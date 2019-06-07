@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs.
 
-{# wf_updated_on: 2019-05-29 #}
+{# wf_updated_on: 2019-06-07 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: trusted-web-activity,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -253,7 +253,7 @@ The next section will show how to setup
 [Digital AssetLinks](/digital-asset-links/v1/getting-started)
 to verify relationship between the website and the app, and remove the URL bar.
 
-### Remove the URL bar
+### Remove the URL bar {: #remove-url-bar }
 
 Trusted Web Activities require an association between the Android application
 and the website to be established to remove the URL bar.
@@ -268,7 +268,7 @@ and
 It is possible to setup the app to website validation and setup Chrome to skip
 the website to app validation, for debugging purposes.
 
-#### Establish an association from app to the website
+#### Establish an association from app to the website {: #link-app-to-site }
 
 Open the string resources file `app > res > values > strings.xml` and add the
 Digital AssetLinks statement below:
@@ -324,7 +324,7 @@ the website to application validation.
 
 Here’s how to test this on a development device:
 
-#### Enable debug mode
+#### Enable debug mode {: #debugging }
 
 1. Open Chrome on the development device, navigate to `chrome://flags`, search
    for an item called _Enable command line on non-rooted devices_ and change it
@@ -344,7 +344,7 @@ Note: It may needed to force close Chrome so it restarts with the correct
 command line. Go to _Android Settings > Apps & notifications > Chrome_,
 and click on _Force stop_.
 
-### Establish an association from the website to the app
+### Establish an association from the website to the app {: #link-site-to-app }
 
 There are 2 pieces of information that the developer needs to collect from the
 app in order to create the association:
@@ -404,7 +404,7 @@ Note: The `AssetLinks` file must be under `/.well-known/assetlinks.json`, at the
 root of the domain, as that's only the place Chrome will look for it.
 
 
-### Creating an Icon
+### Creating an Icon {: #create-icon}
 
 When Android Studio creates a new project, it will come with a default Icon.
 As a developer, you will want to create your own icon and differentiate your
@@ -418,7 +418,7 @@ Inside Android Studio, navigate to `File > New > Image Asset`, select
 `Launcher Icons (Adaptative and Legacy)` and follow the steps from the Wizard.
 to create a custom icon for the application.
 
-### Generating a signed APK
+### Generating a signed APK {: #create-signed-apk }
 
 With the `assetlinks` file in place in your domain and the `asset_statements` tag
 configured in the Android application, the next step is generating a signed app.
@@ -441,6 +441,119 @@ adb logcat | grep -e OriginVerifier -e digital_asset_links
 
 With the upload APK generated, you can now [upload the app to the Play
 Store](https://developer.android.com/studio/publish/upload-bundle).
+
+## Adding a Splash Screen {: #making-a-splash }
+
+Starting on **Chrome 75**, Trusted Web Activities are have support for Splash Screens.
+The Splash Screen can be added by adding a few new image files and configurations to the
+project.
+
+Make sure to update to **Chrome 75 or above** and use the
+[latest version of TWA Support Library](https://jitpack.io/#GoogleChrome/custom-tabs-client).
+
+### Generating the images for the Splash Screen {: #create-images }
+Android devices can have different [screen sizes](https://developer.android.com/training/multiscreen/screensizes)
+and [pixel densities](https://developer.android.com/training/multiscreen/screendensities).
+To ensure the Splash Screen looks good on all devices, you will need to generate
+the image for each pixel density.
+
+A full explanation of [display-independent pixels (dp or dip)](https://developer.android.com/training/multiscreen/screendensities#TaskUseDP) is beyond the scope of this article, but a good
+starting point is to create an image that is 300x300dp, which is equivalent to 300x300
+**pixels** at the *mdpi* density.
+
+From there we can derive the sizes needed for other pixel densities. Below is a list
+with the pixel densities, the multiplier applied to the base size (300x300dp), the
+resulting size in pixels and the location where the image should be added in the
+Android Studio project.
+
+| Density          | Multiplier | Size         | Project Location       |
+|------------------|------------|--------------|------------------------|
+| mdpi (baseline)  | 1.0x       | 300x300 px   | /res/drawable-mdpi/    |
+| ldpi             | 0.75x      | 225x225 px   | /res/drawable-ldpi/    |
+| hdpi             | 1.5x       | 450x450 px   | /res/drawable-hdpi/    |
+| xhdpi            | 2.0x       | 600x600 px   | /res/drawable-xhdpi/   |
+| xxhdpi           | 3.0x       | 600x600 px   | /res/drawable-xxhdpi/  |
+| xxxhdpi          | 4.0x       | 1200x1200 px | /res/drawable-xxxhdpi/ |
+
+### Updating the application {: #add-splash-markup }
+
+With the images for the splash screen generated, it's time to added the necessary
+configurations to the project.  
+
+First, add a [content-provider](https://developer.android.com/guide/topics/providers/content-provider-basics)
+to the Android Manifest (`AndroidManifest.xml`). 
+
+```xml
+<application>
+    ...
+    <provider
+        android:name="android.support.v4.content.FileProvider"
+        android:authorities="com.example.twa.myapplication.fileprovider"
+        android:grantUriPermissions="true"
+        android:exported="false">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/filepaths" />
+    </provider>
+</application>
+```
+
+Note: Make sure to change the `android:authorities` attribute when creating the provider,
+as two applications cannot have the same authority on a device.
+
+Then, add `res/xml/filepaths.xml` resource, and specify the path to the twa splash screen:
+```xml
+<paths>
+    <files-path path="twa_splash/" name="twa_splash" />
+</paths>
+```
+
+Finally, add `meta-tags` to the Android Manifest to customize the LauncherActivity:
+```xml
+<activity android:name="android.support.customtabs.trusted.LauncherActivity">
+    ...
+    <meta-data android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
+               android:resource="@drawable/splash"/>
+    <meta-data android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+               android:resource="@color/colorPrimary"/>
+    <meta-data android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
+               android:value="300"/>
+    <meta-data android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+               android:value="com.example.twa.myapplication.fileprovider"/>
+    ...
+</activity>
+```
+Ensure that the value of the `android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY`
+tag matches the value defined of the `android:authorities` attribute inside the
+`provider` tag.
+
+### Making the LauncherActivity transparent {: #transparent-launcher }
+
+Aditionally, make sure the LauncherActivity is transparent to avoid a white screen
+showing before the splash.
+
+Add a new theme to `res/styles.xml`: 
+
+```xml
+<style name="Theme.LauncherActivity" parent="Theme.AppCompat.NoActionBar">
+     <item name="android:windowAnimationStyle">@null</item>
+     <item name="android:windowIsTranslucent">true</item>
+     <item name="android:windowNoTitle">true</item>
+     <item name="android:windowBackground">@android:color/transparent</item>
+     <item name="android:backgroundDimEnabled">false</item>
+ </style>
+```
+
+Then, add a reference to the new style in the Android Manifest:
+```xml
+<application>
+    ...
+    <activity android:name="android.support.customtabs.trusted.LauncherActivity"
+              android:theme="@style/Theme.LauncherActivity">
+    ...
+    </activity>
+</application>    
+```
 
 We are looking forward to see what developers build with Trusted Web
 Activities. To drop any feedback, reach out to us at
