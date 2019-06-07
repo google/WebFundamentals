@@ -444,7 +444,7 @@ Store](https://developer.android.com/studio/publish/upload-bundle).
 
 ## Adding a Splash Screen {: #making-a-splash }
 
-Starting on **Chrome 75**, Trusted Web Activities are have support for Splash Screens.
+Starting on **Chrome 75**, Trusted Web Activities have support for Splash Screens.
 The Splash Screen can be added by adding a few new image files and configurations to the
 project.
 
@@ -457,8 +457,9 @@ and [pixel densities](https://developer.android.com/training/multiscreen/screend
 To ensure the Splash Screen looks good on all devices, you will need to generate
 the image for each pixel density.
 
-A full explanation of [display-independent pixels (dp or dip)](https://developer.android.com/training/multiscreen/screendensities#TaskUseDP) is beyond the scope of this article, but a good
-starting point is to create an image that is 300x300dp, which is equivalent to 300x300
+A full explanation of [display-independent pixels (dp or dip)](https://developer.android.com/training/multiscreen/screendensities#TaskUseDP)
+is beyond the scope of this article, but a good starting point is to create an image that
+is 300x300dp, which is equivalent to 300x300
 **pixels** at the *mdpi* density.
 
 From there we can derive the sizes needed for other pixel densities. Below is a list
