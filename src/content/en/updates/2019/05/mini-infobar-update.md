@@ -38,7 +38,7 @@ Android, a Chrome system dialog called  the mini-infobar will appear at the
 bottom of the browser window.
 
 Today the Add to Home screen mini-infobar is shown at the same time as the
-[`beforeinstallprompt`](web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt)
+[`beforeinstallprompt`](/web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt)
 event.
 
 ## Changes in Chrome 76
