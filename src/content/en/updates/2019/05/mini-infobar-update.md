@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Adding more control to the mini-infobar for PWAs in Chrome 76.
 
-{# wf_updated_on: 2019-05-20 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2019-05-20 #}
 {# wf_tags: chrome76,addtohomescreen,android,progressive-web-apps,install #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
