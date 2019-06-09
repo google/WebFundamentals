@@ -58,7 +58,7 @@ while your code is busy.
 
 ## Actions
 
-Actions allow you to give users another level of interactions
+Actions allow you to create another level of interaction with your users
 over just clicking the notification.
 
 In the previous section, you saw how to define actions when calling
