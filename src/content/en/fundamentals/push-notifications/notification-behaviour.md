@@ -49,7 +49,7 @@ self.addEventListener('notificationclick', function(event) {
 ```
 
 As you can see in this example, the notification that was clicked can be
-accessed via `event.notification`. From this, we can access
+accessed as `event.notification`. From this, we can access
 the notification's properties and methods. In this case, we call its
 `close()` method and perform additional work.
 
