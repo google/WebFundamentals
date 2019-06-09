@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 기본 DOM 순서의 중요성
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # DOM 순서가 중요 {: .page-title }
@@ -55,7 +55,7 @@ description: 기본 DOM 순서의 중요성
 CSS를 사용해 화면에서 요소의 시각적 위치를 바꿀 때는 주의하세요.
 위치를 바꾸면 탭 순서가 무작위로 달라진 것처럼 보일 수 있어,
 키보드로 버튼을 선택하는 사용자에게 혼동을 줄 수 있기 때문입니다. 따라서
-[섹션 1.3.2](http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
+[섹션 1.3.2](https://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
 의 Web AIM 검사 목록에는 읽기 순서와 탐색 순서는 코드 순서로 정해진 바와 같이 논리적이고
 직관적이어야 한다고 되어 있습니다.
 

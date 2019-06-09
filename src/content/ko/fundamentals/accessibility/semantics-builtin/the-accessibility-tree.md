@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 접근성 트리 소개
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 접근성 트리 {: .page-title }
@@ -102,7 +102,7 @@ DOM에는 대부분 *암시적* 의미 체계에 따른 의미가 있으므로
 
 
     <div class="button-ish">Give me tacos</div>
-    
+
 
 실제 버튼 요소를 사용하지 않으면 스크린 리더가 그 위치에 무엇이 있는지 알 길이
 없습니다. 또한, 지금 코딩하는 바와 같이 마우스로만 이 요소를 사용할 수 있기 때문에 키보드만 사용하는 사용자가 이 요소를 사용할 수 있도록
@@ -133,7 +133,7 @@ DOM에는 대부분 *암시적* 의미 체계에 따른 의미가 있으므로
 있을 것이므로 따로 수행해야 할 작업은 없습니다. 하지만 입력 또는 제어 요소와 이미지 같은 시각적 콘텐츠의 경우
 이름을 지정해야 합니다. 사실,
 텍스트가 아닌 콘텐츠에 대해 대체 텍스트를 제공하는 것이
-[WebAIM 검사 목록의 맨 앞에 있는 항목](http://webaim.org/standards/wcag/checklist#g1.1)입니다.
+[WebAIM 검사 목록의 맨 앞에 있는 항목](https://webaim.org/standards/wcag/checklist#g1.1)입니다.
 
 이런 텍스트를 제공하는 한 가지 방법은 '양식 입력에는 연관된 텍스트 레이블이 있다'는
 권장 사항을 따르는 방법입니다. 레이블을 체크박스와 같은 양식 요소와 연결하는 방법은
@@ -175,7 +175,7 @@ DOM에는 대부분 *암시적* 의미 체계에 따른 의미가 있으므로
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
-    
+
 
 체크박스에 레이블이 올바로 지정되면 스크린 리더에서
 해당 요소는 체크박스 역할이고 확인 표시를 한 상태이며 'Receive

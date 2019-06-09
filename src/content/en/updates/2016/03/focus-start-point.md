@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The 'sequential focus navigation starting point' feature defines where we start to search for focusable elements for sequential focus navigation ([Tab] or [Shift-Tab]) when there is no focused area. It's especially helpful for accessibility features like skip links and managing focus in the document.
 
-{# wf_updated_on: 2016-03-14 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-03-14 #}
 {# wf_tags: accessibility,focus,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/focus.png #}
+{# wf_blink_components: N/A #}
 
 # Removing Headaches from Focus Management {: .page-title }
 
@@ -31,7 +32,7 @@ Text heavy sites often interlink within the same page to help users quickly jump
     <!-- Table of Contents -->
     <a href="#recipes">Recipes</a>
     <a href="#ingredients">Ingredients</a>
-    
+
     <!-- Recipes Section -->
     <h2 id="recipes">Recipes</h1>
     <h3>Vegemite Cheesecake</h3>
@@ -39,7 +40,7 @@ Text heavy sites often interlink within the same page to help users quickly jump
       Vegemite cheesecake is delicious. We promise.
       <a href="cheesecake.html">Read More</a>
     </p>
-    
+
 
 If I were a keyboard user (and a glutton for Australian foods) my next series of actions would go something like this:
 
@@ -93,7 +94,7 @@ There may be times when a user will be focused on an item that needs to be set t
 
 #### Skip links
 
-Skip links are invisible anchors which can only be reached via the keyboard. They allow users to “skip" navigation elements in order to jump straight into the content of a page and they can be extremely beneficial for keyboard and switch device users. As explained [on the WebAIM site](http://webaim.org/techniques/skipnav/){: .external }:
+Skip links are invisible anchors which can only be reached via the keyboard. They allow users to “skip" navigation elements in order to jump straight into the content of a page and they can be extremely beneficial for keyboard and switch device users. As explained [on the WebAIM site](https://webaim.org/techniques/skipnav/){: .external }:
 
 > Without some sort of system for bypassing the long list of links, some users are at a huge disadvantage. Consider users with no arm movement, who use computers by tapping their heads on a switch or that use a stick in their mouth to press keyboard keys. Requiring users to perform any action perhaps 100s of times before reaching the main content is simply unacceptable.
 

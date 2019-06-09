@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Información general sobre el foco de la pantalla en accesibilidad
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introducción al foco {: .page-title }
@@ -57,7 +57,7 @@ Algunos usuarios manejan su computadora casi por completo con el teclado o algú
 de entrada. Para esos usuarios, el foco es crucial porque es el recurso principal para
 acceder a todo lo que se encuentra en pantalla. Es por esto que la lista de comprobación de la Web AIM indica
 en la sección 2.1.1 que [se debe permitir el acceso a todas las funcionalidades de la página por medio de
-un teclado](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
+un teclado](https://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
 a menos que sea algo que no se pueda hacer con un teclado, como dibujar a mano.
 
 Cómo usuario, puedes controlar qué elemento tiene actualmente el foco usando `Tab`,

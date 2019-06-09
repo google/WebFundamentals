@@ -3,8 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description:语义在网页导航中的作用
 
 
-{# wf_updated_on:2016-10-04 #}
-{# wf_published_on:2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-10-04 #}
 
 # 语义和内容导航 {: .page-title }
 
@@ -40,14 +40,14 @@ description:语义在网页导航中的作用
 
 
 大多数结构良好的网页均采用嵌套式标题级别，以指示内容块之中的父-子关系。
-[WebAIM 检查清单](http://webaim.org/standards/wcag/checklist)反复提及了这一方法。
+[WebAIM 检查清单](https://webaim.org/standards/wcag/checklist)反复提及了这一方法。
 
 
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external } 提到“使用语义标记来指定标题”
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external } 提到可利用标题结构这种方法来绕过内容块
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external } 阐述了一些关于编写有用标题的详情
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external } 指出“视情况利用标题来指定各个内容区”
+ - [1.3.1](https://webaim.org/standards/wcag/checklist#sc1.3.1){: .external } 提到“使用语义标记来指定标题”
+ - [2.4.1](https://webaim.org/standards/wcag/checklist#sc2.4.1){: .external } 提到可利用标题结构这种方法来绕过内容块
+ - [2.4.6](https://webaim.org/standards/wcag/checklist#sc2.4.6){: .external } 阐述了一些关于编写有用标题的详情
+ - [2.4.10](https://webaim.org/standards/wcag/checklist#sc2.4.10){: .external } 指出“视情况利用标题来指定各个内容区”
 
 
 
@@ -69,7 +69,7 @@ description:语义在网页导航中的作用
 
     <h2 class="sr-only">This heading is offscreen.</h2>
 
-Note: WebAIM 网站在[这篇有关屏幕外内容的文章](http://webaim.org/techniques/css/invisiblecontent/)中对此方法做了详细阐述。
+Note: WebAIM 网站在[这篇有关屏幕外内容的文章](https://webaim.org/techniques/css/invisiblecontent/)中对此方法做了详细阐述。
 
 
 对于复杂应用，如果视觉设计不需要或没有空间容纳可见标题，可能适合采用此方法来容纳标题。

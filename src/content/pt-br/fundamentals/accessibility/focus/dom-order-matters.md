@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: A importância da ordem padrão do DOM
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # A Ordem do DOM É Importante {: .page-title }
@@ -55,7 +55,7 @@ mover o foco entre os botões.
 Cuidado ao mudar a posição visual de elementos na tela usando CSS.
 Isso pode fazer a ordem de guias para saltar ao redor, aparentemente de forma aleatória, confundindo
 os usuários que usam o teclado. Por esta razão, a lista de verificação do Web AIM afirma,
-[na seção 1.3.2] (http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
+[na seção 1.3.2] (https://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
 que a ordem de leitura e de navegação, determinada pela ordem do código, deve ser
 lógica e intuitiva.
 

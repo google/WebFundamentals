@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Ocultação de conteúdo contra tecnologia assistiva
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Ocultação e Atualização de Conteúdo {: .page-title }
@@ -36,14 +36,14 @@ oculto ainda é incluído na árvore de acessibilidade. Uma técnica comum é in
       height: 1px;
       overflow: hidden;
     }
-    
 
-Além disso, como vimos, é possível fornecer texto somente para leitor de tela por meio de um atributo 
+
+Além disso, como vimos, é possível fornecer texto somente para leitor de tela por meio de um atributo
 `aria-label`, `aria-labelledby`, ou `aria-describedby` referenciando um elemento
 que, de outra forma, é oculto.
 
 Veja este artigo WebAIM sobre [As técnicas para ocultar
-texto](http://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }
+texto](https://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }
 para mais informações sobre a criação de texto "somente para leitor de tela".
 
 Por fim, ARIA fornece um mecanismo para excluir conteúdo de tecnologia
@@ -95,13 +95,13 @@ de um usuário de tecnologia assistiva, definindo seu atributo `aria-live`. Comp
 
 
     <div class="status">Your message has been sent.</div>
-    
+
 
 com seu equivalente "ativo".
 
 
     <div class="status" aria-live="polite">Your message has been sent.</div>
-    
+
 
 `aria-live` tem três valores permitidos: `polite`, `assertive` e `off`.
 
@@ -132,7 +132,7 @@ Outros atributos que funcionam com `aria-live` te ajudam a ajustar o que
 é comunicado ao usuário quando a região ativa muda.
 
 `aria-atomic` indica se a região inteira deve ser considerada como um todo
-ao comunicar atualizações. Por exemplo, se a data de um widget, consistindo de 
+ao comunicar atualizações. Por exemplo, se a data de um widget, consistindo de
 um dia, mês e ano tem `aria-live=true` e `aria-atomic=true`, e o usuário usa um
 controle do podômetro para alterar o valor apenas do mês, todo o
 conteúdo do widget de data seria lido novamente. O valor de `aria-atomic` pode ser `true`
@@ -141,7 +141,7 @@ ou `false` (o padrão).
 `aria-relevant` indica que tipos de mudanças devem ser apresentadas ao usuário.
 Existem algumas opções que podem ser utilizadas separadamente ou como uma lista de token.
 
- - *adições*, que significa que qualquer elemento que seja adicionado à região 
+ - *adições*, que significa que qualquer elemento que seja adicionado à região
    ativa é significativo. Por exemplo, adicionar um span a um registro existente de mensagens
    de status significaria que o span seria anunciado para o usuário (supondo
    que `aria-atomic` fosse `false`).
@@ -159,7 +159,7 @@ Finalmente, `aria-busy` permite notificar a tecnologia assistiva que ela deve
 ignorar temporariamente mudanças em um elemento, como quando as coisas estão carregando. Quando
 tudo estiver no lugar, `aria-busy` deve ser definido como falso para normalizar
 a operação do leitor.
- 
+
 
 
 {# wf_devsite_translation #}

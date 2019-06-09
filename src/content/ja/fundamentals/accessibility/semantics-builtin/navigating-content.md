@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: ページ ナビゲーションにおけるセマンティクスの役割
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # セマンティクスとコンテンツのナビゲーション {: .page-title }
@@ -38,18 +38,18 @@ description: ページ ナビゲーションにおけるセマンティクスの
 スクリーン リーダーは全般的にそのようになっています。スクリーン リーダーはアクセシビリティ ツリーとやり取りし、アクセシビリティ ツリーは DOM ツリーに基づいているため、スクリーン リーダーが受け取る順序は直接 DOM 順序に基づいています。つまり、適切な見出し構造がより重要になります。
 
 
-一般的に、適切な構造を持つページでは、見出しのレベルがネストされ、コンテンツ ブロック間の親子関係が示されています。[WebAIM チェックリスト](http://webaim.org/standards/wcag/checklist)でも、このテクニックについて何度も取り上げています。
+一般的に、適切な構造を持つページでは、見出しのレベルがネストされ、コンテンツ ブロック間の親子関係が示されています。[WebAIM チェックリスト](https://webaim.org/standards/wcag/checklist)でも、このテクニックについて何度も取り上げています。
 
 
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external } 「セマンティックなマークアップは見出しを指定するために使用」と説明
+ - [1.3.1](https://webaim.org/standards/wcag/checklist#sc1.3.1){: .external } 「セマンティックなマークアップは見出しを指定するために使用」と説明
 
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external } コンテンツのブロックを回避するテクニックとして見出しの構造について説明
+ - [2.4.1](https://webaim.org/standards/wcag/checklist#sc2.4.1){: .external } コンテンツのブロックを回避するテクニックとして見出しの構造について説明
 
 
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external } 有用な見出しの書き方について詳しく説明
+ - [2.4.6](https://webaim.org/standards/wcag/checklist#sc2.4.6){: .external } 有用な見出しの書き方について詳しく説明
 
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external } 「適宜、見出しを使用してコンテンツの個々のセクションを指定する」と説明
+ - [2.4.10](https://webaim.org/standards/wcag/checklist#sc2.4.10){: .external } 「適宜、見出しを使用してコンテンツの個々のセクションを指定する」と説明
 
 
 
@@ -71,7 +71,7 @@ description: ページ ナビゲーションにおけるセマンティクスの
 
     <h2 class="sr-only">This heading is offscreen.</h2>
 
-注: WebAIM サイトでは、[画面外のコンテンツに関するこちらの記事](http://webaim.org/techniques/css/invisiblecontent/)で、このテクニックについて詳しく説明しています。
+注: WebAIM サイトでは、[画面外のコンテンツに関するこちらの記事](https://webaim.org/techniques/css/invisiblecontent/)で、このテクニックについて詳しく説明しています。
 
 
 これは、複雑なアプリケーションでビジュアル デザイン上、視覚的な見出しが不要またはそのスペースがない場合でも見出しを配置できる、おすすめの方法です。

@@ -4,7 +4,7 @@ description: Improving accessibility for web pages
 
 
 {# wf_blink_components: Blink>Accessibility #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-06-26 #}
 
 # Accessibility {: .page-title }
@@ -134,11 +134,11 @@ WCAG is organized around four principles often called by the acronym *POUR*:
 
 While WCAG provides a comprehensive overview of what it means for content to be
 accessible, it can also be a bit overwhelming. To help mitigate this, the
-[WebAIM](http://webaim.org/){: .external } (Web Accessibility in Mind) group has
+[WebAIM](https://webaim.org/){: .external } (Web Accessibility in Mind) group has
 distilled the WCAG guidelines into an easy-to-follow checklist, targeted
 specifically for web content.
 
-The [WebAIM checklist](http://webaim.org/standards/wcag/checklist){: .external }
+The [WebAIM checklist](https://webaim.org/standards/wcag/checklist){: .external }
 can give you a short, high-level summary of what you need to implement, while
 also linking to the underlying WCAG specification if you need an expanded
 definition.
@@ -155,7 +155,7 @@ affect them. To explain further, here's an informative question/answer session
 with Victor Tsaran, a Technical Program Manager at Google, who is totally blind.
 
 <figure class="attempt-right">
-  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">	
+  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">
   <figcaption>Victor Tsaran</figcaption>
 </figure>
 
@@ -186,7 +186,7 @@ Visual impairments can be split into a few categories: Users with no vision,
 like me, might use a screen reader, braille, or combination of the two.
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="A braille reader">	
+  <img src="imgs/braille-reader.png" alt="A braille reader">
   <figcaption>A braille reader</figcaption>
 </figure>
 
@@ -211,7 +211,7 @@ high-contrast options like an operating system high-contrast mode, a
 high-contrast browser extension or a high-contrast theme for a website.
 
 <figure class="attempt-right">
-  <img src="imgs/high-contrast.png" alt="High-contrast mode">	
+  <img src="imgs/high-contrast.png" alt="High-contrast mode">
   <figcaption>High-contrast mode</figcaption>
 </figure>
 
@@ -240,7 +240,7 @@ RSI or something and find it painful, to someone who may be physically paralyzed
 and have limited range of motion for certain parts of their body.
 
 <figure class="attempt-right">
-  <img src="imgs/eye-tracking.png" alt="A person using an eye tracking device">	
+  <img src="imgs/eye-tracking.png" alt="A person using an eye tracking device">
   <figcaption>An eye tracking device</figcaption>
 </figure>
 
@@ -262,7 +262,7 @@ much like eyesight, our hearing tends to degrade with age. Many of us use common
 affordances like hearing aids to help us.
 
 <figure class="attempt-right">
-  <img src="imgs/screen-captions.png" alt="A television with captions at the bottom">	
+  <img src="imgs/screen-captions.png" alt="A television with captions at the bottom">
   <figcaption>Screen captions</figcaption>
 </figure>
 

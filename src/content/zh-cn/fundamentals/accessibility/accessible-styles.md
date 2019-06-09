@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:使用合适的样式化提升可访问性
 
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 可访问的样式 {: .page-title }
@@ -27,7 +27,7 @@ description:使用合适的样式化提升可访问性
 
 一般情况下，每次聚焦到一个元素时，我们都依靠浏览器内置的焦点环（CSS `outline` 属性）对元素进行样式化。
 焦点环非常方便，没有它，键盘用户就无法分辨哪个元素具有焦点。
-[WebAIM 检查单](http://webaim.org/standards/wcag/checklist){: .external }提到了这一点，其中的表述为“很容易就能看到哪个页面元素具有当前键盘焦点（即，浏览页面时，您可以看到自己所处的位置）。”
+[WebAIM 检查单](https://webaim.org/standards/wcag/checklist){: .external }提到了这一点，其中的表述为“很容易就能看到哪个页面元素具有当前键盘焦点（即，浏览页面时，您可以看到自己所处的位置）。”
 
 
 
@@ -159,7 +159,7 @@ Warning: 切忌在不提供焦点替代项的情况下将 outline 设为 0 或 n
 
 ![400% 放大下的 Udacity.com](imgs/udacity-zoomed.jpg)
 
-事实上，仅仅通过自适应设计，我们就可以满足 [WebAIM 检查单第 1.4.4 条规则](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external }的要求，其表述为页面“...应在文本大小加倍的情况下便于阅读和正常发挥作用。”
+事实上，仅仅通过自适应设计，我们就可以满足 [WebAIM 检查单第 1.4.4 条规则](https://webaim.org/standards/wcag/checklist#sc1.4.4){: .external }的要求，其表述为页面“...应在文本大小加倍的情况下便于阅读和正常发挥作用。”
 
 
 
@@ -209,7 +209,7 @@ Warning: 使用视口元标记时，切忌设置 maximum-scale=1 或设置 user-
 这通常归结为*颜色对比度*，即前景色与背景色*亮度*之间的关系。如果颜色类似，对比度比率低；如果颜色不同，对比度比率高。
 
 
-[WebAIM 指导原则](http://webaim.org/standards/wcag/){: .external } 建议为所有文本使用 4.5:1 的 AA（最低）对比度比率。
+[WebAIM 指导原则](https://webaim.org/standards/wcag/){: .external } 建议为所有文本使用 4.5:1 的 AA（最低）对比度比率。
 非常大的文本（比默认正文文本大 120-150%）是一个例外，此类文本的对比度比例可以降低至 3:1。请注意下面所示对比度比率的不同。
 
 
@@ -234,7 +234,7 @@ Warning: 使用视口元标记时，切忌设置 maximum-scale=1 或设置 user-
 
 ![devtools 对比度审核对话框](imgs/contrast-audit.png)
 
-WebAIM 也提供了一个方便的[颜色对比度检查器](http://webaim.org/resources/contrastchecker/){: .external }，您可以用它来查看任何颜色对的对比度。
+WebAIM 也提供了一个方便的[颜色对比度检查器](https://webaim.org/resources/contrastchecker/){: .external }，您可以用它来查看任何颜色对的对比度。
 
 
 
@@ -257,7 +257,7 @@ Note: 术语“色盲”经常用于描述一种视觉条件，在此条件下�
 
 ![使用红色下划线指示错误的输入表单](imgs/input-form1.png)
 
-[WebAIM 检查单第 1.4.1 部分的表述](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } 为“不应将颜色作为传达内容或区分可视元素的唯一方法。”该部分还提到“不应仅使用颜色区分文本周围的链接”，除非链接满足特定的对比度要求。检查单建议（使用 CSS `text-decoration` 属性）添加一个额外的指示器（例如下划线）来指示链接何时处于活动状态。
+[WebAIM 检查单第 1.4.1 部分的表述](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } 为“不应将颜色作为传达内容或区分可视元素的唯一方法。”该部分还提到“不应仅使用颜色区分文本周围的链接”，除非链接满足特定的对比度要求。检查单建议（使用 CSS `text-decoration` 属性）添加一个额外的指示器（例如下划线）来指示链接何时处于活动状态。
 
 
 
