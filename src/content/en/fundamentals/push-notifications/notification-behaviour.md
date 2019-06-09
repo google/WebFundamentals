@@ -2,14 +2,14 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 {# wf_blink_components: Blink>PushAPI #}
-{# wf_updated_on: 2019-06-06 #}
+{# wf_updated_on: 2019-06-09 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Notification Behavior {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-So far we've looked at the options that alter the visual appearance of a notification. There
+So far, we've looked at the options that alter the visual appearance of a notification. There
 are also options that alter the behavior of notifications.
 
 By default, calling `showNotification()` with just visual options will have
@@ -18,24 +18,24 @@ the following behaviors:
 - Clicking on the notification does nothing.
 - Each new notification is shown one after the other. The browser will not collapse the
 notifications in any way.
-- The platform may play a sound or vibrate the user's devices (depending on the platform).
-- On some platforms the notification will disappear after a short
+- The platform may play a sound or vibrate the user's device (depending on the platform).
+- On some platforms, the notification will disappear after a short
 period of time while others will show the notification unless the user interacts with it.
 (For example, compare your notifications on Android and Desktop.)
 
-In this section we are going to look at how we can alter these default behaviors
+In this section, we are going to look at how we can alter these default behaviors
 using options alone. These are relatively easy to implement and take advantage of.
 
 ## Notification Click Event
 
-When a user clicks on a notification the default behavior is for nothing
+When a user clicks on a notification, the default behavior is for nothing
 to happen. It doesn't even close or remove the notification.
 
 The common practice for a notification click is for it to close and perform some other logic
 (i.e. open a window or make some API call to the application).
 
-To achieve this we need to add a 'notificationclick' event listener to our service worker. This
-will be called when ever a notification is clicked.
+To achieve this, we need to add a 'notificationclick' event listener to our service worker. This
+will be called whenever a notification is clicked.
 
 ```js
 self.addEventListener('notificationclick', function(event) {
@@ -49,8 +49,8 @@ self.addEventListener('notificationclick', function(event) {
 ```
 
 As you can see in this example, the notification that was clicked can be
-accessed via the `event.notification` parameter. From this we can access
-the notifications properties and methods. In this case we call its
+accessed via the `event.notification` parameter. From this, we can access
+the notification's properties and methods. In this case, we call its
 `close()` method and perform additional work.
 
 Note: You still need to make use of event.waitUntil() to keep the service worker running
@@ -58,10 +58,10 @@ while your code is busy.
 
 ## Actions
 
-Actions allow you to give users another level of interaction with your users
+Actions allow you to give users another level of interactions
 over just clicking the notification.
 
-In the previous section you saw how to define actions when calling
+In the previous section, you saw how to define actions when calling
 `showNotification()`:
 
 ```js
@@ -199,7 +199,7 @@ The `tag` option is simply a way of grouping messages so that any old notificati
 are currently displayed will be closed if they have the same tag as a new notification.
 
 A subtlety to using `tag` is that when it replaces a notification, it
-will do so *without* a sound and vibration.
+will do so *without* a sound or vibration.
 
 This is where the `renotify` option comes in.
 
@@ -210,7 +210,7 @@ notifications vibrate and play a system sound.
 
 There are scenarios where you might want a replacing notification to
 notify the user rather than silently update. Chat applications are a good
-example. In this case you should set `tag` and `renotify` to true.
+example. In this case, you should set `tag` and `renotify` to true.
 
 ```js
 const title = 'Notification 2 of 2';
@@ -251,7 +251,7 @@ Chrome on desktop will show notifications for a set time period before hiding th
 Android doesn't have this behavior. Notifications are displayed until
 the user interacts with them.
 
-To force a notification to stay visible until the user interacts with it
+To force a notification to stay visible until the user interacts with it,
 add the `requireInteraction` option. This will show the notification
 until the user dismisses or clicks your notification.
 
@@ -267,7 +267,7 @@ registration.showNotification(title, options);
 Please use this option with consideration. Showing a notification and forcing the user to stop
 what they are doing to dismiss your notification can be frustrating.
 
-In the next section we are going to look at some of the common patterns used on the web for
+In the next section, we are going to look at some of the common patterns used on the web for
 managing notifications and performing actions such as opening pages when a notification is clicked.
 
 ## Feedback {: #feedback }
