@@ -22,9 +22,10 @@ dot menu.
   <source src="/web/updates/videos/2019/06/pwa-install-addressbar.mp4" type="video/mp4">
 </video>
 
-In Chrome 76, we're making it easier for users to install Progressive Web Apps
-on the desktop by adding an install button to the address bar (omnibox). If a
-site meets the [Progressive Web App installability criteria][pwa-install-criteria],
+In Chrome 76 (beta mid-June 2019), we're making it easier for users to install
+Progressive Web Apps on the desktop by adding an install button to the address
+bar (omnibox). If a site meets the
+[Progressive Web App installability criteria][pwa-install-criteria],
 Chrome will automatically show an install icon in the address bar. Clicking the
 button prompts the user to install the PWA.
 
