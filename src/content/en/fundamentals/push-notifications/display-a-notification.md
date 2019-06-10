@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-06-06 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -189,7 +189,7 @@ On Android the cropping and ratio are different.
 
 ![Notification with image on Chrome for Android.](./images/notification-screenshots/mobile/chrome-image.png){: .center-image }
 
-Given the differences in ratio between desktop and mobile it's extremely hard to suggest
+Given the differences in ratio between desktop and mobile, it's extremely hard to suggest
 guidelines.
 
 Since Chrome on desktop doesn't fill the available space and has a ratio of 4:3, perhaps the
@@ -255,22 +255,22 @@ The title and icon is what you can see in the notification. The ID is used when 
 the action button had been clicked (We'll look into this more in the next section).
 
 In the example above I've defined 4 actions to illustrate that you can define more actions than
-will be displayed. If you want to know the number actions that will be displayed by the browser
+will be displayed. If you want to know the number actions that will be displayed by the browser,
 you can check `Notification.maxActions`, which is used in the body text in the demo.
 
-On desktop the action button icons display their colors (See the pink doughnut above).
+On desktop, the action button icons display their colors (see the pink doughnut above).
 
-On Android Marshmallow the icons are colored to match the system color scheme:
+On Android Marshmallow, the icons are colored to match the system color scheme:
 
 ![Notification with actions on Chrome for Android.](./images/notification-screenshots/mobile/chrome-actions-m.png){: .center-image }
 
 Chrome will hopefully change it's behavior on desktop to match Android (i.e. apply the
-appropriate color scheme to make the icons match the system look and feel). In the meantime you can
-match Chrome's text color by making your icons have a color of "#333333"..
+appropriate color scheme to make the icons match the system look and feel). In the meantime, you can
+match Chrome's text color by making your icons have a color of "#333333".
 
-On Android Nougat the action icons aren't shown at all.
+On Android Nougat, the action icons aren't shown at all.
 
-It's also worth calling out that that icons look crisp on Android but **not** on desktop.
+It's also worth calling out that icons look crisp on Android but **not** on desktop.
 
 The best size I could get to work on desktop Chrome was 24px x 24px. This sadly looks out of
 place on Android.
@@ -292,8 +292,8 @@ it'll be some time before anything is agreed upon.
 The "dir" parameter allows you to define which direction the text should be displayed,
 right-to-left or left-to-right.
 
-In testing it seemed that the direction was largely determined by the text rather than this
-parameter. According to the spec this is intended to suggest to the browser how
+In testing, it seemed that the direction was largely determined by the text rather than this
+parameter. According to the spec, this is intended to suggest to the browser how
 to layout options like actions, but I saw no difference.
 
 Probably best to define if you can, otherwise the browser should do the right thing according
@@ -319,7 +319,7 @@ displayed, assuming the user's current settings allow for vibrations (i.e. the d
 silent mode).
 
 The format of the vibrate option should be an array of numbers that describe the number of
-milliseconds the device should vibrate followed by the number of milliseconds the device should
+milliseconds the device should vibrate, followed by the number of milliseconds the device should
 *not* vibrate.
 
 ```js
@@ -338,7 +338,7 @@ This only affects devices that support vibration.
 
 The sound parameter allows you to define a sound to play when the notification is received.
 
-At the time of writing no browser has support for this option.
+At the time of writing, no browser has support for this option.
 
 ```js
 const title = 'Sound Notification';
@@ -380,14 +380,14 @@ Some common pitfalls to avoid:
 
 * Don't put your website in the title or the body. Browsers include your domain in the
 notification so **don't duplicate it**.
-* Use all information you have available to you. If you send a push message because someone
+* Use all the information that you have available. If you send a push message because someone
 sent a message to a user, rather than using a title of 'New Message' and body of 'Click here to
 read it.' use a title of 'John just sent a new message' and set the body of the notification to
 part of the message.
 
 ## Browsers and Feature Detection
 
-At the time of writing there is a pretty big disparity between Chrome and Firefox in terms of
+At the time of writing, there is a pretty big disparity between Chrome and Firefox in terms of
 feature support for notifications.
 
 Luckily, you can detect support for notification features by looking at the
@@ -405,7 +405,7 @@ if ('actions' in Notification.prototype) {
 
 With this, we could change the notification we display to our users.
 
-With the other options, just do the same as above, replacing 'actions' with the desired
+With the other options, just do the same as above, replacing `'actions'` with the desired
 parameter name.
 
 ## Feedback {: #feedback }
