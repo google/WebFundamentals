@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to promote installation of Progressive Web Apps and best practices.
 
-{# wf_updated_on: 2019-06-04 #}
+{# wf_updated_on: 2019-06-07 #}
 {# wf_published_on: 2019-06-04 #}
 {# wf_blink_components: N/A #}
 
@@ -75,12 +75,12 @@ Note: Starting in Chrome 76, you can
 site and it meets the [installability criteria][a2hs-criteria] on Android, and
 then again after approximately 90 days.
 
-## System UI promotional patterns
+## Application UI promotional patterns
 
-System UI promotional patterns can be used for almost any kind of PWA and
-appear in site navigation UI or as banners. As with any other type of
-promotional pattern, it’s important to be aware of the user’s context to
-minimize disruption of the user’s journey.
+Application UI promotional patterns can be used for almost any kind of PWA and
+appear in the application UI, such as site navigation, banners, etc. As with
+any other type of promotional pattern, it’s important to be aware of the
+user’s context to minimize disruption of the user’s journey.
 
 Sites which are thoughtful about when they trigger promotion UI achieve a
 larger number of installs and avoid interfering with the journeys of users
@@ -187,7 +187,7 @@ Make sure you:
 ## Inline promotional patterns
 
 Inline promotional techniques interweave promotions with site content. This
-is often more subtle than promotion in system UI, which has tradeoffs. You
+is often more subtle than promotion in application UI, which has tradeoffs. You
 want your promotion to stand out enough that interested users will notice it,
 but not so much that it detracts from the quality of your user experience.
 
