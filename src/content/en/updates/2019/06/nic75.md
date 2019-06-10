@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's New in Chrome 75 for developers?
 
 {# wf_published_on: 2019-06-04 #}
-{# wf_updated_on: 2019-06-04 #}
+{# wf_updated_on: 2019-06-10 #}
 {# wf_featured_image: /web/updates/images/2019/06/nic075.jpg #}
 {# wf_tags: chrome75,new-in-chrome,canvas,performance,google-io,graphics,sharing #}
 {# wf_featured_snippet: Chrome 75 is rolling out now. There’s a new way to reduce latency on <code>canvas</code> elements. Web apps can now share files to other installed apps using the system level share sheet. All of talks from Google I/O are on our YouTube channel. And plenty more. Let’s dive in and see what’s new for developers in Chrome 75! #}
@@ -58,7 +58,7 @@ For example, in a drawing app, latencies longer than 50 milliseconds can
 interfere with hand-eye coordination, making them difficult to use.
 
 The `desynchronized` hint, when creating a `canvas` context, uses a different
-code path, that bypasses the usual DOM update mechanism. The hint, tells the
+code path, that bypasses the usual DOM update mechanism. The hint tells the
 system to skip as much compositing as it can. In some cases, the `canvas`'s
 underlying buffer is sent directly to the screen's display controller. This
 eliminates the latency that would be caused by using the renderer compositor
@@ -90,9 +90,9 @@ for more details, including how to do feature detection for it.
           type="video/mp4" />
 </video>
 
-The [web share API](/web/updates/2016/09/navigator-share) allows you to plug
+The [Web Share API](/web/updates/2016/09/navigator-share) allows you to plug
 into the share service provided by the OS, making it easy to share web pages
-and apps with other installed apps on the users device.
+and apps with other installed apps on the user's device.
 
 In Chrome 75, the Web Share API now supports the sharing of files! I’m
 particularly excited about this because it makes it way easier for apps to
@@ -100,7 +100,7 @@ share photos, videos and more. Squoosh is adding support for this to share a
 file once you’ve finished compressing it. The Web Share API currently supports
 the sharing of [audio files, images, videos, and text documents][web-share-ok].
 
-It’s best to use feature detection to see if the web share API is supported,
+It’s best to use feature detection to see if the Web Share API is supported,
 and fallback to your traditional mechanism if it’s not. And you can use
 `navigator.canShare` to check if file sharing is supported.
 
@@ -157,12 +157,12 @@ they’re all up on the [Chrome Developers YouTube channel][cr-dev-yt], in the
 [Web at Google I/O 2019 playlist](https://bit.ly/web-at-io2019).
 
 * Tom and I presented [“Unlocking new capabilities for the web”][yt-unlock]
-  covering some of the amazing new capabilities that landing in browsers
+  covering some of the amazing new capabilities that are landing in browsers
   this year.
 * Addy and Katie covered some cool performance tips and tricks in
-  [“Speed at Scale”][yt-speed]
+  [“Speed at Scale”][yt-speed].
 * Elizabeth and Paul dove into some cool devtools in
-  [“Demystifying Speed Tooling”][yt-tooling]
+  [“Demystifying Speed Tooling”][yt-tooling].
 * And in [“Build Fast and Smooth Web Apps from Feature Phone to Desktop”][yt-proxx]
   Mariko showed us how she and her crew built [Proxx][proxx]
   to work on any device, from feature phone to smart phone to desktop.
