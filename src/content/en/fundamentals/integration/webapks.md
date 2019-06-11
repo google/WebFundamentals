@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2019-06-04 #}
+{# wf_updated_on: 2019-06-11 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -168,7 +168,12 @@ There are a number of rules that govern how these update checks are triggered:
 - The update check may be delayed until the device is plugged in and has a WiFi
   connection.
 
-Here's a hypothetical example of how WebAPK update scheduling works over time:
+Note: The update interval was reduced to 1 day (from 3 days) in Chrome 76.
+For behavior in Chrome 76 and earlier, refer to
+[Updating WebAPKs More Frequently][webapk-update-cr75].
+
+For Chrome 76 and later, here's a hypothetical example of how WebAPK update
+scheduling works over time:
 
 - **January 1**: Install WebAPK
 - **January 1**: Launch WebAPK → No update check (0 days have passed)
@@ -188,8 +193,7 @@ Icons may be [cached](/web/fundamentals/performance/optimizing-content-efficienc
 so it may be helpful to change the filenames when updating icons or other
 graphics.
 
-Note: The update interval was reduced to 1 day (from 3 days) in Chrome 76.
-
+[webapk-update-cr75]: /web/updates/2019/06/webapk-update-frequency#chrome_75_and_earlier
 
 ## Frequently asked questions
 
