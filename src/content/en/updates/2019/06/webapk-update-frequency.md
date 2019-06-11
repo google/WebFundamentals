@@ -4,7 +4,7 @@ description: Starting in Chrome 76, WebAPKs will be updated more frequently.
 
 {# wf_published_on: 2019-06-13 #}
 {# wf_updated_on: 2019-06-13 #}
-{# wf_featured_image: /web/updates/images/2019/06/TODO #}
+{# wf_featured_image: /web/updates/images/2019/06/webapk.png #}
 {# wf_tags: chrome76,mobile,install,addtohomescreen,progressive-web-apps,webapk #}
 {# wf_featured_snippet: When a Progressive Web App is installed on Android, Chrome automatically requests and installs a WebAPK of your app. Starting in Chrome 76, Chrome will check for updates more frequently, ensuring icons, titles, colors, and other key properties to rolled out to your users faster. #}
 {# wf_blink_components: Mobile>WebAPKs #}
