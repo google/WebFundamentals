@@ -88,6 +88,21 @@ jakearchibald:
   description:
     en: Human boy working on web standards at Google
 
+adamargyle:
+  name:
+    given: Adam
+    family: Argyle
+  homepage: 'https://nerdy.dev'
+  email: argyle@google.com
+  twitter: argyleink
+  github: argyleink
+  org:
+    name: Google
+    unit: Chrome
+  description:
+    en: Developer Advocate at Google
+  country: US
+
 pbakaus:
   name:
     given: Paul
@@ -493,6 +508,17 @@ samdutton:
   email: dutton@google.com
   description:
     en: Sam is a Developer Advocate
+
+emilaeklund:
+  name:
+    given: Emil
+    family: Eklund
+  org:
+    name: Google
+    unit: Chrome
+  description:
+    en: Chrome Rendering tech lead and manager.
+  country: US
 
 arthurevans:
   name:
