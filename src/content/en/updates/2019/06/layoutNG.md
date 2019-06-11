@@ -17,7 +17,7 @@ Scheduled to be released in Chrome 76, LayoutNG is a new layout engine exiting a
 multi-year effort. There are several exciting immediate improvements, 
 and additional performance gains and advanced layout features will be coming.
 
-## What's New?
+## What's new?
 
 1. Improves performance isolation.
 1. **Better support** for scripts other than Latin
@@ -46,7 +46,7 @@ LayoutNG reimplements support for floating elements (`float: left;` and `float: 
 fixing a number of correctness issues around placement 
 of floats in relation to other content.
 
-#### Superimposed Content
+#### Superimposed content
 
 The legacy float implementation didn’t correctly account for margins when placing 
 content around a floating element, resulting in the content 
@@ -56,7 +56,7 @@ where the avoidance logic fails to account for the height of a line.
 (See [Chromium bug #861540](https://crbug.com/861540).)
 
 <figure class="attempt-left" style="text-align:center;">
-  <img class="w-screenshot" loading="lazy" 
+  <img loading="lazy" 
     src="/web/updates/images/2019/06/legacy_float_margin.png" 
     alt="top text line shown overlaying floated image"
   >
@@ -66,7 +66,7 @@ where the avoidance logic fails to account for the height of a line.
   </figcaption>
 </figure>
 <figure class="attempt-right" style="text-align:center;">
-  <img class="w-screenshot" loading="lazy" 
+  <img loading="lazy" 
     src="/web/updates/images/2019/06/ng_float_margin.png" 
     alt="proper text on left and floated image on right"
   >
@@ -103,7 +103,7 @@ a block element with a negative margin following a floating element
 </figure>
 <div class="clearfix"></div>
 
-#### Formatting Context Positioning
+#### Formatting context positioning
 
 When an element forming a block formatting context is sized next to floats, 
 the legacy layout engine would try to size the block a fixed number 
@@ -128,7 +128,7 @@ See the next section for more details about improved writing mode support.
 LayoutNG was designed from the ground up to support vertical writing modes 
 and RTL languages, including bidirectional content.
 
-### Bidirectional Text
+### Bidirectional text
 
 LayoutNG supports the most up-to-date bidirectional algorithm defined by 
 [The Unicode Standard](https://unicode.org/standard/standard.html). 
@@ -136,19 +136,19 @@ Not only does this update fix various rendering errors, but it also includes
 missing features such as paired bracket support 
 (See [Chromium bug #302469](https://crbug.com/302469).)
 
-#### Orthogonal Flows
+#### Orthogonal flows
 
 LayoutNG improves the accuracy of vertical flow layout, including, for example, 
 placement of absolutely positioned objects and sizing of orthogonal 
 flow boxes (especially when percent is used). Of the 1,258 tests in the 
 W3C test suites, **103 tests that failed in the old layout engine pass in LayoutNG.**
 
-#### Intrinsic Sizing
+#### Intrinsic sizing
 
 Intrinsic sizes are now calculated correctly when a block contains children 
 in an orthogonal writing mode.
 
-### Text Layout & Line Breaking
+### Text layout & line breaking
 
 The legacy Chromium layout engine laid out text element-by-element and line-by-line. 
 This approach worked well in most cases but required a lot of e
@@ -160,7 +160,7 @@ In LayoutNG, text is laid out at the paragraph level and then split into lines.
 This allows for better performance, higher quality text rendering, 
 and more consistent line breaking. The most notable differences are detailed below.
 
-#### Joining across Element Boundaries
+#### Joining across element boundaries
 
 In some scripts, certain characters can be visually joined when they're adjacent. 
 Check out this example from Arabic:
@@ -266,7 +266,7 @@ The bounds of the yellow box should match the bounds of the text.
 </figure>
 <div class="clearfix"></div>
 
-#### Line Wrapping
+#### Line wrapping
 
 Similar to the problem described above, if the content of a size-to-content 
 block is larger (wider) than the block, content can sometimes 
@@ -292,7 +292,7 @@ wrap unnecessarily. This is quite rare but sometimes happens for mixed direction
 </figure>
 <div class="clearfix"></div>
 
-## Further Information
+## Further information
 
 - [LayoutNG README](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/core/layout/ng/README.md)
 - [Layout NG design document](https://docs.google.com/document/d/1uxbDh4uONFQOiGuiumlJBLGgO4KDWB8ZEkp7Rd47fw4/)
