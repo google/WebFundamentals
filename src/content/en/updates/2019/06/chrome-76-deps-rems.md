@@ -18,7 +18,7 @@ description: A round up of the deprecations and removals in Chrome 76 to help yo
 ## Remove Feature Policy: lazyload
 
 The lazyload feature policy was intended to allow developers to selectively
-control the lazyload attribute on `&lt;iframe>` and `&lt;img>` to provide more
+control the `lazyload` attribute on `<iframe>` and `<img>` to provide more
 control over loading delay for embedded contents and images on a per origin
 basis. 
 
