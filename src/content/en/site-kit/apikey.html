@@ -21,6 +21,12 @@
       {% dynamic if request.query_string.siteurl %}
         {% dynamic setvar productName %}Site Kit on {% dynamic print request.query_string.siteurl|escape %}{% dynamic endsetvar %}
       {% dynamic endif %}
+      {% dynamic if request.query_string.warn_adblocker %}
+        <aside class="warning">
+          <strong>Warning:</strong>
+          <span>It looks like you are using an adblocker. You must temporarily disable it before clicking the button below.</span>
+        </aside>
+      {% dynamic endif %}
       <p>
         Once the project has been created, you will see the API key. You must copy this value into the corresponding field in your Site Kit plugin, open in the other browser tab.
       </p>
