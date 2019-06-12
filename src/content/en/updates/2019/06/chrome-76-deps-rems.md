@@ -25,7 +25,7 @@ basis.
 The policy is removed in favor of a newer feature policy for loading, namely
 `loading-frame-default-eager` which is more aligned with how the `loading`
 attribute will be used. The removal applies to both the Feature-Policy header
-and the `&lt;iframe>` `allow` attribute.
+and the `<iframe>` `allow` attribute.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5641405942726656) &#124;
 [Chromium Bug](https://crbug.com/869492)
