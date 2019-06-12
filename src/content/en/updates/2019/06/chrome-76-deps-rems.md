@@ -31,7 +31,7 @@ and the `<iframe>` `allow` attribute.
 [Chromium Bug](https://crbug.com/869492)
 
 
-## Remove Insecure Usage of `DeviceMotionEvent`
+## Remove Insecure Usage of DeviceMotionEvent
 
 Chromium has been showing deprecation warnings since 2015 whenever the API is
 used in a non-secure browsing context. Chrome now restricts the API to secure
