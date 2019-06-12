@@ -56,7 +56,7 @@ There are three key ways you can promote the installation of your PWA:
 
 Check out Patterns for [Promoting PWA Installation (mobile)][install-patterns]
 for more details. It’s focus is mobile, but many of the patterns are applicable
-for desktop, or can be easily modified to work for mobile experiences.
+for desktop, or can be easily modified to work for desktop experiences.
 
 [pwa-install-criteria]: /web/fundamentals/app-install-banners/#criteria
 [appinstalled-event]: /web/fundamentals/app-install-banners/#appinstalled
