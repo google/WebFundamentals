@@ -15,10 +15,10 @@ description: A round up of the deprecations and removals in Chrome 76 to help yo
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-## Remove Feature Policy: lazyload
+## Remove feature policy: lazyload
 
 The lazyload feature policy was intended to allow developers to selectively
-control the `lazyload` attribute on `<iframe>` and `<img>` to provide more
+control the `lazyload` attribute on the `<iframe>` and `<img>` tags to provide more
 control over loading delay for embedded contents and images on a per origin
 basis. 
 
@@ -30,8 +30,14 @@ and the `<iframe>` `allow` attribute.
 [Chrome Platform Status](https://www.chromestatus.com/feature/5641405942726656) &#124;
 [Chromium Bug](https://crbug.com/869492)
 
+## Remove outputs from MediaStreamAudioDestinationNode
 
-## Remove Insecure Usage of DeviceMotionEvent
+According to the specification, the `MediaStreamAudioDestinationNode` in the Web Audio API should have no outputs. Chrome's implementation has a single output which has been removed.
+
+[Chrome Platform Status](https://www.chromestatus.com/feature/5702493226926080) &#124;
+[Chromium Bug](https://crbug.com/691806)
+
+## Remove insecure usage of DeviceMotionEvent
 
 Chromium has been showing deprecation warnings since 2015 whenever the API is
 used in a non-secure browsing context. Chrome now restricts the API to secure
@@ -43,7 +49,7 @@ with the overarching effort to deprecate powerful features on insecure origins.
 [Chromium Bug](https://crbug.com/932078)
 
 
-## Remove Insecure Usage of DeviceOrientationEvent
+## Remove insecure usage of DeviceOrientationEvent
 
 Chromium has been showing deprecation warnings since 2015 whenever the API is
 used in a non-secure browsing context. Chrome now restricts the API to secure
