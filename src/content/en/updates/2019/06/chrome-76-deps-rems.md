@@ -32,7 +32,9 @@ and the `<iframe>` `allow` attribute.
 
 ## Remove outputs from MediaStreamAudioDestinationNode
 
-According to the specification, the `MediaStreamAudioDestinationNode` in the Web Audio API should have no outputs. Chrome's implementation has a single output which has been removed.
+According to the specification, the `MediaStreamAudioDestinationNode` in the Web
+Audio API should have no outputs. Chrome's implementation has a single output
+which has been removed.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5702493226926080) &#124;
 [Chromium Bug](https://crbug.com/691806)
