@@ -130,8 +130,8 @@ Let's step through the code.
 
 First we parse our example page using the URL API. This is a neat trick I picked up from [Jeff
 Posnick](https://twitter.com/jeffposnick). Calling `new URL()` with the `location` object will
-return an absolute URL if the string passed in is relative (i.e. `/` will become `http://<Site
-Origin>/`).
+return an absolute URL if the string passed in is relative (i.e. `/` will become
+`https://example.com/`).
 
 We make the URL absolute so we can match it against window URL's later on.
 
