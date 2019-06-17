@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-06-17 #}
 {# wf_published_on: 2017-11-15 #}
 
 <style>
@@ -19,7 +19,7 @@ cached for a long time, precaching is the best approach.
 
 Precaching a file will ensure that a file is downloaded and cached before a
 service worker is installed, meaning that if your service worker is installed,
-your files will be cached.
+your files are cached.
 
 Workbox provides an easy way to precache files, ensuring that as your service
 worker changes, the precached files are maintained efficiently, only
@@ -46,7 +46,7 @@ versioning of files.
 ### Generating a Precache Manifest
 
 Most users of Workbox will generate the list of files to precache by using
-one of the following Workbox tools, although you can use any tools that outputs
+one of the following Workbox tools, although you can use any tool that outputs
 files with revisioning. Below is a list of tools that can generate this
 list of files.
 
