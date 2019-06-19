@@ -9,15 +9,6 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 {# wf_featured_snippet: Tests are critical because they find bugs and regressions, enforce better designs and make code easier to maintain. This month, we take a look at how to conduct thorough tests with Gerrit #}
 {# wf_blink_components: N/A #}
 
-<style>
-  body:not(.devsite-dark-code) pre.prettyprint.cc-bad {
-    background-color: #fff7f7;
-  }
-  body:not(.devsite-dark-code) pre.prettyprint.cc-good {
-    background-color: #f7fff7;
-  }
-</style>
-
 # The Chromium Chronicle: Code Coverage in Gerrit {: .page-title }
 
 **Episode 3:** June 2019
@@ -31,7 +22,9 @@ your tests are thorough.
 Chromium CLs can show a line-by-line breakdown of test coverage. You can
 use the code coverage trybot to ensure you only submit well-tested code.
 
-**Insert Image**
+<img src="/web/updates/images/2019/06/LEFT_TRYJOB.png.ext" class="attempt-left">
+<img src="/web/updates/images/2019/06/RIGHT_TRYJOB.png.ext" class="attempt-right">
+<div class="clearfix"></div>
 
 To see code coverage for a Chromium CL, trigger the code coverage trybot
 linux-coverage-rel:
@@ -40,7 +33,7 @@ Once the build finishes and code coverage data is processed successfully,
 look at the right column of the side by side diff view to see coverage
 information:
 
-**Insert Image**
+<img src="/web/updates/images/2019/06/CODE_DIFF.ext">
 
 The code coverage tool currently supports C/C++ code for Chrome on Linux;
 support for more platforms and more languages is in progress.
