@@ -33,7 +33,7 @@ Once the build finishes and code coverage data is processed successfully,
 look at the right column of the side by side diff view to see coverage
 information:
 
-<img src="/web/updates/images/2019/06/CODE_DIFF.ext">
+<img src="/web/updates/images/2019/06/CODE_DIFF.png.ext">
 
 The code coverage tool currently supports C/C++ code for Chrome on Linux;
 support for more platforms and more languages is in progress.
