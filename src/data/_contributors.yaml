@@ -2023,3 +2023,15 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
+
+skikuchi:
+  name:
+    given: Satoko
+    family: Kikuchi
+  org:
+    name: Graat
+  country: JP
+  role:
+    - translator
+  github: s-kic
+  twitter: s_kic
