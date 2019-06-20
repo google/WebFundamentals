@@ -164,6 +164,6 @@ option.
 
 <pre class="prettyprint js">
 workbox.setConfig({
-  debug: <true or false>
+  debug: &lt;true or false&gt;
 });
 </pre>
