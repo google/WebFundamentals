@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-06-06 #}
+{# wf_updated_on: 2019-06-14 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -55,12 +55,12 @@ const options = {
 registration.showNotification('Notification with Data', options);
 ```
 
-Inside a click handler the data can be accessed with `event.notification.data`.
+Inside a click handler, the data can be accessed with `event.notification.data`.
 
 ```js
 const notificationData = event.notification.data;
 console.log('');
-console.log('The data notification had the following parameters:');
+console.log('The notification data has the following parameters:');
 Object.keys(notificationData).forEach((key) => {
   console.log(`  ${key}: ${notificationData[key]}`);
 });
@@ -71,10 +71,10 @@ console.log('');
 
 One of the most common responses to a notification is to open a
 window / tab to a specific URL. We can do this with the
-[clients.openWindow()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/openWindow)
+[`clients.openWindow()`](https://developer.mozilla.org/en-US/docs/Web/API/Clients/openWindow)
 API.
 
-In our `notificationclick` event we'd run some kind like this:
+In our `notificationclick` event, we'd run some code like this:
 
 ```js
 const examplePage = '/demos/notification-examples/example-page.html';
@@ -82,8 +82,8 @@ const promiseChain = clients.openWindow(examplePage);
 event.waitUntil(promiseChain);
 ```
 
-In the next section we'll look at how to check if the page we want to direct the user to is
-already open or not. This way we can focus the open tab rather than opening new
+In the next section, we'll look at how to check if the page we want to direct the user to is
+already open or not. This way, we can focus the open tab rather than opening new
 tabs.
 
 ## Focus an existing window
@@ -96,8 +96,8 @@ is **only possible for pages on your origin**. This is because we can
 only see what pages are open that belong to our site. This prevents
 developers from being able to see all the sites their users are viewing.
 
-Taking the previous example, we'll alter the code to see if '/demos/notification-examples
-/example-page.html' is already open.
+Taking the previous example, we'll alter the code to see if
+`/demos/notification-examples/example-page.html` is already open.
 
 ```js
 const urlToOpen = new URL(examplePage, self.location.origin).href;
@@ -130,8 +130,8 @@ Let's step through the code.
 
 First we parse our example page using the URL API. This is a neat trick I picked up from [Jeff
 Posnick](https://twitter.com/jeffposnick). Calling `new URL()` with the `location` object will
-return an absolute URL if the string passed in is relative (i.e. '/' will become 'http://<Site
-Origin>/').
+return an absolute URL if the string passed in is relative (i.e. `/` will become
+`https://example.com/`).
 
 We make the URL absolute so we can match it against window URL's later on.
 
@@ -139,7 +139,7 @@ We make the URL absolute so we can match it against window URL's later on.
 const urlToOpen = new URL(examplePage, self.location.origin).href;
 ```
 
-Then we get a list of the `WindowClient` objects, which are the list of
+Then we get a list of the `WindowClient` objects, which is the list of the
 currently open tabs and windows. (Remember these are tabs for your origin only.)
 
 ```js
@@ -206,7 +206,7 @@ API which gives you access to all the currently visible notifications for your w
 
 Let's look at how we could use this API to implement the chat example.
 
-In our chat app, let's assume each notification has as some data which includes a username.
+In our chat app, let's assume each notification has some data which includes a username.
 
 The first thing we'll want to do is find any open notifications for a user with a specific
 username. We'll get `registration.getNotifications()` and loop over them and check the
@@ -231,7 +231,7 @@ const promiseChain = registration.getNotifications()
 The next step is to replace this notification with a new notification.
 
 In this fake message app, we'll track the number of new messages by adding a count to our new
-notifications data and increment it with each new notification.
+notification's data and increment it with each new notification.
 
 ```js
 .then((currentNotification) => {
@@ -269,9 +269,9 @@ notifications data and increment it with each new notification.
 });
 ```
 
-If there is a notification currently display we increment the message count and set the
+If there is a notification currently displayed, we increment the message count and set the
 notification title and body message accordingly. If there
-were no notifications, we create a new notification with a `newMessageCount` of 1.
+are no notifications, we create a new notification with a `newMessageCount` of 1.
 
 The result is that the first message would look like this:
 
@@ -283,7 +283,7 @@ A second notification would collapse the notifications into this:
 
 The nice thing with this approach is that if your user witnesses the
 notifications appearing one over the other, it'll look and feel more cohesive
-than just replacing with notification with the latest message.
+than just replacing the notification with the latest message.
 
 ## The exception to the rule
 
@@ -291,7 +291,7 @@ I've been stating that you **must** show a notification when you receive a push 
 true *most* of the time. The one scenario where you don't have to show a notification is when
 the user has your site open and focused.
 
-Inside your push event you can check whether you need to show a notification or not by
+Inside your push event, you can check whether you need to show a notification or not by
 examining the window clients and looking for a focused window.
 
 The code to getting all the windows and looking for a focused window looks like this:
@@ -320,7 +320,7 @@ function isClientFocused() {
 We use [`clients.matchAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Clients/matchAll)
 to get all of our window clients and then we loop over them checking the `focused` parameter.
 
-Inside our push event we'd use this function to decide if we need to show a notification:
+Inside our push event, we'd use this function to decide if we need to show a notification:
 
 ```js
 const promiseChain = isClientFocused()
@@ -345,7 +345,7 @@ what if you still want to let the user know that an event has occurred, but a no
 too heavy handed?
 
 One approach is to send a message from the service worker to the page, this way the web page
-can show a notification or update to the user informing them of the event. This is useful for
+can show a notification or an update to the user, informing them of the event. This is useful for
 situations when a subtle notification in the page is better and friendlier for the user.
 
 Let's say we've received a push, checked that our web app is currently focused,
@@ -380,7 +380,7 @@ navigator.serviceWorker.addEventListener('message', function(event) {
 });
 ```
 
-In this message listener you could do anything you want, show a custom UI on
+In this message listener, you could do anything you want, show a custom UI on
 your page or completely ignore the message.
 
 It's also worth noting that if you don't define a message listener in your web page, the
@@ -388,7 +388,7 @@ messages from the service worker will not do anything.
 
 ## Cache a page and open a window
 
-One scenario that is out of the scope of this book but worth discussing is that you can
+One scenario that is out of the scope of this guide but worth discussing is that you can
 improve the overall UX of your web app by caching web pages you expect users to visit after
 clicking on your notification.
 
@@ -397,7 +397,7 @@ but if you implement a `fetch` event listener, make sure you take
 advantage of it in your `push` event by caching the page and assets
 you'll need before showing your notification.
 
-For more information check out this [introduction to service workers
+For more information, check out this [introduction to service workers
 post](/web/fundamentals/getting-started/primers/service-workers).
 
 ## Feedback {: #feedback }
