@@ -3,12 +3,12 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox CLI.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-06-19 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with Workbox CLI {: .page-title }
 
-This page explains how to use the Workbox Command Line Interface (a.k.a the
+This page explains how to use the Workbox Command Line Interface (a.k.a. the
 Workbox CLI) to generate the list of files to precache and add it to your
 service worker.
 
@@ -20,8 +20,8 @@ Workbox CLI.</aside>
 
 ## Run the Wizard
 
-The next step is to run the wizard. This will setup the CLi to work for your
-project. The wizard will ask a set of questions about your projects file
+The next step is to run the wizard. This will setup the CLI to work for your
+project. The wizard will ask a set of questions about your project's file
 structure which'll be used to determine the files that should be precached.
 
 Start the wizard like so:
@@ -39,8 +39,8 @@ this line of code to your service worker file:
 workbox.precaching.precacheAndRoute([]);
 ```
 
-This piece of code will be replaced by the CLI with the list of files (See
-the next section).
+This piece of code will be replaced by the CLI with the list of files. (See
+the next section.)
 
 ## Inject a Manifest with the CLI
 
