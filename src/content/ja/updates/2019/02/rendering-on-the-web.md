@@ -42,15 +42,15 @@ book_path: /web/updates/_book.yaml
 
 *サーバーレンダリングはナビゲーションに応じたサーバー上のページのために、完全なHTMLを生成します。これはブラウザが応答を受ける前に処理されるため、データフェッチとクライアント上の成形による追加のラウンドトリップを回避します。*
 
-サーバーレンダリングは一般的に、迅速な [First Paint](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint) (FP) と [First
-Contentful Paint](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint) (FCP) を生み出します。
-ページのロジックとレンダリングをサーバー上で実行すると、Javascriptをクライアントへ大量送信することが回避できます。これは短時間の [Time to Interactive](https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive) (TTI) を達成するのを助けます。サーバーレンダリングは、テキストとリンクをユーザーのブラウザへ送信するだけなので理にかなっています。
+サーバーレンダリングは一般的に、迅速な [First Paint](/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint) (FP) と [First
+Contentful Paint](/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint) (FCP) を生み出します。
+ページのロジックとレンダリングをサーバー上で実行すると、Javascriptをクライアントへ大量送信することが回避できます。これは短時間の [Time to Interactive](/web/tools/lighthouse/audits/time-to-interactive) (TTI) を達成するのを助けます。サーバーレンダリングは、テキストとリンクをユーザーのブラウザへ送信するだけなので理にかなっています。
 このアプローチは、広範囲のデバイスやネットワークの状態に適しており、ストリーミングドキュメントのパースのように興味深いブラウザの最適化が見られます。
 
 <img src="../../images/2019/02/rendering-on-the-web/server-rendering-tti.png" alt="Diagram showing server rendering and JS execution affecting FCP and TTI" width="350">
 
 サーバーレンダリングでは、ユーザーがサイトを使用可能になる前、CPUの制約によるJavascriptの処理過程において待たされることがありません。
-[サードパーティのJS](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/)が回避できない時でも、サーバーレンダリングを使用すると、あなたのファーストパーティーの [JSのコスト](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)を削減して、残りの部分ではより多くの “[バジェット](https://medium.com/@addyosmani/start-performance-budgeting-dabde04cf6a3)” を得ることができます。
+[サードパーティのJS](/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/)が回避できない時でも、サーバーレンダリングを使用すると、あなたのファーストパーティーの [JSのコスト](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)を削減して、残りの部分ではより多くの “[バジェット](https://medium.com/@addyosmani/start-performance-budgeting-dabde04cf6a3)” を得ることができます。
 しかし、このアプローチには主な欠点が1つあります。サーバー上でページを生成するには時間を要するため、しばしば [Time to First Byte](https://en.wikipedia.org/wiki/Time_to_first_byte) (TTFB) の時間が遅くなるのです。
 
 サーバーレンダリングが十分かどうかはあなたが積んできた経験に大きく依存します。
@@ -108,8 +108,8 @@ Reactでは、renderToString() が同期処理でシングルスレッドのた�
 もしあなたが追加の足掛かりを置ければ、サーバーレンダリング ＋ [HTMLキャッシュ](https://freecontent.manning.com/caching-in-react/)は、サーバーのレンダリング時間をがっつり減らすことが可能です。
 パーソナライズが必要なページは、静的レンダリングで上手く動作しないタイプのリクエストの具体例です。
 
-サーバーレンダリングもまた、[PWA](https://developers.google.com/web/progressive-web-apps/) を構築する際に興味深い提案をすることができます。
-フルページの[サービスワーカ](https://developers.google.com/web/fundamentals/primers/service-workers/)キャッシュを使用するのが良いでしょうか？それとも個々のコンテンツをサーバーレンダリングするのが良いでしょうか？
+サーバーレンダリングもまた、[PWA](/web/progressive-web-apps/) を構築する際に興味深い提案をすることができます。
+フルページの[サービスワーカ](/web/fundamentals/primers/service-workers/)キャッシュを使用するのが良いでしょうか？それとも個々のコンテンツをサーバーレンダリングするのが良いでしょうか？
 
 ## クライアントサイド レンダリング (CSR) {: #csr }
 
@@ -118,15 +118,15 @@ Reactでは、renderToString() が同期処理でシングルスレッドのた�
 クライアントサイド レンダリングは、取得が難しく、モバイル用に高速を保つことも難しい場合があります。
 もし、最小の作業で[JavaScriptのバジェット](https://mobile.twitter.com/HenrikJoreteg/status/1039744716210950144)を抑え、可能な限り少ない[RTT（往復遅延時間）](https://en.wikipedia.org/wiki/Round-trip_delay_time)で価値を提供すれば、純粋なサーバーレンダリングのパフォーマンスへ近づくことができます。
 [HTTP/2 サーバー通知](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/)、または `<link rel=preload>` を使うことで、クリティカルなスクリプトとデータをすぐに配信することができます。これにより、パーサーはより早く動きます。
-[PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) のようなパターンは、初期状態とその後のナビゲーションが瞬時に感じられるようにするため、その価値が評価されます。
+[PRPL](/web/fundamentals/performance/prpl-pattern/) のようなパターンは、初期状態とその後のナビゲーションが瞬時に感じられるようにするため、その価値が評価されます。
 
 <img src="../../images/2019/02/rendering-on-the-web/client-rendering-tti.png" alt="Diagram showing client-side rendering affecting FCP and TTI" width="500">
 
 クライアントサイド レンダリングの主な欠点は、アプリケーションが大きくなるにつれ、JavaScriptの量も増える傾向にあることです。これは、処理能力を奪いあい、大抵はページのコンテンツをレンダリングする前に処理しなければならないため、新しいJavaScriptライブラリ、polyfill、サードパーティーのコードの追加は特に難しくなります。
-経験上、大きいJavaScriptをバンドルするCSRの場合は、[積極的なコード分割](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting/)を心がけ、必ずJavaScriptを遅延ロードするようにします ー「必要な時に必要なものだけを」
+経験上、大きいJavaScriptをバンドルするCSRの場合は、[積極的なコード分割](/web/fundamentals/performance/optimizing-javascript/code-splitting/)を心がけ、必ずJavaScriptを遅延ロードするようにします ー「必要な時に必要なものだけを」
 経験によると、ほとんど対話性がない、または、全く対話可能ではない場合、サーバーレンダリングはこれらの問題のよりスケーラブルな解決方法を提示することができます。
 
-シングルページアプリケーションを構築する人々にとって、ほとんどのページで共有されているユーザーインターフェースの中心部分を判別することは、[アプリケーション シェル キャッシング](https://developers.google.com/web/updates/2015/11/app-shell)の技術が適用できることを意味します。
+シングルページアプリケーションを構築する人々にとって、ほとんどのページで共有されているユーザーインターフェースの中心部分を判別することは、[アプリケーション シェル キャッシング](/web/updates/2015/11/app-shell)の技術が適用できることを意味します。
 サービスワーカーと組み合わせると、再訪問時のパフォーマンスを劇的に向上させることができます。
 
 ## リハイドレーションによるサーバーレンダリングと CSRの組み合わせ {: #rehydration }
@@ -182,7 +182,7 @@ Reactでは、[renderToNodeStream()](https://reactjs.org/docs/react-dom-server.h
 
 ### トライソモルフィック レンダリング  {: #trisomorphic }
 
-もしも[サービスワーカー](https://developers.google.com/web/fundamentals/primers/service-workers/)をあなたのために選択するなら、“トライソモルフィック” レンダリングも面白いかもしれません。
+もしも[サービスワーカー](/web/fundamentals/primers/service-workers/)をあなたのために選択するなら、“トライソモルフィック” レンダリングも面白いかもしれません。
 これは initial/non-JS ナビゲーションのためにストリーミング サーバー レンダリングを使うことができる時のテクニックで、それら（initial/non-JS）がインストールされた後、あなたのサービスワーカーはナビゲーションのためのHTMLレンダリングに取りかかります。
 これはキャッシュコンポーネントと最新のテンプレートを保持し、同一セッション内の新規ビューをレンダリングするためのSPAスタイルナビゲーションを有効にします。
 このアプローチは、同じテンプレートを生成したり、サーバー、クライアントページ、サーバーワーカーの間でルーティングコードを共有できる場合に適しています。
