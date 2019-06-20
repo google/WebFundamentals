@@ -22,8 +22,8 @@ your tests are thorough.
 Chromium CLs can show a line-by-line breakdown of test coverage. You can
 use the code coverage trybot to ensure you only submit well-tested code.
 
-<img src="/web/updates/images/2019/06/LEFT_TRYJOB.png.ext" class="attempt-left">
-<img src="/web/updates/images/2019/06/RIGHT_TRYJOB.png.ext" class="attempt-right">
+<img src="/web/updates/images/2019/06/LEFT_TRYJOB.jpg" class="attempt-left">
+<img src="/web/updates/images/2019/06/RIGHT_TRYJOB.jpg" class="attempt-right">
 <div class="clearfix"></div>
 
 To see code coverage for a Chromium CL, trigger the code coverage trybot
@@ -33,7 +33,7 @@ Once the build finishes and code coverage data is processed successfully,
 look at the right column of the side by side diff view to see coverage
 information:
 
-<img src="/web/updates/images/2019/06/CODE_DIFF.png.ext">
+<img src="/web/updates/images/2019/06/CODE_DIFF.jpg">
 
 The code coverage tool currently supports C/C++ code for Chrome on Linux;
 support for more platforms and more languages is in progress.
