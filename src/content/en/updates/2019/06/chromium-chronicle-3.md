@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-06-18 #}
+{# wf_updated_on: 2019-06-20 #}
 {# wf_published_on: 2019-06-25 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
@@ -46,7 +46,7 @@ expand it to more platforms.
 
 Want to learn more? Check out the coverage in Gerrit [demo CL][demo-cl]
 and play around with code coverage in Gerrit, or see the full
-[codebase coverage dashboard][dashboard], broken down by directories and components. 
+[codebase coverage dashboard][dashboard], broken down by directories and components.
 
 ## Share your feedback
 
@@ -55,3 +55,7 @@ Have any feedback? Contact code-coverage@chromium.org or [file a bug][file-bug].
 [demo-cl]: https://chromium-review.googlesource.com/c/chromium/src/+/1455344
 [dashboard]: https://analysis.chromium.org/p/chromium/coverage
 [file-bug]: https://bugs.chromium.org/p/chromium/issues/entry?labels=Pri-3&status=Unconfirmed&components=Tools%3ECodeCoverage&comment=what%27s%20the%20bug%20or%20feature?
+
+{% include "web/_shared/helpful.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
