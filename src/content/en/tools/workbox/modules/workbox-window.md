@@ -591,7 +591,7 @@ controlling the page:
 
 ## Window to service worker communication
 
-Most advanced service worker usage involves a lost of messaging between the
+Most advanced service worker usage involves a lots of messaging between the
 service worker and the window. The `Workbox` class helps with this as well by
 providing a `messageSW()` method, which will `postMessage()` the instance's
 registered service worker and await a response.
