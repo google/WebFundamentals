@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2019-06-11 #}
+{# wf_updated_on: 2019-06-13 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -15,14 +15,14 @@ _This article contains contributions from Jeff Posnick and
 [Peter Kotwicz](https://groups.google.com/a/chromium.org/forum/#!msg/chromium-discuss/NUjaM4QtFrU/gTJ1kSONBAAJ)_.
 
 [Add to Home Screen](/web/fundamentals/app-install-banners/) on Android does
-more than just add the Progressive Web App to the users Home Screen. Chrome
+more than just add the Progressive Web App to the user's Home Screen. Chrome
 automatically generates and installs a special APK of your app. We sometimes
 refer to this as a **WebAPK**. Being installed via an APK makes it possible
 for your app to show up in the app launcher, in Android's app settings and
 to register a set of intent filters.
 
 To
-[generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README)
+[generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README),
 Chrome looks at the [web app manifest](/web/fundamentals/web-app-manifest/) and
 other metadata. [When an update to the manifest is detected](#update-webapk),
 Chrome will need to generate a new APK.
@@ -30,7 +30,7 @@ Chrome will need to generate a new APK.
 Note: Since the WebAPK is regenerated each time an updated manifest is detected,
 we recommend changing it only when necessary. Don't use the manifest to store
 user specific identifiers, or other other data that might be customized.
-Frequently changing the manifest will increase overall install time.
+Frequently changing the manifest will increase the overall install time.
 
 ## Android intent filters
 
@@ -69,7 +69,7 @@ If the user clicks on a link within an installed app to
 in the Progressive Web App.
 
 Note: Navigating directly to `https://example.com/app/` from the address bar in
-Chrome will work exactly as the same as it does for native apps that have an
+Chrome will work exactly the same as it does for native apps that have an
 intent filter. Chrome assumes the user <b>intended</b> to visit the site and
 will open this site.
 
@@ -87,7 +87,7 @@ Consider the following partial `manifest.json`:
 
 ```text
 "scope": "/app/",
-"start_url": "/",
+"start_url": "/app/",
 "display": "standalone",
 ```
 
@@ -122,7 +122,7 @@ the scope of your app.
 ## Managing permissions
 
 Permissions work in the same way as other web apps and cannot be requested at
-install time. Instead they must be requested at run time, ideally only when
+install time. Instead, they must be requested at run time, ideally only when
 you really need them. For example, don't ask for camera permission on first
 load, but instead wait until the user attempts to take a picture.
 
@@ -158,8 +158,8 @@ There are a number of rules that govern how these update checks are triggered:
   an update.
 - Clearing Chrome's data (via "CLEAR ALL DATA" in Android settings) resets the update timer.
 - Chrome will only update a WebAPK if the Web Manifest URL does not change. If
-  you change the web page from referencing `<link rel="manifest.json">` to
-  reference `<link rel="manifest2.json">` the WebAPK will no longer update.
+  you change the web page from referencing `/manifest.json` to
+  reference `/manifest2.json`, the WebAPK will no longer update.
   (Don't do this!)
 - Chrome will only update a WebAPK if the WebAPK is not running. Moving the
   WebAPK to the background is not sufficient if it keeps running.
@@ -169,7 +169,7 @@ There are a number of rules that govern how these update checks are triggered:
   connection.
 
 Note: The update interval was reduced to 1 day (from 3 days) in Chrome 76.
-For behavior in Chrome 76 and earlier, refer to
+For behavior in Chrome 75 and earlier, refer to
 [Updating WebAPKs More Frequently][webapk-update-cr75].
 
 For Chrome 76 and later, here's a hypothetical example of how WebAPK update
@@ -185,7 +185,7 @@ scheduling works over time:
   is the first WebAPK launch)
 - **January 10**: Launch WebAPK → Check whether update is needed (1 day has passed)
 
-See
+See the
 [`UpdateReason`](https://cs.chromium.org/chromium/src/chrome/browser/android/webapk/webapk.proto?l=35)
 enum in `message WebApk` for the reasons a WebAPK may be updated.
 
@@ -288,7 +288,7 @@ graphics.
   <dd>No.</dd>
 
   <dt>
-    I am developer of another browser on Android, can I have this seamless
+    I am a developer of another browser on Android, can I have this seamless
     install process?
   </dt>
   <dd>
