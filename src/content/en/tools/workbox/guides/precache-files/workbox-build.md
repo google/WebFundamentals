@@ -13,7 +13,7 @@ list of files to precache and add it to your service worker.
 
 <aside class="note"><b>Note:</b> You'll need to have
 <a href="https://nodejs.org/en/download/">Node installed</a> to use
-`workbox-build`.</aside>
+<code>workbox-build</code>.</aside>
 
 {% include "web/tools/workbox/guides/_shared/install-workbox-build.html" %}
 
