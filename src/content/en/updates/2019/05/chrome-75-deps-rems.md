@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 75 to help you plan.
 
-{# wf_updated_on: 2019-05-02 #}
+{# wf_updated_on: 2019-06-21 #}
 {# wf_published_on: 2019-05-02 #}
 {# wf_tags: deprecations,removals,chrome75 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
-{# wf_featured_image: /web/updates/images/generic/warning.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 75 to help you plan. #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
@@ -26,6 +26,10 @@ setting `overflow: hidden`.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5731653806718976) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=940652)
+
+## Deprecations
+
+There are no new deprecations in this version of Chrome. {% include "web/updates/_shared/deprecations.html" %}
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
