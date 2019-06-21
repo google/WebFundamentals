@@ -29,7 +29,8 @@ setting `overflow: hidden`.
 
 ## Deprecations
 
-There are no new deprecations in this version of Chrome. {% include "web/updates/_shared/deprecations.html" %}
+There are no new deprecations in this version of Chrome.
+{% include "web/updates/_shared/deprecations.html" %}
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
