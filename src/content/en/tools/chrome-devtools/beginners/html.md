@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-12-19 #}
+{# wf_updated_on: 2019-06-20 #}
 {# wf_published_on: 2018-08-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -77,7 +77,7 @@ You're going to build your site in an online code editor called Glitch.
        </figcaption>
      </figure>
 
-1. Click **Remix This**. Glitch creates a copy of the project that you can 
+1. Click **Remix Project**. Glitch creates a copy of the project that you can 
    edit and randomly generates a new name for the project. The content is
    the same as before.
 
