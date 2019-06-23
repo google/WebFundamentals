@@ -169,8 +169,8 @@ performance gain.
           return [];
         }
         layout(children, constraintSpace, styleMap) {
-            Const width = constraintSpace.width;
-            Const height =constraintSpace.height;
+            const width = constraintSpace.width;
+            const height = constraintSpace.height;
             for (let child of children) {
                 const x = Math.random()*width;
                 const y = Math.random()*height;
