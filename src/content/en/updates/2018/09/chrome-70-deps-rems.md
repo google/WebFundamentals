@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 70 to help you plan.
 
-{# wf_updated_on: 2019-06-21 #}
+{# wf_updated_on: 2019-06-24 #}
 {# wf_published_on: 2018-09-14 #}
 {# wf_tags: deprecations,removals,chrome70 #}
 {# wf_blink_components: Blink>HTML,Blink>GamepadAPI,Blink>SecurityFeature,Internals>SpeechSynthesis #}
@@ -71,7 +71,7 @@ Custom Elements v1 have been [implemented in
 Chrome](https://www.chromestatus.com/feature/4696261944934400) since version
 54, which shipped in October 2016. Custom Elements v0 was an experimental
 version not implemented in other browsers. As such it is now deprecated with
-removal expected in Chrome 73, around April 2019.
+removal expected in Chrome 80, around February 2020.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4642138092470272) &#124;
