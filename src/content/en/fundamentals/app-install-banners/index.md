@@ -136,10 +136,6 @@ the next page navigation.
 
 <<_mini-info-bar.md>>
 
-## Feedback {: .hide-from-toc }
-
-{% include "web/_shared/helpful.html" %}
-
 <div class="clearfix"></div>
 
 ## Determine if the app was successfully installed {: #appinstalled }
@@ -233,3 +229,7 @@ The easiest way to test if the `beforeinstallprompt` event will be fired, is
 to use [Lighthouse](/web/tools/lighthouse/) to audit your app, and check the
 results of the [User Can Be Prompted To Install The Web App](/web/tools/lighthouse/audits/install-prompt)
 test.
+
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
