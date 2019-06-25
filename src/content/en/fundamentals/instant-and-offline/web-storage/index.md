@@ -106,6 +106,7 @@ Model</th>
 Support</th>
     <th>Transactions</th>
     <th>Sync/Async</th>
+    <th>Maintained</th>
   </thead>
   <tbody>
     <tr>
@@ -115,6 +116,7 @@ Support</th>
       <td><a href="http://caniuse.com/#feat=filesystem">52%</a></td>
       <td>No</td>
       <td>Async</td>
+      <td>No</td>
     </tr>
     <tr>
       <td>
@@ -127,6 +129,7 @@ Support</th>
       <td><a href="http://caniuse.com/#feat=namevalue-storage">93%</a></td>
       <td>No</td>
       <td>Sync</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td>
@@ -139,6 +142,7 @@ Support</th>
       <td><a href="http://caniuse.com/#feat=namevalue-storage">93%</a></td>
       <td>No</td>
       <td>Sync</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">Cookies</a></td>
@@ -147,6 +151,7 @@ Support</th>
       <td>100%</td>
       <td>No</td>
       <td>Sync</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td><a href="https://www.w3.org/TR/webdatabase/">WebSQL</a></td>
@@ -155,6 +160,7 @@ Support</th>
       <td><a href="http://caniuse.com/#feat=sql-storage">77%</a></td>
       <td>Yes</td>
       <td>Async</td>
+      <td>No</td>
     </tr>
     <tr>
       <td>
@@ -165,6 +171,7 @@ Support</th>
       <td><a href="http://caniuse.com/#feat=serviceworkers">60%</a></td>
       <td>No</td>
       <td>Async</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td>
@@ -175,6 +182,7 @@ Support</th>
       <td><a href="http://caniuse.com/#feat=indexeddb">83%</a></td>
       <td>Yes</td>
       <td>Async</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td><a href="https://cloud.google.com/storage/">cloud storage</a></td>
@@ -183,6 +191,7 @@ Support</th>
       <td>100%</td>
       <td>No</td>
       <td>Both</td>
+      <td>Yes</td>
     </tr>
   <tbody>
 </table>
