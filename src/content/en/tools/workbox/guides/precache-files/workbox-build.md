@@ -3,17 +3,17 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with workbox-build.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-05-18 #}
+{# wf_updated_on: 2019-06-20 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with workbox-build {: .page-title }
 
-This page explains how to use the workbox-build Node module to generate the
+This page explains how to use the `workbox-build` Node module to generate the
 list of files to precache and add it to your service worker.
 
 <aside class="note"><b>Note:</b> You'll need to have
 <a href="https://nodejs.org/en/download/">Node installed</a> to use
-workbox-build.</aside>
+<code>workbox-build</code>.</aside>
 
 {% include "web/tools/workbox/guides/_shared/install-workbox-build.html" %}
 
@@ -26,12 +26,12 @@ this line of code to your service worker file:
 workbox.precaching.precacheAndRoute([]);
 ```
 
-This piece of code will be replaced by workbox-build with the list of files (See
-the next section).
+This piece of code will be replaced by `workbox-build` with the list of files. (See
+the next section.)
 
 ## Call <code>injectManifest()</code>
 
-The final step is to add workbox-build to your build process or script:
+The final step is to add `workbox-build` to your build process or script:
 
 ```javascript
 const workboxBuild = require('workbox-build');
@@ -56,7 +56,7 @@ const buildSW = () => {
 buildSW();
 ```
 
-This command will create a list of files to precache, read in your service
+This code will create a list of files to precache, read in your service
 worker file, inject the manifest and output a new service worker file with
 the manifest. The result should look something like this:
 
@@ -106,7 +106,7 @@ gulp.task('service-worker', () => {
 });
 ```
 
-After this you can simply run the task via `gulp service-worker` or add it
+After this, you can simply run the task via `gulp service-worker` or add it
 to the end of another Gulp task.
 
 {% include "web/tools/workbox/guides/_shared/precache-config.html" %}
