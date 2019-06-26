@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 72 to help you plan.
 
-{# wf_updated_on: 2019-06-21 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2018-12-18 #}
 {# wf_tags: deprecations,removals,chrome72 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
@@ -61,7 +61,7 @@ downloaded rather than rendered in the browser.
 
 ## Deprecations
 
-Current deprecations are listed below. {% include "web/updates/_shared/deprecations.html" %}
+{% include "web/updates/_shared/deprecations.html" %}
 
 ### Deprecate TLS 1.0 and TLS 1.1
 

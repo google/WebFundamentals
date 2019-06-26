@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 71 to help you plan.
 
-{# wf_updated_on: 2019-06-21 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2018-10-29 #}
 {# wf_tags: deprecations,removals,chrome71 #}
 {# wf_blink_components: Blink>Storage>CacheStorage,Blink>ServiceWorker,Internals>SpeechSynthesis,Blink>Animation,Blink>MediaStream #}
@@ -94,8 +94,7 @@ and has wider support.
 
 ## Deprecations
 
-There are no new deprecations in this version of Chrome.
-{% include "web/updates/_shared/deprecations.html" %}
+{% include "web/updates/_shared/no-new-deprecations.html" %}
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 

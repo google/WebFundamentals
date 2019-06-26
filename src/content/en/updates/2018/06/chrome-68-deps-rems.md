@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 68 to help you plan.
 
-{# wf_updated_on: 2019-06-21 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2018-06-08 #}
 {# wf_tags: deprecations,removals,chrome68 #}
 {# wf_blink_components: Blink>CSS,Blink>CSS>Filters,Blink>Input,Blink>WebGL #}
@@ -57,7 +57,7 @@ Group and support for it is now removed from Chrome.
 
 ## Deprecations
 
-Current deprecations are listed below. {% include "web/updates/_shared/deprecations.html" %}
+{% include "web/updates/_shared/deprecations.html" %}
 
 ### Deprecate and Remove Negative Brightness Values in Filter
 

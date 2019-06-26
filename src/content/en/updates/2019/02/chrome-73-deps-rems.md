@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 73 to help you plan.
 
-{# wf_updated_on: 2019-06-21 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2019-02-07 #}
 {# wf_tags: deprecations,removals,chrome73 #}
 {# wf_blink_components: Blink>Storage>WebSQL,Blink>HTML,Blink #}
@@ -44,7 +44,7 @@ version 73, Chrome no longer does this either.
 
 ## Deprecations
 
-Current deprecations are listed below. {% include "web/updates/_shared/deprecations.html" %}
+{% include "web/updates/_shared/deprecations.html" %}
 
 ### Deprecate 'drive-by downloads' in sandboxed iframes
 

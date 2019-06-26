@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 74 to help you plan.
 
-{# wf_updated_on: 2019-06-21 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2019-03-22 #}
 {# wf_tags: deprecations,removals,chrome74 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
@@ -42,7 +42,7 @@ or not the popup blocker is enabled.
 
 ## Deprecations
 
-Current deprecations are listed below. {% include "web/updates/_shared/deprecations.html" %}
+New deprecations for this version of Chrome are listed below. {% include "web/updates/_shared/deprecations.html" %}
 
 ### Deprecate drive-by downloads in sandboxed iframes
 

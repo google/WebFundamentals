@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 69 to help you plan.
 
-{# wf_updated_on: 2019-06-21 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2018-08-02 #}
 {# wf_tags: deprecations,removals,chrome69 #}
 {# wf_blink_components: Internals>Media>Source,Blink>Input,Blink>WindowDialog #}
@@ -50,7 +50,6 @@ removed in Chrome 64, and 56 respectively, the abuse has been moving to
 
 ## Deprecations
 
-There are no new deprecations in this version of Chrome. 
 {% include "web/updates/_shared/deprecations.html" %}
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
