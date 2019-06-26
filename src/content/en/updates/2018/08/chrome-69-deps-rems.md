@@ -6,7 +6,7 @@ description: A round up of the deprecations and removals in Chrome 69 to help yo
 {# wf_published_on: 2018-08-02 #}
 {# wf_tags: deprecations,removals,chrome69 #}
 {# wf_blink_components: Internals>Media>Source,Blink>Input,Blink>WindowDialog #}
-{# wf_featured_image: /web/updates/images/generic/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 69 to help you plan.#}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}

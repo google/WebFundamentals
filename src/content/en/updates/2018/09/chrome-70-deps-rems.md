@@ -6,7 +6,7 @@ description: A round up of the deprecations and removals in Chrome 70 to help yo
 {# wf_published_on: 2018-09-14 #}
 {# wf_tags: deprecations,removals,chrome70 #}
 {# wf_blink_components: Blink>HTML,Blink>GamepadAPI,Blink>SecurityFeature,Internals>SpeechSynthesis #}
-{# wf_featured_image: /web/updates/images/generic/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 70 to help you plan.#}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}

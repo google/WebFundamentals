@@ -6,7 +6,7 @@ description: A round up of the deprecations and removals in Chrome 72 to help yo
 {# wf_published_on: 2018-12-18 #}
 {# wf_tags: deprecations,removals,chrome72 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
-{# wf_featured_image: /web/updates/images/generic/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 72 to help you plan.#}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}

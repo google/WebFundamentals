@@ -6,7 +6,7 @@ description: A round up of the deprecations and removals in Chrome 73 to help yo
 {# wf_published_on: 2019-02-07 #}
 {# wf_tags: deprecations,removals,chrome73 #}
 {# wf_blink_components: Blink>Storage>WebSQL,Blink>HTML,Blink #}
-{# wf_featured_image: /web/updates/images/generic/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 73 to help you plan.#}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}

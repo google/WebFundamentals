@@ -6,7 +6,7 @@ description: A round up of the deprecations and removals in Chrome 71 to help yo
 {# wf_published_on: 2018-10-29 #}
 {# wf_tags: deprecations,removals,chrome71 #}
 {# wf_blink_components: Blink>Storage>CacheStorage,Blink>ServiceWorker,Internals>SpeechSynthesis,Blink>Animation,Blink>MediaStream #}
-{# wf_featured_image: /web/updates/images/generic/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 71 to help you plan.#}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}

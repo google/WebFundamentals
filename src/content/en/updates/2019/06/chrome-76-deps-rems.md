@@ -6,7 +6,7 @@ description: A round up of the deprecations and removals in Chrome 76 to help yo
 {# wf_published_on: 2019-06-21 #}
 {# wf_tags: deprecations,removals,chrome76 #}
 {# wf_blink_components: Blink>FeaturePolicy,Blink>WebAudio,Blink>Sensor>DeviceOrientation #}
-{# wf_featured_image: /web/updates/images/generic/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 76 to help you plan. #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
