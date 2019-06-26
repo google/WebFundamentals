@@ -22,7 +22,7 @@ description: 스크롤은 모바일 웹사이트에서 유저의 행위라고 �
   </iframe>
 </div>
 
-## The Intervention
+## 중재
 
 Our goal with this change is to reduce the time it takes to update the display
 after the user starts scrolling by wheel or touchpad without developers needing
