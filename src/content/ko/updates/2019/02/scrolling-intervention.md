@@ -24,15 +24,7 @@ description: 스크롤은 모바일 웹사이트에서 유저의 행위라고 �
 
 ## 중재
 
-Our goal with this change is to reduce the time it takes to update the display
-after the user starts scrolling by wheel or touchpad without developers needing
-to change code. Our metrics show that 75% of the `wheel` and `mousewheel` event
-listeners that are registered on root targets (window, document, or body) do
-not specify any values for the passive option and more than 98% of such
-listeners do not call preventDefault(). In Chrome 73 we are changing the
-`wheel` and `mousewheel` listeners registered on root targets (window,
-document, or body) to be passive by default. It means that an event listener
-like:
+저희가 추구하는 바는 개발자들이 코드를 따로 수정하지 않더라도 사용자가 터치패드나 마우스 휠로 스크롤을 했을 때 다음 화면이 나타나는 시간을 단축시키는 것입니다. 저희 통계 지표로는 75%의 `wheel`과 `mousewheel` 이벤트 리스너는 패시브 옵션에 아무런 값도 할당하지 않은 최상위 객체에 등록이 되어있었고(window, document, body 등) 이러한 리스너들의 98%는 preventDefault()를 호출하지 않는 것으로 확인됐습니다. Chrome 73 버전에서는 `wheel`과 `mousewheel` 리스너를 최상위 객체(window, document, body 등)에 등록하되, 기본적으로 패시브 옵션이 적용될 수 있도록 수정했습니다. 이제 이벤트 리스너는 다음과 같은 맥락으로 볼 수 있습니다:
 
 ```js
 window.addEventListener("wheel", func);
