@@ -85,22 +85,21 @@ Absolute, fixed 배치는 W3C 사양을 보다 더 준수하며 다른 브라우
 
 ## Right-to-left (RTL) 언어 및 수직 쓰기 모드
 
-LayoutNG was designed from the ground up to support vertical writing modes
-and RTL languages, including bidirectional content.
+LayoutNG는 처음부터 양방향 콘텐츠를 포함하여 수직 쓰기 모드와 RTL 언어를 지원하도록 설계되었습니다.
 
-### Bidirectional text
+### 양방향 텍스트
 
 LayoutNG는 [The Unicode Standard](https://unicode.org/standard/standard.html)에서 정의한 최신 양방향 알고리즘을 지원합니다.
 이 업데이트는 다양한 렌더링 오류를 해결할 뿐 아니라, paired bracket 지원 등의 누락된 기능을 포함합니다.
 ([Chromium bug #302469](https://crbug.com/302469)를 참조하세요.)
 
-#### Orthogonal flows
+#### 직교 흐름
 
 LayoutNG는 수직 흐름 레이아웃의 정확도를 향상시킵니다. 예를 들어,
 absolute 배치된 요소의 위치 및 직교 흐름 박스의 크기(특히 백분율을 사용하는 경우)를 조정하면,
 W3C Test Suites의 1,258개 테스트 중 **과거의 레이아웃 엔진에서 실패한 103개의 테스트가 LayoutNG에서 통과합니다.**
 
-#### Intrinsic sizing
+#### 본질적인 크기 조정
 
 직교 쓰기 모드의 하위에 블록을 포함하면 본질적인 크기가 올바르게 계산됩니다.
 
@@ -112,7 +111,7 @@ W3C Test Suites의 1,258개 테스트 중 **과거의 레이아웃 엔진에서 
 LayoutNG에서 텍스트는 단락 레벨에서 배열한 후 다음 행으로 분할합니다.
 이를 통해 더 나은 성능, 고품질의 텍스트 렌더링 및 일관된 줄바꿈이 가능해집니다. 가장 눈에 띄는 차이는 아래에 자세히 설명합니다.
 
-#### Joining across element boundaries
+#### 요소 경계를 넘어서 결합
 
 일부 스크립트에서는 인접한 특정 문자를 시각적으로 결합할 수 있습니다. 
 아랍어에서 이 예제 확인해보세요:
@@ -216,7 +215,7 @@ Size-to-content(인라인 블록 같은) 요소의 경우 현재 레이아웃 �
 </figure>
 <div class="clearfix"></div>
 
-## Further information
+## 추가 정보
 
 - [LayoutNG README](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/core/layout/ng/README.md)
 - [Layout NG design document](https://docs.google.com/document/d/1uxbDh4uONFQOiGuiumlJBLGgO4KDWB8ZEkp7Rd47fw4/)
