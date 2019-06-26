@@ -42,7 +42,7 @@ or not the popup blocker is enabled.
 
 ## Deprecations
 
-New deprecations for this version of Chrome are listed below. {% include "web/updates/_shared/deprecations.html" %}
+{% include "web/updates/_shared/deprecations.html" %}
 
 ### Deprecate drive-by downloads in sandboxed iframes
 
