@@ -82,7 +82,7 @@ Two new permissions for copy and paste were added to the
 The `clipboard-write permission` is granted automatically to pages when they are the active tab.
 The `clipboard-read permission` must be requested, which you can do by trying to read data from the clipboard.
 Attempting to read or write clipboard data will automatically prompt the user for permission
- if it hasn not already been granted.
+if it has not already been granted.
 
 ```js
 const permissionStatus = await navigator.permissions.query({
@@ -124,16 +124,16 @@ try {
 try {
   await navigator.permissions.request({name: 'clipboard-read'});
   const clipboardItems = await navigator.clipboard.read();
-  clipboardItems.forEach((clipboardItem) => {
+  for (const clipboardItem of clipboardItems) {
     try {
-      clipboardItem.types.forEach(async (type) => {
+      for (const type of clipboardItem.types) {
         const blob = await clipboardItem.getType(type);
         console.log(URL.createObjectURL(blob));
-      });
+      }
     } catch (e) {
       console.error(e, e.message);
     }
-  });
+  }
 } catch (e) {
   console.error(e, e.message);
 }
@@ -147,16 +147,16 @@ document.addEventListener('paste', async (e) => {
   try {
     await navigator.permissions.request({name: 'clipboard-read'});
     const clipboardItems = await navigator.clipboard.read();
-    clipboardItems.forEach((clipboardItem) => {
+    for (const clipboardItem of clipboardItems) {
       try {
-        clipboardItem.types.forEach(async (type) => {
+        for (const type of clipboardItem.types) {
           const blob = await clipboardItem.getType(type);
           console.log(URL.createObjectURL(blob), type);
-        });
+        }
       } catch (e) {
         console.error(e, e.message);
       }
-    });
+    }
   } catch (e) {
     console.error(e, e.message);
   }
