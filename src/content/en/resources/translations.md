@@ -2,14 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: "If you want to translate Web Fundamentals to other languages, anyone can contribute."
 
-{# wf_updated_on: 2019-03-04 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2016-09-13 #}
 {# wf_blink_components: N/A #}
 
 # Translations {: .page-title }
-
-Warning: We are no longer using GitLocalize, these instructions are out of date
-and will be updated shortly.
 
 We are experimenting with a translation tool called
 [GitLocalize](https://gitlocalize.com/). Follow the steps to get started with
