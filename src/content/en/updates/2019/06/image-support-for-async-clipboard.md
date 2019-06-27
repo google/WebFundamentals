@@ -4,7 +4,7 @@ description: The Async Clipboard API, the text-focused portion of which we've sh
 
 {# wf_published_on: 2019-06-30 #}
 {# wf_updated_on: 2019-06-30 #}
-{# wf_featured_image: /web/updates/images/2019/06/pwa-omnibox-install.jpg #}
+{# wf_featured_image: /web/updates/images/generic/photo.png #}
 {# wf_tags: chrome76,cutandcopy,execcommand,input,clipboard #}
 {# wf_featured_snippet: The Async Clipboard API, the text-focused portion of which we've shipped in Chrome 66, has learned a new trick. As of Chrome 76, it now also handles images. #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
@@ -18,11 +18,13 @@ of the Asynchronous [Clipboard API](https://w3c.github.io/clipboard-apis/)
 that replaced the previous
 [`Document.execCommand()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand)-based
 method to [cut and copy](/web/updates/2015/04/cut-and-copy-commands) contents on the web.
-Now in Chrrome&nbsp;76, we are shipping the *image-focused* portion of the Asynchronous Clipboard API.
+Now in Chrome&nbsp;76, we are shipping the *image-focused* portion of the Asynchronous Clipboard
+API.
 
 ## Recap of the Asynchronous Clipboard API
 
-Before I dive into what is shipping now, let me briefly look back at how the Asynchronous Clipboard API works.
+Before I dive into what is shipping now, let me briefly look back at how the Asynchronous Clipboard
+API works.
 
 ### Copy: Writing text to the clipboard
 
@@ -80,7 +82,8 @@ but reading from the clipboard always requires permission.
 Two new permissions for copy and paste were added to the
 [Permissions API](/web/updates/2015/04/permissions-api-for-the-web).
 The `clipboard-write permission` is granted automatically to pages when they are the active tab.
-The `clipboard-read permission` must be requested, which you can do by trying to read data from the clipboard.
+The `clipboard-read permission` must be requested, which you can do by trying to read data from the
+clipboard.
 Attempting to read or write clipboard data will automatically prompt the user for permission
 if it has not already been granted.
 
@@ -184,3 +187,12 @@ document.addEventListener('copy', async (e) => {
 * [Chromium bug](https://crbug.com/150835)
 * [Chrome Platform Status entry](https://www.chromestatus.com/features/5074658793619456)
 
+## Acknowledgements
+
+Thanks to [Kyarik](https://github.com/kyarik) for reviewing this article.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
