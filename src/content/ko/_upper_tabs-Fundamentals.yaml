@@ -1,0 +1,13 @@
+---
+toc:
+- attributes:
+  - name: data-category
+    value: webFu
+  - name: data-label
+    value: upper-webfu
+  heading: Web Fundamentals
+  lower_tabs:
+    guides:
+    - path: "/web/fundamentals/"
+      title: Home
+  name: Fundamentals
