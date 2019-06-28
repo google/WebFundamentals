@@ -64,7 +64,7 @@ const getClipboardContents = async () => {
 
 ### Handling paste events
 
-Paste events can be handled by using the, surprise, `onpaste` event.
+Paste events can be handled by using the, surprise, `paste` event.
 It works nicely with the new asynchronous methods for reading clipboard text:
 
 ```js
@@ -153,8 +153,8 @@ try {
 
 ### Paste: Reading an image from the clipboard
 
-Similar to `write()`, the `read()` method is a convenience method for `readText()`
-and it is also asynchronous and Promise-based.
+Similar to `write()`, the `readText()` method is just a convenience method for `read()`.
+It is likewise asynchronous and Promise-based.
 
 As a first step, you need to obtain the list of `ClipboardItem`s that you then need to iterate over.
 Everything is asynchronous code, so remember to use the
@@ -249,17 +249,23 @@ Opening up the Asynchronous Clipboard API for images comes with certain
 [risks](https://w3c.github.io/clipboard-apis/#security) that need to be carefully evaluated.
 One new challenge are so-called [image compression bombs](https://bomb.codes/bombs#images),
 that is, image files that appear to be innocent, but—once decompressed—turn out to be huge.
+Even more serious than large images are specifically crafted malicious images
+that are designed to exploit known vulnerabilities in the native operating system.
+This is why we can’t just copy the image directly to the native clipboard,
+and why in Chrome we require that the image be transcoded.
+
 The [specification](https://w3c.github.io/clipboard-apis/#image-transcode)
-mentions transcoding as a mitigation method:
+therefore also explicitly mentions transcoding as a mitigation method:
 *“To prevent malicious image data from being placed on the clipboard, the image data may be
 transcoded to produce a safe version of the image.”*
 There is some ongoing discussion happening on the related
 [W3C Technical Architecture Group review](https://github.com/w3ctag/design-reviews/issues/350)
-on whether and how the transcoding should be specified.
+on whether and how the transcoding details should be specified.
 
 ## Next Steps
 
-Eventually, the Clipboard API shall be opened up for any kind of data.
+We are actively working on expanding the Asynchronous Clipboard API
+so that in the future it can support a larger number of data types.
 As the related [implementation bug](https://bugs.chromium.org/p/chromium/issues/detail?id=897289)
 puts it, *“[t]his is a scary, dangerous, and powerful permission, with plenty of security risks,
 so we need to tread carefully.”*
@@ -281,10 +287,10 @@ The Asynchronous Clipboard API was implemented by
 [Darwin Huang](https://www.linkedin.com/in/darwinhuang/)
 and [Gary Kačmarčík](https://www.linkedin.com/in/garykac/).
 Darwin also provided the [demo](https://jsfiddle.net/0794oysr/2/).
-My introduction of this article is very inspired by
+My introduction of this article is inspired by
 [Jason Miller](https://twitter.com/_developit?lang=en)’s
 original [text](/web/updates/2018/03/clipboardapi).
-Thanks to [Kyarik](https://github.com/kyarik) for reviewing this article.
+Thanks to [Kyarik](https://github.com/kyarik) and again Gary Kačmarčík for reviewing this article.
 
 ## Feedback {: #feedback .hide-from-toc }
 
