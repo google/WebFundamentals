@@ -64,7 +64,7 @@ The previous section describes how to customize the **default cache names** used
 for precaching and runtime caching, but it’s not uncommon to want additional
 caches for specific uses, such as a cache just for images.
 
-In other parts of the Workbox APIs, there is an option to supply a `cacheName`
+In other parts of the Workbox APIs, you can supply a `cacheName`
 property as an option. For example, the [runtime strategies](/web/tools/workbox/modules/workbox-strategies)
 accepts a `cacheName` option. In these cases, the cache name will be used
 exactly as you specify; the prefix and suffix **will not be used**.
