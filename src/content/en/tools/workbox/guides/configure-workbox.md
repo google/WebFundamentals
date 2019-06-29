@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-06-29 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -64,7 +64,7 @@ The previous section describes how to customize the **default cache names** used
 for precaching and runtime caching, but it’s not uncommon to want additional
 caches for specific uses, such as a cache just for images.
 
-In other parts of the Workbox APIs there is an option to supply a `cacheName`
+In other parts of the Workbox APIs, there is an option to supply a `cacheName`
 property as an option. For example, the [runtime strategies](/web/tools/workbox/modules/workbox-strategies)
 accepts a `cacheName` option. In these cases, the cache name will be used
 exactly as you specify; the prefix and suffix **will not be used**.
@@ -131,8 +131,8 @@ production builds.
 
 ![Debug vs Production Builds of Workbox](../images/guides/configure-workbox/debug-vs-prod.png)
 
-You can override this behavior with the `debug` option. Setting to true will
-force debug builds, setting to false will force production builds.
+You can override this behavior with the `debug` option. Setting it to `true` will
+force debug builds, setting it to `false` will force production builds.
 
 ```javascript
 // Force development builds
