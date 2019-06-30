@@ -967,6 +967,18 @@ brendankenny:
   description:
     en: Lighthouse Bulb Installer
 
+skikuchi:
+  name:
+    given: Satoko
+    family: Kikuchi
+  org:
+    name: Graat
+  country: JP
+  role:
+    - translator
+  github: s-kic
+  twitter: s_kic
+
 jeokrang:
   name:
     given: Hunmin
@@ -1696,6 +1708,22 @@ borissmus:
     - author
   email: smus@google.com
 
+antoinesolnichkin:
+  name:
+    given: Antoine
+    family: Solnichkin
+  org:
+    name: Independent
+    unit: Software Engineer
+  country: LU
+  role:
+    - translator
+  homepage: http://devconnected.com
+  twitter: devconnectedcom
+  email: solnichkin.antoine@gmail.com
+  description:
+    en: "Antoine is a Software Engineer based in Luxembourg"
+
 rsolomakhin:
   name:
     given: Rouslan
@@ -2023,31 +2051,3 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
-
-skikuchi:
-  name:
-    given: Satoko
-    family: Kikuchi
-  org:
-    name: Graat
-  country: JP
-  role:
-    - translator
-  github: s-kic
-  twitter: s_kic
-
-antoinesolnichkin:
-  name:
-    given: Antoine
-    family: Solnichkin
-  org:
-    name: Independent
-    unit: Software Engineer
-  country: LU
-  role:
-    - translator
-  homepage: http://devconnected.com
-  twitter: devconnectedcom
-  email: solnichkin.antoine@gmail.com
-  description:
-    en: "Antoine is a Software Engineer based in Luxembourg"
