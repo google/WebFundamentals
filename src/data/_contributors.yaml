@@ -2035,3 +2035,19 @@ skikuchi:
     - translator
   github: s-kic
   twitter: s_kic
+
+antoinesolnichkin:
+  name:
+    given: Antoine
+    family: Solnichkin
+  org:
+    name: Independent
+    unit: Software Engineer
+  country: LU
+    role:
+    - translator
+  homepage: http://devconnected.com
+  twitter: devconnectedcom
+  email: solnichkin.antoine@gmail.com
+  description:
+    en: "Antoine is a Software Engineer based in Luxembourg"
