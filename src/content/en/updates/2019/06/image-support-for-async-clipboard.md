@@ -14,12 +14,9 @@ description: The Async Clipboard API, the text-focused portion of which we’ve 
 {% include "web/_shared/contributors/thomassteiner.html" %}
 
 In Chrome&nbsp;66, we shipped the [text-focused portion](/web/updates/2018/03/clipboardapi)
-of the Asynchronous [Clipboard API](https://w3c.github.io/clipboard-apis/)
-that replaced the previous method that was based on
-[`Document.execCommand()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand)
-to [cut and copy](/web/updates/2015/04/cut-and-copy-commands) contents on the web.
+of the Asynchronous [Clipboard API](https://w3c.github.io/clipboard-apis/).
 Now in Chrome&nbsp;76, we are shipping the *image-focused* portion of the Asynchronous Clipboard
-API.
+API that will allow sites to programmatically copy and paste `image/png` images?
 
 Before I dive into what is shipping now, let me briefly look back at how the Asynchronous Clipboard
 API works.
@@ -108,8 +105,8 @@ permissionStatus.onchange = () => {
 
 ### Copy: Writing an image to the clipboard
 
-Similar to `writeText()`, the generic method `write()` that you can now use for copying images
-is asynchronous and Promise-based.
+Similar to `writeText()`, the generic method `write()` that you can now use for copying PNG images
+(`image/png`) is asynchronous and Promise-based.
 Actually, `writeText()` is just a convenience method for the generic `write()` method.
 
 In order to write an image to the clipboard, first, you need the image as a
@@ -154,7 +151,7 @@ try {
 ### Paste: Reading an image from the clipboard
 
 Similar to `write()`, the `readText()` method is just a convenience method for `read()`.
-It is likewise asynchronous and Promise-based.
+It is likewise asynchronous and Promise-based and supports PNG images (`image/png`).
 
 As a first step, you need to obtain the list of `ClipboardItem`s that you then need to iterate over.
 Everything is asynchronous code, so remember to use the
@@ -229,8 +226,14 @@ document.addEventListener('copy', async (e) => {
   e.preventDefault();
   try {
     await navigator.permissions.request({name: 'clipboard-write'});
-    await navigator.clipboard.write(e.clipboardData.items);
-  } catch (e) {
+    for (const item of e.clipboardData.items) {
+      await navigator.clipboard.write(new ClipboardItem(Object.defineProperty({}, item.type, {
+        value: item,
+        enumerable: true
+      })));
+    }
+    console.log('Image copied.');
+  } catch(e) {
     console.error(e, e.message);
   }
 });
