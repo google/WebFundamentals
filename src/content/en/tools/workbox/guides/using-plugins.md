@@ -2,13 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2019-04-03 #}
+{# wf_updated_on: 2019-07-01 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
 # Using Plugins {: .page-title }
 
-In a number of situations it’s beneficial being able to manipulate a request
+In a number of situations, it’s beneficial being able to manipulate a request
 and response as it’s being fetched and cached as it allows you to add
 additional behaviors to your service worker without writing substantial
 boilerplate code.
@@ -28,17 +28,17 @@ Workbox provides the following plugins:
   the request when the next sync event is triggered.
 
 * [`workbox.broadcastUpdate.Plugin`](../reference-docs/latest/workbox.broadcastUpdate.Plugin):
-  Whenever a cache is updated dispatch, a message on a Broadcast Channel or via
+  Whenever a cache is updated, dispatch a message on a Broadcast Channel or via
   `postMessage()`.
 
 * [`workbox.cacheableResponse.Plugin`](../reference-docs/latest/workbox.cacheableResponse.Plugin):
-  Only cache cache requests that meet a certain criteria.
+  Only cache requests that meet a certain criteria.
 
 * [`workbox.expiration.Plugin`](../reference-docs/latest/workbox.expiration.Plugin):
   Manage the number and maximum age of items in the cache.
   
 * [`workbox.rangeRequests.Plugin`](../reference-docs/latest/workbox.rangeRequests.Plugin):
-  Respond to requests that include a `Range:` header, with partial content from
+  Respond to requests that include a `Range:` header with partial content from
   a cache.
 
 You can use these plugins with a Workbox strategy by adding an instance to
@@ -62,7 +62,7 @@ workbox.routing.registerRoute(
 ## Custom Plugins
 
 You can create your own plugins by passing in an object that has any of the
-following functions:
+following methods:
 
 * `cacheWillUpdate`: Called before a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response)
   is used to update a cache. You can alter the response before it's added to the
@@ -110,7 +110,7 @@ const myPlugin = {
     // the body of the fresh response, use a technique like:
     // const freshResponse = await caches.match(request, {cacheName});
   },
-  cacheKeyWillBeUsed: async function ({request, mode}) {
+  cacheKeyWillBeUsed: async ({request, mode}) => {
   // request is the Request object that would otherwise be used as the cache key.
   // mode is either 'read' or 'write'.
   // Return either a string, or a Request whose url property will be used as the cache key.
@@ -132,7 +132,7 @@ const myPlugin = {
     // the underlying `fetch()` to fail.
   },
   fetchDidSucceed: async ({request, response}) => {
-    // Return `response` to use the network response it as-is,
+    // Return `response` to use the network response as-is,
     // or alternatively create and return a new Response object.
     return response;
   }
