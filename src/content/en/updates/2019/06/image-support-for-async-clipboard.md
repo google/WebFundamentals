@@ -243,8 +243,8 @@ document.addEventListener('copy', async (e) => {
 
 <iframe style="border: solid 1px;" width="100%" height="500"
   src="https://jsfiddle.net/0794oysr/2/embedded/result,js,html,css"
-  allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"
-></iframe>
+  allowfullscreen="allowfullscreen" frameborder="0">
+</iframe>
 
 ### Security
 
@@ -261,20 +261,22 @@ The [specification](https://w3c.github.io/clipboard-apis/#image-transcode)
 therefore also explicitly mentions transcoding as a mitigation method:
 *“To prevent malicious image data from being placed on the clipboard, the image data may be
 transcoded to produce a safe version of the image.”*
-There is some ongoing discussion happening on the related
+There is ongoing discussion happening in the
 [W3C Technical Architecture Group review](https://github.com/w3ctag/design-reviews/issues/350)
-on whether and how the transcoding details should be specified.
+on whether, and how the transcoding details should be specified.
 
 ## Next Steps
 
-We are actively working on expanding the Asynchronous Clipboard API
-so that in the future it can support a larger number of data types.
-As the related [implementation bug](https://bugs.chromium.org/p/chromium/issues/detail?id=897289)
-puts it, *“[t]his is a scary, dangerous, and powerful permission, with plenty of security risks,
-so we need to tread carefully.”*
-You can star the bug to be notified about changes.
+We are actively working on expanding the Asynchronous Clipboard API to add
+support a larger number of data types. But, due to the potential risks, we
+will tread carefully. You can star the [bug][cr-bug] to be notified about
+changes.
+
 For now, image support has landed and can be used as of Chrome 76.
+
 Happy copying&nbsp;&amp;&nbsp;pasting!
+
+[cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=897289
 
 ## Related links
 
