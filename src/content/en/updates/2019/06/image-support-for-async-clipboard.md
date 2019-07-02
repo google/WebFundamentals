@@ -15,11 +15,11 @@ description: Starting in Chrome 76, the async clipboard API now handles images, 
 
 In Chrome 66, we shipped the [text portion](/web/updates/2018/03/clipboardapi)
 of the Asynchronous [Clipboard API](https://w3c.github.io/clipboard-apis/).
-Now in Chrome 76, we are shipping the *image* portion of the Asynchronous
-Clipboard API that will allow sites to programmatically copy and paste
+Now in Chrome 76, adding support for **images** to the Asynchronous
+Clipboard API, making it easy to programmatically copy and paste
 `image/png` images.
 
-Before we dive in, let’s briefly look back at how the Asynchronous Clipboard
+Before we dive in, let’s take a brief look at how the Asynchronous Clipboard
 API works. If you remember the details, skip ahead to the
 [image section](#images).
 
@@ -79,8 +79,8 @@ document.addEventListener('paste', async (e) => {
 
 ### Security and permissions {: #security-permission }
 
-The `navigator.clipboard` API is only supported for pages served over HTTPS
-and, to help prevent abuse, clipboard access is only allowed when a page is
+The `navigator.clipboard` API is only supported for pages served over HTTPS,
+and to help prevent abuse, clipboard access is only allowed when a page is
 the active tab. Pages in active tabs can write to the clipboard without
 requesting permission, but reading from the clipboard always requires
 permission.
@@ -164,8 +164,8 @@ also asynchronous, and Promise-based.
 
 To read an image from the clipboard, we need to obtain a list of
 `ClipboardItem`s, then iterate over them. Since everything is asynchronous,
-remember to use the [`for ... of`][for-of] iterator, since it handles
-async/await code nicely.
+use the [`for ... of`][for-of] iterator, since it handles async/await code
+nicely.
 
 [for-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
 
@@ -198,9 +198,9 @@ async function getClipboardContents() {
 ### Custom paste handler {: #custom-paste-handler }
 
 If you want to dynamically handle paste events, you can listen for the `paste`
-event, [prevent][prevent-default] the default behavior, and then use the
-code above to read the contents from the clipboard, and handle it in whatever
-way your app needs.
+event, [prevent the default][prevent-default] behavior, then use the code above
+to read the contents from the clipboard, and handle it in whatever way your
+app needs.
 
 [prevent-default]: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 
@@ -213,11 +213,12 @@ document.addEventListener('paste', async (e) => {
 
 ### Custom copy handler {: #custom-copy-handler }
 
-The `copy` event includes a [`clipboardData`][clipboard-data] property with
-the items already in the right format, eliminating the need to manually create
-a blob. Like before, prevent the default behavior, we need to call
-`preventDefault()` on the event handler.
+The [`copy` event][copy-event] includes a [`clipboardData`][clipboard-data]
+property with the items already in the right format, eliminating the need to
+manually create a blob. Like before, don't forget to prevent the default
+behavior.
 
+[copy-event]: https://developer.mozilla.org/en-US/docs/Web/API/Document/copy_event
 [clipboard-data]: https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/clipboardData
 
 ```js
