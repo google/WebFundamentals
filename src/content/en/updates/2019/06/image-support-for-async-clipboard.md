@@ -23,74 +23,80 @@ Before we dive in, let’s briefly look back at how the Asynchronous Clipboard
 API works. If you remember the details, skip ahead to the
 [image section](#images).
 
-## Recap of the Asynchronous Clipboard API
+## Recap of the Asynchronous Clipboard API {: #recap }
 
-### Copy: Writing text to the clipboard
+### Copy: Writing text to the clipboard {: #copy-text }
 
-Text can be copied to the clipboard by calling `writeText()`.
+Text can be copied to the clipboard by calling `navigator.clipboard.writeText()`.
 Since this API is asynchronous, the `writeText()` function returns a Promise
-that will be resolved or rejected depending on whether the passed text is copied successfully:
+that will be resolved or rejected depending on whether the passed text is
+copied successfully:
 
 ```js
-const copyPageUrl = async () => {
+async function copyPageURL() {
   try {
     await navigator.clipboard.writeText(location.href);
     console.log('Page URL copied to clipboard');
   } catch (err) {
     console.error('Failed to copy: ', err);
   }
-};
+}
 ```
 
-### Paste: Reading text from the clipboard
+### Paste: Reading text from the clipboard {: #reading-text }
 
-Much like copy, text can be read from the clipboard by calling `readText()`
-and waiting for the returned Promise to resolve with the text:
+Much like copy, text can be read from the clipboard by calling
+`navigator.clipboard.readText()` and waiting for the returned Promise to
+resolve with the text:
 
 ```js
-const getClipboardContents = async () => {
+async function getClipboardText() {
   try {
     const text = await navigator.clipboard.readText();
-    console.log('Pasted content: ', text);
+    console.log('Clipboard contents: ', text);
   } catch (err) {
     console.error('Failed to read clipboard contents: ', err);
   }
-};
+}
 ```
 
 ### Handling paste events
 
-Paste events can be handled by using the, surprise, `paste` event.
+Paste events can be handled by listening for the (surprise) `paste` event.
 It works nicely with the new asynchronous methods for reading clipboard text:
 
 ```js
 document.addEventListener('paste', async (e) => {
   e.preventDefault();
-  const text = await navigator.clipboard.readText();
-  console.log('Pasted text: ', text);
+  try {
+    const text = await navigator.clipboard.readText();
+    console.log('Pasted text: ', text);
+  } catch (err) {
+    console.error('Failed to read clipboard contents: ', err);
+  }
 });
 ```
 
-### Security and permissions
+### Security and permissions {: #security-permission }
 
-As usual, `navigator.clipboard` is only supported for pages served over HTTPS
-and to help prevent abuse, clipboard access is only allowed when a page is the active tab.
-Pages in active tabs can write to the clipboard without requesting permission,
-but reading from the clipboard always requires permission.
+The `navigator.clipboard` API is only supported for pages served over HTTPS
+and, to help prevent abuse, clipboard access is only allowed when a page is
+the active tab. Pages in active tabs can write to the clipboard without
+requesting permission, but reading from the clipboard always requires
+permission.
 
 When the Asynchronous Clipboard API was introduced,
 two new permissions for copy and paste were added to the
-[Permissions API](/web/updates/2015/04/permissions-api-for-the-web).
-The `clipboard-write` permission is granted automatically to pages when they are the active tab.
-The `clipboard-read` permission must be requested, which you can do by trying to read data from the
-clipboard.
-Attempting to read or write clipboard data will automatically prompt the user for permission
-if it has not already been granted.
+[Permissions API](/web/updates/2015/04/permissions-api-for-the-web):
+
+* The `clipboard-write` permission is granted automatically to pages when they
+  are the active tab.
+* The `clipboard-read` permission must be requested, which you can do by
+  trying to read data from the clipboard.
 
 ```js
-const permissionStatus = await navigator.permissions.query({
-  name: 'clipboard-read'
-});
+const queryOpts = { name: 'clipboard-read' };
+const permissionStatus = await navigator.permissions.query(queryOpts);
 // Will be 'granted', 'denied' or 'prompt':
 console.log(permissionStatus.state);
 
