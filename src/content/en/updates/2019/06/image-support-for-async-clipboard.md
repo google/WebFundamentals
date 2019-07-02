@@ -13,16 +13,15 @@ description: Starting in Chrome 76, the async clipboard API now handles images, 
 
 {% include "web/_shared/contributors/thomassteiner.html" %}
 
-In Chrome&nbsp;66, we shipped the [text-focused portion](/web/updates/2018/03/clipboardapi)
+In Chrome 66, we shipped the [text portion](/web/updates/2018/03/clipboardapi)
 of the Asynchronous [Clipboard API](https://w3c.github.io/clipboard-apis/).
-Now in Chrome&nbsp;76, we are shipping the *image-focused* portion of the Asynchronous Clipboard
-API that will allow sites to programmatically copy and paste `image/png` images?
+Now in Chrome 76, we are shipping the *image* portion of the Asynchronous
+Clipboard API that will allow sites to programmatically copy and paste
+`image/png` images.
 
-Before we dive into what is shipping now, let’s briefly look back at how the Asynchronous Clipboard
-API works.
-If you remember the details, ⏭ skip ahead to the
-[new image-focused portion](#the_new_image-focused_portion_of_the_asynchronous_clipboard_api)
-of the API.
+Before we dive in, let’s briefly look back at how the Asynchronous Clipboard
+API works. If you remember the details, skip ahead to the
+[image section](#images).
 
 ## Recap of the Asynchronous Clipboard API
 
