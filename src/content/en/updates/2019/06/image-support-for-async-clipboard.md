@@ -157,60 +157,33 @@ try {
 }
 ```
 
-### Paste: Reading an image from the clipboard
+### Paste: Reading an image from the clipboard {: #paste-image }
 
-Similar to `write()`, the `readText()` method is just a convenience method for `read()`.
-It is likewise asynchronous and Promise-based and supports PNG images (`image/png`).
+The `navigator.clipboard.read()` method reads data from the clipboard. It is
+also asynchronous, and Promise-based.
 
-As a first step, you need to obtain the list of `ClipboardItem`s that you then need to iterate over.
-Everything is asynchronous code, so remember to use the
-[`for … of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-loop as it copes well with `await`ing asynchronous results.
+To read an image from the clipboard, we need to obtain a list of
+`ClipboardItem`s, then iterate over them. Since everything is asynchronous,
+remember to use the [`for ... of`][for-of] iterator, since it handles
+async/await code nicely.
 
-Each `ClipboardItem` can hold its contents in different types, so next,
-you need to iterate over the list of types, again using a `for … of` loop.
-For each type, you call the `getType()` method with the current type as an argument
-to obtain the corresponding image `Blob`.
-As before, this code is future-proof and not tied to images.
+[for-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
 
-```js
-try {
-  await navigator.permissions.request({name: 'clipboard-read'});
-  const clipboardItems = await navigator.clipboard.read();
-  for (const clipboardItem of clipboardItems) {
-    try {
-      for (const type of clipboardItem.types) {
-        const blob = await clipboardItem.getType(type);
-        console.log(URL.createObjectURL(blob));
-      }
-    } catch (e) {
-      console.error(e, e.message);
-    }
-  }
-} catch (e) {
-  console.error(e, e.message);
-}
-```
-
-### Custom paste handler
-
-If you want to dynamically handle paste events, which most likely you want to do,
-the code snippet below has all the steps you need.
-It is actually just the snippet from above, but wrapped in an event listener listening on `paste`
-that [prevents](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
-the default paste behavior.
+Each `ClipboardItem` can hold its contents in different types, so you'll
+need to iterate over the list of types, again using a `for ... of` loop.
+For each type, call the `getType()` method with the current type as an argument
+to obtain the corresponding image `Blob`. As before, this code is is not tied
+to images, and will work with other future file types.
 
 ```js
-document.addEventListener('paste', async (e) => {
-  e.preventDefault();
+async function getClipboardContents() {
   try {
-    await navigator.permissions.request({name: 'clipboard-read'});
     const clipboardItems = await navigator.clipboard.read();
     for (const clipboardItem of clipboardItems) {
       try {
         for (const type of clipboardItem.types) {
           const blob = await clipboardItem.getType(type);
-          console.log(URL.createObjectURL(blob), type);
+          console.log(URL.createObjectURL(blob));
         }
       } catch (e) {
         console.error(e, e.message);
@@ -219,27 +192,45 @@ document.addEventListener('paste', async (e) => {
   } catch (e) {
     console.error(e, e.message);
   }
+}
+```
+
+### Custom paste handler {: #custom-paste-handler }
+
+If you want to dynamically handle paste events, you can listen for the `paste`
+event, [prevent][prevent-default] the default behavior, and then use the
+code above to read the contents from the clipboard, and handle it in whatever
+way your app needs.
+
+[prevent-default]: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+
+```js
+document.addEventListener('paste', async (e) => {
+  e.preventDefault();
+  getClipboardContents();
 });
 ```
 
-### Custom copy handler
+### Custom copy handler {: #custom-copy-handler }
 
-Rather than manually copying items in the clipboard, which is a little involved
-as you need to deal with `Blob`s and wrap them in `ClipboardItem`s manually,
-leveraging the `copy` event of the browser is easier.
-Again you need to prevent the default behavior, and can then just write the clipboard data
-that is conveniently already
+The `copy` event includes a [`clipboardData`][clipboard-data] property with
+the items already in the right format, eliminating the need to manually create
+a blob. Like before, prevent the default behavior, we need to call
+`preventDefault()` on the event handler.
+
+[clipboard-data]: https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/clipboardData
 
 ```js
 document.addEventListener('copy', async (e) => {
   e.preventDefault();
   try {
-    await navigator.permissions.request({name: 'clipboard-write'});
     for (const item of e.clipboardData.items) {
-      await navigator.clipboard.write(new ClipboardItem(Object.defineProperty({}, item.type, {
-        value: item,
-        enumerable: true
-      })));
+      await navigator.clipboard.write([
+        new ClipboardItem(Object.defineProperty({}, item.type, {
+          value: item,
+          enumerable: true
+        }))
+      ]);
     }
     console.log('Image copied.');
   } catch(e) {
