@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Starting in Chrome 76, the async clipboard API now handles images, in addition to text.
+description: Starting in Chrome 76, the async clipboard API now handles (some) images, in addition to text.
 
 {# wf_published_on: 2019-07-03 #}
 {# wf_updated_on: 2019-07-03 #}
 {# wf_featured_image: /web/updates/images/generic/photo.png #}
 {# wf_tags: capabilities,chrome76,cutandcopy,execcommand,input,clipboard #}
-{# wf_featured_snippet: Chrome 76 adds expands the functionality of the Async Clipboard API to add support for images. Copying and pasting images to the clipboard has never been easier. #}
+{# wf_featured_snippet: Chrome 76 adds expands the functionality of the Async Clipboard API to add support for png images. Copying and pasting images to the clipboard has never been easier. #}
 {# wf_blink_components: Blink>DataTransfer #}
 
 # Image Support for the Async Clipboard API {: .page-title }
@@ -15,9 +15,15 @@ description: Starting in Chrome 76, the async clipboard API now handles images, 
 
 In Chrome 66, we shipped the [text portion](/web/updates/2018/03/clipboardapi)
 of the Asynchronous [Clipboard API](https://w3c.github.io/clipboard-apis/).
-Now in Chrome 76, adding support for **images** to the Asynchronous
+Now in Chrome 76, adding support for images to the Asynchronous
 Clipboard API, making it easy to programmatically copy and paste
 `image/png` images.
+
+<aside class="caution">
+  <b>Note:</b>
+  At the time of writing, only <code>image/png</code> files are supported.
+  Support for other images and file formats will be added in the future.
+</aside>
 
 Before we dive in, let’s take a brief look at how the Asynchronous Clipboard
 API works. If you remember the details, skip ahead to the
