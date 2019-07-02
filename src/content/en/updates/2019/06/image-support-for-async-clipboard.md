@@ -106,40 +106,44 @@ permissionStatus.onchange = () => {
 };
 ```
 
-## 🆕 The new image-focused portion of the Asynchronous Clipboard API
+## 🆕 The new image-focused portion of the Asynchronous Clipboard API {: #images }
 
-### Copy: Writing an image to the clipboard
+### Copy: Writing an image to the clipboard {: #copy-image }
 
-Similar to `writeText()`, the generic method `write()` that you can now use for copying PNG images
-(`image/png`) is asynchronous and Promise-based.
-Actually, `writeText()` is just a convenience method for the generic `write()` method.
+The new `navigator.clipboard.write()` method can be used for copying images
+to the clipboard. Like [`writeText()`](#copy-text), it is asynchronous, and
+Promise-based. Actually, `writeText()` is just a convenience method for the
+generic `write()` method.
 
-In order to write an image to the clipboard, first, you need the image as a
-[`Blob`](https://developer.mozilla.org/en-US/docs/Web/API/Blob).
-One way to achieve this is by `fetch`ing (or if you insist `XMLHttpRequest`ing) the image from a
-server and getting the response body as a
-[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Body/blob) (or for XHR by setting the
-[`responseType`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType#Value)
-to `'blob'`).
-Another method to `Blob`ify an image is to write the image to a canvas, and then to call the
-canvas’s [`toBlob()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob)
-method.
+In order to write an image to the clipboard, you need the image as a
+[`Blob`](https://developer.mozilla.org/en-US/docs/Web/API/Blob). One way to
+achieve this is by `fetch`ing (or `XMLHttpRequest`ing) the image from a
+server and getting the response body as a [Blob][blob] (or for XHR,
+by setting the [`responseType`][blog-response-type] to `'blob'`).
+Another method to `Blob`ify an image is to write the image to a canvas, then
+call the `canvas`’s [`toBlob()`][to-blob] method.
 
-Eventually you will be able to copy more than one image to the clipboard,  so in the next step you
-need to pass an array of `ClipboardItem`s as a parameter to the `write()` method.
-As at present the `write()` method supports just one image, this will be a one-element array.
+[blob]: https://developer.mozilla.org/en-US/docs/Web/API/Body/blob
+[to-blob]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
+[blog-response-type]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType#Value
+
+Next, pass an array of `ClipboardItem`s as a parameter to the `write()` method.
+Currently you can only pass one image at a time, but we plan to add support for
+multiple images in the future.
+
 The `ClipboardItem` takes an object with the MIME type of the image as the key,
-and the actual blob as the value.
-The sample code below shows a future-proof way to do this by leveraging the
-[`Object.defineProperty()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
-method.
-If you use this approach from the start, your code will be ready for future image types as well as
-other MIME types that the Asynchronous Clipboard API shall eventually support.
+and the actual blob as the value. The sample code below shows a future-proof
+way to do this by leveraging the [`Object.defineProperty()`][object-define-prop]
+method. Using this approach will ensure your code will be ready for future
+image types as well as other MIME types that the Asynchronous Clipboard API
+may support.
+
+[object-define-prop]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 ```js
 try {
-  await navigator.permissions.request({name: 'clipboard-write'});
-  const data = await fetch('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Chrome_Material_Icon-450x450.png');
+  const imgURL = 'https://developers.google.com/web/updates/images/generic/file.png';
+  const data = await fetch(imgURL);
   const blob = await data.blob();
   await navigator.clipboard.write([
     new ClipboardItem(Object.defineProperty({}, blob.type, {
