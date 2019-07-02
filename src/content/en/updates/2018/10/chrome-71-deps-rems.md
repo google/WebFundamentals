@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 71 to help you plan.
 
-{# wf_updated_on: 2018-10-29 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2018-10-29 #}
 {# wf_tags: deprecations,removals,chrome71 #}
 {# wf_blink_components: Blink>Storage>CacheStorage,Blink>ServiceWorker,Internals>SpeechSynthesis,Blink>Animation,Blink>MediaStream #}
-{# wf_featured_image: /web/updates/images/generic/warning.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 71 to help you plan.#}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
@@ -92,6 +92,9 @@ and has wider support.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5701042356355072) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=692084)
 
+## Deprecations
+
+{% include "web/updates/_shared/no-new-deprecations.html" %}
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 

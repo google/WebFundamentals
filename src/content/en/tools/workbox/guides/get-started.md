@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-06-25 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -21,23 +21,23 @@ Before we can use Workbox, we need to create a service worker file and
 register it to our website.
 
 Start by creating a file called `service-worker.js` at the root of your site and add a
-console message to the file (This is so we can see it load).
+console message to the file (this is so we can see it load).
 
 ```javascript
 console.log('Hello from service-worker.js');
 ```
 
-In your web page register your new service worker file like so:
+In your web page, register your new service worker file like so:
 
 {% include "web/tools/workbox/guides/_shared/register-sw.html" %}
 
-This tells the browser this is the service worker to use for site.
+This tells the browser this is the service worker to use for the site.
 
-If you refresh your page you'll see the log from your service worker file.
+If you refresh your page, you'll see the log from your service worker file.
 
 ![Console message from sw.js in DevTools](../images/guides/get-started/hello-console.png)
 
-Looking in the “Application” tab in Chrome DevTools you should see your service
+Looking in the “Application” tab in Chrome DevTools, you should see your service
 worker registered.
 
 ![Application Tab displaying a registered service worker.](../images/guides/get-started/application-tab.png)
@@ -50,7 +50,7 @@ Workbox.
 
 ## Importing Workbox
 
-To start using Workbox you just need to import the `workbox-sw.js` file in your
+To start using Workbox, you just need to import the `workbox-sw.js` file in your
 service worker.
 
 Change your service worker so that it has the following `importScripts()` call.
@@ -109,7 +109,7 @@ but fallback to the cached version if the network fails, we can use the
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('.*\.js'),
+  /\.js$/,
   new workbox.strategies.NetworkFirst()
 );
 ```
@@ -127,7 +127,7 @@ caches of DevTools to check that the request has actually been cached.
 
 Workbox provides a few caching strategies that you can use. For example, your
 CSS could be served from the cache first and updated in the background or your
-images could be cached and used until it’s a week old, after which it’ll need
+images could be cached and used until they're a week old, after which they’ll need
 updating.
 
 ```javascript

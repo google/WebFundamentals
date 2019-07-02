@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 76 to help you plan.
 
-{# wf_updated_on: 2019-06-21 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2019-06-21 #}
 {# wf_tags: deprecations,removals,chrome76 #}
-{# wf_blink_components: Blink #}
-{# wf_featured_image: /web/updates/images/generic/warning.png #}
+{# wf_blink_components: Blink>FeaturePolicy,Blink>WebAudio,Blink>Sensor>DeviceOrientation #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 76 to help you plan. #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
@@ -15,7 +15,9 @@ description: A round up of the deprecations and removals in Chrome 76 to help yo
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-## Remove feature policy: lazyload
+## Removals
+
+### Remove feature policy: lazyload
 
 The lazyload feature policy was intended to allow developers to selectively
 control the `lazyload` attribute on the `<iframe>` and `<img>` tags to provide more
@@ -30,7 +32,7 @@ and the `<iframe>` `allow` attribute.
 [Chrome Platform Status](https://www.chromestatus.com/feature/5641405942726656) &#124;
 [Chromium Bug](https://crbug.com/869492)
 
-## Remove outputs from MediaStreamAudioDestinationNode
+### Remove outputs from MediaStreamAudioDestinationNode
 
 According to the specification, the `MediaStreamAudioDestinationNode` in the Web
 Audio API should have no outputs. Chrome's implementation has a single output
@@ -39,7 +41,7 @@ which has been removed.
 [Chrome Platform Status](https://www.chromestatus.com/feature/5702493226926080) &#124;
 [Chromium Bug](https://crbug.com/691806)
 
-## Remove insecure usage of DeviceMotionEvent
+### Remove insecure usage of DeviceMotionEvent
 
 Chromium has been showing deprecation warnings since 2015 whenever the API is
 used in a non-secure browsing context. Chrome now restricts the API to secure
@@ -51,7 +53,7 @@ with the overarching effort to deprecate powerful features on insecure origins.
 [Chromium Bug](https://crbug.com/932078)
 
 
-## Remove insecure usage of DeviceOrientationEvent
+### Remove insecure usage of DeviceOrientationEvent
 
 Chromium has been showing deprecation warnings since 2015 whenever the API is
 used in a non-secure browsing context. Chrome now restricts the API to secure
@@ -61,6 +63,10 @@ with the overarching effort to deprecate powerful features on insecure origins.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5468407470227456) &#124;
 [Chromium Bug](https://crbug.com/932078)
+
+## Deprecations
+
+{% include "web/updates/_shared/no-new-deprecations.html" %}
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
