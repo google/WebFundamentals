@@ -172,7 +172,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         </a>
       </td>
       <td>
-        In Chrome 66, we shipped the the Asynchronous Clipboard API with
+        In Chrome 66, we shipped the Asynchronous Clipboard API with
         support for reading and writing text. In Chrome 76, we added support
         for reading and writing images to the clipboard.
         <br><br>
@@ -199,7 +199,8 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
 
 <aside class="key-point">
   <b>Want to try some of these new capabilities?</b> Check out the
-  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">Web Capabilities Codelab</a>
+  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">
+  Web Capabilities Codelab</a>
 </aside>
 
 ## How will we design & implement these new capabilities? {: #process }
