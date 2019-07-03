@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-05-23 #}
+{# wf_updated_on: 2019-07-03 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -61,6 +61,12 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
 
 ### Capabilities in flight {: #in-flight }
 
+<aside class="success">
+  <b>New</b>
+  See a completely list of APIs we're working on and approximate time
+  lines in our <a href="https://bit.ly/fugu-api-tracker">API Tracker</a>.
+</aside>
+
 <table>
   <thead>
     <tr>
@@ -103,7 +109,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2019/01/shape-detection">Shape Detection API</a>
+        <a href="/web/updates/2019/01/shape-detection">Shape&nbsp;Detection API</a>
       </td>
       <td>
         The Shape Detection API opens up native implementations of shape
@@ -161,6 +167,21 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
   <tbody>
     <tr>
       <td>
+        <a href="/web/updates/2019/06/image-support-for-async-clipboard">
+          Async&nbsp;Clipboard API (images)
+        </a>
+      </td>
+      <td>
+        In Chrome 66, we shipped the Asynchronous Clipboard API with
+        support for reading and writing text. In Chrome 76, we added support
+        for reading and writing images to the clipboard.
+        <br><br>
+        <b>Status:</b> Launched in Chrome 76<br>
+        <b>Last Updated:</b> July 3rd, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="/web/updates/2018/12/web-share-target">Web Share Target</a>
       </td>
       <td>
@@ -178,7 +199,8 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
 
 <aside class="key-point">
   <b>Want to try some of these new capabilities?</b> Check out the
-  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">Web Capabilities Codelab</a>.
+  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">
+  Web Capabilities Codelab</a>.
 </aside>
 
 ## How will we design & implement these new capabilities? {: #process }
