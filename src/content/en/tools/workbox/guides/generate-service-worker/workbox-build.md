@@ -13,7 +13,7 @@ complete service worker with precaching and runtime caching.
 
 <aside class="note"><b>Note:</b> You'll need to have
 <a href="https://nodejs.org/en/download/">Node installed</a> to use
-  <code>workbox-build</code>.</aside>
+<code>workbox-build</code>.</aside>
 
 {% include "web/tools/workbox/guides/_shared/install-workbox-build.html" %}
 
@@ -49,7 +49,7 @@ In your web page, you can register this service worker by adding:
 ## Adding Runtime Caching
 
 There may be files that you don't want to precache but will be used by
-your webapp that you'd like to cache at runtime. Images are a great example.
+your web app that you'd like to cache at runtime. Images are a great example.
 
 Instead of precaching all images for your site, which will take up a lot of
 space in the cache, you can cache them as they are used and limit the number
