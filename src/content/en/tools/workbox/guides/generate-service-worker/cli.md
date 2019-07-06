@@ -49,7 +49,7 @@ In your web page, you can register this service worker by adding:
 ## Adding Runtime Caching
 
 There may be files that you don't want to precache but will be used by
-your web app that you'd like cache at runtime. Images are a great example.
+your web app that you'd like to cache at runtime. Images are a great example.
 
 Instead of precaching all images for your site, which will take up a lot of
 space in the cache, you can cache them as they are used and limit the number
