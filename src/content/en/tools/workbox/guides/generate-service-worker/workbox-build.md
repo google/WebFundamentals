@@ -103,7 +103,7 @@ The full set of available options can be found on the
 [`workbox-build` module page](/web/tools/workbox/modules/workbox-build).
 
 <aside class="note"><b>Note:</b> Please ensure that whenever you update your
-site, you re-run <code>workboxBuild.generateSW()</code> as this will unsure
+site, you re-run <code>workboxBuild.generateSW()</code> as this will ensure
 your service worker caches the latest files.</aside>
 
 ## Using with Gulp
