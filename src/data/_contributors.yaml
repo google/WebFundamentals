@@ -2035,3 +2035,12 @@ skikuchi:
     - translator
   github: s-kic
   twitter: s_kic
+
+jbingham:
+  name:
+    given: Jonathan
+    family: Bingham
+  github: jonathanbingham
+  twitter: jbingham
+  description:
+    en: Jonathan is a Product Manager at Google
