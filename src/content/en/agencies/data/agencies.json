@@ -1133,6 +1133,189 @@
           }
         }
       ]
+    },
+    {
+      "agency_name": "Toaster",
+      "region": [
+        "Europe",
+        "Asia",
+        "North America"
+      ],
+      "description": "We’re Toaster. We create innovative ideas for people and brands using emerging technology.",
+      "website": "https://toaster.co/",
+      "projects": [
+        {
+          "url": "https://toaster.co/",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello-london@toaster.co",
+      "image_url": "/web/agencies/images/toaster.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "London"
+          ]
+        },
+        {
+          "country_name": "United States",
+          "cities": [
+            "San Francisco"
+          ]
+        },
+        {
+          "country_name": "Singapore",
+          "cities": [
+            "Singapore"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "London",
+          "geo": {
+            "lat": 51.5073509,
+            "lng": -0.1277583
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Escola S.A. (inc.)",
+      "region": [
+        "Europe"
+      ],
+      "description": "Escola is a group of brands commited to develop best mobile and web solutions. Our clients include banks, insurance, energy sector and FMCG companies. ",
+      "website": "https://escola.pl/",
+      "projects": [
+        {
+          "url": "https://naprawmyto.pl/home",
+          "vertical": [
+            "Social"
+          ],
+          "lighthouse_score": 92
+        }
+      ],
+      "max_lighthouse_score": 92,
+      "contact": "pwa@escola.pl",
+      "image_url": "/web/agencies/images/escola_sa_inc.png",
+      "vertical": [
+        "Social"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Poland",
+          "cities": [
+            "Warsaw",
+            "Gdansk"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Poland",
+          "city_name": "Warsaw",
+          "geo": {
+            "lat": 52.2296756,
+            "lng": 21.0122287
+          }
+        },
+        {
+          "country_name": "Poland",
+          "city_name": "Gdansk"
+        }
+      ]
+    },
+    {
+      "agency_name": "Long Live King Ltd",
+      "region": [
+        "Europe"
+      ],
+      "description": "We’re all about loving the work we do, working with like-minded people and delivering projects that make a difference, building platforms to engage with your audience and streamline business through websites and web applications.",
+      "website": "https://longliveking.com",
+      "projects": [
+        {
+          "url": "https://longliveking.com/",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "team@longliveking.com",
+      "image_url": "/web/agencies/images/long_live_king_ltd.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "London"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "London",
+          "geo": {
+            "lat": 51.5073509,
+            "lng": -0.1277583
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Isobar UK",
+      "region": [
+        "Europe"
+      ],
+      "description": "We are a global agency that delivers digital transformation, powered by creativity. We solve complex business challenges through digital marketing, ecosystems and products, driving digital strength and brand loyalty. Our clients include Coca-Cola, adidas, Enterprise, P&G, Philips and Huawei.",
+      "website": "https://www.isobar.com",
+      "projects": [
+        {
+          "url": "https://direct.asda.com/george/clothing/10,default,sc.html",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 92
+        }
+      ],
+      "max_lighthouse_score": 92,
+      "contact": "alex.hamilton@isobar.com",
+      "image_url": "/web/agencies/images/isobar_uk.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "London"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "London",
+          "geo": {
+            "lat": 51.5073509,
+            "lng": -0.1277583
+          }
+        }
+      ]
     }
   ],
   "filters_": {
