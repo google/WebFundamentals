@@ -17,12 +17,13 @@ description: Web Components v0 users have more time to upgrade to v1; but be sur
 
 The Web Components v1 APIs are a web platform standard that has shipped in Chrome, Safari, Firefox, 
 and (soon) Edge. The v1 APIs are used by literally millions of sites, reaching billions of users 
-daily. The earlier draft v0 APIs provided valuable developer feedback that helped shape the 
-standards, but were only supported by Chrome. In order to ensure interoperability, late last year, 
-we [announced](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/h-JwMiPUnuU/sl79aLoLBQAJ) 
+daily. Developers using the draft v0 APIs provided valuable feedback that influenced the 
+specifications. But the v0 APIs were only supported by Chrome. In order to ensure interoperability, 
+late last year, we 
+[announced](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/h-JwMiPUnuU/sl79aLoLBQAJ) 
 that these draft APIs were deprecated and were scheduled for removal as of Chrome 73.
 
-However, enough developers requested more time to migrate, so the APIs have not yet been removed 
+Because enough developers requested more time to migrate, the APIs have not yet been removed 
 from Chrome. **The v0 draft APIs are now targeted for removal in Chrome 80**, around February 2020. 
 
 Here's what you need to know if you believe you might be using the v0 APIs: 
@@ -31,7 +32,7 @@ Here's what you need to know if you believe you might be using the v0 APIs:
     You're done. See [Back to the future: disabling the v0 APIs](#back-to-the-future-disabling-the-v0-apis) 
     for instructions.
 *   **If you're using Polymer library v1 or v2**—follow the 
-    [instructions published previously](https://www.polymer-project.org/blog/2018-10-02-webcomponents-v0-deprecations) 
+    [instructions published previously](https://www.polymer-project.org/blog/2018-10-02-webcomponents-v0-deprecations 
     by the Polymer team. 
 *   If you're using shadow DOM v0, custom elements v0, or HTML imports, you'll need to load some
     polyfills. See [Use the v0 polyfills](#use-the-v0-polyfills).
@@ -48,8 +49,7 @@ the following flags:
 ```
 
 You'll need to exit Chrome before starting it from the command line. If you have Chrome Canary 
-installed, you can run the test in Canary while keeping this page loaded in Chrome. (Or load this 
-page in Firefox, Safari, or Edge while you're testing in Chrome.)
+installed, you can run the test in Canary while keeping this page loaded in Chrome. 
  
 To test your site with v0 APIs disabled:
 
@@ -84,37 +84,40 @@ To test your site with v0 APIs disabled:
     Native HTML Imports? false Native Custom Elements v0? false Native Shadow DOM v0? false
     ```
 
-    If the browser reports true for any or all of these features--something's wrong. Make sure 
-    you've fully quit out of Chrome before restarting with the flags.
+    If the browser reports true for any or all of these features, something's wrong. Make sure 
+    you've fully quit Chrome before restarting with the flags.
 
 1.  Finally, load your app and run through the features. If everything works as expected, you're 
     done. 
 
 ## Use the v0 polyfills {#use-the-v0-polyfills}
 
-If your site isn't working on Chrome with the v0 APIs disabled, chances are you aren't loading the 
-polyfills. There are a couple of possibilities:
+The Web Components v0 polyfills provide support for the v0 APIs on browsers that don't 
+provide native support. If your site isn't working on Chrome with the v0 APIs disabled, 
+you probably aren't loading the polyfills. There are several possibilities:
 
 *   You're not loading the polyfills at all. In this case, your site should fail on other browsers, 
     like Firefox and Safari.
 *   You're loading the polyfills conditionally based on browser sniffing. In this case, your site 
-    should work on other browsers. Skip ahead to Load the polyfills.
+    should work on other browsers. Skip ahead to [Load the polyfills]{#load-the-v0-polyfills).
+
+In the past, the Polymer Project team and others have recommended loading the polyfills conditionally
+based on feature detection. This approach should work fine with the v0 APIs disabled.
 
 ### Install the v0 polyfills {#install-the-v0-polyfills}
 
-The Web Components v0 polyfills were never published to the npm registry. You have a couple of 
-choices when it comes to installing the polyfills:
+The Web Components v0 polyfills were never published to the npm registry. You can install
+the polyfills using Bower, if your project is already using Bower. Or you can install from a zip file.
 
-*   If your existing project uses bower, use bower to install the v0 polyfills.
+*   To install with Bower:
 
     `bower install --save webcomponents/webcomponentsjs#^0.7.0`
 
-*   If you're not using bower, you can download the latest 0.7.x release from GitHub as a zip file 
-    or compressed tar file:
+*   To install from a zip file, download the latest 0.7.x release from GitHub:
 
     https://github.com/webcomponents/webcomponentsjs/releases/tag/v0.7.24
 
-    Note that if you download from GitHub, you'll have to manually update the polyfills if another 
+    If you install from a zip file, you'll have to manually update the polyfills if another 
     version comes out. You'll probably want to check the polyfills in with your code. 
 
 ### Load the v0 polyfills {#load-the-v0-polyfills}
@@ -151,12 +154,14 @@ To load the polyfills unconditionally:
 
 ```html
 <script src="/bower_components/webcomponents/webcomponentsjs/webcomponents-lite-min.js">
+</script>
 ```
 
 Or:
 
 ```html
 <script src="/bower_components/webcomponents/webcomponentsjs/webcomponents-min.js">
+</script>
 ```
 
 If you installed the polyfills directly from GitHub, you'll need to supply the path where you 
@@ -170,8 +175,8 @@ non-Chrome browsers), your site will fail when v0 support is removed from Chrome
 
 ## Help! I don't know what APIs I'm using! {#help-i-don't-know-what-apis-i'm-using}
 
-If you don't know whether you're using any of the v0 APIs--or _which_ APIs you're using, you can 
-check the console output in Chrome.
+If you don't know whether you're using any of the v0 APIs&mdash;or _which_ APIs you're 
+using&mdash;you can check the console output in Chrome.
 
 1.  If you previously started Chrome with the flags to disable the v0 APIs, close Chrome and restart
     it normally.
@@ -192,9 +197,8 @@ If you're using one or more of these APIs, see [Use the v0 polyfills](#use-the-v
 
 ## Next steps: moving off of v0 {#next-steps-moving-off-of-v0}
 
-Making sure the v0 polyfills are getting loaded should ensure your site keeps working when the  v0 
-APIs are removed. Moving forward, we recommend moving off of the v0 APIs entirely so you can take 
-advantage of cross-platform, native support for the Web Components v1 APIs.
+Making sure the v0 polyfills are getting loaded should ensure your site keeps working when the v0 
+APIs are removed. We recommend moving to the Web Components v1 APIs, which are broadly supported.
 
 If you're using a Web Components library, like the Polymer library, X-Tag, or SkateJS, the first 
 step is to check whether newer versions of the library are available that support the v1 APIs.
