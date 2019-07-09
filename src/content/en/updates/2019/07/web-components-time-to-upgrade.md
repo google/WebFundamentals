@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web Components v0 users have more time to upgrade to v1; but be sure and test.
 
-{# wf_updated_on: 2019-07-08 #}
-{# wf_published_on: 2019-07-08 #}
+{# wf_updated_on: 2019-07-09 #}
+{# wf_published_on: 2019-07-09 #}
 {# wf_tags: webcomponents,deprecations,removals #}
 {# wf_blink_components: Blink>FeaturePolicy,Blink>WebAudio,Blink>Sensor>DeviceOrientation #}
 {# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
