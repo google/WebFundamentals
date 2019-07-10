@@ -20,7 +20,7 @@ Phasellus quis nunc leo. Donec lacus mauris, placerat sed turpis ac, eleifend
 iaculis ipsum. Curabitur convallis felis vel lectus mattis, a accumsan magna
 consectetur. Etiam eleifend eget nisi a faucibus.
 
-### This is a level 3 heading
+### This is a level 3 heading {#another-bad-anchor}
 
 Sed porttitor ex eget dolor fringilla, eget rutrum odio tempus. Curabitur
 feugiat vitae ex eu tempor. Praesent fermentum leo quis tellus feugiat
