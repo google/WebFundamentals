@@ -209,12 +209,6 @@ toc:
   path: /web/tools/chrome-devtools/security/
 - title: Keyboard Shortcuts
   path: /web/tools/chrome-devtools/shortcuts
-- title: DevTools for Beginners
-  section:
-  - title: HTML and the DOM
-    path: /web/tools/chrome-devtools/beginners/html
-  - title: CSS
-    path: /web/tools/chrome-devtools/beginners/css
 - title: Resources
   path: /web/tools/chrome-devtools/resources/
 - title: Customize

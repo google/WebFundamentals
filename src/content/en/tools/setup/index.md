@@ -1,11 +1,17 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Set up your workspace to include a good editor, debugging, and build tools for the multi-device web.
+robots: noindex
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2019-07-10 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: N/A #}
 
 # Getting Started {: .page-title }
+
+<aside class="caution">
+  <b>This page is not being maintained.</b>
+</aside>
 
 Set up your workspace to include a good editor, debugging, and build tools for the multi-device web.
 
