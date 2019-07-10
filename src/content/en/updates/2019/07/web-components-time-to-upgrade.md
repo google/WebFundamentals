@@ -32,7 +32,7 @@ Here's what you need to know if you believe you might be using the v0 APIs:
     You're done. See [Back to the future: disabling the v0 APIs](#back-to-the-future-disabling-the-v0-apis) 
     for instructions.
 *   **If you're using Polymer library v1 or v2**—follow the 
-    [instructions published previously](https://www.polymer-project.org/blog/2018-10-02-webcomponents-v0-deprecations 
+    [instructions published previously](https://www.polymer-project.org/blog/2018-10-02-webcomponents-v0-deprecations) 
     by the Polymer team. 
 *   If you're using shadow DOM v0, custom elements v0, or HTML imports, you'll need to load some
     polyfills. See [Use the v0 polyfills](#use-the-v0-polyfills).
