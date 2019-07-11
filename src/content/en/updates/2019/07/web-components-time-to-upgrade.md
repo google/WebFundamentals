@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web Components v0 users have more time to upgrade to v1; but be sure and test.
 
-{# wf_updated_on: 2019-07-09 #}
+{# wf_updated_on: 2019-07-10 #}
 {# wf_published_on: 2019-07-09 #}
 {# wf_tags: webcomponents,deprecations,removals #}
 {# wf_blink_components: Blink>FeaturePolicy,Blink>WebAudio,Blink>Sensor>DeviceOrientation #}
@@ -32,14 +32,14 @@ Here's what you need to know if you believe you might be using the v0 APIs:
     You're done. See [Back to the future: disabling the v0 APIs](#back-to-the-future-disabling-the-v0-apis) 
     for instructions.
 *   **If you're using Polymer library v1 or v2**—follow the 
-    [instructions published previously](https://www.polymer-project.org/blog/2018-10-02-webcomponents-v0-deprecations 
+    [instructions published previously](https://www.polymer-project.org/blog/2018-10-02-webcomponents-v0-deprecations) 
     by the Polymer team. 
 *   If you're using shadow DOM v0, custom elements v0, or HTML imports, you'll need to load some
     polyfills. See [Use the v0 polyfills](#use-the-v0-polyfills).
 *   If you're not sure what you're using, don't worry. See 
     [Help! I don't know what APIs I'm using!](#use-the-v0-polyfills)
 
-## Back to the future: disabling the v0 APIs {#back-to-the-future-disabling-the-v0-apis}
+## Back to the future: disabling the v0 APIs {: #back-to-the-future-disabling-the-v0-apis }
 
 To test your site with the v0 APIs disabled, you need to start Chrome from the command line with 
 the following flags:
@@ -90,7 +90,7 @@ To test your site with v0 APIs disabled:
 1.  Finally, load your app and run through the features. If everything works as expected, you're 
     done. 
 
-## Use the v0 polyfills {#use-the-v0-polyfills}
+## Use the v0 polyfills {: #use-the-v0-polyfills }
 
 The Web Components v0 polyfills provide support for the v0 APIs on browsers that don't 
 provide native support. If your site isn't working on Chrome with the v0 APIs disabled, 
@@ -99,12 +99,12 @@ you probably aren't loading the polyfills. There are several possibilities:
 *   You're not loading the polyfills at all. In this case, your site should fail on other browsers, 
     like Firefox and Safari.
 *   You're loading the polyfills conditionally based on browser sniffing. In this case, your site 
-    should work on other browsers. Skip ahead to [Load the polyfills]{#load-the-v0-polyfills).
+    should work on other browsers. Skip ahead to [Load the polyfills](#load-the-v0-polyfills).
 
 In the past, the Polymer Project team and others have recommended loading the polyfills conditionally
 based on feature detection. This approach should work fine with the v0 APIs disabled.
 
-### Install the v0 polyfills {#install-the-v0-polyfills}
+### Install the v0 polyfills {: #install-the-v0-polyfills }
 
 The Web Components v0 polyfills were never published to the npm registry. You can install
 the polyfills using Bower, if your project is already using Bower. Or you can install from a zip file.
@@ -120,7 +120,7 @@ the polyfills using Bower, if your project is already using Bower. Or you can in
     If you install from a zip file, you'll have to manually update the polyfills if another 
     version comes out. You'll probably want to check the polyfills in with your code. 
 
-### Load the v0 polyfills {#load-the-v0-polyfills}
+### Load the v0 polyfills {: #load-the-v0-polyfills }
 
 The Web Components v0 polyfills are provided as two separate bundles:
 
@@ -173,7 +173,7 @@ work when v0 support is removed.
 If you conditionally load the polyfills using browser sniffing (that is, loading the polyfills on 
 non-Chrome browsers), your site will fail when v0 support is removed from Chrome. 
 
-## Help! I don't know what APIs I'm using! {#help-i-don't-know-what-apis-i'm-using}
+## Help! I don't know what APIs I'm using! {: #help-i-don't-know-what-apis-i'm-using }
 
 If you don't know whether you're using any of the v0 APIs&mdash;or _which_ APIs you're 
 using&mdash;you can check the console output in Chrome.
@@ -195,7 +195,7 @@ for HTML Imports, custom elements v0, and shadow DOM v0.
 If you're using one or more of these APIs, see [Use the v0 polyfills](#use-the-v0-polyfills).
 
 
-## Next steps: moving off of v0 {#next-steps-moving-off-of-v0}
+## Next steps: moving off of v0 {: #next-steps-moving-off-of-v0 }
 
 Making sure the v0 polyfills are getting loaded should ensure your site keeps working when the v0 
 APIs are removed. We recommend moving to the Web Components v1 APIs, which are broadly supported.
@@ -210,7 +210,7 @@ the new APIs. These resources might help:
 *   [What's New in Shadow DOM v1](https://hayato.io/2016/shadowdomv1/)
 
 
-## Summing up {#summing-up}
+## Summing up {: #summing-up }
 
 The Web Components v0 draft APIs are going away. If you take one thing away from this post, make 
 sure you [test your app with the v0 APIs disabled](#back-to-the-future-disabling-the-v0-apis) and 
