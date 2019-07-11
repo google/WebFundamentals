@@ -233,7 +233,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(precacheController.install());
 });
 self.addEventListener('activate', (event) => {
-  event.waitUntil(precacheController.cleanup());
+  event.waitUntil(precacheController.activate());
 });
 self.addEventListener('fetch', (event) => {
   const cacheKey = precacheController.getCacheKeyForURL(event.request.url);
