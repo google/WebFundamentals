@@ -297,7 +297,7 @@ convert their modern JavaScript syntax to
 [ES5](https://en.wikipedia.org/wiki/ECMAScript#5th_Edition) so it can be run in
 older browsers.
 
-Keep in mind that every browser that supports service workers, also supports most
+Keep in mind that every browser that supports service workers also supports most
 [ES2015](https://en.wikipedia.org/wiki/ECMAScript#6th_Edition_-_ECMAScript_2015)
 features (the primary exception being `import` statements), so there's usually
 no need to transpile your code.
