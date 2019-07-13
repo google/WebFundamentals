@@ -29,7 +29,7 @@ branches:
   only:
     - master
 notifications:
-  email:
+  email: riszinryan@gmail.com
     recipients:
       - petele@google.com
     on_success: never
