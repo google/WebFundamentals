@@ -110,7 +110,7 @@ used to determine whether a response received from the network should
 be cached:
 
 * staleWhileRevalidate and networkFirst: Responses with a status of `0`
-([i.e. opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
+(i.e. [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
 or `200` are considered cacheable.
 * cacheFirst: Responses with a status of `200` are considered cacheable.
 
