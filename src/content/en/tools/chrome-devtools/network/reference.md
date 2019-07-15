@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2019-02-08 #}
+{# wf_updated_on: 2019-07-15 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -661,6 +661,7 @@ tab:
 * **Stalled**. The request could be stalled for any of the reasons described
   in **Queueing**.
 * **DNS Lookup**. The browser is resolving the request's IP address.
+* **Initial connection**. The browser is establishing a connection, including TCP handshakes/retries and negotiating an SSL.
 * **Proxy negotiation**. The browser is negotiating the request with a [proxy
   server](https://en.wikipedia.org/wiki/Proxy_server).
 * **Request sent**. The request is being sent.
