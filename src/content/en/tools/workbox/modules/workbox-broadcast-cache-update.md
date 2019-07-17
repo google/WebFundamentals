@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2019-04-02 #}
+{# wf_updated_on: 2019-07-17 #}
 {# wf_published_on: 2017-11-29 #}
 {# wf_blink_components: N/A #}
 
@@ -13,7 +13,7 @@ description: The module guide for workbox-background-sync.
 When responding to requests with cached entries, while being fast, it
 comes with a tradeoff that users may end up seeing stale data.
 
-The `workbox-broadcast-cache-update module` provides a standard way of
+The `workbox-broadcast-cache-update` module provides a standard way of
 notifying Window Clients that a cached response has been updated. This is most
 commonly used along with the
 [staleWhileRevalidate strategy](./workbox-strategies#stale-while-revalidate).
@@ -89,7 +89,7 @@ updatesChannel.addEventListener('message', async (event) => {
 
 ### Message format
 
-When a `message` event listener as received in your web app, the
+When a `message` event listener is invoked in your web app, the
 `event.data` property will have the following format:
 
 ```js
