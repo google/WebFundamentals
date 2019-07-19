@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "First CPU Idle" Lighthouse audit.
 
-{# wf_updated_on: 2018-10-01 #}
+{# wf_updated_on: 2019-07-19 #}
 {# wf_published_on: 2017-06-23 #}
 {# wf_blink_components: N/A #}
 
@@ -44,7 +44,7 @@ Consistently Interactive][FIACI] for definitions.
 
 [Audit source][src]{:.external}
 
-[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/first-interactive.js
+[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/first-cpu-idle.js
 
 ## Feedback {: #feedback }
 
