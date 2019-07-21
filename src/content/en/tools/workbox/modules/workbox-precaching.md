@@ -165,7 +165,7 @@ workbox.precaching.precacheAndRoute([
 
 ### Clean URLs
 
-If a request fails to match the precache, we'll add `.html` to end to support
+If a request fails to match the precache, we'll add `.html` to the end to support
 "clean" URLs (a.k.a. "pretty" URLs). This means a request like `/about` will
 be handled by the precached entry for `/about.html`.
 
