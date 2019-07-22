@@ -1,4 +1,4 @@
-enabled: false
+enabled: true
 description: >
     <style>
       .devsite-banner-announcement {
@@ -16,6 +16,8 @@ description: >
         margin-right: 8px;
       }
     </style>
-    Join us for the first <b>#AskChrome Live</b> session to learn about
-    Implementing Performance Budgets and live Q&A.
-    <a href="https://events.withgoogle.com/askchrome-live/registrations/new/">Register now</a>
+    Do you use responsive images, lazy loading, or other optimizations?
+    If not, why not? What affects your decisions? <br>
+    Answer a few simple questions to help us understand your needs, and
+    what we can do to make your life easier.
+    <a href="https://forms.gle/DJt35H2mdEe81Lae9">Get Started</a>
