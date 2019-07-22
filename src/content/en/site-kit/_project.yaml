@@ -12,3 +12,21 @@ hide_ratings_widget: true
 google_analytics_ids:
   - UA-52746336-1
   - UA-130569087-3
+announcement:
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style> Do you use responsive images, lazy loading, or other optimizations? If not, why not? What affects your decisions? <br> Answer a few simple questions to help us understand your needs, and what we can do to make your life easier. <a href="https://forms.gle/DJt35H2mdEe81Lae9">Get Started</a>
