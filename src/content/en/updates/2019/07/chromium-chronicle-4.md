@@ -83,7 +83,7 @@ var anotherOrigin = "https://&#123;&#123;hosts[][www1]}}:&#123;&#123;ports[https
 to the headers of the response, and delays 1 second before responding. Search for "pipes"
 on [web-platform-tests.org][web-platform-tests] for more.
 
-**WPT can also test behaviours that are not included in specs yet;** just
+**WPT can also test behaviors that are not included in specs yet;** just
 name the test as `.tentative`. If you need Blink internal APIs (e.g.
 `testRunner`, `internals`), put your tests in `web_tests/wpt_internal`.
 
