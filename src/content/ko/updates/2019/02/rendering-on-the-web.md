@@ -111,7 +111,7 @@ SSR Rehydration에 대한 희망도 있습니다. 단기적으로 캐시할 수 
 
 ## 스트리밍 서버 렌더링 및 점진적인 Rehydration {: #progressive-rehydration }
 
-Server rendering has had a number of developments over the last few years.
+서버 렌더링은 지난 몇 년 동안 여러 가지 발전이있었습니다.
 
 [스트리밍 서버 렌더링](https://zeit.co/blog/streaming-server-rendering-at-spectrum)을 사용하면 브라우저가 받은대로 점진적으로 렌더링 할 수 있는 청크로 HTML을 보낼 수 있습니다. 이것은 마크업이 사용자에게 더 빨리 도착할 때 빠른 First Paint와 First Contentful Paint를 제공 할 수 있습니다. React에서 [renderToNodeStream()](https://reactjs.org/docs/react-dom-server.html#rendertonodestream) 에서 비동기인 스트림은 동기 renderToString과 비교하여 유속이 빠르다는 것을 의미합니다.
 
