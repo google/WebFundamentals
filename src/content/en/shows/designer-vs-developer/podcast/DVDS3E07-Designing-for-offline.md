@@ -41,7 +41,7 @@ In this episode:
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E07-Designing-for-offline.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
-<a href="http://bit.ly/MustafaOnSpotify">Spotify</a>,
+<a href="https://bit.ly/MustafaOnSpotify">Spotify</a>
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">Google Music</a>

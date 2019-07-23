@@ -39,7 +39,7 @@ controls preload="none">
 
 
 Subscribe to Designer Vs Developer Podcast via
-<a href="http://bit.ly/MustafaOnSpotify">Spotify</a>,
+<a href="https://bit.ly/MustafaOnSpotify">Spotify</a>
 <a href="https://goo.gl/USHXv8">Feedburner</a>, 
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or 
 <a href="https://goo.gl/qCBlST">

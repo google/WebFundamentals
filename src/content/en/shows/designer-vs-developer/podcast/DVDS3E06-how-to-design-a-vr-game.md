@@ -43,7 +43,7 @@ In this episode:
 <audio style="width: 100%" controls preload="none" src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E06-How-to-design-VR-game.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
-<a href="http://bit.ly/MustafaOnSpotify">Spotify</a>,
+<a href="https://bit.ly/MustafaOnSpotify">Spotify</a>
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">Google Music</a>
