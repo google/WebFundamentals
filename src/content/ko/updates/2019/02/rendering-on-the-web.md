@@ -32,7 +32,7 @@ book_path: /web/updates/_book.yaml
 
 - **TTFB:** Time to First Byte (첫 번째 바이트까지의 시간) - 링크를 클릭한 후 처음으로 들어오는 콘텐츠 비트 사이의 시간을 나타냅니다.
 - **FP:** First Paint - 픽셀이 처음으로 사용자에게 표시되는 시점.
-- **FCP:**  First Contentful Paint - the time when requested content (articlebody, etc) becomes visible.
+- **FCP:**  First Contentful Paint - 요청 콘텐츠(기사 본문 등)가 표시되는 시점
 - **TTI:** Time To Interactive - 페이지가 상호작용 가능하게 될 때까지의 시간 (이벤트 발생 등).
 
 ## 서버 렌더링 {: #server-rendering }
@@ -119,28 +119,11 @@ SSR Rehydration에 대한 희망도 있습니다. 단기적으로 캐시할 수 
 
 ### 부분 Rehydration {: #partial-rehydration }
 
-Partial rehydration has proven difficult to implement. This approach is an
-extension of the idea of progressive rehydration, where the individual pieces
-(components / views / trees) to be progressively rehydrated are analyzed and
-those with little interactivity or no reactivity are identified. For each of
-these mostly-static parts, the corresponding JavaScript code is then transformed
-into inert references and decorative functionality, reducing their client-side
-footprint to near-zero.
-The partial hydration approach comes with its own issues and compromises. It
-poses some interesting challenges for caching, and client-side navigation means
-we can't assume server-rendered HTML for inert parts of the application will be
-available without a full page load.
+부분 Rehydration은 수행 과정이 어렵습니다. 개별 요소(구성요소/보기/트리)는 점진적으로 Rehydration 및 분석되고, 상호 활동이 거의 없거나 반응성을 확인할 수 없는 경우 이 방법을 통해 점진적인 Rehydration의 개념을 확장합니다. 대부분의 정적인 부분의 경우 일치하는 JavaScript 코드는 비활성 참조 및 장식 기능성으로 전환되어 클라이언트의 자취가 거의 없는 상태가 됩니다. 부분 Hydration 방법은 자체적인 문제와 손상을 포함합니다. 캐시에 대한 흥미로운 문제가 발생하며, 클라이언트 측의 메뉴는 애플리케이션의 비활성 부분을 위한 서버 렌더링 방식의 HTML을 추측할 수 없습니다. 서버 렌더링 방식의 HTML은 애플리케이션의 비활성 부분을 위해서 전체 페이지를 로드하지 않고 접근할 수 있습니다.
 
 ### 삼자형 렌더링 {: #trisomorphic }
 
-If [service workers](https://developers.google.com/web/fundamentals/primers/service-workers/) are an option for you, “trisomorphic” rendering may also be
-of interest. It's a technique where you can use streaming server rendering for
-initial/non-JS navigations, and then have your service worker take on rendering
-of HTML for navigations after it has been installed. This can keep cached
-components and templates up to date and enables SPA-style navigations for
-rendering new views in the same session. This approach works best when you can
-share the same templating and routing code between the server, client page, and
-service worker.
+[서비스 작업자](https://developers.google.com/web/fundamentals/primers/service-workers/)가 선택할 수 있는 옵션인 경우 “삼자형” 렌더링에 관심을 가질 수 있습니다. 초기/비 JS 메뉴를 위해 스트리밍 서버 렌더링을 사용할 수 있으며, 서비스 작업자는 설치를 완료한 후 메뉴를 위한 HTML 렌더링을 수행합니다. 이를 통해 캐시 구성요소와 템플릿의 최신 업데이트 상태를 유지하며, 동일한 세션에서 신규 보기를 렌더링하기 위해 SPA 스타일의 메뉴를 활성화합니다. 이와 같은 접근 방법은 사용자가 서버, 클라인트 페이지 및 서비스 작업자 간의 동일한 템플릿 및 라우팅 코드를 공유할 때 효과가 높습니다.
 
 <img src="../../images/2019/02/rendering-on-the-web/trisomorphic.png" alt="Diagram of Trisomorphic rendering, showing a browser and service worker
 communicating with the server">
