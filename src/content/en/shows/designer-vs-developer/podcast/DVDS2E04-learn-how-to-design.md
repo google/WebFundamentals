@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Yasmine talks about learning to design.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-05 #}
+{# wf_updated_on: 2019-07-23 #}
 {# wf_published_on: 2017-09-11 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E04-learn-how-to-design.mp3 #}
 {# wf_podcast_duration: 00:11:02 #}
@@ -41,7 +41,7 @@ src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E04-learn
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
-<a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,
+<a href="https://bit.ly/MustafaOnSpotify">Spotify</a>
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">

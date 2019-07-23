@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: This week we speak to Jake Archibald about communication.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-05 #}
+{# wf_updated_on: 2019-07-23 #}
 {# wf_published_on: 2017-03-07 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3 #}
 {# wf_podcast_duration: 00:13:28 #}
@@ -37,7 +37,7 @@ src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
-<a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,
+<a href="https://bit.ly/MustafaOnSpotify">Spotify</a>
 <a href="https://goo.gl/USHXv8">Feedburner</a>, 
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or 
 <a href="https://goo.gl/qCBlST">
