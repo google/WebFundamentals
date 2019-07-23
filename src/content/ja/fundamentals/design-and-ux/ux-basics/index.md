@@ -31,8 +31,7 @@ description: UX デザインの基本の手順ガイド
 タスクがどのようなものであっても、達成しようとしている目標に合わせて言語を調整するだけです。
 ステートメントは、チーム目標に関連付けられたものであり、対象読者に重点を置き、鼓舞するようなものであると同時に簡潔である必要があります。
 
-These are some real life examples of products that I have worked on in the
-past;
+これらは私が過去に取り組んできた製品の実生活の例です。
 
 - 内反足の患者の治療とフォローアップ治療を管理するシステムをデザインする。
 
@@ -42,13 +41,10 @@ past;
 
 ### 課題ステートメントの更新
 
-Once you have written several variations of the goal, present it to your team to
-get a consensus. You may want to include a deadline as this will help the team
-focus on the problem. So with the added adjustments, the list above could
-be:
+目標のバリエーションをいくつか書いたら、それをチームに提示して合意を得ます。チームが問題に集中するのに役立つので、期限を含めることをお勧めします。調整を追加すると、上記のリストは次のようになります。
 
 - 内反足の 2 歳未満の子供の治療とフォローアップ治療を管理するシステムをデザインする。提供開始は今年の第 1 四半期。
-- Create a simple financial app that allows you to buy and sell shares at the tapof a button without prior knowledge of the financial world, with initial launchon July 2017.
+- 2017年7月の最初のローンチで、金融業界の知識がなくてもボタンを押すだけで株式を売買できるシンプルな金融アプリを作成します。
 - 複数のプラットフォームに柔軟に対応し、各プラットフォームに会社のブランドを効果的に配置するデザインガイドを作成する。期限は年内。
 
 課題ステートメントを完成させたら、それを目立つ場所に掲示して、作業中に確認できるようにします。
@@ -119,14 +115,7 @@ be:
   <figcaption>自然な環境にいるユーザーに会うことは、ユーザーが自分自身の課題をどのように解決するかを把握するのに最適な方法です。</figcaption>
 </figure>
 
-This is where you observe the user in the field, in context while doing
-something like how they do their shopping, how they travel to work,
-how they send SMS messages etc.. The reason is in some cases people will tell
-you what they think you want to hear. But if you watch users perform actions and
-tasks on their own it can be insightful. Basically you are observing without
-interfering, noting things which they find easy or difficult and things they
-may have missed. The goal is to immerse yourself in the user's environment to
-better empathize with their pain points.
+ここでは、買い物をする方法、仕事をする方法、SMSメッセージを送信する方法などを実行しながら、現場でユーザーを観察します。聞きたいしかし、ユーザーが自分でアクションやタスクを実行するのを見れば、それは洞察に満ちたものになる可能性があります。基本的にあなたは干渉することなく観察しています、彼らが容易であるか難しいと感じるものと彼らが逃したかもしれないものに注意してください。目標は、ユーザーの環境に没頭して、ユーザーの問題点をより的確に共感することです。
 
 通常、この方法では、作業に長い時間がかかり、リサーチャーがプロジェクトのこの部分をリードする必要があります。ただし、自然な環境で調査対象のユーザーに会う機会が得られれば、最も分析に役立つでしょう。
 
