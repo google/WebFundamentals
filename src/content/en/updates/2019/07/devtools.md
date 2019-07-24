@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copy element styles, visualize layout shifting, and more.
 
-{# wf_updated_on: 2019-07-22 #}
+{# wf_updated_on: 2019-07-23 #}
 {# wf_published_on: 2019-07-22 #}
 {# wf_tags: chrome77, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -28,6 +28,11 @@ Right-click a node in the **DOM Tree** to copy that DOM node's CSS to your clipb
 <!-- https://chromium.googlesource.com/chromium/src/+/3acba91a70ebe1c21a0c29759309abf8aaa2ac99 -->
 
 ## Visualize layout shifts {: #layoutshifts }
+
+<aside class="warning">
+  This feature can cause your screen to flash a lot and may not be suitable for you if you're prone to
+  photosensitive epilepsy.
+</aside>
 
 [placeholders]: /web/fundamentals/performance/lazy-loading-guidance/images-and-video/#layout_shifting_and_placeholders
 
