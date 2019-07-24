@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copy element styles, visualize layout shifting, and more.
 
-{# wf_updated_on: 2019-07-23 #}
+{# wf_updated_on: 2019-07-24 #}
 {# wf_published_on: 2019-07-22 #}
 {# wf_tags: chrome77, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -68,7 +68,9 @@ DevTools can now help you detect layout shifting:
   covering it now.
 </aside>
 
-The Audits panel is now running Lighthouse 5.1. New audits include:
+[v5.1]: https://github.com/GoogleChrome/lighthouse/releases/tag/v5.1.0
+
+The Audits panel is now running [Lighthouse 5.1][v5.1]. New audits include:
 
 [safari]: /web/fundamentals/design-and-ux/browser-customization/#safari
 [FID]: /web/updates/2018/05/first-input-delay
