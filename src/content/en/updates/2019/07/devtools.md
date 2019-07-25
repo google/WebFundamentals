@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copy element styles, visualize layout shifting, and more.
 
-{# wf_updated_on: 2019-07-24 #}
+{# wf_updated_on: 2019-07-25 #}
 {# wf_published_on: 2019-07-22 #}
 {# wf_tags: chrome77, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -24,6 +24,11 @@ Right-click a node in the **DOM Tree** to copy that DOM node's CSS to your clipb
     Figure 1. Copy element styles.
   </figcaption>
 </figure>
+
+[visbug]: https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc
+
+Thanks [Adam Argyle](https://twitter.com/argyleink) and [VisBug][visbug] for the
+[inspiration](https://twitter.com/argyleink/status/1142216452184821760).
 
 <!-- https://chromium.googlesource.com/chromium/src/+/3acba91a70ebe1c21a0c29759309abf8aaa2ac99 -->
 
