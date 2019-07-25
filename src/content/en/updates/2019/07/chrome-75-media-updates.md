@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the audio/video updates in Chrome 75: Predicting whether playback will be smooth and power efficient for encrypted media and support of the video elements "playsInline" attribute hint.
+description: A round up of the audio/video updates in Chrome 75: predicting whether playback will be smooth and power efficient for encrypted media and support of the video element's "playsInline" attribute hint.
 
 {# wf_updated_on: 2019-07-24 #}
 {# wf_published_on: 2019-07-22 #}
 {# wf_tags: news,chrome75,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
-{# wf_featured_snippet: A round up of the audio/video updates in Chrome 75: Predicting whether playback will be smooth and power efficient for encrypted media and support of the video elements "playsInline" attribute hint. #}
+{# wf_featured_snippet: A round up of the audio/video updates in Chrome 75: predicting whether playback will be smooth and power efficient for encrypted media and support of the video element's "playsInline" attribute hint. #}
 {# wf_blink_components: Blink>Media #}
 
 # Audio/Video Updates in Chrome 75 {: .page-title }
@@ -18,7 +18,7 @@ discuss those new features which include:
 
 - Predicting whether playback will be smooth and power efficient for encrypted
   media.
-- Support of the video elements `playsInline` attribute hint.
+- Support of the video element's `playsInline` attribute hint.
 
 ## Encrypted Media: Decoding Info API  {: #encrypted-media}
 
@@ -74,22 +74,23 @@ different codec support and performance compared to clear playbacks. Hence a new
 `keySystemConfiguration` key must be set in the media configuration object
 passed to `navigator.mediaCapabilities.decodingInfo()`. The value of this key is
 a dictionary that holds a number of [well-known EME types]. This replicates the
-inputs provided to EME's `requestMediaKeySystemAccess()` (rMKSA) with one major
-difference: sequences of inputs provided to rMKSA are flattened to a single
-value wherever the intent of the sequence was to have rMKSA choose a subset it
-supports.
+inputs provided to EME's `requestMediaKeySystemAccess()` with one major
+difference: sequences of inputs provided to `requestMediaKeySystemAccess()`
+are flattened to a single
+value wherever the intent of the sequence was to have `requestMediaKeySystemAccess()`
+choose a subset it supports.
 
 The Decoding Info API describes the quality (smoothness and power efficiency) of
 support for a single pair of audio and video streams without making a decision
 for the caller. Callers should still order media configurations as they do with
-rMKSA, only now they walk the list themselves.
+`requestMediaKeySystemAccess()`. Only now they walk the list themselves.
 
 `navigator.mediaCapabilities.decodingInfo()` returns a promise that resolves
 asynchronously with an object containing three booleans: `supported`, `smooth`,
 and `powerEfficient`. However when a`keySystemConfiguration` key is set and
-`supported` is `true`, yet another MediaKeySystemAccess object named
+`supported` is `true`, yet another `MediaKeySystemAccess` object named
 `keySystemAccess` is returned as well. It can be used to request some media keys
-and setup encrypted media playback. Here’s an example.
+and setup encrypted media playback. Here’s an example:
 
     // Like rMSKA(), orderedMediaConfigs is ordered from most to least wanted.
     const capabilitiesPromises = orderedMediaConfigs.map(mediaConfig =>
@@ -116,7 +117,8 @@ and setup encrypted media playback. Here’s an example.
 Note that the Decoding Info API for encrypted media requires HTTPS.
 
 Moreover, be aware that it may trigger a user prompt on Android and Chrome OS in
-the same way as rMKSA. It won’t show more prompts than rMKSA though, in spite of
+the same way as `requestMediaKeySystemAccess()`. It won’t show more prompts than
+`requestMediaKeySystemAccess()` though, in spite of
 requiring more calls to setup encrypted media playback.
 
 
@@ -136,8 +138,7 @@ requiring more calls to setup encrypted media playback.
 Dogfood: To get feedback from web developers, this feature is available as an
 [Origin Trial] in Chrome 75. You will need to [request a token], so that the
 feature is automatically enabled for your origin for a limited period
-of time. This will eliminate the need to enable the "Web Platform Features"
-flag.
+of time. 
 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/d/topic/blink-dev/eA9uG98td5U/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5765900795904000) &#124;
@@ -149,7 +150,7 @@ Chrome now supports the `playsInline` boolean attribute. If present, it hints to
 the browser that the video ought to be displayed "inline" in the document by
 default, constrained to the element's playback area.
 
-[Similarly] to Safari where video elements on iPhone don’t automatically enter
+[Similarly] to Safari, where video elements on iPhone don’t automatically enter
 fullscreen mode when playback begins, this hint allows some embedders to have an
 auto-fullscreen video playback experience. Web developers can use it to opt-out
 of this experience if needed.
