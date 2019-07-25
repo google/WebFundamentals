@@ -53,8 +53,8 @@ Learn more about autofill in
 
 ## Prevent the form from submitting
 
-When the user presses the submit button, prevent the form from submitting, which would result
-in a page transition:
+When the user presses the submit button, prevent the form from submitting, which would otherwise
+result in a page transition:
 
     var f = document.querySelector('#signup');
     f.addEventListener('submit', e => {
