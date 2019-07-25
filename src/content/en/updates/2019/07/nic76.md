@@ -83,7 +83,7 @@ for complete details.
   </figcaption>
 </figure>
 
-On mobile, Chrome shows the mini-infobar the first time a user visits your
+On mobile, Chrome shows the [mini-infobar][mini-infobar] the first time a user visits your
 site if it meets the [Progressive Web App installability criteria][pwa-install-criteria].
 We heard from you that you want to be able to prevent the mini-infobar from
 appearing, and provide your own install promotion instead.
@@ -108,6 +108,7 @@ our recommend best practices for promoting the installation of your
 Progressive Web Apps.
 
 [patterns-mobile]: /web/fundamentals/app-install-banners/promoting-install-mobile
+[mini-infobar]: /web/fundamentals/app-install-banners/#mini-info-bar
 
 <div class="clearfix"></div>
 
