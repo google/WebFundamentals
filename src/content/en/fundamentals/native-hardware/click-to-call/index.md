@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: On devices with phone capabilities, make it easy for users to directly connect with you by simply tapping a phone number, more commonly known as click to call.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-07-26 #}
 {# wf_published_on: 2014-06-17 #}
 {# wf_blink_components: Blink>Input #}
 
