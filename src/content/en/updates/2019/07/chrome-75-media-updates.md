@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 75: predicting whether playback will be smooth and power efficient for encrypted media and support of the video element's "playsInline" attribute hint.
 
-{# wf_updated_on: 2019-07-24 #}
+{# wf_updated_on: 2019-07-26 #}
 {# wf_published_on: 2019-07-22 #}
 {# wf_tags: news,chrome75,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -20,19 +20,19 @@ discuss those new features which include:
   media.
 - Support of the video element's `playsInline` attribute hint.
 
-## Encrypted Media: Decoding Info API  {: #encrypted-media}
+## Encrypted Media: Decoding Info  {: #encrypted-media}
 
-Since Chrome 66, web developers have been able to use the [Decoding Info API] to
+Since Chrome 66, web developers have been able to use [Decoding Info] to
 query the browser about the clear content decoding abilities of the device based
 on information such as the codecs, profile, resolution, bitrates, etc. It
 indicates whether the playback will be smooth (timely) and power efficient based
 on previous playback statistics recorded by the browser.
 
-The [Media Capabilities API] specification has since been updated to handle
-encrypted media configurations as well so that websites using encrypted media
-(EME) can select the optimal media streams.
+The [Media Capabilities API] specification, defining Decoding Info, has since
+been updated to handle encrypted media configurations as well so that websites
+using encrypted media (EME) can select the optimal media streams.
 
-In a nutshell, here’s how the Decoding Info API for EME works. Give a try to the
+In a nutshell, here’s how Decoding Info for EME works. Give a try to the
 [official sample].
 
     const encryptedMediaConfig = {
@@ -80,7 +80,7 @@ are flattened to a single
 value wherever the intent of the sequence was to have `requestMediaKeySystemAccess()`
 choose a subset it supports.
 
-The Decoding Info API describes the quality (smoothness and power efficiency) of
+Decoding Info describes the quality (smoothness and power efficiency) of
 support for a single pair of audio and video streams without making a decision
 for the caller. Callers should still order media configurations as they do with
 `requestMediaKeySystemAccess()`. Only now they walk the list themselves.
@@ -114,7 +114,7 @@ and setup encrypted media playback. Here’s an example:
       // TODO: Maybe choose the lowest resolution and framerate available.
     }
 
-Note that the Decoding Info API for encrypted media requires HTTPS.
+Note that Decoding Info for encrypted media requires HTTPS.
 
 Moreover, be aware that it may trigger a user prompt on Android and Chrome OS in
 the same way as `requestMediaKeySystemAccess()`. It won’t show more prompts than
@@ -166,7 +166,7 @@ As Chrome on Android and Desktop don’t implement auto-fullscreen, the
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-[Decoding Info API]: https://developers.google.com/web/updates/2017/12/chrome-63-64-media-updates#media-capabilities-decoding-info-api
+[Decoding Info]: https://developers.google.com/web/updates/2017/12/chrome-63-64-media-updates#media-capabilities-decoding-info-api
 [Media Capabilities API]: https://wicg.github.io/media-capabilities
 [official sample]: https://googlechrome.github.io/samples/media-capabilities/decoding-info-eme
 [well-known EME types]: https://wicg.github.io/media-capabilities/#dictdef-mediacapabilitieskeysystemconfiguration
