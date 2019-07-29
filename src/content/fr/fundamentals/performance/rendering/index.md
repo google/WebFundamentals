@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Les utilisateurs remarquent quand les sites ou applications ne
 fonctionnent pas correctement, leur optimisation est donc cruciale!
 
-{# wf_updated_on: 2019-07-28 #}
+{# wf_updated_on: 2019-07-29 #}
 {# wf_published_on: 2015-03-20 #}
 {# wf_blink_components: Blink>Paint #}
 
@@ -51,9 +51,9 @@ utilisateur.
 
 Il y a cinq domaines principaux que vous devez connaître et prendre en compte
 lorsque vous travaillez. Ce sont les zones sur lesquelles vous avez le plus de
-contrôle et les points clés du pipeline pixels à l'écran:
+contrôle et les points clés du pipeline de pixels à l'écran:
 
-<img src="images/intro/frame-full.jpg" alt="Le pipeline pixels complet.">
+<img src="images/intro/frame-full.jpg" alt="Le pipeline de pixels complet.">
 
 - **JavaScript**. De manière générale le JavaScript est utilisé pour écrire des
 fonctions qui ont un impact visual, que ce soit en utilisant la fonction
@@ -102,7 +102,7 @@ visuel, qu'il soit en Javascript, en CSS, ou via les Web Animations:
 
 ### 1. JS / CSS > Style > Mise en Page> Rendu > Composition
 
-<img src="images/intro/frame-full.jpg" alt="Le pipeline pixels complet.">
+<img src="images/intro/frame-full.jpg" alt="Le pipeline de pixels complet.">
 
 Si vous changez une propriété de "mise en page" lié au changement des propriétés
 géométriques d'un élément, comme sa largeur, sa hauteur, ou sa position avec
@@ -112,7 +112,7 @@ et le rendu final va devoir être réagencé avec ces autres élements.
 
 ### 2. JS / CSS > Style > Rendu> Composition
 
-<img src="images/intro/frame-no-layout.jpg" alt="Le pipeline pixels sans mise en page.">
+<img src="images/intro/frame-no-layout.jpg" alt="Le pipeline de pixels sans mise en page.">
 
 Si vous faites un changement de "rendu uniquement", comme une image
 d'arrière-plan, la couleur du texte, ou des ombres, en d'autres mots des
@@ -121,7 +121,7 @@ l'étape de mise en page, mais il va tout de même faire le rendu.
 
 ### 3. JS / CSS > Style > Composition
 
-<img src="images/intro/frame-no-layout-paint.jpg" alt="Le pipeline pixels sans mise en page ou rendu.">
+<img src="images/intro/frame-no-layout-paint.jpg" alt="Le pipeline de pixels sans mise en page ou rendu.">
 
 Si vous faites un changement qui ne nécessite ni une remise en page, ni un rendu
 supplémentaire, le navigateur passe directement à l'étape de composition.
