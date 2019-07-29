@@ -37,17 +37,6 @@ what’s new for developers in Chrome 76!
 
 <div class="clearfix"></div>
 
-### Change log {: .hide-from-toc }
-
-This covers only some of the key highlights, check the links below for
-additional changes in Chrome 76.
-
-* [What's new in Chrome DevTools (76)](/web/updates/2019/05/devtools)
-* [Chrome 76 deprecations & removals](/web/updates/2019/06/chrome-76-deps-rems)
-* [ChromeStatus.com updates for Chrome 76](https://www.chromestatus.com/features#milestone%3D76)
-* [What's new in JavaScript in Chrome 76](https://v8.dev/blog/v8-release-76)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/75.0.3770.67..76.0.3809.88)
-
 ## PWA Omnibox Install Button {: #pwa-install }
 
 <video loop autoplay muted class="attempt-right">
@@ -209,7 +198,18 @@ easy to programmatically copy and paste images.
 
 [img-async-clipboard]: /web/updates/2019/07/image-support-for-async-clipboard
 
-## Subscribe
+## Further reading
+
+This covers only some of the key highlights, check the links below for
+additional changes in Chrome 76.
+
+* [What's new in Chrome DevTools (76)](/web/updates/2019/05/devtools)
+* [Chrome 76 deprecations & removals](/web/updates/2019/06/chrome-76-deps-rems)
+* [ChromeStatus.com updates for Chrome 76](https://www.chromestatus.com/features#milestone%3D76)
+* [What's new in JavaScript in Chrome 76](https://v8.dev/blog/v8-release-76)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/75.0.3770.67..76.0.3809.88)
+
+## Subscribe {: .hide-from-toc }
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
