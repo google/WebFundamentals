@@ -23,7 +23,7 @@ Web がブラウザアプリケーションプラットフォームへと進化�
 
 Google は、[Mobile Speed Matters](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/) を含む、ユーザーエンゲージメントに対するパフォーマンスの影響に関する広範な調査を発表しています。[WPOStats](https://wpostats.com) や [PWAStats](https://www.pwastats.com) など、さまざまな Web パフォーマンス統計やケーススタディも独立したサイトで入手できます。
 
-## The Goal
+## 目標
 
 開発者は、対話までの時間 (TTI) や最初の意味のあるペイント (FMP) のような測定可能な概念についてよく話します。これは重要で包括的な目標を定量化しようとする試みで、単に最初の訪問、そしてその後の訪問でユーザーができるだけ早くコンテンツと動作の両方にアクセスできるように*できるだけ早くページをロードすることです*。
 
