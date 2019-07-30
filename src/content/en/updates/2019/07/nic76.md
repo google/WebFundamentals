@@ -6,7 +6,7 @@ description: What's New in Chrome 76 for developers?
 {# wf_updated_on: 2019-07-30 #}
 {# wf_featured_image: /web/updates/images/2019/07/nic076.jpg #}
 {# wf_tags: chrome76,new-in-chrome,mobile,install,addtohomescreen,progressive-web-apps,webapk,css,desktop #}
-{# wf_featured_snippet: Chrome 76 is rolling out now! It adds support for the <code>prefers-color-scheme</code> media query, bringing dark mode to websites. An install button in the omnibox to make installation of Progressive Web Apps on desktop easier. A way to prevent the mini-infobar from appearing on mobile. Increases the frequency that WebAPKs are updated. And plenty more. Let’s dive in and see what’s new for developers in Chrome 76! #}
+{# wf_featured_snippet: Chrome 76 is rolling out now! It adds support for the <code>prefers-color-scheme</code> media query, bringing dark mode to websites. An install button in the omnibox to make installation of Progressive Web Apps on desktop easier. A way to prevent the mini-infobar from appearing on mobile. Increases the frequency with which WebAPKs are updated. And plenty more. Let’s dive in and see what’s new for developers in Chrome 76! #}
 {# wf_blink_components: N/A #}
 
 # New in Chrome 76 {: .page-title }
