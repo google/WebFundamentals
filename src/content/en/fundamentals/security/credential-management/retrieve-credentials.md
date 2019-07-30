@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-07-22 #}
 {# wf_published_on: 2016-11-08 #}
 {# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
@@ -60,8 +60,8 @@ don’t forget to check if the user is already signed in:
       }
     }
 
-When the `navigator.credentials.get()` resolves,
-it returns either undefined or a credential object.
+The promise returned by `navigator.credentials.get()` resolves
+with either a credential object or `null`.
 To determine whether it is a `PasswordCredential` or a `FederatedCredential`,
 simply look at the `.type` property of the object,
 which will be either `password` or `federated`.
@@ -89,7 +89,7 @@ run an authentication flow depending on the type of credential,
        return Promise.resolve();
      }
 
-When the function resolves,
+When the promise resolves,
 check if you've received a credential object.
 If not, it means auto sign-in couldn’t happen.
 Silently dismiss the auto sign-in process.
@@ -172,14 +172,14 @@ skipping the ordinary sign-in form, for example:
   </figure>
 </div>
 
-The steps to sign in via account chooser are the same as
+The steps to sign in via the account chooser are the same as in
 [auto sign-in](#auto_sign-in),
 with an additional call to show the account chooser
 as part of getting credential information:
 
-1. Get credential information and show account chooser.
+1. Get the credential information and show the account chooser.
 2. [Authenticate the user](#authenticate_user).
-3. [Update UI or proceed to a personalized page](#update_ui).
+3. [Update the UI or proceed to a personalized page](#update_ui).
 
 ### Get credential information and show account chooser
 
@@ -216,12 +216,12 @@ Once the user selects an account,
 the promise resolves with the credential.
 If the users cancels the account chooser,
 or there are no credentials stored,
-the promise resolves with an undefined value.
+the promise resolves with `null`.
 In that case, fall back to the sign in form experience.
 
-### Don't forget to fallback to sign-in form
+### Don't forget to fall back to sign-in form
 
-You should fallback to a sign-in form for any of these reasons:
+You should fall back to a sign-in form for any of these reasons:
 
 * No credentials are stored.
 * The user dismissed the account chooser without selecting an account.
@@ -286,7 +286,7 @@ To implement federated login:
 
 1. Authenticate the user with a third-party identity.
 2. Store the identity information.
-3. [Update UI or proceed to a personalized page](#update_ui) (same as auto sign-in).
+3. [Update the UI or proceed to a personalized page](#update_ui) (same as in auto sign-in).
 
 ### Authenticate user with third-party identity
 
@@ -355,7 +355,7 @@ Learn more about this information in the
 [Credential Management specification](https://w3c.github.io/webappsec-credential-management/#credential).
 
 To store federated account details, instantiate a new 
-[`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential),
+[`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential)
 object with the user's identifier and the provider's identifier.
 Then invoke
 [`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store)
@@ -412,8 +412,8 @@ Call
     }
 
 This will ensure the auto sign-in won’t happen until next time the user enables auto sign-in.
-To resume auto sign-in, a user can choose to intentionally sign-in
-by choosing the account they wish to sign in with, from the account chooser.
+To resume auto sign-in, a user can choose to intentionally sign in
+by choosing the account they wish to sign in with from the account chooser.
 Then the user is always signed back in until they explicitly sign out.
 
 ## Feedback {: #feedback }
