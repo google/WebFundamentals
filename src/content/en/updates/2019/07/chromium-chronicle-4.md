@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-07-22 #}
+{# wf_updated_on: 2019-07-30 #}
 {# wf_published_on: 2019-07-30 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
@@ -95,7 +95,7 @@ are imported, create an `OWNERS` file in a subdirectory in WPT:
 ```
 # TEAM: your-team@chromium.org
 # COMPONENT: Blink>YourComponent
-# WPT-NOTI FY: true
+# WPT-NOTIFY: true
 emails-here-will-be-cc@chromium.org
 ```
 
