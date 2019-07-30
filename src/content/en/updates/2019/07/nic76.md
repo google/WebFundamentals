@@ -107,7 +107,7 @@ Progressive Web Apps.
 
 When a Progressive Web App is installed on Android, Chrome automatically
 requests and installs a [Web APK][web-apk]. After it’s been installed,
-Chrome periodically checks to see if the web app manifest has changed,
+Chrome periodically checks if the web app manifest has changed,
 maybe you’ve updated the icons, colors, or changed the app name, to see if
 a new WebAPK is required.
 
@@ -126,21 +126,21 @@ See [Updating WebAPKs More Frequently][updating-webapk] for complete details.
 Many operating systems now support a dark mode, or dark theme.
 
 The `prefers-color-scheme` media query, allows you to adjust the look and feel
-of your site to match the users preferred mode.
+of your site to match the user's preferred mode.
 
 ```css
 @media (prefers-color-scheme: dark) {
   body {
-    color: white;
     background-color: black;
+    color: white;
   }
 }
 ```
 
 Tom has a great article [Hello darkness, my old friend][dark-article] on
 [web.dev](https://web.dev/blog/) with everything you need to know, plus tips
-for architecting your style sheets to support to support both a light,
-and dark mode.
+for architecting your style sheets to support both a light,
+and a dark mode.
 
 [dark-article]: https://web.dev/prefers-color-scheme/
 
@@ -169,8 +169,8 @@ await Promise.allSettled(promises);
 
 ### Reading blobs is easier
 
-`Blobs` are easier to read with three new methods, `text()`, `arrayBuffer()`
-and `stream()`; and means we don’t have to create a wrapper around file
+`Blob`s are easier to read with three new methods: `text()`, `arrayBuffer()`,
+and `stream()`; this means we don’t have to create a wrapper around file
 reader any more!
 
 ```js
