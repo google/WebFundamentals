@@ -1,9 +1,9 @@
 {
-	"folders": [
-		{
+  "folders": [
+    {
       "name": "WebFundamentals",
-			"path": "."
-		}
+      "path": "."
+    }
   ],
   "settings": {
     "files.trimTrailingWhitespace": true,
