@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn the concept of the Web Payments and how it works at a high level.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-25 #}
+{# wf_updated_on: 2019-07-27 #}
 {# wf_blink_components: Blink>Payments #}
 {# wf_featured_image: /web/fundamentals/payments/images/webpayments.png #}
 
@@ -81,28 +81,28 @@ web, and can easily integrate a secure payment solution.</div>
 This document aims at developers who are working for payment industries,
 especially at merchants, payment service providers and payment handlers.
 
-**All developers** should start with reading through ["Basics"
+**All developers** should start with reading through the ["Basics"
 section](/web/fundamentals/payments/basics/how-payment-ecosystem-works).
 
 **Merchants without PCI-DSS compliance** should then consult with their payment
-service provider to see if they have support for Payment Request API. If they
-don't, consider forwarding this document and ask them to support W3C Payment
+service provider to see if they have support for the Payment Request API. If they
+don't, consider forwarding this document and ask them to support the W3C Payment
 APIs. [UX
 considerations](/web/fundamentals/payments/merchant-guide/payment-request-ux-considerations)
-of "Merchant Guide" should be also helpful.
+of the "Merchant Guide" should be also helpful.
 
 
 **Merchants or payment service providers with PCI-DSS compliance** should
-proceed to ["Merchants
+proceed to the ["Merchants
 Guide"](/web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request)
 and learn the Payment Request API in details.
 
-**Payment handlers** should proceed to "Payment Apps Developer Guide" section.
-Depending on your technology set, consider implementing either [Android payment
+**Payment handlers** should proceed to the "Payment Apps Developer Guide" section.
+Depending on your technology set, consider implementing either the [Android payment
 app](/web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps)
-or [web-based payment
+or the [web-based payment
 app](/web/fundamentals/payments/payment-apps-developer-guide/web-payment-apps)
-by reading respective section.
+by reading through the respective section.
 
 ## Feedback {: #feedback }
 
