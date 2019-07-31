@@ -4,6 +4,7 @@ description: Polymer Starter Kit.
 
 {# wf_published_on: 2015-01-01 #}
 {# wf_updated_on: 2019-04-08 #}
+{# wf_blink_components: N/A #}
 
 # Polymer Starter Kit {: .page-title }
 
