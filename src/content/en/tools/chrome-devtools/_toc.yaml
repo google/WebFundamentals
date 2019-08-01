@@ -9,6 +9,8 @@ toc:
     path: /web/tools/chrome-devtools/css/
   - title: CSS Reference
     path: /web/tools/chrome-devtools/css/reference
+  - title: Find Unused CSS
+    path: /web/tools/chrome-devtools/coverage/
   - title: Inspect Animations
     path: /web/tools/chrome-devtools/inspect-styles/animations
   - title: Edit Styles
@@ -124,6 +126,8 @@ toc:
     path: /web/tools/chrome-devtools/javascript/
   - title: Pause Your Code With Breakpoints
     path: /web/tools/chrome-devtools/javascript/breakpoints
+  - title: Find Unused JavaScript
+    path: /web/tools/chrome-devtools/coverage/
   - title: Map Preprocessed Code to Source Code
     path: /web/tools/chrome-devtools/javascript/source-maps
   - title: JS Debugging Reference
@@ -205,12 +209,6 @@ toc:
   path: /web/tools/chrome-devtools/security/
 - title: Keyboard Shortcuts
   path: /web/tools/chrome-devtools/shortcuts
-- title: DevTools for Beginners
-  section:
-  - title: HTML and the DOM
-    path: /web/tools/chrome-devtools/beginners/html
-  - title: CSS
-    path: /web/tools/chrome-devtools/beginners/css
 - title: Resources
   path: /web/tools/chrome-devtools/resources/
 - title: Customize

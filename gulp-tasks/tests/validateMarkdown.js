@@ -1,5 +1,5 @@
 /**
- * @fileoverview Validates a file is a valid YAML file.
+ * @fileoverview Validates a file is a valid Markdown file.
  *
  * @author Pete LePage <petele@google.com>
  */
@@ -278,10 +278,10 @@ function test(filename, contents, options) {
     });
 
     // Error on bad anchor tags
-    matches = wfRegEx.getMatches(/{#\w+}/gm, contents);
+    matches = wfRegEx.getMatches(/{#[-\w]+}/gm, contents);
     matches.forEach(function(match) {
       const position = {line: getLineNumber(contents, match.index)};
-      const msg = `Unsupported anchor style used, use '{: #anchor }', found: `;
+      const msg = `Unsupported anchor style used, use '{: #anchor }', found: ` +
         `'${match[0]}'`;
       logError(msg, position);
     });

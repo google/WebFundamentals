@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with the Workbox Webpack Plugin.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-02 #}
+{# wf_updated_on: 2019-06-27 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with Webpack {: .page-title }
@@ -15,7 +15,7 @@ generate the list of files to precache and add it to your service worker.
 
 ## Setup your Webpack Config
 
-To add the manifest to your service worker file you'll need to add the
+To add the manifest to your service worker file, you'll need to add the
 plugin to your `webpack.config.js` file like so:
 
 <pre class="prettyprint lang-javascript"><code>// Inside of webpack.config.js:
@@ -33,8 +33,8 @@ module.exports = {
   ]
 };</code></pre>
 
-If you look at the output of your service worker file you'll see an extra
-file is added as an `importScripts()` call. It'll be named
+If you look at the output of your service worker file, you'll see an extra
+file added as an `importScripts()` call. It'll be named
 `precache-manifest.<revision>.js`. This file will contain the list of files
 to precache and it will expose the list as the variable
 `self.__precacheManifest`.

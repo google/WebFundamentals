@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-05-23 #}
+{# wf_updated_on: 2019-07-03 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -40,7 +40,7 @@ web today. We call this, the *app gap*. The gap between what’s possible on the
 web and what’s possible on native. We want to close that gap. We believe web
 apps should be able to do anything native apps can.
 
-> Throught our capabilities project, we want to make it possible for web apps
+> Through our capabilities project, we want to make it possible for web apps
 > to do anything native apps can, by exposing the capabilities of native
 > platforms to the web platform, while maintaining user security, privacy,
 > trust, and other core tenets of the web.
@@ -60,6 +60,12 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
 </aside>
 
 ### Capabilities in flight {: #in-flight }
+
+<aside class="success">
+  <b>New</b>
+  See a completely list of APIs we're working on and approximate time
+  lines in our <a href="https://bit.ly/fugu-api-tracker">API Tracker</a>.
+</aside>
 
 <table>
   <thead>
@@ -93,7 +99,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         </a>
       </td>
       <td>
-        The <code>getInstalledRelatedApps</code> API is a new web platform API
+        The Get Installed Related Apps API is a new web platform API
         that allows your web app to check to see if your native app is
         installed on the users device, and vice versa.
         <br><br>
@@ -103,7 +109,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2019/01/shape-detection">Shape Detection API</a>
+        <a href="/web/updates/2019/01/shape-detection">Shape&nbsp;Detection API</a>
       </td>
       <td>
         The Shape Detection API opens up native implementations of shape
@@ -111,8 +117,8 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         interfaces. Currently, the supported features are face detection,
         barcode detection, and text detection (Optical Character Recognition).
         <br><br>
-        <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> February 2nd, 2019
+        <b>Current Status:</b> Behind a flag in Chrome 74.<br>
+        <b>Last Updated:</b> May 28th, 2019
       </td>
     <tr>
       <td>
@@ -127,8 +133,8 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         the device from going to sleep when an application needs to keep
         running.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
-        <b>Last Updated:</b> December 18th, 2018
+        <b>Current Status:</b> Behind a flag in Chrome 71 for desktop.<br>
+        <b>Last Updated:</b> May 28th, 2019
       </td>
     </tr>
     <tr>
@@ -136,7 +142,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         <a href="/web/updates/2018/11/writable-files">Writable Files API</a>
       </td>
       <td>
-        The writable files API is designed to increase interoperability of
+        The Writable Files API is designed to increase interoperability of
         web applications with native applications, making it possible for users
         to choose files or directories that a web app can interact with on the
         native file system, and without having to use a native wrapper like
@@ -161,6 +167,21 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
   <tbody>
     <tr>
       <td>
+        <a href="/web/updates/2019/06/image-support-for-async-clipboard">
+          Async&nbsp;Clipboard API (images)
+        </a>
+      </td>
+      <td>
+        In Chrome 66, we shipped the Asynchronous Clipboard API with
+        support for reading and writing text. In Chrome 76, we added support
+        for reading and writing images to the clipboard.
+        <br><br>
+        <b>Status:</b> Launched in Chrome 76<br>
+        <b>Last Updated:</b> July 3rd, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="/web/updates/2018/12/web-share-target">Web Share Target</a>
       </td>
       <td>
@@ -178,7 +199,8 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
 
 <aside class="key-point">
   <b>Want to try some of these new capabilities?</b> Check out the
-  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">Web Capabilities Codelab</a>
+  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">
+  Web Capabilities Codelab</a>.
 </aside>
 
 ## How will we design & implement these new capabilities? {: #process }

@@ -1,8 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and edit the HTML and CSS of your pages.
+robots: noindex
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2019-07-11 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -10,6 +11,10 @@ description: Inspect and edit the HTML and CSS of your pages.
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+<aside class="caution">
+  This page is deprecated.
+</aside>
 
 Inspect and live-edit the HTML and CSS of a page using 
 the Chrome DevTools Elements panel.

@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "name": "WebFundamentals",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.trimTrailingWhitespace": true,
+    "editor.trimAutoWhitespace": true
+  }
+}

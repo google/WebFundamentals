@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 74 to help you plan.
 
-{# wf_updated_on: 2019-04-22 #}
+{# wf_updated_on: 2019-06-26 #}
 {# wf_published_on: 2019-03-22 #}
 {# wf_tags: deprecations,removals,chrome74 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
-{# wf_featured_image: /web/updates/images/generic/warning.png #}
+{# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 74 to help you plan. #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
@@ -15,7 +15,9 @@ description: A round up of the deprecations and removals in Chrome 74 to help yo
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-## Remove PaymentAddress's languageCode property
+## Removals
+
+### Remove PaymentAddress's languageCode property
 
 The `PaymentAddress.languageCode` property has been removed from the Payment
 Request API. This property is the browser's best guess for the language of the
@@ -28,7 +30,7 @@ enough for safe removal.
 [Chrome Platform Status](https://www.chromestatus.com/feature/4992562146312192) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=877521)
 
-## Don't allow popups during page unload
+### Don't allow popups during page unload
 
 Pages may no longer use `window.open()` to open a new page during unload. The
 Chrome popup blocker already prohibited this, but now it is prohibited whether
@@ -38,7 +40,11 @@ or not the popup blocker is enabled.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5989473649164288) &#124;
 [Chromium Bug](https://groups.google.com/a/chromium.org/d/topic/blink-dev/MkA0A1YKSw4/discussion)
 
-## Deprecate drive-by downloads in sandboxed iframes
+## Deprecations
+
+{% include "web/updates/_shared/deprecations.html" %}
+
+### Deprecate drive-by downloads in sandboxed iframes
 
 Chrome will soon prevent downloads in sandboxed `iframes` that lack a user
 gesture, though this restriction could be lifted via an 

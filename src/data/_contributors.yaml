@@ -195,6 +195,15 @@ ericbidelman:
   description:
     en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
 
+jbingham:
+  name:
+    given: Jonathan
+    family: Bingham
+  github: jbingham
+  twitter: jonathanbingham
+  description:
+    en: Jonathan is a Product Manager at Google
+
 bokan:
   name:
     given: David

@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on configuring Workbox to avoid storage quota issues.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-07-02 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_blink_components: N/A #}
 
@@ -19,13 +19,13 @@ When setting up a route and runtime caching strategy, you can add in an instance
 [`workbox.expiration.Plugin`](/web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin)
 configured with settings that make the most sense for the type of assets you're caching.
 
-For instance, the following configuration might be use for caching images at runtime, with both
+For instance, the following configuration might be used for caching images at runtime, with both
 explicit limits as well as automatic cleanup if quota is exceeded:
 
 ```javascript
 workbox.routing.registerRoute(
   // Match common image extensions.
-  new RegExp('\.(?:png|gif|jpg|svg)$'),
+  new RegExp('\\.(?:png|gif|jpg|jpeg|svg)$'),
   // Use a cache-first strategy with the following config:
   new workbox.strategies.CacheFirst({
     // You need to provide a cache name when using expiration.

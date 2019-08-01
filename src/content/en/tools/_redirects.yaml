@@ -120,6 +120,9 @@ redirects:
 - from: /web/tools/iterate/inspect-styles/media-queries
   to: /web/tools/chrome-devtools/device-mode/media-queries
 
+- from: /web/tools/chrome-devtools/beginners/...
+  to: /web/tools/chrome-devtools/
+
 - from: /web/tools/iterate/...
   to: /web/tools/chrome-devtools/...
 
