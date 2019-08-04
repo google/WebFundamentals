@@ -41,15 +41,16 @@ Animating with CSS is the simplest way to get something moving on screen. This a
 
 Below is some CSS that moves an element `100px` in both the X and Y axes. It's done by using a CSS transition that's set to take `500ms`. When the `move` class is added, the `transform` value is changed and the transition begins.
 
+```css
+.box {
+  transform: translate(0, 0);
+  transition: transform 500ms;
+}
 
-    .box {
-      transform: translate(0, 0);
-      transition: transform 500ms;
-    }
-    
-    .box.move {
-      transform: translate(100px, 100px);
-    }
+.box.move {
+  transform: translate(100px, 100px);
+}
+```
     
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html){: target="_blank" .external }
 
@@ -80,44 +81,44 @@ Note: If you’re new to animations, keyframes are an old term from hand-drawn a
 
 You can, for example, animate the box in the same way with transitions, but have it animate without any user interactions like clicking, and with infinite repetitions. You can also change multiple properties at the same time:
 
+```css
+.box {
+  /* Choose the animation */
+  animation-name: movingBox;
 
-    .box {
-      /* Choose the animation */
-      animation-name: movingBox;
-    
-      /* The animation’s duration */
-      animation-duration: 1300ms;
-    
-      /* The number of times we want
-          the animation to run */
-      animation-iteration-count: infinite;
-    
-      /* Causes the animation to reverse
-          on every odd iteration */
-      animation-direction: alternate;
-    }
-    
-    @keyframes movingBox {
-      0% {
-        transform: translate(0, 0);
-        opacity: 0.3;
-      }
-    
-      25% {
-        opacity: 0.9;
-      }
-    
-      50% {
-        transform: translate(100px, 100px);
-        opacity: 0.2;
-      }
-    
-      100% {
-        transform: translate(30px, 30px);
-        opacity: 0.8;
-      }
-    }
-    
+  /* The animation’s duration */
+  animation-duration: 1300ms;
+
+  /* The number of times we want
+      the animation to run */
+  animation-iteration-count: infinite;
+
+  /* Causes the animation to reverse
+      on every odd iteration */
+  animation-direction: alternate;
+}
+
+@keyframes movingBox {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+
+  25% {
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: translate(100px, 100px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(30px, 30px);
+    opacity: 0.8;
+  }
+}
+```
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html){: target="_blank" .external }
 
