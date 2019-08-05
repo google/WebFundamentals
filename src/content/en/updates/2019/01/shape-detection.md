@@ -96,8 +96,8 @@ text. The following bullet list contains examples of use cases for all three fea
 | ------------------------------------------ | ---------------------------- |
 | 1. Create explainer                        | [Complete][explainer]        |
 | 2. Create initial draft of specification   | [In Progress][spec]          |
-| 3. Gather feedback & iterate on design     | [In progress](#feedback)     |
-| **4. Origin trial**                        | [**In progress**](ot)        |
+| 3. **Gather feedback & iterate on design** | [**In progress**](#feedback) |
+| 4. Origin trial                            | [In progress](ot)            |
 | 5. Launch                                  | Not started                  |
 
 Success: Following a successful Origin Trial,
