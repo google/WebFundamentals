@@ -15,8 +15,8 @@ description: The Barcode Detection API allows for barcodes to be detected in ima
 
 <div class="clearfix"></div>
 
-Success: We were working the specification for this API as part of the [capabilities
-project](/web/updates/capabilities). Following a successful Origin Trial,
+Success: We were working the specification for this API as part of the
+[capabilities project](/web/updates/capabilities). Following a successful Origin Trial,
 barcode detection has now launched.
 
 You may remember [my post from January](../01/shape-detection)

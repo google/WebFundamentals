@@ -15,11 +15,12 @@ description: The Shape Detection API allows for faces, barcodes, and text to be 
 
 <div class="clearfix"></div>
 
+Success: Following a successful Origin Trial,
+[barcode detection has now launched](../08/barcode-detection).
+
 Warning: We’re currently working the specification for this API as part of the [capabilities
 project](/web/updates/capabilities). We’ll keep this post updated as this new API moves from design
 to implementation.
-
-Success: Following a successful Origin Trial, barcode detection has now launched.
 
 ## What is the Shape Detection API? {: #what }
 
@@ -99,7 +100,8 @@ text. The following bullet list contains examples of use cases for all three fea
 | **4. Origin trial**                        | [**In progress**](ot)        |
 | 5. Launch                                  | Not started                  |
 
-Success: Following a successful Origin Trial, barcode detection has now launched.
+Success: Following a successful Origin Trial,
+[barcode detection has now launched](../08/barcode-detection).
 
 ## How to use the Shape Detection API {: #use }
 
