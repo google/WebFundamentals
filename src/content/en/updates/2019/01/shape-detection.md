@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Shape Detection API allows for faces, barcodes, and text to be detected in images.
 
-{# wf_updated_on: 2019-02-22 #}
+{# wf_updated_on: 2019-08-05 #}
 {# wf_published_on: 2019-01-07 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -18,6 +18,8 @@ description: The Shape Detection API allows for faces, barcodes, and text to be 
 Warning: We’re currently working the specification for this API as part of the [capabilities
 project](/web/updates/capabilities). We’ll keep this post updated as this new API moves from design
 to implementation.
+
+Success: Following a successful Origin Trial, barcode detection has now launched.
 
 ## What is the Shape Detection API? {: #what }
 
@@ -96,6 +98,8 @@ text. The following bullet list contains examples of use cases for all three fea
 | 3. Gather feedback & iterate on design     | [In progress](#feedback)     |
 | **4. Origin trial**                        | [**In progress**](ot)        |
 | 5. Launch                                  | Not started                  |
+
+Success: Following a successful Origin Trial, barcode detection has now launched.
 
 ## How to use the Shape Detection API {: #use }
 
