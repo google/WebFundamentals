@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Go offroad and create totally custom animations for your projects.
 
 {# wf_blink_components: Blink>Animation #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-08-05 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Custom Easing {: .page-title }
@@ -19,9 +19,9 @@ Sometimes you won't want to use the easing keywords that are included with CSS, 
 * Use JavaScript when you need more control over the animation timing and behavior, for example, elastic or bounce animations.
 
 
-If you're animating with CSS, you'll find that you can define cubic Bézier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out`, and `linear` map to predefined Bézier curves, which are detailed in the [CSS transitions specification](http://www.w3.org/TR/css3-transitions/) and the [Web Animations specification](https://w3c.github.io/web-animations/#scaling-using-a-cubic-bezier-curve).
+If you're animating with CSS, you'll find that you can define cubic Bézier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out`, and `linear` map to predefined Bézier curves, which are detailed in the [CSS transitions specification](https://www.w3.org/TR/css3-transitions/) and the [Web Animations specification](https://w3c.github.io/web-animations/#scaling-using-a-cubic-bezier-curve).
 
-These Bézier curves take four values, or two pairs of numbers, with each pair describing the X and Y coordinates of a cubic Bézier curve’s control points. The starting point of the Bézier curve has a coordinate of (0, 0) and the end coordinate is (1, 1); you get to set the X and Y values of the two control points. The X values for the two control points must be between 0 and 1, and each control point’s Y value can exceed the [0, 1] limit, although the spec isn’t clear by how much.
+These Bézier curves take four values, or two pairs of numbers, with each pair describing the X and Y coordinates of a cubic Bézier curve’s control points. The starting point of the Bézier curve has coordinates (0, 0) and the ending point has coordinates (1, 1); you get to set the X and Y values of the two control points. The X values for the two control points must be between 0 and 1, and each control point’s Y value can exceed the [0, 1] limit, although the spec isn’t clear by how much.
 
 Changing the X and Y value of each control point gives you a vastly different curve, and therefore a vastly different feel to your animation. For example, if the first control point is in the lower right area, the animation will be slow to start. If it’s in the top left area, it’s going to be fast to start. Conversely, if the second control point is in the bottom right area of the grid, it’s going to be fast at the end; if it’s in the top left, it will be slow to end.
 
