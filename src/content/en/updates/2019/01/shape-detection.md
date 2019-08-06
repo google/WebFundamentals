@@ -7,7 +7,7 @@ description: The Shape Detection API allows for faces, barcodes, and text to be 
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: The Shape Detection API allows for faces, barcodes, and text to be detected in images. #}
-{# wf_blink_components: Blink>ImageCapture #}
+{# wf_blink_components: Blink>ShapeDetection #}
 
 # A Picture is Worth a Thousand Words, Faces, and Barcodes—The Shape Detection API {: .page-title}
 
