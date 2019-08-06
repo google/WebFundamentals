@@ -7,7 +7,7 @@ description: The Barcode Detection API allows for barcodes to be detected in ima
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: The Barcode Detection API allows for barcodes to be detected in images. #}
-{# wf_blink_components: Blink>ImageCapture #}
+{# wf_blink_components: Blink>ShapeDetection #}
 
 # Shipping the Barcode Detection Part of the Shape Detection API {: .page-title}
 
