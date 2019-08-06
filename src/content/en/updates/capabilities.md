@@ -47,7 +47,7 @@ apps should be able to do anything native apps can.
 
 ## The new capabilities
 
-You can see the [full list](crbug.com/?q=proj-fugu) of capabilities we're
+You can see the [full list](https://crbug.com/?q=proj-fugu) of capabilities we're
 considering on [crbug.com](https://crbug.com) and filtering issues with the
 `proj-fugu` label.
 
