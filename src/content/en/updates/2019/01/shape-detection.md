@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Shape Detection API allows for faces, barcodes, and text to be detected in images.
 
-{# wf_updated_on: 2019-08-05 #}
+{# wf_updated_on: 2019-08-06 #}
 {# wf_published_on: 2019-01-07 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -18,7 +18,7 @@ description: The Shape Detection API allows for faces, barcodes, and text to be 
 Success: Following a successful Origin Trial,
 [barcode detection has now launched](../08/barcode-detection).
 
-Warning: We’re currently working the specification for this API as part of the [capabilities
+Warning: We’re currently working on the specification for this API as part of the [capabilities
 project](/web/updates/capabilities). We’ll keep this post updated as this new API moves from design
 to implementation.
 
@@ -250,7 +250,7 @@ Share your thoughts on the [Shape Detection API WICG Discourse][wicg-discourse] 
 * [API Demo][demo] | [API Demo source][demo-source]
 * [Tracking bug][cr-bug]
 * [ChromeStatus.com entry][cr-status]
-* Blink Component: `Blink>ImageCapture`
+* Blink Component: `Blink>ShapeDetection`
 
 {% include "web/_shared/helpful.html" %}
 

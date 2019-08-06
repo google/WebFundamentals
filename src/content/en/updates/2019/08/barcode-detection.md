@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Barcode Detection API allows for barcodes to be detected in images.
 
-{# wf_updated_on: 2019-08-05 #}
+{# wf_updated_on: 2019-08-06 #}
 {# wf_published_on: 2019-08-01 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -15,7 +15,7 @@ description: The Barcode Detection API allows for barcodes to be detected in ima
 
 <div class="clearfix"></div>
 
-Success: We were working the specification for this API as part of the
+Success: We were working on the specification for this API as part of the
 [capabilities project](/web/updates/capabilities). Following a successful Origin Trial,
 barcode detection has now launched.
 
@@ -24,7 +24,7 @@ on the [Shape Detection API](https://wicg.github.io/shape-detection-api),
 an API that defines three interfaces: `BarcodeDetector`, `FaceDetector`,
 and `TextDetector`. I'm now happy to share that following a successful Origin Trial,
 we're shipping the `BarcodeDetector` part of the Shape Detection API in Chrome&nbsp;78.
-The `FaceDetector` and the `TextDetector` interfaces still need some more fine-tuning.
+The `FaceDetector` and the `TextDetector` interface still need some more fine-tuning.
 
 ### Working With the `BarcodeDetector` {: #barcodedetector}
 
@@ -94,6 +94,18 @@ For a more advanced real-world Progressive Web App
 that you can actually install to your device's home screen,
 check out [QR Snapper](https://qrsnapper.com/).
 
+### Perception Toolkit
+
+An exciting software package that leverages barcode detection is the
+[Perception Toolkit](https://perceptiontoolkit.dev/), an open-source library
+that provides the tools for you to add an augmented experience to your website.
+The toolkit works by taking a stream from the device camera,
+and passing it through a set of detectors, one of which is for barcodes.
+For more details, read the
+[*Getting Started* guide](https://perceptiontoolkit.dev/getting-started/)
+and head over to the
+[GitHub repo](https://github.com/GoogleChromeLabs/perception-toolkit/).
+
 ### Conclusion
 
 The way from a first feature idea to a fully standardized and shipping API can be long.
@@ -107,7 +119,7 @@ Please share what you create with it, we can't wait to see the cool new apps you
 * [API Demo][demo]
 * [Tracking bug][cr-bug]
 * [ChromeStatus.com entry][cr-status]
-* Blink Component: `Blink>ImageCapture`
+* Blink Component: `Blink>ShapeDetection`
 
 ### Acknowledgements
 
