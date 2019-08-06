@@ -57,7 +57,8 @@ Chrome's autoplay policies are simple:
     - User has interacted with the domain (click, tap, etc.).
     - On desktop, the user's [Media Engagement Index](#mei) threshold has been crossed,
       meaning the user has previously played video with sound.
-    - On mobile, the user has [added the site to their home screen].
+    - The user has [added the site to their home screen] on mobile or
+      [installed the PWA] on desktop.
 - Top frames can [delegate autoplay permission](#iframe) to their iframes to
   allow autoplay with sound.
 
@@ -274,6 +275,7 @@ Note: Web Audio FAQs can be found [here].
 ["AutoplayWhitelist"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayWhitelist
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
 [added the site to their home screen]: /web/updates/2017/02/improved-add-to-home-screen
+[installed the PWA]: /web/progressive-web-apps/desktop
 [Promise]: /web/fundamentals/getting-started/primers/promises
 [rejected]: /web/updates/2017/06/play-request-was-interrupted
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
