@@ -19,7 +19,8 @@ description: A round up of the deprecations and removals in Chrome 77 to help yo
 
 ### Card issuer networks as payment method names
 
-Removes support for calling PaymentRequest with card issuer networks (e.g., "visa", "amex", "mastercard") in the supportedMethods field.
+Removes support for calling PaymentRequest with card issuer networks (e.g.,
+"visa", "amex", "mastercard") in the supportedMethods field.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/1udpnrlQK4Q/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/5725727580225536) &#124;
@@ -27,7 +28,11 @@ Removes support for calling PaymentRequest with card issuer networks (e.g., "vis
 
 ### Deprecate Web MIDI use on insecure origins
 
-Web MIDI use is classified into two groups: non-privilege use, and privilege use with sysex permission. Until Chrome 77, only the latter use prompts users for permission. To reduce security concerns, permissions will always be requested regardless of sysex use. This means that using Web MIDI on insecure origins will no longer be allowed.
+Web MIDI use is classified into two groups: non-privilege use, and privilege use
+with sysex permission. Until Chrome 77, only the latter use prompts users for
+permission. To reduce security concerns, permissions will always be requested
+regardless of sysex use. This means that using Web MIDI on insecure origins will
+no longer be allowed.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/_2XZt3yInCI/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/5138066234671104) &#124;
@@ -37,9 +42,17 @@ Web MIDI use is classified into two groups: non-privilege use, and privilege use
 
 ### Deprecate WebVR 1.1 API
 
-This API is now deprecated in Chrome, [being replaced by](https://www.chromestatus.com/feature/5680169905815552) the WebXR Device API, which is expected to ship in Chrome 78. The WebVR Origin Trial ended on July 24, 2018.
+This API is now deprecated in Chrome, [being replaced
+by](https://www.chromestatus.com/feature/5680169905815552) the WebXR Device API,
+which is expected to ship in Chrome 78. The WebVR Origin Trial ended on July 24,
+2018.
 
-WebVR was never enabled by default in Chrome, and was never ratified as a web standard. The [WebXR Device API](https://immersive-web.github.io/webxr/) is the replacement API for WebVR. Removing WebVR from Chrome allows us to focus on the future of WebXR and remove the maintenance burden of WebVR, as well as reaffirm that Chrome is committed to WebXR as the future for building immersive web-based experiences. Removal is expected in Chrome 79.
+WebVR was never enabled by default in Chrome, and was never ratified as a web
+standard. The [WebXR Device API](https://immersive-web.github.io/webxr/) is the
+replacement API for WebVR. Removing WebVR from Chrome allows us to focus on the
+future of WebXR and remove the maintenance burden of WebVR, as well as reaffirm
+that Chrome is committed to WebXR as the future for building immersive web-based
+experiences. Removal is expected in Chrome 79.
 
 [Intent to Remove]() &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/4532810371039232) &#124;
