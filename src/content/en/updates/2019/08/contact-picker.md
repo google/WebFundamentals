@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Contact Picker API is a new, on-demand picker that allows users to select entries from their contact list and share limited details of the selected entries with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family.
 
-{# wf_published_on: 2019-08-06 #}
-{# wf_updated_on: 2019-08-06 #}
+{# wf_published_on: 2019-08-07 #}
+{# wf_updated_on: 2019-08-07 #}
 {# wf_featured_image: /web/updates/images/generic/contacts.png #}
 {# wf_tags: capabilities,contacts,chrome77 #}
 {# wf_featured_snippet: Access to the user’s contacts has been a feature of native apps since (almost) the dawn of time. The Contact Picker API is a new, on-demand picker that allows users to select an entry or entries from their contact list and share limited details of the selected contact(s) with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family. #}
@@ -19,18 +19,25 @@ description: The Contact Picker API is a new, on-demand picker that allows users
   The Contact Picker API begins an origin trial in Chrome 77
   (stable in September) as part of our capabilities project. We’ll keep this
   post updated as the implementation progresses.<br>
-  <b>Last Updated: August 6th, 2019</b>
+  <b>Last Updated: August 7th, 2019</b>
 </aside>
 
 ## What is the Contact Picker API? {: #what }
 
-<video loop autoplay muted class="attempt-right"
-    poster="https://via.placeholder.com/450x700?text=video%20TODO">
-  <source src="/web/updates/videos/2019/08/todo.webm" type="video/webm">
-  <source src="/web/updates/videos/2019/08/todo.mp4" type="video/mp4">
-</video>
+<style>
+  #video-demo { max-height: 600px; }
+  figcaption { font-size: small; }
+</style>
 
-<!-- <img class="attempt-right" src="https://via.placeholder.com/450x700"> -->
+<a href="https://storage.googleapis.com/webfundamentals-assets/contact-picker/contact-picker.mp4">
+  <video id="video-demo" loop autoplay muted class="attempt-right"
+      poster="/web/updates/images/2019/08/contact-picker-demo.jpg">
+    <source type="video/webm"
+      src="https://storage.googleapis.com/webfundamentals-assets/contact-picker/contact-picker.webm">
+    <source type="video/mp4"
+      src="https://storage.googleapis.com/webfundamentals-assets/contact-picker/contact-picker.mp4">
+  </video>
+</a>
 
 Access to the user’s contacts has been a feature of native apps since
 (almost) the dawn of time. It’s one of the most common feature requests
@@ -86,13 +93,13 @@ in `chrome://flags`.
 
 ### Enabling support during the origin trial phase {: #origin-trial }
 
-Starting in Chrome 77, the Contact Picker API is available as an origin
+Starting in Chrome 77, the Contact Picker API will be available as an origin
 trial on Chrome for Android. Origin trials allow you to try new features
 and give feedback on their usability, practicality, and effectiveness, both
 to us, and to the web standards community. For more information, see the
 [Origin Trials Guide for Web Developers][ot-guide].
 
-1. Request a token for your origin.
+1. Request a [token][ot-request] for your origin.
 2. Add the token to your pages, there are two ways to provide this token on
    any pages in your origin:
      * Add an `origin-trial` `<meta>` tag to the head of any page. For example,
@@ -103,10 +110,6 @@ to us, and to the web standards community. For more information, see the
        should look something like: `Origin-Trial: TOKEN_GOES_HERE`
 
 ### Feature detection
-
-<!--
-Warning: Feature detection is currently broken, and always reports as available, follow https://crbug.com/986296 for updates. In the meantime, be sure to catch any errors thrown when the API is called.
--->
 
 To check if the Contact Picker API is supported, use:
 
@@ -177,7 +180,14 @@ a user gesture, on a [secure][secure-contexts], top-level browsing context.
 This ensures that a site can’t show the picker on page load, or randomly show
 the picker without any context.
 
-<img class="attempt-right" src="https://via.placeholder.com/450x500">
+<figure class="attempt-right">
+  <img src="/web/updates/images/2019/08/contact-picker-user-choice.jpg">
+  <figcaption>
+    User can choose not to share some properties, in this screenshot, the
+    user has unchecked the 'Phone numbers' button. Even though the site
+    asked for phone numbers, they will not be shared with the site.
+  </figcaption>
+</figure>
 
 There's no option to bulk-select all contacts so that users are encouraged
 to select only the contacts that they need to share for that particular
@@ -196,14 +206,14 @@ if a site only requests `tel`, the picker will show only the name, and
 telephone numbers.
 
 <figure class="attempt-left">
-  <img src="https://via.placeholder.com/450x500?text=TODO">
+  <img src="/web/updates/images/2019/08/contact-picker-left.jpg">
   <figcaption>
     Picker, site requesting <code>name</code>, <code>email</code>, and
     <code>tel</code>, one contact selected.
   </figcaption>
 </figure>
 <figure class="attempt-right">
-  <img src="https://via.placeholder.com/450x500?text=TODO">
+  <img src="/web/updates/images/2019/08/contact-picker-right.jpg">
   <figcaption>
     Picker, site requesting only <code>tel</code>, one contact selected.
   </figcaption>
@@ -211,7 +221,7 @@ telephone numbers.
 
 <div class="clearfix"></div>
 
-<img class="attempt-right" src="https://via.placeholder.com/450x500?text=TODO">
+<img class="attempt-right" src="/web/updates/images/2019/08/contact-picker-long-press.jpg">
 
 A long press on a contact will show all of the information that will be
 shared if the contact is selected (image right).
@@ -293,7 +303,8 @@ PS: The 'names' in my contact picker, are characters from Alice in Wonderland.
 [ot-what-is]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/README.md
 [ot-dev-guide]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [ot-use]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin
-[ot-request]: https://developers.chrome.com/origintrials/#/view_trial/TODO
+[ot-request]: https://developers.chrome.com/origintrials/
 [powerful-apis]: https://chromium.googlesource.com/chromium/src/+/lkgr/docs/security/permissions-for-powerful-web-platform-features.md
 [secure-contexts]: https://w3c.github.io/webappsec-secure-contexts/
 [cr-dev-twitter]: https://twitter.com/chromiumdev
+[ot-guide]: https://googlechrome.github.io/OriginTrials/developer-guide.html
