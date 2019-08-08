@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button.
 
 {# wf_published_on: 2018-12-05 #}
-{# wf_updated_on: 2019-05-02 #}
+{# wf_updated_on: 2019-09-08 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: capabilities,sharing,android,chrome71 #}
 {# wf_featured_snippet: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button. #}
@@ -56,7 +56,7 @@ Mozilla and Microsoft have indicated their support but have not implemented it
 yet.
 
 We’ve started working on
-[Web Share Target - Level 2](https://wicg.github.io/web-share/level-2/), adding
+[Web Share Target - Level 2](https://wicg.github.io/web-share-target/level-2/), adding
 support for sharing file objects. Look for a post about that coming soon.
 
 
