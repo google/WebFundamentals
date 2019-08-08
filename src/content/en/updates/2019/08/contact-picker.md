@@ -117,7 +117,7 @@ To check if the Contact Picker API is supported, use:
 const supported = ('contacts' in navigator && 'ContactsManager' in window);
 ```
 
-In addition, on Android the Contact Picker requires Android M or later.
+In addition, on Android, the Contact Picker requires Android M or later.
 
 ### Opening the Contact Picker
 
