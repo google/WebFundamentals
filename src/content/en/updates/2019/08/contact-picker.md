@@ -79,7 +79,7 @@ Want to give the Contact Picker API a try? Check out the
 
 ## Using the Contact Picker API {: #how-to-use }
 
-The Contact Picker API  requires a single API call with an options parameter
+The Contact Picker API requires a single API call with an options parameter
 that specifies the types of contact information you want.
 
 Note: Want to try the Contact Picker API? Check out the
@@ -116,6 +116,8 @@ To check if the Contact Picker API is supported, use:
 ```js
 const supported = ('contacts' in navigator && 'ContactsManager' in window);
 ```
+
+In addition, on Android the Contact Picker requires Android M or later.
 
 ### Opening the Contact Picker
 
