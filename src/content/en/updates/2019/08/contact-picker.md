@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Contact Picker API is a new, on-demand picker that allows users to select entries from their contact list and share limited details of the selected entries with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family.
 
 {# wf_published_on: 2019-08-07 #}
-{# wf_updated_on: 2019-08-07 #}
+{# wf_updated_on: 2019-08-08 #}
 {# wf_featured_image: /web/updates/images/generic/contacts.png #}
 {# wf_tags: capabilities,contacts,chrome77 #}
 {# wf_featured_snippet: Access to the user’s contacts has been a feature of native apps since (almost) the dawn of time. The Contact Picker API is a new, on-demand picker that allows users to select an entry or entries from their contact list and share limited details of the selected contact(s) with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family. #}
@@ -149,7 +149,7 @@ user gesture.
 
 The Contact Picker API returns an array of contacts, and each contact
 includes an array of the requested properties. If a contact doesn’t have
-data for the requested property, or the user chooses to out-out of sharing
+data for the requested property, or the user chooses to opt-out of sharing
 a particular property, it returns an empty array.
 
 For example, if a site requests `name`, `email`, and `tel`, and a user
