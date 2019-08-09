@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Animations must perform well, otherwise they will negatively impact the user experience.
 
 {# wf_blink_components: Blink>Animation #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-08-09 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animations and Performance {: .page-title }
@@ -26,19 +26,19 @@ Where you can, you should avoid animating properties that trigger layout or pain
 
 For a full list of the work triggered by individual CSS properties, see [CSS Triggers](http://csstriggers.com). You can find a full guide on creating [High Performance Animations on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
 
-### Using the will-change property
+### Using the `will-change` property
 
 Use the [`will-change`](https://dev.w3.org/csswg/css-will-change/) to ensure the browser knows that you intend to change an element’s property. This allows the browser to put the most appropriate optimizations in place ahead of when you make the change. Don't overuse `will-change`, however, because doing so can cause the browser to waste resources, which in turn causes even more performance issues.
 
 The general rule of thumb is that if the animation might be triggered in the next 200ms, either by a user’s interaction or because of your application’s state, then having `will-change` on animating elements is a good idea. For most cases, then, any element in your app’s current view that you intend to animate should have `will-change` enabled for whichever properties you plan to change. In the case of the box sample we’ve been using throughout the previous guides, adding `will-change` for transforms and opacity looks like this:
 
+```css
+.box {
+  will-change: transform, opacity;
+}
+```
 
-    .box {
-      will-change: transform, opacity;
-    }
-    
-
-Now the browsers that support it, [currently Chrome, Firefox, and Opera](http://caniuse.com/#feat=will-change), will make the appropriate optimizations under the hood to support changing or animating those properties.
+Now the browsers that support it, [currently most modern browsers](http://caniuse.com/#feat=will-change), will make the appropriate optimizations under the hood to support changing or animating those properties.
 
 ## CSS vs JavaScript performance
 
