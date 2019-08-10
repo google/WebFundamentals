@@ -116,7 +116,7 @@ characteristics. (I've lined up equivalent parts.)
 
     packager input=glocken.mp4                                              --dump_stream_info
 
-By running this command, I get the output shown below. 
+The output I am shown:
  
     [0416/140029:INFO:demuxer.cc(88)] Demuxer::Run() on file 'glocken.mp4'.
     [0416/140029:INFO:demuxer.cc(158)] Initialize Demuxer for file 'glocken.mp4'.
