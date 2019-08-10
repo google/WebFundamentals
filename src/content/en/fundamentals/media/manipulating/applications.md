@@ -54,7 +54,7 @@ _Resolution_ is the amount of information in a single frame of video, given as
 the number of logical pixels in each dimension. For example, a resolution of
 1920 by 1080 works out to 1080 stacked horizontal lines, each of which is one
 logical pixel high and 1920 logical pixels wide. This resolution is frequently
-abbreviated to 1080p because technically the width can vary. The numbers I've given
+abbreviated 1080p because technically the width can vary. The numbers I've given
 produce an
 [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_(image))
 of 16:9, which is the ratio of movie screens and modern television sets. By the
