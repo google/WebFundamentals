@@ -96,7 +96,7 @@ Note: 這是您之前啓用 **JS Profile** 選項的作用。
 
 ![Sources 面板中的函數定義](imgs/definition.png)
 
-`update()` 函數是 `requestAnimationCallback()` 的回調處理程序。
+`update()` 函數是 `requestAnimationFrame()` 的回調處理程序。
 處理程序會根據每個圖像的 `offsetTop` 值計算其 `left` 屬性。
 這將強制瀏覽器立即執行新佈局，以便確保其提供正確的值。在每個動畫幀期間強制佈局是導致頁面上出現動畫卡頓的原因。
  
