@@ -182,7 +182,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
   <tbody>
     <tr>
       <td>
-        <a href="/web/updates/2019/06/image-support-for-async-clipboard">
+        <a href="/web/updates/2019/07/image-support-for-async-clipboard">
           Async&nbsp;Clipboard API (images)
         </a>
       </td>
