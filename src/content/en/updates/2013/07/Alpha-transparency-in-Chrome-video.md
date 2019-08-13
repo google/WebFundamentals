@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: WebM just added alpha transparency, and support for it has landed in Chrome.
+description: WebM just added alpha transparency, and support for it has landed in Chrome 31.
 
-{# wf_updated_on: 2019-08-12 #}
+{# wf_updated_on: 2019-08-13 #}
 {# wf_published_on: 2013-07-25 #}
 {# wf_tags: news,video,webm #}
 {# wf_blink_components: N/A #}
@@ -21,7 +21,7 @@ description: WebM just added alpha transparency, and support for it has landed i
   </iframe>
 </div>
 
-Chrome now supports video alpha transparency in WebM.
+Chrome 31 now supports video alpha transparency in WebM.
 
 In other words, Chrome takes the alpha channel into account when playing '[green
 screen](https://en.wikipedia.org/wiki/Chroma_key)' videos encoded to WebM ([VP8] and [VP9]) with
