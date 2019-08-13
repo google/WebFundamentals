@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device.
 
 {# wf_published_on: 2019-05-02 #}
-{# wf_updated_on: 2019-05-28 #}
+{# wf_updated_on: 2019-08-13 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: capabilities,sharing,chrome75 #}
 {# wf_featured_snippet: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device. #}
