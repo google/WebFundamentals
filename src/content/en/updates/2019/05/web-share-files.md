@@ -37,7 +37,7 @@ able to use web apps as a share target. For now, your web app can share files
 with other web share targets registered on your device.
 
 This article assumes some familiarity with the Web Share API. If this is new to
-you, check out the links above or [the demo](http://wicg.github.io/web-share/demos/share-files.html). 
+you, check out the links above or [the demo](https://w3c.github.io/web-share/demos/share-files.html). 
 
 ## The navigator.canShare() method
 
@@ -93,7 +93,7 @@ IDL rules.
 
 ## More information
 
-+   [Web Share demo](http://wicg.github.io/web-share/demos/share-files.html)
++   [Web Share demo](https://w3c.github.io/web-share/demos/share-files.html)
 +   [Web Share explainer](https://github.com/WICG/web-share/blob/master/docs/explainer.md)
 +   [Web Share on Chrome Status](https://www.chromestatus.com/feature/4777349178458112)
 
