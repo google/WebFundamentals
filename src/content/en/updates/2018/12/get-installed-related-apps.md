@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The getInstalledRelatedApps() API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa..
+description: The getInstalledRelatedApps API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa..
 
 {# wf_published_on: 2018-12-20 #}
 {# wf_updated_on: 2019-08-09 #}
 {# wf_featured_image: /web/updates/images/generic/focus.png #}
 {# wf_tags: capabilities,progressive-web-apps,webapp,webapk,native,chrome73,origintrials #}
-{# wf_featured_snippet: As the capability gap between web and native gets smaller, it becomes easier to offer the same experience for both web and native users. This may lead to cases where users have both the web and native versions installed on the same device. Apps should be able to detect this situation. The <code>getInstalledRelatedApps()</code> API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa.  #}
+{# wf_featured_snippet: As the capability gap between web and native gets smaller, it becomes easier to offer the same experience for both web and native users. This may lead to cases where users have both the web and native versions installed on the same device. Apps should be able to detect this situation. The <code>getInstalledRelatedApps</code> API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa.  #}
 {# wf_blink_components: Mobile>WebAPKs #}
 
 {# When updating this post, don't forget to update /updates/capabilities.md #}
@@ -25,7 +25,7 @@ description: The getInstalledRelatedApps() API is a new web platform API that al
   <b>Last Updated:</b> March 12th, 2019
 </aside>
 
-## What is the `getInstalledRelatedApps()` API? {: #what }
+## What is the `getInstalledRelatedApps` API? {: #what }
 
 <figure class="attempt-right">
   <img src="/web/updates/images/2018/12/getinstalled-cropped.jpg">
@@ -40,9 +40,9 @@ to offer the same experience for both web and native users. This may lead to
 cases where users have both the web and native versions installed on the same
 device. Apps should be able to detect this situation.
 
-The `getInstalledRelatedApps()` API is a new web platform API that allows
+The `getInstalledRelatedApps` API is a new web platform API that allows
 your web app to check to see if your native app is installed on the users
-device, and vice versa. With the `getInstalledRelatedApps()` API, you can
+device, and vice versa. With the `getInstalledRelatedApps` API, you can
 disable some functionality of one app if it should be provided by the other
 app instead.
 
@@ -58,11 +58,11 @@ on this design.
 ### Suggested use cases {: #use-cases }
 
 There may be some cases where there isn’t feature parity between the web and
-native apps. With the `getInstalledRelatedApps()` API, you can check if the
+native apps. With the `getInstalledRelatedApps` API, you can check if the
 other version is installed, and switch to the other app, using the
 functionality there. For example, one of the most common scenarios we’ve
 heard, and the key reason behind this API is to help reduce duplicate
-notifications. Using the `getInstalledRelatedApps()` API, allows you check to
+notifications. Using the `getInstalledRelatedApps` API, allows you check to
 see if the user has the native app installed, then disable the notification
 functionality in the web app.
 
