@@ -103,6 +103,19 @@ adamargyle:
     en: Developer Advocate at Google
   country: US
 
+kenjibaheux:
+  name:
+    given: Kenji
+    family: Baheux
+  twitter: KenjiBaheux
+  github: KenjiBaheux
+  org:
+    name: Google
+    unit: Chrome
+  country: JPN
+  description:
+    en: "Product Manager at Google, working on Chrome/Web Platform"
+
 pbakaus:
   name:
     given: Paul
@@ -2060,16 +2073,3 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
-
-kenjibaheux:
-  name:
-    given: Kenji
-    family: Baheux
-  twitter: KenjiBaheux
-  github: KenjiBaheux
-  org:
-    name: Google
-    unit: Chrome
-  country: JPN
-  description:
-    en: "Product Manager at Google, working on Chrome/Web Platform"
