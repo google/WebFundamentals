@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Contact Picker API is a new, on-demand picker that allows users to select entries from their contact list and share limited details of the selected entries with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family.
 
 {# wf_published_on: 2019-08-07 #}
-{# wf_updated_on: 2019-08-08 #}
+{# wf_updated_on: 2019-08-17 #}
 {# wf_featured_image: /web/updates/images/generic/contacts.png #}
 {# wf_tags: capabilities,contacts,chrome77 #}
 {# wf_featured_snippet: Access to the user’s contacts has been a feature of native apps since (almost) the dawn of time. The Contact Picker API is a new, on-demand picker that allows users to select an entry or entries from their contact list and share limited details of the selected contact(s) with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family. #}
@@ -54,9 +54,6 @@ For example, a web-based email client could use the Contact Picker API to
 select the recipient(s) of an email. A voice-over-IP app could look up
 which phone number to call. Or a social network could help a user discover
 which friends have already joined.
-
-Want to give the Contact Picker API a try? Check out the
-[Contact Picker API demo][demo] or view the [source][demo-source]
 
 <div class="clearfix"></div>
 
@@ -122,7 +119,7 @@ In addition, on Android, the Contact Picker requires Android M or later.
 ### Opening the Contact Picker
 
 The entry point to the Contact Picker API is `navigator.contacts.select()`.
-When called it returns a Promise and shows the Contact Picker, allowing the
+When called, it returns a Promise and shows the Contact Picker, allowing the
 user to select the contact(s) they want to share with the site. After
 selecting what to share and clicking *Done*, the promise resolves with an
 array of contacts selected by the user.
@@ -203,7 +200,7 @@ by toggling the property button at the top of the picker.
 To clarify which contact details are being shared, the picker will always
 show the contact's name and icon, plus any properties that the site has
 requested. For example, if a site requests `name`, `email`, and `tel`,
-values all three properties will be shown in the picker. Alternatively,
+all three properties will be shown in the picker. Alternatively,
 if a site only requests `tel`, the picker will show only the name, and
 telephone numbers.
 
