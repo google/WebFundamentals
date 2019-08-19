@@ -82,10 +82,13 @@ Examples of sites that may use this API include:
 3. Click the **Set** or **Clear** button to set or clear the badge from the app
    icon. You can also provide a number for the *Badge value*.
    
-Note: While the Badging API requires an installed app with an icon that
-actually can be badged, we excplititly advise against making calls to
-the Badging API dependent on the install state. Instead, just call it
-when it exists. If it works, it works. If not, it simply doesn't.
+Note: While the Badging API *in Chrome* requires an installed app
+with an icon that actually can be badged, we advise against
+making calls to the Badging API dependent on the install state.
+The Badging API can apply to *anywhere* a browser might want to show a badge,
+so developers shouldn't make any assumptions about what situations
+the browser will make badges work. Just call the API when it exists.
+If it works, it works. If not, it simply doesn't.
 
 ## How to use the badging API {: #use }
 
