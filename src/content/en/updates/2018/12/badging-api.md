@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen.
 
 {# wf_published_on: 2018-12-11 #}
-{# wf_updated_on: 2019-03-07 #}
+{# wf_updated_on: 2019-08-19 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
 {# wf_tags: capabilities,badging,install,progressive-web-apps,serviceworker,notifications,origintrials #}
 {# wf_featured_snippet: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen. Badging makes it easy to subtly notify the user that there is some new activity that might require their attention, or it can be used to indicate a small amount of information, such as an unread count. #}
@@ -81,6 +81,11 @@ Examples of sites that may use this API include:
    running as an installed PWA (in your task bar or dock).
 3. Click the **Set** or **Clear** button to set or clear the badge from the app
    icon. You can also provide a number for the *Badge value*.
+   
+Note: While the Badging API requires an installed app with an icon that
+actually can be badged, we excplititly advise against making calls to
+the Badging API dependent on the install state. Instead, just call it
+when it exists. If it works, it works. If not, it simply doesn't.
 
 ## How to use the badging API {: #use }
 
