@@ -43,7 +43,7 @@ Make sure to avoid the following common mistakes:
 {: .compare-worse }
 
 <pre class="prettyprint cc-bad lang-html">
-* **Don’t parse or interpret untrustworthy data using C++ in the browser process.**
+* <strong>Don’t parse or interpret untrustworthy data using C++ in the browser process.<strong>
 * Don’t trust the origin a renderer claims to represent. The browser’s 
 RenderProcessHost can be used to get the current origin securely. 
 </pre>
