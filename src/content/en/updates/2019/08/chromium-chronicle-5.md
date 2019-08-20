@@ -35,15 +35,17 @@ For more information, see Chrome's [sandbox implementation guide][sandbox-implem
 Make sure to avoid the following common mistakes:
 {: .compare-worse }
 
+![rule of two](/web/updates/images/2019/08/ch-chron5/rule-of-two.jpg){: .attempt-left }
+
 * **Don’t parse or interpret untrustworthy data using C++ in the
   browser process.**
 * Don’t trust the origin a renderer claims to represent. The browser’s
   RenderProcessHost can be used to get the current origin securely.
 
+<div class="clearfix"></div>
+
 Instead, use the following best practices:
 {: .compare-better }
-
-![rule of two](/web/updates/images/2019/08/ch-chron5/rule-of-two.jpg){: .attempt-left }
 
 * Be extra paranoid if your code is in the browser process.
 * Validate all IPC from other processes. Assume all other processes are already
