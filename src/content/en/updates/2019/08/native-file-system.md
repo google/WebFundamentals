@@ -209,13 +209,12 @@ The `keepExistingData` option when calling `createWriter()` isn’t supported
 yet, so once I get the writer, I immediately call `truncate(0)` to ensure I
 started with an empty file. Otherwise, if the length of the new content is
 shorter than the existing content, the existing content after the new
-content would remain. `keepExistingData` will be added in a future milestone
-as part of the origin trial.
+content would remain. `keepExistingData` will be added in a future milestone.
 
 When `createWriter()` is called, Chrome checks if the user has granted
 write permission. If not, it requests permission. If the user grants
 permission, the app can write the contents to the file. But, if the user
-does not grant permission, `createWriter()`, will throw a `DOMError`, and
+does not grant permission, `createWriter()`, will throw a `DOMException`, and
 the app will not be able to write to the file. In the text editor, these
 DOMExceptions are handled in the [`saveFile()`][text-editor-app-js]
 method.
@@ -255,17 +254,14 @@ We’re still working on some of the implementation for the
 Native File System API, and not everything in the spec (or explainer)
 has been completed.
 
-As of Chrome 78, the following functionality is not available:
+As of Chrome 78, the following functionality is not available, or
+doesn't match the spec:
 
 * Handles are not serializable, meaning they cannot be passed via
   `postMessage()`, or stored in IndexedDB.
 * Non-atomic writes (i.e. calls to `FileSystemFileHandle.createWriter()`
   with `inPlace: true`).
 * Writing to a file using a [`WritableStream`][writablestream].
-
-As of Chrome 78, the following functionality does not match the spec:
-
-* Atomic writes (i.e. any arguments passed to `createWriter()`).
 * The [`FileSystemDirectoryHandle.resolve()`][fs-dir-handle] method.
 
 ## Security and permissions {: #security-considerations }
