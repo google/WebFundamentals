@@ -75,8 +75,9 @@ browser, so long as that browser provides the required capabilities.
 
 ## Getting started {: #getting-started }
 
-Note: A simpler quick start guide for Trusted Web Activities
-[is now available](web/updates/2019/08/twas-quickstart).
+Note: A simpler
+[quick start guide for Trusted Web Activities](web/updates/2019/08/twas-quickstart)
+is now available.
 
 Setting up a Trusted Web Activity (TWA) doesn’t require developers to author
 Java code, but [Android Studio](https://developer.android.com/studio/) is

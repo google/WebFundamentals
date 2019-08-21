@@ -2,57 +2,81 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A guide to get started building a basic, bare-bones Trusted Web Activity.
 
-{# wf_published_on: 2019-08-13 #}
-{# wf_updated_on: 2019-08-13 #}
+{# wf_published_on: 2019-08-21 #}
+{# wf_updated_on: 2019-08-21 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_blink_components: N/A #}
 
 # Trusted Web Activities Quick Start Guide {: .page-title }
 
-Trusted Web Activities can be a bit tricky to set up, especially if all you want to do is display
-your website.
+Trusted Web Activities (TWAs) can be a bit tricky to set up, especially if all you want to do is
+display your website.
 This guide will take you through creating a basic TWA, covering all the gotchas.
 
-First off, you’ll need:
+By the end of this guide, you will:
+
+* Have built a Trusted Web Activity that passes verification.
+* Understand when your debug keys and your release keys are used.
+* Can determine the signature your TWA is being built with.
+* Know how to create a basic Digital Asset Links file.
+
+To follow this guide you'll need:
 
 * [Android Studio Installed](https://developer.android.com/studio/install)
 * An Android phone or emulator connected and set up for development
-([enable USB debugging](https://developer.android.com/studio/debug/dev-options.html#enable)if
+([Enable USB debugging](https://developer.android.com/studio/debug/dev-options.html#enable) if
 you’re using a physical phone).
-* A browser that supports Trusted Web Activities on your development phone. Chrome 72+ will work,
-support in other browsers is on its way.
+* A browser that supports Trusted Web Activities on your development phone.
+  Chrome 72 or later will work. Support in other browsers is on its way.
+* A website you'd like to view in the Trusted Web Activity.
+
+A Trusted Web Activity lets your Android App launch a full screen Browser Tab without
+any browser UI.
+This capability is restricted to websites that you own, and you prove this by setting
+up Digital Asset Links.
+Digital Asset Links consist essentially of a file on your website that points to your app and some
+metadata in your app that points to your website.
+We'll talk [more about them later](#a-note-on-signing-keys).
+
+When you launch a Trusted Web Activity, the browser will check that the Digital Asset Links check
+out, this is called **verification**.
+If verification fails, the browser will fall back to displaying your website as a
+[Custom Tabs](https://developer.chrome.com/multidevice/android/customtabs).
 
 ## Clone and customize the example repo {: #clone-and-customize-the-example-repo }
 
 The [svgomg-twa](https://github.com/GoogleChromeLabs/svgomg-twa) repo contains an example TWA that
 you can customize to launch your website:
 
-Clone the project (`git clone https://github.com/GoogleChromeLabs/svgomg-twa.git`).
-Import the Project into Android Studio, using File > New > Import Project, and select the folder to
-which the project was cloned.
+1. Clone the project (`git clone https://github.com/GoogleChromeLabs/svgomg-twa.git`).
+2. Import the Project into Android Studio, using File > New > Import Project, and select the folder
+   to which the project was cloned.
+3. Open the app's `build.gradle` and modify the values in `twaManifest`.
+   There are two `build.gradle` files.
+   You want the module one at `app/build.gradle`.
 
-Open the app’s `build.gradle` (there are two, you want the module one at app/build.gradle, not the
-top level one) and modify the values in `twaManifest`:
-
-* Change `hostName` to point to your website.
-* Your website must be available on HTTPS, though you omit that from the hostName field.
-  Change `name` to whatever you want.
-* Change `applicationId` to something specific to your project.
-  This translates into the app’s package name and is how the app is identified on the Play Store -
-  no two apps can share the `applicationId` and if you change it you’ll need to create a new Play
-  Store listing.
+    * Change `hostName` to point to your website.
+      Your website must be available on HTTPS, though you omit that from the `hostName` field.
+    * Change `name` to whatever you want.
+    * Change `applicationId` to something specific to your project.
+      This translates into the app’s package name and is
+      [how the app is identified](https://developer.android.com/studio/build/application-id) on the
+      Play Store - no two apps can share the `applicationId` and if you change it you’ll need to
+      create a new Play Store listing.
 
 ## Build and run {: #build-and-run }
 
-In Android Studio hit Run, Run ‘app’ (replace ‘app’ with your module name if you’ve changed it) and
+In Android Studio hit Run, Run ‘app’ (where ‘app’ is your module name, if you’ve changed it) and
 the TWA will be built and run on your device!
-You’ll notice that the top bar is still visible, this is because we haven’t set up our Digital Asset
-Links yet, but first...
+You’ll notice that your website is launched as a Custom Tab, not a Trusted Web Activity, this is
+because we haven’t set up our Digital Asset Links yet, but first...
 
 ### A note on signing keys {: #a-note-on-signing-keys }
 
 **Digital Asset Links** take into account the key that an APK has been signed with and a common
 cause for verification failing is to have the signature wrong.
+(Remember, failing verification means you'll launch your website as a Custom Tab with
+browser UI at the top of the page.)
 When you hit *Run* or *Build APK* in Android Studio, the APK will be created with your developer
 **debug key**, which Android Studio automatically generated for you.
 
@@ -61,32 +85,40 @@ different signature, one that you’ll have created yourself (and protected with
 That means that if your **Digital Asset Links** file specifies your **production key**, verification
 will fail when you build with your **debug key**.
 This also can happen the other way around - if the Digital Asset Links file has your **debug key**
-your TWA will work fine locally, then when you sign it and upload it to Play it will fail to verify.
+your TWA will work fine locally, then when you download the signed version from the Play Store,
+verification will fail.
 
-You can put both your debug and production key in your asset link file (see Adding More Keys below),
-but your debug key is less secure (anyone who gets a copy of the file can use it).
+You can put both your debug and production key in your asset link file
+(see [Adding More Keys](#adding-more-keys) below),
+but your debug key is less secure.
+Anyone who gets a copy of the file can use it.
 Finally, if you have your app installed on your device with one key, you can’t install the version
-with the other key - you must uninstall the previous version first.
+with the other key. You must uninstall the previous version first.
 
-### Building with debug keys {: #building-with-debug-keys }
+### Building your app {: #building }
 
-Just hit *Run ‘app’* (replace ‘app’ with your module name if you’ve changed it).
+* To build with debug keys:
+    1. Click **Run 'app'** where 'app' is the name of your module if you changed it.
+* To build with release keys:
+    1. Click **Build** then **Generate Signed APK**.
+    2. Choose **APK**.
+    3. If you're doing this for the first time, on the next page press **Create New**
+       to create a new key and follow the
+       [Android documentation](https://developer.android.com/studio/publish/app-signing#generate-key).
+       Otherwise select your previously created key.
+    4. Press **Next** and pick the *release* build variant.
+    5. Make sure you check both the V1 and the V2 signatures (the Play Store won’t let you upload
+       the APK otherwise).
+    6. Click **Finish**.
 
-### Building with release keys {: #building-with-release-keys }
+If you built with debug keys, your app will be automatically deployed to your device.
+On the other hand if you built with release keys, after a few seconds a pop up will appear in the
+bottom right corner giving you the option to locate or analyze the APK.
+(If you miss it, you can press on the *Event Log* in the bottom right.)
+You’ll need to use [adb](https://developer.android.com/studio/command-line/adb#move) manually to
+install the signed APK with `adb install app-release.apk`.
 
-Hit *Build > Generate Signed APK*, choose APK and on the next page hit “Create New” to create a new
-key.
-There’s more information on creating a key
-[here](https://developer.android.com/studio/publish/app-signing#generate-key).
-Once you created your key, hit next and pick the “release” build variant.
-Make sure you tick both the V1 and the V2 signatures (the Play Store won’t let you upload the APK
-otherwise).
-Hit Finish.
-
-After a few seconds a pop up will appear in the bottom right corner giving you the option to locate
-or analyze the APK (if you miss it, you can press on the *Event Log* in the bottom right).
-Annoyingly you’ll need to use adb manually to install the signed APK with
-`adb install app-release.apk`.
+This table shows which key is used based on how you create your APK.
 
 <table>
   <tr><th>Key</th><th>Debug</th><th>Release</th></tr>
@@ -111,33 +143,35 @@ Annoyingly you’ll need to use adb manually to install the signed APK with
 
 ## Creating your asset link file {: #creating-your-asset-link-file }
 
-Now that you have your app installed (with either the debug or release key) we can go about
-generating the Digital Asset Link file.
+Now that your app is installed (with either the debug or release key) you can generate the Digital
+Asset Link file.
 I’ve created the
 [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) to help you
-do this - download that app and run it.
+do this.
 
-When the app launches, you’ll be given a list of all applications installed on your device by
-`applicationId`.
-Filter the list by the `applicationId` you chose earlier and click on that entry.
-You’ll see a page listing your app’s signature and with a generated Digital Asset Link.
-Click on the Copy or Share buttons at the bottom to export it however you like (eg, save to Google
-Keep, email it to yourself).
+1. Download the [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool).
+2. When the app launches, you’ll be given a list of all applications installed on your device by
+   `applicationId`.
+   Filter the list by the `applicationId` you chose earlier and click on that entry.
+3. You’ll see a page listing your app’s signature and with a generated Digital Asset Link.
+   Click on the Copy or Share buttons at the bottom to export it however you like (eg, save to
+   Google Keep, email it to yourself).
 
-Put that JSON in a file called `assetlinks.json` and upload it to your website at
+Put the Digital Asset Link in a file called `assetlinks.json` and upload it to your website at
 `.well-known/assetlinks.json` (relative to the root).
 
 ### Ensuring your asset link file is accessible {: #ensuring-your-asset-link-file-is-accessible }
 
-Now that you’ve uploaded it, make sure you can access your asset link file on a browser - check that
-`https://yourwebsite.com/.well-known/assetlinks.json` resolves to the file you just uploaded.
+Now that you’ve uploaded it, make sure you can access your asset link file in a browser.
+Check that `https://example.com/.well-known/assetlinks.json` resolves to the file you just uploaded.
 
-Jekyll based websites
+#### Jekyll based websites
+
 If your website is generated by Jekyll (such as GitHub Pages), you’ll need to add a line of
 configuration so that the `.well-known` directory is included in the output.
+GitHub help has [more information on this topic](https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing).
 Create a file called `_config.yml` at the root of your site (or add to it if it already exists) and
-enter (more information
-[here](https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing)):
+enter:
 
 ```yml
 # Folders with dotfiles are ignored by default.
@@ -146,11 +180,11 @@ include: [.well-known]
 
 ### Adding more keys {: #adding-more-keys }
 
-A Digital Asset Link file can contain multiple apps that are verified for your website and can allow
-multiple signing keys for your app.
+A Digital Asset Link file can contain more than one app, and for each app, it can contain more than
+one key.
 For example, to add a second key just use the
 [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) to
-determine the key and add it as a second entry to the `sha256_cert_fingerprints` field.
+generate the key and add it as a second entry to the `sha256_cert_fingerprints` field.
 The code in Chrome that parses this JSON is quite strict, so make sure you don’t accidentally add an
 extra comma at the end of the list.
 
@@ -169,27 +203,13 @@ extra comma at the end of the list.
 }]
 ```
 
-## Next Steps {: #next-steps }
-
-Hopefully if you’ve followed this guide, you:
-
-* Have built a Trusted Web Activity that verifies correctly.
-* Understand when your debug keys and your release keys are used.
-* Can determine the signature your TWA is being built with.
-* Know how to create a basic Digital Asset Links file.
-
-If not, please have a look at the Troubleshooting section below or file a GitHub issue against
-[these docs](https://github.com/google/WebFundamentals/issues).
-
-For your next steps, I’d recommend you start off by creating an icon for your app. With that done
-you can consider deploying your app to the Play Store.
-
 ## Troubleshooting {: trouble-shooting }
 
-### Viewing relevant  {: viewing-relevant-logs }
+### Viewing relevant logs {: viewing-relevant-logs }
 Chrome logs the reason that Digital Asset Links verification fails and you can view the logs on an
 Android device with `adb logcat`.
-If you’re on Linux/Mac you can see the relevant logs with:
+If you’re developing on Linux/Mac you can see the read the relevant logs from a connected device
+with:
 
 ```shell
 > adb logcat -v brief | grep -e OriginVerifier -e digital_asset_links
@@ -197,24 +217,35 @@ If you’re on Linux/Mac you can see the relevant logs with:
 
 For example if you see the message `Statement failure matching fingerprint.` you should use the
 Asset Link Tool to see your app’s signature and make sure it matches that in your `assetlinks.json`
-file (be wary of confusing your debug and release keys - look at the
-[A note on signing keys](#a-note-on-signing-keys) section).
+file (Be wary of confusing your debug and release keys. Look at the
+[A note on signing keys](#a-note-on-signing-keys) section.)
 
 ### Checking your browser {: #checking-your-browser }
 
-A Trusted Web Activity will try to adhere to the user’s default choice of browser - if the user’s
-default browser supports TWAs, it will be launched.
+A Trusted Web Activity will try to adhere to the user’s default choice of browser.
+If the user’s default browser supports TWAs, it will be launched.
 Failing that if any installed browser supports TWAs, they will be chosen.
 Finally, the default behavior is to fall back to a Custom Tabs mode.
 
-This means that if you’re trying to debug something to do with Trusted Web Activities you should
-check to make sure you’re using the browser you think that you are.
+This means that if you’re debugging something to do with Trusted Web Activities you should
+make sure you’re using the browser you think that you are.
 You can use the following command to check which browser is being used:
 
 ```
 > adb logcat -v brief | grep -e TWAProviderPicker
 D/TWAProviderPicker(17168): Found TWA provider, finishing search: com.google.android.apps.chrome
 ```
+
+## Next Steps {: #next-steps }
+
+Hopefully if you’ve followed this guide, you'll have a working Trusted Web Activity and have enough
+knowledge to debug what's going on when verification fails.
+If not, please have a look at the Troubleshooting section or file a GitHub issue against
+[these docs](https://github.com/google/WebFundamentals/issues).
+
+For your next steps, I’d recommend you start off by
+[creating an icon for your app](https://developer.android.com/studio/write/image-asset-studio#launcher).
+With that done you can consider deploying your app to the Play Store.
 
 {% include "web/_shared/helpful.html" %}
 
