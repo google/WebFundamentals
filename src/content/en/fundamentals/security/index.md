@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Security is a big topic, learn about HTTPS, why it's important and how you can deploy it to your servers.
 
-{# wf_updated_on: 2018-10-30 #}
+{# wf_updated_on: 2019-08-18 #}
 {# wf_published_on: 2015-09-08 #}
 {# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
@@ -29,8 +29,8 @@ APIs and [progressive web apps](/web/progressive-web-apps/) is
 
 Some people mistakenly believe that the only sites that need HTTPS are sites that handle
 some level of sensitive communication, like personal or financial data. But this isn't
-true. Every site should be using HTTPS, HTTPS helps to prevents people from listening
-into what's crossing the wire, and helps prevent it from being tampered with while in
+true. Every site should be using HTTPS. HTTPS helps to prevent people from listening
+in on what's crossing the wire, and helps prevent it from being tampered with while in
 transit. Do you want your ISP or school to know every site you were looking at?
 
 And if privacy and security weren't enough of a reason to protect your users, many new
@@ -52,8 +52,8 @@ APIs like GeoLocation now require HTTPS.
   <h2>Prevent Mixed Content</h2>
   <p>
     One of the more time-consuming tasks in implementing HTTPS is finding and
-    fixing content that mixes both HTTPS and HTTP. Fortunately there are tools
-    to help you help you with this.<br>
+    fixing content that mixes both HTTPS and HTTP. Fortunately, there are tools
+    to help you with this.<br>
     <a href="prevent-mixed-content/what-is-mixed-content">Get Started</a>
   </p>
 </div>
