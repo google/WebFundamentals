@@ -6,7 +6,7 @@ description: The new Native File System API enables developers to build powerful
 {# wf_updated_on: 2019-08-21 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: capabilities,file,filesystem,native-file-system #}
-{# wf_featured_snippet: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the users device. #}
+{# wf_featured_snippet: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device. #}
 {# wf_blink_components: Blink>Storage>FileSystem #}
 
 {# When updating this post, don't forget to update /updates/capabilities.md #}
@@ -30,7 +30,7 @@ The new Native File System API enables developers to build powerful web apps
 that interact with files on the user's local device, like IDEs, photo and video
 editors, text editors, and more. After a user grants a web app access, this
 API allows web apps to read or save changes directly to files and folders
-on the users device.
+on the user's device.
 
 <aside class="caution">
   We've put a lot of thought into the design and implementation of the Native
