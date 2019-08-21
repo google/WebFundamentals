@@ -16,3 +16,21 @@ social_media:
     width: 1200
     height: 675
 gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq
+announcement:
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style> Have questions about images on the web? Tweet your questions to <a href="https://twitter.com/chromiumdev">@ChromiumDev</a> with <code>#AskChrome</code> and we'll answer the top questions in our next <b>#AskChrome</b> episode on YouTube.
