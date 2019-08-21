@@ -89,7 +89,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         such as an unread count.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> March 12th, 2019
+        <b>Last Updated:</b> August 21st, 2019
       </td>
     </tr>
     <tr>
