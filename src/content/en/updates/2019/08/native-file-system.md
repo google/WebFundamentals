@@ -270,7 +270,7 @@ doesn't match the spec:
   figcaption {font-size: smaller;}
 </style>
 
-We’ve designed and implemented the Native File System using the core
+We’ve designed and implemented the Native File System API using the core
 principles we defined in
 [Controlling Access to Powerful Web Platform Features][powerful-apis],
 including user control and transparency, and user ergonomics.
