@@ -127,18 +127,18 @@
 }
 
 .cds2019 h3 {
-  padding: 16px;
+  /* padding: 16px;
   background-color: white;
   box-shadow: 40px 35px 66px 0px rgba(204,204,204,0.75);
-  border-radius: 16px;
+  border-radius: 16px; */
 }
 
 .cds2019 h3 > img {
   display: inline-block;
-  max-width: 128px;
+  max-width: 48px;
   vertical-align: top;
-  margin-right: 1em;
-  margin-top: 22px;
+  margin-right: 0.5em;
+  /* margin-top: 22px; */
 }
 
 .cds2019 h3 > div {
