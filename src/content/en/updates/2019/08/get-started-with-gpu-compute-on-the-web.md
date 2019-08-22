@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: This article is about me playing with the experimental WebGPU API and sharing along my journey with web developers interested in performing data-parallel computations using the GPU.
+description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
 {# wf_updated_on: 2019-08-22 #}
 {# wf_published_on: 2019-08-22 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
 {# wf_featured_image: /web/updates/images/2019/08/matrix-execution.jpg #}
-{# wf_featured_snippet: This article is about me playing with the experimental WebGPU API and sharing along my journey with web developers interested in performing data-parallel computations using the GPU. #}
+{# wf_featured_snippet: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU. #}
 
 <style>figcaption { text-align: center; margin-bottom: 32px; }</style>
 
@@ -16,7 +16,7 @@ description: This article is about me playing with the experimental WebGPU API a
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 _This article is about me playing with the experimental WebGPU API and sharing
-along my journey with web developers interested in performing data-parallel
+my journey with web developers interested in performing data-parallel
 computations using the GPU._
 
 ## Background
@@ -31,25 +31,25 @@ coprocessor for general-purpose scientific computing is called general-purpose
 GPU (GPGPU) programming.
 
 GPU Compute has contributed significantly to the recent machine learning boom,
-as convolution neural networks and other models could take advantage of the
+as convolution neural networks and other models can take advantage of the
 architecture to run more efficiently on GPUs. With the current Web Platform
 lacking in GPU Compute capabilities, the W3C’s “GPU for the Web” Community Group
 is designing an API to expose the modern GPU APIs that are available on most
 current devices. This API is called WebGPU.
 
 WebGPU is a low-level API, like WebGL. It is very powerful and quite verbose, as
-you’ll see. But that’s OK. What we’re looking for here is performance.
+you’ll see. But that’s OK. What we’re looking for is performance.
 
 In this article, I’m going to focus on the GPU Compute part of WebGPU and, to be
-honest, just scratch the surface, so that you can start playing on your own. I
+honest, I'm just scratch the surface, so that you can start playing on your own. I
 will be diving deeper and covering WebGPU rendering (canvas, texture, etc.) in
 forthcoming articles.
 
 Dogfood: WebGPU is available for now in Chrome 78 for macOS behind an
-experimental flag you can enable at `chrome://flags/#enable-unsafe-webgpu`. The
+experimental flag. You can enable it at `chrome://flags/#enable-unsafe-webgpu`. The
 API is constantly changing and currently unsafe. As GPU sandboxing isn't
 implemented yet for the WebGPU API, it is possible to read GPU data for other
-processes! (Don’t browse the web with it enabled.)
+processes! Don’t browse the web with it enabled.
 
 ## Access the GPU
 
@@ -78,13 +78,13 @@ process isn’t straightforward because of the sandboxing model used in modern w
 browsers.
 
 The example below shows you how to write four bytes to buffer memory accessible
-from the GPU. It calls `device.createBufferMappedAsync()` that takes the size of
+from the GPU. It calls `device.createBufferMappedAsync()` which takes the size of
 the buffer and its usage. Even though the usage flag `GPUBufferUsage.MAP_WRITE`
 is not required for this specific call, let's be explicit that we want to write
 to this buffer. The resulting promise resolves with a GPU buffer object and its
 associated raw binary data buffer.
 
-Writing bytes is familiar if you’ve already played with `ArrayBuffer`: use a
+Writing bytes is familiar if you’ve already played with `ArrayBuffer`; use a
 `TypedArray` object and copy the values into it.
 
 ```js
@@ -143,7 +143,7 @@ asynchronously. This is why there is a list of GPU commands built up and sent in
 batches when needed. In WebGPU, the GPU command encoder returned by
 `device.createCommandEncoder()`is the JavaScript object that builds a batch of
 “buffered” commands that will be sent to the GPU at some point. The methods on
-GPUBuffer, on the other hand, are “unbuffered”, meaning they execute atomically
+`GPUBuffer`, on the other hand, are “unbuffered”, meaning they execute atomically
 at the time they are called.
 
 Once you have the GPU command encoder, call `copyEncoder.copyBufferToBuffer()`
@@ -235,7 +235,7 @@ number of columns, and the rest is the actual numbers of the matrix.
   </figcaption>
 </figure>
 
-The 3 GPU buffers are storage buffers as we need to store and retrieve data in
+The three GPU buffers are storage buffers as we need to store and retrieve data in
 the compute shader. This explains why the GPU buffer usage flags include
 `GPUBufferUsage.STORAGE` for all of them. The result matrix usage flag also has
 `GPUBufferUsage.COPY_SRC` because it will be copied to another buffer for
@@ -351,7 +351,7 @@ const bindGroup = device.createBindGroup({
 
 The compute shader code for multiplying matrices is written in GLSL, a
 high-level shading language used in WebGL, which has a syntax based on the C
-programming language. Without going into detail, you should find below the 3
+programming language. Without going into detail, you should find below the three
 storage buffers marked with the keyword `buffer`. The program will use
 `firstMatrix` and `secondMatrix` as inputs and `resultMatrix` as its output.
 
@@ -434,11 +434,11 @@ const computePipeline = device.createComputePipeline({
 
 ### Commands submission
 
-After having instantiated a bind group with our 3 GPU buffers and a compute
+After instantiating a bind group with our three GPU buffers and a compute
 pipeline with a bind group layout, it is time to use them.
 
 Let’s start a programmable compute pass encoder with
-`commandEncoder.beginComputePass()`. We'll use this to to encode GPU commands
+`commandEncoder.beginComputePass()`. We'll use this to encode GPU commands
 that will perform the matrix multiplication. Set its pipeline with
 `passEncoder.setPipeline(computePipeline)` and its bind group at index 0 with
 `passEncoder.setBindGroup(0, bindGroup)`. The index 0 corresponds to the `set =
@@ -482,7 +482,7 @@ passEncoder.endPass();
 ```
 
 To end the compute pass encoder, call `passEncoder.endPass()`. Then, create a
-GPU buffer we’ll use as a destination to copy the result matrix buffer with
+GPU buffer to use as a destination to copy the result matrix buffer with
 `copyBufferToBuffer`. Finally, finish encoding commands with
 `copyEncoder.finish()` and submit those to the GPU device queue by calling
 `device.getQueue().submit()` with the GPU commands.
@@ -551,7 +551,7 @@ when the size of the matrices is greater than 256 by 256.
 </figure>
 
 This article was just the beginning of my journey exploring WebGPU. Expect more
-articles soon featuring more deep dive in GPU Compute and on how rendering
+articles soon featuring more deep dives in GPU Compute and on how rendering
 (canvas, texture, sampler) works in WebGPU.
 
 [try out this sample]: #TODO
