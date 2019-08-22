@@ -168,12 +168,11 @@ We need your help to ensure that the Badging API works in a way that meets your
 needs and that we’re not missing any key scenarios.
 
 <aside class="key-point">
-  <b>We need your help!</b> - Will the current design (allowing any integer
-  that *in Chrome* gets displayed as 1–99 or 99+,
-  or no value that *in Chrome* gets displayed as a white dot/flag)
-  meet your needs? If it won’t, please
-  file an issue in the <a href="https://github.com/WICG/badging/issues">
-  WICG/badging repo</a> and provide as much detail as you can. In addition,
+  <b>We need your help!</b> - Will the current design
+  (allowing either an integer or a flag value) meet your needs?
+  If it won’t, please file an issue in the
+  <a href="https://github.com/WICG/badging/issues">WICG/badging repo</a>
+  and provide as much detail as you can. In addition,
   there are a number of <a href="https://github.com/WICG/badging/blob/master/choices.md">
   open questions</a> that are still being discussed, and we’d be interested to
   hear your feedback.
