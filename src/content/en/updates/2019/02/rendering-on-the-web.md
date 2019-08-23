@@ -60,10 +60,10 @@ to navigation. This avoids additional round-trips for data fetching and
 templating on the client, since it’s handled before the browser gets a
 response._
 
-Server rendering generally produces a fast [First Paint] (FP) and [First
-Contentful Paint] (FCP). Running page logic and rendering on the server makes it
+Server rendering generally produces a fast [First Paint] and [First
+Contentful Paint]. Running page logic and rendering on the server makes it
 possible to avoid sending lots of JavaScript to the client, which helps achieve
-a fast [Time to Interactive] (TTI). This makes sense, since with server
+a fast [Time to Interactive]. This makes sense, since with server
 rendering you’re really just sending text and links to the user’s browser. This
 approach can work well for a large spectrum of device and network conditions,
 and opens up interesting browser optimizations like streaming document parsing.
@@ -77,7 +77,7 @@ JavaScript to process before they can use your site. Even when [third-party JS]
 can’t be avoided, using server rendering to reduce your own first-party [JS
 costs] can give you more "[budget]" for the rest. However, there is one primary
 drawback to this approach: generating pages on the server takes time, which can
-often result in a slower [Time to First Byte] (TTFB).
+often result in a slower [Time to First Byte].
 
 Whether server rendering is enough for your application largely depends on what
 type of experience you are building. There is a longstanding debate over the
