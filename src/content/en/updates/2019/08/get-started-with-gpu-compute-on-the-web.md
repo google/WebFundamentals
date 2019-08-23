@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2019-08-22 #}
+{# wf_updated_on: 2019-08-23 #}
 {# wf_published_on: 2019-08-22 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -35,7 +35,7 @@ as convolution neural networks and other models can take advantage of the
 architecture to run more efficiently on GPUs. With the current Web Platform
 lacking in GPU Compute capabilities, the W3C’s “GPU for the Web” Community Group
 is designing an API to expose the modern GPU APIs that are available on most
-current devices. This API is called WebGPU.
+current devices. This API is called [WebGPU].
 
 WebGPU is a low-level API, like WebGL. It is very powerful and quite verbose, as
 you’ll see. But that’s OK. What we’re looking for is performance.
@@ -85,7 +85,7 @@ to this buffer. The resulting promise resolves with a GPU buffer object and its
 associated raw binary data buffer.
 
 Writing bytes is familiar if you’ve already played with `ArrayBuffer`; use a
-`TypedArray` object and copy the values into it.
+`TypedArray` and copy the values into it.
 
 ```js
 // Get a GPU buffer and an arrayBuffer for writing.
@@ -154,7 +154,6 @@ submissions done via `device.getQueue().submit()` with the GPU commands as
 arguments. This will atomically execute all the commands stored in the array in
 order.
 
-
 ```js
 // Encode commands for copying buffer to buffer.
 const copyEncoder = device.createCommandEncoder();
@@ -179,7 +178,7 @@ the first GPU buffer once all queued GPU commands have been executed.
 ```js
 // Read buffer.
 const copyArrayBuffer = await gpuReadBuffer.mapReadAsync();
-console.log(new Float32Array(copyArrayBuffer));
+console.log(copyArrayBuffer);
 ```
 
 You can [try out this sample].
@@ -210,15 +209,15 @@ multiplication, a common algorithm in machine learning illustrated below.
   </figcaption>
 </figure>
 
-In short, here’s what we’re going to do: 
+In short, here’s what we’re going to do:
 
-- Create three GPU buffers (two for the matrices to multiply and one for the
+1. Create three GPU buffers (two for the matrices to multiply and one for the
   result matrix)
-- Describe input and output for the compute shader
-- Compile the compute shader code
-- Set up a compute pipeline 
-- Submit in batch the encoded commands to the GPU
-- Read the result matrix GPU buffer
+2. Describe input and output for the compute shader
+3. Compile the compute shader code
+4. Set up a compute pipeline
+5. Submit in batch the encoded commands to the GPU
+6. Read the result matrix GPU buffer
 
 ### GPU Buffers creation
 
@@ -416,7 +415,7 @@ and the actual compute shader module compiled with `Utils.compile()`. The string
 `c` simply stands for compute as it can also compile vertex shaders and fragment
 shaders.
 
-```js 
+```js
 await Utils.ready;
 
 const computePipeline = device.createComputePipeline({
@@ -528,11 +527,10 @@ In our code, the result logged in DevTools JavaScript console is “2, 2, 50, 60
 ```js
 // Read buffer.
 const arrayBuffer = await gpuReadBuffer.mapReadAsync();
-console.log(new Float32Array(arrayBuffer));
+console.log(arrayBuffer);
 ```
 
-Congratulations! You made it. Have a look at the [source code] and [play with
-the sample]. 
+Congratulations! You made it. You can [play with the sample].
 
 ## Performance findings
 
@@ -554,10 +552,10 @@ This article was just the beginning of my journey exploring WebGPU. Expect more
 articles soon featuring more deep dives in GPU Compute and on how rendering
 (canvas, texture, sampler) works in WebGPU.
 
-[try out this sample]: #TODO
+[WebGPU]: https://gpuweb.github.io/gpuweb/
+[try out this sample]: https://glitch.com/edit/#!/gpu-compute-sample-1
 [SPIR-V]: https://www.khronos.org/spir/
-[source code]: #TODO
-[play with the sample]: #TODO
+[play with the sample]: https://glitch.com/edit/#!/gpu-compute-sample-2
 
 {% include "web/_shared/helpful.html" %}
 
