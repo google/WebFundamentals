@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, which allows browsers to interact with and manage public-key based credentials. This enables strong authentication using removable security keys and built-in platform authenticators such as fingerprint scanners.
 
-{# wf_updated_on: 2018-05-22 #}
+{# wf_updated_on: 2019-08-25 #}
 {# wf_published_on: 2018-05-10 #}
 {# wf_tags: webauthn, credentials, sign-in, chrome67 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -77,7 +77,7 @@ as the "relying party"):
 1. The relying party asks the browser, through the Credential Manager API, to 
    generate a new credential for the relying party, specifying device 
    capabilities, e.g., whether the device provides its own user authentication 
-   (with biometrics, etc).
+   (with biometrics, etc.).
 1. After the authenticator obtains user consent, the authenticator generates a
    key pair and returns the public key and optional signed attestation to the
    website.
@@ -87,10 +87,10 @@ as the "relying party"):
 
 ```
 let credential = await navigator.credentials.create({ publicKey: {
-  challenge: Uint8Array(32) [117, 61, 252, 231, 191, 241,…]
+  challenge: new Uint8Array([117, 61, 252, 231, 191, 241, ...]),
   rp: { id: "acme.com", name: "ACME Corporation" },
   user: {
-    id: Uint8Array(8) [79, 252, 83, 72, 214, 7, 89, 26]
+    id: new Uint8Array([79, 252, 83, 72, 214, 7, 89, 26]),
     name: "jamiedoe",
     displayName: "Jamie Doe"
   },
@@ -121,11 +121,11 @@ user:
 
 ```
 let credential = await navigator.credentials.get({ publicKey: {
-  challenge: Uint8Array(32) [139, 66, 181, 87, 7, 203,…]
+  challenge: new Uint8Array([139, 66, 181, 87, 7, 203, ...]),
   rpId: "acme.com",
   allowCredentials: [{
     type: "public-key",
-    id: Uint8Array(80) [64, 66, 25, 78, 168, 226, 174,…]
+    id: new Uint8Array([64, 66, 25, 78, 168, 226, 174, ...])
   }],
   userVerification: "required",
 }});
@@ -148,7 +148,7 @@ fingerprint enrollment.
 
 Note that [Microsoft Edge also supports the 
 API](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/web-authentication) 
-and [Firefox will be supporting WebAuthn as of Firefox 
+and [Firefox is supporting WebAuthn as of Firefox 
 60](https://hacks.mozilla.org/2018/01/using-hardware-token-based-2fa-with-the-webauthn-api/).
 
 ## Resources
