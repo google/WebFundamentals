@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2019-08-23 #}
-{# wf_published_on: 2019-08-22 #}
+{# wf_updated_on: 2019-08-28 #}
+{# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
 {# wf_featured_image: /web/updates/images/2019/08/matrix-execution.jpg #}
@@ -41,9 +41,9 @@ WebGPU is a low-level API, like WebGL. It is very powerful and quite verbose, as
 you’ll see. But that’s OK. What we’re looking for is performance.
 
 In this article, I’m going to focus on the GPU Compute part of WebGPU and, to be
-honest, I'm just scratch the surface, so that you can start playing on your own. I
-will be diving deeper and covering WebGPU rendering (canvas, texture, etc.) in
-forthcoming articles.
+honest, I'm just scratching the surface, so that you can start playing on your
+own. I will be diving deeper and covering WebGPU rendering (canvas, texture,
+etc.) in forthcoming articles.
 
 Dogfood: WebGPU is available for now in Chrome 78 for macOS behind an
 experimental flag. You can enable it at `chrome://flags/#enable-unsafe-webgpu`. The
@@ -178,7 +178,7 @@ the first GPU buffer once all queued GPU commands have been executed.
 ```js
 // Read buffer.
 const copyArrayBuffer = await gpuReadBuffer.mapReadAsync();
-console.log(copyArrayBuffer);
+console.log(new Uint8Array(copyArrayBuffer));
 ```
 
 You can [try out this sample].
@@ -358,7 +358,7 @@ Note that each storage buffer has a `binding` qualifier used that corresponds to
 the same index defined in bind group layouts and bind groups declared above.
 
 ```js
-const computeShaderGLSL = `#version 450
+const computeShaderCode = `#version 450
 
   layout(std430, set = 0, binding = 0) readonly buffer FirstMatrix {
       vec2 size;
@@ -395,28 +395,26 @@ const computeShaderGLSL = `#version 450
 ### Pipeline setup
 
 WebGPU in Chrome currently uses bytecode instead of raw GLSL code. This means we
-have to compile `computeShaderGLSL` before running the compute shader. Luckily
-for us, a `Utils` script featuring a shaderc WASM module allows us to compile it
-pretty easily in a format that WebGPU in Chrome accepts. This bytecode format is
-based on a safe subset of [SPIR-V].
+have to compile `computeShaderCode` before running the compute shader. Luckily
+for us, the [@webgpu/glslang] package allows us to compile `computeShaderCode`
+in a format that WebGPU in Chrome accepts. This bytecode format is based on a
+safe subset of [SPIR-V].
 
 Note that the “GPU on the Web” W3C Community Group has still not decided at the
 time of writing on the shading language for WebGPU.
 
 ```js
-<script src="dist/utils.js"></script>
+import glslangModule from 'https://unpkg.com/@webgpu/glslang/web/glslang.js';
 ```
 
 The compute pipeline is the object that actually describes the compute operation
 we're going to perform. Create it by calling `device.createComputePipeline()`.
 It takes two arguments: the bind group layout we created earlier, and a compute
 stage defining the entry point of our compute shader (the `main` GLSL function)
-and the actual compute shader module compiled with `Utils.compile()`. The string
-`c` simply stands for compute as it can also compile vertex shaders and fragment
-shaders.
+and the actual compute shader module compiled with `glslang.compileGLSL()`.
 
 ```js
-await Utils.ready;
+const glslang = await glslangModule();
 
 const computePipeline = device.createComputePipeline({
   layout: device.createPipelineLayout({
@@ -424,7 +422,7 @@ const computePipeline = device.createComputePipeline({
   }),
   computeStage: {
     module: device.createShaderModule({
-      code: Utils.compile("c", computeShaderGLSL)
+      code: glslang.compileGLSL(computeShaderCode, "compute")
     }),
     entryPoint: "main"
   }
@@ -527,7 +525,7 @@ In our code, the result logged in DevTools JavaScript console is “2, 2, 50, 60
 ```js
 // Read buffer.
 const arrayBuffer = await gpuReadBuffer.mapReadAsync();
-console.log(arrayBuffer);
+console.log(new Float32Array(arrayBuffer));
 ```
 
 Congratulations! You made it. You can [play with the sample].
@@ -554,6 +552,7 @@ articles soon featuring more deep dives in GPU Compute and on how rendering
 
 [WebGPU]: https://gpuweb.github.io/gpuweb/
 [try out this sample]: https://glitch.com/edit/#!/gpu-compute-sample-1
+[@webgpu/glslang]: https://www.npmjs.com/package/@webgpu/glslang
 [SPIR-V]: https://www.khronos.org/spir/
 [play with the sample]: https://glitch.com/edit/#!/gpu-compute-sample-2
 
