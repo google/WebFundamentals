@@ -125,8 +125,8 @@ to remember that your users likely won't have a reference to the GIF source like
 you will. Always adhere to your project's standards for media quality, but be
 willing to make trade-offs for performance where appropriate.
 
-If the resulting .mp4 won't open in Quicktime, Safari browser will not load it.
-You might want to run this command below:
+If the resulting .mp4 won't open in Quicktime, Safari will not load it.
+Instead, try the command below to generate an mp4 that should load in Safari:
 
 ```shell
 ffmpeg -i input.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p output.mp4
