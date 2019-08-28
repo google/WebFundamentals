@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-08-20 #}
+{# wf_updated_on: 2019-08-28 #}
 {# wf_published_on: 2019-08-27 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
@@ -29,7 +29,7 @@ situation with other processes?
 to install a program, steal user data, adjust computer settings, access content
 of all browser tabs, login data, etc.
 
-**In other prcoesses, OS access is limited** via platform-specific restrictions.
+**In other processes, OS access is limited** via platform-specific restrictions.
 For more information, see Chrome's [sandbox implementation guide][sandbox-implementation].
 
 Make sure to avoid the following common mistakes:
@@ -54,7 +54,7 @@ Instead, use the following best practices:
   process. Ideally, also use a memory safe language such as JavaScript
   (solves >50% security bugs).
 
-For years, we ran network stacks (e.g. HHTP, DNS, QUIC) in the browser process,
+For years, we ran network stacks (e.g. HTTP, DNS, QUIC) in the browser process,
 which led to some [critical vulnerabilities][critical-vulnerabilities]. On
 some platforms, networking now has its own process, with a sandbox coming.
 
