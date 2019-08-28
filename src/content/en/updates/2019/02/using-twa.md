@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs.
 
-{# wf_updated_on: 2019-08-13 #}
+{# wf_updated_on: 2019-08-28 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: trusted-web-activity,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -76,7 +76,7 @@ browser, so long as that browser provides the required capabilities.
 ## Getting started {: #getting-started }
 
 Note: A simpler
-[quick start guide for Trusted Web Activities](web/updates/2019/08/twas-quickstart)
+[quick start guide for Trusted Web Activities](/web/updates/2019/08/twas-quickstart)
 is now available.
 
 Setting up a Trusted Web Activity (TWA) doesn’t require developers to author

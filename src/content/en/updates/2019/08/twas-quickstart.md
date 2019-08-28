@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A guide to get started building a basic, bare-bones Trusted Web Activity.
 
-{# wf_published_on: 2019-08-21 #}
-{# wf_updated_on: 2019-08-21 #}
+{# wf_published_on: 2019-08-28 #}
+{# wf_updated_on: 2019-08-28 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_blink_components: N/A #}
 
@@ -17,7 +17,7 @@ By the end of this guide, you will:
 
 * Have built a Trusted Web Activity that passes verification.
 * Understand when your debug keys and your release keys are used.
-* Can determine the signature your TWA is being built with.
+* Be able to determine the signature your TWA is being built with.
 * Know how to create a basic Digital Asset Links file.
 
 To follow this guide you'll need:
@@ -49,8 +49,8 @@ The [svgomg-twa](https://github.com/GoogleChromeLabs/svgomg-twa) repo contains a
 you can customize to launch your website:
 
 1. Clone the project (`git clone https://github.com/GoogleChromeLabs/svgomg-twa.git`).
-2. Import the Project into Android Studio, using File > New > Import Project, and select the folder
-   to which the project was cloned.
+2. Import the Project into Android Studio, using **File** > **New** > **Import Project**, and select
+   the folder to which the project was cloned.
 3. Open the app's `build.gradle` and modify the values in `twaManifest`.
    There are two `build.gradle` files.
    You want the module one at `app/build.gradle`.
@@ -66,29 +66,29 @@ you can customize to launch your website:
 
 ## Build and run {: #build-and-run }
 
-In Android Studio hit Run, Run ‘app’ (where ‘app’ is your module name, if you’ve changed it) and
-the TWA will be built and run on your device!
+In Android Studio hit **Run**, **Run ‘app’** (where ‘app’ is your module name, if you’ve changed it)
+and the TWA will be built and run on your device!
 You’ll notice that your website is launched as a Custom Tab, not a Trusted Web Activity, this is
 because we haven’t set up our Digital Asset Links yet, but first...
 
 ### A note on signing keys {: #a-note-on-signing-keys }
 
-**Digital Asset Links** take into account the key that an APK has been signed with and a common
-cause for verification failing is to have the signature wrong.
+Digital Asset Links take into account the key that an APK has been signed with and a common
+cause for verification failing is to use the wrong signature.
 (Remember, failing verification means you'll launch your website as a Custom Tab with
 browser UI at the top of the page.)
-When you hit *Run* or *Build APK* in Android Studio, the APK will be created with your developer
-**debug key**, which Android Studio automatically generated for you.
+When you hit **Run** or **Build APK** in Android Studio, the APK will be created with your developer
+*debug key*, which Android Studio automatically generated for you.
 
-If you deploy your app to the Play Store you’ll hit *Build > Generate Signed APK*, which will use a
-different signature, one that you’ll have created yourself (and protected with a password).
-That means that if your **Digital Asset Links** file specifies your **production key**, verification
-will fail when you build with your **debug key**.
-This also can happen the other way around - if the Digital Asset Links file has your **debug key**
+If you deploy your app to the Play Store you’ll hit **Build** > **Generate Signed APK**, which will
+use a different signature, one that you’ll have created yourself (and protected with a password).
+That means that if your Digital Asset Links file specifies your *production key*, verification
+will fail when you build with your *debug key*.
+This also can happen the other way around - if the Digital Asset Links file has your *debug key*
 your TWA will work fine locally, then when you download the signed version from the Play Store,
 verification will fail.
 
-You can put both your debug and production key in your asset link file
+You can put both your *debug key* and *production key* in your asset link file
 (see [Adding More Keys](#adding-more-keys) below),
 but your debug key is less secure.
 Anyone who gets a copy of the file can use it.
@@ -130,12 +130,12 @@ This table shows which key is used based on how you create your APK.
   <tr>
     <td>When is it used?</td>
     <td><ul>
-      <li><i>Run 'app'</i>.</li>
-      <li><i>Debug 'app'</i>.</li>
-      <li><i>Build APK</i>.</li>
+      <li><b>Run 'app'</b>.</li>
+      <li><b>Debug 'app'</b>.</li>
+      <li><b>Build APK</b>.</li>
     </ul></td>
     <td><ul>
-      <li><i>Generate Signed APK</i>.</li>
+      <li><b>Generate Signed APK</b>.</li>
       <li>When the app is downloaded from the Play Store.</li>
     </ul></td>
   </tr>
@@ -148,6 +148,8 @@ Asset Link file.
 I’ve created the
 [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) to help you
 do this.
+If you'd prefer not to download the Asset Link Tool, you can
+[determine your app's signature manually](/web/updates/2019/02/using-twa#link-site-to-app).
 
 1. Download the [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool).
 2. When the app launches, you’ll be given a list of all applications installed on your device by
@@ -184,7 +186,7 @@ A Digital Asset Link file can contain more than one app, and for each app, it ca
 one key.
 For example, to add a second key just use the
 [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) to
-generate the key and add it as a second entry to the `sha256_cert_fingerprints` field.
+determine the key and add it as a second entry to the `sha256_cert_fingerprints` field.
 The code in Chrome that parses this JSON is quite strict, so make sure you don’t accidentally add an
 extra comma at the end of the list.
 
