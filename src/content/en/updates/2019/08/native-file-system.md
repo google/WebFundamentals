@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device.
 
 {# wf_published_on: 2019-08-20 #}
-{# wf_updated_on: 2019-08-21 #}
+{# wf_updated_on: 2019-08-30 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: capabilities,file,filesystem,native-file-system #}
 {# wf_featured_snippet: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device. #}
@@ -96,7 +96,7 @@ a file picker dialog, and prompts the user to select a file. After selecting
 a file, the API returns a handle to the file. An optional options parameter
 lets you influence the behavior of the file picker, for example, allowing the
 user to select multiple files, or directories, or different file types.
-Without any options specified), the file picker allows the user to select a
+Without any options specified, the file picker allows the user to select a
 single file, perfect for our text editor.
 
 Like many other powerful APIs, calling `chooseFileSystemEntries()` must be
@@ -117,7 +117,7 @@ properties and methods needed to interact with the file.
 
 It’s helpful to keep a reference to the file handle around so that it
 can be used later. It’ll be needed to save changes back to the file, or
-any other file operations. In the next few milestones, installed
+to perform any other file operations. In the next few milestones, installed
 Progressive Web Apps will also be able to save the handle to IndexedDB
 and persist access to the file across page reloads.
 
@@ -205,18 +205,18 @@ async function writeFile(fileHandle, contents) {
 Note: There's no guarantee that the contents are written to disk until
 the `close()` method is called.
 
-The `keepExistingData` option when calling `createWriter()` isn’t supported
+The `keepExistingData` option, when calling `createWriter()`, isn’t supported
 yet, so once I get the writer, I immediately call `truncate(0)` to ensure I
-started with an empty file. Otherwise, if the length of the new content is
+start with an empty file. Otherwise, if the length of the new content is
 shorter than the existing content, the existing content after the new
 content would remain. `keepExistingData` will be added in a future milestone.
 
 When `createWriter()` is called, Chrome checks if the user has granted
 write permission. If not, it requests permission. If the user grants
 permission, the app can write the contents to the file. But, if the user
-does not grant permission, `createWriter()`, will throw a `DOMException`, and
+does not grant permission, `createWriter()` will throw a `DOMException`, and
 the app will not be able to write to the file. In the text editor, these
-DOMExceptions are handled in the [`saveFile()`][text-editor-app-js]
+`DOMException`s are handled in the [`saveFile()`][text-editor-app-js]
 method.
 
 Note: All the code behind the [text editor][text-editor] is on
@@ -231,7 +231,7 @@ several other new capabilities.
 #### Open a directory and enumerate its contents
 
 To enumerate all files in a directory, call `chooseFileSystemEntries()`
-with the `type` option set to `openDirectory`. The user selects a directory
+with the `type` option set to `'openDirectory'`. The user selects a directory
 in a picker, after which a [`FileSystemDirectoryHandle`][fs-dir-handle]
 is returned, which lets you enumerate and access the directory’s files.
 
@@ -291,7 +291,7 @@ directory via the file picker. The open file picker can only be shown via
 a user gesture when served from a [secure context][secure-contexts]. If
 the user changes their mind, they can cancel the selection in the file
 picker and the site does not get access to anything. This is the same
-behavior as the `<input type="file">` element.
+behavior as that of the `<input type="file">` element.
 
 <div class="clearfix"></div>
 
