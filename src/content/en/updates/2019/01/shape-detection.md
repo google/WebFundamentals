@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Shape Detection API detects faces, barcodes, and text in images.
 
-{# wf_updated_on: 2019-08-28 #}
+{# wf_updated_on: 2019-08-30 #}
 {# wf_published_on: 2019-01-07 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -36,7 +36,7 @@ a [QR code reader](https://qrsnapper.appspot.com/), they had to rely on external
 libraries. This could be expensive from a performance point of view and increase the overall page
 weight. On the other hand, operating systems including Android, iOS, and macOS, but also hardware
 chips found in camera modules, typically already have performant and highly optimized feature
-detectors such as the Android 
+detectors such as the Android
 [`FaceDetector`](https://developer.android.com/reference/android/media/FaceDetector) or the iOS
 generic feature detector,
 [`CIDetector`](https://developer.apple.com/documentation/coreimage/cidetector?language=objc).
@@ -78,7 +78,7 @@ text. The following bullet list contains examples of use cases for all three fea
   [EAN](https://en.wikipedia.org/wiki/International_Article_Number) or
   [UPC](https://en.wikipedia.org/wiki/Universal_Product_Code) barcodes of items in a physical
   store to compare prices online.
-- Airports can expose web kiosks where passengers can scan their boarding passes’
+- Airports can provide web kiosks where passengers can scan their boarding passes’
   [Aztec codes](https://en.wikipedia.org/wiki/Aztec_Code) to show personalized information
   related to their flights.
 
@@ -132,6 +132,10 @@ attribute to request CORS access.
 
 ### Working with the `FaceDetector` {: #facedetector}
 
+The `FaceDetector` always returns the bounding boxes of faces it detects in the `ImageBitmapSource`.
+Dependent on the platform, more information regarding face landmarks like eyes, nose, or mouth may
+be available.
+
 ```js
 const faceDetector = new FaceDetector({
   // (Optional) Hint to try and limit the amount of detected faces
@@ -143,12 +147,15 @@ const faceDetector = new FaceDetector({
 });
 try {
   const faces = await faceDetector.detect(image);
-  faces.forEach(face => console.log(face));
+  faces.forEach(face => drawMustache(face));
 } catch (e) {
   console.error('Face detection failed:', e);
 }
 ```
 ### Working with the `BarcodeDetector` {: #barcodedetector}
+
+The `BarcodeDetector` returns the barcode raw values it finds in the `ImageBitmapSource` and the
+bounding boxes, as well as other information like the formats of the detected barcodes.
 
 ```js
 const barcodeDetector = new BarcodeDetector({
@@ -172,7 +179,7 @@ const barcodeDetector = new BarcodeDetector({
 });
 try {
   const barcodes = await barcodeDetector.detect(image);
-  barcodes.forEach(barcode => console.log(barcode));
+  barcodes.forEach(barcode => searchProductDatabase(barcode));
 } catch (e) {
   console.error('Barcode detection failed:', e);
 }
@@ -180,11 +187,16 @@ try {
 
 ### Working with the `TextDetector` {: #textdetector}
 
+The `TextDetector` always returns the bounding boxes of the detected texts, and on some platforms
+the recognized characters.
+
+Note: Text recognition is not universally available.
+
 ```js
 const textDetector = new TextDetector();
 try {
   const texts = await textDetector.detect(image);
-  texts.forEach(text => console.log(text));
+  texts.forEach(text => textToSpeech(text));
 } catch (e) {
   console.error('Text detection failed:', e);
 }
@@ -195,7 +207,7 @@ try {
 Purely checking for the existence of the constructors to feature detect the Shape Detection
 API doesn’t suffice, as Chrome on Linux and Chrome OS currently still expose the detectors, but
 they are known to not work ([bug](https://crbug.com/920961)). As a temporary measure, we instead
-recommend doing feature detection like this:
+recommend a *defensive programming* approach by doing feature detection like this:
 
 ```js
 const supported = await (async () => 'FaceDetector' in window &&
@@ -221,7 +233,8 @@ support face detection per se, but not face landmark detection (eyes, nose, mout
 existence and the location of text may be recognized, but not text contents.
 
 Note: This API is an optimization and not something guaranteed to be available from the platform
-for every user. Developers are expected to combine this with their own image recognition code and
+for every user. Developers are expected to combine this with their own
+[image recognition code](https://github.com/mjyc/opencv) and
 take advantage of the native optimization when it is available.
 
 ## Feedback {: #feedback }
