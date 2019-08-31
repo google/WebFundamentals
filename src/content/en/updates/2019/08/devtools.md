@@ -1,18 +1,17 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel.
 
 {# wf_updated_on: 2019-08-30 #}
 {# wf_published_on: 2019-08-29 #}
 {# wf_tags: chrome78, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 78) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-
 
 ## Lighthouse 5.2 in the Audits panel {: #audits }
 
@@ -28,7 +27,7 @@ to learn more about how third-party code can degrade load performance.
   <img src="/web/updates/images/2019/08/third-party-code.png"
        alt="A screenshot of the 'Third-Party Usage' audit in the Lighthouse report UI."/>
   <figcaption>
-    Figure X. The <b>Third-party usage</b> audit.
+    Figure 1. The <b>Third-party usage</b> audit.
   </figcaption>
 </figure>
 
@@ -47,7 +46,7 @@ of the largest content element visible in the viewport.
   <img src="/web/updates/images/2019/08/lcp.png"
        alt="The LCP marker in the Timings section."/>
   <figcaption>
-    Figure X. The <b>LCP</b> marker in the <b>Timings</b> section.
+    Figure 2. The <b>LCP</b> marker in the <b>Timings</b> section.
   </figcaption>
 </figure>
 
@@ -61,7 +60,7 @@ To highlight the DOM node associated with LCP:
        <img src="/web/updates/images/2019/08/relatednode.png"
             alt="The Related Node section of the Summary tab."/>
        <figcaption>
-         Figure X. The <b>Related Node</b> section of the <b>Summary</b> tab.
+         Figure 3. The <b>Related Node</b> section of the <b>Summary</b> tab.
        </figcaption>
      </figure>
 
@@ -85,7 +84,7 @@ the team's ability to fix your bug or implement your feature request!
   <img src="/web/updates/images/2019/08/reportissue.png"
        alt="Main Menu > Help > Report a DevTools issue."/>
   <figcaption>
-    Figure X. <b>Main Menu</b> &gt; <b>Help</b> &gt; <b>Report a DevTools issue</b>.
+    Figure 4. <b>Main Menu</b> &gt; <b>Help</b> &gt; <b>Report a DevTools issue</b>.
   </figcaption>
 </figure>
 
