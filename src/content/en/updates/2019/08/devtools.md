@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2019-08-29 #}
+{# wf_updated_on: 2019-08-30 #}
 {# wf_published_on: 2019-08-29 #}
 {# wf_tags: chrome78, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -13,12 +13,83 @@ description: TODO
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-* [Lighthouse 5.2](https://chromium.googlesource.com/chromium/src/+/8b464bafc4baba3c5636f2459101656f9e52dc62)
-* [Stack trace for DOM node creation](https://chromium.googlesource.com/chromium/src/+/16ad750d1405f61faf1daaff6fa33816c1a4e4d0)
-* [Fix self-time calculation in Bottom-Up](https://chromium.googlesource.com/chromium/src/+/3265a3b071b0a48bcad70f872a29d2f6756b042f)
-* [Periodic sync](https://chromium.googlesource.com/chromium/src/+/881794356666eed6d9c946c5ce517812558b6959)
-* [LCP](https://chromium.googlesource.com/chromium/src/+/9ed4ed171aa627b481275a90cf193a8e126e3fa6)
-* [Link for filing DevTools issues](https://chromium.googlesource.com/chromium/src/+/ac7df080c78c8f38a448f518cf8a1c63e3d120c5)
+
+## Lighthouse 5.2 in the Audits panel {: #audits }
+
+[LH]: https://github.com/GoogleChrome/lighthouse/releases/tag/v5.2.0
+[3P]: https://web.dev/fast#optimize-your-third-party-resources
+
+The **Audits** panel is now running [Lighthouse 5.2][LH]. The new **Third-Party Usage** 
+diagnostic audit tells you how much third-party code was requested and how long that third-party
+code blocked the main thread while the page loaded. See [Optimize your third-party resources][3P]
+to learn more about how third-party code can degrade load performance.
+
+<figure>
+  <img src="/web/updates/images/2019/08/third-party-code.png"
+       alt="A screenshot of the 'Third-Party Usage' audit in the Lighthouse report UI."/>
+  <figcaption>
+    Figure X. The <b>Third-party usage</b> audit.
+  </figcaption>
+</figure>
+
+[Chromium issue #772558](https://crbug.com/772558)
+
+## Largest Contentful Paint in the Performance panel {: #LCP }
+
+[LCP]: https://web.dev/largest-contentful-paint
+[record]: /web/tools/chrome-devtools/evaluate-performance/reference#record-load
+
+When [analyzing load performance in the **Performance** panel][record], the **Timings** section
+now includes a marker for [Largest Contentful Paint][LCP] (LCP). LCP reports the render time
+of the largest content element visible in the viewport.
+
+<figure>
+  <img src="/web/updates/images/2019/08/lcp.png"
+       alt="The LCP marker in the Timings section."/>
+  <figcaption>
+    Figure X. The <b>LCP</b> marker in the <b>Timings</b> section.
+  </figcaption>
+</figure>
+
+To highlight the DOM node associated with LCP:
+
+1. Click the **LCP** marker in the **Timings** section.
+1. Hover over the **Related Node** in the **Summary** tab to highlight the node in the
+   viewport.
+
+     <figure>
+       <img src="/web/updates/images/2019/08/relatednode.png"
+            alt="The Related Node section of the Summary tab."/>
+       <figcaption>
+         Figure X. The <b>Related Node</b> section of the <b>Summary</b> tab.
+       </figcaption>
+     </figure>
+
+[DOM]: /web/tools/chrome-devtools/dom
+
+1. Click the **Related Node** to select it in the [**DOM Tree**][DOM].
+
+<!-- https://chromium.googlesource.com/chromium/src/+/9ed4ed171aa627b481275a90cf193a8e126e3fa6 -->
+
+## File DevTools issues from the Main Menu {: #issues }
+
+[repro]: https://stackoverflow.com/help/minimal-reproducible-example
+
+If you ever encounter a bug in DevTools and want to file an issue, or if you ever get an idea
+on how to improve DevTools and want to request a new feature, go to **Main Menu** > **Help** >
+**Report a DevTools issue** to talk to the DevTools engineering team. Providing a
+[minimal, reproducible example][repro] on [Glitch](https://glitch.com/) dramatically increases
+the team's ability to fix your bug or implement your feature request!
+
+<figure>
+  <img src="/web/updates/images/2019/08/reportissue.png"
+       alt="Main Menu > Help > Report a DevTools issue."/>
+  <figcaption>
+    Figure X. <b>Main Menu</b> &gt; <b>Help</b> &gt; <b>Report a DevTools issue</b>.
+  </figcaption>
+</figure>
+
+<!-- https://chromium.googlesource.com/chromium/src/+/ac7df080c78c8f38a448f518cf8a1c63e3d120c5 -->
 
 ## Feedback {: #feedback }
 
