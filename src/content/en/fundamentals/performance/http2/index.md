@@ -571,7 +571,7 @@ For full details of the HPACK compression algorithm, see
 
 * [“HTTP/2”](https://hpbn.co/http2/){: .external }
     – The full article by Ilya Grigorik
-* [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external }
+* [“Setting up HTTP/2”](https://dassur.ma/things/h2setup/){: .external }
     – How to set up HTTP/2 in different backends by Surma
 * [“HTTP/2 is here,
 let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)
