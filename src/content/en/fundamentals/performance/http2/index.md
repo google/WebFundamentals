@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing streams and frame control to the web.
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2019-09-01 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
