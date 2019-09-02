@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Barcode Detection API allows for barcodes to be detected in images.
 
-{# wf_updated_on: 2019-08-06 #}
+{# wf_updated_on: 2019-09-02 #}
 {# wf_published_on: 2019-08-01 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -19,7 +19,7 @@ Success: We were working on the specification for this API as part of the
 [capabilities project](/web/updates/capabilities). Following a successful Origin Trial,
 barcode detection has now launched.
 
-You may remember [my post from January](../01/shape-detection)
+You may remember [my previous post](../01/shape-detection)
 on the [Shape Detection API](https://wicg.github.io/shape-detection-api),
 an API that defines three interfaces: `BarcodeDetector`, `FaceDetector`,
 and `TextDetector`. I'm now happy to share that following a successful Origin Trial,
@@ -28,13 +28,13 @@ The `FaceDetector` and the `TextDetector` interface still need some more fine-tu
 
 ### Working With the `BarcodeDetector` {: #barcodedetector}
 
-Let's briefly recall how working with the `BarcodeDetector` looks like:
+Recall how `BarcodeDetector` works:
 
 ```js
 const barcodeDetector = new BarcodeDetector();
 try {
   const barcodes = await barcodeDetector.detect(image);
-  barcodes.forEach(barcode => console.log(barcode));
+  barcodes.forEach(barcode => searchProductDatabase(barcode));
 } catch (err) {
   console.error('Barcode detection failed:', err);
 }
@@ -57,16 +57,14 @@ of barcode detection support across the various Blink platforms.
 In response to this feedback, we've now added a new static `getSupportedFormats()` method
 to more easily allow developers to detect when the current platform supports
 the desired formats, and when a polyfill is necessary.
-We've also hooked up the `formats` hint options parameter to the underlying implementation,
-which allows it to optimize for detecting only the formats specified.
-The code sample below shows how the new method could be used to detect QR codes
-(among several
-[other possible barcode formats](https://wicg.github.io/shape-detection-api/#enumdef-barcodeformat)).
+The `BarcodeDetector` constructor now supports a `formats` option,
+which allows you to detect
+[only specified formats](https://wicg.github.io/shape-detection-api/#enumdef-barcodeformat).
+The example below shows how the new method could be used to detect QR codes.
 
 ```js
-// 🆕 Check if the platform supports QR codes.
 if ((await BarcodeDetector.getSupportedFormats()).includes('qr_code')) {
-  // Initialize the barcode detector. As this could be costly,
+  // Initializing the barcode detector can be costly, so
   // do this only once and from thereon reuse the instance.
   const barcodeDetector = new BarcodeDetector({
     // Hint at the format(s) we're after, allowing the implementation
@@ -74,11 +72,9 @@ if ((await BarcodeDetector.getSupportedFormats()).includes('qr_code')) {
     formats: ['qr_code']
   });
   try {
-    // Try to decode QR codes.
     const detectedCodes = await barcodeDetector.detect(someImage);
-    console.log(detectedCodes);
+    searchProductDatabase(detectedCodes);
   } catch (err) {
-    // Handle potential errors.
     console.error(err);
   }
 } else {
@@ -88,7 +84,7 @@ if ((await BarcodeDetector.getSupportedFormats()).includes('qr_code')) {
 
 ### Barcode Detection Demo
 
-To see the new `getSupportedFormats` method (and of course barcode detection itself) in action,
+To see the new `getSupportedFormats()` method (and of course barcode detection itself) in action,
 head over to this [simple demo][demo].
 For a more advanced real-world Progressive Web App
 that you can actually install to your device's home screen,
@@ -98,7 +94,7 @@ check out [QR Snapper](https://qrsnapper.com/).
 
 An exciting software package that leverages barcode detection is the
 [Perception Toolkit](https://perceptiontoolkit.dev/), an open-source library
-that provides the tools for you to add an augmented experience to your website.
+that provides the tools for you to add visual search to your website.
 The toolkit works by taking a stream from the device camera,
 and passing it through a set of detectors, one of which is for barcodes.
 For more details, read the
@@ -108,10 +104,10 @@ and head over to the
 
 ### Conclusion
 
-The way from a first feature idea to a fully standardized and shipping API can be long.
+The path from feature idea to standardized, shipped API can be long.
 While we're still iterating on face detection and text detection,
 we're extremely happy that barcode detection has made it and is now a first-class browser API.
-Please share what you create with it, we can't wait to see the cool new apps you build!
+Please share what you create with it. We can't wait to see the cool new apps you build!
 
 ### Helpful Links
 

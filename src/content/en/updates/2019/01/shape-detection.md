@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Shape Detection API allows for faces, barcodes, and text to be detected in images.
 
-{# wf_updated_on: 2019-08-06 #}
+{# wf_updated_on: 2019-09-02 #}
 {# wf_published_on: 2019-01-07 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -145,7 +145,7 @@ const faceDetector = new FaceDetector({
 });
 try {
   const faces = await faceDetector.detect(image);
-  faces.forEach(face => console.log(face));
+  faces.forEach(face => drawMustache(face));
 } catch (e) {
   console.error('Face detection failed:', e);
 }
@@ -174,7 +174,7 @@ const barcodeDetector = new BarcodeDetector({
 });
 try {
   const barcodes = await barcodeDetector.detect(image);
-  barcodes.forEach(barcode => console.log(barcode));
+  barcodes.forEach(barcode => searchProductDatabase(barcode));
 } catch (e) {
   console.error('Barcode detection failed:', e);
 }
@@ -186,7 +186,7 @@ try {
 const textDetector = new TextDetector();
 try {
   const texts = await textDetector.detect(image);
-  texts.forEach(text => console.log(text));
+  texts.forEach(text => textToSpeech(text));
 } catch (e) {
   console.error('Text detection failed:', e);
 }
