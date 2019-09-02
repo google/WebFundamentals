@@ -120,6 +120,7 @@
   "Blink>Sensor",
   "Blink>Sensor>DeviceOrientation",
   "Blink>ServiceWorker",
+  "Blink>ShapeDetection",
   "Blink>Speech",
   "Blink>SpeechRecognition?",
   "Blink>Storage",
