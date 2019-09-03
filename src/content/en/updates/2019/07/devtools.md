@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copy element styles, visualize layout shifting, and more.
 
-{# wf_updated_on: 2019-07-25 #}
+{# wf_updated_on: 2019-09-03 #}
 {# wf_published_on: 2019-07-22 #}
 {# wf_tags: chrome77, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,6 +12,12 @@ description: Copy element styles, visualize layout shifting, and more.
 # What's New In DevTools (Chrome 77) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="R8KzoMoKhnM"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Copy element's styles {: #copystyles }
 
