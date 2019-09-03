@@ -379,6 +379,20 @@ mco:
   description:
     en: 'Eng Manager, Web Developer Relations'
 
+peconn:
+  name:
+    given: Peter
+    family: Conn
+  twitter: petereconn
+  github: PEConn
+  description:
+    en: I'm a Software Engineer working on the Web Platform at Google London.
+  org:
+    name: Google
+    unit: Web Platform
+  country: UK
+  email: conn.peter@gmail.com
+
 flaviocopes:
   name:
     given: Flavio
