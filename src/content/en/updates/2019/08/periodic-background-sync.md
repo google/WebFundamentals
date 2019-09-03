@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Experimenting with periodic background sync.
 
-{# wf_updated_on: 2019-08-15 #}
+{# wf_updated_on: 2019-08-29 #}
 {# wf_published_on: 2019-08-15 #}
 {# wf_tags: serviceworker,progressive-web-apps,install #}
 {# wf_blink_components: Blink>BackgroundSync #}
@@ -218,7 +218,7 @@ If the `status` is `'granted'`, then your web app meets the requirements to regi
 
 If the status is anything other than `'granted'` (most likely `'denied'`), then
 your web app can't use PBS. This might be because the current browser doesn't
-support it, or because one of the other requirements outlined above haven't been
+support it, or because one of the other requirements outlined above hasn't been
 met.
 
 ```javascript
@@ -242,7 +242,7 @@ parameter to the corresponding `periodicsync` event in your service worker. This
 allows you to distinguish between multiple types of sync activity that you might
 register.
 
-If you attempt to register when PBS is not supported, the call throw an exception.
+If you attempt to register when PBS is not supported, the call will throw an exception.
 
 ```javascript
 const registration = await navigator.serviceWorker.ready;
@@ -335,7 +335,7 @@ handler:
 ## Debugging
 
 It can be a challenge to get the "big picture" view of periodic background sync
-while testing things locally. information about active registrations,
+while testing things locally. Information about active registrations,
 approximate sync intervals, and logs of past sync events can provide valuable
 context while debugging your web app's behavior. Fortunately, all of that
 information can be found as an experimental feature in Chrome's DevTools.
