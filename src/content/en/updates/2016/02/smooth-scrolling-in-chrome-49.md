@@ -5,6 +5,7 @@ description: Tired of jittery scrolling? Great, because Chrome 49 is shipping wi
 {# wf_updated_on: 2019-09-03 #}
 {# wf_published_on: 2016-02-01 #}
 {# wf_tags: scroll,chrome49 #}
+{# wf_blink_components: Blink>Scroll #}
 {# wf_featured_image: /web/updates/images/2016/02/smooth-scrolling-in-chrome-49/smooth-scroll.png #}
 
 # Smooth Scrolling in Chrome 49 {: .page-title }
