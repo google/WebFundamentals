@@ -1,0 +1,157 @@
+---
+project_path: "/web/tools/workbox/_project.yaml"
+landing_page:
+  header:
+    description: "<!-- No Description -->"
+  rows:
+  - heading: 服務工作者圖書館
+    items:
+    - heading: 針線
+      description: 根據需要管理加載模塊並提供幫助方法。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-sw"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-sw/
+    - heading: workbox.core
+      description: 通過<code>workbox.core</code>更改日誌級別並更改緩存名稱。包含所有Workbox庫使用的共享代碼。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-core"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.core"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-core/
+    - heading: workbox.precaching
+      description: 輕鬆預先緩存一組文件並有效管理文件更新。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-precaching"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.precaching"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-precaching/
+    - heading: workbox.routing
+      buttons:
+      - label: 學到更多
+        path: "./workbox-routing"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.routing.Router"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-routing/
+      description: 將服務工作者的請求路由到特定的緩存策略或回調函數。
+    description: 下面是Workbox提供的服務工作者庫列表。每個庫都滿足特定需求，可以一起使用或單獨使用。
+  - items:
+    - heading: workbox.strategies
+      description: 一組運行時緩存策略，用於處理對請求的響應，通常與<code>workbox.routing</code>一起<code>workbox.routing</code>
+        。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-strategies"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.strategies"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-strategies/
+    - heading: workbox.expiration
+      description: 根據緩存中的項目數或緩存請求的期限刪除緩存的請求。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-cache-expiration"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.expiration"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
+    - heading: workbox.backgroundSync
+      description: 即使用戶離線，也可以使用後台同步可靠地發出網絡請求。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-background-sync"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.backgroundSync"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
+    - heading: workbox.googleAnalytics
+      description: 了解用戶在離線時如何與您的網站進行互動。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-google-analytics"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.googleAnalytics"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
+  - items:
+    - heading: workbox.cacheableResponse
+      description: 根據響應的狀態代碼或標頭限制緩存哪些請求。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-cacheable-response"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.cacheableResponse"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-cacheable-response/
+    - heading: workbox.broadcastUpdate
+      description: 使用新響應更新緩存時，將消息發送到頁面（通過廣播通道）。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-broadcast-update"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.broadcastUpdate"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-update/
+    - heading: workbox.rangeRequest
+      buttons:
+      - label: 學到更多
+        path: "./workbox-range-requests"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.rangeRequests"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-range-requests/
+      description: 此模塊支持使用一段先前緩存的數據響應<code>Range:</code>請求。
+    - heading: workbox.streams
+      description: 此模塊支持編寫來自一系列流媒體源的響應。
+      buttons:
+      - label: 參考
+        path: "../reference-docs/latest/workbox.streams"
+      - label: 演示
+        path: https://workbox-demos.firebaseapp.com/demo/workbox-streams/
+  - items:
+    - buttons:
+      - label: 學到更多
+        path: "./workbox-navigation-preload"
+      - label: 參考
+        path: "../reference-docs/latest/workbox.navigationPreload"
+      heading: workbox.navigationPreload
+      description: 啟用導航預加載，以更快地獲得導航請求的網絡響應。
+  - items:
+    - buttons:
+      - label: 學到更多
+        path: "./workbox-window"
+      - label: 參考
+        path: "../reference-docs/latest/module-workbox-window.Workbox"
+      heading: 針線窗口
+      description: 一個模塊，可幫助註冊服務工作者，管理更新和響應生命週期事件。
+    heading: 窗口模塊
+    description: Workbox提供在窗口上下文中運行的模塊，並補充服務工作者模塊。
+  - heading: 節點模塊
+    description: Workbox提供了一組Node模塊，可以輕鬆生成服務工作者的預緩存文件列表，或者創建一個完整的服務工作者，無需編寫任何代碼即可使用。
+    items:
+    - heading: Workbox CLI
+      description: 生成完整的服務工作者，注入預緩存清單或從命令行複制工作箱文件。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-cli"
+    - heading: 針線建造
+      description: 一個npm模塊，可以生成一個完整的服務工作者，注入一個預緩存清單並複制工作箱文件。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-build"
+      - label: 參考
+        path: "../reference-docs/latest/module-workbox-build"
+    - heading: 針線-的WebPack-插件
+      description: 作為Webpack構建過程的一部分，添加Workbox和precache資產。
+      buttons:
+      - label: 學到更多
+        path: "./workbox-webpack-plugin"
+      - label: 參考
+        path: "../reference-docs/latest/module-workbox-webpack-plugin"
+book_path: "/web/tools/workbox/_book.yaml"
