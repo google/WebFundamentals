@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Tired of jittery scrolling? Great, because Chrome 49 is shipping with a new smooth scroll right out of the box!
 
-{# wf_updated_on: 2016-02-01 #}
+{# wf_updated_on: 2019-09-03 #}
 {# wf_published_on: 2016-02-01 #}
 {# wf_tags: scroll,chrome49 #}
+{# wf_blink_components: Blink>Scroll #}
 {# wf_featured_image: /web/updates/images/2016/02/smooth-scrolling-in-chrome-49/smooth-scroll.png #}
 
 # Smooth Scrolling in Chrome 49 {: .page-title }
@@ -37,7 +38,7 @@ There are other scroll-related goodies in the works that are also worth mentioni
 
 ### Houdini
 
-Compositor Worklets are part of [Houdini](https://wiki.css-houdini.org/), and are yet to be fully spec’d out and implemented. That said, [as the patches land](http://crbug.com/436952), they will allow you to write JavaScript that’s run as part of the compositor’s pipeline, which in general means that scroll-coupled effects like parallaxing will be kept perfectly in sync with the current scroll position. Given the way that scrolling is handled today, where scroll events are only periodically sent to the main thread (and can be blocked by other main thread work), this would represent a huge leap forward. If you’re interested in Compositor Worklets, or any of the other exciting new features that Houdini brings, look over the [Intro to Houdini post by Surma](https://surma.link/things/houdini-intro/), the [Houdini specs](https://drafts.css-houdini.org/), and contribute your thoughts to the [Houdini mailing list](https://lists.w3.org/Archives/Public/public-houdini/)!
+Compositor Worklets are part of [Houdini](https://wiki.css-houdini.org/), and are yet to be fully spec’d out and implemented. That said, [as the patches land](http://crbug.com/436952), they will allow you to write JavaScript that’s run as part of the compositor’s pipeline, which in general means that scroll-coupled effects like parallaxing will be kept perfectly in sync with the current scroll position. Given the way that scrolling is handled today, where scroll events are only periodically sent to the main thread (and can be blocked by other main thread work), this would represent a huge leap forward. If you’re interested in Compositor Worklets, or any of the other exciting new features that Houdini brings, look over the [Intro to Houdini post by Surma](https://dassur.ma/things/houdini-intro/), the [Houdini specs](https://drafts.css-houdini.org/), and contribute your thoughts to the [Houdini mailing list](https://lists.w3.org/Archives/Public/public-houdini/)!
 
 ### scroll-behavior
 
