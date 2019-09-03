@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 支援技術に対してコンテンツを非表示にする
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # コンテンツの非表示と更新 {: .page-title }
@@ -32,13 +32,13 @@ hidden` または `display: none` が指定されている要素、および HTM
       height: 1px;
       overflow: hidden;
     }
-    
+
 
 また、以前に説明したとおり、`aria-label`、`aria-labelledby`、`aria-describedby` の各属性を使用してスクリーン リーダー限定テキストを指定することもできます。
 
 
 
-「スクリーン リーダー限定」テキストの作成の詳細については、WebAIM の[テキストを非表示にする技術](http://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }に関する記事をご覧ください。
+「スクリーン リーダー限定」テキストの作成の詳細については、WebAIM の[テキストを非表示にする技術](https://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }に関する記事をご覧ください。
 
 
 
@@ -79,13 +79,13 @@ hidden` または `display: none` が指定されている要素、および HTM
 
 
     <div class="status">Your message has been sent.</div>
-    
+
 
 "live" を指定した場合と比較してみましょう。
 
 
     <div class="status" aria-live="polite">Your message has been sent.</div>
-    
+
 
 `aria-live` には、`polite`、`assertive`、`off` の 3 つの値を使用できます。
 
@@ -136,7 +136,7 @@ hidden` または `display: none` が指定されている要素、および HTM
 最後に、`aria-busy` を使用すると、たとえばなにかを読み込んでいるときなどに、一時的に要素への変更を無視するように支援技術に指示できます。すべてが配置されたら、`aria-busy` を false に設定し、リーダーを通常の動作に戻す必要があります。
 
 
- 
+
 
 
 {# wf_devsite_translation #}

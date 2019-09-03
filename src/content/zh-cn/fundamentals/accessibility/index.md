@@ -3,8 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description:改善网页的无障碍功能
 
 
-{# wf_updated_on:2016-06-26 #}
-{# wf_published_on:2016-06-26 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-06-26 #}
 
 # 无障碍功能 {: .page-title }
 
@@ -115,12 +115,12 @@ WCAG 围绕四大原则进行组织，通常使用首字母缩写词 *POUR* 来�
 它是否能与辅助技术协作？
 
 尽管 WCAG 提供了无障碍内容含义的全面概览，可能还会让人觉得有点不知所措。
-为帮助缓解这种压力，[WebAIM](http://webaim.org/){: .external }（网络无障碍功能思维）小组将 WCAG 指南提炼成了一份易于遵循的检查清单，专以网络内容为目标。
+为帮助缓解这种压力，[WebAIM](https://webaim.org/){: .external }（网络无障碍功能思维）小组将 WCAG 指南提炼成了一份易于遵循的检查清单，专以网络内容为目标。
 
 
 
 
-[WebAIM 检查清单](http://webaim.org/standards/wcag/checklist){: .external }以高屋建瓴的方式简要介绍了您需要实现的内容，同时还在您需要扩展定义时提供了底层 WCAG 规范的链接。
+[WebAIM 检查清单](https://webaim.org/standards/wcag/checklist){: .external }以高屋建瓴的方式简要介绍了您需要实现的内容，同时还在您需要扩展定义时提供了底层 WCAG 规范的链接。
 
 
 
@@ -135,7 +135,7 @@ WCAG 围绕四大原则进行组织，通常使用首字母缩写词 *POUR* 来�
 
 
 <figure class="attempt-right">
-  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">	
+  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">
   <figcaption>Victor Tsaran</figcaption>
 </figure>
 
@@ -162,7 +162,7 @@ WCAG 围绕四大原则进行组织，通常使用首字母缩写词 *POUR* 来�
 
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="一台盲文阅读器">	
+  <img src="imgs/braille-reader.png" alt="一台盲文阅读器">
   <figcaption>一台盲文阅读器</figcaption>
 </figure>
 
@@ -179,7 +179,7 @@ WCAG 围绕四大原则进行组织，通常使用首字母缩写词 *POUR* 来�
 
 
 <figure class="attempt-right">
-  <img src="imgs/high-contrast.png" alt="高对比度模式">	
+  <img src="imgs/high-contrast.png" alt="高对比度模式">
   <figcaption>高对比度模式</figcaption>
 </figure>
 
@@ -202,7 +202,7 @@ WCAG 围绕四大原则进行组织，通常使用首字母缩写词 *POUR* 来�
 
 
 <figure class="attempt-right">
-  <img src="imgs/eye-tracking.png" alt="一个使用眼球追踪设备的人">	
+  <img src="imgs/eye-tracking.png" alt="一个使用眼球追踪设备的人">
   <figcaption>一台眼球追踪设备</figcaption>
 </figure>
 
@@ -224,7 +224,7 @@ WCAG 围绕四大原则进行组织，通常使用首字母缩写词 *POUR* 来�
 
 
 <figure class="attempt-right">
-  <img src="imgs/screen-captions.png" alt="一台底部显示有字幕的电视">	
+  <img src="imgs/screen-captions.png" alt="一台底部显示有字幕的电视">
   <figcaption>屏幕字幕</figcaption>
 </figure>
 

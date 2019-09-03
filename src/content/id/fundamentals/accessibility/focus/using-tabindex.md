@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Memodifikasi urutan DOM dengan tabindex
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Menggunakan tabindex {: .page-title }
@@ -356,7 +356,7 @@ dan tidak bisa keluar lagi. Perhatikan sebuah widget pelengkapan otomatis yang m
 perilaku tab, namun mencegah pengguna meninggalkannya bila belum selesai.
 Ini disebut *jebakan keyboard*, dan hal ini bisa sangat mengesalkan pengguna.
 Bagian 2.1.2 pada daftar periksa Web AIM menangani masalah ini, yang menyatakan bahwa
-[fokus keyboard tidak boleh dikunci atau terjebak pada satu elemen laman tertentu](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
+[fokus keyboard tidak boleh dikunci atau terjebak pada satu elemen laman tertentu](https://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
 Pengguna harus bisa mengarah ke dan dari semua elemen laman hanya dengan menggunakan
 keyboard.
 

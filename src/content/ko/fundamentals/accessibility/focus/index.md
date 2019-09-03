@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 접근성에서의 화면 포커스 개요
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 포커스 소개 {: .page-title }
@@ -57,7 +57,7 @@ Firefox에서는 파선 테두리로 강조표시합니다.
 컴퓨터를 조작하는 사용자도 있습니다. 이런 사용자에게는 포커스가 화면 상의 모든 요소에 도달하기 위한
 기본 수단이므로 극히 중요합니다. 이런 이유 때문에, 섹션 2.1.1의 Web AIM 검사 목록에는
 자유형 그리기처럼 키보드로는 할 수 없는 작업이 아닌 한
-[키보드로 모든 페이지 기능을 사용할 수 있어야 한다](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external }고
+[키보드로 모든 페이지 기능을 사용할 수 있어야 한다](https://webaim.org/standards/wcag/checklist#sc2.1.1){: .external }고
 명시되어 있습니다.
 
 사용자는 `Tab`,

@@ -4,7 +4,7 @@ description: The role of semantics in page navigation
 
 
 {# wf_blink_components: Blink>Accessibility #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Semantics and Navigating Content {: .page-title }
@@ -52,17 +52,17 @@ means that an appropriate heading structure is more important than ever.
 
 In most well-structured pages, the heading levels are nested to indicate
 parent-child relationships among content blocks. The [WebAIM
-checklist](http://webaim.org/standards/wcag/checklist) repeatedly refers to this
+checklist](https://webaim.org/standards/wcag/checklist) repeatedly refers to this
 technique.
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
+ - [1.3.1](https://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
    mentions "Semantic markup is used to designate headings"
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
+ - [2.4.1](https://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
    mentions heading structure as a technique for bypassing blocks of
    content
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
+ - [2.4.6](https://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
    discusses some details for writing useful headings
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
+ - [2.4.10](https://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
    states "individual sections of content are designated using headings,
    where appropriate"
 
@@ -85,7 +85,7 @@ accessible *only* to screen readers and other assistive technology.
     <h2 class="sr-only">This heading is offscreen.</h2>
 
 Note: The WebAIM site discusses this technique at length in [this
-article on offscreen content](http://webaim.org/techniques/css/invisiblecontent/).
+article on offscreen content](https://webaim.org/techniques/css/invisiblecontent/).
 
 For complex applications, this can be a good way to accommodate headings when
 the visual design doesn't require or have room for a visible heading.

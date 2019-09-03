@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Mejora de la accesibilidad a páginas web
 
 
-{# wf_updated_on: 2016-06-26 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-06-26 #}
 
 # Accesibilidad {: .page-title }
@@ -134,11 +134,11 @@ Las WCAG se organizan sobre la base de cuatro principios a menudo llamados con l
 
 A pesar de que las WCAG brindan información general completa de qué significa que el contenido sea
 accesible, también pueden resultar abrumadoras. Para ayudar a aliviar esto, el grupo de
-[WebAIM](http://webaim.org/){: .external } (Accesibilidad web en mente) ha
+[WebAIM](https://webaim.org/){: .external } (Accesibilidad web en mente) ha
 condensado las pautas WCAG en una lista de comprobación fácil de seguir, dirigida
 específicamente a contenido web.
 
-La [lista de comprobación de WebAIM](http://webaim.org/standards/wcag/checklist){: .external }
+La [lista de comprobación de WebAIM](https://webaim.org/standards/wcag/checklist){: .external }
 puede brindarte un breve resumen de alto nivel de lo que necesitas implementar, mientras
 también se vincula a la especificación subyacente de las WCAG si necesitas una definición
 ampliada.
@@ -155,7 +155,7 @@ los afectan. Para explicar mejor, esta es una sesión de pregunta/respuesta info
 con Victor Tsaran, un director técnico de programas de Google, que es completamente ciego.
 
 <figure class="attempt-right">
-  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">	
+  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">
   <figcaption>Victor Tsaran</figcaption>
 </figure>
 
@@ -186,7 +186,7 @@ La discapacidad visual se puede dividir en algunas categorías: Los usuarios sin
 como yo, pueden usar un lector de pantalla, braille o una combinación de ambos.
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="Lector braille">	
+  <img src="imgs/braille-reader.png" alt="Lector braille">
   <figcaption>Lector braille</figcaption>
 </figure>
 
@@ -211,7 +211,7 @@ opciones de alto contraste, como modo de alto contraste del sistema operativo, u
 extensión de navegador de alto contraste o un tema de alto contraste para un sitio web.
 
 <figure class="attempt-right">
-  <img src="imgs/high-contrast.png" alt="Modo de alto contraste">	
+  <img src="imgs/high-contrast.png" alt="Modo de alto contraste">
   <figcaption>Modo de alto contraste</figcaption>
 </figure>
 
@@ -240,7 +240,7 @@ LER (lesiones por esfuerzo repetitivo) u otra cosa y les resulta doloroso, hasta
 y tiene rango de movimiento limitado en ciertas partes del cuerpo.
 
 <figure class="attempt-right">
-  <img src="imgs/eye-tracking.png" alt="Una persona que usa un dispositivo de rastreo ocular">	
+  <img src="imgs/eye-tracking.png" alt="Una persona que usa un dispositivo de rastreo ocular">
   <figcaption>Un dispositivo de rastreo ocular</figcaption>
 </figure>
 
@@ -262,7 +262,7 @@ así como la vista, la audición suele degradarse con la edad. Muchos usamos dis
 comunes como audífonos que nos ayudan.
 
 <figure class="attempt-right">
-  <img src="imgs/screen-captions.png" alt="Una televisión con subtítulos en la parte inferior">	
+  <img src="imgs/screen-captions.png" alt="Una televisión con subtítulos en la parte inferior">
   <figcaption>Subtítulos</figcaption>
 </figure>
 

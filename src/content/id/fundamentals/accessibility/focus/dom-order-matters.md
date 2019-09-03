@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Pentingnya urutan DOM default
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Pentingnya Urutan DOM {: .page-title }
@@ -55,7 +55,7 @@ memindah fokus melewati tombol-tombol.
 Berhati-hatilah saat mengubah posisi visual elemen di layar dengan menggunakan CSS.
 Hal ini bisa menyebabkan urutan tab melompat-lompat, seolah acak, sehingga membingungkan
 pengguna yang mengandalkan keyboard. Karena alasan ini, daftar periksa Web AIM menyatakan
-[di bagian 1.3.2](http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
+[di bagian 1.3.2](https://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
 bahwa urutan navigasi dan pembacaan, seperti yang ditentukan oleh urutan kode, harus
 logis dan intuitif.
 

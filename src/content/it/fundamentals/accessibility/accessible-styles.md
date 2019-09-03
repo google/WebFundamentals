@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Utilizzare stili appropriati per migliorare l'accessibilità
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Stili accessibili {: .page-title}
@@ -29,7 +29,7 @@ Generalmente, ogni volta che rendiamo attivo un elemento, utilizziamo l'anello d
 messa a fuoco integrato nel browser (la proprietà CSS `outline`) per modellare
 l'elemento. L'anello di messa a fuoco è utile perché, senza di esso, è
 impossibile per chi usa la tastiera indicare quale elemento sia attivato.
-La [checklist WebAIM](http://webaim.org/standards/wcag/checklist){: .external}
+La [checklist WebAIM](https://webaim.org/standards/wcag/checklist){: .external}
 puntualizza, richiedendo che sia "visivamente evidente, quale elemento della pagina
 viene attivato dalla tastiera (ossia mentre sfogliamo la pagina, è possibile
 vedere dove ci troviamo)".
@@ -190,7 +190,7 @@ stessa pagina ingrandita del 400%:
 ![Udacity.com con ingrandimento del 400%](imgs/udacity-zoomed.jpg)
 
 Infatti, solo progettando in modo reactive, stiamo rispettando la [regola 1.4.4
-della checklist WebAIM](http://webaim.org/standards/wcag/checklist#sc1.4.4){:
+della checklist WebAIM](https://webaim.org/standards/wcag/checklist#sc1.4.4){:
 .external}, secondo la quale una pagina "[...]dovrebbe restare leggibile e
 funzionale quando la dimensione del testo è raddoppiata".
 
@@ -263,7 +263,7 @@ riduce al *contrasto del colore*, la relazione tra la *luminosità* del colore d
 primo piano e dello sfondo. Quando i colori sono simili, il rapporto di
 contrasto è basso; quando sono diversi, il rapporto di contrasto è alto.
 
-Le [linee guida WebAIM](http://webaim.org/standards/wcag/){: .external}
+Le [linee guida WebAIM](https://webaim.org/standards/wcag/){: .external}
 consigliano un rapporto di contrasto AA (minimo) di 4,5:1 per tutto il testo.
 Viene fatta un'eccezione per testo molto grande (120-150% più grande del testo
 del corpo predefinito), per il quale il rapporto può scendere a 3:1. Notare la
@@ -295,7 +295,7 @@ Per eseguire un controllo colore/contrasto, seguire questi semplici passaggi:
 ![la finestra di dialogo audit di contrasto in devtools](imgs/contrast-audit.png)
 
 WebAIM fornisce di per sé un pratico [controllo del contrasto del
-colore](http://webaim.org/resources/contrastchecker/){: .external} che puoi
+colore](https://webaim.org/resources/contrastchecker/){: .external} che puoi
 usare per esaminare il contrasto di qualsiasi coppia di colori.
 
 ### Non trasmettere informazioni solo con il colore
@@ -323,7 +323,7 @@ informazioni critiche.
 ![un modulo di input con un errore sottolineato in rosso](imgs/input-form1.png)
 
 La [checklist WebAIM afferma nella sezione
-1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external} che "il
+1.4.1](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external} che "il
 colore non deve essere utilizzato come unico metodo per trasmettere contenuto o
 distinguere elementi visivi." Rileva inoltre che "il colore da solo non deve
 essere utilizzato per distinguere i collegamenti dal testo circostante" a meno

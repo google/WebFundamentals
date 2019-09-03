@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Pengantar Pohon Aksesibilitas
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Pohon Aksesibilitas {: .page-title }
@@ -102,7 +102,7 @@ Ini dapat dibuat di HTML dengan banyak cara; salah satu caranya ditampilkan di b
 
 
     <div class="button-ish">Give me tacos</div>
-    
+
 
 Bila kita tidak menggunakan elemen tombol sesungguhnya, pembaca layar tidak memiliki cara untuk mengetahui
 telah sampai di mana. Selain itu, kita nanti harus melakukan pekerjaan ekstra [berupa penambahan
@@ -133,7 +133,7 @@ Untuk elemen level-teks, kita tidak perlu melakukan apa-apa, karena menurut defi
 akan berisi beberapa teks. Akan tetapi, untuk elemen masukan atau elemen kontrol, serta materi
 visual seperti gambar, kita perlu memastikan bahwa kita menetapkan sebuah nama. Sebenarnya,
 menyediakan alternatif berupa teks bagi materi non-teks adalah [item paling
-pertama pada daftar periksa WebAIM](http://webaim.org/standards/wcag/checklist#g1.1).
+pertama pada daftar periksa WebAIM](https://webaim.org/standards/wcag/checklist#g1.1).
 
 Salah satu cara melakukannya adalah mengikuti saran bahwa "Masukan formulir memiliki
 label teks terkait." Ada dua cara untuk mengaitkan label dengan elemen formulir,
@@ -175,7 +175,7 @@ atau
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
-    
+
 
 Bila kotak centang telah diberi label dengan benar, pembaca layar bisa melaporkan bahwa
 elemen memiliki peran kotak centang, dalam keadaan dicentang, dan dinamai "Receive

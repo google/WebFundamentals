@@ -3,8 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: ウェブページのアクセシビリティの改善
 
 
-{# wf_updated_on:2016-06-26 #}
-{# wf_published_on:2016-06-26 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-06-26 #}
 
 # アクセシビリティ {: .page-title }
 
@@ -116,12 +116,12 @@ WCAG は、頭字語 *POUR* と呼ばれる 4 つの原則にそってまとめ�
  - **堅牢性（Robust）**: コンテンツはさまざまなユーザー エージェント（ブラウザ）で利用できますか。
 支援技術で使用できますか。
 
-WCAG は、コンテンツをアクセス可能にすることの意味について、全般的な概要を説明していますが、これを読むのは少し大変かもしれません。この負担を軽減するために、[WebAIM](http://webaim.org/){: .external }（Web Accessibility in Mind）グループでは WCAG ガイドラインをわかりやすいチェックリストにまとめました。これは、特にウェブ コンテンツを対象にしています。
+WCAG は、コンテンツをアクセス可能にすることの意味について、全般的な概要を説明していますが、これを読むのは少し大変かもしれません。この負担を軽減するために、[WebAIM](https://webaim.org/){: .external }（Web Accessibility in Mind）グループでは WCAG ガイドラインをわかりやすいチェックリストにまとめました。これは、特にウェブ コンテンツを対象にしています。
 
 
 
 
-[WebAIM チェックリスト](http://webaim.org/standards/wcag/checklist){: .external }には、実装が必要なものに関する短い概要が記載されており、広義の定義が必要な場合は基になる WCAG 仕様へのリンクが張られています。
+[WebAIM チェックリスト](https://webaim.org/standards/wcag/checklist){: .external }には、実装が必要なものに関する短い概要が記載されており、広義の定義が必要な場合は基になる WCAG 仕様へのリンクが張られています。
 
 
 
@@ -136,7 +136,7 @@ WCAG は、コンテンツをアクセス可能にすることの意味につい
 
 
 <figure class="attempt-right">
-  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">	
+  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">
   <figcaption>Victor Tsaran</figcaption>
 </figure>
 
@@ -163,7 +163,7 @@ Google での私の仕事は、障害の有無にかかわらず、すべての�
 
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="点字読み取り装置">	
+  <img src="imgs/braille-reader.png" alt="点字読み取り装置">
   <figcaption>点字読み取り装置</figcaption>
 </figure>
 
@@ -180,7 +180,7 @@ Google での私の仕事は、障害の有無にかかわらず、すべての�
 
 
 <figure class="attempt-right">
-  <img src="imgs/high-contrast.png" alt="高コントラスト モード">	
+  <img src="imgs/high-contrast.png" alt="高コントラスト モード">
   <figcaption>高コントラスト モード</figcaption>
 </figure>
 
@@ -201,7 +201,7 @@ Google での私の仕事は、障害の有無にかかわらず、すべての�
 
 
 <figure class="attempt-right">
-  <img src="imgs/eye-tracking.png" alt="視線追跡デバイスを使用している人">	
+  <img src="imgs/eye-tracking.png" alt="視線追跡デバイスを使用している人">
   <figcaption>視線追跡デバイス</figcaption>
 </figure>
 
@@ -221,7 +221,7 @@ Google での私の仕事は、障害の有無にかかわらず、すべての�
 
 
 <figure class="attempt-right">
-  <img src="imgs/screen-captions.png" alt="下部に字幕が表示されるテレビ">	
+  <img src="imgs/screen-captions.png" alt="下部に字幕が表示されるテレビ">
   <figcaption>画面の字幕</figcaption>
 </figure>
 

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 使用 tabindex 修改 DOM 順序
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 使用 tabindex {: .page-title }
@@ -332,7 +332,7 @@ description: 使用 tabindex 修改 DOM 順序
 
 當您管理焦點時，有時會發生進入某種情境後無法退出的情況。
 試想有這樣一個自動填充小部件，它試圖管理焦點和捕獲 Tab 鍵行爲，但在它完成操作前會阻止用戶離開。這種情況稱作*鍵盤陷阱*，可能令用戶感到非常懊惱。
-Web AIM 檢查清單第 2.1.2 節闡述了這個問題，指出[在任何情況下都不應將鍵盤焦點鎖定或困閉在一個特定頁面元素處](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }。用戶應該只使用鍵盤就能在所有頁面元素中雙向導航。
+Web AIM 檢查清單第 2.1.2 節闡述了這個問題，指出[在任何情況下都不應將鍵盤焦點鎖定或困閉在一個特定頁面元素處](https://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }。用戶應該只使用鍵盤就能在所有頁面元素中雙向導航。
 
 
 

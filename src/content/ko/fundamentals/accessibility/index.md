@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 웹페이지의 접근성 개선
 
 
-{# wf_updated_on: 2016-06-26 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-06-26 #}
 
 # 접근성 {: .page-title }
@@ -134,11 +134,11 @@ WCAG는 네 가지 원칙으로 구성되며 주로 *POUR*라는 약자로 표�
 
 WCAG는 콘텐츠 접근성의 의미에 대한 종합적 개요를 제공하지만
 이는 다소 소화하기 어려울 수 있습니다. 이런 어려움을 줄이기 위해서
-[WebAIM](http://webaim.org/){: .external } (Web Accessibility in Mind) 그룹이
+[WebAIM](https://webaim.org/){: .external } (Web Accessibility in Mind) 그룹이
 WCAG 가이드라인을 웹 콘텐츠를 대상으로 하는 따라 하기 쉬운 목록으로
 간결히 작성했습니다.
 
-[WebAIM 검사 목록](http://webaim.org/standards/wcag/checklist){: .external }은
+[WebAIM 검사 목록](https://webaim.org/standards/wcag/checklist){: .external }은
 구현해야 할 것에 대해 간결하고 높은 수준의 정보를 제공하고
 상세한 정의가 필요할 경우에 대비하여 기본적인 WCAG 표준과
 링크되어 있습니다.
@@ -155,7 +155,7 @@ WCAG 가이드라인을 웹 콘텐츠를 대상으로 하는 따라 하기 쉬�
 시력이 전혀 없는 Victor Tsaran의 유익한 질문/답변 세션을 아래에 제공하였습니다.
 
 <figure class="attempt-right">
-  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">	
+  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">
   <figcaption>Victor Tsaran</figcaption>
 </figure>
 
@@ -186,7 +186,7 @@ WCAG 가이드라인을 웹 콘텐츠를 대상으로 하는 따라 하기 쉬�
 앞이 전혀 보이지 않는 사람은 스크린 리더나 점자를 사용하고, 또는 그 두 가지를 혼용해서 사용합니다.
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="점자 판독기">	
+  <img src="imgs/braille-reader.png" alt="점자 판독기">
   <figcaption>점자 판독기</figcaption>
 </figure>
 
@@ -211,7 +211,7 @@ WCAG 가이드라인을 웹 콘텐츠를 대상으로 하는 따라 하기 쉬�
 대비를 높인 옵션도 사용합니다.
 
 <figure class="attempt-right">
-  <img src="imgs/high-contrast.png" alt="고대비 모드">	
+  <img src="imgs/high-contrast.png" alt="고대비 모드">
   <figcaption>고대비 모드</figcaption>
 </figure>
 
@@ -240,7 +240,7 @@ RSI가 있거나 통증이 있어서 마우스를 사용하고 싶어하지 않�
 특정 신체 부위의 운동 능력이 제한된 사람까지 다양합니다.
 
 <figure class="attempt-right">
-  <img src="imgs/eye-tracking.png" alt="안구 추적 기기를 사용하는 사람">	
+  <img src="imgs/eye-tracking.png" alt="안구 추적 기기를 사용하는 사람">
   <figcaption>안구 추적 기기</figcaption>
 </figure>
 
@@ -262,7 +262,7 @@ RSI가 있거나 통증이 있어서 마우스를 사용하고 싶어하지 않�
 보청기와 같은 일반적 보조 도구를 사용하여 도움을 받습니다.
 
 <figure class="attempt-right">
-  <img src="imgs/screen-captions.png" alt="아래에 자막이 나오는 텔레비전">	
+  <img src="imgs/screen-captions.png" alt="아래에 자막이 나오는 텔레비전">
   <figcaption>화면 자막</figcaption>
 </figure>
 

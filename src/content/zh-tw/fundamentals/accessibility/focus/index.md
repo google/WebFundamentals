@@ -3,8 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description:無障礙功能中的屏幕焦點概覽
 
 
-{# wf_updated_on:2016-10-04 #}
-{# wf_published_on:2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-10-04 #}
 
 # 焦點簡介 {: .page-title }
 
@@ -51,7 +51,7 @@ description:無障礙功能中的屏幕焦點概覽
 
 一些用戶幾乎全靠鍵盤或其他輸入設備來操作計算機。
 對這些用戶而言，焦點至關重要，因爲這是他們到達所有屏幕元素的主要途徑。
-因此，Web AIM 檢查清單纔會在其第 2.1.1 節中指出，[所有頁面功能應該都能使用鍵盤來執行](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external }，除非是手繪圖這種無法使用鍵盤執行的操作。
+因此，Web AIM 檢查清單纔會在其第 2.1.1 節中指出，[所有頁面功能應該都能使用鍵盤來執行](https://webaim.org/standards/wcag/checklist#sc2.1.1){: .external }，除非是手繪圖這種無法使用鍵盤執行的操作。
 
 
 
