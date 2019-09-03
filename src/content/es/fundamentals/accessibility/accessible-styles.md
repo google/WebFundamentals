@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Uso de estilo adecuado para mejorar la accesibilidad
 
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Estilos accesibles {: .page-title }
@@ -31,7 +31,7 @@ Generalmente, siempre que nos enfocamos en un elemento, dependemos del anillo de
 incluido en el navegador (la propiedad CSS `outline`) para darle estilo al elemento. El anillo de enfoque es útil
 porque, sin él, es imposible que un usuario que usa el teclado distinga qué elemento
 tiene el foco. La [lista de comprobación
-de WebAIM](http://webaim.org/standards/wcag/checklist){: .external } destaca
+de WebAIM](https://webaim.org/standards/wcag/checklist){: .external } destaca
 esto, solicitando que "Sea visualmente notable qué element de la página tiene
 el foco actual del teclado (es decir, mientras navegas por la página presionan tab, puedes ver dónde
 estás)".
@@ -146,13 +146,13 @@ CSS para el estado presionado del botón de este
 
 
     .toggle.pressed { ... }
-    
+
 
 a este.
 
 
     .toggle[aria-pressed="true"] { ... }
-    
+
 
 Esto crea una relación lógica y semántica entre el estado ARIA
 y la apariencia del elemento, y también reduce el código extra.
@@ -177,7 +177,7 @@ lectores de pantalla móvil. No hay lado negativo. Esta es la misma página ampl
 ![Udacity.com con 400% de ampliación](imgs/udacity-zoomed.jpg)
 
 De hecho, mediante una designación responsable, estamos cumpliendo la [regla 1.4.4 de la lista de comprobación
-de WebAIM](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
+de WebAIM](https://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
 que indica que una página "...debería ser legible y funcional cuando se duplica el
 tamaño del texto".
 
@@ -244,7 +244,7 @@ contraste*, la relación entre la *luminosidad* de los colores
 de primer plano y de segundo plano. Cuando los colores son similares, la relación de contraste es baja. Cuando son
 diferentes, la relación de contraste es alta.
 
-Las [pautas de WebAIM](http://webaim.org/standards/wcag/){: .external }
+Las [pautas de WebAIM](https://webaim.org/standards/wcag/){: .external }
 recomiendan una relación de contraste (mínima) AA de 4.5:1 para todo el texto. Se hace una excepción
 para texto muy grande (120 a 150% más grande que el texto de cuerpo predeterminado), para el que
 la relación puede disminuir a 3:1. Nota la diferencia de relaciones de contraste que se muestra
@@ -274,7 +274,7 @@ Para auditar el color/contraste, sigue los siguientes pasos básicos.
 ![el diálogo de auditoría de contraste de devtools](imgs/contrast-audit.png)
 
 WebAIM brinda un útil [revisor
-de contraste de color](http://webaim.org/resources/contrastchecker/){: .external } que puedes usar
+de contraste de color](https://webaim.org/resources/contrastchecker/){: .external } que puedes usar
 para evaluar el contraste de cualquier par de colores.
 
 ### No transmitas información solo con color
@@ -299,7 +299,7 @@ brindar varios caminos para que el usuario acceda a información crítica.
 ![un formulario de entrada con un error subrayado en rojo](imgs/input-form1.png)
 
 La [lista de comprobación de WebAIM indica en la sección
-1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } que
+1.4.1](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } que
 "el color no debería ser el único método para transmitir contenido ni
 para distinguir elementos visuales". También indica que "no se debería usar solo
 el color para diferenciar vínculos del texto que los rodea" a menos que cumplan ciertos

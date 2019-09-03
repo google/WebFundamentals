@@ -4,7 +4,7 @@ description: Introduction to the Accessibility Tree
 
 
 {# wf_blink_components: Blink>Accessibility #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # The Accessibility Tree {: .page-title }
@@ -103,7 +103,7 @@ It might be constructed in HTML in any number of ways; one way is shown below.
 
 
     <div class="button-ish">Give me tacos</div>
-    
+
 
 When we don't use an actual button element, the screen reader has no way to know
 what it has landed on. Also, we would have to do the extra work [of adding
@@ -134,7 +134,7 @@ For text-level elements, we don't need to do anything, because by definition it
 will have some text content. However, for input or control elements, and visual
 content like images, we need to make sure that we specify a name. In fact,
 providing text alternatives for any non-text content is [the very
-first item on the WebAIM checklist](http://webaim.org/standards/wcag/checklist#g1.1).
+first item on the WebAIM checklist](https://webaim.org/standards/wcag/checklist#g1.1).
 
 One way to do that is to follow their recommendation that "Form inputs have
 associated text labels." There are two ways to associate a label with a form
@@ -176,7 +176,7 @@ or
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
-    
+
 
 When the checkbox has been labeled correctly, the screen reader can report that
 the element has a role of checkbox, is in a checked state, and is named "Receive

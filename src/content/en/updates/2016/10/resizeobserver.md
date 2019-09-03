@@ -151,7 +151,7 @@ when a new message comes in.
 
 Another use case is for any kind of custom element that is doing its own layout.
 Until `ResizeObserver`, there was no reliable way to get notified when your own
-dimensions change so you ca re-layout your own children.
+dimensions change so you can re-layout your own children.
 
 ## Out now!
 

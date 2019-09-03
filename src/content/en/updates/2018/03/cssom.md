@@ -26,7 +26,7 @@ console.log(padding.value, padding.unit); // 42, 'px'
 The days of concatenating strings and subtle bugs are over!
 
 Heads up: Chrome 66 adds support for the CSS Typed Object Model for a
-[subset of CSS properties](https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/Source/core/css/cssom/README.md).
+[subset of CSS properties](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/core/css/cssom/README.md).
 {: .dogfood }
 
 ## Introduction {: #intro}

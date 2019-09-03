@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Elements With ARIA Roles Have The Required aria-* Attributes" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2019-05-25 #}
 {# wf_published_on: 2017-01-17 #}
 {# wf_blink_components: N/A #}
 
@@ -33,7 +33,7 @@ To find each element's missing required attributes:
 
 1. Add any attributes that are missing.
 
-[roles]: https://www.w3.org/TR/wai-aria/roles#role_definitions
+[roles]: https://www.w3.org/TR/wai-aria/#role_definitions
 
 ## More information {: #more-info }
 

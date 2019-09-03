@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 {# wf_blink_components: Blink>PushAPI #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-07 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Push Events {: .page-title }
@@ -11,8 +11,8 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-By this point covered subscribing a user for push sending them a message. The next step is to
-receive this push message on the user's device and display a notification (as well as any other
+By this point, we covered subscribing a user and sending a push message. The next step is to
+receive this push message on the user's device and display a notification (as well as do any other
 work we might want to do).
 
 ## The Push Event
@@ -32,13 +32,13 @@ listener you'd write in JavaScript:
 
 The weirdest bit of this code to most developers who are new to service workers is the `self`
 variable. `self` is commonly used in Web Workers, which a service worker is. `self` refers to
-the global scope, kind of like `window` in a web page. But for a web workers and service workers,
+the global scope, kind of like `window` in a web page. But for web workers and service workers,
 `self` refers to the the worker itself.
 
-In the example above `self.addEventListener()` can be thought of as adding an event listener to
+In the example above, `self.addEventListener()` can be thought of as adding an event listener to
 the service worker itself.
 
-Inside the push event example we check if there is any data and print something to the terminal.
+Inside the push event example, we check if there is any data and print something to the console.
 
 There are other ways you can parse data from a push event:
 
@@ -64,11 +64,11 @@ not making use of `event.waitUntil()`.
 
 One of the things to understand about service workers is that you have little control over when
 the service worker code is going to run. The browser decides when to wake it up and when to
-terminate it. The only way you can tell the browser, "Hey I'm super busy doing important
+terminate it. The only way you can tell the browser, "Hey, I'm super busy doing important
 stuff", is to pass a promise into the `event.waitUntil()` method. With this, the browser will
 keep the service worker running until the promise you passed in has settled.
 
-With push events there is an additional requirement that you must display a notification before
+With push events, there is an additional requirement that you must display a notification before
 the promise you passed in has settled.
 
 Here's a basic example of showing a notification:
@@ -82,10 +82,10 @@ Here's a basic example of showing a notification:
 Calling `self.registration.showNotification()` is the method that displays a notification to
 the user and it returns a promise that will resolve once the notification has been displayed.
 
-For the sake of keeping this example as clear as possible I've assigned this promise to a
-variables called `promiseChain`. This is then passed into `event.waitUntil()`. I know this is
+For the sake of keeping this example as clear as possible, I've assigned this promise to a
+variable called `promiseChain`. This is then passed into `event.waitUntil()`. I know this is
 very verbose, but I've seen a number of issues that have culminated as a result of
-misunderstanding what should be passed into `waitUntil()` or is the result of a broken promise
+misunderstanding what should be passed into `waitUntil()` or as a result of broken promise
 chains.
 
 A more complicated example with a network request for data and tracking the push event with
@@ -177,7 +177,7 @@ You can see how it's an easy thing to miss.
 
 Just remember - if you see that notification, check your promise chains and `event.waitUntil()`.
 
-In the next section we're going to look at what we can do to style notifications and
+In the next section, we're going to look at what we can do to style notifications and
 what content we can display.
 
 ## Feedback {: #feedback }

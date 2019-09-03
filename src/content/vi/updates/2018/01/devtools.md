@@ -37,8 +37,8 @@ Note: Kiểm tra xem bạn đang chạy phiên bản Chrome nào tại `chrome:/
 
 ## Ghi đè {: #overrides }
 
-** Ghi đè cục bộ ** cho phép bạn thực hiện thay đổi trong DevTools và giữ những thay đổi đó trên các lần tải trang. Trước đây, mọi thay đổi bạn đã thực hiện trong DevTools sẽ bị mất khi bạn tải lại trang.
-** Ghi đè cục bộ ** hoạt động đối với hầu hết các loại tệp, với một vài ngoại lệ. Xem [Limitations](#overrides-limitations) .
+**Ghi đè cục bộ** cho phép bạn thực hiện thay đổi trong DevTools và giữ những thay đổi đó trên các lần tải trang. Trước đây, mọi thay đổi bạn đã thực hiện trong DevTools sẽ bị mất khi bạn tải lại trang.
+**Ghi đè cục bộ** hoạt động đối với hầu hết các loại tệp, với một vài ngoại lệ. Xem [Limitations](#overrides-limitations) .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
@@ -54,9 +54,9 @@ Làm thế nào nó hoạt động:
 * Khi bạn thực hiện thay đổi trong DevTools, DevTools lưu một bản sao của tệp đã sửa đổi vào thư mục của bạn.
 * Khi bạn tải lại trang, DevTools phục vụ tệp được sửa đổi cục bộ, chứ không phải tài nguyên mạng.
 
-Để thiết lập ** Ghi đè cục bộ **:
+Để thiết lập **Ghi đè cục bộ**:
 
-1. Mở bảng ** Nguồn **. 1. Mở tab ** Ghi đè **.
+1. Mở bảng **Nguồn**. 1. Mở tab **Ghi đè**.
 
      <figure>
        <img src="/web/updates/images/2018/01/overrides.png"
@@ -66,12 +66,12 @@ Làm thế nào nó hoạt động:
        </figcaption>
      </figure>
 
-1. Nhấp vào ** Ghi đè thiết lập **. 1. Chọn thư mục bạn muốn lưu thay đổi. 1. Ở đầu chế độ xem của bạn, nhấp vào ** Cho phép ** để cấp cho DevTools khả năng đọc và ghi vào thư mục. 1. Thực hiện thay đổi của bạn.
+1. Nhấp vào **Ghi đè thiết lập**. 1. Chọn thư mục bạn muốn lưu thay đổi. 1. Ở đầu chế độ xem của bạn, nhấp vào **Cho phép** để cấp cho DevTools khả năng đọc và ghi vào thư mục. 1. Thực hiện thay đổi của bạn.
 
 ### Giới hạn {: #overrides-limitations }
 
-* DevTools không lưu các thay đổi được thực hiện trong ** DOM Tree ** của bảng điều khiển ** Elements **. Chỉnh sửa HTML trong bảng ** Nguồn ** thay thế.
-* Nếu bạn chỉnh sửa CSS trong khung ** Kiểu ** và nguồn của CSS đó là một tệp HTML, DevTools sẽ không lưu thay đổi. Thay vào đó, hãy chỉnh sửa tệp HTML trong bảng ** Nguồn **.
+* DevTools không lưu các thay đổi được thực hiện trong **DOM Tree** của bảng điều khiển **Elements**. Chỉnh sửa HTML trong bảng **Nguồn** thay thế.
+* Nếu bạn chỉnh sửa CSS trong khung **Kiểu** và nguồn của CSS đó là một tệp HTML, DevTools sẽ không lưu thay đổi. Thay vào đó, hãy chỉnh sửa tệp HTML trong bảng **Nguồn**.
 
 ### Các tính năng liên quan {: #overrides-related }
 
@@ -81,7 +81,7 @@ Làm thế nào nó hoạt động:
 
 ## Tab Thay đổi {: #changes }
 
-Theo dõi các thay đổi bạn thực hiện cục bộ trong DevTools thông qua tab ** Thay đổi ** mới.
+Theo dõi các thay đổi bạn thực hiện cục bộ trong DevTools thông qua tab **Thay đổi** mới.
 
 <figure>
   <img src="/web/updates/images/2018/01/changes.png"
@@ -93,11 +93,11 @@ Theo dõi các thay đổi bạn thực hiện cục bộ trong DevTools thông 
 
 ## Công cụ trợ năng mới {: #a11y }
 
-Sử dụng ngăn ** Trợ năng mới ** để kiểm tra các thuộc tính trợ năng của một phần tử và kiểm tra tỷ lệ tương phản của các phần tử văn bản trong Bộ chọn màu ** để đảm bảo chúng có thể truy cập được với người dùng bị khiếm thị hoặc màu sắc kém hình dung thiếu sót.
+Sử dụng ngăn **Trợ năng mới** để kiểm tra các thuộc tính trợ năng của một phần tử và kiểm tra tỷ lệ tương phản của các phần tử văn bản trong Bộ chọn màu ** để đảm bảo chúng có thể truy cập được với người dùng bị khiếm thị hoặc màu sắc kém hình dung thiếu sót.
 
 ### năng {: #a11y-pane }
 
-Sử dụng ngăn ** Accessibility ** trên bảng điều khiển ** Elements ** để điều tra thuộc tính trợ năng của phần tử hiện được chọn.
+Sử dụng ngăn **Accessibility** trên bảng điều khiển **Elements** để điều tra thuộc tính trợ năng của phần tử hiện được chọn.
 
 <figure>
   <img src="/web/updates/images/2018/01/a11y-pane.png"
@@ -111,7 +111,7 @@ Sử dụng ngăn ** Accessibility ** trên bảng điều khiển ** Elements *
   </figcaption>
 </figure>
 
-Hãy xem A11ycast của Rob Dodson trên nhãn bên dưới để xem cửa sổ ** Accessibility ** đang hoạt động.
+Hãy xem A11ycast của Rob Dodson trên nhãn bên dưới để xem cửa sổ **Accessibility** đang hoạt động.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
@@ -134,13 +134,13 @@ Cải thiện độ tương phản màu của các yếu tố văn bản làm ch
   </figcaption>
 </figure>
 
-Trong ** Hình 5 **, hai dấu kiểm bên cạnh ** 4.61 ** có nghĩa là phần tử này đáp ứng [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . Nếu nó chỉ có một dấu kiểm, điều đó có nghĩa là nó đã đáp ứng được [minimum recommended contrast ratio (AA)][minimum]{:.external} .
+Trong **Hình 5**, hai dấu kiểm bên cạnh **4.61** có nghĩa là phần tử này đáp ứng [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . Nếu nó chỉ có một dấu kiểm, điều đó có nghĩa là nó đã đáp ứng được [minimum recommended contrast ratio (AA)][minimum]{:.external} .
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-Nhấp vào ** Hiển thị thêm **! [Show More][SM]{:.cdt-inl} để mở rộng ** Tỷ lệ tương phản **. Đường màu trắng trong hộp ** Color Spectrum ** đại diện cho ranh giới giữa các màu thỏa mãn tỷ lệ tương phản được khuyến nghị và các màu không phù hợp. Ví dụ: vì màu xám trong
-** Hình 6 ** đáp ứng các khuyến nghị, điều đó có nghĩa là tất cả các màu bên dưới đường màu trắng cũng đều đáp ứng các khuyến nghị.
+Nhấp vào **Hiển thị thêm**! [Show More][SM]{:.cdt-inl} để mở rộng **Tỷ lệ tương phản**. Đường màu trắng trong hộp **Color Spectrum** đại diện cho ranh giới giữa các màu thỏa mãn tỷ lệ tương phản được khuyến nghị và các màu không phù hợp. Ví dụ: vì màu xám trong
+**Hình 6** đáp ứng các khuyến nghị, điều đó có nghĩa là tất cả các màu bên dưới đường màu trắng cũng đều đáp ứng các khuyến nghị.
 
 <figure>
   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
@@ -156,10 +156,10 @@ Nhấp vào ** Hiển thị thêm **! [Show More][SM]{:.cdt-inl} để mở rộ
 
 #### Các tính năng liên quan {: #contrast-related }
 
-Bảng điều khiển ** Kiểm tra ** có kiểm tra khả năng truy cập tự động để đảm bảo rằng
-* mọi phần tử * văn bản trên một trang có tỷ lệ tương phản đủ.
+Bảng điều khiển **Kiểm tra** có kiểm tra khả năng truy cập tự động để đảm bảo rằng
+*mọi phần tử* văn bản trên một trang có tỷ lệ tương phản đủ.
 
-Xem [Run Lighthouse in Chrome DevTools][audit] hoặc xem A11ycast bên dưới để tìm hiểu cách sử dụng bảng điều khiển ** Kiểm tra ** để kiểm tra khả năng truy cập.
+Xem [Run Lighthouse in Chrome DevTools][audit] hoặc xem A11ycast bên dưới để tìm hiểu cách sử dụng bảng điều khiển **Kiểm tra** để kiểm tra khả năng truy cập.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
@@ -174,11 +174,11 @@ Xem [Run Lighthouse in Chrome DevTools][audit] hoặc xem A11ycast bên dưới 
 
 Chrome 65 mang đến một danh mục kiểm toán SEO hoàn toàn mới và nhiều kiểm tra hiệu suất mới.
 
-Note: Bảng điều khiển ** Kiểm tra ** được cung cấp bởi [Lighthouse][LH] . Chrome 64 chạy phiên bản Lighthouse 2.5. Chrome 65 chạy phiên bản Lighthouse 2.8. Vì vậy, phần này chỉ đơn giản là một bản tóm tắt các cập nhật Lighthouse từ 2.6, 2.7 và 2.8.
+Note: Bảng điều khiển **Kiểm tra** được cung cấp bởi [Lighthouse][LH] . Chrome 64 chạy phiên bản Lighthouse 2.5. Chrome 65 chạy phiên bản Lighthouse 2.8. Vì vậy, phần này chỉ đơn giản là một bản tóm tắt các cập nhật Lighthouse từ 2.6, 2.7 và 2.8.
 
 ### Kiểm tra SEO mới {: #seo }
 
-Đảm bảo rằng các trang của bạn vượt qua mỗi lần kiểm tra trong danh mục ** SEO ** mới có thể giúp cải thiện thứ hạng công cụ tìm kiếm của bạn.
+Đảm bảo rằng các trang của bạn vượt qua mỗi lần kiểm tra trong danh mục **SEO** mới có thể giúp cải thiện thứ hạng công cụ tìm kiếm của bạn.
 
 <figure>
   <img src="/web/updates/images/2018/01/seo.png"
@@ -229,7 +229,7 @@ Chrome 65 cũng có nhiều kiểm tra hiệu suất mới:
 
 ## Mã đáng tin cậy với công nhân và mã không đồng bộ {: #stepping }
 
-Chrome 65 mang đến các cập nhật cho ** Bước vào **! Nút [Step Into][into]{:.cdt-inl} khi bước vào mã chuyển các thông điệp giữa các luồng và mã không đồng bộ. Nếu bạn muốn hành vi bước trước đó, bạn có thể sử dụng ** Bước ** mới! Nút [Step][step]{:.cdt-inl} , thay vào đó.
+Chrome 65 mang đến các cập nhật cho **Bước vào**! Nút [Step Into][into]{:.cdt-inl} khi bước vào mã chuyển các thông điệp giữa các luồng và mã không đồng bộ. Nếu bạn muốn hành vi bước trước đó, bạn có thể sử dụng **Bước** mới! Nút [Step][step]{:.cdt-inl} , thay vào đó.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -238,7 +238,7 @@ Chrome 65 mang đến các cập nhật cho ** Bước vào **! Nút [Step Into]
 
 Khi bạn bước vào mã chuyển các thông điệp giữa các luồng, DevTools sẽ hiển thị cho bạn những gì xảy ra trong mỗi luồng.
 
-Ví dụ, ứng dụng trong ** Hình 8 ** truyền một thông điệp giữa chủ đề chính và chuỗi công nhân. Sau khi bước vào cuộc gọi `postMessage()` trên chủ đề chính, DevTools tạm dừng trong trình xử lý `onmessage` trong luồng công nhân. Trình xử lý `onmessage` tự đăng một thông điệp trở lại luồng chính. Bước vào cuộc gọi * đó * sẽ tạm dừng DevTools trở lại trong chuỗi chính.
+Ví dụ, ứng dụng trong **Hình 8** truyền một thông điệp giữa chủ đề chính và chuỗi công nhân. Sau khi bước vào cuộc gọi `postMessage()` trên chủ đề chính, DevTools tạm dừng trong trình xử lý `onmessage` trong luồng công nhân. Trình xử lý `onmessage` tự đăng một thông điệp trở lại luồng chính. Bước vào cuộc gọi *đó* sẽ tạm dừng DevTools trở lại trong chuỗi chính.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
@@ -248,7 +248,7 @@ Ví dụ, ứng dụng trong ** Hình 8 ** truyền một thông điệp giữa 
   </figcaption>
 </figure>
 
-Khi bạn bước vào mã như thế này trong các phiên bản trước của Chrome, Chrome chỉ hiển thị cho bạn dòng chính của mã, như bạn có thể thấy trong ** Hình 9 **.
+Khi bạn bước vào mã như thế này trong các phiên bản trước của Chrome, Chrome chỉ hiển thị cho bạn dòng chính của mã, như bạn có thể thấy trong **Hình 9**.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
@@ -262,7 +262,7 @@ Khi bạn bước vào mã như thế này trong các phiên bản trước củ
 
 Khi bước vào mã không đồng bộ, DevTools bây giờ giả định rằng bạn muốn tạm dừng trong mã không đồng bộ mà cuối cùng chạy.
 
-Ví dụ, trong ** Hình 10 ** sau khi bước vào `setTimeout()` , DevTools chạy tất cả các mã dẫn đến điểm đó đằng sau hậu trường, và sau đó tạm dừng trong hàm được chuyển đến `setTimeout()` .
+Ví dụ, trong **Hình 10** sau khi bước vào `setTimeout()` , DevTools chạy tất cả các mã dẫn đến điểm đó đằng sau hậu trường, và sau đó tạm dừng trong hàm được chuyển đến `setTimeout()` .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
@@ -272,7 +272,7 @@ Ví dụ, trong ** Hình 10 ** sau khi bước vào `setTimeout()` , DevTools ch
   </figcaption>
 </figure>
 
-Khi bạn bước vào mã như thế này trong Chrome 63, DevTools tạm dừng trong mã khi nó chạy theo thứ tự thời gian, như bạn có thể thấy trong ** Hình 11 **.
+Khi bạn bước vào mã như thế này trong Chrome 63, DevTools tạm dừng trong mã khi nó chạy theo thứ tự thời gian, như bạn có thể thấy trong **Hình 11**.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
@@ -284,7 +284,7 @@ Khi bạn bước vào mã như thế này trong Chrome 63, DevTools tạm dừn
 
 ## Nhiều bản ghi trong bảng Hiệu suất {: #recordings }
 
-Bảng điều khiển ** Hiệu suất ** hiện cho phép bạn lưu tạm thời tối đa 5 bản ghi. Bản ghi âm sẽ bị xóa khi bạn đóng cửa sổ DevTools. Xem [Get Started with Analyzing Runtime Performance][runtime] để cảm thấy thoải mái với bảng điều khiển ** Hiệu suất **.
+Bảng điều khiển **Hiệu suất** hiện cho phép bạn lưu tạm thời tối đa 5 bản ghi. Bản ghi âm sẽ bị xóa khi bạn đóng cửa sổ DevTools. Xem [Get Started with Analyzing Runtime Performance][runtime] để cảm thấy thoải mái với bảng điều khiển **Hiệu suất**.
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 

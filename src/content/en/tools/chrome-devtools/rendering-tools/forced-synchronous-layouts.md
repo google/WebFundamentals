@@ -107,7 +107,7 @@ You should now see the function definition in the **Sources** panel.
 ![function definition in sources panel](imgs/definition.png)
 
 The `update()` function is the callback handler for 
-`requestAnimationCallback()`. The handler computes each image's `left` property
+`requestAnimationFrame()`. The handler computes each image's `left` property
 based off of the image's `offsetTop` value. This forces the browser to perform
 a new layout immediately to make sure that it provides the correct value. 
 Forcing a layout during every animation frame is the cause of the janky

@@ -1,793 +1,208 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: En este codelab, crearás una Progressive Web App, que se carga rápidamente, incluso con redes débiles, tiene un ícono en la pantalla principal y se carga como experiencia de pantalla completa y de primer nivel.
 
-{# wf_updated_on: 2017-01-05 #}
+{# wf_auto_generated #}
+{# wf_updated_on: 2019-04-19 #}
 {# wf_published_on: 2016-01-01 #}
-
 
 # Tu primera Progressive Web App {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-
-
 ## Introducción
 
+### ¿Qué hace de una aplicación web, una Progressive Web App?
 
+Las Progressive Web Apps proporcionan un instalable, experiencia de aplicación como en ordenadores de escritorio y móviles que se crean y entregan directamente a través de la web. Son aplicaciones web que son rápidas y confiables. Y lo más importante, son aplicaciones web que funcionan en cualquier navegador. Si estás creando una aplicación web hoy, ya estás en el camino hacia la creación de una Progressive Web App.
 
+#### Rápida y Confiable
 
-Las [Progressive Web Apps](/web/progressive-web-apps) son experiencias que combinan lo mejor de la Web y lo mejor de las apps. Están disponibles para los usuarios a partir de la primera visita en una pestaña del navegador y no requieren instalación. A medida que el usuario compila progresivamente una relación con la app con el paso del tiempo, se hace más y más poderosa. Se carga rápidamente, incluso con redes débiles, envía notificaciones push relevantes, tiene un ícono en la pantalla principal y se carga como experiencia de pantalla completa y de primer nivel.
+Toda experiencia web debe ser rápida, y esto es especialmente cierto para las Progressive Web Apps. Rápida se refiere al tiempo que se tarda en obtener contenido significativo en la pantalla y brinda una experiencia interactiva en menos de 5 segundos.
 
-### ¿Qué es una Progressive Web App?
+Y, debe ser __confiablemente rápido__. Es difícil enfatizar lo suficiente lo bueno que es el rendimiento confiable. Piénsalo de esta manera: la primera carga de una aplicación nativa es frustrante. Está confinado por una tienda de aplicaciones y una descarga enorme, pero una vez que llegas al punto de instalar la aplicación, ese coste inicial se amortiza en todos los inicios de la aplicación, y ninguno de esos inicios tiene un retraso variable. Cada inicio de aplicación es tan rápido como el último, sin variación. Una Progressive Web App debe ofrecer este rendimiento confiable que los usuarios esperan de cualquier experiencia instalada.
 
-Una Progressive Web App es:
+#### Instalable
 
-* __Progresiva__: funciona para todos los usuarios, sin importar la elección de navegador, porque está construida con mejora progresiva como principio central.
-* __Adaptable__: se adapta a cualquier factor de formulario, sea escritorio, móvil, tablet o lo que venga en el futuro.
-* __Independiente de la conectividad__: mejorada con service workers para trabajar sin conexión o con redes de mala calidad.
-* __Estilo app__: al usuario le parece una app con interacciones y navegación estilo app, porque está construida con modelo de shell de app.
-* __Fresca__: siempre actualizada gracias al proceso de actualización de service worker.
-* __Segura__: emitida vía HTTPS para evitar intromisiones y para garantizar que el contenido no se haya manipulado.
-* __Descubrible__: se puede identificar como "app" gracias al manifiesto W3C y al alcance de registro de service worker, lo que permite que los motores de búsqueda la encuentren.
-* __Posibilidad de volver a interactuar__: facilita la posibilidad de volver a interactuar a través de funciones como notificaciones push.
-* __Instalable__: les permite a los usuarios "conservar" las apps que les resultan más útiles en su pantalla principal sin la molestia de una tienda de app.
-* __Vinculable__ : se puede compartir fácilmente vía URL, no requiere instalación compleja.
+Las Progressive Web Apps pueden ejecutarse en una pestaña del navegador, pero también son instalables. Añadir a marcadores un sitio simplemente agrega un acceso directo, pero una Progressive Web App instalada se ve y se comporta como todas las demás aplicaciones instaladas. Se inicia desde el mismo lugar que se lanzan otras aplicaciones. Puedes controlar la experiencia de lanzamiento, incluida una pantalla de inicio personalizada, iconos y más. Se ejecuta como una aplicación, en una ventana de aplicación sin una barra de direcciones u otra interfaz de usuario del navegador. Y como todas las demás aplicaciones instaladas, es una aplicación de nivel superior en el gestor de tareas.
 
-Este codelab te guiará para crear tu propia Progressive Web App, incluidas las consideraciones de diseño, como también la implementación de detalles para garantizar que tu app cumpla los principios claves de una Progressive Web App.
+Recuerda, es fundamental que una PWA instalable sea rápida y confiable. Los usuarios que instalan una PWA esperan que sus aplicaciones funcionen, sin importar en qué tipo de conexión de red estén conectados. Es una expectativa de referencia que todas las aplicaciones instaladas deben cumplir.
 
-### ¿Qué crearemos?
+#### Móvil y Escritorio
 
-En este codelab, crearás una app web de estado del tiempo usando técnicas de Progressive Web
-App. Analicemos las propiedades de una Progressive Web App:
+Mediante el uso de técnicas de diseño adaptable, las Progressive Web Apps funcionan en el móvil __y__ escritorio, utilizando una base de código única entre plataformas. Si estás considerando escribir una aplicación nativa, eche un vistazo a los beneficios que ofrece una PWA.
 
-* **Progresiva**: usaremos una mejora progresiva en todo el proceso.
-* **Adaptable**: nos aseguraremos de que se adapte a cualquier forma de formulario.
-* Independiente de la **conectividad**: almacenaremos en caché el shell de app con service workers.
-* **Similar a una app tradicional**: usaremos interacciones de tipo aplicación-estilo para agregar ciudades y actualizar los datos.
-* **Actualizada**: almacenaremos en caché los datos más actualizados con service workers.
-* **Segura**: implementaremos la app en un host que admita HTTPS.
-* **Detectable e instalable**: incluiremos un manifiesto para que sea sencillo para los motores de búsqueda encontrar nuestra app.
-* **Vinculable**: ¡es la web!
+### Qué construirás
+
+En este laboratorio de código, vas a construir una aplicación web meteorológica utilizando las técnicas de una Progressive Web App. Tu aplicación:
+
+* Usará diseño adaptable, por lo que funciona en escritorio o móvil.
+* Será rápido, usa un service worker para guardar en precache los recursos de la aplicación (HTML, CSS, JavaScript, imágenes) necesarios para ejecutar y almacenar en caché los datos meteorológicos en tiempo de ejecución para mejorar el rendimiento.
+* Será instalable, utilizando un manifiesto de aplicación web y el evento `beforeinstallprompt` para notificar al usuario que es instalable.
+
+![95fe6f7fbeee5bb1.png](img/95fe6f7fbeee5bb1.png)
+
+Warning: para simplificar este laboratorio de código y explicar los fundamentos de proporcionar una experiencia sin conexión, estamos usando JavaScript de vainilla. En una aplicación de producción, le recomendamos que utilice herramientas como [Workbox](/web/tools/workbox/) para construir tu service worker. Elimina muchos de los bordes afilados y las esquinas oscuras con las que puede encontrarse.
 
 ### Lo que aprenderás
 
-* Cómo diseñar y construir una app usando el método “shell de app”
-* Cómo hacer para que tu app funcione sin conexión
-* Cómo almacenar datos para usarlos sin conexión posteriormente
+* Cómo crear y agregar un manifiesto de aplicación web.
+* Cómo proporcionar una experiencia sin conexión simple
+* Cómo proporcionar una experiencia sin conexión completa
+* Como hacer instalable tu aplicación
 
-### Qué necesitarás
+Este laboratorio de código está enfocado en Progressive Web Apps. Los conceptos y los bloques de código no relevantes se pasan por alto y se proporcionan para que usted simplemente copie y pegue.
 
-* Chrome 52 o superior
-*  [Servidor web para Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) o el servidor web de tu elección
-* El ejemplo de código.
-* Un editor de texto.
-* Conocimiento básico de HTML, CSS, JavaScript y Chrome DevTools
+### Lo que necesitarás
 
-Este codelab se enfoca en Progressive Web Apps. Los conceptos que no son relevantes y los bloques de código se pasan por alto y se te brindan para que solo copies y pegues.
-
+* Una versión reciente de Chrome (74 o posterior) las PWAs son solo aplicaciones web y funcionan en todos los navegadores, pero usaremos algunas funciones de Chrome DevTools para comprender mejor lo que está sucediendo a el nivel de navegador y usarlo para probar la experiencia de instalación.
+* Conocimiento de HTML, CSS, JavaScript y [Chrome DevTools](https://developer.chrome.com/devtools) .
 
 ## Preparación
 
+### Consigue una clave para la API de Dark Sky
 
+Nuestros datos meteorológicos provienen de [Dark Sky API](https://darksky.net/dev). Para poder usarlo, deberás solicitar una API key. Es fácil de usar y gratis para proyectos no comerciales.
 
+[Register for API Key](https://darksky.net/dev/register)
 
-### Descarga el código
+Note: También puedes completar este laboratorio de código sin una API key de Dark Sky. Si nuestro servidor no puede obtener datos reales de la API de Dark Sky, devolverá datos falsos en su lugar.
 
-Haz clic en el siguiente botón para descargar todo el código de este codelab:
+#### Verifica que tu API key funciona correctamente
 
-[Vínculo](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
+Para probar que tu API key funciona correctamente, realiza una solicitud HTTP a la API de DarkSky. Actualiza la URL a continuación para reemplazar `DARKSKY_API_KEY` con tu API key. Si todo funciona, debería ver el último pronóstico del tiempo para la ciudad de Nueva York.
 
-Descomprime el archivo zip descargado. Esto descomprimirá una carpeta raíz (`your-first-pwapp-master`), que contiene una carpeta para cada paso de este codelab, junto con todos los recursos que necesitarás.
+`https://api.darksky.net/forecast/DARKSKY_API_KEY/40.7720232,-73.9732319`
 
-Las carpetas `step-NN` contienen el estado final deseado de cada paso de este codelab. Están allí a modo de referencia. Haremos todo tu trabajo de codificación en un directorio llamado `work`.
+### Obtén el código
 
-### Instala y verifica el servidor web
+Hemos puesto todo lo que necesitas para este proyecto en un repositorio de Git. Para comenzar, deberás obtener el código y abrirlo en tu entorno de desarrollo favorito. Para este laboratorio de código, recomendamos utilizar Glitch.
 
-A pesar de que puedes usar tu propio servidor web, este codelab está diseñado para funcionar bien con Web Server de Chrome. Si aún no tienes la app instalada, puedes instalarla desde Chrome Web Store.
+#### Muy recomendable: usa Glitch para importar el repositorio
 
-[Vínculo](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+Usar Glitch es el método recomendado para trabajar a través de este código.
 
-Después de instalar la app Web Server for Chrome, haz clic en el atajo Apps de la barra de marcadores: 
+1. Abre una nueva pestaña del navegador y ve a [https://glitch.com](https://glitch.com) .
+2. Si no tienes una cuenta, deberás registrarte.
+3. Haz clic en __New Project__, luego __Clone from Git Repo.__
+4. Clone __https://github.com/googlecodelabs/your-first-pwapp.git__ y Haz clic en __Accept__.
+5. Una vez que se haya cargado el repositorio, edita el archivo `.env` y actualízalo con tu API key DarkSky.
+6. HAz clic en el botón __Mostrar Live__ para ver la PWA en acción.
 
-![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
+#### Alternativa: Descargar código y trabajar localmente
 
-En la ventana resultante, haz clic en el ícono de Web Server: 
+Si deseas descargar el código y trabajar de manera local, deberás tener una versión reciente de Node y la configuración del editor de códigos y listo para usar.
 
-![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
+Caution: si trabaja localmente, algunas de las auditorías de Lighthouse no se aprobarán y es posible que la instalación no esté disponible porque el servidor local no sirve el contenido en un contexto seguro.
 
-A continuación, verás un diálogo que te permite configurar tu servidor web local:
+[Download source code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
-![433870360ad308d4.png](img/433870360ad308d4.png)
+1. Desempaqueta el archivo zip descargado.
+2. Ejecuta `npm install` para instalar las dependencias necesarias para ejecutar el servidor.
+3. Edita `server.js` y configura la API key de DarkSky.
+4. Ejecuta `node server.js` para iniciar el servidor en el puerto 8000.
+5. Abre una pestaña del navegador en [http://localhost:8000](http://localhost:8000)
 
-Haz clic en el botón __choose folder__ y selecciona la carpeta `work`. Esto te permitirá exhibir tu trabajo en progreso a través de la URL destacada en el diálogo del servidor web (en la sección __Web Server URL(s)__).
+## Establecer una línea de base
 
-En Options, marca el cuadro al lado de "Automatically show index.html", como se muestra a continuación:
+### ¿Cuál es nuestro punto de partida?
 
-![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
+Nuestro punto de partida es una aplicación meteorológica básica diseñada para este laboratorio de código. El código se ha simplificado demasiado para mostrar los conceptos en este laboratorio de código y tiene poco manejo de errores. Si eliges reutilizar algo de este código en una aplicación de producción, asegúrate de manejar cualquier error y probar completamente todo el código.
 
-Luego, detén y reinicia el servidor deslizando el activador denominado "Web Server: STARTED" hacia la izquierda y luego a la derecha.
+Algunas cosas para probar...
 
-![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
+1. Agrega una nueva ciudad con el botón más azul en la esquina inferior derecha.
+2. Actualiza los datos con el botón de actualización en la esquina superior derecha.
+3. Borra una ciudad usando la x en la parte superior derecha de cada tarjeta de ciudad.
+4. Mira cómo funciona en el escritorio y en el móvil.
+5. Mira lo que pasa cuando te desconectas.
+6. Usando el panel de la Red de Chrome, mira qué sucede cuando la red se limita a Slow 3G.
+7. Agrega un retraso al servidor de pronóstico cambiando `FORECAST_DELAY` en `server.js`
 
-Ahora visita tu sitio de trabajo en tu propio navegador web (haciendo clic en la URL destacada de Web Server) y deberías ver una página como esta:
+### Auditoría con Lighthose
 
-![aa64e93e8151b642.png](img/aa64e93e8151b642.png)
+[Lighthouse](/web/tools/lighthouse/#devtools) es una herramienta fácil de usar para ayudar a mejorar la calidad de tus sitios y páginas. Cuenta con auditorías de rendimiento, accesibilidad, Progressive Web Apps y más. Cada auditoría tiene un documento de referencia que explica por qué la auditoría es importante, así como la forma de solucionarla.
 
-Por supuesto, esta app aún no está haciendo nada interesante. Hasta ahora, solo es un esqueleto mínimo con un control de número que usaremos para verificar la funcionalidad de tu servidor web. Agregaremos funcionalidad y funciones de IU en los siguientes pasos. 
+![b112675caafccef0.png](img/b112675caafccef0.png)
 
+Usaremos Lighthouse para auditar nuestra aplicación Weather y verificar los cambios que hemos realizado.
 
-## Adapta la arquitectura del shell de tu app
+Note: Puedes ejecutar Lighthouse en Chrome DevTools, desde la línea de comandos o como un módulo de Node. Considera [añadir Lighthouse](https://github.com/GoogleChromeLabs/lighthousebot) a tu proceso de compilación para asegurarte de que tu aplicación web no retroceda.
 
+### Vamos a ejecutar Lighthouse
 
+1. Abre tu proyecto en una nueva pestaña.
+2. Abre Chrome DevTools y cambia a la pestaña __Audits__, DevTools muestra una lista de categorías de auditoría, déjelas todas habilitadas.
+3. Haz clic en __Ejecutar auditorías__, después de 60-90 segundos, Lighthouse te da un informe en la página.
 
+### La auditoría Progressive Web App
 
-### ¿Qué es el shell de la app?
+Nos centraremos en los resultados de la auditoría de la Progressive Web App.
 
-El shell de la app es el HTML, CSS y JavaScript mínimos necesarios para impulsar la interfaz de usuario de una app web progresiva y es uno de los componentes que garantiza un rendimiento bueno y confiable. Su primera carga debería ser muy rápida y almacenarse en caché inmediatamente. Que se "almacena en caché" significa que los archivos de shell se cargan una vez a través de la red y luego se guardan en el dispositivo local. Cada vez posterior en que el usuario abre la app, los archivos de shell se cargan en la caché local del dispositivo, lo que resulta en tiempos de inicio muy rápidos. 
+![af1a64a13725428e.png](img/af1a64a13725428e.png)
 
-La arquitectura de shell de app separa la infraestructura central de la aplicación y la IU de los datos. La IU y la infraestructura completas se almacenan localmente en la caché mediante un service worker, de modo que en las cargas posteriores la Progressive Web App solo deba recuperar los datos necesarios en lugar de cargar todo.
+Y hay mucho rojo en lo que centrarse:
 
-![156b5e3cc8373d55.png](img/156b5e3cc8373d55.png)
+* __❗FALLADO:__ La página actual no responde con un 200 cuando está desconectado.
+* __❗FALLADO:__ `start_url` no responde con un 200 cuando está desconectado.
+* __❗FALLADO:__ No registra un service worker que controle la página y `start_url.`
+* __❗FALLADO:__ El manifiesto de la aplicación web no cumple con los requisitos de instalación.
+* __❗FALLADO:__ No está configurado para una pantalla de inicio personalizada.
+* __❗FALLADO:__ No establece un color de tema de la barra de direcciones.
 
-Dicho de otra manera, el shell de app es similar al paquete de código que publicarías en una tienda de apps al crear una aplicación nativa. Contiene los componentes principales necesarios para poner en marcha tu app, pero probablemente no contenga los datos.
+¡Saltemos y comencemos a solucionar algunos de estos problemas!
 
-### ¿Por qué usar la arquitectura de shell de app?
+## Añadir un manifiesto de aplicación web
 
-El uso de la arquitectura de shell de app te permite concentrarte en la velocidad y aporta a tu Progressive Web App propiedades similares a las que tienen las apps nativas (carga instantánea y actualizaciones periódicas), todo ello sin la necesidad de una tienda de apps.
+Al final de esta sección, nuestra aplicación meteorológica pasará las siguientes auditorías:
 
-### Diseña el shell de app 
+* El manifiesto de la aplicación web no cumple con los requisitos de instalación.
+* No está configurado para una pantalla de inicio personalizada.
+* No establece un color de tema de la barra de direcciones.
 
-El primer paso es dividir el diseño en los componentes centrales que lo integran.
+### Crear el manifiesto de la aplicación web.
 
-Pregúntate lo siguiente:
+[El manifiesto de las apps web](/web/fundamentals/web-app-manifest) es un archivo JSON simple que permite que tú, el desarrollador, puedas controlar cómo se muestra tu app al usuario.
 
-* ¿Qué debe aparecer en pantalla de inmediato?
-* ¿Qué otros componentes de la IU son claves para tu app?
-* ¿Qué recursos de respaldo se requieren para el shell de la aplicación? Por ejemplo, imágenes, JavaScript, estilos, etc.
+Usando el manifiesto de la aplicación web, tu aplicación web puede:
 
-Crearemos una app meteorológica como nuestra primera Progressive Web App. Los componentes claves serán los siguientes:
+* Indicar al navegador que deseas que se abre tu aplicación en una ventana independiente ( `display` ).
+* Definir qué página se abre cuando la aplicación se inicia por primera vez ( `start_url` ).
+* Definir cómo debería ser la aplicación en el dock o lanzador de apps ( `short_name`, `icons` ).
+* Crear una pantalla de `name` ( `name`, `icons`, `colors` ).
+* Indicar al navegador que abre la ventana en modo horizontal o retrato ( `orientation` ).
+* Y [mucho más](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members) .
 
-* encabezado con título y botones de adición y actualización;
-* contenedor para tarjetas de pronóstico;
-* una plantilla para tarjetas de pronóstico;
-* un cuadro de diálogo para agregar nuevas ciudades;
-* un indicador de carga.
+Crea un archivo llamado `public/manifest.json` en tu proyecto y copia/pega los siguientes contenidos:
 
-Al diseñar una app más compleja, el contenido que no sea necesario para la carga inicial se puede solicitar más adelante y luego almacenarse en caché para su uso posterior. Por ejemplo, podríamos diferir la carga del diálogo New City hasta después de que representemos la experiencia de la primera ejecución y contemos con algunos ciclos inactivos disponibles.
+`public/manifest.json`
 
-
-## Implementa el shell de tu app
-
-
-
-
-Existen varias maneras de comenzar con cualquier proyecto, y generalmente recomendamos usar Web Starter Kit. Sin embargo, en este caso, para que tu proyecto sea lo más simple posible y para que puedas concentrarte en las Progressive Web Apps, te hemos ofrecido todos los recursos que necesitarás.
-
-### Crea la HTML para el shell de app
-
-Ahora, agregaremos los componentes centrales que discutimos en [Adapta la arquitectura del shell de la app](/web/fundamentals/getting-started/your-first-progressive-web-app/step-01).
-
-Recuerda que los componentes claves consistirán en lo siguiente:
-
-* encabezado con título y botones de adición y actualización;
-* contenedor para tarjetas de pronóstico;
-* una plantilla para tarjetas de pronóstico;
-* un cuadro de diálogo para agregar nuevas ciudades;
-* un indicador de carga.
-
-El archivo `index.html` que ya se encuentra en tu directorio `work` debería parecerse a este (este es un subset de los contenidos reales, no copies este código en tu archivo):
-
-```
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather PWA</title>
-  <link rel="stylesheet" type="text/css" href="styles/inline.css">
-</head>
-<body>
-  <header class="header">
-    <h1 class="header__title">Weather PWA</h1>
-    <button id="butRefresh" class="headerButton"></button>
-    <button id="butAdd" class="headerButton"></button>
-  </header>
-
-  <main class="main">
-    <div class="card cardTemplate weather-forecast" hidden>
-    . . .
-    </div>
-  </main>
-
-  <div class="dialog-container">
-  . . .
-  </div>
-
-  <div class="loader">
-    <svg viewBox="0 0 32 32" width="32" height="32">
-      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-    </svg>
-  </div>
-
-  <!-- Insert link to app.js here -->
-</body>
-</html>
-```
-
-Observa que el cargador es visible de manera predeterminada. Esto garantiza que el usuario vea el cargador de inmediato cuando se carga la página, lo cual le proporciona una indicación clara de que el contenido se está cargando.
-
-Para ahorrar tiempo, también ya hemos creado la hoja de estilo para que uses.
-
-### Revisa el código clave de JavaScript de la app
-
-Ahora que tenemos gran parte de la IU lista, es hora de comenzar a conectar el código para que todo funcione. Al igual que con el resto del shell de app, debes conocer el código que necesitas como parte de la experiencia clave y lo que podrás cargar posteriormente.
-
-El directorio de trabajo también ya incluye el código de la app (`scripts/app.js`) y en él encontrarás:
-
-* un objeto `app` que contiene parte de la información clave necesaria para la app;
-* los receptores de códigos para todos los botones del encabezado (`add/refresh`) y del diálogo para agregar la ciudad (`add/cancel`);
-* un método para agregar o actualizar tarjetas de pronóstico (`app.updateForecastCard`);
-* un método para obtener los últimos datos de pronóstico de estado del tiempo de la API de estado del tiempo pública de Firebase (`app.getForecast`);
-* un método para iterar las tarjetas actuales y llamar a `app.getForecast` para obtener los últimos datos de pronóstico climático (`app.updateForecasts`);
-* algunos datos falsos (`initialWeatherForecast`) que puedes usar para probar rápidamente la representación.
-
-### Probar
-
-Ahora que tienes el HTML, los estilo y JavaScript centrales, es hora de probar la app.
-
-Para ver cómo se representan los datos de estado del tiempo falsos, elimina el comentario de la siguiente línea de la parte inferior de tu archivo `index.html`:
-
-    <!--<script src="scripts/app.js" async></script>-->
-
-A continuación, elimina el comentario de la siguiente línea de la parte inferior de tu archivo `app.js`:
-
-    // app.updateForecastCard(initialWeatherForecast);
-
-Vuelve a cargar tu app. El resultado debería ser una tarjeta de pronóstico climático de agradable formato (a pesar de ser falso, como verás por la fecha) con el control de número inhabilitado, así:
-
-![166c3b4982e4a0ad.png](img/166c3b4982e4a0ad.png)
-
-[Vínculo](https://weather-pwa-sample.firebaseapp.com/step-04/)
-
-Una vez que la hayas probado y hayas verificado que funciona como esperabas, puedes quitar la llamada a `app.updateForecastCard` con los datos falsos nuevamente. Solo la necesitas para asegurarte de que todo funcione como esperabas.
-
-
-## Comienza con una primera carga rápida
-
-
-
-
-Las Progressive Web Apps deben iniciarse rápidamente y deben poder usarse de inmediato. En su estado actual, nuestra app de estado del tiempo se inicia rápidamente, pero no puede usarse. No hay datos. Podríamos enviar una solicitud AJAX para obtener esos datos, pero eso generaría otra solicitud y demoraría la carga inicial. Como alternativa, proporciona datos reales en la primera carga.
-
-### Inyecta los datos del pronóstico del tiempo
-
-Para este code lab, simularemos que el servidor introduce el pronóstico de estado del tiempo directamente en el JavaScript, pero, en una app de producción, el servidor introduciría los últimos datos de pronóstico de estado del tiempo según la geolocalización de la dirección IP del usuario.
-
-El código ya contiene los datos que introduciremos. Es el `initialWeatherForecast` que usamos en el paso anterior.
-
-### Diferenciación de la primera ejecución
-
-¿Cómo determinar el momento en que se debe mostrar esa información, que puede no ser relevante en cargas futuras, cuando se obtenga la app del estado del tiempo del caché? Cuando el usuario cargue la app en visitas posteriores, es posible que la ciudad cambie. Por ello, debemos cargar la información para la ciudad implicada, y no necesariamente para la primera ciudad que este buscó.
-
-Las preferencias del usuario, como la lista de ciudades a las que el usuario se ha suscrito, se deberían almacenar a nivel local usando IndexedDB u otro mecanismo de almacenamiento rápido. Para simplificar este code lab lo más posible, hemos usado  [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), que no es ideal para apps de producción porque es un mecanismo de bloqueo y almacenamiento sincrónico que puede ser muy lento en algunos dispositivos.
-
-En primer lugar, agreguemos el código necesario para guardar las preferencias de usuario. Encuentra el siguiente comentario TODO en tu código.
-
-```
-  // TODO add saveSelectedCities function here
-```
-
-Y agrega el siguiente código debajo del comentario.
-
-```
-  // Save list of cities to localStorage.
-  app.saveSelectedCities = function() {
-    var selectedCities = JSON.stringify(app.selectedCities);
-    localStorage.selectedCities = selectedCities;
-  };
-```
-
-A continuación, agreguemos el código de inicio para revisar si el usuario tiene ciudades guardadas y mostrarlas, o usar los datos introducidos. Encuentra el siguiente comentario:
-
-```
-  // TODO add startup code here
-```
-
-Y agrega el siguiente código debajo de este comentario:
-
-```
-/************************************************************************
-   *
-   * Código necesario para iniciar la app
-   *
-   * NOTA: To simplify this codelab, we've used localStorage.
-   *   localStorage is a synchronous API and has serious performance
-   *   implications. It should not be used in production applications!
-   *   Instead, check out IDB (https://www.npmjs.com/package/idb) or
-   *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)
-   ************************************************************************/
-
-  app.selectedCities = localStorage.selectedCities;
-  if (app.selectedCities) {
-    app.selectedCities = JSON.parse(app.selectedCities);
-    app.selectedCities.forEach(function(city) {
-      app.getForecast(city.key, city.label);
-    });
-  } else {
-    /* The user is using the app for the first time, or the user has not
-     * saved any cities, so show the user some fake data. A real app in this
-     * scenario could guess the user's location via IP lookup and then inject
-     * that data into the page.
-     */
-    app.updateForecastCard(initialWeatherForecast);
-    app.selectedCities = [
-      {key: initialWeatherForecast.key, label: initialWeatherForecast.label}
-    ];
-    app.saveSelectedCities();
-  }
-```
-
-El código de inicio revisa si hay ciudades guardadas en el almacenamiento local. Si la hay, analiza los datos de almacenamiento local y muestra una tarjeta de pronóstico climático de cada una de las ciudades guardadas. Si no, el código de inicio usa los datos falsos de pronóstico climático y los guarda como ciudad predeterminada.
-
-### Guarda las ciudades seleccionadas
-
-Finalmente, tienes que modificar el controlador del botón "add city" para guardar la ciudad seleccionada en el almacenamiento local.
-
-Actualiza tu controlador de clic de `butAddCity` para que coincida con el siguiente código:
-
-```
-document.getElementById('butAddCity').addEventListener('click', function() {
-    // Add the newly selected city
-    var select = document.getElementById('selectCityToAdd');
-    var selected = select.options[select.selectedIndex];
-    var key = selected.value;
-    var label = selected.textContent;
-    if (!app.selectedCities) {
-      app.selectedCities = [];
-    }
-    app.getForecast(key, label);
-    app.selectedCities.push({key: key, label: label});
-    app.saveSelectedCities();
-    app.toggleAddDialog(false);
-  });
-```
-
-Los nuevos agregados son la inicialización de `app.selectedCities` si no existe y las llamadas a `app.selectedCities.push()` y `app.saveSelectedCities()`.
-
-### Probar
-
-* Cuando se ejecuta por primera vez, tu app debería mostrarle al usuario inmediatamente el pronóstico climático de `initialWeatherForecast`.
-* Agrega una ciudad nueva (haciendo clic en el ícono + en la esquina superior derecha) y verifica que se muestren dos tarjetas.
-* Actualiza el navegador y verifica que la app cargue ambos pronósticos climáticos y muestre la última información.
-
-[Vínculo](https://weather-pwa-sample.firebaseapp.com/step-05/)
-
-
-## Usa service workers para almacenar en caché por adelantado el shell de la app
-
-
-
-
-Las Progressive Web Apps tienen que ser rápidas y posibles de instalar, lo que significa que funcionan en línea, sin conexión y en conexiones lentas e intermitentes. Para lograr esto, tenemos que almacenar en caché el shell de nuestra app usando service worker, para que siempre esté disponible rápidamente y en forma confiable.
-
-Si no conoces los service workers, puedes adquirir conocimientos básicos leyendo  [Introducción a Service Workers](/web/fundamentals/primers/service-worker/) sobre qué hacen, cómo funciona su ciclo de vida y más. Una vez que hayas completado este code lab, asegúrate de revisar el [code lab Depuración de Service Workers](https://goo.gl/jhXCBy) para conocer más cómo trabajar con service workers.
-
-Las funciones que se proporcionan mediante los procesos de trabajo deben considerarse como una mejora progresiva, y solo deben agregarse si son compatibles con el navegador. Por ejemplo, con los procesos de trabajo puedes almacenar en caché el shell de la app y datos para tu app, de modo que estén disponibles aun cuando no suceda lo mismo con la red. Cuando no se admitan procesos de trabajo, no se llamará al código sin conexión y el usuario obtendrá una experiencia básica. El uso de la detección de funciones para proporcionar una mejora progresiva tiene poca sobrecarga y no fallará en navegadores más antiguos que no admitan esa función.
-
-### Registra el service worker si está disponible
-
-El primer paso para lograr que la app funcione sin conexión es registrar un proceso de trabajo; una secuencia de comandos que permite el uso en segundo plano sin necesidad de abrir una página web o de que exista interacción por parte del usuario.
-
-Esto requiere dos pasos sencillos:
-
-1. Dile al navegador que registre el archivo de JavaScript como service worker.
-2. Crea un archivo de JavaScript que contenga el service worker.
-
-Primero, tenemos que revisar si el navegador es compatible con service workers y, si lo es, registrar el service worker. Agrega el siguiente código a `app.js` (después del comentario `// TODO add service worker code here`):
-
-```
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./service-worker.js')
-             .then(function() { console.log('Service Worker Registered'); });
-  }
-```
-
-### Almacena en caché los recursos del sitio
-
-Cuando se registra el service worker y el evento de instalación se activa por primera vez, el usuario visita la página. En este controlador de eventos, almacenaremos en caché todos los recursos necesarios para la aplicación.
-
-Cuando se activa el service worker, debe abrir los objetos  [cachés](https://developer.mozilla.org/en-US/docs/Web/API/Cache) y mostrarlos con los recursos necesarios para cargar el shell de la app. Crea un archivo llamado `service-worker.js` en tu carpeta de raíz de app (que debería ser el directorio `your-first-pwapp-master/work`). El archivo tiene que vivir en la raíz de la app porque el directorio en el que reside el archivo define el alcance de los service workers. Agrega este código en tu nuevo archivo `service-worker.js`:
-
-```
-var cacheName = 'weatherPWA-step-6-1';
-var filesToCache = [];
-
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
-    })
-  );
-});
-```
-
-En primer lugar, debemos abrir la caché con `caches.open()` y proporcionar un nombre de caché. Proporcionar un nombre de caché nos permite versionar archivos o separar datos del shell de la app de modo que podamos actualizar uno con facilidad sin afectar al otro.
-
-Una vez que se abre la caché, podremos llamar a `cache.addAll()`, que toma una lista de URL, luego las obtiene del servidor y agrega la respuesta al caché. Lamentablemente, `cache.addAll()` es atómico; si alguno de los archivos falla, todo el paso de caché falla.
-
-Comencemos a conocer cómo usar DevTools para comprender y depurar los service workers. Antes de volver a cargar tu página, abre DevTools, dirígete al subpanel __Service Worker__ del panel __Application__. Debería tener la siguiente apariencia:
-
-![ed4633f91ec1389f.png](img/ed4633f91ec1389f.png)
-
-Cuando veas una página en blanco como esta, significa que la página que está abierta no tiene service workers registrados.
-
-Ahora, actualiza la página. El subpanel de Service Worker ahora debería lucir así.
-
-![bf15c2f18d7f945c.png](img/bf15c2f18d7f945c.png)
-
-Cuando veas información como esta, significa que la página tiene un service worker en ejecución.
-
-Ahora vamos a tomar un desvío y mostraremos una trampa que puedes encontrar a la hora de desarrollar service workers. Para mostrarlo, agreguemos un receptor de eventos `activate` debajo del receptor de eventos `install` en tu archivo `service-worker.js`. 
-
-```
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-});
-```
-
-El evento `activate` se activa cuando se inicia el service worker.
-
-Abre la Console de DevTools y vuelve a cargar la página, pasa al subpanel de Service Worker en el panel Application y haz clic para inspeccionar el service worker activado. Esperas ver el mensaje `[ServiceWorker] Activate` registrado en la consola, pero no sucedió. Observa el subpanel de Service Worker y verás que el nuevo service worker (que incluye el receptor de eventos activar) parece estar en estado de "espera".
-
-![1f454b6807700695.png](img/1f454b6807700695.png)
-
-Básicamente, el antiguo service worker sigue controlando la página, siempre y cuando haya una pestaña abierta en la página. Así que,  *podrías * cerrar y volver a abrir la página o presionar el botón __skipWaiting__, pero una solución a más largo plazo es habilitar la casilla de verificación __Update on Reload__ en el subpanel de Service Worker de DevTools. Cuando esta casilla de verificación está marcada, el service worker se actualiza forzosamente cada vez que se vuelve a cargar la página.
-
-Marca la casilla de verificación __update on reload__ ahora y vuelve a cargar la página para confirmar que se active el nuevo service worker.
-
-__Nota:__ puedes ver un error en el subpanel de Service Worker del panel Application similar al siguiente, es __seguro__ ignorar este error.
-
-![b1728ef310c444f5.png](img/b1728ef310c444f5.png)
-
-Eso es todo por ahora en cuanto a inspección y depuración de service workers en DevTools. Más adelante te mostraremos más trucos. Volvamos a la compilación de tu app.
-
-Ampliemos la información sobre el receptor de eventos `activate` e incluyamos algo de lógica para actualizar la caché. Actualiza tu código para que coincida con el siguiente código.
-
-```
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-  e.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (key !== cacheName) {
-          console.log('[ServiceWorker] Removing old cache', key);
-          return caches.delete(key);
-        }
-      }));
-    })
-  );
-  return self.clients.claim();
-});
-```
-
-Este código garantiza que tu service worker actualice su caché cada vez que cambie cualquiera de los archivos del shell de la app. Para que esto funcione, tendrías que incrementar la variable `cacheName` de la parte superior de tu archivo de service worker.
-
-La última instrucción corrige un caso de esquina sobre el que puedes leer en el siguiente cuadro de información (opcional).
-
-Por último, actualizaremos la lista de archivos necesarios para el shell de la app. En la matriz, debemos incluir todos los archivos que necesita nuestra app, como imágenes, JavaScript, hojas de estilo, etc. Cerca de la parte superior de tu archivo `service-worker.js`, reemplaza `var filesToCache = [];` con el siguiente código:
-
-```
-var filesToCache = [
-  '/',
-  '/index.html',
-  '/scripts/app.js',
-  '/styles/inline.css',
-  '/images/clear.png',
-  '/images/cloudy-scattered-showers.png',
-  '/images/cloudy.png',
-  '/images/fog.png',
-  '/images/ic_add_white_24px.svg',
-  '/images/ic_refresh_white_24px.svg',
-  '/images/partly-cloudy.png',
-  '/images/rain.png',
-  '/images/scattered-showers.png',
-  '/images/sleet.png',
-  '/images/snow.png',
-  '/images/thunderstorm.png',
-  '/images/wind.png'
-];
-```
-
-Todavía nuestra app no funciona sin conexión. Hemos almacenado en caché los componentes del shell de la app, pero tenemos que cargarlos desde la caché local.
-
-### Obtén el shell de la app desde la caché
-
-Los procesos de trabajo ofrecen la capacidad de interceptar solicitudes realizadas desde nuestra Progressive Web App y controlarlas desde el service worker. Esto significa que podemos determinar la manera en que deseamos controlar la solicitud y, posiblemente, ofrecer nuestra propia respuesta almacenada en caché.
-
-Por ejemplo:
-
-```
-self.addEventListener('fetch', function(event) {
-  // Do something interesting with the fetch here
-});
-```
-
-A continuación, obtendremos el shell de la app desde la caché. Agrega el siguiente código al final de tu archivo `service-worker.js`:
-
-```
-self.addEventListener('fetch', function(e) {
-  console.log('[ServiceWorker] Fetch', e.request.url);
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
-    })
-  );
-});
-```
-
-Desde adentro hacia afuera, `caches.match()` evalúa la solicitud web que activó el evento  [extracción](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) y revisa si está disponible en la caché. Luego, este responde con la versión almacenada en caché o usa `fetch` para obtener una copia desde la red. La `response` se devuelve a la página web con `e.respondWith()`.
-
-### Probar
-
-¡Ahora tu app puede funcionar sin conexión! Probémoslo.
-
-Vuelve a cargar tu página y dirígete al subpanel __Cache Storage__ del panel __Application__ de DevTools. Expande la sección y deberías ver el nombre de la caché del shell de tu app enumerado a la izquierda. Cuando haces clic en la caché del shell de tu app, puedes ver todos los recursos que actualmente ha almacenado en caché.
-
-![ab9c361527825fac.png](img/ab9c361527825fac.png)
-
-Ahora, probemos el modo sin conexión. Vuelve al subpanel __Service Worker__ de DevTools y marca la casilla de verificación __Offline__. Después de marcarla, deberías ver un pequeño ícono amarillo de advertencia al lado de la pestaña del panel __Network__. Esto indica que trabajas sin conexión.
-
-![7656372ff6c6a0f7.png](img/7656372ff6c6a0f7.png)
-
-Vuelve a cargar tu página y... ¡funciona! O, al menos, así parece. Observa cómo carga los datos de estado del tiempo iniciales (falsos).
-
-![8a959b48e233bc93.png](img/8a959b48e233bc93.png)
-
-Observa la oración `else` de `app.getForecast()` para comprender por qué la app puede cargar los datos falsos.
-
-El siguiente paso es la modificación de la lógica de la app y el service worker para poder almacenar en caché los datos de estado del tiempo, y mostrar los datos más recientes de la caché cuando la app trabaje sin conexión.
-
-__Consejo:__ para comenzar desde cero y eliminar todos los datos guardados (localStoarge, datos de indexedDB, archivos almacenados en caché) y quita los service workers, usa el subpanel de almacenamiento Clear de la pestaña Application.
-
-[Vínculo](https://weather-pwa-sample.firebaseapp.com/step-06/)
-
-### Ten cuidado con los casos extremos
-
-Como ya se mencionó, este código __no se debe usar en producción__ debido a todos los casos extremos sin manejar.
-
-#### El almacenamiento en caché depende de la actualización de la clave del caché para cada cambio
-
-Por ejemplo, este método de almacenamiento en caché exige que actualices la clave del caché cada vez que modifiques contenido; de lo contrario, la caché no se actualizará y se ofrecerá el contenido anterior. Asegúrate de cambiar la clave de caché con cada cambio mientras trabajas en tu proyecto.
-
-#### Requiere que se vuelva a descargar todo para cada cambio
-
-Otra desventaja es que se invalida todo la caché y se debe volver a descargar cada vez que cambia un archivo. Esto significa que si cambias un error ortográfico de un solo carácter, se invalidará la caché y se deberá descargar todo nuevamente. Esto no es precisamente eficaz.
-
-#### La caché del navegador puede impedir la actualización del caché del service worker
-
-Aquí encontramos otro inconveniente importante. Es fundamental que la solicitud HTTPS realizada durante el controlador de la instalación vaya directamente a la red y no muestre una respuesta del la caché del navegador. De lo contrario, el navegador puede mostrar la versión anterior almacenada en caché, lo cual hará que la caché del service worker nunca se actualice.
-
-#### En la producción, ten en cuenta las estrategias en las que se prioriza la caché
-
-En nuestra app se usa una estrategia en la que se prioriza la caché, lo cual genera una copia de todo el contenido almacenado en caché que se muestra sin enviar una consulta a la red. Si bien implementar una estrategia en la que se priorice la caché es sencillo, puede suponer desafíos en el futuro. Una vez que se almacena en caché el registro del proceso de trabajo y la página host, puede resultar muy difícil cambiar la configuración del proceso de trabajo (ya que esta depende del punto en el que se definió), y podrías encontrarte implementando sitios extremadamente difíciles de actualizar.
-
-#### ¿Cómo evito estos casos extremos?
-
-¿Cómo evitamos estos casos extremos? Usa una biblioteca como  [sw-precache](https://github.com/GoogleChrome/sw-precache), que brinda buen control sobre lo que vence, asegura que las solicitudes vayan directamente a la red y se encarga todo el trabajo duro por ti.
-
-### Sugerencias para probar service workers dinámicos
-
-La depuración de service workers puede ser un desafío, y cuando incluye el almacenamiento en caché, todo se puede convertir en una pesadilla si la caché no se actualiza cuando tú lo esperas. Entre el ciclo de vida del proceso de trabajo típico y un error en tu código, puedes frustrarte bastante rápido. No lo hagas. Existen algunas herramientas que pueden hacer más simple tu trabajo.
-
-#### Comienza desde cero
-
-En algunos casos, puedes encontrarte cargando datos almacenados en caché o que las cosas no están actualizadas como esperas. Para eliminar todos los datos guardados (localStoarge, datos de indexedDB, archivos almacenados en caché) y quitar los service workers, usa el subpanel de almacenamiento Clear de la pestaña Application.
-
-Algunas otras sugerencias:
-
-* Una vez que se ha eliminado el registro de un service worker, puede permanecer enumerado hasta que se cierre la ventana del navegador que lo contiene.
-* Si hay varias ventanas de tu app abiertas, el nuevo service worker no tendrá efecto hasta que se hayan vuelto a cargar y se hayan actualizado al último service worker.
-* Eliminar del registro un service worker no limpia la caché, por eso es posible que tengas datos viejos si no ha cambiado el nombre de la caché.
-* Si existe un service worker y se registra un nuevo service worker, el nuevo service worker no tomará control hasta que se vuelva a cargar la página, a menos que tomes  [control inmediato](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control).
-
-
-## Usa service workers para almacenar en caché los datos de pronóstico climático
-
-
-
-
-Escoger la  [estrategia de almacenamiento en caché](https://jakearchibald.com/2014/offline-cookbook/) adecuada para tus datos es vital y depende del tipo de datos que presenta tu app. Por ejemplo, los datos sensibles al tiempo, como el estado del tiempo o cotizaciones bursátiles, deberían ser lo más nuevos posibles, mientras que las imágenes de avatar y el contenido de artículos se puede actualizar menos a menudo.
-
-La estrategia de  [primero-caché-después-red](https://jakearchibald.com/2014/offline-cookbook/#cache-network-race) es ideal para nuestra app. Hace que se muestren datos en pantalla lo más rápido posible y luego los actualiza cuando obtiene de la red los datos más recientes. En comparación con la primero-red-luego-caché, el usuario no tiene que esperar hasta que la  [extracción](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) finalice para obtener los datos almacenados en caché.
-
-Caché-primero-después-red significa que tenemos que emitir dos solicitudes asincrónicas: una a la caché y otra a la red. Nuestra solicitud de red con la app no debe cambiar demasiado, pero se debe modificar el service worker para almacenar en caché la respuesta antes de mostrarla.
-
-Bajo circunstancias normales, los datos almacenados en caché se mostrarán casi inmediatamente, brindándole a la app datos recientes que pueda usar. Posteriormente, cuando se muestre la respuesta de la red, se actualizará la app con los datos más recientes de la red.
-
-### Intercepta la solicitud de la red y almacena la respuesta en caché
-
-Se debe modificar el proceso de trabajo para interceptar solicitudes enviadas a la weather API y almacenar sus respuestas en la caché, de modo que se pueda acceder fácilmente a ellas posteriormente. En la estrategia caché-después-red, esperamos que la respuesta de la red sea la "fuente de la verdad" y que siempre nos brinde la información más reciente. Si esta no puede hacerlo, podría producirse un error, pero no representará un problema porque se habrán recuperado los últimos datos almacenados en la caché de la app.
-
-En el proceso de trabajo, agregaremos un `dataCacheName` para poder separar los datos de nuestras aplicaciones del shell de la app. Cuando se actualice el shell de app y se depuren los cachés más antiguos, los datos permanecerán intactos y estarán listos para una carga rapidísima. Recuerda que si en el futuro cambias el formato de tus datos, deberás controlar esos cambios y asegurarte de que el shell y el contenido de la app permanezcan sincronizados.
-
-Agrega la siguiente línea en la parte superior de tu archivo `service-worker.js`:
-
-```
-var dataCacheName = 'weatherData-v1';
-```
-
-Luego, actualiza el controlador de evento `activate` para que no borre la caché de datos cuando limpia la caché del shell de la app.
-
-```
-if (key !== cacheName && key !== dataCacheName) {
-```
-
-Finalmente, actualiza el controlador de evento `fetch` para que controle solicitudes a la API de datos en forma separada de otras solicitudes.
-
-```
-self.addEventListener('fetch', function(e) {
-  console.log('[Service Worker] Fetch', e.request.url);
-  var dataUrl = 'https://query.yahooapis.com/v1/public/yql';
-  if (e.request.url.indexOf(dataUrl) > -1) {
-    /*
-     * When the request URL contains dataUrl, the app is asking for fresh
-     * weather data. In this case, the service worker always goes to the
-     * network and then caches the response. This is called the "Cache then
-     * network" strategy:
-     * https://jakearchibald.com/2014/offline-cookbook/#cache-then-network
-     */
-    e.respondWith(
-      caches.open(dataCacheName).then(function(cache) {
-        return fetch(e.request).then(function(response){
-          cache.put(e.request.url, response.clone());
-          return response;
-        });
-      })
-    );
-  } else {
-    /*
-     * The app is asking for app shell files. In this scenario the app uses the
-     * "Cache, falling back to the network" offline strategy:
-     * https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network
-     */
-    e.respondWith(
-      caches.match(e.request).then(function(response) {
-        return response || fetch(e.request);
-      })
-    );
-  }
-});
-```
-
-El código intercepta la solicitud y comprueba si la URL comienza con la dirección de la weather API. Si lo hace, usa  [extracción](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) para hacer la solicitud. Una vez que se muestra la respuesta, nuestro código abre la caché, clona la respuesta, la almacena en la caché y le muestra la respuesta al solicitante original.
-
-La app aún no funcionará sin conexión. Hemos implementado el almacenamiento en caché y la devolución para el shell de la app, pero, a pesar de estar almacenando los datos en caché, la app aún no revisa la caché para ver si tiene datos de estado del tiempo. 
-
-### Cómo realizar las solicitudes
-
-Como se mencionó anteriormente, la app debe emitir dos solicitudes asincrónicas: una al caché y otra a la red. La app usa el objeto `caches` disponible en `window` para acceder al caché y recuperar los datos más recientes. Este es un excelente ejemplo de mejora progresiva ya que el objeto `caches` puede no estar disponible en todos los navegadores, y, si no lo está, la solicitud de red debería funcionar.
-
-Para hacer esto, es necesario:
-
-1. Revisa si el objeto `caches` está disponible en el objeto global `window`.
-2. Solicita datos de la caché. 
-
-* Si la solicitud del servidor se sigue destacando, actualiza la app con los datos almacenados en caché.
-
-3. Solicita datos del servidor.
-
-* Guarda los datos para tener un rápido acceso después.
-* Actualiza la app con los datos nuevos del servidor.
-
-#### Obtén datos de la caché
-
-A continuación, se debe comprobar si existe el objeto `caches` y se le deben solicitar datos actualizados. Encuentra el comentario `TODO add cache logic here` en `app.getForecast()` y agrega el código debajo del comentario.
-
-```
-    if ('caches' in window) {
-      /*
-       * Check if the service worker has already cached this city's weather
-       * data. If the service worker has the data, then display the cached
-       * data while the app fetches the latest data.
-       */
-      caches.match(url).then(function(response) {
-        if (response) {
-          response.json().then(function updateFromCache(json) {
-            var results = json.query.results;
-            results.key = key;
-            results.label = label;
-            results.created = json.query.created;
-            app.updateForecastCard(results);
-          });
-        }
-      });
-    }
-```
-
-Nuestra app de estado del tiempo ahora hace dos solicitudes sincrónicas de datos, una desde `cache` y una vía un XHR. Si hay datos en la caché, se devolverán y se mostrarán muy rápidamente (decenas de milisegundos), y actualizarán la tarjeta solo si el XHR sigue estando destacado. Luego, cuando el XHR responda, la tarjeta se actualizará con los datos más nuevos directamente de la weather API.
-
-Observa cómo la solicitud de caché y la solicitud de XHR finalizan con una llamada a actualización de la tarjeta de pronóstico climático. ¿Cómo sabe la app si está mostrando los datos más nuevos? Esto se controla en el siguiente código de `app.updateForecastCard`:
-
-```
-    var cardLastUpdatedElem = card.querySelector('.card-last-updated');
-    var cardLastUpdated = cardLastUpdatedElem.textContent;
-    if (cardLastUpdated) {
-      cardLastUpdated = new Date(cardLastUpdated);
-      // Bail if the card has more recent data then the data
-      if (dataLastUpdated.getTime() < cardLastUpdated.getTime()) {
-        return;
-      }
-    }
-```
-
-Cada vez que se actualiza una tarjeta, la app almacena la marca de tiempo de los datos en un atributo oculto de la tarjeta. La app se retira si la marca de tiempo que ya existe en la tarjeta es más nueva que los datos que se pasaron a la función.
-
-### Probar
-
-Ahora, la app debería funcionar por completo sin conexión. Guarda alguna ciudades y presiona el botón para actualizar en la app para obtener datos de estado del tiempo más nuevos, luego corta la conexión y vuelve a cargar la página. 
-
-Luego ve al subpanel __Cache Storage__ del panel __Application__ de DevTools. Amplía la sección y deberías ver el nombre del shell de tu app y los datos de caché enumerados a la izquierda. Abrir la caché de datos debería mostrar los datos almacenados de cada ciudad.
-
-![cf095c2153306fa7.png](img/cf095c2153306fa7.png)
-
-[Vínculo](https://weather-pwa-sample.firebaseapp.com/step-07/)
-
-
-## Soporta la integración nativa
-
-
-
-
-A nadie le agrada tener que escribir URLs largas en un teclado móvil si no tiene necesidad de hacerlo. Con la función de la pantalla principal Add To, tus usuarios pueden escoger agregar un vínculo de atajo a su dispositivo de la misma manera en que instalarían una app nativa de una tienda, pero con mucha menos fricción.
-
-### Banners de instalación de aplicaciones web y Add to Homescreen para Chrome en Android
-
-Los banners de instalación de apps web te dan la posibilidad de permitir que tus usuarios agreguen de manera rápida y fluida tu app web a sus pantallas de inicio. Esto hace más simple abrir y regresar a tu app. Agregar banners de instalación de apps es sencillo y Chrome se encarga de la mayor parte del trabajo pesado. Solo tenemos que incluir un archivo de manifiesto de app web con detalles de la app.
-
-Chrome luego usa un conjunto de criterios que incluyen el uso de un service worker, estado de SSL y visita algoritmos heurísticos de frecuencia para saber cuándo mostrar el banner. Además, un usuario puede agregarlo en forma manual a través del botón del menú "Add to Home Screen" en Chrome.
-
-#### Declara un manifiesto de las apps con un archivo `manifest.json`
-
-El manifiesto de las apps web es un archivo JSON simple que te proporciona a ti, el programador, la capacidad de controlar cómo se le muestra tu app al usuario en las áreas en las que espera ver apps (por ejemplo, la pantalla de inicio para móvil), dirigir lo que el usuario puede ejecutar y, lo que es más importante, cómo puede hacerlo.
-
-Al usar el manifiesto para aplicaciones web, tu aplicación web puede:
-
-* tener una presencia destacada en la pantalla de inicio de Android del usuario;
-* ejecutarse en el modo de pantalla completa en Android sin barra de URL;
-* controlar la orientación de la pantalla para optimizar la visualización;
-* definir una experiencia de ejecución de “pantalla de presentación” y un color de tema para el sitio;
-* identificar si se ejecuta tu app desde la pantalla de inicio o la barra de URL.
-
-Crea un archivo llamado `manifest.json` en tu carpeta `work` y copia/pega el siguiente contenido:
-
-```
+```json
 {
-  "name": "Weather",
-  "short_name": "Weather",
+  "name": "Clima",
+  "short_name": "Clima",
   "icons": [{
-    "src": "images/icons/icon-128x128.png",
+    "src": "/images/icons/icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png"
     }, {
-      "src": "images/icons/icon-144x144.png",
+      "src": "/images/icons/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     }, {
-      "src": "images/icons/icon-152x152.png",
+      "src": "/images/icons/icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png"
     }, {
-      "src": "images/icons/icon-192x192.png",
+      "src": "/images/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     }, {
-      "src": "images/icons/icon-256x256.png",
+      "src": "/images/icons/icon-256x256.png",
       "sizes": "256x256",
+      "type": "image/png"
+    }, {
+      "src": "/images/icons/icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }],
   "start_url": "/index.html",
@@ -797,126 +212,772 @@ Crea un archivo llamado `manifest.json` en tu carpeta `work` y copia/pega el sig
 }
 ```
 
-El manifiesto es compatible con una variedad de íconos que sirven para distintos tamaños de pantallas. Cuando se escribió esto, Chrome y Opera Mobile, los únicos navegadores compatibles con manifiestos de la app web, no usaban nada de tamaño menor a 192 px.
+El manifiesto admite una serie de iconos, destinados a diferentes tamaños de pantalla. Para este laboratorio de código, hemos incluido algunos otros ya que los necesitábamos para nuestra integración con iOS.
 
-Una sencilla forma de rastrear cómo se lanza la app es agregar una cadena de consulta al parámetro `start_url` y usar una suite de análisis para rastrear la cadena de consulta. Si usas este método, recuerda actualizar la lista de archivos almacenados en caché por el shell de la app, para asegurarte de que el archivo que tiene la cadena de consulta se almacene en caché.
+Note: para ser instalable, Chrome requiere que proporcione al menos un icono de 192x192px y un icono de 512x512px. Pero también puede proporcionar otros tamaños. Chrome utiliza el icono más cercano a 48dp, por ejemplo, 96px en un dispositivo 2x o 144px para un dispositivo 3x.
 
-#### Notifica al navegador sobre tu archivo de manifiesto
+### Añadir un enlace al manifiesto de la aplicación web
 
-Ahora agrega la siguiente línea al final del elemento `<head>` en tu archivo `index.html`: 
+A continuación, debemos informarle al navegador acerca de nuestro manifiesto agregando `<link rel="manifest"...` a cada página de nuestra aplicación. Agrega la siguiente línea al elemento `<head>` en tu archivo `index.html`.
 
-```
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L30)
+
+```html
+<!-- CODELAB: Add link rel manifest -->
 <link rel="manifest" href="/manifest.json">
 ```
 
-#### Prácticas recomendadas
+#### DevTools, un pequeño desvío
 
-* Coloca el vínculo al manifiesto en todas las páginas de tu sitio para que Chrome lo tome no bien el usuario visita el sitio, sin importar a qué página llegue.
-* En Chrome se prefiere el `short_name` y se usará si está presente en el campo de nombre.
-* Define conjuntos de íconos para pantallas de diferentes densidades. Chrome intentará usar el ícono más cercano a 48 dp, por ejemplo, 96 px en un dispositivo de 2 x, o 144 px en un dispositivo de 3 x.
-* Recuerda incluir un ícono con tamaño sensible para una pantalla de presentación y no olvides establecer el `background_color`.
+DevTools proporciona una manera rápida y fácil de revisar tu archivo `manifest.json`. Abre el panel __Manifest__ en el panel __Aplication__. Si has agregado la información del manifiesto correctamente, podrás verla analizada y mostrada en un formato entendible por los humanos en este panel.
 
-Lecturas adicionales:
+![c462743e1bc26958.png](img/c462743e1bc26958.png)
 
-[Uso de banners de instalación de app](/web/fundamentals/engage-and-retain/simplified-app-installs/)
+### Añadir meta etiquetas e íconos de iOS
 
-### Elementos de Add to Homescreen para Safari en iOS
+Safari en iOS no admite el manifiesto de aplicación web ([todavía](https://webkit.org/status/#specification-web-app-manifest)), por lo que deberás agregar [etiquetas `meta` tradicionales](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html) al `<head>` de tu archivo `index.html` :
 
-En tu `index.html`, agrega lo siguiente al final del elemento `<head>`:
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L31)
 
-```
-  <!-- Add to home screen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Weather PWA">
-  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+```html
+<!-- CODELAB: Add iOS meta tags and icons -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="PWA Clima">
+<link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
 ```
 
-### Ícono de mosaico para Windows
+### Bonus: arreglos fáciles de Lighthouse
 
-En tu `index.html`, agrega lo siguiente al final del elemento `<head>`:
+Nuestra auditoría de Lighthouse mencionó algunas otras cosas que son bastante fáciles de arreglar, así que cuidémoslas mientras estamos aquí.
 
+#### Establecer la descripción meta
+
+Bajo la auditoría de SEO, Lighthouse anotó que nuestro &quot;[Documento no tiene una meta descripción](/web/tools/lighthouse/audits/description)&quot;. Las descripciones se pueden mostrar en los resultados de búsqueda de Google. Las descripciones únicas y de alta calidad pueden hacer que tus resultados de búsqueda sean más relevantes para los usuarios y pueden aumentar tu tráfico de búsqueda.
+
+Para agregar una descripción, agrega la siguiente etiqueta `meta` al `<head>` de tu documento:
+
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L32)
+
+```html
+<!-- CODELAB: Add description here -->
+<meta name="description" content="Un simple aplicación meteorológica">
 ```
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+#### Establecer el color del tema de la barra de direcciones
+
+En la auditoría de PWA, Lighthouse observó que nuestra aplicación &quot;[No establece un color de tema de la barra de direcciones](/web/tools/lighthouse/audits/address-bar)&quot;. El hecho de que la barra de direcciones del navegador coincida con los colores de su marca proporciona una experiencia de usuario más envolvente.
+
+Para establecer el color del tema en el móvil, agrega la siguiente etiqueta `meta` al `<head>` de tu documento:
+
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L33)
+
+```html
+<!-- CODELAB: Add meta theme-color -->
+<meta name="theme-color" content="#2F3BA2" />
 ```
 
-### Probar
+### Verificar cambios con Lighthouse
 
-En esta sección, te mostraremos alguna formas de probar el manifiesto de tu app web.
+Ejecuta Lighthouse nuevamente (haciendo clic en el signo + en la esquina superior izquierda del panel Audits) y verifica tus cambios.
 
-La primera forma es con DevTools. Abre el subpanel __Manifest__del panel __Application__. Si has agregado correctamente la información del manifiesto, podrás verla analizada y presentada en un formato legible en este subpanel.
+__Auditoría SEO__
 
-También puedes probar la función para agregar a la pantalla principal desde este subpanel. Haz clic en el botón __Add to homescreen__. Deberías ver el mensaje "add this site to your shelf" debajo de tu barra de URL, como en la siguiente captura de pantalla.
+* __✅ PASADO:__ El documento tiene una meta descripción.
 
-![cbfdd0302b611ab0.png](img/cbfdd0302b611ab0.png)
+__Auditoría de Progressive Web App__
 
-Este es el equivalente de escritorio de la función móvil de agregar a la pantalla principal. Puedes activar esta solicitud en el escritorio con éxito, luego puedes estar seguro de que los usuarios de dispositivos móviles puedan agregar tu app a sus dispositivos.
+* __❗FALLADO:__ La página actual no responde con un 200 cuando está desconectado.
+* __❗FALLADO:__ `start_url` no responde con un 200 cuando está desconectado.
+* __❗FALLADO:__ No registra un service worker que controla la página y `start_url.`
+* __✅ PASADO:__ El manifiesto de la aplicación web cumple con los requisitos de instalación.
+* __✅ PASADO:__ Configurado para una pantalla de inicio personalizada.
+* __✅ PASADO:__ Establece un color de tema de la barra de direcciones.
 
-La segunda forma de probarlo es vía Web Server for Chrome. Con este acercamiento, puedes exponer tu servidor de desarrollo local (en tu computadora de escritorio o laptop) a otras computadoras, y luego puedes acceder a tu progressive web app desde un dispositivo móvil real.
+## Proporciona una experiencia offline básica
 
-En el diálogo de configuración de Web Server for Chrome, selecciona la opción `Accessible on local network`:
+Los usuarios esperan que las aplicaciones instaladas siempre tengan una experiencia de referencia si están sin conexión. Por eso es fundamental que las aplicaciones web instalables nunca muestren el dinosaurio sin conexión de Chrome. La experiencia sin conexión puede abarcar desde una página sin conexión simple hasta una experiencia de solo lectura con datos almacenados previamente en caché, hasta una experiencia sin conexión totalmente funcional que se sincroniza automáticamente cuando se restaura la conexión de red.
 
-![81347b12f83e4291.png](img/81347b12f83e4291.png)
+En esta sección, agregaremos una página sin conexión simple a nuestra aplicación meteorológica. Si el usuario intenta cargar la aplicación mientras está sin conexión, mostrará nuestra página personalizada, en lugar de la página sin conexión típica que muestra el navegador. Al final de esta sección, nuestra aplicación meteorológica pasará las siguientes auditorías:
 
-Coloca el servidor web en `STOPPED` y de nuevo en `STARTED`. Verás una nueva URL que se puede usar para acceder a tu app en forma remota.
+* La página actual no responde con un 200 cuando está desconectado.
+* `start_url` no responde con un 200 cuando está desconectado.
+* No registra un service worker que controla la página y `start_url.`
 
-Ahora, accede a tu sitio desde un dispositivo móvil, usando la nueva URL.
+En la siguiente sección, reemplazaremos nuestra página sin conexión personalizada con una experiencia sin conexión completa. Esto mejorará la experiencia sin conexión, pero lo que es más importante, mejorará significativamente nuestro rendimiento, ya que la mayoría de nuestros activos (HTML, CSS y JavaScript) se almacenarán y servirán localmente, eliminando la red como un posible cuello de botella.
 
-Verás errores de service worker en la consola cuando hagas una prueba de esta forma porque el service worker no se emite a través de HTTPS.
+### Service workers al rescate
 
-Usando Chrome desde un dispositivo Android, intenta agregar la app a la pantalla principal y verificar que la pantalla de inicio aparezca correctamente y se usen los íconos adecuados.
+Si no estás familiarizado con los service workers, leyendo [Introducción a los service workers](/web/fundamentals/primers/service-worker/) puedes hacerte una idea básica sobre lo que pueden hacer, cómo funciona su ciclo de vida y más. Una vez que hayas completado este laboratorio de código, asegúrate de revisar el [Laboratorio de código depurando Service Workers](http://goo.gl/jhXCBy) para tener una visión más detallada de cómo trabajar con los service workers.
 
-En Safari e Internet Explorer, también puedes agregar la app en forma manual a tu pantalla principal.
+Las funciones proporcionadas a través de los service workers se deben considerar una mejora progresiva y se deben agregar solo si el navegador las admite. Por ejemplo, con los service workers puedes almacenar en caché la [shell de la app](/web/fundamentals/architecture/app-shell) y los datos de tu aplicación, de modo que esté disponible incluso cuando la red no lo esté. Cuando los service workers no son compatibles, no se llama al código sin conexión y el usuario obtiene una experiencia básica. El uso de la detección de características para proporcionar mejoras progresivas tiene poca sobrecarga y no se interrumpirá en los navegadores antiguos que no son compatibles con esa característica.
 
-[Vínculo](https://weather-pwa-sample.firebaseapp.com/step-08/)
+Warning: la funcionalidad del service worker solo está disponible en las páginas a las que se accede a través de HTTPS (http://localhost y sus equivalentes también funcionarán para facilitar las pruebas).
 
+### Registrar el service worker
 
-## Impleméntala en un host seguro y festeja
+El primer paso es registrar al _service worker_. Agrega el siguiente código a tu archivo `index.html` :
 
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L206)
 
+```js
+// CODELAB: Register service worker.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
+```
 
+Este código verifica si la API de service workers está disponible y, si lo está, el service worker en `/service-worker.js` se registra una vez que la página es [cargada](/web/fundamentals/primers/service-workers/registration) .
 
-El último paso es implementar nuestra app de estado del tiempo en un servidor compatible con HTTPS. Si aún no tienes uno, el acercamiento más sencillo (y gratuito) es el uso del hosting de contenido estático de Firebase. Es muy fácil de usar, proporciona contenido a través de HTTPS y cuenta con el respaldo de una CDN global.
+Ten en cuenta que el service worker se sirve desde el directorio raíz, no desde un directorio `/scripts/`. Esta es la forma más fácil de configurar el __`scope`__ de tu service worker. El `scope` del _service worker_ determina qué archivos controla el _service worker_, es decir, desde qué ruta el _service worker_ interceptará las solicitudes. El valor predeterminado de `scope` es la ubicación del archivo de service worker y se extiende a todos los directorios a continuación. Entonces, si `service-worker.js` se encuentra en el directorio raíz, el _service worker_ controlará las solicitudes de todas las páginas web en este dominio.
 
-### Crédito adicional: minifica e integra CSS
+### Precache página sin conexión
 
-Hay algo más que deberías tener en cuenta: la minificación de los estilos claves y el alineamiento de los mismo directamente en `index.html`.  [Page Speed Insights](/speed) recomienda emitir el contenido de la mitad superior de la página en los primeros 15k bytes de la solicitud.
+Primero, debemos decirle al service worker qué almacenar en caché. Ya hemos creado una simple [página sin conexión](https://your-first-pwa.glitch.me/offline.html) (`public/offline.html`) que se mostrará cada vez que no haya conexión de red.
 
-Observa el nivel de reducción máxima que puedes lograr para la solicitud inicial con todo integrado.
+En tu `service-worker.js`, agrega `'/offline.html',` al array de `FILES_TO_CACHE`, el resultado final debería verse así:
 
-Lecturas adicionales:  [Reglas de PageSpeed Insight](/speed/docs/insights/rules)
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L23)
 
-### Realiza implementaciones en Firebase
+```js
+// CODELAB: Update cache names any time any of the cached files change.
+const FILES_TO_CACHE = [
+  '/offline.html',
+];
+```
 
-Si eres nuevo en Firebase, primero deberás crear tu cuenta e instalar algunas herramientas.
+A continuación, debemos actualizar el evento `install` para indicar al service worker que precachee la página sin conexión:
 
-1. Crea una cuenta de Firebase en [https://firebase.google.com/console/](https://firebase.google.com/console/)
-2. Instala las herramientas de Firebase vía npm: `npm install -g firebase-tools`
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L29)
 
-Una vez que se haya creado tu cuenta y hayas iniciado sesión, estarás listo para la implementación.
+```js
+// CODELAB: Precache static resources here.
+evt.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('[ServiceWorker] Pre-caching offline page');
+      return cache.addAll(FILES_TO_CACHE);
+    })
+);
+```
 
-1. Crea una nueva app en  [https://firebase.google.com/console/](https://firebase.google.com/console/)
-2. Si no has iniciado sesión recientemente en las herramientas de Firebase, actualiza tus credenciales: `firebase login`
-3. Inicia tu app y proporciona el directorio (probablemente `work`) donde completaste la ubicación de la app: `firebase init`
-4. Finalmente, implementa la app en Firebase: `firebase deploy`
-5. Festeja. ¡Eso es todo! Tu app se implementará en el dominio: `https://YOUR-FIREBASE-APP.firebaseapp.com`
+Note: los eventos y el ciclo de vida del service worker se tratan en la siguiente sección.
 
-Lecturas adicionales:  [Guía de Hosting de Firebase](https://www.firebase.com/docs/hosting/guide/)
+Nuestro evento `install` ahora abre la caché con `caches.open()` y proporciona un nombre de caché. Proporcionar un nombre de caché nos permite versionar archivos, o datos separados de los recursos almacenados en caché para que podamos actualizar fácilmente uno pero no afecte al otro.
 
-### Probar
+Una vez que la caché esté abierta, podemos llamar a `cache.addAll()`, que obtiene una lista de URLs, las obtiene del servidor y agrega la respuesta a la caché. Ten en cuenta que `cache.addAll()` se rechazará si falla alguna de las solicitudes individuales. Eso significa que tienes la garantía de que, si el paso de instalación se realiza correctamente, tu caché estará en un estado consistente. Pero, si falla por alguna razón, lo intentará de nuevo automáticamente la próxima vez que se inicie el service worker.
 
-* Intenta agregar la app a tu pantalla principal y desconecta la red, y verifica que la app funcione sin conexión, como se espera.
+#### DevTools, un pequeño desvío
 
-[Vínculo](https://weather-pwa-sample.firebaseapp.com/final/)
+Veamos cómo puedes usar DevTools para comprender y depurar los service workers. Antes de volver a cargar tu página, abre DevTools, ve al panel __Service Workers__ en el panel __Aplication__. Debe tener un aspecto como este:
 
+![b3aa37b67863fd03.png](img/b3aa37b67863fd03.png)
 
+Cuando ves una página en blanco como esta, significa que la página actualmente abierta no tiene ningún service worker registrado.
 
+Ahora, recarga tu página. El panel service workers ahora debería tener este aspecto:
 
+![69808e4bf3aee41b.png](img/69808e4bf3aee41b.png)
 
-## ¿Encontraste un problema o tienes comentarios? {: .hide-from-toc }
-Ayúdanos a que nuestros code labs sean mejores enviando un 
-[problema](https://github.com/googlecodelabs/your-first-pwapp/issues) hoy. ¡Gracias!
+Cuando veas información como esta, significa que la página tiene un service worker en ejecución.
 
+Junto a la etiqueta de estado, hay un número (*34251* en este caso), vigila ese número mientras trabaja con los service workers. Es una manera fácil de saber si tu service worker ha sido actualizado.
 
-{# wf_devsite_translation #}
+### Limpieza de páginas sin conexión antiguas
+
+Usaremos el evento `activate` para limpiar los datos antiguos en nuestro caché. Este código garantiza que tu service worker actualiza nuestra caché cada vez que cambie alguno de los archivos de la shell de la aplicación. Para que esto funcione, necesitarías incrementar la variable `CACHE_NAME` en la parte superior de tu archivo de service worker.
+
+Agrega el siguiente código a tu evento `activate` :
+
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L36)
+
+```js
+// CODELAB: Remove previous cached data from disk.
+evt.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if (key !== CACHE_NAME) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+);
+```
+
+#### DevTools, un pequeño desvío
+
+Con el panel service workers abierto, actualiza la página, verá el nuevo service worker instalado y el incremento del número de estado.
+
+![1db827d76bc0b359.png](img/1db827d76bc0b359.png)
+
+El _service worker_ actualizado toma el control inmediatamente porque nuestro evento `install` finaliza con `self.skipWaiting()` y el evento `activate` finaliza con `self.clients.claim()`. Sin esos, el service worker anterior continuaría controlando la página siempre que haya una pestaña abierta en la página.
+
+### Solicitudes de red fallidas
+
+Y finalmente, necesitamos manejar los eventos de `fetch`. Vamos a utilizar una [estrategia de red y recurrir a la caché](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache). El _service worker_ primero intentará recuperar el recurso de la red, si eso falla, devolverá la página sin conexión de la caché.
+
+![6302ad4ba8460944.png](img/6302ad4ba8460944.png)
+
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L43)
+
+```js
+// CODELAB: Add fetch event handler here.
+if (evt.request.mode !== 'navigate') {
+  // Not a page navigation, bail.
+  return;
+}
+evt.respondWith(
+    fetch(evt.request)
+        .catch(() => {
+          return caches.open(CACHE_NAME)
+              .then((cache) => {
+                return cache.match('offline.html');
+              });
+        })
+);
+```
+
+El controlador `fetch` solo necesita manejar las navegaciones de la página, por lo que otras solicitudes pueden ser eliminadas del controlador y serán tratadas normalmente por el navegador. Pero, si la solicitud `.mode` es `navigate`, usa `fetch` para intentar obtener el elemento de la red. Si falla, el manejador de `catch` abre la caché con `caches.open(CACHE_NAME)` y usa `cache.match('offline.html')` para obtener la página sin conexión predefinida. El resultado se devuelve al navegador mediante `evt.respondWith()`.
+
+Key Point: envolver la llamada `fetch` en [`evt.respondWith()`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) evita el manejo de recuperación predeterminado del navegador y le dice al navegador que queremos manejar la respuesta por nosotros mismos. Si no llamas a `evt.respondWith()` dentro de un controlador de `fetch`, solo obtendrás el comportamiento de red predeterminado.
+
+#### DevTools, un pequeño desvío
+
+Revisemos para asegurarnos de que todo funciona como lo esperamos. Con el panel service workers abierto, actualiza la página, verás el nuevo service worker instalado y el incremento del número de estado.
+
+También podemos verificar qué ha sido almacenado en caché. Ve al panel __Cache Storage__ en el panel __Application__ de DevTools. Haz clic con el botón derecho en __Cache Storage__, selecciona __Refresh Caches__, expande la sección y deberías ver el nombre de su caché estática en el lado izquierdo. Al hacer clic en el nombre de la memoria caché se muestran todos los archivos que están en caché.
+
+![c80a2a2e93c1c3ee.png](img/c80a2a2e93c1c3ee.png)
+
+Ahora, vamos a probar el modo sin conexión. Vuelve al panel __Service Workers__ de DevTools y marca la casilla __Offline__. Después de cambiarlo, deberías ver un pequeño icono de advertencia amarillo junto a la pestaña del panel __Network__. Esto indica que estás desconectado.
+
+![984b34dc2aa667a.png](img/984b34dc2aa667a.png)
+
+Recarga tu página y... ¡funciona! ¡Obtenemos __nuestro__ panda desconectado, en lugar del dino desconectado de Chrome!
+
+### Consejos para probar los service workers
+
+Depurar a los service workers puede ser un desafío, y cuando se trata de almacenamiento en caché, las cosas pueden convertirse en una pesadilla aún más si la caché no se actualiza cuando se espera. Entre el ciclo de vida típico de un service worker y un error en su código, puedes frustrarte rápidamente. __Pero no .__
+
+#### Usar DevTools
+
+En el panel service workers del panel Application, hay algunas casillas de verificación que harán tu vida mucho más fácil.
+
+![c7ac93904f473a91.png](img/c7ac93904f473a91.png)
+
+* __Offline__ - Cuando se marca, simula una experiencia sin conexión y evita que cualquier solicitud vaya a la red.
+* __Actualización en la recarga__ - Cuando se marca, se obtendrá el service worker más reciente, se instalará y se activará de inmediato.
+* __Bypass para red__ - Cuando se marca, las solicitudes pasan por alto al _service worker_ y se envían directamente a la red.
+
+#### Borrón y cuenta nueva
+
+En algunos casos, es posible que esté cargando datos en caché o que las cosas no se actualizan como esperas. Para borrar todos los datos guardados (localStorage, indexedDB data, cached files) y eliminar cualquier service worker, usa el panel Clear storage en la pestaña Application. Alternativamente, también puedes trabajar en una ventana de incógnito.
+
+![398bbcd285e2c5dd.png](img/398bbcd285e2c5dd.png)
+
+Consejos adicionales:
+
+* Una vez que un service worker no ha sido registrado, puede permanecer en la lista hasta que se cierre la ventana que contiene el navegador.
+* Si hay varias ventanas abiertas de tu aplicación, un nuevo service worker no entrará en vigencia hasta que todas las ventanas hayan sido recargadas y actualizadas al último service worker.
+* ¡Desregistrar un service worker no borra la caché!
+* Si existe un service worker y un nuevo service worker está registrado, el nuevo service worker no tomará el control hasta que la página es recargada, a menos que [tomes el control inmediato](/web/fundamentals/primers/service-workers/lifecycle#clientsclaim).
+
+### Verificar cambios con Lighthouse
+
+Ejecuta Lighthouse de nuevo y verifica tus cambios. ¡No olvides desactivar la opción Offline antes de verificar tus cambios!
+
+__Auditoría SEO__
+
+* __✅ PASADO:__ El documento tiene una meta descripción.
+
+__Auditoría de Progressive Web App__
+
+* __✅ PASADO:__ La página actual responde con un 200 cuando está sin conexión.
+* __✅ PASADO:__ `start_url` responde con un 200 cuando está desconectado.
+* __✅ PASADO:__ Registra un service worker que controla la página y `start_url.`
+* __✅ PASADO:__ El manifiesto de la aplicación web cumple con los requisitos de instalación.
+* __✅ PASADO:__ Configurado para una pantalla de inicio personalizada.
+* __✅ PASADO:__ Establece un color de tema de la barra de direcciones.
+
+## Brindar una experiencia sin conexión completa
+
+Tómate un momento, pon tu teléfono en modo avión e intenta ejecutar algunas de sus aplicaciones favoritas. En casi todos los casos, proporcionan una experiencia sin conexión bastante robusta. Los usuarios esperan un experiencia robusta de sus aplicaciones. Y la web no debería ser diferente. Las Progressive Web Apps deben diseñarse para unas condiciones sin conexión como escenario principal.
+
+Key Point: Diseñar primero para sin conexión puede mejorar drásticamente el rendimiento de tu aplicación web al reducir el número de solicitudes de red realizadas por tu app, en lugar de eso, los recursos pueden ser predefinidos y servidos directamente desde la caché local. ¡Incluso con la conexión de red más rápida, el servicio desde la caché local será más rápido!
+
+### Ciclo de vida del service worker
+
+El ciclo de vida del _service worker_ es la parte más complicada. Si no sabes qué es lo que está tratando de hacer y cuáles son los beneficios, puedes sentir que está luchando contra ti. Pero una vez que sepas cómo funciona, puedes ofrecer actualizaciones integrales y discretas a los usuarios, mezclando lo mejor de la web y los patrones nativos.
+
+Key Point: Este laboratorio de código solo cubre los conceptos básicos del ciclo de vida del service worker. Para profundizar más, consulta el artículo [El ciclo de vida del service worker](/web/fundamentals/primers/service-workers/lifecycle) en WebFundamentals.
+
+#### `install`
+
+El primer evento que recibe un service worker es `install`. Se activa tan pronto como el worker se ejecuta, y solo se llama una vez por _service worker_. __Si modificas la secuencia de comandos de tu service worker, el navegador lo considerará un service worker diferente__, y obtendrá su propio evento `install`.
+
+![72ed77b1720512da.png](img/72ed77b1720512da.png)
+
+Normalmente, el evento `install` se usa para almacenar en caché todo lo que necesita para que tu aplicación se ejecute.
+
+#### `activate`
+
+El service worker recibirá un evento `activate` cada vez que se inicie. El objetivo principal del evento `activate` es configurar el comportamiento del _service worker_, limpiar los recursos que quedan de las ejecuciones anteriores (por ejemplo, cachés antiguas) y preparar al _service worker_ para manejar las solicitudes de red (por ejemplo, el evento `fetch` que se describe a continuación).
+
+#### `fetch`
+
+El evento fetch permite que el _service worker_ intercepte cualquier solicitud de red y maneje las solicitudes. Puede ir a la red para obtener el recurso, puede extraerlo de su propia caché, generar una respuesta personalizada o cualquiera de las múltiples opciones. Echa un vistazo a [La guía de soluciones sin conexión](/web/fundamentals/instant-and-offline/offline-cookbook/) para ver las diferentes estrategias que puedes usar.
+
+#### Actualizando un service worker
+
+El navegador comprueba si hay una nueva versión de tu service worker en cada carga de página. Si encuentra una nueva versión, la nueva versión se descarga e instala en segundo plano, pero no está activada. Se encuentra en estado de espera, hasta que ya no queda ninguna página abierta que utilice el antiguo service worker. Una vez que se cierran todas las ventanas que usan el antiguo service worker, el nuevo service worker se activa y puede tomar el control. Consulte la sección [Actualización del service worker](/web/fundamentals/primers/service-workers/lifecycle#updates) del documento del ciclo de vida del service worker para obtener más detalles.
+
+### Elegir la estrategia de almacenamiento en caché correcta
+
+Elegir la [estrategia de cacheo](/web/fundamentals/instant-and-offline/offline-cookbook/) correcta depende del tipo de recurso que intentes almacenar en caché y de cómo podría necesitarlo más adelante. Para nuestra aplicación meteorológica, dividiremos los recursos que necesitamos para almacenar en caché en dos categorías: los recursos que queremos incluir en caché y los datos que almacenaremos en caché en tiempo de ejecución.
+
+#### Almacenamiento en caché de recursos estáticos
+
+Precachear tus recursos es un concepto similar a lo que sucede cuando un usuario instala una aplicación de escritorio o móvil. Los recursos clave necesarios para que la aplicación se ejecute se instalan o se almacenan en la memoria caché del dispositivo para que puedan cargarse más tarde, si hay conexión de red o no.
+
+Para nuestra aplicación, almacenaremos previamente todos nuestros recursos estáticos cuando nuestro service worker esté instalado, de modo que todo lo que necesitamos para ejecutar nuestra aplicación se almacene en el dispositivo del usuario. Para garantizar que nuestra aplicación se cargue a la velocidad de la luz, usaremos la estrategia [cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network); en lugar de ir a la red para obtener los recursos, se extraen de la caché local; Sólo si no está disponible, intentaremos obtenerlo de la red.
+
+![44860840e2090bd8.png](img/44860840e2090bd8.png)
+
+Extraer de la memoria caché local elimina cualquier variabilidad de la red. No importa en qué tipo de red esté el usuario (WiFi, 5G, 3G o incluso 2G), los recursos clave que necesitamos para ejecutar están disponibles casi de inmediato.
+
+Caution: en este ejemplo, los recursos estáticos se sirven utilizando una estrategia [`cache-first`](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network), que da como resultado una copia de cualquier contenido almacenado en caché sin consultar la red. Si bien una estrategia de `cache-first` es fácil de implementar, puede causar desafíos en el futuro.
+
+#### Los datos de la aplicación
+
+La [estrategia stale-while-revalidate](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate) es ideal para ciertos tipos de datos y funciona bien para nuestra aplicación. Obtiene los datos en la pantalla lo más rápido posible, después los actualiza una vez que la red ha devuelto los datos más recientes. Stale-while-revalidate significa que debemos iniciar dos solicitudes asíncronas, una para la memoria caché y otra para la red.
+
+![6ebb2681eb1f58cb.png](img/6ebb2681eb1f58cb.png)
+
+En circunstancias normales, los datos almacenados en la memoria caché se devolverán casi inmediatamente proporcionando la aplicación con datos recientes que puede usar. Luego, cuando vuelva la solicitud de red, la aplicación se actualizará utilizando los datos más recientes de la red.
+
+Para nuestra aplicación, esto proporciona una mejor experiencia que la red, recurriendo a la estrategia de caché porque el usuario no tiene que esperar hasta que la solicitud de la red caduque para ver algo en la pantalla. Es posible que inicialmente vean datos más antiguos, pero una vez que se devuelva la solicitud de red, la aplicación se actualizará con los datos más recientes.
+
+### Actualizar la lógica de la aplicación
+
+Como se mencionó anteriormente, la aplicación debe iniciar dos solicitudes asíncronas, una para la caché y otra para la red. La aplicación utiliza el objeto `caches` disponible en `window` para acceder a la memoria caché y recuperar los últimos datos. Este es un excelente ejemplo de mejora progresiva ya que el objeto `caches` puede no estar disponible en todos los navegadores, y si no es así, la solicitud de red debería funcionar.
+
+Actualiza la función `getForecastFromCache()` para verificar si el objeto `caches` está disponible en el objeto global `window` y, si lo está, solicita los datos de la memoria caché.
+
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L164)
+
+```js
+// CODELAB: Add code to get weather forecast from the caches object.
+if (!('caches' in window)) {
+  return null;
+}
+const url = `${window.location.origin}/forecast/${coords}`;
+return caches.match(url)
+    .then((response) => {
+      if (response) {
+        return response.json();
+      }
+      return null;
+    })
+    .catch((err) => {
+      console.error('Error getting data from cache', err);
+      return null;
+    });
+```
+
+Después, debemos modificar [`updateData()`](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L196) para que haga dos llamadas, una a `getForecastFromNetwork()` para obtener el pronóstico de la red y otra a `getForecastFromCache()` para obtener el último pronóstico almacenado en caché:
+
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L200)
+
+```js
+// CODELAB: Add code to call getForecastFromCache.
+getForecastFromCache(location.geo)
+    .then((forecast) => {
+      renderForecast(card, forecast);
+    });
+```
+
+Nuestra aplicación meteorológica ahora realiza dos solicitudes asíncronas de datos, una desde la caché y otra a través de un `fetch`. Si hay datos en la caché, serán devueltos y procesados extremadamente rápido (decenas de milisegundos). Luego, cuando responda `fetch`, la tarjeta se actualizará con los datos más recientes directamente de la API meteorológica.
+
+Observe cómo la solicitud de caché y la solicitud `fetch` terminan con una llamada para actualizar la tarjeta de pronóstico. ¿Cómo sabe la aplicación si muestra los últimos datos? Esto se maneja en el siguiente código de `renderForecast()` :
+
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L85)
+
+```js
+// If the data on the element is newer, skip the update.
+if (lastUpdated >= data.currently.time) {
+  return;
+}
+```
+
+Cada vez que se actualiza una tarjeta, la aplicación almacena la marca de tiempo de los datos en un atributo oculto en la tarjeta. La aplicación simplemente comprueba si la marca de tiempo que ya existe en la tarjeta es más reciente que los datos que se pasaron a la función.
+
+### Pre-cachear nuestros recursos de la aplicación
+
+En el service worker, agregamos un `DATA_CACHE_NAME` para poder separar los datos de nuestras aplicaciones del shell de la aplicación. Cuando se actualiza el shell de la aplicación y se eliminan los cachés más antiguas, nuestros datos permanecerán intactos, listos para una carga súper rápida. Ten en cuenta que si su formato de datos cambia en el futuro, necesitará una forma de manejar eso y garantizar que el shell y el contenido de la aplicación estén sincronizados.
+
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L21)
+
+```js
+// CODELAB: Update cache names any time any of the cached files change.
+const CACHE_NAME = 'static-cache-v2';
+const DATA_CACHE_NAME = 'data-cache-v1';
+```
+
+No olvides actualizar también `CACHE_NAME`; Estaremos cambiando todos nuestros recursos estáticos también.
+
+Para que nuestra aplicación funcione sin conexión, tenemos que almacenar previamente todos los recursos que necesita. Esto también ayudará a nuestro rendimiento. En lugar de tener que obtener todos los recursos de la red, la aplicación podrá cargarlos todos desde la caché local, eliminando la inestabilidad de la red.
+
+Actualiza el array `FILES_TO_CACHE` con la lista de archivos:
+
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L23)
+
+```js
+// CODELAB: Add list of files to cache here.
+const FILES_TO_CACHE = [
+  '/',
+  '/index.html',
+  '/scripts/app.js',
+  '/scripts/install.js',
+  '/scripts/luxon-1.11.4.js',
+  '/styles/inline.css',
+  '/images/add.svg',
+  '/images/clear-day.svg',
+  '/images/clear-night.svg',
+  '/images/cloudy.svg',
+  '/images/fog.svg',
+  '/images/hail.svg',
+  '/images/install.svg',
+  '/images/partly-cloudy-day.svg',
+  '/images/partly-cloudy-night.svg',
+  '/images/rain.svg',
+  '/images/refresh.svg',
+  '/images/sleet.svg',
+  '/images/snow.svg',
+  '/images/thunderstorm.svg',
+  '/images/tornado.svg',
+  '/images/wind.svg',
+];
+```
+
+Ya que estamos generando manualmente la lista de archivos a cachear, cada vez que actualizamos un archivo, __debemos actualizar `CACHE_NAME`__. Pudimos eliminar `offline.html` de nuestra lista de archivos en caché porque nuestra aplicación ahora cuenta con todos los recursos necesarios para trabajar sin conexión y nunca volverá a mostrar la página sin conexión.
+
+Caution: En este ejemplo, realizamos un despliegue manual de nuestro propio service worker. Cada vez que actualizamos alguno de los recursos estáticos, debemos volver a desplegar al _service worker_ y actualizar la caché, de lo contrario se servirá el contenido anterior. Además, cuando un archivo cambia, la memoria caché completa se invalida y se debe volver a descargar. Eso significa que corregir un simple error de ortografía de un solo carácter invalidará la memoria caché y requerirá que todo se descargue de nuevo, lo que no es exactamente eficiente. [Workbox](/web/tools/workbox/) maneja esto con gracia, al integrarlo en su proceso de compilación, solo se actualizarán los archivos modificados, lo que ahorrará ancho de banda para los usuarios y un mantenimiento más fácil para ti.
+
+#### Actualizar el controlador de eventos activate
+
+Para asegurar que nuestro evento `activate` no elimina accidentalmente nuestros datos, en el evento `activate` de `service-worker.js`, reemplaza `if (key !== CACHE_NAME) {` con:
+
+#### public / service-worker.js
+
+```js
+if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
+```
+
+#### Actualizar el controlador de eventos fetch
+
+Necesitamos modificar el _service worker_ para interceptar las solicitudes a la API metereológica y almacenar sus respuestas en la caché, para que podamos acceder a ellas fácilmente más adelante. En la estrategia stale-while-revalidate, esperamos que la respuesta de la red sea la &quot;fuente de la verdad&quot;, siempre nos proporciona la información más reciente. Si no puede, está bien fallar porque ya hemos recuperado los últimos datos almacenados en caché en nuestra aplicación.
+
+Actualiza el manejador de evento `fetch` para manejar las solicitudes a la API de datos por separado de otras solicitudes.
+
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L42)
+
+```js
+// CODELAB: Add fetch event handler here.
+if (evt.request.url.includes('/forecast/')) {
+  console.log('[Service Worker] Fetch (data)', evt.request.url);
+  evt.respondWith(
+      caches.open(DATA_CACHE_NAME).then((cache) => {
+        return fetch(evt.request)
+            .then((response) => {
+              // If the response was good, clone it and store it in the cache.
+              if (response.status === 200) {
+                cache.put(evt.request.url, response.clone());
+              }
+              return response;
+            }).catch((err) => {
+              // Network request failed, try to get it from the cache.
+              return cache.match(evt.request);
+            });
+      }));
+  return;
+}
+evt.respondWith(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.match(evt.request)
+          .then((response) => {
+            return response || fetch(evt.request);
+          });
+    })
+);
+```
+
+El código intercepta la solicitud y verifica si es para un pronóstico del tiempo. Si es así, usa `fetch` para realizar la solicitud. Una vez que se devuelve la respuesta, abre la memoria caché, clona la respuesta, la almacena en la memoria caché y devuelve la respuesta al solicitante original.
+
+Necesitamos eliminar la comprobación `evt.request.mode !== 'navigate'` porque queremos que nuestro service worker maneje todas las solicitudes (incluidas imágenes, scripts, archivos CSS, etc.), no solo las navegaciones. Si dejamos ese registro, solo se entregará el HTML desde la memoria caché del service worker, todo lo demás se solicitará desde la red.
+
+### Pruébalo
+
+La aplicación, sin conexión, debe estar completamente funcional ahora. Actualiza la página para asegurarte de que tienes instalado el service worker más reciente, luego guarda un par de ciudades y presiona el botón de actualización en la aplicación para obtener información actualizada sobre el clima.
+
+Luego ve al panel __Cache Storage__ en el panel __Application__ de DevTools. Expande la sección y verás el nombre de su caché estático y la caché de datos en el lado izquierdo. Al abrir la caché de datos se deben mostrar los datos almacenados para cada ciudad.
+
+![731e91776cb6ef18.png](img/731e91776cb6ef18.png)
+
+Luego, abre DevTools y cambia al panel service workers, y marca la casilla de verificación Offline, luego intenta volver a cargar la página, después desconecta y vuelve a cargar la página.
+
+Si estás en una red rápida y quiere ver cómo se actualiza datos de previsión del tiempo en una conexión lenta, ajusta el `FORECAST_DELAY` propiedad en `server.js` a `5000`. Todas las solicitudes a la API de pronóstico se retrasarán 5000ms.
+
+### Verificar cambios con Lighthouse
+
+También es una buena idea volver a ejecutar Lighthouse.
+
+__Auditoría SEO__
+
+* __✅ PASADO:__ El documento tiene una meta descripción.
+
+__Auditoría de Progressive Web App__
+
+* __✅ PASADO:__ La página actual responde con un 200 cuando está sin conexión.
+* __✅ PASADO:__ `start_url` responde con un 200 cuando está desconectado.
+* __✅ PASADO:__ Registra un service worker que controla la página y `start_url.`
+* __✅ PASADO:__ El manifiesto de la aplicación web cumple con los requisitos de instalación.
+* __✅ PASADO:__ Configurado para una pantalla de inicio personalizada.
+* __✅ PASADO:__ Establece un color de tema de la barra de direcciones.
+
+## Añadir experiencia de instalación
+
+Cuando se instala una Progressive Web App, se ve y se comporta como todas las demás aplicaciones instaladas. Se inicia desde el mismo lugar que se lanzan otras aplicaciones. Se ejecuta en una aplicación sin una barra de direcciones u otra interfaz de usuario del navegador. Y como todas las demás aplicaciones instaladas, es una aplicación de nivel superior en el conmutador de tareas.
+
+![d824e1712e46a1cc.png](img/d824e1712e46a1cc.png)
+
+En Chrome, una Progressive Web App puede instalarse a través del menú contextual de tres puntos, o puede proporcionar un botón u otro componente de UI al usuario que le pedirá que instale tu aplicación.
+
+Success: dado que la experiencia de instalación en el menú contextual de tres puntos de Chrome está algo oculta, le recomendamos que proporcione alguna indicación dentro de tu aplicación para notificar al usuario que tu aplicación puede instalarse, y un botón de instalación para completar el proceso de instalación.
+
+### Auditoría con Lighthouse
+
+Para que un usuario pueda instalar tu Progressive Web App, debe cumplir con [ciertos criterios](/web/fundamentals/app-install-banners/#criteria). La forma más fácil de verificar es usar Lighthouse y asegurarse de que cumpla con los criterios instalables.
+
+![b921f5583fcddf03.png](img/b921f5583fcddf03.png)
+
+Si has trabajado con este código, tu PWA ya debería cumplir con estos criterios.
+
+Key Point: Para esta sección, habilita la casilla de verificación **Bypass for network** en el panel **service workers** del panel **Application** en DevTools. Cuando está marcado, las solicitudes omiten al _service worker_ y se envían directamente a la red. Esto simplifica nuestro proceso de desarrollo ya que no tenemos que actualizar nuestro service worker mientras trabajamos en esta sección.
+
+### Agrega install.js a index.html
+
+Primero, agregamos el `install.js` a nuestro archivo `index.html`.
+
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L204)
+
+```html
+<!-- CODELAB: Add the install script here -->
+<script src="/scripts/install.js"></script>
+```
+
+### Escucha el evento `beforeinstallprompt`
+
+Si se cumple la función de agregar a la pantalla de inicio [criterio](/web/fundamentals/app-install-banners/#criteria), Chrome activará un evento de `beforeinstallprompt`, que puede usar para indicar que tu aplicación se puede &quot;instalar&quot; y luego solicitar al usuario que la instale. Agrega el siguiente código para escuchar el evento `beforeinstallprompt` :
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L24)
+
+```js
+// CODELAB: Add event listener for beforeinstallprompt event
+window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
+```
+
+### Evento guardar y mostrar el botón de instalación
+
+En nuestra función `saveBeforeInstallPromptEvent`, `saveBeforeInstallPromptEvent` una referencia al evento `beforeinstallprompt` para poder llamar a `prompt()` más adelante y actualizar nuestra interfaz de usuario para mostrar el botón de instalación.
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L34)
+
+```js
+// CODELAB: Add code to save event & show the install button.
+deferredInstallPrompt = evt;
+installButton.removeAttribute('hidden');
+```
+
+### Mostrar el prompt / ocultar el botón
+
+Cuando el usuario hace clic en el botón de instalación, debemos llamar a `.prompt()` en el evento `beforeinstallprompt` guardado. También necesitamos ocultar el botón de instalación, porque solo se puede llamar a `.prompt()` una vez en cada evento guardado.
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L45)
+
+```js
+// CODELAB: Add code show install prompt & hide the install button.
+deferredInstallPrompt.prompt();
+// Hide the install button, it can't be called twice.
+evt.srcElement.setAttribute('hidden', true);
+```
+
+Al llamar a `.prompt()` se mostrará un diálogo modal al usuario y se te pedirá que agregues tu aplicación a la pantalla de inicio.
+
+### Registrar los resultados
+
+Puedes verificar qué respondió el usuario al cuadro de diálogo de instalación escuchando la promesa que devuelve la propiedad `userChoice` del evento `beforeinstallprompt` salvado. La promesa devuelve un objeto con una propiedad `outcome` después de que se haya mostrado la solicitud y el usuario haya respondido a ella.
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L47)
+
+```js
+// CODELAB: Log user response to prompt.
+deferredInstallPrompt.userChoice
+    .then((choice) => {
+      if (choice.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt', choice);
+      } else {
+        console.log('User dismissed the A2HS prompt', choice);
+      }
+      deferredInstallPrompt = null;
+    });
+```
+
+Un comentario sobre `userChoice`, [la especificación lo define como una propiedad](https://w3c.github.io/manifest/#beforeinstallpromptevent-interface), no es una función como podría esperarse.
+
+#### Registrar todos los eventos de instalación
+
+Adicionalmente a cualquier UI que añadadas para instalar tu aplicación, los usuarios también pueden instalar tu PWA a través de otros métodos, por ejemplo, el menú de tres puntos de Chrome. Para rastrear estos eventos, escuche el evento instalado.
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L51)
+
+```js
+// CODELAB: Add event listener for appinstalled event
+window.addEventListener('appinstalled', logAppInstalled);
+```
+
+Después, necesitaremos actualizar la función `logAppInstalled`, para este laboratorio de código, solo usaremos `console.log`, pero en una aplicación de producción, probablemente desearás registrar esto como un evento en tu software de analíticas.
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L60)
+
+```js
+// CODELAB: Add code to log the event
+console.log('Aplicación meteorológica fue instalada.', evt);
+```
+
+### Actualizar el service worker
+
+No olvides actualizar `CACHE_NAME` en tu archivo `service-worker.js`, ya que has realizado cambios en los archivos que ya están en caché. Habilitar la casilla de verificación __Bypass for network__ en el panel service workers del panel de aplicaciones en DevTools funcionará en el desarrollo, pero no ayudará en el mundo real.
+
+### Pruébalo
+
+Vamos a ver cómo fue nuestro paso de instalación. Para estar seguro, usa el botón __Clear site data__ en el panel de aplicaciones de DevTools para eliminar todo y asegurarte de que estamos comenzando de nuevo. Si ya instalaste la aplicación, asegúrate de desinstalarla, de lo contrario, el icono de instalación no volverá a aparecer.
+
+#### Verifica que el botón de instalación esté visible
+
+Primero, verificamos que nuestro ícono de instalación se muestre correctamente, asegúrate de probar esto tanto en el escritorio como en el móvil.
+
+1. Abre la URL en una nueva pestaña de Chrome.
+2. Abre el menú de tres puntos de Chrome (junto a la barra de direcciones).
+▢ Verifica que vea &quot;*Instalar Clima...*&quot; en el menú.
+3. Actualiza los datos metereológicos con el botón de actualización en la esquina superior derecha para asegurarnos de que cumplimos con las [heurística de compromiso del usuario](/web/fundamentals/app-install-banners/#criteria).
+▢ Verifica que el icono de instalación esté visible en el encabezado de la aplicación.
+
+#### Verifica que el botón de instalación funcione
+
+A continuación, nos aseguramos de que todo se instala correctamente y de que nuestros eventos se activan correctamente. Puedes hacerlo tanto en tu escritorio como en tu móvil. Si deseas probar esto en el móvil, asegúrate de que estás utilizando la depuración remota para poder ver lo que se está registrado en la consola.
+
+1. Abre Chrome y, en una nueva pestaña del navegador, navega a tu PWA Clima.
+2. Abre DevTools y cambia al panel de la consola.
+3. Haz clic en el botón de instalación en la esquina superior derecha.
+▢ Verifica que el botón de instalación desaparezca
+▢ Verifica que se muestra el cuadro de diálogo modal de instalación.
+4. Haz clic en Cancelar.
+▢ Verifica que &quot;*El usuario rechazó la solicitud A2HS*&quot; se muestra en la salida de la consola.
+▢ Verifica que el botón de instalación vuelva a aparecer.
+5. Haz clic en el botón Instalar nuevamente, luego haz clic en el botón Instalar en el diálogo modal.
+▢ Verifica que &quot;*El usuario aceptó la solicitud A2HS*&quot; se muestra en la salida de la consola.
+▢ Verifica que &quot;*aplicación meteorológica se haya instalado*&quot; se muestre en la salida de la consola.
+▢ Verifica que la aplicación meteorológica se agrega al lugar donde normalmente encontrará las aplicaciones.
+6. Inicia la PWA Clima.
+▢ Verifica que la aplicación se abre como una aplicación independiente, ya sea en una ventana de la aplicación en el escritorio o en pantalla completa en el móvil.
+
+Ten en cuenta que si está ejecutando en el escritorio desde localhost, tu PWA instalada puede mostrar una pancarta de dirección porque localhost no se considera un host seguro.
+
+#### Verifica que la instalación de iOS funcione correctamente
+
+Veamos también el comportamiento en iOS. Si tienes un dispositivo iOS, puedes usarlo, o si estás usando un Mac, prueba el simulador de iOS disponible con Xcode.
+
+1. Abre Safari y en una nueva pestaña del navegador, navega a tu PWA Clima.
+2. Haz clic en el botón *Compartir*! [8ac92dd483c689d3.png](img/8ac92dd483c689d3.png) .
+3. Desplázate hacia la derecha y Haz clic en el botón *Agregar a la pantalla de inicio*.
+▢ Verifica que el título, la URL y el icono sean correctos.
+4. Haz clic en *Agregar.*
+▢ Verifica que el icono de la aplicación se agrega a la pantalla de inicio.
+5. Inicia la PWA Clima desde la pantalla de inicio.
+▢ Verifica que la aplicación se inicia en pantalla completa.
+
+### Bonus: ### si tu aplicación se inicia desde la pantalla de inicio
+
+La media query `display-mode` permite aplicar estilos dependiendo de cómo se lanzó la aplicación, o determinar cómo se lanzó con JavaScript.
+
+```css
+@media all and (display-mode: standalone) {
+  body {
+    background-color: yellow;
+  }
+}
+```
+
+También puedes comprobar la media query `display-mode` con [JavaScript para ver si estás ejecutándola independientemente](/web/fundamentals/app-install-banners/#detect-mode) .
+
+### Bonus: Desinstalando tu PWA
+
+Recuerda, `beforeinstallevent` no se dispara si la aplicación ya está instalada, por lo que durante el desarrollo probablemente querrás instalarla y desinstalarla varias veces para asegurarte de que todo funciona como se esperaba.
+
+#### Android
+
+En Android se desinstalan de la misma manera que otras aplicaciones instaladas.
+
+* Abre el cajón de aplicaciones.
+* Desplázate hacia abajo para encontrar el icono del tiempo.
+* Arrastra el ícono de la aplicación a la parte superior de la pantalla.
+* Elige *Desinstalar.*
+
+#### ChromeOS
+
+En ChromeOS, las PWA se desinstalan fácilmente desde el cuadro de búsqueda del iniciador.
+
+* Abre el lanzador.
+* Escribe &quot;*Clima*&quot; en el cuadro de búsqueda, tu PWA Clima debería aparecer en los resultados.
+* Haz clic derecho (alt-clic) en la PWA Clima.
+* Haz clic en *Eliminar de Chrome...*
+
+#### macOS y Windows
+
+En Mac y Windows se deben desinstalar a través de Chrome.
+
+* En una nueva pestaña del navegador, abre chrome://apps.
+* Haz clic derecho (alt-clic) en la PWA Clima.
+* Haz clic en *Eliminar de Chrome...*
+
+## Felicitaciones
+
+¡Enhorabuena, has construido con éxito tu primera Progressive Web App!
+
+Agregaste un manifiesto de aplicación web para permitir que se instalara, y agregaste un service worker para garantizar que tu PWA sea siempre rápida y confiable. Has aprendido cómo usar DevTools para auditar una aplicación y cómo esto puede mejorar la experiencia de usuario.
+
+Ahora conoce los pasos clave necesarios para convertir cualquier aplicación web en una Progressive Web App.
+
+### Lectura adicional
+
+* [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
+* [Service Worker Caching Strategies Based on Request Types](https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c)
+
+### referencia
+
+* [Web App Manifest docs](/web/fundamentals/web-app-manifest)
+* [Web App Manifest properties (MDN)](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members)
+* [Install & Add to Home Screen](/web/fundamentals/app-install-banners/)
+* [Service Worker Overview](/web/fundamentals/primers/service-workers/)
+* [Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle)
+* [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
+* [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/#generic-fallback)
+
+## Encontró un problema o tiene comentarios? {: .hide-from-toc }
+
+Ayúdanos a mejorar nuestros laboratorios de códigos enviando una [issue](https://github.com/googlecodelabs/your-first-pwapp/issues) hoy. ¡Y gracias!

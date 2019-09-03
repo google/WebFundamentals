@@ -6,9 +6,11 @@ toc:
     section:
     - include: /web/fundamentals/web-components/_toc.yaml
   - title: JavaScript
-    section:  
+    section:
     - title: Async Functions
       path: /web/fundamentals/primers/async-functions
+    - title: Modules
+      path: /web/fundamentals/primers/modules
     - title: Promises
       path: /web/fundamentals/primers/promises
     - title: Service Workers

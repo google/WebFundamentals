@@ -53,7 +53,7 @@ Este código contiene algunos aspectos para analizar.
 
 2. **Puede que no exista ningún dispositivo de RV disponible.** Deberíamos tener como objetivo crear experiencias que funcionen correctamente con una configuración fuera de la RV, y tratar la disponibilidad de la RV como una mejora progresiva.
 
-3. **Puede que existan varios dispositivos de RV disponibles. **De la misma manera, es absolutamente posible que alguien tenga varios dispositivos de RV disponibles. Deberíamos permitir eso, si fuese posible, permitiéndoles que elijan el más adecuado.
+3. **Puede que existan varios dispositivos de RV disponibles.** De la misma manera, es absolutamente posible que alguien tenga varios dispositivos de RV disponibles. Deberíamos permitir eso, si fuese posible, permitiéndoles que elijan el más adecuado.
 
 ## Instala una extensión de emulación de WebVR para Chrome DevTools
 

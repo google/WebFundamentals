@@ -1,19 +1,20 @@
-<!-- wf_template: src/templates/latest_articles.html -->
-<div class="feed hfeed rendered">
-<style>article.hentry:first-of-type { margin-top: 0; }</style>
-  {{#each articles}}
-  <article class="hentry">
-    <a href="{{ url }}">
-      <header>{{title}}</header>
-    </a>
-    <article>
-      {{{ description }}}
-    </article>
-    <div>
-      <a href="{{ url }}">
-        <time class="updated published">{{ formatDatePretty datePublishedMoment }}</time>
-      </a>
-    </div>
-  </article>
-  {{/each}}
-</div>
+<!-- DevSite v1 requires this level of indentation, do NOT change -->
+        <!-- wf_template: src/templates/latest_articles.html -->
+        <style>
+          .webfu-latest-articles h3 { margin-bottom: 0; margin-top: 0; }
+          .webfu-latest-articles p { margin-bottom: 32px; margin-top: 0; }
+        </style>
+        <div class="webfu-latest-articles">
+          {{#each articles}}
+          <a href="{{ url }}">
+            <h3>{{title}}</h3>
+          </a>
+          <p>
+            {{{ description }}}
+            <br>
+            <a href="{{url}}">
+              <time class="updated published">{{ formatDatePretty datePublishedMoment }}</time>
+            </a>
+          </p>
+          {{/each}}
+        </div>

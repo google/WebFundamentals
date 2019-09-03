@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-07-04 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -12,7 +12,7 @@ This page contains a set of example caching strategies you can use with Workbox.
 
 ## Google Fonts
 
-The Google Fonts service consist of two parts:
+The Google Fonts service consists of two parts:
 
 - The stylesheet with the `@font-face` definitions, which link to the font
   files.
@@ -56,11 +56,12 @@ workbox.routing.registerRoute(
 
 ## Caching Images
 
-You might want to use a cache-first images, by matching against a list of known extensions.
+You might want to use a cache-first strategy for images, by matching against a list of
+known extensions.
 
 ```javascript
 workbox.routing.registerRoute(
-  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  /\.(?:png|gif|jpg|jpeg|webp|svg)$/,
   new workbox.strategies.CacheFirst({
     cacheName: 'images',
     plugins: [
@@ -105,14 +106,14 @@ store assets in  cache for each origin.
 
 ```javascript
 workbox.routing.registerRoute(
-  /.*(?:googleapis)\.com/,
+  /.*googleapis\.com/,
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'googleapis',
   })
 );
 
 workbox.routing.registerRoute(
-  /.*(?:gstatic)\.com/,
+  /.*gstatic\.com/,
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'gstatic',
   })

@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -9,20 +9,18 @@ book_path: /web/fundamentals/_book.yaml
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-
-
 I've split up notification options into two sections, one that deals with the visual aspects
-(this section) and one section that explains the behavioural aspects of notifications.
+(this section) and one section that explains the behavioral aspects of notifications.
 
 The reason for this is that every developer will need to be worried about
-the visual aspects but the behavioural aspects you'll use will depend how
+the visual aspects but the behavioral aspects you'll use will depend how
 you use push notifications.
 
 All of the source code for these demo's is taken from a demo page I put together. If you want
 to test them out for yourself then click the button below.
 
 <a class="button" href="https://web-push-book.gauntface.com/demos/notification-examples/"
-target="\_blank">Notification Demos</a>
+target="_blank">Notification Demos</a>
 
 ## Visual Options
 
@@ -32,34 +30,35 @@ The API for showing a notification is simply:
 
 Where the title is a string and options can be any of the following:
 
-    {
-      "//": "Visual Options",
-      "body": "<String>",
-      "icon": "<URL String>",
-      "image": "<URL String>",
-      "badge": "<URL String>",
-      "vibrate": "<Array of Integers>",
-      "sound": "<URL String>",
-      "dir": "<String of 'auto' | 'ltr' | 'rtl'>",
+```json
+{
+  "//": "Visual Options",
+  "body": "<String>",
+  "icon": "<URL String>",
+  "image": "<URL String>",
+  "badge": "<URL String>",
+  "vibrate": "<Array of Integers>",
+  "sound": "<URL String>",
+  "dir": "<String of 'auto' | 'ltr' | 'rtl'>",
 
-      "//": "Behavioural Options",
-      "tag": "<String>",
-      "data": "<Anything>",
-      "requireInteraction": "<boolean>",
-      "renotify": "<Boolean>",
-      "silent": "<Boolean>",
+  "//": "Behavioral Options",
+  "tag": "<String>",
+  "data": "<Anything>",
+  "requireInteraction": "<boolean>",
+  "renotify": "<Boolean>",
+  "silent": "<Boolean>",
 
-      "//": "Both Visual & Behavioural Options",
-      "actions": "<Array of Strings>",
+  "//": "Both visual & behavioral options",
+  "actions": "<Array of Strings>",
 
-      "//": "Information Option. No visual affect.",
-      "timestamp": "<Long>"
-    }
+  "//": "Information Option. No visual affect.",
+  "timestamp": "<Long>"
+}
+```
 
 First let's look at the visual options.
 
 ![Dissection of the UI of a Notification](./images/notification-ui.png){: .center-image }
-
 
 ### Title and Body Options
 
@@ -68,11 +67,13 @@ on the notification.
 
 If we ran the following code:
 
-        const title = 'Simple Title';
-        const options = {
-          body: 'Simple piece of body text.\nSecond line of body text :)'
-        };
-        registration.showNotification(title, options);
+```js
+const title = 'Simple Title';
+const options = {
+  body: 'Simple piece of body text.\nSecond line of body text :)'
+};
+registration.showNotification(title, options);
+```
 
 We'd get this notification on Chrome:
 
@@ -93,10 +94,11 @@ causing the notification to expand.
 
 ![Notification with long title and body text on Firefox on Linux while hovering over the notification with the mouse cursor.](./images/notification-screenshots/desktop/firefox-long-title-body-expanded.png){: .center-image }
 
-The reason I've included these examples is twofold. There will be differences between
-browsers. Just looking at text, Firefox and Chrome look and act differently. Secondly there are
-differences across platforms. Chrome has a custom UI for all platforms whereas Firefox uses the
-system notifications on my Linux machine. The same notifications on Windows with Firefox look
+The reason I've included these examples is twofold. There will be differences
+between browsers. Just looking at text, Firefox and Chrome look and act
+differently. Secondly there are differences across platforms. Chrome has a
+custom UI for all platforms whereas Firefox uses the system notifications on
+my Linux machine. The same notifications on Windows with Firefox look
 like this:
 
 ![Notification with title and body text on Firefox on Windows.](./images/notification-screenshots/desktop/firefox-title-body-windows.png){: .center-image }
@@ -109,11 +111,13 @@ The `icon` option is essentially a small image you can show next to the title an
 
 In your code you just need to provide a URL to the image you'd like to load.
 
-        const title = 'Icon Notification';
-        const options = {
-          icon: '/images/demos/icon-512x512.png'
-        };
-        registration.showNotification(title, options);
+```js
+const title = 'Icon Notification';
+const options = {
+  icon: '/images/demos/icon-512x512.png'
+};
+registration.showNotification(title, options);
+```
 
 On Chrome we get this notification on Linux:
 
@@ -125,8 +129,7 @@ and on Firefox:
 
 Sadly there aren't any solid guidelines for what size image to use for an icon.
 
-[Android seems to want a 64dp
-image](http://stackoverflow.com/questions/7220738/honeycomb-notifications-how-to-set-largeicon-to-the-right-size)
+[Android seems to want a 64dp image](http://stackoverflow.com/questions/7220738/honeycomb-notifications-how-to-set-largeicon-to-the-right-size)
 (which is 64px multiples by the device pixel ratio).
 
 If we assume the highest pixel ratio for a device will be 3, an icon size
@@ -140,11 +143,13 @@ if you intend to use a third-party image.
 The `badge` is a small monochrome icon that is used to portray a little more information to the
 user about where the notification is from.
 
-        const title = 'Badge Notification';
-        const options = {
-          badge: '/images/demos/badge-128x128.png'
-        };
-        registration.showNotification(title, options);
+```js
+const title = 'Badge Notification';
+const options = {
+  badge: '/images/demos/badge-128x128.png'
+};
+registration.showNotification(title, options);
+```
 
 At the time of writing the badge is only used on Chrome for Android.
 
@@ -168,11 +173,13 @@ pixel ratio of 3).
 The `image` option can be used to display a larger image to the user. This is particularly
 useful to display a preview image to the user.
 
-        const title = 'Image Notification';
-        const options = {
-          image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
-        };
-        registration.showNotification(title, options);
+```js
+const title = 'Image Notification';
+const options = {
+  image: '/images/demos/unsplash-farzad-nazifi-1600x1100.jpg'
+};
+registration.showNotification(title, options);
+```
 
 On desktop the notification will look like this:
 
@@ -182,7 +189,7 @@ On Android the cropping and ratio are different.
 
 ![Notification with image on Chrome for Android.](./images/notification-screenshots/mobile/chrome-image.png){: .center-image }
 
-Given the differences in ratio between desktop and mobile it's extremely hard to suggest
+Given the differences in ratio between desktop and mobile, it's extremely hard to suggest
 guidelines.
 
 Since Chrome on desktop doesn't fill the available space and has a ratio of 4:3, perhaps the
@@ -200,42 +207,44 @@ bet.
 
 You can defined `actions` to display buttons with a notification.
 
-        const title = 'Actions Notification';
-        const options = {
-          actions: [
-            {
-              action: 'coffee-action',
-              title: 'Coffee',
-              icon: '/images/demos/action-1-128x128.png'
-            },
-            {
-              action: 'doughnut-action',
-              title: 'Doughnut',
-              icon: '/images/demos/action-2-128x128.png'
-            },
-            {
-              action: 'gramophone-action',
-              title: 'gramophone',
-              icon: '/images/demos/action-3-128x128.png'
-            },
-            {
-              action: 'atom-action',
-              title: 'Atom',
-              icon: '/images/demos/action-4-128x128.png'
-            }
-          ]
-        };
+```js
+const title = 'Actions Notification';
+const options = {
+  actions: [
+    {
+      action: 'coffee-action',
+      title: 'Coffee',
+      icon: '/images/demos/action-1-128x128.png'
+    },
+    {
+      action: 'doughnut-action',
+      title: 'Doughnut',
+      icon: '/images/demos/action-2-128x128.png'
+    },
+    {
+      action: 'gramophone-action',
+      title: 'gramophone',
+      icon: '/images/demos/action-3-128x128.png'
+    },
+    {
+      action: 'atom-action',
+      title: 'Atom',
+      icon: '/images/demos/action-4-128x128.png'
+    }
+  ]
+};
 
-        const maxVisibleActions = Notification.maxActions;
-        if (maxVisibleActions < 4) {
-          options.body = `This notification will only display ` +
-            `${maxVisibleActions} actions.`;
-        } else {
-          options.body = `This notification can display up to ` +
-            `${maxVisibleActions} actions.`;
-        }
+const maxVisibleActions = Notification.maxActions;
+if (maxVisibleActions < 4) {
+  options.body = `This notification will only display ` +
+    `${maxVisibleActions} actions.`;
+} else {
+  options.body = `This notification can display up to ` +
+    `${maxVisibleActions} actions.`;
+}
+```
 
-        registration.showNotification(title, options);
+registration.showNotification(title, options);
 
 At the time of writing only Chrome and Opera for Android support actions.
 
@@ -246,22 +255,22 @@ The title and icon is what you can see in the notification. The ID is used when 
 the action button had been clicked (We'll look into this more in the next section).
 
 In the example above I've defined 4 actions to illustrate that you can define more actions than
-will be displayed. If you want to know the number actions that will be displayed by the browser
+will be displayed. If you want to know the number actions that will be displayed by the browser,
 you can check `Notification.maxActions`, which is used in the body text in the demo.
 
-On desktop the action button icons display their colors (See the pink doughnut above).
+On desktop, the action button icons display their colors (see the pink doughnut above).
 
-On Android Marshmallow the icons are colored to match the system color scheme:
+On Android Marshmallow, the icons are colored to match the system color scheme:
 
 ![Notification with actions on Chrome for Android.](./images/notification-screenshots/mobile/chrome-actions-m.png){: .center-image }
 
-Chrome will hopefully change it's behavior on desktop to match android (i.e. apply the
-appropriate color scheme to make the icons match the system look and feel). In the meantime you can
-match Chrome's text color by making your icons have a color of "#333333"..
+Chrome will hopefully change it's behavior on desktop to match Android (i.e. apply the
+appropriate color scheme to make the icons match the system look and feel). In the meantime, you can
+match Chrome's text color by making your icons have a color of "#333333".
 
-On Android Nougat the action icons aren't shown at all.
+On Android Nougat, the action icons aren't shown at all.
 
-It's also worth calling out that that icons look crisp on Android but **not** on desktop.
+It's also worth calling out that icons look crisp on Android but **not** on desktop.
 
 The best size I could get to work on desktop Chrome was 24px x 24px. This sadly looks out of
 place on Android.
@@ -283,8 +292,8 @@ it'll be some time before anything is agreed upon.
 The "dir" parameter allows you to define which direction the text should be displayed,
 right-to-left or left-to-right.
 
-In testing it seemed that the direction was largely determined by the text rather than this
-parameter. According to the spec this is intended to suggest to the browser how
+In testing, it seemed that the direction was largely determined by the text rather than this
+parameter. According to the spec, this is intended to suggest to the browser how
 to layout options like actions, but I saw no difference.
 
 Probably best to define if you can, otherwise the browser should do the right thing according
@@ -302,21 +311,26 @@ On Firefox (while hovering over it) you'll get this:
 
 ### Vibrate
 
+Caution: Support for [`vibrate` has been deprecated](https://crbug.com/971422)
+on Android O or later.
+
 The vibrate option allows you to define a vibration pattern that'll run when a notification is
 displayed, assuming the user's current settings allow for vibrations (i.e. the device isn't in
 silent mode).
 
 The format of the vibrate option should be an array of numbers that describe the number of
-milliseconds the device should vibrate followed by the number of milliseconds the device should
+milliseconds the device should vibrate, followed by the number of milliseconds the device should
 *not* vibrate.
 
-        const title = 'Vibrate Notification';
-        const options = {
-          // Star Wars shamelessly taken from the awesome Peter Beverloo
-          // https://tests.peter.sh/notification-generator/
-          vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500]
-        };
-        registration.showNotification(title, options);
+```js
+const title = 'Vibrate Notification';
+const options = {
+  // Star Wars shamelessly taken from the awesome Peter Beverloo
+  // https://tests.peter.sh/notification-generator/
+  vibrate: [500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500]
+};
+registration.showNotification(title, options);
+```
 
 This only affects devices that support vibration.
 
@@ -324,13 +338,15 @@ This only affects devices that support vibration.
 
 The sound parameter allows you to define a sound to play when the notification is received.
 
-At the time of writing no browser has support for this option.
+At the time of writing, no browser has support for this option.
 
-        const title = 'Sound Notification';
-        const options = {
-          sound: '/demos/notification-examples/audio/notification-sound.mp3'
-        };
-        registration.showNotification(title, options);
+```js
+const title = 'Sound Notification';
+const options = {
+  sound: '/demos/notification-examples/audio/notification-sound.mp3'
+};
+registration.showNotification(title, options);
+```
 
 ### Timestamp
 
@@ -340,12 +356,14 @@ that resulted in the push notification being sent.
 The `timestamp` should be the number of milliseconds since 00:00:00 UTC, which is
 1 January 1970 (i.e. the unix epoch).
 
-        const title = 'Timestamp Notification';
-        const options = {
-          body: 'Timestamp is set to "01 Jan 2000 00:00:00".',
-          timestamp: Date.parse('01 Jan 2000 00:00:00')
-        };
-        registration.showNotification(title, options);
+```js
+const title = 'Timestamp Notification';
+const options = {
+  body: 'Timestamp is set to "01 Jan 2000 00:00:00".',
+  timestamp: Date.parse('01 Jan 2000 00:00:00')
+};
+registration.showNotification(title, options);
+```
 
 ## UX Best Practices
 
@@ -362,18 +380,14 @@ Some common pitfalls to avoid:
 
 * Don't put your website in the title or the body. Browsers include your domain in the
 notification so **don't duplicate it**.
-
-
-* Use all information you have available to you. If you send a push message because someone
+* Use all the information that you have available. If you send a push message because someone
 sent a message to a user, rather than using a title of 'New Message' and body of 'Click here to
 read it.' use a title of 'John just sent a new message' and set the body of the notification to
 part of the message.
 
-
-
 ## Browsers and Feature Detection
 
-At the time of writing there is a pretty big disparity between Chrome and Firefox in terms of
+At the time of writing, there is a pretty big disparity between Chrome and Firefox in terms of
 feature support for notifications.
 
 Luckily, you can detect support for notification features by looking at the
@@ -381,15 +395,17 @@ Notification prototype.
 
 Let's say we wanted to know if a notification supports action buttons, we'd do the following:
 
-    if ('actions' in Notification.prototype) {
-      // Action buttons are supported.
-    } else {
-      // Action buttons are NOT supported.
-    }
+```js
+if ('actions' in Notification.prototype) {
+  // Action buttons are supported.
+} else {
+  // Action buttons are NOT supported.
+}
+```
 
 With this, we could change the notification we display to our users.
 
-With the other options, just do the same as above, replacing 'actions' with the desired
+With the other options, just do the same as above, replacing `'actions'` with the desired
 parameter name.
 
 ## Feedback {: #feedback }

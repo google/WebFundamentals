@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2019-02-12 #}
+{# wf_updated_on: 2019-05-08 #}
 {# wf_published_on: 2018-10-19 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/10/watch-video-using-picture-in-picture/hero.png #}
@@ -75,6 +75,8 @@ of the following reasons:
 - Video file is audio-only.
 - The new `disablePictureInPicture` attribute is present on the video element.
 - The call was not made in a user gesture event handler (e.g. a button click).
+  Starting in Chrome 74, this is [applicable only] if there's not an element in
+  Picture-in-Picture already.
 
 The [Feature support] section below shows how to enable/disable a button based on
 these restrictions.
@@ -122,6 +124,9 @@ the original tab. Note that this method also returns a promise.
     }
     ...
 
+Note: I'd recommend the video leaves Picture-in-Picture automatically when 
+[video enters fullscreen].
+
 ### Listen to Picture-in-Picture events {: #listen-pip-events }
 
 Operating systems usually restrict Picture-in-Picture to one window, so
@@ -146,6 +151,49 @@ catalog of videos, to surfacing a livestream chat.
       // Video left Picture-in-Picture.
       // User may have played a Picture-in-Picture video from a different page.
     });
+
+### Customize the Picture-in-Picture window
+
+Chrome 74 supports play/pause, previous track and next track buttons in the
+Picture-in-Picture window you can control by using the [Media Session API].
+
+<figure>
+  <img src="/web/updates/images/2018/10/media-playback-controls.png"
+       alt="Media playback controls in a Picture-in-Picture window">
+  <figcaption>
+    <b>Figure 1.</b>
+    Media playback controls in a Picture-in-Picture window
+  </figcaption>
+</figure>
+
+By default, a play/pause button is always shown in the Picture-in-Picture
+window unless the video is playing MediaStream objects (e.g. `getUserMedia()`,
+`getDisplayMedia()`, `canvas.captureStream()`) or the video has a MediaSource
+duration set to `+Infinity` (e.g. live feed). To make  sure a play/pause button
+is always visible, set somesee Media Session action handlers for both "Play" and
+"Pause" media events as below.
+
+      // Show a play/pause button in the Picture-in-Picture window
+      navigator.mediaSession.setActionHandler('play', function() {
+        // User clicked "Play" button.
+      });
+      navigator.mediaSession.setActionHandler('pause', function() {
+        // User clicked "Pause" button.
+      });
+
+Showing "Previous Track" and "Next track" window controls is similar. Setting
+Media Session action handlers for those will show them in the Picture-in-Picture
+window and you'll be able to handle these actions.
+
+      navigator.mediaSession.setActionHandler('previoustrack', function() {
+        // User clicked "Previous Track" button.
+      });
+
+      navigator.mediaSession.setActionHandler('nexttrack', function() {
+        // User clicked "Next Track" button.
+      });
+
+To see this in action, try out the official [Media Session sample].
 
 ### Get the Picture-in-Picture window size
 
@@ -259,6 +307,19 @@ video.play();
 // Later on, video.requestPictureInPicture();
 ```
 
+Combining `canvas.captureStream()` with the [Media Session API], you can for
+instance create an audio playlist window in Chrome 74. Check out the official
+[Audio playlist sample].
+
+<figure>
+  <img src="/web/updates/images/2018/10/audio-playlist.jpg"
+       alt="Audio playlist in a Picture-in-Picture window">
+  <figcaption>
+    <b>Figure 2.</b>
+    Audio playlist in a Picture-in-Picture window
+  </figcaption>
+</figure>
+
 ## Samples, demos, and codelabs {: #samples-demos-codelabs }
 
 Check out our official [Picture-in-Picture sample] to try the Picture-in-Picture
@@ -307,8 +368,11 @@ involved in the [standardization effort].
 [yet]: https://bugs.chromium.org/p/chromium/issues/detail?id=789591
 [promise]: https://developers.google.com/web/fundamentals/primers/promises
 [may reject]: https://wicg.github.io/picture-in-picture/#request-pip
+[applicable only]: https://github.com/WICG/picture-in-picture/issues/116
 [Feature support]: #feature-support
 [feature policy]: /web/updates/2018/06/feature-policy
+[video enters fullscreen]: https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenchange_event
+[Media Session sample]: https://googlechrome.github.io/samples/media-session/video.html
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
 [disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/master/features.md#picture-in-picture
@@ -322,3 +386,6 @@ involved in the [standardization effort].
 [https://github.com/gbentaieb/pip-polyfill/]: https://github.com/gbentaieb/pip-polyfill/
 [standardization effort]: https://github.com/WICG/picture-in-picture/issues?utf8=%E2%9C%93&q=
 [Jennifer Apacible]: https://twitter.com/japacible
+[Media Session API]: /web/updates/2017/02/media-session
+[Audio playlist sample]: https://googlechrome.github.io/samples/picture-in-picture/audio-playlist
+

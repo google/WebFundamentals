@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-05-31 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -38,7 +38,7 @@ if (!('PushManager' in window)) {
 ```
 
 While browser support is growing quickly for both service worker and
-push messaging support, it's always a good idea to feature detect for both and
+push messaging, it's always a good idea to feature detect for both and
 [progressively enhance](https://en.wikipedia.org/wiki/Progressive_enhancement).
 
 ## Register a Service Worker
@@ -55,7 +55,7 @@ To register a service worker, call `navigator.serviceWorker.register()`, passing
 our file. Like so:
 
     function registerServiceWorker() {
-      return navigator.serviceWorker.register('service-worker.js')
+      return navigator.serviceWorker.register('/service-worker.js')
       .then(function(registration) {
         console.log('Service worker successfully registered.');
         return registration;
@@ -65,7 +65,7 @@ our file. Like so:
       });
     }
 
-This code above tells the browser that we have a service worker file and where it's located. In
+This function tells the browser that we have a service worker file and where it's located. In
 this case, the service worker file is at `/service-worker.js`. Behind the scenes the browser
 will take the following steps after calling `register()`:
 
@@ -73,13 +73,13 @@ will take the following steps after calling `register()`:
 
 1. Run the JavaScript.
 
-1. If everything ran correctly and there were no errors, the promise returned by `register()`
+1. If everything runs correctly and there are no errors, the promise returned by `register()`
 will resolve. If there are errors of any kind, the promise will reject.
 
 > If `register()` does reject, double check your JavaScript for typos / errors in Chrome DevTools.
 
 When `register()` does resolve, it returns a `ServiceWorkerRegistration`. We'll use this
-registration to access to the [PushManager
+registration to access the [PushManager
 API](https://developer.mozilla.org/en-US/docs/Web/API/PushManager).
 
 ## Requesting Permission
@@ -115,8 +115,8 @@ In the above code, the important snippet of code is the call to
 
 ![Permission Prompt on Desktop and Mobile Chrome.](./images/permission-prompt.png)
 
-Once the permission has been accepted / allowed, closed (i.e. clicking the cross on the pop-up),
-or blocked, we'll be given the result as a string: 'granted', 'default' or 'denied'.
+Once the user interacted with the permission prompt by pressing Allow, Block, or just closing it,
+we'll be given the result as a string: `'granted'`, `'default'` or `'denied'`.
 
 In the sample code above, the promise returned by `askPermission()` resolves if the permission
 is granted, otherwise we throw an error making the promise reject.
@@ -138,7 +138,7 @@ Once we have our service worker registered and we've got permission, we can subs
 calling `registration.pushManager.subscribe()`.
 
     function subscribeUserToPush() {
-      return navigator.serviceWorker.register('service-worker.js')
+      return navigator.serviceWorker.register('/service-worker.js')
       .then(function(registration) {
         const subscribeOptions = {
           userVisibleOnly: true,
@@ -263,7 +263,7 @@ We call `subscribe()`, pass in some options, and in return we get a promise that
 `PushSubscription` resulting in some code like so:
 
     function subscribeUserToPush() {
-      return navigator.serviceWorker.register('service-worker.js')
+      return navigator.serviceWorker.register('/service-worker.js')
       .then(function(registration) {
         const subscribeOptions = {
           userVisibleOnly: true,

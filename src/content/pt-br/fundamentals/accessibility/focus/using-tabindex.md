@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Modificando a ordem do DOM com tabindex
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Uso do tabindex {: .page-title }
@@ -356,7 +356,7 @@ qual não consegue sair. Considere um widget de preenchimento automático que te
 o comportamento de tabulação, mas impede o usuário de sair até que seja
 concluído. Isso é chamado de *armadilha de teclado*, e pode ser muito
 frustrante para o usuário. A seção 2.1.2 da lista de verificação do Web AIM
-aborda esta questão, afirmando que [o foco do teclado nunca deve ser bloqueado ou preso em um elemento de página específico](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
+aborda esta questão, afirmando que [o foco do teclado nunca deve ser bloqueado ou preso em um elemento de página específico](https://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
 O usuário deve ser capaz de navegar para e de todos os elementos da página
 usando apenas o teclado.
 

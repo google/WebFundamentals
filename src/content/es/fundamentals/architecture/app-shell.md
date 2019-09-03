@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml 
+project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: La arquitectura de shell de la app mantiene tu IU local y carga contenido dinámicamente sin sacrificar las vínculos y la visibilidad de la Web. 
+description: La arquitectura de shell de la app mantiene tu IU local y carga contenido dinámicamente sin sacrificar las vínculos y la visibilidad de la Web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2016-09-27 #}
 
 # El modelo de "shell de app" {: .page-title }
@@ -162,11 +162,11 @@ archivo index completo. Observemos lo que contiene.
       <header class="header">
         <h1 class="header__title">Shell de app</h1>
       </header>
-      
+
       <nav class="nav">
       ...
       </nav>
-      
+
       <main class="main">
       ...
       </main>
@@ -197,7 +197,7 @@ archivo index completo. Observemos lo que contiene.
 <div class="clearfix"></div>
 
 
-Note: Visita [https://app-shell.appspot.com/](https://app-shell.appspot.com/) para ver una PWA
+Note: Visita [The App Shell Model](/web/fundamentals/architecture/app-shell) para ver una PWA
 simple y real que utiliza una shell de app y
 representación de contenido del lado del servidor. Una shell de app se puede implementar por medio de cualquier biblioteca o
 framework mencionado en nuestra charla sobre <a
@@ -207,7 +207,7 @@ href="https://shop.polymer-project.org">Shop</a>) y React (<a
 href="https://github.com/insin/react-hn">ReactHN</a>,
 <a
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>).
- 
+
 
 ### Almacenamiento en caché de la shell de app {: #app-shell-caching }
 

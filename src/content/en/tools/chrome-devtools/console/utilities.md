@@ -2,14 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-02-27 #}
+{# wf_updated_on: 2019-04-18 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Console Utilities API Reference {: .page-title }
 
-{% include "web/_shared/contributors/andismith.html" %}
-{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 The Console Utilities API contains a collection of convenience functions for performing common
 tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and
@@ -21,7 +20,7 @@ if you try to call them in your scripts.
 Looking for `console.log()`, `console.error()`, and the rest of the `console.*` functions?
 See [Console API Reference](/web/tools/chrome-devtools/console/api).
 
-## $_
+## $_ {: #recent }
 
 `$_` returns the value of the most recently evaluated expression.
 
@@ -160,20 +159,20 @@ for elements.
 
 ![Example of using an XPath selector with startNode](images/xpath-p-node-example.png)
 
-## clear()
+## clear() {: #clear }
 
 `clear()` clears the console of its history.
 
 		clear();
 
-## copy(object)
+## copy(object) {: #copy }
 
 `copy(object)` copies a string representation of the specified object
 to the clipboard.
 
 		copy($0);
 
-## debug(function)
+## debug(function) {: #debug }
 
 When the specified function is called,
 the debugger is invoked and breaks inside the function
@@ -190,7 +189,7 @@ For more information on breakpoints,
 see [Pause Your Code With
 Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints).
 
-## dir(object)
+## dir(object) {: #dir }
 
 `dir(object)` displays an object-style listing
 of all the specified object's properties.
@@ -210,14 +209,14 @@ see the
 [`console.dir()`](/web/tools/chrome-devtools/debug/console/console-reference#console.dir(object))
 entry in the Console API.
 
-## dirxml(object)
+## dirxml(object) {: #dirxml }
 
 `dirxml(object)` prints an XML representation of the specified object,
 as seen in the Elements tab.
 This method is equivalent to the
 [console.dirxml()](https://developer.mozilla.org/en-US/docs/Web/API/Console) method.
 
-## inspect(object/function) {:#inspect}
+## inspect(object/function) {: #inspect }
 
 `inspect(object/function)` opens and selects the specified element
 or object in the appropriate panel: either the Elements panel for DOM elements or the
@@ -233,7 +232,7 @@ When passing a function to inspect,
 the function opens the document up
 in the Sources panel for you to inspect.
 
-## getEventListeners(object)
+## getEventListeners(object) {: #geteventlisteners }
 
 `getEventListeners(object)` returns the event listeners registered
 on the specified object.
@@ -261,7 +260,7 @@ You can further expand each of these objects to explore their properties:
 
 ![Expanded view of listener object](images/scrolling-list-expanded.png)
 
-## keys(object)
+## keys(object) {: #keys }
 
 `keys(object)` returns an array containing the names
 of the properties belonging to the specified object.
@@ -278,7 +277,7 @@ and `values(player1)` in the console results in the following:
 
 ![Example of keys() and values() methods](images/keys-values.png)
 
-## monitor(function)
+## monitor(function) {: #monitor }
 
 When the function specified is called,
 a message is logged to the console that indicates the function name
@@ -387,7 +386,7 @@ Result in the profiles panel:
 Note: Multiple CPU profiles can operate at once and you aren't required to close them out
 in creation order.
 
-## table(data[, columns])
+## table(data[, columns]) {: #table }
 
 Log object data with table formatting by passing in a data object
 in with optional column headings.
@@ -403,7 +402,7 @@ you would do:
 
 ![Example of table() method](images/table.png)
 
-## undebug(function)
+## undebug(function) {: #undebug }
 
 `undebug(function)` stops the debugging of the specified function
 so that when the function is called,
@@ -411,7 +410,7 @@ the debugger is no longer invoked.
 
 		undebug(getData);
 
-## unmonitor(function)
+## unmonitor(function) {: #unmonitor }
 
 `unmonitor(function)` stops the monitoring of the specified function.
 This is used in concert with `monitor(fn)`.
@@ -436,7 +435,7 @@ and then stops monitoring "mousemove" events (perhaps to reduce noise in the con
 		monitorEvents($0, "mouse");
 		unmonitorEvents($0, "mousemove");
 
-## values(object)
+## values(object) {: #values }
 
 `values(object)` returns an array containing the values
 of all properties belonging to the specified object.

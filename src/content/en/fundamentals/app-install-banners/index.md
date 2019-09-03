@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2019-03-19 #}
+{# wf_updated_on: 2019-07-25 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -10,8 +10,12 @@ description: Add to Home Screen gives you the ability to let users quickly and s
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
+**If your PWA has use cases where it’s helpful for a user to install
+your app, for example if you have users who use your app more than once a
+week, you should be promoting the installation of your PWA within the web UI of
+your app.**
 
-**Add to Home Screen**, sometimes referred to as the web app install prompt,
+Add to Home Screen, sometimes referred to as the web app install prompt,
 makes it easy for users to install your Progressive Web App on their mobile
 or [desktop device](/web/progressive-web-apps/desktop). After the user
 accepts the prompt, your PWA will be added to their launcher, and it will run
@@ -29,10 +33,10 @@ Chrome handles most of the heavy lifting for you:
 
 {% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
 
-Note: If the web app manifest includes <code>related_applications</code> and
-has <code>"prefer_related_applications": true</code>, the
-<a href="/web/fundamentals/app-install-banners/native">native app install
-prompt</a> will be shown instead.
+Note: If the web app manifest includes `related_applications` and
+has `"prefer_related_applications": true`, the
+[native app install prompt](/web/fundamentals/app-install-banners/native)
+will be shown instead.
 
 ## Show the Add to Home Screen dialog {: #trigger }
 
@@ -51,9 +55,6 @@ In order to show the Add to Home Screen dialog, you need to:
 
 <div class="clearfix"></div>
 
-Note: Chrome 67 and earlier showed an "Add to home screen" banner. It
-was removed in Chrome 68.
-
 ### Listen for `beforeinstallprompt`
 
 If the add to home screen [criteria](#criteria) are met, Chrome will fire a
@@ -64,36 +65,42 @@ When the `beforeinstallprompt` event has fired, save a reference to the event,
 and update your user interface to indicate that the user can add your app
 to their home screen.
 
-    let deferredPrompt;
+```js
+let deferredPrompt;
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent Chrome 67 and earlier from automatically showing the prompt
-      e.preventDefault();
-      // Stash the event so it can be triggered later.
-      deferredPrompt = e;
-    });
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  ...
+});
+```
 
 ### Notify the user your app can be installed
 
-The best way to notify the user your app can be installed is by adding a button
-or other element to your user interface. **Don't show a full page interstitial
-or other elements that may be annoying or distracting.**
+There are many different [patterns][install-patterns-mobile] that you can
+use to notify the user your app can be installed and promote the installation,
+for example, a button in the header, an item in the navigation menu, or an
+item in your content feed.
 
 <pre class="prettyprint">
 window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   <strong>// Update UI notify the user they can add to home screen
-  btnAdd.style.display = 'block';</strong>
+  showInstallPromotion();</strong>
 });
 </pre>
 
-Success: you may want to wait before showing the prompt to the user,
+Note: See [Patterns for Promoting PWA Installation][install-patterns-mobile]
+for recommended patterns and best practices for notifying the user your PWA is
+installable.
+
+You may want to wait before showing the prompt to the user,
 so you don't distract them from what they're doing. For example, if the user
 is in a check-out flow, or creating their account, let them complete that
 before interrupting them with the prompt.
+
+[install-patterns-mobile]: /web/fundamentals/app-install-banners/promoting-install-mobile
 
 ### Show the prompt
 
@@ -105,32 +112,30 @@ Then, listen for the promise returned by the `userChoice` property. The
 promise returns an object with an `outcome` property after the prompt has
 shown and the user has responded to it.
 
-    btnAdd.addEventListener('click', (e) => {
-      // hide our user interface that shows our A2HS button
-      btnAdd.style.display = 'none';
-      // Show the prompt
-      deferredPrompt.prompt();
-      // Wait for the user to respond to the prompt
-      deferredPrompt.userChoice
-        .then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
-          } else {
-            console.log('User dismissed the A2HS prompt');
-          }
-          deferredPrompt = null;
-        });
+```js
+btnAdd.addEventListener('click', (e) => {
+  // hide our user interface that shows our A2HS button
+  btnAdd.style.display = 'none';
+  // Show the prompt
+  deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  deferredPrompt.userChoice
+    .then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
     });
+});
+```
 
 You can only call `prompt()` on the deferred event once. If the user dismisses
 it, you'll need to wait until the `beforeinstallprompt` event is fired on
 the next page navigation.
 
 <<_mini-info-bar.md>>
-
-## Feedback {: .hide-from-toc }
-
-{% include "web/_shared/helpful.html" %}
 
 <div class="clearfix"></div>
 
@@ -139,9 +144,11 @@ the next page navigation.
 To determine if the app was successfully added to the user's home screen _after_
 they accepted the prompt, you can listen for the `appinstalled` event.
 
-    window.addEventListener('appinstalled', (evt) => {
-      app.logEvent('a2hs', 'installed');
-    });
+```js
+window.addEventListener('appinstalled', (evt) => {
+  console.log('a2hs installed');
+});
+```
 
 ## Detecting if your app is launched from the home screen {: #detect-mode }
 
@@ -153,28 +160,33 @@ on how the app was launched, or determine how it was launched with JavaScript.
 To apply a different background color for the app above when being launched
 from the home screen with `"display": "standalone"`, use conditional CSS:
 
-    @media all and (display-mode: standalone) {
-      body {
-        background-color: yellow;
-      }
-    }
+```css
+@media all and (display-mode: standalone) {
+  body {
+    background-color: yellow;
+  }
+}
+```
 
 It's also possible to detect if the `display-mode` is standalone from
 JavaScript:
 
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      console.log('display-mode is standalone');
-    }
+```js
+if (window.matchMedia('(display-mode: standalone)').matches) {
+  console.log('display-mode is standalone');
+}
+```
 
 ### Safari
 
 To determine if the app was launched in `standalone` mode in Safari, you can
 use JavaScript to check:
 
-    if (window.navigator.standalone === true) {
-      console.log('display-mode is standalone');
-    }
-
+```js
+if (window.navigator.standalone === true) {
+  console.log('display-mode is standalone');
+}
+```
 
 ## Updating your app's icon and name
 
@@ -190,7 +202,6 @@ once the device has is plugged in and connected to WiFi.
 On Desktop, the manifest is not automatically updated, but this is planned
 for a future update.
 
-
 ## Test your add to home screen experience {: #test }
 
 You can manually trigger the `beforeinstallprompt` event with Chrome DevTools.
@@ -202,7 +213,6 @@ Caution: Chrome has a slightly different install flow for desktop and mobile.
 Although the instructions are similar, testing on mobile <b>requires</b> remote
 debugging; without it, Chrome will use the desktop install flow.
 
-
 ### Chrome for Android
 
 1. Open a [remote debugging](/web/tools/chrome-devtools/remote-debugging/)
@@ -210,7 +220,6 @@ debugging; without it, Chrome will use the desktop install flow.
 2. Go to the **Application** panel.
 3. Go to the **Manifest** tab.
 4. Click **Add to home screen**
-
 
 ### Chrome OS, Linux, or Windows
 
@@ -225,3 +234,7 @@ The easiest way to test if the `beforeinstallprompt` event will be fired, is
 to use [Lighthouse](/web/tools/lighthouse/) to audit your app, and check the
 results of the [User Can Be Prompted To Install The Web App](/web/tools/lighthouse/audits/install-prompt)
 test.
+
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}

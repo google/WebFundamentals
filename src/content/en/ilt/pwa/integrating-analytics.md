@@ -2,11 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2016-01-01 #}
 
 
 # Integrating Analytics {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

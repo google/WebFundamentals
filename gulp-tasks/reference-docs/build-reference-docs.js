@@ -10,85 +10,43 @@
 const path = require('path');
 const os = require('os');
 const fs = require('fs-extra');
+const semver = require('semver');
 
-const getLatestTags = require('./get-latest-tags');
-const filterTagsToBuild = require('./filter-tags-to-build');
+const {getLatestTags} = require('./get-latest-tags');
 const getSourceCode = require('./get-source-code');
 const buildJSDocs = require('./build-js-docs');
+
+// The oldest major version we publish docs for.
+const oldestMajorVersion = 2;
 
 /**
  * Given a set of tags - Loop through each one and build the docs if needed.
  *
- * @param {Array<string>} latestTags The array of Git tags to build.
+ * @param {Object} latestTags And object mapping folder names to release tags.
+ *     The object keys will be major verions (e.g. `v4`) or either `latest`
+ *     or `prerelease`.
  * @param {string} gitUrl The URL of the Git repo to get tags from.
  * @param {string} docPath The path to write the docs to.
  * @param {string} jsdocConfPath The path to the JSDoc config file.
- * @param {string} latestDirName The name to use for a copy of the most up
- * to date docs. For stable releases this would be 'latest', for prereleases
- * it's 'prerelease'.
- * @return {Promise}
  */
-const buildReferenceDocsForTags =
-  (latestTags, gitUrl, docPath, jsdocConfPath, latestDirName) => {
-  // Filter the list down to tags that need to be built
-  return filterTagsToBuild(latestTags, docPath)
-  .then((tagsToBuild) => {
-    return tagsToBuild.reduce((promiseChain, tag) => {
-      return promiseChain.then(() => {
-        const tmpSrCodePath = path.join(
-          os.tmpdir(), Date.now().toString(), tag);
-        return getSourceCode(gitUrl, tag, tmpSrCodePath)
-        .then(() => {
-          const taggedOutputPath = path.join(docPath, tag);
-          return buildJSDocs(
-            tag, tmpSrCodePath, taggedOutputPath, jsdocConfPath);
-        })
-        .then(() => {
-          if (tag === latestTags[0]) {
-            const latestOutputPath = path.join(docPath, latestDirName);
-            fs.removeSync(latestOutputPath);
-            return buildJSDocs(
-              tag, tmpSrCodePath, latestOutputPath, jsdocConfPath);
-          }
-        });
-      });
-    }, Promise.resolve());
-  });
-};
+const buildReferenceDocsForTags = async (
+    latestTags, gitUrl, docPath, jsdocConfPath) => {
+  for (const [folder, tag] of Object.entries(latestTags)) {
+    const taggedOutputPath = path.join(docPath, folder);
 
-/**
- * Builds the stable release tags.
- *
- * @param {string} gitUrl The Github URL.
- * @param {string} docPath Path to place the documentation files (i.e. built
- * JSDocs)
- * @param {string} jsdocConfPath Path to the JSDoc config path/
- * @return {Promise}
- */
-const buildStableReleases = (gitUrl, docPath, jsdocConfPath) => {
-  // Get all of the latest tags from Github
-  return getLatestTags.stable(gitUrl)
-  .then((tags) => {
-    return buildReferenceDocsForTags(
-      tags, gitUrl, docPath, jsdocConfPath, 'latest');
-  });
-};
+    // If this tag is for an older version, and a folder for that version
+    // already exists on the file system. Assume it doesn't need to be rebuilt.
+    // NOTE: if you need to rebuild the docs for some reason, you can do
+    // so by deleting the folder before running this command.
+    if (semver.lt(tag, latestTags.latest) &&
+      await fs.pathExists(taggedOutputPath)) {
+      continue;
+    }
 
-/**
- * Builds the prerelease tags.
- *
- * @param {string} gitUrl The Github URL.
- * @param {string} docPath Path to place the documentation files (i.e. built
- * JSDocs)
- * @param {string} jsdocConfPath Path to the JSDoc config path/
- * @return {Promise}
- */
-const buildPreleases = (gitUrl, docPath, jsdocConfPath) => {
-  return getLatestTags.prerelease(gitUrl)
-  .then((tags) => {
-    return buildReferenceDocsForTags(
-      tags, gitUrl, docPath, jsdocConfPath, 'prerelease');
-  });
+    const tmpSrCodePath = path.join(os.tmpdir(), Date.now().toString(), tag);
+    await getSourceCode(gitUrl, tag, tmpSrCodePath);
+    await buildJSDocs(tag, tmpSrCodePath, taggedOutputPath, jsdocConfPath);
+  }
 };
 
 /**
@@ -98,13 +56,12 @@ const buildPreleases = (gitUrl, docPath, jsdocConfPath) => {
  * @param {string} docPath Path to place the documentation files (i.e. built
  * JSDocs)
  * @param {string} jsdocConfPath Path to the JSDoc config path/
- * @return {Promise}
  */
-const buildReferenceDocs = (gitUrl, docPath, jsdocConfPath) => {
-  return buildStableReleases(gitUrl, docPath, jsdocConfPath)
-  .then(() => {
-    return buildPreleases(gitUrl, docPath, jsdocConfPath);
-  });
+const buildReferenceDocs = async (gitUrl, docPath, jsdocConfPath) => {
+  const latestTags = await getLatestTags(gitUrl, oldestMajorVersion);
+
+  await buildReferenceDocsForTags(
+      latestTags, gitUrl, docPath, jsdocConfPath, 'latest');
 };
 
 module.exports = buildReferenceDocs;

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn how the Payment Request API works at a high level.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2019-07-30 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How Payment Request API Works {: .page-title }
@@ -33,10 +33,10 @@ does, without getting bogged down in the details.
 
 Constructing a `PaymentRequest` object requires two parameters: _payment
 methods_ and _payment details_. In addition, a third _payment options_ parameter
-is optional. A basic request could be created like this.
+is optional. A basic request could be created like this:
 
 ```javascript
-var request = new PaymentRequest(paymentMethods, paymentDetails, paymentOptions);
+const request = new PaymentRequest(paymentMethods, paymentDetails, paymentOptions);
 ```
 
 Let's look at how each parameter is built and used.
@@ -108,7 +108,7 @@ email address, a phone number, and a name. The shipping type is set to specify
 the shipping address as _delivery_.
 
 ```javascript
-var options = {
+const options = {
   requestShipping: true,
   requestPayerEmail: true,
   requestPayerPhone: true,
@@ -117,7 +117,7 @@ var options = {
 };
 ```
 
-## The show() Method
+## The `show()` Method
 
 After setting the three parameters and creating the `request` object as shown
 above, you can call the `show()` method, which displays the Payment Request user
@@ -159,7 +159,7 @@ initiate the payment via a PSP.
 
 Finally, you may close the Payment Request UI by completing the process with
 `response.complete('success')` or `response.complete('fail')` depending on the
-result of PSP returns.
+result that the PSP returns.
 
 ## Next Up
 

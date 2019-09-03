@@ -2,11 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-07-02 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2016-01-01 #}
 
 
 # Introduction to Progressive Web App Architectures {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 
@@ -175,7 +177,7 @@ The app shell model is great but how does it work in browsers that do not suppor
 <p>web app manifest</p>
 </td><td colspan="1" rowspan="1">
 <p>The app shell is deployed alongside a  <a href="https://www.w3.org/TR/appmanifest/"><strong>web app manifest</strong></a>, which is a simple JSON file that controls how the application appears to the user and how it can be launched. (This is typically named <code>manifest.json</code>.) When connecting to a network for the first time, a web browser reads the manifest file, downloads the resources given and stores them locally. Then, if there is no network connection, the browser uses the local cache to render the web app while offline.</p>
-<p><strong> <em>Note:</em> </strong> <em> Do not confuse this with the older </em>  <em><code>.manifest</code></em>  <em> file used by AppCache. PWAs should use the service worker to implement caching and the web app manifest to enable "add to homescreen" and push messaging. </em> </p>
+<p><strong> <em>Note:</em> </strong> <em> Do not confuse this with the older </em>  <em><code>.manifest</code></em>  <em> file used by AppCache. PWAs should use the service worker to implement caching and the web app manifest to enable Add to Home Screen" and push messaging. </em> </p>
 </td>
 </tr></table>
 
@@ -447,7 +449,7 @@ When should you use the app shell architecture?  It makes the most sense for app
 
 ### App Shell Features
 
-PWAs use a service worker to cache the app shell and data content so that it always loads fast regardless of the network conditions, even when fully offline, retrieving from cache when appropriate and making live calls when appropriate. For instance, a service worker can redirect HTTP/HTTPS requests to a cache and serve dynamic data from a local database. But, unlike  [the older AppCache standard](http://www.w3schools.com/html/html5_app_cache.asp) with its fixed rules, all of these decisions happen in the code that you write. Developers get to decide how network requests from apps are handled.
+PWAs use a service worker to cache the app shell and data content so that it always loads fast regardless of the network conditions, even when fully offline, retrieving from cache when appropriate and making live calls when appropriate. For instance, a service worker can redirect HTTP/HTTPS requests to a cache and serve dynamic data from a local database. But, unlike  [the older AppCache standard](https://www.w3schools.com/html/html5_webstorage.asp) with its fixed rules, all of these decisions happen in the code that you write. Developers get to decide how network requests from apps are handled.
 
 ### Benefits
 
@@ -469,7 +471,7 @@ The benefits of an app shell architecture with a service worker include:
 
 For a simple example of a web app manifest file, see the Use a Web App Manifest File section.
 
-You can see actual offline application shells demonstrated in Jake Archibald's demo of an  [offline Wikipedia app](https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty),  [Flipkart Lite](http://tech-blog.flipkart.net/2015/11/progressive-web-app/) (an e-commerce company), and  [Voice Memos](https://github.com/googlechrome/voice-memos) (a sample web app that records voice memos). For a very basic app shell plus service worker example with minimal options about frameworks or libraries, see  [app-shell.appspot.com](http://app-shell.appspot.com).
+You can see actual offline application shells demonstrated in Jake Archibald's demo of an  [offline Wikipedia app](https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty),  [Flipkart Lite](/web/showcase/2016/flipkart) (an e-commerce company), and  [Voice Memos](https://github.com/googlechrome/voice-memos) (a sample web app that records voice memos). For more on the app shell plus a service worker example with minimal options about frameworks or libraries, see [Your First Progressive Web App](/web/fundamentals/codelabs/your-first-pwapp/).
 
 Other great examples include  [AliExpress](/web/showcase/2016/aliexpress), one of the world's largest e-commerce sites,  [BaBe](/web/showcase/2016/babe), an Indonesian news aggregator service,  [United eXtra](/web/showcase/2016/extra), a leading retailer in Saudi Arabia, and  [The Washington Post](https://www.washingtonpost.com/pr/wp/2016/05/19/the-washington-post-introduces-new-progressive-web-app-experience/), America's most widely circulated newspaper.
 
@@ -478,14 +480,11 @@ Other great examples include  [AliExpress](/web/showcase/2016/aliexpress), one o
 
 ## How to Create an App Shell
 
-
-
-
 So, your next step could be to add a service worker to your existing web app. Using a service worker is one of the things that turns a single-page app into an app shell. (See the  [App Shell Features](#features) section earlier in this document for a description of the service worker.)
 
 However, there are many situations that can affect your strategy for structuring your PWA and its app shell. It is important to understand the network traffic so you know what to actually precache and what to request as far as dynamic content. These decisions cannot be arbitrary.
 
-You can use  [Chrome Developer Tools](https://developer.chrome.com/devtools/docs/remote-debugging) to help analyze network traffic patterns. It is also important to ask yourself: "What are people trying to achieve when they visit my site?"
+You can use  [Chrome Developer Tools](/web/tools/chrome-devtools/remote-debugging/) to help analyze network traffic patterns. It is also important to ask yourself: "What are people trying to achieve when they visit my site?"
 
 ### Exercise
 
@@ -883,14 +882,14 @@ Structure your app for a clear distinction between the page shell and the dynami
 
 ### Use a Web App Manifest File
 
-In essence, the manifest provides the ability to create user experiences that are more comparable to that of a native application. The web app manifest contains metadata provided by the web developer that can be used when a web app is added to a user's homescreen on Android. This includes things like a high-resolution icon, the web app's name, splash screen colors, and other properties.
+In essence, the manifest provides the ability to create user experiences that are more comparable to that of a native application. The web app manifest contains metadata provided by the web developer that can be used when a web app is added to a user's home screen on Android. This includes things like a high-resolution icon, the web app's name, splash screen colors, and other properties.
 
 It is a simple JSON file that provides developers with:
 
 * A centralized place to put metadata about a web site, such as fields for the application name, display mode information such as background color and font size, links to icons, and so on.
 * A way to declare a default orientation for their web application,and provide the ability to set the display mode for the application (e.g., in full screen).
 
-The following manifest file is for the simple app shell at  [appspot.com](https://app-shell.appspot.com/).
+The following manifest file is for a simple app shell.
 
 ```
 {

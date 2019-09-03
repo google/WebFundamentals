@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2019-03-01 #}
+{# wf_updated_on: 2019-07-10 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -35,14 +35,6 @@ parts of the DevTools UI.
   jump straight into the **Console** panel.
 
 See [Open Chrome DevTools](/web/tools/chrome-devtools/open) for more details and workflows.
-
-## DevTools for Beginners {: #beginners }
-
-DevTools for Beginners teaches you the **fundamentals of web development** as well as the basics of DevTools.
-Check out [Get started](#get-started) below if you'd prefer tutorials that focus on DevTools.
-
-* [Get Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html)
-* [Get Started with CSS](/web/tools/chrome-devtools/beginners/css)
 
 ## Get started {: #start }
 
@@ -88,6 +80,7 @@ View and change the DOM and CSS.
 * [Edit Styles](/web/tools/chrome-devtools/inspect-styles/edit-styles)
 * [Edit the DOM](/web/tools/chrome-devtools/inspect-styles/edit-dom)
 * [Inspect Animations](/web/tools/chrome-devtools/inspect-styles/animations)
+* [Find Unused CSS](/web/tools/chrome-devtools/coverage/)
 
 <div style="clear:both;"></div>
 
@@ -117,6 +110,7 @@ save and run snippets of JavaScript, and save changes that you make in DevTools 
 * [Run Snippets Of Code From Any Page](/web/tools/chrome-devtools/snippets)
 * [JavaScript Debugging Reference](/web/tools/chrome-devtools/javascript/reference)
 * [Persist Changes Across Page Reloads with Local Overrides](/web/updates/2018/01/devtools#overrides)
+* [Find Unused JavaScript](/web/tools/chrome-devtools/coverage/)
 
 <div style="clear:both;"></div>
 

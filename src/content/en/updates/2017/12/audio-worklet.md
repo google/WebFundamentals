@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 {# wf_published_on: 2017-12-14 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2019-05-28 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
-{# wf_tags: chrome64,chrome66,webaudio #}
+{# wf_tags: chrome64,chrome66,webaudio,worklet #}
 {# wf_featured_snippet: Chrome 64 comes with a highly anticipated new feature in Web Audio API - Audio Worklet. Audio Worklet nicely keeps the user-supplied JavaScript code all within the audio processing thread — that is, it doesn’t have to jump over to the main thread to process audio. #}
 {# wf_blink_components: Blink>WebAudio #}
 
@@ -19,7 +19,9 @@ Chrome 64 comes with a highly anticipated new feature in Web Audio API -
 article introduces its concept and usage for those who are eager to create a
 custom audio processor with JavaScript code. Please take a look at the [live
 demos](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/) on
-GitHub or [the instruction](#experimental) on how to use this feature.
+GitHub. Also the next article in series, [Audio Worklet Design
+Pattern](/web/updates/2018/06/audio-worklet-design-pattern), might be an
+interesting read for building an advanced audio app.
 
 ### Background: ScriptProcessorNode
 

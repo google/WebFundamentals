@@ -3,8 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description:語義在網頁導航中的作用
 
 
-{# wf_updated_on:2016-10-04 #}
-{# wf_published_on:2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-10-04 #}
 
 # 語義和內容導航 {: .page-title }
 
@@ -40,14 +40,14 @@ description:語義在網頁導航中的作用
 
 
 大多數結構良好的網頁均採用嵌套式標題級別，以指示內容塊之中的父-子關係。
-[WebAIM 檢查清單](http://webaim.org/standards/wcag/checklist)反覆提及了這一方法。
+[WebAIM 檢查清單](https://webaim.org/standards/wcag/checklist)反覆提及了這一方法。
 
 
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external } 提到“使用語義標記來指定標題”
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external } 提到可利用標題結構這種方法來繞過內容塊
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external } 闡述了一些關於編寫有用標題的詳情
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external } 指出“視情況利用標題來指定各個內容區”
+ - [1.3.1](https://webaim.org/standards/wcag/checklist#sc1.3.1){: .external } 提到“使用語義標記來指定標題”
+ - [2.4.1](https://webaim.org/standards/wcag/checklist#sc2.4.1){: .external } 提到可利用標題結構這種方法來繞過內容塊
+ - [2.4.6](https://webaim.org/standards/wcag/checklist#sc2.4.6){: .external } 闡述了一些關於編寫有用標題的詳情
+ - [2.4.10](https://webaim.org/standards/wcag/checklist#sc2.4.10){: .external } 指出“視情況利用標題來指定各個內容區”
 
 
 
@@ -69,7 +69,7 @@ description:語義在網頁導航中的作用
 
     <h2 class="sr-only">This heading is offscreen.</h2>
 
-Note: WebAIM 網站在[這篇有關屏幕外內容的文章](http://webaim.org/techniques/css/invisiblecontent/)中對此方法做了詳細闡述。
+Note: WebAIM 網站在[這篇有關屏幕外內容的文章](https://webaim.org/techniques/css/invisiblecontent/)中對此方法做了詳細闡述。
 
 
 對於複雜應用，如果視覺設計不需要或沒有空間容納可見標題，可能適合採用此方法來容納標題。

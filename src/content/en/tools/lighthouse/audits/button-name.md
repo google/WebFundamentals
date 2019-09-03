@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Buttons have an accessible name" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2019-05-08 #}
 {# wf_published_on: 2017-05-11 #}
 {# wf_blink_components: N/A #}
 
@@ -46,7 +46,7 @@ For `<input type="submit">` and `<input type="reset">`:
 This audit is powered by the aXe Accessibility Engine. See [Buttons must have
 discernible text][axe].
 
-[axe]: https://dequeuniversity.com/rules/axe/1.1/button-name
+[axe]: https://dequeuniversity.com/rules/axe/3.2/button-name
 
 ## Feedback {: #feedback }
 

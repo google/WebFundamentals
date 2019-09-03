@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Ringkasan fokus layar dalam aksesibilitas
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Pengantar Fokus {: .page-title }
@@ -57,7 +57,7 @@ Sebagian pengguna mengoperasikan komputer mereka hampirnya sepenuhnya dengan key
 perangkat masukan lainnya. Bagi para pengguna tersebut, fokus sangatlah penting; inilah sarana utama mereka untuk
 melakukan apa saja di layar. Karena alasan itu, daftar periksa Web AIM menyatakan
 di bagian 2.1.1 bahwa [semua fungsionalitas laman harus tersedia menggunakan
-keyboard](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
+keyboard](https://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
 kecuali jika ada yang tidak bisa Anda lakukan dengan keyboard, misalnya menggambar bebas.
 
 Sebagai pengguna, Anda bisa mengontrol elemen mana yang saat ini difokus dengan menggunakan `Tab`,

@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Nick Butcher on prototyping motion and material design
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-05 #}
+{# wf_updated_on: 2019-07-23 #}
 {# wf_published_on: 2018-10-09 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E4_prototyping_motion.mp3 #}
 {# wf_podcast_duration: 00:19:58 #}
@@ -42,7 +42,7 @@ In this episode:
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E4_prototyping_motion.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
-<a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,
+<a href="https://bit.ly/MustafaOnSpotify">Spotify</a>
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> or
 <a href="https://goo.gl/qCBlST">Google Music</a>

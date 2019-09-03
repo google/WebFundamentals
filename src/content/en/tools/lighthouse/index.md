@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit your web apps.
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2019-02-26 #}
 {# wf_published_on: 2016-09-27 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -95,6 +95,8 @@ Choose the Lighthouse workflow that suits you best:
 * [From the command line](#cli). Automate your Lighthouse runs via shell scripts.
 * [As a Node module](#programmatic). Integrate Lighthouse into your continuous
   integration systems.
+* [From a web UI](#psi). Run Lighthouse and link to reports without
+  installing a thing.
 
 Note: Every Lighthouse workflow requires you to have an instance of Google Chrome
 installed on your machine.
@@ -204,6 +206,22 @@ To run an audit:
      </figure>
 
 
+### Run PageSpeed Insights {: #psi }
+
+To run Lighthouse on PageSpeed Insights:
+
+1. Navigate to [PageSpeed Insights](/speed/pagespeed/insights/).
+1. Enter a web page URL.
+1. Click **Analyze**.
+
+     <figure>
+       <img src="images/lighthouse-psi.png" alt="The PageSpeed Insights UI.">
+       <figcaption>
+         <b>Figure 5</b>. The PageSpeed Insights UI
+       </figcaption>
+     </figure>
+
+
 ## Share and view reports online {: #report-viewer }
 
 Use the [Lighthouse Viewer][viewer] to view and share reports online.
@@ -211,7 +229,7 @@ Use the [Lighthouse Viewer][viewer] to view and share reports online.
 <figure>
   <img src="images/viewer.png" alt="The Lighthouse Viewer.">
   <figcaption>
-    <b>Figure 5</b>. The Lighthouse Viewer
+    <b>Figure 6</b>. The Lighthouse Viewer
   </figcaption>
 </figure>
 

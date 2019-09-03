@@ -1,34 +1,55 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
+description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-03-20 #}
+{# wf_updated_on: 2019-08-21 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
 {# wf_featured_snippet: We strongly believe that every developer should have access to the capabilities they need to make a great web experience, and we are committed to a more capable web. Learn about some of the new APIs we're considering and how you can get involved. #}
 {# wf_blink_components: N/A #}
 
-# Capabilities {: .page-title }
+# Unlocking new capabilities for the web {: .page-title }
 
-> **We want to close the capability gap between the web and native and make it
-> easy for developers to build great experiences on the open web.**
+<style>
+  .proj-goal {
+    font-size: inherit;
+    font-family: Google Sans, sans-serif;
+  }
+</style>
 
-There are some capabilities, like file system access, idle detection, and
-more that are available to native but aren’t available on the web. These
-missing capabilities mean some types of apps can't be delivered on the
-web, or are less useful.
+<aside class="success proj-goal">
+  Web apps should be able to do anything native apps can.
+  We want to make it possible for you to build and deliver apps on the open
+  web that have never been possible before.
+</aside>
 
-We strongly believe that every developer should have access to the capabilities
-they need to make a great web experience, and we are committed to a more
-capable web.
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="GSiUzuB-PoI"
+          data-autohide="1" data-showinfo="1" frameborder="1" allowfullscreen>
+  </iframe>
+</div>
 
-We will design and develop these new capabilities in an
-[open and transparent way](#process), using the existing open web platform
-standards processes while getting early feedback from developers and other
-browser vendors as we iterate on the design, to ensure an interoperable design.
+The web is an amazing platform, it reaches users all around the world - on
+essentially any device. It’s easy to use, and easy to share. There’s nothing
+to install. But most importantly, it’s an open-ecosystem that anyone can use
+or build on.
 
-You can see the [full list](https://goo.gl/JkDCXM) of capabilities we're
-considering on <crbug.com> and filtering issues with the `proj-fugu` label.
+There are some apps that are not possible to build and deliver on the open
+web today. We call this, the *app gap*. The gap between what’s possible on the
+web and what’s possible on native. We want to close that gap. We believe web
+apps should be able to do anything native apps can.
+
+> Through our capabilities project, we want to make it possible for web apps
+> to do anything native apps can, by exposing the capabilities of native
+> platforms to the web platform, while maintaining user security, privacy,
+> trust, and other core tenets of the web.
+
+## The new capabilities
+
+You can see the [full list](https://crbug.com/?q=proj-fugu) of capabilities we're
+considering on [crbug.com](https://crbug.com) and filtering issues with the
+`proj-fugu` label.
 
 <aside class="note">
   <b>Have a suggestion for a capability you think we should consider?</b>
@@ -38,7 +59,13 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
   that might be helpful.
 </aside>
 
-## In flight {: #in-flight }
+### Capabilities in flight {: #in-flight }
+
+<aside class="success">
+  <b>New</b>
+  See a completely list of APIs we're working on and approximate time
+  lines in our <a href="https://bit.ly/fugu-api-tracker">API Tracker</a>.
+</aside>
 
 <table>
   <thead>
@@ -62,7 +89,22 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
         such as an unread count.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> March 12th, 2019
+        <b>Last Updated:</b> August 21st, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2019/08/contact-picker">Contact Picker API</a>
+      </td>
+      <td>
+        The Contact Picker API is a new, on-demand picker that allows users to
+        select entries from their contact list and share limited details of
+        the selected entries with a website. It allows users to share only
+        what they want, when they want, and makes it easier for users to
+        reach and connect with their friends and family.
+        <br><br>
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> August 7th, 2019
       </td>
     </tr>
     <tr>
@@ -72,7 +114,7 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
         </a>
       </td>
       <td>
-        The <code>getInstalledRelatedApps</code> API is a new web platform API
+        The Get Installed Related Apps API is a new web platform API
         that allows your web app to check to see if your native app is
         installed on the users device, and vice versa.
         <br><br>
@@ -82,7 +124,25 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2019/01/shape-detection">Shape Detection API</a>
+        <a href="/web/updates/2019/08/native-file-system">
+          Native File System API
+        </a>
+      </td>
+      <td>
+        The Native File System API (formerly known as the Writable Files API)
+        enables developers to build powerful web apps that interact with files
+        on the users local device, like IDEs, photo and video editors, text
+        editors, and more. After a user grants a web app access, this API
+        allows web apps to read or save changes directly to files and folders
+        on the users device.
+        <br><br>
+        <b>Current Status:</b> Behind a flag.<br>
+        <b>Last Updated:</b> August 20th, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2019/01/shape-detection">Shape&nbsp;Detection API</a>
       </td>
       <td>
         The Shape Detection API opens up native implementations of shape
@@ -91,7 +151,7 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
         barcode detection, and text detection (Optical Character Recognition).
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> February 2nd, 2019
+        <b>Last Updated:</b> May 28th, 2019
       </td>
     <tr>
       <td>
@@ -106,29 +166,14 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
         the device from going to sleep when an application needs to keep
         running.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
-        <b>Last Updated:</b> December 18th, 2018
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/web/updates/2018/11/writable-files">Writable Files API</a>
-      </td>
-      <td>
-        The writable files API is designed to increase interoperability of
-        web applications with native applications, making it possible for users
-        to choose files or directories that a web app can interact with on the
-        native file system, and without having to use a native wrapper like
-        Electron to ship your web app.
-        <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
-        <b>Last Updated:</b> November 12th, 2018
+        <b>Current Status:</b> Behind a flag.<br>
+        <b>Last Updated:</b> May 28th, 2019
       </td>
     </tr>
   </tbody>
 </table>
 
-## Launched {: #launched }
+### Launched capabilities {: #launched }
 
 <table>
   <thead>
@@ -138,6 +183,21 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>
+        <a href="/web/updates/2019/07/image-support-for-async-clipboard">
+          Async&nbsp;Clipboard API (images)
+        </a>
+      </td>
+      <td>
+        In Chrome 66, we shipped the Asynchronous Clipboard API with
+        support for reading and writing text. In Chrome 76, we added support
+        for reading and writing images to the clipboard.
+        <br><br>
+        <b>Status:</b> Launched in Chrome 76<br>
+        <b>Last Updated:</b> July 3rd, 2019
+      </td>
+    </tr>
     <tr>
       <td>
         <a href="/web/updates/2018/12/web-share-target">Web Share Target</a>
@@ -154,6 +214,12 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
     </tr>
   </tbody>
 </table>
+
+<aside class="key-point">
+  <b>Want to try some of these new capabilities?</b> Check out the
+  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">
+  Web Capabilities Codelab</a>.
+</aside>
 
 ## How will we design & implement these new capabilities? {: #process }
 
@@ -193,11 +259,10 @@ on bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/list?can=2&q=T
 ### Create an explainer
 
 After identifying the need for a new capability, create an
-[explainer](https://github.com/w3ctag/w3ctag.github.io/blob/master/explainers.md).
-The explainer should have enough detail to identify the problem the new
-capability provides and helps people understand the scope of the problem. The
-Explainer is a living design document that will go through heavy iteration as
-the new capability evolves.
+[explainer](https://github.com/w3ctag/w3ctag.github.io/blob/master/explainers.md),
+essentially a design doc that is meant to explain the problem, along with some
+sample code showing how the API might work. The explainer is a living design
+document that will go through heavy iteration as the new capability evolves.
 
 ### Get feedback and iterate on the explainer
 
@@ -209,21 +274,35 @@ there really is a need for this capability.
 
 ### Move the design to a specification & iterate
 
-At this point, the design work will transition into the standards process,
-creating a formal specification, working with developers and other browser
-vendors to iterate and improve on the design.
+Once the explainer is in a good state, the design work transitions into a
+formal specification, working with developers and other browser vendors to
+iterate and improve on the design.
 
-As the design begins to stabilize, an [origin
-trial](https://github.com/GoogleChrome/OriginTrials) might be helpful. Origin
-trials provide a means to safely experiment with new web platform features in
-Chrome and help to verify the proposal solves the problem it set out to solve.
+Then, once the design starts to stabilize, we typically use an
+[origin trial](https://github.com/GoogleChrome/OriginTrials) to experiment
+with the implementation. Origin trials allow you to try new features with
+real users, and give feedback on the implementation. This real world feedback
+helps shape and validate the design, ensuring we get it right, before it
+becomes a standard.
 
 ### Ship it
 
-Finally, after the spec has been finalized, the origin trial is complete and all
-of the steps and approvals from the [Blink launch
-process](https://www.chromium.org/blink/launching-features) have been completed,
-it’s time to ship it.
+Finally, once the origin trial is complete, the spec has been finalized, and
+all of the other launch steps have been completed, it’s time to ship it to
+stable.
+
+## Design for user security, privacy, and trust
+
+Some of these features may seem scary at first, especially in light of how
+they’re implemented on native. But the web is inherently safer than native,
+opening a web page shouldn’t be scary.
+
+Nothing should ever be granted access by default, but instead rely on a
+permission model that puts the user in total control, and is easily
+revoke-able. It needs to be crystal clear when, and how these APIs are being
+used. We've outlined some of our thought process in
+[Controlling Access to Powerful Web Platform Features](https://bit.ly/powerful-apis).
+
 
 <div class="clearfix"></div>
 

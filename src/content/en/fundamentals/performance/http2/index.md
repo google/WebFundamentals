@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing streams and frame control to the web.
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2019-09-01 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -269,7 +269,7 @@ us to:
 * Use a single connection to deliver multiple requests and responses in parallel.
 * Remove unnecessary HTTP/1.x workarounds (see
   [Optimizing for HTTP/1.x](https://hpbn.co/optimizing-application-delivery/#optimizing-for-http1x),
-  such as concatenated files, image sprites, and domain sharding.
+  such as concatenated files, image sprites, and domain sharding).
 * Deliver lower page load times by eliminating unnecessary latency and improving
   utilization of available network capacity.
 * *And much more…*
@@ -571,7 +571,7 @@ For full details of the HPACK compression algorithm, see
 
 * [“HTTP/2”](https://hpbn.co/http2/){: .external }
     – The full article by Ilya Grigorik
-* [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external }
+* [“Setting up HTTP/2”](https://dassur.ma/things/h2setup/){: .external }
     – How to set up HTTP/2 in different backends by Surma
 * [“HTTP/2 is here,
 let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19)

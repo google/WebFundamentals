@@ -119,7 +119,7 @@ elements directly using JavaScript:
 
     const header = document.createElement('header');
     const h1 = document.createElement('h1');
-    h1.textContent = 'Hello world!';
+    h1.textContent = 'Hello DOM';
     header.appendChild(h1);
     document.body.appendChild(header);
 

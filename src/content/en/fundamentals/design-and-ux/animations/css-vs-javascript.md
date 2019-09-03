@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: You can animate with CSS or JavaScript. Which should you use, and why?
 
 {# wf_blink_components: Blink>Animation #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-08-03 #}
 {# wf_published_on: 2014-08-08 #}
 
 # CSS Versus JavaScript Animations {: .page-title }
@@ -22,7 +22,7 @@ There are two primary ways to create animations on the web: with CSS and with Ja
 Most basic animations can be created with either CSS or JavaScript, but the amount of effort and time differs (see also [CSS vs JavaScript Performance](animations-and-performance#css-vs-javascript-performance)). Each has its pros and cons, but these are good guidelines:
 
 * **Use CSS when you have smaller, self-contained states for UI elements.** CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip. You may end up using JavaScript to control the states, but the animations themselves will be in your CSS.
-* **Use JavaScript when you need significant control over your animations.** The Web Animations API is the standards-based approach, available today in Chrome and Opera. This provides real objects, ideal for complex object-oriented applications. JavaScript is also useful when you need to stop, pause, slow down, or reverse.
+* **Use JavaScript when you need significant control over your animations.** The Web Animations API is the standards-based approach, available today in most modern browsers. This provides real objects, ideal for complex object-oriented applications. JavaScript is also useful when you need to stop, pause, slow down, or reverse your animations.
 * **Use `requestAnimationFrame` directly when you want to orchestrate an entire scene by hand.** This is an advanced JavaScript approach, but can be useful if you're building a game or drawing to an HTML canvas.
 
 <div class="video-wrapper">
@@ -39,21 +39,18 @@ Alternatively, if you're already using a JavaScript framework that includes anim
 
 Animating with CSS is the simplest way to get something moving on screen. This approach is described as *declarative*, because you specify what you'd like to happen.
 
-Below is some CSS that moves an element 100px in both the X and Y axes. It's done by using a CSS transition that's set to take 500ms. When the `move` class is added, the `transform` value is changed and the transition begins.
+Below is some CSS that moves an element `100px` in both the X and Y axes. It's done by using a CSS transition that's set to take `500ms`. When the `move` class is added, the `transform` value is changed and the transition begins.
 
+```css
+.box {
+  transform: translate(0, 0);
+  transition: transform 500ms;
+}
 
-    .box {
-      -webkit-transform: translate(0, 0);
-      -webkit-transition: -webkit-transform 500ms;
-    
-      transform: translate(0, 0);
-      transition: transform 500ms;
-    }
-    
-    .box.move {
-      -webkit-transform: translate(100px, 100px);
-      transform: translate(100px, 100px);
-    }
+.box.move {
+  transform: translate(100px, 100px);
+}
+```
     
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-simple.html){: target="_blank" .external }
 
@@ -84,56 +81,50 @@ Note: If you’re new to animations, keyframes are an old term from hand-drawn a
 
 You can, for example, animate the box in the same way with transitions, but have it animate without any user interactions like clicking, and with infinite repetitions. You can also change multiple properties at the same time:
 
+```css
+.box {
+  /* Choose the animation */
+  animation-name: movingBox;
 
-    /**
-     * This is a simplified version without
-     * vendor prefixes. With them included
-     * (which you will need), things get far
-     * more verbose!
-     */
-    .box {
-      /* Choose the animation */
-      animation-name: movingBox;
-    
-      /* The animation’s duration */
-      animation-duration: 1300ms;
-    
-      /* The number of times we want
-          the animation to run */
-      animation-iteration-count: infinite;
-    
-      /* Causes the animation to reverse
-          on every odd iteration */
-      animation-direction: alternate;
-    }
-    
-    @keyframes movingBox {
-      0% {
-        transform: translate(0, 0);
-        opacity: 0.3;
-      }
-    
-      25% {
-        opacity: 0.9;
-      }
-    
-      50% {
-        transform: translate(100px, 100px);
-        opacity: 0.2;
-      }
-    
-      100% {
-        transform: translate(30px, 30px);
-        opacity: 0.8;
-      }
-    }
-    
+  /* The animation’s duration */
+  animation-duration: 1300ms;
+
+  /* The number of times we want
+      the animation to run */
+  animation-iteration-count: infinite;
+
+  /* Causes the animation to reverse
+      on every odd iteration */
+  animation-direction: alternate;
+}
+
+@keyframes movingBox {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+
+  25% {
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: translate(100px, 100px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(30px, 30px);
+    opacity: 0.8;
+  }
+}
+```
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-keyframes.html){: target="_blank" .external }
 
-With CSS animations you define the animation itself independently of the target element, and use the animation-name property to choose the required animation.
+With CSS animations you define the animation itself independently of the target element, and use the `animation-name` property to choose the required animation.
 
-CSS animations are still somewhat vendor prefixed, with `-webkit-` being used in Safari, Safari Mobile, and Android. Chrome, Opera, Internet Explorer, and Firefox all ship without prefixes. Many tools can help you create the prefixed versions of the CSS you need, allowing you to write the unprefixed version in your source files.
+If you want your CSS animations to work on older browsers, you will need to add vendor prefixes. Many tools can help you create the prefixed versions of the CSS you need, allowing you to write the unprefixed version in your source files.
 
 ## Animate with JavaScript and the Web Animations API
 
@@ -156,7 +147,7 @@ By default, Web Animations only modify the presentation of an element. If you'd 
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-wa.html){: target="_blank" .external }
 
-The Web Animations API is a new standard from the W3C. It is supported natively in Chrome and Opera, and is in [active development for Firefox](https://birtles.github.io/areweanimatedyet/){: .external }. For other modern browsers, [a polyfill is available](https://github.com/web-animations/web-animations-js).
+The Web Animations API is a relatively new standard from the W3C. It is supported natively in most modern browsers. For non-supporting modern browsers, [a polyfill is available](https://github.com/web-animations/web-animations-js).
 
 With JavaScript animations, you're in total control of an element's styles at every step. This means you can slow down animations, pause them, stop them, reverse them, and manipulate elements as you see fit. This is especially useful if you're building complex, object-oriented applications, because you can properly encapsulate your behavior.
 

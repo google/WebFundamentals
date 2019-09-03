@@ -59,7 +59,7 @@ To check if a server compressed a response:
 1. Go to the **Network** panel in DevTools.
 1. Click the request that caused the response you're interested in.
 1. Click the **Headers** tab.
-1. Check the `content-heading` header in the **Response Headers** section.
+1. Check the `content-encoding` header in the **Response Headers** section.
 
 <figure>
   <img src="images/content-encoding.svg"

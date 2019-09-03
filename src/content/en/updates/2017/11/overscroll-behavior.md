@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Introduction to the CSS overscroll-behavior property.
 
-{# wf_updated_on: 2017-11-21 #}
+{# wf_updated_on: 2019-08-26 #}
 {# wf_published_on: 2017-11-14 #}
 
 {# wf_tags: chrome63,css,overscroll,scroll #}
@@ -77,7 +77,7 @@ provide a different user experience when the user hits a scroll boundary.
 
 ### The pull-to-refresh effect {: #p2r }
 
-Pull-to-refresh is a intuitive gesture popularized by mobile apps such as
+Pull-to-refresh is an intuitive gesture popularized by mobile apps such as
 Facebook and Twitter. Pulling down on a social feed and releasing creates new
 space for more recent posts to be loaded. In fact, this particular UX has
 become _so popular_ that mobile browsers like Chrome on Android have adopted
@@ -112,7 +112,7 @@ For situations like the Twitter [PWA](/web/progressive-web-apps/),
 it might make sense to disable the native pull-to-refresh action. Why? In this
 app, you probably don't want the user accidentally refreshing the page. There's
 also the potential to see a double refresh animation! Alternatively, it might
-be nicer to custom the browser's action, aligning it more closely to the site's
+be nicer to customize the browser's action, aligning it more closely to the site's
 branding. The unfortunate part is that this type of customization has been
 tricky to pull off. Developers end up writing unnecessary JavaScript, add
 [non-passive](/web/tools/lighthouse/audits/passive-event-listeners)
@@ -123,14 +123,14 @@ effects on scrolling performance.
 
 We can do better!
 
-## Introducing overscroll-behavior {: #intro }
+## Introducing `overscroll-behavior` {: #intro }
 
 The `overscroll-behavior` [property][spec] is a new CSS feature that controls
 the behavior of what happens when you over-scroll a container (including the
 page itself). You can use it to cancel scroll chaining, disable/customize the
 pull-to-refresh action, disable rubberbanding effects on iOS (when Safari
 implements `overscroll-behavior`), and more.
-The best part is that ** using `overscroll-behavior` does not adversely affect
+The best part is that **using `overscroll-behavior` does not adversely affect
 page performance** like the hacks mentioned in the intro!
 
 The property takes three possible values:
@@ -167,7 +167,7 @@ Let's dive into some examples to see how to use `overscroll-behavior`.
 </figure>
 
 Consider a fixed positioned chatbox that sits at the bottom of the page. The
-intention is that the chatbox is self-contained component and that it scrolls
+intention is that the chatbox is a self-contained component and that it scrolls
 separately from the content behind it. However, because of scroll chaining, the
 document starts scrolling as soon as the user hits the last message in the chat
 history.
@@ -342,7 +342,7 @@ being implemented](https://crbug.com/762023) in Chrome.
 ## Full demo {: #demo }
 
 Putting it all together, the full
-[chatbox demo](https://ebidel.github.io/demos/chatbox.html), uses
+[chatbox demo](https://ebidel.github.io/demos/chatbox.html) uses
 `overscroll-behavior` to create a custom pull-to-refresh animation
 and disable scrolls from escaping the chatbox widget. This provides an optimal
 user experience that would have been tricky to achieve without CSS

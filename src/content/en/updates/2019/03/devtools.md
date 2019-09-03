@@ -15,6 +15,14 @@ description: Highlight nodes affected by a CSS property, Lighthouse v4, WebSocke
 
 Welcome back! Here's what's new.
 
+## Video version of this page {: #video }
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="I14fXc7sXdU"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## Highlight all nodes affected by CSS property {: #highlight }
 
 Hover over a CSS property that affects a node's box model, such as `padding` or `margin`, to

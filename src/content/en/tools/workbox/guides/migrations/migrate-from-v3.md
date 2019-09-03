@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v3 to v4.
 
-{# wf_updated_on: 2019-02-25 #}
+{# wf_updated_on: 2019-03-22 #}
 {# wf_published_on: 2019-02-25 #}
 {# wf_blink_components: N/A #}
 
@@ -141,7 +141,7 @@ Here's an example of custom replay logic:
 
 ```javascript
 const queue = new workbox.backgroundSync.Queue('my-queue-name', {
-  onSync: async (queue) => {
+  onSync: async ({queue}) => {
     let entry;
     while (entry = await this.shiftRequest()) {
       try {

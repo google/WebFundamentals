@@ -172,7 +172,7 @@ function test(filename, contents, options) {
   }
 
   // Search for and throw an error for hard coded developers.google.com
-  const matched = wfRegEx.getMatches(/developers\.google\.com/g, contents);
+  const matched = wfRegEx.getMatches(/\/\/developers\.google\.com/g, contents);
   matched.forEach(function(match) {
     const result = {
       level: 'ERROR',

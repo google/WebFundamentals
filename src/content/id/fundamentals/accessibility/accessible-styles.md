@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Menggunakan penataan gaya yang tepat untuk meningkatkan aksesibilitas
 
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Gaya yang Dapat Diakses {: .page-title }
@@ -30,7 +30,7 @@ tiga bagian.
 Umumnya, setiap kali kita memfokuskan elemen, kita mengandalkan lingkaran
 fokus browser bawaan (properti `outline` CSS) untuk menata gaya elemen. Lingkaran fokus ini berguna
 karena, tanpanya, mustahil pengguna keyboard dapat memberi tahu elemen mana yang
-memiliki fokus. [Daftar periksa WebAIM](http://webaim.org/standards/wcag/checklist){: .external } menunjukkan
+memiliki fokus. [Daftar periksa WebAIM](https://webaim.org/standards/wcag/checklist){: .external } menunjukkan
 pentingnya hal ini, yang mengharuskan bahwa "Tampak nyata secara visual elemen laman mana yang memiliki
 fokus keyboard saat ini (yakni, saat melakukan navigasi pada laman tersebut, Anda bisa melihat tempat
 Anda berada)."
@@ -145,13 +145,13 @@ CSS untuk keadaan tombol yang ditekan dari
 
 
     .toggle.pressed { ... }
-    
+
 
 ke ini.
 
 
     .toggle[aria-pressed="true"] { ... }
-    
+
 
 Hal ini menciptakan hubungan yang logis maupun semantik antara kondisi ARIA
 dan penampilan elemen, juga memangkas kode ekstra.
@@ -176,7 +176,7 @@ seluler juga. Ini saling menguntungkan. Ini adalah laman yang sama yang diperbes
 ![Udacity.com dengan pembesaran 400%](imgs/udacity-zoomed.jpg)
 
 Kenyataannya, hanya dengan mendesain secara responsif, kita memenuhi [aturan 1.4.4 dari daftar periksa WebAIM
-](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
+](https://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
 yang menyatakan bahwa suatu laman "...harus dapat dibaca dan fungsional saat ukuran
 teksnya digandakan."
 
@@ -243,7 +243,7 @@ warna*, hubungan antara
 *luminansi* warna latar belakang dan latar depan. Saat warna serupa, rasio kontras rendah; saat warna
 berbeda, rasio kontras pun tinggi.
 
-[Panduan WebAIM](http://webaim.org/standards/wcag/){: .external }
+[Panduan WebAIM](https://webaim.org/standards/wcag/){: .external }
 menyarankan rasio kontras AA (minimum) sebesar 4,5:1 untuk semua teks. Pengecualian akan
 dibuat untuk teks yang sangat besar (120-150% lebih besar dari teks isi default), yang
 rasionya dapat turun menjadi 3:1. Perhatikan perbedaan dalam rasio kontras yang ditampilkan
@@ -273,7 +273,7 @@ Untuk menjalankan audit warna/kontras, ikuti langkah-langkah dasar ini.
 ![dialog audit kontras devtools](imgs/contrast-audit.png)
 
 WebAIM sendiri menyediakan [pemeriksa kontras
-warna](http://webaim.org/resources/contrastchecker/){: .external } praktis yang bisa Anda gunakan
+warna](https://webaim.org/resources/contrastchecker/){: .external } praktis yang bisa Anda gunakan
 untuk memeriksa kontras setiap pasangan warna.
 
 ### Jangan menyampaikan informasi dengan warna saja
@@ -298,7 +298,7 @@ menyediakan beberapa cara bagi pengguna untuk mengakses informasi penting.
 ![formulir masukan dengan kesalahan digarisbawahi merah](imgs/input-form1.png)
 
 [Daftar periksa WebAIM menyatakan di bagian
-1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } bahwa
+1.4.1](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } bahwa
 "warna tidak boleh digunakan sebagai satu-satunya metode untuk menyampaikan materi atau
 membedakan elemen visual." Daftar periksa tersebut juga menyebutkan bahwa "warna saja tidak boleh
 digunakan untuk membedakan tautan dari teks sekelilingnya" kecuali jika warna tersebut memenuhi

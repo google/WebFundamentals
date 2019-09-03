@@ -185,8 +185,8 @@ reactions**.
       <td><code>constructor</code></td>
       <td>An instance of the element is
         created or <a href="#upgrades">upgraded</a>. Useful for initializing
-        state, settings up event listeners, or
-        <a href="#shadowdom">creating shadow dom</a>.
+        state, setting up event listeners, or
+        <a href="#shadowdom">creating a shadow dom</a>.
         See the
         <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">
         spec
@@ -219,7 +219,7 @@ reactions**.
       </td>
     </tr>
     <tr>
-      <td><code>adoptedCallback()</code></td>
+      <td><code>adoptedCallback</code></td>
       <td>The
         custom element has been moved into a new <code>document</code> (e.g.
         someone called <code>document.adoptNode(el)</code>).
@@ -396,7 +396,7 @@ tags](#unknown). The process of calling `define()` and endowing an existing
 element with a class definition is called "element upgrades".
 
 To know when a tag name becomes defined, you can use
-`window.customElements.whenDefined()`. It vends a Promise that resolves when the
+`window.customElements.whenDefined()`. It returns a Promise that resolves when the
 element becomes defined.
 
 
@@ -432,8 +432,8 @@ element becomes defined.
 Note: I think of custom elements as being in a state of limbo before they're
 defined. The
 [spec](https://dom.spec.whatwg.org/#concept-element-custom-element-state)
-defines an element's state as "undefined", "uncustomized", or "custom". Built-in
-elements like `<div>` are always "defined".
+defines an element's state as `undefined`, `uncustomized`, or `custom`. Built-in
+elements like `<div>` are always `defined`.
 
 ## Element-defined content {: #addingmarkup}
 
@@ -594,7 +594,7 @@ Example usage:
 
 For those unfamiliar, the [`<template>`
 element](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)
-allows you to declare fragments of DOM which are parsed, inert at page load, and
+allows you to declare fragments of the DOM which are parsed, inert at page load, and
 can be activated later at runtime. It's another API primitive in the web
 components family. **Templates are an ideal placeholder for declaring the
 structure of a custom element**.
@@ -629,8 +629,8 @@ on:
 
 1. We're defining a new element in HTML: `<x-foo-from-template>`
 2. The element's Shadow DOM is created from a `<template>`
-3. The element's DOM is local to the element thanks to Shadow DOM
-4. The element's internal CSS is scoped to the element thanks to Shadow DOM
+3. The element's DOM is local to the element thanks to the Shadow DOM
+4. The element's internal CSS is scoped to the element thanks to the Shadow DOM
 
 {% framebox height="120px" %}
 <style>
@@ -952,7 +952,7 @@ Example
 
 Returns a Promise that resolves when the custom element is defined. If the
 element is already defined, resolve immediately. Rejects if the tag name is not
-a valid custom element name
+a valid custom element name.
 
 Example
 

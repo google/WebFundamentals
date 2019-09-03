@@ -1,5 +1,11 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/ui
+  to:   /web/tools/chrome-devtools/customize/
+
+- from: /web/tools/chrome-devtools/console/get-started
+  to:   /web/tools/chrome-devtools/console/
+
 - from: /web/tools/chrome-devtools/snippets
   to:   /web/tools/chrome-devtools/javascript/snippets
 
@@ -113,6 +119,9 @@ redirects:
 
 - from: /web/tools/iterate/inspect-styles/media-queries
   to: /web/tools/chrome-devtools/device-mode/media-queries
+
+- from: /web/tools/chrome-devtools/beginners/...
+  to: /web/tools/chrome-devtools/
 
 - from: /web/tools/iterate/...
   to: /web/tools/chrome-devtools/...
@@ -230,3 +239,6 @@ redirects:
 
 - from: /web/tools/workbox/guides/migrate
   to: /web/tools/workbox/guides/migrations/migrate-from-sw
+
+- from: /web/tools/workbox/modules/workbox-broadcast-cache-update
+  to: /web/tools/workbox/modules/workbox-broadcast-update

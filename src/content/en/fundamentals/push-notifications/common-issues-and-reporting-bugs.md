@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are right ways of using notifications, and ways of using them better. Learn what makes a good notification. We won't just show you what to do. We'll show you how to do it.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-15 #}
 {# wf_published_on: 2017-03-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -22,7 +22,7 @@ that I strongly recommend checking out if you are new to
 service worker development.
 
 There are two distinct stages to check off when developing and testing web push,
-each with their own set of common issues / problems.
+each with its own set of common issues / problems:
 
 - **Sending a Message:** Make sure that sending messages is successful.
    You should be getting a 201 HTTP code. If you aren't :
@@ -48,15 +48,15 @@ section to file a good bug report with all the necessary information to expedite
 the bug fixing process.
 
 One thing I'd like to call out before we start is that **Firefox and the
-Mozilla AutoPush Service have great errors messages.** If you get stuck and
+Mozilla AutoPush Service have great error messages.** If you get stuck and
 are not sure what the problem is, then test in Firefox and see if you
 get a more helpful error message.
 
 ## Authorization Issues
 
 Authorization issues are one of the most common issues developers hit when
-starting out with web push. This is normally a problem with configuration of a
-sites [Application Server Keys (a.k.a VAPID keys)
+starting out with web push. This is normally a problem with the configuration of a
+site's [Application Server Keys (a.k.a. VAPID keys)
 ](https://tools.ietf.org/html/draft-ietf-webpush-vapid-02).
 
 The easiest way to support push in both Firefox and Chrome is to supply an
@@ -90,7 +90,7 @@ if it'll provide more insight to the problem.
 
 ### Firefox and Mozilla AutoPush
 
-Firefox and Mozilla AutoPush provides a friendly set of error messages for
+Firefox and Mozilla AutoPush provide a friendly set of error messages for
 `Authorization` issues.
 
 You'll also receive an `Unauthorized` error response from
@@ -135,8 +135,8 @@ error will be returned:
 }
 ```
 
-Lastly if you have an invalid value in your JWT (for example if the "alg" value
-is an unexpected value) you'll receive the following error from Mozilla
+Lastly, if you have an invalid value in your JWT (for example if the "alg" value
+is an unexpected value), you'll receive the following error from Mozilla
 AutoPush:
 
 ```
@@ -173,9 +173,8 @@ poorly formatted.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found. The subscription has expired. In this case you
-should delete the PushSubscription from your back end and wait for an
-opportunity to resubscribe the user.</td>
+<td>Not Found. In this case you should delete the PushSubscription from your
+back end and wait for an opportunity to resubscribe the user.</td>
 </tr>
 <tr>
 <td>410</td>
@@ -190,7 +189,7 @@ support is 4096 bytes (or 4kb). Anything larger can result in this error.</td>
 </tr>
 </table>
 
-If the http status code is not in this list and the error message is not
+If the HTTP status code is not in this list and the error message is not
 helpful, check the [Web Push Protocol
 spec](https://tools.ietf.org/html/draft-ietf-webpush-protocol) to see if the
 status code is referenced along with a scenario of when that status code can
@@ -218,7 +217,7 @@ To check if this is the issue in Chrome, do the following:
 
 ![GCM internals decryption log](./images/gcm-internals-decryption-log.png)
 
-If there was an issue with the decryption of the payload, you'll see an error
+If there is an issue with the decryption of the payload, you'll see an error
 similar to the one displayed above. (Notice the `AES-GCM decryption failed`
 message in the details column.)
 
@@ -235,12 +234,12 @@ If you aren't receiving a push event in your service worker and you aren't
 seeing any decryption errors, then the browser may be failing to connect to
 a push service.
 
-In Chrome you can check whether the browser is receiving messages by examining
+In Chrome, you can check whether the browser is receiving messages by examining
 the 'Receive Message Log' (sic) in `chrome://gcm-internals`.
 
 ![GCM internals receive message log](./images/gcm-internals-receive-log.png)
 
-If you aren't seeing the message arrive in a timely fashion then make sure that
+If you aren't seeing the message arrive in a timely fashion, then make sure that
 the connection status of your browser is `CONNECTED`:
 
 ![GCM internals connection state](./images/gcm-internals-connection-state.png)
@@ -260,9 +259,9 @@ For Chrome, you'd raise the issue here:
 For Firefox, you should raise the issue on:
 [https://bugzilla.mozilla.org/](https://bugzilla.mozilla.org/)
 
-To provide a good bug report you should provide the following details:
+To provide a good bug report, you should provide the following details:
 
-* Browsers you've tested in (i.e. Chrome version 50, Chrome version 51, Firefox
+* Browsers you've tested in (e.g. Chrome version 50, Chrome version 51, Firefox
   version 50, Firefox version 51).
 * An example `PushSubscription` that demonstrates the problem.
 * Include any example requests (i.e. content of network requests to a push

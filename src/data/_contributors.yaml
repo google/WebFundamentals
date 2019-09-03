@@ -88,6 +88,34 @@ jakearchibald:
   description:
     en: Human boy working on web standards at Google
 
+adamargyle:
+  name:
+    given: Adam
+    family: Argyle
+  homepage: 'https://nerdy.dev'
+  email: argyle@google.com
+  twitter: argyleink
+  github: argyleink
+  org:
+    name: Google
+    unit: Chrome
+  description:
+    en: Developer Advocate at Google
+  country: US
+
+kenjibaheux:
+  name:
+    given: Kenji
+    family: Baheux
+  twitter: KenjiBaheux
+  github: KenjiBaheux
+  org:
+    name: Google
+    unit: Chrome
+  country: JPN
+  description:
+    en: "Product Manager at Google, working on Chrome/Web Platform"
+
 pbakaus:
   name:
     given: Paul
@@ -179,6 +207,15 @@ ericbidelman:
   email: e.bidelman@google.com
   description:
     en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
+
+jbingham:
+  name:
+    given: Jonathan
+    family: Bingham
+  github: jbingham
+  twitter: jonathanbingham
+  description:
+    en: Jonathan is a Product Manager at Google
 
 bokan:
   name:
@@ -493,6 +530,17 @@ samdutton:
   email: dutton@google.com
   description:
     en: Sam is a Developer Advocate
+
+emilaeklund:
+  name:
+    given: Emil
+    family: Eklund
+  org:
+    name: Google
+    unit: Chrome
+  description:
+    en: Chrome Rendering tech lead and manager.
+  country: US
 
 arthurevans:
   name:
@@ -816,6 +864,20 @@ katiehempenius:
   twitter: katiehempenius
   email: khempenius@google.com
 
+jihyerish:
+  name:
+    given: Jihye
+    family: Hong
+  org:
+    name: LG Electronics
+  country: KR
+  role:
+    - translator
+  twitter: jihyerish
+  email: jh.hong@lge.com
+  description:
+    en: "Software Engineer at LG Electronics working on the web standards"
+
 patrickhulce:
   name:
     given: Patrick
@@ -926,6 +988,18 @@ brendankenny:
   email: bckenny@google.com
   description:
     en: Lighthouse Bulb Installer
+
+skikuchi:
+  name:
+    given: Satoko
+    family: Kikuchi
+  org:
+    name: Graat
+  country: JP
+  role:
+    - translator
+  github: s-kic
+  twitter: s_kic
 
 jeokrang:
   name:
@@ -1266,6 +1340,18 @@ smcgruer:
     name: Google
     unit: Chrome
   country: Canada
+  role:
+    - author
+
+pjmclachlan:
+  name:
+    given: Peter
+    family: Mclachlan
+  org:
+    name: Google
+    unit: Chrome
+  description:
+    en: Peter is a Product Manager on Google's Chrome team responsible for web applications including Chrome advanced permissions, progressive web apps and web platform strategy for mobile.
   role:
     - author
 
@@ -1643,6 +1729,22 @@ borissmus:
   role:
     - author
   email: smus@google.com
+
+antoinesolnichkin:
+  name:
+    given: Antoine
+    family: Solnichkin
+  org:
+    name: Independent
+    unit: Software Engineer
+  country: LU
+  role:
+    - translator
+  homepage: http://devconnected.com
+  twitter: devconnectedcom
+  email: solnichkin.antoine@gmail.com
+  description:
+    en: "Antoine is a Software Engineer based in Luxembourg"
 
 rsolomakhin:
   name:

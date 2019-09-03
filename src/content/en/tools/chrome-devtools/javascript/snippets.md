@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Snippets are small scripts that you can author and execute within the Sources panel of Chrome DevTools. You can access and run them from any page. When you run a Snippet, it executes from the context of the currently open page.
 
-{# wf_updated_on: 2019-03-22 #}
+{# wf_updated_on: 2019-07-03 #}
 {# wf_published_on: 2015-10-12 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -162,7 +162,7 @@ See [Rename Snippets](#rename) if you'd like to give your new Snippet a custom n
 1. [Open the **Snippets** pane](#open).
 1. Click the name of the Snippet that you want to run. The Snippet opens in the **Code Editor**.
 1. Click **Run Snippet** ![Run Snippet](imgs/runsnippet.png){: .inline-icon }, or press
-   <kbd>Control</kbd>+<kbd>Enter</kbd> or <kbd>Control</kbd>+<kbd>Enter</kbd> (Mac).
+   <kbd>Control</kbd>+<kbd>Enter</kbd> or <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac).
 
 ### Run a Snippet with the Command Menu {: #runcommandmenu }
 

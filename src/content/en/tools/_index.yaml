@@ -88,21 +88,3 @@ landing_page:
       buttons:
       - label: Learn more
         path: /speed/pagespeed/module/
-
-  - heading: More
-    classname: devsite-landing-row-no-image-background
-    items:
-    - heading: Polymer Starter Kit
-      description: >
-        The Polymer Starter Kit is a starting point for building apps using a
-        drawer-based layout. The layout is provided by app-layout elements.
-      icon:
-        path: images/polymer-logo-1x1.png
-      path: https://www.polymer-project.org/2.0/start/toolbox/set-up
-    - heading: Setting Up Your Dev Environment
-      description: >
-        Set up your workspace to include a good editor, debugging, and build
-        tools for the multi-device web.
-      icon:
-        path: images/pagespeed.svg
-      path: /web/tools/setup/

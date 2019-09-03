@@ -6,15 +6,21 @@
 'use strict';
 
 const testHelpers = require('./helpers');
-
 const JSONValidator = require('jsonschema').Validator;
 
+const VALID_ANALYTICS_UA_STRINGS = [
+  'UA-52746336-1',
+  'UA-130569087-3',
+];
+
 JSONValidator.prototype.customFormats.wfUAString = function(input) {
-  return input === 'UA-52746336-1';
+  return VALID_ANALYTICS_UA_STRINGS.includes(input);
 };
+
 JSONValidator.prototype.customFormats.doesFileExist = function(input) {
   return testHelpers.doesFileExist(input);
 };
+
 const SCHEMA_PROJECT = {
   id: '/Project',
   type: 'object',
@@ -25,7 +31,7 @@ const SCHEMA_PROJECT = {
     buganizer_id: {type: 'number', pattern: /^180451$/, required: true},
     content_license: {
       type: 'string',
-      pattern: /^cc3-apache2$/,
+      pattern: /^cc-apache$/,
       required: true,
     },
     announcement: {
@@ -41,12 +47,26 @@ const SCHEMA_PROJECT = {
       pattern: /^google-blue|orange$/,
       required: true,
     },
+    feedback: {
+      type: 'object',
+      properties: {
+        product_id: {
+          type: 'number',
+          required: true,
+        },
+      },
+      additionalProperties: false,
+    },
     footer_path: {type: 'string', required: true},
     gcs_id: {type: 'string'},
     google_analytics_ids: {
       type: 'array',
       items: {type: 'string', format: 'wfUAString'},
       required: true,
+    },
+    hide_ratings_widget: {
+      type: 'boolean',
+      additionalProperties: false,
     },
     icon: {
       type: 'object',
@@ -73,16 +93,6 @@ const SCHEMA_PROJECT = {
           },
           required: true,
           additionalProperties: false,
-        },
-      },
-      additionalProperties: false,
-    },
-    feedback: {
-      type: 'object',
-      properties: {
-        product_id: {
-          type: 'number',
-          required: true,
         },
       },
       additionalProperties: false,

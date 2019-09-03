@@ -11,7 +11,7 @@ const path = require('path');
 const fs = require('fs-extra');
 
 const wfHelper = require('../wfHelper');
-const getLatestTags = require('../reference-docs/get-latest-tags');
+const {getLatestTags} = require('../reference-docs/get-latest-tags');
 
 /**
  * We need to ensure workbox-build is up to date to get the latest
@@ -26,7 +26,7 @@ function updateWorkboxBuild() {
 gulp.task('workbox-generate-cdn-include', () => {
   const gitUrl = 'https://github.com/GoogleChrome/workbox.git';
   return updateWorkboxBuild()
-  .then(() => getLatestTags.stable(gitUrl))
+  .then(() => getLatestTags(gitUrl))
   .then((latestTags) => {
     // TODO: Replace these three lines for Workbox-build when getModuleUrl()
     // will be exposed
@@ -35,7 +35,7 @@ gulp.task('workbox-generate-cdn-include', () => {
     const latestUrl = workboxBuild.getModuleURL('workbox-sw');
 
     // Substring removes the 'v' at the front of the git tag.
-    if (latestUrl.indexOf(latestTags[0].substring(1)) === -1) {
+    if (latestUrl.indexOf(latestTags.latest.substring(1)) === -1) {
       throw new Error(`The latest tag isn't in the module URL from ` +
         `workbox-build. This means the workbox-build version is out of date.`);
     }

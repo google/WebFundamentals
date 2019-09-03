@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Cómo ocultar contenido de la tecnología asistencial
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Cómo ocultar y actualizar contenido {: .page-title }
@@ -36,14 +36,14 @@ estando incluido en el árbol de accesibilidad. Una técnica común es incluir
       height: 1px;
       overflow: hidden;
     }
-    
+
 
 Además, como hemos visto, se le puede brindar texto solo para lector de pantalla a través de un atributo
 `aria-label`, `aria-labelledby` o `aria-describedby` que haga referencia a un
 elemento que esté de otra manera oculto.
 
 Consulta este artículo de WebAIM sobre [Técnicas para ocultar
-texto](http://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }
+texto](https://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }
 para obtener más información sobre la creación de texto "solo para lector de pantalla".
 
 Finalmente, ARIA brinda un mecanismo para excluir el contenido de la tecnología
@@ -95,13 +95,13 @@ usuario con tecnología asistencial a través de la configuración de su atribut
 
 
     <div class="status">Your message has been sent.</div>
-    
+
 
 con su opuesto "live".
 
 
     <div class="status" aria-live="polite">Your message has been sent.</div>
-    
+
 
 `aria-live` tiene tres valores permisibles: `polite`, `assertive` y `off`.
 
@@ -159,7 +159,7 @@ Finalmente, `aria-busy` te permite notificar a la tecnología asistencial de que
 ignorar temporalmente los cambios a un elemento, como cuando se están realizando cargas. Una vez que
 todo está en su lugar, `aria-busy` debe estar configurado como false para normalizar la
 operación del lector.
- 
+
 
 
 {# wf_devsite_translation #}

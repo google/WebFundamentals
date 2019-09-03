@@ -3,9 +3,9 @@ book_path: /web/updates/_book.yaml
 description: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button.
 
 {# wf_published_on: 2018-12-05 #}
-{# wf_updated_on: 2019-03-07 #}
+{# wf_updated_on: 2019-08-20 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
-{# wf_tags: capabilities,sharing,chrome71 #}
+{# wf_tags: capabilities,sharing,android,chrome71 #}
 {# wf_featured_snippet: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button. #}
 {# wf_blink_components: Blink>WebShare #}
 
@@ -27,7 +27,7 @@ description: The Web Share Target API allows installed web apps to register with
 </figure>
 
 On your mobile device, sharing something is usually as simple as clicking the
-Share button, choosing which app you want to send it to, and then who you to
+Share button, choosing which app you want to send it to, and then who to
 share it with. For example, after reading an interesting article, I may want
 to share it via email with a few friends, or Tweet about it.
 
@@ -56,7 +56,7 @@ Mozilla and Microsoft have indicated their support but have not implemented it
 yet.
 
 We’ve started working on
-[Web Share Target - Level 2](https://wicg.github.io/web-share/level-2/), adding
+[Web Share Target - Level 2](https://wicg.github.io/web-share-target/level-2/), adding
 support for sharing file objects. Look for a post about that coming soon.
 
 
@@ -96,6 +96,8 @@ In the `manifest.json` file, add the following:
 ```json
 "share_target": {
   "action": "/share-target/",
+  "method": "GET",
+  "enctype": "application/x-www-form-urlencoded",
   "params": {
     "title": "title",
     "text": "text",
@@ -109,6 +111,15 @@ If your application already has a share URL scheme, you can replace the
 URL scheme uses `body` instead of `text`, you could replace the above with
 `"text": "body",`.
 
+The `method` value will default to `"GET"` if not provided. You may need to
+switch it to `"POST"`, depending on what type of HTTP request your `action` URL
+expects to receive. If your web app accepts `POST`s, then the `enctype` value
+will determine what
+[type of encoding](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-enctype)
+is used for the body of the `POST` request. The default `enctype` is
+`"application/x-www-form-urlencoded"`, and the value is ignored if `method` is
+set to `"GET"`.
+
 When another application tries to share, your application will be listed as an
 option in the share intent chooser.
 
@@ -118,20 +129,27 @@ share target landing page.
 
 ### Handle the incoming content
 
-If the user selects your application, the browser opens a new window at the
-`action` URL. It will then generate a query string using the values supplied
-in the manifest. For example if the other app provides `title` and `text`,
-the query string would be `?title=hello&text=world`.
+If the user selects your application, and your `method` is `"GET"` (the
+default), the browser opens a new window at the `action` URL. It will generate a
+query string using the URL encoded values supplied in the manifest. For example,
+if the other app provides `title` and `text`, the query string would be
+`?title=hello&text=world`.
 
 
 ```js
 window.addEventListener('DOMContentLoaded', () => {
   const parsedUrl = new URL(window.location);
+  // searchParams.get() will properly handle decoding the values.
   console.log('Title shared: ' + parsedUrl.searchParams.get('title'));
   console.log('Text shared: ' + parsedUrl.searchParams.get('text'));
   console.log('URL shared: ' + parsedUrl.searchParams.get('url'));
 });
 ```
+
+If your `method` is `"POST"`, then the body of the incoming `POST` request will
+contain the same values, encoded using the `enctype` specified. You may choose
+to handle this request server-side, by decoding the request body and using the
+provided data.
 
 How you deal with the incoming shared data is up to you, and dependent on your
 app.
@@ -155,11 +173,11 @@ app.
   </figcaption>
 </figure>
 
-Be sure to check the incoming data, unfortunately, there is no guarantee
+Be sure to check the incoming data. Unfortunately, there is no guarantee
 that other apps will share the appropriate content in the right parameter.
 
 On Android, the [`url` field will be empty](https://bugs.chromium.org/p/chromium/issues/detail?id=789379)
-because it’s not supported in Android’s share system. Instead URLs will often
+because it’s not supported in Android’s share system. Instead, URLs will often
 appear in the `text` field, or occasionally in the `title` field.
 
 <div class="clearfix"></div>

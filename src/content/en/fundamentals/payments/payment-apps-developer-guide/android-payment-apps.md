@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Web Payments allows any Android payment apps to act as a payment handler for the Payment Request API. Learn how to do it.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2019-05-31 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Android payment apps developer guide {: .page-title }
@@ -79,6 +79,9 @@ include:
 {"default_applications": ["https://bobpay.com/bobpay-app.json"]}
 ```
 
+Note: The origin of `default_applications` must be the same origin as the
+payment method manifest URL.
+
 The browser then downloads `https://bobpay.com/bobpay-app.json` and verifies the
 installed app against the version and signatures in it. The requirements for
 this verification are that all downloads must be over HTTPS, HTTP response codes
@@ -93,9 +96,8 @@ must be 200, and HTTP redirects are not followed.
 After the browser has been used for one or more web payments, it has a cache of
 locally-installed payment apps. The cache allows faster display of the payment
 UI on subsequent visits. When a user taps the merchant website's "Buy" button,
-the browser shows the cached list of apps along with a "Refreshing..."
-indicator. When the payment app cache has been refreshed, the user can tap a
-"Refresh" button to see the updated list of payment apps.
+the browser shows the cached list of apps and refreshes the list of payment
+apps in the background.
 
 Protecting the cache from malware is outside the scope of this project, but is
 an important consideration. If the user's device is infected with malware that
@@ -139,12 +141,12 @@ option for payment.
 
 -   `ArrayList<String> methodNames` - The names of the methods being queried.
     The elements are the keys in
-    [`methodData`](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)
+    [`methodData`](https://w3c.github.io/payment-request/#paymentrequest-interface)
     dictionary.
 -   `Bundle[String] methodData` - A mapping from each
-    [`methodName`](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)
+    [`methodName`](https://w3c.github.io/payment-request/#paymentrequest-interface)
     to the output of
-    `JSON.stringify(`[`methodData[methodName].data`](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)`)`.
+    `JSON.stringify(`[`methodData[methodName].data`](https://w3c.github.io/payment-request/#paymentrequest-interface)`)`.
 -   `String topLevelOrigin` - The schemeless origin of the top-level browsing
     context. For example, `https://mystore.com/checkout` will be passed as
     `mystore.com`.
@@ -201,18 +203,20 @@ callback.handleIsReadyToPay(true);
 A web browser invokes the payment app via an Android intent with payment request
 information in the intent parameters. The payment app responds with `methodName`
 and  `details`, which are payment app specific and are opaque to the browser.
-The browser does not parse the `details`; that parameter's value goes directly
+The browser converts the `details` string into a JavaScript object for merchant
+website via JSON deserialization, but does not enforce any validity beyond that.
+The browser does not modify the `details`; that parameter's value goes directly
 to the merchant website.
 
 #### Payment parameters
 
 -   `ArrayList<String> methodNames` - The names of the methods being used. The
     elements are the keys in the
-    [`methodData`](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)
+    [`methodData`](https://w3c.github.io/payment-request/#paymentrequest-interface)
     dictionary, and indicate the methods that the payment app supports.
 -   `Bundle[String] methodData` - A mapping from each `methodName` to the
     output of
-    `JSON.stringify(`[`methodData[methodName].data`](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)`)`.
+    `JSON.stringify(`[`methodData[methodName].data`](https://w3c.github.io/payment-request/#paymentrequest-interface)`)`.
 -   `String merchantName` - The contents of the `<title>` HTML tag of the top-level
     browsing context on the checkout web page.
 -   `String topLevelOrigin` - The schemeless origin of the top-level browsing
@@ -227,12 +231,12 @@ to the merchant website.
     constructor. If the constructor was invoked from top-level context, then the
     value of this parameter equals the value of `topLevelOrigin` parameter.
 -   `String total` - The output of
-    `JSON.stringify(`[`details.total.amount`](https://w3c.github.io/browser-payment-api/#dom-paymentdetailsinit-total)`)`.
+    `JSON.stringify(`[`details.total.amount`](https://w3c.github.io/payment-request/#dom-paymentdetailsinit-total)`)`.
 -   `String modifiers` - The output of
-    `JSON.stringify(`[`details.modifiers`](https://w3c.github.io/browser-payment-api/#dom-paymentdetailsbase-modifiers)`)`,
+    `JSON.stringify(`[`details.modifiers`](https://w3c.github.io/payment-request/#dom-paymentdetailsbase-modifiers)`)`,
     where `details.modifiers` contain only `supportedMethods` and `total`.
 -   `String paymentRequestId` - The
-    [`PaymentRequest.id`](https://w3c.github.io/browser-payment-api/#id-attribute)
+    [`PaymentRequest.id`](https://w3c.github.io/payment-request/#id-attribute)
     field that “push-payment” apps should associate with transaction state.
     Merchant websites will use this field to query the “push-payment” apps for
     the state of transaction out of band.
@@ -288,12 +292,12 @@ merchant website.
 ## Algorithms
 
 This section describes in detail the steps of algorithms that determine the list
-of possible Android payment apps on the user device. 
+of possible Android payment apps on the user device.
 
 ### Basic process
 
-1.  The merchant website provides a list of payment methods in the
-    `PaymentRequest` constructor.
+1. The merchant website provides a list of payment methods in the
+   `PaymentRequest` constructor.
 2. The browser finds the locally installed Android payment apps that claim
    support for the given payment methods.
 3. The browser downloads and validates the payment method manifests and the web
@@ -315,19 +319,19 @@ manifests](https://w3c.github.io/payment-method-manifest/#ingest).
 
 This algorithm queries locally installed Android apps for possible payment apps.
 It runs when
-[`PaymentRequest.canMakePayment()`](https://w3c.github.io/browser-payment-api/#dom-paymentrequest-canmakepayment())
+[`PaymentRequest.canMakePayment()`](https://w3c.github.io/payment-request/#dom-paymentrequest-canmakepayment)
 or
-[`PaymentRequest.show()`](https://w3c.github.io/browser-payment-api/#dom-paymentrequest-show())
+[`PaymentRequest.show()`](https://w3c.github.io/payment-request/#dom-paymentrequest-show)
 is called.
 
 1.  Let `apps` be an empty list of payment apps.
 2.  If
-    [`PaymentMethodData.supportedMethods`](https://w3c.github.io/browser-payment-api/#dom-paymentmethoddata-supportedmethods)
+    [`PaymentMethodData.supportedMethods`](https://w3c.github.io/payment-request/#dom-paymentmethoddata-supportedmethods)
     contains the string `"basic-card"`, then query all apps that can respond to
     `org.chromium.intent.action.PAY` action and have `"basic-card"` in
     `<meta-data>`. Add these apps to the `apps` list.
 3.  Let `urlPaymentMethods` be the subset of
-    [`PaymentMethodData.supportedMethods`](https://w3c.github.io/browser-payment-api/#dom-paymentmethoddata-supportedmethods)
+    [`PaymentMethodData.supportedMethods`](https://w3c.github.io/payment-request/#dom-paymentmethoddata-supportedmethods)
     that are valid, absolute URLs with HTTPS scheme.
 4.  Query all apps that can respond to the `org.chromium.intent.action.PAY`
     action with any of the `urlPaymentMethods` in `<meta-data>`. Add these apps
@@ -336,7 +340,7 @@ is called.
 
         ResolveInfo app; // Needs to be assigned.
         boolean isLabelEmpty = !TextUtils.isEmpty(app.loadLabel(
-        getContext().getPackageManager()));
+                getContext().getPackageManager()));
 
 6.  Return the `urlPaymentMethods` and `apps` lists.
 
@@ -472,11 +476,11 @@ be used.
 To allow unrestricted use of a payment method identifier, specify
 `"supported_origins": "*"` in the payment method manifest.
 
-The `"id"`, `"min_version"`, and `"fingerprints"` values are required. The "id" value
-should be non-empty.  The `"fingerprints"` list must be non-empty, and each
-dictionary in the list must have both `"type"` and `"value"`. The order of the items
-in `"fingerprints"` is not important. Only the `"sha256_cert"` fingerprint type is
-supported.
+The `"id"`, `"min_version"`, and `"fingerprints"` values are required. The "id"
+value should be non-empty.  The `"fingerprints"` list must be non-empty, and
+each dictionary in the list must have both `"type"` and `"value"`. The order of
+the items in `"fingerprints"` is not important. Only the `"sha256_cert"`
+fingerprint type is supported.
 
 The values of `"fingerprints"` can be computed as follows.
 
@@ -577,7 +581,7 @@ duplicate the default payment method name in the `<string-array>`.
 ## `“basic-card”`
 
 Any payment app can support [`"basic-card"` payment
-method](https://w3c.github.io/webpayments-methods-card/). This payment method
+method](https://w3c.github.io/payment-method-basic-card/). This payment method
 does not require a payment app manifest. Chrome does not perform signature
 verification of a payment app that supports only `"basic-card"`. To enable
 support for this payment method, add the following to the `AndroidManifest.xml`
@@ -624,8 +628,8 @@ interface  IsReadyToPayServiceCallback {
 }
 ```
 
-Save this in `org/chromium/IsReadyToPayServiceCallback.aidl` in your project. The
-callback is used to enable asynchronous querying.
+Save this in `org/chromium/IsReadyToPayServiceCallback.aidl` in your project.
+The callback is used to enable asynchronous querying.
 
 ```java
 package org.chromium;
@@ -671,7 +675,7 @@ public  class  IsReadyToPayServiceImpl  extends Service {
 The permission check can be accomplished by checking `Binder.getCallingUid()`.
 The `onBind()` method in a `Service` is called only once during the lifetime of
 the `Service`. If multiple apps connect to the `Service` while it’s alive, they
-will all get the same instance. This means, that multiple apps may be talking to
+will all get the same instance. This means that multiple apps may be talking to
 same instance of the payment app’s `IsReadyToPayService`. Therefore, permission
 check must happen inside of `isReadyToPay()` call.
 
@@ -690,9 +694,9 @@ to get the name of the package. A payment app should use
 the `"PAY"` intent .
 
 ```java
-Signature[] callerSignatures = getPackageManager().getPackageInfo(  
-    getCallingActivity().getPackageName(),  
-    PackageManager.GET_SIGNATURES).signatures;
+Signature[] callerSignatures = getPackageManager().getPackageInfo(
+        getCallingActivity().getPackageName(),
+        PackageManager.GET_SIGNATURES).signatures;
 ```
 
 Beware that `getCallingActivity()` is not guaranteed to return an object. Check

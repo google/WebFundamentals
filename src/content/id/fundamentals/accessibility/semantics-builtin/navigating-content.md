@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Peran semantik dalam navigasi laman
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Semantik dan Menyusuri Materi {: .page-title }
@@ -51,17 +51,17 @@ berarti struktur heading yang tepat menjadi kian penting.
 
 Di kebanyakan laman yang terstruktur dengan baik, level heading disarangkan untuk menunjukkan
 hubungan induk-anak di antara blok materi. [Daftar Periksa
-WebAIM](http://webaim.org/standards/wcag/checklist) berulang kali merujuk
+WebAIM](https://webaim.org/standards/wcag/checklist) berulang kali merujuk
 teknik ini.
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
+ - [1.3.1](https://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
    menyebutkan "Markup semantik digunakan untuk menunjukkan heading"
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
+ - [2.4.1](https://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
    menyebutkan struktur heading sebagai teknik untuk melangkahi blok
    materi
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
+ - [2.4.6](https://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
    mendiskusikan beberapa detail untuk penulisan heading yang berguna
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
+ - [2.4.10](https://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
    menyebutkan "masing-masing bagian materi ditetapkan menggunakan heading,
    bila memang sesuai"
 
@@ -84,7 +84,7 @@ sengaja menempatkan sebagian heading di luar layar untuk membuatnya
     <h2 class="sr-only">This heading is offscreen.</h2>
 
 Note: Situs WebAIM mendiskusikan teknik ini panjang lebar dalam [artikel
-ini di materi di luar layar](http://webaim.org/techniques/css/invisiblecontent/).
+ini di materi di luar layar](https://webaim.org/techniques/css/invisiblecontent/).
 
 Bagi aplikasi yang kompleks, ini bisa menjadi cara yang bagus untuk mengakomodasi heading bila
 desain visual tidak memerlukan atau memiliki ruang bagi heading yang terlihat.

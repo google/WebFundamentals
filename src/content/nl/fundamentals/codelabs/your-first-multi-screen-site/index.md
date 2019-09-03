@@ -22,7 +22,7 @@ Het is niet zo moeilijk om volledig responsieve websites te maken als u misschie
 
 
 
-## Uw eigen inhoud en structuur maken 
+## Uw eigen inhoud en structuur maken
 
 
 
@@ -164,14 +164,14 @@ We hebben overzicht van de website gemaakt en we hebben alle belangrijke structu
 <div class="clearfix"></div>
 
 
-Het is u misschien opgevallen dat de pagina helemaal niet mooi is. Dat is de bedoeling. 
+Het is u misschien opgevallen dat de pagina helemaal niet mooi is. Dat is de bedoeling.
 Inhoud is het belangrijkste aspect van een website en we moesten ervoor zorgen dat we een goede solide informatiearchitectuur en -dichtheid hebben. Dankzij deze gids hebben we een uitstekende basis waarop we kunnen bouwen. In de volgende gids zullen we onze inhoud vormgeven.
 
 
 
 
 
-## De pagina responsief maken 
+## De pagina responsief maken
 
 
 
@@ -239,7 +239,6 @@ Een stijlgids is een erg handige manier om een goed inzicht te krijgen in de vis
   <div style="background-color: #39b1a4">#39b1a4</div>
   <div style="background-color: white">#ffffff</div>
   <div style="background-color: #f5f5f5">#f5f5f5</div>
-
   <div style="background-color: #e9e9e9">#e9e9e9</div>
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
@@ -264,7 +263,7 @@ Het kan erg eenvoudig zijn om ze in te voegen. In ons voorbeeld wordt deze afbee
       background-image: url(backgroundimage.jpg);
       background-size: cover;
     }
-    
+
 
 We hebben een eenvoudige achtergrondafbeelding gekozen die wazig is zodat de aandacht op de inhoud blijft gevestigd en we hebben ingesteld dat deze het hele element bedekt, zodat de hoogte-breedteverhouding ook tijdens het uitrekken blijft behouden.
 
@@ -286,9 +285,9 @@ Het ontwerp ziet er pas slecht uit vanaf een breedte van 600 pixels. In ons voor
 
 
     @media (min-width: 600px) {
-    
+
     }
-    
+
 
 Er is meer ruimte op een groter scherm, waardoor u flexibeler kunt zijn in de manier waarop inhoud wordt weergegeven.
 
@@ -405,7 +404,7 @@ Voor browsers die het ondersteunen, kunt u een afbeelding met hoge dichtheid wee
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
-    
+
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
@@ -442,6 +441,3 @@ Als u deze richtlijnen volgt, maakt u een goed begin:
 3.  Maak uw basiservaring volgens een aanpak voor mobiele apparaten eerst.
 4.  Als u uw mobiele ervaring heeft, maakt u de weergave breder tot deze niet meer juist is en stelt u uw breekpunt daar in.
 5.  Blijf herhalen.
-
-
-

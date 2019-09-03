@@ -2,11 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-04-11 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2016-01-01 #}
 
 
 # Introduction to Service Worker {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 
@@ -111,7 +113,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-This code starts by checking for browser support by examining `navigator.serviceWorker`. The service worker is then registered with `navigator.serviceWorker.register`, which returns a promise that resolves when the service worker has been successfully registered. The `scope` of the service worker is then logged with `registration.scope`.
+This code starts by checking for browser support by examining `navigator.serviceWorker`. The service worker is then registered with `navigator.serviceWorker.register`, which returns a promise that resolves when the service worker has been successfully registered. The `scope` of the service worker is then logged with `registration.scope`. If the service worker is already installed, `navigator.serviceWorker.register` returns the registration object of the currently active service worker.
 
 The `scope` of the service worker determines which files the service worker controls, in other words, from which path the service worker will intercept requests. The default scope is the location of the service worker file, and extends to all directories below. So if __service-worker.js__ is located in the root directory, the service worker will control requests from all files at this domain.
 
@@ -125,9 +127,30 @@ navigator.serviceWorker.register('/service-worker.js', {
 });
 ```
 
-In this case we are setting the scope of the service worker to `/app/`, which means the service worker will control requests from pages like `/app/`, `/app/lower/` and `/app/lower/lower`, but not from pages like `/app` or `/`, which are higher.
+In this case we are setting the scope of the service worker to `/app/`, which means the service worker will control requests from pages like `/app/`, `/app/lower/` and `/app/lower/lower`, **but not from pages like `/app` or `/`**, which are higher.
 
-If the service worker is already installed, `navigator.serviceWorker.register` returns the registration object of the currently active service worker.
+If you want the service worker to control higher pages e.g. `/app` (without the trailing slash) you can indeed change the scope option, but you'll also need to set the [Service-Worker-Allowed HTTP Header](https://w3c.github.io/ServiceWorker/#service-worker-script-response) in your server config for the request serving the service worker script.
+
+#### main.js
+
+```
+navigator.serviceWorker.register('/app/service-worker.js', {
+  scope: '/app'
+});
+```
+
+#### Your server config
+
+Note: This is an example of adding the `Service-Worker-Allowed` header to the service worker script response using the popular [nginx web server](https://www.nginx.com/resources/wiki/start/topics/examples/full/). If you're using a different web server, please refer to its documentation on setting response headers to make the equivalent change.
+
+
+```
+location ~* (service-worker\.js)$ {
+  # tells browsers the service worker scope
+  add_header 'Service-Worker-Allowed' '/app';
+}
+```
+
 
 ### Installation
 

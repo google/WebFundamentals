@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 페이지 탐색에서 의미 체계의 역할
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 의미 체계와 콘텐츠 탐색 {: .page-title }
@@ -51,17 +51,17 @@ DOM 순서를 따른다는 점을 알 수 있을 것입니다.
 
 잘 구조화된 페이지에서는 대부분 콘텐츠 블록 사이의 상위-하위 관계를 나타내기 위해
 제목 수준이 중첩되어 있습니다. [WebAIM
-검사 목록](http://webaim.org/standards/wcag/checklist)에서는 이 기법을 반복해서
+검사 목록](https://webaim.org/standards/wcag/checklist)에서는 이 기법을 반복해서
 언급합니다.
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }에서는
+ - [1.3.1](https://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }에서는
    '의미 체계 마크업을 사용해 제목을 지정한다'고 언급
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }에서는
+ - [2.4.1](https://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }에서는
    제목 구조를 콘텐츠 블록 우회 기법으로
    언급
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }에서는
+ - [2.4.6](https://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }에서는
    유용한 제목 작성을 위한 세부 사항 설명
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }에서는
+ - [2.4.10](https://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }에서는
    '상황에 맞춰 적절히 제목을 사용해 콘텐츠의 개별 섹션을 지정'한다고
    설명
 
@@ -84,7 +84,7 @@ DOM 순서를 따른다는 점을 알 수 있을 것입니다.
     <h2 class="sr-only">This heading is offscreen.</h2>
 
 참고: WebAIM 사이트에서
-[화면 밖 콘텐츠에 대한 문서](http://webaim.org/techniques/css/invisiblecontent/)를 통해 이 기술에 대한 자세한 내용을 확인할 수 있습니다.
+[화면 밖 콘텐츠에 대한 문서](https://webaim.org/techniques/css/invisiblecontent/)를 통해 이 기술에 대한 자세한 내용을 확인할 수 있습니다.
 
 복잡한 애플리케이션의 경우 시각적 디자인에 시각적 제목이 필요하지 않거나 이런 제목을 배치할 공간이 없을 때
 이 기술을 사용하면 문제 없이 제목을 수용할 수 있습니다.

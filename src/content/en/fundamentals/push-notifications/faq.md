@@ -1,15 +1,13 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-06 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
 # FAQ {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
-
-
 
 ## Why doesn't push work when the browser is closed?
 
@@ -31,7 +29,7 @@ On Mac OS X, you can tell if a program is running or not by a marking
 under the app icon in the dock.
 
 If you compare the two Chrome icons in the following dock, the one on the left
-is running, illustrated by the marking under the icon, whereas the Chrome
+is running, as illustrated by the marking under the icon, whereas the Chrome
 on the right is **not running**, hence the lack of the marking underneath.
 
 ![Example of OS X](./images/faq/os-x-dock.png){: .center-image }
@@ -42,7 +40,7 @@ when the browser is running, i.e. has the marking underneath the icon.
 This means the browser can have no windows open, and you'll still receive the push message in
 your service worker, because the browser in running in the background.
 
-The only time a push won't be received is if the browser is completely closed, i.e. not running
+The only time a push won't be received is when the browser is completely closed, i.e. not running
 at all (no marking). The same applies for Windows, although it's a little trickier to determine
 whether or not Chrome is running in the background.
 
@@ -72,7 +70,7 @@ fairly regularly, your notifications will open in the normal browser UI.
 
 This issue will be worked on further.
 
-**Note:** This is just the behavior of Chrome, though other browsers may do different things as well.
+Note: This is just the behavior of Chrome, though other browsers may do different things as well.
 Feel free to [raise an issue](https://github.com/gauntface/web-push-book/issues) if you have
 anything to add to this discussion.
 
@@ -87,7 +85,8 @@ web page is kept open.
 This question has a number of facets to it and the easiest way to explain is to
 step through the history of web push and Chrome. (Don't worry, it's short.)
 
-##### December 2014
+### December 2014
+
 When Chrome first implemented web push, Chrome used Google Cloud Messaging (GCM)
 to power the sending of push messages from the server to the browser.
 
@@ -99,7 +98,8 @@ This **was not web push**. There are a few reasons this early set-up of Chrome a
 messaging correctly.
 - GCM's servers accepted a custom API request that wasn't a web standard.
 
-##### July 2016
+### July 2016
+
 In July a new feature in web push landed - Application Server Keys (or VAPID, as
 the spec is known). When Chrome added support for this new API, it used Firebase
 Cloud Messaging (also known as FCM) instead of GCM as a messaging service. This
@@ -111,23 +111,24 @@ or Firebase. It'll just work.
 support. This means that regardless of what push service a browser uses, you just make the same
 kind of request and it'll send the message.
 
-##### Why is it confusing today?
+### Why is it confusing today?
+
 There is a large amount of confusion now that content has been written on the topic of web
 push, much of which references GCM or FCM. If content references GCM, you should probably treat
 it as a sign that it's either old content OR it's focusing too much on Chrome. (I'm guilty of
 doing this in a number of old posts.)
 
 Instead, think of web push as consisting of a browser, which uses a push service to manage
-sending and receiving message, where the push service will accept a "web push protocol"
+sending and receiving messages, where the push service will accept a "web push protocol"
 request. If you think in these terms, you can ignore which browser and which push service it's
 using and get to work.
 
-This book has been written to focus on the standards approach of web push and
+This guide has been written to focus on the standards approach of web push and
 purposefully ignores anything else.
 
 ## Firebase has a JavaScript SDK. What and Why?
 
-For those of you who have found the Firebase web SDK and noticed is has a messaging API for
+For those of you who have found the Firebase web SDK and noticed it has a messaging API for
 JavaScript, you may be wondering how it differs from web push.
 
 The messaging SDK (known as Firebase Cloud Messaging JS SDK) does a few tricks behind the
@@ -137,16 +138,16 @@ scenes to make it easier to implement web push.
 you only need to worry about an FCM Token (a string).
 - Using the tokens for each user, you can use the proprietary FCM API to
 trigger push messages. This API doesn't require encrypting payloads. You
-can send a plain test payload in a POST request body.
+can send a plain text payload in a POST request body.
 - FCM's proprietary API supports custom features, for example
 [FCM Topics](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging)
 (It works on the web too, though it's poorly documented).
-- Finally FCM supports Android, iOS and web, so for some teams it is
+- Finally, FCM supports Android, iOS and web, so for some teams it is
 easier to work with in existing projects.
 
 This uses web push behind the scenes, but its goal is to abstract it away.
 
-Like I said in the previous question, if you consider web push as just a browser and push
+Like I said in the previous question, if you consider web push as just a browser and a push
 service, then you can consider the Messaging SDK in Firebase as a library to simplify
 implementing web push.
 

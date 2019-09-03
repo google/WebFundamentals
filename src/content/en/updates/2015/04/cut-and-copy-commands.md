@@ -140,8 +140,7 @@ Safari does not support these commands.
 
 ## Known Bugs
 
-* ~~Calling queryCommandSupported() for cut or copy [always returns false until after a user interaction](https://bugs.chromium.org/p/chromium/issues/detail?id=476508). This prevents you from disabling your UI for browsers which don't actually support it.~~ Fixed on Chrome 48.
-* [Calling queryCommandSupported() from devtools will always return
+* [Calling `queryCommandSupported()` from devtools will always return
   false](https://bugs.chromium.org/p/chromium/issues/detail?id=475868).
 * At the moment [cut only works when you programmatically select
   text](https://bugs.chromium.org/p/chromium/issues/detail?id=476848).

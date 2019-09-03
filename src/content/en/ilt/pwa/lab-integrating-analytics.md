@@ -2,11 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-30 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2016-01-01 #}
 
 
 # Lab: Integrating Analytics {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 
@@ -365,7 +367,7 @@ gtag('event', 'unsubscribe', {
 });
 ```
 
-Save the script and refresh the app. Now test the __Subscribe__ and __Unsubscribe__ buttons. Confirm that you see the custom events in the the Google Analytics dashboard.
+Save the script and refresh the app. Now test the __Subscribe__ and __Unsubscribe__ buttons. Confirm that you see the custom events in the Google Analytics dashboard.
 
 __Optional__: Add analytics hits for the `catch` blocks of the `subscribe` and `unsubscribe` functions. In other words, add analytics code to record when users have errors subscribing or unsubscribing. Make sure the event's `action` (the second argument to `gtag`) is distinct, for example `subscribe-err`). Then manually block notifications in the app by clicking the icon next to the URL and revoking permission for notifications. Refresh the page and test subscribing, you should see an event fired for the subscription error in the Google Analytics dashboard. Remember to restore notification permissions when you are done.
 
@@ -571,7 +573,7 @@ Note: Testing the Measurement Protocol can be difficult because it does not retu
 
 #### Explanation
 
-We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) to import the `analytics-helper.js` file with our `sendAnalyticsEvent` helper function. This function is used send custom events at appropriate places (such as when push events are received, or notifications are interacted with). The `eventAction` and `eventCategory` that we want to associate with the event are passed in as parameters.
+We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) to import the `analytics-helper.js` file with our `sendAnalyticsEvent` helper function. This function is used to send custom events at appropriate places (such as when push events are received, or notifications are interacted with). The `eventAction` and `eventCategory` that we want to associate with the event are passed in as parameters.
 
 Note: [`event.waitUntil`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil) extends the life of an event until the asynchronous actions inside of it have completed. This ensures that the service worker will not be terminated preemptively while waiting for an asynchronous action to complete.
 

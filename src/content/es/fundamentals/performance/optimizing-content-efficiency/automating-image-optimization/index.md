@@ -855,7 +855,7 @@ MozJPEG.
 
 **¿Combinar codificadores?**
 
-Para imágenes de gran tamaño, descubrí que combinar Guetzli con **compresión sin pérdida **en
+Para imágenes de gran tamaño, descubrí que combinar Guetzli con **compresión sin pérdida** en
 MozJPEG (jpegtran, no cjpeg para no desperdiciar el trabajo realizado por Guetzli)
 puede producir una reducción adicional del 10-15% en el tamaño de archivos (55% en total) con solo
 disminuciones menores de SSIM. Esto es algo en lo que yo recomendaría

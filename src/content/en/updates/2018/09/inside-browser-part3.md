@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Inner workings of a browser rendering engine
 
 {# wf_published_on: 2018-09-20 #}
-{# wf_updated_on: 2019-02-09 #}
+{# wf_updated_on: 2019-05-30 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: Once the browser receives page data, what happens inside of the renderer process to display a page? #}
 {# wf_blink_components: N/A #}
@@ -169,7 +169,7 @@ needs to be.
 CSS can make element float to one side, mask overflow item, and change writing directions. You can
 imagine, this layout stage has a mighty task. In Chrome, a whole team of engineers works on the
 layout. If you want to see details of their work,
-[few talks form BlinkOn Conference](https://www.youtube.com/watch?v=Y5Xa4H2wtVA) are recorded and
+[few talks from BlinkOn Conference](https://www.youtube.com/watch?v=Y5Xa4H2wtVA) are recorded and
 quite interesting to watch.
 
 <div class="clearfix"></div>

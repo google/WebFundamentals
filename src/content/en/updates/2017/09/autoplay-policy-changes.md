@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-10-09 #}
+{# wf_updated_on: 2019-08-06 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -56,8 +56,9 @@ Chrome's autoplay policies are simple:
 - Autoplay with sound is allowed if:
     - User has interacted with the domain (click, tap, etc.).
     - On desktop, the user's [Media Engagement Index](#mei) threshold has been crossed,
-      meaning the user has previously play video with sound.
-    - On mobile, the user has [added the site to their home screen].
+      meaning the user has previously played video with sound.
+    - The user has [added the site to their home screen] on mobile or
+      [installed the PWA] on desktop.
 - Top frames can [delegate autoplay permission](#iframe) to their iframes to
   allow autoplay with sound.
 
@@ -273,7 +274,8 @@ Note: Web Audio FAQs can be found [here].
 ["AutoplayAllowed"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayAllowed
 ["AutoplayWhitelist"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayWhitelist
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
-[added the site to his or her home screen]: /web/updates/2017/02/improved-add-to-home-screen
+[added the site to their home screen]: /web/updates/2017/02/improved-add-to-home-screen
+[installed the PWA]: /web/progressive-web-apps/desktop
 [Promise]: /web/fundamentals/getting-started/primers/promises
 [rejected]: /web/updates/2017/06/play-request-was-interrupted
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38

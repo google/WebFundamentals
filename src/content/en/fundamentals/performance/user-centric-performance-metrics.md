@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: User-centric Performance Metrics
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2019-05-08 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -134,7 +134,7 @@ several new metrics:
 
 ### First paint and first contentful paint
 
-The [Paint Timing](https://github.com/WICG/paint-timing) API defines two
+The [Paint Timing](https://w3c.github.io/paint-timing/) API defines two
 metrics: *first paint* (FP) and *first contentful paint* (FCP). These metrics
 mark the points, immediately after navigation, when the browser renders pixels
 to the screen. This is important to the user because it answers the question:
@@ -780,7 +780,7 @@ delight their users and create great applications.
 File spec issues:
 
 * [https://github.com/w3c/longtasks/issues](https://github.com/w3c/longtasks/issues)
-* [https://github.com/WICG/paint-timing/issues](https://github.com/WICG/paint-timing/issues)
+* [https://github.com/w3c/paint-timing/issues](https://github.com/w3c/paint-timing/issues)
 * [https://github.com/w3c/performance-timeline/issues](https://github.com/w3c/performance-timeline/issues)
 
 File polyfill issues:

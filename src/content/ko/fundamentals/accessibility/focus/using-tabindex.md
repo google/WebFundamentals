@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: tabindex로 DOM 순서 변경
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # tabindex 사용 {: .page-title }
@@ -356,7 +356,7 @@ GitHub에서
 이를 완료할 때까지 사용자가 떠나지 못하게 하는 자동완성 위젯을 생각해봅시다.
 이것을 *키보드 트랩*이라고 하고 이는 사용자에게 매우 불만스러울 수 있습니다.
 Web AIM 검사 목록의 섹션 2.1.2에서는 이 문제에 대해
-[키보드 포커스는 특정 페이지 요소에서 잠그거나 트랩되어서는 안 됩니다](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }라고 되어 있습니다.
+[키보드 포커스는 특정 페이지 요소에서 잠그거나 트랩되어서는 안 됩니다](https://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }라고 되어 있습니다.
 사용자는 키보드만 사용하여 모든 페이지 요소를 이동할 수
 있어야 합니다.
 

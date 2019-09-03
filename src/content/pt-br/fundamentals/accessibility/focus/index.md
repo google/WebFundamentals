@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Visão geral do foco na tela em acessibilidade
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introdução a Foco {: .page-title }
@@ -57,7 +57,7 @@ Alguns usuários operam seus computadores quase que inteiramente com o teclado
 ou outro dispositivo de interação. Para esses usuários, o foco é crucial; pois é seu
 principal meio de alcançar tudo que há na tela. Por este motivo, a lista de verificação Web AIM afirma,
 na seção 2.1.1 que [todas as funcionalidades da página devem estar disponíveis usando
-o teclado](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
+o teclado](https://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
 a menos que seja algo impossível de se fazer com um teclado, como desenhar à mão livre.
 
 Como usuário, você pode controlar qual elemento está atualmente focado usando `Tab`,
@@ -81,7 +81,7 @@ ordem e têm o manuseio integrado de eventos de teclado sem a intervenção do d
 
 ![campos implicitamente focalizáveis](imgs/implicitly-focused.png)
 
-Porém, nem todos os elementos são focalizáveis; parágrafos, divs e vários outros 
+Porém, nem todos os elementos são focalizáveis; parágrafos, divs e vários outros
 elementos de página não são focados conforme você tabula pela página, e isso
 é projetado assim. Geralmente não há necessidade de focar em alguma coisa, se o usuário não pode interagir com ela.
 

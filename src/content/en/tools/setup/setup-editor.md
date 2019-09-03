@@ -1,14 +1,20 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Your code editor is your main development tool; you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins.
+robots: noindex
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2019-07-10 #}
 {# wf_published_on: 2014-05-28 #}
+{# wf_blink_components: N/A #}
 
 # Set Up Your Editor {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
+
+<aside class="caution">
+  <b>This page is not being maintained.</b>
+</aside>
 
 Your code editor is your main development tool; you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins.
 

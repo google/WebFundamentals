@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: On devices with phone capabilities, make it easy for users to directly connect with you by simply tapping a phone number, more commonly known as click to call.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-07-26 #}
 {# wf_published_on: 2014-06-17 #}
 {# wf_blink_components: Blink>Input #}
 
@@ -29,9 +29,10 @@ enabled for click to call and that they will be styled to match your site.
 To mark a phone number as a link, use the `tel:` scheme.  The syntax is 
 simple:
 
-
-    NIST Telephone Time-of-Day Service 
-    <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
+```html
+NIST Telephone Time-of-Day Service 
+<a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
+```
 
 Your browser displays this syntax as follows:
 
@@ -74,7 +75,7 @@ detects phone numbers and allows users to click to call, but does not wrap
 the phone numbers in hyperlinks or apply any special styles.
 
 To prevent Mobile Safari from automatically detecting phone numbers, add the
-following meta tag to the top of the page:
+following meta tag to your page:
 
 
     <meta name="format-detection" content="telephone=no">

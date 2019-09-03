@@ -1,7 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_blink_components: Blink>PushAPI #}
+{# wf_updated_on: 2019-06-06 #}
 {# wf_published_on: 2016-06-30 #}
 
 # パーミッションの UX {: .page-title }
@@ -30,23 +31,29 @@ book_path: /web/fundamentals/_book.yaml
 
 これらは、ユーザーがあなたのサービスに期待しているポイントすべてであり、プッシュ通知を有効にする明確な価値があります。
 
+![Owen Campbell-Moore's example of good UX for push.](./images/ux-examples/owen/owen-good-example.png){: .device-image .attempt-right }
+
 [Owen Campbell-Moore](https://twitter.com/owencm) は、このアプローチを実証するために、架空の航空会社のウェブサイトのモックを作成しました。
 
 ユーザーがフライトを予約した後、フライトの遅延通知を希望するかどうかを尋ねます。
 
-![Owen Campbell-Moore's example of good UX for push.](./images/ux-examples/owen/owen-good-example.png){: .device-image .center-image }
-
 これはウェブサイトのカスタム UI であることに注意して下さい。
+
+<div class="clearfix"></div>
+
+![Owen Campbell-Moore's example of good UX for the permission prompt.](./images/ux-examples/owen/owen-permission-prompt.png){: .device-image .attempt-right }
 
 Owen のデモのもう一つの良い点は、ユーザーが通知を有効にするためにクリックした際、パーミッションのプロンプトが表示されると同時に、ページ全体に半透明のオーバーレイが追加されることです。これにより、ユーザーの注意がパーミッションのプロンプトに向けられます。
 
-![Owen Campbell-Moore's example of good UX for the permission prompt.](./images/ux-examples/owen/owen-permission-prompt.png){: .device-image .center-image }
+<div class="clearfix"></div>
 
 逆にパーミッションを求める**悪い UX** の例は、ユーザーが航空会社のサイトに辿り着いてすぐにそれを求めるものです。
 
-![Owen Campbell-Moore's example of bad UX for push.](./images/ux-examples/owen/owen-bad-ux.png){: .device-image .center-image }
+![Owen Campbell-Moore's example of bad UX for push.](./images/ux-examples/owen/owen-bad-ux.png){: .device-image .attempt-right }
 
 このアプローチは、なぜ通知がユーザにとって必要で、有用であるかについて何の説明も提供しません。また、それが原因で元々達成しようとしていた目的（例えばフライトの予約）を邪魔してしまいます。
+
+<div class="clearfix"></div>
 
 ### 二重のパーミッション
 
@@ -56,7 +63,7 @@ Owen のデモのもう一つの良い点は、ユーザーが通知を有効に
 
 これらのカテゴリのアプリでは、二重パーミッションパターンを検討する価値があるかもしれません。
 
-最初に、あなたのウェブサイトが制御する偽のパーミッションプロンプトを表示します。これはパーミッションの要求を許可または無視するボタンで構成します。ユーザーが許可をクリックしてはじめて、実際のブラウザーネイティブのパーミッションプロンプトを表示します。
+最初に、あなたのウェブサイトが制御する偽のパーミッションプロンプトを表示してください。プロンプトには要求を許可もしくは無視するボタンを表示します。ユーザーが [許可] ボタンをクリックしたら、パーミッションを要求することで、本来のブラウザが持つパーミッションプロンプトを表示します。
 
 この方法ではまず、Web アプリケーション上でカスタムのパーミッションプロンプトを表示し、通知を有効にするよう求めます。こうすることで、Web サイトは永久にパーミッションをブロックされるリスクなしに、ユーザーに有効または無効を選択してもらうことができます。ユーザーがカスタム UI で有効を選択した場合のみ、実際のパーミッションプロンプトを表示し、そうでなければカスタムポップアップを非表示にして、別の機会に尋ねることができます。
 
@@ -66,20 +73,25 @@ Owen のデモのもう一つの良い点は、ユーザーが通知を有効に
 
 設定画面に通知の項目を用意することで、Web アプリケーションの UI を煩雑にすることなく、ユーザーにプッシュ通知の有効または無効を変更する方法を提供することができます。
 
-[Google I / O の 2016 サイト](https://events.google.com/io2016/)が良い例です。最初に Google I / O
- サイトを読み込んだ時点では、特に何も求められません。ユーザーは自由にサイトを閲覧することができます。
+![When you first load the page, no prompt, just calm on Google IO.](./images/ux-examples/google-io/google-io-first-load.png){: .device-image .attempt-right }
 
-![When you first load the page, no prompt, just calm on Google IO.](./images/ux-examples/google-io/google-io-first-load.png){: .device-image .center-image }
+[Google I/O 2016 のサイト](https://events.google.com/io2016/)が良い例です。最初に Google I/O サイトを読み込んだ時点では、特に何も求められません。ユーザーは自由にサイトを閲覧することができます。
+
+<div class="clearfix"></div>
+
+![Settings panel on Google IO's web app for push messaging.](./images/ux-examples/google-io/google-io-settings-panel.png){: .device-image .attempt-right }
 
 右側のメニュー項目をクリックすると、ユーザーが通知を設定および管理できる設定パネルが表示されます。
 
-![Settings panel on Google IO's web app for push messaging.](./images/ux-examples/google-io/google-io-settings-panel.png){: .device-image .center-image }
+<div class="clearfix"></div>
+
+![Google IO's web app displaying the permission prompt.](./images/ux-examples/google-io/google-io-permission-prompt.png){: .device-image .attempt-right }
 
 チェックボックスをクリックすると、パーミッションプロンプトが表示されます。特に驚きはありませんね。
 
-![Google IO's web app displaying the permission prompt.](./images/ux-examples/google-io/google-io-permission-prompt.png){: .device-image .center-image }
+パーミッションが与えられれば、チェックボックスがチェックされ、プッシュ通知の利用が可能になります。この UI が素晴らしいのは、ユーザーが、一箇所で通知を有効または無効にできることです。
 
-パーミッションが与えられれば、チェックボックスがチェックされ、プッシュ通知の利用が可能になります。この UI の素晴らしいところは、ユーザーがウェブサイト上の特定の場所で、通知を有効または無効にできることです。
+<div class="clearfix"></div>
 
 ### 受動的アプローチ
 
@@ -107,7 +119,7 @@ enabled.](./images/ux-examples/gauntface/gauntface-enabled.png)
 
 訪れた人は、なぜ許可を求められているか、あなたのウェブサイトの目的が何か、それが何をするのか、何を提供してくれるのかさえ知りません。そこに不満を感じたユーザーが、ここでパーミッションをブロックしてしまうことは決して珍しいことではありません。このポップアップは、ユーザーがやろうとしていることを邪魔しているのです。
 
-ユーザーがパーミッションのリクエストを*ブロック*してしまうと、あなたのウェブサイトは二度とパーミッションを求めることができません。ブロックされた後にパーミッションを取得するには、ユーザーがブラウザの UI でパーミッションを変更する必要があります。そうすることは、ユーザーにとって簡単ではありませんし、楽しいことでもありません。
+ユーザーがパーミッションのリクエストを*ブロックしてしまう*と、あなたのウェブサイトは二度とパーミッションを求めることができません。ブロックされた後にパーミッションを取得するには、ユーザーがブラウザの UI でパーミッションを変更する必要があります。そうすることは、ユーザーにとって簡単ではありませんし、楽しいことでもありません。
 
 何があっても、ユーザーがサイトを開いてすぐにパーミッションを求めるのはやめてください。そしてできれば、ユーザーがパーミッションを与える理由を見つけられる、他の UI やアプローチを検討してください。
 
@@ -118,5 +130,9 @@ enabled.](./images/ux-examples/gauntface/gauntface-enabled.png)
 ページが読み込まれた後すぐにパーミッションを求め、プッシュ通知を無効にする UI を提供しないサイトの数は驚異的です。
 
 サイトは、プッシュを無効にする方法をユーザーに説明する必要があります。さもなければ、あなたのサイトは永久にパーミッションをブロックされてしまうでしょう。
+
+## フィードバック {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
 
 Translated by {% include "web/_shared/contributors/agektmr.html" %}

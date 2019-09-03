@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to route requests with Workbox.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-06-28 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -11,13 +11,13 @@ description: A guide on how to route requests with Workbox.
 Routing in Workbox is the process of a Router *matching* a request to a
 route and the route then *handling* that request (i.e. providing a response).
 
-There are three ways developers can match a request with `workbox-routing`.
+There are three ways developers can match a request with `workbox-routing`:
 
 1. A string.
 1. A regular expression.
 1. A callback function.
 
-We’ll first look at how you can matching using this three approaches and
+We’ll first look at how you can match using these three approaches and
 then we’ll go on to cover the handling of a request, which is where the
 `handler` variable will serve as a placeholder.
 
@@ -26,8 +26,8 @@ then we’ll go on to cover the handling of a request, which is where the
 Matching a route with a string is the easiest to understand, but also the
 least flexible option.
 
-The requests URL is compared to the routes string and if they are equal the
-request will use that routes handler.
+The request's URL is compared to the route's string and if they are equal, the
+request will use that route's handler.
 
 So we could define a route for '/logo.png' like so:
 
@@ -41,7 +41,7 @@ workbox.routing.registerRoute(
 The only thing to be wary of is that this would only match for requests
 on your origin. If there was a separate site that had the URL
 `https://some-other-origin.com/logo.png`, this route wouldn’t match, because
-in most cases, that’s not what was intended. Instead you’d need to define
+in most cases, that’s not what was intended. Instead, you’d need to define
 the entire URL to match.
 
 ```javascript
@@ -58,7 +58,7 @@ expressions are the best way to go.
 
 The regular expression provided is tested against the full URL. If there's a match, the route will
 be triggered. This provides a lot of flexibility as to how you use it.
-If we wanted to route specific file extensions we could write routes such as:
+If we wanted to route specific file extensions, we could write routes such as:
 
 ```javascript
 workbox.routing.registerRoute(
@@ -89,7 +89,7 @@ the beginning of the URL in order to trigger a route when there's a cross-origin
 For example, the previous regular expression `new RegExp('/blog/\\d{4}/\\d{2}/.+')` would not match
 a request for `https://some-other-origin.com/blog/<year>/<month>/<post title slug>`. If we wanted a
 route that would match that general path pattern made against both same- and cross-origin requests,
-using a regular expression with a wildcard (`.+`)at the start is one approach:
+using a regular expression with a wildcard (`.+`) at the start is one approach:
 
 ```javascript
 workbox.routing.registerRoute(
@@ -116,10 +116,10 @@ workbox.routing.registerRoute(
 ## Matching a Route with a Callback Function
 
 To allow developers to do anything they want to match a request, you can also
-provide a function that can determine with a request should match a route on
+provide a function that can determine whether a request should match a route on
 any criteria it wishes.
 
-The callback will receive an object with the requests URL and the `FetchEvent`
+The callback will receive an object with the request's URL and the `FetchEvent`
 received in the service worker.
 
 ```javascript
@@ -151,12 +151,12 @@ Most routes can be handled with one of the built in caching strategies.
     - This strategy will use a cached response for a request if it is
     available and update the cache in the background with a response form
     the network. (If it’s not cached it will wait for the network response
-    and use that). This is a fairly safe strategy as it means users are
+    and use that.) This is a fairly safe strategy as it means users are
     regularly updating their cache. The downside of this strategy is that
     it’s always requesting an asset from the network, using up the user’s
     bandwidth.
 - Network First
-    - This will try and get a request from the network first. If it receives
+    - This will try to get a response from the network first. If it receives
     a response, it’ll pass that to the browser and also save it to a cache.
     If the network request fails, the last cached response will be used.
 - Cache First
@@ -221,7 +221,7 @@ device is limited).
 
 There may be scenarios where you’d like to respond to a request with a different
 strategy of your own or simply generating the request in the service worker with
-templating. For this you can provide an `async`function which returns a
+templating. For this you can provide an `async` function which returns a
 `Response` object. It'll be called with a parameter object containing `url` and
 `event` (the `FetchEvent`) properties.
 
