@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel.
 
-{# wf_updated_on: 2019-08-30 #}
+{# wf_updated_on: 2019-09-03 #}
 {# wf_published_on: 2019-08-29 #}
 {# wf_tags: chrome78, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -24,7 +24,7 @@ code blocked the main thread while the page loaded. See [Optimize your third-par
 to learn more about how third-party code can degrade load performance.
 
 <figure>
-  <img src="/web/updates/images/2019/08/third-party-code.png"
+  <img src="/web/updates/images/2019/08/thirdpartycode.png"
        alt="A screenshot of the 'Third-Party Usage' audit in the Lighthouse report UI."/>
   <figcaption>
     Figure 1. The <b>Third-party usage</b> audit.
@@ -76,7 +76,7 @@ To highlight the DOM node associated with LCP:
 
 If you ever encounter a bug in DevTools and want to file an issue, or if you ever get an idea
 on how to improve DevTools and want to request a new feature, go to **Main Menu** > **Help** >
-**Report a DevTools issue** to talk to the DevTools engineering team. Providing a
+**Report a DevTools issue** to create an issue in the DevTools engineering team's tracker. Providing a
 [minimal, reproducible example][repro] on [Glitch](https://glitch.com/) dramatically increases
 the team's ability to fix your bug or implement your feature request!
 
