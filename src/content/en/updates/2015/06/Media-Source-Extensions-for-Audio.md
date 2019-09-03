@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback.
 
-{# wf_updated_on: 2017-02-15 #}
+{# wf_updated_on: 2019-03-22 #}
 {# wf_published_on: 2015-06-11 #}
 {# wf_tags: news,audio,codecs,mse #}
+{# wf_blink_components: N/A #}
 
 # Media Source Extensions for Audio {: .page-title }
 
@@ -12,11 +13,11 @@ description: Media Source Extensions (MSE) provide extended buffering and playba
 
 ## Introduction
 
-[Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/about/){: .external } based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
+[Media Source Extensions (MSE)](https://w3c.github.io/media-source/) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](https://dashif.org/about/){: .external } based video players, below we'll see how they can be used for audio; specifically for [gapless playback](https://en.wikipedia.org/wiki/Gapless_playback).
 
 You've likely listened to a music album where songs flowed seamlessly across tracks; you may even be listening to one right now. Artists create these [gapless playback](https://en.wikipedia.org/wiki/Gapless_playback) experiences both as an artistic choice as well as an artifact of [vinyl records](https://en.wikipedia.org/wiki/Gramophone_record) and [CDs](https://en.wikipedia.org/wiki/Compact_disc) where audio was written as one continuous stream. Unfortunately, due to the way modern audio codecs like [MP3](https://en.wikipedia.org/wiki/MP3) and [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) work, this seamless aural experience is often lost today.
 
-We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/){: .external } chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
+We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](https://durian.blender.org/news/sintel-4k-dcp/){: .external } chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster-red.jpg">
@@ -25,7 +26,7 @@ We'll get into the details of why below, but for now let's start with a demonstr
   </video>
 </p>
 
-[Demo](https://simpl.info/mse/audio/gap)
+[Demo](https://simpl.info/mse/audio/gap/)
 
 Yuck! That's not a great experience; we can do better. With a little more work, using the exact same MP3 files in the above demo, we can use MSE to remove those annoying gaps. The green lines in the next demo indicate where the files have been joined and the gaps removed. On Chrome 38+ this will playback seamlessly!
 
@@ -36,7 +37,7 @@ Yuck! That's not a great experience; we can do better. With a little more work, 
   </video>
 </p>
 
-[Demo](https://simpl.info/mse/audio/gapless)
+[Demo](https://simpl.info/mse/audio/gapless/)
 
 There are a [variety of ways to create gapless content](#appendix-a-creating-gapless-content). For the purposes of this demo, we'll focus on the type of files a normal user might have lying around. Where each file has been encoded separately without regard for the audio segments before or after it.
 
@@ -66,7 +67,7 @@ First, let's backtrack and cover the basic setup of a `MediaSource` instance. Me
     audio.src = URL.createObjectURL(mediaSource);
 
 
-Once the `MediaSource` object is connected, it will perform some initialization and eventually fire a `sourceopen` event; at which point we can create a [`SourceBuffer`](http://www.w3.org/TR/media-source/#sourcebuffer). In the example above, we're creating an `audio/mpeg` one, which is able to parse and decode our MP3 segments; there are several [other types](http://www.w3.org/2013/12/byte-stream-format-registry/) available.
+Once the `MediaSource` object is connected, it will perform some initialization and eventually fire a `sourceopen` event; at which point we can create a [`SourceBuffer`](https://www.w3.org/TR/media-source/#sourcebuffer). In the example above, we're creating an `audio/mpeg` one, which is able to parse and decode our MP3 segments; there are several [other types](https://www.w3.org/2013/12/byte-stream-format-registry/) available.
 
 ## Anomalous Waveforms
 
@@ -85,7 +86,7 @@ In addition to the padding at the end, each file also had padding added to the b
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap.png" alt="Beginning of sintel_1.mp3">
 </p>
 
-The sections of silence at the beginning and end of each file are what cause the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`. Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://w3c.github.io/media-source#definitions) and a [timestamp offset](https://w3c.github.io/media-source#definitions) to remove this silence.
+The sections of silence at the beginning and end of each file are what cause the _glitches_ between segments in the previous demo. To achieve gapless playback, we need to remove these sections of silence. Luckily, this is easily done with `MediaSource`. Below, we'll modify our `onAudioLoaded()` method to use an [append window](https://w3c.github.io/media-source/#definitions) and a [timestamp offset](https://w3c.github.io/media-source/#definitions) to remove this silence.
 
 ## Example Code
 
@@ -178,7 +179,7 @@ Thanks for reading!
 
 ## Appendix A: Creating Gapless Content
 
-Creating gapless content can be hard to get right. Below we'll walk through creation of the [Sintel](http://www.sintel.org/){: .external } media used in this demo. To start you'll need a copy of the [lossless FLAC soundtrack](http://media.xiph.org/sintel/Jan_Morgenstern-Sintel-FLAC.zip) for Sintel; for posterity, the SHA1 is included below. For tools, you'll need [FFmpeg](http://ffmpeg.org/), [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/), [LAME](http://lame.sourceforge.net/), and an OSX installation with [afconvert](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/afconvert.1.html).
+Creating gapless content can be hard to get right. Below we'll walk through creation of the [Sintel](https://durian.blender.org/news/sintel-4k-dcp/){: .external } media used in this demo. To start you'll need a copy of the [lossless FLAC soundtrack](https://durian.blender.org/news/sintel-4k-dcp/) for Sintel; for posterity, the SHA1 is included below. For tools, you'll need [FFmpeg](http://ffmpeg.org/), [MP4Box](https://gpac.wp.imt.fr/mp4box/), [LAME](http://lame.sourceforge.net/), and an OSX installation with [afconvert](https://developer.apple.com/documentation/usernotifications/unnotificationsound).
 
 
     unzip Jan_Morgenstern-Sintel-FLAC.zip
@@ -209,7 +210,7 @@ Next, let's create the MP3 files. LAME has several options for creating gapless 
     lame -V=2 sintel_4.wav sintel_4.mp3
 
 
-That's all that's necessary to create the MP3 files. Now let's cover the creation of the fragmented MP4 files. We'll follow Apple's directions for creating media which is [mastered for iTunes](http://www.apple.com/itunes/mastered-for-itunes/). Below, we'll convert the wave files into intermediate [CAF](https://en.wikipedia.org/wiki/Core_Audio_Format) files, per the instructions, before encoding them as [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) in an [MP4](https://en.wikipedia.org/wiki/MP4) container using the recommended parameters.
+That's all that's necessary to create the MP3 files. Now let's cover the creation of the fragmented MP4 files. We'll follow Apple's directions for creating media which is [mastered for iTunes](https://www.apple.com/itunes/mastered-for-itunes/). Below, we'll convert the wave files into intermediate [CAF](https://en.wikipedia.org/wiki/Core_Audio_Format) files, per the instructions, before encoding them as [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) in an [MP4](https://en.wikipedia.org/wiki/MP4) container using the recommended parameters.
 
 
     afconvert sintel_0.wav sintel_0_intermediate.caf -d 0 -f caff \
@@ -234,7 +235,7 @@ That's all that's necessary to create the MP3 files. Now let's cover the creatio
               -b 256000 -q 127 -s 2 sintel_4.m4a
 
 
-We now have several M4A files which we need to [fragment](http://gpac.wp.mines-telecom.fr/mp4box/dash/) appropriately before they can be used with `MediaSource`. For our purposes, we'll use a fragment size of one second. MP4Box will write out each fragmented MP4 as `sintel_#_dashinit.mp4` along with an MPEG-DASH manifest (`sintel_#_dash.mpd`) which can be discarded.
+We now have several M4A files which we need to [fragment](https://gpac.wp.imt.fr/mp4box/dash/) appropriately before they can be used with `MediaSource`. For our purposes, we'll use a fragment size of one second. MP4Box will write out each fragmented MP4 as `sintel_#_dashinit.mp4` along with an MPEG-DASH manifest (`sintel_#_dash.mpd`) which can be discarded.
 
 
     MP4Box -dash 1000 sintel_0.m4a && mv sintel_0_dashinit.mp4 sintel_0.mp4
@@ -304,7 +305,7 @@ This is written inside an ID3 tag within the MP3 container and within a metadata
 
 On the flip side, most open source MP3 encoders will store the gapless metadata within a special [Xing header](http://gabriel.mp3-tech.org/mp3infotag.html) placed inside of a silent MPEG frame (it's silent so decoders which don't understand the Xing header will simply play silence). Sadly this tag is not always present and has a number of optional fields. For the purposes of this demo, we have control over the media, but in practice some additional sanity checks will be required to know when gapless metadata is actually available.
 
-First we'll parse the total sample count. For simplicity we'll read this from the Xing header, but it could be constructed from the normal [MPEG audio header](http://www.codeproject.com/Articles/8295/MPEG-Audio-Frame-Header). Xing headers can be marked by either a `Xing` or `Info` tag. Exactly 4 bytes after this tag there are 32-bits representing the total number of frames in the file; multiplying this value by the number of samples per frame will give us the total samples in the file.
+First we'll parse the total sample count. For simplicity we'll read this from the Xing header, but it could be constructed from the normal [MPEG audio header](https://www.codeproject.com/Articles/8295/MPEG-Audio-Frame-Header). Xing headers can be marked by either a `Xing` or `Info` tag. Exactly 4 bytes after this tag there are 32-bits representing the total number of frames in the file; multiplying this value by the number of samples per frame will give us the total samples in the file.
 
 
     // Xing padding is encoded as 24bits within the header.  Note: This code will
