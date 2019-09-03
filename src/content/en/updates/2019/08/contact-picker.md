@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The Contact Picker API is a new, on-demand picker that allows users to select entries from their contact list and share limited details of the selected entries with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family.
+description: The Contact Picker API is an on-demand API that allows users to select entries from their contact list and share limited details of the selected entries with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family.
 
 {# wf_published_on: 2019-08-07 #}
-{# wf_updated_on: 2019-08-17 #}
+{# wf_updated_on: 2019-09-06 #}
 {# wf_featured_image: /web/updates/images/generic/contacts.png #}
 {# wf_tags: capabilities,contacts,chrome77 #}
-{# wf_featured_snippet: Access to the user’s contacts has been a feature of native apps since (almost) the dawn of time. The Contact Picker API is a new, on-demand picker that allows users to select an entry or entries from their contact list and share limited details of the selected contact(s) with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family. #}
+{# wf_featured_snippet: Access to the user’s contacts has been a feature of native apps since (almost) the dawn of time. The Contact Picker API is an on-demand API  that allows users to select an entry or entries from their contact list and share limited details of the selected contact(s) with a website. It allows users to share only what they want, when they want, and makes it easier for users to reach and connect with their friends and family. #}
 {# wf_blink_components: Blink>Contacts #}
 
 # A Contact Picker for the Web {: .page-title }
@@ -44,7 +44,7 @@ Access to the user’s contacts has been a feature of native apps since
 I hear from web developers, and is often the key reason they build a native
 app.
 
-The Contact Picker API is a new, on-demand picker that allows users to
+The Contact Picker API is an on-demand API that allows users to
 select entries from their contact list and share limited details of the
 selected entries with a website. It allows users to share only what they
 want, when they want, and makes it easier for users to reach and connect
@@ -90,11 +90,13 @@ in `chrome://flags`.
 
 ### Enabling support during the origin trial phase {: #origin-trial }
 
-Starting in Chrome 77, the Contact Picker API will be available as an origin
+Starting in Chrome 77, the Contact Picker API is available as an origin
 trial on Chrome for Android. Origin trials allow you to try new features
 and give feedback on their usability, practicality, and effectiveness, both
 to us, and to the web standards community. For more information, see the
 [Origin Trials Guide for Web Developers][ot-guide].
+
+To enable the origin trial:
 
 1. Request a [token][ot-request] for your origin.
 2. Add the token to your pages, there are two ways to provide this token on
@@ -119,14 +121,14 @@ In addition, on Android, the Contact Picker requires Android M or later.
 ### Opening the Contact Picker
 
 The entry point to the Contact Picker API is `navigator.contacts.select()`.
-When called, it returns a Promise and shows the Contact Picker, allowing the
+When called, it returns a promise and shows the contact picker, allowing the
 user to select the contact(s) they want to share with the site. After
-selecting what to share and clicking *Done*, the promise resolves with an
+selecting what to share and clicking **Done**, the promise resolves with an
 array of contacts selected by the user.
 
-You must provide an array of properties you’d like returned as the first
-parameter, and optionally whether multiple contacts can be selected as a
-second parameter.
+When calling `select()` you must provide an array of properties you’d like
+returned as the first parameter, and optionally whether multiple contacts can be
+selected as a second parameter.
 
 ```js
 const props = ['name', 'email', 'tel'];
@@ -144,7 +146,7 @@ The Contacts Picker API can only be called from a [secure][secure-contexts],
 top-level browsing context, and like other powerful APIs, it requires a
 user gesture.
 
-#### Handling the results
+### Handling the results
 
 The Contact Picker API returns an array of contacts, and each contact
 includes an array of the requested properties. If a contact doesn’t have
@@ -170,11 +172,11 @@ Note: Labels and other semantic information on contact fields are dropped.
 We’ve designed and implemented the Contact Picker API using the core
 principles defined in
 [Controlling Access to Powerful Web Platform Features][powerful-apis],
-including user control, transparency, and ergonomics.
+including user control, transparency, and ergonomics. I'll explain each. 
 
 ### User control {: #security-control }
 
-Access to the users' contacts is via the picker, it can only be called with
+Access to the users' contacts is via the picker, and it can only be called with
 a user gesture, on a [secure][secure-contexts], top-level browsing context.
 This ensures that a site can’t show the picker on page load, or randomly show
 the picker without any context.
@@ -182,7 +184,7 @@ the picker without any context.
 <figure class="attempt-right">
   <img src="/web/updates/images/2019/08/contact-picker-user-choice.jpg">
   <figcaption>
-    User can choose not to share some properties, in this screenshot, the
+    Users can choose not to share some properties. In this screenshot, the
     user has unchecked the 'Phone numbers' button. Even though the site
     asked for phone numbers, they will not be shared with the site.
   </figcaption>
@@ -197,8 +199,8 @@ by toggling the property button at the top of the picker.
 
 ### Transparency {: #security-transparency }
 
-To clarify which contact details are being shared, the picker will always
-show the contact's name and icon, plus any properties that the site has
+To clarify which contact details are being shared, the picker always
+shows the contact's name and icon, plus any properties that the site has
 requested. For example, if a site requests `name`, `email`, and `tel`,
 all three properties will be shown in the picker. Alternatively,
 if a site only requests `tel`, the picker will show only the name, and
@@ -220,10 +222,17 @@ telephone numbers.
 
 <div class="clearfix"></div>
 
-<img class="attempt-right" src="/web/updates/images/2019/08/contact-picker-long-press.jpg">
+
+<figure class="attempt-right">
+  <img src="/web/updates/images/2019/08/contact-picker-long-press.jpg">
+  <figcaption>
+    The result of a long press on a contact.
+  </figcaption>
+</figure>
+
 
 A long press on a contact will show all of the information that will be
-shared if the contact is selected (image right).
+shared if the contact is selected. (See the Cheshire Cat contact image.)
 
 <div class="clearfix"></div>
 
@@ -240,7 +249,7 @@ We want to hear about your experiences with the Contact Picker API.
 
 ### Tell us about the API design {: .hide-from-toc }
 
-Is there something about the API that doesn’t work like you expected? Or
+Is there something about the API that doesn’t work as expected? Or
 are there missing methods or properties that you need to implement your idea?
 
 * File a spec issue on the [WICG Contact Picker API GitHub repo][issues],
@@ -252,13 +261,13 @@ Did you find a bug with Chrome's implementation? Or is the implementation
 different from the spec?
 
 * File a bug at [https://new.crbug.com][new-bug]. Be sure to include as much
-  detail as you can, simple instructions for reproducing, and set
-  *Components* to `Blink>Contacts`. [Glitch](https://glitch.com) works great
+  detail as you can, provide simple instructions for reproducing the bug, and
+  set *Components* to `Blink>Contacts`. [Glitch](https://glitch.com) works great
   for sharing quick and easy repros.
 
 ### Planning to use the API? {: .hide-from-toc }
 
-Planning to use the Contact Picker API? Your public support helps us to
+Are you planning to use the Contact Picker API? Your public support helps us
 prioritize features, and shows other browser vendors how critical it is to
 support them.
 
