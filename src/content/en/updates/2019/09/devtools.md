@@ -67,10 +67,11 @@ And then auditing the page again:
 </figure>
 
 [demo]: https://devtools.glitch.me/wndt78/multiclient.html
+[tweet]: https://twitter.com/cjamcl/status/1167602064584671234
 
 You could alternatively use [Local Overrides][overrides] to add `async` attributes to each
 of the script tags, but "we'll leave that as an exercise for the reader." Go to
-[Multi-client demo][demo] to try it out.
+[Multi-client demo][demo] to try it out. Or check out [this tweet][tweet] for a video demonstration.
 
 [Chromium issue #991906](https://crbug.com/991906)
 
