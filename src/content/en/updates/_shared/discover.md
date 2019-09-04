@@ -4,6 +4,8 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 
 ### Chrome 78 {: #discover78 .hide-from-toc }
 
+* [Multi-client support in the Audits panel](/web/updates/2019/09/devtools#multiclient)
+* [Payment Handler debugging](/web/updates/2019/09/devtools#payments)
 * [Lighthouse 5.2 in the Audits panel](/web/updates/2019/09/devtools#audits)
 * [Largest Contentful Paint in the Performance panel](/web/updates/2019/09/devtools#LCP)
 * [File DevTools issues from the Main Menu](/web/updates/2019/09/devtools#issues)

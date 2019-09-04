@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel.
 
-{# wf_updated_on: 2019-09-03 #}
+{# wf_updated_on: 2019-09-04 #}
 {# wf_published_on: 2019-09-03 #}
 {# wf_tags: chrome78, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,6 +12,100 @@ description: Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in
 # What's New In DevTools (Chrome 78) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+## Multi-client support in the Audits panel {: #multiclient }
+
+[urlblocks]: /web/updates/2017/04/devtools-release-notes#block-requests
+[overrides]: /web/updates/2018/01/devtools#overrides
+
+You can now use the **Audits** panel in combination with other DevTools features like
+[Request Blocking][urlblocks] and [Local Overrides][overrides].
+
+[renderblocks]: https://web.dev/render-blocking-resources
+
+For example, suppose that your **Audits** panel report says that your page's performance
+score is 70 and one of your biggest performance opportunities is
+[eliminating render-blocking resources][renderblocks].
+
+<figure>
+  <img src="/web/updates/images/2019/09/score1.png"
+       alt="The initial Performance score is 70."/>
+  <figcaption>
+    Figure 1. The initial <b>Performance</b> score.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/web/updates/images/2019/09/renderblockingresources.png"
+       alt="The initial report says that 3 render-blocking scripts are an issue."/>
+  <figcaption>
+    Figure 2. The initial report says that 3 render-blocking scripts are an issue.
+  </figcaption>
+</figure>
+
+Now that the **Audits** panel can be used in combination with request blocking, you can
+quickly measure how much the render-blocking scripts affect your load performance by first
+[blocking the requests for the render-blocking scripts][urlblocks]:
+
+<figure>
+  <img src="/web/updates/images/2019/09/blocking.png"
+       alt="Using the Request Blocking tab to block the problematic scripts."/>
+  <figcaption>
+    Figure 3. Using the <b>Request Blocking</b> tab to block the problematic scripts.
+  </figcaption>
+</figure>
+
+And then auditing the page again:
+
+<figure>
+  <img src="/web/updates/images/2019/09/score2.png"
+       alt="The Performance score improved to 97 after enabling request blocking."/>
+  <figcaption>
+    Figure 4. The <b>Performance</b> score improved to 97 after blocking the problematic
+    scripts.
+  </figcaption>
+</figure>
+
+[demo]: https://devtools.glitch.me/wndt78/multiclient.html
+
+You could alternatively use [Local Overrides][overrides] to add `async` attributes to each
+of the script tags, but "we'll leave that as an exercise for the reader." Go to
+[Multi-client demo][demo] to try it out.
+
+[Chromium issue #991906](https://crbug.com/991906)
+
+## Payment Handler debugging {: #payments }
+
+The **Background Services** section of the **Application** panel now supports
+[Payment Handler](/web/updates/2018/06/payment-handler-api) events.
+
+1. Go the the **Application** panel.
+1. Open the **Payment Handler** pane.
+1. Click **Record**. DevTools records Payment Handler events for 3 days, even when DevTools
+   is closed.
+
+     <figure>
+       <img src="/web/updates/images/2019/09/payment1.png"
+            alt="Recording Payment Handler events."/>
+       <figcaption>
+         Figure 5. Recording Payment Handler events.
+       </figcaption>
+     </figure>
+
+1. Enable **Show events from other domains** if your Payment Handler events occur on a
+   different origin.
+1. After triggering a Payment Handler event, click the event's row to learn more about the
+   event.
+
+     <figure>
+       <img src="/web/updates/images/2019/09/payment2.png"
+            alt="Viewing a Payment Handler event."/>
+       <figcaption>
+         Figure 6. Viewing a Payment Handler event.
+       </figcaption>
+     </figure>
+
+[Chromium issue #980291](https://crbug.com/980291)
 
 ## Lighthouse 5.2 in the Audits panel {: #audits }
 
@@ -27,7 +121,7 @@ to learn more about how third-party code can degrade load performance.
   <img src="/web/updates/images/2019/09/thirdpartycode.png"
        alt="A screenshot of the 'Third-Party Usage' audit in the Lighthouse report UI."/>
   <figcaption>
-    Figure 1. The <b>Third-party usage</b> audit.
+    Figure 7. The <b>Third-party usage</b> audit.
   </figcaption>
 </figure>
 
@@ -46,7 +140,7 @@ of the largest content element visible in the viewport.
   <img src="/web/updates/images/2019/09/lcp.png"
        alt="The LCP marker in the Timings section."/>
   <figcaption>
-    Figure 2. The <b>LCP</b> marker in the <b>Timings</b> section.
+    Figure 8. The <b>LCP</b> marker in the <b>Timings</b> section.
   </figcaption>
 </figure>
 
@@ -60,7 +154,7 @@ To highlight the DOM node associated with LCP:
        <img src="/web/updates/images/2019/09/relatednode.png"
             alt="The Related Node section of the Summary tab."/>
        <figcaption>
-         Figure 3. The <b>Related Node</b> section of the <b>Summary</b> tab.
+         Figure 9. The <b>Related Node</b> section of the <b>Summary</b> tab.
        </figcaption>
      </figure>
 
@@ -84,7 +178,7 @@ the team's ability to fix your bug or implement your feature request!
   <img src="/web/updates/images/2019/09/reportissue.png"
        alt="Main Menu > Help > Report a DevTools issue."/>
   <figcaption>
-    Figure 4. <b>Main Menu</b> &gt; <b>Help</b> &gt; <b>Report a DevTools issue</b>.
+    Figure 10. <b>Main Menu</b> &gt; <b>Help</b> &gt; <b>Report a DevTools issue</b>.
   </figcaption>
 </figure>
 
