@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Wake Lock API provides a way to prevent the device from dimming or locking the screen or prevent the device from going to sleep when an application needs to keep running.
 
 {# wf_published_on: 2018-12-18 #}
-{# wf_updated_on: 2019-03-07 #}
+{# wf_updated_on: 2019-09-04 #}
 {# wf_featured_image: /web/updates/images/2018/12/wake-logo-featured.png #}
 {# wf_tags: capabilities,wake-lock #}
 {# wf_featured_snippet: To avoid draining the battery, most devices will quickly fall asleep when left idle. While this is fine for most of the time, there are some applications that need to keep the screen or the device awake in order to complete some work. The Wake Lock API provides a way to prevent the device from dimming or locking the screen or prevent the device from going to sleep when an application needs to keep running.  #}
@@ -51,7 +51,6 @@ Of course, there are plenty of others:
 * Web based presentation apps where it’s essential to prevent the screen
   from going to sleep while in the middle of a presentation.
 
-
 ## Current status {: #status }
 
 | Step                                       | Status                       |
@@ -62,12 +61,10 @@ Of course, there are plenty of others:
 | 4. Origin trial                            | Not Started                  |
 | 5. Launch                                  | Not Started                  |
 
-
 Note: Big thanks to the folks at Intel, specifically Mrunal Kapade for doing
 the work to implement this. We depend on a community of committers working
 together to move the Chromium project forward. Not every Chromium committer
 is a Googler, and they deserve special recognition!
-
 
 ## How to use the Wake Lock API {: #use }
 
@@ -77,13 +74,11 @@ development, bugs are expected, or it may fail to work completely.
 
 Check out the [Wake Lock demo][demo] and [source][demo-source] for the demo.
 
-
 ### Wake lock types {: #wake-lock-types }
 
 The Wake Lock API provides two types of wake locks, `screen` and `system`.
 While they are treated independently, one may imply the effects of the other.
 For example, a screen wake lock implies that the app should continue running.
-
 
 <div class="attempt-left" id="wake-lock-screen">
   <b><code>screen</code> wake lock</b>
@@ -100,78 +95,99 @@ For example, a screen wake lock implies that the app should continue running.
   </p>
 </div>
 
+<div class="clearfix"></div>
+Warning: We’re currently defining the permission model for `system` wake locks.
+Until this work has finished, requests for `system` wake locks will be denied immediately.
+You can track our progress in [crbug.com/985742](https://crbug.com/985742).
 
-### Get a wake lock object {: #get-wake-lock }
+### Get a wake lock {: #get-wake-lock }
 
-In order to use the Wake Lock API, we need to create and initialize a
-`wakelock` object for the type of wake lock we want. Once created, the promise
-resolves with a `wakelock` object, but note, the wake lock isn’t active yet,
-it’ll need to be activated first.
+In order to request a wake lock, you need to call the `WakeLock.request()` method
+that lives on the `window` object. You pass it the desired wake lock type as the first parameter,
+which *currently* is limited to just `'screen'`. In addition to that,
+you also need a way to abort the wake lock,
+which works through the generic `AbortController` interface.
+Therefore, you first create a new
+[`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController),
+and then pass the controller’s
+[`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal)
+as the second parameter to `WakeLock.request()`.
+Two things can happen next that you need to `catch`:
 
+1. The wake lock can after a while just be regularly aborted,
+  which you detect by checking if the exception’s name is `'AbortError'`.
+  In this context, `AbortError` is actually not an error in the common sense,
+  but just the way `AbortController` works.
+1. The browser can also refuse the request for different reasons, for example,
+  because the battery charge level is too low.
+  In this case, the exception’s message will contain more details.
 
 ```js
-let wakeLockObj;
-if ('getWakeLock' in navigator) {
-  try {
-    // Create a wake lock for the type we want.
-    wakeLockObj = await navigator.getWakeLock('screen');
-    console.log('👍', 'getWakeLock', wakeLockObj);
-  } catch (ex) {
-    console.error('👎', 'getWakeLock', err);
-  }
+const wakeLockCheckbox = document.querySelector('#wakeLockCheckbox');
+
+if ('WakeLock' in window) {
+  let wakeLock = null;
+
+  const requestWakeLock = () => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+    window.WakeLock.request('screen', {signal})
+    .catch((e) => {
+      if (e.name === 'AbortError') {
+        wakeLockCheckbox.checked = false;
+        console.log('Wake Lock was aborted');
+      } else {
+        console.error(`${e.name}, ${e.message}`);
+      }
+    });
+    wakeLockCheckbox.checked = true;
+    console.log('Wake Lock is active');
+    return controller;
+  };
+
+  wakeLockCheckbox.addEventListener('change', () => {
+    if (wakeLockCheckbox.checked) {
+      wakeLock = requestWakeLock();
+    } else {
+      wakeLock.abort();
+      wakeLock = null;
+    }
+  });
 }
 ```
 
-In some instances, the browser may fail to create the wake lock object, and
-instead throws an error, for example if the batteries on the device are low.
+### The wake lock life cycle {: #wake-lock-life-cycle }
 
-
-### Use the wake lock object {: #use-wake-lock-obj }
-
-We can use the newly created `wakeLockObj` to activate a lock, or determine
-the current wake lock state and to receive notifications when the wake lock
-state is changed.
-
-To acquire a wake lock, we simply need to call `wakeLockObj.createRequest()`,
-which creates a new `WakeLockRequest` object. The `WakeLockRequest` object
-allows multiple components on the same page to request their own locks. The
-`WakeLock` object automatically handles the requests. The wake lock is
-released when all of the requests have been cancelled.
-
+When you play with the  [wake lock demo][demo], you will notice that
+wake locks are sensitive to page visibility changes as defined by the
+[Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API),
+as well as full screen changes defined by the
+[Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API).
+This means that when you minimize a tab or window where a wake lock is active
+or enter full screen mode, the wake lock will automatically abort.
+If you want your wake lock to be re-acquired, you need to listen for the events
+that either of the APIs emit, namely the
+[`visibilitychange`](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event)
+event of the Page Visibility API and the
+[fullscreenchange](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#Event_handlers)
+event of the Fullscreen API,
+and then request a new wake lock.
 
 ```js
-let wakeLockRequest;
-function toggleWakeLock() {
-  if (wakeLockRequest) {
-    // Stop the existing wake lock request.
-    wakeLockRequest.cancel();
-    wakeLockRequest = null;
-    return;
+const handleVisibilityChange = () => {
+  if (wakeLock !== null && document.visibilityState === 'visible') {
+    wakeLock = requestWakeLock();
   }
-  wakeLockRequest = wakeLockObj.createRequest();
-  // New wake lock request created.
-}
+};
+
+document.addEventListener('visibilitychange', handleVisibilityChange);
+document.addEventListener('fullscreenchange', handleVisibilityChange);
 ```
-
-Caution: It’s **critical** to keep a reference to `wakeLockRequest`
-created by  `wakeLockObj.createRequest()`  in order to release the wake lock
-later. If the reference to the `wakeLockRequest` is lost, **you won’t be able to
-cancel the wake lock until the page is closed**.
-
-You can track if a wake lock is active by listening for the `activechange`
-event on the `WakeLock` object.
-
-```js
-wakeLockObj.addEventListener('activechange', () => {
-  console.log('⏰', 'wakeLock active:', wakeLockObj.active);
-});
-```
-
 
 ## Best Practices {: #best-practices }
 
 The approach you take depends on the needs of your app. However, you should use
-the most lightweight approach possible for your app, to minimize your app's
+the most lightweight approach possible for your app, to minimize your app’s
 impact on system resources.
 
 Before adding wake lock to your app, consider whether your use cases could
@@ -202,7 +218,7 @@ issue in the [w3c/wake-lock repo][issues] and provide as much detail as you can.
 
 We’re also interested to hear how you plan to use the Wake Lock API:
 
-* Have an idea for a use case or an idea where you'd use it?
+* Have an idea for a use case or an idea where you’d use it?
 * Do you plan to use this?
 * Like it and want to show your support?
 
@@ -225,8 +241,8 @@ discussion.
 
 [spec-ed]: https://w3c.github.io/wake-lock/
 [spec-cr]: https://www.w3.org/TR/wake-lock/
-[demo]: https://wake-lock.glitch.me/
-[demo-source]: https://glitch.com/edit/#!/wake-lock?path=wakelock.js
+[demo]: https://wake-lock-demo.glitch.me/
+[demo-source]: https://glitch.com/edit/#!/wake-lock-demo?path=script.js:1:0
 [cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=257511
 [cr-status]: https://www.chromestatus.com/features/4636879949398016
 [issues]: https://github.com/w3c/wake-lock/issues
