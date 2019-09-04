@@ -170,7 +170,7 @@ dependency to the `dependencies` section:
 
 ```
 dependencies {
-   implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:7a2c1374a3'
+   implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:91b4a1270b'
 }
 ```
 
