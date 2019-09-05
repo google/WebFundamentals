@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Starting in Chrome 76, the Asynchronous Clipboard API now handles some images, in addition to text.
 
 {# wf_published_on: 2019-07-03 #}
-{# wf_updated_on: 2019-09-04 #}
+{# wf_updated_on: 2019-09-05 #}
 {# wf_featured_image: /web/updates/images/generic/photo.png #}
 {# wf_tags: capabilities,chrome76,cutandcopy,execcommand,input,clipboard #}
 {# wf_featured_snippet: Chrome 76 adds expands the functionality of the Async Clipboard API to add support for png images. Copying and pasting images to the clipboard has never been easier. #}
@@ -32,8 +32,8 @@ API works. If you remember the details, skip ahead to the
 ## Recap of the Asynchronous Clipboard API {: #recap }
 
 Before describing image support, I want to review how the Asynchronous Clipboard
-API works. Feel free to [skip ahead](#images) if you're already comforntable
-using the API.ß
+API works. Feel free to [skip ahead](#images) if you're already comfortable
+using the API.
 
 ### Copy: writing text to the clipboard {: #copy-text }
 
@@ -130,7 +130,7 @@ To write an image to the clipboard, you need the image as a
 this is by requesting the image from an server by calling `fetch()` (or
 `XMLHTTPReuest()`). The `response` object returned by `fetch()` has a [`blob()`
 method][blob-method] and
-`XMLHTTPRequest()` let's you set `"blob"` as the [`responseType`][blog-response-type]. 
+`XMLHTTPRequest()` let's you set `"blob"` as the [`responseType`][blog-response-type].
 
 Calling the server may not be desireable or possible for a variety of reasons.
 Fortunately, you can also write the image to a canvas, then call
