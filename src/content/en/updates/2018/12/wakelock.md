@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Wake Lock API provides a way to prevent the device from dimming or locking the screen or prevent the device from going to sleep when an application needs to keep running.
 
 {# wf_published_on: 2018-12-18 #}
-{# wf_updated_on: 2019-09-04 #}
+{# wf_updated_on: 2019-09-05 #}
 {# wf_featured_image: /web/updates/images/2018/12/wake-logo-featured.png #}
 {# wf_tags: capabilities,wake-lock #}
 {# wf_featured_snippet: To avoid draining the battery, most devices will quickly fall asleep when left idle. While this is fine for most of the time, there are some applications that need to keep the screen or the device awake in order to complete some work. The Wake Lock API provides a way to prevent the device from dimming or locking the screen or prevent the device from going to sleep when an application needs to keep running.  #}
@@ -39,7 +39,8 @@ security and privacy issues.
 
 ### Suggested use cases for the Wake Lock API {: #use-cases }
 
-[RioRun](https://www.theguardian.com/sport/2016/aug/06/rio-running-app-marathon-course-riorun) a web app developed by
+[RioRun](https://www.theguardian.com/sport/2016/aug/06/rio-running-app-marathon-course-riorun),
+a web app developed by
 [The Guardian](https://www.theguardian.com/)
 that takes you on a virtual audio tour of Rio, following the route of the 2016
 Olympic marathon would be a perfect use case. Without wake locks, your screen
@@ -102,9 +103,9 @@ You can track our progress in [crbug.com/985742](https://crbug.com/985742).
 
 ### Get a wake lock {: #get-wake-lock }
 
-In order to request a wake lock, you need to call the `WakeLock.request()` method
+To request a wake lock, you need to call the `WakeLock.request()` method
 that lives on the `window` object. You pass it the desired wake lock type as the first parameter,
-which *currently* is limited to just `'screen'`. In addition to that,
+which *currently* is limited to just `'screen'`. In addition,
 you also need a way to abort the wake lock,
 which works through the generic `AbortController` interface.
 Therefore, you first create a new
@@ -114,11 +115,11 @@ and then pass the controller’s
 as the second parameter to `WakeLock.request()`.
 Two things can happen next that you need to `catch`:
 
-1. The wake lock can after a while just be regularly aborted,
+- The wake lock can after a while just be regularly aborted,
   which you detect by checking if the exception’s name is `'AbortError'`.
   In this context, `AbortError` is actually not an error in the common sense,
   but just the way `AbortController` works.
-1. The browser can also refuse the request for different reasons, for example,
+- The browser can also refuse the request for different reasons, for example,
   because the battery charge level is too low.
   In this case, the exception’s message will contain more details.
 
@@ -156,7 +157,7 @@ if ('WakeLock' in window) {
 }
 ```
 
-### The wake lock life cycle {: #wake-lock-life-cycle }
+### The wake lock lifecycle {: #wake-lock-lifecycle }
 
 When you play with the  [wake lock demo][demo], you will notice that
 wake locks are sensitive to page visibility changes as defined by the
@@ -247,3 +248,5 @@ discussion.
 [cr-status]: https://www.chromestatus.com/features/4636879949398016
 [issues]: https://github.com/w3c/wake-lock/issues
 [wicg-discourse]: https://discourse.wicg.io/t/wake-lock-api-suppressing-power-management-screensavers/769
+
+{% include "web/_shared/helpful.html" %}
