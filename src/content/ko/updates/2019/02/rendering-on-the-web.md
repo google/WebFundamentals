@@ -39,11 +39,11 @@ book_path: /web/updates/_book.yaml
 
 *서버 렌더링은 탐색에 대한 응답으로 서버의 페이지에 대한 전체 HTML을 생성합니다. 이렇게 하면 브라우저에서 응답을 받기 전에 처리되므로 클라이언트에서 데이터 가져 오기 및 템플릿 작성에 대한 추가 왕복이 발생하지 않습니다.*
 
-서버 렌더링은 일반적으로 빠른 [First Paint](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint) (FP) 및 [First Contentful Paint](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint) (FCP)를 생성합니다. 서버에서 페이지 로직 및 렌더링을 실행하면 많은 JavaScript를 클라이언트에 보내지 않아도 되므로 TTI ([Time to Interactive](https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive)) 를 빠르게 수행 할 수 있습니다. 이것은 서버 렌더링을 통해 실제로 사용자의 브라우저에 텍스트와 링크를 보내는 것이기 때문에 의미가 있습니다. 이 접근법은 다양한 범위의 장치 및 네트워크 조건에서 잘 동작하며 스트리밍 문서 구문 분석과 같은 흥미로운 브라우저 최적화를 가능성을 열어줍니다.
+서버 렌더링은 일반적으로 빠른 [First Paint](/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint) (FP) 및 [First Contentful Paint](/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint) (FCP)를 생성합니다. 서버에서 페이지 로직 및 렌더링을 실행하면 많은 JavaScript를 클라이언트에 보내지 않아도 되므로 TTI ([Time to Interactive](/web/tools/lighthouse/audits/time-to-interactive)) 를 빠르게 수행 할 수 있습니다. 이것은 서버 렌더링을 통해 실제로 사용자의 브라우저에 텍스트와 링크를 보내는 것이기 때문에 의미가 있습니다. 이 접근법은 다양한 범위의 장치 및 네트워크 조건에서 잘 동작하며 스트리밍 문서 구문 분석과 같은 흥미로운 브라우저 최적화를 가능성을 열어줍니다.
 
 <img src="../../images/2019/02/rendering-on-the-web/server-rendering-tti.png" alt="Diagram showing server rendering and JS execution affecting FCP and TTI" width="350">
 
-서버 렌더링을 사용하면 사용자는 사이트를 사용하기 전에 CPU 바인딩 JavaScript가 처리되기를 기다리지 않아도 됩니다. [서드파티 JS](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/)를 부득이하게 사용해야 할 경우에도 서버 렌더링을 사용하여 자사의 [JS 비용](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)을 줄이면 나머지 "[여유](https://medium.com/@addyosmani/start-performance-budgeting-dabde04cf6a3)"을 더 많이 확보 할 수 있습니다. 그러나 이 방법에는 서버에서 페이지를 생성하는 데 시간이 걸리는 단점이 있습니다. 그 결과 TTFB([Time to First Byte](https://en.wikipedia.org/wiki/Time_to_first_byte)) 가 느려질 수 있습니다.
+서버 렌더링을 사용하면 사용자는 사이트를 사용하기 전에 CPU 바인딩 JavaScript가 처리되기를 기다리지 않아도 됩니다. [서드파티 JS](/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/)를 부득이하게 사용해야 할 경우에도 서버 렌더링을 사용하여 자사의 [JS 비용](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)을 줄이면 나머지 "[여유](https://medium.com/@addyosmani/start-performance-budgeting-dabde04cf6a3)"을 더 많이 확보 할 수 있습니다. 그러나 이 방법에는 서버에서 페이지를 생성하는 데 시간이 걸리는 단점이 있습니다. 그 결과 TTFB([Time to First Byte](https://en.wikipedia.org/wiki/Time_to_first_byte)) 가 느려질 수 있습니다.
 
 애플리케이션이 서버 렌더링만으로 충분한 지는 크게 어떤 유형의 환경을 구축 하느냐에 달려 있습니다. 서버 렌더링과 클라이언트 측 렌더링의 올바른 애플리케이션에 대한 오랜 논쟁이 있지만 일부 페이지에서는 서버 렌더링을 사용하고 다른 페이지에서는 사용하지 않아도 됨을 기억하는 것이 중요합니다. 일부 사이트에서는 하이브리드 렌더링 기술을 사용하여 성공을 거두었습니다. [Netflix](https://medium.com/dev-channel/a-netflix-web-performance-case-study-c0bcde26a9d9) 서버는 상대적으로 정적인 랜딩 페이지를 렌더링하는 반면 상호 작용이 많은 페이지는 JS를 [프리 페치](https://dev.to/addyosmani/speed-up-next-page-navigations-with-prefetching-4285)하여 클라이언트가 렌더링 한 무거운 페이지를 더 빠르게 로드하도록 합니다.
 
@@ -72,19 +72,19 @@ React 사용자는 [Gatsby](https://www.gatsbyjs.org), [Next.js 정적 내보내
 
 서버 렌더링은 각 URL마다 맞춤형 HTML을 생성하지만 정적 렌더링 된 콘텐츠를 제공하는 것보다 느릴 수 있습니다. 추가 작업을 할 수 있으면 서버 렌더링 + [HTML 캐싱](https://freecontent.manning.com/caching-in-react/) 을 통해 서버 렌더링 시간을 크게 줄일 수 있습니다. 서버 렌더링의 장점은 정적 렌더링에서 가능한 것보다 더 많은 "실시간" 데이터를 가져와서 보다 완전한 요청 집합에 응답 할 수 있다는 것입니다. 개인정보가 필요한 페이지는 정적 렌더링에서 제대로 작동하지 않는 요청 유형의 구체적인 예입니다.
 
-서버 렌더링으로 [PWA](https://developers.google.com/web/progressive-web-apps/)를 구축 할 때 흥미로운 결정을 내려야 합니다. 전체 페이지 [서비스 워커](https://developers.google.com/web/fundamentals/primers/service-workers/) 캐싱을 사용하는게 나을까요? 개별 콘텐츠를 서버 렌더링하는 것이 더 나을까요?
+서버 렌더링으로 [PWA](/web/progressive-web-apps/)를 구축 할 때 흥미로운 결정을 내려야 합니다. 전체 페이지 [서비스 워커](/web/fundamentals/primers/service-workers/) 캐싱을 사용하는게 나을까요? 개별 콘텐츠를 서버 렌더링하는 것이 더 나을까요?
 
 ## 클라이언트 측 렌더링 (CSR) {: #csr }
 
 *클라이언트 측 렌더링 (CSR)은 JavaScript를 사용하여 브라우저에서 페이지를 직접 렌더링하는 것을 의미합니다. 모든 로직, 데이터 가져오기, 템플릿 및 라우팅은 서버가 아닌 클라이언트에서 처리됩니다.*
 
-클라이언트 측 렌더링은 모바일에서 구현하기 어려울 수 있습니다. 최소한의 작업만 수행하여 [JavaScript 자원 소모](https://mobile.twitter.com/HenrikJoreteg/status/1039744716210950144)를 최소화하고 최대한 적은 수의 [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) 로 가치를 전달하면 순수한 서버 렌더링 성능에 접근할 수 있습니다. 중요한 스크립트와 데이터는 [HTTP/2 Server Push](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/) 또는 `<link rel=preload>` 사용하여 더 빨리 전달할 수 있습니다. 이렇게 하면 파서가 더 빨리 작동합니다. [PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)과 같은 패턴은 초기 및 순차 탐색이 즉각적으로 느껴지도록 평가할 가치가 있습니다.
+클라이언트 측 렌더링은 모바일에서 구현하기 어려울 수 있습니다. 최소한의 작업만 수행하여 [JavaScript 자원 소모](https://mobile.twitter.com/HenrikJoreteg/status/1039744716210950144)를 최소화하고 최대한 적은 수의 [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) 로 가치를 전달하면 순수한 서버 렌더링 성능에 접근할 수 있습니다. 중요한 스크립트와 데이터는 [HTTP/2 Server Push](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/) 또는 `<link rel=preload>` 사용하여 더 빨리 전달할 수 있습니다. 이렇게 하면 파서가 더 빨리 작동합니다. [PRPL](/web/fundamentals/performance/prpl-pattern/)과 같은 패턴은 초기 및 순차 탐색이 즉각적으로 느껴지도록 평가할 가치가 있습니다.
 
 <img src="../../images/2019/02/rendering-on-the-web/client-rendering-tti.png" alt="Diagram showing client-side rendering affecting FCP and TTI" width="500">
 
-클라이언트 측 렌더링의 주된 단점은 응용 프로그램이 커짐에 따라 필요한 JavaScript의 양이 증가하는 경향이 있다는 것입니다. 특히 처리 능력을 놓고 경쟁하는 새로운 JavaScript 라이브러리, 폴리필 (polyfill) 및 서드파티 코드를 추가하면 페이지의 내용을 렌더링하기 전에 처리해야하는 경우가 종종 있습니다. 대규모 자바 스크립트 번들에 의존하는 CSR을 기반으로 구축된 경험은 [적극적인 코드 분할](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting/)을 고려해야하며 JavaScript를 "필요한 것만 필요할 때만 제공"해야 합니다. 인터렉션이 거의 없거나 전혀없는 경험의 경우, 서버 렌더링은 이러한 문제에 대해 보다 확장 가능한 솔루션일 수 있습니다.
+클라이언트 측 렌더링의 주된 단점은 응용 프로그램이 커짐에 따라 필요한 JavaScript의 양이 증가하는 경향이 있다는 것입니다. 특히 처리 능력을 놓고 경쟁하는 새로운 JavaScript 라이브러리, 폴리필 (polyfill) 및 서드파티 코드를 추가하면 페이지의 내용을 렌더링하기 전에 처리해야하는 경우가 종종 있습니다. 대규모 자바 스크립트 번들에 의존하는 CSR을 기반으로 구축된 경험은 [적극적인 코드 분할](/web/fundamentals/performance/optimizing-javascript/code-splitting/)을 고려해야하며 JavaScript를 "필요한 것만 필요할 때만 제공"해야 합니다. 인터렉션이 거의 없거나 전혀없는 경험의 경우, 서버 렌더링은 이러한 문제에 대해 보다 확장 가능한 솔루션일 수 있습니다.
 
-단일 페이지 애플리케이션을 작성하는 사람들은 대부분의 페이지에서 공유되는 사용자 인터페이스의 핵심 부분을 식별함으로써 [애플리케이션 쉘 캐싱](https://developers.google.com/web/updates/2015/11/app-shell) 기술을 적용 할 수 있음을 의미합니다. 서비스 워커와 합께 사용하면 두 번째 이후의  방문시인지 성능를 획기적으로 향상시킬 수 있습니다.
+단일 페이지 애플리케이션을 작성하는 사람들은 대부분의 페이지에서 공유되는 사용자 인터페이스의 핵심 부분을 식별함으로써 [애플리케이션 쉘 캐싱](/web/updates/2015/11/app-shell) 기술을 적용 할 수 있음을 의미합니다. 서비스 워커와 합께 사용하면 두 번째 이후의  방문시인지 성능를 획기적으로 향상시킬 수 있습니다.
 
 ## Rehydration을 통한 서버 렌더링과 CSR 결합 {: #rehydration }
 
@@ -123,7 +123,7 @@ SSR Rehydration에 대한 희망도 있습니다. 단기적으로 캐시할 수 
 
 ### 삼자형 렌더링 {: #trisomorphic }
 
-[서비스 작업자](https://developers.google.com/web/fundamentals/primers/service-workers/)가 선택할 수 있는 옵션인 경우 “삼자형” 렌더링에 관심을 가질 수 있습니다. 초기/비 JS 메뉴를 위해 스트리밍 서버 렌더링을 사용할 수 있으며, 서비스 작업자는 설치를 완료한 후 메뉴를 위한 HTML 렌더링을 수행합니다. 이를 통해 캐시 구성요소와 템플릿의 최신 업데이트 상태를 유지하며, 동일한 세션에서 신규 보기를 렌더링하기 위해 SPA 스타일의 메뉴를 활성화합니다. 이와 같은 접근 방법은 사용자가 서버, 클라인트 페이지 및 서비스 작업자 간의 동일한 템플릿 및 라우팅 코드를 공유할 때 효과가 높습니다.
+[서비스 작업자](/web/fundamentals/primers/service-workers/)가 선택할 수 있는 옵션인 경우 “삼자형” 렌더링에 관심을 가질 수 있습니다. 초기/비 JS 메뉴를 위해 스트리밍 서버 렌더링을 사용할 수 있으며, 서비스 작업자는 설치를 완료한 후 메뉴를 위한 HTML 렌더링을 수행합니다. 이를 통해 캐시 구성요소와 템플릿의 최신 업데이트 상태를 유지하며, 동일한 세션에서 신규 보기를 렌더링하기 위해 SPA 스타일의 메뉴를 활성화합니다. 이와 같은 접근 방법은 사용자가 서버, 클라인트 페이지 및 서비스 작업자 간의 동일한 템플릿 및 라우팅 코드를 공유할 때 효과가 높습니다.
 
 <img src="../../images/2019/02/rendering-on-the-web/trisomorphic.png" alt="Diagram of Trisomorphic rendering, showing a browser and service worker
 communicating with the server">
