@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A guide to get started building a basic, bare-bones Trusted Web Activity.
 
 {# wf_published_on: 2019-08-28 #}
-{# wf_updated_on: 2019-09-03 #}
+{# wf_updated_on: 2019-09-06 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_blink_components: N/A #}
 
@@ -45,7 +45,7 @@ We'll talk [more about them later](#a-note-on-signing-keys).
 When you launch a Trusted Web Activity, the browser will check that the Digital Asset Links check
 out, this is called **verification**.
 If verification fails, the browser will fall back to displaying your website as a
-[Custom Tabs](https://developer.chrome.com/multidevice/android/customtabs).
+[Custom Tab](https://developer.chrome.com/multidevice/android/customtabs).
 
 ## Clone and customize the example repo {: #clone-and-customize-the-example-repo }
 
@@ -84,12 +84,12 @@ browser UI at the top of the page.)
 When you hit **Run** or **Build APK** in Android Studio, the APK will be created with your developer
 *debug key*, which Android Studio automatically generated for you.
 
-If you deploy your app to the Play Store you’ll hit **Build** > **Generate Signed APK**, which will
+If you deploy your app to the Play Store, you’ll hit **Build** > **Generate Signed APK**, which will
 use a different signature, one that you’ll have created yourself (and protected with a password).
 That means that if your Digital Asset Links file specifies your *production key*, verification
 will fail when you build with your *debug key*.
-This also can happen the other way around - if the Digital Asset Links file has your *debug key*
-your TWA will work fine locally, then when you download the signed version from the Play Store,
+This also can happen the other way around - if the Digital Asset Links file has your *debug key*,
+your TWA will work fine locally, but then when you download the signed version from the Play Store,
 verification will fail.
 
 You can put both your *debug key* and *production key* in your asset link file
@@ -104,12 +104,12 @@ with the other key. You must uninstall the previous version first.
 * To build with debug keys:
     1. Click **Run 'app'** where 'app' is the name of your module if you changed it.
 * To build with release keys:
-    1. Click **Build** then **Generate Signed APK**.
+    1. Click **Build**, then **Generate Signed APK**.
     2. Choose **APK**.
     3. If you're doing this for the first time, on the next page press **Create New**
        to create a new key and follow the
        [Android documentation](https://developer.android.com/studio/publish/app-signing#generate-key).
-       Otherwise select your previously created key.
+       Otherwise, select your previously created key.
     4. Press **Next** and pick the *release* build variant.
     5. Make sure you check both the V1 and the V2 signatures (the Play Store won’t let you upload
        the APK otherwise).
@@ -147,7 +147,7 @@ This table shows which key is used based on how you create your APK.
 
 ## Creating your asset link file {: #creating-your-asset-link-file }
 
-Now that your app is installed (with either the debug or release key) you can generate the Digital
+Now that your app is installed (with either the debug or release key), you can generate the Digital
 Asset Link file.
 I’ve created the
 [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) to help you
@@ -160,7 +160,7 @@ If you'd prefer not to download the Asset Link Tool, you can
    `applicationId`.
    Filter the list by the `applicationId` you chose earlier and click on that entry.
 3. You’ll see a page listing your app’s signature and with a generated Digital Asset Link.
-   Click on the Copy or Share buttons at the bottom to export it however you like (eg, save to
+   Click on the Copy or Share buttons at the bottom to export it however you like (e.g., save to
    Google Keep, email it to yourself).
 
 Put the Digital Asset Link in a file called `assetlinks.json` and upload it to your website at
@@ -188,7 +188,7 @@ include: [.well-known]
 
 A Digital Asset Link file can contain more than one app, and for each app, it can contain more than
 one key.
-For example, to add a second key just use the
+For example, to add a second key, just use the
 [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) to
 determine the key and add it as a second entry to the `sha256_cert_fingerprints` field.
 The code in Chrome that parses this JSON is quite strict, so make sure you don’t accidentally add an
@@ -214,14 +214,14 @@ extra comma at the end of the list.
 ### Viewing relevant logs {: viewing-relevant-logs }
 Chrome logs the reason that Digital Asset Links verification fails and you can view the logs on an
 Android device with `adb logcat`.
-If you’re developing on Linux/Mac you can see the read the relevant logs from a connected device
+If you’re developing on Linux/Mac, you can see the relevant logs from a connected device
 with:
 
 ```shell
 > adb logcat -v brief | grep -e OriginVerifier -e digital_asset_links
 ```
 
-For example if you see the message `Statement failure matching fingerprint.` you should use the
+For example, if you see the message `Statement failure matching fingerprint.`, you should use the
 Asset Link Tool to see your app’s signature and make sure it matches that in your `assetlinks.json`
 file (Be wary of confusing your debug and release keys. Look at the
 [A note on signing keys](#a-note-on-signing-keys) section.)
@@ -230,10 +230,10 @@ file (Be wary of confusing your debug and release keys. Look at the
 
 A Trusted Web Activity will try to adhere to the user’s default choice of browser.
 If the user’s default browser supports TWAs, it will be launched.
-Failing that if any installed browser supports TWAs, they will be chosen.
+Failing that, if any installed browser supports TWAs, it will be chosen.
 Finally, the default behavior is to fall back to a Custom Tabs mode.
 
-This means that if you’re debugging something to do with Trusted Web Activities you should
+This means that if you’re debugging something to do with Trusted Web Activities, you should
 make sure you’re using the browser you think that you are.
 You can use the following command to check which browser is being used:
 
@@ -244,14 +244,14 @@ D/TWAProviderPicker(17168): Found TWA provider, finishing search: com.google.and
 
 ## Next Steps {: #next-steps }
 
-Hopefully if you’ve followed this guide, you'll have a working Trusted Web Activity and have enough
+Hopefully, if you’ve followed this guide, you'll have a working Trusted Web Activity and have enough
 knowledge to debug what's going on when verification fails.
 If not, please have a look at the Troubleshooting section or file a GitHub issue against
 [these docs](https://github.com/google/WebFundamentals/issues).
 
 For your next steps, I’d recommend you start off by
 [creating an icon for your app](https://developer.android.com/studio/write/image-asset-studio#launcher).
-With that done you can consider deploying your app to the Play Store.
+With that done, you can consider deploying your app to the Play Store.
 
 {% include "web/_shared/helpful.html" %}
 
