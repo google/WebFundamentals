@@ -119,7 +119,7 @@ permissionStatus.onchange = () => {
 };
 ```
 
-## The new image-focused portion of the Asynchronous Clipboard API {: #images }
+## Images in the Asynchronous Clipboard API {: #images }
 
 ### Copy: writing an image to the clipboard {: #copy-image }
 
@@ -149,10 +149,11 @@ Currently you can only pass one image at a time, but we plan to add support for
 multiple images in the future.
 
 The `ClipboardItem` takes an object with the MIME type of the image as the key,
-and the actual blob as the value. The sample code below shows a future-proof
-way to do this by using the [`Object.defineProperty()`][object-define-prop]
-method. This approach ensures that your code will be ready for future
-image types as well as other MIME types that may be supported in the future.
+and the actual blob as the value. The sample code below shows a future-proof way
+to do this by using the [`Object.defineProperty()`][object-define-prop] method.
+The MIME used as the key is retrieved from `blob.type`. This approach ensures
+that your code will be ready for future image types as well as other MIME types
+that may be supported in the future.
 
 [object-define-prop]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
