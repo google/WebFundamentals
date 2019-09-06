@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Wake Lock API provides a way to prevent the device from dimming or locking the screen or prevent the device from going to sleep when an application needs to keep running.
 
 {# wf_published_on: 2018-12-18 #}
-{# wf_updated_on: 2019-09-05 #}
+{# wf_updated_on: 2019-09-06 #}
 {# wf_featured_image: /web/updates/images/2018/12/wake-logo-featured.png #}
 {# wf_tags: capabilities,wake-lock #}
 {# wf_featured_snippet: To avoid draining the battery, most devices will quickly fall asleep when left idle. While this is fine for most of the time, there are some applications that need to keep the screen or the device awake in order to complete some work. The Wake Lock API provides a way to prevent the device from dimming or locking the screen or prevent the device from going to sleep when an application needs to keep running.  #}
@@ -98,7 +98,7 @@ For example, a screen wake lock implies that the app should continue running.
 
 <div class="clearfix"></div>
 Warning: We’re currently defining the permission model for `system` wake locks.
-Until this work has finished, requests for `system` wake locks will be denied immediately.
+Until this work is finished, requests for `system` wake locks will be denied immediately.
 You can track our progress in [crbug.com/985742](https://crbug.com/985742).
 
 ### Get a wake lock {: #get-wake-lock }
@@ -115,7 +115,7 @@ and then pass the controller’s
 as the second parameter to `WakeLock.request()`.
 Two things can happen next that you need to `catch`:
 
-- The wake lock can after a while just be regularly aborted,
+- The wake lock can, after a while, just be regularly aborted,
   which you detect by checking if the exception’s name is `'AbortError'`.
   In this context, `AbortError` is actually not an error in the common sense,
   but just the way `AbortController` works.
@@ -159,7 +159,7 @@ if ('WakeLock' in window) {
 
 ### The wake lock lifecycle {: #wake-lock-lifecycle }
 
-When you play with the  [wake lock demo][demo], you will notice that
+When you play with the  [wake lock demo][demo], you'll notice that
 wake locks are sensitive to page visibility changes as defined by the
 [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API),
 as well as full screen changes defined by the
