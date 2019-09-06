@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Starting in Chrome 76, the Asynchronous Clipboard API now handles some images, in addition to text.
 
 {# wf_published_on: 2019-07-03 #}
-{# wf_updated_on: 2019-09-05 #}
+{# wf_updated_on: 2019-09-06 #}
 {# wf_featured_image: /web/updates/images/generic/photo.png #}
 {# wf_tags: capabilities,chrome76,cutandcopy,execcommand,input,clipboard #}
 {# wf_featured_snippet: Chrome 76 adds expands the functionality of the Async Clipboard API to add support for png images. Copying and pasting images to the clipboard has never been easier. #}
@@ -73,6 +73,8 @@ async function getClipboardText() {
 ### Handling paste events
 
 Paste events can be handled by listening for the (surprise) `paste` event.
+Note that you need to call `preventDefault()` in order to modify the to-be-pasted data,
+like for example, convert it to uppercase before pasting.
 It works nicely with the new asynchronous methods for reading clipboard text:
 
 ```js
@@ -80,7 +82,8 @@ document.addEventListener('paste', async (e) => {
   e.preventDefault();
   try {
     const text = await navigator.clipboard.readText();
-    console.log('Pasted text: ', text);
+    text = text.toUpperCase();
+    console.log('Pasted UPPERCASE text: ', text);
   } catch (err) {
     console.error('Failed to read clipboard contents: ', err);
   }
@@ -211,7 +214,8 @@ async function getClipboardContents() {
 ### Custom paste handler {: #custom-paste-handler }
 
 To dynamically handle paste events, listen for the `paste`
-event, call [`preventDefault()`][prevent-default], then use the code above
+event, call [`preventDefault()`][prevent-default] to prevent the default behavior
+in favor of your own logic, then use the code above
 to read the contents from the clipboard, and handle it in whatever way your
 app needs.
 
