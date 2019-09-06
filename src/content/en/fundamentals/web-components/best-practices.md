@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements let you construct your own HTML tags. This checklist covers best practices to help you build high quality elements.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-09-05 #}
 {# wf_published_on: 2017-08-14 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -13,7 +13,7 @@ incredibly powerful feature, but they're also low-level, which means it's not
 always clear how best to implement your own element.
 
 To help you create the best possible experiences we've put together this
-checklist which breaks down all the things we think it takes to be a
+checklist. It breaks down all the things we think it takes to be a
 well behaved custom element.
 
 <style>
@@ -92,6 +92,29 @@ well behaved custom element.
   Children created by your element are part of its implementation and should be
   private. Without the protection of a shadow root, outside JavaScript may
   inadvertently interfere with these children.
+      </td>
+    </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>
+  The <a href="/web/fundamentals/architecture/building-components/examples/howto-tabs">
+  <code>&lt;howto-tabs&gt;</code></a> element.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="responsive ce-cl">
+  <tbody>
+    <tr>
+      <th colspan=2>
+        <h3>Use &lt;slot&gt; to project light DOM children into your shadow DOM</h3>
+      </th>
+    </tr>
+    <tr>
+      <td><b>Why?</b></td>
+      <td>
+        Allow users of your component to specify content in your component as HTML children makes your component more composable. When a browser does not support custom elements, the nested content remains available, visible and accessible.
       </td>
     </tr>
     <tr>
