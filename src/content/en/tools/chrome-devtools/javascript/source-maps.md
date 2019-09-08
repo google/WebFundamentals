@@ -16,7 +16,7 @@ Keep your client-side code readable and debuggable even after you've combined, m
 
 ### TL;DR {: .hide-from-toc }
 - Use Source Maps to map minified code to source code. You can then read and debug compiled code in its original source.
-- Only use <a href=''/web/tools/setup/setup-preprocessors?#supported-preprocessors''>preprocessors capable of producing Source Maps</a>.
+- Only use [preprocessors capable of producing Source Maps](/web/tools/setup/setup-preprocessors?#supported_preprocessors).
 - Verify that your web server can serve Source Maps.
 
 
@@ -26,7 +26,7 @@ This article explains how to interact with JavaScript Source Maps in the DevTool
 
 ## Use a supported preprocessor
 
-You need to use a minifier that's capable of creating source maps. For the most popular options, [see our preprocessor support section](/web/tools/setup/setup-preprocessors?#supported-preprocessors). For an extended view, see the [Source maps: languages, tools and other info](https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info) wiki page.
+You need to use a minifier that's capable of creating source maps. For the most popular options, [see our preprocessor support section](/web/tools/setup/setup-preprocessors?#supported_preprocessors). For an extended view, see the [Source maps: languages, tools and other info](https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info) wiki page.
 
 The following types of preprocessors are commonly used in combination with Source Maps:
 
