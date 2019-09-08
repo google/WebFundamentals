@@ -661,7 +661,8 @@ tab:
 * **Stalled**. The request could be stalled for any of the reasons described
   in **Queueing**.
 * **DNS Lookup**. The browser is resolving the request's IP address.
-* **Initial connection**. The browser is establishing a connection, including TCP handshakes/retries and negotiating an SSL.
+* **Initial connection**. The browser is establishing a connection, including 
+  TCP handshakes/retries and negotiating an SSL.
 * **Proxy negotiation**. The browser is negotiating the request with a [proxy
   server](https://en.wikipedia.org/wiki/Proxy_server).
 * **Request sent**. The request is being sent.
