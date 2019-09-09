@@ -37,7 +37,7 @@ low-performing ones:
   milliseconds.
 
 [pinterest]: https://medium.com/@Pinterest_Engineering/driving-user-growth-with-performance-improvements-cfc50dafadd7
-[COOK]: https://www.nccgroup.trust/uk/about-us/resources/cook-real-user-monitoring-case-study/?style=Website+Performance&resources=Case+Studies
+[COOK]: https://eggplant.io/case-studies/2018/10/19/cook-increases-conversions-by-seven-percent-thanks-to-faster-load-time
 
 Here are a couple case studies where low performance had a negative impact on business
 goals:
