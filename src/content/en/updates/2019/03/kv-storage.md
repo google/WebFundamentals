@@ -238,7 +238,7 @@ techniques described above and runs in all browsers today:
 * Browsers that support modules, import maps, and the built-in module do not
   load any unneeded code.
 * Browsers that support modules and import maps but do not support the built-in
-  module, load the [KV Storage
+  module load the [KV Storage
   polyfill](https://github.com/GoogleChromeLabs/kv-storage-polyfill) (via the
   browser's module loader).
 * Browsers that support modules but do not support import maps also load the
