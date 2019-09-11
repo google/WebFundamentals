@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introdução à árvore de acessibilidade
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # A árvore de acessibilidade {: .page-title }
@@ -102,7 +102,7 @@ Ele pode ser construído em HTML de diversas maneiras; uma maneira é mostrado a
 
 
     <div class="button-ish">Give me tacos</div>
-    
+
 
 Quando não usamos um elemento de botão real, o leitor de tela não tem como
 saber o que encontrou. Além disso, teríamos que fazer o trabalho extra [de adicionar
@@ -133,7 +133,7 @@ Para elementos em nível de texto, não é precisa fazer nada, porque, por
 definição, eles terão algum conteúdo de texto. Todavia, para interação ou elementos de controle, e
 conteúdo visual, como imagens, precisamos certificar que especificamos um nome. Na verdade,
 fornecer alternativas em texto para qualquer conteúdo não
-textual é [o primeiro item da lista de verificação do WebAIM](http://webaim.org/standards/wcag/checklist#g1.1).
+textual é [o primeiro item da lista de verificação do WebAIM](https://webaim.org/standards/wcag/checklist#g1.1).
 
 Uma maneira de fazê-lo é seguir sua recomendação de que "Entradas de formulário
 tenham rótulos de texto associados". Há duas maneiras de associar um rótulo a um elemento
@@ -175,7 +175,7 @@ ou
     <label for="promo">Receber ofertas promocionais?</label>
 </div>
 {% endframebox %}
-    
+
 
 Quando a caixa de seleção tiver sido rotulada corretamente, o leitor de tela pode
 relatar que o elemento tem uma função de caixa de seleção, está em um

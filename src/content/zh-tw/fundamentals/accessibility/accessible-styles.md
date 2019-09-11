@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:使用合適的樣式化提升可訪問性
 
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 可訪問的樣式 {: .page-title }
@@ -27,7 +27,7 @@ description:使用合適的樣式化提升可訪問性
 
 一般情況下，每次聚焦到一個元素時，我們都依靠瀏覽器內置的焦點環（CSS `outline` 屬性）對元素進行樣式化。
 焦點環非常方便，沒有它，鍵盤用戶就無法分辨哪個元素具有焦點。
-[WebAIM 檢查單](http://webaim.org/standards/wcag/checklist){: .external }提到了這一點，其中的表述爲“很容易就能看到哪個頁面元素具有當前鍵盤焦點（即，瀏覽頁面時，您可以看到自己所處的位置）。”
+[WebAIM 檢查單](https://webaim.org/standards/wcag/checklist){: .external }提到了這一點，其中的表述爲“很容易就能看到哪個頁面元素具有當前鍵盤焦點（即，瀏覽頁面時，您可以看到自己所處的位置）。”
 
 
 
@@ -159,7 +159,7 @@ Warning: 切忌在不提供焦點替代項的情況下將 outline 設爲 0 或 n
 
 ![400% 放大下的 Udacity.com](imgs/udacity-zoomed.jpg)
 
-事實上，僅僅通過自適應設計，我們就可以滿足 [WebAIM 檢查單第 1.4.4 條規則](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external }的要求，其表述爲頁面“...應在文本大小加倍的情況下便於閱讀和正常發揮作用。”
+事實上，僅僅通過自適應設計，我們就可以滿足 [WebAIM 檢查單第 1.4.4 條規則](https://webaim.org/standards/wcag/checklist#sc1.4.4){: .external }的要求，其表述爲頁面“...應在文本大小加倍的情況下便於閱讀和正常發揮作用。”
 
 
 
@@ -209,7 +209,7 @@ Warning: 使用視口元標記時，切忌設置 maximum-scale=1 或設置 user-
 這通常歸結爲*顏色對比度*，即前景色與背景色*亮度*之間的關係。如果顏色類似，對比度比率低；如果顏色不同，對比度比率高。
 
 
-[WebAIM 指導原則](http://webaim.org/standards/wcag/){: .external } 建議爲所有文本使用 4.5:1 的 AA（最低）對比度比率。
+[WebAIM 指導原則](https://webaim.org/standards/wcag/){: .external } 建議爲所有文本使用 4.5:1 的 AA（最低）對比度比率。
 非常大的文本（比默認正文文本大 120-150%）是一個例外，此類文本的對比度比例可以降低至 3:1。請注意下面所示對比度比率的不同。
 
 
@@ -234,7 +234,7 @@ Warning: 使用視口元標記時，切忌設置 maximum-scale=1 或設置 user-
 
 ![devtools 對比度審覈對話框](imgs/contrast-audit.png)
 
-WebAIM 也提供了一個方便的[顏色對比度檢查器](http://webaim.org/resources/contrastchecker/){: .external }，您可以用它來查看任何顏色對的對比度。
+WebAIM 也提供了一個方便的[顏色對比度檢查器](https://webaim.org/resources/contrastchecker/){: .external }，您可以用它來查看任何顏色對的對比度。
 
 
 
@@ -257,7 +257,7 @@ Note: 術語“色盲”經常用於描述一種視覺條件，在此條件下�
 
 ![使用紅色下劃線指示錯誤的輸入表單](imgs/input-form1.png)
 
-[WebAIM 檢查單第 1.4.1 部分的表述](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } 爲“不應將顏色作爲傳達內容或區分可視元素的唯一方法。”該部分還提到“不應僅使用顏色區分文本週圍的鏈接”，除非鏈接滿足特定的對比度要求。檢查單建議（使用 CSS `text-decoration` 屬性）添加一個額外的指示器（例如下劃線）來指示鏈接何時處於活動狀態。
+[WebAIM 檢查單第 1.4.1 部分的表述](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } 爲“不應將顏色作爲傳達內容或區分可視元素的唯一方法。”該部分還提到“不應僅使用顏色區分文本週圍的鏈接”，除非鏈接滿足特定的對比度要求。檢查單建議（使用 CSS `text-decoration` 屬性）添加一個額外的指示器（例如下劃線）來指示鏈接何時處於活動狀態。
 
 
 

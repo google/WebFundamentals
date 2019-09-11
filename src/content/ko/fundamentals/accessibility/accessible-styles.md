@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 알맞은 스타일 지정으로 접근성 개선
 
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 액세스 가능한 스타일 {: .page-title }
@@ -31,7 +31,7 @@ description: 알맞은 스타일 지정으로 접근성 개선
 링(CSS `outline` 속성)을 통해 요소의 스타일을 지정합니다. 포커스 링을 사용하지 않으면
 키보드 사용자가 어떤 요소에 포커스에 있는지 알 수 없으므로
 포커스 링은 무척 편리한 수단인 셈입니다. [WebAIM
-검사 목록](http://webaim.org/standards/wcag/checklist){: .external }에서는
+검사 목록](https://webaim.org/standards/wcag/checklist){: .external }에서는
 이 점을 지적하면서 '어떤 페이지 요소에 현재 키보드 포커스가 있는지 시각적으로 분명할 것(예:
 페이지를 탭하며 이동할 때 자신의 위치를 볼 수 있음)'을
 요구합니다.
@@ -146,13 +146,13 @@ ARIA 속성만 사용하여 요소의 스타일을 지정하는 것입니다. �
 
 
     .toggle.pressed { ... }
-    
+
 
 아래와 같이 업데이트할 수 있습니다.
 
 
     .toggle[aria-pressed="true"] { ... }
-    
+
 
 그러면 ARIA 상태와
 요소의 모양 사이에 논리적이고 의미 있는 관계가 생성되고 불필요한 여분의 코드도 없앨 수 있습니다.
@@ -177,7 +177,7 @@ ARIA 속성만 사용하여 요소의 스타일을 지정하는 것입니다. �
 ![400% 배율로 조정한 Udacity.com](imgs/udacity-zoomed.jpg)
 
 사실, 반응적으로 디자인하는 것만으로도 페이지가 '...텍스트 크기를 2배로 확대할 때 올바로 작동하고 읽을 수 있어야 한다'는 [WebAIM
-검사 목록의 규칙 1.4.4](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external }를
+검사 목록의 규칙 1.4.4](https://webaim.org/standards/wcag/checklist#sc1.4.4){: .external }를
 준수할 수
 있습니다.
 
@@ -244,7 +244,7 @@ maximum-scale=1이나 user-scaleable=no로 설정하지 않도록 주의하세�
 귀결됩니다. 색상이 서로 유사하면 명암비가 낮고 색상 차이가 크게 날수록
 명암비가 높아집니다.
 
-[WebAIM 가이드라인](http://webaim.org/standards/wcag/){: .external }에서는
+[WebAIM 가이드라인](https://webaim.org/standards/wcag/){: .external }에서는
 모든 텍스트에 대해 AA(최소) 명암비인 4.5:1을 권장합니다. 한 가지 예외는
 매우 큰 텍스트(기본 본문 텍스트보다 120~150% 이상 큰 텍스트)의 경우
 명암비를 3:1까지 낮출 수 있다는 점입니다. 아래에 표시된 명암비에 차이에
@@ -274,7 +274,7 @@ Chrome용 [Accessibility DevTools
 ![개발 도구의 대비 감사 대화상자](imgs/contrast-audit.png)
 
 WebAIM 자체에서 편리한 [색상 대비
-검사기](http://webaim.org/resources/contrastchecker/){: .external }를 제공하므로, 이 도구를 사용해 색상 쌍의 대비를
+검사기](https://webaim.org/resources/contrastchecker/){: .external }를 제공하므로, 이 도구를 사용해 색상 쌍의 대비를
 검사할 수 있습니다.
 
 ### 색상만으로 정보를 전달하지는 마세요
@@ -299,7 +299,7 @@ WebAIM 자체에서 편리한 [색상 대비
 ![오류가 빨간색 밑줄로 표시된 입력 양식](imgs/input-form1.png)
 
 [WebAIM 검사 목록의
-1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external }에
+1.4.1](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external }에
 '콘텐츠를 전달하거나 시각적 요소를 구분할 유일한 방법으로
 색상을 사용하면 안 된다'고 규정되어 있습니다. 또한, 특정한 대비 요건을 충족하지 않는 한 '색상만으로 링크를 주변 텍스트와 구분하면 안 된다'고도
 규정되어

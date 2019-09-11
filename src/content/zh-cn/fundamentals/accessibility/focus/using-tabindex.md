@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 使用 tabindex 修改 DOM 顺序
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 使用 tabindex {: .page-title }
@@ -332,7 +332,7 @@ description: 使用 tabindex 修改 DOM 顺序
 
 当您管理焦点时，有时会发生进入某种情境后无法退出的情况。
 试想有这样一个自动填充小部件，它试图管理焦点和捕获 Tab 键行为，但在它完成操作前会阻止用户离开。这种情况称作*键盘陷阱*，可能令用户感到非常懊恼。
-Web AIM 检查清单第 2.1.2 节阐述了这个问题，指出[在任何情况下都不应将键盘焦点锁定或困闭在一个特定页面元素处](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }。用户应该只使用键盘就能在所有页面元素中双向导航。
+Web AIM 检查清单第 2.1.2 节阐述了这个问题，指出[在任何情况下都不应将键盘焦点锁定或困闭在一个特定页面元素处](https://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }。用户应该只使用键盘就能在所有页面元素中双向导航。
 
 
 

@@ -3,8 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description:无障碍树简介
 
 
-{# wf_updated_on:2016-10-04 #}
-{# wf_published_on:2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-10-04 #}
 
 # 无障碍树 {: .page-title }
 
@@ -120,7 +120,7 @@ description:无障碍树简介
 
 对于文本级元素，我们什么都不用做，因为按照定义它们将包含一些文本内容。
 不过，对于输入或控件元素以及图像之类的视觉内容，我们需要确保为其指定名称。
-事实上，为任何非文本内容提供文本替代项是 [WebAIM 检查清单上的第一项](http://webaim.org/standards/wcag/checklist#g1.1)。
+事实上，为任何非文本内容提供文本替代项是 [WebAIM 检查清单上的第一项](https://webaim.org/standards/wcag/checklist#g1.1)。
 
 
 

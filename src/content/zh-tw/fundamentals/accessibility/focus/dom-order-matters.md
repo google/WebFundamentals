@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:默認 DOM 順序的重要性
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # DOM 順序至關重要 {: .page-title }
@@ -50,7 +50,7 @@ description:默認 DOM 順序的重要性
 <button>Last!</button>
 {% endframebox %}
 
-利用 CSS 更改元素在屏幕上的視覺位置時要小心。這可能使跳格順序看似隨機般地四處亂跳，令依賴鍵盤的用戶感到困惑。因此，Web AIM 檢查清單[在第 1.3.2 節](http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }規定，由代碼順序決定的讀取和導航順序應直觀併合乎邏輯。
+利用 CSS 更改元素在屏幕上的視覺位置時要小心。這可能使跳格順序看似隨機般地四處亂跳，令依賴鍵盤的用戶感到困惑。因此，Web AIM 檢查清單[在第 1.3.2 節](https://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }規定，由代碼順序決定的讀取和導航順序應直觀併合乎邏輯。
 
 
 

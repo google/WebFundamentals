@@ -4,7 +4,7 @@ description: Overview of screen focus in accessibility
 
 
 {# wf_blink_components: Blink>Accessibility #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introduction to Focus {: .page-title }
@@ -58,7 +58,7 @@ Some users operate their computer almost entirely with the keyboard or other
 input device. For those users, focus is critical; it's their primary means of
 reaching everything on the screen. For that reason, the Web AIM checklist states
 in section 2.1.1 that [all page functionality should be available using the
-keyboard](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
+keyboard](https://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
 unless it's something you cannot do with a keyboard, such as freehand drawing.
 
 As a user, you can control which element is currently focused using `Tab`,

@@ -86,6 +86,7 @@
   "codecs",
   "codesplitting",
   "collections",
+  "contacts",
   "connectivity",
   "containment",
   "content-security-policy",
@@ -197,6 +198,7 @@
   "multimedia",
   "mutationobserver",
   "native",
+  "native-file-system",
   "network-info",
   "news",
   "new-in-chrome",
@@ -331,7 +333,6 @@
   "workers",
   "worklet",
   "workflow",
-  "writable-files",
   "xhr",
   "xhr2",
   "yeoman"

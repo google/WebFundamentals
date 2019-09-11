@@ -102,7 +102,7 @@ Verás la definición en el panel **Sources**.
 ![Definición de la función en el panel Sources](imgs/definition.png)
 
 La función `update()` es el controlador de callbacks de 
-`requestAnimationCallback()`. El controlador computa la propiedad `left` de cada imagen
+`requestAnimationFrame()`. El controlador computa la propiedad `left` de cada imagen
 según su valor `offsetTop`. Esto fuerza el navegador a realizar
 un diseño nuevo de inmediato para garantizar que proporcione el valor correcto.
 La realización forzosa de diseños en cada fotograma de la animación es la causa del bloqueo de las animaciones

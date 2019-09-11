@@ -119,7 +119,7 @@ so check your server's documentation and be sure to check out
 [Mozilla's SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 for best practices.
 
-## Register A service worker
+## Register a service worker
 
 To install a service worker you need to kick start the process by
 **registering** it in your page. This tells the browser where your

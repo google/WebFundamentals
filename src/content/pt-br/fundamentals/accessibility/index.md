@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Melhorando a acessibilidade para páginas da Web
 
 
-{# wf_updated_on: 2016-06-26 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-06-26 #}
 
 #  Acessibilidade {: .page-title }
@@ -17,7 +17,7 @@ description: Melhorando a acessibilidade para páginas da Web
 Este conjunto de documentos é uma versão baseada em texto de parte do conteúdo abordado no
 [Curso da Udacity sobre
 Acessibilidade](https://www.udacity.com/course/web-accessibility--ud891){: .external }.
-Em vez de uma transcrição direta do vídeo curso, ele pretende ser um 
+Em vez de uma transcrição direta do vídeo curso, ele pretende ser um
 tratamento mais conciso de princípios e práticas de acessibilidade, utilizando o
 conteúdo do curso original como base.
 
@@ -134,13 +134,13 @@ As WCAG são organizadas em torno de quatro princípios frequentemente referidos
 
 Embora as WCAG forneçam uma visão abrangente do que significa o conteúdo ser
 acessível, elas também pode ser um pouco impressionantes. Para ajudar a atenuar isso, o grupo
-[WebAIM](http://webaim.org/){: .external } (Web Accessibility in Mind) simplificou
+[WebAIM](https://webaim.org/){: .external } (Web Accessibility in Mind) simplificou
 as diretrizes WCAG em uma lista de verificação fácil de seguir, destinada
 especificamente ao conteúdo da Web.
 
-A [lista de verificação WebAIM](http://webaim.org/standards/wcag/checklist){: .external }
+A [lista de verificação WebAIM](https://webaim.org/standards/wcag/checklist){: .external }
  pode fornecer um breve resumo de alto nível do que você precisa
-implementar, enquanto também faz link com a especificação WCAG subjacente 
+implementar, enquanto também faz link com a especificação WCAG subjacente
 caso precise de uma definição expandida.
 
 Com esta ferramenta em mãos, você pode traçar um rumo para seu trabalho de
@@ -155,7 +155,7 @@ que os afetam. Para explicar melhor, eis uma pergunta sessão informativa de per
 com Victor Tsaran, Gerente de Programa Técnico do Google, que é totalmente cego.
 
 <figure class="attempt-right">
-  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">	
+  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">
   <figcaption>Victor Tsaran</figcaption>
 </figure>
 
@@ -186,7 +186,7 @@ As deficiências visuais podem ser divididas em algumas categorias: Usuários se
 como eu, podem usar um leitor de tela, braile, ou a combinação dos dois.
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="Um leitor de braile">	
+  <img src="imgs/braille-reader.png" alt="Um leitor de braile">
   <figcaption>Um leitor de braile</figcaption>
 </figure>
 
@@ -211,7 +211,7 @@ de alto contraste, como um modo de alto contraste do sistema operacional,
 uma extensão de alto contraste do navegador ou um tema de alto contraste para um site.
 
 <figure class="attempt-right">
-  <img src="imgs/high-contrast.png" alt="Modo de alto contraste">	
+  <img src="imgs/high-contrast.png" alt="Modo de alto contraste">
   <figcaption>Modo de alto contraste</figcaption>
 </figure>
 
@@ -240,7 +240,7 @@ algo assim, e acham doloroso, até alguém que possa estar fisicamente paralisad
 ter uma faixa limitada de movimento em certas partes do corpo.
 
 <figure class="attempt-right">
-  <img src="imgs/eye-tracking.png" alt="Uma pessoa usando um dispositivo de rastreamento ocular">	
+  <img src="imgs/eye-tracking.png" alt="Uma pessoa usando um dispositivo de rastreamento ocular">
   <figcaption>Um dispositivo de rastreamento ocular</figcaption>
 </figure>
 
@@ -262,7 +262,7 @@ assim como a visão, a audição tende a piorar com a idade. Muitas pessoas usam
 como aparelhos auditivos.
 
 <figure class="attempt-right">
-  <img src="imgs/screen-captions.png" alt="Um televisor com legendas na parte inferior">	
+  <img src="imgs/screen-captions.png" alt="Um televisor com legendas na parte inferior">
   <figcaption>Legendas na tela</figcaption>
 </figure>
 

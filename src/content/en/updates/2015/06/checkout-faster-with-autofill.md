@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Help users checkout faster with Autofill. We’ve found that by correctly using autocomplete attributes on your forms, users complete them up to 30% faster!
 
-{# wf_updated_on: 2015-06-05 #}
+{# wf_updated_on: 2019-03-22 #}
 {# wf_published_on: 2015-06-05 #}
 {# wf_tags: news,forms,autofill,monetization,mobile #}
+{# wf_blink_components: N/A #}
 
 # Help users checkout faster with Autofill {: .page-title }
 
@@ -37,8 +38,8 @@ guessing form fields on your website which can result in a poor user experience.
 We've found that by correctly using autocomplete attributes on your forms, users
 complete them up to 30% faster. And since _autocomplete_ is part of the
 [WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill)
-[HTML](https://html.spec.whatwg.org/multipage/forms.html#autofill)
-standard, we hope that other browsers will support it in the near future.  
+[HTML](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill)
+standard, we hope that other browsers will support it in the near future.
 
 
 In the past, many developers would add _autocomplete="off"_ to their form fields
@@ -72,20 +73,20 @@ documented in [Web Fundamentals](/web/fundamentals/design-and-ux/input/forms/).
     <tr>
       <td>
         ccname<br>
-        cardnumber  
-        cvc  
-        ccmonth  
-        ccyear  
-        exp-date  
+        cardnumber
+        cvc
+        ccmonth
+        ccyear
+        exp-date
         card-type
       </td>
       <td>
         cc-name<br>
-        cc-number  
-        cc-csc  
-        cc-exp-month  
-        cc-exp-year  
-        cc-exp  
+        cc-number
+        cc-csc
+        cc-exp-month
+        cc-exp-year
+        cc-exp
         cc-type
       </td>
     </tr>
@@ -95,16 +96,16 @@ documented in [Web Fundamentals](/web/fundamentals/design-and-ux/input/forms/).
 
     <label for="frmNameCC">Name on card</label>
     <input name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
-    
+
     <label for="frmCCNum">Card Number</label>
     <input name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
-    
+
     <label for="frmCCCVC">CVC</label>
     <input name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
-    
+
     <label for="frmCCExp">Expiry</label>
     <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
-    
+
 
 ### Name
 
@@ -118,15 +119,15 @@ documented in [Web Fundamentals](/web/fundamentals/design-and-ux/input/forms/).
 
 <tr>
 <td>
-name  
-fname  
-mname  
+name
+fname
+mname
 lname
 </td>
 <td>
-name (full name)  
-given-name (first name)  
-additional-name (middle name)  
+name (full name)
+given-name (first name)
+additional-name (middle name)
 family-name (last name)
 </td>
 </tr>
@@ -135,7 +136,7 @@ family-name (last name)
 
     <label for="frmNameA">Name</label>
     <input name="name" id="frmNameA" placeholder="Full name" required autocomplete="name">
-    
+
 
 ### Email
 
@@ -161,10 +162,10 @@ email
 
     <label for="frmEmailA">Email</label>
     <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required autocomplete="email">
-    
+
     <label for="frmEmailC">Confirm Email</label>
     <input type="email" name="emailC" id="frmEmailC" placeholder="name@example.com" required autocomplete="email">
-    
+
 
 ### Address
 
@@ -179,22 +180,22 @@ autocomplete attribute
 </tr>
 <tr>
 <td>
-address  
-city  
-region  
-province  
-state  
-zip  
-zip2  
-postal  
+address
+city
+region
+province
+state
+zip
+zip2
+postal
 country
 </td>
 <td>
-For one address input: street-address  
-For two address inputs: address-line1 , address-line2  
-address-level1 (state or province)  
-address-level2 (city)  
-postal-code (zip code)  
+For one address input: street-address
+For two address inputs: address-line1 , address-line2
+address-level1 (state or province)
+address-level2 (city)
+postal-code (zip code)
 country
 </td>
 </tr>
@@ -203,19 +204,19 @@ country
 
     <label for="frmAddressS">Address</label>
     <input name="ship-address" required id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address">
-    
+
     <label for="frmCityS">City</label>
     <input name="ship-city" required id="frmCityS" placeholder="New York" autocomplete="shipping locality">
-    
+
     <label for="frmStateS">State</label>
     <input name="ship-state" required id="frmStateS" placeholder="NY" autocomplete="shipping region">
-    
+
     <label for="frmZipS">Zip</label>
     <input name="ship-zip" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code">
-    
+
     <label for="frmCountryS">Country</label>
     <input name="ship-country" required id="frmCountryS" placeholder="USA" autocomplete="shipping country">
-    
+
 
 
 ### Phone
@@ -231,12 +232,12 @@ autocomplete attribute
 </tr>
 <tr>
 <td markdown="block">
-phone  
-mobile  
-country-code  
-area-code  
-exchange  
-suffix  
+phone
+mobile
+country-code
+area-code
+exchange
+suffix
 ext
 </td>
 <td markdown="block">
@@ -248,7 +249,7 @@ tel
 
     <label for="frmPhoneNumA">Phone</label>
     <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-650-450-1212" required autocomplete="tel">
-    
+
 
 
 The autocomplete attributes can be accompanied with a section name, such as:
@@ -265,16 +266,16 @@ continuous form.
 
     <label for="frmNameCC">Name on card</label>
     <input name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
-    
+
     <label for="frmCCNum">Card Number</label>
     <input name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
-    
+
     <label for="frmCCCVC">CVC</label>
     <input name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
-    
+
     <label for="frmCCExp">Expiry</label>
     <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
-    
+
 
 **Forms best practices**
 
@@ -296,7 +297,7 @@ continuous form.
 ### Demo
 
 You can see it in action over at:
-[greenido.github.io/Product-Site-101/form-cc-example.html](https://greenido.github.io/Product-Site-101/form-cc-example.html)  
+[greenido.github.io/Product-Site-101/form-cc-example.html](https://greenido.github.io/Product-Site-101/form-cc-example.html)
 Or check the code:
 [https://github.com/greenido/Product-Site-101](https://github.com/greenido/Product-Site-101)
 

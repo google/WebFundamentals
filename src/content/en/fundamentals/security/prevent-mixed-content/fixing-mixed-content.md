@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-09-04 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Preventing Mixed Content {: .page-title }
@@ -58,7 +58,7 @@ Note: Mixed content errors and warnings are only shown for the page your are cur
 You can search for mixed content directly in your source code. Search for
 `http://` in your source and look for tags that include HTTP URL attributes.
 Specifically, look for tags listed in the [mixed content types & security threats associated](what-is-mixed-content#mixed-content-types--security-threats-associated){: .external} section of our previous guide.
-Note that having `http://` in the href attribute of anchor tags (`<a>`)
+Note that having `http://` in the `href` attribute of anchor tags (`<a>`)
 is often not a mixed content issue, with some notable exceptions discussed later.
 
 If you have a list of HTTP URLs from Chrome mixed content errors and warnings,
@@ -83,7 +83,7 @@ Which you found in source here:
 #### Step 1
 
 Check that the URL is available over HTTPS by opening a new tab in
-your browser, entering the URL in the address bar, and changing `http://` to `https://`
+your browser, entering the URL in the address bar, and changing `http://` to `https://`.
 
 If the resource displayed is the same over **HTTP** and **HTTPS**, everything is OK.
 Proceed to [Step 2](#step-2).
@@ -114,7 +114,7 @@ If you see a certificate warning, or if the content can't be displayed over
   <figure>
     <img src="imgs/https-not-available.png">
     <figcaption class="warning">
-      Resource not available over HTTPS
+      Resource not available over HTTPS.
      </figcaption>
   </figure>
 </div>
@@ -158,7 +158,7 @@ on the page, causing a mixed content problem.
 
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html){: target="_blank" .external }
 
-In the code above, it may seem safe to leave the `<a>` tags href as `http://`;
+In the code above, it may seem safe to leave the `<a>` tag's `href` as `http://`;
 however if you view the sample and click the image, you'll see that it loads
 a mixed content resource and displays it on the page.
 
@@ -273,7 +273,7 @@ ensuring the entire page is protected.
 
 ### Blocking all mixed content
 
-Not all browsers support the upgrade-insecure-requests directive, so an
+Not all browsers support the `upgrade-insecure-requests` directive, so an
 alternative for protecting users is the
 [**`block-all-mixed-content`**](http://www.w3.org/TR/mixed-content/#strict-checking){: .external}
 CSP directive. This directive instructs the browser to never load mixed content;
@@ -304,11 +304,11 @@ content that your users expect to be available.
 
 If your site is hosted for you by a platform such as Blogger, you may not have
 access to modify headers & add a CSP.
-Instead a viable alternative could be to use a website crawler to find issues
+Instead, a viable alternative could be to use a website crawler to find issues
 across your site for you, such as
 [HTTPSChecker](https://httpschecker.net/how-it-works#httpsChecker){: .external }
 or
-[Mixed Content Scan](https://github.com/bramus/mixed-content-scan){: .external }
+[Mixed Content Scan](https://github.com/bramus/mixed-content-scan){: .external }.
 
 ## Feedback {: #feedback }
 

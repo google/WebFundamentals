@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
 
-{# wf_updated_on: 2018-11-19 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: Blink>CSS #}
 
@@ -32,7 +32,7 @@ Generally, any time we focus an element, we rely on the built-in browser focus
 ring (the CSS `outline` property) to style the element. The focus ring is handy
 because, without it, it's impossible for a keyboard user to tell which element
 has the focus. The [WebAIM
-checklist](http://webaim.org/standards/wcag/checklist){: .external } makes a
+checklist](https://webaim.org/standards/wcag/checklist){: .external } makes a
 point of this, requiring that "It is visually apparent which page element has
 the current keyboard focus (i.e., as you tab through the page, you can see where
 you are)."
@@ -134,13 +134,13 @@ selector for the pressed state of the button from this
 
 
     .toggle.pressed { ... }
-    
+
 
 to this.
 
 
     .toggle[aria-pressed="true"] { ... }
-    
+
 
 This creates both a logical and a semantic relationship between the ARIA state
 and the element's appearance, and cuts down on extra code as well.
@@ -165,7 +165,7 @@ screen reader users as well. It's a win-win. Here's the same page magnified to
 ![Udacity.com at 400% magnification](imgs/udacity-zoomed.jpg)
 
 In fact, just by designing responsively, we're meeting [rule 1.4.4 of the WebAIM
-checklist](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
+checklist](https://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
 which states that a page "...should be readable and functional when the text
 size is doubled."
 
@@ -232,7 +232,7 @@ contrast*, the relationship between the foreground and background colors'
 *luminance*. When the colors are similar, the contrast ratio is low; when they
 are different, the contrast ratio is high.
 
-The [WebAIM guidelines](http://webaim.org/standards/wcag/){: .external }
+The [WebAIM guidelines](https://webaim.org/standards/wcag/){: .external }
 recommend an AA (minimum) contrast ratio of 4.5:1 for all text. An exception is
 made for very large text (120-150% larger than the default body text), for which
 the ratio can go down to 3:1. Notice the difference in the contrast ratios shown
@@ -262,7 +262,7 @@ To run a color/contrast audit, follow these basic steps.
 ![the devtools contrast audit dialog](imgs/contrast-audit.png)
 
 WebAIM itself provides a handy [color contrast
-checker](http://webaim.org/resources/contrastchecker/){: .external } you can use
+checker](https://webaim.org/resources/contrastchecker/){: .external } you can use
 to examine the contrast of any color pair.
 
 ### Don't convey information with color alone
@@ -287,7 +287,7 @@ provide multiple avenues for the user to access critical information.
 ![an input form with an error underlined in red](imgs/input-form1.png)
 
 The [WebAIM checklist states in section
-1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } that
+1.4.1](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } that
 "color should not be used as the sole method of conveying content or
 distinguishing visual elements." It also notes that "color alone should not be
 used to distinguish links from surrounding text" unless they meet certain

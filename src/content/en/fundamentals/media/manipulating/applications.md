@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Much media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-08-10 #}
 {# wf_published_on: 2017-06-09 #}
 {# wf_blink_components: Blink>Media #}
 
@@ -41,7 +41,7 @@ in one. The multiple "files" are called _streams_. A media file can have any
 number of streams, of more types than I will go into here. My examples will
 contain at most two, an audio stream and a video stream. (Among the other types
 you might encounter are captions and data, both of which are beyond the scope of
-this article). There are many instances where audio and video streams are dealt
+this article.) There are many instances where audio and video streams are dealt
 with separately.
  
 There are several characteristics that apply to each stream.
@@ -54,7 +54,7 @@ _Resolution_ is the amount of information in a single frame of video, given as
 the number of logical pixels in each dimension. For example, a resolution of
 1920 by 1080 works out to 1080 stacked horizontal lines, each of which is one
 logical pixel high and 1920 logical pixels wide. This resolution is frequently
-abbreviate 1080p because technically the width can vary. The numbers I've given
+abbreviated 1080p because technically the width can vary. The numbers I've given
 produce an
 [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_(image))
 of 16:9, which is the ratio of movie screens and modern television sets. By the
@@ -106,7 +106,7 @@ Here's the basic pattern for a Shaka Packager command line.
 This isn't quite what you get if you type `packager -help`. This is how I think
 of it, and this reflects the examples in the
 [Shaka Packager README](https://github.com/google/shaka-packager).
-Note the multiple _stream_descriptors_. This is useful for manipulating the
+Note the multiple `stream_descriptor`s. This is useful for manipulating the
 video and audio streams of the same file simultaneously.
 
 Compare this basic pattern with something simple like displaying file
@@ -116,7 +116,7 @@ characteristics. (I've lined up equivalent parts.)
 
     packager input=glocken.mp4                                              --dump_stream_info
 
-I've shown the output below. 
+The output I am shown:
  
     [0416/140029:INFO:demuxer.cc(88)] Demuxer::Run() on file 'glocken.mp4'.
     [0416/140029:INFO:demuxer.cc(158)] Initialize Demuxer for file 'glocken.mp4'.
@@ -154,7 +154,7 @@ codecs are the preferred codecs for their container types, AAC for audio and
 H264 for video. Notice also that streams are identified with numbers. These are
 useful for operations that manipulate the audio and video separately.
  
-Notice that it doesn't show the bitrate. Despite what's missing, It's easier to
+Notice that it doesn't show the bitrate. Despite what's missing, it's easier to
 read, which is why I use it whenever I can. When I need information that Shaka
 Packager can't get, such as the bitrate, I use ffmpeg.
 
@@ -197,7 +197,7 @@ care about, I'll see an error message, as shown in the example below.
           handler_name    : SoundHandler
     At least one output file must be specified
 
-So that's a few bits about media manipulation software in a nutshell. Now jump
+So those are a few bits about media manipulation software in a nutshell. Now jump
 next door to the
 [cheat sheet](cheatsheet). Check back every few weeks as we continue to add new
 content about media for the web.

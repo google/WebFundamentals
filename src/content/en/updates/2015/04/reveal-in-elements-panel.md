@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Reveal DOM nodes in the Elements panel from the Console.
 
-{# wf_updated_on: 2015-05-19 #}
+{# wf_updated_on: 2019-03-22 #}
 {# wf_published_on: 2015-04-27 #}
 {# wf_tags: devtools #}
 {# wf_featured_image: /web/updates/images/2015-05-19-reveal-dom-nodes-in-the-elements-panel-from-the-console/reveal-in-elements.gif #}
+{# wf_blink_components: N/A #}
 
 # Reveal in Elements panel {: .page-title }
 

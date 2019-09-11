@@ -126,3 +126,46 @@
   }
 }
 
+.cds2019 h3 {
+  /* padding: 16px;
+  background-color: white;
+  box-shadow: 40px 35px 66px 0px rgba(204,204,204,0.75);
+  border-radius: 16px; */
+}
+
+.cds2019 h3 > img {
+  display: inline-block;
+  max-width: 48px;
+  vertical-align: top;
+  margin-right: 0.5em;
+  /* margin-top: 22px; */
+}
+
+.cds2019 h3 > div {
+  display: inline-block;
+}
+
+.cds-header {
+  font-weight: bold;
+}
+
+.cds-dates sup {
+  font-size: medium;
+}
+
+.cds-loc {
+  margin-top: 1em;
+}
+
+.cds-loc, .cds-city {
+  font-size: 0.75em;
+  line-height: 1.2em;
+}
+
+.cds-cr {
+  color:#999;
+}
+
+.cds-blue {
+  color: #039be5;
+}

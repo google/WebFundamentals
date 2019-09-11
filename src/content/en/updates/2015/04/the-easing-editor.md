@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Select an easing CSS property to get a visual animated preview for how it behaves.
 
-{# wf_updated_on: 2015-05-19 #}
+{# wf_updated_on: 2019-03-22 #}
 {# wf_published_on: 2015-04-18 #}
 {# wf_tags: devtools #}
 {# wf_featured_image: /web/updates/images/2015-05-19-select-an-easing-to-get-a-visual-animated-preview-for-how-it-behaves/easing-preview.gif #}
+{# wf_blink_components: N/A #}
 
 # The easing editor {: .page-title }
 

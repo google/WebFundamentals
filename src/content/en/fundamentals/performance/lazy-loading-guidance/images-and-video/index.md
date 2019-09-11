@@ -2,11 +2,15 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: If your site has a ton of images and video, but you don't want to cut down on any of it, lazy loading might be just the technique you need to improve initial page load time and lower per-page payload.
 
-{# wf_updated_on: 2018-06-11 #}
+{# wf_updated_on: 2019-08-16 #}
 {# wf_published_on: 2018-04-04 #}
 {# wf_blink_components: Blink>Image,Blink>HTML,Blink>JavaScript #}
 
 # Lazy Loading Images and Video {: .page-title }
+
+Note: Browser-level native lazy loading is now available! Refer to ["Native lazy-loading for the
+web"](https://web.dev/native-lazy-loading) to learn how to use the loading attribute and leverage a
+third-party library as a fallback for browsers that do not yet support it.
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
 
