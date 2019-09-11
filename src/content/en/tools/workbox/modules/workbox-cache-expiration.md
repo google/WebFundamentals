@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-11 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
@@ -19,7 +19,7 @@ period of time.
 
 ## Restrict the Number of Cache Entries
 
-To restrict the number of entries stored in a cache, you can use the
+To restrict the number of entries stored in a cache you can use the
 `maxEntries` option like so:
 
 ```javascript
@@ -39,7 +39,7 @@ workbox.routing.registerRoute(
 With this, the
 [Plugin](/web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin)
 will be added to this route. After a cached response is used or a new request
-is added to the cache, the plugin will look at the configured cache and ensure
+is added to the cache the plugin will look at the configured cache and ensure
 that the number of cached entries doesn’t exceed the limit. If it does,
 **the oldest entries will be removed**.
 
@@ -76,7 +76,7 @@ as it doesn’t require an IndexedDB lookup.
 ## Advanced Usage
 
 If you’d like to use the expiration logic separate from any other Workbox
-module, you can do so with the
+modules you can do so with the
 [CacheExpiration](/web/tools/workbox/reference-docs/latest/workbox.expiration.CacheExpiration)
 class.
 
@@ -95,7 +95,7 @@ const expirationManager = new workbox.expiration.CacheExpiration(
 ```
 
 Whenever you update a cached entry, you need to call the `updateTimestamp()`
-method so that its age is updated.
+method so that it’s age is updated.
 
 ```javascript
 await openCache.put(
@@ -106,7 +106,7 @@ await openCache.put(
 await expirationManager.updateTimestamp(request.url);
 ```
 
-Then, whenever you want to expire a set of entries, you can call the
+Then whenever you want to expire a set of entries you can call the
 `expireEntries()` method which will enforce the `maxAgeSeconds` and
 `maxEntries` configuration.
 

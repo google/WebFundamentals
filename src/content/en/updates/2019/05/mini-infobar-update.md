@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Adding more control to the mini-infobar for PWAs in Chrome 76.
 
-{# wf_updated_on: 2019-07-25 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2019-05-20 #}
 {# wf_tags: chrome76,addtohomescreen,android,progressive-web-apps,install #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
@@ -15,8 +15,8 @@ description: Adding more control to the mini-infobar for PWAs in Chrome 76.
 
 <aside class="note">
   <b>TL;DR:</b> We're giving you more control over the PWA Add to Home Screen
-  mini-infobar. Starting in Chrome 76 (July 2019), you can prevent the
-  mini-infobar from appearing by calling <code>preventDefault()</code> on the
+  mini-infobar. Starting in Chrome 76, you can prevent the mini-infobar
+  from appearing by calling <code>preventDefault()</code> on the
   <code>beforeinstallprompt</code> event.
 </aside>
 
@@ -42,8 +42,6 @@ Today the Add to Home screen mini-infobar is shown at the same time as the
 event.
 
 ## Changes in Chrome 76
-
-Note: Chrome 76 went to stable in July 2019.
 
 We’ve been listening to our community and what we heard was that developers
 want more control over when to ask users to install a PWA.  We heard you!

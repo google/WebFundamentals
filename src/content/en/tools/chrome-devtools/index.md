@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2019-09-04 #}
+{# wf_updated_on: 2019-07-10 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -14,13 +14,13 @@ pages on-the-fly and diagnose problems quickly, which ultimately helps you build
 websites, faster.
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="VYyQv0CSZOE"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="G_P6rpRSr4g"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-Check out the video for live demonstrations of core DevTools workflows, including debugging CSS,
-prototyping CSS, debugging JavaScript, and analyzing load performance.
+With DevTools you can view and change any page. Even the Google homepage, as the video
+demonstrates.
 
 ## Open DevTools {: #open }
 

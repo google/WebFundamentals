@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2019-09-02 #}
+{# wf_updated_on: 2019-05-09 #}
 {# wf_blink_components: N/A #}
 
 # Workbox Window {: .page-title }
@@ -205,7 +205,7 @@ wb.register();
 cache updates from the <code>workbox-broadcast-update</code> package</h4>
 
 The [`workbox-broadcast-update`
-package](/web/tools/workbox/modules/workbox-broadcast-update) is a great
+package](/web/tools/workbox/modules/workbox-broadcast-cache-update) is a great
 
 way to be able to serve content from the cache (for fast delivery) while also
 being able to inform the user of updates to that content (using the

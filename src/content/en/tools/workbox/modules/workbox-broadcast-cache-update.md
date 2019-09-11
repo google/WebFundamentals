@@ -2,18 +2,18 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2019-09-02 #}
+{# wf_updated_on: 2019-04-02 #}
 {# wf_published_on: 2017-11-29 #}
 {# wf_blink_components: N/A #}
 
-# Workbox Broadcast Update {: .page-title }
+# Workbox Broadcast Cache Update {: .page-title }
 
-## What is Broadcast Update?
+## What is Broadcast Cache Update?
 
 When responding to requests with cached entries, while being fast, it
 comes with a tradeoff that users may end up seeing stale data.
 
-The `workbox-broadcast-update` module provides a standard way of
+The `workbox-broadcast-cache-update module` provides a standard way of
 notifying Window Clients that a cached response has been updated. This is most
 commonly used along with the
 [staleWhileRevalidate strategy](./workbox-strategies#stale-while-revalidate).
@@ -44,7 +44,7 @@ Warning: Because Workbox needs to be able to read the header values,
 [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses),
 whose headers are not accessible, will never trigger update messages.
 
-## Using Broadcast Update
+## Using Broadcast Cache Update
 
 The library is intended to be used along with the `staleWhileRevalidate`
 caching strategy, since that strategy involves returning a cached
@@ -89,13 +89,13 @@ updatesChannel.addEventListener('message', async (event) => {
 
 ### Message format
 
-When a `message` event listener is invoked in your web app, the
+When a `message` event listener as received in your web app, the
 `event.data` property will have the following format:
 
 ```js
 {
   type: 'CACHE_UPDATED',
-  meta: 'workbox-broadcast-update',
+  meta: 'workbox-broadcast-cache-update',
   // The two payload values vary depending on the actual update:
   payload: {
     cacheName: 'the-cache-name',
@@ -129,7 +129,7 @@ workbox.routing.registerRoute(
 
 ## Advanced Usage
 
-While most developers will use `workbox-broadcast-update` as a plugin
+While most developers will use `workbox-broadcast-cache-update` as a plugin
 of a particular strategy as shown above, it's possible to use the underlying
 logic in service worker code.
 

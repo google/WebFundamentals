@@ -3,12 +3,12 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with Workbox CLI.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-05 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Complete Service Worker with Workbox CLI {: .page-title }
 
-This page explains how to use the Workbox Command Line Interface (a.k.a. the
+This page explains how to use the Workbox Command Line Interface (a.k.a the
 Workbox CLI) to generate a complete service worker with support for precaching
 files and setup runtime caching.
 
@@ -20,8 +20,8 @@ Workbox CLI.</aside>
 
 ## Run the Wizard
 
-The next step is to run the wizard. This will setup the CLI to work for your
-project. The wizard will ask a set of questions about your project's file
+The next step is to run the wizard. This will setup the CLi to work for your
+project. The wizard will ask a set of questions about your projects file
 structure which'll be used to determine the files that should be precached.
 
 Start the wizard like so:
@@ -39,7 +39,7 @@ a service worker like so:
 workbox generateSW workbox-config.js
 </pre>
 
-This will generate a service worker with precaching setup to cache your site's
+This will generate a service worker with precaching setup to cache your sites
 files for offline use.
 
 In your web page, you can register this service worker by adding:
@@ -49,7 +49,7 @@ In your web page, you can register this service worker by adding:
 ## Adding Runtime Caching
 
 There may be files that you don't want to precache but will be used by
-your web app that you'd like to cache at runtime. Images are a great example.
+your webapp that you'd like cache at runtime. Images are a great example.
 
 Instead of precaching all images for your site, which will take up a lot of
 space in the cache, you can cache them as they are used and limit the number
@@ -74,7 +74,7 @@ module.exports = {
 
   // Define runtime caching rules.
   runtimeCaching: [{
-    // Match any request that ends with .png, .jpg, .jpeg or .svg.
+    // Match any request ends with .png, .jpg, .jpeg or .svg.
     urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
     // Apply a cache-first strategy.
@@ -97,5 +97,5 @@ The full set of available options can be found on the
 [Workbox CLI module page](/web/tools/workbox/modules/workbox-cli).
 
 <aside class="note"><b>Note:</b> Please ensure that whenever you update your
-site, you re-run <code>workbox generateSW</code> as this will ensure your service worker
+site you re-run `workbox generateSW` as this will ensure your service worker
 caches the latest files.</aside>

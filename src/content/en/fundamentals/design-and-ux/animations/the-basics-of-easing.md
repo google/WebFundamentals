@@ -3,14 +3,14 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn how to soften and give weighting to your animations.
 
 {# wf_blink_components: Blink>Animation #}
-{# wf_updated_on: 2019-08-04 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # The Basics of Easing {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-Nothing in nature moves linearly from one point to another. In reality, things tend to accelerate or decelerate as they move. Our brains are wired to expect this kind of motion, so when animating, you should use this to your advantage. Natural motion makes your users feel more comfortable with your apps, which in turn leads to a better overall experience.
+Nothing in nature moves linearly from one point to another. In reality, things tend to accelerate or decelerate as they move. Our brains are wired to expect this kind of motion, so when animating you should use this to your advantage. Natural motion makes your users feel more comfortable with your apps, which in turn leads to a better overall experience.
 
 ### TL;DR {: .hide-from-toc }
 * Easing makes your animations feel more natural.
@@ -55,9 +55,8 @@ Whether you’re coding your animations using CSS or JavaScript, you’ll find t
 
 To achieve the effect above with CSS, the code would look something like this:
 
-```css
-transition: transform 500ms linear;
-```
+
+    transition: transform 500ms linear;
     
 
 
@@ -79,9 +78,8 @@ Easing out is typically the best for user interface work, because the fast start
 
 There are many ways to achieve an ease out effect, but the simplest is the `ease-out` keyword in CSS:
 
-```css
-transition: transform 500ms ease-out;
-```
+
+    transition: transform 500ms ease-out;
     
 
 
@@ -105,9 +103,8 @@ From an interaction point of view, however, ease-ins can feel a little unusual b
 
 To use an ease-in animation, similarly to ease-out and linear animations, you can use its keyword:
 
-```css
-transition: transform 500ms ease-in;
-```
+
+    transition: transform 500ms ease-in;
     
 
 ## Ease-in-out animations
@@ -129,9 +126,8 @@ Do not use an overly long animation duration, because of the sluggishness of an 
 
 To get an ease-in-out animation, you can use the `ease-in-out` CSS keyword:
 
-```css
-transition: transform 500ms ease-in-out;
-```
+
+    transition: transform 500ms ease-in-out;
     
 
 ## Feedback {: #feedback }

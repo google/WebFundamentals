@@ -80,7 +80,7 @@ browsers</a>, you could import the KV Storage module with the following code
 browsers](#what_if_a_browser_doesnt_support_a_built-in_module)):
 
 ```js
-import storage, {StorageArea} from 'std:kv-storage';
+import {storage, StorageArea} from 'std:kv-storage';
 ```
 
 ## The KV Storage module
@@ -110,7 +110,7 @@ main point of this module is it's not synchronous, in contrast to
 [specification](https://wicg.github.io/kv-storage/#storagearea).
 
 As you may have noticed from the code example above, the KV Storage module has
-one default export `storage` and one named export `StorageArea`.
+two named exports: `storage` and `StorageArea`.
 
 `storage` is an instance of the `StorageArea` class with the name `'default'`,
 and it's what developers will use most often in their application code. The
@@ -123,7 +123,7 @@ of the `StorageArea` instance.
 Here's an example of how to use the KV Storage module in your code:
 
 ```js
-import storage from 'std:kv-storage';
+import {storage} from 'std:kv-storage';
 
 const main = async () => {
   const oldPreferences = await storage.get('preferences');
@@ -192,7 +192,7 @@ module:
 
 <!-- Then any module scripts with import statements use the above map -->
 <script type="module">
-  import storage from '/path/to/kv-storage-polyfill.mjs';
+  import {storage} from '/path/to/kv-storage-polyfill.mjs';
 
   // Use `storage` ...
 </script>

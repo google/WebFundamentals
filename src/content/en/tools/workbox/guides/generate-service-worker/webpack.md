@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with the Workbox Webpack Plugin.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-07 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Service Worker with Webpack {: .page-title }
@@ -13,9 +13,9 @@ generate a complete service worker with precaching and runtime caching.
 
 {% include "web/tools/workbox/guides/_shared/install-webpack.html" %}
 
-## Set up your Webpack Config
+## Setup your Webpack Config
 
-To generate a service worker as part of your build process, you'll need to add
+To generate a service worker as part of your build process you'll need to add
 the plugin to your `webpack.config.js` file like so:
 
 ```javascript
@@ -33,7 +33,7 @@ module.exports = {
 };
 ```
 
-The generated service worker will be set up to precache all the files in your
+The generated service worker will be setup to precache all the files in your
 webpack build.
 
 In your web page, you can register this service worker by adding:
@@ -43,7 +43,7 @@ In your web page, you can register this service worker by adding:
 ## Adding Runtime Caching
 
 There may be files that you don't want to precache but will be used by
-your web app that you'd like to cache at runtime. Images are a great example.
+your webapp that you'd like cache at runtime. Images are a great example.
 
 Instead of precaching all images for your site, which will take up a lot of
 space in the cache, you can cache them as they are used and limit the number
@@ -67,12 +67,12 @@ module.exports = {
     // Other plugins...
 
     new WorkboxPlugin.GenerateSW({
-      // Do not precache images
+      // Exclude images from the precache
       exclude: [/\.(?:png|jpg|jpeg|svg)$/],
 
       // Define runtime caching rules.
       runtimeCaching: [{
-        // Match any request that ends with .png, .jpg, .jpeg or .svg.
+        // Match any request ends with .png, .jpg, .jpeg or .svg.
         urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
         // Apply a cache-first strategy.

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Starting in Chrome 76, WebAPKs will be updated more frequently.
 
 {# wf_published_on: 2019-06-13 #}
-{# wf_updated_on: 2019-07-25 #}
+{# wf_updated_on: 2019-06-13 #}
 {# wf_featured_image: /web/updates/images/2019/06/webapk.png #}
 {# wf_tags: chrome76,mobile,install,addtohomescreen,progressive-web-apps,webapk #}
 {# wf_featured_snippet: When a Progressive Web App is installed on Android, Chrome automatically requests and installs a WebAPK of your app. Starting in Chrome 76, Chrome will check for updates more frequently, ensuring icons, titles, colors, and other key properties to rolled out to your users faster. #}
@@ -20,10 +20,10 @@ Android's app settings and to register a set of intent filters.
 
 <aside class="note">
   Chrome periodically checks to see if the manifest has changed, and if a new
-  WebAPK is required. <b>Starting in Chrome 76 (July 2019), Chrome will check
-  the manifest more frequently: checking every 1 day, instead of every 3
-  days.</b> If any of the key properties have changed, Chrome will request
-  and install a new WebAPK.
+  WebAPK is required. <b>Starting in Chrome 76, Chrome will check the manifest
+  more frequently: checking every 1 day, instead of every 3 days.</b> If any
+  of the key properties have changed, Chrome will request and install a new
+  WebAPK.
 </aside>
 
 ## Chrome 76 and later

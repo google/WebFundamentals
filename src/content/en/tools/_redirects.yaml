@@ -239,6 +239,3 @@ redirects:
 
 - from: /web/tools/workbox/guides/migrate
   to: /web/tools/workbox/guides/migrations/migrate-from-sw
-
-- from: /web/tools/workbox/modules/workbox-broadcast-cache-update
-  to: /web/tools/workbox/modules/workbox-broadcast-update

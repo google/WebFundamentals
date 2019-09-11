@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device.
 
 {# wf_published_on: 2019-05-02 #}
-{# wf_updated_on: 2019-09-06 #}
+{# wf_updated_on: 2019-05-28 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: capabilities,sharing,chrome75 #}
 {# wf_featured_snippet: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device. #}
@@ -30,14 +30,14 @@ allows web apps to receive data from a share.
 
 The only resource previously supported by these APIs was links. Chrome 75 adds
 support for the [Web Share API - Level
-2](https://w3c.github.io/web-share/level-2/), making it easy for web apps to
+2](https://wicg.github.io/web-share/level-2/), making it easy for web apps to
 share files to other apps using the system provided picker. [In the
 future](https://www.chromestatus.com/feature/6124071381106688), you'll also be
 able to use web apps as a share target. For now, your web app can share files
 with other web share targets registered on your device.
 
 This article assumes some familiarity with the Web Share API. If this is new to
-you, check out the links above or [the demo](https://w3c.github.io/web-share/demos/share-files.html). 
+you, check out the links above or [the demo](http://wicg.github.io/web-share/demos/share-files.html). 
 
 ## The navigator.canShare() method
 
@@ -93,7 +93,7 @@ IDL rules.
 
 ## More information
 
-+   [Web Share demo](https://w3c.github.io/web-share/demos/share-files.html)
++   [Web Share demo](http://wicg.github.io/web-share/demos/share-files.html)
 +   [Web Share explainer](https://github.com/WICG/web-share/blob/master/docs/explainer.md)
 +   [Web Share on Chrome Status](https://www.chromestatus.com/feature/4777349178458112)
 

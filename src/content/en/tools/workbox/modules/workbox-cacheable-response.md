@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cacheable-response.
 
-{# wf_updated_on: 2019-07-14 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 {# wf_blink_components: N/A #}
 
@@ -24,12 +24,12 @@ with a specific value, or a combination of the two.
 ## Caching Based on Status Codes
 
 You can configure a [Workbox strategy](./workbox-strategies) to consider
-a set of status codes as being eligible for caching by adding a
+set of status codes as being eligible for caching by adding a
 `workbox.cacheableResponse.Plugin` instance to a strategy's `plugins` parameter:
 
 ```js
 workbox.routing.registerRoute(
-  new RegExp('^https://third-party\\.example\\.com/images/'),
+  new RegExp('^https://third-party.example.com/images/'),
   new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
@@ -43,9 +43,9 @@ workbox.routing.registerRoute(
 
 This configuration tells Workbox that when processing responses for
 requests against `https://third-party.example.com/images/`, cache any requests
-with a status code of `0` or `200`.
+with a status code of '0' or '200'.
 
-Note: Status code `0` is used for
+Note: Status code '0' is used for
 [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses).
 
 ## Caching Based on Headers
@@ -105,20 +105,20 @@ workbox.routing.registerRoute(
 ## What Are the Defaults?
 
 If you use one of Workbox's built-in strategies without explicitly
-configuring a `cacheableResponse.Plugin`, the following default criteria is
+configuring a `cacheableRepsonse.Plugin`, the following default criteria is
 used to determine whether a response received from the network should
 be cached:
 
-* staleWhileRevalidate and networkFirst: Responses with a status of `0`
-(i.e. [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
-or `200` are considered cacheable.
-* cacheFirst: Responses with a status of `200` are considered cacheable.
+* staleWhileRevalidate and networkFirst: Responses with a status of 0
+([an opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
+or 200 are considered cacheable.
+* cacheFirst: Responses with a status of 200 are considered cacheable.
 
 By default, response headers are not used to determine cacheability.
 
 ### Why are there Different Defaults?
 
-The defaults vary around whether responses with a status of `0`
+The defaults vary around whether responses with a status of 0
 (i.e. [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses))
 will end up cached. Due to the "black box" nature of opaque responses,
 it's not possible for the service worker to know whether the response
@@ -134,7 +134,7 @@ For strategies that involve caching the first response received and
 reusing that cached response indefinitely, the repercussions of a
 transient error getting cached and reused are more severe. To err on the
 safe side by default, cacheFirst will refuse to save a response unless it
-has a status code of `200`.
+has a status code of 200.
 
 ## Advanced Usage
 

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button.
 
 {# wf_published_on: 2018-12-05 #}
-{# wf_updated_on: 2019-08-20 #}
+{# wf_updated_on: 2019-05-02 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: capabilities,sharing,android,chrome71 #}
 {# wf_featured_snippet: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button. #}
@@ -27,7 +27,7 @@ description: The Web Share Target API allows installed web apps to register with
 </figure>
 
 On your mobile device, sharing something is usually as simple as clicking the
-Share button, choosing which app you want to send it to, and then who to
+Share button, choosing which app you want to send it to, and then who you to
 share it with. For example, after reading an interesting article, I may want
 to share it via email with a few friends, or Tweet about it.
 
@@ -56,7 +56,7 @@ Mozilla and Microsoft have indicated their support but have not implemented it
 yet.
 
 We’ve started working on
-[Web Share Target - Level 2](https://wicg.github.io/web-share-target/level-2/), adding
+[Web Share Target - Level 2](https://wicg.github.io/web-share/level-2/), adding
 support for sharing file objects. Look for a post about that coming soon.
 
 
@@ -131,7 +131,7 @@ share target landing page.
 
 If the user selects your application, and your `method` is `"GET"` (the
 default), the browser opens a new window at the `action` URL. It will generate a
-query string using the URL encoded values supplied in the manifest. For example,
+query string using the URL encoded values supplied in the manifest. For example
 if the other app provides `title` and `text`, the query string would be
 `?title=hello&text=world`.
 
@@ -173,11 +173,11 @@ app.
   </figcaption>
 </figure>
 
-Be sure to check the incoming data. Unfortunately, there is no guarantee
+Be sure to check the incoming data, unfortunately, there is no guarantee
 that other apps will share the appropriate content in the right parameter.
 
 On Android, the [`url` field will be empty](https://bugs.chromium.org/p/chromium/issues/detail?id=789379)
-because it’s not supported in Android’s share system. Instead, URLs will often
+because it’s not supported in Android’s share system. Instead URLs will often
 appear in the `text` field, or occasionally in the `title` field.
 
 <div class="clearfix"></div>

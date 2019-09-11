@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-08-27 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: fundamentals, performance, app-shell #}
 {# wf_featured_image: /web/updates/images/2019/02/rendering-on-the-web/icon.png #}
@@ -60,10 +60,10 @@ to navigation. This avoids additional round-trips for data fetching and
 templating on the client, since it’s handled before the browser gets a
 response._
 
-Server rendering generally produces a fast [First Paint]&nbsp;(FP) and [First
-Contentful Paint]&nbsp;(FCP). Running page logic and rendering on the server makes it
+Server rendering generally produces a fast [First Paint] (FP) and [First
+Contentful Paint] (FCP). Running page logic and rendering on the server makes it
 possible to avoid sending lots of JavaScript to the client, which helps achieve
-a fast [Time to Interactive]&nbsp;(TTI). This makes sense, since with server
+a fast [Time to Interactive] (TTI). This makes sense, since with server
 rendering you’re really just sending text and links to the user’s browser. This
 approach can work well for a large spectrum of device and network conditions,
 and opens up interesting browser optimizations like streaming document parsing.
@@ -77,7 +77,7 @@ JavaScript to process before they can use your site. Even when [third-party JS]
 can’t be avoided, using server rendering to reduce your own first-party [JS
 costs] can give you more "[budget]" for the rest. However, there is one primary
 drawback to this approach: generating pages on the server takes time, which can
-often result in a slower [Time to First Byte]&nbsp;(TTFB).
+often result in a slower [Time to First Byte] (TTFB).
 
 Whether server rendering is enough for your application largely depends on what
 type of experience you are building. There is a longstanding debate over the
@@ -156,7 +156,7 @@ consumption, applying [memoization] techniques, and many other concerns. You're
 generally processing/rebuilding the same application multiple times - once on
 the client and once in the server. Just because server rendering can make
 something show up sooner doesn't suddenly mean you have less work to do.
-
+ 
 Server rendering produces HTML on-demand for each URL but can be slower than
 just serving static rendered content. If you can put in the additional leg-work,
 server rendering + [HTML caching] can massively reduce server render time. The
@@ -255,7 +255,7 @@ partially may be the key to making this technique more viable in the future.
 
 ## Streaming server rendering and Progressive Rehydration {: #progressive-rehydration }
 
-Server rendering has had a number of developments over the last few years.
+Server rendering has had a number of developments over the last few years. 
 
 [Streaming server rendering] allows you to send HTML in chunks that the browser
 can progressively render as it's received. This can provide a fast First Paint
@@ -315,7 +315,7 @@ render. Client-side rendering can work but often not without additional testing
 and leg-work. More recently [dynamic
 rendering](/search/docs/guides/dynamic-rendering) has also become an option
 worth considering if your architecture is heavily driven by client-side
-JavaScript.
+JavaScript. 
 
 When in doubt, the
 [Mobile Friendly Test](https://search.google.com/test/mobile-friendly) tool is

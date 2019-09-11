@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Everyone loves animated GIFs. The only problem is that they can be massive, often weighing in at several megabytes. In this guide, you'll learn how to curb the bloat caused by animated GIFs by replacing them with MPEG-4 and WebM video sources!
 
-{# wf_updated_on: 2019-08-22 #}
+{# wf_updated_on: 2018-07-04 #}
 {# wf_published_on: 2018-04-19 #}
 {# wf_tags: html5,video,gif,images #}
 {# wf_blink_components: Blink>Image,Blink>HTML #}
@@ -124,16 +124,6 @@ the MPEG-4 is certainly sufficient as an animated GIF replacement. It also pays
 to remember that your users likely won't have a reference to the GIF source like
 you will. Always adhere to your project's standards for media quality, but be
 willing to make trade-offs for performance where appropriate.
-
-If the resulting .mp4 won't open in Quicktime, Safari will not load it.
-Instead, try the command below to generate an mp4 that should load in Safari:
-
-```shell
-ffmpeg -i input.gif -b:v 0 -crf 25 -f mp4 -vcodec libx264 -pix_fmt yuv420p output.mp4
-```
-
-This additional config `-f mp4 -vcodec libx264 -pix_fmt yuv420p` should set the 
-correct codec for Quicktime player so Safari browser will recognize the .mp4 file.
 
 While MPEG-4 is broadly compatible and certainly suitable as an animated GIF
 replacement, we can go just a _bit_ further by generating an additional WebM

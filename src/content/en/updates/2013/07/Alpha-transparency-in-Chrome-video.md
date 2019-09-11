@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: WebM just added alpha transparency, and support for it has landed in Chrome 31.
+description: WebM just added alpha transparency, and support for it has landed in Chrome Canary.
 
-{# wf_updated_on: 2019-08-13 #}
+{# wf_updated_on: 2019-03-09 #}
 {# wf_published_on: 2013-07-25 #}
 {# wf_tags: news,video,webm #}
 {# wf_blink_components: N/A #}
@@ -10,7 +10,6 @@ description: WebM just added alpha transparency, and support for it has landed i
 # Alpha transparency in Chrome video {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
-{% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 
 ## Alpha transparency in Chrome video
@@ -21,14 +20,14 @@ description: WebM just added alpha transparency, and support for it has landed i
   </iframe>
 </div>
 
-Chrome 31 now supports video alpha transparency in WebM.
+Chrome Canary now supports video alpha transparency in WebM.
 
 In other words, Chrome takes the alpha channel into account when playing '[green
-screen](https://en.wikipedia.org/wiki/Chroma_key)' videos encoded to WebM ([VP8] and [VP9]) with
+screen](https://en.wikipedia.org/wiki/Chroma_key)' videos encoded to WebM with
 an alpha channel. This means you can play videos with transparent backgrounds: over web pages, images or even other videos.
 
 There's a demo at
-[simpl.info/videoalpha](https://simpl.info/videoalpha/). Somewhat surreal, and a bit rough around the edges (literally) but you get the idea!
+[simpl.info/videoalpha](https://simpl.info/videoalpha/). This only works in Chrome Canary at this point, and you'll need to enable VP8 alpha transparency from the chrome://flags page. Somewhat surreal, and a bit rough around the edges (literally) but you get the idea!
 
 ## How to make alpha videos
 
@@ -122,7 +121,14 @@ Raw alpha videos can be encoded to WebM in two ways.
 ### 4. Playback in Chrome
 
 To play the encoded WebM file in Chrome, simply set the file as the source of a
-video element.
+video element. <br/>
+<br/>
+As of now, VP8 alpha playback is behind a flag, so you have to either enable it
+in about:flags or [set the command line
+flag](http://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+`--enable-vp8-alpha-playback` when you start Chrome. When the flag is enabled,
+alpha playback also works with
+[MediaSource](/web/updates/2011/11/Stream-video-using-the-MediaSource-API).
 
 ### How did they do it?
 
@@ -141,16 +147,6 @@ games, interactive videos, collaborative story telling (add your own video to a
 background video/image), videos with alternative characters or plots, web apps
 that use overlay video components...
 
-Happy film making! Let us know if you build something amazing with alpha
-transparency.
+Happy film making! Let us know if you build something amazing with alpha transparency.
 
-## Helpful resources
 
-- [WebM VP8 video with alpha channel](https://cs.chromium.org/chromium/src/media/test/data/bear-vp8a.webm)
-- [WebM VP9 video with alpha channel](https://cs.chromium.org/chromium/src/media/test/data/bear-vp9a.webm)
-- [Alpha in WebM explained](http://wiki.webmproject.org/alpha-channel)
-- [README for WebM Alpha Encoder](https://chromium.googlesource.com/webm/webm-tools/+/master/alpha_encoder/README)
-- [WebM Discussion Google Group](https://groups.google.com/a/webmproject.org/forum/#!searchin/webm-discuss/alpha%7Csort:relevance)
-
-[VP8]: https://bugs.chromium.org/p/chromium/issues/detail?id=147355
-[VP9]: https://codereview.chromium.org/2096813002/

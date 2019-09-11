@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn how to animate between two views in your apps.
 
 {# wf_blink_components: Blink>Animation #}
-{# wf_updated_on: 2019-08-11 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animating Between Views {: .page-title }
@@ -45,46 +45,49 @@ To achieve this effect, you need a container for both views that has `overflow: 
 
 The CSS for the container is:
 
-```css
-.container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-```
+
+    .container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
 
 The position of the container is set as `relative`. This means that each view inside it can be positioned absolutely to the top left corner and then moved around with transforms. This approach is better for performance than using the `left` property (because that triggers layout and paint), and is typically easier to rationalize.
 
-```css
-.view {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
 
-  /* let the browser know we plan to animate
-     each view in and out */
-  will-change: transform;
-}
-```
+    .view {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    
+      /* let the browser know we plan to animate
+         each view in and out */
+      will-change: transform;
+    }
+    
 
 Adding a `transition` on the `transform` property provides a nice slide effect. To give it a nice feel, it’s using a custom `cubic-bezier` curve, which we discussed in the [Custom Easing guide](custom-easing).
 
-```css
-.view {
-  transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
-}
-```
+
+    .view {
+      /* Prefixes are needed for Safari and other WebKit-based browsers */
+      transition: -webkit-transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+      transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    }
+    
 
 The view that is offscreen should be translated to the right, so in this case the details view needs to be moved:
 
-```css
-.details-view {
-  transform: translateX(100%);
-}
-```
+
+    .details-view {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    
 
 Now a small amount of JavaScript is necessary to handle the classes. This toggles the appropriate classes on the views.
 
@@ -112,16 +115,17 @@ Now a small amount of JavaScript is necessary to handle the classes. This toggle
 
 Finally, we add the CSS declarations for those classes.
 
-```css
-.view-change .list-view {
-  transform: translateX(-100%);
-}
 
-.view-change .details-view {
-  transform: translateX(0);
-}
-```
-
+    .view-change .list-view {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    
+    .view-change .details-view {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html){: target="_blank" .external }
 
 You could expand this to cover multiple views, and the basic concept should remain the same; each non-visible view should be offscreen and brought on as needed, and the currently onscreen view should be moved off.
@@ -140,7 +144,6 @@ In addition to transitioning between views, this technique can also be applied t
 
 For a larger screen, you should keep the list view around all the time rather than removing it, and slide on the details view from the right-hand side. It’s pretty much the same as dealing with a navigation view.
 
-<div class="clearfix"></div>
 
 
 ## Feedback {: #feedback }

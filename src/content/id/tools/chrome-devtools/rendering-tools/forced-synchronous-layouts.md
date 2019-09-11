@@ -102,7 +102,7 @@ Anda sekarang seharusnya melihat definisi fungsi di panel **Sources**.
 ![definisi fungsi dalam panel sources](imgs/definition.png)
 
 Fungsi `update()` adalah penangan callback untuk 
-`requestAnimationFrame()`. Penangan menghitung setiap properti `left` gambar
+`requestAnimationCallback()`. Penangan menghitung setiap properti `left` gambar
 berdasarkan nilai `offsetTop` gambar. Ini memaksa browser melakukan
 layout baru segera untuk memastikan tersedianya nilai yang benar.
 Pemaksaan layout pada setiap bingkai animasi adalah penyebab tersendatnya

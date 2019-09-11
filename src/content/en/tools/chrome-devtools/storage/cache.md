@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: How to view Cache data from the Application panel of Chrome DevTools.
 
-{# wf_updated_on: 2019-09-03 #}
+{# wf_updated_on: 2019-03-25 #}
 {# wf_published_on: 2019-03-25 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -23,7 +23,7 @@ The **Size** column of the **Network Log** has the information you're looking fo
 
 ## View cache data {: #view }
 
-1. Click the **Application** tab to open the **Application** panel. The **Manifest** pane usually opens
+1. Click the **Sources** tab to open the **Sources** panel. The **Manifest** pane usually opens
    by default.
 
      <figure>

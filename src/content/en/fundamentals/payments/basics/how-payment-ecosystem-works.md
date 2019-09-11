@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn who are involved in the Web Payments ecosystem, how they interact each other and how you can get involved.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2019-07-28 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How the payment ecosystem works {: .page-title }
@@ -15,14 +15,14 @@ Let's see how the new payment ecosystem works with Web Payments.
 
 ## The anatomy of Web Payments
 
-_Web Payments_ comprises multiple web standards:
+_Web Payments_ comprises multiple web standards.
 
 *   **Payment Request API:** The [Payment Request
     API](https://www.w3.org/TR/payment-request/) enables fast and easy checkouts
     through a native browser UI. It provides a consistent checkout flow while
     reducing the need for users to enter their shipping and payment information
-    on every checkout. Learn how it works at a high level at [How Payment Request
-    API Works](/web/fundamentals/payments/basics/how-payment-request-api-works) or in detail at
+    on every checkout. Learn how it works at a high level at [How payment request
+    api works](/web/fundamentals/payments/basics/how-payment-request-api-works) or in detail at
     [Deep Dive into the Payment Request
     API](/web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request).
 *   **Payment Handler API:** The [Payment Handler
@@ -35,8 +35,8 @@ _Web Payments_ comprises multiple web standards:
     (`basic-card`, `https://google.com/pay`, etc.) can be used to identify a
     payment method. Along with standardized payment method identifiers, it
     allows anyone to define their own payment method with URL-based payment
-    method identifiers. Learn more at [Payment Method
-    Basics](/web/fundamentals/payments/basics/payment-method-basics).
+    method identifiers. Learn more at [Payment method
+    basics](/web/fundamentals/payments/basics/payment-method-basics).
 *   **Payment Method Manifest:** The [Payment Method
     Manifest](https://w3c.github.io/payment-method-manifest/) defines the
     machine-readable manifest file, known as a payment method manifest,

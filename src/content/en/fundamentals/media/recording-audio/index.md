@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's microphone.
 
-{# wf_updated_on: 2019-08-01 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-08-23 #}
 {# wf_blink_components: Blink>GetUserMedia #}
 
@@ -11,7 +11,7 @@ description: Most browsers can get access to the user's microphone.
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 Many browsers now have the ability to access video and audio input from the
-user. However, depending on the browser, it might be a full dynamic and inline
+user. However, depending on the browser it might be a full dynamic and inline
 experience, or it could be delegated to another app on the user's device.
 
 ## Start simple and progressively
@@ -22,10 +22,10 @@ a `capture` attribute that indicates we want to get it direct from the microphon
 
     <input type="file" accept="audio/*" capture>
 
-This method works on all platforms. On desktop, it will prompt the user to
+This method works on all platforms. On desktop it will prompt the user to
 upload a file from the file system (ignoring the `capture` attribute). In Safari
-on iOS, it will open up the microphone app, allowing you to record audio and
-then send it back to the web page; on Android, it will give the user the
+on iOS it will open up the microphone app, allowing you to record audio and
+then send it back to the web page; on Android it will give the user the
 choice of which app to use record the audio in before sending it back to the web
 page.
 
@@ -38,23 +38,23 @@ the `files` property of the event object.
 &lt;input type="file" accept="audio/*" capture id="recorder">
 &lt;audio id="player" controls>&lt;/audio>
 &lt;script>
-  const recorder = document.getElementById('recorder');
-  const player = document.getElementById('player');
+  var recorder = document.getElementById('recorder');
+  var player = document.getElementById('player');
 
   recorder.addEventListener('change', function(e) {
-    const file = e.target.files[0];
+    var file = e.target.files[0];
     // Do something with the audio file.
     player.srcObject = file;
   });
 &lt;/script>
 </pre>
 
-Once you have access to the file, you can do anything you want with it. For
+Once you have access to the file you can do anything you want with it. For
 example, you can:
 
 * Attach it directly to an `<audio>` element so that you can play it
 * Download it to the user's device
-* Upload it to a server by attaching it to an `XMLHttpRequest`
+* Upload it to a server by attaching to an `XMLHttpRequest`
 * Pass it through the Web Audio API and apply filters on to it
 
 Whilst using the input element method of getting access to audio data is
@@ -77,15 +77,15 @@ If successful the API will return a `Stream` that will contain the data from eit
 the microphone, and we can then either attach it to an `<audio>` element, attach it to a WebRTC
 stream, attach it to a Web Audio `AudioContext`, or save it using the `MediaRecorder` API.
 
-To get data from the microphone, we just set `audio: true` in the constraints
-object that is passed to the `getUserMedia()` API.
+To get data from the microphone we just set `audio: true` in the constraints
+object that is passed to the `getUserMedia()` API
 
 <pre class="prettyprint">
 &lt;audio id="player" controls>&lt;/audio>
 &lt;script>
-  const player = document.getElementById('player');
+  var player = document.getElementById('player');
 
-  const handleSuccess = function(stream) {
+  var handleSuccess = function(stream) {
     if (window.URL) {
       player.srcObject = stream;
     } else {
@@ -98,13 +98,13 @@ object that is passed to the `getUserMedia()` API.
 &lt;/script>
 </pre>
 
-If you want to choose a particular microphone, you can first enumerate the available microphones.
+If you want to choose a particular microphone you can first enumerate the available microphones.
 
     navigator.mediaDevices.enumerateDevices().then((devices) => {
       devices = devices.filter((d) => d.kind === 'audioinput');
     });
 
-You can then pass the `deviceId` that you wish to use when you call `getUserMedia`.
+You can then pass the deviceId that you wish to use when you call `getUserMedia`.
 
     navigator.mediaDevices.getUserMedia({
       audio: {
@@ -116,29 +116,29 @@ By itself, this isn't that useful. All we can do is take the audio data and play
 
 ### Access the raw data from the microphone
 
-To access the raw data from the microphone, we have to take the stream created by
+To access the raw data from the microphone we have to take the stream created by
 `getUserMedia()` and then use the Web Audio API to process the data. The
 Web Audio API is a simple API that takes input sources and connects those
-sources to nodes which can process the audio data (adjust Gain etc.) and
+sources to nodes which can process the audio data (adjust Gain etc) and
 ultimately to a speaker so that the user can hear it.
 
 One of the nodes that you can connect is a `ScriptProcessorNode`. This node will
 emit an `onaudioprocess` event every time the audio buffer is filled and you
-need to process it. At this point, you could save the data into your own buffer
-for later use.
+need to process it. At this point you could save the data into your own buffer
+and save it for later use.
 
 <pre class="prettyprint">
 &lt;script>
-  const handleSuccess = function(stream) {
-    <strong>const context = new AudioContext();
-    const source = context.createMediaStreamSource(stream);
-    const processor = context.createScriptProcessor(1024, 1, 1);
+  var handleSuccess = function(stream) {
+    <strong>var context = new AudioContext();
+    var source = context.createMediaStreamSource(stream);
+    var processor = context.createScriptProcessor(1024, 1, 1);
 
     source.connect(processor);
     processor.connect(context.destination);
 
     processor.onaudioprocess = function(e) {
-      // Do something with the data, e.g. convert it to WAV
+      // Do something with the data, i.e Convert this to WAV
       console.log(e.inputBuffer);
     };</strong>
   };
@@ -149,11 +149,11 @@ for later use.
 </pre>
 
 The data that is held in the buffers is the raw data from the microphone and
-you have a number of options with what you can do with that data:
+you have a number of options with what you can do with the data:
 
 * Upload it straight to the server
 * Store it locally
-* Convert it to a dedicated file format, such as WAV, and then save it to your
+* Convert to a dedicated file format, such as WAV, and then save it to your
   servers or locally
 
 ### Save the data from the microphone
@@ -162,13 +162,13 @@ The easiest way to save the data from the microphone is to use the
 `MediaRecorder` API.
 
 The `MediaRecorder` API will take the stream created by `getUserMedia` and then
-progressively save the data that is on the stream into your preferred
+progressively save the data that is on the stream in to you preferred
 destination.
 
 <pre class="prettyprint">
 &lt;a id="download">Download&lt;/a>
 &lt;button id="stop">Stop&lt;/button>
-&lt;script>
+<script>
   let shouldStop = false;
   let stopped = false;
   const downloadLink = document.getElementById('download');
@@ -178,7 +178,7 @@ destination.
     shouldStop = true;
   });
 
-  const handleSuccess = function(stream) {
+  var handleSuccess = function(stream) {
     const options = {mimeType: 'audio/webm'};
     const recordedChunks = [];
     <strong>const mediaRecorder = new MediaRecorder(stream, options);
@@ -208,22 +208,22 @@ destination.
 &lt;/script>
 </pre>
 
-In our case, we are saving the data directly into an array that we can later turn
-into a `Blob`, which can be then used to save the data to our Web Server or directly
-to the storage on the user's device.
+In our case we are saving the data directly into an array that we can later turn
+in to a `Blob` which can be then used to save to our Web Server or directly in
+storage on the user's device.
 
 ## Ask permission to use microphone responsibly
 
-If the user has not previously granted your site access to the microphone, then
-the instant that you call `getUserMedia`, the browser will prompt the user to
+If the user has not previously granted your site access to the microphone then
+the instant that you call `getUserMedia` the browser will prompt the user to
 grant your site permission to the microphone.
 
 Users hate getting prompted for access to powerful devices on their machine and
 they will frequently block the request, or they will ignore it if they don't
 understand the context of which the prompt has been created. It is best practice
 to only ask to access the microphone when first needed. Once the user has
-granted access, they won't be asked again, however, if they reject access,
-you can't ask the user for permission again.
+granted access they won't be asked again, however, if they reject access,
+you can't get access again to ask the user for permission.
 
 Warning: Asking for access to the microphone on page load will result in most of your users
 rejecting access to the mic.
@@ -233,13 +233,13 @@ rejecting access to the mic.
 The `getUserMedia` API provides you with no knowledge of if you already have
 access to the microphone. This presents you with a problem, to provide a nice UI
 to get the user to grant you access to the microphone, you have to ask for
-access to the microphone.
+access to microphone.
 
 This can be solved in some browsers by using the Permission API. The
 `navigator.permission` API allows you to query the state of the ability to
 access specific API's without having to prompt again.
 
-To query if you have access to the user's microphone, you can pass in
+To query if you have access to the user's microphone you can pass in
 `{name: 'microphone'}` into the query method and it will return either:
 
 *  `granted` &mdash; the user has previously given you access to the microphone;
@@ -248,7 +248,7 @@ To query if you have access to the user's microphone, you can pass in
 *  `denied` &mdash; the system or the user has explicitly blocked access to the
     microphone and you won't be able to get access to it.
 
-And you can now quickly check to see if you need to alter your user
+And you can now check quickly check to see if you need to alter your user
 interface to accommodate the actions that the user needs to take.
 
     navigator.permissions.query({name:'microphone'}).then(function(result) {

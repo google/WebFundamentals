@@ -2,36 +2,6 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
-### Chrome 78 {: #discover78 .hide-from-toc }
-
-* [Multi-client support in the Audits panel](/web/updates/2019/09/devtools#multiclient)
-* [Payment Handler debugging](/web/updates/2019/09/devtools#payments)
-* [Lighthouse 5.2 in the Audits panel](/web/updates/2019/09/devtools#audits)
-* [Largest Contentful Paint in the Performance panel](/web/updates/2019/09/devtools#LCP)
-* [File DevTools issues from the Main Menu](/web/updates/2019/09/devtools#issues)
-
-### Chrome 77 {: #discover77 .hide-from-toc }
-
-* [Copy element styles](/web/updates/2019/07/devtools#copystyles)
-* [Visualize layout shifts](/web/updates/2019/07/devtools#layoutshifts)
-* [Lighthouse 5.1 in the Audits panel](/web/updates/2019/07/devtools#audits)
-* [OS theme syncing](/web/updates/2019/07/devtools#theming)
-* [Keyboard shortcut for opening the Breakpoint Editor](/web/updates/2019/07/devtools#breakpointeditor)
-* [Prefetch cache in the Network panel](/web/updates/2019/07/devtools#prefetch)
-* [Private properties when viewing objects](/web/updates/2019/07/devtools#privateclassfields)
-* [Notifications and push messages in the Application panel](/web/updates/2019/07/devtools#backgroundservices)
-
-### Chrome 76 {: #discover76 .hide-from-toc }
-
-* [Autocomplete with CSS values](/web/updates/2019/05/devtools#values)
-* [A new UI for network settings](/web/updates/2019/05/devtools#settings)
-* [WebSocket messages in HAR exports](/web/updates/2019/05/devtools#websocket)
-* [HAR import and export buttons](/web/updates/2019/05/devtools#HAR)
-* [Real-time memory usage](/web/updates/2019/05/devtools#memory)
-* [Service worker registration port numbers](/web/updates/2019/05/devtools#ports)
-* [Inspect Background Fetch and Background Sync events](/web/updates/2019/05/devtools#background)
-* [Puppeteer for Firefox](/web/updates/2019/05/devtools#puppeteer)
-
 ### Chrome 75 {: #discover75 .hide-from-toc }
 
 * [Meaningful presets when autocompleting CSS functions](/web/updates/2019/04/devtools#presets)

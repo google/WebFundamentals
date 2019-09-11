@@ -4,7 +4,7 @@ description: Modern browsers make it easy to customize certain components, like 
 
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-08-31 #}
+{# wf_updated_on: 2019-05-06 #}
 {# wf_published_on: 2015-09-21 #}
 
 # Icons & Browser Colors {: .page-title }
@@ -42,7 +42,7 @@ the device. To prevent automatic scaling, you can also provide additional
 sizes by specifying the `sizes` attribute.
 
 
-Note: Icons sizes should be based on 48px, for example 48px, 96px, 144px and 192px.
+Note: Icons sizes should be based on 48px, for example 48px, 96px, 144px and 192px
 
 ### Safari
 
@@ -73,7 +73,7 @@ tags if you don't want to support a specific size.
 ### Tiles in Internet Explorer
 
 Microsoft’s "Pinned Sites" and rotating "Live Tiles" go far beyond other
-implementations and are beyond the scope of this guide. You can learn more
+implementations and is beyond the scope of this guide. You can learn more
 at MSDN's
 [how to create live tiles](//msdn.microsoft.com/en-us/library/ie/dn455115(v=vs.85).aspx).
 

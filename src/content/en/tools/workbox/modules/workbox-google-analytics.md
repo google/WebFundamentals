@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-google-analytics.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-18 #}
+{# wf_updated_on: 2019-03-04 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Google Analytics  {: .page-title }
@@ -35,7 +35,7 @@ handlers to cache the
 [analytics.js](/analytics/devguides/collection/analyticsjs/) and
 [gtag.js](/analytics/devguides/collection/gtagjs/)
 scripts, so they can also be run offline. Lastly, when failed requests are
-retried, Workbox Google Analytics also automatically sets (or updates) the
+retried Workbox Google Analytics also automatically sets (or updates) the
 [`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 in the request payload to ensure timestamps in Google Analytics reflect the
 time of the original user interaction.
@@ -53,11 +53,11 @@ Google Analytics, and it's the simplest way to get Google Analytics working
 offline.
 
 However, if using only the code above, the retried requests are
-indistinguishable from requests that succeed on the first try. This means
+indistinguishable from request that succeed on the first try. This means
 you'll receive all the interaction data from offline users, but you won't
 be able to tell which interactions occurred while the user was offline.
 
-To address this concern, you can use one of the configuration options
+To address this concern you can use one of the configuration options
 described below to modify or annotate the data that gets sent in the
 retried request.
 
@@ -79,7 +79,7 @@ The examples below show how you'd use both options.
 
 ## Examples
 
-### Using a custom dimension to track online vs. offline interactions
+### Using a custom dimensions to track online vs. offline interactions
 
 Google Analytics does not have a built-in dimension for online vs. offline
 interactions. However, you can create your own dimension for exactly this
@@ -94,7 +94,7 @@ in Google Analytics. Give it a name like "Network Status" and set its
 [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit)
 (since any interaction can be offline).
 
-1. Take note of the index assigned for the newly created dimension and pass
+1. Take note the index assigned for the newly created dimension and pass
 that as the parameter name to the `parameterOverrides` configuration option
 in your Workbox Google Analytics code.
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-09-05 #}
+{# wf_updated_on: 2019-07-03 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -47,7 +47,7 @@ apps should be able to do anything native apps can.
 
 ## The new capabilities
 
-You can see the [full list](https://crbug.com/?q=proj-fugu) of capabilities we're
+You can see the [full list](crbug.com/?q=proj-fugu) of capabilities we're
 considering on [crbug.com](https://crbug.com) and filtering issues with the
 `proj-fugu` label.
 
@@ -89,22 +89,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         such as an unread count.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> August 21st, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/web/updates/2019/08/contact-picker">Contact Picker API</a>
-      </td>
-      <td>
-        The Contact Picker API is a new, on-demand picker that allows users to
-        select entries from their contact list and share limited details of
-        the selected entries with a website. It allows users to share only
-        what they want, when they want, and makes it easier for users to
-        reach and connect with their friends and family.
-        <br><br>
-        <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> August 7th, 2019
+        <b>Last Updated:</b> March 12th, 2019
       </td>
     </tr>
     <tr>
@@ -124,24 +109,6 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2019/08/native-file-system">
-          Native File System API
-        </a>
-      </td>
-      <td>
-        The Native File System API (formerly known as the Writable Files API)
-        enables developers to build powerful web apps that interact with files
-        on the users local device, like IDEs, photo and video editors, text
-        editors, and more. After a user grants a web app access, this API
-        allows web apps to read or save changes directly to files and folders
-        on the users device.
-        <br><br>
-        <b>Current Status:</b> Behind a flag.<br>
-        <b>Last Updated:</b> August 20th, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="/web/updates/2019/01/shape-detection">Shape&nbsp;Detection API</a>
       </td>
       <td>
@@ -150,7 +117,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         interfaces. Currently, the supported features are face detection,
         barcode detection, and text detection (Optical Character Recognition).
         <br><br>
-        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Current Status:</b> Behind a flag in Chrome 74.<br>
         <b>Last Updated:</b> May 28th, 2019
       </td>
     <tr>
@@ -166,8 +133,23 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         the device from going to sleep when an application needs to keep
         running.
         <br><br>
-        <b>Current Status:</b> Behind a flag.<br>
-        <b>Last Updated:</b> September 5th, 2019
+        <b>Current Status:</b> Behind a flag in Chrome 71 for desktop.<br>
+        <b>Last Updated:</b> May 28th, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/11/writable-files">Writable Files API</a>
+      </td>
+      <td>
+        The Writable Files API is designed to increase interoperability of
+        web applications with native applications, making it possible for users
+        to choose files or directories that a web app can interact with on the
+        native file system, and without having to use a native wrapper like
+        Electron to ship your web app.
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
+        <b>Last Updated:</b> November 12th, 2018
       </td>
     </tr>
   </tbody>
@@ -185,7 +167,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
   <tbody>
     <tr>
       <td>
-        <a href="/web/updates/2019/07/image-support-for-async-clipboard">
+        <a href="/web/updates/2019/06/image-support-for-async-clipboard">
           Async&nbsp;Clipboard API (images)
         </a>
       </td>

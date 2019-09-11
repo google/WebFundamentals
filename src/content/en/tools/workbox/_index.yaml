@@ -210,7 +210,7 @@ landing_page:
       workboxBuild.generateSW({
         swDest: './build/sw.js'
         globDirectory: './app',
-        globPatterns: '**/*.{js,css,html,png}',
+        globPatterns: '**\/*.{js,css,html,png}',
       });</pre>
         </section>
         <section>
@@ -283,7 +283,7 @@ landing_page:
 
   - heading: "Contributors"
     description: >
-      <p>Workbox is built and maintained by a friendly bunch of contributors
+      <p>Workbox is built and maintained by friendly bunch of contributors
       without whom none of this would be possible.</p>
 
       {% include 'web/tools/workbox/_shared/contributors.html' %}

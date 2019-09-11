@@ -2,7 +2,7 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
-  body_class: hide-devsite-banner
+  body_class: x-hide-devsite-banner
   meta_tags:
   - name: google-site-verification
     content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
@@ -42,31 +42,21 @@ landing_page:
 
   rows:
 
-  - classname: devsite-landing-row-100 devsite-landing-row-large-headings  cds2019
+  - classname:  devsite-landing-row-large-headings
     background: grey
     items:
-    - heading: >
-        <img src="https://www.gstatic.com/images/branding/product/2x/chrome_96dp.png">
-        <div>
-          <div class="cds-header"><span class="cds-cr">chrome://</span>dev-summit</div>
-          <div class="cds-dates">
-            november <span class="cds-blue">11<sup>th</sup>-12<sup>th</sup></span> 2019
-          </div>
-          <div class="cds-loc">Yerba Buena Center for the Arts</div>
-          <div class="cds-city">San Francisco, CA</div>
-        </div>
+    - heading: chrome dev summit 2019
       description: >
-        Chrome Dev Summit registration is now open! Join us for our annual
-        developer conference at the Yerba Buena Center for the Arts in San
-        Francisco, CA on November 11-12, 2019. Over the two days, you’ll
-        learn about the latest tools and updates coming to the web platform
-        and hear directly from the Chrome product & engineering teams.
-        Request your invite at the
-        <a href="https://developer.chrome.com/devsummit/">Chrome Dev Summit
-        2019 website</a>.
+        November 11-12 | San Francisco, USA<br><br>
+        Chrome Dev Summit is back! Join us for our annual developer conference
+        at the Yerba Buena Center for the Arts in San Francisco, CA on November
+        11-12, 2019. Over the two days, you’ll learn about the latest tools and
+        updates coming to the web platform and hear directly from the Chrome
+        product engineering teams. Sign up for updates on the
+        <a href="https://developer.chrome.com/devsummit/">Chrome Dev Summit 2019 website.</a>
+      icon:
+        path: https://www.gstatic.com/images/branding/product/2x/chrome_96dp.png
     - youtube_id: nImH_dq1NpM
-
-
 
   - classname: wf-landing-row
     items:

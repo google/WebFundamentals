@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Autocomplete with CSS values, a new UI for network settings, and more.
 
-{# wf_updated_on: 2019-07-15 #}
+{# wf_updated_on: 2019-06-05 #}
 {# wf_published_on: 2019-05-28 #}
 {# wf_tags: chrome76, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -14,12 +14,6 @@ description: Autocomplete with CSS values, a new UI for network settings, and mo
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 Hello! Here's what's new in [Chrome DevTools](/web/tools/chrome-devtools/) in Chrome 76.
-
-<div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="GLUB2yzk0ZQ"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
 
 ## Autocomplete with CSS values {: #values }
 

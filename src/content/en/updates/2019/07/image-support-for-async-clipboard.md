@@ -1,9 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Starting in Chrome 76, the Asynchronous Clipboard API now handles some images, in addition to text.
+description: Starting in Chrome 76, the async clipboard API now handles (some) images, in addition to text.
 
 {# wf_published_on: 2019-07-03 #}
-{# wf_updated_on: 2019-09-06 #}
+{# wf_updated_on: 2019-07-03 #}
 {# wf_featured_image: /web/updates/images/generic/photo.png #}
 {# wf_tags: capabilities,chrome76,cutandcopy,execcommand,input,clipboard #}
 {# wf_featured_snippet: Chrome 76 adds expands the functionality of the Async Clipboard API to add support for png images. Copying and pasting images to the clipboard has never been easier. #}
@@ -14,14 +14,14 @@ description: Starting in Chrome 76, the Asynchronous Clipboard API now handles s
 {% include "web/_shared/contributors/thomassteiner.html" %}
 
 In Chrome 66, we shipped the [text portion](/web/updates/2018/03/clipboardapi)
-of the [Asynchronous Clipboard
-API](https://w3c.github.io/clipboard-apis/#async-clipboard-api). Now in Chrome
-76, adding support for images makes it easy to programmatically copy and paste
-png images.
+of the Asynchronous [Clipboard API](https://w3c.github.io/clipboard-apis/).
+Now in Chrome 76, adding support for images to the Asynchronous
+Clipboard API, making it easy to programmatically copy and paste
+`image/png` images.
 
 <aside class="caution">
   <b>Note:</b>
-  At the time of writing, only png files are supported.
+  At the time of writing, only <code>image/png</code> files are supported.
   Support for other images and file formats will be added in the future.
 </aside>
 
@@ -31,16 +31,12 @@ API works. If you remember the details, skip ahead to the
 
 ## Recap of the Asynchronous Clipboard API {: #recap }
 
-Before describing image support, I want to review how the Asynchronous Clipboard
-API works. Feel free to [skip ahead](#images) if you're already comfortable
-using the API.
+### Copy: Writing text to the clipboard {: #copy-text }
 
-### Copy: writing text to the clipboard {: #copy-text }
-
-To copy text to the clipboard, call `navigator.clipboard.writeText()`.
-Since this API is asynchronous, the `writeText()` function returns a promise
-that resolves or rejects depending on whether the passed text is
-copied successfully. For example:
+Text can be copied to the clipboard by calling `navigator.clipboard.writeText()`.
+Since this API is asynchronous, the `writeText()` function returns a Promise
+that will be resolved or rejected depending on whether the passed text is
+copied successfully:
 
 ```js
 async function copyPageURL() {
@@ -53,10 +49,10 @@ async function copyPageURL() {
 }
 ```
 
-### Paste: reading text from the clipboard {: #reading-text }
+### Paste: Reading text from the clipboard {: #reading-text }
 
 Much like copy, text can be read from the clipboard by calling
-`navigator.clipboard.readText()` and waiting for the returned promise to
+`navigator.clipboard.readText()` and waiting for the returned Promise to
 resolve with the text:
 
 ```js
@@ -73,8 +69,6 @@ async function getClipboardText() {
 ### Handling paste events
 
 Paste events can be handled by listening for the (surprise) `paste` event.
-Note that you need to call `preventDefault()` in order to modify the to-be-pasted data,
-like for example, convert it to uppercase before pasting.
 It works nicely with the new asynchronous methods for reading clipboard text:
 
 ```js
@@ -82,8 +76,7 @@ document.addEventListener('paste', async (e) => {
   e.preventDefault();
   try {
     const text = await navigator.clipboard.readText();
-    text = text.toUpperCase();
-    console.log('Pasted UPPERCASE text: ', text);
+    console.log('Pasted text: ', text);
   } catch (err) {
     console.error('Failed to read clipboard contents: ', err);
   }
@@ -92,7 +85,7 @@ document.addEventListener('paste', async (e) => {
 
 ### Security and permissions {: #security-permission }
 
-The `navigator.clipboard` property is only supported for pages served over HTTPS,
+The `navigator.clipboard` API is only supported for pages served over HTTPS,
 and to help prevent abuse, clipboard access is only allowed when a page is
 the active tab. Pages in active tabs can write to the clipboard without
 requesting permission, but reading from the clipboard always requires
@@ -100,10 +93,10 @@ permission.
 
 When the Asynchronous Clipboard API was introduced,
 two new permissions for copy and paste were added to the
- [Permissions API](/web/updates/2015/04/permissions-api-for-the-web):
+[Permissions API](/web/updates/2015/04/permissions-api-for-the-web):
 
 * The `clipboard-write` permission is granted automatically to pages when they
-  are in the active tab.
+  are the active tab.
 * The `clipboard-read` permission must be requested, which you can do by
   trying to read data from the clipboard.
 
@@ -119,41 +112,37 @@ permissionStatus.onchange = () => {
 };
 ```
 
-## Images in the Asynchronous Clipboard API {: #images }
+## 🆕 The new image-focused portion of the Asynchronous Clipboard API {: #images }
 
-### Copy: writing an image to the clipboard {: #copy-image }
+### Copy: Writing an image to the clipboard {: #copy-image }
 
 The new `navigator.clipboard.write()` method can be used for copying images
 to the clipboard. Like [`writeText()`](#copy-text), it is asynchronous, and
 Promise-based. Actually, `writeText()` is just a convenience method for the
 generic `write()` method.
 
-To write an image to the clipboard, you need the image as a
-[`Blob`][blob]. One way to do
-this is by requesting the image from an server by calling `fetch()` (or
-`XMLHTTPReuest()`). The `response` object returned by `fetch()` has a [`blob()`
-method][blob-method] and
-`XMLHTTPRequest()` let's you set `"blob"` as the [`responseType`][blog-response-type].
+In order to write an image to the clipboard, you need the image as a
+[`Blob`](https://developer.mozilla.org/en-US/docs/Web/API/Blob). One way to
+achieve this is by `fetch`ing (or `XMLHttpRequest`ing) the image from a
+server and getting the response body as a [Blob][blob] (or for XHR,
+by setting the [`responseType`][blog-response-type] to `'blob'`).
+Another method to `Blob`ify an image is to write the image to a canvas, then
+call the `canvas`’s [`toBlob()`][to-blob] method.
 
-Calling the server may not be desireable or possible for a variety of reasons.
-Fortunately, you can also write the image to a canvas, then call
-[`HTMLCanvasElement.toBlog()`][to-blob].
-
-[blob]: https://developer.mozilla.org/en-US/docs/Web/API/blob
-[blob-method]: https://developer.mozilla.org/en-US/docs/Web/API/Body/blob
+[blob]: https://developer.mozilla.org/en-US/docs/Web/API/Body/blob
 [to-blob]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
 [blog-response-type]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType#Value
 
-Next, pass an array of `ClipboardItem` objects as a parameter to the `write()` method.
+Next, pass an array of `ClipboardItem`s as a parameter to the `write()` method.
 Currently you can only pass one image at a time, but we plan to add support for
 multiple images in the future.
 
 The `ClipboardItem` takes an object with the MIME type of the image as the key,
-and the actual blob as the value. The sample code below shows a future-proof way
-to do this by using the [`Object.defineProperty()`][object-define-prop] method.
-The MIME used as the key is retrieved from `blob.type`. This approach ensures
-that your code will be ready for future image types as well as other MIME types
-that may be supported in the future.
+and the actual blob as the value. The sample code below shows a future-proof
+way to do this by leveraging the [`Object.defineProperty()`][object-define-prop]
+method. Using this approach will ensure your code will be ready for future
+image types as well as other MIME types that the Asynchronous Clipboard API
+may support.
 
 [object-define-prop]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
@@ -174,13 +163,13 @@ try {
 }
 ```
 
-### Paste: reading an image from the clipboard {: #paste-image }
+### Paste: Reading an image from the clipboard {: #paste-image }
 
-The `navigator.clipboard.read()` method, which reads data from the clipboard, is
+The `navigator.clipboard.read()` method reads data from the clipboard. It is
 also asynchronous, and Promise-based.
 
-To read an image from the clipboard, obtain a list of
-`ClipboardItem` objects, then iterate over them. Since everything is asynchronous,
+To read an image from the clipboard, we need to obtain a list of
+`ClipboardItem`s, then iterate over them. Since everything is asynchronous,
 use the [`for ... of`][for-of] iterator, since it handles async/await code
 nicely.
 
@@ -189,7 +178,7 @@ nicely.
 Each `ClipboardItem` can hold its contents in different types, so you'll
 need to iterate over the list of types, again using a `for ... of` loop.
 For each type, call the `getType()` method with the current type as an argument
-to obtain the corresponding image `Blob`. As before, this code is not tied
+to obtain the corresponding image `Blob`. As before, this code is is not tied
 to images, and will work with other future file types.
 
 ```js
@@ -214,9 +203,8 @@ async function getClipboardContents() {
 
 ### Custom paste handler {: #custom-paste-handler }
 
-To dynamically handle paste events, listen for the `paste`
-event, call [`preventDefault()`][prevent-default] to prevent the default behavior
-in favor of your own logic, then use the code above
+If you want to dynamically handle paste events, you can listen for the `paste`
+event, [prevent the default][prevent-default] behavior, then use the code above
 to read the contents from the clipboard, and handle it in whatever way your
 app needs.
 
@@ -233,7 +221,8 @@ document.addEventListener('paste', async (e) => {
 
 The [`copy` event][copy-event] includes a [`clipboardData`][clipboard-data]
 property with the items already in the right format, eliminating the need to
-manually create a blob. As before, don't forget to call `preventDefault()`.
+manually create a blob. Like before, don't forget to prevent the default
+behavior.
 
 [copy-event]: https://developer.mozilla.org/en-US/docs/Web/API/Document/copy_event
 [clipboard-data]: https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/clipboardData
@@ -286,13 +275,13 @@ on whether, and how the transcoding details should be specified.
 ## Next Steps
 
 We are actively working on expanding the Asynchronous Clipboard API to add
-support a larger number of data types. Due to the potential risks we are
-treading carefully. To stay up to date on Chrome's progress, you can star the
-[bug][cr-bug] to be notified about changes.
+support a larger number of data types. But, due to the potential risks, we
+will tread carefully. You can star the [bug][cr-bug] to be notified about
+changes.
 
-For now, image support can be used in  Chrome 76 or later.
+For now, image support has landed and can be used as of Chrome 76.
 
-Happy copying and pasting!
+Happy copying&nbsp;&amp;&nbsp;pasting!
 
 [cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=897289
 

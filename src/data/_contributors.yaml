@@ -103,19 +103,6 @@ adamargyle:
     en: Developer Advocate at Google
   country: US
 
-kenjibaheux:
-  name:
-    given: Kenji
-    family: Baheux
-  twitter: KenjiBaheux
-  github: KenjiBaheux
-  org:
-    name: Google
-    unit: Chrome
-  country: JPN
-  description:
-    en: "Product Manager at Google, working on Chrome/Web Platform"
-
 pbakaus:
   name:
     given: Paul
@@ -378,20 +365,6 @@ mco:
   email: mco@google.com
   description:
     en: 'Eng Manager, Web Developer Relations'
-
-peconn:
-  name:
-    given: Peter
-    family: Conn
-  twitter: petereconn
-  github: PEConn
-  description:
-    en: I'm a Software Engineer working on the Web Platform at Google London.
-  org:
-    name: Google
-    unit: Web Platform
-  country: UK
-  email: conn.peter@gmail.com
 
 flaviocopes:
   name:
@@ -1744,22 +1717,6 @@ borissmus:
     - author
   email: smus@google.com
 
-antoinesolnichkin:
-  name:
-    given: Antoine
-    family: Solnichkin
-  org:
-    name: Independent
-    unit: Software Engineer
-  country: LU
-  role:
-    - translator
-  homepage: http://devconnected.com
-  twitter: devconnectedcom
-  email: solnichkin.antoine@gmail.com
-  description:
-    en: "Antoine is a Software Engineer based in Luxembourg"
-
 rsolomakhin:
   name:
     given: Rouslan
@@ -2087,3 +2044,6 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
+
+
+

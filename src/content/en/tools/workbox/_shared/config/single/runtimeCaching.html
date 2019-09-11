@@ -22,7 +22,7 @@
       </p>
       <p>
         The <code>options</code> properties can be used to configure instances of the cache
-        expiration, cacheable response, and broadcast update plugins to apply to a given route.
+        expiration, cacheable response, and broadcast cache update plugins to apply to a given route.
       </p>
       <p>
         <strong>Example:</strong>
@@ -54,7 +54,7 @@
         statuses: [0, 200],
         headers: {'x-test': 'true'},
       },
-      // Configure the broadcast update plugin.
+      // Configure the broadcast cache update plugin.
       broadcastUpdate: {
         channelName: 'my-update-channel',
       },

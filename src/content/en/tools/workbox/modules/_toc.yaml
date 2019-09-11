@@ -23,7 +23,7 @@ toc:
 - title: workbox.cacheableResponse
   path: /web/tools/workbox/modules/workbox-cacheable-response
 - title: workbox.broadcastUpdate
-  path: /web/tools/workbox/modules/workbox-broadcast-update
+  path: /web/tools/workbox/modules/workbox-broadcast-cache-update
 - title: workbox.navigationPreload
   path: /web/tools/workbox/modules/workbox-navigation-preload
 

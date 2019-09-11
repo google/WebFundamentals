@@ -123,11 +123,11 @@ landing_page:
           updated with a new response.
         buttons:
         - label: Learn more
-          path: ./workbox-broadcast-update
+          path: ./workbox-broadcast-cache-update
         - label: Reference
           path: ../reference-docs/latest/workbox.broadcastUpdate
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-update/
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-cache-update/
 
       - heading: workbox.rangeRequest
         description: >

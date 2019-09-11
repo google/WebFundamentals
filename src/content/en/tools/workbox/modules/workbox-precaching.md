@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-21 #}
+{# wf_updated_on: 2019-04-04 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -15,7 +15,7 @@ cache when the service worker is installing. This is often referred to as
 "precaching", since you are caching content ahead of the service worker being
 used.
 
-The main reason for doing this is that it gives developers control over the
+The main reasons for doing this is that it gives developers control over the
 cache, meaning they can determine when and how long a file is cached as well
 as serve it to the browser without going to the network, meaning it can be
 used to create web apps that work offline.
@@ -35,7 +35,7 @@ URL query parameter appended to their cache key representing a hash of their con
 that Workbox generates at build time.
 
 `workbox-precaching` does all of this during the service worker's
-[`install` event](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Install_and_activate_populating_your_cache).
+[install event](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Install_and_activate_populating_your_cache).
 
 When a user later revisits your web app and you have a new service worker with
 different precached assets, `workbox-precaching` will look at the new list
@@ -44,7 +44,7 @@ need updating, based on their revisioning. Any new assets, or updating revisions
 will be added to the cache during the new service worker's `install` event.
 
 This new service worker won't be used to respond to requests until its `activate`
-event has been triggered. It’s in the `activate` event that `workbox-precaching`
+event has been triggered. It’s in the activate event that `workbox-precaching`
 will check for any cached assets that are no longer present in the
 [list](#explanation_of_the_precache_list) of current URLs, and remove those from
 the cache.
@@ -90,9 +90,9 @@ This array is sometimes referred to as a precache manifest.
 
 This list references a set of URLs, each with their own piece of "revisioning"
 information. For the first item in the example above,
-`'/styles/example.ac29.css'`, the revisioning information
+'/styles/example.ac29.css', the revisioning information
 **is in the URL itself**. This is a best practice for web as it allows
-browsers to safely cache these URLs for a long time. Assets with inline content hash
+browsers to safely cache these URLs for a long time. Assets with inline, content hash
 revisioning can be added to the precache list as is.
 
 For assets where you don't have revisioning information in the URL,
@@ -132,7 +132,7 @@ remove all values.
 By default, search parameters starting with `utm_` are removed, meaning that a request for
 `/about.html?utm_campaign=abcd` will be fulfilled with a precached entry for `/about.html`.
 
-You can ignore a different set of search parameters using `ignoreURLParametersMatching`:
+You can ignore a different set of search parameter using `ignoreURLParametersMatching`:
 
 ```javascript
 workbox.precaching.precacheAndRoute([
@@ -165,8 +165,8 @@ workbox.precaching.precacheAndRoute([
 
 ### Clean URLs
 
-If a request fails to match the precache, we'll add `.html` to the end to support
-"clean" URLs (a.k.a. "pretty" URLs). This means a request like `/about` will
+If a request fails to match the precache, we'll add `.html` to end to support
+"clean" URLs (a.k.a "pretty" URLs). This means a request like `/about` will
 be handled by the precached entry for `/about.html`.
 
 You can disable this behavior by setting `cleanUrls`:
@@ -208,7 +208,7 @@ By default, `workbox-precaching` will set up the `install` and `activate` listen
 For developers familiar with service workers, this may not be desirable if you need more control.
 
 Instead of using the default export, you can use the
-[`PrecacheController`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController)
+[PrecacheController](/web/tools/workbox/reference-docs/latest/workbox.precaching.PrecacheController)
 directly to add items to the precache, determine when these assets are installed, and
 when cleanup should occur.
 
@@ -233,7 +233,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(precacheController.install());
 });
 self.addEventListener('activate', (event) => {
-  event.waitUntil(precacheController.activate());
+  event.waitUntil(precacheController.cleanup());
 });
 self.addEventListener('fetch', (event) => {
   const cacheKey = precacheController.getCacheKeyForURL(event.request.url);
@@ -248,7 +248,7 @@ the context of the routing that `workbox-precaching` can automatically perform.
 For instance, you might want to precache partial HTML templates that then need
 to be retrieved and used when constructing a full response.
 
-In general, you can use the
+In general, you can using the
 [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage)
 to obtain the precached `Response` objects, but there is one wrinkle: the URL
 cache key that needs to be used when calling [`cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)
@@ -267,7 +267,7 @@ const response = await cache.match(
 ```
 
 Note: If you are
-[using your own `PrecacheController` instance](#using_precachecontroller_directly),
+[using your own `PrecacheController` instance](#using_precachecontroller_directly)
 instead of using the default instance via `workbox.precaching.*`, you should
 call the
 [`getCacheKeyForURL()` method](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL)
@@ -278,7 +278,7 @@ on that instance.
 Most releases of Workbox maintain the same format for storing precached data,
 and precaches created by older versions of Workbox can normally be used as-is by
 newer releases. Rarely, though, there is a breaking change in precaching storage
-that requires existing users to re-download everything, and which renders
+that requires existing users re-download everything, and which renders
 previously precached data obsolete. (Such a change happened in between the
 Workbox v3 and v4 releases.)
 

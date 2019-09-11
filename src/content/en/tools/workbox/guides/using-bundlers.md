@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2019-07-13 #}
+{# wf_updated_on: 2019-03-04 #}
 {# wf_blink_components: N/A #}
 
 # Using Bundlers (webpack/Rollup) with Workbox {: .page-title }
@@ -67,10 +67,10 @@ The best way to ensure your bundles are as small as possible is to not rely on
 tree shaking in the first place. If you only import the methods you need, then
 there won't be anything to tree shake.
 
-Workbox makes it possible to do this because it defines all its public methods in
+Workbox makes it possible to do this because it defines all its public method in
 their own file at the top level of the package directory. That means instead of
 referencing the package name in your import statements
-(e.g. `from 'workbox-precaching'`), you can reference a specific file:
+(e.g. `from 'workbox-precaching'`) you can reference a specific file:
 
 ```javascript
 // Import the `precacheAndRoute` file directly.
@@ -95,7 +95,7 @@ make it easy to know the path of the file:
 * Every property of each package object maps to a module file in the top-level
   package directly with the same name, plus the `.mjs` extension (e.g.
   `workbox.backgroundSync.Queue` is defined in
-  `workbox-background-sync/Queue.mjs`).
+  `workbox-background-sync/Queue.mjs`)
 * Any `.mjs` file in the top-level directory of a workbox package is considered
   part of the public API and can be imported. Files in sub-directories should be
   considered implementation details and should not be relied upon.
@@ -161,7 +161,7 @@ One of the key developer features that  Workbox offers is its logging, but when
 deploying Workbox code to production, you don't want users to pay the price of
 downloading that developer-focused code.
 
-In the production builds of Workbox we release on our CDN, we've removed this
+In the production builds of Workbox we release on our CDN we've removed this
 code for you. But if you're making your own bundle, you'll need to do this
 yourself.
 
@@ -297,7 +297,7 @@ convert their modern JavaScript syntax to
 [ES5](https://en.wikipedia.org/wiki/ECMAScript#5th_Edition) so it can be run in
 older browsers.
 
-Keep in mind that every browser that supports service workers also supports most
+Keep in mind that every browser that supports service worker also supports most
 [ES2015](https://en.wikipedia.org/wiki/ECMAScript#6th_Edition_-_ECMAScript_2015)
 features (the primary exception being `import` statements), so there's usually
 no need to transpile your code.

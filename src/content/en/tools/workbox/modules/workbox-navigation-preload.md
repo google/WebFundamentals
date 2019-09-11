@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-navigation-preload.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-15 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2018-07-12 #}
 
 # Workbox Navigation Preload {: .page-title }
@@ -36,7 +36,7 @@ to use Workbox to handle caching of other assets on their sites.
 For instance, if you're following the [App Shell pattern](/web/fundamentals/architecture/app-shell),
 and you've got a [navigation route](/web/tools/workbox/modules/workbox-routing#how_to_register_a_navigation_route)
 already set up to use the precached HTML, enabling navigation preload will be a waste. The network
-response that is associated with the preload request will never end up being used, since the precached
+response that associated with the preload request will never end up being used, since the precached
 HTML will be used unconditionally.
 
 ## Basic Usage
@@ -54,7 +54,7 @@ const strategy = new workbox.strategies.NetworkFirst({
 });
 
 const navigationRoute = new workbox.routing.NavigationRoute(strategy, {
-  // Optionally, provide a whitelist/blacklist of RegExp's to determine
+  // Optionally, provide a white/blacklist of RegExps to determine
   // which paths will match this route.
   // whitelist: [],
   // blacklist: [],

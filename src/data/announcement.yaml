@@ -1,4 +1,4 @@
-enabled: true
+enabled: false
 description: >
     <style>
       .devsite-banner-announcement {
@@ -16,7 +16,6 @@ description: >
         margin-right: 8px;
       }
     </style>
-    Register for this year’s <b><code>#ChromeDevSummit</code></b> happening on
-    Nov. 11-12 in San Francisco to learn about the latest features and tools
-    coming to the Web. Request an invite on the
-    <a href="https://developer.chrome.com/devsummit">Chrome Dev Summit 2019 website</a>
+    Join us for the first <b>#AskChrome Live</b> session to learn about
+    Implementing Performance Budgets and live Q&A.
+    <a href="https://events.withgoogle.com/askchrome-live/registrations/new/">Register now</a>

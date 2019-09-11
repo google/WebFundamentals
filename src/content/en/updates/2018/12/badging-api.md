@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen.
 
 {# wf_published_on: 2018-12-11 #}
-{# wf_updated_on: 2019-08-21 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
 {# wf_tags: capabilities,badging,install,progressive-web-apps,serviceworker,notifications,origintrials #}
 {# wf_featured_snippet: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen. Badging makes it easy to subtly notify the user that there is some new activity that might require their attention, or it can be used to indicate a small amount of information, such as an unread count. #}
@@ -20,9 +20,9 @@ description: The Badging API is a new web platform API that allows installed web
 <aside class="caution">
   We’re currently working on this API as part of the new
   <a href="/web/updates/capabilities">capabilities project</a>, and starting
-  in Chrome 73 it is available as an <a href="#ot"><b>origin trial</b></a>.
+  in Chrome 73 is available as an <a href="#ot"><b>origin trial</b></a>.
   This post will be updated as the Badging API evolves.<br>
-  <b>Last Updated:</b> August 21st, 2019
+  <b>Last Updated:</b> March 12th, 2019
 </aside>
 
 ## What is the Badging API? {: #what }
@@ -43,7 +43,7 @@ Badging makes it easy to subtly notify the user that there is some new
 activity that might require their attention, or it can be used to indicate a
 small amount of information, such as an unread count.
 
-Badges tend to be more user-friendly than notifications, and can be updated
+Badges tend to be more user friendly than notifications, and can be updated
 with a much higher frequency, since they don’t interrupt the user. And,
 because they don’t interrupt the user, there’s no special permission needed
 to use them.
@@ -52,12 +52,12 @@ to use them.
 
 <div class="clearfix"></div>
 
-### Suggested use cases for the Badging API {: #use-cases }
+### Suggested use cases for the badging API {: #use-cases }
 
 Examples of sites that may use this API include:
 
 * Chat, email and social apps, to signal that new messages have arrived, or
-  show the number of unread items.
+  show the number of unread items
 * Productivity apps, to signal that a long-running background task (such as
   rendering an image or video) has completed.
 * Games, to signal that a player action is required (e.g., in Chess, when it
@@ -81,16 +81,8 @@ Examples of sites that may use this API include:
    running as an installed PWA (in your task bar or dock).
 3. Click the **Set** or **Clear** button to set or clear the badge from the app
    icon. You can also provide a number for the *Badge value*.
-   
-Note: While the Badging API *in Chrome* requires an installed app
-with an icon that actually can be badged, we advise against
-making calls to the Badging API dependent on the install state.
-The Badging API can apply to *anywhere* a browser might want to show a badge,
-so developers shouldn’t make any assumptions about in what situations
-the browser will make badges work. Just call the API when it exists.
-If it works, it works. If not, it simply doesn’t.
 
-## How to use the Badging API {: #use }
+## How to use the badging API {: #use }
 
 Starting in Chrome 73, the Badging API is available as an origin trial
 for Windows (7+) and macOS.
@@ -101,7 +93,7 @@ standards community. For more information, see the
 
 ### Support for badging across platforms
 
-The Badging API is supported (in an origin trial) on Windows and macOS.
+The badging API is supported (in an origin trial) on Windows and macOS.
 Android is not supported because it requires you to show a notification,
 though this may change in the future.
 Chrome OS support is pending implementation of badging on the platform.
@@ -120,16 +112,16 @@ Chrome OS support is pending implementation of badging on the platform.
 
 ### Alternatives to the origin trial
 
-If you want to experiment with the Badging API locally, without an origin trial,
+If you want to experiment with the badging API locally, without an origin trial,
 enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`.
 
-### Using the Badging API during the origin trial
+### Using the badging API during the origin trial
 
 Dogfood: During the origin trial, the API will be available via
 `window.ExperimentalBadge`. The below code is based on the current design,
 and will change before it lands in the browser as a standardized API.
 
-To use the Badging API, your web app needs to meet
+To use the badging API, your web app needs to meet
 [Chrome’s installability criteria](/web/fundamentals/app-install-banners/#criteria),
 and a user must add it to their home screen.
 
@@ -156,23 +148,16 @@ in this case, the browser will attempt to provide the best representation for
 that device. For example, while the Badging API isn’t supported on Android,
 Android only ever shows a dot instead of a numeric value.
 
-Note: Don’t assume anything about how the user agent wants to display the badge.
-We expect some user agents will take a number like "4000" and rewrite it as "99+".
-If you saturate it yourself (for example to "99") then the "+" won’t appear.
-No matter the actual number, just set `Badge.set(unreadCount)`
-and let the user agent deal with displaying it accordingly.
-
 ## Feedback {: #feedback }
 
 We need your help to ensure that the Badging API works in a way that meets your
 needs and that we’re not missing any key scenarios.
 
 <aside class="key-point">
-  <b>We need your help!</b> - Will the current design
-  (allowing either an integer or a flag value) meet your needs?
-  If it won’t, please file an issue in the
-  <a href="https://github.com/WICG/badging/issues">WICG/badging repo</a>
-  and provide as much detail as you can. In addition,
+  <b>We need your help!</b> - Will the current design (allowing an integer
+  from 1-99, 99+, or a white dot/flag) meet your needs? If it won’t, please
+  file an issue in the <a href="https://github.com/WICG/badging/issues">
+  WICG/badging repo</a> and provide as much detail as you can. In addition,
   there are a number of <a href="https://github.com/WICG/badging/blob/master/choices.md">
   open questions</a> that are still being discussed, and we’d be interested to
   hear your feedback.

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to promote installation of Progressive Web Apps and best practices.
 
-{# wf_updated_on: 2019-07-25 #}
+{# wf_updated_on: 2019-06-07 #}
 {# wf_published_on: 2019-06-04 #}
 {# wf_blink_components: N/A #}
 
@@ -68,7 +68,7 @@ the future.
 
 <div class="clearfix"></div>
 
-Note: In Chrome 76 (July 2019) and later, you can
+Note: Starting in Chrome 76, you can
 [prevent the mini-infobar from appearing][mini-infobar-control] by calling
 `preventDefault` on the `beforeinstallprompt` event. If you do not call
 `preventDefault`, the banner will be shown the first time a user visits your

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The getInstalledRelatedApps API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa..
 
 {# wf_published_on: 2018-12-20 #}
-{# wf_updated_on: 2019-08-09 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/focus.png #}
 {# wf_tags: capabilities,progressive-web-apps,webapp,webapk,native,chrome73,origintrials #}
 {# wf_featured_snippet: As the capability gap between web and native gets smaller, it becomes easier to offer the same experience for both web and native users. This may lead to cases where users have both the web and native versions installed on the same device. Apps should be able to detect this situation. The <code>getInstalledRelatedApps</code> API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa.  #}
@@ -11,7 +11,7 @@ description: The getInstalledRelatedApps API is a new web platform API that allo
 
 {# When updating this post, don't forget to update /updates/capabilities.md #}
 
-# Check If Your Native App Is Installed With getInstalledRelatedApps() {: .page-title }
+# Check If Your Native App Is Installed With getInstalledRelatedApps {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
@@ -30,7 +30,7 @@ description: The getInstalledRelatedApps API is a new web platform API that allo
 <figure class="attempt-right">
   <img src="/web/updates/images/2018/12/getinstalled-cropped.jpg">
   <figcaption>
-    A web app using <code>getInstalledRelatedApps()</code> to determine if it's
+    A web app using <code>getInstalledRelatedApps</code> to determine if it's
     related native app is already installed.
   </figcaption>
 </figure>
@@ -46,7 +46,7 @@ device, and vice versa. With the `getInstalledRelatedApps` API, you can
 disable some functionality of one app if it should be provided by the other
 app instead.
 
-If `getInstalledRelatedApps()` looks familiar, it is. We originally announced
+If `getInstalledRelatedApps` looks familiar, it is. We originally announced
 this feature in April 2017, when it first went to an origin trial. After that
 origin trial ended, we took stock of the feedback and spent some time iterating
 on this design.
@@ -82,21 +82,21 @@ either not prompting to install the PWA, or providing different prompts.
 
 ### See it in action
 
-1. Using Chrome 73 or later on Android, open the [`getInstalledRelatedApps()` demo][demo].
+1. Using Chrome 73 or later on Android, open the [`getInstalledRelatedApps` demo][demo].
    Note, this site uses an origin trial token to enable the API.
 2. Install the demo app from the Play store and refresh the [demo][demo] page.
    You should now see the app listed.
 
-## How to use the `getInstalledRelatedApps()` API {: #use }
+## How to use the `getInstalledRelatedApps` API {: #use }
 
-Starting in Chrome 73, the `getInstalledRelatedApps()` API is available as an
+Starting in Chrome 73, the `getInstalledRelatedApps` API is available as an
 origin trial for Android. [Origin trials][ot-what-is] allow you to try out
 new features and give feedback on usability, practicality, and effectiveness
 to us, and the web standards community. For more information, see the
 [Origin Trials Guide for Web Developers][ot-dev-guide].
 
-Check out the [`getInstalledRelatedApps()` API Demo][demo] and
-[`getInstalledRelatedApps()` API Demo source][demo-source]
+Check out the [`getInstalledRelatedApps` API Demo][demo] and
+[`getInstalledRelatedApps` API Demo source][demo-source]
 
 ### Register for the origin trial {: #ot }
 
@@ -117,7 +117,7 @@ enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`
 
 ### Establish a relationship between your apps {: #relationship }
 
-In order to use the `getInstalledRelatedApps()`, you must first create a
+In order to use the `getInstalledRelatedApps`, you must first create a
 relationship between your two apps. This relationship is critical and prevents
 other apps from using the API to detect if your app is installed, and prevents
 sites from collecting information about the apps you have installed on your
@@ -197,12 +197,12 @@ navigator.getInstalledRelatedApps().then((relatedApps) => {
 });
 ```
 
-Note: Like most other powerful web APIs, the `getInstalledRelatedApps()` API is
+Note: Like most other powerful web APIs, the `getInstalledRelatedApps` API is
 only available when served over **HTTPS**.
 
 ## Feedback {: #feedback }
 
-We need your help to ensure that the `getInstalledRelatedApps()` API works in a
+We need your help to ensure that the `getInstalledRelatedApps` API works in a
 way that meets your needs and that we’re not missing any key scenarios.
 
 <aside class="key-point">
@@ -213,22 +213,22 @@ way that meets your needs and that we’re not missing any key scenarios.
 </aside>
 
 We’re also interested to hear how you plan to use the
-`getInstalledRelatedApps()` API:
+`getInstalledRelatedApps` API:
 
 * Have an idea for a use case or an idea where you'd use it?
 * Do you plan to use this?
 * Like it, and want to show your support?
 
 Share your thoughts on the
-[`getInstalledRelatedApps()` API WICG Discourse][wicg-discourse] discussion.
+[`getInstalledRelatedApps` API WICG Discourse][wicg-discourse] discussion.
 
 {% include "web/_shared/helpful.html" %}
 
 ## Helpful Links {: #helpful }
 
 * [Public explainer][explainer]
-* [`getInstalledRelatedApps()` API Demo][demo] |
-  [`getInstalledRelatedApps()` API Demo source][demo-source]
+* [`getInstalledRelatedApps` API Demo][demo] |
+  [`getInstalledRelatedApps` API Demo source][demo-source]
 * [Tracking bug][cr-bug]
 * [ChromeStatus.com entry][cr-status]
 * Blink Component: `Mobile>WebAPKs`
