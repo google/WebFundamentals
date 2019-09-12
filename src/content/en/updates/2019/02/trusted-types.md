@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Types is a new experimental API available in Chrome that helps prevent DOM-Based Cross-Site Scripting in your applications.
 
-{# wf_updated_on: 2019-02-15 #}
+{# wf_updated_on: 2019-09-12 #}
 {# wf_published_on: 2019-02-15 #}
 {# wf_tags: news,security,trusted-types,origintrials,chrome73 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -145,7 +145,7 @@ document.head.innerHTML += html;
 Here, we create a `template` policy that verifies the passed template ID
 parameter and creates the resulting HTML. The policy object `create*` function
 calls into a respective user-defined function, and wraps the result in a Trusted
-Type object. In this case, `templatePolicy.createHTML` calls the provided templateId
+Type object. In this case, `templatePolicy.createHTML` calls the provided `templateId`
 validation function, and returns a `TrustedHTML` with the `<link ...>` snippet.
 The browser allows `TrustedHTML` to be used with an injection sink that expects
 HTML - like `innerHTML`.
@@ -167,7 +167,7 @@ first - the output of this particular policy does not introduce XSS.
 ## Limiting policies
 
 Did you notice the `*` value that we used in the `Content-Security-Policy`
-header? It indicates that the application can create arbitrary number of
+header? It indicates that the application can create an arbitrary number of
 policies, provided each of them has a unique name. If applications can freely
 create a large number of policies, preventing DOM XSS in practice would be
 difficult.
@@ -180,7 +180,7 @@ Content-Security-Policy: trusted-types template
 ```
 
 This assures that only a single policy with a name `template` can be created.
-That policy is then easy to identify in a source code, and can be effectively
+That policy is then easy to identify in source code and can be effectively
 reviewed. With this, we can be certain that the application is free from DOM
 XSS. Nice job!
 
@@ -199,7 +199,7 @@ experimenting with it.
 
 To get this new behavior on your site, you need to be
 [signed up](https://developers.chrome.com/origintrials){: .external} for the
-"Trusted Types" Origin Trial (in Chrome 73 through 76). If you just want to try
+"Trusted Types" Origin Trial (in Chrome 73 through 78). If you just want to try
 it out locally, starting from Chrome 73 the experiment can be enabled on the
 command line:
 
