@@ -16,7 +16,9 @@ description: A round up of the deprecations and removals in Chrome 78 to help yo
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 ## XSS Auditor
-XSS Auditor has been removed from Chrome. The XSS Auditor can introduce cross-site information leaks and mechanisms to bypass the Auditor are widely known.
+XSS Auditor has been removed from Chromeß. The XSS Auditor can introduce
+cross-site information leaks and mechanisms to bypass the Auditor are widely
+known.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/TuYw-EZhO9g/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/5021976655560704) &#124;
