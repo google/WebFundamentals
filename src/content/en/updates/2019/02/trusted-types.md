@@ -200,7 +200,7 @@ experimenting with it.
 To get this new behavior on your site, you need to be
 [signed up](https://developers.chrome.com/origintrials){: .external} for the
 "Trusted Types" Origin Trial (in Chrome 73 through 78). If you just want to try
-it out locally, starting from Chrome 73 the experiment can be enabled on the
+it out locally, starting from Chrome 73, the experiment can be enabled on the
 command line:
 
 ```
