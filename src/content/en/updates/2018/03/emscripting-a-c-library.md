@@ -108,7 +108,7 @@ After running the command, you should end up with a JavaScript file called
 "module") contains our compiled C code and should be fairly small. The
 JavaScript file takes care of loading and initializing our Wasm module and
 providing a nicer API. If needed, it will also take care of setting up the stack,
-the heap and other functionality usually expected to be provided by the
+the heap, and other functionality usually expected to be provided by the
 operating system when writing C code. As such, the JavaScript file is a bit
 bigger, weighing in at 19KB (~5KB gzip'd).
 
