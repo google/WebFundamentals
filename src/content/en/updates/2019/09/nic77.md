@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's New in Chrome 77 for developers?
 
-{# wf_published_on: 2019-09-10 #}
-{# wf_updated_on: 2019-09-10 #}
+{# wf_published_on: 2019-09-16 #}
+{# wf_updated_on: 2019-09-16 #}
 {# wf_featured_image: /web/updates/images/2019/09/new-77.jpg #}
 {# wf_tags: chrome77,new-in-chrome,chromedevsummit,forms,formdata,lazy-loading,performance #}
 {# wf_featured_snippet: Chrome 77 is rolling out now! There’s a better way to track the performance of your site with Largest Contentful Paint. Forms get some new capabilities. Native lazy loading is here. The Chrome DevSummit is happening November 11-12 2019. And plenty more. Let’s dive in and see what’s new for developers in Chrome 77! #}
@@ -18,7 +18,7 @@ description: What's New in Chrome 77 for developers?
 Chrome 77 is rolling out now!
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="S8aVB3IfOR4"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -210,7 +210,7 @@ additional changes in Chrome 77.
 * [Chrome 77 deprecations & removals](/web/updates/2019/08/chrome-77-deps-rems)
 * [ChromeStatus.com updates for Chrome 77](https://www.chromestatus.com/features#milestone%3D77)
 * [What's new in JavaScript in Chrome 77](https://v8.dev/blog/v8-release-77)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/76.0.3809.88..77.0.3865.68) (TODO)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/76.0.3809.88..77.0.3865.75)
 
 ## Subscribe {: .hide-from-toc }
 
