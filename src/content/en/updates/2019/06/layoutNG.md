@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A new layout engine for Chromium
 
 {# wf_published_on: 2019-06-06 #}
-{# wf_updated_on: 2019-06-10 #}
+{# wf_updated_on: 2019-09-09 #}
 {# wf_featured_image: /web/updates/images/2019/06/layoutNG-header.jpg #}
 {# wf_tags: layout,performance,chrome76,layoutng #}
 {# wf_featured_snippet: LayoutNG is a new layout engine for Chromium that has been designed for the needs of modern scalable web applications. It improves performance isolation, better supports scripts other than Latin, and fixes many float, margin, and web compatibility issues. #}
@@ -20,9 +20,9 @@ and additional performance gains and advanced layout features will be coming.
 ## What's new?
 
 1. Improves performance isolation.
-1. **Better support** for scripts other than Latin
-1. **Fixes** many issues around floats and margins
-1. **Fixes** a large number of web compatibility issues
+1. **Better support** for scripts other than Latin.
+1. **Fixes** many issues around floats and margins.
+1. **Fixes** a large number of web compatibility issues.
 
 Please note that LayoutNG will be **launched in stages**. In Chrome 76, LayoutNG 
 is used for inline and block layout. Other layout primitives 
@@ -151,8 +151,8 @@ in an orthogonal writing mode.
 ### Text layout & line breaking
 
 The legacy Chromium layout engine laid out text element-by-element and line-by-line. 
-This approach worked well in most cases but required a lot of e
-xtra complexity to support scripts and achieve good performance. It was also 
+This approach worked well in most cases but required a lot of extra
+complexity to support scripts and achieve good performance. It was also 
 prone to measurement inconsistencies, which led to subtle differences 
 in the sizing of size-to-content containers and their content or unnecessary line breaks.
 
@@ -165,8 +165,8 @@ and more consistent line breaking. The most notable differences are detailed bel
 In some scripts, certain characters can be visually joined when they're adjacent. 
 Check out this example from Arabic:
 
-In LayoutNG joining now works even if the characters are in different elements. 
-Joins will even be preserved when different styling is applied 
+In LayoutNG, joining now works even if the characters are in different elements. 
+Joins will even be preserved when different styling is applied.
 (See [Chromium bug #6122](https://crbug.com/6122).)
 
 > A **grapheme** is the smallest unit of a language's writing system. For example, 
@@ -237,11 +237,11 @@ using the Adobe SourceHanSansJP font:
 
 ### Size-to-content elements
 
-For elements that size-to-content (such as inline blocks) the current layout 
+For elements that size to content (such as inline blocks), the current layout 
 engine computes the size of the block first and then performs 
 layout on the content. In some cases, such as when a font kerns aggressively, 
 this may result in a mismatch between the size of the content 
-and the block. In LayoutNG this failure mode has been eliminated as the block 
+and the block. In LayoutNG, this failure mode has been eliminated as the block 
 is sized based on the actual content.
 
 The example below shows a yellow block sized to content. It uses the Lato font 
@@ -253,7 +253,7 @@ The bounds of the yellow box should match the bounds of the text.
     alt="trailing whitespace shown at the end of the text container">
   <figcaption>
     <small>Fig 5a, Legacy layout engine</small><br>
-    Note the trailing whitespace after the last _T_
+    Note the trailing whitespace after the last T
   </figcaption>
 </figure>
 <figure class="attempt-right" style="text-align:center;">
@@ -295,7 +295,7 @@ wrap unnecessarily. This is quite rare but sometimes happens for mixed direction
 ## Further information
 
 - [LayoutNG README](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/core/layout/ng/README.md)
-- [Layout NG design document](https://docs.google.com/document/d/1uxbDh4uONFQOiGuiumlJBLGgO4KDWB8ZEkp7Rd47fw4/)
+- [LayoutNG design document](https://docs.google.com/document/d/1uxbDh4uONFQOiGuiumlJBLGgO4KDWB8ZEkp7Rd47fw4/)
 - [Master tracking bug](https://crbug.com/591099)
 
 For more detailed information about the specific compatibility issues and bugs 

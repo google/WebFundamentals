@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The prefers-reduced-motion media query detects whether the user has requested that the system minimize the amount of animation or motion it uses. This is for users who either require or prefer minimized animations; for example people with vestibular disorders often desire animations to be kept to a minimum.
 
-{# wf_updated_on: 2019-03-20 #}
+{# wf_updated_on: 2019-09-11 #}
 {# wf_published_on: 2019-03-11 #}
 {# wf_tags: media-queries #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -61,7 +61,7 @@ possible.
 Finally, there are *decorative* effects like animated gradients, parallax scrolling,
 background videos, and several others.
 While many users enjoy such animations, some users dislike
-them because they feel distracted or slowed down from them. In the worst case, users may even suffer
+them because they feel distracted or slowed down by them. In the worst case, users may even suffer
 from motion sickness as if it were a real life experience, so for these users reducing animations is
 a *medical necessity*.
 
@@ -105,7 +105,7 @@ animation or motion it uses. It can take two possible values:
 - `no-preference`: Indicates that the user has made no preference in the underlying operating system.
   This keyword value evaluates as `false` in the boolean context.
 - `reduce`: Indicates that the user has set an operating system preference indicating that
-  interfaces should minimize movement or animation, preferabley to the point where all non-essential
+  interfaces should minimize movement or animation, preferably to the point where all non-essential
   movement is removed.
 
 ## Working with the media query
@@ -176,7 +176,7 @@ I have created a little demo based on Rogério Vicente's amazing
 hilarious and I'll wait. Now that you're back, let me introduce the
 [demo](https://prefers-reduced-motion.glitch.me). When you scroll down, each HTTP status cat
 alternatingly appears from either the right or the left side. It's a buttery smooth 60fps animation,
-but as outlined above, some users may dislike it or event get motion sick by it, so the demo is
+but as outlined above, some users may dislike it or even get motion sick by it, so the demo is
 programmed to respect `prefers-reduced-motion`. This even works dynamically, so users can change
 their preference on-the-fly, no reload required. If a user prefers reduced motion, the non-necessary
 reveal animations are gone, and just the regular scrolling motion is left. The screencast below
@@ -232,7 +232,7 @@ like
 [`prefers-reduced-transparency`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-transparency)
 (detects if the user prefers reduced transparency),
 [`prefers-contrast`](https://drafts.csswg.org/mediaqueries-5/#prefers-contrast)
-(detects if the user has requested the system increase or decrease the amount of
+(detects if the user has requested the system to increase or decrease the amount of
 contrast between adjacent colors),
 [`prefers-color-scheme`](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme)
 (detects if the user prefers a light or

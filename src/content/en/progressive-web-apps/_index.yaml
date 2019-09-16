@@ -211,8 +211,7 @@ landing_page:
             <li>
               <a href="/web/progressive-web-apps/desktop">
                 Progressive Web Apps on Desktop
-              </a><br>Progressive Web Apps now work on the desktop, including
-              Chrome OS and Windows, with support for Mac and Linux coming soon.
+              </a><br>Progressive Web Apps now work on all desktop platforms.
             </li>
             <li>
               <a href="/web/fundamentals/app-install-banners">
