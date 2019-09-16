@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Mixed occurs when initial HTML is loaded over a secure HTTPS connection, but other resources are loaded over an insecure HTTP connection.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-09-07 #}
 {# wf_published_on: 2015-09-25 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
@@ -123,9 +123,9 @@ default. See [browser behavior with mixed content](#browser-behavior-with-mixed-
   <figcaption>Chrome blocks the insecure script.</figcaption>
 </figure>
 
-### An XMLHttpRequest example
+### An `XMLHttpRequest` example
 
-Loading insecure data with XMLHttpRequest.
+Loading insecure data with `XMLHttpRequest`.
 
 Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html){: .external}&mdash;includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
 
@@ -255,7 +255,7 @@ of users rely on every day. The current compromise is to block the most
 dangerous types of mixed content and allow the less dangerous types to still be
 requested.
 
-Modern browsers follow [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external }, which defines [**optionally blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable){: .external} and [**blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable){: .external} categories.
+Modern browsers follow the [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external }, which defines the [**optionally blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable){: .external} and [**blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable){: .external} categories.
 
 From the spec, a resource qualifies as optionally blockable content "when the risk
 of allowing its usage as mixed content is outweighed by the risk of breaking
@@ -270,7 +270,7 @@ and is blocked by the browser.
 
 ### Browser versions
 
-It is important to remember that not every visitor to your website use
+It is important to remember that not every visitor to your website uses
 the most up-to-date browsers. Different versions from different browser vendors
 each behave differently with mixed content. At worst, some browsers and versions
 don't block any mixed content at all, which is very unsafe for the user.
