@@ -40,7 +40,7 @@ Make sure to avoid the following common mistakes:
 * **Don’t parse or interpret untrustworthy data using C++ in the
   browser process.**
 * Don’t trust the origin a renderer claims to represent. The browser’s
-  RenderProcessHost can be used to get the current origin securely.
+  [RenderFrameHost][render-frame-host] can be used to get the current origin securely.
 
 <div class="clearfix"></div>
 
@@ -70,6 +70,7 @@ from the renderer process are not full of fibs and misrepresentations.
 {% include "web/_shared/rss-widget-updates.html" %}
 
 [sandbox-implementation]: https://chromium.googlesource.com/chromium/src/+/master/docs/design/sandbox.md
+[render-frame-host]: https://cs.chromium.org/search/?q=RenderFrameHost&sq=package:chromium&type=cs
 [critical-vulnerabilities]: https://bugs.chromium.org/p/chromium/issues/list?q=type%3Dbug-security%20component%3AInternals%3ENetwork%20status%3Afixed%2Cverified%20security_severity%3Dcritical&can=1
 [rule-of-two]: https://chromium.googlesource.com/chromium/src/+/master/docs/security/rule-of-2.md
 [validating-ipc]: https://chromium.googlesource.com/chromium/src/+/HEAD/docs/security/mojo.md#Validate-privilege_presuming-data-received-over-IPC
