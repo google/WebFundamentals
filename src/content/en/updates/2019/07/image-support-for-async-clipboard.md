@@ -133,16 +133,16 @@ To write an image to the clipboard, you need the image as a
 this is by requesting the image from an server by calling `fetch()` (or
 `XMLHTTPReuest()`). The `response` object returned by `fetch()` has a [`blob()`
 method][blob-method] and
-`XMLHTTPRequest()` let's you set `"blob"` as the [`responseType`][blog-response-type].
+`XMLHTTPRequest()` let's you set `"blob"` as the [`responseType`][blob-response-type].
 
 Calling the server may not be desireable or possible for a variety of reasons.
 Fortunately, you can also write the image to a canvas, then call
-[`HTMLCanvasElement.toBlog()`][to-blob].
+[`HTMLCanvasElement.toBlob()`][to-blob].
 
 [blob]: https://developer.mozilla.org/en-US/docs/Web/API/blob
 [blob-method]: https://developer.mozilla.org/en-US/docs/Web/API/Body/blob
 [to-blob]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob
-[blog-response-type]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType#Value
+[blob-response-type]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType#Value
 
 Next, pass an array of `ClipboardItem` objects as a parameter to the `write()` method.
 Currently you can only pass one image at a time, but we plan to add support for
