@@ -1,3 +1,4 @@
+project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
@@ -14,9 +15,10 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 
 *by Tiffany in San Francisco*
 
-Chrome’s issue tracker, [Monorail][monorail-homepage], offers a grid view that allows you to **visualize
-your issues in a Kanban style board**. When you’re viewing a list of
-issues, you can click the “Grid” button to activate grid mode!
+Chrome’s issue tracker, [Monorail][monorail-homepage], offers a grid view
+that allows you to **visualize your issues in a Kanban style board**.
+When you’re viewing a list of issues, you can click the “Grid” button to
+activate grid mode!
 
 <img src="/web/updates/images/2019/09/chrom-chron-6-screenshot1.png">
 
