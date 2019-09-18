@@ -30,14 +30,14 @@ The flexibility of the grid view allows you to **customize it to fit your
 team’s needs**. For example, below we’ve set up the grid view to show all
 pending Q3 Monorail work, sorted by owner and sprint date.
 
-<img src="/web/updates/images/2019/09/chrom-chron-6-screenshot2.png">
+<img src="/web/updates/images/2019/09/chrom-chron-6-screenshot3.png">
 
 If you need more information on each issue, you can view the grid view with
 “Tile” cells instead. And if you want a bird’s eye view of many, many issues,
 you can **view issues in the grid view as counts**. In fact, the grid view even
 supports loading up to 6,000 issues at once.
 
-<img src="/web/updates/images/2019/09/chrom-chron-6-screenshot3.png">
+<img src="/web/updates/images/2019/09/chrom-chron-6-screenshot2.png">
 
 All setting changes in the grid view are reflected in the page URL. So once
 you’ve configured your grid to your needs, you can **share a link to your new
