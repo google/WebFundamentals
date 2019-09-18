@@ -33,7 +33,7 @@ Additionally, starting in Chrome 78, the byte-for-byte comparison will be
 applied to scripts loaded in a service worker via
 [`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts).
 Any change made to an imported script will trigger the
-[service worker update flow](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#updates),
+[service worker update flow](/web/fundamentals/primers/service-workers/lifecycle#updates),
 just like a change to the top-level service worker would.
 
 ## Background
@@ -119,7 +119,7 @@ an imported script was to change the script's URL, either usually by adding in a
 the contents (e.g. `importScripts('https://example.com/index.abcd1234.js')`). A
 side-effect of changing the imported URL is that the top-level service worker
 script's contents change, which in turn triggers the
-[service worker update flow](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#updates).
+[service worker update flow](/web/fundamentals/primers/service-workers/lifecycle#updates).
 
 Starting with Chrome 78, each time a update check is performed for a top-level
 service worker file, checks will be made at the same time to determine whether
