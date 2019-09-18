@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: HTTP requests that check for updates to the service worker script will no longer be fulfilled by the HTTP cache by default, and imported scripts can trigger the service worker update flow.
 
 {# wf_updated_on: 2019-09-18 #}
-{# wf_published_on: 2018-06-04 #}
+{# wf_published_on: 2019-09-18 #}
 {# wf_tags: progressive-web-apps, serviceworker, chrome68 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 {# wf_featured_snippet: HTTP requests that check for updates to the service worker script will no longer be fulfilled by the <a href="/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP cache</a> by default. This works around a <a href="/web/tools/workbox/guides/service-worker-checklist#cache-control_of_your_service_worker_file">common developer pain point</a>, in which setting an inadvertent <code>Cache-Control:</code> header on your service worker script could lead to delayed updates. Also, updates to imported scripts can trigger the service worker update flow. #}
