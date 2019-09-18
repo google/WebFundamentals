@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's New in Chrome 77 for developers?
 
 {# wf_published_on: 2019-09-16 #}
-{# wf_updated_on: 2019-09-16 #}
+{# wf_updated_on: 2019-09-17 #}
 {# wf_featured_image: /web/updates/images/2019/09/new-77.jpg #}
 {# wf_tags: chrome77,new-in-chrome,chromedevsummit,forms,formdata,lazy-loading,performance #}
 {# wf_featured_snippet: Chrome 77 is rolling out now! There’s a better way to track the performance of your site with Largest Contentful Paint. Forms get some new capabilities. Native lazy loading is here. The Chrome DevSummit is happening November 11-12 2019. And plenty more. Let’s dive in and see what’s new for developers in Chrome 77! #}
@@ -101,7 +101,7 @@ controls, and remove  the many of the existing limitations.
 
 ### The `formdata` event
 
-The `formdata` event, is a low-level API that lets any JavaScript code
+The `formdata` event is a low-level API that lets any JavaScript code
 participate in a form submission. To use it, add a `formdata` event listener
 to the form you want to interact with.
 
@@ -119,10 +119,11 @@ Then, in your `formdata` event handler, you can update or modify the
 
 ### Form-associated custom elements
 
-Form-associated custom elements help to bridge the gap between custom element,
-and native controls. It tells the browser to treat the custom element like all
-other form elements, and adds common properties found on input elements,
-like `name`, `value`, and `validity`.
+Form-associated custom elements help to bridge the gap between custom elements
+and native controls. Adding a static `formAssociated` property tells the browser
+to treat the custom element like all other form elements. You should also add
+common properties found on input elements, like `name`, `value`, and `validity`
+to ensure consistency with native controls.
 
 <pre class="prettyprint lang-js">
 class MyCounter extends HTMLElement {
@@ -153,8 +154,8 @@ details!
 
 I’m not sure how I missed native lazy loading in my last video! It’s pretty
 amazing, so I’m including it now. Lazy loading is a technique that allows
-you to defer the loading of non-critical resources, like off-screen `<img>`,
-or `<iframes>` - until they’re needed, increasing the performance of your page.
+you to defer the loading of non-critical resources, like off-screen `<img>`'s,
+or `<iframe>`'s - until they’re needed, increasing the performance of your page.
 
 Starting in Chrome 76, the browser handles lazy loading for you, without the
 need to write custom lazy loading code, or use a separate JavaScript library.
@@ -162,7 +163,7 @@ need to write custom lazy loading code, or use a separate JavaScript library.
 <div class="clearfix"></div>
 
 To tell the browser you want an image, or iframe lazy loaded, use the
-`loading=”lazy”` attribute. Images and `<iframes>` that are “above the fold”,
+`loading=”lazy”` attribute. Images and iframes that are “above the fold”
 load normally. And those that are below, are only fetched when the user
 scrolls near them.
 
@@ -203,7 +204,7 @@ And there are new measurement units in the
 
 ## Further reading
 
-This covers only some of the key highlights, check the links below for
+This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 77.
 
 * [What's new in Chrome DevTools (77)](/web/updates/2019/07/devtools)
