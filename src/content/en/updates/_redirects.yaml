@@ -2,6 +2,9 @@
 
 redirects:
 
+- from: /web/updates/2018/06/fresher-sw
+  to: /web/updates/2019/09/fresher-sw
+
 - from: /web/updates/nic
   to: /web/updates/2019/04/nic74
 
