@@ -130,8 +130,8 @@ the file across page reloads.
 Now that you have a handle to a file, you can get the file's properties, or
 access the file itself. For now, let’s simply read its contents. Calling
 `handle.getFile()` returns a [`File`][file-api-spec] object, which contains
-binary data as a blob. To get the data from the blob, call one of the reader
-methods (`slice()`, `stream()`, `text()`, `arrayBuffer()`).
+a blob. To get the data from the blob, call one of [its
+methods][blob-methods] (`slice()`, `stream()`, `text()`, `arrayBuffer()`).
 
 ```js
 const file = await fileHandle.getFile();
@@ -441,6 +441,7 @@ critical it is to support them.
 [nfs-cr-sec-model]: https://docs.google.com/document/d/1NJFd-EWdUlQ7wVzjqcgXewqC5nzv_qII4OvlDtK6SE8/edit
 [wicg-discourse]: https://discourse.wicg.io/t/writable-file-api/1433
 [file-api-spec]: https://w3c.github.io/FileAPI/
+[blob-methods]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
 [choose-fs-entries]: https://wicg.github.io/native-file-system/#api-choosefilesystementries
 [fs-writer]: https://wicg.github.io/native-file-system/#filesystemwriter
 [blob]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
