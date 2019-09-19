@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: HTTP requests that check for updates to the service worker script will no longer be fulfilled by the HTTP cache by default, and imported scripts can trigger the service worker update flow.
 
-{# wf_updated_on: 2019-09-18 #}
+{# wf_updated_on: 2019-09-19 #}
 {# wf_published_on: 2019-09-18 #}
 {# wf_tags: progressive-web-apps, serviceworker, chrome68 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
@@ -13,7 +13,7 @@ description: HTTP requests that check for updates to the service worker script w
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 
-Note: This article was [updated](#checks-for-updates-to-imported-scripts) to
+Note: This article was [updated](#checks_for_updates_to_imported_scripts) to
 reflect that the byte-for-byte service worker update check applies to imported
 scripts starting in Chrome 78.
 
@@ -110,7 +110,7 @@ Prior to Chrome 78, any service worker script loaded via
 [`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts)
 would be retrieved only once (checking first against the HTTP cache, or via the
 network, depending on the `updateViaCache` configuration). After that initial
-retrieval, it would be cached internally by the browser, and never re-fetched.
+retrieval, it would be stored internally by the browser, and never re-fetched.
 
 The only way to force an already installed service worker to pick up changes to
 an imported script was to change the script's URL, either usually by adding in a
