@@ -204,11 +204,13 @@ async function writeFile(fileHandle, contents) {
 ```
 
 To write data to disk, I needed a [`FileSystemWriter`][fs-writer]. Create one by
-calling `createWriter()` on the file handle object. If permission to write
-hasn’t been granted, the browser will prompt the user for permission. If
-permission isn't granted, , `createWriter()` will throw a `DOMException`, and
-the app will not be able to write to the file. In the text editor, these
-`DOMException`s are handled in the [`saveFile()`][text-editor-app-js] method.
+calling `createWriter()` on the file handle object. When `createWriter()` is
+called, Chrome first checks if the user has granted write permission to the file.
+If permission to write hasn’t been granted, the browser will prompt the user for
+permission. If permission isn't granted, , `createWriter()` will throw a
+`DOMException`, and the app will not be able to write to the file. In the text
+editor, these `DOMException`s are handled in the [`saveFile()`][text-editor-app-js]
+method.
 
 Next, call `truncate(0)`. This wipes the file of any existing data. If I didn't,
 and I wrote less data than was already in the file, I see some of the old data
