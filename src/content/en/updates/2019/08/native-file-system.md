@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device.
 
 {# wf_published_on: 2019-08-20 #}
-{# wf_updated_on: 2019-09-09 #}
+{# wf_updated_on: 2019-09-19 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: capabilities,file,filesystem,native-file-system #}
 {# wf_featured_snippet: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device. #}
@@ -188,7 +188,7 @@ function getNewFileHandle() {
 You can find all the code for saving changes to a file in my [text
 editor][text-editor] demo on [GitHub][text-editor-source]. The core file system
 interactions are in [`fs-helpers.js`][text-editor-fs-helper]. At its simpliest,
-the process looks like the code below. I'll walk through each step and explain itß.
+the process looks like the code below. I'll walk through each step and explain it.
 
 ```js
 async function writeFile(fileHandle, contents) {
