@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 78 to help you plan.
 
-{# wf_updated_on: 2019-09-19 #}
+{# wf_updated_on: 2019-09-20 #}
 {# wf_published_on: 2019-09-19 #}
 {# wf_tags: deprecations,removals,chrome78 #}
 {# wf_blink_components: Blink #}
@@ -29,9 +29,11 @@ events:
 To ensure that data is sent to the server when a page unloads, we recommend
 SendBeacon or Fetch keep-alive. 
 
-For now, enterprise users can use the AllowSyncXHRInPageDismissal policy flag to
-allow synchronous XHR requests during page unload. We expect to remove this flag
-in Chrome 82.
+For now, enterprise users can use the AllowSyncXHRInPageDismissal policy flag
+and developers can use the origin trial flag ‘allow-sync-xhr-in-page-dismissal’
+to allow synchronous XHR requests during page unload. This is a temporary
+“opt-out” measure, and we expect to remove this flag in Chrome 82.
+
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/TuYw-EZhO9g/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/5021976655560704) &#124;
