@@ -2,9 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
 
-{# experiments_path: /web/updates/2018/08/_experiments.yaml #}
-
-{# wf_updated_on: 2018-12-03 #}
+{# wf_updated_on: 2019-09-19 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -278,80 +276,6 @@ a certain phase of your lifecycle, call `window.performance.mark()` at the begin
 lifecycle function. React does this in development mode.
 
 ## Feedback {: #feedback }
-
-<style>
-  .helpful--container {
-    margin: 1em 0;
-    position: relative;
-  }
-  .helpful--section {
-    position: static;
-  }
-</style>
-
-{% dynamic if experiments.feedback.helpful %}
-
-Was this page helpful?
-
-<div class="helpful--container">
-  <section class="expandable helpful--section">
-    <button class="button button-primary expand-control gc-analytics-event"
-            data-category="Helpful" data-value="1"
-            data-label="{% dynamic print request.path %} (helpful)"
-            style="background-color:#f44336;">
-      Yes
-    </button>
-    <aside class="success">
-      Great! Thank you for the feedback. Please use the feedback channels below to
-      tell us how we can improve.
-    </aside>
-  </section>
-  <section class="expandable helpful--section">
-    <button class="button button-primary expand-control gc-analytics-event"
-            data-category="Helpful" data-value="0"
-            data-label="{% dynamic print request.path %} (helpful)"
-            style="position:absolute;top:0;left:70px;background-color:#f44336;">
-      No
-    </button>
-    <aside class="warning">
-      Sorry to hear that. Please use the feedback channels below to tell us
-      how we can improve.
-    </aside>
-  </section>
-</div>
-
-{% dynamic elif experiments.feedback.useful %}
-
-Was this page useful?
-
-<div class="helpful--container">
-  <section class="expandable helpful--section">
-    <button class="button button-primary expand-control gc-analytics-event"
-            data-category="Helpful" data-value="1"
-            data-label="{% dynamic print request.path %} (useful)"
-            style="background-color:#f44336;">
-      Yes
-    </button>
-    <aside class="success">
-      Great! Thank you for the feedback. Please use the feedback channels below to
-      tell us how we can improve.
-    </aside>
-  </section>
-  <section class="expandable helpful--section">
-    <button class="button button-primary expand-control gc-analytics-event"
-            data-category="Helpful" data-value="0"
-            data-label="{% dynamic print request.path %} (useful)"
-            style="position:absolute;top:0;left:70px;background-color:#f44336;">
-      No
-    </button>
-    <aside class="warning">
-      Sorry to hear that. Please use the feedback channels below to tell us
-      how we can improve.
-    </aside>
-  </section>
-</div>
-
-{% dynamic endif %}
 
 To discuss the new features and changes in this post, or anything else related to DevTools:
 

@@ -2,9 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more.
 
-{# experiments_path: /web/updates/2018/05/_experiments.yaml #}
-
-{# wf_updated_on: 2018-12-03 #}
+{# wf_updated_on: 2019-09-19 #}
 {# wf_published_on: 2018-05-21 #}
 {# wf_tags: chrome68,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -203,75 +201,6 @@ The **Show timestamps** checkbox previously in **Console Settings**
 [Settings](/web/tools/chrome-devtools/ui#settings).
 
 ## Feedback {: #feedback }
-
-<style>
-  .wndt-feedback {
-    display: inline;
-    margin: 1em;
-  }
-  #quickstart-feedback-question {
-    margin: 1em 0;
-    position: relative;
-  }
-  #quickstart-feedback-question section.expandable {
-    position: static;
-    display: inline;
-  }
-</style>
-
-Was this page helpful?
-
-{% dynamic if experiments.feedback.red %}
-  <div id="quickstart-feedback-question">
-    <section class="expandable">
-      <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
-              style="background-color: #f44336"
-              data-category="Helpful"
-              data-label="{% dynamic print request.path %} (red)" data-value="1">
-        Yes
-      </button>
-      <aside id="quickstart-feedback-success" class="success">
-        Great! Thank you for the feedback. Please use the feedback channels below to tell us what
-        we're doing well, or how we can improve.
-      </aside>
-    </section>
-    <section class="expandable">
-      <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
-              style="background-color: #f44336"
-              data-category="Helpful" data-action="Feedback"
-              data-label="{% dynamic print request.path %} (red)" data-value="0">
-        No
-      </button>
-      <aside id="quickstart-feedback-failure" class="warning">
-        Sorry to hear that. Please use the feedback channels below to tell us how we can improve.
-      </aside>
-    </section>
-  </div>
-{% dynamic elif experiments.feedback.white %}
-  <div id="quickstart-feedback-question">
-    <section class="expandable">
-      <button class="wndt-feedback button button-blue expand-control gc-analytics-event"
-              data-category="Helpful"
-              data-label="{% dynamic print request.path %} (white)" data-value="1">
-        Yes
-      </button>
-      <aside id="quickstart-feedback-success" class="success">
-        Great! Thank you for the feedback. Please use the feedback channels below to tell us what
-        we're doing well, or how we can improve.
-      </aside>
-    </section>
-    <section class="expandable">
-      <button class="wndt-feedback button button-blue expand-control gc-analytics-event"
-              data-category="Helpful" data-action="Feedback"
-              data-label="{% dynamic print request.path %} (white)" data-value="0">
-        No
-      </button>
-      <aside id="quickstart-feedback-failure" class="warning">
-        Sorry to hear that. Please use the feedback channels below to tell us how we can improve.
-      </aside>
-    </section>
-  </div>
-{% dynamic endif %}
 
 To discuss the new features and changes in this post, or anything else related to DevTools:
 
