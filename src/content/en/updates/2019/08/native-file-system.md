@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device.
 
 {# wf_published_on: 2019-08-20 #}
-{# wf_updated_on: 2019-09-19 #}
+{# wf_updated_on: 2019-09-20 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: capabilities,file,filesystem,native-file-system #}
 {# wf_featured_snippet: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device. #}
@@ -207,7 +207,7 @@ To write data to disk, I needed a [`FileSystemWriter`][fs-writer]. Create one by
 calling `createWriter()` on the file handle object. When `createWriter()` is
 called, Chrome first checks if the user has granted write permission to the file.
 If permission to write hasn’t been granted, the browser will prompt the user for
-permission. If permission isn't granted, , `createWriter()` will throw a
+permission. If permission isn't granted, `createWriter()` will throw a
 `DOMException`, and the app will not be able to write to the file. In the text
 editor, these `DOMException`s are handled in the [`saveFile()`][text-editor-app-js]
 method.
