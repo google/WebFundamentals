@@ -113,7 +113,7 @@ network, depending on the `updateViaCache` configuration). After that initial
 retrieval, it would be stored internally by the browser, and never re-fetched.
 
 The only way to force an already installed service worker to pick up changes to
-an imported script was to change the script's URL, either usually by adding in a
+an imported script was to change the script's URL, usually either by adding in a
 [semver value](https://semver.org/) (e.g.
 `importScripts('http://example.com/v1.1.0/index.js')`) or by including a hash of
 the contents (e.g. `importScripts('https://example.com/index.abcd1234.js')`). A
@@ -121,7 +121,7 @@ side-effect of changing the imported URL is that the top-level service worker
 script's contents change, which in turn triggers the
 [service worker update flow](/web/fundamentals/primers/service-workers/lifecycle#updates).
 
-Starting with Chrome 78, each time a update check is performed for a top-level
+Starting with Chrome 78, each time an update check is performed for a top-level
 service worker file, checks will be made at the same time to determine whether
 or not the contents of any imported scripts have changed. Depending on the
 `Cache-Control` headers used, these imported script checks might be fulfilled by
