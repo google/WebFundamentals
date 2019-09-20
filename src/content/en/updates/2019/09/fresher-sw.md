@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: HTTP requests that check for updates to the service worker script will no longer be fulfilled by the HTTP cache by default, and imported scripts can trigger the service worker update flow.
 
-{# wf_updated_on: 2019-09-19 #}
+{# wf_updated_on: 2019-09-20 #}
 {# wf_published_on: 2019-09-19 #}
 {# wf_tags: progressive-web-apps, serviceworker, chrome68 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
-{# wf_featured_snippet: HTTP requests that check for updates to the service worker script will no longer be fulfilled by the <a href="/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP cache</a> by default. This works around a <a href="/web/tools/workbox/guides/service-worker-checklist#cache-control_of_your_service_worker_file">common developer pain point</a>, in which setting an inadvertent <code>Cache-Control:</code> header on your service worker script could lead to delayed updates. Also, updates to imported scripts can trigger the service worker update flow. #}
+{# wf_featured_snippet: HTTP requests that check for updates to the service worker script will no longer be fulfilled by the <a href="/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP cache</a> by default. This works around a <a href="/web/tools/workbox/guides/service-worker-checklist#cache-control_of_your_service_worker_file">common developer pain point</a>, in which setting an inadvertent <code>Cache-Control</code> header on your service worker script could lead to delayed updates. Also, updates to imported scripts can trigger the service worker update flow. #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Fresher service workers, by default {: .page-title }
@@ -22,7 +22,7 @@ scripts starting in Chrome 78.
 Starting in Chrome 68, HTTP requests that check for updates to the service worker script will no
 longer be fulfilled by the [HTTP cache](/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
 by default. This works around a [common developer pain point](/web/tools/workbox/guides/service-worker-checklist#cache-control_of_your_service_worker_file),
-in which setting an inadvertent `Cache-Control:` header on your service worker script could lead
+in which setting an inadvertent `Cache-Control` header on your service worker script could lead
 to delayed updates.
 
 If you've already opted-out of HTTP caching for your `/service-worker.js` script by serving it
@@ -77,7 +77,7 @@ It takes one of three values: `'imports'`, `'all'`, or `'none'`.
 The values determine if and how the browser's standard [HTTP cache](https://jakearchibald.com/2016/caching-best-practices/)
 comes into play when making the HTTP request to check for updated service worker resources.
 
-- When set to `imports`, the HTTP cache will never be consulted when checking for updates to the
+- When set to `'imports'`, the HTTP cache will never be consulted when checking for updates to the
   `/service-worker.js` script, but will be consulted when fetching any imported scripts
   (`path/to/import.js`, in our example). This is the default, and it matches the behavior starting
   in Chrome 68.
@@ -88,7 +88,7 @@ comes into play when making the HTTP request to check for updated service worker
   prior to Chrome 68.
 
 - When set to `'none'`, the HTTP cache will not be consulted when making requests for either the
-  top-level `/service-worker.js` or for any imported scripted, such as the hypothetical
+  top-level `/service-worker.js` or for any imported scripts, such as the hypothetical
   `path/to/import.js`.
 
 For example, the following code will register a service worker, and ensure that the HTTP cache is
@@ -115,7 +115,7 @@ retrieval, it would be stored internally by the browser, and never re-fetched.
 The only way to force an already installed service worker to pick up changes to
 an imported script was to change the script's URL, usually either by adding in a
 [semver value](https://semver.org/) (e.g.
-`importScripts('http://example.com/v1.1.0/index.js')`) or by including a hash of
+`importScripts('https://example.com/v1.1.0/index.js')`) or by including a hash of
 the contents (e.g. `importScripts('https://example.com/index.abcd1234.js')`). A
 side-effect of changing the imported URL is that the top-level service worker
 script's contents change, which in turn triggers the
@@ -149,7 +149,7 @@ or because it's just the [default for your hosting environment](https://jakearch
 you may start seeing an uptick of additional HTTP requests for `/service-worker.js` made against
 your server—these are requests that used to be fulfilled by the HTTP cache. If you want to
 continue allowing the `Cache-Control` header value to influence the freshness of your
-`/service-worker.js`', you'll need to start explicitly setting `updateViaCache: 'all'` when
+`/service-worker.js`, you'll need to start explicitly setting `updateViaCache: 'all'` when
 registering your service worker.
 
 Given that there may be a long-tail of users on older browser versions, it's still a good idea to
