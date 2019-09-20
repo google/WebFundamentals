@@ -404,7 +404,7 @@ Note that the “GPU on the Web” W3C Community Group has still not decided at 
 time of writing on the shading language for WebGPU.
 
 ```js
-import glslangModule from 'https://unpkg.com/@webgpu/glslang@0.0.7/web/glslang.js';
+import glslangModule from 'https://unpkg.com/@webgpu/glslang@0.0.8/dist/web-devel/glslang.js';
 ```
 
 The compute pipeline is the object that actually describes the compute operation
