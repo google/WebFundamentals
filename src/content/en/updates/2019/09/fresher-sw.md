@@ -1,17 +1,21 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Starting in Chrome 68, HTTP requests that check for updates to the service worker script will no longer be fulfilled by the HTTP cache by default.
+description: HTTP requests that check for updates to the service worker script will no longer be fulfilled by the HTTP cache by default, and imported scripts can trigger the service worker update flow.
 
-{# wf_updated_on: 2018-06-04 #}
-{# wf_published_on: 2018-06-04 #}
+{# wf_updated_on: 2019-09-19 #}
+{# wf_published_on: 2019-09-19 #}
 {# wf_tags: progressive-web-apps, serviceworker, chrome68 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
-{# wf_featured_snippet: Starting in Chrome 68, HTTP requests that check for updates to the service worker script will no longer be fulfilled by the <a href="/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP cache</a> by default. This works around a <a href="/web/tools/workbox/guides/service-worker-checklist#cache-control_of_your_service_worker_file">common developer pain point</a>, in which setting an inadvertent <code>Cache-Control:</code> header on your service worker script could lead to delayed updates. #}
+{# wf_featured_snippet: HTTP requests that check for updates to the service worker script will no longer be fulfilled by the <a href="/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP cache</a> by default. This works around a <a href="/web/tools/workbox/guides/service-worker-checklist#cache-control_of_your_service_worker_file">common developer pain point</a>, in which setting an inadvertent <code>Cache-Control:</code> header on your service worker script could lead to delayed updates. Also, updates to imported scripts can trigger the service worker update flow. #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Fresher service workers, by default {: .page-title }
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
+
+Note: This article was [updated](#checks_for_updates_to_imported_scripts) to
+reflect that the byte-for-byte service worker update check applies to imported
+scripts starting in Chrome 78.
 
 ### tl;dr {: .hide-from-toc }
 
@@ -24,6 +28,13 @@ to delayed updates.
 If you've already opted-out of HTTP caching for your `/service-worker.js` script by serving it
 with `Cache-Control: max-age=0`, then you shouldn't see any changes due to the new default
 behavior.
+
+Additionally, starting in Chrome 78, the byte-for-byte comparison will be
+applied to scripts loaded in a service worker via
+[`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts).
+Any change made to an imported script will trigger the
+[service worker update flow](/web/fundamentals/primers/service-workers/lifecycle#updates),
+just like a change to the top-level service worker would.
 
 ## Background
 
@@ -93,6 +104,40 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
+## Checks for updates to imported scripts
+
+Prior to Chrome 78, any service worker script loaded via
+[`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts)
+would be retrieved only once (checking first against the HTTP cache, or via the
+network, depending on the `updateViaCache` configuration). After that initial
+retrieval, it would be stored internally by the browser, and never re-fetched.
+
+The only way to force an already installed service worker to pick up changes to
+an imported script was to change the script's URL, usually either by adding in a
+[semver value](https://semver.org/) (e.g.
+`importScripts('http://example.com/v1.1.0/index.js')`) or by including a hash of
+the contents (e.g. `importScripts('https://example.com/index.abcd1234.js')`). A
+side-effect of changing the imported URL is that the top-level service worker
+script's contents change, which in turn triggers the
+[service worker update flow](/web/fundamentals/primers/service-workers/lifecycle#updates).
+
+Starting with Chrome 78, each time an update check is performed for a top-level
+service worker file, checks will be made at the same time to determine whether
+or not the contents of any imported scripts have changed. Depending on the
+`Cache-Control` headers used, these imported script checks might be fulfilled by
+the HTTP cache if `updateViaCache` is set to `'all'` or `'imports'` (which is
+the default value), or the checks might go directly against the network if
+`updateViaCache` is set to `'none'`.
+
+If an update check for an imported script results in a byte-for-byte difference
+compared to what was previously stored by the service worker, that will in turn
+trigger the full service worker update flow, even if the top-level service
+worker file remains the same.
+
+The Chrome 78 behavior matches what Firefox [implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=1290951)
+several years ago, in Firefox 56. Safari already implements this behavior as
+well.
+
 ## What do developers need to do?
 
 If you've effectively opted-out of HTTP caching for your `/service-worker.js` script by serving it
@@ -114,6 +159,20 @@ newer browsers might ignore them.
 Developers can use this opportunity to decide whether they want to explicitly opt their imported
 scripts out of HTTP caching now, and add in `updateViaCache: 'none'` to their service worker
 registration if appropriate.
+
+### Serving imported scripts
+
+Starting with Chrome 78, developers might see more incoming HTTP requests for
+resources loaded via `importScripts()`, since they will now be checked for
+updates.
+
+If you would like to avoid this additional HTTP traffic, set long-lived
+`Cache-Control` headers when serving scripts that include semver or hashes in
+their URLs, and rely on the default `updateViaCache` behavior of `'imports'`.
+
+Alternatively, if you *want* your imported scripts to be checked for frequent
+updates, then make sure you either serve them with `Cache-Control: max-age=0`,
+or that you use `updateViaCache: 'none'`.
 
 ## Further reading
 
