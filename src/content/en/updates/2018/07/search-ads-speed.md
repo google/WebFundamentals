@@ -23,11 +23,13 @@ of visits are abandoned if a mobile page takes over [3 seconds to
 load](https://www.thinkwithgoogle.com/data-gallery/detail/mobile-site-abandonment-three-second-load/). 
 
 Last week, Google Search and Ads teams announced two new speed initiatives to
-help improve user-experience on the web. Both efforts are leveraging real-world
-user experience data (see [Chrome User Experience
-Report](/web/tools/chrome-user-experience-report/)) to prioritize and highlight
-pages that deliver optimized and fast user experiences.
-
+help improve user-experience on the web.  Both efforts recommend that site owners
+and developers pay attention to 
+[user-centric performance metrics](/web/fundamentals/performance/user-centric-performance-metrics) 
+and use tools  such as [Lighthouse](/web/tools/lighthouse/) and 
+[PageSpeed Insights](/speed/pagespeed/insights/), and real-world field data
+(e.g. see [Chrome User Experience Report](/web/tools/chrome-user-experience-report/)) 
+to diagnose and improve user experiences.
 
 ### Speed is now used as a ranking factor for mobile searches
 
