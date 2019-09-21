@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: In version 72, Chrome ships User Activation v2 which makes user activation availability complete for all activation-gated APIs, resolving many user activation inconsistencies.
 
 {# wf_published_on: 2019-01-14 #}
-{# wf_updated_on: 2019-02-05 #}
+{# wf_updated_on: 2019-09-21 #}
 {# wf_featured_image: /web/updates/images/misc/first-input-delay.png #}
 {# wf_tags: chrome72,user-activation,user-gesture #}
 {# wf_featured_snippet: In version 72, Chrome ships User Activation v2 which makes user activation availability complete for all activation-gated APIs, resolving many user activation inconsistencies. #}
@@ -28,8 +28,8 @@ controls the _activation-gated APIs_.  In Chrome, the implementation was based
 on a token-based model that turned out to be too complex to define a consistent
 behavior across all activation-gated APIs.  For example, Chrome has been
 allowing incomplete access to activation-gated APIs through
-[postMessage()](https://crbug.com/161068) and
-[setTimeout() calls](https://crbug.com/802291); and user activation wasn't
+[`postMessage()`](https://crbug.com/161068) and
+[`setTimeout()` calls](https://crbug.com/802291); and user activation wasn't
 supported with [Promises](https://crbug.com/404161),
 [XHR](https://crbug.com/760848),
 [Gamepad interaction](https://crbug.com/381596), etc.  Note that some of these
@@ -80,11 +80,11 @@ into a single activation corresponding to the last interaction.
 
 ## Examples of consistency in activation-gated APIs
 
-Here are two examples with popup windows (opened using`window.open()`) that
+Here are two examples with popup windows (opened using `window.open()`) that
 show how User Activation v2 makes the behavior of activation-gated APIs
 consistent.
 
-### Chained setTimeout() calls
+### Chained `setTimeout()` calls
 
 This example is from
 [our `setTimeout()` demo](https://mustaqahmed.github.io/user-activation-v2/api-consistency/setTimeout.html).
@@ -108,12 +108,12 @@ Without User Activation v2, the second event handler fails in all browsers we
 tested. (Even the first one fails
 [in some cases](https://docs.google.com/document/d/1hYRTEkfWDl-KO4Y6cG469FBC3nyBy9_SYItZ1EEsXUA/edit#bookmark=id.7fb3jwz3is2s).)
 
-### Cross-domain postMessage() calls
+### Cross-domain `postMessage()` calls
 
 Here's an example from
 [our `postMessage()` demo](https://mustaqahmed.github.io/user-activation-v2/api-consistency/postMessages.html).
 Suppose a `click` handler in a cross-origin subframe sends two messages directly
-the parent frame.  The parent frame should be able to open a popup upon
+to the parent frame.  The parent frame should be able to open a popup upon
 receiving either of these messages (but not both):
 
     // Parent frame code
