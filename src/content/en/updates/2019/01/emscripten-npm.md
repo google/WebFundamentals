@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: How do you integrate WebAssembly into this setup? In this article we are going to work this out with C/C++ and Emscripten as an example.
 
-{# wf_updated_on: 2019-01-16 #}
+{# wf_updated_on: 2019-09-22 #}
 {# wf_published_on: 2019-01-15 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/generic/webassembly.png #}
@@ -15,11 +15,11 @@ description: How do you integrate WebAssembly into this setup? In this article w
 
 [WebAssembly](/web/updates/2018/03/emscripting-a-c-library) (wasm) is often
 framed as either a performance primitive or a way to run your existing C++
-codebase on the web. With [squoosh.app](https://squoosh.app) we wanted to show
+codebase on the web. With [squoosh.app](https://squoosh.app), we wanted to show
 that there is at least a third perspective for wasm: making use of the huge
 ecosystems of other programming languages. With
-[Emscripten](https://kripken.github.io/emscripten-site/) you can use C/C++ code,
-[Rust has wasm support](https://rustwasm.github.io/book/) built in and the [Go
+[Emscripten](https://kripken.github.io/emscripten-site/), you can use C/C++ code,
+[Rust has wasm support](https://rustwasm.github.io/book/) built in, and the [Go
 team is working on it](https://github.com/golang/go/wiki/WebAssembly), too. I'm
 sure many other languages will follow.
 
@@ -52,10 +52,10 @@ image](https://hub.docker.com/r/trzeci/emscripten/) by
 ## Integration with npm
 
 In the majority of cases, the entry point to a web project is npm's
-`package.json`. By convention most projects can be built with `npm install &&
+`package.json`. By convention, most projects can be built with `npm install &&
 npm run build`.
 
-In general the build artifacts produced by Emscripten (a `.js` and a `.wasm`
+In general, the build artifacts produced by Emscripten (a `.js` and a `.wasm`
 file) should be treated as just another JavaScript module and just another
 asset. The JavaScript file can be handled by a bundler like webpack or rollup,
 and the wasm file should be treated like any other bigger binary asset, like
@@ -65,7 +65,7 @@ As such, the Emscripten build artifacts need to be built before your "normal"
 build process kicks in:
 
     {
-      "name": "my-worldchanging-project",;
+      "name": "my-worldchanging-project",
       "scripts": {
         "build:emscripten": "docker run --rm -v $(pwd):/src trzeci/emscripten
     ./build.sh",
@@ -83,10 +83,10 @@ consistent.
 `docker run ... trzeci/emscripten ./build.sh` tells Docker to spin up a new
 container using the `trzeci/emscripten` image and run the `./build.sh` command.
 `build.sh` is a shell script that you are going to write next! `--rm` tells
-Docker to delete the container after it's done running. This way you don't build
+Docker to delete the container after it's done running. This way, you don't build
 up a collection of stale machine images over time. `-v $(pwd):/src` means that
 you want Docker to "mirror" the current directory (`$(pwd)`) to `/src` inside
-the container. Any changes you make to files in `/src` directory inside the
+the container. Any changes you make to files in the `/src` directory inside the
 container will be mirrored to your actual project. These mirrored directories
 are called "bind mounts".
 
@@ -135,9 +135,9 @@ return an error, the entire script gets aborted immediately. This can be
 incredibly helpful as the last output of the script will always be a success
 message or the error that caused the build to fail.
 
-With the `export` statements you define the values of a couple of environment
+With the `export` statements, you define the values of a couple of environment
 variables. They allow you to pass additional command-line parameters to the C
-compiler (`CFLAGS`), the C++ compiler (`CXXFLAGS`) and the linker (`LDFLAGS`).
+compiler (`CFLAGS`), the C++ compiler (`CXXFLAGS`), and the linker (`LDFLAGS`).
 They all receive the optimizer settings via `OPTIMIZE` to make sure that
 everything gets optimized the same way. There are a couple of possible values
 for the `OPTIMIZE` variable:
@@ -149,7 +149,7 @@ for the `OPTIMIZE` variable:
   criterion.
 * `-Oz`: Optimize aggressively for size, sacrificing performance if necessary.
 
-For the web I mostly recommend `-Os`.
+For the web, I mostly recommend `-Os`.
 
 The `emcc` command has a myriad of options of its own. Note that emcc is
 supposed to be a  "drop-in replacement for compilers like GCC or clang". So all
@@ -168,7 +168,7 @@ that I think are most important for web developers:
   necessary. At the time of writing, Emscripten will allocate 16MB of memory
   initially. As your code allocates chunks of memory, this option decides if
   these operations will make the entire wasm module fail when memory is
-  exhausted or if the glue code is allowed expand the total memory to
+  exhausted, or if the glue code is allowed to expand the total memory to
   accommodate the allocation.
 * `-s MALLOC=...` chooses which `malloc()` implementation to use. `emmalloc` is
   a small and fast `malloc()` implementation specifically for Emscripten. The
@@ -311,11 +311,11 @@ in assembler code that takes advantage of features specific to that architecture
 and can't be compiled to WebAssembly. If a flag like that is present (check with
 `./configure --help`), make sure to set it to a generic target.
 
-A C/C++ library is split into two parts: The headers (traditionally `.h` or
-`.hpp` files) that define the data structures, classes, constants etc that a
+A C/C++ library is split into two parts: the headers (traditionally `.h` or
+`.hpp` files) that define the data structures, classes, constants etc. that a
 library exposes and the actual library (traditionally `.so` or `.a` files). To
 use the `VPX_CODEC_ABI_VERSION` constant of the library in your code, you have
-to include the library's header files using an `#include` statement:
+to include the library's header files using a `#include` statement:
 
     #include "vpxenc.h"
     #include <emscripten/bind.h>
@@ -352,8 +352,8 @@ actual library file:
 
     # ... below is unchanged ...
 
-If you run `npm run build` now, you will see the process builds a new `.js` and
-a new `.wasm` file and that the demo page will indeed output the constant:
+If you run `npm run build` now, you will see that the process builds a new `.js`
+and a new `.wasm` file and that the demo page will indeed output the constant:
 
 <img src="/web/updates/images/2019/01/emscripten-npm/libvpx.png" alt="DevTools
 showing a the ABI version of libvpx printed via emscripten">
@@ -387,7 +387,7 @@ more Docker-centric solution.
     )
     echo "============================================="
     echo "Compiling libvpx done"
-    echo "=============================================
+    echo "============================================="
     # ... below is unchanged ...
 
 (Here's a [gist](https://gist.github.com/surma/8884a1e66b006c48e1ecc57bd1f36011)
@@ -424,9 +424,9 @@ time you can get away with just using `FROM`, `RUN` and `ADD`. In this case:
     RUN apt-get update && \
         apt-get install -qqy doxygen
 
-With `FROM` you can declare which Docker image you want to use as a starting
-point. I chose `trezeci/emscripten` as a basis — the image you have been using
-all along. With `RUN` you instruct Docker to run shell commands inside the
+With `FROM`, you can declare which Docker image you want to use as a starting
+point. I chose `trzeci/emscripten` as a basis — the image you have been using
+all along. With `RUN`, you instruct Docker to run shell commands inside the
 container. Whatever changes these commands make to the container is now part of
 the Docker image. To make sure that your Docker image has been built and is
 available before you run `build.sh`, you have to adjust your `package.json` a
