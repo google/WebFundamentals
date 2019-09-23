@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copy element styles, visualize layout shifting, and more.
 
-{# wf_updated_on: 2019-09-03 #}
+{# wf_updated_on: 2019-09-23 #}
 {# wf_published_on: 2019-07-22 #}
 {# wf_tags: chrome77, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
