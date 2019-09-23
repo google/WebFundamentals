@@ -123,7 +123,7 @@ the occasionally quite unwieldy wasm errors.
 
 ### Objects
 
-Many JavaScript constructors and functions use an options objects. It's a nice
+Many JavaScript constructors and functions use options objects. It's a nice
 pattern in JavaScript, but extremely tedious to realize in wasm manually. embind
 can help here, too!
 
