@@ -73,6 +73,8 @@ DevTools can now help you detect layout shifting:
 
 ## Lighthouse 5.1 in the Audits panel {: #audits }
 
+Note: This actually launched in Chrome 76, but we missed it in the last release notes so we're covering it now.
+
 <aside class="note">
   This update actually shipped in Chrome 76. We didn't cover it in
   <a href="/web/updates/2019/05/devtools">What's New In DevTools (Chrome 76)</a> so we're
