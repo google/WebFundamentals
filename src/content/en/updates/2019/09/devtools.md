@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel.
 
-{# wf_updated_on: 2019-09-04 #}
+{# wf_updated_on: 2019-09-23 #}
 {# wf_published_on: 2019-09-03 #}
 {# wf_tags: chrome78, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -109,6 +109,8 @@ The **Background Services** section of the **Application** panel now supports
 [Chromium issue #980291](https://crbug.com/980291)
 
 ## Lighthouse 5.2 in the Audits panel {: #audits }
+
+Note: This actually launched in Chrome 77, but we missed it in the last release notes so we're covering it now.
 
 [LH]: https://github.com/GoogleChrome/lighthouse/releases/tag/v5.2.0
 [3P]: https://web.dev/fast#optimize-your-third-party-resources
