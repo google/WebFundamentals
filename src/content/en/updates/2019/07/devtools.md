@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copy element styles, visualize layout shifting, and more.
 
-{# wf_updated_on: 2019-09-03 #}
+{# wf_updated_on: 2019-09-23 #}
 {# wf_published_on: 2019-07-22 #}
 {# wf_tags: chrome77, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -72,6 +72,8 @@ DevTools can now help you detect layout shifting:
 [Chromium issue #961846](https://crbug.com/961846)
 
 ## Lighthouse 5.1 in the Audits panel {: #audits }
+
+Note: This actually launched in Chrome 76, but we missed it in the last release notes so we're covering it now.
 
 <aside class="note">
   This update actually shipped in Chrome 76. We didn't cover it in
