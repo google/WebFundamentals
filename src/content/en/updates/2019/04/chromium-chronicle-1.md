@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-04-16 #}
+{# wf_updated_on: 2019-09-17 #}
 {# wf_published_on: 2019-04-16 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
@@ -74,13 +74,13 @@ class FooTest : public testing::Test {
  public
   (...)
  protected:
-  <b>base::test::ScopedTaskEnvironment task_environment_;</b>
+  <b>base::test::TaskEnvironment task_environment_;</b>
   Foo foo_;
 };
 </pre>
 
-Having **ScopedTaskEnvironment first in the fixture** naturally ensures it
-manages the task environment throughout Foo’s lifetime. The ScopedTaskEnvironment
+Having **TaskEnvironment first in the fixture** naturally ensures it
+manages the task environment throughout Foo’s lifetime. The TaskEnvironment
 will capture Foo’s request-on-construction to create a SequencedTaskRunner and
 will manage its tasks under each FooTest.
 
@@ -97,16 +97,16 @@ TEST_F(FooTest, TestAsyncWork) {
 </pre>
 
 This is preferred to RunUntilIdle(), which can be flaky if the asynchronous
-workload involves a task outside of the ScopedTaskEnvironment’s purview,
+workload involves a task outside of the TaskEnvironment’s purview,
 e.g. a system event, so use [RunUntilIdle() with care][run-until-idle-w-care].
 
 <aside class="success">
-Pro-tip: Use ScopedTaskEnvironment’s MOCK_TIME mode to reliably test delayed
+Pro-tip: Use TaskEnvironment’s MOCK_TIME mode to reliably test delayed
 tasks.
 </aside>
 
 **Want to learn more?** Read our documentation on [threading and tasks][threading-and-tasks]
-or get involved in the [migration to ScopedTaskEnvironment][scoped-task-env]!
+or get involved in the [migration to TaskEnvironment][task-env]!
 
 {% include "web/_shared/helpful.html" %}
 
@@ -114,5 +114,5 @@ or get involved in the [migration to ScopedTaskEnvironment][scoped-task-env]!
 
 [prefer-sequences]: https://chromium.googlesource.com/chromium/src/+/lkgr/docs/threading_and_tasks.md#Prefer-Sequences-to-Threads
 [threading-and-tasks]: https://chromium.googlesource.com/chromium/src/+/master/docs/threading_and_tasks.md
-[scoped-task-env]: https://docs.google.com/document/d/1QabRo8c7D9LsYY3cEcaPQbOCLo8Tu-6VLykYXyl3Pkk/edit
-[run-until-idle-w-care]: https://cs.chromium.org/chromium/src/base/test/scoped_task_environment.h?type=cs&q=file:scoped_task_environment.h+%22void+RunUntilIdle()%22+WARNING+case:yes&sq=package:chromium&g=0
+[task-env]: https://docs.google.com/document/d/1QabRo8c7D9LsYY3cEcaPQbOCLo8Tu-6VLykYXyl3Pkk/edit
+[run-until-idle-w-care]: https://cs.chromium.org/chromium/src/base/test/task_environment.h?type=cs&q="void+RunUntilIdle()"+WARNING+case:yes&sq=package:chromium&g=0

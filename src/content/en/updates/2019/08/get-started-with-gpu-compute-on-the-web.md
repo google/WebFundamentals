@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2019-08-28 #}
+{# wf_updated_on: 2019-09-18 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -404,7 +404,7 @@ Note that the “GPU on the Web” W3C Community Group has still not decided at 
 time of writing on the shading language for WebGPU.
 
 ```js
-import glslangModule from 'https://unpkg.com/@webgpu/glslang/web/glslang.js';
+import glslangModule from 'https://unpkg.com/@webgpu/glslang@0.0.8/dist/web-devel/glslang.js';
 ```
 
 The compute pipeline is the object that actually describes the compute operation

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Priority Hints provide developers a way to indicate a resource's relative importance to the browser, allowing more control over the order resources are loaded.
 
-{# wf_updated_on: 2019-02-21 #}
+{# wf_updated_on: 2019-09-13 #}
 {# wf_published_on: 2019-02-14 #}
 {# wf_tags: fundamentals, performance #}
 {# wf_featured_image: /web/updates/images/2019/02/priority-hints/image1.png #}
@@ -94,7 +94,7 @@ The `importance` attribute accepts one of three values:
 
 *   `high:` The resource may be prioritized, if the browser's own heuristics
     don't prevent that from happening.
-*   `low:` The resource may be _de_prioritized, if the browser's heuristics
+*   `low:` The resource may be *de*prioritized, if the browser's heuristics
     permit.
 *   `auto`: Let the browser decide what priority is appropriate for a resource.
     This is the default value.
@@ -131,7 +131,7 @@ simply hit the network after high priority ones, assuming that there are higher
 priority requests in the queue. If there aren't, the browser may still delay
 some low priority requests if it predicts that higher priority requests will
 come along soon (e.g., if the document's `<head>` is still open and rendering
-critical resources are likely to be discovered there.
+critical resources are likely to be discovered there).
 
 With HTTP/2, the browser may still delay some low-priority requests, but on top
 of that, it can also set their resource's [stream

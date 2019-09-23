@@ -172,6 +172,7 @@
   "json-ld",
   "karma",
   "layout",
+  "lazy-loading",
   "lighthouse",
   "link",
   "lit-html",

@@ -2,8 +2,11 @@
 
 redirects:
 
+- from: /web/updates/2018/06/fresher-sw
+  to: /web/updates/2019/09/fresher-sw
+
 - from: /web/updates/nic
-  to: /web/updates/2019/04/nic74
+  to: /web/updates/2019/09/nic77
 
 - from: /web/updates/2018/11/writable-files
   to: /web/updates/2019/08/native-file-system
