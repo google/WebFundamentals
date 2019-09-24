@@ -58,7 +58,7 @@ server.
 
       // Supported payment methods
       var supportedInstruments = [{
-          supportedMethods: ['basic-card']
+          supportedMethods: ['basic-card'],
           data: {
             supportedNetworks: [
               'visa', 'mastercard', 'amex', 'discover',
