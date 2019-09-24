@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emscripten’s embind
 
-{# wf_updated_on: 2018-08-24 #}
+{# wf_updated_on: 2019-09-23 #}
 {# wf_published_on: 2018-08-20 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2018/08/embind/code.png #}
@@ -14,7 +14,7 @@ description: Emscripten’s embind
 
 {% include "web/_shared/contributors/surma.html" %}
 
-In my last [wasm article](/web/updates/2018/03/emscripting-a-c-library) I talked
+In my last [wasm article](/web/updates/2018/03/emscripting-a-c-library), I talked
 about how to compile a C library to wasm so you can use it on the web. One thing
 that stood out to me (and to many readers) is the crude and slightly awkward way
 you have to manually declare which functions of your wasm module you are using.
@@ -28,7 +28,7 @@ To refresh your mind, this is the code snippet I am talking about:
 
 Here we declare the names of the functions that we marked with
 `EMSCRIPTEN_KEEPALIVE`, what their return types are, and what the types of their
-arguments are. Afterwards we can use the functions on the `api` object to invoke
+arguments are. Afterwards, we can use the methods on the `api` object to invoke
 these functions. However, using wasm this way doesn't support strings and
 requires you to manually move chunks of memory around which makes many library
 APIs very tedious to use. Isn't there a better way? Why yes there is, otherwise
@@ -38,7 +38,7 @@ what would this article be about?
 
 While the developer experience would be reason enough to build a tool that helps
 with these bindings, there's actually a more pressing reason: When you compile C
-or C++ code, each file is compiled separately. Then a linker takes care of
+or C++ code, each file is compiled separately. Then, a linker takes care of
 munging all these so-called object files together and turning them into a wasm
 file. With C, the names of the functions are still available in the object file
 for the linker to use. All you need to be able to call a C function is the name,
@@ -76,12 +76,12 @@ simple with some plain functions:
 
     EMSCRIPTEN_BINDINGS(my_module) {
       function("add", &add);
-      function("exclaim", &exclaim)
+      function("exclaim", &exclaim);
     }
 
 Compared to my previous article, we are not including `emscripten.h` anymore, as
 we don't have to annotate our functions with `EMSCRIPTEN_KEEPALIVE` anymore.
-Instead we have an `EMSCRIPTEN_BINDINGS` section in which we list the names under
+Instead, we have an `EMSCRIPTEN_BINDINGS` section in which we list the names under
 which we want to expose our functions to JavaScript.
 
 Note: The parameter for the `EMSCRIPTEN_BINDINGS` macro is mostly used to avoid
@@ -123,7 +123,7 @@ the occasionally quite unwieldy wasm errors.
 
 ### Objects
 
-Many JavaScript constructors and functions use is options objects. It's a nice
+Many JavaScript constructors and functions use options objects. It's a nice
 pattern in JavaScript, but extremely tedious to realize in wasm manually. embind
 can help here, too!
 
