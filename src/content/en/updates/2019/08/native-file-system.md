@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device.
 
 {# wf_published_on: 2019-08-20 #}
-{# wf_updated_on: 2019-08-30 #}
+{# wf_updated_on: 2019-09-20 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: capabilities,file,filesystem,native-file-system #}
 {# wf_featured_snippet: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device. #}
@@ -32,11 +32,15 @@ editors, text editors, and more. After a user grants a web app access, this
 API allows web apps to read or save changes directly to files and folders
 on the user's device.
 
+If you've worked with reading and writing files before, much of what I'm about
+to share will be familliar to you. I encourage you to read anyway because not
+all systems are alike.
+
 <aside class="caution">
   We've put a lot of thought into the design and implementation of the Native
   File System API to ensure that people can easily manage their files. See the
   <a href="#security-considerations">Security and permissions</a>
-  section of this post.
+  section of this post for more information.
 </aside>
 
 ## Current status {: #status }
@@ -92,12 +96,12 @@ then open and read that file from disk.
 
 The entry point to the Native File System API is
 [`window.chooseFileSystemEntries()`][choose-fs-entries]. When called, it shows
-a file picker dialog, and prompts the user to select a file. After selecting
+a file picker dialog box, and prompts the user to select a file. After selecting
 a file, the API returns a handle to the file. An optional options parameter
-lets you influence the behavior of the file picker, for example, allowing the
+lets you influence the behavior of the file picker, for example, by allowing the
 user to select multiple files, or directories, or different file types.
 Without any options specified, the file picker allows the user to select a
-single file, perfect for our text editor.
+single file. This is perfect for our text editor.
 
 Like many other powerful APIs, calling `chooseFileSystemEntries()` must be
 done in a [secure context][secure-contexts], and must be called from within
@@ -115,19 +119,19 @@ Once the user selects a file, `chooseFileSystemEntries()` returns a handle,
 in this case a [`FileSystemFileHandle`][fs-file-handle] that contains the
 properties and methods needed to interact with the file.
 
-It’s helpful to keep a reference to the file handle around so that it
-can be used later. It’ll be needed to save changes back to the file, or
-to perform any other file operations. In the next few milestones, installed
-Progressive Web Apps will also be able to save the handle to IndexedDB
-and persist access to the file across page reloads.
+It’s helpful to keep a reference to the file handle around so that it can be
+used later. It’ll be needed to save changes back to the file, or to perform any
+other file operations. In the next few versions of Chrome, installed Progressive
+Web Apps will also be able to save the handle to IndexedDB and persist access to
+the file across page reloads.
 
 #### Read a file from the file system
 
-Now that you have a handle to a file, you can get the properties of the file,
-or access the file itself. For now, let’s simply read the contents of the
-file. Calling `handle.getFile()` returns a [`File`][file-api-spec] object,
-which contains binary data as a blob. To get the data from the blob, call
-one of the reader methods (`slice()`, `stream()`, `text()`, `arrayBuffer()`).
+Now that you have a handle to a file, you can get the file's properties, or
+access the file itself. For now, let’s simply read its contents. Calling
+`handle.getFile()` returns a [`File`][file-api-spec] object, which contains
+a blob. To get the data from the blob, call one of [its
+methods][blob-methods] (`slice()`, `stream()`, `text()`, `arrayBuffer()`).
 
 ```js
 const file = await fileHandle.getFile();
@@ -136,7 +140,7 @@ const contents = await file.text();
 
 #### Putting it all together
 
-Putting it all together, when the user clicks the Open button, the browser
+When users click the Open button, the browser
 shows a file picker. Once they’ve selected a file, the app reads the
 contents and puts them into a `<textarea>`.
 
@@ -159,7 +163,7 @@ new file handle.
 
 #### Create a new file
 
-The `chooseFileSystemEntries()` API with `{type: 'saveFile'}` will show the
+Passing `{type: 'saveFile'}` to `chooseFileSystemEntries()` will show the
 file picker in “save” mode, allowing the user to pick a new file they want
 to use for saving. For the text editor, I also wanted it to automatically
 add a `.txt` extension, so I provided some additional parameters.
@@ -181,13 +185,10 @@ function getNewFileHandle() {
 
 #### Save changes to the original file
 
-To write data to disk, I needed to create a [`FileSystemWriter`][fs-writer]
-by calling `createWriter()` on the file handle, then call `write()` to do
-the write. If permission to write hasn’t been granted already, the browser
-will prompt the user for permission to write to the file first (during
-`createWriter()`). The `write()` method takes a string, which is what we
-want for a text editor, but it can also take a [BufferSource][buffersource],
-or a [Blob][blob].
+You can find all the code for saving changes to a file in my [text
+editor][text-editor] demo on [GitHub][text-editor-source]. The core file system
+interactions are in [`fs-helpers.js`][text-editor-fs-helper]. At its simpliest,
+the process looks like the code below. I'll walk through each step and explain it.
 
 ```js
 async function writeFile(fileHandle, contents) {
@@ -202,26 +203,29 @@ async function writeFile(fileHandle, contents) {
 }
 ```
 
-Note: There's no guarantee that the contents are written to disk until
-the `close()` method is called.
-
-The `keepExistingData` option, when calling `createWriter()`, isn’t supported
-yet, so once I get the writer, I immediately call `truncate(0)` to ensure I
-start with an empty file. Otherwise, if the length of the new content is
-shorter than the existing content, the existing content after the new
-content would remain. `keepExistingData` will be added in a future milestone.
-
-When `createWriter()` is called, Chrome checks if the user has granted
-write permission. If not, it requests permission. If the user grants
-permission, the app can write the contents to the file. But, if the user
-does not grant permission, `createWriter()` will throw a `DOMException`, and
-the app will not be able to write to the file. In the text editor, these
-`DOMException`s are handled in the [`saveFile()`][text-editor-app-js]
+To write data to disk, I needed a [`FileSystemWriter`][fs-writer]. Create one by
+calling `createWriter()` on the file handle object. When `createWriter()` is
+called, Chrome first checks if the user has granted write permission to the file.
+If permission to write hasn’t been granted, the browser will prompt the user for
+permission. If permission isn't granted, `createWriter()` will throw a
+`DOMException`, and the app will not be able to write to the file. In the text
+editor, these `DOMException`s are handled in the [`saveFile()`][text-editor-app-js]
 method.
 
-Note: All the code behind the [text editor][text-editor] is on
-[GitHub][text-editor-source], and the core file system interactions are
-in [`fs-helpers.js`][text-editor-fs-helper].
+Next, call `truncate(0)`. This wipes the file of any existing data. If I didn't,
+and I wrote less data than was already in the file, I see some of the old data
+at the file's end. This is a stop-gap measure. The spec calls for
+`createWriter()` to take an option called `keepExistingData`, which will default
+to false. That hasn't been implemented yet, so for now I'll use `truncate(0)`.
+
+
+Call `FileSystemWriter.write()` to write your contents.  The `write()` method
+takes a string, which is what we want for a text editor. But it can also take a
+[BufferSource][buffersource], or a [Blob][blob]. Finally, finish writing by
+calling `FileSystemWriter.close()`.
+
+Note: There's no guarantee that the contents are written to disk until
+the `close()` method is called.
 
 ### What else is possible?
 
@@ -282,14 +286,14 @@ including user control and transparency, and user ergonomics.
     <img src="/web/updates/images/2019/08/fs-open.jpg">
   </a>
   <figcaption>
-    File picker used to open an existing file for reading.
+    A file picker used to open an existing file for reading.
   </figcaption>
 </figure>
 
 When opening a file, the user provides permission to read a file or
 directory via the file picker. The open file picker can only be shown via
 a user gesture when served from a [secure context][secure-contexts]. If
-the user changes their mind, they can cancel the selection in the file
+users change their minds, they can cancel the selection in the file
 picker and the site does not get access to anything. This is the same
 behavior as that of the `<input type="file">` element.
 
@@ -300,7 +304,7 @@ behavior as that of the `<input type="file">` element.
     <img src="/web/updates/images/2019/08/fs-save.jpg">
   </a>
   <figcaption>
-    File picker used to save a file to disk.
+    A file picker used to save a file to disk.
   </figcaption>
 </figure>
 
@@ -338,9 +342,9 @@ from the user.
 </figure>
 
 If a person wants to save changes to a file that they previously granted
-read access, the browser will show a modal permission prompt, requesting
+read access to, the browser will show a modal permission prompt, requesting
 permission for the site to write changes to disk. The permission request
-can only be triggered by a user gesture, for example, clicking a “Save”
+can only be triggered by a user gesture, for example, by clicking a “Save”
 button.
 
 Alternatively, a web app that edits multiple files, like an IDE, can
@@ -348,7 +352,7 @@ also ask for permission to save changes at the time of opening.
 
 If the user chooses *Cancel*, and does not grant write access, the web
 app cannot save changes to the local file. It should provide an alternative
-method to allow the user to save their data, for example providing a way to
+method to allow the user to save their data, for example by providing a way to
 [“download” the file][download-file], saving data to the cloud, etc.
 
 <div class="clearfix"></div>
@@ -374,13 +378,13 @@ The user can easily revoke that access if they choose.
 
 ### Permission persistence
 
-The web app can continue to save changes to the file without prompting as
-long as the tab is open. Once a tab is closed, the site loses all access.
-The next time the user uses the web app, they will be re-prompted for access
-to the files. In the next few milestones, installed Progressive Web Apps
-(only) will also be able to save the handle to IndexedDB and persist access
-to handles across page reloads. In this case, an icon will be shown in the
-omnibox as long as the app has write access to local files.
+The web app can continue to save changes to the file without prompting as long
+as the tab is open. Once a tab is closed, the site loses all access. The next
+time the user uses the web app, they will be re-prompted for access to the
+files. In the next few versions of Chrome, installed Progressive Web Apps (only)
+will also be able to save the handle to IndexedDB and persist access to handles
+across page reloads. In this case, an icon will be shown in the omnibox as long
+as the app has write access to local files.
 
 ## Feedback {: #feedback }
 
@@ -437,6 +441,7 @@ critical it is to support them.
 [nfs-cr-sec-model]: https://docs.google.com/document/d/1NJFd-EWdUlQ7wVzjqcgXewqC5nzv_qII4OvlDtK6SE8/edit
 [wicg-discourse]: https://discourse.wicg.io/t/writable-file-api/1433
 [file-api-spec]: https://w3c.github.io/FileAPI/
+[blob-methods]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
 [choose-fs-entries]: https://wicg.github.io/native-file-system/#api-choosefilesystementries
 [fs-writer]: https://wicg.github.io/native-file-system/#filesystemwriter
 [blob]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
