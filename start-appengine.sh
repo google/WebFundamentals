@@ -6,7 +6,7 @@ if [ "$port" == "" ]; then
   port='8080'
 fi
 
-tools/update-resources.sh
+# tools/update-resources.sh
 
 echo "Starting server on: http://localhost:"$port"/"
 

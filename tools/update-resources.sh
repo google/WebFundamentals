@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "DO NOT USE"
+echo "This will attempt to pull v1 files that no longer exist."
+
 getResource() {
   local TEMP_FILE="$(mktemp)"
   echo "$1"
