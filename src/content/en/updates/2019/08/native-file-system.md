@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device.
 
 {# wf_published_on: 2019-08-20 #}
-{# wf_updated_on: 2019-09-20 #}
+{# wf_updated_on: 2019-09-25 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: capabilities,file,filesystem,native-file-system #}
 {# wf_featured_snippet: The new Native File System API enables developers to build powerful web apps that interact with files on the user's local device, like IDEs, photo and video editors, text editors, and more. After a user grants a web app access, this API allows web apps to read or save changes directly to files and folders on the user's device. #}
@@ -19,14 +19,14 @@ description: The new Native File System API enables developers to build powerful
 
 <aside class="note">
   The Native File System API (formerly known as the Writeable Files API), is
-  available behind a flag in Chrome 77 and later, and should begin an origin
-  trial in Chrome 78 (stable in October). It is part of our capabilities
-  project, and this post will be updated as the implementation progresses.
+  available as an origin trial in Chrome 78 (beta in September,
+  stable in October) and later. It is part of our capabilities project, and
+  this post will be updated as the implementation progresses.
 </aside>
 
 ## What is the Native File System API? {: #what-is-it }
 
-The new Native File System API enables developers to build powerful web apps
+The Native File System API enables developers to build powerful web apps
 that interact with files on the user's local device, like IDEs, photo and video
 editors, text editors, and more. After a user grants a web app access, this
 API allows web apps to read or save changes directly to files and folders
@@ -50,7 +50,7 @@ all systems are alike.
 | 1. Create explainer                        | [Complete][explainer]        |
 | 2. Create initial draft of specification   | [In progress][spec]          |
 | 3. Gather feedback & iterate on design     | [In progress][spec]          |
-| 4. Origin trial                            | Expected to start in Chrome 78 |
+| 4. Origin trial                            | [In progress](#origin-trial) |
 | 5. Launch                                  | Not started                  |
 
 ## Using the Native File System API {: #how-to-use }
@@ -66,7 +66,6 @@ understand the concepts.
 If you want to experiment with the Native File System API locally, enable
 the `#native-file-system-api` flag in `chrome://flags`.
 
-<!--
 ### Enabling support during the origin trial phase {: #origin-trial }
 
 Starting in Chrome 78, the Native File System API is available as an
@@ -74,6 +73,8 @@ origin trial on all desktop platforms. Origin trials allow you to try
 new features and give feedback on their usability, practicality, and
 effectiveness, both to us, and to the web standards community. For
 more information, see the [Origin Trials Guide for Web Developers][ot-guide].
+
+To enable the origin trial:
 
 1. Request a [token][ot-request] for your origin.
 2. Add the token to your pages, there are two ways to provide this token on
@@ -84,8 +85,6 @@ more information, see the [Origin Trials Guide for Web Developers][ot-guide].
      * If you can configure your server, you can also provide the token on
        pages using an `Origin-Trial` HTTP header. The resulting response header
        should look something like: `Origin-Trial: TOKEN_GOES_HERE`
-
--->
 
 ### Read a file from the local file system {: #read-file }
 
@@ -460,3 +459,4 @@ critical it is to support them.
 [text-editor-app-js]: https://github.com/GoogleChromeLabs/text-editor/blob/master/src/inline-scripts/app.js
 [download-file]: /web/updates/2011/08/Downloading-resources-in-HTML5-a-download
 [cr-dev-twitter]: https://twitter.com/chromiumdev
+[ot-request]: https://developers.chrome.com/origintrials/#/view_trial/3868592079911256065

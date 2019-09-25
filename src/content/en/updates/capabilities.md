@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-09-05 #}
+{# wf_updated_on: 2019-09-25 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -104,7 +104,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         reach and connect with their friends and family.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> August 7th, 2019
+        <b>Last Updated:</b> September 25th, 2019
       </td>
     </tr>
     <tr>
@@ -136,8 +136,8 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         allows web apps to read or save changes directly to files and folders
         on the users device.
         <br><br>
-        <b>Current Status:</b> Behind a flag.<br>
-        <b>Last Updated:</b> August 20th, 2019
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> September 25th, 2019
       </td>
     </tr>
     <tr>
