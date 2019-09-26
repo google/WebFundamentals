@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini’s CSS Paint API allows you to programmatically draw CSS images.
 
-{# wf_updated_on: 2018-05-21 #}
+{# wf_updated_on: 2019-09-26 #}
 {# wf_published_on: 2018-01-18 #}
 {# wf_tags: css,style,houdini,javascript,chrome65 #}
 {# wf_featured_image: /web/updates/images/2018/01/paintapi/houdinidiamond.png #}
@@ -16,7 +16,7 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 
 ## New possibilities in Chrome 65
 CSS Paint API (also known as “CSS Custom Paint” or “Houdini’s paint worklet”) is
-about to be enabled by default in Chrome Stable. What is it? What can you do
+enabled by default starting in Chrome 65. What is it? What can you do
 with it? And how does it work? Well, read on, will ya’…
 
 
@@ -30,7 +30,7 @@ functions like `linear-gradient()`. Instead of using those, you can now use
 
 To define a paint worklet called `myPainter`, we need to load a CSS paint
 worklet file using `CSS.paintWorklet.addModule('my-paint-worklet.js')`. In that
-file we can use the `registerPaint` function to register a paint worklet class:
+file, we can use the `registerPaint` function to register a paint worklet class:
 
     class MyPainter {
       paint(ctx, geometry, properties) {
@@ -233,7 +233,7 @@ of DOM elements and can lead to degraded performance on mobile. If you
 [implement the ripple effect using paint
 worklet](https://googlechromelabs.github.io/houdini-samples/paint-worklet/ripple/)
 instead, you end up with 0 additional elements and just one paint worklet.
-Additionally, you have with something that is much easier to customize and
+Additionally, you have something that is much easier to customize and
 parameterize.
 
 Another upside of using paint worklet is that — in most scenarios — a solution
@@ -244,10 +244,10 @@ jank. Chrome is working on moving paint worklets off the main thread so that
 even long-running paint worklets don’t affect the responsiveness of the main
 thread.
 
-To me, the most exciting prospect is that paint worklet allows to efficient
+To me, the most exciting prospect is that paint worklet allows an efficient
 polyfilling of CSS features that a browser doesn’t have yet. One example would be
-polyfill [conic gradients](https://lab.iamvdo.me/houdini/conic-gradient) until
-they land in Chrome natively. Another example: in a CSS meeting it was
+to polyfill [conic gradients](https://lab.iamvdo.me/houdini/conic-gradient) until
+they land in Chrome natively. Another example: in a CSS meeting, it was
 decided that you can now have multiple border colors. While this meeting was
 still going on, my colleague Ian Kilpatrick [wrote a
 polyfill](https://twitter.com/malyw/status/934737334494429184) for this new CSS
