@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen.
+description: The Badging API allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen.
 
-{# wf_published_on: 2018-12-11 #}
-{# wf_updated_on: 2019-08-21 #}
+{# wf_published_on: 2019-09-25 #}
+{# wf_updated_on: 2019-09-26 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
 {# wf_tags: capabilities,badging,install,progressive-web-apps,serviceworker,notifications,origintrials #}
-{# wf_featured_snippet: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen. Badging makes it easy to subtly notify the user that there is some new activity that might require their attention, or it can be used to indicate a small amount of information, such as an unread count. #}
+{# wf_featured_snippet: The Badging API allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen. Badging makes it easy to subtly notify the user that there is some new activity that might require their attention, or it can be used to indicate a small amount of information, such as an unread count. #}
 {# wf_blink_components: UI>Browser>WebAppInstalls #}
 
 {# When updating this post, don't forget to update /updates/capabilities.md #}
@@ -30,33 +30,32 @@ description: The Badging API is a new web platform API that allows installed web
 <figure class="attempt-right">
   <img src="/web/updates/images/2018/12/badges-on-windows.jpg">
   <figcaption>
-    Example of Twitter with 8 notifications and another app showing a flag
+    Example of Twitter with eight notifications and another app showing a flag
     type badge.
   </figcaption>
 </figure>
 
-The Badging API is a new web platform API that allows installed web apps to
-set an application-wide badge, shown in an operating-system-specific place
-associated with the application (such as the shelf or home screen).
+The Badging API allows installed web apps to set an application-wide badge,
+shown in an operating-system-specific place associated with the application
+(such as the shelf or home screen).
 
-Badging makes it easy to subtly notify the user that there is some new
-activity that might require their attention, or it can be used to indicate a
-small amount of information, such as an unread count.
+Badging makes it easy to subtly notify the user that there is some new activity
+that might require their attention, or to indicate a small amount of
+information, such as an unread count.
 
 Badges tend to be more user-friendly than notifications, and can be updated
 with a much higher frequency, since they don’t interrupt the user. And,
-because they don’t interrupt the user, there’s no special permission needed
-to use them.
+because they don’t interrupt the user, they don't need the user's permission.
 
 [Read explainer][explainer]{: .button .button-primary }
 
 <div class="clearfix"></div>
 
-### Suggested use cases for the Badging API {: #use-cases }
+### Possible use cases {: #use-cases }
 
 Examples of sites that may use this API include:
 
-* Chat, email and social apps, to signal that new messages have arrived, or
+* Chat, email, and social apps, to signal that new messages have arrived, or to
   show the number of unread items.
 * Productivity apps, to signal that a long-running background task (such as
   rendering an image or video) has completed.
@@ -76,35 +75,34 @@ Examples of sites that may use this API include:
 ### See it in action
 
 1. Using Chrome 73 or later on Windows or Mac, open the [Badging API demo][demo].
-2. When prompted, click **Install** to install the app , or use the Chrome
-   menu to install it, then open it as an installed PWA. Note, it must be
-   running as an installed PWA (in your task bar or dock).
-3. Click the **Set** or **Clear** button to set or clear the badge from the app
+2. When prompted, click **Install** to install the app, or use the Chrome
+   menu to install it.
+3. Open it as an installed PWA. Note, it must be running as an installed PWA (in 
+   your task bar or dock).
+4. Click the **Set** or **Clear** button to set or clear the badge from the app
    icon. You can also provide a number for the *Badge value*.
    
 Note: While the Badging API *in Chrome* requires an installed app
-with an icon that actually can be badged, we advise against
+with an icon that can actually be badged, we advise against
 making calls to the Badging API dependent on the install state.
 The Badging API can apply to *anywhere* a browser might want to show a badge,
-so developers shouldn’t make any assumptions about in what situations
-the browser will make badges work. Just call the API when it exists.
+so developers shouldn’t make any assumptions about situations where
+the browser will display them. Just call the API when it exists.
 If it works, it works. If not, it simply doesn’t.
 
 ## How to use the Badging API {: #use }
 
 Starting in Chrome 73, the Badging API is available as an origin trial
 for Windows (7+) and macOS.
+
 [Origin trials][ot-what-is] allow you to try out new features and give
 feedback on usability, practicality, and effectiveness to us, and the web
 standards community. For more information, see the
 [Origin Trials Guide for Web Developers][ot-dev-guide].
 
-### Support for badging across platforms
-
-The Badging API is supported (in an origin trial) on Windows and macOS.
-Android is not supported because it requires you to show a notification,
-though this may change in the future.
-Chrome OS support is pending implementation of badging on the platform.
+Note: Android is not supported because it requires you to show a notification,
+though this may change in the future. Chrome OS support is pending
+implementation of badging on the platform.
 
 ### Register for the origin trial {: #ot }
 
@@ -126,12 +124,12 @@ enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`
 ### Using the Badging API during the origin trial
 
 Dogfood: During the origin trial, the API will be available via
-`window.ExperimentalBadge`. The below code is based on the current design,
+`window.ExperimentalBadge`. The code below is based on the current design,
 and will change before it lands in the browser as a standardized API.
 
 To use the Badging API, your web app needs to meet
 [Chrome’s installability criteria](/web/fundamentals/app-install-banners/#criteria),
-and a user must add it to their home screen.
+and users must add it to their home screens.
 
 The `ExperimentalBadge` interface is a member object on `window`. It contains
 two methods:
@@ -140,6 +138,8 @@ two methods:
   to the provided value otherwise, display a plain white dot (or other flag as
   appropriate to the platform).
 * `clear()`: Removes app's badge.
+
+For example:
 
 ```js
 // In a web page
@@ -157,10 +157,11 @@ that device. For example, while the Badging API isn’t supported on Android,
 Android only ever shows a dot instead of a numeric value.
 
 Note: Don’t assume anything about how the user agent wants to display the badge.
-We expect some user agents will take a number like "4000" and rewrite it as "99+".
-If you saturate it yourself (for example to "99") then the "+" won’t appear.
-No matter the actual number, just set `Badge.set(unreadCount)`
-and let the user agent deal with displaying it accordingly.
+We expect some user agents will take a number like "4000" and rewrite it as
+"99+". If you saturate the badge yourself (for example by setting it to "99")
+then the "+" won’t appear. No matter the actual number, just set
+`Badge.set(unreadCount)` and let the user agent deal with displaying it
+accordingly.
 
 ## Feedback {: #feedback }
 
