@@ -216,10 +216,9 @@ The next step is to program our service worker to return the intercept the reque
 <li>Why do you have ?homescreen=1</li>
 <li>
 <p>URLs with query string parameters are treated as individual URLs and need to be cached separately.</p>
-</aside>
 </li>
 </ul>
-
+</aside>
 
 
 ## Intercept the web page requests
