@@ -81,6 +81,8 @@ toc:
     path: /web/tools/chrome-devtools/storage/applicationcache
   - title: Web SQL
     path: /web/tools/chrome-devtools/storage/websql
+  - title: Cache
+    path: /web/tools/chrome-devtools/storage/cache
   - title: Inspect and Manage Storage, Databases, and Caches
     path: /web/tools/chrome-devtools/manage-data/local-storage
     status: deprecated
