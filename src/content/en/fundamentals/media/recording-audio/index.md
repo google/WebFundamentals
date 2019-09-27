@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's microphone.
 
-{# wf_updated_on: 2019-08-01 #}
+{# wf_updated_on: 2019-09-27 #}
 {# wf_published_on: 2016-08-23 #}
 {# wf_blink_components: Blink>GetUserMedia #}
 
@@ -43,8 +43,9 @@ the `files` property of the event object.
 
   recorder.addEventListener('change', function(e) {
     const file = e.target.files[0];
+    const url = URL.createObjectURL(file);
     // Do something with the audio file.
-    player.srcObject = file;
+    player.src = url;
   });
 &lt;/script>
 </pre>
