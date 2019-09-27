@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: WebAssembly thread support has shipped in Chrome 70 under an origin-trial.
 
 {# wf_published_on: 2018-10-29 #}
-{# wf_updated_on: 2018-10-31 #}
+{# wf_updated_on: 2019-09-25 #}
 {# wf_tags: webassembly,threads #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_featured_snippet: WebAssembly threads enable an application to make use of parallel threads running while sharing the same memory address space. This enables libraries and applications that rely on pthreads to be ported to run in the browser. This feature is being run under an origin-trial to solicit feedback from the developer community. #}
@@ -13,11 +13,14 @@ description: WebAssembly thread support has shipped in Chrome 70 under an origin
 
 {% include "web/_shared/contributors/alexdanilo.html" %}
 
+Note: WebAssembly threads are enabled by default in Chrome 74 for desktop.
+The origin trial mentioned in this article ended in Chrome 75.
+
 WebAssembly (Wasm) enables compilation of code written in C++ and other
 languages to run on the web. One very useful feature of native applications
 is the ability to use threads - a primitive for parallel computation. Most C
 and C++ developers would be familiar with
-**_[pthreads](https://en.wikipedia.org/wiki/POSIX_Threads) _**which is a
+**[_pthreads_](https://en.wikipedia.org/wiki/POSIX_Threads)** which is a
 standardized API for thread management in an application.
 
 The [WebAssembly Community Group](https://www.w3.org/community/webassembly/) has
@@ -113,11 +116,11 @@ int main(int argc, char *argv[]) {
 That code begins with the **<code>main()</code>** function which declares 2
 variables <strong><code>fg_val</code></strong> and
 <strong><code>bg_val</code></strong>. There is also a function called
-<strong><code>fibonacci() </code></strong>which will be called by both of the
-threads in this example. The <strong><code>main()</code></strong>function
+<strong><code>fibonacci()</code></strong>, which will be called by both of the
+threads in this example. The <strong><code>main()</code></strong> function
 creates a background thread using <strong><code>pthread_create()</code></strong>
 whose task is to calculate the fibonacci number sequence value corresponding to
-the value of  <strong><code>bg_val</code></strong> variable. Meanwhile, the
+the value of the <strong><code>bg_val</code></strong> variable. Meanwhile, the
 <strong><code>main()</code></strong> function running in the foreground thread
 calculates it for the <strong><code>fg_val</code></strong> variable. Once the
 background thread has completed running, the results are printed out.
@@ -139,7 +142,7 @@ The command line argument '`-s USE_PTHREADS=1`' turns on threading support for
 the compiled WebAssembly module and the argument '`-s PTHREAD_POOL_SIZE=2`'
 tells the compiler to generate a pool of two (2) threads.
 
-When the program is run, under the hood it will load the WebAssembly module
+When the program is run, under the hood it will load the WebAssembly module,
 create a Web Worker for each of the threads in the thread pool, share the module
 with each of the workers, in this case it's 2, and those will be used whenever a
 call to **<code>pthread_create()</code>** is made. Each worker instantiates the
@@ -169,7 +172,7 @@ Change the setting to **_Enabled_** as shown below, then restart your browser.
 <img src="/web/updates/images/2018/10/WasmThreads3.png"
      alt="WebAssembly threads setting enabled">
 
-After the browser has restarted we can try loading the threaded WebAssembly
+After the browser has restarted, we can try loading the threaded WebAssembly
 module with a minimal HTML page, containing just this content:
 
 ```html
@@ -182,7 +185,7 @@ module with a minimal HTML page, containing just this content:
 </html>
 ```
 
-To try this page you'll need to run some form of web server and load it from
+To try this page, you'll need to run some form of web server and load it from
 your browser. That will cause the WebAssembly module to load and run. Opening
 DevTools shows us the output from the run, and you should see something like the
 output image below in the console:
@@ -211,7 +214,7 @@ We've hosted our simple example above using an origin trial token, so you can
 [try it out for yourself](https://alex-wasm.appspot.com/threads/index.html)
 without needing to build anything.
 
-If you want to see what 4 threads running in parallel can do for ASCII art then
+If you want to see what 4 threads running in parallel can do for ASCII art, then
 you must take a
 [look at this demo](https://alex-wasm.appspot.com/threads/pthread.html) as well!
 
