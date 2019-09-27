@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A guide to get started building a basic, bare-bones Trusted Web Activity.
 
 {# wf_published_on: 2019-08-28 #}
-{# wf_updated_on: 2019-09-14 #}
+{# wf_updated_on: 2019-09-27 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -166,6 +166,25 @@ If you'd prefer not to download the Asset Link Tool, you can
 
 Put the Digital Asset Link in a file called `assetlinks.json` and upload it to your website at
 `.well-known/assetlinks.json` (relative to the root).
+
+### Play Store Signing {: #play-store-signing }
+
+If you opt in to
+[App signing by Google Play](https://developer.android.com/studio/publish/app-signing#app-signing-google-play),
+Google manages your app's signing key.
+There are two ways you can get the correct Digital Asset Link file for a Google managed app signing
+key:
+
+* With the [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool):
+    1. Download your app from the Google Play Store.
+    2. Repeat [Creating your asset link file](#creating-your-asset-link-file).
+* Manually:
+    1. Open the [Google Play Console](https://play.google.com/apps/publish/).
+    2. Select your app.
+    3. Choose **Release management** and then **App signing** from the panel on the left.
+    4. Copy the **SHA-256 certificate fingerprint** from under the **App signing certificate**
+       section.
+    5. Use this value in your Digital Asset Link file.
 
 ### Ensuring your asset link file is accessible {: #ensuring-your-asset-link-file-is-accessible }
 
