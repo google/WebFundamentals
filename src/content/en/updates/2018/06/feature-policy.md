@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2019-03-21 #}
+{# wf_updated_on: 2019-09-30 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_tags: ux,chrome60,chrome74,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
@@ -209,7 +209,7 @@ This example would do the following:
 ## JavaScript API {: #js }
 
 While Chrome 60 added support for the `Feature-Policy` HTTP header and the
-`allow` attribute on iframes, the [JavaScript API][jsapi] was added in chrome
+`allow` attribute on iframes, the [JavaScript API][jsapi] was added in Chrome
 74.
 
 This API allows client-side code to determine which features are allowed by a
@@ -261,9 +261,7 @@ For now, there are a couple of ways to see what features are controllable.
   of each policy that's been implemented in Blink.
 -  Check [Chrome's source](https://cs.chromium.org/chromium/src/third_party/blink/renderer/platform/feature_policy/feature_policy.cc?l=138&rcl=ab90b51c5b60de15054a32b0bd18e4839536a1c9)
   for the list of feature names.
-- If you have the `--enable-experimental-web-platform-features` flag turned on
-  in `chrome:flags`, query `document.featurePolicy.allowedFeatures()` on `about:blank`
-  to find the list:
+- Query `document.featurePolicy.allowedFeatures()` on `about:blank` to find the list:
 
         ["geolocation",
          "midi",
