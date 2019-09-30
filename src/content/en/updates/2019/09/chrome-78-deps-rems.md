@@ -35,7 +35,7 @@ to allow synchronous XHR requests during page unload. This is a temporary
 “opt-out” measure, and we expect to remove this flag in Chrome 82.
 
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/TuYw-EZhO9g/discussion) &#124;
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/LnqwTCiT9Gs/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/5021976655560704) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=968591)
 
