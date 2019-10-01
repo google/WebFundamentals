@@ -16,7 +16,7 @@ landing_page:
           Manages loading modules as needed & provides helper methods.
         buttons:
         - label: Learn more
-          path: ./workbox-sw
+          path: /web/tools/workbox/modules/workbox-sw
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-sw/
 
@@ -26,9 +26,9 @@ landing_page:
           Contains shared code used by all Workbox libraries.
         buttons:
         - label: Learn more
-          path: ./workbox-core
+          path: /web/tools/workbox/modules/workbox-core
         - label: Reference
-          path: ../reference-docs/latest/workbox.core
+          path: /web/tools/workbox/reference-docs/latest/workbox.core
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-core/
 
@@ -38,9 +38,9 @@ landing_page:
           files.
         buttons:
         - label: Learn more
-          path: ./workbox-precaching
+          path: /web/tools/workbox/modules/workbox-precaching
         - label: Reference
-          path: ../reference-docs/latest/workbox.precaching
+          path: /web/tools/workbox/reference-docs/latest/workbox.precaching
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-precaching/
 
@@ -50,9 +50,9 @@ landing_page:
           or callback functions.
         buttons:
         - label: Learn more
-          path: ./workbox-routing
+          path: /web/tools/workbox/modules/workbox-routing
         - label: Reference
-          path: ../reference-docs/latest/workbox.routing.Router
+          path: /web/tools/workbox/reference-docs/latest/workbox.routing.Router
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-routing/
 
@@ -63,9 +63,9 @@ landing_page:
           request, normally used with <code>workbox.routing</code>.
         buttons:
         - label: Learn more
-          path: ./workbox-strategies
+          path: /web/tools/workbox/modules/workbox-strategies
         - label: Reference
-          path: ../reference-docs/latest/workbox.strategies
+          path: /web/tools/workbox/reference-docs/latest/workbox.strategies
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-strategies/
 
@@ -75,9 +75,9 @@ landing_page:
           the age of the cached request.
         buttons:
         - label: Learn more
-          path: ./workbox-cache-expiration
+          path: /web/tools/workbox/modules/workbox-cache-expiration
         - label: Reference
-          path: ../reference-docs/latest/workbox.expiration
+          path: /web/tools/workbox/reference-docs/latest/workbox.expiration
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
 
@@ -87,9 +87,9 @@ landing_page:
           user if offline.
         buttons:
         - label: Learn more
-          path: ./workbox-background-sync
+          path: /web/tools/workbox/modules/workbox-background-sync
         - label: Reference
-          path: ../reference-docs/latest/workbox.backgroundSync
+          path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
 
@@ -98,9 +98,9 @@ landing_page:
           See how users are interacting with your site when they are offline.
         buttons:
         - label: Learn more
-          path: ./workbox-google-analytics
+          path: /web/tools/workbox/modules/workbox-google-analytics
         - label: Reference
-          path: ../reference-docs/latest/workbox.googleAnalytics
+          path: /web/tools/workbox/reference-docs/latest/workbox.googleAnalytics
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
 
@@ -111,9 +111,9 @@ landing_page:
           or headers.
         buttons:
         - label: Learn more
-          path: ./workbox-cacheable-response
+          path: /web/tools/workbox/modules/workbox-cacheable-response
         - label: Reference
-          path: ../reference-docs/latest/workbox.cacheableResponse
+          path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-cacheable-response/
 
@@ -123,9 +123,9 @@ landing_page:
           updated with a new response.
         buttons:
         - label: Learn more
-          path: ./workbox-broadcast-update
+          path: /web/tools/workbox/modules/workbox-broadcast-update
         - label: Reference
-          path: ../reference-docs/latest/workbox.broadcastUpdate
+          path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-update/
 
@@ -135,9 +135,9 @@ landing_page:
           request using a slice of previously cached data.
         buttons:
         - label: Learn more
-          path: ./workbox-range-requests
+          path: /web/tools/workbox/modules/workbox-range-requests
         - label: Reference
-          path: ../reference-docs/latest/workbox.rangeRequests
+          path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-range-requests/
 
@@ -147,7 +147,7 @@ landing_page:
           of streaming sources.
         buttons:
         - label: Reference
-          path: ../reference-docs/latest/workbox.streams
+          path: /web/tools/workbox/reference-docs/latest/workbox.streams
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-streams/
 
@@ -158,9 +158,9 @@ landing_page:
           requests faster.
         buttons:
         - label: Learn more
-          path: ./workbox-navigation-preload
+          path: /web/tools/workbox/modules/workbox-navigation-preload
         - label: Reference
-          path: ../reference-docs/latest/workbox.navigationPreload
+          path: /web/tools/workbox/reference-docs/latest/workbox.navigationPreload
 
       # Force Devsite 4-up layout
       - heading: ""
@@ -178,9 +178,9 @@ landing_page:
           updates, and responding to lifecycle events.
         buttons:
         - label: Learn more
-          path: ./workbox-window
+          path: /web/tools/workbox/modules/workbox-window
         - label: Reference
-          path: ../reference-docs/latest/module-workbox-window.Workbox
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
 
       # Force Devsite 4-up layout
       - heading: ""
@@ -199,7 +199,7 @@ landing_page:
           or copy the Workbox files from the command line.
         buttons:
         - label: Learn more
-          path: ./workbox-cli
+          path: /web/tools/workbox/modules/workbox-cli
 
       - heading: workbox-build
         description: >
@@ -207,9 +207,9 @@ landing_page:
           a precache manifest and copy the Workbox files.
         buttons:
         - label: Learn more
-          path: ./workbox-build
+          path: /web/tools/workbox/modules/workbox-build
         - label: Reference
-          path: ../reference-docs/latest/module-workbox-build
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-build
 
       - heading: workbox-webpack-plugin
         description: >
@@ -217,9 +217,9 @@ landing_page:
           assets.
         buttons:
         - label: Learn more
-          path: ./workbox-webpack-plugin
+          path: /web/tools/workbox/modules/workbox-webpack-plugin
         - label: Reference
-          path: ../reference-docs/latest/module-workbox-webpack-plugin
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin
 
       # Force Devsite 4-up layout
       - heading: ""
