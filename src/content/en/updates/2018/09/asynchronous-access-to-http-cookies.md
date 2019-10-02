@@ -115,7 +115,7 @@ process hop or a disk read, and will cause your UI to jank.
 A straightforward fix for this problem is switching from the `document.cookie`
 getter to the asynchronous Cookie Store API.
 
-    await cookieStore.get('session_id');
+    await cookieStore.get('session_id')
 
     // {
     //   domain: "example.com",
