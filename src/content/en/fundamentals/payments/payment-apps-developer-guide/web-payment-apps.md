@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Web Payments allows any websites to act as a payment handler for the Payment Request API. Learn how to do it.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2019-03-14 #}
+{# wf_updated_on: 2019-10-03 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Web based payment apps developer guide {: .page-title }
@@ -409,6 +409,25 @@ before the payment request dialog is shown.
 After the installation, the JIT-installable payment app is set as the supported
 payment method. The payment app can update it later as a previously-installed
 payment app.
+
+## Optional: Let Chrome skip-the-sheet
+
+Chrome can skip the Payment Request UI if certain conditions are met. By using
+this approach, you can let merchants put your own brand button and launch your
+payment app directly rather than launching the Payment Request UI and select the
+payment method your app supports.
+
+Following are the conditions to enable skip-the-sheet:
+
+1. Only one payment method identifier is specified in the `PaymentRequest`
+   constructor.
+2. No shipping address or contact info were requested in the `PaymentRequest`
+   constructor.
+3. `show()` is called with user gesture.
+
+See a skip-the-sheet example here:
+[https://rsolomakhin.github.io/pr/skip-ui/](https://rsolomakhin.github.io/pr/skip-ui/)
+
 
 ## Write a service worker
 
