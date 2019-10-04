@@ -420,7 +420,7 @@ payment method your app supports.
 Following are the conditions to enable skip-the-sheet:
 
 1. Only one payment method identifier is specified in the `PaymentRequest`
-   constructor.
+   constructor. The payment method identifier must be URL-based.
 2. No shipping address or contact info were requested in the `PaymentRequest`
    constructor.
 3. `show()` is called with user gesture.
