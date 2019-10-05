@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 63 shipped with NoState Prefetch. NoState Prefetch is a mechanism for fetching resources in advance that uses less memory than the deprecated prerendering process.
 
-{# wf_updated_on: 2018-11-27 #}
+{# wf_updated_on: 2019-10-05 #}
 {# wf_published_on: 2018-07-20 #}
 {# wf_tags: performance, chrome63 #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -67,7 +67,7 @@ The following steps explain how NoState Prefetch works.
 
       In Chrome, a 
       “[renderer](https://www.chromium.org/developers/design-documents/multi-process-architecture)” 
-      is a process responsible for taking a HTML document, parsing it, 
+      is a process responsible for taking an HTML document, parsing it, 
       constructing its render tree, and painting the result to the screen. Each tab in Chrome, as 
       well as each NoState Prefetch process, has its own renderer to provide isolation. This 
       helps minimize the effects of something going wrong (e.g., a tab crashing) as well as 
@@ -102,8 +102,8 @@ local DNS cache.**
       It’s important to call this out because this is the “NoState” in “NoState Prefetch”.
    
       At this point in the “normal” page load process, the browser would probably do things that 
-      would modify the browser state: for example, executing JavaScript, mutating sessionStorage 
-      or localStorage, playing music or videos, using the History API, or prompting the user. The 
+      would modify the browser state: for example, executing JavaScript, mutating `sessionStorage`
+      or `localStorage`, playing music or videos, using the History API, or prompting the user. The 
       only state modifications that occur in NoState Prefetch are the updating of the DNS cache 
       when responses arrive and the updating of the cookie store if a response contains the 
       `Set-Cookie` header.
@@ -133,7 +133,7 @@ scripts rely on the execution of JavaScript and NoState Prefetch does not execut
 
 Server-side analytics tools register metrics when a request is handled. For resources loaded via
 NoState Prefetch, there can be a significant gap of time between when a request is handled and when
-the response is actually used by the client (if it is used at all). Since Chrome 69 NoState Prefetch
+the response is actually used by the client (if it is used at all). Since Chrome 69, NoState Prefetch
 adds the header `Purpose: Prefetch` to all requests in order to make them distinguishable from
 normal browsing.
 
