@@ -428,7 +428,7 @@ Unlike `getEntriesByName` and `getEntriesByType`,
 gets everything in the performance entry buffer by default:
 
 ```javascript
-// Get timing data for an important hero image
+// Get timing data for all entries in the performance entry buffer
 var allTheTimings = performance.getEntries();
 ```
 
