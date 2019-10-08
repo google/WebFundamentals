@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copycats rejoice! Async Clipboard API is unblocking copy & paste in Chrome 66.
 
-{# wf_updated_on: 2018-03-15 #}
+{# wf_updated_on: 2019-09-29 #}
 {# wf_published_on: 2018-03-13 #}
 {# wf_tags: cutandcopy,execcommand,input,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
@@ -165,13 +165,13 @@ has permission to interact with the clipboard:
 Here's where the "async" part of the Clipboard API really comes in handy though:
 attempting to read or write clipboard data will automatically prompt the user
 for permission if it hasn't already been granted.  Since the API is
-promise-based this is completely transparent, and a user denying clipboard
+promise-based, this is completely transparent, and a user denying clipboard
 permission rejects the promise so the page can respond appropriately.
 
 Since Chrome only allows clipboard access when a page is the current active tab,
 you'll find some of the examples here don't run quite right if pasted directly
 into DevTools, since DevTools itself is the active tab. There's a trick: we need
-to defer the clipboard access using setTimeout, then quickly click inside the
+to defer the clipboard access using `setTimeout()`, then quickly click inside the
 page to focus it before the functions are called:
 
     setTimeout(async () => {
@@ -200,7 +200,7 @@ it:
       if (result === 'unsuccessful') {
         console.error('Failed to copy text.');
       }
-    })
+    });
 
 Similarly, here's how you can handle pasted content in browsers that don't
 support the new Async Clipboard API:
@@ -208,11 +208,11 @@ support the new Async Clipboard API:
     document.addEventListener('paste', e => {
       const text = e.clipboardData.getData('text/plain');
       console.log('Got pasted text: ', text);
-    })
+    });
 
 
 In Internet Explorer, we can also access the clipboard through
-window.clipboardData. If accessed within a user gesture such as a click event -
+`window.clipboardData`. If accessed within a user gesture such as a click event -
 part of [asking permission responsibly] - no permissions prompt is shown.
 
 
