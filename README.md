@@ -61,7 +61,7 @@ To update the Code Labs, you'll need the
 [`claat`](https://github.com/googlecodelabs/tools/tree/master/claat) tool and
 access to the original Doc files. This will likely only work for Googlers.
 
-1. Download the `claat` tool and place it in your `tools` directory.
+1. Download the `claat` tool and place it in your `tools` directory
 1. Run `tools/update-codelabs.sh`
 1. Check the latest changes into GitHub
 
