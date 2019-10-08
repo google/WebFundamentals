@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Introduction to CSS Scroll Snap.
 
 
-{# wf_updated_on: 2018-07-30 #}
+{# wf_updated_on: 2019-10-04 #}
 {# wf_published_on: 2018-07-24 #}
 {# wf_tags: chrome69,css,snap,scroll #}
 {# wf_blink_components: Blink>CSS #}
@@ -119,9 +119,9 @@ which is still currently implemented by Edge and Firefox.
 Scroll snapping is the act of adjusting the scroll offset of a scroll container
 to be at a preferred **snap position** once the scroll operation is finished.
 
-A scroll container may be opted into scroll snapping by using `scroll-snap-type`
+A scroll container may be opted into scroll snapping by using the `scroll-snap-type`
 property. This tells the browser that it should consider snapping this scroll
-container to the snap positions produced by its descendents.  `scroll-snap-type`
+container to the snap positions produced by its descendants.  `scroll-snap-type`
 determines the axis on which scrolling occurs: `x`, `y`, or `both`, and the
 snapping strictness: `mandatory`, `proximity`. More on these later.
 
@@ -136,9 +136,9 @@ be flushed with the element snap area start edge. Similarly, the `end` and
 should be flushed with the element snap area end edge or center.
 
 [Snapport](https://drafts.csswg.org/css-scroll-snap/#scroll-padding) is the area
-of the scroll container to which the snap areas are aligned. By default it is
-the same as the visual viewport of the scroll container but it can be adjusted
-using `scroll-padding` property.
+of the scroll container to which the snap areas are aligned. By default, it is
+the same as the visual viewport of the scroll container, but it can be adjusted
+using the `scroll-padding` property.
 
 
 
@@ -213,8 +213,8 @@ around within that image only snapping at its edges.
 
 Another common case that can benefit from scroll snapping are pages with
 multiple logical sections that are vertically scrolled through, e.g., a typical
-product page. `scroll-snap-type: y proximity;` is a `more natural fit for cases
-like this. It does not interfere when user scrolls to the middle of a particular
+product page. `scroll-snap-type: y proximity;` is a more natural fit for cases
+like this. It does not interfere when a user scrolls to the middle of a particular
 section but also snaps and brings attention to a new section when they scroll
 close enough to it.
 
@@ -251,28 +251,28 @@ header {
 #### Scroll padding and margin
 
 Our product page has a fixed position top header. Our design also asked for some
-of the top section to remain visible when scroll container is snapped in order
+of the top section to remain visible when the scroll container is snapped in order
 to provide a design cue to users about the content above.
 
 
 `scroll-padding` is a new css property that can be used to adjust the effective
-viewable region of scroll container.  This region is also known as snapport and
+viewable region of the scroll container.  This region is also known as snapport and
 is used when calculating scroll snap alignments. The property defines an inset
-against the scroll container's padding box. In our example 15vh additional inset
-was added to the top which instructs the browser to consider a lower position,
-15vh below the top edge of the scroll container, as its vertical start edge for
+against the scroll container's padding box. In our example, `15vh` additional inset
+was added to the top, which instructs the browser to consider a lower position,
+`15vh` below the top edge of the scroll container, as its vertical start edge for
 scroll snapping. When snapping, the start edge of the snap target element will
-become flushed with this new position thus leaving space above.
+become flushed with this new position, thus leaving space above.
 
 `scroll-margin` defines the outset amount used to adjust the snap target
-effective box similar to how `scroll-padding` functions on snap scroll
+effective box similar to how `scroll-padding` functions on the snap scroll
 container.
 
 You may have noticed that these two properties do not have the word "`snap`" in
 them. This is intentional as they actually modify the box for all relevant
-scroll operations and are not just scroll snapping. For example Chrome takes
+scroll operations and are not just scroll snapping. For example, Chrome takes
 them into account when calculating page size for paging scroll operations such
-as PageDown and PageUp and also when calculating scroll amount for
+as PageDown and PageUp, and also when calculating scroll amount for the
 `Element.scrollIntoView()` operation.
 
 
@@ -339,13 +339,13 @@ Do not assume that programmatically scrolling APIs such as `Element.scrollTo`
 always finish at the requested scroll offset. Scroll snapping may adjust the
 scroll offset after programmatic scrolling is complete. Note that this was not a
 good assumption even before scroll snap since scrolling may have been
-interrupted for other reasons but it is especially the case with scroll
+interrupted for other reasons, but it is especially the case with scroll
 snapping.
 
 
 Note: There is an <a href="https://github.com/w3c/csswg-drafts/issues/1562#issuecomment-389586317">
 upcoming proposal</a> to change various scrolling APIs to return a promise.
-This promise is resolved when user agent either completes or aborts that
+This promise is resolved when the user agent either completes or aborts that
 scrolling operation. Once this is standardized and implemented, it provides an
 ergonomic and efficient way for following up a user script initiated scroll
 with other actions.
@@ -354,11 +354,11 @@ with other actions.
 
 ## Future work
 
-Chrome 69 ships the core functionality specified in CSS Scroll Snap
+Chrome 69 ships the core functionality specified in the CSS Scroll Snap
 specification. The main omissions are snapping for keyboard scrolling and
 fragment navigations which at the moment are not supported by any other
-implementations. Chrome will continue improving this feature over time
-particularly focusing on missing features, improving snap selection algorithm,
+implementations. Chrome will continue improving this feature over time,
+particularly focusing on missing features, improving the snap selection algorithm,
 animation smoothness, and devtools facilities.
 
 {% include "web/_shared/rss-widget-updates.html" %}
