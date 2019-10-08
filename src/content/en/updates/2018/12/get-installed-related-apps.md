@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The getInstalledRelatedApps API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa..
 
 {# wf_published_on: 2018-12-20 #}
-{# wf_updated_on: 2019-08-09 #}
+{# wf_updated_on: 2019-10-01 #}
 {# wf_featured_image: /web/updates/images/generic/focus.png #}
 {# wf_tags: capabilities,progressive-web-apps,webapp,webapk,native,chrome73,origintrials #}
 {# wf_featured_snippet: As the capability gap between web and native gets smaller, it becomes easier to offer the same experience for both web and native users. This may lead to cases where users have both the web and native versions installed on the same device. Apps should be able to detect this situation. The <code>getInstalledRelatedApps</code> API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa.  #}
@@ -101,7 +101,7 @@ Check out the [`getInstalledRelatedApps()` API Demo][demo] and
 ### Register for the origin trial {: #ot }
 
 1. [Request a token][ot-request] for your origin.
-2. Add the token to your pages, there are two ways to provide this token on
+2. Add the token to your pages. There are two ways to provide this token on
    any pages in your origin:
      * Add an `origin-trial` `<meta>` tag to the head of any page. For example,
        this may look something like:
@@ -187,7 +187,7 @@ Once you’ve updated your native app and added the appropriate fields to the
 web app manifest, you can add the code to check for the presence of your native
 app to you web app. Calling `navigator.getInstalledRelatedApps()` returns a
 `Promise` that resolves with an array of your apps that are installed on the
-users device.
+user's device.
 
 ```js
 navigator.getInstalledRelatedApps().then((relatedApps) => {
