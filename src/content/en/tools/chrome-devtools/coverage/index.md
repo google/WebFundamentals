@@ -83,8 +83,8 @@ for the following reasons:
        if you want to see what code is needed to load the page.
      * Click **Instrument Coverage** ![Instrument Coverage][record]{: .inline-icon }
        if you want to see what code is used after interacting with the page.
-1. Click **Stop Instrumeting Coverage And Show Results** 
-   ![Stop Instrumeting Coverage And Show Results][stop]{: .inline-icon } when you want to 
+1. Click **Stop Instrumenting Coverage And Show Results** 
+   ![Stop Instrumenting Coverage And Show Results][stop]{: .inline-icon } when you want to 
    stop recording code coverage.
 
 ## Analyze code coverage {: #analyze }
