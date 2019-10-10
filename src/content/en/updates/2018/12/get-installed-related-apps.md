@@ -78,6 +78,34 @@ either not prompting to install the PWA, or providing different prompts.
 | **4. Origin trial**                          | Complete                     |
 | 5. Launch                                    | In beta                      |
 
+## Join the origin trial {: #origin-trial }
+
+Starting in Chrome 73, the `getInstalledRelatedApps()` API is available as an
+origin trial for Android. [Origin trials][ot-what-is] allow you to try out
+new features and give feedback on usability, practicality, and effectiveness
+to us, and the web standards community. For more information, see the
+[Origin Trials Guide for Web Developers][ot-dev-guide].
+
+Check out the [`getInstalledRelatedApps()` API Demo][demo] and
+[`getInstalledRelatedApps()` API Demo source][demo-source]
+
+### Register for the origin trial {: #ot }
+
+1. [Request a token][ot-request] for your origin.
+2. Add the token to your pages. There are two ways to provide this token on
+   any pages in your origin:
+     * Add an `origin-trial` `<meta>` tag to the head of any page. For example,
+       this may look something like:
+       `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
+     * If you can configure your server, you can also provide the token on pages
+       using an `Origin-Trial` HTTP header. The resulting response header should
+       look something like: `Origin-Trial: TOKEN_GOES_HERE`
+
+### Alternatives to the origin trial
+
+If you want to experiment with the API locally, without an origin trial,
+enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`.
+
 ## See it in action
 
 1. Using Chrome 79 or later on Android, open the [`getInstalledRelatedApps()` demo][demo].
