@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Cookie Store API offers asynchronous access to HTTP cookies, and opens up the cookie jar to service workers.
 
-{# wf_updated_on: 2018-11-29 #}
+{# wf_updated_on: 2019-10-02 #}
 {# wf_published_on: 2018-09-06 #}
 {# wf_tags: cookie,storage #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
@@ -73,7 +73,7 @@ storage mechanism, and we've learned a lot since then.
 
 The main reasons for avoiding cookies are:
 
-* Cookies bring your storage schema into the your back-end API.
+* Cookies bring your storage schema into your back-end API.
   Each HTTP request carries a snapshot of the cookie jar. This makes it easy for
   back-end engineers to introduce dependencies on the current cookie format. Once
   this happens, your front-end can't change its storage schema without deploying
@@ -146,11 +146,11 @@ The Cookie Store API brings an alternative method for observing cookie
 changes, which does not require polling.
 
     cookieStore.addEventListener('change', (event) => {
-      for (const cookie in event.changed) {
+      for (const cookie of event.changed) {
         if (cookie.name === 'session_id')
           sessionCookieChanged(cookie.value);
       }
-      for (const cookie in event.deleted) {
+      for (const cookie of event.deleted) {
         if (cookie.name === 'session_id')
           sessionCookieChanged(null);
       }
@@ -172,7 +172,7 @@ service workers.
       await cookieStore.delete('session_id');
     }
 
-However, observing cookie changes is a bit different in service worker. Waking
+However, observing cookie changes is a bit different in service workers. Waking
 up a service worker can be pretty expensive, so we have to explicitly describe
 the cookie changes that the worker is interested in.
 
