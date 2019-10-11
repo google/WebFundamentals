@@ -17,6 +17,10 @@ description: Shipping in Chrome 73, Constructable Stylesheets provide a seamless
 new way to create and distribute reusable styles when using [Shadow
 DOM](/web/fundamentals/web-components/shadowdom). 
 
+> Note: As of October 2019, Constructable Stylesheets are only available in Chrome
+> (versions 73 and higher). [Support in other browsers can be tracked
+> here](https://chromestatus.com/feature/5394843094220800).
+
 It has always been possible to create stylesheets using JavaScript. However, the
 process has historically been to create a `<style>` element using
 `document.createElement('style')`, and then access its sheet property to obtain
