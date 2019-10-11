@@ -108,7 +108,7 @@ landing_page:
       path: web-components/
       buttons:
       - label: Learn more
-        path: web-components/
+        path: /web/fundamentals/web-components/
         classname: button button-white
 
     - image_path: images/pay-req.png
