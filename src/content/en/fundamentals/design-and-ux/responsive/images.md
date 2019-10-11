@@ -216,31 +216,31 @@ browser would choose:
     <tr>
       <td data-th="Browser width">400px</td>
       <td data-th="Device pixel ratio">1</td>
-      <td data-th="Image used"><code>200.png</code></td>
+      <td data-th="Image used"><code>200.jpg</code></td>
       <td data-th="Effective resolution">1x</td>
     </tr>
     <tr>
       <td data-th="Browser width">400px</td>
       <td data-th="Device pixel ratio">2</td>
-      <td data-th="Image used"><code>400.png</code></td>
+      <td data-th="Image used"><code>400.jpg</code></td>
       <td data-th="Effective resolution">2x</td>
     </tr>
     <tr>
       <td data-th="Browser width">320px</td>
       <td data-th="Device pixel ratio">2</td>
-      <td data-th="Image used"><code>400.png</code></td>
+      <td data-th="Image used"><code>400.jpg</code></td>
       <td data-th="Effective resolution">2.5x</td>
     </tr>
     <tr>
       <td data-th="Browser width">600px</td>
       <td data-th="Device pixel ratio">2</td>
-      <td data-th="Image used"><code>800.png</code></td>
+      <td data-th="Image used"><code>800.jpg</code></td>
       <td data-th="Effective resolution">2.67x</td>
     </tr>
     <tr>
       <td data-th="Browser width">640px</td>
       <td data-th="Device pixel ratio">3</td>
-      <td data-th="Image used"><code>1000.png</code></td>
+      <td data-th="Image used"><code>1000.jpg</code></td>
       <td data-th="Effective resolution">3.125x</td>
     </tr>
     <tr>
