@@ -246,8 +246,8 @@ browser would choose:
     <tr>
       <td data-th="Browser width">1100px</td>
       <td data-th="Device pixel ratio">1</td>
-      <td data-th="Image used"><code>1400.jpg</code></td>
-      <td data-th="Effective resolution">1.27x</td>
+      <td data-th="Image used"><code>800.png</code></td>
+      <td data-th="Effective resolution">1.45x</td>
     </tr>
   </tbody>
 </table>
