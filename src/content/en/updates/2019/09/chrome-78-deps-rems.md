@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 78 to help you plan.
 
-{# wf_updated_on: 2019-09-20 #}
+{# wf_updated_on: 2019-10-10 #}
 {# wf_published_on: 2019-09-19 #}
 {# wf_tags: deprecations,removals,chrome78 #}
 {# wf_blink_components: Blink #}
@@ -14,30 +14,6 @@ description: A round up of the deprecations and removals in Chrome 78 to help yo
 # Deprecations and removals in Chrome 78 {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
-
-## Disallow sync XHR in page dismissal
-
-Chrome now disallows synchronous XHR during page dismissal when the page is
-being navigated away from or closed by the user. This applies to the following
-events:
-
-* `beforeunload`
-* `unload`
-* `pagehide`
-* `visibilitychange`
-
-To ensure that data is sent to the server when a page unloads, we recommend
-SendBeacon or Fetch keep-alive. 
-
-For now, enterprise users can use the AllowSyncXHRInPageDismissal policy flag
-and developers can use the origin trial flag ‘allow-sync-xhr-in-page-dismissal’
-to allow synchronous XHR requests during page unload. This is a temporary
-“opt-out” measure, and we expect to remove this flag in Chrome 82.
-
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/LnqwTCiT9Gs/discussion) &#124;
-[Chrome Platform Status](https://www.chromestatus.com/feature/5021976655560704) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=968591)
 
 ## XSS Auditor
 
