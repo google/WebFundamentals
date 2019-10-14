@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Aborting fetches using a new web primitive – The abort controller.
 
-{# wf_updated_on: 2017-10-25 #}
+{# wf_updated_on: 2019-10-14 #}
 {# wf_published_on: 2017-09-28 #}
 {# wf_tags: fetch #}
 {# wf_featured_image: /web/updates/images/2017/09/abortable-fetch.png #}
@@ -104,7 +104,7 @@ When you abort an async operation, the promise rejects with a `DOMException` nam
     });
 
 You don't often want to show an error message if the user aborted the operation, as it isn't an
-"error" if you successfully do that the user asked. To avoid this, use an if-statement such as the
+"error" if you successfully do what the user asked. To avoid this, use an if-statement such as the
 one above to handle abort errors specifically.
 
 Here's an example that gives the user a button to load content, and a button to abort. If the fetch
@@ -155,7 +155,7 @@ support this are Edge 16 and Firefox 57.
 
 A single signal can be used to abort many fetches at once:
 
-    async function fetchStory({ signal }={}) {
+    async function fetchStory({ signal } = {}) {
       const storyResponse = await fetch('/story.json', { signal });
       const data = await storyResponse.json();
 
@@ -232,7 +232,7 @@ Yeah… it took a long time for this relatively simple API to come together. Her
 
 ### API disagreement
 
-As you can see [the GitHub discussion is pretty long](https://github.com/whatwg/fetch/issues/27).
+As you can see, [the GitHub discussion is pretty long](https://github.com/whatwg/fetch/issues/27).
 There a lot of nuance in that thread (and some lack-of-nuance), but the key disagreement is one
 group wanted the `abort` method to exist on the object returned by `fetch()`, whereas the other
 wanted a separation between getting the response and affecting the response.
