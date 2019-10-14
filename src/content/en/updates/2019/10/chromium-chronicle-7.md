@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-09-14 #}
+{# wf_updated_on: 2019-10-14 #}
 {# wf_published_on: 2019-10-22 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
