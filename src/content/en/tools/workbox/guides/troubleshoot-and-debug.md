@@ -90,7 +90,7 @@ worker like so:
 navigator.serviceWorker.register('/blog/sw.js', {scope: '/'});
 ```
 
-You can [learn more about service worker scope here]('/web/fundamentals/primers/service-workers/lifecycle#scope_and_control').
+You can [learn more about service worker scope here](/web/fundamentals/primers/service-workers/lifecycle#scope_and_control).
 
 **_Q:_** Why are changes to my service worker not shown?
 
