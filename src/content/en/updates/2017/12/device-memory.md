@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Device Memory API allows developers to serve different resources to users based on their device's memory capabilities.
 
-{# wf_updated_on: 2017-12-07 #}
+{# wf_updated_on: 2019-10-13 #}
 {# wf_published_on: 2017-12-07 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -56,10 +56,10 @@ Device-Memory: 0.5
 Accept: */*
 ```
 
-With this technique you can create one or more versions of your application
+With this technique, you can create one or more versions of your application
 script(s) and respond to requests from the client conditionally based on the
 value set in the `Device-Memory` header. These versions don't need to contain
-completely different code (as that's harder to maintain). Most of the time the
+completely different code (as that's harder to maintain). Most of the time, the
 "lite" version will just exclude features that may be expensive and not critical
 to the user experience.
 
@@ -75,12 +75,12 @@ to the `<head>` of your document:
 
 Or include "Device-Memory" in your server's `Accept-CH` response headers:
 
-```
+<pre>
 HTTP/1.1 200 OK
 Date: Thu Dec 07 2017 11:44:31 GMT
 Content-Type: text/html
 Accept-CH: <strong>Device-Memory</strong>, Downlink, Viewport-Width
-```
+</pre>
 
 This tells the browser to send the `Device-Memory` header with all sub-resource
 requests for the current page.
@@ -100,7 +100,7 @@ less than 1, or it serves a "full" version if the browser doesn't support the
 app.get('/static/js/:scriptId', (req, res) => {
   // Low-memory devices should load the "lite" version of the component.
   // The logic below will set `scriptVersion` to "lite" if (and only if)
-  // `Device-Memory` isn't undefined and returns a number less than 2.
+  // `Device-Memory` isn't undefined and returns a number less than 1.
   const scriptVersion = req.get('Device-Memory') < 1 ? 'lite' : 'full';
 
   // Respond with the file based on `scriptVersion` above.
@@ -171,7 +171,7 @@ use to track device memory for you users' devices.
 Using custom dimensions in Google Analytics is a two-step process.
 
 1. [Set up the custom dimension](
-   https://support.google.com/analytics/answer/2709829) in Google Analytics
+   https://support.google.com/analytics/answer/2709829) in Google Analytics.
 2. Update your tracking code to [`set`](
    /analytics/devguides/collection/analyticsjs/accessing-trackers)
    the device memory value for the custom dimension you just created.
@@ -239,7 +239,7 @@ And the report it generates might looks like this:
 Once you're collecting device memory data and have a baseline for how users are
 experiencing your application across all ranges of the memory spectrum, you can
 experiment with serving different resources to different users (using the
-techniques described in the section above). Afterwards you'll be able to look at
+techniques described in the section above). Afterwards, you'll be able to look at
 the results and see if they've improved.
 
 
