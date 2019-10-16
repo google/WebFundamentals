@@ -1,19 +1,19 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Debug why cookies were blocked, simulate "prefers-color-scheme: dark", code coverage updates, and more.
 
 {# wf_updated_on: 2019-10-15 #}
 {# wf_published_on: 2019-10-15 #}
 {# wf_tags: chrome79, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Debug why cookies were blocked, simulate "prefers-color-scheme: dark", code coverage updates, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 79) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-## Cookies {: #cookies }
+## New features for cookies {: #cookies }
 
 ### Debug why a cookie was blocked {: #blockedcookies }
 
@@ -70,28 +70,7 @@ edit and delete cookies.
 
 Chromium issue [#462370](https://crbug.com/462370)
 
-## Debug why a network resource was requested {: #initiator }
-
-After recording network activity, select a network resource and then navigate to the
-**Initiator** tab to understand why the resource was requested. The **Request call stack**
-section describes the JavaScript call stack leading up to the network request.
-
-<figure>
-  <img src="../../images/2019/10/initiator.png"
-       alt="The Initiator tab."/>
-  <figcaption>
-    The <b>Initiator</b> tab.
-  </figcaption>
-</figure>
-
-Note: You can also access this data by hovering over the **Initiator** column in the Network
-Log. We added the **Initiator** tab because it's more accessible.
-
-{# https://chromium.googlesource.com/chromium/src/+/0d0cae574b458c3d4bd7f6f254f74f6f2442b710 #}
-
-Chromium issues [963183](https://crbug.com/963183), [842488](https://crbug.com/842488)
-
-## Simulate different prefers-color-scheme preferences {: #colorscheme }
+## Simulate different prefers-color-scheme and prefers-reduced-motion preferences {: #userpreferences }
 
 The [prefers-color-scheme](https://web.dev/prefers-color-scheme) media query lets you match
 your site's style to your user's preferences. For example, if the `prefers-color-scheme: dark`
@@ -114,11 +93,14 @@ your `prefers-color-scheme: dark` and `prefers-color-scheme: light` styles.
   </figcaption>
 </figure>
 
+You can also simulate `prefers-reduced-motion: reduce` using the **Emulate CSS media feature
+prefers-reduced-motion** dropdown next to the **Emulate CSS media feature prefers-color-scheme** dropdown.
+
 {# https://chromium.googlesource.com/chromium/src/+/9ca30329b8ee53b2462d72772dc189385b6e2a34 #}
 
 Chromium issue [#1004246](https://crbug.com/1004246)
 
-## Accessible colors and filtering in the Coverage tab {: #coverage }
+## Code coverage updates {: #coverage }
 
 The [Coverage tab](/web/tools/chrome-devtools/coverage) can help you [find unused JavaScript and
 CSS](https://web.dev/remove-unused-code/).
@@ -137,10 +119,43 @@ The new **URL filter** text box lets you filter out patterns of URLs.
   </figcaption>
 </figure>
 
+The Sources panel now displays code coverage data by default. Clicking the red or bluish
+marks next to the line number opens the Coverage tab and highlights the file.
+
+<figure>
+  <img src="../../images/2019/10/sources.png"
+       alt="Coverage data in the Sources panel."/>
+  <figcaption>
+    Coverage data in the Sources panel. Line 8 is an example of unused code.
+    Line 11 is an example of used code.
+  </figcaption>
+</figure>
+
 {# https://chromium.googlesource.com/chromium/src/+/71d06de626d5e15fae7534df8fe0bb1613838aa7 #}
 {# https://chromium.googlesource.com/chromium/src/+/59cca2c8f5fcd709360d4ba111fd2a9fca4e78f7 #}
 
 Chromium issues [#1003671](https://crbug.com/1003671), [#1004185](https://crbug.com/1004185)
+
+## Debug why a network resource was requested {: #initiator }
+
+After recording network activity, select a network resource and then navigate to the
+**Initiator** tab to understand why the resource was requested. The **Request call stack**
+section describes the JavaScript call stack leading up to the network request.
+
+<figure>
+  <img src="../../images/2019/10/initiator.png"
+       alt="The Initiator tab."/>
+  <figcaption>
+    The <b>Initiator</b> tab.
+  </figcaption>
+</figure>
+
+Note: You can also access this data by hovering over the **Initiator** column in the Network
+Log. We added the **Initiator** tab because it's more accessible.
+
+{# https://chromium.googlesource.com/chromium/src/+/0d0cae574b458c3d4bd7f6f254f74f6f2442b710 #}
+
+Chromium issues [963183](https://crbug.com/963183), [842488](https://crbug.com/842488)
 
 ## Console and Sources panels respect indentation preferences again {: #indentation }
 
