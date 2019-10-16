@@ -2,6 +2,16 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 79 {: #discover79 .hide-from-toc }
+
+* [Debug why a cookie was blocked](/web/updates/2019/10/devtools#blockedcookies)
+* [View cookie values](/web/updates/2019/10/devtools#cookiepreviews)
+* [Simulate different prefers-color-scheme and prefers-reduced-motion preferences](/web/updates/2019/10/devtools#userpreferences)
+* [Code coverage updates](/web/updates/2019/10/devtools#coverage)
+* [Debug why a network resource was requested](/web/updates/2019/10/devtools#initiator)
+* [Console and Sources panels respect indentation preferences again](/web/updates/2019/10/devtools#indentation)
+* [New shortcuts for cursor navigation](/web/updates/2019/10/devtools#console)
+
 ### Chrome 78 {: #discover78 .hide-from-toc }
 
 * [Multi-client support in the Audits panel](/web/updates/2019/09/devtools#multiclient)
