@@ -94,7 +94,8 @@ your `prefers-color-scheme: dark` and `prefers-color-scheme: light` styles.
 </figure>
 
 You can also simulate `prefers-reduced-motion: reduce` using the **Emulate CSS media feature
-prefers-reduced-motion** dropdown next to the **Emulate CSS media feature prefers-color-scheme** dropdown.
+prefers-reduced-motion** dropdown next to the **Emulate CSS media feature prefers-color-scheme**
+dropdown.
 
 {# https://chromium.googlesource.com/chromium/src/+/9ca30329b8ee53b2462d72772dc189385b6e2a34 #}
 
@@ -109,7 +110,8 @@ The Coverage tab now uses new colors to represent used and unused code. This col
 is proven to be more accessible for people with color vision deficiencies. The red bar on the left
 represents unused code, and the bluish bar on the right represents used code.
 
-The new **URL filter** text box lets you filter out patterns of URLs.
+The new coverage **type filter** text box lets you filter for coverage information by its type:
+display only JavaScript coverage, only CSS, or display all types of coverage.
 
 <figure>
   <img src="../../images/2019/10/coverage.png"
@@ -119,7 +121,7 @@ The new **URL filter** text box lets you filter out patterns of URLs.
   </figcaption>
 </figure>
 
-The Sources panel now displays code coverage data by default. Clicking the red or bluish
+The Sources panel displays code coverage data when it is available. Clicking the red or bluish
 marks next to the line number opens the Coverage tab and highlights the file.
 
 <figure>
@@ -173,7 +175,7 @@ Chromium issue [#977394](https://crbug.com/977394)
 ## New shortcuts for cursor navigation {: #console }
 
 Press <kbd>Control</kbd>+<kbd>P</kbd> in the Console or Sources panels to move your cursor to
-the line above. Press <kbd>Control</kbd>+<kbd>N</kbd> to move your cursor to the line below. 
+the line above. Press <kbd>Control</kbd>+<kbd>N</kbd> to move your cursor to the line below.
 
 {# https://chromium.googlesource.com/chromium/src/+/0cba9023f762656df94d07f8afc1bc94bf3840f2 #}
 
