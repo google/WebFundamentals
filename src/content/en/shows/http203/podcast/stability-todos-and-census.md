@@ -8,12 +8,12 @@ description: Also how do you do TODO?
 {# wf_podcast_duration: 01:00:28 #}
 {# wf_podcast_fileSize: 38066136 #}
 {# wf_podcast_subtitle: Also how do you do TODO? #}
-{# wf_featured_image: /web/shows/http203/podcast/images/surma-and-jake.jpg #}
+{# wf_featured_image: /web/shows/http203/podcast/images/surma-and-jake-2.jpg #}
 {# wf_blink_components: Blink>CSS #}
 
 # Stability, TODOs, and the HTTP 203 census {: .page-title }
 
-<img src="/web/shows/http203/podcast/images/surma-and-jake.jpg" class="attempt-right">
+<img src="/web/shows/http203/podcast/images/surma-and-jake-2.jpg" class="attempt-right">
 
 In this episode we chat about:
 
