@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Custom transform matrices allow you to build frame-perfect custom scrollbars.
 
-{# wf_updated_on: 2019-01-16 #}
+{# wf_updated_on: 2019-10-20 #}
 {# wf_published_on: 2017-03-23 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>Layout>Scrollbars #}
@@ -18,7 +18,7 @@ Custom scrollbars are extremely rare and that’s mostly due to the fact that
 scrollbars are one of the remaining bits on the web that are pretty much
 unstylable (I’m looking at you, date picker).
 You can use JavaScript to build your own, but that’s expensive, low
-fidelity and can feel laggy. In this article we will leverage some
+fidelity and can feel laggy. In this article, we will leverage some
 unconventional CSS matrices to build a custom scroller that doesn’t require any
 JavaScript while scrolling, just some setup code.
 
@@ -35,7 +35,7 @@ concepts if you want to understand the intricate details of this trick. However,
 we hope that – even if you don’t enjoy matrix math – you can still
 follow along and see how we used them.
 
-A while ago we built a parallax scroller (Did you read
+A while ago, we built a parallax scroller (Did you read
 [that article](/web/updates/2016/12/performant-parallaxing)?
 It’s really good, well worth your time!). By pushing elements back using CSS 3D
 transforms, elements moved _slower_ than our actual scrolling speed.
@@ -58,7 +58,7 @@ As shown in the animation, we achieved the parallax effect by pushing elements
 translation along the Y axis. So if we scroll _down_ by, say 100px, every
 element will be translated _upwards_ by 100px. That applies to _all_ elements,
 even the ones that are “further back”. But _because_ they are farther away from
-the camera their _observed_ on-screen movement will be less than 100px, yielding
+the camera, their _observed_ on-screen movement will be less than 100px, yielding
 the desired parallax effect.
 
 Of course, moving an element back in space will also make it appear smaller,
@@ -77,7 +77,7 @@ into the viewport the scrollbar is usually hidden.
 If the content has 2x the height of the viewport, the
 scrollbar fills ½ of the height of the viewport. Content worth 3x the height of
 the viewport scales the scrollbar to ⅓ of the viewport etc. You see the pattern.
-Instead of scrolling you can also click-and-drag the scrollbar to move through
+Instead of scrolling, you can also click-and-drag the scrollbar to move through
 the site faster. That’s a surprising amount of behavior for an inconspicuous
 element like that. Let’s fight one battle at a time.
 
@@ -103,18 +103,18 @@ One occasion where you can see that CSS uses homogeneous coordinates under the
 hood is when you define your own 4x4 matrices in a transform property using the
 `matrix3d()` function. `matrix3d` takes 16 arguments (because the matrix is
 4x4), specifying one column after the other. So we can use this function to
-manually specify rotations, translations etc.. But what it also allows us to do
+manually specify rotations, translations, etc. But what it also allows us to do
 is mess around with that _w_ coordinate!
 
 Before we can make use of `matrix3d()`, we need a 3D context – because without a
 3D context there wouldn’t be any perspective distortion and no need for
-homogeneous coordinates. To create a 3D context we need a container with a
+homogeneous coordinates. To create a 3D context, we need a container with a
 `perspective` and some elements inside that we can transform in the newly
 created 3D space. For
 [example](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-1.html):
 
 <img src="/web/updates/images/2017/03/custom-scrollbar/perspective.png"
-  alt="A piece of CSS code that distorts a div using CSS’
+  alt="A piece of CSS code that distorts a div using the CSS’s
     perspective attribute.">
 
 The elements inside a perspective container are processed by the CSS engine
@@ -135,8 +135,8 @@ So if an element is pushed back, a translation of 400px will cause the element
 to only move 300px on the screen.
 
 If you want to know _all_ the details, you should read the
-[spec](https://drafts.csswg.org/css-transforms-2/#transform-rendering) on CSS’
-transform rendering model, but for the sake of this article I simplified the
+[spec](https://drafts.csswg.org/css-transforms-2/#transform-rendering) on the CSS’s
+transform rendering model, but for the sake of this article, I simplified the
 algorithm above.
 
 Our box is inside a perspective container with value p for the `perspective`
@@ -150,27 +150,29 @@ n pixels.
   row fourth column times element transform matrix.">
 
 The first matrix is the perspective matrix, the second matrix is the scroll
-matrix. To recap: The scroll matrix’ job is to make an element _move up_ when we
+matrix. To recap: The scroll matrix’s job is to make an element _move up_ when we
 are _scrolling down_, hence the negative sign.
 
-For our scrollbar however we want the _opposite_ – we want our element to
+For our scrollbar, however, we want the _opposite_ – we want our element to
 _move down_ when we are scrolling _down_. Here’s where we can use a trick:
 Inverting the _w_ coordinate of the corners of our box. If the _w_ coordinate is
 -1, all translations will take effect in the opposite direction. So how do we do
 that? The CSS engine takes care of converting the corners of our box to
 homogeneous coordinates, and sets w to 1. It’s time for `matrix3d()` to shine!
 
-    .box {
-      transform:
-        matrix3d(
-          1, 0, 0, 0,
-          0, 1, 0, 0,
-          0, 0, 1, 0,
-          0, 0, 0, -1
-        );
-    }
+```css
+.box {
+  transform:
+    matrix3d(
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, -1
+    );
+}
+```
 
-This matrix will do nothing else then negating _w_. So when the CSS engine has
+This matrix will do nothing else than negating _w_. So when the CSS engine has
 turned each corner into a vector of the form `[x,y,z,1]`, the matrix will
 convert it into `[x,y,z,-1]`.
 
@@ -199,16 +201,18 @@ coordinate is currently 0, and p is 1, _w_ will be -1.
 Luckily, we can choose the value of z! To make sure we end up with w=1, we need
 to set z = -2.
 
-    .box {
-      transform:
-        matrix3d(
-          1, 0, 0, 0,
-          0, 1, 0, 0,
-          0, 0, 1, 0,
-          0, 0, 0, -1
-        )
-        translateZ(-2px);
-    }
+```css
+.box {
+  transform:
+    matrix3d(
+      1, 0, 0, 0,
+      0, 1, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, -1
+    )
+    translateZ(-2px);
+}
+```
 
 Lo and behold, our
 [box is back](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-3.html)!
@@ -284,7 +288,7 @@ later with a trick.
 The size of the thumb is
 [looking good](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/step-5.html),
 but it’s moving way too fast. This is where we can grab our technique from the
-parallax scroller. If we move the element further back it will move slower while
+parallax scroller. If we move the element further back, it will move slower while
 scrolling. We can correct the size by scaling it up. But how much should we push
 it back exactly? Let’s do some – you guessed it – math! This is the last time, I
 promise.
@@ -306,7 +310,7 @@ article. According to the
 [relevant section in the spec](https://drafts.csswg.org/css-transforms-2/#perspective):
 The scaling factor is equal to p/(p − z). We can solve this equation for z to
 figure out how much we we need to translate our thumb along the z axis. But keep
-in mind that due to our w coordinate shenanigans we need to translate an
+in mind that due to our w coordinate shenanigans, we need to translate an
 additional `-2px` along z. Also note that an element’s transforms are applied
 right to left, meaning that all translations before our special matrix will not
 be inverted, all translations after our special matrix, however, will! Let’s
@@ -334,7 +338,7 @@ We have a
 And it’s just a DOM element that we can style however we like. One thing that is
 important to do in terms of accessibility is to make the thumb respond to
 click-and-drag, as many users are used to interacting with a scrollbar that way.
-For the sake of not making this blog post even longer, I am not going explain
+For the sake of not making this blog post even longer, I am not going to explain
 the details for that part. Take a look at the
 [library code](https://github.com/GoogleChromeLabs/ui-element-samples/blob/gh-pages/custom-scrollbar/scrollbar.js#L5-L25)
 for details if you want to see how it’s done.
@@ -350,10 +354,10 @@ we’ll do exactly the same thing here. Take a look at the
 to refresh your memory.
 
 ## What about the browser scrollbar?
-On some systems we will have to deal with a permanent, native scrollbar.
+On some systems, we will have to deal with a permanent, native scrollbar.
 Historically, the scrollbar can’t be hidden (except with a
 [non-standard pseudo-selector](https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar)).
-So to hide it we have to resort to some (math-free) hackery. We wrap our
+So to hide it, we have to resort to some (math-free) hackery. We wrap our
 scrolling element in a container with `overflow-x: hidden` and make the
 scrolling element wider than the container. The browser’s native scrollbar is
 now out of view.
