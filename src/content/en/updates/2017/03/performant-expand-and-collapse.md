@@ -60,7 +60,7 @@ You could imagine using a bit of CSS to animate the width and height on the cont
 ```
 
 The immediate problem with this approach is that it requires animating `width` and `height`.
-These properties require calculating layout and paint on every frame of the animation,
+These properties require calculating layout, and paint the results on every frame of the animation,
 which can be very expensive, and will typically cause you to miss out on 60fps. If that’s news to
 you then read our
 [Rendering Performance](/web/fundamentals/performance/rendering/)
