@@ -62,7 +62,7 @@ experience for a click to trigger a download on the same page, compared with
 downloads started automatically when landing at a new page, or started non
 spontaneously after the click.
 
-Removal is expected in Chrome 80.
+Removal is expected in Chrome 81.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5706745674465280) &#124;
 
