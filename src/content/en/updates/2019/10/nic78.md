@@ -81,9 +81,9 @@ on web.dev for complete details.
 ## Fresher service workers {: #fresher-service-workers }
 
 Byte-for-byte checks are now performed for service worker scripts imported by
-`importScripts().` In the past, the only way to force an installed service
+`importScripts()`. In the past, the only way to force an installed service
 worker to pick up changes to an imported script was to change the imported
-script's URL usually either by adding in a semver value, or hash in the URL.
+script's URL, usually either by adding in a semver value or hash in the URL.
 
 ```js
 importScripts('https://example.com/v1.1.0/index.js'));
@@ -92,7 +92,7 @@ importScripts('https://example.com/index.abcd1234.js'));
 
 Starting in Chrome 78, each time an update check is performed for a top-level
 service worker file, Chrome will also check whether or not the contents of
-any imported scripts have changed. If it has, it will trigger the full
+any imported scripts have changed. If they have, it will trigger the full
 service worker update flow. This brings Chrome into conformance with the
 spec, and matches what Firefox and Safari do.
 
