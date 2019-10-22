@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-09-25 #}
+{# wf_updated_on: 2019-10-22 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -64,7 +64,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
 <aside class="success">
   <b>New</b>
   See a completely list of APIs we're working on and approximate time
-  lines in our <a href="https://bit.ly/fugu-api-tracker">API Tracker</a>.
+  lines in our <a href="https://goo.gle/fugu-api-tracker">API Tracker</a>.
 </aside>
 
 <table>
@@ -77,7 +77,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
   <tbody>
     <tr>
       <td>
-        <a href="/web/updates/2018/12/badging-api">Badging API</a>
+        <a href="https://web.dev/badging-api/">Badging API</a>
       </td>
       <td>
         The Badging API is a new web platform API that allows installed web
@@ -89,12 +89,12 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         such as an unread count.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> August 21st, 2019
+        <b>Last Updated:</b> October 22nd, 2019
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2019/08/contact-picker">Contact Picker API</a>
+        <a href="https://web.dev/contact-picker/">Contact Picker API</a>
       </td>
       <td>
         The Contact Picker API is a new, on-demand picker that allows users to
@@ -104,12 +104,12 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         reach and connect with their friends and family.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> September 25th, 2019
+        <b>Last Updated:</b> October 22nd, 2019
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2018/12/get-installed-related-apps">
+        <a href="https://web.dev/get-installed-related-apps/">
           Get Installed Related Apps API
         </a>
       </td>
@@ -119,12 +119,12 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         installed on the users device, and vice versa.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> March 12th, 2019
+        <b>Last Updated:</b> October 22nd, 2019
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2019/08/native-file-system">
+        <a href="https://web.dev/native-file-system/">
           Native File System API
         </a>
       </td>
@@ -137,12 +137,12 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         on the users device.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> September 25th, 2019
+        <b>Last Updated:</b> October 22nd, 2019
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2019/01/shape-detection">Shape&nbsp;Detection API</a>
+        <a href="https://web.dev/shape-detection/">Shape&nbsp;Detection API</a>
       </td>
       <td>
         The Shape Detection API opens up native implementations of shape
@@ -151,11 +151,11 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         barcode detection, and text detection (Optical Character Recognition).
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> May 28th, 2019
+        <b>Last Updated:</b> October 22nd, 2019
       </td>
     <tr>
       <td>
-        <a href="/web/updates/2018/12/wakelock">Wake Lock API</a>
+        <a href="https://web.dev/wakelock/">Wake Lock API</a>
       </td>
       <td>
         To avoid draining the battery, most devices will quickly fall asleep
@@ -167,7 +167,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         running.
         <br><br>
         <b>Current Status:</b> Behind a flag.<br>
-        <b>Last Updated:</b> September 5th, 2019
+        <b>Last Updated:</b> October 22nd, 2019
       </td>
     </tr>
   </tbody>
@@ -185,7 +185,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
   <tbody>
     <tr>
       <td>
-        <a href="/web/updates/2019/07/image-support-for-async-clipboard">
+        <a href="https://web.dev/image-support-for-async-clipboard/">
           Async&nbsp;Clipboard API (images)
         </a>
       </td>
@@ -195,7 +195,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         for reading and writing images to the clipboard.
         <br><br>
         <b>Status:</b> Launched in Chrome 76<br>
-        <b>Last Updated:</b> July 3rd, 2019
+        <b>Last Updated:</b> October 22nd, 2019
       </td>
     </tr>
     <tr>
