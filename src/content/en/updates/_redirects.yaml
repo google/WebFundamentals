@@ -2,17 +2,38 @@
 
 redirects:
 
+- from: /web/updates/2018/12/badging-api
+  to: https://web.dev/badging-api/
+
+- from: /web/updates/2019/08/contact-picker
+  to: https://web.dev/contact-picker/
+
+- from: /web/updates/2018/12/get-installed-related-apps
+  to: https://web.dev/get-installed-related-apps/
+
+- from: /web/updates/2019/08/native-file-system
+  to: https://web.dev/native-file-system/
+
+- from: /web/updates/2019/01/shape-detection
+  to: https://web.dev/shape-detection/
+
+- from: /web/updates/2018/12/wakelock
+  to: https://web.dev/wakelock/
+
+- from: /web/updates/2019/07/image-support-for-async-clipboard
+  to: https://web.dev/image-support-for-async-clipboard/
+
 - from: /web/updates/2018/06/fresher-sw
   to: /web/updates/2019/09/fresher-sw
 
 - from: /web/updates/nic
-  to: /web/updates/2019/09/nic77
+  to: /web/updates/2019/10/nic78
 
 - from: /web/updates/2018/11/writable-files
-  to: /web/updates/2019/08/native-file-system
+  to: https://web.dev/native-file-system/
 
 - from: /web/updates/2017/04/getinstalledrelatedapps
-  to: /web/updates/2018/12/get-installed-related-apps
+  to: https://web.dev/get-installed-related-apps/
 
 - from: /web/updates/2017/10/using-twa
   to: /web/updates/2019/02/using-twa
