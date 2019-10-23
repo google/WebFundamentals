@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 73 to help you plan.
 
-{# wf_updated_on: 2019-06-26 #}
+{# wf_updated_on: 2019-10-23 #}
 {# wf_published_on: 2019-02-07 #}
 {# wf_tags: deprecations,removals,chrome73 #}
 {# wf_blink_components: Blink>Storage>WebSQL,Blink>HTML,Blink #}
@@ -62,7 +62,7 @@ experience for a click to trigger a download on the same page, compared with
 downloads started automatically when landing at a new page, or started non
 spontaneously after the click.
 
-Removal is expected in Chrome 74.
+Removal is expected in Chrome 81.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5706745674465280) &#124;
 
