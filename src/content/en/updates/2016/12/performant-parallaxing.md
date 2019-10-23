@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: With a little mathematical wriggling, it's possible to have parallax effects that play nicely with browser architectures!
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2019-10-19 #}
 {# wf_published_on: 2016-12-02 #}
 {# wf_tags: performance,parallax,css,3d,style #}
 {# wf_featured_image: /web/updates/images/2016/12/performant-parallaxing/featured-image.jpg #}
@@ -15,9 +15,9 @@ description: With a little mathematical wriggling, it's possible to have paralla
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/flackr.html" %}
 
-Love it or hate it, parallaxing is here to stay. When used judiciously it can
+Love it or hate it, parallaxing is here to stay. When used judiciously, it can
 add depth and subtlety to a web app. The problem, however, is that implementing
-parallaxing in a performant way can be challenging. In this article we’ll
+parallaxing in a performant way can be challenging. In this article, we’ll
 discuss a solution that is both performant and, just as importantly, works
 cross-browser.
 
@@ -25,12 +25,12 @@ cross-browser.
 
 **TL;DR**
 
-* Don’t use scroll events or background-position to create parallax animations.
+* Don’t use scroll events or `background-position` to create parallax animations.
 * Use CSS 3D transforms to create a more accurate parallax effect.
 * For Mobile Safari use `position: sticky` to ensure that the parallax effect
   gets propagated.
 
-If you want the drop-in solution head over to the [UI Element Samples GitHub
+If you want the drop-in solution, head over to the [UI Element Samples GitHub
 repo](https://github.com/GoogleChromeLabs/ui-element-samples) and grab the
 [Parallax helper
 JS](https://github.com/GoogleChromeLabs/ui-element-samples/blob/gh-pages/parallax/scripts/parallax.js)!
@@ -40,13 +40,13 @@ GitHub repo.
 
 ## Problem parallaxers
 
-To begin with let’s take a look at two common ways of achieving a parallax
-effect, and in particular why they are unsuitable for our purposes.
+To begin with, let’s take a look at two common ways of achieving a parallax
+effect, and in particular, why they are unsuitable for our purposes.
 
 ### Bad: using scroll events
 
 The key requirement of parallaxing is that it should be scroll-coupled; for
-every single change in the page’s scroll position the parallaxing element's
+every single change in the page’s scroll position, the parallaxing element's
 position should update. While that sounds simple, an important mechanism of
 modern browsers is their ability to work asynchronously. This applies, in our
 particular case, to scroll events. In most browsers scroll events are delivered
@@ -56,14 +56,14 @@ scroll animation!
 This important piece of information tells us why we need to avoid a
 JavaScript-based solution that moves elements based on scroll events:
 **JavaScript doesn’t guarantee that parallaxing will keep in step with the
-page’s scroll position**. In older versions of Mobile Safari scroll events were
+page’s scroll position**. In older versions of Mobile Safari, scroll events were
 actually delivered at the end of the scroll, which made it impossible to make a
 JavaScript-based scroll effect. More recent versions *do* deliver scroll events
 during the animation, but, similarly to Chrome, on a "best-effort" basis. If the
 main thread is busy with any other work, scroll events will not get delivered
 immediately, meaning the parallax effect will be lost.
 
-### Bad: updating background-position
+### Bad: updating `background-position`
 
 Another situation we’d like to avoid is painting on every frame. Many solutions
 attempt to change `background-position` to provide the parallax look, which
@@ -90,19 +90,21 @@ and the technique they use is effectively this:
 
 The CSS for this approach looks like so:
 
-    .container {
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      perspective: 1px;
-      perspective-origin: 0 0;
-    }
+```css
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1px;
+  perspective-origin: 0 0;
+}
 
-    .parallax-child {
-      transform-origin: 0 0;
-      transform: translateZ(-2px) scale(3);
-    }
+.parallax-child {
+  transform-origin: 0 0;
+  transform: translateZ(-2px) scale(3);
+}
+```
 
 Which assumes a snippet of HTML like this:
 
@@ -115,7 +117,7 @@ Which assumes a snippet of HTML like this:
 Pushing the child element back will cause it to get smaller proportional to the
 perspective value. You can calculate how much it will need to be scaled up with
 this equation: **(perspective - distance) / perspective**. Since we most likely
-want the parallaxing element to parallax but appear at the size we authored it
+want the parallaxing element to parallax but appear at the size we authored it,
 it would need to be scaled up in this way, rather than being left as is.
 
 In the case of the above code, perspective is **1px**, and the
@@ -142,7 +144,7 @@ However, applying a perspective value to the scrolling element messes around
 with this process; it changes the matrices that underpin the scroll transform.
 Now a scroll of 300px may only move the children by 150px, depending on the
 `perspective` and `translateZ` values you chose. If an element has a
-`translateZ` value of 0 it will be scrolled at 1:1 (as it used to), but a child
+`translateZ` value of 0, it will be scrolled at 1:1 (as it used to), but a child
 pushed in Z away from the perspective origin will be scrolled at a different
 rate! Net result: parallax motion. And, very importantly, this is handled as
 part of the browser’s internal scroll machinery automatically, meaning there’s
@@ -167,9 +169,11 @@ in most cases, is fairly straightforward: you add `transform-style: preserve-3d`
 to the element, causing it to propagate any 3D effects (like our perspective
 value) that have been applied further up the tree.
 
-    .parallax-container {
-      transform-style: preserve-3d;
-    }
+```css
+.parallax-container {
+  transform-style: preserve-3d;
+}
+```
 
 In the case of Mobile Safari, however, things are a little more convoluted.
 Applying `overflow-y: scroll` to the container element technically works, but at
@@ -178,10 +182,10 @@ the cost of being able to fling the scrolling element. The solution is to add
 and we won’t get any parallaxing.
 
 From a progressive enhancement point-of-view, this probably isn’t too much of an
-issue. If we can’t parallax in every situation our app will still work, but it
+issue. If we can’t parallax in every situation, our app will still work, but it
 would be nice to figure out a workaround.
 
-### position: sticky to the rescue!
+### `position: sticky` to the rescue!
 
 There is, in fact, some help in the form of `position: sticky`, which exists to
 allow elements to "stick" to the top of the viewport or a given parent element
@@ -205,7 +209,7 @@ at 300px, there’s a new opportunity to use perspectives (or any other transfor
 to manipulate that 300px offset value before it’s applied to any sticky
 elements.
 
-By applying `position: -webkit-sticky` to the parallaxing element we can
+By applying `position: -webkit-sticky` to the parallaxing element, we can
 effectively "reverse" the flattening effect of `-webkit-overflow-scrolling:
 touch`. This ensures that the parallaxing element references the nearest
 ancestor with a scrolling box, which in this case is `.container`. Then,
@@ -218,20 +222,22 @@ which changes the calculated scroll offset and creates a parallax effect.
       </div>
     </div>
 
-    .container {
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-    }
+```css
+.container {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
 
-    .parallax-container {
-      perspective: 1px;
-    }
+.parallax-container {
+  perspective: 1px;
+}
 
-    .parallax-child {
-      position: -webkit-sticky;
-      top: 0px;
-      transform: translate(-2px) scale(3);
-    }
+.parallax-child {
+  position: -webkit-sticky;
+  top: 0px;
+  transform: translate(-2px) scale(3);
+}
+```
 
 This restores the parallax effect for Mobile Safari, which is excellent news all
 round!
@@ -251,7 +257,7 @@ parallax with sticky ends up being the inverse of the one without:
 If that all seems a bit abstract, [take a look at this
 demo](https://jsbin.com/sexiwe/edit?html,css,js,output) by Robert Flack, which
 demonstrates how elements behave differently with and without sticky
-positioning. To see the difference you need Chrome Canary (which is version 56
+positioning. To see the difference, you need Chrome Canary (which is version 56
 at the time of writing) or Safari.
 
 <a href="https://jsbin.com/sexiwe/edit?output">
@@ -270,12 +276,12 @@ smoothed over:
   Chrome, Edge lacks support entirely, and Firefox has [painting bugs when
   sticky is combined with perspective
   transforms](https://bugzilla.mozilla.org/show_bug.cgi?id=1254260). In such
-  cases it’s worth adding a little code to only add `position: sticky` (the
+  cases, it’s worth adding a little code to only add `position: sticky` (the
   `-webkit-` prefixed version) when it’s needed, which is for Mobile Safari
   only.
 * **The effect doesn’t "just work" in Edge.** Edge tries to handle scrolling at
   the OS level, which is generally a good thing, but in this case it prevents it
-  from detecting the perspective changes during scroll. To fix this you can add
+  from detecting the perspective changes during scroll. To fix this, you can add
   a fixed position element, as this seems to [switch Edge over to a
   ](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/5084491/)[non-OS
   scrolling
@@ -295,7 +301,7 @@ smoothed over:
 
 ## Conclusion
 
-Parallaxing is a fun effect when used thoughtfully. As you can see it’s possible
+Parallaxing is a fun effect when used thoughtfully. As you can see, it’s possible
 to implement it in a way that is performant, scroll-coupled, and cross-browser.
 Since it requires a little bit of mathematical wriggling, and a small amount of
 boilerplate to get the desired effect, we have wrapped up a small helper library
