@@ -153,7 +153,7 @@ when DevTools is not open:
        </figcaption>
      </figure>
 
-## Push Messages {: #pushmessages }
+## Push Messages {: #push }
 
 To display a push notification to a user, a [service worker][serviceworker] must first use the
 [Push Message][push] API to receive data from a server. When the service worker is ready to display
