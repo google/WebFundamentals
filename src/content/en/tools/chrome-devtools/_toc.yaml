@@ -138,6 +138,8 @@ toc:
     path: /web/tools/chrome-devtools/snippets
   - title: Sources Panel Overview
     path: /web/tools/chrome-devtools/sources
+  - title: Debug Background Services
+    path: /web/tools/chrome-devtools/javascript/background-services
   - title: Guides
     section:
     - title: Blackbox Chrome Extension Scripts
