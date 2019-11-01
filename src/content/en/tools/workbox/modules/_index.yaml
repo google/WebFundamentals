@@ -18,7 +18,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-sw
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-sw/
+          path: https://glitch.com/edit/#!/workbox-sw
 
       - heading: workbox.core
         description: >
@@ -30,7 +30,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.core
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-core/
+          path: https://glitch.com/edit/#!/workbox-core
 
       - heading: workbox.precaching
         description: >
@@ -42,7 +42,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.precaching
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-precaching/
+          path: https://glitch.com/edit/#!/workbox-precaching
 
       - heading: workbox.routing
         description: >
@@ -54,7 +54,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.routing.Router
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-routing/
+          path: https://glitch.com/edit/#!/workbox-routing
 
     - items:
       - heading: workbox.strategies
@@ -67,7 +67,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.strategies
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-strategies/
+          path: https://glitch.com/edit/#!/workbox-strategies
 
       - heading: workbox.expiration
         description: >
@@ -79,7 +79,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.expiration
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
+          path: https://glitch.com/edit/#!/workbox-expiration
 
       - heading: workbox.backgroundSync
         description: >
@@ -91,7 +91,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
+          path: https://glitch.com/edit/#!/workbox-background-sync-demo
 
       - heading: workbox.googleAnalytics
         description: >
@@ -102,7 +102,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.googleAnalytics
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
+          path: https://glitch.com/edit/#!/workbox-google-analytics
 
     - items:
       - heading: workbox.cacheableResponse
@@ -115,7 +115,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-cacheable-response/
+          path: https://glitch.com/edit/#!/workbox-cacheable-response
 
       - heading: workbox.broadcastUpdate
         description: >
@@ -127,7 +127,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-update/
+          path: https://glitch.com/edit/#!/workbox-broadcast-update-demo
 
       - heading: workbox.rangeRequest
         description: >
@@ -139,7 +139,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-range-requests/
+          path: https://glitch.com/edit/#!/workbox-range-requests
 
       - heading: workbox.streams
         description: >
@@ -149,7 +149,7 @@ landing_page:
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.streams
         - label: Demo
-          path: https://workbox-demos.firebaseapp.com/demo/workbox-streams/
+          path: https://glitch.com/edit/#!/workbox-streams
 
     - items:
       - heading: workbox.navigationPreload
@@ -161,6 +161,8 @@ landing_page:
           path: /web/tools/workbox/modules/workbox-navigation-preload
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/workbox.navigationPreload
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-navigation-preload
 
       # Force Devsite 4-up layout
       - heading: ""
@@ -181,6 +183,8 @@ landing_page:
           path: /web/tools/workbox/modules/workbox-window
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-window
 
       # Force Devsite 4-up layout
       - heading: ""
