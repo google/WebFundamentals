@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-11-03 #}
 {# wf_published_on: 2014-04-29 #}
 {# wf_blink_components: Blink>CSS #}
 
@@ -79,7 +79,6 @@ full screen width.
 Sites using this pattern include:
 
  * [Modernizr](https://modernizr.com/){: .external }
- * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
@@ -104,9 +103,6 @@ larger, with a left `div` and two stacked `div`'s on the right.
 
 Sites using this pattern include:
 
- * [Food Sense](http://foodsense.is/){: .external }
- * [Seminal Responsive Design
-  Example](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
  * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
@@ -157,7 +153,7 @@ absolute positioning.
 
 Sites using this pattern include:
 
- * [HTML5Rocks Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
+ * [HTML5Rocks Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/){: .external }
  * [Google Nexus](https://www.google.com/nexus/){: .external }
  * [Facebook's Mobile Site](https://m.facebook.com/){: .external }
 
