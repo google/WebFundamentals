@@ -6,7 +6,7 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 {# wf_published_on: 2019-10-22 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
-{# wf_featured_snippet: Compiling a single Chromium source file by hand can help dvelopers expriment with compiler optimization options, understand subtle macro details, or minimize a compiler bug. This month, we take a look at how to preprocess source. #}
+{# wf_featured_snippet: Compiling a single Chromium source file by hand can help developers experiment with compiler optimization options, understand subtle macro details, or minimize a compiler bug. This month, we take a look at how to preprocess source. #}
 {# wf_blink_components: N/A #}
 
 <style>
