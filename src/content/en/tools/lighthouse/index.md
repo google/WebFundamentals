@@ -285,6 +285,23 @@ To view a report that's been saved as a Gist:
 
 [share]: images/share.png
 
+## Lighthouse extensibility {: #extensibility }
+
+Lighthouse aims to provide guidance that is relevant and actionable for all web developers. To this end, there are two features now available that allow you to tailor Lighthouse to your specific needs. 
+
+* **Stack Packs**. 
+Many developers today use different technologies (backend/CMS/JavaScript frameworks) to build their web pages. Instead of only surfacing general recommendations, Lighthouse is now able to provide more relevant and actionable advice depending on the tools used. 
+
+Stack Packs allow Lighthouse to detect what platform your site is built on and display specific stack-based recommendations. These recommendations are defined and curated by experts from the community.
+
+To contribute a Stack Pack, review the [Contributing Guidelines](https://github.com/GoogleChrome/lighthouse-stack-packs/blob/master/CONTRIBUTING.md).
+
+* **Lighthouse Plugins**. 
+Lighthouse Plugins allow domain experts in the community to extend the functionality of Lighthouse for their specific needs. You are now able to leverage the data that Lighthouse collects to create new audits. At its core, a Lighthouse plugin is a node module that implements a set of checks that will be run by Lighthouse and added to the report as a new category. 
+
+For more information about how to create your own plugin, check out our [Plugin Handbook](https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md) in the Lighthouse GitHub repo. 
+
+
 ## Contribute to Lighthouse {: #contribute }
 
 Lighthouse is open source and [contributions are welcome](https://github.com/GoogleChrome/lighthouse/blob/master/CONTRIBUTING.md).
