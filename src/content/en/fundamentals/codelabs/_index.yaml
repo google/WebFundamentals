@@ -18,21 +18,22 @@ landing_page:
       description: >
         In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky
         networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
-      path: /web/fundamentals/codelabs/your-first-pwapp/
+      path: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
       buttons:
       - label: Start
-        path: /web/fundamentals/codelabs/your-first-pwapp/
+        path: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
         classname: button button-white
 
-    - heading: Debugging Service Workers
+    - heading: Getting Started with Web Serial
       description: >
-        In this codelab, you'll learn how to debug a service worker using the new DevTools
-        Application panel. You'll also learn how to simulate a Push notification to verify your
-        subscription is properly setup.
-      path: /web/fundamentals/codelabs/debugging-service-workers/
+        In this codelab, you'll build a web page that interacts with a
+        micro:bit board to show different images on its 5x5 LED display.
+        You'll learn about Web Serial, and how to use Readable, Writeable,
+        and Transform Streams to communicate with serial devices in the browser.
+      path: /web/fundamentals/codelabs/web-serial/
       buttons:
       - label: Start
-        path: /web/fundamentals/codelabs/debugging-service-workers/
+        path: /web/fundamentals/codelabs/web-serial/
         classname: button button-white
 
     - heading: Your First Offline Web App

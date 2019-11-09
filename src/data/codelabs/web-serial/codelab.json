@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "source": "1teI-sq_p54FwwYWKar1sbrfUPfnaqdvvLzUgxdTWIi0",
+  "format": "md",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-11-08T23:51:15Z",
+  "id": "web-serial",
+  "duration": 16,
+  "title": "Getting Started with Web Serial",
+  "author": "Pete LePage",
+  "summary": "In this codelab, you'll build a web page that interacts with a micro:bit board to show different images on its 5x5 LED display. You'll learn about Web Serial, and how to use Readable, Writeable, and Transform Streams to communicate with serial devices in the browser.",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "kiosk",
+    "web"
+  ],
+  "ga": "UA-52746336-1",
+  "url": "web-serial"
+}
