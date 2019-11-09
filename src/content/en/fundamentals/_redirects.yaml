@@ -1,5 +1,11 @@
 redirects:
 
+- from: /web/fundamentals/codelabs/your-first-pwapp
+  to: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
+
+- from: /web/fundamentals/codelabs/your-first-pwapp/
+  to: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
+
 - from: /web/fundamentals/layouts/...
   to: /web/fundamentals/design-and-ux/responsive/
 
