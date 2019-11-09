@@ -2,6 +2,12 @@
 
 redirects:
 
+- from: /web/updates/2018/12/web-share-target
+  to: https://web.dev/web-share-target/
+
+- from: /web/updates/2016/09/navigator-share
+  to: https://web.dev/web-share/
+
 - from: /web/updates/2018/12/badging-api
   to: https://web.dev/badging-api/
 

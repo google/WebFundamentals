@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-10-22 #}
+{# wf_updated_on: 2019-11-09 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -200,7 +200,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2018/12/web-share-target">Web Share Target</a>
+        <a href="https://web.dev/web-share-target/">Web Share Target</a>
       </td>
       <td>
         The Web Share Target API allows installed web apps to register with
