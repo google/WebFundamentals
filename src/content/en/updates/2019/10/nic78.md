@@ -86,8 +86,8 @@ worker to pick up changes to an imported script was to change the imported
 script's URL, usually either by adding in a semver value or hash in the URL.
 
 ```js
-importScripts('https://example.com/v1.1.0/index.js'));
-importScripts('https://example.com/index.abcd1234.js'));
+importScripts('https://example.com/v1.1.0/index.js');
+importScripts('https://example.com/index.abcd1234.js');
 ```
 
 Starting in Chrome 78, each time an update check is performed for a top-level
