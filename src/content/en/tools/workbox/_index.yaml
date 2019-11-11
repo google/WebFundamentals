@@ -208,7 +208,7 @@ landing_page:
           <div class="kd-tabbutton">Node Module</div>
           <pre class="prettyprint lang-javascript">const workboxBuild = require('workbox-build');
       workboxBuild.generateSW({
-        swDest: './build/sw.js'
+        swDest: './build/sw.js',
         globDirectory: './app',
         globPatterns: '**/*.{js,css,html,png}',
       });</pre>
