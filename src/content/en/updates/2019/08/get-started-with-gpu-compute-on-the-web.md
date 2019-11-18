@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2019-09-18 #}
+{# wf_updated_on: 2019-11-18 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -150,7 +150,7 @@ Once you have the GPU command encoder, call `copyEncoder.copyBufferToBuffer()`
 as shown below to add this command to the command queue for later execution.
 Finally, finish encoding commands by calling `copyEncoder.finish()` and submit
 those to the GPU device command queue. The queue is responsible for handling
-submissions done via `device.getQueue().submit()` with the GPU commands as
+submissions done via `device.defaultQueue.submit()` with the GPU commands as
 arguments. This will atomically execute all the commands stored in the array in
 order.
 
@@ -167,7 +167,7 @@ copyEncoder.copyBufferToBuffer(
 
 // Submit copy commands.
 const copyCommands = copyEncoder.finish();
-device.getQueue().submit([copyCommands]);
+device.defaultQueue.submit([copyCommands]);
 ```
 
 At this point, GPU queue commands have been sent, but not necessarily executed.
@@ -482,7 +482,7 @@ To end the compute pass encoder, call `passEncoder.endPass()`. Then, create a
 GPU buffer to use as a destination to copy the result matrix buffer with
 `copyBufferToBuffer`. Finally, finish encoding commands with
 `copyEncoder.finish()` and submit those to the GPU device queue by calling
-`device.getQueue().submit()` with the GPU commands.
+`device.defaultQueue.submit()` with the GPU commands.
 
 ```js
 // Get a GPU buffer for reading in an unmapped state.
@@ -502,7 +502,7 @@ commandEncoder.copyBufferToBuffer(
 
 // Submit GPU commands.
 const gpuCommands = commandEncoder.finish();
-device.getQueue().submit([gpuCommands]);
+device.defaultQueue.submit([gpuCommands]);
 ```
 
 ### Read result matrix
