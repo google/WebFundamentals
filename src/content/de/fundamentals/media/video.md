@@ -280,13 +280,6 @@ Vergleichen Sie das Beispiel <a href="https://googlesamples.github.io/web-fundam
 
 ## Videoplayer anpassen 
 
-
-
-
-Videos werden je nach Plattform unterschiedlich dargestellt. Bei Lösungen für Mobilgeräte muss die Geräteausrichtung berücksichtigt werden. Verwenden Sie die Fullscreen-API, um die Vollbildansicht von Videoinhalten zu steuern.
-
-
-
 Videos werden je nach Plattform unterschiedlich dargestellt. Bei Lösungen für Mobilgeräte muss die Geräteausrichtung berücksichtigt werden. Verwenden Sie die Fullscreen-API, um die Vollbildansicht von Videoinhalten zu steuern.
 
 ### Wie die Geräteausrichtung geräteübergreifend funktioniert
