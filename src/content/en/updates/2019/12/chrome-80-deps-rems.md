@@ -48,9 +48,9 @@ that the attached cookie can only be transmitted over a secure protocal such as
 HTTPS.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5633521622188032) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=954551)
+[Chromium Bug](https://crbug.com/954551)
 
-### Don't allow popups during page unload
+## Don't allow popups during page unload
 
 Pages may no longer use `window.open()` to open a new page during unload. The
 Chrome popup blocker already prohibited this, but now it is prohibited whether
@@ -59,30 +59,39 @@ or not the popup blocker is enabled.
 Enterprises can use the `AllowPopupsDuringPageUnload` policy flag to allow
 popups during unload. We expect to remove this flag in Chrome 82.
 
-[Intent to Remove](https://crbug.com/844455) &#124;
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/MkA0A1YKSw4/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5989473649164288) &#124;
-[Chromium Bug](https://groups.google.com/a/chromium.org/d/topic/blink-dev/MkA0A1YKSw4/discussion)
+[Chromium Bug](https://crbug.com/844455)
+
+## Web Components v0 removed
+
+In July Chrome announced [more time to upgrade to Web Components
+v1](/web/updates/2019/07/web-components-time-to-upgrade)
+from Web components v0. In Chrome 80 that time is up. The Web Components v1 APIs
+are a web platform standard that has shipped in Chrome, Safari, Firefox, and
+(soon) Edge. At that time we published guidance for upgrading, which you can
+read by following the link at the top of this paragraph. The following features
+have now been removed.
+
+### Custom Elements
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/4642138092470272) &#124;
+[Chromium Bug](http://crbug.com/180965)
 
 
-### TBD
+### HTML Imports
 
-[Intent to Remove]() &#124;
-[Chrome Platform Status]() &#124;
-[Chromium Bug]()
-
-
-### TBD
-
-[Intent to Remove]() &#124;
-[Chrome Platform Status]() &#124;
-[Chromium Bug]()
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/5144752345317376) &#124;
+[Chromium Bug](http://crbug.com/240592)
 
 
-### TBD
+### Shadow DOM
 
-[Intent to Remove]() &#124;
-[Chrome Platform Status]() &#124;
-[Chromium Bug]()
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/4507242028072960) &#124;
+[Chromium Bug](http://crbug.com/336121)
 
 
 ### TBD
