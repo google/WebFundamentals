@@ -50,6 +50,19 @@ HTTPS.
 [Chrome Platform Status](https://www.chromestatus.com/feature/5633521622188032) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=954551)
 
+### Don't allow popups during page unload
+
+Pages may no longer use `window.open()` to open a new page during unload. The
+Chrome popup blocker already prohibited this, but now it is prohibited whether
+or not the popup blocker is enabled. 
+
+Enterprises can use the `AllowPopupsDuringPageUnload` policy flag to allow
+popups during unload. We expect to remove this flag in Chrome 82.
+
+[Intent to Remove](https://crbug.com/844455) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5989473649164288) &#124;
+[Chromium Bug](https://groups.google.com/a/chromium.org/d/topic/blink-dev/MkA0A1YKSw4/discussion)
+
 
 ### TBD
 
