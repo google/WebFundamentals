@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: WebVR 1.1 has been removed from Chrome.
 
-{# wf_updated_on: 2019-11-20 #}
-{# wf_published_on: 2019-08-15 #}
+{# wf_updated_on: 2019-12-19 #}
+{# wf_published_on: 2019-12-19 #}
 {# wf_tags: deprecations,removals,chrome80,webvr,webxr #}
 {# wf_blink_components: Blink>WebVR #}
 {# wf_featured_image: /web/updates/images/generic/deps-rems.jpg #}
