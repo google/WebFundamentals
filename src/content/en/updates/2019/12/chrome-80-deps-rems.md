@@ -94,6 +94,33 @@ have now been removed.
 [Chromium Bug](http://crbug.com/336121)
 
 
+## Remove -webkit-appearance:button for arbitrary elements
+
+Changes `-webkit-appearance:button` to work only with `<button>` and `<input>`
+buttons. If `button` is specified for an unsupported element, the element has
+the default appearance. All other `-webkit-appearance` keywords already have
+such restriction. 
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/QFXFzfQtlKk/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/4867142128238592) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=981720)
+
+
+
+### TBD
+
+[Intent to Remove]() &#124;
+[Chrome Platform Status]() &#124;
+[Chromium Bug]()
+
+
+### TBD
+
+[Intent to Remove]() &#124;
+[Chrome Platform Status]() &#124;
+[Chromium Bug]()
+
+
 ### TBD
 
 [Intent to Remove]() &#124;
