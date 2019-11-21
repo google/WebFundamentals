@@ -9,7 +9,7 @@ description: Learn how to set up Lighthouse to audit your web apps.
 
 # Lighthouse {: .page-title }
 
-<img src="/web/progressive-web-apps/images/pwa-lighthouse.png"
+<img src="/web/tools/lighthouse/images/lighthouse-logo.svg"
       class="lighthouse-logo attempt-right" alt="Lighthouse Logo">
 
 <style>
@@ -42,7 +42,7 @@ figure {
   margin: 32px;
 }
 .lighthouse-inline {
-  max-height: 1em;
+  max-height: 1.5em;
   vertical-align: middle;
 }
 </style>
@@ -50,7 +50,7 @@ figure {
 Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse),
 automated tool for improving the quality of web pages. You can run it against
 any web page, public or requiring authentication. It has audits for performance,
-accessibility, progressive web apps, and more.
+accessibility, progressive web apps, SEO and more.
 
 You can run Lighthouse in Chrome DevTools, from the command line, or as a
 Node module. You give Lighthouse a URL to audit, it runs a series of audits
@@ -58,6 +58,8 @@ against the page, and then it generates a report on how well the page did.
 From there, use the failing audits as indicators on how to improve the page.
 Each audit has a reference doc explaining why the audit is important, as
 well as how to fix it.
+
+You can also use [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci/blob/master/docs/getting-started.md) to prevent regressions on your sites.
 
 <p class="lighthouse-call-to-action-container">
   <a class="button button-primary lighthouse-primary-call-to-action gc-analytics-event"
@@ -77,11 +79,11 @@ well as how to fix it.
   </a>
 </p>
 
-Check out the video below from Google I/O 2017 to learn more about how to use
+Check out the video below from Google I/O 2019 to learn more about how to use
 and contribute to Lighthouse.
 
 <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="NoRYn6gOtVo"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="mLjxXPHuIJo"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -98,12 +100,12 @@ Choose the Lighthouse workflow that suits you best:
 * [From a web UI](#psi). Run Lighthouse and link to reports without
   installing a thing.
 
-Note: Every Lighthouse workflow requires you to have an instance of Google Chrome
+Note: The CLI and Node workflows require you to have an instance of Google Chrome
 installed on your machine.
 
 ### Run Lighthouse in Chrome DevTools {: #devtools }
 
-Lighthouse now powers the **Audits** panel of Chrome DevTools. To run a report:
+Lighthouse powers the **Audits** panel of Chrome DevTools. To run a report:
 
 1. Download [Google Chrome for Desktop][desktop].
 1. In Google Chrome, go to the URL you want to audit. You can audit any URL on the web.
@@ -121,7 +123,7 @@ Lighthouse now powers the **Audits** panel of Chrome DevTools. To run a report:
 
 1. Click **Perform an audit**. DevTools shows you a list of audit categories.
    Leave them all enabled.
-1. Click **Run audit**. After 60 to 90 seconds, Lighthouse gives you a report
+1. Click **Run audit**. After 30 to 60 seconds, Lighthouse gives you a report
    on the page.
 
      <figure>
@@ -146,7 +148,7 @@ To run an audit:
 
     lighthouse <url>
 
-To see audit options:
+To see all the options:
 
     lighthouse --help
 
@@ -160,9 +162,8 @@ programmatically, as a Node module.
 ### Run Lighthouse as a Chrome Extension {: #extension }
 
 Note: Unless you have a specific reason, you should use the Chrome DevTools workflow
-rather than this Chrome Extension workflow. The DevTools workflow provides
-the same benefits as the Extension workflow, with the added bonus of no installation
-needed.
+rather than this Chrome Extension workflow. The DevTools workflow allows for testing local
+sites and authenticated pages, while the extension does not.
 
 To install the extension:
 
@@ -186,20 +187,20 @@ To run an audit:
    menu expands.
 
      <figure>
-       <img src="images/menu.png" alt="The Lighthouse menu.">
+       <img src="images/extension.png" alt="The Lighthouse extension">
        <figcaption>
          <b>Figure 3</b>. The Lighthouse menu
        </figcaption>
      </figure>
 
-[icon]: images/lighthouse-icon-16.png
+[icon]: images/lh_favicon_32px.png
 
 1. Click **Generate report**. Lighthouse runs its audits against the
    currently-focused page, then opens up a new tab with a report of the
    results.
 
      <figure>
-       <img src="images/report.png" alt="The Lighthouse menu.">
+       <img src="images/report.png" alt="The Lighthouse report">
        <figcaption>
          <b>Figure 4</b>. A Lighthouse report
        </figcaption>
@@ -247,7 +248,7 @@ Lighthouse workflow you're using:
 
     `lighthouse --output json --output-path <path/for/output.json>`
 
-* **Chrome Extension**. Click **Export** > **Save as JSON**.
+* **Lighthouse Viewer**. Click **Export** > **Save as JSON**.
 
 To view the report data:
 
@@ -260,10 +261,9 @@ To view the report data:
 If you don't want to manually pass around JSON files, you can also share your
 reports as secret GitHub Gists. One benefit of Gists is free version control.
 
-To export a report as a Gist from the Chrome Extension version of
-Lighthouse:
+To export a report as a Gist from the report:
 
-1. Click **Export** > **Open In Viewer**. The report opens in the
+1. (If already on the viewer, skip this step) Click **Export** > **Open In Viewer**. The report opens in the
    Viewer, located at `https://googlechrome.github.io/lighthouse/viewer/`.
 1. In the Viewer, click **Share** ![Share][share]{: .lighthouse-inline}. The
    first time you do this, a popup asks permission to access your basic
