@@ -50,6 +50,46 @@ HTTPS.
 [Chrome Platform Status](https://www.chromestatus.com/feature/5633521622188032) &#124;
 [Chromium Bug](https://crbug.com/954551)
 
+## FTP support deprecated
+
+The current FTP implementation in Chrome has no support for encrypted
+connections (FTPS), nor proxies. Usage of FTP in the browser is sufficiently low
+that it is no longer viable to invest in improving the existing FTP client. In
+addition more capable FTP clients are available on all affected platforms.
+
+Chrome 72 removed support for fetching document subresources over FTP and
+rendering of top level FTP resources. Currently navigating to FTP URLs results
+in showing a directory listing or a download depending on the type of resource.
+A bug in Google Chrome 74 and later resulted in dropping support for accessing
+FTP URLs over HTTP proxies. Proxy support for FTP was removed entirely in Google
+Chrome 76.
+
+The remaining capabilities of Google Chrome’s FTP implementation are restricted
+to either displaying a directory listing or downloading a resource over
+unencrypted connections. 
+
+The deprecation timeline is tentatively set as follows:
+
+**Chrome 80 (stable in February 2020)**
+
+FTP is disabled by default for *non-enterprise clients*, but may be turned on
+using either the `--enable-ftp` or the `--enable-features=FtpProtocol`
+command-line flags.
+
+**Chrome 81 (stable in March 2020)**
+
+FTP is disabled by default for *all Chrome installations*, but may be turned on
+using either the `--enable-ftp` or the `--enable-features=FtpProtocol`
+command-line flags.
+
+**Chrome 82 (stable in April 2020)**
+
+FTP support will be completely removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/e1hkwUL4p3w/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/6246151319715840) &#124;
+[Chromium Bug](https://crbug.com/333943)
+
 ## Don't allow popups during page unload
 
 Pages may no longer use `window.open()` to open a new page during unload. The
