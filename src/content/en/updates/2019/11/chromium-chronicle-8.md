@@ -37,9 +37,9 @@ traces** to help debug memory issues. Let's take a look at an example
 ([crbug/956230](https://crbug.com/956230)) of some of the additional data
 presented in the crash UI:
 
-<img src="/web/updates/images/2019/12/cr-chron/img1.png">
+<img src="/web/updates/images/2019/11/cr-chron/img1.png">
 
-<img src="/web/updates/images/2019/12/cr-chron/img2.png">
+<img src="/web/updates/images/2019/11/cr-chron/img2.png">
 
 The use and deallocation both originate in `PDFiumEngine::ExtendSelection()`.
 The source quickly shows the bug is a use of an invalidated `std::vector`
