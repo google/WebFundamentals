@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2019-11-18 #}
+{# wf_updated_on: 2019-11-26 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -530,6 +530,52 @@ console.log(new Float32Array(arrayBuffer));
 
 Congratulations! You made it. You can [play with the sample].
 
+## One last trick
+
+One way of making your code easier to read is to use the handy
+`getBindGroupLayout` method of the compute pipeline to [infer the bind group
+layout from the shader module]. This trick removes the need from creating a
+custom bind group layout and specifying a pipeline layout in your compute
+pipeline as you can see below.
+
+An illustration of `getBindGroupLayout` for the previous sample is [available].
+
+```
+ const computePipeline = device.createComputePipeline({
+-  layout: device.createPipelineLayout({
+-    bindGroupLayouts: [bindGroupLayout]
+-  }),
+   computeStage: {
+```
+
+```
+-// Bind group layout and bind group
+- const bindGroupLayout = device.createBindGroupLayout({
+-   bindings: [
+-     {
+-       binding: 0,
+-       visibility: GPUShaderStage.COMPUTE,
+-       type: "storage-buffer"
+-     },
+-     {
+-       binding: 1,
+-       visibility: GPUShaderStage.COMPUTE,
+-       type: "storage-buffer"
+-     },
+-     {
+-       binding: 2,
+-       visibility: GPUShaderStage.COMPUTE,
+-       type: "storage-buffer"
+-     }
+-   ]
+- });
++// Bind group
+  const bindGroup = device.createBindGroup({
+-  layout: bindGroupLayout,
++  layout: computePipeline.getBindGroupLayout(0 /* index */),
+   bindings: [
+```
+
 ## Performance findings
 
 So how does running matrix multiplication on a GPU compare to running it on a
@@ -555,6 +601,8 @@ articles soon featuring more deep dives in GPU Compute and on how rendering
 [@webgpu/glslang]: https://www.npmjs.com/package/@webgpu/glslang
 [SPIR-V]: https://www.khronos.org/spir/
 [play with the sample]: https://glitch.com/edit/#!/gpu-compute-sample-2
+[infer the bind group layout from the shader module]: https://github.com/gpuweb/gpuweb/issues/446
+[available]: https://glitch.com/edit/#!/gpu-compute-sample-3
 
 {% include "web/_shared/helpful.html" %}
 
