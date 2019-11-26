@@ -4,12 +4,12 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2019-11-08T23:51:15Z",
+  "updated": "2019-11-14T23:43:49Z",
   "id": "web-serial",
   "duration": 16,
-  "title": "Getting Started with Web Serial",
+  "title": "Getting started with the Web Serial API",
   "author": "Pete LePage",
-  "summary": "In this codelab, you'll build a web page that interacts with a micro:bit board to show different images on its 5x5 LED display. You'll learn about Web Serial, and how to use Readable, Writeable, and Transform Streams to communicate with serial devices in the browser.",
+  "summary": "In this codelab, you'll build a web page that interacts with a BBC micro:bit board to show images on its 5x5 LED display. You'll learn about the Web Serial API and how to use readable, writeable, and transform streams to communicate with serial devices through the browser.",
   "theme": "web",
   "status": [
     "published"
