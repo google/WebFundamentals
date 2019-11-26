@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-10-22 #}
+{# wf_updated_on: 2019-11-26 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -166,8 +166,8 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         the device from going to sleep when an application needs to keep
         running.
         <br><br>
-        <b>Current Status:</b> Behind a flag.<br>
-        <b>Last Updated:</b> October 22nd, 2019
+        <b>Current Status:</b> Origin Trial.<br>
+        <b>Last Updated:</b> November, 2019
       </td>
     </tr>
   </tbody>
@@ -200,7 +200,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
     </tr>
     <tr>
       <td>
-        <a href="/web/updates/2018/12/web-share-target">Web Share Target</a>
+        <a href="https://web.dev/web-share-target/">Web Share Target</a>
       </td>
       <td>
         The Web Share Target API allows installed web apps to register with
@@ -209,7 +209,21 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         button.
         <br><br>
         <b>Status:</b> Launched in Chrome 71<br>
-        <b>Last Updated:</b> December 5th, 2018
+        <b>Last Updated:</b> November 8th, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://web.dev/web-share/">Web Share</a>
+      </td>
+      <td>
+        With the Web Share API, web apps are able to use the same
+        system-provided share capabilities as native apps. The Web Share API
+        makes it possible for web apps to share links, text, and files to other
+        apps installed on the device in the same way as native apps.
+        <br><br>
+        <b>Status:</b> Launched in Chrome 61<br>
+        <b>Last Updated:</b> November 8th, 2019
       </td>
     </tr>
   </tbody>
