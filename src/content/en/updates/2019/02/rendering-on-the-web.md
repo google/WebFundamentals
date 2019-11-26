@@ -115,7 +115,7 @@ and TTI" width="280">
 
 Solutions for static rendering come in all shapes and sizes. Tools like [Gatsby]
 are designed to make developers feel like their application is being rendered
-dynamically rather than generated as a build step. Others like [Jekyl] and
+dynamically rather than generated as a build step. Others like [Jekyll] and
 [Metalsmith] embrace their static nature, providing a more template-driven
 approach.
 
@@ -374,7 +374,7 @@ Sebastian Markbåge
 [Universal]: https://angular.io/guide/universal
 [Gatsby]: https://www.gatsbyjs.org
 [Navi]: https://frontarm.com/navi/
-[Jekyl]: https://jekyllrb.com
+[Jekyll]: https://jekyllrb.com
 [Metalsmith]: https://metalsmith.io
 [Progressive Enhancement]: https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement
 
