@@ -30,10 +30,10 @@ landing_page:
         micro:bit board to show different images on its 5x5 LED display.
         You'll learn about Web Serial, and how to use Readable, Writeable,
         and Transform Streams to communicate with serial devices in the browser.
-      path: /web/fundamentals/codelabs/web-serial/
+      path: https://codelabs.developers.google.com/codelabs/web-serial/
       buttons:
       - label: Start
-        path: /web/fundamentals/codelabs/web-serial/
+        path: https://codelabs.developers.google.com/codelabs/web-serial/
         classname: button button-white
 
     - heading: Your First Offline Web App
