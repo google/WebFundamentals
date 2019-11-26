@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-12-01 #}
-{# wf_published_on: 2019-12-01 #}
+{# wf_updated_on: 2019-11-26 #}
+{# wf_published_on: 2019-11-26 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
 {# wf_featured_snippet: GWP-ASan is a heap-only memory error detector designed to be used in the wild. It detects use-after-frees, buffer overflows/underflows, and double frees. Unlike ASan, it does not detect errors on the stack or in globals. #}
