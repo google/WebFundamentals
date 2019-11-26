@@ -42,10 +42,10 @@ landing_page:
 
   rows:
 
-  - classname: devsite-landing-row-100
-    background: grey
-    items:
-    - youtube_id: nImH_dq1NpM
+  # - classname: devsite-landing-row-100
+  #   background: grey
+  #   items:
+  #   - youtube_id: nImH_dq1NpM
 
   - classname: wf-landing-row
     items:
