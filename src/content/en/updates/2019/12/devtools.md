@@ -15,16 +15,11 @@ description: TODO
 
 Resume: https://chromium.googlesource.com/devtools/devtools-frontend/+log?s=fd90361fadb2f8127747016563672b2f3f5f9955
 
+## Request initiator chain 
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/df0ca90392989452ad997537308e52a9257f3377
+
 ## WebAssembly {: #webassembly }
-
-This cl adds Ctrl+G and F3 as keyboard shortcuts
-for windows and linux to find the next occurrence
-while a search is open (not necessarily focused).
-The default behaviour of Ctrl+G opening the goto
-line popup still works as long as the search is not
-opened.
-
-What's Mac?
 
 <figure>
   <img src="../../images/2019/12/TODO.png"
@@ -34,11 +29,15 @@ What's Mac?
   </figcaption>
 </figure>
 
-{# https://chromium.googlesource.com/chromium/src/+/40294377601150bd8c37ee375a6cfcdbd01b9630 #}
+https://chromium.googlesource.com/devtools/devtools-frontend/+/1a8762b0f1a26f977d082f93aa518d5a7a025e37
 
 Chromium issue [#887586](https://crbug.com/887586)
 
 https://docs.google.com/document/d/1Kn4TwTQ9XxPhhAClEMg-qvMtuh7ZcHP4eS27xUCmbQM/edit?ts=5dde8a56
+
+## import/export formatting
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/ab8035da9c1a9050b84971f177d54b5516000205
 
 ## Highlight selected network request in Overview {: #overview }
 
@@ -109,7 +108,13 @@ What's Mac?
 
 Chromium issue [#887586](https://crbug.com/887586)
 
-## Lighthouse 5.6 {: #lighthouse }
+## Lighthouse
+
+### New start view
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/e66080e9a1ff79cba8130169c16ebcd222747510
+
+### Lighthouse 5.6 {: #lighthouse }
 
 <figure>
   <img src="../../images/2019/12/TODO.png"
@@ -122,6 +127,18 @@ Chromium issue [#887586](https://crbug.com/887586)
 {# https://chromium.googlesource.com/chromium/src/+/5f16f693662c78467b8ae531a3f03e37ccf94c69 #}
 
 Chromium issue [#772558](https://crbug.com/772558)
+
+### Lighthouse 5.7
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/3ee5ac7b0e2c4078e303c09e9de2be0cd93bdd2b
+
+### Linkable resources
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/0403a42fb12935d58cebd4c471ac084f9fc33b61
+
+## Updated Firefox User Agent string
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/f05ffb295a3a4c36f8a5154285f6641a87f1f8b5
 
 ## URL and path columns in Network panel {: #network }
 
@@ -137,7 +154,9 @@ Chromium issue [#772558](https://crbug.com/772558)
 
 Chromium issue [#993366](https://crbug.com/993366)
 
-## Coverage on reload {: #coverage }
+## Coverage
+
+### Coverage on reload {: #coverage }
 
 <figure>
   <img src="../../images/2019/12/TODO.png"
@@ -150,6 +169,18 @@ Chromium issue [#993366](https://crbug.com/993366)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4a1e8c7288534a29a48a35d7cd6477d22e6555d2 #}
 
 Chromium issue [#1004203](https://crbug.com/1004203)
+
+### Per-function coverage
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/d4f572c25cc6d4e135911d87e0aa3b88b0aba68f
+
+## Auto-stepping...?
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ca5d5c442a1ff23ff228af8c0143887f6722a6
+
+## Main-thread scrolling reasons...?
+
+https://chromium.googlesource.com/devtools/devtools-frontend/+/36ab40d0bfb153e691873b892a98c0be34f083f7
 
 ## Feedback {: #feedback }
 
