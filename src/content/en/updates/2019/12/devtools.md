@@ -13,13 +13,12 @@ description: TODO
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Resume: https://chromium.googlesource.com/devtools/devtools-frontend/+log?s=fd90361fadb2f8127747016563672b2f3f5f9955
+<!-- "Find Next"
+   https://chromium.googlesource.com/chromium/src/+/40294377601150bd8c37ee375a6cfcdbd01b9630
+   https://crbug.com/887586
+-->
 
-## Request initiator chain 
-
-https://chromium.googlesource.com/devtools/devtools-frontend/+/df0ca90392989452ad997537308e52a9257f3377
-
-## WebAssembly {: #webassembly }
+## TEMPLATE
 
 <figure>
   <img src="../../images/2019/12/TODO.png"
@@ -29,134 +28,159 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/df0ca90392989452a
   </figcaption>
 </figure>
 
-https://chromium.googlesource.com/devtools/devtools-frontend/+/1a8762b0f1a26f977d082f93aa518d5a7a025e37
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/TODO #}
 
-Chromium issue [#887586](https://crbug.com/887586)
+Chromium issue [#TODO](https://crbug.com/TODO)
 
-https://docs.google.com/document/d/1Kn4TwTQ9XxPhhAClEMg-qvMtuh7ZcHP4eS27xUCmbQM/edit?ts=5dde8a56
+## Support for `let` redeclarations in the Console {: #let }
 
-## import/export formatting
+The Console now supports redeclarations of `let` statements.
 
-https://chromium.googlesource.com/devtools/devtools-frontend/+/ab8035da9c1a9050b84971f177d54b5516000205
+<aside class="warning">
+  Redeclaring a <code>let</code> statement in a script will still cause a
+  <code>SyntaxError</code>. <code>let</code> redeclarations only work in the Console.
+</aside>
 
-## Highlight selected network request in Overview {: #overview }
+Previously, when redeclaring a local variable with `let`, the Console would throw an error:
 
 <figure>
-  <img src="../../images/2019/12/TODO.png"
-       alt="TODO"/>
+  <img src="../../images/2019/12/letbefore.png"
+       alt="A screenshot of the Console in Chrome 78 showing that the let redeclaration fails."/>
+</figure>
+
+Now, the Console allows the redeclaration:
+
+<figure>
+  <img src="../../images/2019/12/letafter.png"
+       alt="A screenshot of the Console in Chrome 80 showing that the let redeclaration succeeds."/>
+</figure>
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/53a8548ce03957e7704ae88b780dfa019bf967e0 #}
+
+Chromium issue [#1004193](https://crbug.com/1004193)
+
+## Improved WebAssembly debugging {: #webassembly }
+
+DevTools has started to support the [DWARF Debugging Standard](http://dwarfstd.org/),
+which means that you can now step over code, set breakpoints, and resolve stack traces in your
+source languages within DevTools.
+Check out [Improved WebAssembly debugging in Chrome DevTools](/web/updates/2019/12/webassembly)
+for the full story.
+
+<figure>
+  <img src="../../images/2019/12/dwarf.png"
+       alt="A screenshot of the new DWARF-powered WebAssembly debugging."/>
+</figure>
+
+## Network panel updates {: #network }
+
+### Request Initiator Chains in the Initiator tab {: #initiators }
+
+You can now view the initiators and dependencies of a network request as a nested list.
+After [logging network activity in the Network panel](/web/tools/chrome-devtools/network), click
+a resource and then go to the **Initiator** tab to view its **Request Initiator Chain**:
+
+* The *inspected resource* is bold. In Figure X, `https://web.dev/default-627898b5.js`
+  is the inspected resource.
+* The resources above the inspected resource are the *initiators*. In Figure X,
+  `https://web.dev/bootstrap.js` is the initiator of `https://web.dev/default-627898b5.js`.
+  In other words, `https://web.dev/bootstrap.js` caused the network request for 
+  `https://web.dev/default-627898b5.js`.
+* The resources below the inspected resource are the *dependencies*. In Figure X,
+  `https://web.dev/chunk-f34f99f7.js` is a dependency of `https://web.dev/default-627898b5.js`.
+  In other words, `https://web.dev/default-627898b5.js` caused the network request for
+  `https://web.dev/chunk-f34f99f7.js`.
+
+
+<figure>
+  <img src="../../images/2019/12/initiators.png"
+       alt="A screenshot of a Request Initiator Chain in the Initiator tab"/>
   <figcaption>
-    TODO
+    Figure X. A Request Initiator Chain.
   </figcaption>
+</figure>
+
+<aside class="note">
+  Initiator and dependency information can also be accessed by holding <kbd>Shift</kbd> and then
+  hovering over network resources. See 
+  <a href="/web/tools/chrome-devtools/network/reference#initiators-dependencies">View
+  initiators and dependencies</a>.
+</aside>
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/df0ca90392989452ad997537308e52a9257f3377 #}
+
+Chromium issue [#842488](https://crbug.com/842488)
+
+### Highlight selected network request in Overview {: #overview }
+
+After you click a network resource in order to inspect it, the Network panel now puts a blue border 
+around that resource in the **Overview**. This can help you detect if the network request is 
+happening earlier or later than expected.
+
+<figure>
+  <img src="../../images/2019/12/overview.png"
+       alt="A screenshot of the Overview pane highlighting the inspected resource."/>
 </figure>
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3c77a5937675b59056598afd236b22eaeedc679f #}
 
 Chromium issue [#988253](https://crbug.com/988253)
 
-## Keyboard-accessible Search {: #search }
+### URL and path columns in the Network panel {: #columns }
+
+Use the new **Path** and **URL** columns in the **Network** panel to see the absolute path
+or full URL of each network resource.
 
 <figure>
-  <img src="../../images/2019/12/TODO.png"
-       alt="TODO"/>
-  <figcaption>
-    TODO
-  </figcaption>
+  <img src="../../images/2019/12/columns.png"
+       alt="A screenshot of the new Path and URL columns in the Network panel."/>
 </figure>
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ebb539c3b295d72b5c570f604908d4c00e5a58ed #}
-
-Chromium issue [#963183](https://crbug.com/963183)
-
-## REPL {: #REPL }
-
-<figure>
-  <img src="../../images/2019/12/TODO.png"
-       alt="TODO"/>
-  <figcaption>
-    TODO
-  </figcaption>
-</figure>
-
-https://chromium.googlesource.com/devtools/devtools-frontend/+log?s=c20eb36aa74460b2cd476e2ec4af675e66e62f00
-
-https://chromium.googlesource.com/devtools/devtools-frontend/+/53a8548ce03957e7704ae88b780dfa019bf967e0
-
-{# TODO #}
-
-Chromium issue [#TODO](https://crbug.com/TODO)
-
-## Find next {: #findnext }
-
-This cl adds Ctrl+G and F3 as keyboard shortcuts
-for windows and linux to find the next occurrence
-while a search is open (not necessarily focused).
-The default behaviour of Ctrl+G opening the goto
-line popup still works as long as the search is not
-opened.
-
-What's Mac?
-
-<figure>
-  <img src="../../images/2019/12/TODO.png"
-       alt="TODO"/>
-  <figcaption>
-    TODO
-  </figcaption>
-</figure>
-
-{# https://chromium.googlesource.com/chromium/src/+/40294377601150bd8c37ee375a6cfcdbd01b9630 #}
-
-Chromium issue [#887586](https://crbug.com/887586)
-
-## Lighthouse
-
-### New start view
-
-https://chromium.googlesource.com/devtools/devtools-frontend/+/e66080e9a1ff79cba8130169c16ebcd222747510
-
-### Lighthouse 5.6 {: #lighthouse }
-
-<figure>
-  <img src="../../images/2019/12/TODO.png"
-       alt="TODO"/>
-  <figcaption>
-    TODO
-  </figcaption>
-</figure>
-
-{# https://chromium.googlesource.com/chromium/src/+/5f16f693662c78467b8ae531a3f03e37ccf94c69 #}
-
-Chromium issue [#772558](https://crbug.com/772558)
-
-### Lighthouse 5.7
-
-https://chromium.googlesource.com/devtools/devtools-frontend/+/3ee5ac7b0e2c4078e303c09e9de2be0cd93bdd2b
-
-### Linkable resources
-
-https://chromium.googlesource.com/devtools/devtools-frontend/+/0403a42fb12935d58cebd4c471ac084f9fc33b61
-
-## Updated Firefox User Agent string
-
-https://chromium.googlesource.com/devtools/devtools-frontend/+/f05ffb295a3a4c36f8a5154285f6641a87f1f8b5
-
-## URL and path columns in Network panel {: #network }
-
-<figure>
-  <img src="../../images/2019/12/TODO.png"
-       alt="TODO"/>
-  <figcaption>
-    TODO
-  </figcaption>
-</figure>
+Right-click the **Waterfall** table header and select **Path** or **URL** to show the new
+columns.
 
 {# https://chromium.googlesource.com/chromium/src/+/923cd866fb089619bbbd971ff16cd7d766c1fb67 #}
 
 Chromium issue [#993366](https://crbug.com/993366)
 
-## Coverage
+### Updated User-Agent string for Firefox {: #firefox }
 
-### Coverage on reload {: #coverage }
+The **Network Conditions** tab enables you to instruct Chrome to send different User-Agent
+header values when Chrome requests network resources. The User-Agent strings for Firefox have been
+updated.
+
+<figure>
+  <img src="../../images/2019/12/useragent.png"
+       alt="A screenshot of the User Agent menu in the Network Conditions tab."/>
+</figure>
+
+To access **Network Conditions**, [open the Command Menu](/web/tools/chrome-devtools/command-menu)
+and run the `Show Network Conditions` command.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/f05ffb295a3a4c36f8a5154285f6641a87f1f8b5 #}
+
+Chromium issue [#1029031](https://crbug.com/1029031)
+
+## Audits panel updates {: #audits }
+
+### New configuration UI {: #config }
+
+[throttling]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling
+
+The configuration UI has a new, responsive design, and the throttling configuration options have
+been simplified. See [Audits Panel Throttling][throttling] for more information on the throttling
+UI changes.
+
+<figure>
+  <img src="../../images/2019/12/start.png"
+       alt="The new configuration UI."/>
+</figure>
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/e66080e9a1ff79cba8130169c16ebcd222747510 #}x
+
+## Coverage tab updates {: #coverage }
+
+### Coverage on reload {: #reload }
 
 <figure>
   <img src="../../images/2019/12/TODO.png"
@@ -170,17 +194,23 @@ Chromium issue [#993366](https://crbug.com/993366)
 
 Chromium issue [#1004203](https://crbug.com/1004203)
 
-### Per-function coverage
+### Per-function or per-block coverage {: #function }
 
-https://chromium.googlesource.com/devtools/devtools-frontend/+/d4f572c25cc6d4e135911d87e0aa3b88b0aba68f
+The [Coverage tab](/web/tools/chrome-devtools/coverage) has a new dropdown menu that lets 
+you specify whether code coverage
+data should be collected **per function** or **per block**. **Per block** coverage is
+more detailed but also far more expensive to collect. DevTools uses **per function** coverage
+by default now.
 
-## Auto-stepping...?
+<aside class="caution">
+  You may see large code coverage differences in HTML files depending on whether you use
+  <b>per function</b> or <b>per block</b> mode.
+  When using <b>per function</b> mode, inline scripts in HTML files are treated as functions.
+  If the script executes at all then DevTools will mark the entire script as used code. Only if
+  the script doesn't execute at all will DevTools mark the script as unused code.
+</aside>
 
-https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ca5d5c442a1ff23ff228af8c0143887f6722a6
-
-## Main-thread scrolling reasons...?
-
-https://chromium.googlesource.com/devtools/devtools-frontend/+/36ab40d0bfb153e691873b892a98c0be34f083f7
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4f572c25cc6d4e135911d87e0aa3b88b0aba68f #}
 
 ## Feedback {: #feedback }
 

@@ -2087,3 +2087,15 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
+
+ingvarstepanyan:
+  name:
+    given: Ingvar
+    family: Stepanyan
+  org:
+    name: Google
+  country: UK
+  role:
+    - author
+  description:
+    en: Developer Advocate, V8 & WebAssembly
