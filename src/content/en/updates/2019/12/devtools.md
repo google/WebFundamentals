@@ -1,40 +1,23 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Support for let redeclarations in the Console, improved WebAssembly debugging, and more.
 
 {# wf_updated_on: 2019-12-05 #}
 {# wf_published_on: 2019-12-05 #}
 {# wf_tags: chrome80, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Support for let redeclarations in the Console, improved WebAssembly debugging, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 80) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-<!-- "Find Next"
-   https://chromium.googlesource.com/chromium/src/+/40294377601150bd8c37ee375a6cfcdbd01b9630
-   https://crbug.com/887586
--->
-
-## TEMPLATE
-
-<figure>
-  <img src="../../images/2019/12/TODO.png"
-       alt="TODO"/>
-  <figcaption>
-    TODO
-  </figcaption>
-</figure>
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/TODO #}
-
-Chromium issue [#TODO](https://crbug.com/TODO)
-
 ## Support for `let` redeclarations in the Console {: #let }
 
-The Console now supports redeclarations of `let` statements.
+The Console now supports redeclarations of `let` statements. The inability to redeclare
+`let` statements was a common annoyance for web developers who use the Console to experiment with
+new JavaScript code.
 
 <aside class="warning">
   Redeclaring a <code>let</code> statement in a script will still cause a
@@ -76,29 +59,29 @@ for the full story.
 
 ### Request Initiator Chains in the Initiator tab {: #initiators }
 
-You can now view the initiators and dependencies of a network request as a nested list.
-After [logging network activity in the Network panel](/web/tools/chrome-devtools/network), click
-a resource and then go to the **Initiator** tab to view its **Request Initiator Chain**:
-
-* The *inspected resource* is bold. In Figure X, `https://web.dev/default-627898b5.js`
-  is the inspected resource.
-* The resources above the inspected resource are the *initiators*. In Figure X,
-  `https://web.dev/bootstrap.js` is the initiator of `https://web.dev/default-627898b5.js`.
-  In other words, `https://web.dev/bootstrap.js` caused the network request for 
-  `https://web.dev/default-627898b5.js`.
-* The resources below the inspected resource are the *dependencies*. In Figure X,
-  `https://web.dev/chunk-f34f99f7.js` is a dependency of `https://web.dev/default-627898b5.js`.
-  In other words, `https://web.dev/default-627898b5.js` caused the network request for
-  `https://web.dev/chunk-f34f99f7.js`.
-
+You can now view the initiators and dependencies of a network request as a nested list. This
+can help you understand why a resource was requested, or what network activity a certain resource
+(such as a script) caused.
 
 <figure>
   <img src="../../images/2019/12/initiators.png"
        alt="A screenshot of a Request Initiator Chain in the Initiator tab"/>
-  <figcaption>
-    Figure X. A Request Initiator Chain.
-  </figcaption>
 </figure>
+
+
+After [logging network activity in the Network panel](/web/tools/chrome-devtools/network), click
+a resource and then go to the **Initiator** tab to view its **Request Initiator Chain**:
+
+* The *inspected resource* is bold. In the screenshot above, `https://web.dev/default-627898b5.js`
+  is the inspected resource.
+* The resources above the inspected resource are the *initiators*. In the screenshot above,
+  `https://web.dev/bootstrap.js` is the initiator of `https://web.dev/default-627898b5.js`.
+  In other words, `https://web.dev/bootstrap.js` caused the network request for 
+  `https://web.dev/default-627898b5.js`.
+* The resources below the inspected resource are the *dependencies*. In the screenshot above,
+  `https://web.dev/chunk-f34f99f7.js` is a dependency of `https://web.dev/default-627898b5.js`.
+  In other words, `https://web.dev/default-627898b5.js` caused the network request for
+  `https://web.dev/chunk-f34f99f7.js`.
 
 <aside class="note">
   Initiator and dependency information can also be accessed by holding <kbd>Shift</kbd> and then
@@ -111,7 +94,7 @@ a resource and then go to the **Initiator** tab to view its **Request Initiator 
 
 Chromium issue [#842488](https://crbug.com/842488)
 
-### Highlight selected network request in Overview {: #overview }
+### Highlight the selected network request in the Overview {: #overview }
 
 After you click a network resource in order to inspect it, the Network panel now puts a blue border 
 around that resource in the **Overview**. This can help you detect if the network request is 
@@ -176,25 +159,11 @@ UI changes.
        alt="The new configuration UI."/>
 </figure>
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/e66080e9a1ff79cba8130169c16ebcd222747510 #}x
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/e66080e9a1ff79cba8130169c16ebcd222747510 #}
 
 ## Coverage tab updates {: #coverage }
 
-### Coverage on reload {: #reload }
-
-<figure>
-  <img src="../../images/2019/12/TODO.png"
-       alt="TODO"/>
-  <figcaption>
-    TODO
-  </figcaption>
-</figure>
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/4a1e8c7288534a29a48a35d7cd6477d22e6555d2 #}
-
-Chromium issue [#1004203](https://crbug.com/1004203)
-
-### Per-function or per-block coverage {: #function }
+### Per-function or per-block coverage modes {: #modes }
 
 The [Coverage tab](/web/tools/chrome-devtools/coverage) has a new dropdown menu that lets 
 you specify whether code coverage
@@ -210,7 +179,22 @@ by default now.
   the script doesn't execute at all will DevTools mark the script as unused code.
 </aside>
 
+<figure>
+  <img src="../../images/2019/12/modes.png"
+       alt="The coverage mode dropdown menu."/>
+</figure>
+
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d4f572c25cc6d4e135911d87e0aa3b88b0aba68f #}
+
+### Coverage must now be initiated by a page reload {: #reload }
+
+Toggling code coverage without a page reload has been removed because the coverage data
+was unreliable. For example, a function can be reported as unused if its execution 
+was a long time ago and V8's garbage collector has cleaned it up.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/4a1e8c7288534a29a48a35d7cd6477d22e6555d2 #}
+
+Chromium issue [#1004203](https://crbug.com/1004203)
 
 ## Feedback {: #feedback }
 
