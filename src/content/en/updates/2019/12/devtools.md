@@ -146,6 +146,10 @@ Chromium issue [#1029031](https://crbug.com/1029031)
 
 ## Audits panel updates {: #audits }
 
+### Plugins {: #plugins }
+
+TODO
+
 ### New configuration UI {: #config }
 
 [throttling]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling
