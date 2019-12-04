@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Support for let redeclarations in the Console, improved WebAssembly debugging, and more.
+description: Support for let and class redeclarations in the Console, improved WebAssembly debugging, and more.
 
 {# wf_updated_on: 2019-12-05 #}
 {# wf_published_on: 2019-12-05 #}
 {# wf_tags: chrome80, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Support for let redeclarations in the Console, improved WebAssembly debugging, and more. #}
+{# wf_featured_snippet: Support for let and class redeclarations in the Console, improved WebAssembly debugging, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 80) {: .page-title }
@@ -152,10 +152,6 @@ and run the `Show Network Conditions` command.
 Chromium issue [#1029031](https://crbug.com/1029031)
 
 ## Audits panel updates {: #audits }
-
-### Plugins {: #plugins }
-
-TODO
 
 ### New configuration UI {: #config }
 
