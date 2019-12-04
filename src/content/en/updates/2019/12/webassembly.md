@@ -45,10 +45,11 @@ However, source maps were designed for text formats with clear mappings to JavaS
 On the other hand, many native languages already have a common debugging format,
 [DWARF](http://dwarfstd.org/), that provides all the necessary information for debuggers to resolve locations, variable names, type layouts, and more.
 
-While there are still some WebAssembly-specific features that need to be added for full compatibility, compilers like Clang and Rust already support emitting DWARF information in WebAssembly modules, which enabled the DevTools team to start integrating DWARF information
-directly into DevTools.
+While there are still some WebAssembly-specific features that need to be added for full compatibility, compilers like Clang and Rust already support emitting DWARF information in WebAssembly modules, which enabled the DevTools team to start using it
+directly in DevTools.
 
-As a first step, the Chrome DevTools team implemented native source mapping using this information, so you can start debugging Wasm modules produced by any of these compilers without resorting to the disassembled format or having to use any custom scripts.
+As a first step, DevTools now supports native source mapping using this information, so you can start debugging Wasm modules produced by any of these compilers without resorting to the disassembled format or having to use any custom scripts.
+
 Instead, you just need to tell your compiler to include debug info like you normally would on other platforms. For example, in Clang this can be done by passing the `-g` flag during compilation:
 
     clang -g ...sources… -target wasm32 -o out.wasm
@@ -57,7 +58,7 @@ You can use same `-g` flag in Rust:
 
     rustc -g source.rs --target wasm32-unknown-unknown -o out.wasm
 
-If you’re using Cargo, the debug info will be included by default:
+Or, if you’re using Cargo, the debug info will be included by default:
 
     cargo build --target wasm32-unknown-unknown
 
@@ -78,6 +79,7 @@ And on the Chrome DevTools side, we’ll be evolving integration more over time 
 * Resolving variable names
 * Pretty-printing types
 * Evaluating expressions in source languages
+* …and much more!
 
 Stay tuned for future updates!
 

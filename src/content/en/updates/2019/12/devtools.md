@@ -20,8 +20,8 @@ was a common annoyance for web developers who use the Console to experiment with
 code.
 
 <aside class="warning">
-  Redeclaring a <code>let</code> or <code>class</code> statement in a script will still cause a
-  <code>SyntaxError</code>. These redeclarations only work in the Console.
+  Redeclaring a <code>let</code> or <code>class</code> statement in a script outside of the
+  Console or within a single Console input will still cause a <code>SyntaxError</code>.
 </aside>
 
 For example, previously, when redeclaring a local variable with `let`, the Console would throw an error:
@@ -45,13 +45,13 @@ Chromium issue [#1004193](https://crbug.com/1004193)
 ## Improved WebAssembly debugging {: #webassembly }
 
 DevTools has started to support the [DWARF Debugging Standard](http://dwarfstd.org/),
-which means that you can now step over code, set breakpoints, and resolve stack traces in your
+which means increased support for stepping over code, setting breakpoints, and resolving stack traces in your
 source languages within DevTools.
 Check out [Improved WebAssembly debugging in Chrome DevTools](/web/updates/2019/12/webassembly)
 for the full story.
 
 <figure>
-  <img src="../../images/2019/12/dwarf.png"
+  <img src="../../images/2019/12/wasm.png"
        alt="A screenshot of the new DWARF-powered WebAssembly debugging."/>
 </figure>
 
@@ -126,11 +126,13 @@ columns.
 
 Chromium issue [#993366](https://crbug.com/993366)
 
-### Updated User-Agent string for Firefox {: #firefox }
+### Updated User-Agent strings {: #useragents }
 
-The **Network Conditions** tab enables you to instruct Chrome to send different User-Agent
-header values when Chrome requests network resources. The User-Agent strings for Firefox have been
-updated.
+DevTools supports setting a custom User-Agent string through the **Network Conditions** tab. 
+The User-Agent string affects the `User-Agent` HTTP header attached to network resources, and also 
+the value of `navigator.userAgent`.
+
+The predefined User-Agent strings have been updated to reflect modern browser versions.
 
 <figure>
   <img src="../../images/2019/12/useragent.png"
@@ -139,6 +141,11 @@ updated.
 
 To access **Network Conditions**, [open the Command Menu](/web/tools/chrome-devtools/command-menu)
 and run the `Show Network Conditions` command.
+
+<aside class="note">
+  You can also <a href="/web/tools/chrome-devtools/device-mode#viewport">set User-Agent strings in 
+  Device Mode</a>.
+</aside>
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f05ffb295a3a4c36f8a5154285f6641a87f1f8b5 #}
 
