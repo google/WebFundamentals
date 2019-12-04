@@ -2,6 +2,18 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 80 {: #discover80 .hide-from-toc }
+
+* [Support for `let` and `class` redeclarations in the Console](/web/updates/2019/12/devtools#redeclarations)
+* [Improved WebAssembly debugging](/web/updates/2019/12/devtools#webassembly)
+* [Request Initiator Chains in the Initiator tab](/web/updates/2019/12/devtools#initiators)
+* [Highlight the selected network request in the Overview](/web/updates/2019/12/devtools#overview)
+* [URL and path columns in the Network panel](/web/updates/2019/12/devtools#columns)
+* [Updated User-Agent strings](/web/updates/2019/12/devtools#useragents)
+* [New Audits panel configuration UI](/web/updates/2019/12/devtools#config)
+* [Per-function or per-block code coverage modes](/web/updates/2019/12/devtools#modes)
+* [Code coverage must now be initiated by a page reload](/web/updates/2019/12/devtools#reload)
+
 ### Chrome 79 {: #discover79 .hide-from-toc }
 
 * [Debug why a cookie was blocked](/web/updates/2019/10/devtools#blockedcookies)
