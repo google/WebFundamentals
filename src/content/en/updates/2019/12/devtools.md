@@ -13,18 +13,18 @@ description: Support for let redeclarations in the Console, improved WebAssembly
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-## Support for `let` redeclarations in the Console {: #let }
+## Support for `let` and `class` redeclarations in the Console {: #redeclarations }
 
-The Console now supports redeclarations of `let` statements. The inability to redeclare
-`let` statements was a common annoyance for web developers who use the Console to experiment with
-new JavaScript code.
+The Console now supports redeclarations of `let` and `class` statements. The inability to redeclare
+was a common annoyance for web developers who use the Console to experiment with new JavaScript
+code.
 
 <aside class="warning">
-  Redeclaring a <code>let</code> statement in a script will still cause a
-  <code>SyntaxError</code>. <code>let</code> redeclarations only work in the Console.
+  Redeclaring a <code>let</code> or <code>class</code> statement in a script will still cause a
+  <code>SyntaxError</code>. These redeclarations only work in the Console.
 </aside>
 
-Previously, when redeclaring a local variable with `let`, the Console would throw an error:
+For example, previously, when redeclaring a local variable with `let`, the Console would throw an error:
 
 <figure>
   <img src="../../images/2019/12/letbefore.png"
