@@ -113,6 +113,23 @@ contains data from cross cross-origin images that is not verified by CORS logic.
 [Chrome Platform Status](https://www.chromestatus.com/feature/5728790883860480) &#124;
 [Chromium Bug](https://crbug.com/1013087)
 
+## Protocol handling now requires a secure context
+
+The methods `registerProtocolHandler()` and `unregisterProtocolHandler()` now
+require a secure context. These methods capable of reconfiguring client states
+such that they would allow transmitions of potentially sensitive data over a
+network. 
+
+The `registerProtocolHandler()` method gives a webpage a mechanism to register
+itself to handle a protocol after a user consents. For example, a web-based
+email application could register to handle the mailto: scheme. The corresponding
+`unregisterProtocolHandler()` method allows a site to abandon its
+protocol-handling registration.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/1AOWqzgFQiw/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/5756636801007616) &#124;
+[Chromium Bug](https://crbug.com/882284)
+
 ## Web Components v0 removed
 
 In July Chrome announced [more time to upgrade to Web Components
@@ -154,29 +171,6 @@ such restriction.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/QFXFzfQtlKk/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/4867142128238592) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=981720)
-
-
-
-### TBD
-
-[Intent to Remove]() &#124;
-[Chrome Platform Status]() &#124;
-[Chromium Bug]()
-
-
-### TBD
-
-[Intent to Remove]() &#124;
-[Chrome Platform Status]() &#124;
-[Chromium Bug]()
-
-
-### TBD
-
-[Intent to Remove]() &#124;
-[Chrome Platform Status]() &#124;
-[Chromium Bug]()
-
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
