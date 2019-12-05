@@ -62,7 +62,6 @@ More guidelines:
 * Use secure HTTPS canonical URLs over HTTP ones as much as possible. Make sure that the page
   is completely secure and doesn't have any mixed content errors. See [Understand Security
   Issues][Security] to learn how to diagnose security errors in Chrome DevTools.
-* Make sure that the canonical URL is valid.
 * If you use [hreflang links][hreflang]{:.external} to serve different versions of a page
   depending on a user's language or country, make sure that the canonical URL points to the
   proper page for that respective language or country.
