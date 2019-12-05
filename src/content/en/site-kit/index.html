@@ -64,7 +64,7 @@
               </aside>
             {% dynamic endif %}
             <p>
-              Once the project has been created, you will see a client configuration snippet. You must copy this value into the corresponding field in your Site Kit plugin, open in the other browser tab.
+              Once the project has been created, you will see your client ID and client secret. You must copy these values into the corresponding fields in your Site Kit Developer Settings plugin, open in the other browser tab.
             </p>
             <p>
               <a id="site-kit-setup-button" tabindex="0" class="devsite-api-getstarted-widget button button-primary button-large"
@@ -75,7 +75,6 @@
                 data-henhouse-extra-api-ids="adsense.googleapis.com,analytics.googleapis.com,analyticsreporting.googleapis.com,pagespeedonline.googleapis.com,people.googleapis.com,siteverification.googleapis.com,tagmanager.googleapis.com,webmasters.googleapis.com"
                 data-henhouse-credential-type="OAUTH"
                 data-henhouse-client-type="WEB_SERVER"
-                data-henhouse-display-entire-oauth-client-config="true"
                 {% dynamic if user.signed_in and setvar.projectName and setvar.productName and setvar.redirectURI %}
                   data-henhouse-project-name="{% dynamic print setvar.projectName|escape %}"
                   data-henhouse-product-name="{% dynamic print setvar.productName|escape %}"
