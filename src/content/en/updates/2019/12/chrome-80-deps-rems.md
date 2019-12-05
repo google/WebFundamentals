@@ -105,7 +105,9 @@ popups during unload. We expect to remove this flag in Chrome 82.
 
 ## Non-origin-clean ImageBitmap serialization and transferring removed
 
-Errors will now be raised when a script tries to serialize or transfer a non-origin-clean ImageBitmap. A non-origin-clean ImageBitmap is one that contains data from cross cross-origin images that is not verified by CORS logic.
+Errors will now be raised when a script tries to serialize or transfer a
+non-origin-clean ImageBitmap. A non-origin-clean ImageBitmap is one that
+contains data from cross cross-origin images that is not verified by CORS logic.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Z1XdYf6SjDU/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/5728790883860480) &#124;
