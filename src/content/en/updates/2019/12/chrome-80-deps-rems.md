@@ -26,7 +26,7 @@ compatibility are being removed.
 For more regarding the `SameSite` attribute and its possible values, read
 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
 
-### Disallow defaulting of SameSite attribute to None
+### Disallow defaulting of SameSite attribute to 'None'
 
 The `SameSite` attribute for cookies now defaults to `Lax` meaning your cookies
 are only available to other sites from top-level navigations. 
@@ -102,6 +102,14 @@ popups during unload. We expect to remove this flag in Chrome 82.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/MkA0A1YKSw4/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5989473649164288) &#124;
 [Chromium Bug](https://crbug.com/844455)
+
+## Non-origin-clean ImageBitmap serialization and transferring removed
+
+Errors will now be raised when a script tries to serialize or transfer a non-origin-clean ImageBitmap. A non-origin-clean ImageBitmap is one that contains data from cross cross-origin images that is not verified by CORS logic.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Z1XdYf6SjDU/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/5728790883860480) &#124;
+[Chromium Bug](https://crbug.com/1013087)
 
 ## Web Components v0 removed
 
