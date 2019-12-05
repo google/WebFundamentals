@@ -74,7 +74,8 @@ The deprecation timeline is tentatively set as follows:
 
 FTP is disabled by default for *non-enterprise clients*, but may be turned on
 using either the `--enable-ftp` or the `--enable-features=FtpProtocol`
-command-line flags.
+command-line flags. Alternatively, it can be turned on using the `#enable-ftp`
+option on chrome://flags.
 
 **Chrome 81 (stable in March 2020)**
 
