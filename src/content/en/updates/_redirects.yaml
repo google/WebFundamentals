@@ -39,7 +39,7 @@ redirects:
   to: /web/updates/2019/09/fresher-sw
 
 - from: /web/updates/nic
-  to: /web/updates/2019/10/nic78
+  to: /web/updates/2019/12/nic79
 
 - from: /web/updates/2018/11/writable-files
   to: https://web.dev/native-file-system/
