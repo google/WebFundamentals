@@ -145,7 +145,6 @@ data: {
 * [Google Pay (`https://google.com/pay`)](/pay/api/web/)
 * [Apple Pay (`https://apple.com/apple-pay`)](https://developer.apple.com/documentation/apple_pay_on_the_web)
 * [Samsung Pay (`https://spay.samsung.com`)](https://developer.samsung.com/internet/android/web-payments-guide)
-* [Facebook (`fb`)](https://developers.facebook.com/docs/messenger-platform/reference/messenger-extensions-sdk/PaymentRequest/)
 
 Note: Send [pull requests](https://github.com/google/WebFundamentals/pulls) to
 us if your payment app supports Payment Request API but is not listed here.
