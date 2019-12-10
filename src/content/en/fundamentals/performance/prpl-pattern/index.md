@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2019-12-02 #}
 {# wf_published_on: 2016-09-28 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -9,9 +9,9 @@ book_path: /web/fundamentals/_book.yaml
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Dogfood: PRPL is a new pattern we feel has great potential. At this stage,
-we welcome experimentation with it while we iterate on the ideas in the
-pattern and collect more data on where it offers the greatest benefits.
+Note: Refer to ["Apply instant loading with the PRPL
+pattern"](https://web.dev/apply-instant-loading-with-prpl/) to learn more about
+how to apply the PRPL pattern to your web pages.
 
 The mobile web is too slow. Over the years the web has evolved from a
 document-centric platform to a first-class application platform. Thanks to
