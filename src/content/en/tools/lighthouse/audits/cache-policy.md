@@ -70,7 +70,7 @@ The **Headers** tab can help you verify a resource's `Cache-Control` header is s
 as expected.
 
 <figure>
-  <img src="images/cache-control-header.png" alt="Inspecting the Cache-Control header via the Headers tab."/>
+  <img src="images/cache-control-header.png?v=2" alt="Inspecting the Cache-Control header via the Headers tab."/>
   <figcaption>
     <b>Figure 2</b>. Inspecting the <code>Cache-Control</code> header via the <b>Headers</b> tab
   </figcaption>
