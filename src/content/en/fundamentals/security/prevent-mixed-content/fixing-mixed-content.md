@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2019-09-04 #}
+{# wf_updated_on: 2019-12-10 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Preventing Mixed Content {: .page-title }
@@ -51,7 +51,7 @@ displayed:
 
 You need to fix the http:// URLs listed in these errors and warnings, in your site's source. It's helpful to make a list of these URLs, along with the page you found them on, for use when you fix them.
 
-Note: Mixed content errors and warnings are only shown for the page your are currently viewing, and the JavaScript console is cleared every time you navigate to a new  page. This means you will have to view every page of your site individually to find these errors. Some errors may only show up after you interact with part of the page, see the image gallery mixed content example from our previous guide.
+Note: Mixed content errors and warnings are only shown for the page you are currently viewing, and the JavaScript console is cleared every time you navigate to a new  page. This means you will have to view every page of your site individually to find these errors. Some errors may only show up after you interact with part of the page, see the image gallery mixed content example from our previous guide.
 
 ### Finding mixed content in your source code
 
