@@ -50,6 +50,27 @@ HTTPS.
 [Chrome Platform Status](https://www.chromestatus.com/feature/5633521622188032) &#124;
 [Chromium Bug](https://crbug.com/954551)
 
+## Disallow Synchronous XMLHTTPRequest() in Page Dismissal
+
+Chrome now disallows synchronous calls to `XMLHTTPRequest()` during page
+dismissal when the page is being navigated away from or is closed by the user.
+This applies to `beforeunload`, `unload`, `pagehide`, and `visibilitychange`.
+
+To ensure that data is sent to the server when a page unloads, we recommend
+`sendBeacon()` or `Fetch` `keep-alive`. For now, enterprise users can use the
+`AllowSyncXHRInPageDismissal` policy flag and developers can use the origin
+trial flag `allow-sync-xhr-in-page-dismissal` to allow synchronous XHR requests
+during page unload. This is a temporary "opt-out" measure, and we expect to
+remove this flag in Chrome 82. 
+
+For details about this and the alternatives, see [Disallowing synchronous
+XMLHTTPRequest() during page dismissal]().
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cCWNIXB4dzY/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/4664843055398912) &#124;
+[Chromium Bug](https://crbug.com/827324)
+
+
 ## FTP support deprecated
 
 The current FTP implementation in Chrome has no support for encrypted
@@ -118,12 +139,12 @@ contains data from cross cross-origin images that is not verified by CORS logic.
 
 The methods `registerProtocolHandler()` and `unregisterProtocolHandler()` now
 require a secure context. These methods capable of reconfiguring client states
-such that they would allow transmitions of potentially sensitive data over a
+such that they would allow transmission of potentially sensitive data over a
 network. 
 
 The `registerProtocolHandler()` method gives a webpage a mechanism to register
 itself to handle a protocol after a user consents. For example, a web-based
-email application could register to handle the mailto: scheme. The corresponding
+email application could register to handle the `mailto:` scheme. The corresponding
 `unregisterProtocolHandler()` method allows a site to abandon its
 protocol-handling registration.
 
