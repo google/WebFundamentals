@@ -77,14 +77,14 @@ FTP support will be completely removed.
 [Chrome Platform Status](https://www.chromestatus.com/feature/6246151319715840) &#124;
 [Chromium Bug](https://crbug.com/333943)
 
-## Don't allow popups during page unload
+## Disallow allow popups during page unload
 
 Pages may no longer use `window.open()` to open a new page during unload. The
 Chrome popup blocker already prohibited this, but now it is prohibited whether
 or not the popup blocker is enabled. 
 
 Enterprises can use the `AllowPopupsDuringPageUnload` policy flag to allow
-popups during unload. We expect to remove this flag in Chrome 82.
+popups during unload. Chrome expects to remove this flag in Chrome 82.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/MkA0A1YKSw4/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5989473649164288) &#124;
@@ -119,13 +119,12 @@ protocol-handling registration.
 
 ## Web Components v0 removed
 
-In July Chrome announced [more time to upgrade to Web Components
-v1](/web/updates/2019/07/web-components-time-to-upgrade)
-from Web components v0. In Chrome 80 that time is up. The Web Components v1 APIs
-are a web platform standard that has shipped in Chrome, Safari, Firefox, and
-(soon) Edge. At that time we published guidance for upgrading, which you can
-read by following the link at the top of this paragraph. The following features
-have now been removed.
+Web Components v0 are now removed from Chrome. The Web Components v1 APIs are a
+web platform standard that has shipped in Chrome, Safari, Firefox, and (soon)
+Edge. For guidance on upgrading, read [Web Components update: more time to
+upgrade to v1 APIs](/web/updates/2019/07/web-components-time-to-upgrade). The
+following features have now been removed. This deprecation covers the items
+listed below.
 
 ### Custom Elements
 
