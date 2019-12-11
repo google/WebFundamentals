@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2019-11-26 #}
+{# wf_updated_on: 2019-12-11 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -294,11 +294,12 @@ Concepts of bind group layout and bind group are specific to WebGPU. A bind
 group layout defines the input/output interface expected by a shader, while a
 bind group represents the actual input/output data for a shader.
 
-In the example below, the bind group layout expects some storage buffers at
-numbered bindings `0`, `1`, and `2` for the compute shader. The bind group on
-the other hand, defined for this bind group layout, associates GPU buffers to
-the bindings: `gpuBufferFirstMatrix` to the binding `0`, `gpuBufferSecondMatrix`
-to the binding `1`, and `resultMatrixBuffer` to the binding `2`.
+In the example below, the bind group layout expects two readonly storage buffers at
+numbered bindings `0`, `1`, and a storage buffer at `2` for the compute shader.
+The bind group on the other hand, defined for this bind group layout, associates
+GPU buffers to the bindings: `gpuBufferFirstMatrix` to the binding `0`,
+`gpuBufferSecondMatrix` to the binding `1`, and `resultMatrixBuffer` to the
+binding `2`.
 
 ```js
 const bindGroupLayout = device.createBindGroupLayout({
@@ -306,12 +307,12 @@ const bindGroupLayout = device.createBindGroupLayout({
     {
       binding: 0,
       visibility: GPUShaderStage.COMPUTE,
-      type: "storage-buffer"
+      type: "readonly-storage-buffer"
     },
     {
       binding: 1,
       visibility: GPUShaderStage.COMPUTE,
-      type: "storage-buffer"
+      type: "readonly-storage-buffer"
     },
     {
       binding: 2,
@@ -352,7 +353,8 @@ The compute shader code for multiplying matrices is written in GLSL, a
 high-level shading language used in WebGL, which has a syntax based on the C
 programming language. Without going into detail, you should find below the three
 storage buffers marked with the keyword `buffer`. The program will use
-`firstMatrix` and `secondMatrix` as inputs and `resultMatrix` as its output.
+`firstMatrix` and `secondMatrix` as inputs (readonly) and `resultMatrix` as its
+output.
 
 Note that each storage buffer has a `binding` qualifier used that corresponds to
 the same index defined in bind group layouts and bind groups declared above.
@@ -555,12 +557,12 @@ An illustration of `getBindGroupLayout` for the previous sample is [available].
 -     {
 -       binding: 0,
 -       visibility: GPUShaderStage.COMPUTE,
--       type: "storage-buffer"
+-       type: "readonly-storage-buffer"
 -     },
 -     {
 -       binding: 1,
 -       visibility: GPUShaderStage.COMPUTE,
--       type: "storage-buffer"
+-       type: "readonly-storage-buffer"
 -     },
 -     {
 -       binding: 2,
