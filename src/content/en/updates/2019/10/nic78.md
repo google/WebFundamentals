@@ -86,8 +86,8 @@ worker to pick up changes to an imported script was to change the imported
 script's URL, usually either by adding in a semver value or hash in the URL.
 
 ```js
-importScripts('https://example.com/v1.1.0/index.js'));
-importScripts('https://example.com/index.abcd1234.js'));
+importScripts('https://example.com/v1.1.0/index.js');
+importScripts('https://example.com/index.abcd1234.js');
 ```
 
 Starting in Chrome 78, each time an update check is performed for a top-level
@@ -156,7 +156,7 @@ code, a demo, and how we’re working to keep users safe.
 
 ### SMS Receiver {: #sms-receiver }
 
-*An [Origin Trial for the SMS Reciver API][smsr-ot] starts in Chrome 78 and is
+*An [Origin Trial for the SMS Receiver API][smsr-ot] starts in Chrome 78 and is
 expected to run through Chrome 80.*
 
 The SMS Receiver API, now available as an origin trial, lets your web app
@@ -164,7 +164,7 @@ receive specially formatted SMS messages for your app's origin. From this,
 you can programmatically obtain an OTP from an SMS message and verify a phone
 number for the user more easily.
 
-Eiji wrote [Verify phone numbers on the web with the SMS Reciver API][sms-r]
+Eiji wrote [Verify phone numbers on the web with the SMS Receiver API][sms-r]
 with all the details, and how to sign up for the origin trial.
 
 [smsr-ot]: https://developers.chrome.com/origintrials/#/view_trial/607985949695016961

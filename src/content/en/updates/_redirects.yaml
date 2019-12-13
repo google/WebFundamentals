@@ -2,8 +2,20 @@
 
 redirects:
 
+- from: /web/updates/2019/08/periodic-background-sync
+  to: https://web.dev/periodic-background-sync/
+
 - from: /web/updates/2018/12/badging-api
   to: https://web.dev/badging-api/
+
+- from: /web/updates/2018/12/web-share-target
+  to: https://web.dev/web-share-target/
+
+- from: /web/updates/2019/05/web-share-files
+  to: https://web.dev/web-share/#sharing-files
+
+- from: /web/updates/2016/09/navigator-share
+  to: https://web.dev/web-share/
 
 - from: /web/updates/2019/08/contact-picker
   to: https://web.dev/contact-picker/
@@ -27,7 +39,7 @@ redirects:
   to: /web/updates/2019/09/fresher-sw
 
 - from: /web/updates/nic
-  to: /web/updates/2019/10/nic78
+  to: /web/updates/2019/12/nic79
 
 - from: /web/updates/2018/11/writable-files
   to: https://web.dev/native-file-system/

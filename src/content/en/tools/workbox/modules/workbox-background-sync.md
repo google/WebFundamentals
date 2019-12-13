@@ -87,7 +87,7 @@ the queue name has to be unique to your origin.
 ### Adding a request to the Queue
 
 Once you've created your Queue instance, you can add failed requests to it.
-You add failed request by invoking the `.addRequest()` method. For example,
+You add failed request by invoking the `.pushRequest()` method. For example,
 the following code catches any requests that fail and adds them to the queue:
 
 ```js

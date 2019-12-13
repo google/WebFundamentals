@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel.
 
-{# wf_updated_on: 2019-09-23 #}
+{# wf_updated_on: 2019-12-06 #}
 {# wf_published_on: 2019-09-03 #}
 {# wf_tags: chrome78, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,6 +12,12 @@ description: Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in
 # What's New In DevTools (Chrome 78) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="VNkctDLYP6o"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Multi-client support in the Audits panel {: #multiclient }
 

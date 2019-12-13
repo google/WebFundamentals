@@ -1804,6 +1804,18 @@ thomassteiner:
     - author
   email: tomac@google.com
 
+ingvarstepanyan:
+  name:
+    given: Ingvar
+    family: Stepanyan
+  org:
+    name: Google
+  country: UK
+  role:
+    - author
+  description:
+    en: Developer Advocate, V8 & WebAssembly
+
 sunyunjia:
   name:
     given: Sandra
