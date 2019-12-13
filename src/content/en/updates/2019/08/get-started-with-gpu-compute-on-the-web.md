@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2019-11-18 #}
+{# wf_updated_on: 2019-12-13 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -78,19 +78,18 @@ process isn’t straightforward because of the sandboxing model used in modern w
 browsers.
 
 The example below shows you how to write four bytes to buffer memory accessible
-from the GPU. It calls `device.createBufferMappedAsync()` which takes the size of
+from the GPU. It calls `device.createBufferMapped()` which takes the size of
 the buffer and its usage. Even though the usage flag `GPUBufferUsage.MAP_WRITE`
 is not required for this specific call, let's be explicit that we want to write
-to this buffer. The resulting promise resolves with a GPU buffer object and its
-associated raw binary data buffer.
+to this buffer. It results in a GPU buffer object and its associated raw binary
+data buffer.
 
 Writing bytes is familiar if you’ve already played with `ArrayBuffer`; use a
 `TypedArray` and copy the values into it.
 
 ```js
-// Get a GPU buffer and an arrayBuffer for writing.
-// Upon success the GPU buffer is put in the mapped state.
-const [gpuBuffer, arrayBuffer] = await device.createBufferMappedAsync({
+// Get a GPU buffer in a mapped state and an arrayBuffer for writing.
+const [gpuBuffer, arrayBuffer] = device.createBufferMapped({
   size: 4,
   usage: GPUBufferUsage.MAP_WRITE
 });
@@ -118,9 +117,8 @@ GPUBufferUsage.MAP_READ` as it will be used as the destination of the first GPU
 buffer and read in JavaScript once GPU copy commands have been executed.
 
 ```js
-// Get a GPU buffer and an arrayBuffer for writing.
-// Upon success the GPU buffer is returned in the mapped state.
-const [gpuWriteBuffer, arrayBuffer] = await device.createBufferMappedAsync({
+// Get a GPU buffer in a mapped state and an arrayBuffer for writing.
+const [gpuWriteBuffer, arrayBuffer] = device.createBufferMapped({
   size: 4,
   usage: GPUBufferUsage.MAP_WRITE | GPUBufferUsage.COPY_SRC
 });
@@ -187,8 +185,8 @@ In short, here’s what you need to remember regarding buffer memory operations:
 
 - GPU buffers have to be unmapped to be used in device queue submission.
 - When mapped, GPU buffers can be read and written in JavaScript.
-- GPU buffers are mapped when `mapReadAsync()`, `mapWriteAsync()`,
-  `createBufferMappedAsync()` and `createBufferMapped()` are called.
+- GPU buffers are mapped when `mapReadAsync()`, `mapWriteAsync()`, and
+  `createBufferMapped()` are called.
 
 ## Shader programming
 
@@ -253,7 +251,7 @@ const firstMatrix = new Float32Array([
   5, 6, 7, 8
 ]);
 
-const [gpuBufferFirstMatrix, arrayBufferFirstMatrix] = await device.createBufferMappedAsync({
+const [gpuBufferFirstMatrix, arrayBufferFirstMatrix] = device.createBufferMapped({
   size: firstMatrix.byteLength,
   usage: GPUBufferUsage.STORAGE,
 });
@@ -271,7 +269,7 @@ const secondMatrix = new Float32Array([
   7, 8
 ]);
 
-const [gpuBufferSecondMatrix, arrayBufferSecondMatrix] = await device.createBufferMappedAsync({
+const [gpuBufferSecondMatrix, arrayBufferSecondMatrix] = device.createBufferMapped({
   size: secondMatrix.byteLength,
   usage: GPUBufferUsage.STORAGE,
 });
@@ -294,11 +292,12 @@ Concepts of bind group layout and bind group are specific to WebGPU. A bind
 group layout defines the input/output interface expected by a shader, while a
 bind group represents the actual input/output data for a shader.
 
-In the example below, the bind group layout expects some storage buffers at
-numbered bindings `0`, `1`, and `2` for the compute shader. The bind group on
-the other hand, defined for this bind group layout, associates GPU buffers to
-the bindings: `gpuBufferFirstMatrix` to the binding `0`, `gpuBufferSecondMatrix`
-to the binding `1`, and `resultMatrixBuffer` to the binding `2`.
+In the example below, the bind group layout expects two readonly storage buffers at
+numbered bindings `0`, `1`, and a storage buffer at `2` for the compute shader.
+The bind group on the other hand, defined for this bind group layout, associates
+GPU buffers to the bindings: `gpuBufferFirstMatrix` to the binding `0`,
+`gpuBufferSecondMatrix` to the binding `1`, and `resultMatrixBuffer` to the
+binding `2`.
 
 ```js
 const bindGroupLayout = device.createBindGroupLayout({
@@ -306,12 +305,12 @@ const bindGroupLayout = device.createBindGroupLayout({
     {
       binding: 0,
       visibility: GPUShaderStage.COMPUTE,
-      type: "storage-buffer"
+      type: "readonly-storage-buffer"
     },
     {
       binding: 1,
       visibility: GPUShaderStage.COMPUTE,
-      type: "storage-buffer"
+      type: "readonly-storage-buffer"
     },
     {
       binding: 2,
@@ -352,7 +351,8 @@ The compute shader code for multiplying matrices is written in GLSL, a
 high-level shading language used in WebGL, which has a syntax based on the C
 programming language. Without going into detail, you should find below the three
 storage buffers marked with the keyword `buffer`. The program will use
-`firstMatrix` and `secondMatrix` as inputs and `resultMatrix` as its output.
+`firstMatrix` and `secondMatrix` as inputs (readonly) and `resultMatrix` as its
+output.
 
 Note that each storage buffer has a `binding` qualifier used that corresponds to
 the same index defined in bind group layouts and bind groups declared above.
@@ -530,6 +530,52 @@ console.log(new Float32Array(arrayBuffer));
 
 Congratulations! You made it. You can [play with the sample].
 
+## One last trick
+
+One way of making your code easier to read is to use the handy
+`getBindGroupLayout` method of the compute pipeline to [infer the bind group
+layout from the shader module]. This trick removes the need from creating a
+custom bind group layout and specifying a pipeline layout in your compute
+pipeline as you can see below.
+
+An illustration of `getBindGroupLayout` for the previous sample is [available].
+
+```
+ const computePipeline = device.createComputePipeline({
+-  layout: device.createPipelineLayout({
+-    bindGroupLayouts: [bindGroupLayout]
+-  }),
+   computeStage: {
+```
+
+```
+-// Bind group layout and bind group
+- const bindGroupLayout = device.createBindGroupLayout({
+-   bindings: [
+-     {
+-       binding: 0,
+-       visibility: GPUShaderStage.COMPUTE,
+-       type: "readonly-storage-buffer"
+-     },
+-     {
+-       binding: 1,
+-       visibility: GPUShaderStage.COMPUTE,
+-       type: "readonly-storage-buffer"
+-     },
+-     {
+-       binding: 2,
+-       visibility: GPUShaderStage.COMPUTE,
+-       type: "storage-buffer"
+-     }
+-   ]
+- });
++// Bind group
+  const bindGroup = device.createBindGroup({
+-  layout: bindGroupLayout,
++  layout: computePipeline.getBindGroupLayout(0 /* index */),
+   bindings: [
+```
+
 ## Performance findings
 
 So how does running matrix multiplication on a GPU compare to running it on a
@@ -555,6 +601,8 @@ articles soon featuring more deep dives in GPU Compute and on how rendering
 [@webgpu/glslang]: https://www.npmjs.com/package/@webgpu/glslang
 [SPIR-V]: https://www.khronos.org/spir/
 [play with the sample]: https://glitch.com/edit/#!/gpu-compute-sample-2
+[infer the bind group layout from the shader module]: https://github.com/gpuweb/gpuweb/issues/446
+[available]: https://glitch.com/edit/#!/gpu-compute-sample-3
 
 {% include "web/_shared/helpful.html" %}
 
