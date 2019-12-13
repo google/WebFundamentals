@@ -6,7 +6,7 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 {# wf_published_on: 2019-12-13 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: You may find you are asked to fix high-priority security bugs discovered by ClusterFuzz. What is it? Should you take those bugs seriously? How can you help? #}
 {# wf_blink_components: N/A #}
 
 # The Chromium Chronicle: ClusterFuzz {: .page-title }
