@@ -62,9 +62,22 @@ You can help:
   [single byte overflow][go-onebyte] has led to arbitrary code execution by an
   attacker.
 
+<div class="clearfix"></div>
+
+## Resources
+
+* [Fuzz testing in Chromium][go-fuzz-in-cr]: How to add new fuzzers to
+  ClusterFuzz for new data formats, or just because you want the credit of
+  finding awesome vulns.
+* [Chrome Fuzzer Program Update and How-To][go-cr-fuzz-pgm]: Fuzzers are also
+  written by external contributors. Hear about their experience and how easy
+  it can be to get started.
+
 [go-asan]: https://github.com/google/sanitizers/wiki/AddressSanitizer
 [go-libfuzzer]: https://llvm.org/docs/LibFuzzer.html
 [go-onebyte]: https://googleprojectzero.blogspot.com/2016/12/chrome-os-exploit-one-byte-overflow-and.html
+[go-fuzz-in-cr]: https://chromium.googlesource.com/chromium/src/+/master/testing/libfuzzer/README.md
+[go-cr-fuzz-pgm]: https://security.googleblog.com/2019/07/chrome-fuzzer-program-update-and-how-to.html
 
 {% include "web/_shared/helpful.html" %}
 
