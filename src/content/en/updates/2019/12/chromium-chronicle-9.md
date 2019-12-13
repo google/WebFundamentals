@@ -47,7 +47,7 @@ ClusterFuzz generates input from fuzzers or from bugs submitted externally.
 Some fuzzers are powered by [libFuzzer][go-libfuzzer], which evolves input to
 increase code coverage. Some understand the grammar of the input language
 converted into `protobufs`. Once ClusterFuzz finds a crash, it will try to
-**minimise the input test case and even bisect to find the offending commit**.
+**minimize the input test case and even bisect to find the offending commit**.
 It finds a lot...
 
 <img src="/web/updates/images/2019/12/cr-chron-2.png" class="attempt-left">
