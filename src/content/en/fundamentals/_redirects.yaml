@@ -108,9 +108,6 @@ redirects:
 - from: /web/fundamentals/primers/service-worker/update-a-service-worker
   to: /web/fundamentals/primers/service-workers/#update-a-service-worker
 
-- from: /web/fundamentals/media/mse/basics
-  to: /web/fundamentals/media/mse/
-
 - from: /web/fundamentals/webvr/...
   to: /web/fundamentals/vr/...
 
