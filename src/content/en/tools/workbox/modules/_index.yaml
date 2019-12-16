@@ -84,7 +84,7 @@ landing_page:
       - heading: workbox.backgroundSync
         description: >
           Use background sync to reliably make a network request even if the
-          user if offline.
+          user is offline.
         buttons:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-background-sync
