@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Formati di immagine
 
-{# wf_updated_on: 2017-12-15 #}
+{# wf_updated_on: 2019-12-17 #}
 {# wf_published_on: 2017-11-16 #}
 
 # Automatizza l'ottimizzazione delle immagini {: .page-title}
@@ -412,7 +412,7 @@ gulp.task('images', function () {
             progressive: true
 
         }))
-        .pipe(gulp.dest('dist'));       
+        .pipe(gulp.dest('dist'));
 });
 ```
 
@@ -1235,7 +1235,7 @@ C'erano quindi tre problemi chiave:
 
 <ul> <li>"Salva con nome" non è in grado di registrare i file WebP localmente.
 Questo problema è stato risolto da Chrome registrandosi come gestore
-".webp".</li> <li>"Salva con nome", allegando l'immagine a un'email per 
+".webp".</li> <li>"Salva con nome", allegando l'immagine a un'email per
 condividerla con qualcuno senza Chrome. Facebook ha risolto questo problema
 introducendo un pulsante "download" prominente nella loro interfaccia utente che
 restituisce un JPEG quando gli utenti richiedono il download.</li> <li>Quando
@@ -1369,8 +1369,8 @@ Ecco alcuni esempi di codice HTML:
   <img src="/path/to/image.jpg" alt="">
 </picture>
 
-<picture>   
-    <source srcset='paul_irish.jxr' type='image/vnd.ms-photo'>  
+<picture>
+    <source srcset='paul_irish.jxr' type='image/vnd.ms-photo'>
     <source srcset='paul_irish.jp2' type='image/jp2'>
     <source srcset='paul_irish.webp' type='image/webp'>
     <img src='paul_irish.jpg' alt='paul'>
@@ -1490,6 +1490,7 @@ forma più minimale senza influire sullo SVG finale che viene sottoposto a
 rendering.
 
 <img src="images/Modern-Image26.jpg" alt="SVGO">
+
 [SVGOMG](https://jakearchibald.github.io/svgomg/) , di Jake Archibald, è
 un'interfaccia GUI che ti permette di ottimizzare i tuoi SVG in base alle tue
 preferenze selezionando le ottimizzazioni, con un'anteprima in tempo reale del
@@ -1517,12 +1518,12 @@ immagini raster di grandi dimensioni.
 - Effettua un doppio controllo per tutte le immagini raster incorporate che non
 sono compatibili con SVG
 - Usa uno strumento per ottimizzare i tuoi SVG.
-[SVGOMG](https://jakearchibald.github.io/svgomg/) è una GUI web-based molto
-comoda per [SVGO](https://github.com/svg/svgo) di Jake Archibald che ho trovato
-inestimabile. Se si utilizza Sketch, è possibile utilizzare il [plug-in SVGO
-Compressor]([plug-in Sketch per l'esecuzione di
-SVGO](https://www.sketchapp.com/extensions/plugins/svgo-compressor/)) durante
-l'esportazione per ridurre le dimensioni del file.
+  [SVGOMG](https://jakearchibald.github.io/svgomg/) è una GUI web-based molto
+  comoda per [SVGO](https://github.com/svg/svgo) di Jake Archibald che ho
+  trovato inestimabile. Se si utilizza Sketch, è possibile utilizzare il
+  plug-in SVGO Compressor
+  ([plug-in Sketch per l'esecuzione di SVGO](https://www.sketchapp.com/extensions/plugins/svgo-compressor/))
+  durante l'esportazione per ridurre le dimensioni del file.
 
 <img src="images/svgo-precision.jpg" alt="la riduzione della precisione di svgo
 può a volte avere un impatto positivo sulle dimensioni"> Un esempio di
@@ -2671,7 +2672,7 @@ header](https://www.igvita.com/2013/05/01/deploying-webp-via-accept-content-nego
           sorgenti originali delle immagini non compresse usando WebP avrai la
           minore distorsione visibile WebP e potranno anche essere compresse meglio.
         * Le impostazioni predefinite che il team WebP usa `-m 4 -q 75` sono
-          solitamente valide per la maggior parte dei casi per ottimizzazioni 
+          solitamente valide per la maggior parte dei casi per ottimizzazioni
           velocità/rapporto.
         * WebP ha anche una speciale modalità lossless (`-m 6 -q 100`) per poter
           ridurre un file alla dimensione minima esplorando tutte le combinazioni
