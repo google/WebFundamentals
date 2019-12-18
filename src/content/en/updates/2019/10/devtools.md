@@ -25,7 +25,7 @@ why you might be seeing more blocked cookies in Chrome 76 and later.
 [samesite]: https://web.dev/samesite-cookies-explained#changes-to-the-default-behavior-without-samesite
 
 <figure>
-  <img src="../../images/2019/10/cookiestab.png"
+  <img src="../../images/2019/10/cookiestab.png" loading="lazy"
        alt="The Cookies tab."/>
   <figcaption>
     The <b>Cookies</b> tab.
@@ -55,7 +55,7 @@ Click a row in the [Cookies pane](/web/tools/chrome-devtools/storage/cookies) to
 value of that cookie.
 
 <figure>
-  <img src="../../images/2019/10/cookievalues.png"
+  <img src="../../images/2019/10/cookievalues.png" loading="lazy"
        alt="Viewing the value of a cookie."/>
   <figcaption>
     Viewing the value of a cookie.
@@ -82,7 +82,7 @@ command, and then set the **Emulate CSS media feature prefers-color-scheme** dro
 your `prefers-color-scheme: dark` and `prefers-color-scheme: light` styles.
 
 <figure>
-  <img src="../../images/2019/10/colorscheme.png"
+  <img src="../../images/2019/10/colorscheme.png" loading="lazy"
        alt="When the 'prefers-color-scheme: dark' option is set in the Rendering tab
             the Styles pane shows the CSS that gets applied when that media query is true
             and the viewport shows the dark mode styles."/>
@@ -114,7 +114,7 @@ The new coverage **type filter** text box lets you filter for coverage informati
 display only JavaScript coverage, only CSS, or display all types of coverage.
 
 <figure>
-  <img src="../../images/2019/10/coverage.png"
+  <img src="../../images/2019/10/coverage.png" loading="lazy"
        alt="The Coverage tab."/>
   <figcaption>
     The Coverage tab.
@@ -125,7 +125,7 @@ The Sources panel displays code coverage data when it is available. Clicking the
 marks next to the line number opens the Coverage tab and highlights the file.
 
 <figure>
-  <img src="../../images/2019/10/sources.png"
+  <img src="../../images/2019/10/sources.png" loading="lazy"
        alt="Coverage data in the Sources panel."/>
   <figcaption>
     Coverage data in the Sources panel. Line 8 is an example of unused code.
@@ -145,7 +145,7 @@ After recording network activity, select a network resource and then navigate to
 section describes the JavaScript call stack leading up to the network request.
 
 <figure>
-  <img src="../../images/2019/10/initiator.png"
+  <img src="../../images/2019/10/initiator.png" loading="lazy"
        alt="The Initiator tab."/>
   <figcaption>
     The <b>Initiator</b> tab.
