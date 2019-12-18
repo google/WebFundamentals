@@ -48,7 +48,7 @@ If needed, you can change this replacement string via the `injectionPoint` confi
 1. Detected whether or not a given `fetch` event had a <code>[mode of 'navigate'](https://fetch.spec.whatwg.org/#concept-request-mode)</code>.
 1. If so, responding to that request using the contents of a previously cached, hardcoded URL, regardless of which URL being navigated to.
 
-This is a common pattern to use when implementing the [App Shell architecture](https://developers.google.com/web/fundamentals/architecture/app-shell).
+This is a common pattern to use when implementing the [App Shell architecture](/web/fundamentals/architecture/app-shell).
 
 The second step, generating a response by reading from the cache, falls outside of what we envision `workbox-routing` accomplishing. Instead, we see it as functionality that should be part of `workbox-precaching`, via a new method, `createHandlerForURL()`. This new method can work hand-in-hand with the existing `NavigationRoute` class in `workbox-routing` to accomplish the same logic.
 
@@ -123,7 +123,7 @@ navigator.serviceWorker.addEventListener('message', (event) => {
 });
 ```
 
-<code>[workbox-window](https://developers.google.com/web/tools/workbox/modules/workbox-window)</code> users should not need to make any changes, as its internal logic has been updated to listen for <code>postMessage()</code> calls.
+<code>[workbox-window](/web/tools/workbox/modules/workbox-window)</code> users should not need to make any changes, as its internal logic has been updated to listen for <code>postMessage()</code> calls.
 
 ### Build Tools Require Node.js v8 or Higher
 
@@ -149,9 +149,9 @@ The `generateSWString` mode has been removed from `workbox-build`. We expect the
 
 While this change is a) optional and b) technically was possible when using Workbox v4, the biggest change that we anticipate while moving to v5 is a model where you create your own bundled service worker by using Workbox's module imports. This approach is an alternative to calling `importScripts('/path/to/workbox-sw.js')` at the top of your service worker, and using Workbox via the `workbox.*` namespace.
 
-If you're using one of the build tools (`workbox-webpack-plugin`, `workbox-build`, `workbox-cli`) in "generate SW" mode, then this change will happen for you automatically. All of those tools will output a local, custom bundle of the Workbox runtime alongside the actual code necessary to implement your service worker logic. In this scenario, there is no longer any dependency on <code>[workbox-sw](https://developers.google.com/web/tools/workbox/modules/workbox-sw)</code> or the CDN copy of Workbox. Depending on the value of your <code>inlineWorkboxRuntime</code> configuration, the Workbox runtime will either be split into a separate file that should be deployed alongside your service worker (when set to <code>false</code>, which is the default), or included inline along with the service worker logic (when set to <code>true</code>).
+If you're using one of the build tools (`workbox-webpack-plugin`, `workbox-build`, `workbox-cli`) in "generate SW" mode, then this change will happen for you automatically. All of those tools will output a local, custom bundle of the Workbox runtime alongside the actual code necessary to implement your service worker logic. In this scenario, there is no longer any dependency on <code>[workbox-sw](/web/tools/workbox/modules/workbox-sw)</code> or the CDN copy of Workbox. Depending on the value of your <code>inlineWorkboxRuntime</code> configuration, the Workbox runtime will either be split into a separate file that should be deployed alongside your service worker (when set to <code>false</code>, which is the default), or included inline along with the service worker logic (when set to <code>true</code>).
 
-If you're using the build tools in "inject manifest" mode, or if you're not using Workbox's build tools at all, you can learn more about creating your own Workbox runtime bundle in the existing "[Using Bundlers (webpack/Rollup) with Workbox](https://developers.google.com/web/tools/workbox/guides/using-bundlers)" guide.
+If you're using the build tools in "inject manifest" mode, or if you're not using Workbox's build tools at all, you can learn more about creating your own Workbox runtime bundle in the existing "[Using Bundlers (webpack/Rollup) with Workbox](/web/tools/workbox/guides/using-bundlers)" guide.
 
 The documentation and examples for v5 are written assuming the module imports syntax, though the `workbox.*` namespace will continue to be supported in Workbox v5.
 
