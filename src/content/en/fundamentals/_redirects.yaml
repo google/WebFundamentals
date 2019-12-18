@@ -9,6 +9,9 @@ redirects:
 - from: /web/fundamentals/codelabs/your-first-pwapp/
   to: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
 
+- from: /web/fundamentals/performance/prpl-pattern
+  to: https://web.dev/apply-instant-loading-with-prpl/
+
 - from: /web/fundamentals/layouts/...
   to: /web/fundamentals/design-and-ux/responsive/
 
