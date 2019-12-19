@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from sw-precache or sw-toolbox to Workbox.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2018-01-25 #}
 {# wf_blink_components: N/A #}
 
@@ -224,14 +224,14 @@ workbox.routing.registerRoute(
     // Configuration options are passed in to the strategy.
     cacheName: 'youtube-thumbnails',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         maxEntries: 10,
         maxAgeSeconds: 30,
       }),
       // In Workbox, you must explicitly opt-in to caching
       // responses with a status of 0 when using the
       // cache-first strategy.
-      new workbox.cacheableResponse.Plugin({
+      new workbox.cacheableResponse.CacheableResponsePlugin({
         statuses: [0, 200],
       }),
     ]

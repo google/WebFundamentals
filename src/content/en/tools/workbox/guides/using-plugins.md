@@ -23,21 +23,21 @@ you can implement your own plugins if you want to add custom logic.
 
 Workbox provides the following plugins:
 
-* [`workbox.backgroundSync.Plugin`](../reference-docs/latest/workbox.backgroundSync.Plugin):
+* [`workbox.backgroundSync.BackgroundSyncPlugin`](../reference-docs/latest/workbox.backgroundSync.BackgroundSyncPlugin):
   If a network request ever fails, add it to a background sync queue and retry
   the request when the next sync event is triggered.
 
-* [`workbox.broadcastUpdate.Plugin`](../reference-docs/latest/workbox.broadcastUpdate.Plugin):
+* [`workbox.broadcastUpdate.BroadcastUpdatePlugin`](../reference-docs/latest/workbox.broadcastUpdate.BroadcastUpdatePlugin):
   Whenever a cache is updated, dispatch a message on a Broadcast Channel or via
   `postMessage()`.
 
-* [`workbox.cacheableResponse.Plugin`](../reference-docs/latest/workbox.cacheableResponse.Plugin):
+* [`workbox.cacheableResponse.CacheableResponsePlugin`](../reference-docs/latest/workbox.cacheableResponse.CacheableResponsePlugin):
   Only cache requests that meet a certain criteria.
 
-* [`workbox.expiration.Plugin`](../reference-docs/latest/workbox.expiration.Plugin):
+* [`workbox.expiration.ExpirationPlugin`](../reference-docs/latest/workbox.expiration.ExpirationPlugin):
   Manage the number and maximum age of items in the cache.
 
-* [`workbox.rangeRequests.Plugin`](../reference-docs/latest/workbox.rangeRequests.Plugin):
+* [`workbox.rangeRequests.RangeRequestsPlugin`](../reference-docs/latest/workbox.rangeRequests.RangeRequestsPlugin):
   Respond to requests that include a `Range:` header with partial content from
   a cache.
 
@@ -50,7 +50,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.CacheFirst({
     cacheName: 'images',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),
@@ -100,7 +100,7 @@ A plugin using all of these callbacks would look like this:
 ```javascript
 const myPlugin = {
   cacheWillUpdate: async ({request, response, event}) => {
-    // Return `response`, a different Response object or null
+    // Return `response`, a different `Response` object, or `null`.
     return response;
   },
   cacheDidUpdate: async ({cacheName, request, oldResponse, newResponse, event}) => {
@@ -111,17 +111,18 @@ const myPlugin = {
     // const freshResponse = await caches.match(request, {cacheName});
   },
   cacheKeyWillBeUsed: async ({request, mode}) => {
-  // request is the Request object that would otherwise be used as the cache key.
-  // mode is either 'read' or 'write'.
-  // Return either a string, or a Request whose url property will be used as the cache key.
-  // Returning the original request will make this a no-op.
+    // `request` is the `Request` object that would otherwise be used as the cache key.
+    // `mode` is either 'read' or 'write'.
+    // Return either a string, or a `Request` whose `url` property will be used as the cache key.
+    // Returning the original `request` will make this a no-op.
+    return request;
   },
   cachedResponseWillBeUsed: async ({cacheName, request, matchOptions, cachedResponse, event}) => {
-    // Return `cachedResponse`, a different Response object or null
+    // Return `cachedResponse`, a different `Response` object, or null.
     return cachedResponse;
   },
   requestWillFetch: async ({request}) => {
-    // Return `request` or a different Request
+    // Return `request` or a different `Request` object.
     return request;
   },
   fetchDidFail: async ({originalRequest, request, error, event}) => {
@@ -133,7 +134,7 @@ const myPlugin = {
   },
   fetchDidSucceed: async ({request, response}) => {
     // Return `response` to use the network response as-is,
-    // or alternatively create and return a new Response object.
+    // or alternatively create and return a new `Response` object.
     return response;
   }
 };

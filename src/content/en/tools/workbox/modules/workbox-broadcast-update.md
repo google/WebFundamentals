@@ -53,7 +53,7 @@ caching strategy, since that strategy involves returning a cached
 response immediately, but also provides a mechanism for updating the
 cache asynchronously.
 
-To broadcast updates, you just need to add a `broadcastUpdate.Plugin` to your
+To broadcast updates, you just need to add a `broadcastUpdate.BroadcastUpdatePlugin` to your
 strategy options.
 
 ```js
@@ -61,7 +61,7 @@ workbox.routing.registerRoute(
   new RegExp('/api/'),
   new workbox.strategies.StaleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin(),
+      new workbox.broadcastUpdate.BroadcastUpdatePlugin(),
     ],
   })
 );
@@ -122,7 +122,7 @@ workbox.routing.registerRoute(
   new RegExp('/api/'),
   new workbox.strategies.StaleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin({
+      new workbox.broadcastUpdate.BroadcastUpdatePlugin({
         headersToCheck: ['X-My-Custom-Header'],
       }),
     ],

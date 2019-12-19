@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-12 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -42,7 +42,7 @@ automatically Queue up failed requests and retry them when  future `sync`
 events are fired.
 
 ```javascript
-const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName', {
+const bgSyncPlugin = new workbox.backgroundSync.BackgroundSyncPlugin('myQueueName', {
   maxRetentionTime: 24 * 60 // Retry for max of 24 Hours (specified in minutes)
 });
 

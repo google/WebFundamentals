@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cacheable-response.
 
-{# wf_updated_on: 2019-07-14 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-11-27 #}
 {# wf_blink_components: N/A #}
 
@@ -25,7 +25,7 @@ with a specific value, or a combination of the two.
 
 You can configure a [Workbox strategy](./workbox-strategies) to consider
 a set of status codes as being eligible for caching by adding a
-`workbox.cacheableResponse.Plugin` instance to a strategy's `plugins` parameter:
+`workbox.cacheableResponse.CacheableResponsePlugin` instance to a strategy's `plugins` parameter:
 
 ```js
 workbox.routing.registerRoute(
@@ -33,7 +33,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.cacheableResponse.Plugin({
+      new workbox.cacheableResponse.CacheableResponsePlugin({
         statuses: [0, 200],
       })
     ]
@@ -60,7 +60,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'api-cache',
     plugins: [
-      new workbox.cacheableResponse.Plugin({
+      new workbox.cacheableResponse.CacheableResponsePlugin({
         headers: {
           'X-Is-Cacheable': 'true',
         },
@@ -91,7 +91,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'api-cache',
     plugins: [
-      new workbox.cacheableResponse.Plugin({
+      new workbox.cacheableResponse.CacheableResponsePlugin({
         statuses: [200, 404],
         headers: {
           'X-Is-Cacheable': 'true',
@@ -105,7 +105,7 @@ workbox.routing.registerRoute(
 ## What Are the Defaults?
 
 If you use one of Workbox's built-in strategies without explicitly
-configuring a `cacheableResponse.Plugin`, the following default criteria is
+configuring a `cacheableResponse.CacheableResponsePlugin`, the following default criteria is
 used to determine whether a response received from the network should
 be cached:
 

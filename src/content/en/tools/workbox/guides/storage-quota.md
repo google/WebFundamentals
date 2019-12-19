@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on configuring Workbox to avoid storage quota issues.
 
-{# wf_updated_on: 2019-07-02 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_blink_components: N/A #}
 
@@ -16,7 +16,7 @@ avoid running into storage quota limitations.
 ## What configuration options are supported?
 
 When setting up a route and runtime caching strategy, you can add in an instance of the
-[`workbox.expiration.Plugin`](/web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin)
+[`workbox.expiration.ExpirationPlugin`](/web/tools/workbox/reference-docs/latest/workbox.expiration.ExpirationPlugin)
 configured with settings that make the most sense for the type of assets you're caching.
 
 For instance, the following configuration might be used for caching images at runtime, with both
@@ -31,7 +31,7 @@ workbox.routing.registerRoute(
     // You need to provide a cache name when using expiration.
     cacheName: 'images',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         // Keep at most 50 entries.
         maxEntries: 50,
         // Don't keep any entries for more than 30 days.
@@ -44,7 +44,7 @@ workbox.routing.registerRoute(
 );
 ```
 
-You need to set `maxEntries`, `maxAgeSeconds`, or both when using `workbox.expiration.Plugin`.
+You need to set `maxEntries`, `maxAgeSeconds`, or both when using `workbox.expiration.ExpirationPlugin`.
 `purgeOnQuotaError` is optional.
 
 ### maxEntries
@@ -104,5 +104,5 @@ contributing [around 7 megabytes](https://bugs.chromium.org/p/chromium/issues/de
 towards your quota usage.
 
 You can quickly use up much more quota than you'd anticipate once you start caching opaque
-responses, so the best practice is to use `workbox.expiration.Plugin` with `maxEntries`, and
+responses, so the best practice is to use `workbox.expiration.ExpirationPlugin` with `maxEntries`, and
 potentially `purgeOnQuotaError`, configured appropriately.

@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-range-requests.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Range Requests {: .page-title }
@@ -34,7 +34,7 @@ workbox.routing.registerRoute(
   /\.mp4$/,
   new workbox.strategies.CacheFirst({
     plugins: [
-      new workbox.rangeRequests.Plugin(),
+      new workbox.rangeRequests.RangeRequestsPlugin(),
     ],
   });
 );

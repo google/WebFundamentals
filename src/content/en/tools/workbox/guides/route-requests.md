@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to route requests with Workbox.
 
-{# wf_updated_on: 2019-06-28 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -206,7 +206,7 @@ new workbox.strategies.StaleWhileRevalidate({
    // Use a custom cache for this route.
   cacheName: 'my-cache-name',
 
-  // Add an array of custom plugins (like workbox.expiration.Plugin).
+  // Add an array of custom plugins (like workbox.expiration.ExpirationPlugin).
   plugins: [
     ...
   ]

@@ -284,8 +284,8 @@ workbox.routing.registerRoute(
   new workbox.strategies.CacheFirst({
     cacheName: 'your-cache-name-here',
     plugins: [
-      new workbox.cacheableResponse.Plugin({statuses: [200]}),
-      new workbox.rangeRequests.Plugin(),
+      new workbox.cacheableResponse.CacheableResponsePlugin({statuses: [200]}),
+      new workbox.rangeRequests.RangeRequestsPlugin(),
     ],
   }),
 );

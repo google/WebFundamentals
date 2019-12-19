@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-11 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
@@ -28,7 +28,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         maxEntries: 20,
       }),
     ],
@@ -37,7 +37,7 @@ workbox.routing.registerRoute(
 ```
 
 With this, the
-[Plugin](/web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin)
+[Plugin](/web/tools/workbox/reference-docs/latest/workbox.expiration.ExpirationPlugin)
 will be added to this route. After a cached response is used or a new request
 is added to the cache, the plugin will look at the configured cache and ensure
 that the number of cached entries doesn’t exceed the limit. If it does,
@@ -54,7 +54,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],

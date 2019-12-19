@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-06-25 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -149,7 +149,7 @@ workbox.routing.registerRoute(
     // Use a custom cache name.
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         // Cache only 20 images.
         maxEntries: 20,
         // Cache for a maximum of a week.

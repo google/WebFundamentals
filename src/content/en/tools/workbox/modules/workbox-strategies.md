@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-10 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -143,10 +143,10 @@ workbox.routing.registerRoute(
 ### Using Plugins
 Workbox comes with a set of plugins that can be used with these strategies.
 
-- workbox.expiration.Plugin
-- workbox.cacheableResponse.Plugin
-- workbox.broadcastUpdate.Plugin
-- workbox.backgroundSync.Plugin
+- workbox.expiration.ExpirationPlugin
+- workbox.cacheableResponse.CacheableResponsePlugin
+- workbox.broadcastUpdate.BroadcastUpdatePlugin
+- workbox.backgroundSync.BackgroundSyncPlugin
 
 To use any of these plugins (or a custom plugin), you just need to pass in
 instances to the `plugins` option.
@@ -157,7 +157,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         // Only cache requests for a week
         maxAgeSeconds: 7 * 24 * 60 * 60,
         // Only cache 10 requests.
