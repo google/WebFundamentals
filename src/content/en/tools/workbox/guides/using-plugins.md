@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2019-07-01 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -36,7 +36,7 @@ Workbox provides the following plugins:
 
 * [`workbox.expiration.Plugin`](../reference-docs/latest/workbox.expiration.Plugin):
   Manage the number and maximum age of items in the cache.
-  
+
 * [`workbox.rangeRequests.Plugin`](../reference-docs/latest/workbox.rangeRequests.Plugin):
   Respond to requests that include a `Range:` header with partial content from
   a cache.
@@ -143,8 +143,8 @@ Note: the `event` object passed to each plugin callback above represents the
 original event that triggered the fetch or cache action. In some cases there
 will **not** be an original event, so your code should check for its existence
 before referencing it. Also, when invoking the
-[`makeRequest()`](/web/tools/workbox/guides/advanced-recipes#make-requests)
-method of a strategy, the `event` you pass to `makeRequest()` will be the event
+[`handle()`](/web/tools/workbox/guides/advanced-recipes#handle)
+method of a strategy, the `event` you pass to `handle()` will be the event
 passed to the plugin callbacks.
 
 ## Third-party Plugins

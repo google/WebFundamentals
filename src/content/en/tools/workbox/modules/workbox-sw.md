@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-sw.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-08 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox {: .page-title }
@@ -103,7 +103,7 @@ self.addEventListener('fetch', (event) => {
     // Oops! This causes workbox-strategies.js to be imported inside a fetch handler,
     // outside of the initial, synchronous service worker execution.
     const cacheFirst = new workbox.strategies.CacheFirst();
-    event.respondWith(cacheFirst.makeRequest({request: event.request}));
+    event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
 </pre>
@@ -122,7 +122,7 @@ self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png')) {
     // Referencing workbox.strategies will now work as expected.
     const cacheFirst = new workbox.strategies.CacheFirst();
-    event.respondWith(cacheFirst.makeRequest({request: event.request}));
+    event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
 </pre>
@@ -140,7 +140,7 @@ self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png')) {
     // Using the previously-initialized strategies will work as expected.
     const cacheFirst = new strategies.CacheFirst();
-    event.respondWith(cacheFirst.makeRequest({request: event.request}));
+    event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
 </pre>

@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2019-03-07 #}
+{# wf_updated_on: 2019-12-18 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -174,7 +174,7 @@ workbox.routing.setCatchHandler(({event}) => {
 });
 ```
 
-## Make standalone requests using a strategy {: #make-requests }
+## Make standalone requests using a strategy {: #handle }
 
 Most developers will use one of Workbox's
 [strategies](/web/tools/workbox/modules/workbox-strategies) as part of a
@@ -185,22 +185,21 @@ There are situations where you may want to use a strategy in your own router set
 a plain `fetch()` request.
 
 To help with these sort of use cases, you can use any of the Workbox strategies in a "standalone"
-fashion via the `makeRequest()` method.
+fashion via the `handle()` method.
 
 ```javascript
 // Inside your service worker code:
 const strategy = new workbox.strategies.NetworkFirst({
   networkTimeoutSeconds: 10,
 });
-const response = await strategy.makeRequest({
-  request: 'https://example.com/path/to/file',
+const response = await strategy.handle({
+  request: new Request('https://example.com/path/to/file'),
 });
 // Do something with response.
 ```
 
-The `request` parameter is required, and can either be a
-[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) object or a string
-representing a URL.
+The `request` parameter is required, and must be of type
+[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request).
 
 The `event` parameter is an optional
 [`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent). If provided,
@@ -208,32 +207,34 @@ it will be used to keep the service worker alive (via
 [`event.waitUntil()`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil))
 long enough to complete any "background" cache updates and cleanup.
 
-`makeRequest()` returns a promise for a
+`handle()` returns a promise for a
 [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object.
 
 You can use it in a more complex example as follows:
 
 ```javascript
-self.addEventListener('fetch', async (event) => {
+self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('/complexRequest')) {
-    // Configure the strategy in advance.
-    const strategy = new workbox.strategies.StaleWhileRevalidate({cacheName: 'api-cache'});
+    event.respondWith((async () => {
+      // Configure the strategy in advance.
+      const strategy = new workbox.strategies.StaleWhileRevalidate({cacheName: 'api-cache'});
 
-    // Make two requests using the strategy.
-    // Because we're passing in event, event.waitUntil() will be called automatically.
-    const firstPromise = strategy.makeRequest({event, request: 'https://example.com/api1'});
-    const secondPromise = strategy.makeRequest({event, request: 'https://example.com/api2'});
+      // Make two requests using the strategy.
+      // Because we're passing in event, event.waitUntil() will be called automatically.
+      const firstPromise = strategy.handle({event, request: 'https://example.com/api1'});
+      const secondPromise = strategy.handle({event, request: 'https://example.com/api2'});
 
-    const [firstResponse, secondResponse] = await Promise.all(firstPromise, secondPromise);
-    const [firstBody, secondBody] = await Promise.all(firstResponse.text(), secondResponse.text());
+      const [firstResponse, secondResponse] = await Promise.all(firstPromise, secondPromise);
+      const [firstBody, secondBody] = await Promise.all(firstResponse.text(), secondResponse.text());
 
-    // Assume that we just want to concatenate the first API response with the second to create the
-    // final response HTML.
-    const compositeResponse = new Response(firstBody + secondBody, {
-      headers: {'content-type': 'text/html'},
-    });
+      // Assume that we just want to concatenate the first API response with the second to create the
+      // final response HTML.
+      const compositeResponse = new Response(firstBody + secondBody, {
+        headers: {'content-type': 'text/html'},
+      });
 
-    event.respondWith(compositeResponse);
+      return compositeResponse;
+    })());
   }
 });
 ```
