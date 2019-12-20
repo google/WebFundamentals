@@ -4,10 +4,10 @@ description: Also cache invalidation, server rendering, and learning curves.
 
 {# wf_updated_on: 2019-12-20 #}
 {# wf_published_on: 2019-12-20 #}
-{# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-25.mp3 #}
+{# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-26.m4a #}
 {# wf_podcast_duration: 01:07:03 #}
 {# wf_podcast_fileSize: 37146673 #}
-{# wf_podcast_subtitle: Also #} cache invalidation, server rendering, and learning curves.
+{# wf_podcast_subtitle: Also cache invalidation, server rendering, and learning curves. #}
 {# wf_featured_image: /web/shows/http203/podcast/images/surjiko-small.jpg #}
 {# wf_blink_components: Blink>Workers #}
 
