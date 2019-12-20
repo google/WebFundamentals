@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-broadcast-update/BroadcastCacheUpdate.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-broadcast-update/BroadcastCacheUpdate.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
+import { timeout } from &#x27;workbox-core/_private/timeout.js&#x27;;
+import { resultingClientExists } from &#x27;workbox-core/_private/resultingClientExists.js&#x27;;
+import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
+import { responsesAreSame } from &#x27;./responsesAreSame.js&#x27;;
+import { CACHE_UPDATED_MESSAGE_TYPE, CACHE_UPDATED_MESSAGE_META, DEFAULT_HEADERS_TO_CHECK } from &#x27;./utils/constants.js&#x27;;
+import &#x27;./_version.js&#x27;;
+// UA-sniff Safari: https://stackoverflow.com/questions/7944460/detect-safari-browser
+// TODO(philipwalton): remove once this Safari bug fix has been released.
+// https://bugs.webkit.org/show_bug.cgi?id&#x3D;201169
+const isSafari &#x3D; /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+/**
+ * Generates the default payload used in update messages. By default the
+ * payload includes the &#x60;cacheName&#x60; and &#x60;updatedURL&#x60; fields.
+ *
+ * @return Object
+ * @private
+ */
+function defaultPayloadGenerator(data) {
+    return {
+        cacheName: data.cacheName,
+        updatedURL: data.request.url,
+    };
+}
+/**
+ * Uses the &#x60;postMessage()&#x60; API to inform any open windows/tabs when a cached
+ * response has been updated.
+ *
+ * For efficiency&#x27;s sake, the underlying response bodies are not compared;
+ * only specific response headers are checked.
+ *
+ * @memberof module:workbox-broadcast-update
+ */
+class BroadcastCacheUpdate {
+    /**
+     * Construct a BroadcastCacheUpdate instance with a specific &#x60;channelName&#x60; to
+     * broadcast messages on
+     *
+     * @param {Object} options
+     * @param {Array&amp;lt;string&gt;} [options.headersToCheck&#x3D;[&#x27;content-length&#x27;, &#x27;etag&#x27;, &#x27;last-modified&#x27;]]
+     *     A list of headers that will be used to determine whether the responses
+     *     differ.
+     * @param {string} [options.generatePayload] A function whose return value
+     *     will be used as the &#x60;payload&#x60; field in any cache update messages sent
+     *     to the window clients.
+     */
+    constructor({ headersToCheck, generatePayload, } &#x3D; {}) {
+        this._headersToCheck &#x3D; headersToCheck || DEFAULT_HEADERS_TO_CHECK;
+        this._generatePayload &#x3D; generatePayload || defaultPayloadGenerator;
+    }
+    /**
+     * Compares two [Responses](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+     * and sends a message (via &#x60;postMessage()&#x60;) to all window clients if the
+     * responses differ (note: neither of the Responses can be
+     * {@link http://stackoverflow.com/questions/39109789|opaque}).
+     *
+     * The message that&#x27;s posted has the following format (where &#x60;payload&#x60; can
+     * be customized via the &#x60;generatePayload&#x60; option the instance is created
+     * with):
+     *
+     * &#x60;&#x60;&#x60;
+     * {
+     *   type: &#x27;CACHE_UPDATED&#x27;,
+     *   meta: &#x27;workbox-broadcast-update&#x27;,
+     *   payload: {
+     *     cacheName: &#x27;the-cache-name&#x27;,
+     *     updatedURL: &#x27;https://example.com/&#x27;
+     *   }
+     * }
+     * &#x60;&#x60;&#x60;
+     *
+     * @param {Object} options
+     * @param {Response} [options.oldResponse] Cached response to compare.
+     * @param {Response} options.newResponse Possibly updated response to compare.
+     * @param {Request} options.request The request.
+     * @param {string} options.cacheName Name of the cache the responses belong
+     *     to. This is included in the broadcast message.
+     * @param {Event} [options.event] event An optional event that triggered
+     *     this possible cache update.
+     * @return {Promise} Resolves once the update is sent.
+     */
+    async notifyIfUpdated(options) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            assert.isType(options.cacheName, &#x27;string&#x27;, {
+                moduleName: &#x27;workbox-broadcast-update&#x27;,
+                className: &#x27;BroadcastCacheUpdate&#x27;,
+                funcName: &#x27;notifyIfUpdated&#x27;,
+                paramName: &#x27;cacheName&#x27;,
+            });
+            assert.isInstance(options.newResponse, Response, {
+                moduleName: &#x27;workbox-broadcast-update&#x27;,
+                className: &#x27;BroadcastCacheUpdate&#x27;,
+                funcName: &#x27;notifyIfUpdated&#x27;,
+                paramName: &#x27;newResponse&#x27;,
+            });
+            assert.isInstance(options.request, Request, {
+                moduleName: &#x27;workbox-broadcast-update&#x27;,
+                className: &#x27;BroadcastCacheUpdate&#x27;,
+                funcName: &#x27;notifyIfUpdated&#x27;,
+                paramName: &#x27;request&#x27;,
+            });
+        }
+        // Without two responses there is nothing to compare.
+        if (!options.oldResponse) {
+            return;
+        }
+        if (!responsesAreSame(options.oldResponse, options.newResponse, this._headersToCheck)) {
+            if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                logger.log(&#x60;Newer response found (and cached) for:&#x60;, options.request.url);
+            }
+            const messageData &#x3D; {
+                type: CACHE_UPDATED_MESSAGE_TYPE,
+                meta: CACHE_UPDATED_MESSAGE_META,
+                payload: this._generatePayload(options),
+            };
+            // For navigation requests, wait until the new window client exists
+            // before sending the message
+            if (options.request.mode &#x3D;&#x3D;&#x3D; &#x27;navigate&#x27;) {
+                let resultingClientId;
+                if (options.event instanceof FetchEvent) {
+                    resultingClientId &#x3D; options.event.resultingClientId;
+                }
+                const resultingWin &#x3D; await resultingClientExists(resultingClientId);
+                // Safari does not currently implement postMessage buffering and
+                // there&#x27;s no good way to feature detect that, so to increase the
+                // chances of the message being delivered in Safari, we add a timeout.
+                // We also do this if &#x60;resultingClientExists()&#x60; didn&#x27;t return a client,
+                // which means it timed out, so it&#x27;s worth waiting a bit longer.
+                if (!resultingWin || isSafari) {
+                    // 3500 is chosen because (according to CrUX data) 80% of mobile
+                    // websites hit the DOMContentLoaded event in less than 3.5 seconds.
+                    // And presumably sites implementing service worker are on the
+                    // higher end of the performance spectrum.
+                    await timeout(3500);
+                }
+            }
+            const windows &#x3D; await self.clients.matchAll({ type: &#x27;window&#x27; });
+            for (const win of windows) {
+                win.postMessage(messageData);
+            }
+        }
+    }
+}
+export { BroadcastCacheUpdate };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

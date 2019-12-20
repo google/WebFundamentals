@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-precaching/index.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-precaching/index.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
+import { addPlugins } from &#x27;./addPlugins.js&#x27;;
+import { addRoute } from &#x27;./addRoute.js&#x27;;
+import { cleanupOutdatedCaches } from &#x27;./cleanupOutdatedCaches.js&#x27;;
+import { createHandler } from &#x27;./createHandler.js&#x27;;
+import { createHandlerBoundToURL } from &#x27;./createHandlerBoundToURL.js&#x27;;
+import { getCacheKeyForURL } from &#x27;./getCacheKeyForURL.js&#x27;;
+import { matchPrecache } from &#x27;./matchPrecache.js&#x27;;
+import { precache } from &#x27;./precache.js&#x27;;
+import { precacheAndRoute } from &#x27;./precacheAndRoute.js&#x27;;
+import { PrecacheController } from &#x27;./PrecacheController.js&#x27;;
+import &#x27;./_version.js&#x27;;
+if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+    assert.isSWEnv(&#x27;workbox-precaching&#x27;);
+}
+/**
+ * Most consumers of this module will want to use the
+ * [precacheAndRoute()]{@link module:workbox-precaching.precacheAndRoute}
+ * method to add assets to the Cache and respond to network requests with these
+ * cached assets.
+ *
+ * If you require finer grained control, you can use the
+ * [PrecacheController]{@link module:workbox-precaching.PrecacheController}
+ * to determine when performed.
+ *
+ * @module workbox-precaching
+ */
+export { addPlugins, addRoute, cleanupOutdatedCaches, createHandler, createHandlerBoundToURL, getCacheKeyForURL, matchPrecache, precache, precacheAndRoute, PrecacheController, };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

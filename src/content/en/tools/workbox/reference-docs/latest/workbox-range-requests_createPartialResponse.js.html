@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-range-requests/createPartialResponse.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-range-requests/createPartialResponse.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { WorkboxError } from &#x27;workbox-core/_private/WorkboxError.js&#x27;;
+import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
+import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
+import { calculateEffectiveBoundaries } from &#x27;./utils/calculateEffectiveBoundaries.js&#x27;;
+import { parseRangeHeader } from &#x27;./utils/parseRangeHeader.js&#x27;;
+import &#x27;./_version.js&#x27;;
+/**
+ * Given a &#x60;Request&#x60; and &#x60;Response&#x60; objects as input, this will return a
+ * promise for a new &#x60;Response&#x60;.
+ *
+ * If the original &#x60;Response&#x60; already contains partial content (i.e. it has
+ * a status of 206), then this assumes it already fulfills the &#x60;Range:&#x60;
+ * requirements, and will return it as-is.
+ *
+ * @param {Request} request A request, which should contain a Range:
+ * header.
+ * @param {Response} originalResponse A response.
+ * @return {Promise&amp;lt;Response&gt;} Either a &#x60;206 Partial Content&#x60; response, with
+ * the response body set to the slice of content specified by the request&#x27;s
+ * &#x60;Range:&#x60; header, or a &#x60;416 Range Not Satisfiable&#x60; response if the
+ * conditions of the &#x60;Range:&#x60; header can&#x27;t be met.
+ *
+ * @memberof module:workbox-range-requests
+ */
+async function createPartialResponse(request, originalResponse) {
+    try {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            assert.isInstance(request, Request, {
+                moduleName: &#x27;workbox-range-requests&#x27;,
+                funcName: &#x27;createPartialResponse&#x27;,
+                paramName: &#x27;request&#x27;,
+            });
+            assert.isInstance(originalResponse, Response, {
+                moduleName: &#x27;workbox-range-requests&#x27;,
+                funcName: &#x27;createPartialResponse&#x27;,
+                paramName: &#x27;originalResponse&#x27;,
+            });
+        }
+        if (originalResponse.status &#x3D;&#x3D;&#x3D; 206) {
+            // If we already have a 206, then just pass it through as-is;
+            // see https://github.com/GoogleChrome/workbox/issues/1720
+            return originalResponse;
+        }
+        const rangeHeader &#x3D; request.headers.get(&#x27;range&#x27;);
+        if (!rangeHeader) {
+            throw new WorkboxError(&#x27;no-range-header&#x27;);
+        }
+        const boundaries &#x3D; parseRangeHeader(rangeHeader);
+        const originalBlob &#x3D; await originalResponse.blob();
+        const effectiveBoundaries &#x3D; calculateEffectiveBoundaries(originalBlob, boundaries.start, boundaries.end);
+        const slicedBlob &#x3D; originalBlob.slice(effectiveBoundaries.start, effectiveBoundaries.end);
+        const slicedBlobSize &#x3D; slicedBlob.size;
+        const slicedResponse &#x3D; new Response(slicedBlob, {
+            // Status code 206 is for a Partial Content response.
+            // See https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/206
+            status: 206,
+            statusText: &#x27;Partial Content&#x27;,
+            headers: originalResponse.headers,
+        });
+        slicedResponse.headers.set(&#x27;Content-Length&#x27;, String(slicedBlobSize));
+        slicedResponse.headers.set(&#x27;Content-Range&#x27;, &#x60;bytes ${effectiveBoundaries.start}-${effectiveBoundaries.end - 1}/&#x60; +
+            originalBlob.size);
+        return slicedResponse;
+    }
+    catch (error) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            logger.warn(&#x60;Unable to construct a partial response; returning a &#x60; +
+                &#x60;416 Range Not Satisfiable response instead.&#x60;);
+            logger.groupCollapsed(&#x60;View details here.&#x60;);
+            logger.log(error);
+            logger.log(request);
+            logger.log(originalResponse);
+            logger.groupEnd();
+        }
+        return new Response(&#x27;&#x27;, {
+            status: 416,
+            statusText: &#x27;Range Not Satisfiable&#x27;,
+        });
+    }
+}
+export { createPartialResponse };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

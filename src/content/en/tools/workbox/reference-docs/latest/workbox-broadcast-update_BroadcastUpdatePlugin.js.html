@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-broadcast-update/BroadcastUpdatePlugin.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-broadcast-update/BroadcastUpdatePlugin.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { dontWaitFor } from &#x27;workbox-core/_private/dontWaitFor.js&#x27;;
+import { BroadcastCacheUpdate } from &#x27;./BroadcastCacheUpdate.js&#x27;;
+import &#x27;./_version.js&#x27;;
+/**
+ * This plugin will automatically broadcast a message whenever a cached response
+ * is updated.
+ *
+ * @memberof module:workbox-broadcast-update
+ */
+class BroadcastUpdatePlugin {
+    /**
+     * Construct a BroadcastCacheUpdate instance with the passed options and
+     * calls its [&#x60;notifyIfUpdated()&#x60;]{@link module:workbox-broadcast-update.BroadcastCacheUpdate~notifyIfUpdated}
+     * method whenever the plugin&#x27;s &#x60;cacheDidUpdate&#x60; callback is invoked.
+     *
+     * @param {Object} options
+     * @param {Array&amp;lt;string&gt;} [options.headersToCheck&#x3D;[&#x27;content-length&#x27;, &#x27;etag&#x27;, &#x27;last-modified&#x27;]]
+     *     A list of headers that will be used to determine whether the responses
+     *     differ.
+     * @param {string} [options.generatePayload] A function whose return value
+     *     will be used as the &#x60;payload&#x60; field in any cache update messages sent
+     *     to the window clients.
+     */
+    constructor(options) {
+        /**
+         * A &quot;lifecycle&quot; callback that will be triggered automatically by the
+         * &#x60;workbox-sw&#x60; and &#x60;workbox-runtime-caching&#x60; handlers when an entry is
+         * added to a cache.
+         *
+         * @private
+         * @param {Object} options The input object to this function.
+         * @param {string} options.cacheName Name of the cache being updated.
+         * @param {Response} [options.oldResponse] The previous cached value, if any.
+         * @param {Response} options.newResponse The new value in the cache.
+         * @param {Request} options.request The request that triggered the update.
+         * @param {Request} [options.event] The event that triggered the update.
+         */
+        this.cacheDidUpdate &#x3D; async (options) &#x3D;&gt; {
+            dontWaitFor(this._broadcastUpdate.notifyIfUpdated(options));
+        };
+        this._broadcastUpdate &#x3D; new BroadcastCacheUpdate(options);
+    }
+}
+export { BroadcastUpdatePlugin };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

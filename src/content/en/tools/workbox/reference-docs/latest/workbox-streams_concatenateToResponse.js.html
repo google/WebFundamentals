@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-streams/concatenateToResponse.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-streams/concatenateToResponse.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { createHeaders } from &#x27;./utils/createHeaders.js&#x27;;
+import { concatenate } from &#x27;./concatenate.js&#x27;;
+import &#x27;./_version.js&#x27;;
+/**
+ * Takes multiple source Promises, each of which could resolve to a Response, a
+ * ReadableStream, or a [BodyInit](https://fetch.spec.whatwg.org/#bodyinit),
+ * along with a
+ * [HeadersInit](https://fetch.spec.whatwg.org/#typedefdef-headersinit).
+ *
+ * Returns an object exposing a Response whose body consists of each individual
+ * stream&#x27;s data returned in sequence, along with a Promise which signals when
+ * the stream is finished (useful for passing to a FetchEvent&#x27;s waitUntil()).
+ *
+ * @param {Array&amp;lt;Promise&amp;lt;module:workbox-streams.StreamSource&gt;&gt;} sourcePromises
+ * @param {HeadersInit} [headersInit] If there&#x27;s no &#x60;Content-Type&#x60; specified,
+ * &#x60;&#x27;text/html&#x27;&#x60; will be used by default.
+ * @return {Object&amp;lt;{done: Promise, response: Response}&gt;}
+ *
+ * @memberof module:workbox-streams
+ */
+function concatenateToResponse(sourcePromises, headersInit) {
+    const { done, stream } &#x3D; concatenate(sourcePromises);
+    const headers &#x3D; createHeaders(headersInit);
+    const response &#x3D; new Response(stream, { headers });
+    return { done, response };
+}
+export { concatenateToResponse };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>
