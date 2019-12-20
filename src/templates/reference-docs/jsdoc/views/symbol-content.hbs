@@ -18,15 +18,19 @@
   {{/block}}
 
   {{#block 'symbol-content-enums'}}
-    {{#withOnly items=(where members.properties isEnum=true) headingKey='enums'}}
-      {{#embed 'members-details'}}{{/embed}}
-    {{/withOnly}}
+    {{#if members.properties}}
+      {{#withOnly items=(where members.properties isEnum=true) headingKey='enums'}}
+        {{#embed 'members-details'}}{{/embed}}
+      {{/withOnly}}
+    {{/if}}
   {{/block}}
 
   {{#block 'symbol-content-properties'}}
-    {{#withOnly items=(where members.properties isEnum=undefined) headingKey='properties'}}
-      {{#embed 'members-details'}}{{/embed}}
-    {{/withOnly}}
+    {{#if members.properties}}
+      {{#withOnly items=(where members.properties isEnum=undefined) headingKey='properties'}}
+        {{#embed 'members-details'}}{{/embed}}
+      {{/withOnly}}
+    {{/if}}
   {{/block}}
 
   {{#block 'symbol-content-methods'}}
