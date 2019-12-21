@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2019-12-20 #}
+{# wf_updated_on: 2019-12-21 #}
 {# wf_blink_components: N/A #}
 
 # Workbox Window {: .page-title }
@@ -38,7 +38,7 @@ The easiest way to import the `Workbox` class on your site is from our CDN:
 
 ```html
 <script type="module">
-import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-window.prod.mjs';
+import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/{% include "web/tools/workbox/_shared/workbox-latest-version.html" %}/workbox-window.prod.mjs';
 
 if ('serviceWorker' in navigator) {
   const wb = new Workbox('/sw.js');

@@ -14,7 +14,7 @@ const buildReferenceDocs = require('../reference-docs/build-reference-docs');
 // latest reference docs
 gulp.task('workbox', [
     'workbox-generate-contributors',
-    'workbox-generate-cdn-include',
+    'workbox-generate-includes',
   ], () => {
   const GIT_URL = 'https://github.com/GoogleChrome/workbox.git';
   const toolsPath = path.join(

@@ -23,7 +23,7 @@ function updateWorkboxBuild() {
   return wfHelper.promisedExec(`npm install --save-dev workbox-build`);
 }
 
-gulp.task('workbox-generate-cdn-include', () => {
+gulp.task('workbox-generate-includes', () => {
   const gitUrl = 'https://github.com/GoogleChrome/workbox.git';
   return updateWorkboxBuild()
   .then(() => getLatestTags(gitUrl))
@@ -33,6 +33,7 @@ gulp.task('workbox-generate-cdn-include', () => {
     const buildPath = path.dirname(require.resolve('workbox-build'));
     const workboxBuild = require(path.join(buildPath, 'lib', 'cdn-utils.js'));
     const latestUrl = workboxBuild.getModuleURL('workbox-sw');
+    const latestVersion = latestTags.latest.slice(1); // Omit leading "v".
 
     // Substring removes the 'v' at the front of the git tag.
     if (latestUrl.indexOf(latestTags.latest.substring(1)) === -1) {
@@ -43,10 +44,13 @@ gulp.task('workbox-generate-cdn-include', () => {
     const toolsPath = path.join(
       __dirname, '..', '..', 'src', 'content', 'en', 'tools'
     );
-    const includePath = path.join(
-      toolsPath, 'workbox', '_shared', 'workbox-sw-cdn-url.html');
 
-    fs.ensureDirSync(path.dirname(includePath));
-    fs.writeFileSync(includePath, latestUrl);
+    const includeDir = path.join(toolsPath, 'workbox', '_shared');
+
+    const versionPath = path.join(includeDir, 'workbox-latest-version.html');
+    fs.outputFileSync(versionPath, latestVersion);
+
+    const cdnUrlPath = path.join(includeDir, 'workbox-sw-cdn-url.html');
+    fs.outputFileSync(cdnUrlPath, latestUrl);
   });
 });
