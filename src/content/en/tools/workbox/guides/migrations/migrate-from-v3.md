@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v3 to v4.
 
-{# wf_updated_on: 2019-03-22 #}
+{# wf_updated_on: 2019-12-20 #}
 {# wf_published_on: 2019-02-25 #}
 {# wf_blink_components: N/A #}
 
@@ -25,7 +25,7 @@ special `__WB_REVISION__` URL query parameter appended to the original URL.
 [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB).)
 
 Developers who take advantage of precaching via
-<code>[workbox.precaching.precacheAndRoute()](/web/tools/workbox/reference-docs/latest/workbox.precaching#.precacheAndRoute)</code>,
+<code>[workbox.precaching.precacheAndRoute()](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)</code>,
 which is the most common use case, do not need to make any changes to their
 service worker configuration; upon upgrading to Workbox v4, your users' cached
 assets will automatically migrate to the new cache key format, and moving
@@ -79,7 +79,7 @@ false-positives around deletion, to [please let us know](https://github.com/Goog
 #### Parameter Capitalization
 
 Two
-[optional parameters](/web/tools/workbox/reference-docs/latest/workbox.precaching#.addRoute)
+[optional parameters](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.addRoute)
 that can be passed to `workbox.precaching.precacheAndRoute()` and
 `workbox.precaching.addRoute() ` have been renamed, to standardize our overall
 capitalization convention. `ignoreUrlParametersMatching` is now
@@ -107,7 +107,7 @@ in the future v5 release.
 ### workbox-background-sync
 
 The
-[`workbox.backgroundSync.Queue` class](/web/tools/workbox/reference-docs/latest/workbox.backgroundSync.Queue#Queue)
+[`workbox.backgroundSync.Queue` class](/web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#Queue)
 has been rewritten to offer developers more flexibility and control over how
 requests are added to the queue and replayed.
 
@@ -131,7 +131,7 @@ including the ability to dynamically modify, re-order, or even cancel
 individual requests.
 
 In v4, these callbacks have been removed in favor of a single
-[`onSync` callback](/web/tools/workbox/reference-docs/latest/workbox.backgroundSync.Queue#Queue),
+[`onSync` callback](/web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#Queue),
 which is invoked any time a replay attempt is being made by the browser. By
 default the `onSync` callback will invoke `replayRequests()`, but if you need
 more control over the replay process, you can use the array-like methods listed
@@ -158,7 +158,7 @@ const queue = new workbox.backgroundSync.Queue('my-queue-name', {
 ```
 
 Similarly, the
-[`workbox.backgroundSync.Plugin`](/web/tools/workbox/reference-docs/latest/workbox.backgroundSync.Plugin)
+[`workbox.backgroundSync.Plugin`](/web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Plugin)
 class accepts the same arguments as the `Queue` class (since it creates a
 `Queue` instance internally), so it has changed in the same way.
 

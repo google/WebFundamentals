@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-range-requests.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-12-18 #}
+{# wf_updated_on: 2019-12-20 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Range Requests {: .page-title }
@@ -53,4 +53,4 @@ can use the `createPartialResponse()` function.
 workbox.rangeRequests.createPartialResponse(request, cachedResponse);
 ```
 
-For more info [see the reference docs](../reference-docs/latest/workbox.rangeRequests).
+For more info [see the reference docs](../reference-docs/latest/module-workbox-range-requests).

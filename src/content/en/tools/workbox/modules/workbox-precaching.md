@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-21 #}
+{# wf_updated_on: 2019-12-20 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -56,9 +56,9 @@ files that have changed.
 ### Serving Precached Responses
 
 Calling
-[`workbox.precaching.precacheAndRoute()`](/web/tools/workbox/reference-docs/latest/workbox.precaching#.precacheAndRoute)
+[`workbox.precaching.precacheAndRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)
 or
-[`workbox.precaching.addRoute()`](/web/tools/workbox/reference-docs/latest/workbox.precaching#.addRoute)
+[`workbox.precaching.addRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.addRoute)
 will create a [route](/web/tools/workbox/modules/workbox-routing) that matches requests for
 precached URLs.
 

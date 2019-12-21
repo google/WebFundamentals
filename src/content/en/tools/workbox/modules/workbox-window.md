@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2019-09-02 #}
+{# wf_updated_on: 2019-12-20 #}
 {# wf_blink_components: N/A #}
 
 # Workbox Window {: .page-title }
@@ -272,7 +272,7 @@ wb.register();
   The above technique work for any route defined via the
   <code>workbox.routing.registerRoute()</code> method on the default router. If
   you're creating your own <code>Router</code> instance, you'll need to call <a
-  href="/web/tools/workbox/reference-docs/latest/workbox.routing.Router#addCacheListener">
+  href="/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#addCacheListener">
   <code>addCacheListener()</code></a> manually.
 </aside>
 

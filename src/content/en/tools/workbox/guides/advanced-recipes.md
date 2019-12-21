@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2019-12-18 #}
+{# wf_updated_on: 2019-12-20 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -125,7 +125,7 @@ the original image can't be retrieved.
 
 All of the built-in caching strategies reject in a consistent manner when there's a network failure
 and/or a cache miss. This promotes the pattern of [setting a global "catch"
-handler](/web/tools/workbox/reference-docs/latest/workbox.routing#.setCatchHandler) to deal with any
+handler](/web/tools/workbox/reference-docs/latest/module-workbox-routing#.setCatchHandler) to deal with any
 failures in a single handler function:
 
 ```javascript

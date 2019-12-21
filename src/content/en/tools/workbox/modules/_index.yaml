@@ -28,7 +28,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-core
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.core
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-core
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-core
 
@@ -40,7 +40,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-precaching
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.precaching
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-precaching
 
@@ -52,7 +52,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-routing
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.routing.Router
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-routing.Router
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-routing
 
@@ -65,7 +65,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-strategies
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.strategies
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-strategies
 
@@ -77,7 +77,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-cache-expiration
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.expiration
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-expiration
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-expiration
 
@@ -89,7 +89,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-background-sync
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-background-sync-demo
 
@@ -100,7 +100,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-google-analytics
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.googleAnalytics
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-google-analytics
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-google-analytics
 
@@ -113,7 +113,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-cacheable-response
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-cacheable-response
 
@@ -125,7 +125,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-broadcast-update
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-broadcast-update-demo
 
@@ -137,7 +137,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-range-requests
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-range-requests
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-range-requests
 
@@ -147,7 +147,7 @@ landing_page:
           of streaming sources.
         buttons:
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.streams
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-streams
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-streams
 
@@ -160,7 +160,7 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-navigation-preload
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.navigationPreload
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-navigation-preload
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-navigation-preload
 

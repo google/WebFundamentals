@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2019-12-18 #}
+{# wf_updated_on: 2019-12-20 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -23,21 +23,21 @@ you can implement your own plugins if you want to add custom logic.
 
 Workbox provides the following plugins:
 
-* [`workbox.backgroundSync.BackgroundSyncPlugin`](../reference-docs/latest/workbox.backgroundSync.BackgroundSyncPlugin):
+* [`workbox.backgroundSync.BackgroundSyncPlugin`](../reference-docs/latest/module-workbox-background-sync.BackgroundSyncPlugin):
   If a network request ever fails, add it to a background sync queue and retry
   the request when the next sync event is triggered.
 
-* [`workbox.broadcastUpdate.BroadcastUpdatePlugin`](../reference-docs/latest/workbox.broadcastUpdate.BroadcastUpdatePlugin):
+* [`workbox.broadcastUpdate.BroadcastUpdatePlugin`](../reference-docs/latest/module-workbox-broadcast-update.BroadcastUpdatePlugin):
   Whenever a cache is updated, dispatch a message on a Broadcast Channel or via
   `postMessage()`.
 
-* [`workbox.cacheableResponse.CacheableResponsePlugin`](../reference-docs/latest/workbox.cacheableResponse.CacheableResponsePlugin):
+* [`workbox.cacheableResponse.CacheableResponsePlugin`](../reference-docs/latest/module-workbox-cacheable-response.CacheableResponsePlugin):
   Only cache requests that meet a certain criteria.
 
-* [`workbox.expiration.ExpirationPlugin`](../reference-docs/latest/workbox.expiration.ExpirationPlugin):
+* [`workbox.expiration.ExpirationPlugin`](../reference-docs/latest/module-workbox-expiration.ExpirationPlugin):
   Manage the number and maximum age of items in the cache.
 
-* [`workbox.rangeRequests.RangeRequestsPlugin`](../reference-docs/latest/workbox.rangeRequests.RangeRequestsPlugin):
+* [`workbox.rangeRequests.RangeRequestsPlugin`](../reference-docs/latest/module-workbox-range-requests.RangeRequestsPlugin):
   Respond to requests that include a `Range:` header with partial content from
   a cache.
 

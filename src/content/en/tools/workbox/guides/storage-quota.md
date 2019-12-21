@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on configuring Workbox to avoid storage quota issues.
 
-{# wf_updated_on: 2019-12-18 #}
+{# wf_updated_on: 2019-12-20 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_blink_components: N/A #}
 
@@ -16,7 +16,7 @@ avoid running into storage quota limitations.
 ## What configuration options are supported?
 
 When setting up a route and runtime caching strategy, you can add in an instance of the
-[`workbox.expiration.ExpirationPlugin`](/web/tools/workbox/reference-docs/latest/workbox.expiration.ExpirationPlugin)
+[`workbox.expiration.ExpirationPlugin`](/web/tools/workbox/reference-docs/latest/module-workbox-expiration.ExpirationPlugin)
 configured with settings that make the most sense for the type of assets you're caching.
 
 For instance, the following configuration might be used for caching images at runtime, with both
