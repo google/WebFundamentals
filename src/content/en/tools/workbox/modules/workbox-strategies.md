@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-12-20 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -43,9 +43,12 @@ This is a fairly common strategy where having the most up-to-date resource
 is not vital to the application.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
   new RegExp('/images/avatars/'),
-  new workbox.strategies.StaleWhileRevalidate()
+  new StaleWhileRevalidate()
 );
 ```
 
@@ -64,9 +67,12 @@ response, the Request will be fulfilled by a network request and the response
 will be cached so that the next request is served directly from the cache.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
   new RegExp('/styles/'),
-  new workbox.strategies.CacheFirst()
+  new CacheFirst()
 );
 ```
 
@@ -82,9 +88,12 @@ in the cache. If the network fails to return a response, the cached response
 will be used.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {NetworkFirst} from 'workbox-strategies';
+
+registerRoute(
   new RegExp('/social-timeline/'),
-  new workbox.strategies.NetworkFirst()
+  new NetworkFirst()
 );
 ```
 
@@ -97,9 +106,12 @@ If you require specific requests to be fulfilled from the network, the
 is the strategy to use.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {NetworkOnly} from 'workbox-strategies';
+
+registerRoute(
   new RegExp('/admin/'),
-  new workbox.strategies.NetworkOnly()
+  new NetworkOnly()
 );
 ```
 
@@ -112,9 +124,12 @@ strategy ensures that responses are obtained from a cache. This is less common
 in workbox, but can be useful if you have your own precaching step.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheOnly} from 'workbox-strategies';
+
+registerRoute(
   new RegExp('/app/v2/'),
-  new workbox.strategies.CacheOnly()
+  new CacheOnly()
 );
 ```
 
@@ -132,32 +147,41 @@ You can change the cache a strategy used by supplying a cache name. This is
 useful if you want to separate out your assets to help with debugging.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+
+registerRoute(
   new RegExp('/images/'),
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'image-cache',
   })
 );
 ```
 
 ### Using Plugins
+
 Workbox comes with a set of plugins that can be used with these strategies.
 
-- workbox.expiration.ExpirationPlugin
-- workbox.cacheableResponse.CacheableResponsePlugin
-- workbox.broadcastUpdate.BroadcastUpdatePlugin
-- workbox.backgroundSync.BackgroundSyncPlugin
+- [workbox-background-sync](/web/tools/workbox/reference-docs/latest/module-workbox-background-sync)
+- [workbox-broadcast-update](/web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update)
+- [workbox-cacheable-response](/web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response)
+- [workbox-expiration](/web/tools/workbox/reference-docs/latest/module-workbox-expiration)
+- [workbox-range-requests](/web/tools/workbox/reference-docs/latest/module-workbox-range-requests)
 
 To use any of these plugins (or a custom plugin), you just need to pass in
 instances to the `plugins` option.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   new RegExp('/images/'),
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.ExpirationPlugin({
+      new ExpirationPlugin({
         // Only cache requests for a week
         maxAgeSeconds: 7 * 24 * 60 * 60,
         // Only cache 10 requests.
@@ -178,9 +202,8 @@ following:
 
 ```javascript
 self.addEventListener('fetch', (event) => {
-  if (event.request.url === '/') {
-    const staleWhileRevalidate = new workbox.strategies.StaleWhileRevalidate();
-    event.respondWith(staleWhileRevalidate.handle({event}));
+  if (event.request.url === '/') {f
+    event.respondWith(new StaleWhileRevalidate().handle(event));
   }
 });
 ```

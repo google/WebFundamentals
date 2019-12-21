@@ -107,9 +107,11 @@ add some files to the cache during the service worker installation.
 To do this you'll need to install your desired assets to the runtime cache.
 
 ```javascript
+import {cacheNames} from 'workbox-core';
+
 self.addEventListener('install', (event) => {
   const urls = [/* ... */];
-  const cacheName = workbox.core.cacheNames.runtime;
+  const cacheName = cacheNames.runtime;
   event.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(urls)));
 });
 ```
@@ -129,26 +131,27 @@ handler](/web/tools/workbox/reference-docs/latest/module-workbox-routing#.setCat
 failures in a single handler function:
 
 ```javascript
+import {registerRoute, setDefaultHandler, setCatchHandler} from 'workbox-routing';
+import {CacheFirst, StaleWhileRevalidate} from 'workbox-strategies';
+
 // Use an explicit cache-first strategy and a dedicated cache for images.
-workbox.routing.registerRoute(
+registerRoute(
   new RegExp('/images/'),
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'images',
     plugins: [...],
   })
 );
 
 // Use a stale-while-revalidate strategy for all other requests.
-workbox.routing.setDefaultHandler(
-  new workbox.strategies.StaleWhileRevalidate()
-);
+setDefaultHandler(new StaleWhileRevalidate());
 
 // This "catch" handler is triggered when any of the other routes fail to
 // generate a response.
-workbox.routing.setCatchHandler(({event}) => {
-  // The FALLBACK_URL entries must be added to the cache ahead of time, either via runtime
-  // or precaching.
-  // If they are precached, then call workbox.precaching.getCacheKeyForURL(FALLBACK_URL)
+setCatchHandler(({event}) => {
+  // The FALLBACK_URL entries must be added to the cache ahead of time, either
+  // via runtime or precaching. If they are precached, then call
+  // `getCacheKeyForURL(FALLBACK_URL)` (from the `workbox-precaching` package)
   // to get the correct cache key to pass in to caches.match().
   //
   // Use event, request, and url to figure out how to respond.
@@ -188,10 +191,11 @@ To help with these sort of use cases, you can use any of the Workbox strategies 
 fashion via the `handle()` method.
 
 ```javascript
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
 // Inside your service worker code:
-const strategy = new workbox.strategies.NetworkFirst({
-  networkTimeoutSeconds: 10,
-});
+const strategy = new NetworkFirst({networkTimeoutSeconds: 10});
+
 const response = await strategy.handle({
   request: new Request('https://example.com/path/to/file'),
 });
@@ -213,11 +217,13 @@ long enough to complete any "background" cache updates and cleanup.
 You can use it in a more complex example as follows:
 
 ```javascript
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
 self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('/complexRequest')) {
     event.respondWith((async () => {
       // Configure the strategy in advance.
-      const strategy = new workbox.strategies.StaleWhileRevalidate({cacheName: 'api-cache'});
+      const strategy = new StaleWhileRevalidate({cacheName: 'api-cache'});
 
       // Make two requests using the strategy.
       // Because we're passing in event, event.waitUntil() will be called automatically.
@@ -272,6 +278,11 @@ Workbox:
 ```
 
 ```javascript
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {CacheableResponsePlugin} from 'workbox-cacheable-response';
+import {RangeRequestsPlugin} from 'workbox-range-requests';
+
 // In your service worker:
 // It's up to you to either precache or explicitly call cache.add('movie.mp4')
 // to populate the cache.
@@ -279,13 +290,13 @@ Workbox:
 // This route will go against the network if there isn't a cache match,
 // but it won't populate the cache at runtime.
 // If there is a cache match, then it will properly serve partial responses.
-workbox.routing.registerRoute(
+registerRoute(
   /.*\.mp4/,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'your-cache-name-here',
     plugins: [
-      new workbox.cacheableResponse.CacheableResponsePlugin({statuses: [200]}),
-      new workbox.rangeRequests.RangeRequestsPlugin(),
+      new CacheableResponsePlugin({statuses: [200]}),
+      new RangeRequestsPlugin(),
     ],
   }),
 );

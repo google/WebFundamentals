@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-06-17 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-15 #}
 
 <style>
@@ -29,10 +29,12 @@ redundant.
 Precaching files with Workbox can be done like so:
 
 ```javascript
-workbox.precaching.precacheAndRoute([
-    '/styles/index.0c9a31.css',
-    '/scripts/main.0d5770.js',
-    { url: '/index.html', revision: '383676' },
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
+  {url: '/index.html', revision: '383676' },
+  {url: '/styles/index.0c9a31.css', revision: null},
+  {url: '/scripts/main.0d5770.js', revision: null},
 ]);
 ```
 
@@ -50,9 +52,9 @@ one of the following Workbox tools, although you can use any tool that outputs
 files with revisioning. Below is a list of tools that can generate this
 list of files.
 
-<aside class="note"><strong>Note:</strong> If you're not sure what option
-is best for you, <a href="./cli">start with the CLI</a> as it's easy to setup
-and will give you a better understanding of how the other tools work.</aside>
+Note: If you're not sure what option
+is best for you, [start with the CLI](./cli) as it's easy to setup
+and will give you a better understanding of how the other tools work.
 
 ###### Workbox Command Line Interface (CLI)
 

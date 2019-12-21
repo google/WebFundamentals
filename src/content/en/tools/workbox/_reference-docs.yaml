@@ -3,10 +3,6 @@ toc:
 - title: "Overview"
   path: /web/tools/workbox/reference-docs/latest/index
 
-- heading: Workbox loader (CDN)
-- title: "workbox"
-  path: /web/tools/workbox/reference-docs/latest/workbox
-
 - heading: Service Worker Packages
 - title: "workbox-background-sync"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync
@@ -42,6 +38,10 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/module-workbox-build
 - title: workbox-webpack-plugin
   path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin
+
+- heading: Workbox loader (CDN)
+- title: "workbox"
+  path: /web/tools/workbox/reference-docs/latest/workbox
 
 - title: "View Full API"
   style: accordion

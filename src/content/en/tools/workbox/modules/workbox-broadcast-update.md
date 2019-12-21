@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2019-12-18 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-29 #}
 {# wf_blink_components: N/A #}
 
@@ -57,11 +57,15 @@ To broadcast updates, you just need to add a `broadcastUpdate.BroadcastUpdatePlu
 strategy options.
 
 ```js
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+import {BroadcastUpdatePlugin} from 'workbox-broadcast-update';
+
+registerRoute(
   new RegExp('/api/'),
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.BroadcastUpdatePlugin(),
+      new BroadcastUpdatePlugin(),
     ],
   })
 );
@@ -118,11 +122,15 @@ You can customize the headers to check by setting the `headersToCheck`
 property.
 
 ```js
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+import {BroadcastUpdatePlugin} from 'workbox-broadcast-update';
+
+registerRoute(
   new RegExp('/api/'),
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.BroadcastUpdatePlugin({
+      new BroadcastUpdatePlugin({
         headersToCheck: ['X-My-Custom-Header'],
       }),
     ],
@@ -137,7 +145,9 @@ of a particular strategy as shown above, it's possible to use the underlying
 logic in service worker code.
 
 ```js
-const broadcastUpdate = new workbox.broadcastUpdate.BroadcastCacheUpdate({
+import {BroadcastCacheUpdate} from 'workbox-broadcast-update';
+
+const broadcastUpdate = new BroadcastCacheUpdate({
   headersToCheck: ['X-My-Custom-Header'],
 });
 

@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-12-20 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -56,32 +56,35 @@ files that have changed.
 ### Serving Precached Responses
 
 Calling
-[`workbox.precaching.precacheAndRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)
+[`precacheAndRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)
 or
-[`workbox.precaching.addRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.addRoute)
-will create a [route](/web/tools/workbox/modules/workbox-routing) that matches requests for
-precached URLs.
+[`addRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.addRoute)
+will create a [route](/web/tools/workbox/modules/workbox-routing) that matches
+requests for precached URLs.
 
 The response strategy used in this route is
 [cache-first](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network):
 the precached response will be used, unless that cached response is not present (due to some
 unexpected error), in which case a network response will be used instead.
 
-The order in which you call `workbox.precaching.precacheAndRoute()` or
-`workbox.precaching.addRoute()` is important. You would normally want to call it early on in your
-service worker file, before registering any additional routes with
-`workbox.routing.registerRoute()`. If you did call `workbox.routing.registerRoute()` first, and that
-route matched an incoming request, whatever strategy you defined in that additional route will be
-used to respond, instead of the cache-first strategy used by `workbox-precaching`.
+The order in which you call `precacheAndRoute()` or `addRoute()` is important.
+You would normally want to call it early on in your service worker file, before
+registering any additional routes with
+[`registerRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute).
+If you did call `registerRoute()` first, and that route matched an incoming
+request, whatever strategy you defined in that additional route will be used to
+respond, instead of the cache-first strategy used by `workbox-precaching`.
 
 ## Explanation of the Precache List
 
 `workbox-precaching` expects an array of strings or an array of objects:
 
 ```javascript
-workbox.precaching.precacheAndRoute([
-  '/styles/example.ac29.css',
-  { url: '/index.html', revision: 'abcd1234' },
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
+  {url: '/styles/example.ac29.css', revision: null},
+  {url: '/index.html', revision: 'abcd1234' },
   // ... other entries ...
 ]);
 ```
@@ -93,7 +96,7 @@ information. For the first item in the example above,
 `'/styles/example.ac29.css'`, the revisioning information
 **is in the URL itself**. This is a best practice for web as it allows
 browsers to safely cache these URLs for a long time. Assets with inline content hash
-revisioning can be added to the precache list as is.
+revisioning can be added to the precache list by specifying `revision: null`.
 
 For assets where you don't have revisioning information in the URL,
 **there must be a revision property, which should be an auto-generated hash of the file contents**.
@@ -101,7 +104,7 @@ This allows `workbox-precaching` to know when the file has changed and update it
 
 Workbox comes with tools to help with generating this list:
 
-- `workbox-build`: This is an npm module that can be used in a gulp task or as
+- `workbox-build`: This is a node package that can be used in a gulp task or as
   an npm run script.
 - `workbox-webpack-plugin`: webpack users can use this plugin.
 - `workbox-cli`: Our CLI can also be used to generate the list of assets and add
@@ -135,10 +138,12 @@ By default, search parameters starting with `utm_` are removed, meaning that a r
 You can ignore a different set of search parameters using `ignoreURLParametersMatching`:
 
 ```javascript
-workbox.precaching.precacheAndRoute([
-  '/styles/index.0c9a31.css',
-  '/scripts/main.0d5770.js',
-  { url: '/index.html', revision: '383676' },
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
+  {'/styles/index.0c9a31.css', revision: null},
+  {'/scripts/main.0d5770.js', revision: null},
+  {url: '/index.html', revision: '383676'},
 ], {
   // Ignore all URL parameters.
   ignoreURLParametersMatching: [/.*/]
@@ -154,10 +159,12 @@ entry `/index.html`.
 You can alter this to something else, or disable it completely, by setting `directoryIndex`:
 
 ```javascript
-workbox.precaching.precacheAndRoute([
-  '/styles/index.0c9a31.css',
-  '/scripts/main.0d5770.js',
-  { url: '/index.html', revision: '383676' },
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
+  {'/styles/index.0c9a31.css', revision: null},
+  {'/scripts/main.0d5770.js', revision: null},
+  {url: '/index.html', revision: '383676'},
 ], {
   directoryIndex: null,
 });
@@ -172,10 +179,12 @@ be handled by the precached entry for `/about.html`.
 You can disable this behavior by setting `cleanUrls`:
 
 ```javascript
-workbox.precaching.precacheAndRoute([
-  '/styles/index.0c9a31.css',
-  '/scripts/main.0d5770.js',
-  { url: '/index.html', revision: '383676' },
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
+  {'/styles/index.0c9a31.css', revision: null},
+  {'/scripts/main.0d5770.js', revision: null},
+  {url: '/index.html', revision: '383676'},
 ], {
   cleanUrls: false,
 });
@@ -188,10 +197,12 @@ you can do so with the `urlManipulation` option. This should be a callback
 that returns an array of possible matches.
 
 ```javascript
-workbox.precaching.precacheAndRoute([
-  '/styles/index.0c9a31.css',
-  '/scripts/main.0d5770.js',
-  { url: '/index.html', revision: '383676' },
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
+  {'/styles/index.0c9a31.css', revision: null},
+  {'/scripts/main.0d5770.js', revision: null},
+  {url: '/index.html', revision: '383676'},
 ], {
   urlManipulation: ({url}) => {
     // Your logic goes here...
@@ -213,12 +224,14 @@ directly to add items to the precache, determine when these assets are installed
 when cleanup should occur.
 
 ```javascript
-const precacheController = new workbox.precaching.PrecacheController();
+import {PrecacheController} from 'workbox-precaching';
+
+const precacheController = new PrecacheController();
 precacheController.addToCacheList([
-  '/styles/example-1.abcd.css',
-  '/styles/example-2.1234.css',
-  '/scripts/example-1.abcd.js',
-  '/scripts/example-2.1234.js',
+  {url: '/styles/example-1.abcd.css', revision: null},
+  {url: '/styles/example-2.1234.css', revision: null},
+  {url: '/scripts/example-1.abcd.js', revision: null},
+  {url: '/scripts/example-2.1234.js', revision: null},
 ]);
 
 precacheController.addToCacheList([{
@@ -232,9 +245,11 @@ precacheController.addToCacheList([{
 self.addEventListener('install', (event) => {
   event.waitUntil(precacheController.install());
 });
+
 self.addEventListener('activate', (event) => {
   event.waitUntil(precacheController.activate());
 });
+
 self.addEventListener('fetch', (event) => {
   const cacheKey = precacheController.getCacheKeyForURL(event.request.url);
   event.respondWith(caches.match(cacheKey).then(...));
@@ -255,20 +270,23 @@ cache key that needs to be used when calling [`cache.match()`](https://developer
 might contain a versioning parameter that `workbox-precaching` automatically
 creates and maintains.
 
-The best practice is to call `workbox.precaching.getCacheKeyForURL()`, passing
+The best practice is to call [`getCacheKeyForURL()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.getCacheKeyForURL), passing
 in the original URL, and then use the result to perform a `cache.match()` on the
 appropriate cache. In practice, this looks like:
 
 ```javascript
-const cache = await caches.open(workbox.core.cacheNames.precache);
+import {cacheNames} from 'workbox-core';
+import {getCacheKeyForURL} from 'workbox-precaching';
+
+const cache = await caches.open(cacheNames.precache);
 const response = await cache.match(
-  workbox.precaching.getCacheKeyForURL('/precached-file.html')
+  getCacheKeyForURL('/precached-file.html')
 );
 ```
 
 Note: If you are
 [using your own `PrecacheController` instance](#using_precachecontroller_directly),
-instead of using the default instance via `workbox.precaching.*`, you should
+instead of using the default instance via `precacheAndRoute`, you should
 call the
 [`getCacheKeyForURL()` method](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL)
 on that instance.
@@ -285,6 +303,6 @@ Workbox v3 and v4 releases.)
 This obsolete data shouldn't interfere with normal operations, but it does
 contribute towards your overall storage quota usage, and it can be friendlier to
 your users to explicitly delete it. You can do this by adding
-`workbox.precaching.cleanupOutdatedCaches()` to your service worker, or setting
-`cleanupOutdatedCaches: true` if you're using one of Workbox's build tools to
-generate your service worker.
+[`cleanupOutdatedCaches()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.cleanupOutdatedCaches)
+to your service worker, or setting `cleanupOutdatedCaches: true` if you're using
+one of Workbox's build tools to generate your service worker.

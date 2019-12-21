@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2019-12-20 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -23,21 +23,21 @@ you can implement your own plugins if you want to add custom logic.
 
 Workbox provides the following plugins:
 
-* [`workbox.backgroundSync.BackgroundSyncPlugin`](../reference-docs/latest/module-workbox-background-sync.BackgroundSyncPlugin):
+* [`BackgroundSyncPlugin`](../reference-docs/latest/module-workbox-background-sync.BackgroundSyncPlugin):
   If a network request ever fails, add it to a background sync queue and retry
   the request when the next sync event is triggered.
 
-* [`workbox.broadcastUpdate.BroadcastUpdatePlugin`](../reference-docs/latest/module-workbox-broadcast-update.BroadcastUpdatePlugin):
+* [`BroadcastUpdatePlugin`](../reference-docs/latest/module-workbox-broadcast-update.BroadcastUpdatePlugin):
   Whenever a cache is updated, dispatch a message on a Broadcast Channel or via
   `postMessage()`.
 
-* [`workbox.cacheableResponse.CacheableResponsePlugin`](../reference-docs/latest/module-workbox-cacheable-response.CacheableResponsePlugin):
+* [`CacheableResponsePlugin`](../reference-docs/latest/module-workbox-cacheable-response.CacheableResponsePlugin):
   Only cache requests that meet a certain criteria.
 
-* [`workbox.expiration.ExpirationPlugin`](../reference-docs/latest/module-workbox-expiration.ExpirationPlugin):
+* [`ExpirationPlugin`](../reference-docs/latest/module-workbox-expiration.ExpirationPlugin):
   Manage the number and maximum age of items in the cache.
 
-* [`workbox.rangeRequests.RangeRequestsPlugin`](../reference-docs/latest/module-workbox-range-requests.RangeRequestsPlugin):
+* [`RangeRequestsPlugin`](../reference-docs/latest/module-workbox-range-requests.RangeRequestsPlugin):
   Respond to requests that include a `Range:` header with partial content from
   a cache.
 
@@ -45,12 +45,16 @@ You can use these plugins with a Workbox strategy by adding an instance to
 the `plugins` property:
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'images',
     plugins: [
-      new workbox.expiration.ExpirationPlugin({
+      new ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),

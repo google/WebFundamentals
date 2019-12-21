@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-12-20 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Routing {: .page-title }
@@ -84,7 +84,9 @@ the “handler” for a matching request.
 You can register these callbacks like so:
 
 ```js
-workbox.routing.registerRoute(matchCb, handlerCb);
+import {registerRoute} from 'workbox-routing';
+
+registerRoute(matchCb, handlerCb);
 ```
 
 The only limitation is that the "match" callback **must synchronously** return a truthy
@@ -101,14 +103,17 @@ Normally the "handler" callback would use one of the strategies provided
 by [workbox-strategies](./workbox-strategies) like so:
 
 ```js
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
   matchCb,
-  new workbox.strategies.StaleWhileRevalidate()
+  new StaleWhileRevalidate()
 );
 ```
 
 In this page, we’ll focus on `workbox-routing` but you can
-[learn more about these strategies on workbox.strategies](./workbox-strategies).
+[learn more about these strategies on workbox-strategies](./workbox-strategies).
 
 ## How to Register a Regular Expression Route
 
@@ -116,7 +121,9 @@ A common practice is to use a regular expression instead of a "match" callback.
 Workbox makes this easy to implement like so:
 
 ```js
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+
+registerRoute(
   new RegExp('/styles/.*\\.css'),
   handlerCb
 );
@@ -201,8 +208,10 @@ If you want to supply a "handler" for requests that don’t match a route, you
 can set a default handler.
 
 ```javascript
-workbox.routing.setDefaultHandler(({url, event, params}) => {
-  ...
+import {setDefaultHandler} from 'workbox-routing';
+
+setDefaultHandler(({url, event, params}) => {
+  // ...
 });
 ```
 
@@ -212,7 +221,9 @@ In the case of any of your routes throwing an error, you can capture and
 degrade gracefully by setting a catch handler.
 
 ```javascript
-workbox.routing.setCatchHandler(({url, event, params}) => {
+import {setCatchHandler} from 'workbox-routing';
+
+setCatchHandler(({url, event, params}) => {
   ...
 });
 ```
@@ -225,12 +236,14 @@ If you would like to route other requests, like a `POST` request, you need
 to define the method when registering the route, like so:
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+
+registerRoute(
   matchCb,
   handlerCb,
   'POST'
 );
-workbox.routing.registerRoute(
+registerRoute(
   new RegExp('/api/.*\\.json'),
   handlerCb,
   'POST'
@@ -261,7 +274,9 @@ it’s [`handleRequest()`](/web/tools/workbox/reference-docs/latest/module-workb
 method whenever you want to use the router to respond to a request.
 
 ```javascript
-const router = new DefaultRouter();
+import {Router} from 'workbox-routing';
+
+const router = new Router();
 self.addEventListener('fetch', (event) => {
   const responsePromise = router.handleRequest(event);
   if (responsePromise) {
@@ -277,7 +292,9 @@ When using the `Router` directly, you will also need to use the `Route` class,
 or any of the extending classes to register routes.
 
 ```javascript
-const router = new DefaultRouter();
+import {Route, RegExpRoute, NavigationRoute, Router} from 'workbox-routing';
+
+const router = new Router();
 router.registerRoute(new Route(matchCb, handlerCb));
 router.registerRoute(new RegExpRoute(new RegExp(...), handlerCb));
 router.registerRoute(new NavigationRoute(handlerCb));

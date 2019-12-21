@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-12-20 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
@@ -23,12 +23,16 @@ To restrict the number of entries stored in a cache, you can use the
 `maxEntries` option like so:
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   new RegExp('/images/'),
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.ExpirationPlugin({
+      new ExpirationPlugin({
         maxEntries: 20,
       }),
     ],
@@ -49,12 +53,16 @@ To restrict how long a request is cached for, you can define a max age in
 seconds using the `maxAgeSeconds` option like so:
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   /\/images\//,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.ExpirationPlugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],
@@ -84,8 +92,10 @@ To apply restrictions to a cache, you’d create an instance of `CacheExpiration
 for the cache you want to control like so:
 
 ```javascript
+import {CacheExpiration} from 'workbox-expiration';
+
 const cacheName = 'my-cache';
-const expirationManager = new workbox.expiration.CacheExpiration(
+const expirationManager = new CacheExpiration(
   cacheName,
   {
     maxAgeSeconds: 24 * 60 * 60,
