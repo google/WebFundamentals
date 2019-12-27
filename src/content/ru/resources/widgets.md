@@ -58,7 +58,7 @@ This is [an example][id] reference-style link.
 {% include "web/_shared/sample.html" %}
 
 <pre class="prettyprint">
-{% include "web/_shared/sample.html" %}
+&#123;% include "web/_shared/sample.html" %}
 </pre>
 
 Примечание: Включаемые файлы, использующие такой синтаксис должны быть HTML.
@@ -88,7 +88,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"><#cdata-s
 
 Код этого примера:
 
-<pre class="prettyprint lang-html">{% framebox height="80px" %}{% htmlescape %}
+<pre class="prettyprint lang-html">&#123;% framebox height="80px" %}{% htmlescape %}
 #cdata-section>#cdata-section><style><#cdata-section></div></style></pre>
 
 <p id="demopara">Кликните на кнопку, для переключения border.
@@ -110,8 +110,8 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"><#cdata-s
 en локали, прежде чем упасть.
 
 <pre class="prettyprint">
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/resources/_code/file.js" %}
+&lt;pre class="prettyprint">
+&#123;% includecode content_path="web/fundamentals/resources/_code/file.js" %}
 </pre>
 </pre>
 
@@ -125,8 +125,8 @@ en локали, прежде чем упасть.
 `adjust_indentation="auto"`.
 
 <pre class="prettyprint">
-<pre class="prettyprint">
-{% includecode content_path="path/file.js" adjust_indentation="auto" %}
+&lt;pre class="prettyprint">
+&#123;% includecode content_path="path/file.js" adjust_indentation="auto" %}
 </pre>
 </pre>
 
@@ -138,8 +138,8 @@ DevSite не имеет такой функции. Чтобы упростить
 связанных руководств.
 
 <pre class="prettyprint">
-{% include "_shared/related-guides/heading.html" %}
-{% include "_shared/related-guides/service-workers.html" %}
+&#123;% include "_shared/related-guides/heading.html" %}
+&#123;% include "_shared/related-guides/service-workers.html" %}
 </pre>
 
 Будет отображено как:
@@ -153,7 +153,7 @@ DevSite не имеет такой функции. Чтобы упростить
 комментариев на страницу снизу. Например:
 
 <pre class="prettyprint">
-{% include "comment-widget.html" %}
+&#123;% include "comment-widget.html" %}
 </pre>
 
 Примечение: виджет комментариев **не** отображается в  staging или development
@@ -211,7 +211,7 @@ JS](/web/tools/chrome-devtools/javascript/). В каждом из вопросо
 5. Добавьте `_feedback/1.html` в ваш документ, типа того:
 
 <pre class="prettyprint">
-{% include "web/path/to/_feedback/1.html" %}
+&#123;% include "web/path/to/_feedback/1.html" %}
 </pre>
 
 Путь должен всегда начинаться с относительной ссылки на `web/`. Именно так
