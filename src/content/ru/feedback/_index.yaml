@@ -11,6 +11,12 @@ landing_page:
   - classname: devsite-landing-row-50
     items:
     - image_path: images/hero-2x.png
+      description: Мы хотим сделать проще поиск и сообщение об ошибках в любом браузере,
+        а также помочь вам искать ресурсы, в то время как вы создаете ваш сайт.<br><br>
+        Сообщать поставщикам браузеров об ошибках, которые вы нашли в их браузере,
+        на определенном устройстве или платформе, – это неотъемлемая часть процесса
+        улучшения веб-платформы! <br><br> Дополнительная поддержка существующих ошибок
+        поможет разработчикам определить проблемы, затрагивающие пользователей.
   - classname: devsite-landing-row-67
     items:
     - heading: Поиск существующих ошибок
@@ -28,6 +34,8 @@ landing_page:
       image_path: images/content-file-responsive-2x.png
       buttons:
       - path: "/web/feedback/file-a-bug"
+        label: Узнайте, как правильно сообщить об ошибке.
+      heading: Как правильно сообщить об ошибке
   - classname: devsite-landing-row-67
     items:
     - heading: Сообщить об ошибке
@@ -72,3 +80,18 @@ landing_page:
     items:
     - heading: Обсуждение решений
       image_path: images/content-developer-discussions-responsive-2x.png
+      description: |-
+        <p>
+          Обсуждение проблем, с которыми вы сталкиваетесь, с другими разработчиками, – отличный способ как обучения, так и обмена опытом.
+        </p> <ul>
+          <li>
+            <a href="https://stackoverflow.com/questions/tagged/google-chrome" class="gc-analytics-event" data-category="webfundamentals" data-label="so-gchrome">
+              <code>google-chrome</code> tag on Stack Overflow
+            </a>
+          </li>
+          <li>
+            <a href="https://join.slack.com/t/chromiumdev/shared_invite/enQtMzM3NjYwNjI0MDM4LTk2NjEyYTIxODk1MDYxMmNjNWYzMGMxZGVhMDNhY2I1ZjBhMjdlYTg0MTg4ZGE0OTQ0ZmYwNTRiMGJlYzVjOTE" class="gc-analytics-event" data-category="webfundamentals" data-label="slack-chromiumdev">
+              Канал ChromiumDev в Slack
+            </a>
+          </li>
+        </ul>
