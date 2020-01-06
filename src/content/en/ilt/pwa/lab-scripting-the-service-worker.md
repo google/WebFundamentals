@@ -321,7 +321,7 @@ navigator.serviceWorker.register('/service-worker.js', {
 
 In the above example the scope of the service worker is set to `/kitten/`. The service worker intercepts requests from pages in `/kitten/` and `/kitten/lower/` but not from pages like `/kitten` or `/`.
 
-Note: You cannot set an arbitrary scope that is above the service worker's actual location. However, if your server worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a max scope for that service worker above the service worker's location.
+Note: You cannot set an arbitrary scope that is above the service worker's actual location. However, if your service worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a max scope for that service worker above the service worker's location.
 
 #### For more information
 
