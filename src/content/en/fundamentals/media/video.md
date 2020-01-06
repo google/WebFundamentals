@@ -427,12 +427,12 @@ fullscreening of content, or the page.
 
 To full screen an element, like a video:
 
-    elem.requestFullScreen();
+    elem.requestFullscreen();
 
 
 To full screen the entire document:
 
-    document.body.requestFullScreen();
+    document.body.requestFullscreen();
 
 
 You can also listen for fullscreen state changes:
@@ -460,7 +460,7 @@ images as placeholders for video:
 To see this in action, check out the
 [demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/fullscreen.html).
 
-Dogfood: `requestFullScreen()` may be vendor prefixed and may require extra code
+Dogfood: `requestFullscreen()` may be vendor prefixed and may require extra code
 for full cross browser compatibility.
 
 <div style="clear:both;"></div>
