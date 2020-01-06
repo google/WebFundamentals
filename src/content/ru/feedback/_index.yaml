@@ -1,0 +1,74 @@
+---
+project_path: "/web/feedback/_project.yaml"
+book_path: "/web/feedback/_book.yaml"
+title: Программа обратной связи для разработчиков
+landing_page:
+  header:
+    buttons:
+    - path: "/web/feedback/browser-bug-searcher"
+      label: Поиск ошибок браузера
+  rows:
+  - classname: devsite-landing-row-50
+    items:
+    - image_path: images/hero-2x.png
+  - classname: devsite-landing-row-67
+    items:
+    - heading: Поиск существующих ошибок
+      description: Здесь вы можете провести поиск по трекерам ошибок всех основных
+        браузеров, чтобы попытаться найти интересующую вас ошибку.
+      image_path: images/content-search-for-bugs-responsive-2x.png
+      buttons:
+      - label: Поиск ошибок браузера
+        path: "/web/feedback/browser-bug-searcher"
+  - classname: devsite-landing-row-67
+    items:
+    - description: Проблема встречается в других браузерах? Это регрессия? У вас есть
+        тестовый случай? Чем больше информации вы можете предоставить, тем выше шанс,
+        что ваша ошибка будет исправлена!
+      image_path: images/content-file-responsive-2x.png
+      buttons:
+      - path: "/web/feedback/file-a-bug"
+  - classname: devsite-landing-row-67
+    items:
+    - heading: Сообщить об ошибке
+      description: Чтобы быть уверенным, что ваша ошибка будет быстро исправлена,
+        важно рассказать о ней правильным людям. Все основные производители браузеров
+        обеспечивают возможность сообщить об ошибках.
+      image_path: images/content-node-responsive-2x.png
+      buttons:
+      - label: Chromium
+        path: https://crbug.com
+        classname: gc-analytics-event button button-white
+        attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: cr-bug
+      - label: Edge
+        path: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/
+        classname: gc-analytics-event button button-white
+        attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: edge-bug
+      - label: Mozilla
+        path: https://bugzilla.mozilla.org/
+        classname: gc-analytics-event button button-white
+        attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: moz-bug
+      - label: WebKit
+        path: https://bugs.webkit.org/
+        classname: gc-analytics-event button button-white
+        attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: webkit-bug
+  - classname: devsite-landing-row-67
+    items:
+    - heading: Обсуждение решений
+      image_path: images/content-developer-discussions-responsive-2x.png
