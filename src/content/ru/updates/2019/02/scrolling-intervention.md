@@ -43,7 +43,7 @@ data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-## The Intervention
+## Вмешательство
 
 Цель этого изменения состоит в том, чтобы сократить время, необходимое для
 обновления дисплея после того, как пользователь начинает прокручивать с помощью
@@ -59,14 +59,14 @@ data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
 window.addEventListener("wheel", func);
 ```
 
-becomes equivalent to:
+становится эквивалентным:
 
 ```js
 window.addEventListener("wheel", func, {passive: true});
 ```
 
-And calling `preventDefault()` inside the listener will be ignored with the
-following DevTools warning:
+И вызов `preventDefault()` внутри слушателя будет проигнорирован со следующим
+предупреждением DevTools:
 
 ```
 [Intervention] Unable to preventDefault inside passive event listener due
@@ -85,7 +85,7 @@ to target being treated as passive. See https://www.chromestatus.com/features/66
 false}` в `addEventListener()` чтобы переопределить поведение по умолчанию и
 сохранить слушатель событий как блокирующий.
 
-## Feedback {: .hide-from-toc }
+## Обратная связь {: .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
 
