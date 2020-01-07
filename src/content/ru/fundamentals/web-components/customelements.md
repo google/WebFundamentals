@@ -1,7 +1,7 @@
 project_path: "/web/fundamentals/_project.yaml"
 book_path: "/web/fundamentals/_book.yaml"
-description: Custom elements allow web developers to define new HTML tags, extend
-  existing ones, and create reusable web components.
+description: Пользовательские элементы позволяют разработчикам определять новые HTML
+  тэги, расширять существующие, а также создавать повторно используемые веб-компоненты.
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-28 #}
