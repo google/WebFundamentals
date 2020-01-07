@@ -1,15 +1,13 @@
 project_path: "/web/_project.yaml"
 book_path: "/web/updates/_book.yaml"
-description: Eager evaluation, argument hints, function autocompletion, Lighthouse
-  3.0, and more.
+description: Упреждающее вычисление, подсказки аргументов, функция автозаполнения,
+  Lighthouse 3.0 и многое другое.
 
-{# wf_updated_on: 2019-09-19 #}
-{# wf_published_on: 2018-05-21 #}
-{# wf_tags: chrome68,devtools,devtools-whatsnew #}
-{# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Eager evaluation, argument hints, function
-autocompletion, Lighthouse 3.0, and more. #}
-{# wf_blink_components: Platform>DevTools #}
+{# wf_updated_on: 2019-09-19 #} {# wf_published_on: 2018-05-21 #} {# wf_tags:
+chrome68,devtools,devtools-whatsnew #} {# wf_featured_image:
+/web/updates/images/generic/chrome-devtools.png #} {# wf_featured_snippet:
+Упреждающее вычисление, подсказки аргументов, автозавершение функций, Lighthouse
+3.0 и многое другое. #} {# wf_blink_components: Platform>DevTools #}
 
 # Что нового в DevTools (Chrome 68) {: .page-title }
 
@@ -17,29 +15,27 @@ autocompletion, Lighthouse 3.0, and more. #}
 
 Новое в DevTools в Chrome 68:
 
-- [Eager Evaluation](#eagerevaluation). As you type expressions, the Console
-previewsthe result.
-- [Argument hints](#hints). As you type functions, the Console shows you the
-expected argumentsfor that function.
-- [Function autocompletion](#autocomplete). After typing a function call such
-as`document.querySelector('p')`, the Console shows you the functions and
-properties thatthe return value supports.
-- [ES2017 keywords in the Console](#keywords). Keywords such as `await` are now
-available in theConsole's autocomplete UI.
-- [Lighthouse 3.0 in the Audits panel](#lh3). Faster, more consistent audits, a
-new UI, andnew audits.
-- [`BigInt` support](#bigint). Try out JavaScript's new arbitrary-precision
-integer in theConsole.
-- [Adding property paths to the Watch pane](#watch). Add properties from the
-Scope pane tothe Watch pane.
+- [Упреждающее вычисление](#eagerevaluation). По мере ввода выражений Консоль
+предварительно показывает результат.
+- [Подсказки аргументов](#hints). По мере ввода функций, Консоль показывает
+ожидаемые аргументы для этой функции.
+- [Функция автозаполнения](#autocomplete) . После ввода вызова функции, такого
+как `document.querySelector('p')`, Консоль показывает вам функции и свойства,
+которые поддерживает возвращаемое значение.
+- [Ключевые слова ES2017 в консоли](#keywords). Ключевые слова, такие как
+`await` , теперь доступны в интерфейсе автозаполнения консоли.
+- [Lighthouse 3.0 в панели Аудит](#lh3). Более быстрые и последовательные
+аудиты, новый пользовательский интерфейс и новые аудиты.
+- [Поддержка `BigInt`](#bigint). Попробуйте новое целое число JavaScript
+произвольной точности в Консоли.
+- [Добавление путей к свойствам на панель Watch](#watch). Добавьте свойства из
+панели «Область» в панель «Просмотр».
 - [«Показать метки времени» перенесено в «Настройки»](#timestamps) .
 
-Note: Check what version of Chrome you're running at `chrome://version`. If
-you're running
-an earlier version, these features won't exist. If you're running a later
-version, these features
-may have changed. Chrome auto-updates to a new major version about every 6
-weeks.
+Примечание. Проверьте, какую версию Chrome вы используете в `chrome://version`.
+Если вы используете более раннюю версию, эти функции не будут работать. Если вы
+используете более позднюю версию, эти функции могут быть изменены. Chrome
+автоматически обновляется до новой основной версии примерно каждые 6 недель.
 
 Читайте дальше или смотрите видео-версию заметок о выпуске ниже.
 
@@ -54,11 +50,10 @@ data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
 Chrome 68 поставляется с несколькими новыми функциями консоли, связанными с
 автозаполнением и предварительным просмотром.
 
-### Eager Evaluation {: #eagerevaluation }
+### Упреждающее вычисление {: #eagerevaluation }
 
-When you type an expression in the Console, the Console can now show a preview
-of the result of
-that expression below your cursor.
+Когда вы вводите выражение в Консоли, Консоль теперь может отображать
+предварительный результат выражения под курсором.
 
 <figure>
 <img src="/web/updates/images/2018/05/eagereval.png" alt="The Console is
@@ -71,14 +66,14 @@ printing the result of the sort() operation before it has been
 Чтобы включить Eager Evaluation:
 
 1. Откройте **консоль** .
-2. Open **Console Settings** ![Console
-    Settings](/web/updates/images/2018/05/settings.png){:.inline-icon}.
-3. Enable the **Eager evaluation** checkbox.
+2. Откройте **Настройки Консоли** ![Console
+    Settings](/web/updates/images/2018/05/settings.png) {:.inline-icon}.
+3. Включите флажок **Упреждающее вычисление** .
 
-DevTools does not eager evaluate if the expression causes [side
-effects](https://stackoverflow.com/a/8129277/1669860){:.external}.
+DevTools не делает упреждающего вычисления, если выражение вызывает [побочные
+эффекты](https://stackoverflow.com/a/8129277/1669860) {:.external}.
 
-### Argument hints {: #hints }
+### Подсказки аргументов {: #hints }
 
 Когда вы печатаете функции, консоль теперь показывает аргументы, которые ожидает
 функция.
@@ -98,18 +93,17 @@ Console.">
 - Многоточие перед аргументом, например `...items` , представляет
 [спред](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 {:.external}.
-- Some functions, such as `CSS.supports()`, accept multiple argument signatures.
+- Некоторые функции, такие как `CSS.supports()` , принимают несколько сигнатур
+аргументов.
 
 ### Автозаполнение после выполнения функции {: #autocomplete }
 
-Note: This feature depends on [Eager Evaluation](#eagerevaluation), which needs
-to be enabled
-from **Console Settings** ![Console
-Settings](/web/updates/images/2018/05/settings.png){:.inline-icon}.
+Примечание. Эта функция зависит от [Упреждающего вычисления](#eagerevaluation),
+которое необходимо включить в **Настройках Консоли** ![Console
+Settings](/web/updates/images/2018/05/settings.png) {:.inline-icon}.
 
-After enabling Eager Evaluation, the Console now also shows you which properties
-and
-functions are available after you type out a function.
+После включения Упреждающего вычисления консоль теперь также показывает, какие
+свойства и функции доступны после ввода функции.
 
 <figure>
 <img src="/web/updates/images/2018/05/autocomplete.png" alt="After running
@@ -156,24 +150,23 @@ in Lighthouse 3.0.">
 3.0</figcaption>
 </figure>
 
-### New audits {: #audits }
+### Новые проверки {: #audits }
 
-Lighthouse 3.0 also ships with 4 new audits:
+Lighthouse 3.0 также поставляется с 4 новыми проверками:
 
-- First Contentful Paint
+- Первое существенное отображение (First Contentful Paint)
 - robots.txt недействителен
 - Используйте видео форматы для анимированного контента
-- Avoid multiple, costly round trips to any origin
+- Избегайте многократных дорогостоящих круговых задержек запросов (Round-Trips)
 
 ## Поддержка BigInt {: #bigint }
 
-Note: This isn't a DevTools features per se, but it is a new JavaScript
-capability that you
-can try out in the Console.
+Примечание. По сути, это не DevTools, а новая функция JavaScript, которую вы
+можете попробовать в Консоли.
 
-Chrome 68 supports a new numeric primitive called
-[`BigInt`](/web/updates/2018/05/bigint). `BigInt` lets you represent
-integers with arbitrary precision. Try it out in the Console:
+Chrome 68 поддерживает новый числовой примитив под названием
+[`BigInt`](/web/updates/2018/05/bigint). `BigInt` позволяет вам представлять
+целые числа с произвольной точностью. Попробуйте это в консоли:
 
 <figure>
 <img src="/web/updates/images/2018/05/bigint.png" alt="An example of BigInt in
@@ -183,9 +176,9 @@ the Console.">
 
 ## Добавьте путь свойства для просмотра {: #watch }
 
-While paused on a breakpoint, right-click a property in the Scope pane and
-select
-**Add property path to watch** to add that property to the Watch pane.
+Во время паузы в точке останова щелкните правой кнопкой мыши свойство на панели
+«Область» и выберите **Добавить путь свойства, чтобы просмотреть его,** чтобы
+добавить это свойство на панель «Просмотр».
 
 <figure>
 <img src="/web/updates/images/2018/05/watch.png" alt="An example of Add
@@ -205,32 +198,32 @@ property path to watch.">
 Чтобы обсудить новые функции и изменения в этом посте, или что-нибудь еще,
 связанное с DevTools:
 
-- File bug reports at [Chromium Bugs](https://crbug.com){:.external}.
-- Discuss features and changes on the [Mailing
-List](https://groups.google.com/forum/#!forum/google-chrome-developer-tools){:.external}.
-Please don't use the mailinglist for support questions. Use Stack Overflow,
-instead.
-- Get help on how to use DevTools on [Stack
-Overflow](https://stackoverflow.com/questions/tagged/google-chrome-devtools){:.external}.
-Please don't file bugson Stack Overflow. Use Chromium Bugs, instead.
-- Tweet us at [@ChromeDevTools](https://twitter.com/chromedevtools).
-- File bugs on this doc in the [Web
-Fundamentals](https://github.com/google/webfundamentals/issues/new){:.external}
-repository.
+- Сообщите об ошибках в [Chromium Bugs](https://crbug.com) {:.external}.
+- Обсудите особенности и изменения в [списке
+рассылки](https://groups.google.com/forum/#!forum/google-chrome-developer-tools)
+{:.external}. Пожалуйста, не используйте список рассылки для вопросов поддержки.
+Вместо этого используйте Stack Overflow.
+- Получите помощь в использовании DevTools на [Stack
+Overflow](https://stackoverflow.com/questions/tagged/google-chrome-devtools)
+{:.external}. Пожалуйста, не регистрируйте ошибки на Stack Overflow. Вместо
+этого используйте Chromium Bugs.
+- Упомяните нас в Твиттере [@ChromeDevTools](https://twitter.com/chromedevtools)
+.
+- Ошибки в этом документе размещайте в репозитории [Web
+Fundamentals](https://github.com/google/webfundamentals/issues/new)
+{:.external}.
 
-## Consider Canary {: #canary }
+## Обратите внимание на Canary {: #canary }
 
-If you're on Mac or Windows, please consider using [Chrome
-Canary](https://www.google.com/chrome/browser/canary.html) as your default
-development browser. If you report a bug or a change that you don't like while
-it's still in
-Canary, the DevTools team can address your feedback significantly faster.
+Если вы используете Mac или Windows, рассмотрите возможность использования
+[Chrome Canary](https://www.google.com/chrome/browser/canary.html) в качестве
+браузера по умолчанию для разработки. Если вы сообщаете об ошибке или изменении,
+которое вам не нравится, пока оно находится в Canary, команда DevTools может
+значительно быстрее отреагировать на ваши отзывы.
 
-Note: Canary is the bleeding-edge version of Chrome. It's released as soon as
-its built, without
-testing. This means that Canary breaks from time-to-time, about once-a-month,
-and it's usually
-fixed within a day. You can go back to using Chrome Stable while Canary is
-broken.
+Примечание: Canary - новейшая версия Chrome. Она выпущено, как только собрана,
+без тестирования. Это означает, что Canary ломается время от времени, примерно
+раз в месяц, и это обычно исправляется в течение дня. Вы можете вернуться к
+использованию Chrome Stable, пока Canary не работает.
 
 << ../../_ общий / discover.md >>
