@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs.
 
-{# wf_updated_on: 2019-08-28 #}
+{# wf_updated_on: 2020-01-08 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: trusted-web-activity,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -120,35 +120,13 @@ or AndroidX artifacts, and click _Finish_.
 
 ### Get the TWA Support Library {: #get-support-lib }
 
-To setup the  TWA library in the project  you will need to edit a couple of
-files. Look for the _Gradle Scripts_ section in the _Project Navigator_. Both
-files are called `build.gradle`, which may be a bit confusing, but the
+To setup the TWA library in the project you will need to edit the Application
+build file. Look for the _Gradle Scripts_ section in the _Project Navigator_.
+There are two files called `build.gradle`, which may be a bit confusing and the
 descriptions in parenthesis help identifying the correct one.
 
-The first file is the **Project** level `build.gradle`. Look for the one with
-your project name next to it.
-
-Add the [Jitpack](https://jitpack.io/) configuration (in bold below) to the
-list of repositories. Under the `allprojects` section:
-
-```
-allprojects {
-   repositories {
-       google()
-       jcenter()
-       maven { url "https://jitpack.io" }
-   }
-}
-```
-
-Android Studio will prompt to synchronize the project. Click on the _Sync Now_
-link.
-
-Note: The support library for Trusted Web Activities will be part of
-[Jetpack](https://developer.android.com/jetpack/androidx/) in the future, and
-the previous step won’t be required anymore.
-
-The second file we need to change is the **Module** level `build.gradle`.
+The file we are are looking for is the one with module **Module** next to its
+name.
 
 The Trusted Web Activities library uses
 [Java 8 features](https://developer.android.com/studio/write/java8-support)
@@ -170,7 +148,7 @@ dependency to the `dependencies` section:
 
 ```
 dependencies {
-   implementation 'com.github.GoogleChrome.custom-tabs-client:customtabs:91b4a1270b'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.0.0'
 }
 ```
 
@@ -204,7 +182,7 @@ Add the TWA Activity by inserting an `activity` tag into the `application` tag:
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="android.support.customtabs.trusted.LauncherActivity">
+            android:name="com.google.androidbrowserhelper.trusted.LauncherActivity">
 
            <!-- Edit android:value to change the url opened by the TWA -->
            <meta-data
@@ -494,7 +472,7 @@ to the Android Manifest (`AndroidManifest.xml`).
 <application>
     ...
     <provider
-        android:name="android.support.v4.content.FileProvider"
+        android:name="androidx.core.content.FileProvider"
         android:authorities="com.example.twa.myapplication.fileprovider"
         android:grantUriPermissions="true"
         android:exported="false">
@@ -519,7 +497,7 @@ Then, add `res/xml/filepaths.xml` resource, and specify the path to the twa spla
 Finally, add `meta-tags` to the Android Manifest to customize the LauncherActivity:
 
 ```xml
-<activity android:name="android.support.customtabs.trusted.LauncherActivity">
+<activity android:name="com.google.androidbrowserhelper.trusted.LauncherActivity">
     ...
     <meta-data android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
                android:resource="@drawable/splash"/>
@@ -559,7 +537,7 @@ Then, add a reference to the new style in the Android Manifest:
 ```xml
 <application>
     ...
-    <activity android:name="android.support.customtabs.trusted.LauncherActivity"
+    <activity android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
               android:theme="@style/Theme.LauncherActivity">
     ...
     </activity>
