@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 80 to help you plan.
 
-{# wf_updated_on: 2019-12-19 #}
+{# wf_updated_on: 2020-01-09 #}
 {# wf_published_on: 2019-12-19 #}
 {# wf_tags: deprecations,removals,chrome80 #}
 {# wf_blink_components: Blink #}
@@ -11,7 +11,7 @@ description: A round up of the deprecations and removals in Chrome 80 to help yo
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
 
-# Deprecations and removals in Chrome 78 {: .page-title }
+# Deprecations and removals in Chrome 80 {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
