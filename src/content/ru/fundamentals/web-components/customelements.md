@@ -830,7 +830,7 @@ customElements.define('fancy-app-drawer', FancyDrawer);
 Edge и Firefox будет реализована их поддержка, однако в Safari - нет. Из-за
 этого может пострадать доступность пользовательского интерфейса и возможность
 осуществления прогрессивного улучшения. Если вы считаете, что расширение
-возможностей встроенных элементов HTML полезно, выскажитесь на Github (проблемы
+возможностей встроенных элементов HTML полезно, выскажитесь на GitHub (проблемы
 <a href="https://github.com/w3c/webcomponents/issues/509">509</a> и <a
 href="https://github.com/w3c/webcomponents/issues/662">662</a> ).
 
@@ -1091,7 +1091,7 @@ npm install --save @webcomponents/webcomponentsjs
 
   WebComponents.waitFor(() => {
     // At this point we are guaranteed that all required polyfills have
-    // loaded, and can use web components APIs.
+    // loaded, and can use Web Components APIs.
     // Next, load element definitions that call `customElements.define`.
     // Note: returning a promise causes the custom elements
     // polyfill to wait until all definitions are loaded and then upgrade
