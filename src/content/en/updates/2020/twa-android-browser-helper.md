@@ -8,7 +8,7 @@ description: Introduces android-browser-helper, a new library to build Trusted W
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
 
-# Introducing android-browser-helper, a new Library for building with Trusted Web Activities {: .page-title }
+# Introducing android-browser-helper, a library for building Trusted Web Activities {: .page-title }
 
 {% include "web/_shared/contributors/andreban.html" %}
 
@@ -46,8 +46,8 @@ dependencies {
 ```
 
 ## Migrating from the custom-tabs-client
-Developers who were using the previous [`custom-tabs-client`][5] will have to implement a few changes
-in their application, when migrating to `android-browser-helper`.
+Developers who were using the previous [`custom-tabs-client`][5] will have to implement a few
+changes in their application, when migrating to `android-browser-helper`.
 
 Fortunately, besides replacing using the old library with the new library, those changes mainly
 involve changing searching and replacing a few strings throughout `AndroidManifest.xml`. 
@@ -61,7 +61,14 @@ Here’s a summary of the names changed:
 | android.support.customtabs.trusted.TrustedWebActivityService | com.google.androidbrowserhelper.trusted.DelegationService |
 
 The [svgomg-twa demo][10] has been updated to use android-browser-helper. this [diff][7] shows all
-the changes required when migrating an existing project using `custom-tabs-client` to `android-browser-helper`.
+the changes required when migrating an existing project using `custom-tabs-client` to
+`android-browser-helper`.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 [1]: https://github.com/GoogleChrome/android-browser-helper
 [2]: https://developer.android.com/jetpack/
