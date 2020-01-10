@@ -60,7 +60,7 @@ Note: Вы не можете добавить HTML атрибут описани
 запятую.
 
 <pre class="prettyprint">
-{# wf_tags: devtools,geolocation,gulp,getusermedia #}
+&#123;# wf_tags: devtools,geolocation,gulp,getusermedia #}
 </pre>
 
 Note: Посмотрите список [общих
@@ -75,7 +75,7 @@ Note: Посмотрите список [общих
 абсолютным.
 
 <pre class="prettyprint">
-{# wf_featured_image: /web/updates/images/weird.jpg #}
+&#123;# wf_featured_image: /web/updates/images/weird.jpg #}
 </pre>
 
 Изображение должно быть 16x9, в идеале 800px на 450px.
@@ -90,7 +90,7 @@ Note: Посмотрите список [общих
 включать HTML.
 
 <pre class="prettyprint">
-{# wf_featured_snippet: Use <kbd class='kbd'>Cmd + ]</kbd>... #}
+&#123;# wf_featured_snippet: Use <kbd class='kbd'>Cmd + ]</kbd>... #}
 </pre>
 
 ### Блоки комментариев
@@ -98,10 +98,6 @@ Note: Посмотрите список [общих
 Блоки комментариев не добавляются автоматически на страницы обновлений. Чтобы
 разрешить пользователям комментировать ваш документ, вам нужно добавить виджет
 комментариев внизу страницы. Например:
-
-<pre class="prettyprint">
-{% include "comment-widget.html" %}
-</pre>
 
 Note: виджет комментариев **не** отображается в staging и development среде, и
 будет отображаться только на опубликованной на DevSite странице.

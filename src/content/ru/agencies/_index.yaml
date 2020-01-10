@@ -19,6 +19,6 @@ landing_page:
       heading: Каталог агенств, создающих прогрессивные веб-приложения
   - classname: devsite-landing-row-100 programs-directory-ctn
     items:
-    - custom_html: '{% include \"web/agencies/_partials/web-directory.html\" %}'
+    - custom_html: '{% include "web/agencies/_partials/web-directory.html" %}'
 project_path: "/web/_project.yaml"
 title: Найдите квалифицированные веб-студии для разработки оптимизированных web-приложений
