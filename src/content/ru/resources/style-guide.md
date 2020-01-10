@@ -439,8 +439,7 @@ Dogfood: Этот тип выноски предназначен для заме
     <tr>
       <td><code>navigationType</code></td>
 <td>
-<code><a href="#">PageNavigationType</a></code><br>the choice's navigation
-type</td>
+<code><a href="#">PageNavigationType</a></code> <br> тип навигации выбора</td>
     </tr>
   </tbody>
 </table>
