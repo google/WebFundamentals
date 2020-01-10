@@ -132,6 +132,20 @@ pbakaus:
   description:
     en: 'Open Web Developer Advocate at Google • Tools, Performance, Animation, UX'
 
+andreban:
+  name:
+    given: Andre
+    family: Bandarra
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  email: andreban@google.com
+  description:
+    en: Andre is a Developer Advocate
+
 ianbarber:
   name:
     given: Ian
