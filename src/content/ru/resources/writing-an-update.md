@@ -60,7 +60,7 @@ Note: Вы не можете добавить HTML атрибут описани
 запятую.
 
 <pre class="prettyprint">
-{# wf_tags: devtools,geolocation,gulp,getusermedia #}
+&#123;# wf_tags: devtools,geolocation,gulp,getusermedia #}
 </pre>
 
 Note: Посмотрите список [общих
@@ -75,7 +75,7 @@ Note: Посмотрите список [общих
 абсолютным.
 
 <pre class="prettyprint">
-{# wf_featured_image: /web/updates/images/weird.jpg #}
+&#123;# wf_featured_image: /web/updates/images/weird.jpg #}
 </pre>
 
 Изображение должно быть 16x9, в идеале 800px на 450px.
@@ -90,7 +90,7 @@ Note: Посмотрите список [общих
 включать HTML.
 
 <pre class="prettyprint">
-{# wf_featured_snippet: Use <kbd class='kbd'>Cmd + ]</kbd>... #}
+&#123;# wf_featured_snippet: Use <kbd class='kbd'>Cmd + ]</kbd>... #}
 </pre>
 
 ### Блоки комментариев
