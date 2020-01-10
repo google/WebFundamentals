@@ -21,7 +21,7 @@ their Android applications.
 Activity.**
 
 The library is hosted on the official [Google Maven repository][11], which works out of the box in
-Android Projects, and also compatible with other Jetpack libraries, a common [issue][12] with the
+Android Projects, and is also compatible with AndroidX, which was a common [issue][12] with the
 previous library.
 
 More features and development experience improvements will be added this library. This is a short
@@ -64,6 +64,15 @@ The [svgomg-twa demo][10] has been updated to use android-browser-helper. this [
 the changes required when migrating an existing project using `custom-tabs-client` to
 `android-browser-helper`.
 
+## Are we missing anything?
+
+android-browser-helper has the goal of simplifying the development of applications using Trusted
+Web Activities. The library will continue to evolve as TWAs get more features.
+
+If you are missing a feature in Trusted Web Activities, think of ways that
+android-browser-helper could make make the development work simpler, or have a question on how to
+use the library, make sure to pop by the [GitHub repository][1] and file an [issue][13].
+
 ## Feedback {: #feedback .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
@@ -82,3 +91,4 @@ the changes required when migrating an existing project using `custom-tabs-clien
 [10]: https://github.com/GoogleChromeLabs/svgomg-twa
 [11]: https://maven.google.com/
 [12]: https://bugs.chromium.org/p/chromium/issues/detail?id=983378#c4
+[13]: https://github.com/GoogleChrome/android-browser-helper/issues
