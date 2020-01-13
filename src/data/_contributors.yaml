@@ -1733,3 +1733,15 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+
+ann40a:
+  name:
+    given: Anna
+    family: Sorokina
+  org:
+    name: Independent
+    unit: Developer
+  country: BY
+  role:
+    - translator
+  email: ann40a@yandex.ru
