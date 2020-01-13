@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device.
 
-{# wf_updated_on: 2017-06-28 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-04-15 #}
 {# wf_blink_components: Blink>Media #}
 
@@ -427,12 +427,12 @@ fullscreening of content, or the page.
 
 To full screen an element, like a video:
 
-    elem.requestFullScreen();
+    elem.requestFullscreen();
 
 
 To full screen the entire document:
 
-    document.body.requestFullScreen();
+    document.body.requestFullscreen();
 
 
 You can also listen for fullscreen state changes:
@@ -460,7 +460,7 @@ images as placeholders for video:
 To see this in action, check out the
 [demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/fullscreen.html).
 
-Dogfood: `requestFullScreen()` may be vendor prefixed and may require extra code
+Dogfood: `requestFullscreen()` may be vendor prefixed and may require extra code
 for full cross browser compatibility.
 
 <div style="clear:both;"></div>
@@ -754,4 +754,6 @@ page on the Mozilla Developer Network for a complete listing.
   </tbody>
 </table>
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

@@ -2,14 +2,18 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to evaluate runtime performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2018-12-28 #}
 {# wf_published_on: 2017-04-06 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 # Get Started With Analyzing Runtime Performance {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+Note: See [Optimize Website Speed](/web/tools/chrome-devtools/speed/get-started) to learn how
+make your pages load faster.
 
 Runtime performance is how your page performs when it is running, as opposed to
 loading. This tutorial teaches you how to use the Chrome DevTools Performance
@@ -344,7 +348,7 @@ well, the next question to answer is: why?
 
      <aside class="note">
        **Note**: The **Animation Frame Fired** event occurs whenever a
-       [`requestAnimationFrame()`][raf] callback is executed. 
+       [`requestAnimationFrame()`][raf] callback is executed.
      </aside>
 
 [raf]: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
@@ -429,7 +433,7 @@ Include screenshots or links to reproducible pages, if possible.
 
 [SO]: http://stackoverflow.com/questions/ask?tags=google-chrome-devtools
 
-To really master runtime performance, you've got learn how
+To really master runtime performance, you've got to learn how
 the browser translates HTML, CSS, and JS into pixels on a screen. The best
 place to start is the [Rendering Performance Overview][RP]. [The Anatomy Of A
 Frame][Anatomy] dives into even more detail.
@@ -455,3 +459,7 @@ tips for improving various aspects of runtime performance, such as:
 [Paint]: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
 [Layer]: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
 [Debounce]: /web/fundamentals/performance/rendering/debounce-your-input-handlers
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

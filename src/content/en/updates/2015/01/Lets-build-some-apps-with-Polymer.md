@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Building apps, the Polymer way.
 
-{# wf_updated_on: 2015-01-19 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,webcomponents,polymer,chromedevsummit #}
+{# wf_blink_components: Blink>DOM>ShadowDOM #}
 
 # Chrome Dev Summit 2014: Let's build some apps with Polymer! {: .page-title }
 
@@ -31,7 +32,7 @@ For Chrome Dev Summit, I tried to answer these questions by building a small con
 
 ## Structure
 
-Breaking an application into modular pieces that can be combined and reused is a central tenant of Web Components. Polymer's core-\* and paper-\* elements make it easy to start with small pieces, like [paper-toolbar](https://elements.polymer-project.org/elements/paper-toolbar) and [paper-icon-button](https://elements.polymer-project.org/elements/paper-icon-button)...
+Breaking an application into modular pieces that can be combined and reused is a central tenant of Web Components. Polymer's core-\* and paper-\* elements make it easy to start with small pieces, like [paper-toolbar](https://www.webcomponents.org/element/@polymer/paper-toolbar) and [paper-icon-button](https://www.webcomponents.org/element/@polymer/paper-icon-button)...
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-01-20-lets-build-some-apps-with-polymer/core-toolbar.jpg" alt="Polymer helps developers build applications faster" width="800" />
@@ -101,7 +102,7 @@ There's no reason to incur all that cost if the platform already has full suppor
         // HTML Imports are supported
       } else {
         document.write(
-          '<script src=“bower_components/webcomponentsjs/HTMLImports.min.js"><\/script>'
+          '<script src="bower_components/webcomponentsjs/HTMLImports.min.js"><\/script>'
         );
       }
     </script>
@@ -116,7 +117,7 @@ Vulcanize will concatenate your imports into a single bundle, *significantly* re
 
 ## Offline
 
-But just building a performant app doesn't solve the dilemma of a user with little or no connectivity. In other words, if your app doesn't work offline, then it's not really a mobile app. Today you can use [the much maligned application cache](http://alistapart.com/article/application-cache-is-a-douchebag) to offline your resources, but looking to the future, [Service Worker](/web/fundamentals/getting-started/primers/service-workers) should soon make the offline development experience much nicer.
+But just building a performant app doesn't solve the dilemma of a user with little or no connectivity. In other words, if your app doesn't work offline, then it's not really a mobile app. Today you can use [the much maligned application cache](https://alistapart.com/article/application-cache-is-a-douchebag) to offline your resources, but looking to the future, [Service Worker](/web/fundamentals/getting-started/primers/service-workers) should soon make the offline development experience much nicer.
 
 Jake Archibald has recently published an amazing [cookbook of service worker patterns](/web/fundamentals/instant-and-offline/offline-cookbook/) but I'll give you the quick start to get you going:
 
@@ -141,4 +142,3 @@ This allows my app to provide at least a fallback experience to the user if they
 Web Components are a big addition to the web platform, and they're still in their infancy. As they land in more browsers, it'll be up to us, the developer community, to figure out the best practices for structuring our applications. The above solutions give us a starting point, but there's still much more to learn. Onward to building better apps!
 
 
-{% include "comment-widget.html" %}

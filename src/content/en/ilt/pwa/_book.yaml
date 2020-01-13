@@ -77,8 +77,6 @@ upper_tabs:
             path: /web/ilt/pwa/live-data-in-the-service-worker
         - title: Using Workbox
           section:
-          - title: Slides
-            path: /web/ilt/pwa/workbox-slides
           - title: Lab
             path: /web/ilt/pwa/lab-workbox
         - title: Migrating to Workbox
@@ -141,6 +139,22 @@ upper_tabs:
             path: /web/ilt/pwa/integrating-analytics
           - title: Lab
             path: /web/ilt/pwa/lab-integrating-analytics
+        - title: PWA with AMP
+          section:
+          - title: Lab
+            path: /web/ilt/pwa/lab-build-a-progressive-web-amp
+        - title: Cloud Firestore
+          section:
+          - title: Lab
+            path: /web/ilt/pwa/lab-cloud-firestore
+        - title: PWA News Reader
+          section:
+          - title: Challenge
+            path: /web/ilt/pwa/challenge-convert-a-news-app-to-a-pwa
+        - title: PWA Ecommerce
+          section:
+          - title: Challenge
+            path: /web/ilt/pwa/challenge-convert-an-e-commerce-site-to-a-pwa
         - title: Appendix
           section:
           - title: Setting Up the Labs

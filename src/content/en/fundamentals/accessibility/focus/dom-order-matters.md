@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The importance of the default DOM order
 
-
-{# wf_updated_on: 2017-07-24 #}
+{# wf_blink_components: Blink>Accessibility #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # DOM Order Matters {: .page-title }
@@ -55,7 +55,7 @@ move focus through the buttons.
 Be careful when changing the visual position of elements on screen using CSS.
 This can cause the tab order to jump around, seemingly at random, confusing
 users who rely on the keyboard. For this reason, the Web AIM checklist states
-[in section 1.3.2](http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
+[in section 1.3.2](https://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
 that the reading and navigation order, as determined by code order, should be
 logical and intuitive.
 
@@ -92,3 +92,7 @@ sequence. If it does, you should make sure you are appropriately hiding
 offscreen content with `display: none` or `visibility: hidden`, or that you
 rearrange elements' physical positions in the DOM so they are in a logical
 order.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

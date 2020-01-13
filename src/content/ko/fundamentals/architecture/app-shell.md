@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml 
+project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 애플리케이션 셸 아키텍처는 웹의 연결성과 검색 기능을 저해하지 않고 UI를 로컬로 유지하고 콘텐츠를 동적으로 로드합니다. 
+description: 애플리케이션 셸 아키텍처는 웹의 연결성과 검색 기능을 저해하지 않고 UI를 로컬로 유지하고 콘텐츠를 동적으로 로드합니다.
 
-{# wf_updated_on: 2016-09-26 #} 
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2016-09-27 #}
 
 # 앱 셸 모델 {: .page-title }
@@ -162,11 +162,11 @@ API를 통해 콘텐츠를 동적으로 가져오지만 웹의 연결성과 검�
       <header class="header">
         <h1 class="header__title">App Shell</h1>
       </header>
-      
+
       <nav class="nav">
       ...
       </nav>
-      
+
       <main class="main">
       ...
       </main>
@@ -197,7 +197,7 @@ API를 통해 콘텐츠를 동적으로 가져오지만 웹의 연결성과 검�
 <div class="clearfix"></div>
 
 
-참고: [https://app-shell.appspot.com/](https://app-shell.appspot.com/)에서
+참고: [The App Shell Model](/web/fundamentals/architecture/app-shell) 에서
 애플리케이션 셸과 서버측 콘텐츠 렌더링을 사용하는 매우 단순한 PWA의 실제 모습을
 살펴보세요. 앱 셸은
 <a
@@ -207,7 +207,7 @@ href="https://shop.polymer-project.org">Shop</a>)와 React(<a
 href="https://github.com/insin/react-hn">ReactHN</a>,
 <a
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>)를 사용한 샘플이 있습니다.
- 
+
 
 ### 애플리케이션 셸 캐싱 {: #app-shell-caching }
 
@@ -253,7 +253,7 @@ sw-precache가 생성한 서비스 워커가 빌드 프로세스에서 구성한
 HTML, 자바스크립트 및 CSS 파일에서 리소스를 미리 캐시할 수 있습니다. 모든 것이
 오프라인에서도 작동하고 추가적인 노력 없이도 다음 방문 시 빠르게 로드됩니다.
 
-다음은 
+다음은
 [gulp](http://gulpjs.com) 빌드 프로세스에서 sw-precache를 사용하는 기본적 예시입니다.
 
     gulp.task('generate-service-worker', function(callback) {

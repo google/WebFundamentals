@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:向輔助技術隱藏內容
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 隱藏和更新內容 {: .page-title }
@@ -34,13 +34,13 @@ description:向輔助技術隱藏內容
       height: 1px;
       overflow: hidden;
     }
-    
+
 
 此外，正如我們所見，通過 `aria-label`、`aria-labelledby` 或 `aria-describedby` 屬性引用原本隱藏的元素來提供屏幕閱讀器專用文本是可行的。
 
 
 
-如需瞭解有關創建“屏幕閱讀器專用”文本的詳細信息，請參閱這篇有關[文本隱藏技巧](http://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }的 WebAIM 文章。
+如需瞭解有關創建“屏幕閱讀器專用”文本的詳細信息，請參閱這篇有關[文本隱藏技巧](https://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }的 WebAIM 文章。
 
 
 
@@ -85,13 +85,13 @@ description:向輔助技術隱藏內容
 
 
     <div class="status">Your message has been sent.</div>
-    
+
 
 與其“活動”版本進行比較：
 
 
     <div class="status" aria-live="polite">Your message has been sent.</div>
-    
+
 
 `aria-live` 有三個允許值：`polite`、`assertive` 和 `off`。
 
@@ -139,7 +139,7 @@ description:向輔助技術隱藏內容
 一切就位後，`aria-busy` 應設置爲 false，以使閱讀器的工作正常化。
 
 
- 
+
 
 
 {# wf_devsite_translation #}

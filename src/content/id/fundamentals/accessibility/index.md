@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Meningkatkan aksesibilitas untuk laman web
 
 
-{# wf_updated_on: 2016-06-26 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-06-26 #}
 
 # Aksesibilitas {: .page-title }
@@ -103,7 +103,7 @@ kotak centang sehingga Anda juga bisa beralih dengan mengeklik labelnya.
 
 ![formulir dengan aksesibilitas ditingkatkan](imgs/betteraccess.jpg)
 
-Mana yang lebih suka Anda gunakan? Jika Anda bilang "versi yang bisa diakses", berarti Anda 
+Mana yang lebih suka Anda gunakan? Jika Anda bilang "versi yang bisa diakses", berarti Anda
 sudah memahami premis utama panduan ini. Sering kali, sesuatu yang menjadi
 pemblokir penuh bagi segelintir pengguna juga menjadi hal yang menyakitkan bagi banyak pengguna lainnya, jadi dengan
 memperbaiki masalah aksesibilitas berarti Anda memperbaiki pengalaman bagi siapa saja.
@@ -134,11 +134,11 @@ WCAG disusun oleh empat prinsip yang sering kali disebut dengan singkatan *POUR*
 
 Walaupun WCAG menyediakan ringkasan yang komprehensif mengenai apa yang
 dimaksudnya dengan materi yang bisa diakses, ini juga bisa sedikit membebani. Untuk membantu meminimkannya, grup
-[WebAIM](http://webaim.org/){: .external } (Web Accessibility in Mind) telah
+[WebAIM](https://webaim.org/){: .external } (Web Accessibility in Mind) telah
 meringkas panduan WCAG ke dalam sebuah daftar periksa yang mudah diikuti, yang ditargetkan
 secara khusus untuk materi web.
 
-[Daftar periksa WebAIM](http://webaim.org/standards/wcag/checklist){: .external }
+[Daftar periksa WebAIM](https://webaim.org/standards/wcag/checklist){: .external }
 bisa memberi Anda rangkuman tingkat tinggi mengenai hal-hal yang perlu
 diimplementasikan, sekaligus menautkan ke spesifikasi WCAG yang
 mendasarinya jika Anda membutuhkan definisi yang diluaskan.
@@ -155,7 +155,7 @@ yang memengaruhi mereka. Untuk menjelaskan lebih jauh, inilah sesi tanya-jawab i
 dengan Victor Tsaran, Technical Program Manager di Google, yang buta total.
 
 <figure class="attempt-right">
-  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">	
+  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">
   <figcaption>Victor Tsaran</figcaption>
 </figure>
 
@@ -186,7 +186,7 @@ Kelemahan visual bisa dibagi ke dalam beberapa kategori: Pengguna yang tidak mem
 seperti saya, dapat menggunakan pembaca layar, braille, atau kombinasi keduanya.
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="Pembaca braille">	
+  <img src="imgs/braille-reader.png" alt="Pembaca braille">
   <figcaption>Pembaca braille</figcaption>
 </figure>
 
@@ -211,7 +211,7 @@ opsi kontras tingi seperti mode kontras tinggi di sistem operasi,
 ekstensi browser kontras tinggi atau tema kontras tinggi untuk situs web.
 
 <figure class="attempt-right">
-  <img src="imgs/high-contrast.png" alt="Mode kontras tinggi">	
+  <img src="imgs/high-contrast.png" alt="Mode kontras tinggi">
   <figcaption>Mode kontras tinggi</figcaption>
 </figure>
 
@@ -240,7 +240,7 @@ RSI atau sesuatu dan merasa nyeri bila menggunakannya, hingga orang yang mungkin
 dan memiliki jangkauan gerak terbatas untuk anggota tubuh tertentu.
 
 <figure class="attempt-right">
-  <img src="imgs/eye-tracking.png" alt="Orang yang menggunakan perangkat pelacak mata">	
+  <img src="imgs/eye-tracking.png" alt="Orang yang menggunakan perangkat pelacak mata">
   <figcaption>Perangkat pelacak mata</figcaption>
 </figure>
 
@@ -262,7 +262,7 @@ mirip sekali dengan penglihatan, pendengaran kita cenderung menurun bersama usia
 kemampuan umum seperti alat bantu dengar.
 
 <figure class="attempt-right">
-  <img src="imgs/screen-captions.png" alt="Televisi dengan teks di bagian bawah">	
+  <img src="imgs/screen-captions.png" alt="Televisi dengan teks di bagian bawah">
   <figcaption>Teks layar</figcaption>
 </figure>
 

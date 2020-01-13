@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Uso do estilo adequado para aprimorar a acessibilidade
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Estilos acessíveis {: .page-title }
@@ -31,7 +31,7 @@ Geralmente, a qualquer momento que focamos um elemento, contamos com o
 anel integrado de foco do navegador anel (a propriedade CSS `outline`) para estilizar o elemento. O anel de foco é útil
 porque, sem ele, é impossível para um usuário de teclado dizer qual elemento
 tem o foco. A [lista de verificação
-WebAIM](http://webaim.org/standards/wcag/checklist){: .external } certifica
+WebAIM](https://webaim.org/standards/wcag/checklist){: .external } certifica
 isso, exigindo que "É visualmente aparente qual elemento da página tem o
 foco do teclado no momento (ou seja, à medida que percorre a página, você pode ver
 onde está)."
@@ -146,13 +146,13 @@ CSS para o estado pressionado do botão deste
 
 
     .toggle.pressed { ... }
-    
+
 
 para este.
 
 
     .toggle[aria-pressed="true"] { ... }
-    
+
 
 Isso cria uma lógica e uma relação semântica entre o estado ARIA e
 a aparência do elemento, e também reduz o código extra.
@@ -177,7 +177,7 @@ também para usuários de leitor de tela em celular. É vantajoso para todos. Ei
 ![Udacity.com em ampliação de 400%](imgs/udacity-zoomed.jpg)
 
 Na verdade, apenas através do design responsivo, estamos cumprindo [regra 1.4.4 da lista de verificação
-do WebAIM](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
+do WebAIM](https://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
 que afirma que uma página "... deve ser legível e funcional quando o tamanho
 do texto é dobrado".
 
@@ -227,11 +227,9 @@ que é aproximadamente o tamanho da área de toque do dedo de uma pessoa.
 
 ![um diagrama que mostra alguns alvos de toque de 48 pixels](imgs/touch-target.jpg)
 
-Alvos de toque também devem ter um espaço de cerca de 32 pixels
+Alvos de toque também devem ter um espaço de cerca de 8 pixels
 entre si, tanto horizontal como verticalmente, de modo que o dedo de um
 usuário pressionando um alvo de toque não pressione outro alvo de toque sem querer.
-
-![um diagrama que mostra 32 pixels de espaço em volta de um alvo de toque](imgs/touch-target2.jpg)
 
 ## Cor e contraste
 
@@ -246,7 +244,7 @@ contraste *, a relação entre a *luminância* das cores em primeiro plano e
 do fundo. Quando as cores são semelhantes, a relação de contraste é baixa; quando
 elas são diferentes, a relação de contraste é alta.
 
-As [diretrizes WebAIM](http://webaim.org/standards/wcag/){: .external }
+As [diretrizes WebAIM](https://webaim.org/standards/wcag/){: .external }
 recomendam uma relação AA (mínima) de contraste de 4,5: 1 para todos os textos. Uma exceção é
 feita para textos muito grandes (120-150% maiores que o corpo de texto padrão),
 para os quais a relação pode descer até 3:1. Observe a diferença nas relações de contraste
@@ -276,7 +274,7 @@ Para executar uma auditoria de cor/contraste, siga estes passos básicos.
 ![a caixa de diálogo de contraste devtools](imgs/contrast-audit.png)
 
 O próprio WebAIM fornece um [verificador de cor
-e contraste](http://webaim.org/resources/contrastchecker/){: .external } útil que você pode usar
+e contraste](https://webaim.org/resources/contrastchecker/){: .external } útil que você pode usar
 para examinar o contraste de qualquer par de cores.
 
 ### Não transmita informações somente pela cor
@@ -301,7 +299,7 @@ fornecer vários caminhos para que o usuário acesse informações críticas.
 ![um formulário de interação com um erro sublinhado em vermelho](imgs/input-form1.png)
 
 A [lista de verificação WebAIM afirma, na seção
-1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } que
+1.4.1](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } que
 "cor não deve ser utilizada como único método de transmissão de conteúdo de
 distinguir elementos visuais". Ela também observa que "a cor por si só não deve
 ser usada para distinguir links do texto ao redor", a menos que cumpra
@@ -348,7 +346,7 @@ compreensão do leitor de qual página está ativa.
 ![uma barra de navegação no modo de alto contraste](imgs/tab-contrast.png)
 
 Da mesma forma, se você considerar o exemplo da lição anterior, o sublinhado
-vermelho no campo de número de telefone inválido pode ser exibido em uma 
+vermelho no campo de número de telefone inválido pode ser exibido em uma
 cor azul-esverdeada difícil de distinguir.
 
 ![um formulário com um campo de erro no modo de alto contraste](imgs/high-contrast.jpg)

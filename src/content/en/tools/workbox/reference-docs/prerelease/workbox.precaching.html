@@ -19,49 +19,18 @@
             <div class="symbol-detail-labels"><span class="label label-kind"><small>namespace</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v3.0.0-beta.2</small></span>
+              <span class="label label-version"><small>v4.0.0-rc.4</small></span>
             </div>
             <p>Most consumers of this module will want to use the
               <a href="workbox.precaching.html#.precacheAndRoute">precacheAndRoute()</a> method to add assets to the Cache and respond to network requests with these cached assets.</p>
-            <p>If you require finer grained control, you can use the
-              <a href="workbox.precaching.PrecacheController.html">PrecacheController</a> to determine when performed.</p>
+            <p>If you require finer grained control, you can use the PrecacheController to determine when performed.</p>
           </header>
           <section>
-            <h2>Class</h2>
-            <section id='members-links'>
-              <h3 class="class-list"><a href="workbox.precaching.PrecacheController.html">PrecacheController</a></h3>
-              <p>Performs efficient precaching of assets.</p>
-            </section>
-            <h2>Methods</h2>
+            <h2>Properties</h2>
             <section>
-              <h3 id=".addPlugins" class="symbol-name">addPlugins</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> addPlugins(newPlugins)</p>
-              <p>Add plugins to precaching.</p>
-              <section>
-                <table class="function param responsive">
-                  <tr>
-                    <th colspan="2">
-                      <h4>Parameter</h4>
-                    </th>
-                  </tr>
-                  <tbody>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>newPlugins</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">Array of Object</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-              </dl>
               <h3 id=".addRoute" class="symbol-name">addRoute</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> addRoute(options)</p>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
               <p>Add a <code>fetch</code> listener to the service worker that will respond to
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Custom_responses_to_requests">network requests</a> with precached assets.</p>
               <p>Requests for assets that aren't precached, the <code>FetchEvent</code> will not be responded to, allowing the event to fall through to other <code>fetch</code> event listeners.
@@ -100,7 +69,7 @@
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>ignoreUrlParametersMatching</p>
+                                <p>ignoreURLParametersMatching</p>
                               </td>
                               <td>
                                 <p class="details-table-optional">Optional</p>
@@ -110,12 +79,12 @@
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>cleanUrls</p>
+                                <p>cleanURLs</p>
                               </td>
                               <td>
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">boolean</p>
-                                <p>The <code>cleanUrls</code> option will check the cache for the URL with a <code>.html</code> added to the end of the end.</p>
+                                <p>The <code>cleanURLs</code> option will check the cache for the URL with a <code>.html</code> added to the end of the end.</p>
                               </td>
                             </tr>
                             <tr>
@@ -137,12 +106,51 @@
               </section>
               <dl class="dl-compact">
               </dl>
+              <h3 id=".cleanupOutdatedCaches" class="symbol-name">cleanupOutdatedCaches</h3>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
+              <p>Adds an <code>activate</code> event listener which will clean up incompatible precaches that were created by older versions of Workbox.</p>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".getCacheKeyForURL" class="symbol-name">getCacheKeyForURL</h3>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
+              <p>Takes in a URL, and returns the corresponding URL that could be used to lookup the entry in the precache.</p>
+              <p>If a relative URL is provided, the location of the service worker file will be used as the base.</p>
+              <p>For precached entries without revision information, the cache key will be the same as the original URL.</p>
+              <p>For precached entries with revision information, the cache key will be the original URL with the addition of a query parameter used for keeping track of the revision info.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>url</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">string</p>
+                        <p>The URL whose cache key to look up.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>string</code>&nbsp;The cache key that corresponds to that URL.</p>
+                </dd>
+              </dl>
               <h3 id=".precache" class="symbol-name">precache</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> precache(entries)</p>
-              <p>Add items to the precache list, removing any duplicates and store the files in the &quot;precache cache&quot; when the service worker installs.</p>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
+              <p>Adds items to the precache list, removing any duplicates and stores the files in the &quot;precache cache&quot; when the service worker installs.</p>
               <p>This method can be called multiple times.</p>
-              <p>Please note: This method <strong>will not</strong> serve any of the cached files for you, it only precaches files. To respond to a network request you call addRoute().
+              <p>Please note: This method <strong>will not</strong> serve any of the cached files for you. It only precaches files. To respond to a network request you call addRoute().
               </p>
               <p>If you have a single array of files to precache, you can just call precacheAndRoute().
               </p>
@@ -169,8 +177,8 @@
               <dl class="dl-compact">
               </dl>
               <h3 id=".precacheAndRoute" class="symbol-name">precacheAndRoute</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> precacheAndRoute(entries, options)</p>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
               <p>This method will add entries to the precache list and add a route to respond to fetch events.</p>
               <p>This is a convenience method that will call precache() and addRoute() in a single call.</p>
               <section>
@@ -204,10 +212,13 @@
               </section>
               <dl class="dl-compact">
               </dl>
-              <h3 id=".suppressWarnings" class="symbol-name">suppressWarnings</h3>
+            </section>
+            <h2>Method</h2>
+            <section>
+              <h3 id=".addPlugins" class="symbol-name">addPlugins</h3>
               <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> suppressWarnings(suppress)</p>
-              <p>Warnings will be logged if any of the precached assets are entered without a <code>revision</code> property. This is extremely dangerous if the URL's aren't revisioned. However, the warnings can be supressed with this method.</p>
+              <p class="type-signature"> addPlugins(newPlugins)</p>
+              <p>Adds plugins to precaching.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -218,10 +229,10 @@
                   <tbody>
                     <tr>
                       <td class="details-table-name">
-                        <p>suppress</p>
+                        <p>newPlugins</p>
                       </td>
                       <td>
-                        <p class="details-table-types">boolean</p>
+                        <p class="details-table-types">Array of Object</p>
                       </td>
                     </tr>
                   </tbody>
@@ -236,7 +247,7 @@
               <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
               <p class="type-signature">Object</p>
               <section>
-                <h4>Properties</h4>
+                <h4>Property</h4>
                 <table class="function param responsive">
                   <tr>
                     <th colspan="2">
@@ -250,16 +261,7 @@
                       </td>
                       <td>
                         <p class="details-table-types">Array of string</p>
-                        <p>List of URLs that were deleted from the precache cache.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>deletedRevisionDetails</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">Array of string</p>
-                        <p>List of URLs that were deleted from the precache cache.</p>
+                        <p>List of URLs that were deleted while cleaning up the cache.</p>
                       </td>
                     </tr>
                   </tbody>
@@ -281,20 +283,22 @@
                   <tbody>
                     <tr>
                       <td class="details-table-name">
-                        <p>updatedEntries</p>
+                        <p>updatedURLs</p>
                       </td>
                       <td>
-                        <p class="details-table-types">Array of (<a href="workbox.precaching.html#.PrecacheEntry">workbox.precaching.PrecacheEntry</a> or string)</p>
-                        <p>List of entries supplied for precaching that were precached.</p>
+                        <p class="details-table-types">Array of string</p>
+                        <p>List of URLs that were updated during installation.
+                        </p>
                       </td>
                     </tr>
                     <tr>
                       <td class="details-table-name">
-                        <p>notUpdatedEntries</p>
+                        <p>notUpdatedURLs</p>
                       </td>
                       <td>
-                        <p class="details-table-types">Array of (<a href="workbox.precaching.html#.PrecacheEntry">workbox.precaching.PrecacheEntry</a> or string)</p>
-                        <p>List of entries supplied for precaching that were already precached.</p>
+                        <p class="details-table-types">Array of string</p>
+                        <p>List of URLs that were already up to date.
+                        </p>
                       </td>
                     </tr>
                   </tbody>
@@ -328,6 +332,7 @@
                         <p>revision</p>
                       </td>
                       <td>
+                        <p class="details-table-optional">Optional</p>
                         <p class="details-table-types">string</p>
                         <p>Revision information for the URL.</p>
                       </td>
@@ -383,7 +388,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Array of URL</code>&nbsp;To add additional urls to test, return an Array of URL's. Please note that these <strong>should not be Strings</strong>, but URL objects.</p>
+                  <p><code>Array of URL</code>&nbsp;To add additional urls to test, return an Array of URLs. Please note that these <strong>should not be strings</strong>, but URL objects.</p>
                 </dd>
               </dl>
             </section>

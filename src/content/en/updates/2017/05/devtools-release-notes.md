@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 60.
 
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2017-05-23 #}
 {# wf_tags: chrome60,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New features and changes coming to DevTools in Chrome 60. #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -78,13 +79,17 @@ To audit a page:
    device, runs a bunch of tests against the page, and then displays the
    results in the **Audits** panel.
 
+
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / New Audits Panel / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
+
 
 #### Lighthouse at Google I/O '17 {: #lighthouse-at-io }
 
@@ -159,14 +164,18 @@ Performance][GSRP] to learn how to analyze performance with DevTools.
 </figure>
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / Third-Party Badges / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
+
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var response = 'Thanks for the feedback. Please tweet us at ' +
     '<a href="https://twitter.com/chromedevtools">@ChromeDevTools</a> or start a thread in the ' +
@@ -199,8 +208,10 @@ var feedback = {
   ]
 };
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
+
 
 ### A new gesture for Continue to Here {: #continue }
 
@@ -227,10 +238,12 @@ debugging in DevTools.
 [GSDJ]: /web/tools/chrome-devtools/javascript/
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / Continue To Here / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -257,10 +270,12 @@ the feature.
 </div>
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / Step Into Async / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -289,10 +304,12 @@ Now, the Console provides more information about the contents of the object.
 </figure>
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / New Object Previews UI / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -315,10 +332,12 @@ available contexts.
 </figure>
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / New Context Selection Menu UI / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -347,10 +366,12 @@ Now, the **Coverage** tab shows you in real-time what code is being used.
 </figure>
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / Real-Time Coverage Tab Updates / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -375,10 +396,12 @@ metrics next to each option, because those values were misleading. The goal
 is to match the true experience of each option.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / Simplified Network Throttling / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -395,10 +418,12 @@ capture async stack traces` command in the [Command Menu][CM].
 [CM]: /web/tools/chrome-devtools/ui#command-menu
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'WNDT60 / Async Stacks On By Default / Sentiment';
 {% include "web/updates/2017/05/_sentiment.js" %}
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -426,7 +451,4 @@ you're short on time.
 That's all for what's new in DevTools in Chrome 60. See you in 6 weeks for
 Chrome 61!
 
-## Links to previous release notes {: #links }
-
-* [What's New In DevTools (Chrome 59)](/web/updates/2017/04/devtools-release-notes)
-* [What's New In DevTools (Chrome 58)](/web/updates/2017/03/devtools-release-notes)
+<<../../_shared/discover.md>>

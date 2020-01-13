@@ -21,19 +21,11 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
-  Copyright 2017 Google Inc.
+  Copyright 2018 Google LLC
 
-  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
 import {WorkboxError} from &#x27;workbox-core/_private/WorkboxError.mjs&#x27;;
@@ -50,10 +42,13 @@ import &#x27;./_version.mjs&#x27;;
  * Given a &#x60;Request&#x60; and &#x60;Response&#x60; objects as input, this will return a
  * promise for a new &#x60;Response&#x60;.
  *
+ * If the original &#x60;Response&#x60; already contains partial content (i.e. it has
+ * a status of 206), then this assumes it already fulfills the &#x60;Range:&#x60;
+ * requirements, and will return it as-is.
+ *
  * @param {Request} request A request, which should contain a Range:
  * header.
- * @param {Response} originalResponse An original response containing the full
- * content.
+ * @param {Response} originalResponse A response.
  * @return {Promise&amp;lt;Response&gt;} Either a &#x60;206 Partial Content&#x60; response, with
  * the response body set to the slice of content specified by the request&#x27;s
  * &#x60;Range:&#x60; header, or a &#x60;416 Range Not Satisfiable&#x60; response if the
@@ -77,6 +72,12 @@ async function createPartialResponse(request, originalResponse) {
       });
     }
 
+    if (originalResponse.status &#x3D;&#x3D;&#x3D; 206) {
+      // If we already have a 206, then just pass it through as-is;
+      // see https://github.com/GoogleChrome/workbox/issues/1720
+      return originalResponse;
+    }
+
     const rangeHeader &#x3D; request.headers.get(&#x27;range&#x27;);
     if (!rangeHeader) {
       throw new WorkboxError(&#x27;no-range-header&#x27;);
@@ -86,10 +87,10 @@ async function createPartialResponse(request, originalResponse) {
     const originalBlob &#x3D; await originalResponse.blob();
 
     const effectiveBoundaries &#x3D; calculateEffectiveBoundaries(
-      originalBlob, boundaries.start, boundaries.end);
+        originalBlob, boundaries.start, boundaries.end);
 
     const slicedBlob &#x3D; originalBlob.slice(effectiveBoundaries.start,
-      effectiveBoundaries.end);
+        effectiveBoundaries.end);
     const slicedBlobSize &#x3D; slicedBlob.size;
 
     const slicedResponse &#x3D; new Response(slicedBlob, {
@@ -102,7 +103,7 @@ async function createPartialResponse(request, originalResponse) {
 
     slicedResponse.headers.set(&#x27;Content-Length&#x27;, slicedBlobSize);
     slicedResponse.headers.set(&#x27;Content-Range&#x27;,
-      &#x60;bytes ${effectiveBoundaries.start}-${effectiveBoundaries.end - 1}/&#x60; +
+        &#x60;bytes ${effectiveBoundaries.start}-${effectiveBoundaries.end - 1}/&#x60; +
       originalBlob.size);
 
     return slicedResponse;
@@ -111,9 +112,9 @@ async function createPartialResponse(request, originalResponse) {
       logger.warn(&#x60;Unable to construct a partial response; returning a &#x60; +
         &#x60;416 Range Not Satisfiable response instead.&#x60;);
       logger.groupCollapsed(&#x60;View details here.&#x60;);
-      logger.unprefixed.log(error);
-      logger.unprefixed.log(request);
-      logger.unprefixed.log(originalResponse);
+      logger.log(error);
+      logger.log(request);
+      logger.log(originalResponse);
       logger.groupEnd();
     }
 

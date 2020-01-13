@@ -19,7 +19,7 @@
             <div class="symbol-detail-labels"><span class="label label-kind"><small>namespace</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v3.0.0-beta.2</small></span>
+              <span class="label label-version"><small>v4.0.0-rc.4</small></span>
             </div>
             <p>All of the Workbox service worker libraries use workbox-core for shared code as well as setting default values that need to be shared (like cache names).
             </p>
@@ -28,7 +28,7 @@
             <h2>Properties</h2>
             <section>
               <h3 id=".cacheNames" class="symbol-name">cacheNames</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
               <p class="type-signature"></p>
               <p>Get the current cache names used by Workbox.</p>
               <p><code>cacheNames.precache</code> is used for precached assets,
@@ -36,90 +36,20 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Object</code>&nbsp;An object with <code>precache</code> and <code>runtime</code> cache names.</p>
+                  <p><code>Object</code>&nbsp;An object with <code>precache</code>, <code>runtime</code>, and
+                    <code>googleAnalytics</code> cache names.</p>
                 </dd>
               </dl>
-              <h3 id=".LOG_LEVELS" class="symbol-name">LOG_LEVELS</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <h3 id=".clientsClaim" class="symbol-name">clientsClaim</h3>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
               <p class="type-signature"></p>
-              <p>The available log levels in Workbox: debug, log, warn, error and silent.</p>
-              <section>
-                <h4>Properties</h4>
-                <table class="function param responsive">
-                  <tr>
-                    <th colspan="2">
-                      <h4>Parameter</h4>
-                    </th>
-                  </tr>
-                  <tbody>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>debug</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">int</p>
-                        <p>Prints all logs from Workbox. Useful for debugging.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>log</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">int</p>
-                        <p>Prints console log, warn, error and groups. Default for debug builds.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>warn</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">int</p>
-                        <p>Prints console warn, error and groups. Default for non-debug builds.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>error</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">int</p>
-                        <p>Print console error and groups.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>silent</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">int</p>
-                        <p>Force no logging from Workbox.</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
+              <p>Claim any currently available clients once the service worker becomes active. This is normally used in conjunction with <code>skipWaiting()</code>.</p>
               <dl class="dl-compact">
               </dl>
-              <h3 id=".logLevel" class="symbol-name">logLevel</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"></p>
-              <p>Get the current log level.</p>
-              <dl class="dl-compact">
-                <dt>Returns</dt>
-                <dd>
-                  <p><code>number</code>&nbsp;.</p>
-                </dd>
-              </dl>
-            </section>
-            <h2>Methods</h2>
-            <section>
               <h3 id=".setCacheNameDetails" class="symbol-name">setCacheNameDetails</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> setCacheNameDetails(details)</p>
-              <p>You can alter the default cache names used by the Workbox modules by changing the cache name details.</p>
-              <p>Cache names are generated as <code>&lt;prefix&gt;-&lt;Cache Name&gt;-&lt;suffix&gt;</code>.</p>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
+              <p>Modifies the default cache names used by the Workbox packages. Cache names are generated as <code>&lt;prefix&gt;-&lt;Cache Name&gt;-&lt;suffix&gt;</code>.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -147,6 +77,7 @@
                                 <p>prefix</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Object</p>
                                 <p>The string to add to the beginning of the precache and runtime cache names.</p>
                               </td>
@@ -156,6 +87,7 @@
                                 <p>suffix</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Object</p>
                                 <p>The string to add to the end of the precache and runtime cache names.</p>
                               </td>
@@ -165,6 +97,7 @@
                                 <p>precache</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Object</p>
                                 <p>The cache name to use for precache caching.
                                 </p>
@@ -175,6 +108,7 @@
                                 <p>runtime</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Object</p>
                                 <p>The cache name to use for runtime caching.</p>
                               </td>
@@ -184,6 +118,7 @@
                                 <p>googleAnalytics</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Object</p>
                                 <p>The cache name to use for
                                   <code>workbox-google-analytics</code> caching.</p>
@@ -198,11 +133,19 @@
               </section>
               <dl class="dl-compact">
               </dl>
-              <h3 id=".setLogLevel" class="symbol-name">setLogLevel</h3>
+              <h3 id=".skipWaiting" class="symbol-name">skipWaiting</h3>
+              <div class="symbol-detail-labels"><span class="label label-constant"><small>constant</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
+              <p>Force a service worker to become active, instead of waiting. This is normally used in conjunction with <code>clientsClaim()</code>.</p>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+            <h2>Method</h2>
+            <section>
+              <h3 id=".registerQuotaErrorCallback" class="symbol-name">registerQuotaErrorCallback</h3>
               <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> setLogLevel(newLevel)</p>
-              <p>Set the current log level passing in one of the values from LOG_LEVELS.
-              </p>
+              <p class="type-signature"> registerQuotaErrorCallback(callback)</p>
+              <p>Adds a function to the set of callbacks that will be executed when there's a quota error.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -213,11 +156,10 @@
                   <tbody>
                     <tr>
                       <td class="details-table-name">
-                        <p>newLevel</p>
+                        <p>callback</p>
                       </td>
                       <td>
-                        <p class="details-table-types">number</p>
-                        <p>The new log level to use.</p>
+                        <p class="details-table-types">function()</p>
                       </td>
                     </tr>
                   </tbody>

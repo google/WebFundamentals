@@ -22,4 +22,3 @@ When you are viewing a selector in the Styles Pane, comma separated selector por
 </ul>
 
 
-{% include "comment-widget.html" %}

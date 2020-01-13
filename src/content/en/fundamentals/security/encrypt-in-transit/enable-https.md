@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2019-09-08 #}
 {# wf_published_on: 2015-03-27 #}
 {# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
@@ -364,12 +364,6 @@ Most web servers offer a simple redirect feature. Use `301 (Moved Permanently)`
 to indicate to search engines and browsers that the HTTPS version is canonical,
 and redirect your users to the HTTPS version of your site from HTTP.
 
-## Migration concerns
-
-Many developers have legitimate concerns about migrating from HTTP to HTTPS.
-The Google Webmasters Team has some [excellent
-guidance](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J) available.
-
 ### Search ranking
 
 Google uses [HTTPS as a positive search quality
@@ -408,8 +402,8 @@ solve it:
 * To work around a variety of problems with Referer headers, use the new
   [Referrer Policy standard](http://www.w3.org/TR/referrer-policy/#referrer-policy-delivery-meta).
 
-Because search engines are migrating to HTTPS, in the future you are likely
-see _more_ Referer headers when you migrate to HTTPS.
+Because search engines are migrating to HTTPS, in the future, you are likely
+to see _more_ Referer headers when you migrate to HTTPS.
 
 Caution: According to the [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3),
 clients **SHOULD NOT** include a Referer header field in a (non-secure) HTTP
@@ -425,8 +419,12 @@ site operators cannot migrate to HTTPS without losing ad revenue; but until site
 operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
 
 Advertisers should at least offer ad service via HTTPS (such as by completing
-the "Enable HTTPS on your servers" section on this page. Many already do. You
+the "Enable HTTPS on your servers" section on this page). Many already do. You
 should ask advertisers that do not serve HTTPS at all to at least start.
 You may wish to defer completing
 [Make IntraSite URLs relative](#make-intrasite-urls-relative) until enough
 advertisers interoperate properly.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

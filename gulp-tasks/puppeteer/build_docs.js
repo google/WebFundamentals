@@ -59,11 +59,11 @@ async function generateTOC(tocYaml, tags) {
       title: tag,
       section: [{
         title: 'Docs',
-        path: `${GITHUB_PROJECT_URL}/blob/${tag}/docs/api.md`,
+        path: `https://pptr.dev/#?product=Puppeteer&version=${tag}&show=outline`,
         status: 'external',
       }, {
         title: 'Release Notes',
-        path: `${GITHUB_PROJECT_URL}/releases/tag/${tag}`,
+        path: `https://pptr.dev/#?product=Puppeteer&version=${tag}&show=api-release-notes`,
         status: 'external',
       }],
     };

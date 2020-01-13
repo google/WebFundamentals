@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-google-analytics.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2019-07-18 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Google Analytics  {: .page-title }
@@ -35,7 +35,7 @@ handlers to cache the
 [analytics.js](/analytics/devguides/collection/analyticsjs/) and
 [gtag.js](/analytics/devguides/collection/gtagjs/)
 scripts, so they can also be run offline. Lastly, when failed requests are
-retried Workbox Google Analytics also automatically sets (or updates) the
+retried, Workbox Google Analytics also automatically sets (or updates) the
 [`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 in the request payload to ensure timestamps in Google Analytics reflect the
 time of the original user interaction.
@@ -53,18 +53,18 @@ Google Analytics, and it's the simplest way to get Google Analytics working
 offline.
 
 However, if using only the code above, the retried requests are
-indistinguishable from request that succeed on the first try. This means
+indistinguishable from requests that succeed on the first try. This means
 you'll receive all the interaction data from offline users, but you won't
-be able to which interactions occurred while the user was offline.
+be able to tell which interactions occurred while the user was offline.
 
-To address this concern you can use one of the configuration options
+To address this concern, you can use one of the configuration options
 described below to modify or annotate the data that gets sent in the
 retried request.
 
 ### Modifying what data gets sent
 
 If you want to be able to differentiate retried requests from non-retried
-requests, you can specify either the `parameterOverrides` or `hitFilters`
+requests, you can specify either the `parameterOverrides` or `hitFilter`
 [configuration options](/web/tools/workbox/reference-docs/latest/workbox.googleAnalytics#.initialize).
 
 These options let you modify the
@@ -79,7 +79,7 @@ The examples below show how you'd use both options.
 
 ## Examples
 
-### Using a custom dimensions to track online vs. offline interactions
+### Using a custom dimension to track online vs. offline interactions
 
 Google Analytics does not have a built-in dimension for online vs. offline
 interactions. However, you can create your own dimension for exactly this
@@ -94,7 +94,7 @@ in Google Analytics. Give it a name like "Network Status" and set its
 [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit)
 (since any interaction can be offline).
 
-1. Take note the index assigned for the newly created dimension and pass
+1. Take note of the index assigned for the newly created dimension and pass
 that as the parameter name to the `parameterOverrides` configuration option
 in your Workbox Google Analytics code.
 
@@ -117,25 +117,39 @@ it'll make your reports easier to read.
 
     For example, if you used the default analytics.js tracking snippet to
     install Google Analytics, you could add the line
-    `ga('set', 'cd1', 'online')` to use a default value of "online" for your
+    `ga('set', 'dimension1', 'online')` to use a default value of "online" for your
     "Network Status" custom dimension for all requests not replayed by the
     service worker.
 
-    <pre class="prettyprint html">
-    &lt;script&gt;
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<pre class="prettyprint html">
+&lt;script&gt;
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-XXXXX-Y', 'auto');
+ga('create', 'UA-XXXXX-Y', 'auto');
 
-    // Set default value of custom dimension 1 to 'online'
-    ga('set', 'cd1', 'online');
+// Set default value of custom dimension 1 to 'online'
+ga('set', 'dimension1', 'online');
 
-    ga('send', 'pageview');
-    &lt;/script&gt;
-    </pre>
+ga('send', 'pageview');
+&lt;/script&gt;
+</pre>
+
+<aside>
+  <strong>Note:</strong>
+  <code>workbox-google-analytics</code> uses Measurement Protocol <a
+  href="/analytics/devguides/collection/protocol/v1/parameters">parameter
+  names</a>, which are different from the <a
+  href="/analytics/devguides/collection/analyticsjs/field-reference#dimension">
+  field names</a> used by analytics.js. For example, with custom dimensions the
+  Measurement Protocol uses
+  <a href="/analytics/devguides/collection/protocol/v1/parameters#cd_">cdXX</a>
+  (e.g. <code>cd1</code>) whereas analytics.js uses <a
+  href="/analytics/devguides/collection/analyticsjs/field-reference#dimension">
+  dimensionXX</a> (e.g. <code>dimension1</code>).
+</aside>
 
 ### Using a custom metric to track time requests spent in the queue
 
@@ -150,7 +164,7 @@ in Google Analytics. Give it a name like "Offline Queue Time", set its
 [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit),
 and set its formatting type to "Time" (in seconds).
 
-1. Use the `hitFilter` option to get the value the
+1. Use the `hitFilter` option to get the value of the
 [`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 param and divide it by 1000 (to convert it to seconds). Then set that value
 as a param with the index of the newly created metric. If this is your
@@ -164,3 +178,9 @@ first custom metric, the parameter name would be "cm1":
       },
     });
     </pre>
+
+## Testing Workbox Google Analytics
+
+As Workbox Google Analytics uses Background Sync to replay events, it can
+be unintuitive to test. Read more at
+[Testing Workbox Background Sync](/web/tools/workbox/modules/workbox-background-sync#testing_workbox_background_sync).

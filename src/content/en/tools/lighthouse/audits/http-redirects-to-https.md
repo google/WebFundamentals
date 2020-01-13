@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Redirects HTTP Traffic To HTTPS" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-09-20 #}
 {# wf_blink_components: N/A #}
 
@@ -33,4 +33,6 @@ the event from the Chrome Debugger that indicates that the page is secure. If
 Lighthouse does not receive the event within 10 seconds then the audit fails.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/http-redirects-to-https.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

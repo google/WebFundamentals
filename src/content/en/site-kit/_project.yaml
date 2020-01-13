@@ -1,0 +1,32 @@
+parent_project_metadata_path: /web/_project.yaml
+name: Site Kit
+description: Set up the Site Kit plugin for your WordPress site by obtaining credentials for your Google Cloud Platform project.
+home_url: /web/site-kit/
+buganizer_id: 488674
+color: google-blue
+content_license: cc-apache
+footer_path: /web/site-kit/_footer.yaml
+icon:
+  path: 'https://www.gstatic.com/images/branding/product/1x/googleg_64dp.png'
+hide_ratings_widget: true
+google_analytics_ids:
+  - UA-52746336-1
+  - UA-130569087-3
+announcement:
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style> Didn't make the <code>#ChromeDevSummit</code> this year? Catch all the content (and more!) in the <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIDA1uGhqy45bqlul0VcvKMr">Chrome Dev Summit 2019</a> playlist on our <a href="https://www.youtube.com/user/ChromeDevelopers/">Chrome Developers YouTube Channel</a>.

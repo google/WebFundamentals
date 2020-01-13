@@ -3,23 +3,23 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with workbox-build.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-07-06 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Service Worker with workbox-build {: .page-title }
 
-This page explains how to use the workbox-build Node module to generate a
+This page explains how to use the `workbox-build` Node module to generate a
 complete service worker with precaching and runtime caching.
 
 <aside class="note"><b>Note:</b> You'll need to have
 <a href="https://nodejs.org/en/download/">Node installed</a> to use
-workbox-build.</aside>
+<code>workbox-build</code>.</aside>
 
 {% include "web/tools/workbox/guides/_shared/install-workbox-build.html" %}
 
 ## Call <code>generateSW()</code>
 
-To generate a service worker, you need to add `workbox-build.generateSW()`
+To generate a service worker, you need to add `workboxBuild.generateSW()`
 to your build process or Node script:
 
 ```javascript
@@ -31,11 +31,11 @@ const buildSW = () => {
   return workboxBuild.generateSW({
     globDirectory: 'build',
     globPatterns: [
-      '**\/*.{html,json,js,css}',
+      '**/*.{html,json,js,css}',
     ],
     swDest: 'build/sw.js',
   });
-}
+};
 ```
 
 This command will output a service worker to `build/sw.js` which
@@ -49,7 +49,7 @@ In your web page, you can register this service worker by adding:
 ## Adding Runtime Caching
 
 There may be files that you don't want to precache but will be used by
-your webapp that you'd like cache at runtime. Images are a great example.
+your web app that you'd like to cache at runtime. Images are a great example.
 
 Instead of precaching all images for your site, which will take up a lot of
 space in the cache, you can cache them as they are used and limit the number
@@ -71,44 +71,45 @@ const buildSW = () => {
   return workboxBuild.generateSW({
     globDirectory: 'build',
     globPatterns: [
-      '**\/*.{html,json,js,css}',
+      '**/*.{html,json,js,css}',
     ],
     swDest: 'build/sw.js',
 
     // Define runtime caching rules.
-    runtimeCaching: [
-      {
-        // Match any request ends with .png, .jpg, .jpeg or .svg.
-        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+    runtimeCaching: [{
+      // Match any request that ends with .png, .jpg, .jpeg or .svg.
+      urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
-        // Apply a cache-first strategy.
-        handler: 'cacheFirst',
+      // Apply a cache-first strategy.
+      handler: 'CacheFirst',
 
-        options: {
-          // Only cache 10 images.
-          expiration: {
-            maxEntries: 10,
-          },
+      options: {
+        // Use a custom cache name.
+        cacheName: 'images',
+
+        // Only cache 10 images.
+        expiration: {
+          maxEntries: 10,
         },
       },
-    ],
+    }],
   });
-}
+};
 
 buildSW();
 ```
 
 The full set of available options can be found on the
-[workbox-build module page](/web/tools/workbox/modules/workbox-build).
+[`workbox-build` module page](/web/tools/workbox/modules/workbox-build).
 
 <aside class="note"><b>Note:</b> Please ensure that whenever you update your
-site you re-run `workbox generateSW` as this will unsure your service worker
-caches the latest files.</aside>
+site, you re-run <code>workboxBuild.generateSW()</code> as this will ensure
+your service worker caches the latest files.</aside>
 
 ## Using with Gulp
 
 Using `workbox-build` with your Gulp process is simply a case of using the same
-code as above as a Gulp task..
+code as above as a Gulp task.
 
 ```javascript
 const gulp = require('gulp');
@@ -118,7 +119,7 @@ gulp.task('service-worker', () => {
   return workboxBuild.generateSW({
     globDirectory: 'build',
     globPatterns: [
-      '**\/*.{html,json,js,css}',
+      '**/*.{html,json,js,css}',
     ],
     swDest: 'build/sw.js',
   });

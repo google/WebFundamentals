@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Matt talks about PWA's competing with native
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2019-07-23 #}
 {# wf_published_on: 2017-10-06 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E06-how-PWAs-can-compete-with-native.mp3 #}
 {# wf_podcast_duration: 00:12:21 #}
@@ -11,7 +11,7 @@ description: Matt talks about PWA's competing with native
 {# wf_podcast_subtitle: Matt talks about PWA's competing with native #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e06-cover-large.jpg #}
 
-# How The Web Can Compete With Native {: .page-title }
+# Matt Gaunt on how the web can compete with native {: .page-title }
 
 Welcome to Designer Vs. Developer, a show that tries to solve the
 challenges faced in the industry by opening a conversation between
@@ -41,6 +41,7 @@ src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E06-how-P
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
+<a href="https://bit.ly/MustafaOnSpotify">Spotify</a>
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">
@@ -48,3 +49,5 @@ Google Music</a>
 
 Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
 the video recording</a>.
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document doesn't have a valid rel=canonical" Lighthouse audit.
 
-{# wf_updated_on: 2018-03-09 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-03-05 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -62,7 +62,6 @@ More guidelines:
 * Use secure HTTPS canonical URLs over HTTP ones as much as possible. Make sure that the page
   is completely secure and doesn't have any mixed content errors. See [Understand Security
   Issues][Security] to learn how to diagnose security errors in Chrome DevTools.
-* Make sure that the canonical URL is valid.
 * If you use [hreflang links][hreflang]{:.external} to serve different versions of a page
   depending on a user's language or country, make sure that the canonical URL points to the
   proper page for that respective language or country.
@@ -113,3 +112,7 @@ Lighthouse marks the audit as a fail if any of the following are true:
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/canonical.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

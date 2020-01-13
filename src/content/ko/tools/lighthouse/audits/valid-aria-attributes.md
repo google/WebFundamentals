@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse 검사 항목 "요소의 ARIA 속성은 유효해야 한다"를 위한 참조 문서
 
-{# wf_updated_on: 2017-02-20 #}
+{# wf_updated_on: 2019-05-08 #}
 {# wf_published_on: 2017-01-18 #}
 
 # 요소의 ARIA 속성은 유효해야 한다 {: .page-title }
@@ -38,4 +38,4 @@ description: Lighthouse 검사 항목 "요소의 ARIA 속성은 유효해야 한
 이 검사는 aXe 접근성 엔진에 의해 검사합니다.
 더 자세한 정보는 [Elements must only use allowed ARIA attributes][axe]를 참고하세요.
 
-[axe]: https://dequeuniversity.com/rules/axe/1.1/aria-valid-attr
+[axe]: https://dequeuniversity.com/rules/axe/3.2/aria-valid-attr

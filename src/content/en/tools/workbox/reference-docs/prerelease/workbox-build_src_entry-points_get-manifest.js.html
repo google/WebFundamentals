@@ -21,21 +21,15 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
-  Copyright 2017 Google Inc.
+  Copyright 2018 Google LLC
 
-  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
+const checkForDeprecatedOptions &#x3D;
+    require(&#x27;../lib/check-for-deprecated-options&#x27;);
 const getFileManifestEntries &#x3D; require(&#x27;../lib/get-file-manifest-entries&#x27;);
 const getManifestSchema &#x3D; require(&#x27;./options/get-manifest-schema&#x27;);
 const validate &#x3D; require(&#x27;./options/validate&#x27;);
@@ -48,7 +42,7 @@ const validate &#x3D; require(&#x27;./options/validate&#x27;);
  * @param {Object} config Please refer to the
  * [configuration guide](/web/tools/workbox/modules/workbox-build#getmanifest_mode).
  * @return {Promise&amp;lt;{manifestEntries: Array&amp;lt;ManifestEntry&gt;,
- * count: Number, size: Number, warnings: Array&amp;lt;String&gt;}&gt;} A promise that
+ * count: number, size: number, warnings: Array&amp;lt;string&gt;}&gt;} A promise that
  * resolves once the precache manifest is determined. The &#x60;size&#x60; property
  * contains the aggregate size of all the precached entries, in bytes, the
  * &#x60;count&#x60; property contains the total number of precached entries, and the
@@ -58,10 +52,18 @@ const validate &#x3D; require(&#x27;./options/validate&#x27;);
  * @memberof module:workbox-build
  */
 async function getManifest(config) {
+  // This check needs to be done before validation, since the deprecated options
+  // will be renamed.
+  const deprecationWarnings &#x3D; checkForDeprecatedOptions(config);
+
   const options &#x3D; validate(config, getManifestSchema);
 
   const {manifestEntries, count, size, warnings} &#x3D;
     await getFileManifestEntries(options);
+
+  // Add in any deprecation warnings.
+  warnings.push(...deprecationWarnings);
+
   return {manifestEntries, count, size, warnings};
 }
 

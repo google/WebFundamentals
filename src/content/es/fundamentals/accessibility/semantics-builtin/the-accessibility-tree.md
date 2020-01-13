@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introducción al árbol de accesibilidad
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # El árbol de accesibilidad {: .page-title }
@@ -102,7 +102,7 @@ Se puede construir en HTML de varias formas, una de ellas es la siguiente.
 
 
     <div class="button-ish">Give me tacos</div>
-    
+
 
 Cuando no usamos un elemento botón real, el lector de pantalla no tiene forma de saber
 sobre qué ha aterrizado. Además, tendríamos que hacer el trabajo adicional [de agregar
@@ -133,7 +133,7 @@ Para los elementos de nivel de texto, no tenemos que hacer nada, porque, por def
 tendrán contenido de texto. Sin embargo, para los elementos de control o entrada, y el contenido
 visual como imágenes, tenemos que asegurarnos de especificar un nombre. De hecho,
 brindar alternativas de texto para cualquier contenido que no sea texto es [el primer
-artículo de la lista de comprobación de WebAIM](http://webaim.org/standards/wcag/checklist#g1.1).
+artículo de la lista de comprobación de WebAIM](https://webaim.org/standards/wcag/checklist#g1.1).
 
 Una forma de hacerlo es seguir su recomendación de que "Las entradas de formulario tienen
 etiquetas de texto asociadas". Existen dos formas de asociar una etiqueta a un elemento
@@ -175,7 +175,7 @@ o
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
-    
+
 
 Cuando se etiqueta correctamente la casilla de verificación, el lector de pantalla puede informar que
 el elemento tiene un rol de casilla de verificación y se llama "Receive

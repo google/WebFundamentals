@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Enable Text Compression" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_blink_components: N/A #}
 
@@ -59,7 +59,7 @@ To check if a server compressed a response:
 1. Go to the **Network** panel in DevTools.
 1. Click the request that caused the response you're interested in.
 1. Click the **Headers** tab.
-1. Check the `content-heading` header in the **Response Headers** section.
+1. Check the `content-encoding` header in the **Response Headers** section.
 
 <figure>
   <img src="images/content-encoding.svg"
@@ -96,37 +96,4 @@ Lighthouse does not flag that response in the results.
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Text Compression / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    {
-      "button": {
-        "text": "This Doc Was Helpful"
-      },
-      "response": "Thanks for the feedback.",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "This Doc Was Not Helpful"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}

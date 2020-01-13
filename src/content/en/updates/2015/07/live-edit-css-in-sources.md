@@ -23,4 +23,3 @@ Two things:
 </ol>
 
 
-{% include "comment-widget.html" %}

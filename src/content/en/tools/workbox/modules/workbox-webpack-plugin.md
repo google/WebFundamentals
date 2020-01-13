@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2018-03-19 #}
+{# wf_updated_on: 2018-07-09 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -75,6 +75,7 @@ module.exports = {
 };
 ```
 
+{% with anchor_prefix="generateSW-" %}
 <table class="responsive">
   <tbody>
     <tr>
@@ -88,6 +89,7 @@ module.exports = {
 {% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
 </table>
+{% endwith %}
 
 ## InjectManifest Plugin
 
@@ -130,6 +132,7 @@ module.exports = {
 };
 ```
 
+{% with anchor_prefix="injectManifest-" %}
 <table class="responsive">
   <tbody>
     <tr>
@@ -143,6 +146,7 @@ module.exports = {
 {% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
 </table>
+{% endwith %}
 
 ## Cache additional, non-webpack assets
 

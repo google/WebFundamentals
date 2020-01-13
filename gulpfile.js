@@ -41,10 +41,12 @@ global.WF = {
  * Default options
  *****************************************************************************/
 const defaultOptions = {
-  string: ['lang', 'verbose', 'testAll', 'testTests', 'testWarnOnly'],
+  boolean: ['buildRSS', 'verbose', 'testAll', 'testTests', 'testWarnOnly'],
+  string: ['lang', 'buildType'],
   default: {
     lang: null,
     verbose: false,
+    buildRSS: false,
     buildType: 'dev',
     testAll: false,
     testTests: false,
@@ -74,28 +76,27 @@ if (global.WF.options.lang) {
   global.WF.options.lang = global.WF.langs;
 }
 
+// Build RSS
+gutil.log('Build RSS Files:', gutil.colors.cyan(global.WF.options.buildRSS));
+
 // Show verbose output
-if (global.WF.options.verbose !== false) {
-  global.WF.options.verbose = true;
+if (global.WF.options.verbose) {
   gutil.log('Verbose: ', gutil.colors.cyan(global.WF.options.verbose));
 }
 
 // Test all files
-if (global.WF.options.testAll !== false) {
+if (global.WF.options.testAll) {
   gutil.log('testAll:', chalk.cyan('true'));
-  global.WF.options.testAll = true;
 }
 
 // Test test files
-if (global.WF.options.testTests !== false) {
+if (global.WF.options.testTests) {
   gutil.log('testTests:', chalk.cyan('true'));
-  global.WF.options.testTests = true;
 }
 
 // Warn only, no errors
-if (global.WF.options.testWarnOnly !== false) {
+if (global.WF.options.testWarnOnly) {
   gutil.log('testWarnOnly: ', gutil.colors.cyan('true'));
-  global.WF.options.testWarnOnly = true;
 }
 
 gutil.log('');
@@ -157,6 +158,7 @@ gulp.task('default', function(cb) {
   const langDesc = 'Comma separated list of languages to use';
   const langExamp = chalk.gray('eg: --lang=en,fr');
   gutil.log('  ', chalk.cyan('--lang'), langDesc, langExamp);
+  gutil.log('  ', chalk.cyan('--buildRSS'), 'Build RSS/ATOM files');
   gutil.log('  ', chalk.cyan('--verbose'), 'Log with verbose output');
   gutil.log('  ', chalk.cyan('--testAll'), 'Test all files, not just open');
   gutil.log('  ', chalk.cyan('--testTests'), 'Test the test files');

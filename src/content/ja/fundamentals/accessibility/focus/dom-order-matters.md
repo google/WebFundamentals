@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 既定の DOM 順序の重要性
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # DOM 順序の重要性 {: .page-title }
@@ -47,7 +47,7 @@ CSS を使用すると、DOM での順序を保持したまま、異なる順序
 <button>Last!</button>
 {% endframebox %}
 
-CSS を使用して画面上での要素の視覚的な位置を変更する場合は注意が必要です。フォーカスの位置がランダムに移動しているように見えるため、キーボードを使用するユーザーが混乱することがあります。このような理由から、WebAIM チェックリストの[セクション 1.3.2](http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external } では、コード順によって決定される読み取りとナビゲーションの順序は、論理的かつ直感的にする必要があると既定されています。
+CSS を使用して画面上での要素の視覚的な位置を変更する場合は注意が必要です。フォーカスの位置がランダムに移動しているように見えるため、キーボードを使用するユーザーが混乱することがあります。このような理由から、WebAIM チェックリストの[セクション 1.3.2](https://webaim.org/standards/wcag/checklist#sc1.3.2){: .external } では、コード順によって決定される読み取りとナビゲーションの順序は、論理的かつ直感的にする必要があると既定されています。
 
 
 

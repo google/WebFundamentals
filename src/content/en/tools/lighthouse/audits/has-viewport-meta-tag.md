@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Has A &lt;meta name="viewport"&gt; Tag With width Or initial-scale" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: N/A #}
 
@@ -41,4 +41,6 @@ it does not check that `width` equals `device-width`. Lighthouse also does not
 check for a `initial-scale` key-value pair.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/has-viewport-meta-tag.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

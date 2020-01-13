@@ -19,7 +19,7 @@ WebVR 是一个 JavaScript API，其利用用户拥有的任意 VR 耳机和 VR 
 
 * Chrome Beta (M56+)，通过一个[来源试用版](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)实现。
 * Firefox Nightly。
-* Samsung Internet Browser for Gear VR。（请注意：此浏览器目前支持一个较早版本的 WebVR 规范）。
+* Samsung Internet Browser for Gear VR。（请Note: 此浏览器目前支持一个较早版本的 WebVR 规范）。
 
 对于不支持 WebVR 或可能具有较旧版本的 API 的浏览器，您可以回退到 [WebVR Polyfill](https://github.com/googlevr/webvr-polyfill)。不过，请谨记，VR *对性能极其敏感*，并且 polyfill 的性能成本通常相对较高，因此，对于无法为 WebVR 提供原生支持的用户，您需要斟酌是否使用 polyfill。
 

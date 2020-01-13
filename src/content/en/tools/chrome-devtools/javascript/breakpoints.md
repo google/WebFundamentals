@@ -2,13 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn about all the ways you can pause your code in Chrome DevTools.
 
-{# wf_updated_on: 2018-05-18 #}
+{# wf_updated_on: 2019-02-16 #}
 {# wf_published_on: 2017-02-03 #}
 {# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Pause Your Code With Breakpoints {: .page-title }
+# How To Pause Your Code With Breakpoints In Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -263,6 +263,15 @@ throwing a caught or uncaught exception.
 1. Click **Pause on exceptions** ![Pause on
    exceptions](imgs/pause-on-exceptions.png){:.devtools-inline}. It turns blue
    when enabled.
+
+     <figure>
+       <img src="imgs/pause-on-exceptions-highlight.png"
+            alt="The 'Pause on exceptions' button."
+       <figcaption>
+         <b>Figure 8</b>: The <b>Pause on exceptions</b> button
+       </figcaption>
+     </figure>
+
 1. (Optional) Check the **Pause On Caught Exceptions** checkbox if you also
    want to pause on caught exceptions, in addition to uncaught ones.
 
@@ -270,7 +279,7 @@ throwing a caught or uncaught exception.
   <img src="imgs/uncaught-exception.png"
        alt="Paused on an uncaught exception."
   <figcaption>
-    <b>Figure 7</b>: Paused on an uncaught exception
+    <b>Figure 9</b>: Paused on an uncaught exception
   </figcaption>
 </figure>
 
@@ -311,7 +320,11 @@ Ensuring the target function is in scope can be tricky if you're
 calling `debug()` from the DevTools Console. Here's one strategy:
 
 1. Set a [line-of-code breakpoint](#loc) somewhere where the function is
-   scope.
+   in scope.
 1. Trigger the breakpoint.
 1. Call `debug()` in the DevTools Console while the code is still paused
    on your line-of-code breakpoint.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

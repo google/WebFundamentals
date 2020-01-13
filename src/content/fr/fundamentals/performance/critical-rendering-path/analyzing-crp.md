@@ -31,7 +31,7 @@ Enfin, un dernier point avant de commencer... Jusqu'ici, nous nous sommes exclus
 
 Nous allons commencer avec un balisage HTML basique et une seule image, sans CSS ni JavaScript, ce qui est d'une simplicité enfantine. Nous allons à présent ouvrir notre chronologie réseau dans Chrome DevTools, puis examiner le graphique en cascade des ressources qui en résulte :
 
-<img src="images/waterfall-dom.png" alt="" class="center" alt="Chemin critique du rendu">
+<img src="images/waterfall-dom.png" class="center" alt="Chemin critique du rendu">
 
 Comme prévu, le téléchargement du fichier HTML a pris 200 ms. La portion transparente de la ligne bleue indique le temps d'attente du navigateur sur le réseau, c'est à dire qu'aucun octet de réponse n'a encore été reçu. La partie pleine de la ligne indique le temps écoulé jusqu'à la fin du téléchargement, après la réception des premiers octets de réponse. Dans l'exemple ci-dessus, le téléchargement HTML est de petite taille (moins de 4 Ko). Une seule boucle réseau suffit pour récupérer l'intégralité du fichier. Par conséquent, la récupération du document prend approximativement 200 ms. Une moitié de cette durée est passée à attendre sur le réseau et l'autre moitié à attendre la réponse du serveur.
 
@@ -190,6 +190,3 @@ Pour finir, supposons que la feuille de style CSS ne soit utile que pour l'impre
 <img src="images/analysis-dom-css-nb-js-async.png" alt="Chemin critique du rendu avec DOM, CSS non bloquant et JavaScript asynchrone" class="center">
 
 Comme la ressource css.style ne sert qu'à l'impression, le navigateur n'a pas besoin de la bloquer pour afficher la page. Donc, dès que la construction du DOM est terminée, le navigateur dispose de suffisamment d'informations pour afficher la page. Par conséquent, cette page ne comporte qu'une seule ressource cruciale (le document HTML) et la longueur minimale du chemin critique du rendu est d'une boucle.
-
-
-

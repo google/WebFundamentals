@@ -122,4 +122,3 @@ div.auto {
 </div>
 {% endframebox %}
 
-{% include "comment-widget.html" %}

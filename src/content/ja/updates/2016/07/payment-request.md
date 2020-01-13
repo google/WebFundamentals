@@ -49,7 +49,7 @@ Payment Request API がどのように動作するのか、コードを追いな
 
       // Supported payment methods
       var supportedInstruments = [{
-          supportedMethods: ['basic-card']
+          supportedMethods: ['basic-card'],
           data: {
             supportedNetworks: [
               'visa', 'mastercard', 'amex', 'discover',
@@ -227,4 +227,3 @@ Payment Request API についてさらに知るために、いくつかのドキ
 Translated By:
 {% include "web/_shared/contributors/kazukikanamori.html" %}
 
-{% include "comment-widget.html" %}

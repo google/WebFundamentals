@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-06-25 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -20,24 +20,24 @@ can cache and serve these files using a service worker and Workbox.
 Before we can use Workbox, we need to create a service worker file and
 register it to our website.
 
-Start by creating a file called `sw.js` at the root of your site and add a
-console message to the file (This is so we can see it load).
+Start by creating a file called `service-worker.js` at the root of your site and add a
+console message to the file (this is so we can see it load).
 
 ```javascript
-console.log('Hello from sw.js');
+console.log('Hello from service-worker.js');
 ```
 
-In your web page register your new service worker file like so:
+In your web page, register your new service worker file like so:
 
 {% include "web/tools/workbox/guides/_shared/register-sw.html" %}
 
-This tells the browser this is the service worker to use for site.
+This tells the browser this is the service worker to use for the site.
 
-If you refresh your page you'll see the log from your service worker file.
+If you refresh your page, you'll see the log from your service worker file.
 
 ![Console message from sw.js in DevTools](../images/guides/get-started/hello-console.png)
 
-Looking in the “Application” tab in Chrome DevTools you should see your service
+Looking in the “Application” tab in Chrome DevTools, you should see your service
 worker registered.
 
 ![Application Tab displaying a registered service worker.](../images/guides/get-started/application-tab.png)
@@ -50,7 +50,7 @@ Workbox.
 
 ## Importing Workbox
 
-To start using Workbox you just need to import the `workbox-sw.js` file in your
+To start using Workbox, you just need to import the `workbox-sw.js` file in your
 service worker.
 
 Change your service worker so that it has the following `importScripts()` call.
@@ -72,6 +72,15 @@ officially loaded in our service worker.
 
 Now we can start using Workbox.
 
+Warning: Importing `workbox-sw.js` will create a
+[`workbox` object](/web/tools/workbox/modules/workbox-sw) inside of your service worker, and that
+instance is responsible for importing other helper libraries, based on the features you use. Due to
+restrictions in the
+[service worker specification](https://www.chromestatus.com/feature/5748516353736704),
+these imports need to happen either inside of an `install` event handler, or synchronously in the
+top-level code for your service worker. More details, along with workarounds, can be found in the
+[`workbox-sw` documentation](/web/tools/workbox/modules/workbox-sw#avoid_async_imports).
+
 ## Using Workbox
 
 One of Workbox’s primary features is it’s routing and caching strategy
@@ -79,12 +88,12 @@ modules. It allows you to listen for requests from your web page and determine
 if and how that request should be cached and responded to.
 
 Let’s add a cache fallback to our JavaScript files. The easiest way to do this
-is to register a route with Workbox that will match any “.js” files that are
+is to register a route with Workbox that will match any `.js` files that are
 requested, which we can do with a regular expression:
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('.*\.js'),
+  /\.js$/,
   …
 );
 ```
@@ -100,8 +109,8 @@ but fallback to the cached version if the network fails, we can use the
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('.*\.js'),
-  workbox.strategies.networkFirst()
+  /\.js$/,
+  new workbox.strategies.NetworkFirst()
 );
 ```
 
@@ -110,7 +119,7 @@ has JavaScript files in it, you should see some logs similar to this:
 
 ![Example console logs from routing a JavaScript file.](../images/guides/get-started/routing-example.png)
 
-Workbox has routed the request for any “.js” files and used the network first
+Workbox has routed the request for any `.js` files and used the network first
 strategy to determine how to respond to the request. You can look in the
 caches of DevTools to check that the request has actually been cached.
 
@@ -118,32 +127,32 @@ caches of DevTools to check that the request has actually been cached.
 
 Workbox provides a few caching strategies that you can use. For example, your
 CSS could be served from the cache first and updated in the background or your
-images could be cached and used until it’s a week old, after which it’ll need
+images could be cached and used until they're a week old, after which they’ll need
 updating.
 
 ```javascript
 workbox.routing.registerRoute(
-  // Cache CSS files
-  /.*\.css/,
-  // Use cache but update in the background ASAP
-  workbox.strategies.staleWhileRevalidate({
-    // Use a custom cache name
+  // Cache CSS files.
+  /\.css$/,
+  // Use cache but update in the background.
+  new workbox.strategies.StaleWhileRevalidate({
+    // Use a custom cache name.
     cacheName: 'css-cache',
   })
 );
 
 workbox.routing.registerRoute(
-  // Cache image files
-  /.*\.(?:png|jpg|jpeg|svg|gif)/,
-  // Use the cache if it's available
-  workbox.strategies.cacheFirst({
-    // Use a custom cache name
+  // Cache image files.
+  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  // Use the cache if it's available.
+  new workbox.strategies.CacheFirst({
+    // Use a custom cache name.
     cacheName: 'image-cache',
     plugins: [
       new workbox.expiration.Plugin({
-        // Cache only 20 images
+        // Cache only 20 images.
         maxEntries: 20,
-        // Cache for a maximum of a week
+        // Cache for a maximum of a week.
         maxAgeSeconds: 7 * 24 * 60 * 60,
       })
     ],
@@ -155,7 +164,7 @@ workbox.routing.registerRoute(
 
 Routing and caching strategies are performed by the `routing` and
 `strategies` modules, but there are plenty of other modules, each offering
-specific behaviours that you can use in your service worker.
+specific behaviors that you can use in your service worker.
 
 You'll find a number of guides that cover other features of Workbox as well
 as more information on configuring Workbox. Find a full list on the left, but

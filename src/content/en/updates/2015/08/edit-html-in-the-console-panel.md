@@ -24,4 +24,3 @@ The DOM node context menu, which you may recognize from the elements panel, is a
 </ol>
 
 
-{% include "comment-widget.html" %}

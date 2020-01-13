@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime #}
 
@@ -62,3 +62,7 @@ high-return performance wins. The content is progressive, not cumulative; that i
 to use all of the proposed techniques, nor do you have to use them in any particular order. But
 the more of them you can apply to your web pages, the better those pages will perform.
 
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

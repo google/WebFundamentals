@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-11-08 #}
 {# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
@@ -94,3 +94,7 @@ shared devices, without having to re-enter their sign-in information.
 
 Learn more in
 [Sign out](/web/fundamentals/security/credential-management/retrieve-credentials#sign-out).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

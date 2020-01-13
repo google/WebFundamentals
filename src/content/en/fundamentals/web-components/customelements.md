@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2018-04-17 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -118,7 +118,7 @@ create a **public JavaScript API** for your tag.
 
       // Can define constructor arguments if you wish.
       constructor() {
-        // If you define a ctor, always call super() first!
+        // If you define a constructor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
 
@@ -185,8 +185,8 @@ reactions**.
       <td><code>constructor</code></td>
       <td>An instance of the element is
         created or <a href="#upgrades">upgraded</a>. Useful for initializing
-        state, settings up event listeners, or
-        <a href="#shadowdom">creating shadow dom</a>.
+        state, setting up event listeners, or
+        <a href="#shadowdom">creating a shadow dom</a>.
         See the
         <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">
         spec
@@ -219,7 +219,7 @@ reactions**.
       </td>
     </tr>
     <tr>
-      <td><code>adoptedCallback()</code></td>
+      <td><code>adoptedCallback</code></td>
       <td>The
         custom element has been moved into a new <code>document</code> (e.g.
         someone called <code>document.adoptNode(el)</code>).
@@ -244,7 +244,7 @@ removed from the DOM (e.g. the user calls `el.remove()`).
 
     class AppDrawer extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         ...
       }
       connectedCallback() {
@@ -396,7 +396,7 @@ tags](#unknown). The process of calling `define()` and endowing an existing
 element with a class definition is called "element upgrades".
 
 To know when a tag name becomes defined, you can use
-`window.customElements.whenDefined()`. It vends a Promise that resolves when the
+`window.customElements.whenDefined()`. It returns a Promise that resolves when the
 element becomes defined.
 
 
@@ -432,8 +432,8 @@ element becomes defined.
 Note: I think of custom elements as being in a state of limbo before they're
 defined. The
 [spec](https://dom.spec.whatwg.org/#concept-element-custom-element-state)
-defines an element's state as "undefined", "uncustomized", or "custom". Built-in
-elements like `<div>` are always "defined".
+defines an element's state as `undefined`, `uncustomized`, or `custom`. Built-in
+elements like `<div>` are always `defined`.
 
 ## Element-defined content {: #addingmarkup}
 
@@ -520,7 +520,7 @@ To use Shadow DOM in a custom element, call `this.attachShadow` inside your
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to the element.
         let shadowRoot = this.attachShadow({mode: 'open'});
@@ -577,7 +577,7 @@ Example usage:
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         let shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.appendChild(tmpl.content.cloneNode(true));
       }
@@ -594,7 +594,7 @@ Example usage:
 
 For those unfamiliar, the [`<template>`
 element](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)
-allows you to declare fragments of DOM which are parsed, inert at page load, and
+allows you to declare fragments of the DOM which are parsed, inert at page load, and
 can be activated later at runtime. It's another API primitive in the web
 components family. **Templates are an ideal placeholder for declaring the
 structure of a custom element**.
@@ -616,7 +616,7 @@ structure of a custom element**.
 
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
-          super(); // always call super() first in the ctor.
+          super(); // always call super() first in the constructor.
           let shadowRoot = this.attachShadow({mode: 'open'});
           shadowRoot.appendChild(tmpl.content.cloneNode(true));
         }
@@ -629,8 +629,8 @@ on:
 
 1. We're defining a new element in HTML: `<x-foo-from-template>`
 2. The element's Shadow DOM is created from a `<template>`
-3. The element's DOM is local to the element thanks to Shadow DOM
-4. The element's internal CSS is scoped to the element thanks to Shadow DOM
+3. The element's DOM is local to the element thanks to the Shadow DOM
+4. The element's internal CSS is scoped to the element thanks to the Shadow DOM
 
 {% framebox height="120px" %}
 <style>
@@ -750,7 +750,7 @@ Extending another custom element is done by extending its class definition.
 
     class FancyDrawer extends AppDrawer {
       constructor() {
-        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+        super(); // always call super() first in the constructor. This also calls the extended class' constructor.
         ...
       }
 
@@ -801,7 +801,7 @@ Similarly, an element that extends `<img>` needs to extend `HTMLImageElement`.
     // for the list of other DOM interfaces.
     class FancyButton extends HTMLButtonElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
 
@@ -888,7 +888,7 @@ or create an instance in JavaScript:
 
 
     const BiggerImage = customElements.get('bigger-img');
-    const image = new BiggerImage(15, 20); // pass ctor values like so.
+    const image = new BiggerImage(15, 20); // pass constructor values like so.
     console.assert(image.width === 150);
     console.assert(image.height === 200);
 
@@ -952,7 +952,7 @@ Example
 
 Returns a Promise that resolves when the custom element is defined. If the
 element is already defined, resolve immediately. Rejects if the tag name is not
-a valid custom element name
+a valid custom element name.
 
 Example
 
@@ -977,12 +977,11 @@ article](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/){:
 
 ### Browser support
 
-Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)) and
-Safari 10.1 ([status](https://webkit.org/status/#feature-custom-elements)) have
-Custom Elements v1. Edge has [begun
-prototyping](https://twitter.com/AaronGustafson/status/717028669948977153).
-Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=889230)
-to implement.
+Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)),
+Safari 10.1 ([status](https://webkit.org/status/#feature-custom-elements)), and
+Firefox 63 ([status](https://platform-status.mozilla.org/#custom-elements)) have
+Custom Elements v1. Edge has [begun 
+development](https://developer.microsoft.com/microsoft-edge/platform/status/customelements/).
 
 To feature detect custom elements, check for the existence of
 `window.customElements`:
@@ -994,37 +993,52 @@ To feature detect custom elements, check for the existence of
 #### Polyfill {: #polyfill}
 
 Until browser support is widely available, there's a
-[polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js)
-available.
+[standalone polyfill](https://github.com/webcomponents/custom-elements/)
+available for Custom Elements v1. However, we recommend using the [webcomponents.js
+loader](https://github.com/webcomponents/webcomponentsjs#using-webcomponents-loaderjs)
+to optimally load the web components polyfills. The loader
+uses feature detection to asynchronously load only the necessary pollyfills
+required by the browser.
 
-**Note**: the `:defined` CSS pseudo-class cannot be polyfilled.
+Note: If your project transpiles to or uses ES5, be sure to see
+the notes on including [custom-elements-es5-adapter.js](https://github.com/webcomponents/webcomponentsjs#custom-elements-es5-adapterjs) in addition to the polyfills.
 
 Install it:
 
-    bower install --save webcomponents/custom-elements
+    npm install --save @webcomponents/webcomponentsjs
 
 Usage:
 
+    <!-- Use the custom element on the page. -->
+    <my-element></my-element>
 
-    function loadScript(src) {
-     return new Promise(function(resolve, reject) {
-       const script = document.createElement('script');
-       script.src = src;
-       script.onload = resolve;
-       script.onerror = reject;
-       document.head.appendChild(script);
-     });
-    }
+    <!-- Load polyfills; note that "loader" will load these async -->
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
 
-    // Lazy load the polyfill if necessary.
-    if (!supportsCustomElementsV1) {
-      loadScript('/bower_components/custom-elements/custom-elements.min.js').then(e => {
-        // Polyfill loaded.
+    <!-- Load a custom element definitions in `waitFor` and return a promise -->
+    <script type="module"> 
+      function loadScript(src) {
+        return new Promise(function(resolve, reject) {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+    
+      WebComponents.waitFor(() => {
+        // At this point we are guaranteed that all required polyfills have
+        // loaded, and can use web components APIs.
+        // Next, load element definitions that call `customElements.define`.
+        // Note: returning a promise causes the custom elements
+        // polyfill to wait until all definitions are loaded and then upgrade
+        // the document in one batch, for better performance.
+        return loadScript('my-element.js');
       });
-    } else {
-      // Native support. Good to go.
-    }
+    </script>
 
+Note: the `:defined` CSS pseudo-class cannot be polyfilled.
 
 ## Conclusion
 
@@ -1043,3 +1057,7 @@ picture of Web Components:
 
 [spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [sd_spec]: http://w3c.github.io/webcomponents/spec/shadow/
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -21,33 +21,20 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
-  Copyright 2017 Google Inc.
+  Copyright 2018 Google LLC
 
-  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
 const fse &#x3D; require(&#x27;fs-extra&#x27;);
 const path &#x3D; require(&#x27;path&#x27;);
-
 const errors &#x3D; require(&#x27;./errors&#x27;);
-const useBuildType &#x3D; require(&#x27;./use-build-type&#x27;);
+
 
 // Used to filter the libraries to copy based on our package.json dependencies.
 const WORKBOX_PREFIX &#x3D; &#x27;workbox-&#x27;;
-const BUILD_TYPES &#x3D; [
-  &#x27;dev&#x27;,
-  &#x27;prod&#x27;,
-];
 
 /**
  * This copies over a set of runtime libraries used by Workbox into a
@@ -81,25 +68,14 @@ module.exports &#x3D; async (destDirectory) &#x3D;&gt; {
 
   const copyPromises &#x3D; [];
   const librariesToCopy &#x3D; Object.keys(thisPkg.dependencies).filter(
-    (dependency) &#x3D;&gt; dependency.startsWith(WORKBOX_PREFIX));
+      (dependency) &#x3D;&gt; dependency.startsWith(WORKBOX_PREFIX));
   for (const library of librariesToCopy) {
-    const pkg &#x3D; require(&#x60;${library}/package.json&#x60;);
-    const defaultPathToLibrary &#x3D; require.resolve(&#x60;${library}/${pkg.main}&#x60;);
+    const mainFilePath &#x3D; require.resolve(library);
+    const srcPath &#x3D; path.dirname(mainFilePath);
 
-    for (const buildType of BUILD_TYPES) {
-      // Special-case logic for workbox-sw, which only has a single build type.
-      // This prevents a race condition with two identical copy promises;
-      // see https://github.com/GoogleChrome/workbox/issues/1180
-      if (library &#x3D;&#x3D;&#x3D; &#x27;workbox-sw&#x27; &amp;amp;&amp;amp; buildType &#x3D;&#x3D;&#x3D; BUILD_TYPES[0]) {
-        continue;
-      }
-
-      const srcPath &#x3D; useBuildType(defaultPathToLibrary, buildType);
-      const destPath &#x3D; path.join(workboxDirectoryPath,
-        path.basename(srcPath));
-      copyPromises.push(fse.copy(srcPath, destPath));
-      copyPromises.push(fse.copy(&#x60;${srcPath}.map&#x60;, &#x60;${destPath}.map&#x60;));
-    }
+    // fse.copy() copies all the files in a directory, not the directory itself.
+    // See https://github.com/jprichardson/node-fs-extra/blob/master/docs/copy.md#copysrc-dest-options-callback
+    copyPromises.push(fse.copy(srcPath, workboxDirectoryPath));
   }
 
   try {

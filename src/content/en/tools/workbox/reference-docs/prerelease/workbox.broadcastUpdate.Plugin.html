@@ -19,7 +19,7 @@
             <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v3.0.0-beta.2</small></span>
+              <span class="label label-version"><small>v4.0.0-rc.4</small></span>
             </div>
             <p>This plugin will automatically broadcast a message whenever a cached response is updated.</p>
           </header>
@@ -27,8 +27,10 @@
             <h2>Constructor</h2>
             <section>
               <h3 id="Plugin" class="symbol-name">Plugin</h3>
-              <p class="type-signature"> new Plugin(channelName, options)</p>
-              <p>Construct a new instance with a specific <code>channelName</code> to broadcast messages on</p>
+              <p class="type-signature"> new Plugin(options)
+              </p>
+              <p>Construct a BroadcastCacheUpdate instance with the passed options and calls its <code>notifyIfUpdated()</code> method whenever the plugin's
+                <code>cacheDidUpdate</code> callback is invoked.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -37,15 +39,6 @@
                     </th>
                   </tr>
                   <tbody>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>channelName</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">string</p>
-                        <p>The name that will be used when creating the <code>BroadcastChannel</code>.</p>
-                      </td>
-                    </tr>
                     <tr>
                       <td class="details-table-name">
                         <p>options</p>
@@ -73,12 +66,22 @@
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>source</p>
+                                <p>channelName</p>
                               </td>
                               <td>
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">string</p>
-                                <p>An attribution value that indicates where the update originated.</p>
+                                <p>The name that will be used . when creating the <code>BroadcastChannel</code>, which defaults to 'workbox' (the channel name used by the <code>workbox-window</code> package).</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>deferNoticationTimeout</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">string</p>
+                                <p>The amount of time to wait for a ready message from the window on navigation requests before sending the update.</p>
                               </td>
                             </tr>
                           </tbody>

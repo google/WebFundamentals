@@ -68,4 +68,3 @@ the page.
 ## Support
 * Chrome 56 on Android.
 
-{% include "comment-widget.html" %}

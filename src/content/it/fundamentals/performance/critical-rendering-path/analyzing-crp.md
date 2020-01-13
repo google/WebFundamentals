@@ -31,7 +31,7 @@ Infine, un'ultima cosa prima di iniziare... finora ci siamo concentrati esclusiv
 
 Inizieremo con un markup HTML di base e un'immagine singola, senza CSS o JavaScript, quindi il massimo della semplicità. Adesso dai Chrome DevTools apriamo la barra temporale dell'attività di rete e ispezioniamo la sequenza delle risorse:
 
-<img src="images/waterfall-dom.png" alt="" class="center" alt="CRP">
+<img src="images/waterfall-dom.png" class="center" alt="CRP">
 
 Come previsto, il download del file HTML ha richiesto ~200 ms. La parte trasparante della linea blu indica il tempo in cui il browser sta attendendo sulla rete, quindi che non sono stati ancora ricevuti byte di risposta, mentre la parte solida mostra il tempo per completare il download dopo che sono stati ricevuti i primi byte di risposta. Nel nostro esempio di cui sopra, il download HTML è piccolo (<4 K), quindi ci serve un singolo roundtrip per il recupero dell'intero file. Di conseguenza, il recupero del documento HTML richiede ~200 ms, con la metà trascorsa in attesa sulla rete e l'altra metà per la risposta del server.
 
@@ -190,6 +190,3 @@ Infine, poniamo che il foglio di stile CSS fosse necessario solo per la stampa. 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, CSS non bloccante e CRP JavaScript async" class="center">
 
 Dato che la risorsa style.css viene utilizzata solo per la stampa, il browser non la deve bloccarsi su di esso per eseguire il rendering della pagina. Quindi, non appena la costruzione DOM è completa, il browser dispone di informazioni sufficienti per eseguire il rendering della pagina. Di conseguenza, questa pagina presenta solamente una singola risorsa critica (il documento HTML) e la lunghezza minima del percorso di rendering critico è un roundtrip.
-
-
-

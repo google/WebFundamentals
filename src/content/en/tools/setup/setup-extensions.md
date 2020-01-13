@@ -1,14 +1,21 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Out of the box, every desktop browser comes with a set of developer tools, you can extend and add to these with extensions or plugins for your browser.
+robots: noindex
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2019-07-10 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: N/A #}
 
 # Set Up Browser Extensions {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
+
+
+<aside class="caution">
+  <b>This page is not being maintained.</b>
+</aside>
 
 Out of the box, every desktop browser comes with a set of developer tools, you can extend and add to these with extensions or plugins for your browser.
 

@@ -41,7 +41,7 @@ description:进入全屏模式。
 * `document.fullscreenElement`（目前在 Chrome、Firefox 和 IE 中添加前缀）：如有任何元素处于全屏模式，返回 true。
 
 
-注：您会注意到，在添加前缀的版本中，屏幕中“S”的大小写处理存在大量不一致的情况。
+Note: 您会注意到，在添加前缀的版本中，屏幕中“S”的大小写处理存在大量不一致的情况。
 这很不雅观，但也正是实行中规范存在的问题。
 
 
@@ -64,7 +64,7 @@ description:进入全屏模式。
 上例有点人为的痕迹；我将供应商前缀使用方面的复杂性全都隐藏了起来。
 
 
-注：该死的供应商前缀！
+Note: 该死的供应商前缀！
 
 实际代码要复杂得多。<a
 href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Mozilla 创建了</a>一个非常有用的脚本，您可以用它来切换全屏。
@@ -319,7 +319,7 @@ Chrome（Android 版）从 38 版（2014 年 10 月）起就已支持清单，�
 
     window.scrollTo(0,1);
 
-注意：是朋友我才告诉你。办法有是有，虽然有效，却并非正途。
+Note: 是朋友我才告诉你。办法有是有，虽然有效，却并非正途。
 还是不要使用为好。&mdash; Paul
 
 这是个相当简单的方法，页面加载时系统会指示浏览器地址栏让开。

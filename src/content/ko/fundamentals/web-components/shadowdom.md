@@ -191,7 +191,7 @@ DOM/CSS를 캡슐화합니다.
     // using an ES6 class. Every instance of <fancy-tab> will have this same prototype.
     customElements.define('fancy-tabs', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to <fancy-tabs>.
         const shadowRoot = this.attachShadow({mode: 'open'});
@@ -728,7 +728,7 @@ Shadow DOM에 액세스할 수 없습니다.
 
         customElements.define('x-element', class extends HTMLElement {
           constructor() {
-            super(); // always call super() first in the ctor.
+            super(); // always call super() first in the constructor.
             this._shadowRoot = this.attachShadow({mode: 'closed'});
             this._shadowRoot.innerHTML = '<div class="wrapper"></div>';
           }
@@ -911,7 +911,7 @@ Shadow DOM 내부에서 발생하는 이벤트는 호스팅 요소에서 발생�
     <script>
     customElements.define('x-focus', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
     
         const root = this.attachShadow({mode: 'open', delegatesFocus: true});
         root.innerHTML = `

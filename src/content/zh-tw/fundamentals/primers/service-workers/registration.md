@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:確定服務工作線程註冊時間的最佳做法。
 
-{# wf_updated_on:2016-11-28 #}
+{# wf_updated_on:2018-12-21 #}
 {# wf_published_on:2016-11-28 #}
 
 # 服務工作線程註冊 {: .page-title }
@@ -110,8 +110,8 @@ description:確定服務工作線程註冊時間的最佳做法。
 
 
 
-![儘早註冊時的網絡流量。](../images/early-registration.png
-"Network traffic with early registration.")
+![儘早註冊時的網絡流量。](images/early-registration.png
+"儘早註冊時的網絡流量。")
 
 上面的屏幕截圖反映了修改示例以儘快執行服務工作線程註冊時的網絡流量。
 您可以看到預緩存請求（旁邊帶有[齒輪圖標](http://stackoverflow.com/questions/33590378/status-code200-ok-from-serviceworker-in-chrome-network-devtools/33655173#33655173)的條目，源自服務工作線程的 `install` 處理程序）與針對顯示頁面所需的其他資源的請求分散排列。
@@ -120,8 +120,8 @@ description:確定服務工作線程註冊時間的最佳做法。
 
 
 
-![延遲註冊時的網絡流量。](../images/late-registration.png
-"Network traffic with late registration.")
+![延遲註冊時的網絡流量。](images/late-registration.png
+"延遲註冊時的網絡流量。")
 
 
 在上面的屏幕截圖中，延遲服務工作線程註冊直到頁面已加載。

@@ -462,4 +462,3 @@ for the Chrome implementation.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: La importancia del orden predeterminado del DOM
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # El orden del DOM es importante {: .page-title }
@@ -55,7 +55,7 @@ mover el foco entre los botones.
 Ten cuidado al cambiar la posición visual de los elementos en la pantalla con CSS.
 Esto puede provocar que el orden de tabulación salte, de forma aparentemente aleatoria, y confunda a los
 usuarios que utilizan el teclado. Por esta razón, la lista de comprobación de la Web AIM indica
-[en la sección 1.3.2](http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
+[en la sección 1.3.2](https://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
 que el orden de navegación y lectura, como lo determina el orden del código, debe ser
 lógico e intuitivo.
 

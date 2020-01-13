@@ -1,7 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_blink_components: Blink>PushAPI #}
+{# wf_updated_on: 2019-05-30 #}
 {# wf_published_on: 2016-06-30 #}
 
 # How Push Works {: .page-title }
@@ -10,7 +11,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-Before getting into the API, let's look at push from a highlevel, start to finish. Then as we
+Before getting into the API, let's look at push from a high level, start to finish. Then as we
 step through individual topics or API's later on, you'll have an idea of how and why it's
 important.
 
@@ -156,3 +157,7 @@ can make analytics calls, cache pages offline and show notifications.
 receives a push event.](./images/svgs/push-service-to-sw-event.svg)
 
 That's the whole flow for push messaging. Lets go through each step in more detail.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -149,7 +149,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 const applicationServerPublicKey = '<Your Public Key>';
 ```
 
-注：决不能将私钥放在网络应用中！
+Note: 决不能将私钥放在网络应用中！
 
 
 ## 初始化状态
@@ -474,7 +474,7 @@ event.waitUntil(notificationPromise);
 
 ![eee7f9133a97c1c4.png](img/eee7f9133a97c1c4.png)
 
-注：如果这个步骤不管用，请通过 DevTools Application 面板中的 *Unregister* 链接取消注册服务工作线程，等待服务工作线程停止，然后重新加载页面。
+Note: 如果这个步骤不管用，请通过 DevTools Application 面板中的 *Unregister* 链接取消注册服务工作线程，等待服务工作线程停止，然后重新加载页面。
 
 
 ## 通知点击

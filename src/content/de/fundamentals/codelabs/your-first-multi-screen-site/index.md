@@ -25,7 +25,7 @@ Vollständig responsive Websites zu erstellen ist nicht so schwer, wie Sie viell
 
 
 
-## Inhalte und Struktur erstellen 
+## Inhalte und Struktur erstellen
 
 
 
@@ -167,12 +167,12 @@ Wir haben einen Entwurf der Website ausgearbeitet und die wichtigsten strukturel
 <div class="clearfix"></div>
 
 
-Sie werden nun vielleicht denken, dass die Seite gar nicht gut aussieht. Das ist jedoch Absicht. 
+Sie werden nun vielleicht denken, dass die Seite gar nicht gut aussieht. Das ist jedoch Absicht.
 Inhalte sind der wichtigste Aspekt jeder Website und wir mussten sichergehen, dass wir eine gute und solide Informationsarchitektur und Informationsdichte haben. Anhand dieses Leitfadens haben wir uns eine ausgezeichnete Grundlage geschaffen, auf der wir nun aufbauen können. Die Formatierung unserer Inhalte wird im nächsten Leitfaden behandelt.
 
 
 
-## Responsiv machen 
+## Responsiv machen
 
 
 Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Bildschirmen bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Jedes dieser Geräte bringt eigene Vorteile, jedoch auch Einschränkungen mit sich. Als Webentwickler wird von Ihnen erwartet, sämtliche Geräte zu unterstützen.
@@ -208,7 +208,7 @@ Dazu müssen wir uns auf Grundlage dessen, wie die Inhalte auf den jeweiligen Bi
 - Allgemeinen Entwurf Ihres Layouts über alle primären Übergangspunkte hinweg erstellen
 
 
-### Darstellungsbereich einfügen 
+### Darstellungsbereich einfügen
 
 Selbst bei sehr einfachen Seiten ist es *obligatorisch*, ein Darstellungsbereich-Meta-Tag einzufügen.
 Der Darstellungsbereich ist die wichtigste Komponente zur Realisierung geeigneter Mehr-Geräte-Erlebnisse.
@@ -236,7 +236,6 @@ Ein Styleguide stellt eine gute Möglichkeit dar, ein umfassendes Verständnis f
   <div style="background-color: #39b1a4">#39b1a4</div>
   <div style="background-color: white">#ffffff</div>
   <div style="background-color: #f5f5f5">#f5f5f5</div>
-
   <div style="background-color: #e9e9e9">#e9e9e9</div>
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
@@ -261,7 +260,7 @@ Solche Bilder können sehr einfach hinzugefügt werden. In unserem Fall fügen w
       background-image: url(backgroundimage.jpg);
       background-size: cover;
     }
-    
+
 
 Wir haben ein einfaches Hintergrundbild ausgewählt, das unscharf ist, damit es nicht vom Inhalt ablenkt. Wir haben es so konfiguriert, dass es sich stets über das gesamte Element erstreckt und dabei immer das richtige Seitenverhältnis aufweist.
 
@@ -284,9 +283,9 @@ Das Design sieht ab 600 Pixeln in der Breite unvorteilhaft aus. In unserem Fall 
 
 
     @media (min-width: 600px) {
-    
+
     }
-    
+
 
 Auf einem größeren Bildschirm ist mehr Platz, womit mehr Flexibilität bei der Darstellung von Inhalten gegeben ist.
 
@@ -401,7 +400,7 @@ In Browsern, die dies unterstützen, können Sie Bilder mit hoher Pixeldichte an
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
-    
+
 
 #### Tabellen
 
@@ -427,7 +426,7 @@ Dadurch sorgen wir für einen klaren und konsequenten Übergang.
 
 ### Abschluss
 
-** Wir gratulieren!** Wenn Sie diesen Text lesen, haben Sie Ihre erste einfache Produktzielseite erstellt, die auf vielen verschiedenen Geräten, Formfaktoren und Bildschirmgrößen richtig angezeigt wird.
+**Wir gratulieren!** Wenn Sie diesen Text lesen, haben Sie Ihre erste einfache Produktzielseite erstellt, die auf vielen verschiedenen Geräten, Formfaktoren und Bildschirmgrößen richtig angezeigt wird.
 
 Indem Sie sich an die folgenden Richtlinien halten, sorgen Sie für einen guten Start:
 
@@ -436,6 +435,3 @@ Indem Sie sich an die folgenden Richtlinien halten, sorgen Sie für einen guten 
 3. Erstellen Sie die Grunderfahrung anhand des ``Mobile First``-Ansatzes.
 4. Wenn Sie die Erfahrung für Mobilgeräte fertiggestellt haben, erhöhen Sie die Breite der Darstellung, bis sie unvorteilhaft aussieht, und setzen Sie davor Ihren Übergangspunkt.
 5. Wiederholen Sie diesen Ansatz.
-
-
-

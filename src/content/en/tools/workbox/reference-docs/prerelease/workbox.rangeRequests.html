@@ -19,7 +19,7 @@
             <div class="symbol-detail-labels"><span class="label label-kind"><small>namespace</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v3.0.0-beta.2</small></span>
+              <span class="label label-version"><small>v4.0.0-rc.4</small></span>
             </div>
           </header>
           <section>
@@ -35,6 +35,7 @@
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
               <p class="type-signature"> createPartialResponse(request, originalResponse)&nbsp;returns&nbsp;Promise containing Response</p>
               <p>Given a <code>Request</code> and <code>Response</code> objects as input, this will return a promise for a new <code>Response</code>.</p>
+              <p>If the original <code>Response</code> already contains partial content (i.e. it has a status of 206), then this assumes it already fulfills the <code>Range:</code> requirements, and will return it as-is.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -59,8 +60,7 @@
                       </td>
                       <td>
                         <p class="details-table-types">Response</p>
-                        <p>An original response containing the full content.
-                        </p>
+                        <p>A response.</p>
                       </td>
                     </tr>
                   </tbody>

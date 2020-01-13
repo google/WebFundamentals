@@ -20,7 +20,7 @@ description: 向shadow-piercing CSS選擇器說再見。
 - `/deep/` 组合者(combinator)將會成為後代選擇器。 `x-foo /deep/ div` 將會當成 `x-foo div`.
 - `::shadow` 偽元素(pseudo-element)將不會匹配任何元素。
 
-注：如果你的網頁使用Polymer, Polymer團隊已發布了一個[如何讓你遷移](https://www.polymer-project.org/blog/2017-10-18-upcoming-changes.html) `::shadow` 和 `/deep/`的文章。
+Note: 如果你的網頁使用Polymer, Polymer團隊已發布了一個[如何讓你遷移](https://www.polymer-project.org/blog/2017-10-18-upcoming-changes.html) `::shadow` 和 `/deep/`的文章。
 
 ## 決定刪除::shadow 和 /deep/ 的原因
 
@@ -44,4 +44,3 @@ Note: 目前JavaScript API如`querySelector()` 和 `querySelectorAll()`會繼續
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6750456638341120) |
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
-{% include "comment-widget.html" %}

@@ -27,4 +27,3 @@ Or:
 <pre><code>query file:main</code></pre>
 
 
-{% include "comment-widget.html" %}

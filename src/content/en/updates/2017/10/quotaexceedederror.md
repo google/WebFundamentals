@@ -187,4 +187,3 @@ There are a few things to keep in mind when using this technique:
    location and resume playback from there. Be aware that this will cause
    playback interruption until the seek is completed.
 
-{% include "comment-widget.html" %}

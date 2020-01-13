@@ -26,4 +26,3 @@ You can also Cut (right click &gt; Cut, Cmd + x/Ctrl + x) a DOM node and paste -
 <em>Experiment:</em> Try adding more links in the header/footer of a site using this copy and paste technique and figure out at which point the layout needs improving.
 
 
-{% include "comment-widget.html" %}

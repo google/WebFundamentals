@@ -70,4 +70,3 @@ If your page still doesn't behave the way you'd like, file a bug at
 `Cr-UI-Browser-Mobile-TouchToSearch`.
 
 
-{% include "comment-widget.html" %}

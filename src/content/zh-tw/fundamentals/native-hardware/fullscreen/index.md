@@ -41,7 +41,7 @@ description:進入全屏模式。
 * `document.fullscreenElement`（目前在 Chrome、Firefox 和 IE 中添加前綴）：如有任何元素處於全屏模式，返回 true。
 
 
-注：您會注意到，在添加前綴的版本中，屏幕中“S”的大小寫處理存在大量不一致的情況。
+Note: 您會注意到，在添加前綴的版本中，屏幕中“S”的大小寫處理存在大量不一致的情況。
 這很不雅觀，但也正是實行中規範存在的問題。
 
 
@@ -64,7 +64,7 @@ description:進入全屏模式。
 上例有點人爲的痕跡；我將供應商前綴使用方面的複雜性全都隱藏了起來。
 
 
-注：該死的供應商前綴！
+Note: 該死的供應商前綴！
 
 實際代碼要複雜得多。<a
 href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Mozilla 創建了</a>一個非常有用的腳本，您可以用它來切換全屏。
@@ -319,7 +319,7 @@ Chrome（Android 版）從 38 版（2014 年 10 月）起就已支持清單，�
 
     window.scrollTo(0,1);
 
-注意：是朋友我才告訴你。辦法有是有，雖然有效，卻並非正途。
+Note: 是朋友我才告訴你。辦法有是有，雖然有效，卻並非正途。
 還是不要使用爲好。&mdash; Paul
 
 這是個相當簡單的方法，頁面加載時系統會指示瀏覽器地址欄讓開。

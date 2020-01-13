@@ -2,15 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Reducing Chrome's memory footprint is one of the team's top priorities this year.
 
-{# wf_updated_on: 2015-08-31 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-08-31 #}
 {# wf_tags: news,performance,update #}
 {# wf_featured_image: /web/updates/images/2015-09-01-tab-discarding/image09.png #}
+{# wf_blink_components: N/A #}
 
 # Tab Discarding in Chrome: A Memory-Saving Experiment {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
-
 
 
 Reducing Chrome's memory footprint is one of the team's top priorities this
@@ -32,7 +32,7 @@ keep your background tab state. This can get a little unwieldy over time.
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image01.png" />
 
-One of our goals is to reduce the memory used on tabs you're **not **actually
+One of our goals is to reduce the memory used on tabs you're **not** actually
 using. If I look at what tabs are consuming my system memory in the Chrome Task
 Manager, I'm really just 'using' one or two of the sites below whilst the other
 tabs in the background are unused.
@@ -75,7 +75,7 @@ to you, from most to least.
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image05.png" />
 
-To test out the feature, you can either carry out your normal browsing behaviour
+To test out the feature, you can either carry out your normal browsing behavior
 until your system is in a low-memory mode, or alternatively trigger a tab
 discard from about:discards by clicking 'Discard tab now'. This will discard the
 last tab in the list. You can also discard a particular tab from the list by
@@ -156,4 +156,3 @@ and let us know what you think in the comments. :) We'd also appreciate it if yo
 file tickets for any bugs you encounter on [crbug.com](https://crbug.com).
 
 
-{% include "comment-widget.html" %}

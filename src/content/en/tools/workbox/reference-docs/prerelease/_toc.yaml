@@ -19,18 +19,18 @@ toc:
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.NetworkFirst
 - title: "NetworkOnly"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.NetworkOnly
-- title: "broadcastUpdate.Plugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate.Plugin
-- title: "rangeRequests.Plugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.rangeRequests.Plugin
 - title: "cacheableResponse.Plugin"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.cacheableResponse.Plugin
-- title: "backgroundSync.Plugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync.Plugin
 - title: "expiration.Plugin"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.expiration.Plugin
+- title: "rangeRequests.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.rangeRequests.Plugin
+- title: "broadcastUpdate.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate.Plugin
+- title: "backgroundSync.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync.Plugin
 - title: "PrecacheController"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.precaching.PrecacheController
+  path: /web/tools/workbox/reference-docs/prerelease/module-workbox-precaching.PrecacheController
 - title: "Queue"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync.Queue
 - title: "RegExpRoute"
@@ -41,8 +41,8 @@ toc:
   path: /web/tools/workbox/reference-docs/prerelease/workbox.routing.Router
 - title: "StaleWhileRevalidate"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.StaleWhileRevalidate
-- title: "workbox"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox
+- title: "Workbox"
+  path: /web/tools/workbox/reference-docs/prerelease/module-workbox-window.Workbox
 - title: "workbox.backgroundSync"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync
 - title: "workbox.broadcastUpdate"
@@ -55,13 +55,15 @@ toc:
   path: /web/tools/workbox/reference-docs/prerelease/workbox.expiration
 - title: "workbox.googleAnalytics"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.googleAnalytics
+- title: "workbox.navigationPreload"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.navigationPreload
 - title: "workbox.precaching"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.precaching
 - title: "workbox.rangeRequests"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.rangeRequests
-- title: "workbox.routing"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.routing
 - title: "workbox.strategies"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies
+- title: "workbox.streams"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.streams
 - title: "Index of all"
   path: /web/tools/workbox/reference-docs/prerelease/index-all

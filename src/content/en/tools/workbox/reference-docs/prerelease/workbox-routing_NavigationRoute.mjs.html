@@ -21,19 +21,12 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
- Copyright 2016 Google Inc. All Rights Reserved.
- Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Copyright 2018 Google LLC
 
-     http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- */
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
 
 import {assert} from &#x27;workbox-core/_private/assert.mjs&#x27;;
 import {logger} from &#x27;workbox-core/_private/logger.mjs&#x27;;
@@ -91,7 +84,7 @@ class NavigationRoute extends Route {
       });
     }
 
-    super((...args) &#x3D;&gt; this._match(...args), handler);
+    super((options) &#x3D;&gt; this._match(options), handler);
 
     this._whitelist &#x3D; whitelist;
     this._blacklist &#x3D; blacklist;
@@ -100,26 +93,28 @@ class NavigationRoute extends Route {
   /**
    * Routes match handler.
    *
-   * @param {Object} input
-   * @param {FetchEvent} input.event
-   * @param {URL} input.url
+   * @param {Object} options
+   * @param {URL} options.url
+   * @param {Request} options.request
    * @return {boolean}
    *
    * @private
    */
-  _match({event, url}) {
-    if (event.request.mode !&#x3D;&#x3D; &#x27;navigate&#x27;) {
+  _match({url, request}) {
+    if (request.mode !&#x3D;&#x3D; &#x27;navigate&#x27;) {
       return false;
     }
 
     const pathnameAndSearch &#x3D; url.pathname + url.search;
 
-    if (this._blacklist.some((regExp) &#x3D;&gt; regExp.test(pathnameAndSearch))) {
-      if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-        logger.debug(&#x60;The navigation route is not being used, since the &#x60; +
-          &#x60;request URL matches both the whitelist and blacklist.&#x60;);
+    for (const regExp of this._blacklist) {
+      if (regExp.test(pathnameAndSearch)) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+          logger.log(&#x60;The navigation route is not being used, since the &#x60; +
+              &#x60;URL matches this blacklist pattern: ${regExp}&#x60;);
+        }
+        return false;
       }
-      return false;
     }
 
     if (this._whitelist.some((regExp) &#x3D;&gt; regExp.test(pathnameAndSearch))) {
@@ -127,15 +122,12 @@ class NavigationRoute extends Route {
         logger.debug(&#x60;The navigation route is being used.&#x60;);
       }
       return true;
-    } else {
-      if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-        logger.debug(
-          &#x60;The navigation route is not being used, since the &#x60; +
-          &#x60;URL being navigated to doesn&#x27;t match the whitelist.&#x60;
-        );
-      }
     }
 
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      logger.log(&#x60;The navigation route is not being used, since the URL &#x60; +
+          &#x60;being navigated to doesn&#x27;t match the whitelist.&#x60;);
+    }
     return false;
   }
 }

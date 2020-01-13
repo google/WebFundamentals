@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: "Automated testing with Headless Chrome"
 
-{# wf_updated_on: 2018-02-08 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2017-06-13 #}
 
 {# wf_tags: headless,testing,karma,mocha,chai #}
@@ -15,6 +15,7 @@ description: "Automated testing with Headless Chrome"
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var response = 'Thanks for the feedback!';
 var feedback = {
@@ -51,6 +52,7 @@ var feedback = {
   ]
 };
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -62,7 +64,7 @@ all set up using Karma as a runner and Mocha+Chai for authoring tests.
 Karma, Mocha, Chai, Headless Chrome, oh my!
 
 [Karma](https://karma-runner.github.io) is a testing harness that works with
-any of the the most popular testing frameworks ([Jasmine](https://jasmine.github.io/), [Mocha](https://mochajs.org/), [QUnit](https://qunitjs.com/)).
+any of the most popular testing frameworks ([Jasmine](https://jasmine.github.io/), [Mocha](https://mochajs.org/), [QUnit](https://qunitjs.com/)).
 
 [Chai](http://chaijs.com/) is an assertion library that works with Node and in the browser.
 We need the latter.
@@ -94,7 +96,7 @@ if you're not a fan, choose your favorite assertion library that works in the br
 
 ### Configure Karma
 
-Create a `karma.config.js` file that uses the `ChromeHeadless` launcher.
+Create a `karma.conf.js` file that uses the `ChromeHeadless` launcher.
 
 **karma.conf.js**
 
@@ -193,11 +195,11 @@ language: node_js
 node_js:
   - "7"
 dist: trusty # needs Ubuntu Trusty
-# Note: if you switch to sudo: false, you'll need to launch chrome with --no-sandbox.
+# Note: if you switch to sudo: false, you'll need to launch Chrome with --no-sandbox.
 # See https://github.com/travis-ci/travis-ci/issues/8836
 sudo: required
 addons:
-  chrome: stable # have Travis install chrome stable.
+  chrome: stable # have Travis install Chrome stable.
 cache:
   yarn: true
   directories:
@@ -212,4 +214,3 @@ Note: check out the [example repo](https://github.com/ebidel/headless-karma-trav
 
 <br>
 
-{% include "comment-widget.html" %}

@@ -74,11 +74,11 @@ description:學習如何將服務工作線程集成到現有應用內，以使�
 
 現在，您可以使用 Chrome DevTools 模擬離線模式了。
 
-打開 DevTools，轉至 __Application__ 面板，然後啓用 __Offline __ 複選框。在下面的屏幕截圖中，鼠標懸停在複選框上。 
+打開 DevTools，轉至 __Application__ 面板，然後啓用 __Offline__ 複選框。在下面的屏幕截圖中，鼠標懸停在複選框上。 
 
 ![479219dc5f6ea4eb.png](img/479219dc5f6ea4eb.png)
 
-點擊複選框後，請注意 __Network __ 面板標籤旁邊的警告圖標（帶有感嘆號的黃色三角形）。這表示您處於離線狀態。 
+點擊複選框後，請注意 __Network__ 面板標籤旁邊的警告圖標（帶有感嘆號的黃色三角形）。這表示您處於離線狀態。 
 
 如需證明您處於離線模式，請轉至  [https://google.com](https://google.com)。您會看到 Chrome 的“there is no Internet connection”錯誤消息。 
 
@@ -97,11 +97,11 @@ description:學習如何將服務工作線程集成到現有應用內，以使�
 
     $ git checkout code-lab
 
-返回到 DevTools 的 __Application __ 面板，禁用 __Offline __ 複選框，以便重新返回在線狀態。
+返回到 DevTools 的 __Application__  面板，禁用 __Offline__  複選框，以便重新返回在線狀態。
 
 運行頁面。應用應能如期運行。
 
-現在，使用 DevTools 重新模擬離線模式（通過在 __Application __ 面板中啓用 __Offline __ 複選框）。__注意！如果您不是非常瞭解服務工作線程，則會看到一些異常行爲。
+現在，使用 DevTools 重新模擬離線模式（通過在 __Application__  面板中啓用 __Offline__  複選框）。__注意！如果您不是非常瞭解服務工作線程，則會看到一些異常行爲。
 
 您可能會看到什麼？因爲您處於離線狀態，並且這個版本的應用沒有服務工作線程，您將看到 Chrome 中顯示典型的“there is no Internet connection”錯誤消息。
 
@@ -111,7 +111,7 @@ description:學習如何將服務工作線程集成到現有應用內，以使�
 
 這是怎麼回事？回想一下您在開始此代碼實驗室時的情景，您嘗試了應用的完整版本。當您運行那個版本時，應用實際上安裝了服務工作線程。現在，在您每次運行應用時，服務工作線程都會自動運行。一旦 `localhost:3000` 等作用域（您將會在下一部分中瞭解有關作用域的更多內容）中安裝了服務工作線程，服務工作線程會在您每次訪問作用域時自動啓動，除非您以編程方式或手動將其刪除。 
 
-如需修復這一問題，請轉至 DevTools 的 __Application __ 面板，點擊 __Service Workers __ 選項卡，然後點擊 __Unregister __ 按鈕。在下面的屏幕截圖中，鼠標懸停在按鈕上。 
+如需修復這一問題，請轉至 DevTools 的 __Application__  面板，點擊 __Service Workers__ 選項卡，然後點擊 __Unregister__  按鈕。在下面的屏幕截圖中，鼠標懸停在按鈕上。 
 
 ![837b46360756810a.png](img/837b46360756810a.png)
 
@@ -145,19 +145,19 @@ if('serviceWorker' in navigator) {
 
 腳本會檢查瀏覽器是否支持服務工作線程。如果不支持，它會將我們當前使用的空白文件 `sw.js` 註冊爲服務工作線程，然後記錄到控制檯。
 
-在重新運行網站之前，返回到 DevTools，查看  __Application __面板的 __Service Workers __ 標籤。此標籤當前應爲空，表示網站沒有安裝服務工作線程。 
+在重新運行網站之前，返回到 DevTools，查看  __Application__ 面板的 __Service Workers __ 標籤。此標籤當前應爲空，表示網站沒有安裝服務工作線程。 
 
 ![37d374c4b51d273.png](img/37d374c4b51d273.png)
 
-確保已停用 DevTools 中的 __Offline __ 複選框。重新加載頁面。在加載頁面時，您可以看到服務工作線程已經完成註冊。
+確保已停用 DevTools 中的 __Offline__  複選框。重新加載頁面。在加載頁面時，您可以看到服務工作線程已經完成註冊。
 
 ![b9af9805d4535bd3.png](img/b9af9805d4535bd3.png)
 
-在 __Source __ 標籤旁邊，您可以看到已註冊的服務工作線程源代碼的鏈接。 
+在 __Source__  標籤旁邊，您可以看到已註冊的服務工作線程源代碼的鏈接。 
 
 ![3519a5068bc773ea.png](img/3519a5068bc773ea.png)
 
-如果您想要檢查當前爲頁面安裝的服務工作線程，請點擊鏈接。這將會在 DevTools 的 __Sources __ 面板中爲您顯示服務工作線程的源代碼。例如，現在點擊鏈接，您會看到一個空文件。 
+如果您想要檢查當前爲頁面安裝的服務工作線程，請點擊鏈接。這將會在 DevTools 的 __Sources__  面板中爲您顯示服務工作線程的源代碼。例如，現在點擊鏈接，您會看到一個空文件。 
 
 ![dbc14cbb8ca35312.png](img/dbc14cbb8ca35312.png)
 
@@ -208,15 +208,15 @@ self.addEventListener('install', function(e) {
 
 我們來測試一下這個功能。__注意！__您將會看到更加異常的服務工作線程行爲。 
 
-打開 DevTools，轉至 __Application__ 面板。應停用 __Offline __複選框。按 `Esc` 鍵以打開 DevTools 窗口底部的 __Console __抽屜。您的 DevTools 窗口應類似於以下屏幕截圖：
+打開 DevTools，轉至 __Application__ 面板。應停用 __Offline__ 複選框。按 `Esc` 鍵以打開 DevTools 窗口底部的 __Console__ 抽屜。您的 DevTools 窗口應類似於以下屏幕截圖：
 
 ![c96de824be6852d7.png](img/c96de824be6852d7.png)
 
-現在重新加載頁面並查看 DevTools 窗口。首先，我們預期能看到記錄到控制檯中的大量請求，但沒有看到。其次，在 __Service Worker __窗格中，我們可以看到 __Status __已發生更改：
+現在重新加載頁面並查看 DevTools 窗口。首先，我們預期能看到記錄到控制檯中的大量請求，但沒有看到。其次，在 __Service Worker __窗格中，我們可以看到 __Status__ 已發生更改：
 
 ![c7cfb6099e79d5aa.png](img/c7cfb6099e79d5aa.png)
 
-在 __Status __中，有一個新的服務工作線程正等待激活。這就是包含我們剛纔所做更改的新的服務工作線程。因此，出於某種原因，我們以前安裝的舊的服務工作線程（空白文件）仍然在控制頁面。如果您點擊 __Source __旁邊的 `sw.js` 鏈接，便可驗證舊的服務工作線程仍然在運行中。 
+在 __Status__ 中，有一個新的服務工作線程正等待激活。這就是包含我們剛纔所做更改的新的服務工作線程。因此，出於某種原因，我們以前安裝的舊的服務工作線程（空白文件）仍然在控制頁面。如果您點擊 __Source__ 旁邊的 `sw.js` 鏈接，便可驗證舊的服務工作線程仍然在運行中。 
 
 如需修復這種不便，請啓用 __Update on reload__ 複選框。
 

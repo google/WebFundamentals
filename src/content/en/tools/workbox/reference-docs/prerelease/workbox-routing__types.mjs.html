@@ -21,62 +21,59 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
- Copyright 2016 Google Inc. All Rights Reserved.
- Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Copyright 2018 Google LLC
 
-     http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- */
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
 
 import &#x27;./_version.mjs&#x27;;
 
 /**
- * The &quot;match&quot; callback is used to determine if a &#x60;Route&#x60; should handle a
- * service worker&#x27;s &#x60;fetch&#x60; event. Returning a truthy value means
- * this &#x60;Route&#x60; will handle and respond to the event.
- *
- * Return &#x60;null&#x60; if this Route shouldn&#x27;t match against the &#x60;fetch&#x60; event.
- *
- * Any truthy value returned by this callback will be passed to the
- * Route&#x27;s
- * [handler callback]{@link workbox.routing.Route~handlerCallback}.
+ * The &quot;match&quot; callback is used to determine if a &#x60;Route&#x60; should apply for a
+ * particular URL. When matching occurs in response to a fetch event from the
+ * client, the &#x60;event&#x60; and &#x60;request&#x60; objects are supplied in addition to the
+ * URL. However, since the match callback can be invoked outside of a fetch
+ * event, matching logic should not assume the &#x60;event&#x60; or &#x60;request&#x60; objects
+ * will always be available (unlike URL, which is always available).
+ * If the match callback returns a truthy value, the matching route&#x27;s
+ * [handler callback]{@link workbox.routing.Route~handlerCallback} will be
+ * invoked immediately. If the value returned is a non-empty array or object,
+ * that value will be set on the handler&#x27;s &#x60;context.params&#x60; argument.
  *
  * @callback Route~matchCallback
  * @param {Object} context
  * @param {URL} context.url The request&#x27;s URL.
- * @param {FetchEvent} context.event The service worker&#x60;s &#x60;fetch&#x60;
- * event.
- * @return {Object|null} To signify a match, return anything other than &#x60;null&#x60;.
- * Return &#x60;null&#x60; if the route shouldn&#x27;t match.
- * [handler]{@link workbox.routing.Route~handlerCallback}.
+ * @param {FetchEvent} [context.request] The corresponding request,
+ *     if available.
+ * @param {FetchEvent} [context.event] The corresponding event that triggered
+ *     the request, if available.
+ * @return {*} To signify a match, return a truthy value.
  *
  * @memberof workbox.routing
  */
 
 /**
- * The &quot;handler&quot; callback is called when a service worker&#x27;s &#x60;fetch&#x60; event
- * has been matched by a &#x60;Route&#x60;. This callback should return a Promise that
- * resolves with a &#x60;Response&#x60;.
+ * The &quot;handler&quot; callback is invoked whenever a &#x60;Router&#x60; matches a URL to a
+ * &#x60;Route&#x60; via its [match]{@link workbox.routing.Route~handlerCallback}
+ * callback. This callback should return a Promise that resolves with a
+ * &#x60;Response&#x60;.
  *
- * If a value is returned by the
+ * If a non-empty array or object is returned by the
  * [match callback]{@link workbox.routing.Route~matchCallback} it
- * will be passed in as the &#x60;context.params&#x60; argument.
+ * will be passed in as the handler&#x27;s &#x60;context.params&#x60; argument.
  *
  * @callback Route~handlerCallback
  * @param {Object} context
- * @param {URL} context.url The request&#x27;s URL.
- * @param {FetchEvent} context.event The service worker&#x27;s &#x60;fetch&#x60;
- * event.
- * @param {Object} [context.params] Parameters returned by the Route&#x27;s
- * [match callback]{@link workbox.routing.Route~matchCallback} function.
- * This will be undefined if nothing was returned.
+ * @param {URL} context.url The URL that matched.
+ * @param {FetchEvent} [context.request] The corresponding request,
+ *     if available.
+ * @param {FetchEvent} [context.event] The corresponding event that triggered
+ *     the request, if available.
+ * @param {Object} [context.params] Array or Object parameters returned by the
+ *     Route&#x27;s [match callback]{@link workbox.routing.Route~matchCallback}.
+ *     This will be undefined if an empty array or object were returned.
  * @return {Promise&amp;lt;Response&gt;} The response that will fulfill the request.
  *
  * @memberof workbox.routing

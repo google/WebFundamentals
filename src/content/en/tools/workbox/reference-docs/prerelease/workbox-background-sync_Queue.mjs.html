@@ -21,18 +21,11 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
- Copyright 2017 Google Inc. All Rights Reserved.
- Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Copyright 2018 Google LLC
 
-     http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
 import {WorkboxError} from &#x27;workbox-core/_private/WorkboxError.mjs&#x27;;
@@ -62,28 +55,16 @@ class Queue {
    *     in IndexedDB specific to this instance. An error will be thrown if
    *     a duplicate name is detected.
    * @param {Object} [options]
-   * @param {Object} [options.callbacks] Callbacks to observe the lifecycle of
-   *     queued requests. Use these to respond to or modify the requests
-   *     during the replay process.
-   * @param {function(StorableRequest):undefined}
-   *     [options.callbacks.requestWillEnqueue]
-   *     Invoked immediately before the request is stored to IndexedDB. Use
-   *     this callback to modify request data at store time.
-   * @param {function(StorableRequest):undefined}
-   *     [options.callbacks.requestWillReplay]
-   *     Invoked immediately before the request is re-fetched. Use this
-   *     callback to modify request data at fetch time.
-   * @param {function(Array&amp;lt;StorableRequest&gt;):undefined}
-   *     [options.callbacks.queueDidReplay]
-   *     Invoked after all requests in the queue have successfully replayed.
-   * @param {number} [options.maxRetentionTime &#x3D; 7 days] The amount of time (in
+   * @param {Function} [options.onSync] A function that gets invoked whenever
+   *     the &#x27;sync&#x27; event fires. The function is invoked with an object
+   *     containing the &#x60;queue&#x60; property (referencing this instance), and you
+   *     can use the callback to customize the replay behavior of the queue.
+   *     When not set the &#x60;replayRequests()&#x60; method is called.
+   * @param {number} [options.maxRetentionTime&#x3D;7 days] The amount of time (in
    *     minutes) a request may be retried. After this amount of time has
    *     passed, the request will be deleted from the queue.
    */
-  constructor(name, {
-    callbacks &#x3D; {},
-    maxRetentionTime &#x3D; MAX_RETENTION_TIME,
-  } &#x3D; {}) {
+  constructor(name, {onSync, maxRetentionTime} &#x3D; {}) {
     // Ensure the store name is not already being used
     if (queueNames.has(name)) {
       throw new WorkboxError(&#x27;duplicate-queue-name&#x27;, {name});
@@ -92,9 +73,9 @@ class Queue {
     }
 
     this._name &#x3D; name;
-    this._callbacks &#x3D; callbacks;
-    this._maxRetentionTime &#x3D; maxRetentionTime;
-    this._queueStore &#x3D; new QueueStore(this);
+    this._onSync &#x3D; onSync || this.replayRequests;
+    this._maxRetentionTime &#x3D; maxRetentionTime || MAX_RETENTION_TIME;
+    this._queueStore &#x3D; new QueueStore(this._name);
 
     this._addSyncListener();
   }
@@ -107,103 +88,199 @@ class Queue {
   }
 
   /**
-   * Stores the passed request into IndexedDB. The database used is
-   * &#x60;workbox-background-sync&#x60; and the object store name is the same as
-   * the name this instance was created with (to guarantee it&#x27;s unique).
+   * Stores the passed request in IndexedDB (with its timestamp and any
+   * metadata) at the end of the queue.
    *
-   * @param {Request} request The request object to store.
+   * @param {Object} entry
+   * @param {Request} entry.request The request to store in the queue.
+   * @param {Object} [entry.metadata] Any metadata you want associated with the
+   *     stored request. When requests are replayed you&#x27;ll have access to this
+   *     metadata object in case you need to modify the request beforehand.
+   * @param {number} [entry.timestamp] The timestamp (Epoch time in
+   *     milliseconds) when the request was first added to the queue. This is
+   *     used along with &#x60;maxRetentionTime&#x60; to remove outdated requests. In
+   *     general you don&#x27;t need to set this value, as it&#x27;s automatically set
+   *     for you (defaulting to &#x60;Date.now()&#x60;), but you can update it if you
+   *     don&#x27;t want particular requests to expire.
    */
-  async addRequest(request) {
+  async pushRequest(entry) {
     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-      assert.isInstance(request, Request, {
+      assert.isType(entry, &#x27;object&#x27;, {
         moduleName: &#x27;workbox-background-sync&#x27;,
         className: &#x27;Queue&#x27;,
-        funcName: &#x27;addRequest&#x27;,
-        paramName: &#x27;request&#x27;,
+        funcName: &#x27;pushRequest&#x27;,
+        paramName: &#x27;entry&#x27;,
+      });
+      assert.isInstance(entry.request, Request, {
+        moduleName: &#x27;workbox-background-sync&#x27;,
+        className: &#x27;Queue&#x27;,
+        funcName: &#x27;pushRequest&#x27;,
+        paramName: &#x27;entry.request&#x27;,
       });
     }
 
-    const storableRequest &#x3D; await StorableRequest.fromRequest(request.clone());
-    await this._runCallback(&#x27;requestWillEnqueue&#x27;, storableRequest);
-    await this._queueStore.addEntry(storableRequest);
-    await this._registerSync();
+    await this._addRequest(entry, &#x27;push&#x27;);
+  }
+
+  /**
+   * Stores the passed request in IndexedDB (with its timestamp and any
+   * metadata) at the beginning of the queue.
+   *
+   * @param {Object} entry
+   * @param {Request} entry.request The request to store in the queue.
+   * @param {Object} [entry.metadata] Any metadata you want associated with the
+   *     stored request. When requests are replayed you&#x27;ll have access to this
+   *     metadata object in case you need to modify the request beforehand.
+   * @param {number} [entry.timestamp] The timestamp (Epoch time in
+   *     milliseconds) when the request was first added to the queue. This is
+   *     used along with &#x60;maxRetentionTime&#x60; to remove outdated requests. In
+   *     general you don&#x27;t need to set this value, as it&#x27;s automatically set
+   *     for you (defaulting to &#x60;Date.now()&#x60;), but you can update it if you
+   *     don&#x27;t want particular requests to expire.
+   */
+  async unshiftRequest(entry) {
     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-      logger.log(&#x60;Request for &#x27;${getFriendlyURL(storableRequest.url)}&#x27; has been
-          added to background sync queue &#x27;${this._name}&#x27;.&#x60;);
+      assert.isType(entry, &#x27;object&#x27;, {
+        moduleName: &#x27;workbox-background-sync&#x27;,
+        className: &#x27;Queue&#x27;,
+        funcName: &#x27;unshiftRequest&#x27;,
+        paramName: &#x27;entry&#x27;,
+      });
+      assert.isInstance(entry.request, Request, {
+        moduleName: &#x27;workbox-background-sync&#x27;,
+        className: &#x27;Queue&#x27;,
+        funcName: &#x27;unshiftRequest&#x27;,
+        paramName: &#x27;entry.request&#x27;,
+      });
+    }
+
+    await this._addRequest(entry, &#x27;unshift&#x27;);
+  }
+
+  /**
+   * Removes and returns the last request in the queue (along with its
+   * timestamp and any metadata). The returned object takes the form:
+   * &#x60;{request, timestamp, metadata}&#x60;.
+   *
+   * @return {Promise&amp;lt;Object&gt;}
+   */
+  async popRequest() {
+    return this._removeRequest(&#x27;pop&#x27;);
+  }
+
+  /**
+   * Removes and returns the first request in the queue (along with its
+   * timestamp and any metadata). The returned object takes the form:
+   * &#x60;{request, timestamp, metadata}&#x60;.
+   *
+   * @return {Promise&amp;lt;Object&gt;}
+   */
+  async shiftRequest() {
+    return this._removeRequest(&#x27;shift&#x27;);
+  }
+
+  /**
+   * Adds the entry to the QueueStore and registers for a sync event.
+   *
+   * @param {Object} entry
+   * @param {Request} entry.request
+   * @param {Object} [entry.metadata]
+   * @param {number} [entry.timestamp&#x3D;Date.now()]
+   * @param {string} operation (&#x27;push&#x27; or &#x27;unshift&#x27;)
+   */
+  async _addRequest(
+      {request, metadata, timestamp &#x3D; Date.now()}, operation) {
+    const storableRequest &#x3D; await StorableRequest.fromRequest(request.clone());
+    const entry &#x3D; {
+      requestData: storableRequest.toObject(),
+      timestamp,
+    };
+
+    // Only include metadata if it&#x27;s present.
+    if (metadata) {
+      entry.metadata &#x3D; metadata;
+    }
+
+    await this._queueStore[&#x60;${operation}Entry&#x60;](entry);
+    await this.registerSync();
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      logger.log(&#x60;Request for &#x27;${getFriendlyURL(request.url)}&#x27; has &#x60; +
+          &#x60;been added to background sync queue &#x27;${this._name}&#x27;.&#x60;);
     }
   }
 
   /**
-   * Retrieves all stored requests in IndexedDB and retries them. If the
-   * queue contained requests that were successfully replayed, the
-   * &#x60;queueDidReplay&#x60; callback is invoked (which implies the queue is
-   * now empty). If any of the requests fail, a new sync registration is
-   * created to retry again later.
+   * Removes and returns the first or last (depending on &#x60;operation&#x60;) entry
+   * form the QueueStore that&#x27;s not older than the &#x60;maxRetentionTime&#x60;.
+   *
+   * @param {string} operation (&#x27;pop&#x27; or &#x27;shift&#x27;)
+   * @return {Object|undefined}
+   */
+  async _removeRequest(operation) {
+    const now &#x3D; Date.now();
+    const entry &#x3D; await this._queueStore[&#x60;${operation}Entry&#x60;]();
+
+    if (entry ) {
+      // Ignore requests older than maxRetentionTime. Call this function
+      // recursively until an unexpired request is found.
+      const maxRetentionTimeInMs &#x3D; this._maxRetentionTime * 60 * 1000;
+      if (now - entry.timestamp &gt; maxRetentionTimeInMs) {
+        return this._removeRequest(operation);
+      }
+
+      entry.request &#x3D; new StorableRequest(entry.requestData).toRequest();
+      delete entry.requestData;
+
+      return entry;
+    }
+  }
+
+  /**
+   * Loops through each request in the queue and attempts to re-fetch it.
+   * If any request fails to re-fetch, it&#x27;s put back in the same position in
+   * the queue (which registers a retry for the next sync event).
    */
   async replayRequests() {
-    const now &#x3D; Date.now();
-    const replayedRequests &#x3D; [];
-    const failedRequests &#x3D; [];
-
-    let storableRequest;
-    while (storableRequest &#x3D; await this._queueStore.getAndRemoveOldestEntry()) {
-      // Make a copy so the unmodified request can be stored
-      // in the event of a replay failure.
-      const storableRequestClone &#x3D; storableRequest.clone();
-
-      // Ignore requests older than maxRetentionTime.
-      const maxRetentionTimeInMs &#x3D; this._maxRetentionTime * 60 * 1000;
-      if (now - storableRequest.timestamp &gt; maxRetentionTimeInMs) {
-        continue;
-      }
-
-      await this._runCallback(&#x27;requestWillReplay&#x27;, storableRequest);
-
-      const replay &#x3D; {request: storableRequest.toRequest()};
-
+    let entry;
+    while (entry &#x3D; await this.shiftRequest()) {
       try {
-        // Clone the request before fetching so callbacks get an unused one.
-        replay.response &#x3D; await fetch(replay.request.clone());
+        await fetch(entry.request);
+
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-          logger.log(&#x60;Request for &#x27;${getFriendlyURL(storableRequest.url)}&#x27;
-             has been replayed&#x60;);
+          logger.log(&#x60;Request for &#x27;${getFriendlyURL(entry.request.url)}&#x27;&#x60; +
+             &#x60;has been replayed in queue &#x27;${this._name}&#x27;&#x60;);
         }
-      } catch (err) {
+      } catch (error) {
+        await this.unshiftRequest(entry);
+
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-          logger.log(&#x60;Request for &#x27;${getFriendlyURL(storableRequest.url)}&#x27;
-             failed to replay&#x60;);
+          logger.log(&#x60;Request for &#x27;${getFriendlyURL(entry.request.url)}&#x27;&#x60; +
+             &#x60;failed to replay, putting it back in queue &#x27;${this._name}&#x27;&#x60;);
         }
-        replay.error &#x3D; err;
-        failedRequests.push(storableRequestClone);
+        throw new WorkboxError(&#x27;queue-replay-failed&#x27;, {name: this._name});
       }
-
-      replayedRequests.push(replay);
     }
-
-    await this._runCallback(&#x27;queueDidReplay&#x27;, replayedRequests);
-
-    // If any requests failed, put the failed requests back in the queue
-    // and rethrow the failed requests count.
-    if (failedRequests.length) {
-      await Promise.all(failedRequests.map((storableRequest) &#x3D;&gt; {
-        return this._queueStore.addEntry(storableRequest);
-      }));
-
-      throw new WorkboxError(&#x27;queue-replay-failed&#x27;,
-        {name: this._name, count: failedRequests.length});
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      logger.log(&#x60;All requests in queue &#x27;${this.name}&#x27; have successfully &#x60; +
+          &#x60;replayed; the queue is now empty!&#x60;);
     }
   }
 
   /**
-   * Runs the passed callback if it exists.
-   *
-   * @private
-   * @param {string} name The name of the callback on this._callbacks.
-   * @param {...*} args The arguments to invoke the callback with.
+   * Registers a sync event with a tag unique to this instance.
    */
-  async _runCallback(name, ...args) {
-    if (typeof this._callbacks[name] &#x3D;&#x3D;&#x3D; &#x27;function&#x27;) {
-      await this._callbacks[name].apply(null, args);
+  async registerSync() {
+    if (&#x27;sync&#x27; in registration) {
+      try {
+        await registration.sync.register(&#x60;${TAG_PREFIX}:${this._name}&#x60;);
+      } catch (err) {
+        // This means the registration failed for some reason, possibly due to
+        // the user disabling it.
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+          logger.warn(
+              &#x60;Unable to register sync event for &#x27;${this._name}&#x27;.&#x60;, err);
+        }
+      }
     }
   }
 
@@ -219,10 +296,10 @@ class Queue {
       self.addEventListener(&#x27;sync&#x27;, (event) &#x3D;&gt; {
         if (event.tag &#x3D;&#x3D;&#x3D; &#x60;${TAG_PREFIX}:${this._name}&#x60;) {
           if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-            logger.log(&#x60;Background sync for tag &#x27;${event.tag}&#x27;
-                has been received, starting replay now&#x60;);
+            logger.log(&#x60;Background sync for tag &#x27;${event.tag}&#x27;&#x60; +
+                &#x60;has been received&#x60;);
           }
-          event.waitUntil(this.replayRequests());
+          event.waitUntil(this._onSync({queue: this}));
         }
       });
     } else {
@@ -231,27 +308,7 @@ class Queue {
       }
       // If the browser doesn&#x27;t support background sync, retry
       // every time the service worker starts up as a fallback.
-      this.replayRequests();
-    }
-  }
-
-  /**
-   * Registers a sync event with a tag unique to this instance.
-   *
-   * @private
-   */
-  async _registerSync() {
-    if (&#x27;sync&#x27; in registration) {
-      try {
-        await registration.sync.register(&#x60;${TAG_PREFIX}:${this._name}&#x60;);
-      } catch (err) {
-        // This means the registration failed for some reason, possibly due to
-        // the user disabling it.
-        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-          logger.warn(
-            &#x60;Unable to register sync event for &#x27;${this._name}&#x27;.&#x60;, err);
-        }
-      }
+      this._onSync({queue: this});
     }
   }
 

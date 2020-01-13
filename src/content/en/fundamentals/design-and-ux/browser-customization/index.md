@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Modern browsers make it easy to customize certain components, like icons, the address bar color, and even add things like custom tiles. These simple tweaks can increase engagement and bring users back to your site.
 
 
-{# wf_updated_on: 2015-09-21 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-08-31 #}
 {# wf_published_on: 2015-09-21 #}
 
 # Icons & Browser Colors {: .page-title }
@@ -41,21 +42,20 @@ the device. To prevent automatic scaling, you can also provide additional
 sizes by specifying the `sizes` attribute.
 
 
-Note: Icons sizes should be based on 48px, for example 48px, 96px, 144px and 192px
+Note: Icons sizes should be based on 48px, for example 48px, 96px, 144px and 192px.
 
 ### Safari
 
-Safari also uses the `<link>` tag with the `rel` attribute: `apple-touch-icon`.
-
-You can specify [explicit sizes](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27) 
-by providing a separate link tag for each icon, preventing the OS from 
-having to resize the icon:
-
+Safari also uses the `<link>` tag with the `rel` attribute: `apple-touch-icon` to 
+indicate the home screen icon.
 
     <link rel="apple-touch-icon" href="touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+
+A non-transparent PNG that's 180px or 192px square is ideal for the apple-touch-icon.
+
+Including multiple versions via the `sizes` attribute is not recommended. 
+Previously, Safari for iOS would consider the `-precomposed` keyword to avoid
+adding visual effects, but it hasn't been necessary since iOS 7. 
     
 
 ### Internet Explorer & Windows Phone
@@ -73,7 +73,7 @@ tags if you don't want to support a specific size.
 ### Tiles in Internet Explorer
 
 Microsoft’s "Pinned Sites" and rotating "Live Tiles" go far beyond other
-implementations and is beyond the scope of this guide. You can learn more
+implementations and are beyond the scope of this guide. You can learn more
 at MSDN's
 [how to create live tiles](//msdn.microsoft.com/en-us/library/ie/dn455115(v=vs.85).aspx).
 
@@ -147,4 +147,6 @@ more height, but obstructs the top.  Here’s the code required:
 
 <div style="clear:both;"></div>
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

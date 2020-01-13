@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: CSS Typed Object Model (Typed OM) brings types, methods, and a flexible object model to working with CSS values. Shipped in Chrome 66.
 
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2018-03-26 #}
 {# wf_tags: css,style,cssom,houdini,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
@@ -26,7 +26,7 @@ console.log(padding.value, padding.unit); // 42, 'px'
 The days of concatenating strings and subtle bugs are over!
 
 Heads up: Chrome 66 adds support for the CSS Typed Object Model for a
-[subset of CSS properties](https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/Source/core/css/cssom/README.md).
+[subset of CSS properties](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/core/css/cssom/README.md).
 {: .dogfood }
 
 ## Introduction {: #intro}
@@ -108,15 +108,15 @@ far more verbose than the old object model. I would agree!
 Before you write off Typed OM, consider some of the key features it brings
 to the table:
 
-1. **Fewer bugs**. e.g. numerical values are always returned as numbers, not strings.
+- **Fewer bugs**. e.g. numerical values are always returned as numbers, not strings.
 
         el.style.opacity += 0.1;
         el.style.opacity === '0.30.1' // dragons!
 
 - **Arithmetic operations & unit conversion**. convert between absolute length
-units (e.g. `px` -> `cm`) and [do basic math](#arithmetic).
+  units (e.g. `px` -> `cm`) and [do basic math](#arithmetic).
 - **Value clamping & rounding**. Typed OM [rounds and/or clamps](#clamping)
-values so they're within the acceptable ranges for a property.
+  values so they're within the acceptable ranges for a property.
 - **Better performance**. The browser has to do less work serializing
   and deserializing string values. Now, the engine uses a similar understanding
   of CSS values across JS and C++. Tab Akins has shown some [early perf benchmarks](https://github.com/w3c/css-houdini-drafts/issues/634#issuecomment-366358609)
@@ -578,8 +578,6 @@ never felt right to me. The CSS Typed OM API is a bit verbose, but hopefully it
 results in fewer bugs and more performant code down the line.
 
 {% include "web/_shared/rss-widget-updates.html" %}
-
-{% include "comment-widget.html" %}
 
 [cssom-old]: https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 [spec]: https://drafts.css-houdini.org/css-typed-om/

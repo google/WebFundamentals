@@ -17,4 +17,3 @@ description: Reveal DOM nodes in the Elements panel from the Console.
 If you <code>console.log</code> out a DOM node, you can right click on it in the Console panel and select <em>Reveal in Elements panel</em>, you are then taken to the DOM node location in the Elements panel.
 
 
-{% include "comment-widget.html" %}

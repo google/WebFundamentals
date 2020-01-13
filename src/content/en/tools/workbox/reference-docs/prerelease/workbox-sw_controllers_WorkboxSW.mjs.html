@@ -21,19 +21,11 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
-  Copyright 2017 Google Inc.
+  Copyright 2018 Google LLC
 
-  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
 import &#x27;../_version.mjs&#x27;;
@@ -41,16 +33,22 @@ import &#x27;../_version.mjs&#x27;;
 const CDN_PATH &#x3D; &#x60;WORKBOX_CDN_ROOT_URL&#x60;;
 
 const MODULE_KEY_TO_NAME_MAPPING &#x3D; {
+  // TODO(philipwalton): add jsdoc tags to associate these with their module.
+  // @name backgroundSync
+  // @memberof workbox
+  // @see module:workbox-background-sync
   backgroundSync: &#x27;background-sync&#x27;,
-  core: &#x27;core&#x27;,
-  expiration: &#x27;cache-expiration&#x27;,
-  googleAnalytics: &#x27;google-analytics&#x27;,
-  strategies: &#x27;strategies&#x27;,
-  precaching: &#x27;precaching&#x27;,
-  routing: &#x27;routing&#x27;,
+  broadcastUpdate: &#x27;broadcast-update&#x27;,
   cacheableResponse: &#x27;cacheable-response&#x27;,
-  broadcastUpdate: &#x27;broadcast-cache-update&#x27;,
+  core: &#x27;core&#x27;,
+  expiration: &#x27;expiration&#x27;,
+  googleAnalytics: &#x27;offline-ga&#x27;,
+  navigationPreload: &#x27;navigation-preload&#x27;,
+  precaching: &#x27;precaching&#x27;,
   rangeRequests: &#x27;range-requests&#x27;,
+  routing: &#x27;routing&#x27;,
+  strategies: &#x27;strategies&#x27;,
+  streams: &#x27;streams&#x27;,
 };
 
 /**
@@ -59,7 +57,7 @@ const MODULE_KEY_TO_NAME_MAPPING &#x3D; {
  *
  * @private
  */
-class WorkboxSW {
+export class WorkboxSW {
   /**
    * Creates a proxy that automatically loads workbox namespaces on demand.
    *
@@ -119,26 +117,6 @@ class WorkboxSW {
   }
 
   /**
-   * Force a service worker to become active, instead of waiting. This is
-   * normally used in conjunction with &#x60;clientsClaim()&#x60;.
-   *
-   * @alias workbox.skipWaiting
-   */
-  skipWaiting() {
-    self.addEventListener(&#x27;install&#x27;, () &#x3D;&gt; self.skipWaiting());
-  }
-
-  /**
-   * Claim any currently available clients once the service worker
-   * becomes active. This is normally used in conjunction with &#x60;skipWaiting()&#x60;.
-   *
-   * @alias workbox.clientsClaim
-   */
-  clientsClaim() {
-    self.addEventListener(&#x27;activate&#x27;, () &#x3D;&gt; self.clients.claim());
-  }
-
-  /**
    * Load a Workbox module by passing in the appropriate module name.
    *
    * This is not generally needed unless you know there are modules that are
@@ -160,7 +138,7 @@ class WorkboxSW {
       // We can&#x27;t rely on workbox-core being loaded so using console
       // eslint-disable-next-line
       console.error(
-        &#x60;Unable to import module &#x27;${moduleName}&#x27; from &#x27;${modulePath}&#x27;.&#x60;);
+          &#x60;Unable to import module &#x27;${moduleName}&#x27; from &#x27;${modulePath}&#x27;.&#x60;);
       throw err;
     }
   }
@@ -200,8 +178,6 @@ class WorkboxSW {
     return pathParts.join(&#x27;/&#x27;);
   }
 }
-
-export default WorkboxSW;
 </code></pre>
           </article>
         </div>

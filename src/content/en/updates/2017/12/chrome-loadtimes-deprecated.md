@@ -364,4 +364,3 @@ to avoid any loss in data.
 [Chromestatus Tracker](https://www.chromestatus.com/features/5637885046816768) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=621512)
 
-{% include "comment-widget.html" %}

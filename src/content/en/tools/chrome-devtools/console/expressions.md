@@ -1,14 +1,23 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Explore the state of any item on your page from the DevTools console.
+robots: noindex
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2019-03-28 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Evaluate Expressions {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/josephmedley.html" %}
+
+
+<aside class="warning">
+  This page is deprecated.
+</aside>
+
+
 Explore the state of any item on your page from the DevTools console using one of its evaluation capabilities.
 
 The DevTools console allows you to learn the state of items
@@ -96,3 +105,7 @@ Use $0 - 4,
 to access these elements from within the console.
 Remember computers begin counting from 0;
 this means the latest item is $0 and the oldest item is $4.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

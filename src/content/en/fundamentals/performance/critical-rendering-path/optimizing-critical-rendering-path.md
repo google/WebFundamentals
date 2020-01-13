@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn the key factors in optimizing the critical rendering path.
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: N/A #}
 
 # Optimizing the Critical Rendering Path {: .page-title }
 
@@ -31,3 +32,7 @@ Finally, the fewer critical bytes the browser has to download, the faster it can
 1. Minimize number of critical resources: eliminate them, defer their download, mark them as async, and so on.
 1. Optimize the number of critical bytes to reduce the download time (number of roundtrips).
 1. Optimize the order in which the remaining critical resources are loaded: download all critical assets as early as possible to shorten the critical path length.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

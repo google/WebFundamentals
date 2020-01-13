@@ -6,6 +6,7 @@ description: Re-order DevTools tabs which ever way suits you best and see exactl
 {# wf_published_on: 2015-10-14 #}
 {# wf_tags: devtools,digest,update #}
 {# wf_featured_image: /web/updates/images/2015-08-24-devtools-digest/featured.jpg #}
+{# wf_blink_components: N/A #}
 
 # DevTools Digest: Tab Reordering, Console is #2 and Framework Event Listeners {: .page-title }
 
@@ -21,7 +22,7 @@ After investigating which areas of DevTools are used the most, it became clear t
 
 But look, we get it. The classic order is part of your muscle memory and you’ll feel dizzy for a while. Or maybe, gasp, you just hate the full screen console! Fear not, we’ve got you covered. The tabs can now be *reordered by dragging them around*, like so:
 
-<video src="/web/updates/images/2015-10-05/reordering_tabs.mp4" autoplay loop></video>
+<video src="/web/updates/images/2015-10-05/reordering_tabs.mp4" autoplay loop muted></video>
 
 The changes you make to the tab bar persist, and it works with both native tabs and extension-provided tabs. And as a bonus, we’ve thrown in smooth, animated underlines. Because we’re nice like that.
 
@@ -45,12 +46,11 @@ But with the new “Framework Listeners” option in the Event Listener tab, Dev
 
 - - -
 
-As always, [let us know what you think via 
-Twitter](https://twitter.com/intent/tweet?text=%40ChromeDevTools) or the 
+As always, [let us know what you think via
+Twitter](https://twitter.com/intent/tweet?text=%40ChromeDevTools) or the
 comments below, and submit bugs to [crbug.com/new](https://crbug.com/new).
 
-Until next month!  
+Until next month!
 Paul Bakaus & the DevTools team
 
 
-{% include "comment-widget.html" %}

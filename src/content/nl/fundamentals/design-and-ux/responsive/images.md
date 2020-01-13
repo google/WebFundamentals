@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Een foto is evenveel waard als 1000 woorden. Afbeeldingen vormen dan ook een integraal onderdeel van elke pagina. Maar het downloaden ervan kost veel bytes.  Met responsive webdesign kunnen niet alleen onze lay-outs veranderen op basis van apparaatkenmerken, maar ook afbeeldingen.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Afbeeldingen {: .page-title }
@@ -52,7 +52,7 @@ Aangezien CSS inhoud toestaat over te lopen tot buiten de begrenzing van de cont
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Zorg voor zinvolle beschrijvingen via het kenmerk `alt` in `img`-elementen. Zo maakt u uw site beter toegankelijk door schermlezers en andere ondersteunende technologieën een context te bieden.
 
@@ -69,9 +69,9 @@ Het kenmerk <code>srcset</code> verbetert het gedrag van het element <code>img</
 
 <div class="clearfix"></div>
 
- 
+
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 Op browsers die `srcset` niet ondersteunen, maakt de browser gewoon gebruik van het standaard-afbeeldingsbestand dat door het kenmerk `src` is opgegeven. Daarom is het belangrijk altijd een 1x afbeelding op te nemen die op elk willekeurig apparaat kan worden weergegeven, los van de capaciteiten.  Wanneer `srcset` wordt ondersteund, wordt de lijst met door komma`s gescheiden waarden met afbeeldingen/voorwaarden geparseerd voordat er verzoeken worden gedaan. Vervolgens wordt alleen de meest geschikte afbeelding gedownload en weergegeven.
 
@@ -84,7 +84,7 @@ Het wijzigen van afbeeldingen op basis van apparaatkenmerken, ook wel `art direc
 <img class="center" src="img/art-direction.png" alt="Voorbeeld art direction"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Note: Het element <code>picture</code> wordt langzaamaan steeds meer toegepast in browsers. Hoewel het nog niet in iedere browser beschikbaar is, bevelen we het gebruik hiervan aan vanwege de sterke terugwaartse compatibiliteit en het mogelijke gebruik van de <a href='http://picturefill.responsiveimages.org/'>Picturefill polyfill</a>. Zie voor meer informatie de site <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
+Note: Het element <code>picture</code> wordt langzaamaan steeds meer toegepast in browsers. Hoewel het nog niet in iedere browser beschikbaar is, bevelen we het gebruik hiervan aan vanwege de sterke terugwaartse compatibiliteit en het mogelijke gebruik van de <a href='https://scottjehl.github.io/picturefill/'>Picturefill polyfill</a>. Zie voor meer informatie de site <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -167,7 +167,7 @@ In het voorbeeld hierboven wordt een afbeelding weergegeven die de helft van de 
 
 #### Rekening houden met breekpunten in responsieve afbeeldingen
 
-Vaak kan de grootte of afbeelding veranderen, afhankelijk van de lay-outbreekpunten van de site. Op een klein scherm, bijvoorbeeld, wilt u misschien dat de afbeelding de breedte van de viewport geheel vult, terwijl deze op een groter scherm slechts een klein gedeelte in beslag zou nemen.  
+Vaak kan de grootte of afbeelding veranderen, afhankelijk van de lay-outbreekpunten van de site. Op een klein scherm, bijvoorbeeld, wilt u misschien dat de afbeelding de breedte van de viewport geheel vult, terwijl deze op een groter scherm slechts een klein gedeelte in beslag zou nemen.
 
 <pre class="prettyprint">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" %}
@@ -238,7 +238,7 @@ Met de functie `image-set()` in CSS wordt de gedragseigenschap `background` verb
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 De browser zal niet alleen de juiste afbeelding laden, maar deze ook correct
 schalen. Met andere woorden, de browser gaat er vanuit dat 2x afbeeldingen tweemaal zo groot zijn als 1x afbeeldingen en zal om die reden het 2x bestand omlaag schalen met een factor 2, waardoor de afbeelding op de papina dezelfde grootte lijkt te hebben.
@@ -261,7 +261,7 @@ Mediaquery`s kunnen regels maken die gebaseerd zijn op de [device pixel ratio](h
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome, Firefox en Opera ondersteunen alledrie de standaard `(min-resolution: 2dppx)`, terwijl voor zowel Safari als Android Browser de oudere syntax met voorvoegsel van de leverancier vereist is zonder de eenheid `dppx`. Houd er rekening mee dat deze stijlen alleen worden geladen als het apparaat overeenkomt met de mediaquery, en dat u stijlen moet opgeven voor de basiscasus. Dit biedt ook het voordeel dat er in ieder geval iets wordt weergegeven in het geval de browser geen resolutiespecifieke mediaquery`s ondersteunt.
 
@@ -277,7 +277,7 @@ U kunt ook de `min-width`-syntax gebruiken voor het weergeven van alternatieve a
         background-image: url(bg.png);
       }
     }
-      
+
 
 ## SVG gebruiken voor pictogrammen
 
@@ -298,7 +298,7 @@ Het toevoegen van een unicode-teken gebeurt op dezelfde manier als bij entiteite
 
 
     U bent een super &#9733;
-    
+
 
 U bent een super &#9733;
 
@@ -325,7 +325,7 @@ Pictogramlettertypen zijn populair en kunnen soms handig zijn, maar vergeleken b
 * Beperkte styling met CSS.
 * Een perfecte positionering van pixels kan lastig zijn, afhankelijk van de regelhoogte, letterafstand, enzovoort.
 * Ze zijn niet semantisch en kunnen onhandig zijn voor gebruik met schermlezers of andere ondersteunende technologie.
-* Tenzij ze correct zijn gerelateerd aan een bereik, kunnen ze resulteren in een groot bestandsformaat terwijl maar een kleine subset van de beschikbare pictogrammen wordt gebruikt. 
+* Tenzij ze correct zijn gerelateerd aan een bereik, kunnen ze resulteren in een groot bestandsformaat terwijl maar een kleine subset van de beschikbare pictogrammen wordt gebruikt.
 
 
 <img src="img/icon-fonts.png" class="center"
@@ -416,11 +416,11 @@ Tekst moet zoveel mogelijk tekst zijn en niet zijn ingesloten in afbeeldingen, b
 Moderne browsers kunnen gebruikmaken van CSS-functies voor het maken van stijlen waarvoor vroeger afbeeldingen vereist waren. Zo kunnen complexe kleurovergangen worden gemaakt met de eigenschap <code>background</code>, schaduwen met <code>box-shadow</code> en afgeronde hoeken kunnen worden toegevoegd met de eigenschap <code>border-radius</code>.
 
 <p id="noImage">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
-amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
-nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
-dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
-fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 
@@ -433,7 +433,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Houd er rekening mee dat het weergeven van cycli vereist is voor het gebruik van deze technieken, en dat kan belastend zijn voor een mobiele telefoon. Als u dit te vaak doet, kunnen eventuele positieve effecten verdwijnen en de prestaties achteruitgaan.
 

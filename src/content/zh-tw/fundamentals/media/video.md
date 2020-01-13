@@ -20,7 +20,7 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 </div>
 
 
-## 新增影片 
+## 新增影片
 
 
 
@@ -50,7 +50,7 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
     <video src="chrome.webm" type="video/webm">
         <p>您的瀏覽器不支援影片元素。</p>
     </video>
-    
+
 
 ### 指定多個檔案格式
 
@@ -92,7 +92,7 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 
 
     <source src="video/chrome.webm#t=5,10" type="video/webm">
-    
+
 
 您還可以使用 Media Fragments API 提供同一部影片的多個畫面 (如 DVD 中的提示點)，完全不需要編碼及提供多個檔案。
 
@@ -112,7 +112,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
     <video poster="poster.jpg" ...>
       ...
     </video>
-    
+
 
 如果影片 `src` 損壞或提供的影片格式都不受支援，那麼海報也可當作備用資源。海報圖片唯一的缺點就是需要額外的檔案請求，這不僅會佔用頻寬，而且還需要轉譯時間。詳情請參閱[圖片最佳化](../../performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization)。
 
@@ -135,7 +135,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
   </figure>
 </div>
 
-## 為舊版平台提供替代方案 
+## 為舊版平台提供替代方案
 
 
 
@@ -231,7 +231,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 如要瞭解這項操作的實際情況，請觀看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">這部示範影片</a>：Chrome 和 Firefox 會選擇 `chrome.webm` (因為這是上述瀏覽器的潛在來源支援清單中的第一個選項)，而 Safari 則會選擇 `chrome.mp4`。
 
 
-## 正確設定影片大小 
+## 正確設定影片大小
 
 
 
@@ -275,6 +275,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 </div>
 
 <div style="clear:both;"></div>
+
 您可以使用 JavaScript 或 CSS 控制影片尺寸。JavaScript 程式庫和 [FitVids](//fitvidsjs.com/) 等外掛程式可協助您維持合適的影片大小及長寬比，即使是 YouTube 和其他來源中的 Flash 影片也不例外。
 
 使用 [CSS 媒體查詢](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)，即可根據檢視區尺寸指定元素大小；`max-width: 100%` 是您的最佳幫手。
@@ -285,13 +286,13 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 Note: 請勿將元素大小強制調整為不同於原始影片的長寬比。過度擠壓或延展都會導致不佳的視覺效果。
 
-**CSS：**
+**CSS**
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
-**HTML：**
+**HTML**
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
@@ -300,7 +301,7 @@ Note: 請勿將元素大小強制調整為不同於原始影片的長寬比。�
 請嘗試比較<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html">回應式示例</a>和<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html">非回應式版本</a>有何不同。
 
 
-## 自訂影片播放器 
+## 自訂影片播放器
 
 
 
@@ -361,22 +362,22 @@ iPad 版 Safari 以內嵌模式播放影片：
 如要以全螢幕模式顯示某元素，例如video:
 
     elem.requestFullScreen();
-    
+
 
 如要以全螢幕模式顯示整個文件：
 
     document.body.requestFullScreen();
-    
+
 
 您也可以偵測全螢幕狀態變化：
 
     video.addEventListener("fullscreenchange", handler);
-    
+
 
 此外，您還可查看元素目前是否處於全螢幕模式：
 
     console.log("In full screen mode: ", video.displayingFullscreen);
-    
+
 
 您也可以使用 CSS `:fullscreen` 準類別來變更元素在全螢幕模式的顯示方式。
 
@@ -394,7 +395,7 @@ Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 
-## 無障礙程度很重要 
+## 無障礙程度很重要
 
 
 
@@ -439,7 +440,7 @@ track 元素的 `src` 屬性會指定字幕軌檔案的位置。
     ...
 
 
-## 快速參考 
+## 快速參考
 
 
 
@@ -654,6 +655,3 @@ playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamen
     </tr>
   </tbody>
 </table>
-
-
-

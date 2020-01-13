@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 보조 기술에서 콘텐츠 숨기기
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 콘텐츠 숨기기 및 업데이트 {: .page-title }
@@ -36,14 +36,14 @@ hidden` 또는 `display: none`의 CSS 스타일이 있거나 HTML5 `hidden` 속�
       height: 1px;
       overflow: hidden;
     }
-    
+
 
 또한, 앞서 살펴본 바와 같이 다른 상황이었다면 숨겨지는 요소를
 참조하는 `aria-label`, `aria-labelledby` 또는 `aria-describedby` 속성을 통해 스크린 리더 전용 텍스트를 제공할 수
 있습니다.
 
 '스크린 리더 전용' 텍스트 생성에 대한 자세한 내용은 [텍스트 숨기기
-기법](http://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }에
+기법](https://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }에
 대한 WebAIM 문서를 참조하세요.
 
 마지막으로, ARIA는
@@ -95,13 +95,13 @@ hidden` 또는 `display: none`의 CSS 스타일이 있거나 HTML5 `hidden` 속�
 
 
     <div class="status">Your message has been sent.</div>
-    
+
 
 아래의 '라이브' div와 비교해 보세요.
 
 
     <div class="status" aria-live="polite">Your message has been sent.</div>
-    
+
 
 `aria-live`에는 `polite`, `assertive`, `off`의 세 가지 값이 허용됩니다.
 
@@ -159,7 +159,7 @@ hidden` 또는 `display: none`의 CSS 스타일이 있거나 HTML5 `hidden` 속�
 일시적으로 무시해야 한다고 알려줄 수 있습니다(예: 뭔가를 로드할 때). 모든
 절차를 올바로 끝낸 후 리더의 작동을 정상화하려면 `aria-busy`를 false로
 설정해야 합니다.
- 
+
 
 
 {# wf_devsite_translation #}

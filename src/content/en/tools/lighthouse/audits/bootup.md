@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "JavaScript Bootup Time Is Too High" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-14 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-02-14 #}
 {# wf_blink_components: N/A #}
 
@@ -51,3 +51,7 @@ See [JavaScript Start-Up Optimization][N] by Addy Osmani for more guidance.
 [Audit source][S]{:.external}
 
 [S]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/bootup-time.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

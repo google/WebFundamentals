@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-11-15 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_published_on: 2012-11-15 #}
-{# wf_tags: news,contentsecuritypolicy,security #}
+{# wf_tags: news,content-security-policy,security #}
+{# wf_blink_components: N/A #}
 
 # Content Security Policy 1.0 is officially awesome. {: .page-title }
 
@@ -16,14 +17,14 @@ Chrome Canary and WebKit nightlies now support the unprefixed `Content-Security-
 
 
       X-WebKit-CSP: script-src 'self'; object-src 'none'
-    
+
 
 
 You'll write:
 
 
     Content-Security-Policy: script-src 'self'; object-src 'none'
-    
+
 
 We expect other browser vendors to follow suit within the next few revisions, so it's a great idea to start sending the canonical header today.
 
@@ -31,10 +32,8 @@ We expect other browser vendors to follow suit within the next few revisions, so
 
 Content Security Policy! It helps you reduce the risk of cross-site scripting and other content injection attacks in your applications. It's a huge step forward in terms of the protection you can offer your users, and we highly recommend taking a hard look at implementing it. You can get all the details in the ever so cleverly named ["An Introduction to Content Security Policy"][h5r].
 
-[csp10]: http://w3.org/TR/CSP
-[impl]: http://www.w3.org/News/2012#entry-9633
-[csp11]: https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html
-[h5r]: http://www.html5rocks.com/en/tutorials/security/content-security-policy/
+[csp10]: https://www.w3.org/TR/CSP/
+[impl]: https://www.w3.org/News/2012#entry-9633
+[csp11]: https://w3c.github.io/webappsec-csp/
+[h5r]: https://www.html5rocks.com/en/tutorials/security/content-security-policy/
 
-
-{% include "comment-widget.html" %}

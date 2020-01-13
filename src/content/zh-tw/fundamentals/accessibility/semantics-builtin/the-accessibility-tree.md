@@ -3,8 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description:無障礙樹簡介
 
 
-{# wf_updated_on:2016-10-04 #}
-{# wf_published_on:2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-10-04 #}
 
 # 無障礙樹 {: .page-title }
 
@@ -93,7 +93,7 @@ description:無障礙樹簡介
 
 
     <div class="button-ish">Give me tacos</div>
-    
+
 
 當我們不使用實際按鈕元素時，屏幕閱讀器無從知曉其讀取的內容。
 此外，我們還需要額外完成[添加 tabindex](/web/fundamentals/accessibility/focus/using-tabindex) 的工作，以便只使用鍵盤的用戶能夠使用它，因爲按照現有編碼，它只能使用鼠標操作。
@@ -120,13 +120,13 @@ description:無障礙樹簡介
 
 對於文本級元素，我們什麼都不用做，因爲按照定義它們將包含一些文本內容。
 不過，對於輸入或控件元素以及圖像之類的視覺內容，我們需要確保爲其指定名稱。
-事實上，爲任何非文本內容提供文本替代項是 [WebAIM 檢查清單上的第一項](http://webaim.org/standards/wcag/checklist#g1.1)。
+事實上，爲任何非文本內容提供文本替代項是 [WebAIM 檢查清單上的第一項](https://webaim.org/standards/wcag/checklist#g1.1)。
 
 
 
 實現該目的的一種方法是遵循他們的建議“表單輸入有關聯的文本標籤”。
 將標籤與表單元素（例如複選框）關聯有兩種方法。
-無論採用哪一種方法，都會使標籤文本同時成爲複選框的點擊目標，這對鼠標或觸摸屏用戶同樣有幫助。要將標籤與元素關聯，請執行下列任一操作：
+無論採用哪一種方法，都會使標籤文本同時成爲複選框的點擊目標，這對鼠標或觸摸屏用戶同樣有幫助。要將標籤與元素關聯，請執行下列任一操作:
 
  - 將 input 元素置於 label 元素內
 
@@ -162,7 +162,7 @@ description:無障礙樹簡介
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
-    
+
 
 正確標示覆選框後，屏幕閱讀器便可報告元素角色爲 checkbox，處於 checked 狀態，名稱爲“Receive promotional offers?”。
 
@@ -170,7 +170,7 @@ description:無障礙樹簡介
 
 ![VoiceOver 產生的顯示覆選框朗讀標籤的屏幕文本輸出](imgs/promo-offers.png)
 
-成功：您實際上可以使用屏幕閱讀器，通過按 Tab 鍵在頁面上循環跳轉並驗證朗讀的角色、狀態和名稱來找到關聯不正確的標籤。
+Success: 您實際上可以使用屏幕閱讀器，通過按 Tab 鍵在頁面上循環跳轉並驗證朗讀的角色、狀態和名稱來找到關聯不正確的標籤。
 
 
 

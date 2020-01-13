@@ -102,7 +102,7 @@ DevTools 경고를 볼 수 있습니다. 강제 리플로우는
 ![Sources 패널에 표시된 함수 정의](imgs/definition.png)
 
 `update()` 함수는
-`requestAnimationCallback()`의 콜백 핸들러입니다. 이 핸들러는 이미지의 `offsetTop` 값을 기준으로 각 이미지의 
+`requestAnimationFrame()`의 콜백 핸들러입니다. 이 핸들러는 이미지의 `offsetTop` 값을 기준으로 각 이미지의 
 `left` 속성을 계산합니다. 따라서 브라우저가 즉시 강제로 새로운 레이아웃을 수행하여
 올바른 값을 제공하도록 보장합니다.
 애니메이션 프레임마다 레이아웃을 강제 적용하면 페이지 애니메이션에 버벅거림이 발생하는 원인이 

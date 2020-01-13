@@ -69,11 +69,11 @@ description: 이 코드랩에서는 새로운 DevTools Application 패널을 사
 
 [링크](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요. 
+Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요.
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-확인하는 창에서 Web Server 아이콘을 클릭하세요. 
+확인하는 창에서 Web Server 아이콘을 클릭하세요.
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -95,7 +95,7 @@ __choose folder__ 버튼을 클릭하고 `work` 폴더를 선택하세요. 그�
 
 ![693305d127d9fe80.png](img/693305d127d9fe80.png)
 
-이 앱은 아직은 뭔가 흥미로운 점이 전혀 없는 상태입니다. 이어지는 단계에서 기능을 추가하면서 앱이 오프라인에서 작동하는지 확인해 볼 것입니다. 
+이 앱은 아직은 뭔가 흥미로운 점이 전혀 없는 상태입니다. 이어지는 단계에서 기능을 추가하면서 앱이 오프라인에서 작동하는지 확인해 볼 것입니다.
 
 
 ## Application 탭 소개
@@ -127,7 +127,7 @@ Progressive Web App을 빌드하려면 서비스 워커와 웹 앱 매니페스�
 
 __Service Workers__ 뷰는 현재 기준에서 활성 상태인 서비스 워커에 대한 정보를 제공합니다. 위쪽 행을 따라 다음과 같은 일련의 확인란이 있습니다.
 
-* __Offline __- 네트워크에서 연결이 끊긴 상태를 시뮬레이션합니다. 이를 통해 서비스 워커 페치 핸들러가 올바로 작동하는지 빠르게 확인할 수 있습니다.
+* __Offline__ - 네트워크에서 연결이 끊긴 상태를 시뮬레이션합니다. 이를 통해 서비스 워커 페치 핸들러가 올바로 작동하는지 빠르게 확인할 수 있습니다.
 * __Update on reload__ - 기존의 서비스 워커를 강제로 새로운 서비스 워커로 바꿉니다(개발자가 `service-worker.js`에 대한 업데이트를 만든 경우). 일반적으로 브라우저는 사용자가 현재 사이트를 포함하는 탭을 전부 닫을 때까지 기다린 후 새로운 서비스 워커로 업데이트할 것입니다.
 * __Bypass for network__ - 브라우저가 모든 활성 서비스 워커를 무시하고 네트워크에서 리소스를 가져오도록 강제 적용합니다. 이는 CSS 또는 자바스크립트 작업을 하고 싶은데 서비스 워커가 우연히 이전 파일을 캐시하여 반환하지 않을까 하는 걱정을 떨쳐버리고 싶은 경우에 매우 유용합니다.
 * __Show all__ - 출처에 상관없이 모든 활성 서비스 워커의 목록을 표시합니다.
@@ -143,9 +143,9 @@ __Service Workers__ 뷰는 현재 기준에서 활성 상태인 서비스 워커
     self.addEventListener('install', function(event) {
       console.log('Service Worker installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
-      console.log('Service Worker activating.');  
+      console.log('Service Worker activating.');
     });
 
 DevTools로 다시 전환해 Console을 살펴보면 두 로그가 모두 올바로 출력된 사실을 확인할 수 있습니다.
@@ -159,9 +159,9 @@ DevTools로 다시 전환해 Console을 살펴보면 두 로그가 모두 올바
     self.addEventListener('install', function(event) {
       console.log('A *new* Service Worker is installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
-      console.log('Finally active. Ready to start serving content!');  
+      console.log('Finally active. Ready to start serving content!');
     });
 
 * 페이지를 새로 고치고 DevTools에서 콘솔을 엽니다.
@@ -224,11 +224,11 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         return cache.addAll(urlsToCache);
       })
-  );  
+  );
 });
 
 self.addEventListener('activate', function(event) {
-  console.log('Finally active. Ready to start serving content!');  
+  console.log('Finally active. Ready to start serving content!');
 });
 ```
 
@@ -387,7 +387,7 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         return cache.addAll(urlsToCache);
       })
-  );  
+  );
 });
 ```
 
@@ -456,18 +456,18 @@ __Sources__ 패널에서 코드를 이미 검사 중이라면 실제 파일에 `
 * `service-worker.js`를 열고 `fetch` 핸들러 뒤에 다음 줄을 추가합니다.
 
 ```
-self.addEventListener('push', function(event) {  
-  var title = 'Yay a message.';  
-  var body = 'We have received a push message.';  
-  var icon = '/images/smiley.svg';  
+self.addEventListener('push', function(event) {
+  var title = 'Yay a message.';
+  var body = 'We have received a push message.';
+  var icon = '/images/smiley.svg';
   var tag = 'simple-push-example-tag';
-  event.waitUntil(  
-    self.registration.showNotification(title, {  
-      body: body,  
-      icon: icon,  
-      tag: tag  
-    })  
-  );  
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      icon: icon,
+      tag: tag
+    })
+  );
 });
 ```
 
@@ -497,7 +497,7 @@ self.addEventListener('push', function(event) {
 
 
 ## 문제가 있거나 의견이 있으세요? {: .hide-from-toc }
-언제든 망설이지 말고 
+언제든 망설이지 말고
 [문제](https://github.com/googlecodelabs/debugging-service-workers/issues)를 제출해 주시면 코드랩에서 더욱 나은 서비스를 제공하는 데 큰 도움이 될 것입니다. 감사합니다!
 
 {# wf_devsite_translation #}

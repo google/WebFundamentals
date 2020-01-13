@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Learn how to save changes made within DevTools to disk.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-05-03 #}
+{# wf_updated_on: 2018-12-14 #}
 {# wf_published_on: 2018-04-10 #}
 
 {# Links #}
@@ -11,7 +11,7 @@ description: Learn how to save changes made within DevTools to disk.
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools 
 
-# Save Changes To Disk With Workspaces {: .page-title }
+# Edit Files With Workspaces {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -119,7 +119,8 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
     <pre class="prettyprint">
     <code class="devsite-terminal">cd ~/Desktop/app</code>
-    <code class="devsite-terminal">python -m SimpleHTTPServer</code>
+    <code class="devsite-terminal">python -m SimpleHTTPServer</code> # Python 2
+    <code class="devsite-terminal">python -m http.server</code> # Python 3
     </pre>
 
 1. Open a tab in Google Chrome and go to locally-hosted version of the site. You should be
@@ -376,155 +377,7 @@ to share your knowledge with the rest of the DevTools community.
 
 ## Feedback {: #feedback }
 
-Hello, this is [Kayce][Kayce]{:.external}. I wrote this
-tutorial. I hope you enjoyed your cake. Please take a moment to provide feedback.
-I really do pay attention to the data, and it helps me create better tutorials for
-you. If you'd like to give me more feedback on these topics, or anything else
-related to DevTools, please send me a message using any of the community channels
-listed at the bottom of this section.
-
-[Kayce]: https://twitter.com/kaycebasques
-
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = '/web/tools/chrome-devtools/workspaces/';
-var title = '[feedback] ' + label;
-var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
-var link = '<a href="' + url + '">open an issue</a>';
-var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
-var feedback = {
-  category: "Helpful",
-  question: "Was this page helpful?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
-
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Workspaces / Confusing';
-var response = "Got it. If most people say it's too long, I'll edit it down.";
-var feedback = {
-  category: "DevTools",
-  question: "Did you have trouble completing any part of the tutorial?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Workspaces / Too Long';
-var response = "Got it. If most people say it's too long, I'll edit it down.";
-var feedback = {
-  category: "DevTools",
-  question: "Was the tutorial too long?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Workspaces / Have Used Before';
-var response = "Thanks for the feedback. This helps me understand the target audience for this tutorial.";
-var feedback = {
-  category: "DevTools",
-  question: "Have you used Workspaces before?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}
 
 If you'd like to give more feedback on these topics or anything else, please use any of the
 channels below:

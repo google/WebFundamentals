@@ -3,8 +3,9 @@ book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
+{# wf_blink_components: Blink>CSS #}
 
 # Accessible Styles {: .page-title }
 
@@ -31,7 +32,7 @@ Generally, any time we focus an element, we rely on the built-in browser focus
 ring (the CSS `outline` property) to style the element. The focus ring is handy
 because, without it, it's impossible for a keyboard user to tell which element
 has the focus. The [WebAIM
-checklist](http://webaim.org/standards/wcag/checklist){: .external } makes a
+checklist](https://webaim.org/standards/wcag/checklist){: .external } makes a
 point of this, requiring that "It is visually apparent which page element has
 the current keyboard focus (i.e., as you tab through the page, you can see where
 you are)."
@@ -95,20 +96,7 @@ fake button and notice the `:focus` style is always applied.
     <fake-button tabindex="0">Click Me!</fake-button>
 
 {% framebox height="80px" %}
-<style>
-  fake-button {
-    display: inline-block;
-    padding: 10px;
-    border: 1px solid black;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  fake-button:focus {
-    outline: none;
-    background: pink;
-  }
-</style>
+<style>fake-button {display: inline-block;padding: 10px;border: 1px solid black;cursor: pointer;user-select: none;}fake-button:focus {outline: none;background: pink;}</style>
 <fake-button tabindex="0">Click Me!</fake-button>
 {% endframebox %}
 
@@ -146,13 +134,13 @@ selector for the pressed state of the button from this
 
 
     .toggle.pressed { ... }
-    
+
 
 to this.
 
 
     .toggle[aria-pressed="true"] { ... }
-    
+
 
 This creates both a logical and a semantic relationship between the ARIA state
 and the element's appearance, and cuts down on extra code as well.
@@ -177,7 +165,7 @@ screen reader users as well. It's a win-win. Here's the same page magnified to
 ![Udacity.com at 400% magnification](imgs/udacity-zoomed.jpg)
 
 In fact, just by designing responsively, we're meeting [rule 1.4.4 of the WebAIM
-checklist](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
+checklist](https://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
 which states that a page "...should be readable and functional when the text
 size is doubled."
 
@@ -227,11 +215,9 @@ which is about the size of a person's finger pad area.
 
 ![a diagram showing a couple of 48 pixel touch targets](imgs/touch-target.jpg)
 
-Touch targets should also be spaced about 32 pixels
+Touch targets should also be spaced about 8 pixels
 apart, both horizontally and vertically, so that a user's finger pressing on one
 tap target does not inadvertently touch another tap target.
-
-![a diagram showing 32 pixels of space around a touch target](imgs/touch-target2.jpg)
 
 ## Color and contrast
 
@@ -246,7 +232,7 @@ contrast*, the relationship between the foreground and background colors'
 *luminance*. When the colors are similar, the contrast ratio is low; when they
 are different, the contrast ratio is high.
 
-The [WebAIM guidelines](http://webaim.org/standards/wcag/){: .external }
+The [WebAIM guidelines](https://webaim.org/standards/wcag/){: .external }
 recommend an AA (minimum) contrast ratio of 4.5:1 for all text. An exception is
 made for very large text (120-150% larger than the default body text), for which
 the ratio can go down to 3:1. Notice the difference in the contrast ratios shown
@@ -276,7 +262,7 @@ To run a color/contrast audit, follow these basic steps.
 ![the devtools contrast audit dialog](imgs/contrast-audit.png)
 
 WebAIM itself provides a handy [color contrast
-checker](http://webaim.org/resources/contrastchecker/){: .external } you can use
+checker](https://webaim.org/resources/contrastchecker/){: .external } you can use
 to examine the contrast of any color pair.
 
 ### Don't convey information with color alone
@@ -301,7 +287,7 @@ provide multiple avenues for the user to access critical information.
 ![an input form with an error underlined in red](imgs/input-form1.png)
 
 The [WebAIM checklist states in section
-1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } that
+1.4.1](https://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } that
 "color should not be used as the sole method of conveying content or
 distinguishing visual elements." It also notes that "color alone should not be
 used to distinguish links from surrounding text" unless they meet certain
@@ -319,8 +305,8 @@ for areas where you may be relying too heavily on color to convey important
 information.
 
 If you're curious about how your site looks to different people, or if you rely
-heavily on the use of color in your UI, you can use the [NoCoffee Chrome
-extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
+heavily on the use of color in your UI, you can use the
+[NoCoffee Chrome extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
 to simulate various forms of visual impairment, including different types of
 color blindness.
 
@@ -358,3 +344,7 @@ should be fine when it comes to supporting high-contrast mode. But for added
 peace of mind, consider installing the Chrome High Contrast extension and giving
 your page a once-over just to check that everything works, and looks, as
 expected.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

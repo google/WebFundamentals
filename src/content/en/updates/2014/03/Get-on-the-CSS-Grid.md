@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: CSS Grid Layout is a new CSS3 module that provides new layout primitives that are ideal for web applications.
 
-{# wf_updated_on: 2014-03-19 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-03-19 #}
 {# wf_tags: news,layout,css,grids #}
+{# wf_blink_components: N/A #}
 
 # Get on the CSS Grid! {: .page-title }
 
@@ -13,7 +14,7 @@ description: CSS Grid Layout is a new CSS3 module that provides new layout primi
 
 When building a Web Application, one of the first things that's needed is a way to lay out the content of your app.
 
-Lots of designers use imaginary grids to lay out content, whether it's for a site or app. The CSS group has been working hard to make layouts easier, and as part of that have produced the [CSS Grid Layout Module](http://www.w3.org/TR/css-grid-1/) which is now emerging in browsers.
+Lots of designers use imaginary grids to lay out content, whether it's for a site or app. The CSS group has been working hard to make layouts easier, and as part of that have produced the [CSS Grid Layout Module](https://www.w3.org/TR/css-grid-1/) which is now emerging in browsers.
 
 This feature is available to try out in Chrome behind an experimental flag. It's also implemented in IE since version 10, and likely to be in most browsers soon.
 
@@ -53,4 +54,3 @@ Now just click the _Relaunch Now_ button to restart your browser and you'll be a
 CSS Grid Layout is a great new primitive for web content, but as usual we're all keen to hear what developers think about it. There are lots of ways to give feedback - leave a comment here, send mail to the [W3C CSS Working Group list](mailto:www-style@w3.org) with "[css-grid]" in the subject line, log bugs, or blog and tweet what you think of it. We look forward to seeing the great layouts you build with this super useful new feature.
 
 
-{% include "comment-widget.html" %}

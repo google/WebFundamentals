@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Breaking symmetry provides contrast and appeal to your projects. Learn when and how to apply this to your projects.
 
-{# wf_updated_on: 2014-10-21 #}
+{# wf_blink_components: Blink>Animation #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Asymmetric animation timing {: .page-title }
@@ -26,3 +27,7 @@ The general rule of thumb, then, is the following:
 
 * For UI animations triggered by a user’s interaction, such as view transitions or showing an element, have a fast intro (short duration), but a slow outro (longer duration).
 * For UI animations triggered by your code, such as errors or modal views, have a slower intro (longer duration), but a fast outro (short duration).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

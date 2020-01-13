@@ -279,4 +279,3 @@ This feature is removed in Chrome 60.
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
-{% include "comment-widget.html" %}

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: What tools to use to keep track of and analyze the webpack bundle
 
-{# wf_updated_on: 2018-02-16 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -251,3 +251,7 @@ bundles](https://medium.com/webpack/webpack-bits-getting-the-most-out-of-the-com
 - Use `webpack-dashboard` and `bundlesize` to stay tuned of how large your app is
 
 - Dig into what builds up the size with `webpack-bundle-analyzer`
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

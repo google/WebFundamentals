@@ -539,7 +539,7 @@ Twitter 在旧内容上添加新内容，并调整滚动位置，以便用户不
       );
     });
 
-注：上述代码在 Chrome 中还不可用，我们还没有向页面公开 `fetch` 和 `caches`（[ticket #1](https://code.google.com/p/chromium/issues/detail?id=436770)、[ticket #2](https://code.google.com/p/chromium/issues/detail?id=439389)）。
+Note: 上述代码在 Chrome 中还不可用，我们还没有向页面公开 `fetch` 和 `caches`（[ticket #1](https://code.google.com/p/chromium/issues/detail?id=436770)、[ticket #2](https://code.google.com/p/chromium/issues/detail?id=439389)）。
 
 在 [trained-to-thrill][ttt] 中，我解决了此问题，方法是使用 [XHR 而不是获取](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3)，滥用 Accept 标头以通知 ServiceWorker 在哪里获取来自（[页面代码](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/index.js#L70)、[ServiceWorker 代码](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L61)）的结果。
 

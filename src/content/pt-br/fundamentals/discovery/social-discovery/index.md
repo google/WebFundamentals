@@ -24,7 +24,7 @@ Você pode influenciar a forma com que o site é exibido quando compartilhado
 em redes sociais adicionando algumas linhas de código a cada página. Ajuda a gerar mais envolvimento
 quando se oferece prévias com informações mais valiosas do que as normalmente oferecidas.
 Sem isso, as redes sociais forneceriam apenas informações básicas, sem imagens ou
-outras informações úteis. 
+outras informações úteis.
 
 Qual dos dois você acha que tem mais chances de receber um clique? As pessoas são atraídas por imagens
 e sentem-se mais confiantes de que vão gostar do conteúdo quando veem uma
@@ -96,18 +96,12 @@ de conteúdo da sua página da web. Veja um exemplo relevante
 metadados em sites sociais, os valores comuns para `itemprop` são `name`, `description`
 e `image`.
 
-### Saiba mais
-Esses microdados fornecem informações semânticas aos rastreadores, normalmente do
-[Google+](https://plus.google.com/){: .external } e da Pesquisa do Google. Para saber mais
-sobre fragmentos e renderização no Google+, leia os documentos abaixo:
 
-* [Renderização de artigo - Plataforma Google+](/+/web/snippet/article-rendering)
-* [Fragmento - Plataforma Google+](/+/web/snippet/)
 
 ### Valide fragmentos ricos
 Para validar fragmentos ricos no Google+, você pode usar ferramentas como:
 
-* [Ferramenta de teste de dados estruturados](https://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools  
+* [Ferramenta de teste de dados estruturados](https://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
@@ -160,8 +154,7 @@ As propriedades e os conteúdos podem ter os seguintes valores:
 </table>
 
 Essas tags "meta" fornecem informações semânticas aos rastreadores dos sites sociais,
-normalmente do [Google+](https://plus.google.com/){: .external } e
-do [Facebook](https://www.facebook.com/){: .external }.
+normalmente do [Facebook](https://www.facebook.com/){: .external }.
 
 ### Saiba mais
 Para saber mais sobre que coisas você pode anexar a uma postagem do Facebook, acesse o site oficial
@@ -186,7 +179,7 @@ Para fazer um cartão do Twitter funcionar, [o seu domínio deve
 ser aprovado](https://cards-dev.twitter.com/validator) e
 conter uma tag "meta" que tenha `twitter:card` como o atributo `name` em vez de o atributo
 `property`.
-  
+
 Veja um exemplo rápido:
 
 <pre class="prettyprint">
@@ -223,7 +216,7 @@ Observe que os microdados e o OGP compartilham parte da marcação:
 * `title` e `description` são compartilhadas entre microdados e OGP
 * `itemprop="image"` está usando a tag `link` com o atributo `href` em vez de
 reutilizar a tag `meta` com `property="og:image"`
-  
+
 Para fechar, não deixe de confirmar que sua página web é exibida como o esperado em cada
 rede social antes de publicar.
 

@@ -1,14 +1,21 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that.
+robots: noindex
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2019-07-10 #}
 {# wf_published_on: 2014-09-24 #}
+{# wf_blink_components: N/A #}
 
 # Set Up Command Line Shortcuts {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
+
+
+<aside class="caution">
+  <b>This page is not being maintained.</b>
+</aside>
 
 Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that.
 

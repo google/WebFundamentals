@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A small set of changes have landed in Chrome 45 that will make it easier for developers to build better touch based apps
 
-{# wf_updated_on: 2015-07-20 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2015-07-20 #}
 {# wf_tags: news,android,touch #}
+{# wf_blink_components: N/A #}
 
 # Using rotationAngle and touchRadius {: .page-title }
 
@@ -42,7 +43,7 @@ the police a fingerprint.  Without the `rotationAngle` you would simple get
 how wide and how tall the touch gesture was.  With the `rotationAngle`, you 
 get 90 degrees of rotation (0 being vertical and 90 being horizontal). Why only 
 90 degrees? You only need the 90 degrees because as you move past those angles 
-the `radiusX` and `radiusY` will change to accomodate. 
+the `radiusX` and `radiusY` will change to accommodate. 
 
 Another cool thing about this is that the contact area of the user's finger changes 
 as they vary the degree of pressure of their finger on the screen.  It is not a 
@@ -122,8 +123,10 @@ read [Rick Byers' tracking doc](https://docs.google.com/document/d/1keeTmtqTEFS6
 
 ## See Also
 
-* [Precision Touch Getures](/web/updates/2014/09/Precision-Touch-for-Precise-Gestures) 
+* [Precision Touch Gestures](/web/updates/2014/09/Precision-Touch-for-Precise-Gestures) 
 * [TouchEvent spec with rotationAngle](http://www.w3.org/TR/2011/WD-touch-events-20110505/#widl-Touch-rotationAngle)
 
 
-{% include "comment-widget.html" %}
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

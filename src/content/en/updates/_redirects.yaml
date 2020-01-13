@@ -2,6 +2,54 @@
 
 redirects:
 
+- from: /web/updates/2019/08/periodic-background-sync
+  to: https://web.dev/periodic-background-sync/
+
+- from: /web/updates/2018/12/badging-api
+  to: https://web.dev/badging-api/
+
+- from: /web/updates/2018/12/web-share-target
+  to: https://web.dev/web-share-target/
+
+- from: /web/updates/2019/05/web-share-files
+  to: https://web.dev/web-share/#sharing-files
+
+- from: /web/updates/2016/09/navigator-share
+  to: https://web.dev/web-share/
+
+- from: /web/updates/2019/08/contact-picker
+  to: https://web.dev/contact-picker/
+
+- from: /web/updates/2018/12/get-installed-related-apps
+  to: https://web.dev/get-installed-related-apps/
+
+- from: /web/updates/2019/08/native-file-system
+  to: https://web.dev/native-file-system/
+
+- from: /web/updates/2019/01/shape-detection
+  to: https://web.dev/shape-detection/
+
+- from: /web/updates/2018/12/wakelock
+  to: https://web.dev/wakelock/
+
+- from: /web/updates/2019/07/image-support-for-async-clipboard
+  to: https://web.dev/image-support-for-async-clipboard/
+
+- from: /web/updates/2018/06/fresher-sw
+  to: /web/updates/2019/09/fresher-sw
+
+- from: /web/updates/nic
+  to: /web/updates/2019/12/nic79
+
+- from: /web/updates/2018/11/writable-files
+  to: https://web.dev/native-file-system/
+
+- from: /web/updates/2017/04/getinstalledrelatedapps
+  to: https://web.dev/get-installed-related-apps/
+
+- from: /web/updates/2017/10/using-twa
+  to: /web/updates/2019/02/using-twa
+
 - from: /web/updates/2011/06/HTML5-Libraries---Late-June
   to: /web/updates/2011/06/HTML5-Libraries-Late-June
 

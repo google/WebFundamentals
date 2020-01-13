@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Host a site on a development machine web server, and then access the content from an Android device.
 
-{# wf_updated_on: 2017-11-27 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Access Local Servers {: .page-title }
 
@@ -125,3 +126,7 @@ device you should be using the URL `chrome.devtools:7331`.
 
 **Tip**: To resume normal browsing, remember to revert the proxy settings on 
 your Android device after you disconnect from the development machine.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

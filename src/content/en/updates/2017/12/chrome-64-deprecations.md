@@ -48,4 +48,3 @@ StackOverflow](https://stackoverflow.com/questions/2952667/find-all-css-rules-th
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
-{% include "comment-widget.html" %}

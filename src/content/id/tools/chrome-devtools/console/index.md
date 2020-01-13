@@ -1,9 +1,10 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Pelajari cara menjelajahi Konsol JavaScript pada Chrome DevTools.
+description: Pelajari cara menavigasi Konsol JavaScript di Chrome DevTools.
 
-{# wf_updated_on: 2016-02-01 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2015-05-10 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Menggunakan Console {: .page-title }
 
@@ -18,10 +19,10 @@ keluaran atau menyimpannya ke file, memfilter keluaran, dan mengakses setelan
 Console tambahan.
 
 ### TL;DR {: .hide-from-toc }
-- Membuka Console sebagai panel tersendiri atau sebagai panel samping di sebelah panel lain.
-- Menumpuk pesan yang berlebihan, atau menampilkannya di barisnya masing-masing.
-- Menghapus atau mempertahankan keluaran antar laman, atau menyimpannya ke file.
-- Memfilter keluaran menurut tingkat keseriusannya, dengan menyembunyikan pesan jaringan, atau dengan pola ekspresi reguler.
+- Buka Console sebagai panel tersendiri atau sebagai panel samping di sebelah panel lain.
+- Tumpuk pesan yang berlebihan, atau tampilkan di barisnya masing-masing.
+- Hapus atau pertahankan output antarhalaman, atau simpan ke file.
+- Filter output menurut tingkat keseriusannya, dengan menyembunyikan pesan jaringan, atau dengan pola ekspresi reguler.
 
 ## Membuka Console
 
@@ -33,22 +34,22 @@ Atau berupa panel samping yang dibuka di sebelah panel lain:
 
 ![Panel samping Console](images/console-drawer.png)
 
-### Membuka sebagai panel
+### Buka sebagai panel
 
-Untuk membuka panel **Console** tersendiri, lakukan salah satu hal berikut:
+Untuk membuka panel **Console**:
 
 * Tekan <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows / Linux) atau
   <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac).
-* Jika DevTools sudah dibuka, tekan tombol **Console**.
+* Jika DevTools terbuka, tekan tombol **Console**.
 
 Bila Anda membuka panel Console, panel samping Console akan diciutkan secara otomatis.
 
-### Membuka sebagai panel samping
+### Buka sebagai panel samping
 
 Untuk membuka Console sebagai panel samping di sebelah panel lain, lakukan salah satu hal berikut:
 
 * Tekan <kbd>Esc</kbd> saat DevTools terfokus.
-* Tekan tombol **Customize and control DevTools** kemudian tekan 
+* Tekan tombol **Customize and control DevTools** dan tekan tombol 
   **Show console**.
 
 ![Show console](images/show-console.png)
@@ -56,14 +57,14 @@ Untuk membuka Console sebagai panel samping di sebelah panel lain, lakukan salah
 ## Penumpukan pesan
 
 Jika pesan diulang secara berturutan, Console tidak akan mencetak setiap
-instance pesan pada baris baru, tetapi "menumpuk" pesan tersebut
+contoh pesan pada baris baru, tetapi "menumpuk" pesan tersebut
 dan menampilkan angka di margin kiri. Angka itu menunjukkan berapa kali
 pesan diulangi.
 
 ![Penumpukan pesan](images/message-stacking.png)
 
 Jika Anda lebih menyukai entri baris sendiri-sendiri untuk setiap log, aktifkan **Show timestamps**
-dari setelan DevTools.
+dari pengaturan DevTools.
 
 ![Show timestamps](images/show-timestamps.png)
 
@@ -72,30 +73,30 @@ pada barisnya sendiri.
 
 ![Konsol stempel waktu](images/timestamped-console.png)
 
-## Menggunakan riwayat Console
+## Menggunakan histori Console
 
-### Mengosongkan riwayat {: #clearing}
+### Mengosongkan histori {: #clearing}
 
-Anda bisa mengosongkan riwayat konsol dengan melakukan salah satu hal berikut:
+Anda bisa mengosongkan histori konsol dengan melakukan salah satu hal berikut:
 
-* Klik kanan di Console dan tekan **Clear console**.
+* Klik kanan Console dan tekan **Clear console**.
 * Ketikkan `clear()` di Console.
-* Panggil `console.clear()` dari dalam kode JavaScript Anda.
+* Panggil `console.clear()` dari dalam kode JavaScript.
 * Tekan <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">L</kbd> 
   (Mac, Windows, Linux).
 
-### Mempertahankan riwayat {: #preserve-log}
+### Mempertahankan histori {: #preserve-log}
 
 Aktifkan kotak centang **Preserve log** di bagian atas konsol untuk mempertahankan
-riwayat konsol di sela penyegaran atau perubahan laman. Pesan akan disimpan
+histori konsol di sela penyegaran atau perubahan laman. Pesan akan disimpan
 hingga Anda mengosongkan Console atau menutup tab.
 
-### Menyimpan riwayat
+### Menyimpan histori
 
 Klik kanan di Console dan pilih **Save as** untuk menyimpan keluaran
 konsol ke file log.
 
-![Simpan Konsol ke file log](images/console-save-as.png)
+![Simpan Console ke file log](images/console-save-as.png)
 
 ## Memilih konteks eksekusi {: #execution-context }
 
@@ -118,7 +119,7 @@ elemen `<p>` di dalam konteks `<iframe>`, DevTools menyetel Pemilih
 Konteks Eksekusi ke konteks `<iframe>` tersebut.
 
 Saat Anda sedang menggarap konteks selain `top`, DevTools menyoroti
-Pemilih Konteks Eksekusi dengan warna merah, seperti dalam tangkapan layar berikut. Ini karena
+Pemilih Konteks Eksekusi dengan warna merah, seperti dalam screenshot berikut. Ini karena
 developer jarang perlu menggarap konteks selain `top`. Tentu
 membingungkan kalau kita mengetikkan suatu variabel, mengharapkan suatu nilai, tetapi malah melihat bahwa
 variabel itu `undefined` (karena definisinya berada di konteks lain).
@@ -128,8 +129,8 @@ variabel itu `undefined` (karena definisinya berada di konteks lain).
 ## Memfilter keluaran Console
 
 Klik tombol **Filter** 
-(![tombol filters](images/filter-button.png){:.inline})
-untuk memfilter keluaran konsol. Anda bisa memfilter menurut tingkat keseriusan, menurut ekspresi 
+(![tombol filter](images/filter-button.png){:.inline})
+untuk memfilter keluaran console. Anda bisa memfilter menurut tingkat keseriusan, menurut ekspresi 
 reguler, atau dengan menyembunyikan pesan jaringan.
 
 ![Keluaran Konsol Difilter](images/filtered-console.png)
@@ -144,7 +145,7 @@ Memfilter menurut tingkat keparahan setara dengan yang berikut ini:
   </thead>
   <tbody>
   <tr>
-    <td>All</td>
+    <td>Semua</td>
     <td>Menampilkan semua keluaran konsol</td>
   </tr>
   <tr>
@@ -172,7 +173,7 @@ Memfilter menurut tingkat keparahan setara dengan yang berikut ini:
 
 ## Setelan tambahan
 
-Buka setelan DevTools, masuk ke tab **General**, dan gulir ke bawah hingga
+Buka setelan DevTools, masuk ke tab **General**, dan scroll ke bawah hingga
 bagian **Console** untuk melihat setelan Console lebih lanjut.
 
 ![Setelan konsol](images/console-settings.png)
@@ -186,7 +187,7 @@ bagian **Console** untuk melihat setelan Console lebih lanjut.
   <tbody>
   <tr>
     <td>Hide network messages</td>
-    <td>Secara default, konsol melaporkan masalah jaringan. Mengaktifkannya akan menginstruksikan konsol agar tidak menampilkan log kesalahan ini. Misalnya, kesalahan seri 404 dan 500 tidak akan dimasukkan ke log.</td>
+    <td>Secara default, konsol melaporkan masalah jaringan. Mengaktifkannya akan menginstruksikan konsol agar tidak menampilkan log error ini. Misalnya, error seri 404 dan 500 tidak akan dimasukkan ke log.</td>
   </tr>
   <tr>
     <td>Log XMLHttpRequests</td>
@@ -194,7 +195,7 @@ bagian **Console** untuk melihat setelan Console lebih lanjut.
   </tr>
   <tr>
     <td>Preserve log upon navigation</td>
-    <td>Mempertahankan riwayat konsol selama penyegaran laman atau navigasi.</td>
+    <td>Mempertahankan histori konsol selama penyegaran laman atau navigasi.</td>
   </tr>
   <tr>
     <td>Show timestamps</td>
@@ -207,5 +208,6 @@ bagian **Console** untuk melihat setelan Console lebih lanjut.
   </tbody>
 </table>
 
+## Masukan {: #feedback }
 
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}

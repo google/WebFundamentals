@@ -23,7 +23,14 @@ toc:
 - title: workbox.cacheableResponse
   path: /web/tools/workbox/modules/workbox-cacheable-response
 - title: workbox.broadcastUpdate
-  path: /web/tools/workbox/modules/workbox-broadcast-cache-update
+  path: /web/tools/workbox/modules/workbox-broadcast-update
+- title: workbox.navigationPreload
+  path: /web/tools/workbox/modules/workbox-navigation-preload
+
+- heading: Window Modules
+- title: Workbox Window
+  path: /web/tools/workbox/modules/workbox-window
+  status: new
 
 - heading: Node Modules
 - title: Workbox CLI

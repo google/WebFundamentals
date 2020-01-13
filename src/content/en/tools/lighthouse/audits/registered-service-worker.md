@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Registers A Service Worker" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-07-25 #}
 {# wf_blink_components: N/A #}
 
@@ -44,4 +44,6 @@ the features in your own app:
 Checks if the Chrome Debugger returns a service worker version.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/registered-service-worker.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

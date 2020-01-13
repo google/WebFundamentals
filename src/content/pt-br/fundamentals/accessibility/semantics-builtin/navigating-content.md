@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: A função da semântica na navegação de páginas
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # A semântica e a navegação de conteúdo {: .page-title }
@@ -51,17 +51,17 @@ significa que uma estrutura de cabeçalhos apropriada é mais importante do que 
 
 Na maioria das páginas bem estruturadas, os níveis dos cabeçalhos são aninhados para indicar relações
 de pai-filho entre os blocos de conteúdo. A [lista de verificação
-WebAIM](http://webaim.org/standards/wcag/checklist) menciona essa técnica
+WebAIM](https://webaim.org/standards/wcag/checklist) menciona essa técnica
 várias vezes.
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
+ - [1.3.1](https://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
  indica que “a marcação semântica é usada para designar cabeçalhos”
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
+ - [2.4.1](https://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
  menciona que a estrutura de cabeçalhos é uma técnica para ignorar
  blocos de conteúdo
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
+ - [2.4.6](https://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
  discute alguns detalhes sobre como escrever cabeçalhos úteis
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
+ - [2.4.10](https://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
  declara que “seções individuais de conteúdo são designadas usando cabeçalhos,
  quando apropriado”
 
@@ -84,7 +84,7 @@ acessíveis *apenas* para leitores de tela e outras tecnologias assistivas.
     <h2 class="sr-only">This heading is offscreen.</h2>
 
 Observação: o site WebAIM discute essa técnica extensivamente [neste
-artigo sobre conteúdo fora da tela](http://webaim.org/techniques/css/invisiblecontent/).
+artigo sobre conteúdo fora da tela](https://webaim.org/techniques/css/invisiblecontent/).
 
 Para aplicativos completos, essa pode ser uma boa forma de acomodar cabeçalhos quando
 o design visual não exige ou tem espaço para um cabeçalho visível.

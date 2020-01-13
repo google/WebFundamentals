@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Contains Some Content When JavaScript Is Not Available" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-09-20 #}
 {# wf_blink_components: N/A #}
 
@@ -60,4 +60,6 @@ the HTML is empty then the audit fails. If the HTML is not empty then the audit
 passes.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/no-js.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

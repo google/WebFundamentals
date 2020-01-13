@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Contains start_url" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-09-21 #}
 {# wf_blink_components: N/A #}
 
@@ -38,4 +38,6 @@ The manifest that Lighthouse fetches is separate from the one that Chrome is
 using on the page, which can possibly cause inaccurate results.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/manifest-contains-start_url.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

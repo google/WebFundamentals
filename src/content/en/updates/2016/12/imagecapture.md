@@ -235,4 +235,3 @@ API from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
 * [Shape Detection explainer and readme](https://github.com/WICG/shape-detection-api)
 * [Shape Detection demo collection](https://codepen.io/collection/DwWVJj/)
 
-{% include "comment-widget.html" %}

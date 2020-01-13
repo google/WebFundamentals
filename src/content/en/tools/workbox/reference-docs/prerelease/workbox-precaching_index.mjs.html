@@ -21,23 +21,27 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
-  Copyright 2017 Google Inc.
+  Copyright 2018 Google LLC
 
-  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
-import defaultPrecachingExport from &#x27;./_default.mjs&#x27;;
+import {assert} from &#x27;workbox-core/_private/assert.mjs&#x27;;
+import {addPlugins} from &#x27;./addPlugins.mjs&#x27;;
+import {addRoute} from &#x27;./addRoute.mjs&#x27;;
+import {cleanupOutdatedCaches} from &#x27;./cleanupOutdatedCaches.mjs&#x27;;
+import {getCacheKeyForURL} from &#x27;./getCacheKeyForURL.mjs&#x27;;
+import {precache} from &#x27;./precache.mjs&#x27;;
+import {precacheAndRoute} from &#x27;./precacheAndRoute.mjs&#x27;;
+import {PrecacheController} from &#x27;./PrecacheController.mjs&#x27;;
 import &#x27;./_version.mjs&#x27;;
+
+
+if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+  assert.isSWEnv(&#x27;workbox-precaching&#x27;);
+}
 
 /**
  * Most consumers of this module will want to use the
@@ -52,9 +56,15 @@ import &#x27;./_version.mjs&#x27;;
  * @namespace workbox.precaching
  */
 
-export * from &#x27;./_public.mjs&#x27;;
-
-export default defaultPrecachingExport;
+export {
+  addPlugins,
+  addRoute,
+  cleanupOutdatedCaches,
+  getCacheKeyForURL,
+  precache,
+  precacheAndRoute,
+  PrecacheController,
+};
 </code></pre>
           </article>
         </div>

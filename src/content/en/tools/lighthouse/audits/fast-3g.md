@@ -1,22 +1,22 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Page Load Is Fast Enough On 3G" Lighthouse audit.
+description: Reference documentation for the "Page load is fast enough on mobile networks" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-14 #}
 {# wf_blink_components: N/A #}
 
-# Page Load Is Fast Enough On 3G  {: .page-title }
+# Page Load Is Fast Enough On Mobile  {: .page-title }
 
 ## Overview {: #overview }
 
-Many mobile users of your page experience the equivalent of a 3G network
-connection. Ensuring that your page loads fast over a simulated 3G network
+Many users of your page visit over a slow cellular network connection. 
+Ensuring that your page loads fast over a simulated mobile network
 ensures that your page loads in a reasonable amount of time for your mobile
 users.
 
-Note: A fast page load on 3G is a baseline requirement for a site to be
-considered a Progressive Web App. See [Baseline Progressive Web App
+Note: A fast page load on a mobile network is a baseline requirement for a site
+to be considered a Progressive Web App. See [Baseline Progressive Web App
 Checklist](/web/progressive-web-apps/checklist#baseline).
 
 ## Recommendations {: #recommendations }
@@ -49,43 +49,9 @@ Performance][RP] for strategies.
 
 ## More information {: #more-info }
 
-Lighthouse throttles the page if the network connection is faster than
-3G and then measures the time to first interactive. If the time to first
-interactive is less than 10s, the audit passes.
+Lighthouse computes what time to interactive would be on a slow 4G network 
+connection. If the time to interactive is less than 10s, the audit passes.
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Fast Enough On 3G / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    {
-      "button": {
-        "text": "This Doc Was Helpful"
-      },
-      "response": "Thanks for the feedback.",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "This Doc Was Not Helpful"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}

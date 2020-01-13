@@ -34,7 +34,7 @@ description:为您反复使用的命令行任务设置快捷方式。如果您�
 3. 任何时候当您位于带 git repo 的目录时，都可以运行命令 `master`，它将为您检查主分支。
 
 
-注：请参阅[设置 Windows 别名](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx)的说明。
+Note: 请参阅[设置 Windows 别名](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx)的说明。
 
 
 ## 我们推荐的快捷方式

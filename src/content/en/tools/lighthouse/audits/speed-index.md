@@ -1,16 +1,16 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Perceptual Speed Index" Lighthouse audit.
+description: Reference documentation for the "Speed Index" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-11-10 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: N/A #}
 
-# Perceptual Speed Index  {: .page-title }
+# Speed Index  {: .page-title }
 
 ## Overview {: #overview }
 
-Perceptual Speed Index is a page load performance metric that shows you how
+Speed Index is a page load performance metric that shows you how
 quickly the contents of a page are visibly populated. The lower the score,
 the better.
 
@@ -33,8 +33,9 @@ see [Speed Index](https://sites.google.com/a/webpagetest.org/docs/using-webpaget
 
 The target score is computed by a cumulative distribution function of a
 log-normal distribution. Check out the comments in the
-[source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)
+[source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)
 of the audit if you need to know more.
 
+## Feedback {: #feedback }
 
-{% include "web/tools/lighthouse/audits/_feedback/speed-index.html" %}
+{% include "web/_shared/helpful.html" %}

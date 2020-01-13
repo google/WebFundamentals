@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and modify animations with the Chrome DevTools  Animation Inspector.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2016-05-02 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Inspect animations {: .page-title }
 
@@ -51,9 +52,13 @@ separately.
 
 There are two ways to open the Animation Inspector:
 
-* Go to the **Styles** pane (on the **Elements** panel) and press the 
-  **Animations** button (![animations 
-  button](imgs/animations-button.png){:.inline}). 
+* Through the Main Menu:
+    - Click **More** ![More](../../chrome-devtools/images/more.png){:.devtools-inline} to open the
+    Main Menu.
+    - Navigate to the **More tools** sub-menu.
+    - Select **Animations**:  
+    ![Animations via Main Menu](imgs/animations-via-main-menu.png)  
+
 * Open the Command Menu and type `Drawer: Show Animations`. 
 
 The Animation Inspector opens up as a tab next to the Console Drawer. Since
@@ -155,3 +160,7 @@ To add a delay to an animation, click and drag it anywhere except the
 circles. 
 
 ![modified delay](imgs/modify-delay.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

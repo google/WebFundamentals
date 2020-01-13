@@ -93,4 +93,3 @@ Examples of transform scale animations from real applications
 +  [Ticketmaster seat map](http://www1.ticketmaster.com/nba-finals-game-4-warriors-watch-oakland-california-06-10-2016/event/1C0050C2D72071FD?artistid=805946&majorcatid=10004&minorcatid=7)
 
 
-{% include "comment-widget.html" %}

@@ -1,838 +1,985 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Progressive Web Apps 是結合了 web 和 原生應用中最好功能的一種體驗。在這個指南的引導下，你將會建立你自己的 Progressive Web Apps。你也會學到建立 Progressive Web App 的基礎，包括 app shell 模式, 如何使用 service worker 來緩存 App Shell 和你應用中的關鍵數據等等。
+
+{% include "web/_shared/machine-translation-start.html" %}
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2016-09-08 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_updated_on: 2019-04-19 #}
+{# wf_published_on: 2016-01-01 #}
 
 # 你的首個 Progressive Web App {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-[Progressive Web Apps](/web/progressive-web-apps) 是結合了 web 和 原生應用中最好功能的一種體驗。對於首次訪問的用戶它是非常有利的, 用戶可以直接在瀏覽器中進行訪問，不需要安裝應用。隨著時間的推移當用戶漸漸地和應用建立了聯系，它將變得越來越強大。它能夠快速地加載，即使在比較糟糕的網絡環境下，能夠推送相關消息, 也可以像原生應用那樣添加至主屏，能夠有全屏瀏覽的體驗。
+## 簡介
 
-### 什麽是 Progressive Web App?
+### 什麼是網路應用程式，一個漸進式網路應用程式？
 
-Progressive Web Apps 是:
+漸進式 Web 應用程式在桌面和行動裝置上提供可安裝的，類似應用程式的體驗，可通過 Web 直接建置和交付。它們是快速可靠的網路應用程式。最重要的是，它們是適用於任何瀏覽器的網路應用程式。如果您今天正在建置一個 Web 應用程式，那麼您已經開始建置一個漸進式 Web 應用程式。
 
-* __漸進增強__ - 能夠讓每一位用戶使用，無論用戶使用什麽瀏覽器，因為它是始終以漸進增強為原則。
-* __響應式用戶界面__ - 適應任何環境：桌面電腦，智能手機，筆記本電腦，或者其他設備。
-* __不依賴網絡連接__ - 通過 service workers 可以在離線或者網速極差的環境下工作。
-* __類原生應用__ - 有像原生應用般的交互和導航給用戶原生應用般的體驗，因為它是建立在 app shell model 上的。
-* __持續更新__ - 受益於 service worker 的更新進程，應用能夠始終保持更新。
-* __安全__ - 通過 HTTPS 來提供服務來防止網絡窺探，保證內容不被篡改。
-* __可發現__ - 得益於 W3C manifests 元數據和 service worker 的登記，讓搜索引擎能夠找到 web 應用。
-* __再次訪問__ - 通過消息推送等特性讓用戶再次訪問變得容易。
-* __可安裝__ - 允許用戶保留對他們有用的應用在主屏幕上，不需要通過應用商店。
-* __可連接性__ - 通過 URL 可以輕松分享應用，不用復雜的安裝即可運行。
+#### 快速可靠
 
-這引導指南將會引導你完成你自己的 Progressive Web App，包括設計時需要考慮的因素，也包括實現細節，以確保你的應用程序符合 Progressive Web App 的關鍵原則。
+每個 Web 體驗都必須快速，對於 Progressive Web Apps 尤其如此。快速是指在螢幕上取得有意義內容所需的時間，並在不到5秒的時間內提供互動式體驗。
 
-### 我們將要做什麽？
+並且，它必須同時兼具可靠性與執行效能。我們很難說怎樣的壓力下才能算是同時擁有好的可靠性與效能。但可以這樣想：本機應用程式的第一次載入令人沮喪。它可能會需要先進入應用程式商店，然後再下載一個巨大的應用程式，但當你成功安裝該應用程式之後，基本上就感受不到應用程式的啟動延遲，這部分就跟其他應用程式的啟動速度一樣快，沒有任何差異。漸進式 Web 應用程式必須提供用戶可以從任何已安裝的體驗中獲得的可靠性能。
 
-### 你將會學到
+#### 可安裝的
 
-* 如何使用 "app shell" 的方法來設計和構建應用程序。
-* 如何讓你的應用程序能夠離線工作。
-* 如何存儲數據以在離線時使用。
+漸進式 Web 應用程式可以在瀏覽器頁籤中運行，但也可以被安裝到系統桌面。為網站新增書籤只是新增了一個快捷方式，但已安裝的Progressive Web App的外觀和行為與所有其他已安裝的應用程式類似。它與其他應用程式啟動時的位置相同。您可以控制啟動體驗，包括自定義啟動畫面、圖示等。它在應用程式窗口中作為應用程式運行，沒有位址列或其他瀏覽器UI。與所有其他已安裝的應用程式一樣，它可以在最上層的應用程式中進行切換。
 
+請記住，可安裝的 PWA 快速可靠至關重要。安裝 PWA 的用戶希望他們的應用程式正常運行，無論他們使用何種網路連接。這是每個已安裝應用必須滿足的基本期待。
 
-### 你需要
+#### 手機和桌面
 
-* Chrome 52 或以上
-* [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb) 或其他的網絡服務器。
-* 示例代碼
-* 代碼編輯器
-* HTML，CSS 和 JavaScript 的基本知識
+使用回應式設計技術，Progressive Web Apps 可在行動裝置__與__桌面上工作，使用平台之間的單一程式庫。如果您正在考慮編寫本機應用程式，請查看 PWA 提供的好處。
 
-這份引導指南的重點是 Progressive Web Apps。其中有些概念的只是簡單的解釋
-而有些則是只提供示例代碼（例如 CSS 和其他不相關的 JavaScript ），你只需復制和粘貼即可。
+### 你將建立什麼
 
-## 設置
+在此代碼實驗室中，您將使用漸進式 Web 應用程式技術建置天氣 Web 應用程式。您的應用將:
 
-### 下載示例代碼
+* 使用回應式設計，因此可在桌面或行動裝置上使用。
+* 快速，使用服務工作者來預先運行運行所需的應用程式資源（HTML，CSS，JavaScript，Images），並在運行時快取天氣數據以提高性能。
+* 可安裝，使用 Web 應用程式資訊清單(manifest)和`beforeinstallprompt`事件通知用戶它是可安裝的。
 
-你可以[下載本 progressive web app 引導指南需要的所有代碼](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)。
+![95fe6f7fbeee5bb1.png](img/95fe6f7fbeee5bb1.png)
 
-將下載好的zip文件進行解壓縮。這將會解壓縮一個名為(`your-first-pwapp-master`)的根文件夾。這文件夾包含了這指南你所需要的資源。
+Warning: 為了簡化此代碼實驗室，並解釋提供離線體驗的基礎知識，我們使用的是原始的 JavaScript 語法。在正式環境下的應用程式中，我們強烈建議使用[Workbox](/web/tools/workbox/)工具來建置服務工作者(service worker)。它可以消除許多可能遇到的尖銳邊緣和暗角。
 
-名為 `step-NN` 的文件夾則包含了這指南每個步驟的完整的代碼。你可以把他當成參考。
+### 你將學到什麼
 
-### 安裝及校驗網絡服務器
+* 如何建立和新增 Web 應用程式資訊清單
+* 如何提供簡單的離線體驗
+* 如何提供完整的離線體驗
+* 如何使您的應用程式可安裝
 
-你可以選擇其他的網絡服務器，但在這個指南我們將會使用Web Server for Chrome。如果你還沒有安裝，你可以到 Chrome 網上應用店下載。
+此代碼實驗室專注於Progressive Web Apps。屏蔽了不相關的概念和程式碼區塊，並為您提供簡單的複製和貼上。
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+### 你需要什麼
 
-安裝完畢後，從書簽欄中選擇Apps的捷徑:
+* 最近版本的Chrome（74或更高版本）PWA只是網路應用，適用於所有瀏覽器，但我們將使用Chrome DevTools的一些功能來更好地了解瀏覽器級別的情況，並將其用於測試安裝體驗。
+* 了解HTML，CSS，JavaScript和[Chrome DevTools](https://developer.chrome.com/devtools) 。
 
-![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
+## 設定好
 
-接下來點擊Web Server的圖標
+### 取得Dark Sky API的密鑰
 
-![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
+我們的天氣數據來自[Dark Sky API](https://darksky.net/dev) 。要使用它，您需要申請API密鑰。它易於使用，並且可以免費用於非商業項目。
 
-你將會看到以下的窗口，這讓你配置你的本地網絡服務器:
+[Register for API Key](https://darksky.net/dev/register)
 
-![433870360ad308d4.png](img/433870360ad308d4.png)
+Note: 您仍然可以在沒有Dark Sky API密鑰的情況下完成此代碼實驗室。如果我們的伺服器無法從Dark Sky API取得真實數據，它將返回虛假數據。
 
-點擊 __choose folder__ 的按鈕，然後選擇名為 `work` 的文件夾。這會把目錄和文件都以HTTP的方式展示出來。URL地址可以在窗口裏的 __Web Server URL(s)__ 找到。
+#### 驗證您的API密鑰是否正常工作
 
-在選項中，選擇"Automatically show index.html" 的選擇框:
+要測試您的API密鑰是否正常工作，請向DarkSky API發出HTTP請求。更新以下網址，將`DARKSKY_API_KEY`替換為您的API密鑰。如果一切正常，您應該看到紐約市的最新天氣預報。
 
-![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
+`https://api.darksky.net/forecast/DARKSKY_API_KEY/40.7720232,-73.9732319`
 
-然後在 "Web Server: STARTED" 的按鈕拉去左邊，在拉去右邊，以將本地網絡服務器關閉並重啟。
+### 取得代碼
 
-![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
+我們已將此項目所需的一切都放入Git倉庫中。首先，您需要取得代碼並在您喜歡的開發環境中打開它。對於此程式庫，我們建議使用Glitch。
 
-現在你可以使用遊覽器來訪問那個文件夾(點擊窗口內的Web Server URL下的鏈接即可)。你將會看到以下的畫面:
+#### 強烈推薦:使用Glitch導入回購
 
-![aa64e93e8151b642.png](img/aa64e93e8151b642.png)
+使用Glitch是推薦使用此程式庫的方法。
 
-很明顯的，這個應用程序並沒有什麽功能。現在只有一個加載圖標在那裏轉動，這只是來確保你的網絡服務器能正常操作。在接下來的步驟，我們將會添加更多東西。
+1. 打開一個新的瀏覽器頁籤，然後轉到[https://glitch.com](https://glitch.com) 。
+2. 如果您沒有帳戶，則需要註冊。
+3. 單擊__New Project__，然後單擊Git Repo中的__Clone .__
+4. 複製__https://github.com/googlecodelabs/your-f同時兼具可靠性與執行效能r我們st說怎樣的壓力下才能算是同時擁有可靠性與效能__並單擊確定。
+5. 載入時間repo後，編輯`.env`文件，並使用DarkSky API密鑰更新它。
+6. 單擊__Show Live__按鈕以查看 PWA 的運行情況。
 
-## 基於應用外殼的架構
+#### 替代方案:下載代碼並在本地工作
 
-### 什麽是應用外殼(App Shell)
+如果您想下載代碼並在本地工作，您需要擁有最新版本的Node和代碼編輯器設定並準備就緒。
 
-App Shell是應用的用戶界面所需的最基本的 HTML、CSS 和 JavaScript，也是一個用來確保應用有好多性能的組件。它的首次加載將會非常快，加載後立刻被緩存下來。這意味著應用的外殼不需要每次使用時都被下載，而是只加載需要的數據。
+Caution: 如果您在本地工作，某些 Lighthouse 審核將無法通過，並且安裝可能無法使用，因為本地伺服器不通過安全上下文提供內容。
 
-應用外殼的結構分為應用的核心基礎組件和承載數據的 UI。所有的 UI 和基礎組件都使用一個 service worker 緩存在本地，因此在後續的加載中 Progressive Web App 僅需要加載需要的數據，而不是加載所有的內容。
+[Download source code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
-![156b5e3cc8373d55.png](img/156b5e3cc8373d55.png)
+1. 解壓縮下載的zip文件。
+2. 運行`npm install`以安裝運行伺服器所需的依賴項。
+3. 編輯`server.js`並設定DarkSky API密鑰。
+4. 運行`node server.js`以在端口8000上啟動伺服器.
+5. 打開瀏覽器頁籤到[http://localhost:8000](http://localhost:8000)
 
-換句話說，應用的殼相當於那些發布到應用商店的原生應用中打包的代碼。它是讓你的應用能夠運行的核心組件，只是沒有包含數據。
+## 建立基線
 
-### 為什麽使用基於應用外殼的結構?
+### 我們的出發點是什麼？
 
-使用基於應用外殼的結構允許你專註於速度，給你的 Progressive Web App 和原生應用相似的屬性：快速的加載和靈活的更新，所有這些都不需要用到應用商店。
+我們的出發點是為此代碼實驗室設計的基本天氣應用程式。代碼已經過度簡化，以顯示此程式庫中的概念，並且它幾乎沒有錯誤處理。如果您選擇在生產應用程式中重用任何此代碼，請確保處理任何錯誤並完全測試所有代碼。
 
-### 設計應用外殼
+有些事要嘗試......
 
-第一步是設計核心組件
+1. 在右下角新增一個帶有藍色加號按鈕的新城市。
+2. 使用右上角的重新整理按鈕重整數據。
+3. 使用每張城市卡右上角的x刪除城市。
+4. 了解它在桌面和行動裝置上的工作原理。
+5. 看看你離線時會發生什麼。
+6. 使用 Chrome 的 “網路” 面板，查看當網路受限制為慢速 3G 時會發生什麼。
+7. 通過更改`FORECAST_DELAY`中的`server.js`向預測伺服器新增延遲
 
-問問自己：
+### 審計與Lighthouse
 
-* 需要立刻顯示什麽在屏幕上？
-* 我們的應用需要那些關鍵的 UI 組件？
-* 應用外殼需要那些資源？比如圖片，JavaScript，樣式表等等。
+[Lighthouse](/web/tools/lighthouse/#devtools)是一款易於使用的工具，可幫助您提高網站和網頁的質量。它具有性能，可訪問性，漸進式 Web 應用程式等審計。每個審核都有一個參考文件，解釋了審核為何重要，以及如何解決。
 
-我們將要創建一個天氣應用作為我們的第一個 Progressive Web App 。它的核心組件包括：
+![b112675caafccef0.png](img/b112675caafccef0.png)
 
-在設計一個更加復雜的應用時，內容不需要在首次全部加載，可以在之後按需加載，然後緩存下來供下次使用。比如，我們能夠延遲加載添加城市的對話框，直到完成對首屏的渲染且有一些空閑的時間。
+我們將使用 Lighthouse 來審核我們的天氣應用程式，並驗證我們所做的更改。
 
-## 實現應用外殼
+Note: 您可以在Chrome DevTools中，從命令行或作為節點模塊運行 Lighthouse。將[adding Lighthouse](https://github.com/GoogleChromeLabs/lighthousebot)您的建置過程，以確保您的 Web 應用程式不會退化。
 
+### 讓我們運行Lighthouse
 
-任何項目都可以有多種起步方式，通常我們推薦使用 Web Starter Kit。但是，這裏為了保持我們的項目
-足夠簡單並專註於 Progressive Web Apps，我們提供了你所需的全部資源。
+1. 在新頁籤中打開項目。
+2. 打開Chrome DevTools並切換到__Audits__頁籤，DevTools顯示審核類別列表，將它們全部啟用。
+3. 單擊__Run audits__，60-90秒後，Lighthouse會在頁面上顯示報告。
 
+### 漸進式Web App審計
 
+我們將重點關注Progressive Web App審核的結果。
 
-### 為應用外殼編寫 HTML 代碼
+![af1a64a13725428e.png](img/af1a64a13725428e.png)
 
-為了保證我們的起步代碼盡可能清晰，我們將會開始於一個新的 `index.html` 文件並添加在
-[構建應用外殼](/web/fundamentals/getting-started/codelabs/your-first-pwapp/#architect_your_app_shell)中談論過的核心組件的代碼
+並且有很多紅色要關注:
 
-請記住，核心組件包括：
+* __❗失敗:__ 離線時當前頁面不回應200。
+* __❗失敗:__ `start_url`在離線時不回應200。
+* __❗失敗:__ 不註冊控制頁面和`start_url.`的服務工作者
+* __❗失敗:__ Web應用程式資訊清單不符合可安裝性要求。
+* __❗失敗:__ 未配置自定義初始螢幕。
+* __❗失敗:__ 不設定位址列主題顏色。
 
-* 包含標題的頭部，以及頭部的 添加/刷新 按鈕
-* 放置天氣預報卡片的容器
-* 天氣預報卡片的模板
-* 一個用來添加城市的對話框
-* 一個加載指示器
+讓我們進入並開始修復其中的一些問題！
 
-<div class="clearfix"></div>
+## 新增 Web 應用程式資訊清單
 
-    <!DOCTYPE html>
-    <html>
+到本節結束時，我們的天氣應用程式將通過以下審核:
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Weather PWA</title>
-        <link rel="stylesheet" type="text/css" href="styles/inline.css">
-    </head>
+* Web應用程式資訊清單不符合可安裝性要求。
+* 未配置自定義初始螢幕。
+* 不設定位址列主題顏色。
 
-    <body>
-        <header class="header">
-            <h1 class="header__title">Weather PWA</h1>
-            <button id="butRefresh" class="headerButton"></button>
-            <button id="butAdd" class="headerButton"></button>
-        </header>
-        <main class="main">
-            <div class="card cardTemplate weather-forecast" hidden>
-                . . .
-            </div>
-        </main>
-        <div class="dialog-container">
-            . . .
-        </div>
-        <div class="loader">
-            <svg viewBox="0 0 32 32" width="32" height="32">
-                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-            </svg>
-        </div>
-        <!-- Insert link to app.js here -->
-    </body>
+### 建立 Web 應用程式資訊清單
 
-    </html>
+[web app manifest](/web/fundamentals/web-app-manifest)是一個簡單的JSON文件，它使開發人員能夠控制應用程式對用戶的顯示方式。
 
+使用 Web 應用程式資訊清單，您的 Web 應用程式可以:
 
-需要註意的是，在默認情況下加載指示器是顯示出來的。這是為了保證
-用戶能在頁面加載後立刻看到加載器，給用戶一個清晰的指示，表明頁面正在加載。
+* 告訴瀏覽器您希望應用程式在獨立窗口中打開（ `display` ）。
+* 定義首次啟動應用程式時打開的頁面（ `start_url` ）。
+* 定義應用程式在Dock或app啟動器（ `short_name` ， `icons` ）上應該是什麼樣子。
+* 建立一個閃屏（ `name` ， `icons` ， `colors` ）。
+* 告訴瀏覽器以橫向或縱向模式（ `orientation` ）打開窗口。
+* 和[plenty more](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members) 。
 
-為了節省你的時間，我們已經已創建了 stylesheet。
+在項目中建立名為`public/manifest.json`的文件，並複製/貼上以下內容:
 
-### 添加關鍵的 JavaScript 啟動代碼
+`public/manifest.json`
 
-現在我們的 UI 已經準備好了，是時候來添加一些代碼讓它工作起來了。像搭建應用外殼的時候那樣，註意
-考慮哪些代碼是為了保持用戶體驗必須提供的，哪些可以延後加載。
+```json
+{
+  "name": "Weather",
+  "short_name": "Weather",
+  "icons": [{
+    "src": "/images/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "/images/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "/images/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "/images/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "/images/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }, {
+      "src": "/images/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#3E4EB8",
+  "theme_color": "#2F3BA2"
+}
+```
 
-在啟動代碼中，我們將包括(你可以在(`scripts/app.js`)的文件夾中找到)：
+清單支持一、圖示，用於不同的螢幕尺寸。對於此代碼實驗室，我們已經包含了其他一些代碼實驗室，因為我們需要它們用於 iOS 整合。
 
-* 一個 `app` 對象包含一些和應用效果的關鍵信息。
-* 為頭部的按鈕（`add`/`refresh`）和添加城市的對話框中的按鈕（`add`/`cancel`）添加事件監聽
-函數。
-* 一個添加或者更新天氣預報卡片的方法（`app.updateForecastCard`）。
-* 一個從 Firebase 公開的天氣 API 上獲取數據的方法(`app.getForecast`)。
-* 一個叠代當前所有卡片並調用 `app.getForecast` 獲取最新天氣預報數據的方法 (`app.updateForecasts`).
-* 一些假數據 (`fakeForecast`) 讓你能夠快速地測試渲染效果。
+Note: 要安裝，Chrome要求您提供至少192x192p、圖示和512x512p、圖示。但是你也可以提供其他尺碼。 Chrome使用最接近48dp、圖示，例如，2x設備上的96px或3x設備的144px。
 
-### 測試
+### 新增指向 Web 應用程式資訊清單的連結
 
-現在，你已經添加了核心的 HTML、CSS 和 JavaScript，是時候測試一下應用了。這個時候它能做的可能還不多，但要確保在控制臺沒有報錯信息。
+接下來，我們需要通過向應用程式中的每個頁面新增`<link rel="manifest"...`來告訴瀏覽器我們的清單。 `<head>`新增到`index.html`文件中的`<head>`元素。
 
-為了看看假的天氣信息的渲染效果，從 `index.html`中取消註釋以下的代碼:
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L30)
 
-    <!--<script src="scripts/app.js" async></script>-->
+```html
+<!-- CODELAB: Add link rel manifest -->
+<link rel="manifest" href="/manifest.json">
+```
 
-接下來，從 `app.js`中取消註釋以下的代碼:
+#### DevTools Detour
 
-    // app.updateForecastCard(initialWeatherForecast);
+DevTools 提供了一種快速簡便的方法來檢查您的`manifest.json`文件。打開__Application__面板上的__Manifest__窗格。如果您已正確新增清單信息，您將能夠在此窗格中看到它以人性化格式進行解析和顯示。
 
-刷新你的應用程序，你將會看到一個比較整齊漂亮的天氣預報的卡片:
+![c462743e1bc26958.png](img/c462743e1bc26958.png)
 
-![166c3b4982e4a0ad.png](img/166c3b4982e4a0ad.png)
+### 新增 iOS 元標記、圖示
 
-[](https://weather-pwa-sample.firebaseapp.com/step-04/)
+iOS 上的 Safari 不支持 Web 應用程式資訊清單（ [yet](https://webkit.org/status/#specification-web-app-manifest) ），因此您需要將[traditional `meta` tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)新增到`index.html`文件的`<head>`中:
 
-嘗試並確保他能正常運作之後，將 `app.updateForecastCard` 清除。
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L31)
 
-## 從快速的首次加載開始
+```html
+<!-- CODELAB: Add iOS meta tags and icons -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Weather PWA">
+<link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
+```
 
-Progressive Web Apps 應該能夠快速啟動並且立即可用。目前，我們的天氣應用能夠快速啟動，但是還不能使用，因為還沒有數據。我們能夠發起一個 AJAX 請求來獲取數據，但是額外的請求會讓初次加載時間變長。取而代之的方法是，在初次加載時提供真實的數據。
+### 獎勵:簡易 Lighthouse 修復
 
-### 插入天氣預報信息
+我們的 Lighthouse 審核還提出了一些其他很容易解決的問題，所以當我們在這裡時，讓我們來處理這些問題。
 
-在本實例中，我們將會靜態地插入天氣預報信息，但是在一個投入生產環境的應用中，最新的天氣預報數據會由服務器根據用戶的 IP 位置信息插入。
+#### 設定 Meta 描述
 
-這代碼已經包括了所需的資料，那就是我們在前個步驟所用的 `initialWeatherForecast`。
+根據SEO審計，Lighthouse注意到我們的 “ [Document does not have a meta description.](/web/tools/lighthouse/audits/description) ” 描述可以顯示在Google的搜尋結果中。高質量，獨特的描述可以使您的搜尋結果與搜尋用戶更相關，並可以增加搜尋流量。
 
-### 區分首次運行
+要新增說明，請將以下`meta`標記新增到文件的`<head>`中:
 
-但我們如何知道什麽時候該展示這些信息，那些數據需要存入緩存供下次使用？當用戶下次使用的時候，他們所在城市可能已經發生了變動，所以我們需要加載目前所在城市的信息，而不是之前的城市。
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L32)
 
-用戶首選項（比如用戶訂閱的城市列表），這類數據應該使用 IndexedDB 或者其他快速的存儲方式存放在本地。
-為了盡可能簡化，這裏我們使用 [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) 進行存儲，在生產環境下這並不是理想的選擇，因為它是阻塞型同步的存儲機制，在某些設備上可能很緩慢。
+```html
+<!-- CODELAB: Add description here -->
+<meta name="description" content="A sample weather app">
+```
 
-首先，讓我們添加用來存儲用戶首選項的代碼。從代碼中尋找以下的TODO註解：
+#### 設定位址列主題顏色
 
+在 PWA 審計中，Lighthouse注意到我們的應用程式 “ [Does not set an address-bar theme color](/web/tools/lighthouse/audits/address-bar) ”。將瀏覽器的位址列設定為與您品牌的顏色相匹配，可以提供更加身臨其境的用戶體驗。
 
-    // TODO add saveSelectedCities function here
+要在行動裝置上設定主題顏色，請將以下`meta`標記新增到文件的`<head>` :
 
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L33)
 
-然後將以下的代碼粘貼在TODO註解的下一行。
+```html
+<!-- CODELAB: Add meta theme-color -->
+<meta name="theme-color" content="#2F3BA2" />
+```
 
+### 驗證 Lighthouse 的變化
 
-    //  將城市裂變存入 localStorage.
-    app.saveSelectedCities = function() {
-        var selectedCities = JSON.stringify(app.selectedCities);
-        localStorage.selectedCities = selectedCities;
-    };
+再次運行Lighthouse（通過單擊 “審核” 窗格左上角的+號）並驗證您的更改。
 
+__SEO審計___
 
+* __✅通過:__ Document有 Meta 描述。
 
-接下來，添加一些啟動代碼來檢查用戶是否已經訂閱了某些城市，並渲染它們，或者使用插入的天氣數據來渲染。從代碼中尋找以下的TODO註解：
+__Progressive Web App Audit__
 
+* __❗失敗:__ 離線時當前頁面不回應200。
+* __❗失敗:__ `start_url`在離線時不回應200。
+* __❗失敗:__ 不註冊控制頁面和`start_url.`的服務工作者
+* __✅通過:__ Web應用程式資訊清單符合可安裝性要求。
+* __✅通過:__ 已配置為自定義初始螢幕。
+* __✅通過:__ 設定位址列主題顏色。
 
-    // TODO add startup code here
+## 提供基本的離線體驗
 
+用戶期望安裝的應用程式在離線時始終具有基線體驗。這就是為什麼對於可安裝的網路應用程式來說，永遠不會顯示 Chrome 的離線恐龍至關重要。離線體驗的範圍從簡單的離線頁面到具有先前快取數據的只讀體驗，一直到完全功能的離線體驗，在網路連接恢復時自動同步。
 
-然後將以下的代碼粘貼在TODO註解的下一行。
+在本節中，我同時兼具可靠性與執行效能將我們向天說怎樣的壓力下才能算是同時擁有可靠性與效能離線頁面。如果用戶在離線時嘗試載入時間應用，則會顯示我們的自定義頁面，而不是瀏覽器顯示的典型離線頁面。到本節結束時，我們的天氣應用程式將通過以下審核:
 
+* 離線時當前頁面不回應200。
+* 離線時， `start_url`不回應200。
+* 不註冊控制頁面和`start_url.`的服務工作者
 
-    /****************************************************************************   
-     *
-     * 用來啟動應用的代碼
-     *
-     * 註意: 為了簡化入門指南, 我們使用了 localStorage。
-     *   localStorage 是一個同步的 API，有嚴重的性能問題。它不應該被用於生產環節的應用中！
-     *   應該考慮使用, IDB (https://www.npmjs.com/package/idb) 或者
-     *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)
-     *
-     ****************************************************************************/
+在下一部分中，我們將使用完整的離線體驗替換我們的自定義離線頁面。這將改善離線體驗，但更重要的是，它將顯著提高我們的性能，因為我們的大多數資產（HTML，CSS和JavaScript）將在本地儲存和提供，從而消除了網路作為潛在的瓶頸。
 
-    app.selectedCities = localStorage.selectedCities;
-    if (app.selectedCities) {
-      app.selectedCities = JSON.parse(app.selectedCities);
-      app.selectedCities.forEach(function(city) {
-        app.getForecast(city.key, city.label);
-      });
-    } else {
-      app.updateForecastCard(initialWeatherForecast);
-      app.selectedCities = [
-        {key: initialWeatherForecast.key, label: initialWeatherForecast.label}
-      ];
-      app.saveSelectedCities();
-    }
+### 服務人員進行救援
 
+如果您對服務工作者不熟悉，可以通過閱讀[Introduction To Service Workers](/web/fundamentals/primers/service-worker/)了解他們可以做什麼，他們的生命週期如何工作等等，從而獲得基本的理解。完成此代碼實驗室後，請務必查看[Debugging Service Workers code lab](http://goo.gl/jhXCBy)以便更深入地了解如何與服務人員合作。
 
-### 儲存已被選擇的城市
+通過服務工作人員提供的功能應被視為漸進增強功能，並且僅在瀏覽器支持時才新增。例如，對於服務工作者，您可以為應用程式快取[app shell](/web/fundamentals/architecture/app-shell)和數據，以便即使網路不可用也可以使用它。如果不支持服務工作者，則不會呼叫離線代碼，並且用戶將獲得基本體驗。使用特徵檢測提供漸進增強功能的開銷很小，並且在不支持該功能的舊瀏覽器中不會中斷。
 
-現在，你需要修改"add city"按鈕的功能。這將會把已被選擇的城市儲存進local storage。
+Warning: 服務工作者功能僅在通過HTTPS訪問的頁面上可用（http:// localhost和等效項也可用於促進測試）。
 
-更新`butAddCity`中的代碼:
+### 註冊服務人員
 
+第一步是註冊服務工作者。將以下代碼新增到`index.html`文件中:
 
-    document.getElementById('butAddCity').addEventListener('click', function() {
-        // Add the newly selected city
-        var select = document.getElementById('selectCityToAdd');
-        var selected = select.options[select.selectedIndex];
-        var key = selected.value;
-        var label = selected.textContent;
-        if (!app.selectedCities) {
-          app.selectedCities = [];
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L206)
+
+```js
+// CODELAB: Register service worker.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
+```
+
+此代碼檢查服務工作者API是否可用，如果是，則在頁面為[loaded](/web/fundamentals/primers/service-workers/registration) ， `/service-worker.js`的服務工作者將註冊。
+
+注意，服務工作者是從根目錄提供的，而不是從`/scripts/`目錄提供的。這是設定服務工作者的__ `scope` __的最簡單方法。服務工作者的`scope`確定服務工作者控制哪些文件，換句話說，服務工作者將`scope`條路徑攔截請求。預設的`scope`是服務工作者文件的位置，並擴展到下面的所有目錄。因此，如果`service-worker.js`位於根目錄中，則服務工作者將控制來自此域的所有網頁的請求。
+
+### Precache離線頁面
+
+首先，我們需要告訴服務工作者快取什麼。我們已經建立了一個簡單的[offline page](https://your-first-pwa.glitch.me/offline.html) （ `public/offline.html` ），只要沒有網路連接，我們就會顯示它。
+
+在`service-worker.js` ，將`'/offline.html',`新增到`FILES_TO_CACHE`數組中，最終結果應如下所示:
+
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L23)
+
+```js
+// CODELAB: Update cache names any time any of the cached files change.
+const FILES_TO_CACHE = [
+  '/offline.html',
+];
+```
+
+接下來，我們需要更新`install`事件以告知服務工作者預先快取離線頁面:
+
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L29)
+
+```js
+// CODELAB: Precache static resources here.
+evt.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('[ServiceWorker] Pre-caching offline page');
+      return cache.addAll(FILES_TO_CACHE);
+    })
+);
+```
+
+Note: 服務工作者事件和生命週期將在下一節中介紹。
+
+我們的`install`事件現在使用`caches.open()`打開快取並提供快取名稱。提供快取名稱允許我們對快取資源進行版本控製或分離數據，以便我們可以輕鬆更新一個但不影響另一個。
+
+一旦快取打開，我們就可以呼叫`cache.addAll()` ，它取得一個URL列表，從伺服器取得它們並將回應新增到快取中。請注意，如果任何單個請求失敗， `cache.addAll()`將拒絕。這意味著您可以保證，如果安裝步驟成功，您的快取將處於一致狀態。但是，如果由於某種原因失敗，它將在下次服務工作者啟動時自動重試。
+
+#### DevTools Detour
+
+讓我們來看看同時兼具可靠性與執行效能何我們使用說怎樣的壓力下才能算是同時擁有可靠性與效能解和偵錯服務工作者。在重新載入時間頁面之前，打開DevTools，轉到__Application__面板上的__Service Workers__窗格。它應該如下所示:
+
+![b3aa37b67863fd03.png](img/b3aa37b67863fd03.png)
+
+當您看到這樣的空白頁面時，表示當前打開的頁面沒有任何已註冊的服務工作者。
+
+現在，重新載入頁面。現在服務工作者窗格應該會長這樣：
+
+![69808e4bf3aee41b.png](img/69808e4bf3aee41b.png)
+
+當您看到這樣的信息時，表示該頁面正在運行服務工作者。
+
+狀態標籤旁邊有一個數字（在這種情況下為 *34251*），在您與服務工作人員合作時，請密切注意該數字。這是一種簡單的方法來判斷您的服務工作者是否已更新。
+
+### 清理舊的離線頁面
+
+我們將使用`activate`事件來清理快取中的任何舊數據。此代碼可確保您的服務工作程序在任何應用程式shell文件發生更改時更新其快取。為了使其工作，您需要在服務工作文件的頂部增加`CACHE_NAME`變量。
+
+將以下代碼新增到`activate`事件:
+
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L36)
+
+```js
+// CODELAB: Remove previous cached data from disk.
+evt.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if (key !== CACHE_NAME) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
         }
-        app.getForecast(key, label);
-        app.selectedCities.push({key: key, label: label});
-        app.saveSelectedCities();
-        app.toggleAddDialog(false);
-      });
+      }));
+    })
+);
+```
 
+#### DevTools Detour
 
-### 測試
+打開  “服務工作者”  窗格，重整頁面，您將看到安裝了新的服務工作者，並且狀態編號會增加。
 
-* 在首次允許時，你的應用應該立刻向用戶展示 `initialWeatherForecast` 中的天氣數據。
-* 添加一個新城市確保會展示兩個卡片。
-* 刷新瀏覽器並驗證應用是否加載了天氣預報並展示了最新的信息。
+![1db827d76bc0b359.png](img/1db827d76bc0b359.png)
 
-[](https://weather-pwa-sample.firebaseapp.com/step-05/)
+更新後的服務工作者立即獲得控制權，因為我們的`install`事件以`self.skipWaiting()`結束， `activate`事件以`self.clients.claim()`結束。沒有這些，只要有一個打開頁面的頁籤，舊的服務工作者就會繼續控制頁面。
 
-## 使用 Service Workers 來預緩存應用外殼
+### 處理失敗的網路請求
 
-Progressive Web Apps 是快速且可安裝的，這意味著它能在在線、離線、斷斷續續或者緩慢的網絡環境下使用。為了實現這個目標，我們需要使用一個 service worker 來緩存應用外殼，以保證它能始終迅速可用且可靠。
+最後，我們需要處理`fetch`事件。我們將使用[network, falling back to cache strategy](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache) 。服務工作者將首先嘗試從網路取得資源，如果失敗，它將從快取中返回離線頁面。
 
-如果你對 service workers 不熟悉，你可以通過閱讀 [介紹 Service
-Workers](/web/fundamentals/getting-started/primers/service-workers) 來了解關於它能做什麽，它的生命周期是如何工作的等等知識。
+![6302ad4ba8460944.png](img/6302ad4ba8460944.png)
 
-service workers 提供的是一種應該被理解為漸進增強的特性，這些特性僅僅作用於支持service workers 的瀏覽器。比如，使用 service workers 你可以緩存應用外殼和你的應用所需的數據，所以這些數據在離線的環境下依然可以獲得。如果瀏覽器不支持 service workers ，支持離線的
-代碼沒有工作，用戶也能得到一個基本的用戶體驗。使用特性檢測來漸漸增強有一些小的開銷，它不會在老舊的不支持 service workers 的瀏覽器中產生破壞性影響。
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L43)
 
-### 註冊 service worker
-
-為了讓應用離線工作，要做的第一件事是註冊一個 service worker，一段允許在後臺運行的腳本，不需要
-用戶打開 web 頁面，也不需要其他交互。
-
-這只需要簡單兩步：
-
-1. 創建一個 JavaScript 文件作為 service worker
-1. 告訴瀏覽器註冊這個 JavaScript 文件為 service worker
-
-第一步，在你的應用根目錄下創建一個空文件叫做 `service-worker.js` 。這個 `service-worker.js`
- 文件必須放在跟目錄，因為 service workers 的作用範圍是根據其在目錄結構中的位置決定的。
-
-接下來，我們需要檢查瀏覽器是否支持 service workers，如果支持，就註冊 service worker，將下面代碼添加至 `app.js`中。
-
-    
-    if('serviceWorker' in navigator) {  
-        navigator.serviceWorker  
-            .register('/service-worker.js')  
-            .then(function() { console.log('Service Worker Registered'); });  
-    }
-
-
-### 緩存站點的資源
-
-當 service worker 被註冊以後，當用戶首次訪問頁面的時候一個 `install` 事件會被觸發。在這個事件的回調函數中，我們能夠緩存所有的應用需要再次用到的資源。
-
-當 service worker 被激活後，它應該打開緩存對象並將應用外殼需要的資源存儲進去。將下面這些代碼加入你的 `service-worker.js` (你可以在`your-first-pwapp-master/work`中找到) ：
-
-
-    var cacheName = 'weatherPWA-step-6-1';
-    var filesToCache = [];
-
-    self.addEventListener('install', function(e) {
-      console.log('[ServiceWorker] Install');
-      e.waitUntil(
-        caches.open(cacheName).then(function(cache) {
-          console.log('[ServiceWorker] Caching app shell');
-          return cache.addAll(filesToCache);
+```js
+// CODELAB: Add fetch event handler here.
+if (evt.request.mode !== 'navigate') {
+  // Not a page navigation, bail.
+  return;
+}
+evt.respondWith(
+    fetch(evt.request)
+        .catch(() => {
+          return caches.open(CACHE_NAME)
+              .then((cache) => {
+                return cache.match('offline.html');
+              });
         })
-      );
-    });
-
-
-首先，我們需要提供一個緩存的名字並利用 `caches.open()`打開 cache 對象。提供的緩存名允許我們給
-緩存的文件添加版本，或者將數據分開，以至於我們能夠輕松地升級數據而不影響其他的緩存。
-
-一旦緩存被打開，我們可以調用 `cache.addAll()` 並傳入一個 url 列表，然後加載這些資源並將響應添加至緩存。不幸的是 `cache.addAll()` 是原子操作，如果某個文件緩存失敗了，那麽整個緩存就會失敗！
-
-好的。讓我們開始熟悉如何使用DevTools並學習如何使用DevTools來調試service workers。在刷新你的網頁前，開啟DevTools，從　__Application__　的面板中打開 __Service Worker__ 的窗格。它應該是這樣的：
-
-![ed4633f91ec1389f.png](img/ed4633f91ec1389f.png)
-
-當你看到這樣的空白頁，這意味著當前打開的頁面沒有已經被註冊的Service Worker。
-
-現在，重新加載頁面。Service Worker的窗格應該是這樣的:
-
-![bf15c2f18d7f945c.png](img/bf15c2f18d7f945c.png)
-
-當你看到這樣的信息，這意味著頁面有個Service Worker正在運行。
-
-現在讓我們來示範你在使用Service Worker時可能會遇到的問題。為了演示, 我們將把`service-worker.js`裏的`install` 的事件監聽器的下面添加在`activate` 的事件監聽器。
-
-```
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-});
+);
 ```
 
-當 service worker 開始啟動時，這將會發射`activate`事件。
+`fetch`處理程序只需要處理頁面導航，因此其他請求可以從處理程序`fetch`出，並且將由瀏覽器正常處理。但是，如果請求`.mode`是`navigate` ，請使用`fetch`嘗試從網路取得項目。如果失敗，則`catch`處理程序打開快取， `caches.open(CACHE_NAME)`並使用`cache.match('offline.html')`獲得預快取的離線頁面。然後使用`evt.respondWith()`將結果傳回瀏覽器。
 
-打開DevTools並刷新網頁，切換到應用程序面板的Service Worker窗格，在已被激活的Service Worker中單擊inspect。理論上，控制臺將會出現`[ServiceWorker] Activate`的信息，但這並沒有發生。現在回去Service Worker窗格，你會發現到新的Service Worker是在“等待”狀態。
+Key Point: 中包裝`fetch`呼叫[`evt.respondWith()`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith)防止瀏覽器預設提取處理，並告訴我們要處理的回應自己的瀏覽器。如果你沒有在`fetch`處理程序中呼叫`evt.respondWith()` ，你將只獲得預設的網路行為。
 
-![1f454b6807700695.png](img/1f454b6807700695.png)
+#### DevTools Detour
 
-簡單來說，舊的Service Worker將會繼續控制該網頁直到標簽被關閉。因此，你可以關閉再重新打開該網頁或者點擊 __skipWaiting__ 的按鈕，但一個長期的解決方案是在DevTools中的Service Worker窗格啟用 __Update on Reload__ 。當那個復選框被選擇後，當每次頁面重新加載，Service Worker將會強制更新
+讓我們檢查一下，確保一切正常。打開  “服務工作者”  窗格，重整頁面，您將看到安裝了新的服務工作者，並且狀態編號會增加。
 
-啟用 __update on reload__ 復選框並重新加載頁面以確認新的Service Worker被激活。
+我們還可以查看已快取的內容。轉到 DevTools 的__Application__面板上的__Cache Storage__窗格。右鍵單擊__Cache Storage __，選擇__Refresh Caches__，展開該部分，您應該會在左側看到靜態快取的名稱。單擊快取名稱將顯示快取的所有文件。
 
-__Note:__ 您可能會在應用程序面板裏的Service Worker窗格中看到類似於下面的錯誤信息，但你可以放心的忽略那個錯誤信息。
+![c80a2a2e93c1c3ee.png](img/c80a2a2e93c1c3ee.png)
 
-![b1728ef310c444f5.png](img/b1728ef310c444f5.png)
+現在，讓我們測試離線模式。返回 DevTools 的__Service Workers__窗格並檢查__Offline__複選框。檢查後，您應該會在__Network__面板頁籤旁邊看到一個黃色警、圖示。這表示您處於離線狀態。
 
-Ok, 現在讓我們來完成`activate` 的事件處理函數的代碼以更新緩存。
+![984b34dc2aa667a.png](img/984b34dc2aa667a.png)
 
+重新載入時間同時兼具可靠性與執行效能的我們頁面說怎樣的壓力下才能算是同時擁有可靠性與效能原理！我們得到__our__離線熊貓，而不是 Chrome 的離線恐龍！
 
-    self.addEventListener('activate', function(e) {  
-      console.log('[ServiceWorker] Activate');  
-      e.waitUntil(  
-        caches.keys().then(function(keyList) {  
-          return Promise.all(keyList.map(function(key) {  
-            console.log('[ServiceWorker] Removing old cache', key);  
-            if (key !== cacheName) {  
-              return caches.delete(key);  
-            }  
-          }));  
-        })  
-      );  
-    });
+### 測試服務人員的技巧
 
+偵錯服務工作者可能是一個挑戰，當它涉及快取時，如果快取未按預期更新，事情可能變得更加噩夢。在典型的服務工作者生命週期和代碼中的錯誤之間，您可能會很快感到沮喪。 __But不要.__
 
-確保在每次修改了 service worker 後修改 `cacheName`，這能確保你永遠能夠從緩存中獲得到最新版本的文件。過一段時間清理一下緩存刪除掉沒用的數據也是很重要的。
+#### 使用DevTools
 
-最後，讓我們更新一下 app shell 需要的緩存的文件列表。在這個數組中，我們需要包括所有我們的應用需要的文件，其中包括圖片、JavaScript以及樣式表等等。
+在 “應用程式” 面板的 “服務工作者” 窗格中，有一些複選框可以使您的生活更輕鬆。
 
+![c7ac93904f473a91.png](img/c7ac93904f473a91.png)
 
-    var filesToCache = [  
-      '/',  
-      '/index.html',  
-      '/scripts/app.js',  
-      '/styles/inline.css',  
-      '/images/clear.png',  
-      '/images/cloudy-scattered-showers.png',  
-      '/images/cloudy.png',  
-      '/images/fog.png',  
-      '/images/ic_add_white_24px.svg',  
-      '/images/ic_refresh_white_24px.svg',  
-      '/images/partly-cloudy.png',  
-      '/images/rain.png',  
-      '/images/scattered-showers.png',  
-      '/images/sleet.png',  
-      '/images/snow.png',  
-      '/images/thunderstorm.png',  
-      '/images/wind.png'  
-    ];
+* __Offline__ - 選中時會模擬離線體驗並阻止任何請求進入網路。
+* __Update on reload__ - 選中後將獲得最新的服務工作者，安裝它，並立即激活它。
+* __Bypass for network__ - 當檢查請求繞過服務工作者並直接發送到網路時。
 
+#### 開始新鮮
 
-我麽的應用目前還不能離線工作。我們緩存了 app shell 的組件，但是我們仍然需要從本地緩存中加載它們。
+在某些情況下同時兼具可靠性與執行效能您我們可能說怎樣的壓力下才能算是同時擁有可靠性與效能間快取數據或者沒有按預期更新內容。要清除所有已保存的數據（localStorage，indexedDB數據，快取文件）並刪除任何服務工作者，請使用 “應用程式” 頁籤中的 “清除儲存” 窗格。或者，您也可以在隱身窗口中工作。
 
-### 從緩存中加載 app sheel
+![398bbcd285e2c5dd.png](img/398bbcd285e2c5dd.png)
 
-Service workers 可以截獲 Progressive Web App 發起的請求並從緩存中返回響應。這意味著我們能夠
-決定如何來處理這些請求，以及決定哪些網絡響應能夠成為我們的緩存。
+其他提示:
 
-比如：
+* 一旦服務工作者未註冊，它可能會一直列出，直到其包含的瀏覽器窗口關閉。
+* 如果您的同時兼具可靠性與執行效能用我們程序說怎樣的壓力下才能算是同時擁有可靠性與效能將所有窗口重新載入時間並更新到最新的服務工作者之後，新的服務工作程序將不會生效。
+* 取消註冊服務工作者不會清除快取！
+* 如果存在服務工作者並且註冊了新的服務工作者，則除非您使用[take immediate control](/web/fu同時兼具可靠性與執行效能d我們am說怎樣的壓力下才能算是同時擁有可靠性與效能mers/service-workers/lifecycle#clientsclaim) ，否則在重新載入時間頁面之前，新服務工作者將不會獲得控制[take immediate control](/web/fundamentals/primers/service-workers/lifecycle#clientsclaim) 。
 
-    self.addEventListener('fetch', function(event) {  
-      // Do something interesting with the fetch here  
-    });
+### 驗證 Lighthouse 的變化
 
+再次運行 Lighthouse 並驗證您的更改。在驗證更改之前，請不要忘記取消選中 “離線” 複選框！
 
-讓我們來從緩存中加載 app shell。將下面代碼加入 `service-worker.js` 中：
+__SEO審計___
 
+* __✅通過:__ Document有 Meta 描述。
 
-    self.addEventListener('fetch', function(e) {  
-      console.log('[ServiceWorker] Fetch', e.request.url);  
-      e.respondWith(  
-        caches.match(e.request).then(function(response) {  
-          return response || fetch(e.request);  
-        })  
-      );  
-    });
+__Progressive Web App Audit__
 
+* __✅通過:__ 當前頁面在離線時以200回應。
+* __✅通過:__ `start_url`在離線時以200回應。
+* __✅通過:__ 註冊一個控制頁面和`start_url.`的服務工作者
+* __✅通過:__ Web應用程式資訊清單符合可安裝性要求。
+* __✅通過:__ 已配置為自定義初始螢幕。
+* __✅通過:__ 設定位址列主題顏色。
 
-從內至外，`caches.match()` 從網絡請求觸發的 `fetch` 事件中得到請求內容，並判斷請求的資源是
-否存在於緩存中。然後以緩存中的內容作為響應，或者使用 [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 函數來加載資源（如果緩存中沒有該資源）。
-`response` 最後通過 `e.respondWith()` 返回給 web 頁面。
+## 提供完整的離線體驗
 
+花點時間將手機置於飛行模式，然後嘗試運行一些您喜歡的應用程式。幾乎在所有情況下，它們都提供了相當強大的離線體驗。用戶希望他們的應用程式具有強大的體驗網路應該沒有什麼不同。漸進式 Web 應用程式應設計為離線作為核心方案。
 
-### 測試
-你的應用程序現在可以在離線下使用了！　讓我們來試試吧！
+Key Point: 設計離線優先可以通過減少應用程式發出的網路請求數量來大幅提高 Web 應用程式的性能，而不是預先快取資源並直接從本地快取提供資源。即使使用最快的網路連接，從本地快取提供的服務也會更快！
 
-先刷新那個網頁, 然後去DevTools裏的 __Cache Storage__ 窗格中的 __Application__ 面板上。展開該部分，你應該會在左邊看到您的app shell緩存的名稱。當你點擊你的appshell緩存，你將會看到所有已經被緩存的資源。
+### 服務工作者生命週期
 
-![ab9c361527825fac.png](img/ab9c361527825fac.png)
+服務人員的生命週期是最複雜的部分。如果你不知道它想要做什麼以及有什麼好處，它可能會覺得它在和你作鬥爭。但是一旦你知道它是如何工作的，你就可以為用戶提供無縫，不顯眼的更新，混合最好的網路和本機模式。
 
-現在，讓我們測試離線模式。回去DevTools中的 __Service Worker__ 窗格，啟用 __Offline__ 的復選框。啟用之後，你將會在 __Network__ 窗格的旁邊看到一個黃色的警告圖標。這表示您處於離線狀態。
+Key Point: 此codelab僅涵蓋服務工作者生命週期的基礎知識。要深入了解，請參閱有關WebFundamentals的[The Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle)文章。
 
-![7656372ff6c6a0f7.png](img/7656372ff6c6a0f7.png)
+#### `install`事件
 
-刷新網頁,然後你會發現你的網頁仍然可以正常操作！
+服務工作者獲得的第一個事件是`install` 。它會在工作程序執行時立即觸發，並且每個服務工作程序只呼叫一次。 __如果您更改了服務工作者腳本，瀏覽器會將其視為不同的服務工作者___，並且它將獲得自己的`install`事件。
 
-![8a959b48e233bc93.png](img/8a959b48e233bc93.png)
+![72ed77b1720512da.png](img/72ed77b1720512da.png)
 
-下一步驟是修改該應用程序和service worker的邏輯，讓氣象數據能夠被緩存，並能在應用程序處於離線狀態，將最新的緩存數據顯示出來。
+通常， `install`事件用於快取應用程式運行所需的所有內容。
 
-__Tip:__ 如果你要清除所有保存的數據（localStoarge，IndexedDB的數據，緩存文件），並刪除任何的service worker，你可以在DevTools中的__Application__ 面板裏的Clear storage清除。
+#### `activate`事件
 
-[](https://weather-pwa-sample.firebaseapp.com/step-06/)
+服務工作者每次啟動時都會收到`activate`事件。 `activate`事件的主要目的是配置服務工作者的行為，清除以前運行中遺留的任何資源（例如舊快取），並讓服務工作者準備好處理網路請求（例如下面描述的`fetch`事件）。
 
-### 當心邊緣問題
+#### `fetch`事件
 
-之前提到過，這段代碼 **一定不要用在生產環境下** ，因為有很多沒有處理的邊界情況。
+fetch事件允許服務工作者攔截任何網路請求並處理請求。它可以進入網路取得資源，它可以從自己的快取中提取資源，產生自定義回應或任意數量的不同選項。查看[Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/)了解您可以使用的不同策略。
 
+#### 更新服務工作者
 
-#### 緩存依賴於每次修改內容後更新緩存名稱
+瀏覽器會檢查同時兼具可靠性與執行效能個我們頁面說怎樣的壓力下才能算是同時擁有可靠性與效能本的服務工作者。如果找到新版本，則會下載新版本並在後台安裝，但不會激活。它處於等待狀態，直到不再打開任何使用舊服務工作者的頁面。一旦關閉了使用舊服務工作者的所有窗口，新的服務工作者就會被激活並可以控制。有關更多詳細信息，請參閱Service Worker Lifecycle doc的[Updating the service worker](/web/fundamentals/primers/service-workers/lifecycle#updates)部分。
 
-比如緩存方法需要你在每次改變內容後更新緩存的名字。否則，緩存不會被更新，舊的內容會一直被緩存返回。
-所以，請確保每次修改你的項目後更新緩存名稱。
+### 選擇正確的快取策略
 
-#### 每次修改後所有資源都需要被重新下載
+選擇正確的[caching strategy](/web/fundamentals/instant-and-offline/offline-cookbook/)取決於您嘗試快取的資源類型以及以後可能需要的資源。對於我們的天氣應用程式，我們將需要快取的資源分為兩類:我們想要預先快取的資源以及我們將在運行時快取的數據。
 
-另一個缺點是當一個文件被修改後，整個緩存都需要被重新下載。這意味著即使你修改了一個簡單的拼寫錯誤
-也會讓整個緩存重新下載。這不太高效。
+#### 快取靜態資源
 
-#### 瀏覽器的緩存可能阻礙  service worker 的緩存的更新
+預先快取資源與用戶安裝桌面或移動應用程式時的情況類似。應用程式運行所需的關鍵資源已安裝或快取在設備上，以便以後可以載入時間它們是否存在網路連接。
 
-另外一個重要的警告。首次安裝時請求的資源是直接經由 HTTPS 的，這個時候瀏覽器不會返回緩存的資源，
-除此之外，瀏覽器可能返回舊的緩存資源，這導致 service worker 的緩存不會得到 更新。
+對於我們的應同時兼具可靠性與執行效能程我們序，說怎樣的壓力下才能算是同時擁有可靠性與效能者時預先快取所有靜態同時兼具可靠性與執行效能源我們，以說怎樣的壓力下才能算是同時擁有可靠性與效能需的一切都儲存在用戶的設備上。為了確保我們的應用程式快速載入時間，我們將使用[cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)策略;而不是去網路取得資源，而是從本地快取中取出;只有當它不可用時，我們才會嘗試從網路中取得它。
 
-#### 在生產環境中當下 cache-first 策略
+![44860840e2090bd8.png](img/44860840e2090bd8.png)
 
-我們的應用使用了優先緩存的策略，這導致所有後續請求都會從緩存中返回而不詢問網絡。優先緩存的策略是
-很容易實現的，但也會為未來帶來諸多挑戰。一旦主頁和註冊的 service worker 被緩存下來，將會很難
-去修改 service worker 的配置（因為配置依賴於它的位置），你會發現你部署的站點很難被升級。
+從本地快取中拉出可消除任何網路可變性。無論用戶使用何種網路（WiFi，5G，3G 甚至 2G），我們需要運行的關鍵資源幾乎可以立即使用。
 
-#### 我該如何避免這些邊緣問題
+Caution: 在此示例中，使用[`cache-first`](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)策略提供靜態資源，這會導致在不諮詢網路的情況下返回任何快取內容的副本。雖然`cache-first`策略易於實施，但它可能會在未來帶來挑戰。
 
-我們該如何避免這些邊緣問題呢？ 使用一個庫，比如
-[sw-precache](https://github.com/GoogleChrome/sw-precache), 它對資源何時過期提供了
-精細的控制，能夠確保請求直接經由網絡，並且幫你處理了所有棘手的問題。
+#### 快取應用數據
 
-#### 實時測試 service workers 提示
+[stale-while-revalidate strategy](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)是理想的某些類型的數據，適用於我們的應用程式。它盡可能快地在螢幕上取得數據，然後在網路返回最新數據後進行更新。 Stale-while-revalidate意味著我們需要啟動兩個異步請求，一個到快取，一個到網路。
 
-調試 service workers 是一件有調整性的事情，當涉及到緩存後，當你期望緩存更新，但實際上它並沒有的時候，事情更是變得像一場惡夢。在 service worker 典型的生命周期和你的代碼之間，你很快就會受挫。但幸運的是，這裏有一些工具可以讓你的生活更加簡單。
+![6ebb2681eb1f58cb.png](img/6ebb2681eb1f58cb.png)
 
-其他的提示：
+在正常情況下，快取數據幾乎會立即返回，為應用程式提供可以使用的最新數據。然後，當網路請求返回時，將使用來自網路的最新數據更新應用程式。
 
-* 一旦 service worker 被註銷（unregistered）。它會繼續作用直到瀏覽器關閉。
-* 如果你的應用打開了多個窗口，新的 service worker 不會工作，直到所有的窗口都進行了刷新，使用了
-新的 service worker。
-* 註銷一個 service worker 不會清空緩存，所以如果緩存名沒有修改，你可能繼續獲得到舊的數據。
-* 如果一個 service worker 已經存在，而且另外一個新的 service worker 已經註冊了，這個新的
-service worker 不會接管控制權，知道該頁面重新刷新後，除非你使用[立刻控制](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control)的方式。
+對於我們的應用程式，這提供了比網路更好的體驗，回退到快取策略，因為用戶不必等到網路請求超時才能在螢幕上看到某些內容。他們最初可能會看到較舊的數據，但一旦網路請求返回，應用程式將使用最新數據進行更新。
 
-## 使用 Service Workers 來緩存應用數據
+### 更新應用程式邏輯
 
+如前所述，應用程式需要啟動兩個異步請求，一個到快取，一個到網路。該應用程式使用`caches`可用對象`window`訪問快取和檢索最新數據。這是漸進增強的一個很好的例子，因為`caches`對象可能並非在所有瀏覽器中都可用，如果不是，網路請求仍然可以工作。
 
-選擇一個正確的緩存策略是很重要的，並且這取決於你應用中使用的數據的類型。比如像天氣信息、股票信息等對實時性要求較高的數據，應該時常被刷新，但是用戶的頭像或者文字內容應該以較低的頻率進行更新。
+更新`getForecastFromCache()`函數，檢查`caches`像是否在全局`window`對`caches`中可用，如果是，請從快取中請求數據。
 
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L164)
 
-
-**先使用緩存後使用請求結果** 的策略對於我們的應用是非常理想的選擇。應用從緩存中獲取數據，並立刻顯示在屏幕上，然後在網絡請求返回後再更新頁面。如果使用 **先請求網絡後緩存** 的策略，用戶可能不會等到數據從網絡上加載回來便離開了應用。
-
-**先使用緩存後使用請求結果** 意味著我們需要發起兩個異步的請求，一個從請求緩存，另一個請求網絡。我們應用中的網絡請求不需要進行修改，但我們需要修改一下 service worker 的代碼來緩存網絡請求的響應並返回響應內容。
-
-通常情況下，應該立刻返回緩存的數據，提供應用能夠使用的最新信息。然後當網絡請求返回後應用應該使用最新加載的數據來更新。
-
-### 截獲網絡請求並緩存響應結果
-
-我麽需要修改 service worker 來截獲對天氣 API 的請求，然後緩存請求的結果，以便於以後使用。**先使用緩存後使用請求結果** 的策略中，我們希望請求的響應是真實的數據源，並始終提供給我們最新的數據。如果它不能做到，那也沒什麽，因為我們已經從緩存中給應用提供了最新的數據。
-
-在 service worker 中，我們添加一個 `dataCacheName` 變量，以至於我們能夠將應用數據和應用外殼資源分開。當應用外殼更新了，應用外殼的緩存就沒用了，但是應用的數據不會受影響，並時刻保持能用。記住，如果將來你的數據格式改變了，你需要一種能夠讓應用外殼和應用數據能後保持同步的方法。
-
-將下面代碼添加至你的 `service-worker.js` 中：
-
-    var dataCacheName = 'weatherData-v1';
-
-接下來，我麽需要更新`activate`事件的回調函數，以它清理應用程序的外殼(app shell)緩存，並不會刪除數據緩存。
-
-    if (key !== cacheName && key !== dataCacheName) {
-
-最後，我麽需要修改 `fetch` 事件的回調函數，添加一些代碼來將請求數據 API 的請求和其他請求區分開來。
-
-    self.addEventListener('fetch', function(e) {  
-      console.log('[ServiceWorker] Fetch', e.request.url);  
-      var dataUrl = 'https://publicdata-weather.firebaseio.com/';  
-      if (e.request.url.indexOf(dataUrl) === 0) {  
-        // Put data handler code here  
-      } else {  
-        e.respondWith(  
-          caches.match(e.request).then(function(response) {  
-            return response || fetch(e.request);  
-          })  
-        );  
-      }  
-    });
-
-
-這段代碼對請求進行攔截，判斷請求的 URL 的開頭是否為該天氣 API，如果是，我們使用 `fetch` 來發起請求。一旦有響應返回，我們的代碼就打開緩存並將響應存入緩存，然後將響應返回給原請求。
-
-接下來，使用下面代碼替換 `// Put data handler code here`
-
-    e.respondWith(  
-      fetch(e.request)  
-        .then(function(response) {  
-          return caches.open(dataCacheName).then(function(cache) {  
-            cache.put(e.request.url, response.clone());  
-            console.log('[ServiceWorker] Fetched&Cached Data');  
-            return response;  
-          });  
-        })  
-    );
-
-
-我們的應用目前還不能離線工作。我們已經實現了從緩存中返回應用外殼，但即使我們緩存了數據，依舊需要依賴網絡。
-
-### 發起請求
-
-之前提到過，應用需要發起兩個異步請求，一個從請求緩存，另一個請求網絡。應用需要使用 `window` 上的 `caches` 對象，並從中取到最新的數據。這是一個關於漸進增強 _極佳_ 的例子，因為 `caches` 對象可能並不是在任何瀏覽器上都存在的，且就算它不存在，網絡請求依舊能夠工作，只是沒有使用緩存而已。
-
-為了實現該功能，我們需要：
-
-1. 檢查 `cahces` 對象是否存在在全局 `window` 對象上。
-2. 向緩存發起請求
-
-* 如果向服務器發起的請求還沒有返回結果，使用緩存中返回的數據更新應用。
-
-3. 向服務器發起請求
-
-* 保存響應結果便於在之後使用
-* 使用從服務器上返回的最新數據更新應用
-
-#### 從緩存中獲取資料
-
-接下來，我們需要檢查 `caches` 對象是否存在，若存在，就向它請求最新的數據。將下面這段代碼添加至 `app.getForecast()` 方法中。
-
-    if ('caches' in window) {
-      /*
-       * Check if the service worker has already cached this city's weather
-       * data. If the service worker has the data, then display the cached
-       * data while the app fetches the latest data.
-       */
-      caches.match(url).then(function(response) {
-        if (response) {
-          response.json().then(function updateFromCache(json) {
-            var results = json.query.results;
-            results.key = key;
-            results.label = label;
-            results.created = json.query.created;
-            app.updateForecastCard(results);
-          });
-        }
-      });
-    }
-
-我們的天氣應用現在發起了兩個異步請求，一個從緩存中，另一個經由 XHR。如果有數據存在於緩存中，它將會很快地（幾十毫秒）被返回並更新顯示天氣的卡片，通常這個時候 XHR 的請求還沒有返回來。之後當 XHR 的請求響應了以後，顯示天氣的卡片將會使用直接從天氣 API 中請求的最新數據來更新。
-
-如果因為某些原因，XHR 的響應快於 cache 的響應，`hasRequestPending` 標誌位會阻止緩存中數據覆蓋從網路上請求的數據。
-
-
-    var cardLastUpdatedElem = card.querySelector('.card-last-updated');
-    var cardLastUpdated = cardLastUpdatedElem.textContent;
-    if (cardLastUpdated) {
-      cardLastUpdated = new Date(cardLastUpdated);
-      // Bail if the card has more recent data then the data
-      if (dataLastUpdated.getTime() < cardLastUpdated.getTime()) {
-        return;
+```js
+// CODELAB: Add code to get weather forecast from the caches object.
+if (!('caches' in window)) {
+  return null;
+}
+const url = `${window.location.origin}/forecast/${coords}`;
+return caches.match(url)
+    .then((response) => {
+      if (response) {
+        return response.json();
       }
-    }
+      return null;
+    })
+    .catch((err) => {
+      console.error('Error getting data from cache', err);
+      return null;
+    });
+```
 
-### 親自嘗試
+然後，我們需要修改[`updateData()`](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L196)以便它進行兩次呼叫，一次呼叫`getForecastFromNetwork()`以從網路取得預測，另一次`getForecastFromCache()`以取得最新的快取預測:
 
-現在應用應該能夠離線工作了。嘗試關閉裏本地啟動的服務器，並切斷網絡，然後刷新頁面。
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L200)
 
+```js
+// CODELAB: Add code to call getForecastFromCache.
+getForecastFromCache(location.geo)
+    .then((forecast) => {
+      renderForecast(card, forecast);
+    });
+```
 
-然後去DevTools的 __Application__ 面板上的 __Cache Storage__ 窗格。
-展開該部分，你應該會在左邊看到您的app shell緩存的名稱。當你點擊你的appshell緩存，你將會看到所有已經被緩存的資源。
+我們的天氣應用程式現在發出兩個異步數據請求，一個來自快取，另一個來自`fetch` 。如果快取中有數據，它將被非常快速地返回和渲染（數十毫秒）。然後，當`fetch`回應時，將使用直接來自天氣API的最新數據更新卡。
 
-![cf095c2153306fa7.png](img/cf095c2153306fa7.png)
+請注意快取請求和`fetch`請求如何以更新預測卡的呼叫結束。應用程式如何知道它是否顯示最新數據？這在`renderForecast()`的以下代碼中處理:
 
-[](https://weather-pwa-sample.firebaseapp.com/step-07/)
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L85)
 
+```js
+// If the data on the element is newer, skip the update.
+if (lastUpdated >= data.currently.time) {
+  return;
+}
+```
 
+每次更新卡時，應用程式都會將數據的時間戳儲存在卡上的隱藏屬性中。如果卡上已存在的時間戳比傳遞給函數的數據更新，則應用程式就會失效。
 
-## 支持集成入原生應用
+### 預先快取我們的應用資源
 
+在服務工作者中，讓我們新增一個`DATA_CACHE_NAME`以便我們可以將應用程式數據與app s同時兼具可靠性與執行效能e我們ll說怎樣的壓力下才能算是同時擁有可靠性與效能殼並清除舊快取後，我們的數據將保持不變，為超快速載入時間做好準備。請記住，如果您的數據格式將來發生變化，您需要一種方法來處理這種情況，並確保應用程式外殼和內容保持同步。
 
-沒有人喜歡在手機的鍵盤上輸入一長串的 URL，有了添加至主屏幕的功能，你的用戶可以選擇添加一個圖標在他們的屏幕上，就像從應用商店安裝一個原生應用那樣。而且這兒添加一個圖標是更加容易的。
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L21)
 
+```js
+// CODELAB: Update cache names any time any of the cached files change.
+const CACHE_NAME = 'static-cache-v2';
+const DATA_CACHE_NAME = 'data-cache-v1';
+```
 
-### Web 應用安裝橫幅和添加至主屏
+別忘了也更新`CACHE_NAME` ;我們也將改變我們所有的靜態資源。
 
+為了使我們的應用程式離線工作，我們需要預先快取它所需的所有資源。這也有助於我們的表現。該應用程式無需從網路取得所有資源，而是可以從本地快取載入時間所有資源，從而消除任何網路不穩定性。
 
-web 應用安裝橫幅給你能夠讓用戶快速地將 web 應用添加至他們的主屏的能力，讓他們能夠很容易地再次進入你的應用。添加應用安裝橫幅是很簡單的，Chrome 處理了幾乎所有事情，我麽只需要簡單地包含一個應用程序清單（manifest）來說明你的應用的一些細節。
+使用文件列表同時兼具可靠性與執行效能新我們`F說怎樣的壓力下才能算是同時擁有可靠性與效能CHE`數組:
 
-Chrome 使用了一系列標準包括對 service worker 的使用，加密連接狀態以及用戶的訪問頻率決定了什麽時候展示這個橫幅。除此之外，用戶可以手動地通過 Chrome 中 “添加至主屏” 這個菜單按鈕來添加。
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L23)
 
+```js
+// CODELAB: Add list of files to cache here.
+const FILES_TO_CACHE = [
+  '/',
+  '/index.html',
+  '/scripts/app.js',
+  '/scripts/install.js',
+  '/scripts/luxon-1.11.4.js',
+  '/styles/inline.css',
+  '/images/add.svg',
+  '/images/clear-day.svg',
+  '/images/clear-night.svg',
+  '/images/cloudy.svg',
+  '/images/fog.svg',
+  '/images/hail.svg',
+  '/images/install.svg',
+  '/images/partly-cloudy-day.svg',
+  '/images/partly-cloudy-night.svg',
+  '/images/rain.svg',
+  '/images/refresh.svg',
+  '/images/sleet.svg',
+  '/images/snow.svg',
+  '/images/thunderstorm.svg',
+  '/images/tornado.svg',
+  '/images/wind.svg',
+];
+```
 
-#### 使用 `manifest.json` 文件來聲明一個應用程序清單
+由於我們手動產生要快取的文件列表，因此每次更新文件時__必須更新`CACHE_NAME` __。我們能夠從快取文件列表中刪除`offline.html` ，因為我們的應用程式現在具有離線工作所需的所有必要資源，並且不會再次顯示離線頁面。
 
-web 應用程序清單是一個簡單的 JSON 文件，它給你了控制你的應用如何出現在用戶期待出現的地方（比如用戶手機主屏幕），這直接影響到用戶能啟動什麽，以及更重要的，用戶如何啟動它。
+Caution: 在此示例中，我們手動推出了自己的服務工作者。每次我們更新任何靜態資源時，我們都需要重新重整服務工作者並更新快取，否則將提供舊內容。此外，當一個文件更改時，整個快取無效並需要重新下載。這意味著修復一個簡單的單字符拼寫錯誤將使快取無效並要求再次下載所有內容 - 效率不高。 [Workbox](/web/tools/workbox/)優雅地處理它，通過將其整合到您的建置過程中，只更新已更改的文件，為用戶節省帶寬並為您更輕鬆地進行維護！
 
-使用 web 應用程序清單，你的應用可以：
+#### 更新activate事件處理程序
 
-* 能夠真實存在於用戶主屏幕上
-* 在 Android 上能夠全屏啟動，不顯示地址欄
-* 控制屏幕方向已獲得最佳效果
-* 定義啟動畫面，為你的站點定義主題
-* 追蹤你的應用是從主屏幕還是 URL 啟動的
+為了確保我們`activate`事件不小心刪除我們的數據，在`activate`事件`service-worker.js` ，更換`if (key !== CACHE_NAME) {`有:
 
-<div class="clearfix"></div>
+#### public / service-worker.js
 
-    {
-      "name": "Weather",
-      "short_name": "Weather",
-      "icons": [{
-        "src": "images/icons/icon-128x128.png",
-          "sizes": "128x128",
-          "type": "image/png"
-        }, {
-          "src": "images/icons/icon-144x144.png",
-          "sizes": "144x144",
-          "type": "image/png"
-        }, {
-          "src": "images/icons/icon-152x152.png",
-          "sizes": "152x152",
-          "type": "image/png"
-        }, {
-          "src": "images/icons/icon-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }, {
-          "src": "images/icons/icon-256x256.png",
-          "sizes": "256x256",
-          "type": "image/png"
-        }],
-      "start_url": "/index.html",
-      "display": "standalone",
-      "background_color": "#3E4EB8",
-      "theme_color": "#2F3BA2"
-    }
+```js
+if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
+```
 
-追蹤你的應用是從哪兒啟動的最簡單方式是在 `start_url` 參數後面添加一個查詢字符串，然後使用工具來分析查詢字段。如果你使用這個方法，記得要更新應用外殼緩存的文件，確保含有查詢字段的文件被緩存。
+#### 更新fetch事件處理程序
 
-#### 告訴瀏覽器你的程序清單文件
+我們需要修改服務工作者以攔截對weather API的請求並將其回應儲存在快取中，以便我們以後可以輕鬆訪問它們。在陳舊的重新驗證策略中，我們期望網路回應成為 “事實來源”，始終向我們提供最新信息。如果不能，則可以失敗，因為我們已經在應用程式中檢索了最新的快取數據。
 
-將這段代碼添加至你的 `index.html` 的 `<head>` 部分：
+更新`fetch`事件處理程序以獨立於其他請求處理對數據API的請求。
 
-    <link rel="manifest" href="/manifest.json">
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L42)
 
-#### 最佳實踐
+```js
+// CODELAB: Add fetch event handler here.
+if (evt.request.url.includes('/forecast/')) {
+  console.log('[Service Worker] Fetch (data)', evt.request.url);
+  evt.respondWith(
+      caches.open(DATA_CACHE_NAME).then((cache) => {
+        return fetch(evt.request)
+            .then((response) => {
+              // If the response was good, clone it and store it in the cache.
+              if (response.status === 200) {
+                cache.put(evt.request.url, response.clone());
+              }
+              return response;
+            }).catch((err) => {
+              // Network request failed, try to get it from the cache.
+              return cache.match(evt.request);
+            });
+      }));
+  return;
+}
+evt.respondWith(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.match(evt.request)
+          .then((response) => {
+            return response || fetch(evt.request);
+          });
+    })
+);
+```
 
-* 將程序清單的鏈接添加至你站點的所有頁面上，這樣在用戶第一次訪問的時候它能夠被 Chrome 正確檢索到，且不管用戶從哪個頁面訪問的。
-* 如果同時提供了 `name` 和 `short_name`，`short_name` 是 Chrome 的首選。
-* 為不同分辨率的屏幕提供不同的 icon。Chrome 會嘗試使用最接近 48dp 的圖標，比如在 2x 屏上使用 96px 的，在 3x屏上使用 144px 的。
-* 記得要包含一個適合在啟動畫面上顯示的圖標，另外別忘了設置 `background_color`。
+該代碼攔截請求並檢查它是否用於天氣預報。如果是，請使用 `fetch` 發出請求。返迴回應後，打開快取，複製回應，將其儲存在快取中，然後將回應返回給原始請求者。
 
-擴展閱讀：[使用應用安裝橫幅](/web/fundamentals/engage-and-retain/simplified-app-installs/)
+我們需要刪除`evt.request.mode !== 'navigate'`檢查，因為我們希望我們的服務工作者處理所有請求（包括圖像，腳本，CSS文件等），而不僅僅是導航。如果我們離開該簽入，則只從服務工作者快取中提供HTML，其他所有內容都將從網路請求。
 
+### 試一試
 
-### iOS Safari 的添加至主屏幕元素
+該應用程式現在應該完全離線功能。重整頁面以確保您已安裝最新的服務工作者，然後保存幾個城市並按應用程式上的重新整理按鈕以取得新的天氣數據。
 
-在 `index.html` 中，將下面代碼添加至 `<head>` 中：
+然後轉到 DevTools 的__Application__面板上的__Cache Storage__窗格。展開該部分，您應該會在左側看到靜態快取和數據快取的名稱。打開數據快取應顯示為每個城市儲存的數據。
 
-    <!-- Add to home screen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Weather PWA">
-    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+![731e91776cb6ef18.png](img/731e91776cb6ef18.png)
 
-### Windows 上的貼片圖標
+然後，打開 DevTools 並切換到Service Workers窗格，選中Offline複選框，然後嘗試重新載入時間頁面，然後離線並重新載入時間頁面。
 
-在 `index.html` 中，將下面代碼添加至 `<head>` 中：
+如果你是一個同時兼具可靠性與執行效能速我們的網說怎樣的壓力下才能算是同時擁有可靠性與效能預報數據是如何更新連接速度慢，設定`FORECAST_DELAY`物業`server.js`到`5000` 。對預測API的所有請求都將延遲5000毫秒。
 
-    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
+### 驗證 Lighthouse 的變化
 
-### 親自嘗試
+再次運行 Lighthouse 也是一個好主意。
 
-* 嘗試將應用在你的 Android Chrome 上添加至首屏，並確認啟動畫面上使用了正確的圖標。
-* 檢查一下 Safari 和 Internet Explorer 確認圖標正確地出現了。
+__SEO審計___
 
-[](https://weather-pwa-sample.firebaseapp.com/step-08/)
+* __✅通過:__ Document有 Meta 描述。
 
+__Progressive Web App Audit__
 
-## 部署在安全的主機上
+* __✅通過:__ 當前頁面在離線時以200回應。
+* __✅通過:__  `start_url`在離線時以200回應。
+* __✅通過:__ 註冊一個控制頁面和`start_url.`的服務工作者
+* __✅通過:__ Web應用程式資訊清單符合可安裝性要求。
+* __✅通過:__ 已配置為自定義初始螢幕。
+* __✅通過:__ 設定位址列主題顏色。
 
+## 新增安裝經驗
 
+安裝Progressive Web App後，其外觀和行為與所有其他已安裝的應用程式類似。它與其他應用程式啟動時的位置相同。它在沒有位址列或其他瀏覽器UI的應用程式中運行。與所有其他已安裝的應用程式一樣，它是任務切換器中的頂級應用程式。
 
-最後一步是將我們的天氣應用部署在一個支撐 HTTPs 的服務器上。如果你目前還沒有一個這樣的主機，那麽最簡單（且免費）的方法絕對是使用我們的靜態資源部署服務 Firebase。它非常容易使用，通過 HTTPs 來提供服務且在全球 CDN 中。
+![d824e1712e46a1cc.png](img/d824e1712e46a1cc.png)
 
+在 Chrome 中，可以通過三點上下文選單安裝漸進式 Web 應用程式，也可以向用戶提供按鈕或其他UI組件，以提示他們安裝您的應用程式。
 
-### 可優化的地方：壓縮並內聯 CSS 樣式
+Success: 由於 Chrome 的三點上下文選單中的安裝體驗有點埋沒，我們建議您在應用程式中提供一些指示以通知用戶您的應用程式可以安裝，並使用安裝按鈕完成安裝過程。
 
-還有一些你需要考慮的事情，壓縮關鍵的 CSS 樣式並將其內聯在 `index.html` 中。[Page Speed Insights](/speed) 建議以上內容要在 15k 以內。
+### 審計與Lighthouse
 
-看看當所有內容都內聯後，首次加載資源有多大。
+為了使用戶能夠安裝Progressive Web App，它需要滿足[certain criteria](/web/fundamentals/app-install-banners/#criteria) 。最簡單的方法是使用 Lighthouse 並確保它符合可安裝的標準。
 
-**擴展閱讀:** [PageSpeed Insight Rules](/speed/docs/insights/rules)
+![b921f5583fcddf03.png](img/b921f5583fcddf03.png)
 
-### 部署到 Firebase
+如果您使用此程式庫，您的 PWA 應該已經符合這些標準。
 
-如果你首次使用 Firebase，那麽你需要使用你的 Google 賬號登錄 Firebase 並安裝一些工具。
+Key Point: 對於本節，在 DevTools 的** Application **面板的** Service Workers **窗格中啟用** Bypass for network **複選框。選中後，請求將繞過服務工作者並直接發送到網路。這簡化了我們的開發過程，因為我們在完成本節時不必更新我們的服務工作者。
 
-1. 使用你的 Google 賬號登錄 Firebase [https://firebase.google.com/](https://firebase.google.com/)
-2. 通過 npm 安裝 Firebase 工具 :<br/>
-   `npm install -g firebase-tools`
+### 將install.js新增到index.html
 
-你的賬號被創建且已經登錄後，你就可以開始部署了！
+首先，讓我們將`install.js`新增到`index.html`文件中。
 
-1. 創建一個新的應用，在這兒：[https://console.firebase.google.com/](https://console.firebase.google.com/)
-2. 如果你最近沒有登錄過 Firebase 工具，請更新你的證書:<br/>
-   `firebase login`
-3. 初始化你的應用，並提供你完成了應用的目錄位置：<br/>
-   `firebase init`
-4. 最後，將應用部署至 Firebase:<br/>
-   `firebase deploy`
-5. 祝賀你。你完成了，你的應用將會部署在：<br/>
-   `https://YOUR-FIREBASE-APP.firebaseapp.com`
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L204)
 
-**擴展閱讀:** [Firebase Hosting
-Guide](https://firebase.google.com/docs/hosting/)
+```html
+<!-- CODELAB: Add the install script here -->
+<script src="/scripts/install.js"></script>
+```
 
-### 親自嘗試
+### 收聽`beforeinstallprompt`活動
 
-* 試著將應用添加至你的主屏幕，然後斷開網絡連接，看看它是否能在離線的情況下很好的工作。
+如果符合新增到主螢幕[criteria](/web/fundamentals/app-install-banners/#criteria) ，Chrome將觸發`beforeinstallprompt`事件，您可以使用該事件指示您的應用可以 “安裝”，然後提示用戶安裝它。新增以下代碼以收聽`beforeinstallprompt`事件:
 
-[](https://weather-pwa-sample.firebaseapp.com/final/)
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L24)
 
+```js
+// CODELAB: Add event listener for beforeinstallprompt event
+window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
+```
 
-Translated By:
-{% include "web/_shared/contributors/henrylim.html" %}
-{% include "web/_shared/contributors/wangyu.html" %}
+### 保存事件並顯示安裝按鈕
+
+在我們的`saveBeforeInstallPromptEvent`函數中，我們將保存對`beforeinstallprompt`事件的引用，以便我們稍後可以在其上呼叫`prompt()` ，並更新我們的UI以顯示安裝按鈕。
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L34)
+
+```js
+// CODELAB: Add code to save event & show the install button.
+deferredInstallPrompt = evt;
+installButton.removeAttribute('hidden');
+```
+
+### 顯示提示/隱藏按鈕
+
+當用戶單擊安裝按鈕時，我們需要在保存的`beforeinstallprompt`事件上呼叫`.prompt()` 。我們還需要隱藏安裝按鈕，因為`.prompt()`只能在每個保存的事件上呼叫一次。
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L45)
+
+```js
+// CODELAB: Add code show install prompt & hide the install button.
+deferredInstallPrompt.prompt();
+// Hide the install button, it can't be called twice.
+evt.srcElement.setAttribute('hidden', true);
+```
+
+呼叫`.prompt()`將向用戶顯示模式對話框，要求他們將您的應用新增到主螢幕。
+
+### 記錄結果
+
+您可以通過偵聽已保存的`beforeinstallprompt`事件的`userChoice`屬性返回的保證來檢查用戶如何回應安裝對話框。在提示顯示並且用戶已對其作出回應後，promise將返回具有`outcome`屬性的對象。
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L47)
+
+```js
+// CODELAB: Log user response to prompt.
+deferredInstallPrompt.userChoice
+    .then((choice) => {
+      if (choice.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt', choice);
+      } else {
+        console.log('User dismissed the A2HS prompt', choice);
+      }
+      deferredInstallPrompt = null;
+    });
+```
+
+關於`userChoice`一個評論， [spec defines it as a property](https://w3c.github.io/manifest/#beforeinstallpromptevent-interface) ，不是你所期望的功能。
+
+#### 記錄所有安裝事件
+
+除了您新增的用於安裝應用的任何UI之外，用戶還可以通過其他方法安裝PWA，例如 Chrome 的三點式選單。要跟踪這些事件，請偵聽appinstalled事件。
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L51)
+
+```js
+// CODELAB: Add event listener for appinstalled event
+window.addEventListener('appinstalled', logAppInstalled);
+```
+
+然後，我們需要更新`logAppInstalled`函數，對於這個程式庫，我們只使用`console.log` ，但在生產應用程式中，您可能希望將其作為事件記錄在您的分析軟件中。
+
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L60)
+
+```js
+// CODELAB: Add code to log the event
+console.log('Weather App was installed.', evt);
+```
+
+### 更新服務工作者
+
+不要忘記更新`CACHE_NAME`在`service-worker.js`文件，因為你所做的已快取文件的更改。在 DevTools 的 “應用程式” 面板的 “服務工作者” 窗格中啟用__Bypass for network__複選框將在開發中工作，但在現實世界中無濟於事。
+
+### 試一試
+
+讓我們看看我們的安裝步驟是如何進行的。為了安全起見，使用 DevTools 應用程式面板中的__Clear站點數據__按鈕清除所有內容並確保我們重新開始。如果您之前安裝了該應用程式，請務必將其卸載，否則安、圖示將不會再次顯示。
+
+#### 確認安裝按鈕可見
+
+首先，讓我們驗證我們的安、圖示是否正確顯示，請務必在桌面和行動裝置上試用。
+
+1. 在新的 Chrome 標籤頁中打開網址。
+2. 打開 Chrome 的三點選單（位址列旁邊）。
+▢確認您在選單中看到 “*安裝 Weather......*”。
+3. 使用右上角的重新整理按鈕重整天氣數據，以確保我們符合[user engagement heuristics](/web/fundamentals/app-install-banners/#criteria) 。
+▢確認應用程式標題中顯示安、圖示。
+
+#### 驗證安裝按鈕是否有效
+
+接下來，讓我們確保一切安裝正確，並正確觸發我們的事件。您可以在桌面設備或行動裝置上執行此操作。如果您想在行動裝置上進行測試，請確保使用遠程偵錯，以便查看登錄到控制台的內容。
+
+1. 打開Chrome，然後在新的瀏覽器標籤中，導航到您的Weather PWA。
+2. 打開 DevTools 並切換到 “控制台” 窗格。
+3. 單擊右上角的安裝按鈕。
+▢確認安裝按鈕消失▢確認顯示安裝模式對話框。
+4. 單擊 “取消”。
+▢驗證 “*用戶解除了A2HS提示*” 顯示在控制台輸出中。
+▢確認重新出現安裝按鈕。
+5. 再次單擊安裝按鈕，然後單擊模式對話框中的安裝按鈕。
+▢驗證 “*用戶接受A2HS提示*” 顯示在控制台輸出中。
+▢確認 “*已安裝天氣應用程式*” 顯示在控制台輸出中。
+▢確認天氣應用已新增到您通常會找到應用的位置。
+6.啟動Weather PWA。
+▢驗證應用程式是作為獨立應用程式打開的，可以在桌面上的應用程式窗口中，也可以在行動裝置上全屏顯示。
+
+請注意，如果您從localhost在桌面上運行，則您安裝的 PWA 可能會顯示地址標題，因為localhost不被視為安全主機。
+
+#### 驗證 iOS 安裝是否正常
+
+我們還要檢查 iOS 上的行為。如果您有 iOS 設備，可以使用它，或者如果您使用的是Mac，請嘗試使用Xcode提供的 iOS 模擬器。
+
+1. 打開 Safari，在新的瀏覽器頁籤中，導航到 Weather PWA。
+2. 單擊 *共享* ![8ac92dd483c689d3.png](img/8ac92dd483c689d3.png) 按鈕。
+3. 向右捲動並找到 Weather 增到主螢幕*按鈕。▢ 驗證標題，URL、圖示是否正確。
+4. 單擊 *新增* ▢ 確認應用程式圖示已新增到主螢幕。
+5. 從主螢幕啟動 Weather PWA。▢ 確認應用程式全屏啟動。
+
+### 獎勵:檢測您的應用是否從主螢幕啟動
+
+`display-mode`媒體查詢可以根據應用程式的啟動方式應用樣式，或者確定如何使用 JavaScript 啟動樣式。
+
+```css
+@media all and (display-mode: standalone) {
+  body {
+    background-color: yellow;
+  }
+}
+```
+
+您還可以檢查`display-mode`在媒體查詢[JavaScript to see if you're running in standalone](/web/fundamentals/app-install-banners/#detect-mode) 。
+
+### 獎勵:卸載您的 PWA
+
+請記住，如果已經安裝了應用程式，則`beforeinstallevent`不會觸發，因此在開發期間，您可能需要多次安裝和卸載應用程式，以確保一切正常運行。
+
+#### Android
+
+在Android上，卸載 PWA 的方式與卸載其他已安裝的應用程式的方式相同。
+
+* 打開應用程式抽屜。
+* 向下捲動以找到 Weather 圖示。
+* 將應用程式圖示拖到螢幕頂部。
+* 選擇*卸載。*
+
+#### ChromeOS
+
+在ChromeOS上，可以從啟動器搜尋框輕鬆卸載 PWA。
+
+* 打開發射器。
+* 在搜尋框中輸入 “*Weather*” ，您的 Weather PWA 應出現在搜尋結果中。
+* 右鍵單擊（按住 alt 鍵單擊）Weather PWA。
+* 點擊*從 Chrome 中刪除...*
+
+#### macOS 和 Windows
+
+在 Mac 和 Windows 上，必須通過 Chrome 卸載 PWA。
+
+* 在新的瀏覽器標籤中，打開chrome:// apps。
+* 右鍵單擊（按住 alt 鍵單擊）Weather PWA。
+* 點擊*從 Chrome 中刪除...*
+
+## 恭喜
+
+恭喜，您已經成功建置了第一個 Progressive Web App！
+
+您新增了一個 Web 應用程式資訊清單以使其能夠安裝，並且您新增了一個服務工作者以確保您的 PWA 始終快速且可靠。您學習瞭如何使用 DevTools 審核應用程式以及它如何幫助您改善用戶體驗。
+
+您現在知道將任何 Web 應用程式轉換為Progressive Web App所需的關鍵步驟。
+
+※ 本文由 [Will 保哥](https://blog.miniasp.com/) 協助正體中文翻譯。
+
+### 進一步閱讀
+
+* [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
+* [Service Worker Caching Strategies Based on Request Types](https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c)
+
+### 參考文件
+
+* [Web App Manifest docs](/web/fundamentals/web-app-manifest)
+* [Web App Manifest properties (MDN)](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members)
+* [Install & Add to Home Screen](/web/fundamentals/app-install-banners/)
+* [Service Worker Overview](/web/fundamentals/primers/service-workers/)
+* [Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle)
+* [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
+* [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/#generic-fallback)
+
+## 發現了問題，或者有反饋？ {: .hide-from-toc }
+
+今天提交 [issue](https://github.com/googlecodelabs/your-first-pwapp/issues) 幫助我們改進代碼實驗室。謝謝！
+
+{% include "web/_shared/translation-end.html" %}

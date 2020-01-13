@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Modifying the DOM order with tabindex
 
 
-{# wf_updated_on: 2018-03-19 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: N/A #}
 
@@ -363,7 +363,7 @@ the tab behavior, but prevents the user from leaving it until it's complete.
 This is called a *keyboard trap*, and it can be very frustrating for the user.
 Section 2.1.2 of the Web AIM checklist addresses this issue, stating that
 [keyboard focus should never be locked or trapped at one particular page
-element](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
+element](https://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
 The user should be able to navigate to and from all page elements using only the
 keyboard.
 
@@ -419,3 +419,6 @@ code](https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and
 and view a live example from a [completed
 page](http://udacity.github.io/ud891/lesson2-focus/07-modals-and-keyboard-traps/solution/index.html){: .external }.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

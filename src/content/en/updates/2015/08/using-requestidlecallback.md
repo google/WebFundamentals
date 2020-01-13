@@ -297,4 +297,3 @@ All being well we will now see much less jank when appending items to the DOM. E
 Check it out in Chrome Canary, give it a spin for your projects, and let us know how you get on!
 
 
-{% include "comment-widget.html" %}

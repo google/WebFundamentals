@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Modificación del orden en el DOM con tabindex
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Uso de tabindex {: .page-title }
@@ -356,7 +356,7 @@ salir. Piensa en un widget para autocompletar que intente administrar el foco y 
 el comportamiento de pestañas, pero que evite que el usuario salga hasta que esté completo.
 Esto se llama una *trampa de teclado*, y puede ser muy molesta para el usuario.
 La sección 2.1.2 de la lista de comprobación de la Web AIM trata este tema y menciona que
-[el foco del teclado nunca debería bloquearse ni atraparse en un elemento de la página en especial](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
+[el foco del teclado nunca debería bloquearse ni atraparse en un elemento de la página en especial](https://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
 El usuario debería poder navegar desde todos los elementos de página y hacia los mismos usando únicamente el
 teclado.
 

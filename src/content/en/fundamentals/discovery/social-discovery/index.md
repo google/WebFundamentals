@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
 
-{# wf_updated_on: 2017-10-31 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-10-07 #}
 
 # Social Discovery {: .page-title }
@@ -96,14 +97,6 @@ in [this page](https://schema.org/docs/full.html).
 metadata to social sites, typical `itemprop` values are `name`, `description`,
 and `image`.
 
-### Learn more
-These microdata provide semantic information to crawlers, typically for
-[Google+](https://plus.google.com/){: .external } and Google Search. To learn more about
-snippets and rendering on Google+, read the following documents:
-
-* [Article Rendering - Google+ Platform](/+/web/snippet/article-rendering)
-* [Snippet - Google+ Platform](/+/web/snippet/)
-
 ### Validate rich snippets
 In order to validate rich snippets on Google+, you can use tools such as:
 
@@ -160,8 +153,7 @@ Properties and contents may take the following values:
 </table>
 
 These meta tags provide semantic information to crawlers from social sites,
-typically from [Google+](https://plus.google.com/){: .external } and
-[Facebook](https://www.facebook.com/){: .external }.
+like [Facebook](https://www.facebook.com/){: .external }.
 
 ### Learn more
 To learn more about things you can attach to the post on Facebook, visit the
@@ -227,3 +219,6 @@ reusing `meta` tag with `property="og:image"`
 Lastly, make sure to validate that your web page appears as expected on each
 social site before publishing.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

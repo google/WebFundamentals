@@ -20,7 +20,7 @@
         XMLHttpRequest mixed content example!
       </h1>
       <p>
-        View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html">HTTPS</a>
+        View page over: <a href="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html">HTTPS</a>
       </p>
       <p>
         This page constructs an HTTP URL dynamically in JavaScript, the URL is eventually used to load an insecure resource by XMLHttpRequest. When the xmlhttprequest-data.js file is requested by the browser, an attacker can inject code into the returned content and take control of the entire page. Thankfully, most modern browsers block this type of dangerous content by default and display an error in the JavaScript console. This can be seen when the page is viewed over HTTPS.
@@ -28,7 +28,7 @@
       <div id="output">Waiting for data...</div>
       <!-- // [START snippet1] -->
       <script>
-        var rootUrl = 'http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content';
+        var rootUrl = 'http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content';
         var resources = {
           jsonData: '/xmlhttprequest-data.js'
         };

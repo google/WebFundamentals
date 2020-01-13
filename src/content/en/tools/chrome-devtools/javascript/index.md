@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to find and fix JavaScript bugs.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-01-05 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-01-04 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -343,3 +343,7 @@ learn when and how to use each type.
 
 There's a couple of code stepping controls that weren't explained in this tutorial. See [Step
 over line of code](/web/tools/chrome-devtools/javascript/reference#stepping) to learn more.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

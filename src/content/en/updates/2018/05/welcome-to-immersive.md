@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-05-10 #}
+{# wf_updated_on: 2018-07-30 #}
 {# wf_published_on: 2018-05-08 #}
-{# wf_tags: webxr #}
+{# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
 {# wf_featured_snippet: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets. #}
 {# wf_blink_components: Blink>WebVR #}
@@ -32,11 +32,11 @@ thought of as a spectrum from complete reality to a completely immersive VR
 environment, with various levels of AR in between.
 
 <figure>
-  <img alt="The immersive web is a specturum from complete reality to
+  <img alt="The immersive web is a spectrum from complete reality to
   completely immersive, with various levels in between."
        src="/web/updates/images/2018/05/immersive-spectrum.png">
   <figcaption>
-    The immersive web is a specturum from complete reality to completely
+    The immersive web is a spectrum from complete reality to completely
     immersive, with various levels in between.
   </figcaption>
 </figure>
@@ -61,7 +61,7 @@ polyfill for Safari.
 
 But it's time to move on.
 
-The origin trial is ending on July 24, 2018, and the spec has been superseded
+The origin trial ended on July 24, 2018, and the spec has been superseded
 by the [WebXR Device API](https://www.chromestatus.com/features/5680169905815552)
 and a new origin trial.
 
@@ -87,7 +87,7 @@ improvements. At the same time, AR and other use cases were emerging and it
 became important that the API be extensible to support those in the future.
 
 The WebXR Device API was designed and named with these expanded use cases in
-mind and provides a better path forward. Implementers of WebVR have committed
+mind and provides a better path forward. Implementors of WebVR have committed
 to migrating to the WebXR Device API.
 
 ## What is the WebXR Device API?
@@ -100,9 +100,10 @@ spectrum of immersive experiences. It's available in the previously mentioned
 [origin trial](https://github.com/GoogleChrome/OriginTrials) as well as through
 a [polyfill](https://github.com/immersive-web/webxr-polyfill).
 
-**Note:** As of Chrome 67 only VR capabilities are enabled. AR capabilities
-will land in Chrome 68 (Canary) soon and I hope to tell you about them in six
-weeks or so.
+When this article was originally published during the Chrome 67 beta period,
+only VR capabilities were enabled. Augmented reality arrived in Chrome 69. Read
+about it in [Augmented reality for the
+web](/web/updates/2018/06/ar-for-the-web).
 
 There's more to this new API than I can go to in an article like this. I want
 to give you enough to start making sense of the [WebXR
@@ -112,7 +113,13 @@ explainer](https://github.com/immersive-web/webxr/blob/master/explainer.md) and
 our [Immersive Web Early Adopters
 Guide](https://immersive-web.github.io/webxr-reference/). I'll be expanding the
 latter as the origin trial progresses. Feel free to open issues or submit pull
-requests. For this article, I'm going to discuss starting, stopping and running
+requests.
+
+Note: The Early Adopters Guide is updated when spec changes land in Chrome. To
+be notified of those updates watch [its repo on
+GitHub](https://github.com/immersive-web/webxr-reference).
+
+For this article, I'm going to discuss starting, stopping and running
 an XR session, plus a few basics about processing input.
 
 What I'm not going to cover is how to draw AR/VR content to the screen. The
@@ -121,7 +128,7 @@ Drawing is done using WebGL APIs. You can do that if you're really ambitious.
 Though, we recommend using a framework. The immersive web samples use one
 created just for the demos called
 [Cottontail](https://github.com/immersive-web/webxr-samples/tree/master/js/cottontail).
-Three.js will support WebXR in early May. There is no official word yet on
+Three.js has supported WebXR since May. I've heard nothing about
 A-Frame.
 
 ## Starting and running an app
@@ -130,7 +137,7 @@ The basic process is this:
 
 1. Request an XR device.
 1. If it's available, request an XR session. If you want the user to put their
-phone in a headset, it's called an exclusive session and requires a user
+phone in a headset, it's called an immersive session and requires a user
 gesture to enter.
 1. Use the session to run a render loop which provides 60 image frames per
 second. Draw appropriate content to the screen in each frame.
@@ -146,9 +153,9 @@ give a sense of it.
 Here, you'll recognize the standard feature detection code. You could wrap this
 in a function called something like `checkForXR()`.
 
-If you're not using an exclusive session you can skip advertising the
+If you're not using an immersive session you can skip advertising the
 functionality and getting a user gesture and go straight to requesting a
-session. An exclusive session is one that requires a headset. A non-exclusive
+session. An immersive session is one that requires a headset. A non-immersive
 session simply shows content on the device screen. The former is what most
 people think of when you refer to virtual reality or augmented reality. The
 latter is sometimes called a 'magic window'.
@@ -186,9 +193,9 @@ To create a session, the browser needs a canvas on which to draw.
 
     xrPresentationContext = htmlCanvasElement.getContext('xrpresent');
     let sessionOptions = {
-      // The exclusive option is optional for non-exclusive sessions; the value
+      // The immersive option is optional for non-immersive sessions; the value
       //   defaults to false.
-      exclusive: false,
+      immersive: false,
       outputContext: xrPresentationContext
     }
     xrDevice.requestSession(sessionOptions)
@@ -230,23 +237,22 @@ the view stay the same when the user moves or does it shift as it would in real
 life?)
 
 The second type of frame is the _presentation frame_, represented by an
-`XRPresentationFrame` object. This object contains the information needed to
+`XRFrame` object. This object contains the information needed to
 render a single frame of an AR/VR scene to the device. This is a bit confusing
 because a presentation frame is retrieved by calling `requestAnimationFrame()`.
-This makes it compatible with `window.requestAnimationFrame()` which comes in
-useful when ending an XR session. More about that later.
+This makes it compatible with `window.requestAnimationFrame()`.
 
 Before I give you any more to digest, I'll offer some code. The sample below
 shows how the render loop is started and maintained. Notice the dual use of the
 word frame. And notice the recursive call to `requestAnimationFrame()`. This
 function will be called 60 times a second.
 
-    xrSession.requestFrameOfReference('eyeLevel')
+    xrSession.requestFrameOfReference('eye-level')
     .then(xrFrameOfRef => {
-      xrSession.requestAnimationFrame(onFrame(time, xrPresFrame) {
+      xrSession.requestAnimationFrame(onFrame(time, xrFrame) {
         // The time argument is for future use and not implemented at this time.
         // Process the frame.
-        xrPresFrame.session.requestAnimationFrame(onFrame);
+        xrFrame.session.requestAnimationFrame(onFrame);
       }
     });
 
@@ -258,11 +264,11 @@ and orientation of a thing in AR/VR is called a pose. Both viewers and input
 devices have a pose. (I cover input devices later.) Both viewer and input
 device poses are defined as a 4 by 4 matrix stored in a `Float32Array` in column
 major order. You get the viewer's pose by calling
-`XRPresentationFrame.getDevicePose()` on the current animation frame object.
+`XRFrame.getDevicePose()` on the current animation frame object.
 Always test to see if you got a pose back. If something went wrong you don't
 want to draw to the screen.
 
-    let pose = xrPresFrame.getDevicePose(xrFrameOfRef);
+    let pose = xrFrame.getDevicePose(xrFrameOfRef);
     if (pose) {
       // Draw something to the screen.
     }
@@ -271,11 +277,11 @@ want to draw to the screen.
 
 After checking the pose, it's time to draw something. The object you draw to is
 called a view (`XRView`). This is where the session type becomes important. Views
-are retrieved from the `XRPresentationFrame` object as an array. If you're in a
-non-exclusive session the array has one view. If you're in an exclusive
+are retrieved from the `XRFrame` object as an array. If you're in a
+non-immersive session the array has one view. If you're in an immersive
 session, the array has two, one for each eye.
 
-    for (let view of xrPresFrame.views) {
+    for (let view of xrFrame.views) {
       // Draw something to the screen.
     }
 
@@ -288,13 +294,13 @@ to have a single rendering path for a variety of devices.
 If I put all this together, I get the code below. I've left a placeholder for
 the input devices, which I'll cover in a later section.
 
-    xrSession.requestFrameOfReference('eyeLevel')
+    xrSession.requestFrameOfReference('eye-level')
     .then(xrFrameOfRef => {
-      xrSession.requestAnimationFrame(onFrame(time, xrPresFrame) {
+      xrSession.requestAnimationFrame(onFrame(time, xrFrame) {
         // The time argument is for future use and not implemented at this time.
-        let pose = xrPresFrame.getDevicePose(xrFrameOfRef);
+        let pose = xrFrame.getDevicePose(xrFrameOfRef);
         if (pose) {
-          for (let view of xrPresFrame.views) {
+          for (let view of xrFrame.views) {
             // Draw something to the screen.
           }
         }
@@ -318,7 +324,7 @@ resumed.
       xrSession.addEventListener('end', onSessionEnd);
     });
 
-    // Restore the page to normal after exclusive access has been released.
+    // Restore the page to normal after immersive access has been released.
     function onSessionEnd() {
       xrSession = null;
 
@@ -416,8 +422,8 @@ is in the Input Selection example.
 
 ## Conclusion: looking ahead
 
-As I said earlier, augmented reality should land in Chrome 68 (Canary as of May
-2018) any day now. Nevertheless, I encourage you try what we've got so far. We
+As I said earlier, augmented reality is expected in Chrome 69 (Canary some time
+in June 2018). Nevertheless, I encourage you try what we've got so far. We
 need feedback to make it better. Follow it's progress by watching
 ChromeStatus.com for [WebXR Hit
 Test](https://www.chromestatus.com/features/4755348300759040). You can also
@@ -428,4 +434,3 @@ which will improve pose tracking.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

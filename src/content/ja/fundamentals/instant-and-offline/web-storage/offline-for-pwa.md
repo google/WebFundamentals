@@ -13,7 +13,7 @@ description: レスポンス タイムとオフライン サポートの向上�
 <figure class="attempt-right">
   <img src="images/pwa-in-devtools.jpg" alt="DevTools での PWA">
   <figcaption>
-    <a href="https://pokedex.org" class="external">Pokedex</a> 
+    <a href="https://pokedex.org" class="external">Pokedex</a>
     Progressive Web App では、アプリの状態とポケモン データセットには IndexedDB を使用し、
     URL 指定可能なリソースには Cache API を使用しています。
   </figcaption>
@@ -245,8 +245,7 @@ API](https://www.chromestatus.com/features/5630353511284736) を使用すると�
 
 * [ydn-db](https://github.com/yathit/ydn-db)（dexie に類似、WebSQL で動作）
 
-**Nolan Lawson, Joshua Bell（Open Web Storage と [BlinkOn talk](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit) への取り組みがこの記事を書くきっかけとなりました）、Jake Archibald、Dru Knox、およびその他の方々に、ウェブストレージ領域へのこれまでの取り組みに対し感謝の意を述べたいと思います。
-**
+**Nolan Lawson, Joshua Bell（Open Web Storage と [BlinkOn talk](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit) への取り組みがこの記事を書くきっかけとなりました）、Jake Archibald、Dru Knox、およびその他の方々に、ウェブストレージ領域へのこれまでの取り組みに対し感謝の意を述べたいと思います。**
 
 
 

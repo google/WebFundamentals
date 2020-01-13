@@ -52,6 +52,7 @@ function test(filename, contents, options) {
 
   const isLighthouse = wfRegEx.RE_LIGHTHOUSE_PATH.test(filename);
   const isWorkbox = wfRegEx.RE_WORKBOX_PATH.test(filename);
+  const isSiteKit = wfRegEx.RE_SITEKIT_PATH.test(filename);
   const isTranslation = testHelpers.isTranslation(filename, contents);
   const isInclude = testHelpers.isInclude(filename, contents);
 
@@ -59,7 +60,7 @@ function test(filename, contents, options) {
    * Simple wrapper that adds an error to the list
    *
    * @param {string} message The message to add.
-   * @param {object} position The line number the error occured on.
+   * @param {object} position The line number the error occurred on.
    */
   function logError(message, position) {
     results.push({
@@ -122,8 +123,8 @@ function test(filename, contents, options) {
   }
 
   // Check for valid Blink components
-  if (options.blinkComponents &&
-      !isInclude && !isTranslation && !isLighthouse && !isWorkbox) {
+  if (options.blinkComponents && !isInclude &&
+      !isTranslation && !isLighthouse && !isWorkbox && !isSiteKit) {
     matches = wfRegEx.RE_BLINK_COMPONENTS.exec(contents);
     if (matches) {
       const position = {line: getLineNumber(contents, matches.index)};
@@ -186,6 +187,9 @@ function test(filename, contents, options) {
       logError(`'{% include %}' is badly quoted: ${include[0]}`, position);
     }
     if (inclFile === 'comment-widget.html') {
+      const widget = `{% include "comment-widget.html" %}`;
+      const msg = `The comments widget '${widget}' has been deprecated.`;
+      logError(`${msg} Do not use it.`, position);
       return;
     }
     if (inclFile.indexOf('web/') !== 0) {
@@ -236,14 +240,16 @@ function test(filename, contents, options) {
     logError(msg, position);
   });
 
-  // Warn on unescaped template tags
-  if (!wfRegEx.RE_USES_TEMPLATE.test(contents)) {
-    matches = wfRegEx.getMatches(/\{\{/g, contents);
-    matches.forEach(function(match) {
-      const position = {line: getLineNumber(contents, match.index)};
-      const msg = `Template tags ('{{'') should be escaped to '&#123;&#123;'`;
-      logError(msg, position);
-    });
+  // Error on unescaped template tags
+  if (!options.ignoreTemplateTags) {
+    if (!wfRegEx.RE_USES_TEMPLATE.test(contents)) {
+      matches = wfRegEx.getMatches(/\{\{/g, contents);
+      matches.forEach(function(match) {
+        const position = {line: getLineNumber(contents, match.index)};
+        const msg = `Template tags ('{{'') should be escaped to '&#123;&#123;'`;
+        logError(msg, position);
+      });
+    }
   }
 
   // Error on script blocks in markdown
@@ -257,21 +263,22 @@ function test(filename, contents, options) {
     });
   }
 
-  // Warn on missing comment widgets
-  if (!options.ignoreMissingCommentWidget) {
-    const reComment = /^{%\s?include "comment-widget\.html"\s?%}/m;
-    const reUpdatesPath = /src\/content\/.+?\/updates\/\d{4}\//;
-    if (reUpdatesPath.test(filename)) {
-      if (!reComment.test(contents)) {
+  // Warn on missing "was this page helpful?" widget
+  if (!options.ignoreMissingHelpfulWidget) {
+    const reHelpful = /^{%\s?include "web\/_shared\/helpful\.html"\s?%}/m;
+    const rePath = /src\/content\/.+?\//;
+    if (rePath.test(filename)) {
+      if (!reHelpful.test(contents)) {
         const position = {line: getLineNumber(contents, contents.length - 1)};
-        const msg = `Updates post is missing comment widget: ` +
-          `'{% include "comment-widget.html" %}'`;
+        const msg =
+          'Consider adding a "was this page helpful?" widget to your page: ' +
+          'https://developers.google.com/web/resources/widgets#helpful';
         logWarning(msg, position);
       }
     }
   }
 
-  // Warn on missing comment widgets
+  // Warn on missing feed widget
   if (!options.ignoreMissingFeedWidget) {
     const reWidget =
         /^{%\s?include "web\/_shared\/rss-widget-updates.html"\s?%}/m;

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Offscreen Images" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-12-17 #}
 {# wf_published_on: 2017-05-31 #}
 {# wf_blink_components: N/A #}
 
@@ -36,13 +36,15 @@ all the things!][IATT] for more on this approach.
 [IO]: /web/updates/2016/04/intersectionobserver
 
 If you do use an IntersectionObserver, make sure to include the
-[polyfill][polyfill], because native browser support is limited.
+[polyfill][pf], because native browser support is limited.
 
-[polyfill]: https://github.com/w3c/IntersectionObserver/tree/master/polyfill
+[pf]: https://github.com/w3c/IntersectionObserver/tree/master/polyfill
 
 ## More information {: #more-info }
 
 Lighthouse flags offscreen images that were requested before the
 Time To Interactive (TTI) event.
 
-{% include "web/tools/lighthouse/audits/_feedback/offscreen-images.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

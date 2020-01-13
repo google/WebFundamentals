@@ -19,7 +19,7 @@
             <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v3.0.0-beta.2</small></span>
+              <span class="label label-version"><small>v4.0.0-rc.4</small></span>
             </div>
             <p>A <code>Route</code> consists of a pair of callback functions, &quot;match&quot; and &quot;handler&quot;. The &quot;match&quot; callback determine if a route should be used to &quot;handle&quot; a request by returning a non-falsy value if
               it can. The &quot;handler&quot; callback is called when there is a match and should return a Promise that resolves to a <code>Response</code>.</p>
@@ -81,9 +81,11 @@
               <h3 id="~handlerCallback" class="symbol-name">handlerCallback</h3>
               <div class="symbol-detail-labels"><span class="label label-inner"><small>inner</small></span></div>
               <p class="type-signature"> handlerCallback(context)&nbsp;returns&nbsp;Promise containing Response</p>
-              <p>The &quot;handler&quot; callback is called when a service worker's <code>fetch</code> event has been matched by a <code>Route</code>. This callback should return a Promise that resolves with a <code>Response</code>.</p>
-              <p>If a value is returned by the
-                <a href="workbox.routing.Route.html#~matchCallback">match callback</a> it will be passed in as the <code>context.params</code> argument.</p>
+              <p>The &quot;handler&quot; callback is invoked whenever a <code>Router</code> matches a URL to a
+                <code>Route</code> via its <a href="workbox.routing.Route.html#~handlerCallback">match</a> callback. This callback should return a Promise that resolves with a
+                <code>Response</code>.</p>
+              <p>If a non-empty array or object is returned by the
+                <a href="workbox.routing.Route.html#~matchCallback">match callback</a> it will be passed in as the handler's <code>context.params</code> argument.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -112,7 +114,17 @@
                               </td>
                               <td>
                                 <p class="details-table-types">URL</p>
-                                <p>The request's URL.</p>
+                                <p>The URL that matched.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>request</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">FetchEvent</p>
+                                <p>The corresponding request, if available.</p>
                               </td>
                             </tr>
                             <tr>
@@ -120,9 +132,9 @@
                                 <p>event</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">FetchEvent</p>
-                                <p>The service worker's <code>fetch</code> event.
-                                </p>
+                                <p>The corresponding event that triggered the request, if available.</p>
                               </td>
                             </tr>
                             <tr>
@@ -132,8 +144,7 @@
                               <td>
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Object</p>
-                                <p>Parameters returned by the Route's
-                                  <a href="workbox.routing.Route.html#~matchCallback">match callback</a> function. This will be undefined if nothing was returned.</p>
+                                <p>Array or Object parameters returned by the Route's <a href="workbox.routing.Route.html#~matchCallback">match callback</a>. This will be undefined if an empty array or object were returned.</p>
                               </td>
                             </tr>
                           </tbody>
@@ -151,11 +162,11 @@
               </dl>
               <h3 id="~matchCallback" class="symbol-name">matchCallback</h3>
               <div class="symbol-detail-labels"><span class="label label-inner"><small>inner</small></span></div>
-              <p class="type-signature"> matchCallback(context)&nbsp;returns&nbsp;(Object or null)</p>
-              <p>The &quot;match&quot; callback is used to determine if a <code>Route</code> should handle a service worker's <code>fetch</code> event. Returning a truthy value means this <code>Route</code> will handle and respond to the event.</p>
-              <p>Return <code>null</code> if this Route shouldn't match against the <code>fetch</code> event.</p>
-              <p>Any truthy value returned by this callback will be passed to the Route's
-                <a href="workbox.routing.Route.html#~handlerCallback">handler callback</a>.</p>
+              <p class="type-signature"> matchCallback(context)&nbsp;returns&nbsp;any type</p>
+              <p>The &quot;match&quot; callback is used to determine if a <code>Route</code> should apply for a particular URL. When matching occurs in response to a fetch event from the client, the <code>event</code> and <code>request</code> objects are
+                supplied in addition to the URL. However, since the match callback can be invoked outside of a fetch event, matching logic should not assume the <code>event</code> or <code>request</code> objects will always be available (unlike URL, which
+                is always available). If the match callback returns a truthy value, the matching route's
+                <a href="workbox.routing.Route.html#~handlerCallback">handler callback</a> will be invoked immediately. If the value returned is a non-empty array or object, that value will be set on the handler's <code>context.params</code> argument.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -189,12 +200,22 @@
                             </tr>
                             <tr>
                               <td class="details-table-name">
+                                <p>request</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">FetchEvent</p>
+                                <p>The corresponding request, if available.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
                                 <p>event</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">FetchEvent</p>
-                                <p>The service worker<code>s</code>fetch` event.
-                                </p>
+                                <p>The corresponding event that triggered the request, if available.</p>
                               </td>
                             </tr>
                           </tbody>
@@ -207,8 +228,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>(Object or null)</code>&nbsp;To signify a match, return anything other than <code>null</code>. Return <code>null</code> if the route shouldn't match.
-                    <a href="workbox.routing.Route.html#~handlerCallback">handler</a>.</p>
+                  <p><code>any type</code>&nbsp;To signify a match, return a truthy value.</p>
                 </dd>
               </dl>
             </section>

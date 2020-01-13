@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Third-party services can start deploying their own network request handlers.
 
-{# wf_updated_on: 2018-04-16 #}
+{# wf_updated_on: 2018-06-01 #}
 {# wf_published_on: 2016-09-12 #}
 {# wf_tags: chrome54,origintrials,serviceworker,cors,fetch #}
 {# wf_featured_image: /web/updates/images/2016/09/foreign-fetch/show-all-service-workers.png #}
@@ -12,8 +12,10 @@ description: Third-party services can start deploying their own network request 
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 
-
-
+Warning: The information in this post is out of date. Foreign fetch is no longer
+available for testing in Chrome, and
+[has been removed](https://github.com/w3c/ServiceWorker/issues/1188)
+from the service worker specification.
 
 ## Background
 
@@ -238,4 +240,3 @@ The browser starts from the top and, depending on the service worker implementat
 Chrome's implementation of the foreign fetch Origin Trial is subject to change as we address feedback from developers. We'll keep this post up to date via inline changes, and will make note the specific changes below as they happen. We'll also share information about major changes via the [@chromiumdev](https://twitter.com/@chromiumdev) Twitter account.
 
 
-{% include "comment-widget.html" %}

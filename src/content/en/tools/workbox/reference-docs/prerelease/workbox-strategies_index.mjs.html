@@ -21,20 +21,83 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
-  Copyright 2017 Google Inc.
+  Copyright 2018 Google LLC
 
-  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
+
+import {logger} from &#x27;workbox-core/_private/logger.mjs&#x27;;
+import {CacheFirst} from &#x27;./CacheFirst.mjs&#x27;;
+import {CacheOnly} from &#x27;./CacheOnly.mjs&#x27;;
+import {NetworkFirst} from &#x27;./NetworkFirst.mjs&#x27;;
+import {NetworkOnly} from &#x27;./NetworkOnly.mjs&#x27;;
+import {StaleWhileRevalidate} from &#x27;./StaleWhileRevalidate.mjs&#x27;;
+import &#x27;./_version.mjs&#x27;;
+
+
+const mapping &#x3D; {
+  cacheFirst: CacheFirst,
+  cacheOnly: CacheOnly,
+  networkFirst: NetworkFirst,
+  networkOnly: NetworkOnly,
+  staleWhileRevalidate: StaleWhileRevalidate,
+};
+
+const deprecate &#x3D; (strategy) &#x3D;&gt; {
+  const StrategyCtr &#x3D; mapping[strategy];
+
+  return (options) &#x3D;&gt; {
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      const strategyCtrName &#x3D; strategy[0].toUpperCase() + strategy.slice(1);
+      logger.warn(&#x60;The &#x27;workbox.strategies.${strategy}()&#x27; function has been &#x60; +
+          &#x60;deprecated and will be removed in a future version of Workbox.\n&#x60; +
+          &#x60;Please use &#x27;new workbox.strategies.${strategyCtrName}()&#x27; instead.&#x60;);
+    }
+    return new StrategyCtr(options);
+  };
+};
+
+/**
+ * @function workbox.strategies.cacheFirst
+ * @param {Object} options See the {@link workbox.strategies.CacheFirst}
+ * constructor for more info.
+ * @deprecated since v4.0.0
+ */
+const cacheFirst &#x3D; deprecate(&#x27;cacheFirst&#x27;);
+
+/**
+ * @function workbox.strategies.cacheOnly
+ * @param {Object} options See the {@link workbox.strategies.CacheOnly}
+ * constructor for more info.
+ * @deprecated since v4.0.0
+ */
+const cacheOnly &#x3D; deprecate(&#x27;cacheOnly&#x27;);
+
+/**
+ * @function workbox.strategies.networkFirst
+ * @param {Object} options See the {@link workbox.strategies.NetworkFirst}
+ * constructor for more info.
+ * @deprecated since v4.0.0
+ */
+const networkFirst &#x3D; deprecate(&#x27;networkFirst&#x27;);
+
+/**
+ * @function workbox.strategies.networkOnly
+ * @param {Object} options See the {@link workbox.strategies.NetworkOnly}
+ * constructor for more info.
+ * @deprecated since v4.0.0
+ */
+const networkOnly &#x3D; deprecate(&#x27;networkOnly&#x27;);
+
+/**
+ * @function workbox.strategies.staleWhileRevalidate
+ * @param {Object} options See the
+ * {@link workbox.strategies.StaleWhileRevalidate} constructor for more info.
+ * @deprecated since v4.0.0
+ */
+const staleWhileRevalidate &#x3D; deprecate(&#x27;staleWhileRevalidate&#x27;);
 
 /**
  * There are common caching strategies that most service workers will need
@@ -43,11 +106,21 @@
  * @namespace workbox.strategies
  */
 
-import defaultExport from &#x27;./_default.mjs&#x27;;
-import &#x27;./_version.mjs&#x27;;
+export {
+  CacheFirst,
+  CacheOnly,
+  NetworkFirst,
+  NetworkOnly,
+  StaleWhileRevalidate,
 
-export default defaultExport;
-export * from &#x27;./_public.mjs&#x27;;
+  // Deprecated...
+  cacheFirst,
+  cacheOnly,
+  networkFirst,
+  networkOnly,
+  staleWhileRevalidate,
+};
+
 </code></pre>
           </article>
         </div>

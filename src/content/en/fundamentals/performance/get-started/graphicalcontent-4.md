@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>Image #}
 
@@ -302,3 +302,7 @@ And see the
 [Wrap-up and Demo](/web/fundamentals/performance/get-started/wrapup-7)
 page for direct application of these and other techniques discussed in this set of articles.
 
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

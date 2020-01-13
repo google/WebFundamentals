@@ -1,9 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Search across network headers, copy requests as fetch, audit pages using desktop conditions, and much more.
-experiments_path: /web/updates/2018/04/_experiments.yaml
 
-{# wf_updated_on: 2018-05-03 #}
+{# wf_updated_on: 2019-09-19 #}
 {# wf_published_on: 2018-04-11 #}
 {# wf_tags: chrome67,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -15,8 +14,6 @@ experiments_path: /web/updates/2018/04/_experiments.yaml
 # What's New In DevTools (Chrome 67) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-
-Note: The video version of these release notes will be published around early June 2018.
 
 New features and major changes coming to DevTools in Chrome 67 include:
 
@@ -31,6 +28,14 @@ New features and major changes coming to DevTools in Chrome 67 include:
 * [Dark theme updates](#dark)
 * [Certificate transparency information in the **Security** panel](#security)
 * [Site isolation features in the **Performance** panel](#site-isolation)
+
+[Video version of the release notes](https://youtu.be/4EdPq9Nw6uI):
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="4EdPq9Nw6uI"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
@@ -185,7 +190,7 @@ an infinite loop by mistake while developing your site. To stop the infinite loo
   <iframe class="devsite-embedded-youtube-video" data-video-id="haFYwEBjaTo"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 In the video above, the clock is being updated via a `setInterval()` timer. Clicking
 **Start Infinite Loop** runs a `do...while` loop that never stops. The interval resumes because
@@ -293,76 +298,6 @@ a flame chart for each process so that you can see the total work that each proc
 
 That's all for Chrome 67!
 
-{% dynamic if experiments.inline_feedback.generic_prompt %}
-  {% framebox width="auto" height="auto" enable_widgets="true" %}
-    <script>
-      var label = '/web/updates/2018/04/devtools (generic)';
-      var response = "Thank you for the feedback!";
-      var feedback = {
-        category: "Helpful",
-        question: "Was this page helpful?",
-        choices: [
-          {
-            button: {
-              text: "Yes"
-            },
-            response: response,
-            analytics: {
-              label: label,
-              value: 1
-            }
-          },
-          {
-            button: {
-              text: "No"
-            },
-            response: response,
-            analytics: {
-              label: label,
-              value: 0
-            }
-          }
-        ]
-      };
-    </script>
-    {% include "web/_shared/multichoice.html" %}
-  {% endframebox %}
-{% dynamic elif experiments.inline_feedback.specific_prompt %}
-  {% framebox width="auto" height="auto" enable_widgets="true" %}
-    <script>
-      var label = '/web/updates/2018/04/devtools (specific)';
-      var response = "Thank you for the feedback!";
-      var feedback = {
-        category: "Helpful",
-        question: "How are we doing with these release notes? Did you find this post helpful?",
-        choices: [
-          {
-            button: {
-              text: "Yes"
-            },
-            response: response,
-            analytics: {
-              label: label,
-              value: 1
-            }
-          },
-          {
-            button: {
-              text: "No"
-            },
-            response: response,
-            analytics: {
-              label: label,
-              value: 0
-            }
-          }
-        ]
-      };
-    </script>
-    {% include "web/_shared/multichoice.html" %}
-  {% endframebox %}
-{% dynamic endif %}
-
 To discuss the new features and changes in this post, or anything else related to DevTools:
 
 * File bug reports at [Chromium Bugs](https://crbug.com){:.external}.
@@ -389,11 +324,4 @@ fixed within a day. You can go back to using Chrome Stable while Canary is broke
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Previous release notes {: #links }
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
-
-[tag]: /web/updates/tags/devtools-whatsnew
-
-{% include "web/_shared/rss-widget-updates.html" %}
+<<../../_shared/discover.md>>

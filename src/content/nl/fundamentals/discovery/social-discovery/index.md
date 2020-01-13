@@ -61,20 +61,14 @@ De type van een item kan worden gespecificeerd met het `itemtype` attribuut same
 ### Voeg `itemprop` toe om ieder item te beschrijven volgens het schema.org vocabulaire
 `itemprop`s defineren eigenschappen voor `itemtype`s in de scope. Voor sociale media metadata is voornamelijk de `itemprop` waardes van `name`, `description` and `image` het meest relevant.
 
-### Leer meer
-Deze microdata levert semantische data aan crawlers, voornamelijk [Google+](https://plus.google.com/){: .external } en Google Search. Om meer te leren over snippets en rendering op Google+ lees de volgende documenten:
-
-* [Article Rendering - Google+ Platform](/+/web/snippet/article-rendering)
-* [Snippet - Google+ Platform](/+/web/snippet/)
-
 ### Valideer rich snippets
 Om rich snippets te valideren op Google+ kan je deze tools gebruiken:
 
-* [Structured Data Testing Tool](http://www.google.com/webmasters/tools/richsnippets){: .external } - Webmaster Tools  
+* [Structured Data Testing Tool](http://www.google.com/webmasters/tools/richsnippets){: .external } - Webmaster Tools
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
-* [Semantic inspector](https://chrome.google.com/webstore/detail/semantic-inspector/jobakbebljifplmcapcooffdbdmfdbjh/reviews){: .external } - Chrome Extension  
+* [Semantic inspector](https://chrome.google.com/webstore/detail/semantic-inspector/jobakbebljifplmcapcooffdbdmfdbjh/reviews){: .external } - Chrome Extension
 
 <img src="imgs/semantic-inspector.png" srcset="imgs/semantic-inspector.png 1x, imgs/semantic-inspector-2x.png 2x" />
 
@@ -121,7 +115,7 @@ Een `meta` tag bevat een `property` attribuut en een `content` attribuut.
   </tbody>
 </table>
 
-Deze meta tags bevatten semantische informatie voor sociale media crawlers, voornamelijk van Google+](https://plus.google.com/){: .external } en [Facebook](https://www.facebook.com/).
+Deze meta tags bevatten semantische informatie voor sociale media crawlers, voornamelijk van [Facebook](https://www.facebook.com/).
 
 ### Leer meer
 Om meer te leren over wat je kan toevoegen aan een Facebook post, bezoek de officieele Open Graph Protocol site:

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Responds With A 200 When Offline" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-09-15 #}
 {# wf_blink_components: N/A #}
 
@@ -41,4 +41,6 @@ Lighthouse emulates an offline connection using the Chrome Debugging Protocol,
 and then attempts to retrieve the page using `XMLHttpRequest`.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/http-200-when-offline.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -24,7 +24,7 @@ description: サイトの各ページにコードを数行追加すると、ソ�
 リッチな情報を追加でプレビュー表示すると、エンゲージメントを高めることができます。この対応を行わないと、ソーシャル サイトの基本情報しか表示されず、画像やその他の有用な情報が提供されません。
 
 
- 
+
 
 ユーザーは以下のどちらのページをクリックする可能性が高いと思いますか。ユーザーは画像に引かれるため、先にプレビューが目に入ると、そのサイトにさらに興味を持つようになります。
 
@@ -89,20 +89,10 @@ description: サイトの各ページにコードを数行追加すると、ソ�
 ###  `itemprop` を追加して schema.org ボキャブラリで各アイテムを記述する
 `itemprop` は、スコープ内の `itemtype` のプロパティを定義します。メタデータをソーシャル サイトに提供する場合、一般的に使用する `itemprop` の値は `name`、`description`、および `image` です。
 
-
-
-###  詳細
-このような microdata によって、主に [Google+](https://plus.google.com/){: .external } や Google 検索用の意味情報がクローラに提供されます。
-Google+ のスニペットやレンダリングの詳細については、次のドキュメントをご覧ください。
-
-
-* [Article Rendering - Google+ Platform](/+/web/snippet/article-rendering)
-* [Snippet - Google+ Platform](/+/web/snippet/)
-
 ###  リッチ スニペットを検証する
 Google+ のリッチ スニペットを検証する場合、次のようなツールを使用できます。
 
-* [構造化データ テストツール](https://www.google.com/webmasters/tools/richsnippets) - ウェブマスター ツール  
+* [構造化データ テストツール](https://www.google.com/webmasters/tools/richsnippets) - ウェブマスター ツール
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
@@ -154,9 +144,6 @@ Google+ のリッチ スニペットを検証する場合、次のようなツ�
   </tbody>
 </table>
 
-これらのメタタグによって、主に [Google+](https://plus.google.com/){: .external } や [Facebook](https://www.facebook.com/){: .external } などのソーシャル サイトのクローラに意味情報が提供されます。
-
-
 
 ###  詳細
 Facebook の投稿に表示できる画像やデータの詳細については、Open Graph Protocol の公式サイトをご覧ください。
@@ -179,7 +166,7 @@ Twitter カードを適切に表示するには、[ドメインが承認され�
 
 
 
-  
+
 
 
 <pre class="prettyprint">
@@ -217,7 +204,7 @@ microdata と OGP が同じマークアップを共有していることに注�
 * `itemprop="image"` は、`property="og:image"` を指定した `meta` タグを再利用する代わりに、`href` 属性を指定した `link` タグを使用しています。
 
 最後に、ウェブページを公開する前に、各ソーシャル サイトにウェブページが想定どおりに表示されることを確認してください。
-  
+
 
 
 

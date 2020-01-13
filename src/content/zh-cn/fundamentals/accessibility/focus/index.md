@@ -3,8 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description:无障碍功能中的屏幕焦点概览
 
 
-{# wf_updated_on:2016-10-04 #}
-{# wf_published_on:2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-10-04 #}
 
 # 焦点简介 {: .page-title }
 
@@ -51,7 +51,7 @@ description:无障碍功能中的屏幕焦点概览
 
 一些用户几乎全靠键盘或其他输入设备来操作计算机。
 对这些用户而言，焦点至关重要，因为这是他们到达所有屏幕元素的主要途径。
-因此，Web AIM 检查清单才会在其第 2.1.1 节中指出，[所有页面功能应该都能使用键盘来执行](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external }，除非是手绘图这种无法使用键盘执行的操作。
+因此，Web AIM 检查清单才会在其第 2.1.1 节中指出，[所有页面功能应该都能使用键盘来执行](https://webaim.org/standards/wcag/checklist#sc2.1.1){: .external }，除非是手绘图这种无法使用键盘执行的操作。
 
 
 

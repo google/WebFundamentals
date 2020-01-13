@@ -128,4 +128,3 @@ Until next month!
 Paul Bakaus & the DevTools team
 
 
-{% include "comment-widget.html" %}

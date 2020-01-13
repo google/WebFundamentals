@@ -21,33 +21,24 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
- Copyright 2016 Google Inc. All Rights Reserved.
- Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+  Copyright 2018 Google LLC
 
-     http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
+import {assert} from &#x27;workbox-core/_private/assert.mjs&#x27;;
 import {cacheNames} from &#x27;workbox-core/_private/cacheNames.mjs&#x27;;
 import {cacheWrapper} from &#x27;workbox-core/_private/cacheWrapper.mjs&#x27;;
 import {fetchWrapper} from &#x27;workbox-core/_private/fetchWrapper.mjs&#x27;;
+import {getFriendlyURL} from &#x27;workbox-core/_private/getFriendlyURL.mjs&#x27;;
 import {logger} from &#x27;workbox-core/_private/logger.mjs&#x27;;
-import {assert} from &#x27;workbox-core/_private/assert.mjs&#x27;;
+import {WorkboxError} from &#x27;workbox-core/_private/WorkboxError.mjs&#x27;;
 
-import messages from &#x27;./utils/messages.mjs&#x27;;
-import cacheOkAndOpaquePlugin from &#x27;./plugins/cacheOkAndOpaquePlugin.mjs&#x27;;
+import {messages} from &#x27;./utils/messages.mjs&#x27;;
+import {cacheOkAndOpaquePlugin} from &#x27;./plugins/cacheOkAndOpaquePlugin.mjs&#x27;;
 import &#x27;./_version.mjs&#x27;;
-
-// TODO: Replace &#x60;Workbox plugins&#x60; link in the class description with a
-// link to d.g.c.
-// TODO: Replace &#x60;plugins&#x60; parameter link with link to d.g.c.
 
 /**
  * An implementation of a
@@ -64,6 +55,9 @@ import &#x27;./_version.mjs&#x27;;
  * Opaque responses are are cross-origin requests where the response doesn&#x27;t
  * support [CORS]{@link https://enable-cors.org/}.
  *
+ * If the network request fails, and there is no cache match, this will throw
+ * a &#x60;WorkboxError&#x60; exception.
+ *
  * @memberof workbox.strategies
  */
 class StaleWhileRevalidate {
@@ -72,15 +66,16 @@ class StaleWhileRevalidate {
    * @param {string} options.cacheName Cache name to store and retrieve
    * requests. Defaults to cache names provided by
    * [workbox-core]{@link workbox.core.cacheNames}.
-   * @param {string} options.plugins [Plugins]{@link https://docs.google.com/document/d/1Qye_GDVNF1lzGmhBaUvbgwfBWRQDdPgwUAgsbs8jhsk/edit?usp&#x3D;sharing}
+   * @param {Array&amp;lt;Object&gt;} options.plugins [Plugins]{@link /web/tools/workbox/guides/using-plugins}
    * to use in conjunction with this caching strategy.
    * @param {Object} options.fetchOptions Values passed along to the
    * [&#x60;init&#x60;](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
    * of all fetch() requests made by this strategy.
+   * @param {Object} options.matchOptions [&#x60;CacheQueryOptions&#x60;](https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions)
    */
   constructor(options &#x3D; {}) {
     this._cacheName &#x3D; cacheNames.getRuntimeName(options.cacheName);
-      this._plugins &#x3D; options.plugins || [];
+    this._plugins &#x3D; options.plugins || [];
 
     if (options.plugins) {
       let isUsingCacheWillUpdate &#x3D;
@@ -93,6 +88,7 @@ class StaleWhileRevalidate {
     }
 
     this._fetchOptions &#x3D; options.fetchOptions || null;
+    this._matchOptions &#x3D; options.matchOptions || null;
   }
 
   /**
@@ -100,48 +96,89 @@ class StaleWhileRevalidate {
    * will work with the
    * [Workbox Router]{@link workbox.routing.Router}.
    *
-   * @param {Object} input
-   * @param {FetchEvent} input.event The fetch event to run this strategy
-   * against.
+   * @param {Object} options
+   * @param {Request} options.request The request to run this strategy for.
+   * @param {Event} [options.event] The event that triggered the request.
    * @return {Promise&amp;lt;Response&gt;}
    */
-  async handle({event}) {
+  async handle({event, request}) {
+    return this.makeRequest({
+      event,
+      request: request || event.request,
+    });
+  }
+  /**
+   * This method can be used to perform a make a standalone request outside the
+   * context of the [Workbox Router]{@link workbox.routing.Router}.
+   *
+   * See &quot;[Advanced Recipes](/web/tools/workbox/guides/advanced-recipes#make-requests)&quot;
+   * for more usage information.
+   *
+   * @param {Object} options
+   * @param {Request|string} options.request Either a
+   *     [&#x60;Request&#x60;]{@link https://developer.mozilla.org/en-US/docs/Web/API/Request}
+   *     object, or a string URL, corresponding to the request to be made.
+   * @param {FetchEvent} [options.event] If provided, &#x60;event.waitUntil()&#x60; will
+   *     be called automatically to extend the service worker&#x27;s lifetime.
+   * @return {Promise&amp;lt;Response&gt;}
+   */
+  async makeRequest({event, request}) {
     const logs &#x3D; [];
+
+    if (typeof request &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+      request &#x3D; new Request(request);
+    }
+
     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-      assert.isInstance(event, FetchEvent, {
+      assert.isInstance(request, Request, {
         moduleName: &#x27;workbox-strategies&#x27;,
         className: &#x27;StaleWhileRevalidate&#x27;,
         funcName: &#x27;handle&#x27;,
-        paramName: &#x27;event&#x27;,
+        paramName: &#x27;request&#x27;,
       });
     }
 
-    const fetchAndCachePromise &#x3D; this._getFromNetwork(event);
+    const fetchAndCachePromise &#x3D; this._getFromNetwork({request, event});
 
-    let response &#x3D; await cacheWrapper.match(
-      this._cacheName,
-      event.request,
-      null,
-      this._plugins
-    );
-
+    let response &#x3D; await cacheWrapper.match({
+      cacheName: this._cacheName,
+      request,
+      event,
+      matchOptions: this._matchOptions,
+      plugins: this._plugins,
+    });
+    let error;
     if (response) {
       if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
         logs.push(&#x60;Found a cached response in the &#x27;${this._cacheName}&#x27;&#x60; +
           &#x60; cache. Will update with the network response in the background.&#x60;);
       }
-      event.waitUntil(fetchAndCachePromise);
+
+      if (event) {
+        try {
+          event.waitUntil(fetchAndCachePromise);
+        } catch (error) {
+          if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            logger.warn(&#x60;Unable to ensure service worker stays alive when &#x60; +
+              &#x60;updating cache for &#x27;${getFriendlyURL(request.url)}&#x27;.&#x60;);
+          }
+        }
+      }
     } else {
       if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
         logs.push(&#x60;No response found in the &#x27;${this._cacheName}&#x27; cache. &#x60; +
           &#x60;Will wait for the network response.&#x60;);
       }
-      response &#x3D; await fetchAndCachePromise;
+      try {
+        response &#x3D; await fetchAndCachePromise;
+      } catch (err) {
+        error &#x3D; err;
+      }
     }
 
     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
       logger.groupCollapsed(
-        messages.strategyStart(&#x27;StaleWhileRevalidate&#x27;, event));
+          messages.strategyStart(&#x27;StaleWhileRevalidate&#x27;, request));
       for (let log of logs) {
         logger.log(log);
       }
@@ -149,30 +186,46 @@ class StaleWhileRevalidate {
       logger.groupEnd();
     }
 
+    if (!response) {
+      throw new WorkboxError(&#x27;no-response&#x27;, {url: request.url, error});
+    }
     return response;
   }
 
   /**
-   * @param {FetchEvent} event
+   * @param {Object} options
+   * @param {Request} options.request
+   * @param {Event} [options.event]
    * @return {Promise&amp;lt;Response&gt;}
    *
    * @private
    */
-  async _getFromNetwork(event) {
-    const response &#x3D; await fetchWrapper.fetch(
-      event.request,
-      this._fetchOptions,
-      this._plugins
-    );
+  async _getFromNetwork({request, event}) {
+    const response &#x3D; await fetchWrapper.fetch({
+      request,
+      event,
+      fetchOptions: this._fetchOptions,
+      plugins: this._plugins,
+    });
 
-    event.waitUntil(
-      cacheWrapper.put(
-        this._cacheName,
-        event.request,
-        response.clone(),
-        this._plugins
-      )
-    );
+    const cachePutPromise &#x3D; cacheWrapper.put({
+      cacheName: this._cacheName,
+      request,
+      response: response.clone(),
+      event,
+      plugins: this._plugins,
+    });
+
+    if (event) {
+      try {
+        event.waitUntil(cachePutPromise);
+      } catch (error) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+          logger.warn(&#x60;Unable to ensure service worker stays alive when &#x60; +
+            &#x60;updating cache for &#x27;${getFriendlyURL(request.url)}&#x27;.&#x60;);
+        }
+      }
+    }
 
     return response;
   }

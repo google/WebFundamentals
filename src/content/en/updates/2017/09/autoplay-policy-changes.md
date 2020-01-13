@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-05-04 #}
+{# wf_updated_on: 2019-08-06 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -10,6 +10,14 @@ description: Learn best practices for good user experiences with the new autopla
 {# wf_blink_components: Blink>Media #}
 
 # Autoplay Policy Changes {: .page-title }
+
+Note: The Autoplay Policy launched in M66 Stable for audio and video
+elements and is effectively blocking roughly half of unwanted media autoplays
+in Chrome. For the Web Audio API, the autoplay policy will launch in M71. This
+affects web games, some WebRTC applications, and other web pages using audio
+features.  Developers will need to update their code to take advantage of the
+policy. More details can be found in the <a href="#webaudio">Web Audio API
+section</a> below.
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
@@ -48,8 +56,9 @@ Chrome's autoplay policies are simple:
 - Autoplay with sound is allowed if:
     - User has interacted with the domain (click, tap, etc.).
     - On desktop, the user's [Media Engagement Index](#mei) threshold has been crossed,
-      meaning the user has previously play video with sound.
-    - On mobile, the user has [added the site to his or her home screen].
+      meaning the user has previously played video with sound.
+    - The user has [added the site to their home screen] on mobile or
+      [installed the PWA] on desktop.
 - Top frames can [delegate autoplay permission](#iframe) to their iframes to
   allow autoplay with sound.
 
@@ -82,7 +91,7 @@ User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 
 ### Developer switches {: #developer-switches }
 
-As a developer, you may want to change Chrome autoplay policy behaviour locally
+As a developer, you may want to change Chrome autoplay policy behavior locally
 to test your website depending on user engagement.
 
 - You can decide to disable entirely the autoplay policy by setting the Chrome
@@ -92,10 +101,10 @@ to test your website depending on user engagement.
   always allowed.
 
 - You can also decide to make sure playback autoplay is never allowed by
-  disabling use of MEI and whether sites with the highest overall MEI get
-  playback autoplay by default for new users. This can be done with two
-  [internal switches] with `chrome.exe
-  --disable-features=PreloadMediaEngagementData,
+  disabling use of MEI, applying autoplay policy to Web Audio, and whether
+  sites with the highest overall MEI get playback autoplay by default for new
+  users. This can be done with three [internal switches] with `chrome.exe
+  --disable-features=PreloadMediaEngagementData,AutoplayIgnoreWebAudio,
   MediaEngagementBypassAutoplayPolicies`.
 
 ### Iframe delegation {: #iframe }
@@ -146,10 +155,10 @@ autoplay.
 
 ### Chrome enterprise policies
 
-It is possible to change this new autoplay behaviour with Chrome enterprise
+It is possible to change this new autoplay behavior with Chrome enterprise
 policies for use cases such as kiosks or unattended systems. Check out the
-[Configure policies and settings] help page to learn how to set these new
-autoplay related enterprise policies:
+[Policy List] help page to learn how to set these new autoplay related
+enterprise policies:
 
 - The ["AutoplayAllowed"] policy controls whether autoplay is allowed or not.
 - The ["AutoplayWhitelist"] policy allows you to specify a whitelist of URL
@@ -197,19 +206,25 @@ including Facebook, Instagram, Twitter, and YouTube.
       });
     </script>
 
-### WebAudio
+### Web Audio {: #webaudio }
+
+Note: The Web Audio API will be included in the Chrome autoplay policy with M71
+(December 2018).
 
 First, be reminded that it is good practice to wait for a user interaction
 before starting audio playback as user is aware of something happening. Think
 of a "play" button or "on/off" switch for instance. You can also simply add an
 "unmute" button depending on the flow of the app.
 
-Key Point: An <code>AudioContext</code> must be created or resumed after the
-document received a user gesture to enable audio playback.
+Key Point: If an <code>AudioContext</code> is created prior to the document
+receiving a user gesture, it will be created in the "suspended" state, and you
+will need to call <code>resume()</code> after a user gesture is received.
 
-If you create your <code>AudioContext</code> on page load, you’ll
-have to call <code>resume()</code> later when user interacts with the page
-(e.g., user clicked a button).
+If you create your <code>AudioContext</code> on page load, you’ll have to call
+<code>resume()</code> at some time after the user interacted with the page
+(e.g., user clicked a button). Alternatively, the <code>AudioContext</code> 
+will be resumed after a user gesture if <code>start()</code> is called on
+any attached node.
 
     // Existing code unchanged.
     window.onload = function() {
@@ -225,8 +240,8 @@ have to call <code>resume()</code> later when user interacts with the page
       });
     });
 
-You may also create the <code>AudioContext</code> only when user interacts wit
-the page.
+You may also create the <code>AudioContext</code> only when the user interacts 
+with the page.
 
     document.querySelector('button').addEventListener('click', function() {
       var context = new AudioContext();
@@ -240,30 +255,36 @@ allowed to play, it should immediately switch to `running`. Otherwise it will
 be `suspended`. If you listen to the `statechange` event, you can detect changes
 asynchronously.
 
-For info, checkout the small [Pull Request] that fixes WebAudio playback due to
+For info, checkout the small [Pull Request] that fixes Web Audio playback due to
 these autoplay policy changes for [https://airhorner.com].
 
-## Feedback
+By default, the Web Audio API is not currently affected by the autoplay policy.
+To enable the autoplay policy for Web Audio, launch Chrome with the following
+[internal switch]: `chrome.exe --disable-features=AutoplayIgnoreWebAudio`.
 
-At the time of writing, Chrome's autoplay policies aren't carved in stone.
-Please reach out to the Chrome team, [ChromiumDev on Twitter] to share your
-thoughts.
+Note: Web Audio FAQs can be found [here].
 
-{% include "comment-widget.html" %}
+## Feedback {: .hide-from-toc }
 
-[Configure policies and settings]: https://support.google.com/chrome/a/topic/4386995
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
+
+[Policy List]: https://dev.chromium.org/administrators/policy-list-3
 ["AutoplayAllowed"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayAllowed
 ["AutoplayWhitelist"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayWhitelist
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
-[added the site to his or her home screen]: /web/updates/2017/02/improved-add-to-home-screen
+[added the site to their home screen]: /web/updates/2017/02/improved-add-to-home-screen
+[installed the PWA]: /web/progressive-web-apps/desktop
 [Promise]: /web/fundamentals/getting-started/primers/promises
 [rejected]: /web/updates/2017/06/play-request-was-interrupted
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
-[feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md
+[feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/master/features.md
 [feature policy]: https://wicg.github.io/feature-policy/
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
 [enable MEI]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [internal switches]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [Pull Request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [https://airhorner.com]: https://airhorner.com
-[ChromiumDev on Twitter]: https://twitter.com/chromiumdev
+[internal switch]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
+[here]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay

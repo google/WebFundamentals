@@ -1,15 +1,22 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Take advantage of the Console API to measure execution times and count statement executions.
+robots: noindex
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2019-03-28 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Measure and count executions {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/flaviocopes.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
+
+
+<aside class="warning">
+  This page is deprecated.
+</aside>
 
 Take advantage of the Console API to measure execution times and count statement executions.
 
@@ -106,4 +113,6 @@ Output of the code sample:
 
 ![console.count() example output](images/track-executions-console-count.png)
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

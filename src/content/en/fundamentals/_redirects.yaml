@@ -1,5 +1,17 @@
 redirects:
 
+- from: /web/fundamentals/codelabs/your-first-pwapp
+  to: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
+
+- from: /web/fundamentals/codelabs/web-serial
+  to: https://codelabs.developers.google.com/codelabs/web-serial/
+
+- from: /web/fundamentals/codelabs/your-first-pwapp/
+  to: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
+
+- from: /web/fundamentals/performance/prpl-pattern
+  to: https://web.dev/apply-instant-loading-with-prpl/
+
 - from: /web/fundamentals/layouts/...
   to: /web/fundamentals/design-and-ux/responsive/
 
@@ -99,9 +111,6 @@ redirects:
 - from: /web/fundamentals/primers/service-worker/update-a-service-worker
   to: /web/fundamentals/primers/service-workers/#update-a-service-worker
 
-- from: /web/fundamentals/media/mse/basics
-  to: /web/fundamentals/media/mse/
-
 - from: /web/fundamentals/webvr/...
   to: /web/fundamentals/vr/...
 
@@ -111,11 +120,17 @@ redirects:
 - from: /web/fundamentals/native-hardware/capturing-images/
   to: /web/fundamentals/media/capturing-images/
 
+- from: /web/fundamentals/payments/deep-dive-into-payment-request
+  to: /web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request
+
+- from: /web/fundamentals/payments/payment-request-ux-considerations
+  to: /web/fundamentals/payments/merchant-guide/payment-request-ux-considerations
+
 - from: /web/fundamentals/primers/payment-request/...
   to: /web/fundamentals/payments/...
 
 - from: /web/fundamentals/payments/android-pay
-  to: /pay/api/web/paymentrequest/tutorial
+  to: /pay/api/web/guides/paymentrequest/tutorial
 
 - from: /web/fundamentals/feed.xml
   to: /web/fundamentals/rss.xml

@@ -27,7 +27,5 @@ CSS Custom properties are incredibly powerful. Check out how you can use them to
 - [Extending native elements -- Polycasts #15](https://www.youtube.com/watch?v=OV8BvxpNQOs&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 - [Create reusable elements with ease -- Polycasts #14](https://www.youtube.com/watch?v=p7Q1mQtFGM8&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN&index=2)
 - [Polymer Slack](http://bit.ly/polymerslack)
-- [Polymer G+ community](https://plus.google.com/communities/115626364525706131031)
 
 [Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel
-

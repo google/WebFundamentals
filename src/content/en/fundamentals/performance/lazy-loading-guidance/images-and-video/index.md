@@ -2,11 +2,15 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: If your site has a ton of images and video, but you don't want to cut down on any of it, lazy loading might be just the technique you need to improve initial page load time and lower per-page payload.
 
-{# wf_updated_on: 2018-04-04 #}
+{# wf_updated_on: 2019-08-16 #}
 {# wf_published_on: 2018-04-04 #}
-{# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
+{# wf_blink_components: Blink>Image,Blink>HTML,Blink>JavaScript #}
 
 # Lazy Loading Images and Video {: .page-title }
+
+Note: Browser-level native lazy loading is now available! Refer to ["Native lazy-loading for the
+web"](https://web.dev/native-lazy-loading) to learn how to use the loading attribute and leverage a
+third-party library as a fallback for browsers that do not yet support it.
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
 
@@ -573,7 +577,7 @@ These changes can be disorienting for users and trigger expensive DOM layout
 operations that consume system resources and contribute to jank. At a minimum,
 consider using a solid color placeholder occupying the same dimensions as the
 target image, or techniques such as
-[LQIP](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders/) or
+[LQIP](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders) or
 [SQIP](https://github.com/technopagan/sqip) that hint at the content of a media
 item before it loads.
 
@@ -709,3 +713,11 @@ As far as performance improvement techniques go, lazy loading is reasonably
 uncontroversial. If you have a lot of inline imagery in your site, it's a
 perfectly fine way to cut down on unnecessary downloads. Your site's users and
 project stakeholders will appreciate it!
+
+_Special thanks to [François
+Beaufort](/web/resources/contributors/beaufortfrancois), Dean Hume, [Ilya
+Grigork](/web/resources/contributors/ilyagrigorik), [Paul
+Irish](/web/resources/contributors/paulirish), [Addy
+Osmani](/web/resources/contributors/addyosmani), [Jeff
+Posnick](/web/resources/contributors/jeffposnick), and Martin Schierle for their
+valuable feedback, which significantly improved the quality of this article._

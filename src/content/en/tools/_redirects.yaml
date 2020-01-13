@@ -1,5 +1,50 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/ui
+  to:   /web/tools/chrome-devtools/customize/
+
+- from: /web/tools/chrome-devtools/console/get-started
+  to:   /web/tools/chrome-devtools/console/
+
+- from: /web/tools/chrome-devtools/snippets
+  to:   /web/tools/chrome-devtools/javascript/snippets
+
+- from: /web/tools/chrome-devtools/manage-data/page-resources
+  to:   /web/tools/chrome-devtools/resources/
+
+- from: /web/tools/chrome-devtools/manage-data/cookies
+  to:   /web/tools/chrome-devtools/storage/cookies
+
+- from: /web/tools/chrome-devtools/network-performance/
+  to:   /web/tools/chrome-devtools/network/
+
+- from: /web/tools/chrome-devtools/console/command-line-reference
+  to: /web/tools/chrome-devtools/console/utilities
+
+- from: /web/tools/chrome-devtools/console/console-reference
+  to: /web/tools/chrome-devtools/console/api
+
+- from: /web/tools/lighthouse/audits/required-aria-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-required-attr
+
+- from: /web/tools/lighthouse/audits/valid-aria-values
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-valid-attr-value
+
+- from: /web/tools/lighthouse/audits/valid-aria-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-valid-attr
+
+- from: /web/tools/lighthouse/audits/aria-allowed-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-allowed-attr
+
+- from: /web/tools/lighthouse/audits/unoptimized-images
+  to: /web/tools/lighthouse/audits/optimize-images
+
+- from: /web/tools/lighthouse/audits/first-interactive
+  to: /web/tools/lighthouse/audits/first-cpu-idle
+
+- from: /web/tools/lighthouse/audits/consistently-interactive
+  to: /web/tools/lighthouse/audits/time-to-interactive
+
 - from: /web/tools/polymer-starter-kit/...
   to: https://www.polymer-project.org/2.0/start/toolbox/set-up
 
@@ -17,6 +62,9 @@ redirects:
 
 - from: /web/tools/lighthouse/audits/has-viewport-meta-tag%22
   to: /web/tools/lighthouse/audits/has-viewport-meta-tag
+
+- from: /web/tools/lighthouse/audits/contrast-ratio
+  to: https://dequeuniversity.com/rules/axe/2.2/color-contrast?application=lighthouse
 
 - from: /web/tools/chrome-devtools/javascript/What%20do%20the%20colors%20mean%20in%20Chrome%20Developer%20Tools%20Scope%20panel
   to: /web/tools/chrome-devtools/javascript
@@ -54,9 +102,6 @@ redirects:
 - from: /web/tools/chrome-devtools/evaluate-performance/rail
   to: /web/fundamentals/performance/rail
 
-- from: /web/tools/chrome-devtools/network-performance/
-  to: /web/tools/chrome-devtools/network-performance/resource-loading
-
 - from: /web/tools/chrome-devtools/evaluate-performance/
   to: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
 
@@ -74,6 +119,9 @@ redirects:
 
 - from: /web/tools/iterate/inspect-styles/media-queries
   to: /web/tools/chrome-devtools/device-mode/media-queries
+
+- from: /web/tools/chrome-devtools/beginners/...
+  to: /web/tools/chrome-devtools/
 
 - from: /web/tools/iterate/...
   to: /web/tools/chrome-devtools/...
@@ -133,10 +181,7 @@ redirects:
   to: /web/tools/chrome-devtools/remote-debugging/
 
 - from: /web/tools/chrome-devtools/debug/snippets/
-  to: /web/tools/chrome-devtools/snippets
-
-- from: /web/tools/chrome-devtools/javascript/snippets
-  to: /web/tools/chrome-devtools/snippets
+  to: /web/tools/chrome-devtools/javascript/snippets
 
 - from: /web/tools/chrome-devtools/debug/watch-variables/
   to: /web/tools/chrome-devtools/javascript/watch-variables
@@ -144,8 +189,8 @@ redirects:
 - from: /web/tools/chrome-devtools/progressive-web-apps/
   to: /web/tools/chrome-devtools/progressive-web-apps
 
-- from: /web/tools/chrome-devtools/security/
-  to: /web/tools/chrome-devtools/security
+- from: /web/tools/chrome-devtools/security
+  to: /web/tools/chrome-devtools/security/
 
 - from: /web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis
   to: /web/tools/chrome-devtools/memory-problems/
@@ -165,6 +210,9 @@ redirects:
 - from: /web/tools/chrome-devtools/javascript/console/...
   to: /web/tools/chrome-devtools/console/...
 
+- from: /web/tools/chrome-devtools/network-performance/...
+  to:   /web/tools/chrome-devtools/network/...
+
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
 
@@ -174,7 +222,7 @@ redirects:
 - from: /web/tools/workbox/examples/
   to: /web/tools/workbox/modules/
 
-- from: /web/tools/workbox/overview/
+- from: /web/tools/workbox/overview
   to: /web/tools/workbox/
 
 - from: /web/tools/workbox/overview/
@@ -191,3 +239,6 @@ redirects:
 
 - from: /web/tools/workbox/guides/migrate
   to: /web/tools/workbox/guides/migrations/migrate-from-sw
+
+- from: /web/tools/workbox/modules/workbox-broadcast-cache-update
+  to: /web/tools/workbox/modules/workbox-broadcast-update

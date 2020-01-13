@@ -19,7 +19,7 @@
             <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v3.0.0-beta.2</small></span>
+              <span class="label label-version"><small>v4.0.0-rc.4</small></span>
             </div>
             <p>A class to manage storing failed requests in IndexedDB and retrying them later. All parts of the storing and replaying process are observable via callbacks.
             </p>
@@ -64,42 +64,13 @@
                           <tbody>
                             <tr>
                               <td class="details-table-name">
-                                <p>callbacks</p>
+                                <p>onSync</p>
                               </td>
                               <td>
                                 <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">Object</p>
-                                <p>Callbacks to observe the lifecycle of queued requests. Use these to respond to or modify the requests during the replay process.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>callbacks.requestWillEnqueue</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">function(StorableRequest)</p>
-                                <p>Invoked immediately before the request is stored to IndexedDB. Use this callback to modify request data at store time.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>callbacks.requestWillReplay</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">function(StorableRequest)</p>
-                                <p>Invoked immediately before the request is re-fetched. Use this callback to modify request data at fetch time.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>callbacks.queueDidReplay</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">function(Array of StorableRequest)</p>
-                                <p>Invoked after all requests in the queue have successfully replayed.</p>
+                                <p class="details-table-types">function()</p>
+                                <p>A function that gets invoked whenever the 'sync' event fires. The function is invoked with an object containing the <code>queue</code> property (referencing this instance), and you can use the callback to customize the
+                                  replay behavior of the queue. When not set the <code>replayRequests()</code> method is called.</p>
                               </td>
                             </tr>
                             <tr>
@@ -137,11 +108,10 @@
             </section>
             <h2>Methods</h2>
             <section>
-              <h3 id="addRequest" class="symbol-name">addRequest</h3>
+              <h3 id="_addRequest" class="symbol-name">_addRequest</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
-              <p class="type-signature"> addRequest(request)</p>
-              <p>Stores the passed request into IndexedDB. The database used is
-                <code>workbox-background-sync</code> and the object store name is the same as the name this instance was created with (to guarantee it's unique).</p>
+              <p class="type-signature"> _addRequest(entry, operation)</p>
+              <p>Adds the entry to the QueueStore and registers for a sync event.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -152,11 +122,55 @@
                   <tbody>
                     <tr>
                       <td class="details-table-name">
-                        <p>request</p>
+                        <p>entry</p>
                       </td>
                       <td>
-                        <p class="details-table-types">Request</p>
-                        <p>The request object to store.</p>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>entry</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>request</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Request</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>metadata</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Object</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>timestamp</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">number</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>operation</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">string</p>
+                        <p>('push' or 'unshift')</p>
                       </td>
                     </tr>
                   </tbody>
@@ -164,11 +178,198 @@
               </section>
               <dl class="dl-compact">
               </dl>
+              <h3 id="_removeRequest" class="symbol-name">_removeRequest</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> _removeRequest(operation)&nbsp;returns&nbsp;(Object or undefined)</p>
+              <p>Removes and returns the first or last (depending on <code>operation</code>) entry form the QueueStore that's not older than the <code>maxRetentionTime</code>.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>operation</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">string</p>
+                        <p>('pop' or 'shift')</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>(Object or undefined)</code>&nbsp;</p>
+                </dd>
+              </dl>
+              <h3 id="popRequest" class="symbol-name">popRequest</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> popRequest()&nbsp;returns&nbsp;Promise containing Object</p>
+              <p>Removes and returns the last request in the queue (along with its timestamp and any metadata). The returned object takes the form:
+                <code>{request, timestamp, metadata}</code>.</p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing Object</code>&nbsp;</p>
+                </dd>
+              </dl>
+              <h3 id="pushRequest" class="symbol-name">pushRequest</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> pushRequest(entry)</p>
+              <p>Stores the passed request in IndexedDB (with its timestamp and any metadata) at the end of the queue.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>entry</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>entry</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>request</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Request</p>
+                                <p>The request to store in the queue.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>metadata</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Object</p>
+                                <p>Any metadata you want associated with the stored request. When requests are replayed you'll have access to this metadata object in case you need to modify the request beforehand.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>timestamp</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">number</p>
+                                <p>The timestamp (Epoch time in milliseconds) when the request was first added to the queue. This is used along with <code>maxRetentionTime</code> to remove outdated requests. In general you don't need to set this value, as
+                                  it's automatically set for you (defaulting to <code>Date.now()</code>), but you can update it if you don't want particular requests to expire.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id="registerSync" class="symbol-name">registerSync</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> registerSync()</p>
+              <p>Registers a sync event with a tag unique to this instance.</p>
+              <dl class="dl-compact">
+              </dl>
               <h3 id="replayRequests" class="symbol-name">replayRequests</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> replayRequests()</p>
-              <p>Retrieves all stored requests in IndexedDB and retries them. If the queue contained requests that were successfully replayed, the
-                <code>queueDidReplay</code> callback is invoked (which implies the queue is now empty). If any of the requests fail, a new sync registration is created to retry again later.</p>
+              <p>Loops through each request in the queue and attempts to re-fetch it. If any request fails to re-fetch, it's put back in the same position in the queue (which registers a retry for the next sync event).</p>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id="shiftRequest" class="symbol-name">shiftRequest</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> shiftRequest()&nbsp;returns&nbsp;Promise containing Object</p>
+              <p>Removes and returns the first request in the queue (along with its timestamp and any metadata). The returned object takes the form:
+                <code>{request, timestamp, metadata}</code>.</p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing Object</code>&nbsp;</p>
+                </dd>
+              </dl>
+              <h3 id="unshiftRequest" class="symbol-name">unshiftRequest</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> unshiftRequest(entry)</p>
+              <p>Stores the passed request in IndexedDB (with its timestamp and any metadata) at the beginning of the queue.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>entry</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>entry</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>request</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Request</p>
+                                <p>The request to store in the queue.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>metadata</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Object</p>
+                                <p>Any metadata you want associated with the stored request. When requests are replayed you'll have access to this metadata object in case you need to modify the request beforehand.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>timestamp</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">number</p>
+                                <p>The timestamp (Epoch time in milliseconds) when the request was first added to the queue. This is used along with <code>maxRetentionTime</code> to remove outdated requests. In general you don't need to set this value, as
+                                  it's automatically set for you (defaulting to <code>Date.now()</code>), but you can update it if you don't want particular requests to expire.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
               <dl class="dl-compact">
               </dl>
             </section>

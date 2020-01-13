@@ -130,7 +130,7 @@ description:使用 Chrome DevTools CPU 分析器識別開銷大的函數。
 *  **Total time**。完成此函數和其調用的任何函數當前的調用所需的時間。
 *  **URL**。形式爲 `file.js:100` 的函數定義的位置，其中 `file.js` 是定義函數的文件名稱，`100` 是定義的行號。
 *  **Aggregated self time**。記錄中函數所有調用的總時間，不包含此函數調用的函數。
-*  **Aggregated total time**。函數所有調用的總時間，不包含此函數調用的函數。
+*  **Aggregated total time**。函數所有調用的總時間，包含此函數調用的函數。
 *  **Not optimized**。如果分析器已檢測出函數存在潛在的優化，會在此處列出。
 
 

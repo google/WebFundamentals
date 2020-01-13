@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Some Insecure Resources Can Be Upgraded To HTTPS" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-08 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-02-06 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -81,3 +81,7 @@ the audit results.
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/mixed-content.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

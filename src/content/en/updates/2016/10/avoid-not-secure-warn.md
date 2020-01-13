@@ -70,4 +70,3 @@ HTTP, regardless of whether or not the page contains sensitive input fields.
 Even if you adopt one of the more targeted resolutions above, you should plan to
 migrate your site to use HTTPS for all pages.
 
-{% include "comment-widget.html" %}

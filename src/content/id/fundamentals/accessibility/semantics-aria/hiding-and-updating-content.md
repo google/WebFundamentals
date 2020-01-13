@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Menyembunyikan materi dari teknologi pendukung
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Menyembunyikan dan Memperbarui Materi {: .page-title }
@@ -36,14 +36,14 @@ akan tetap disertakan dalam pohon aksesibilitas. Salah satu teknik umum adalah m
       height: 1px;
       overflow: hidden;
     }
-    
+
 
 Selain itu, seperti yang telah kita lihat, bisa saja menyediakan teks khusus pembaca layar lewat atribut
 `aria-label`, `aria-labelledby`, atau `aria-describedby` yang mereferensikan
 elemen yang dalam keadaan lain disembunyikan.
 
 Lihat artikel WebAIM ini di [Teknik untuk menyembunyikan
-teks](http://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }
+teks](https://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }
 untuk informasi selengkapnya mengenai pembuatan teks "khusus pembaca layar".
 
 Terakhir, ARIA menyediakan mekanisme untuk mengecualikan materi dari
@@ -95,13 +95,13 @@ teknologi pendukung ke pesan tersebut dengan menyetel atribut `aria-live`-nya. B
 
 
     <div class="status">Your message has been sent.</div>
-    
+
 
 dengan pasangan "live"-nya.
 
 
     <div class="status" aria-live="polite">Your message has been sent.</div>
-    
+
 
 `aria-live` memiliki tiga nilai yang diperbolehkan: `polite`, `assertive`, dan `off`.
 
@@ -159,7 +159,7 @@ Terakhir, `aria-busy` memungkinkan Anda memberi tahu teknologi pendukung agar
 untuk sementara mengabaikan perubahan pada elemen, misalnya bila ada sesuatu yang sedang dimuat. Setelah
 semua berada pada tempatnya, `aria-busy` harus disetel ke false untuk menormalkan
 operasi pembaca.
- 
+
 
 
 {# wf_devsite_translation #}

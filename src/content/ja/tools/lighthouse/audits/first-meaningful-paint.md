@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「First Meaningful Paint」のリファレンス ドキュメント。
 
-{# wf_updated_on: 2016-10-05 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2016-10-05 #}
 
 #  First Meaningful Paint {: .page-title }
@@ -27,7 +27,7 @@ First Meaningful Paint の高速化を実現するには、[クリティカル �
 
 基本的に First Meaningful Paint とは、アバブ・ザ・フォールドのレイアウトが大きく変化してウェブフォントが読み込まれる前のペイントを指します。
 詳細な仕様については
-[First Meaningful Paint: A Layout-Based Aproach](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view) をご覧ください。
+[First Meaningful Paint: A Layout-Based Approach](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view) をご覧ください。
 
 
 

@@ -37,4 +37,3 @@ Let's show a quick example:
 As the list of supported options grows and changes, you can use feature detection to perform the correct actions for your web applications.
 
 
-{% include "comment-widget.html" %}

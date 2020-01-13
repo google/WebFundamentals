@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml 
+project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Arsitektur shell aplikasi membuat UI Anda tetap lokal dan memuat konten secara dinamis tanpa mengorbankan kemampuan untuk dapat ditemukan dan ditautkan pada web. 
+description: Arsitektur shell aplikasi membuat UI Anda tetap lokal dan memuat konten secara dinamis tanpa mengorbankan kemampuan untuk dapat ditemukan dan ditautkan pada web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2016-09-27 #}
 
 # Model Shell Aplikasi {: .page-title }
@@ -162,11 +162,11 @@ file indeks lengkap. Mari kita lihat apa materinya.
       <header class="header">
         <h1 class="header__title">Shell Aplikasi</h1>
       </header>
-      
+
       <nav class="nav">
       ...
       </nav>
-      
+
       <main class="main">
       ...
       </main>
@@ -197,7 +197,7 @@ file indeks lengkap. Mari kita lihat apa materinya.
 <div class="clearfix"></div>
 
 
-Note: Lihat [https://app-shell.appspot.com/](https://app-shell.appspot.com/) untuk
+Note: Lihat [The App Shell Model](/web/fundamentals/architecture/app-shell) untuk
 tampilan sesungguhnya dengan PWA sangat sederhana menggunakan shell aplikasi dan
 rendering sisi-server untuk materi. Shell aplikasi bisa diimplementasikan dengan menggunakan sembarang pustaka atau
 kerangka kerja seperti yang dibahas dalam pembahasan <a
@@ -207,7 +207,7 @@ href="https://shop.polymer-project.org">Shop</a>) dan React (<a
 href="https://github.com/insin/react-hn">ReactHN</a>,
 <a
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>).
- 
+
 
 ### Meng-cache shell aplikasi {: #app-shell-caching }
 

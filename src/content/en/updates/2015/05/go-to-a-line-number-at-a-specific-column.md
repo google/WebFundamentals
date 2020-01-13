@@ -23,4 +23,3 @@ description: Learn how to jump to specific line numbers in the Sources panel.
 </ol>
 
 
-{% include "comment-widget.html" %}

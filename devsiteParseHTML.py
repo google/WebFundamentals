@@ -100,7 +100,9 @@ def parse(requestPath, fileLocation, content, lang='en'):
       context['footerLinks'] = item['linkboxes']
 
   # Replaces <pre> tags with prettyprint enabled tags
-  body = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint">', body)
+  body = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint devsite-code-highlight">', body)
+  # Adds code highlighting support, which requires devsite-code-highlight
+  body = re.sub(r'^<pre class="prettyprint">(?m)', r'<pre class="prettyprint devsite-code-highlight">', body)
 
   context['content'] = body
 

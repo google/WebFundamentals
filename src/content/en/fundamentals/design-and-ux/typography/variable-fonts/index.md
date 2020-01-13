@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: We will look at what variable fonts are, how we can use them in our work.
 
-{# wf_updated_on: 2018-03-01 #}
+{# wf_updated_on: 2019-02-21 #}
 {# wf_published_on: 2018-02-19 #}
 {# wf_blink_components: Blink>Fonts #}
 
@@ -301,8 +301,8 @@ generate eight weights, across three widths, across both the Italic and Roman
 styles. Storing 48 individual fonts in a single variable font file meant a
 **88% reduction in file size**.
 
-On the flip side, if you are animating the font between settings, this may 
-cause the browser performance issues. Learn more about this on 
+On the flip side, if you are animating the font between settings, this may
+cause the browser performance issues. Learn more about this on
 [Surma's Supercharged](https://www.youtube.com/watch?v=B42rUMdcB7c).
 
 With variable fonts, app and website makers can offer really rich typography
@@ -318,10 +318,10 @@ in Chrome and Safari, with support coming soon to Edge 17 and Firefox. See
 [caniuse.com](https://caniuse.com/#search=font-variation-settings){: .external}
 for more details.
 
-It is possible to use @supports in you CSS to create a viable fallback:
+It is possible to use @supports in your CSS to create a viable fallback:
 
 ```
-@supports (font-variations-settings: 'wdth' 200) {
+@supports (font-variation-settings: 'wdth' 200) {
   @font-face {
     /* https://github.com/TypeNetwork/Amstelvar */
     font-family: AmstelvarAlpha;
@@ -347,3 +347,7 @@ people:
 * Laurence Penney, developer of [axis-praxis.org](https://axis-praxis.org){: .external}
 * [Mandy Michael](https://twitter.com/Mandy_Kerr){: .external}
 * Dave Crossland, Program Manager, Google Fonts
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

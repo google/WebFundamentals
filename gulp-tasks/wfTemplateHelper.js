@@ -100,7 +100,13 @@ function getFullFeedEntries(articles, maxItems, includeContent = true) {
  * @param {Object} options Options used to generate the feed
  */
 function generateFeeds(files, options) {
-  gutil.log(' ', 'Generating RSS and ATOM feeds...');
+  if (!global.WF.options.buildRSS) {
+    return;
+  }
+  if (!files || files.length === 0) {
+    return;
+  }
+  gutil.log(' ', `Generating '${options.title}' RSS & ATOM feeds...`);
   const maxItems = options.maxItems || global.WF.maxArticlesInFeed;
   let context = {
     title: options.title,
@@ -252,9 +258,13 @@ function generateIndex(files, options) {
  */
 function generateLatestWidget(files, options) {
   gutil.log(' ', 'Generating latest updates widget...');
-  const context = {
-    articles: files.splice(0, options.articlesToShow),
-  };
+  // Create a new array instead of mutating the existing array
+  const articles = [];
+  const len = options.articlesToShow || files.length;
+  for (let i = 0; i < len; i++) {
+    articles.push(files[i]);
+  }
+  const context = {articles};
   const template = path.join(global.WF.src.templates, 'latest_articles.html');
   const outputFile = path.join(options.outputPath, '_shared',
       'latest_articles.html');

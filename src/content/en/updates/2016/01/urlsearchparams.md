@@ -158,4 +158,3 @@ Try out the [sample](https://googlechrome.github.io/samples/urlsearchparams/inde
 To see `URLSearchParams` in a real-world app, check out [Polymer's material design Iconset Generator](https://poly-icon.appspot.com/). I used it to setup the app's [initial state from a deep link](https://github.com/PolymerLabs/polyicon/blob/master/index.html#L336-L349). Pretty handy :)
 
 
-{% include "comment-widget.html" %}

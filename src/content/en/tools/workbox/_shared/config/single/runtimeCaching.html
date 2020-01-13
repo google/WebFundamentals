@@ -1,4 +1,4 @@
-<tr>
+<tr id="{{ anchor_prefix }}runtimeCaching">
     <td>
       <p>runtimeCaching</p>
     </td>
@@ -22,7 +22,7 @@
       </p>
       <p>
         The <code>options</code> properties can be used to configure instances of the cache
-        expiration, cacheable response, and broadcast cache update plugins to apply to a given route.
+        expiration, cacheable response, and broadcast update plugins to apply to a given route.
       </p>
       <p>
         <strong>Example:</strong>
@@ -31,7 +31,7 @@
     // Match any same-origin request that contains 'api'.
     urlPattern: /api/,
     // Apply a network-first strategy.
-    handler: 'networkFirst',
+    handler: 'NetworkFirst',
     options: {
       // Fall back to the cache after 10 seconds.
       networkTimeoutSeconds: 10,
@@ -42,12 +42,19 @@
         maxEntries: 5,
         maxAgeSeconds: 60,
       },
+      // Configure background sync.
+      backgroundSync: {
+        name: 'my-queue-name',
+        options: {
+          maxRetentionTime: 60 * 60,
+        },
+      },
       // Configure which responses are considered cacheable.
       cacheableResponse: {
         statuses: [0, 200],
         headers: {'x-test': 'true'},
       },
-      // Configure the broadcast cache update plugin.
+      // Configure the broadcast update plugin.
       broadcastUpdate: {
         channelName: 'my-update-channel',
       },
@@ -55,12 +62,19 @@
       plugins: [
         {cacheDidUpdate: () => /* custom plugin code */}
       ],
+      // matchOptions and fetchOptions are used to configure the handler.
+      fetchOptions: {
+        mode: 'no-cors',
+      },
+      matchOptions: {
+        ignoreSearch: true,
+      },
     },
   }, {
     // To match cross-origin requests, use a RegExp that matches
     // the start of the origin:
     urlPattern: new RegExp('^https://cors\.example\.com/'),
-    handler: 'staleWhileRevalidate',
+    handler: 'StaleWhileRevalidate',
     options: {
       cacheableResponse: {
         statuses: [0, 200]

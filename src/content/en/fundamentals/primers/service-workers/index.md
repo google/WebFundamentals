@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2018-03-28 #}
+{# wf_updated_on: 2019-01-09 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Service Workers: an Introduction {: .page-title }
@@ -119,7 +119,7 @@ so check your server's documentation and be sure to check out
 [Mozilla's SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 for best practices.
 
-## Register A service worker
+## Register a service worker
 
 To install a service worker you need to kick start the process by
 **registering** it in your page. This tells the browser where your
@@ -273,13 +273,7 @@ response of the fetch request and then adding it to the cache, like below.
               return response;
             }
 
-            // IMPORTANT: Clone the request. A request is a stream and
-            // can only be consumed once. Since we are consuming this
-            // once by cache and once by the browser for fetch, we need
-            // to clone the response.
-            var fetchRequest = event.request.clone();
-
-            return fetch(fetchRequest).then(
+            return fetch(event.request).then(
               function(response) {
                 // Check if we received a valid response
                 if(!response || response.status !== 200 || response.type !== 'basic') {
@@ -488,3 +482,7 @@ that you may find useful.
 If you get stuck then please post your questions on StackOverflow and use the
 '[service-worker](http://stackoverflow.com/questions/tagged/service-worker)'
 tag so that we can keep a track of issues and try and help as much as possible.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

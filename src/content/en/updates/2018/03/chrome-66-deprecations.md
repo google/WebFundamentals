@@ -104,4 +104,3 @@ since version 48. To comply with the specification, `document.createTouch()` and
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

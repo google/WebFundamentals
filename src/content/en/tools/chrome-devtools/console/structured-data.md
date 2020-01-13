@@ -1,14 +1,23 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Compare similar data objects using the table() method.
+robots: noindex
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2019-03-28 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Compare Similar Data Objects {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
+
+
+
+<aside class="warning">
+  This page is deprecated.
+</aside>
+
 View structured data and compare data objects using the table() method.
 
 The `table()` method provides an easy way to view objects and arrays that include similar data. When called, it will take the properties of an object and create a header. The row data then comes from each index's properties value.
@@ -51,4 +60,6 @@ This will output the following:
 
 ![console output with table objects](images/table-people-objects.png)
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

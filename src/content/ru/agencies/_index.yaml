@@ -1,0 +1,24 @@
+---
+book_path: "/web/_book.yaml"
+landing_page:
+  body_class: web-landing-page web-landing-page--agencies
+  custom_css_path: "/web/agencies/css/web-agencies-styles.css"
+  rows:
+  - classname: devsite-landing-row-50 devsite-landing-row-large-headings
+    items:
+    - description: 'Найдите квалифицированные веб-студии, которые помогут вам создать
+        оптимизированные, в том числе для мобильных платформ, веб-приложения. Ваше
+        агентство создает прогрессивые веб-приложения для Ваших клиентов? Если да,
+        пожалуйста используйте эту форму чтобы мы рассмотрели возможность занесения
+        Вас в этот каталогGoogle Developers не даёт никаких гарантий в отношении этих
+        сертифицированных агентств. Каждое агентсво полностью ответственно за их услуги
+        и не аффилированно с Google Developers и не предлагает услуги от имени Google
+        Developers. Клиенты несут полную ответственность за использование услуг, если
+        таковые имеются. Google Developers не будут нести ответственность ни за какие  продукты
+        или услуги, предоставляемые агенством. '
+      heading: Каталог агенств, создающих прогрессивные веб-приложения
+  - classname: devsite-landing-row-100 programs-directory-ctn
+    items:
+    - custom_html: '{% include "web/agencies/_partials/web-directory.html" %}'
+project_path: "/web/_project.yaml"
+title: Найдите квалифицированные веб-студии для разработки оптимизированных web-приложений

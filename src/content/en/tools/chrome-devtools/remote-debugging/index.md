@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Remote debug live content on an Android device from a Windows, Mac, or Linux computer.
 
-{# wf_updated_on: 2018-01-12 #}
+{# wf_updated_on: 2018-11-19 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -98,29 +98,39 @@ Android device](#troubleshooting) for more help.
 
 ### Troubleshooting: DevTools is not detecting the Android device {: #troubleshooting }
 
+Make sure that your hardware is set up correctly:
+
 * If you're using a USB hub, try connecting your Android device directly to your
   development machine instead.
 * Try unplugging the USB cable between your Android device and development machine, and
   then plugging it back in. Do it while your Android and development machine screens
   are unlocked.
-* If your development machine is running Windows, try manually installing the USB drivers for
-  your Android device. See [Install OEM USB Drivers][drivers]{:.external}.
-* If you don't see the **Allow USB Debugging** prompt on your Android device, try
-  disconnecting and then re-connecting the USB cable while DevTools is in focus on
-  your development machine and your Android homescreen is showing. In other words,
-  sometimes the prompt doesn't show up when your Android or development machine screens
-  are locked. Consider updating the display settings for your Android device and development
-  machine so that they never go to sleep.
-* Select **Revoke USB Debugging Authorizations** from the **Developer Options** screen on your
-  Android device to reset it to a fresh state.
-* Some combinations of Windows and Android devices (especially Samsung) require extra
-  set up. See [Chrome DevTools Devices does not detect device when plugged in][SO]{:.external}.
 * Make sure that your USB cable works. You should be able to inspect files on your Android device
   from your development machine.
 
+Make sure that your software is set up correctly:
+
+* If your development machine is running Windows, try manually installing the USB drivers for
+  your Android device. See [Install OEM USB Drivers][drivers]{:.external}.
+* Some combinations of Windows and Android devices (especially Samsung) require extra
+  set up. See [Chrome DevTools Devices does not detect device when plugged in][SO]{:.external}.
+
+If you don't see the **Allow USB Debugging** prompt on your Android device try:
+
+* Disconnecting and then re-connecting the USB cable while DevTools is in focus on
+  your development machine and your Android homescreen is showing. In other words,
+  sometimes the prompt doesn't show up when your Android or development machine screens
+  are locked.
+* Updating the display settings for your Android device and development
+  machine so that they never go to sleep.
+* Setting Android's USB mode to PTP. See [Galaxy S4 does not show Authorize USB debugging
+  dialog box](https://android.stackexchange.com/questions/101933){: .external }.
+* Select **Revoke USB Debugging Authorizations** from the **Developer Options** screen on your
+  Android device to reset it to a fresh state.
+
 If you find a solution that is not mentioned in this section or in [Chrome DevTools Devices
-does not detect device when plugged in][SO], please add an answer to that Stack Overflow
-question, or [open an issue on this tutorial's repository][issue]{:.external}!
+does not detect device when plugged in][SO]{: .external}, please add an answer to that Stack
+Overflow question, or [open an issue in the webfundamentals repository][issue]{:.external}!
 
 [drivers]: https://developer.android.com/tools/extras/oem-usb.html
 [SO]: https://stackoverflow.com/questions/21925992
@@ -198,7 +208,7 @@ You can interact with the screencast in multiple ways:
 Some notes on screencasts:
 
 * Screencasts only display page content. Transparent portions of the screencast 
-  represent device interfaces, such as the Chrome omnibox, the Android status 
+  represent device interfaces, such as the Chrome address bar, the Android status 
   bar, or the Android keyboard.
 * Screencasts negatively affect frame rates. Disable screencasting while
   measuring scrolls or animations to get a more accurate picture of your
@@ -206,3 +216,7 @@ Some notes on screencasts:
 * If your Android device screen locks, the content of your screencast
   disappears. Unlock your Android device screen to automatically resume the
   screencast.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,14 +1,20 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and edit the HTML and CSS of your pages.
+robots: noindex
 
-{# wf_updated_on: 2016-01-28 #}
+{# wf_updated_on: 2019-07-11 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Inspect and Edit Pages and Styles {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+<aside class="caution">
+  This page is deprecated.
+</aside>
 
 Inspect and live-edit the HTML and CSS of a page using 
 the Chrome DevTools Elements panel.
@@ -116,3 +122,7 @@ Assuming you've set up persistent authoring, to undo changes:
   panel and select **revert** next to the filename.
 
 [inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

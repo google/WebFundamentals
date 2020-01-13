@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:改善網頁的無障礙功能
 
-{# wf_updated_on:2018-03-09 #}
-{# wf_published_on:2016-06-26 #}
+{# wf_updated_on: 2019-06-08 #}
+{# wf_published_on: 2016-06-26 #}
 
 # 無障礙功能 {: .page-title }
 
@@ -78,9 +78,9 @@ WCAG 圍繞四大原則進行組織，通常使用首字母縮寫詞 *POUR* 來�
     它是否能與輔助技術協作？
 
 儘管 WCAG 提供了無障礙內容含義的全面概覽，可能還會讓人覺得有點不知所措。
-爲幫助緩解這種壓力，[WebAIM](http://webaim.org/){: .external }（網絡無障礙功能思維）小組將 WCAG 指南提煉成了一份易於遵循的檢查清單，專以網絡內容爲目標。
+爲幫助緩解這種壓力，[WebAIM](https://webaim.org/){: .external }（網絡無障礙功能思維）小組將 WCAG 指南提煉成了一份易於遵循的檢查清單，專以網絡內容爲目標。
 
-[WebAIM 檢查清單](http://webaim.org/standards/wcag/checklist){: .external }以高屋建瓴的方式簡要介紹了您需要實現的內容，同時還在您需要擴展定義時提供了底層 WCAG 規範的鏈接。
+[WebAIM 檢查清單](https://webaim.org/standards/wcag/checklist){: .external }以高屋建瓴的方式簡要介紹了您需要實現的內容，同時還在您需要擴展定義時提供了底層 WCAG 規範的鏈接。
 
 有這個工具在手，您就可以爲自己的無障礙功能工作制定方向，並堅信只要項目達到規定標準，用戶就能在訪問您的內容時獲得良好的體驗。
 
@@ -89,7 +89,7 @@ WCAG 圍繞四大原則進行組織，通常使用首字母縮寫詞 *POUR* 來�
 在瞭解有關無障礙功能的內容時，瞭解世界上用戶的多樣性以及影響他們的無障礙功能主題的種類會有幫助。爲做進一步說明，請看一看下面這段包含豐富信息的問答對話，問答的對象是 Victor Tsaran 這位全盲的 Google 技術項目經理。
 
 <figure class="attempt-right">
-  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">	
+  <img src="imgs/victor_tsaran.jpg" alt="Victor Tsaran">
   <figcaption>Victor Tsaran</figcaption>
 </figure>
 
@@ -110,7 +110,7 @@ WCAG 圍繞四大原則進行組織，通常使用首字母縮寫詞 *POUR* 來�
 視覺缺陷可以分爲幾個類別：像我這樣的無視力用戶可以使用屏幕閱讀器、盲文或結合使用這兩者。
 
 <figure class="attempt-right">
-  <img src="imgs/braille-reader.png" alt="一臺盲文閱讀器">	
+  <img src="imgs/braille-reader.png" alt="一臺盲文閱讀器">
   <figcaption>一臺盲文閱讀器</figcaption>
 </figure>
 
@@ -121,7 +121,7 @@ WCAG 圍繞四大原則進行組織，通常使用首字母縮寫詞 *POUR* 來�
 這是個龐大的羣體，因此這一類別人羣使用的視覺調節自然種類多樣：一些人使用屏幕閱讀器或盲文顯示器（我甚至聽說過有一位婦女閱讀顯示在屏幕上的盲文，因爲這些盲文比印刷文字更容易看清），他們也可以使用不含完整屏幕閱讀器功能的文字語音轉換技術，使用可對屏幕進行局部放大的屏幕放大鏡，或者直接使用瀏覽器縮放來增大字號。他們還可以使用高對比度方案，例如操作系統高對比度模式、高對比度瀏覽器擴展程序或網站的高對比度主題背景。
 
 <figure class="attempt-right">
-  <img src="imgs/high-contrast.png" alt="高對比度模式">	
+  <img src="imgs/high-contrast.png" alt="高對比度模式">
   <figcaption>高對比度模式</figcaption>
 </figure>
 
@@ -138,7 +138,7 @@ WCAG 圍繞四大原則進行組織，通常使用首字母縮寫詞 *POUR* 來�
 沒錯，運動缺陷，或者說是靈巧性缺陷。這一羣體的範圍既包括可能是由於受到 RSI 或類似損傷，害怕疼痛而不願意使用鼠標的用戶，也包括身體癱瘓以及某些身體部位運動範圍受限的用戶。
 
 <figure class="attempt-right">
-  <img src="imgs/eye-tracking.png" alt="一個使用眼球追蹤設備的人">	
+  <img src="imgs/eye-tracking.png" alt="一個使用眼球追蹤設備的人">
   <figcaption>一臺眼球追蹤設備</figcaption>
 </figure>
 
@@ -154,7 +154,7 @@ WCAG 圍繞四大原則進行組織，通常使用首字母縮寫詞 *POUR* 來�
 我們之中有許多人會使用助聽器之類的常見輔助裝置來幫助自己。
 
 <figure class="attempt-right">
-  <img src="imgs/screen-captions.png" alt="一臺底部顯示有字幕的電視">	
+  <img src="imgs/screen-captions.png" alt="一臺底部顯示有字幕的電視">
   <figcaption>屏幕字幕</figcaption>
 </figure>
 

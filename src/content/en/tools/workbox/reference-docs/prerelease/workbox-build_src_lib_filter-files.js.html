@@ -21,24 +21,16 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
-  Copyright 2017 Google Inc.
+  Copyright 2018 Google LLC
 
-  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
 const maximumSizeTransform &#x3D; require(&#x27;./maximum-size-transform&#x27;);
-const modifyUrlPrefixTranform &#x3D; require(&#x27;./modify-url-prefix-transform&#x27;);
-const noRevisionForUrlsMatchingTransform &#x3D;
+const modifyURLPrefixTranform &#x3D; require(&#x27;./modify-url-prefix-transform&#x27;);
+const noRevisionForURLsMatchingTransform &#x3D;
   require(&#x27;./no-revision-for-urls-matching-transform&#x27;);
 
 /**
@@ -82,9 +74,9 @@ const noRevisionForUrlsMatchingTransform &#x3D;
  * };
  *
  * @callback ManifestTransform
- * @param {Array&amp;lt;ManifestEntry&gt;} manifestEntries The full array of entries,
- * prior to the current transformation.
- * @return &#123;&#123;manifest: Array&amp;lt;ManifestEntry&gt;, warnings: Array&amp;lt;String&gt;|undefined}}
+ * @param {Array&amp;lt;module:workbox-build.ManifestEntry&gt;} manifestEntries The full
+ * array of entries, prior to the current transformation.
+ * @return {module:workbox-build.ManifestTransformResult}
  * The array of entries with the transformation applied, and optionally, any
  * warnings that should be reported back to the build tool.
  *
@@ -92,11 +84,11 @@ const noRevisionForUrlsMatchingTransform &#x3D;
  */
 
 module.exports &#x3D; ({
-  dontCacheBustUrlsMatching,
+  dontCacheBustURLsMatching,
   fileDetails,
   manifestTransforms,
   maximumFileSizeToCacheInBytes,
-  modifyUrlPrefix,
+  modifyURLPrefix,
 }) &#x3D;&gt; {
   let allWarnings &#x3D; [];
 
@@ -116,13 +108,13 @@ module.exports &#x3D; ({
     transformsToApply.push(maximumSizeTransform(maximumFileSizeToCacheInBytes));
   }
 
-  if (modifyUrlPrefix) {
-    transformsToApply.push(modifyUrlPrefixTranform(modifyUrlPrefix));
+  if (modifyURLPrefix) {
+    transformsToApply.push(modifyURLPrefixTranform(modifyURLPrefix));
   }
 
-  if (dontCacheBustUrlsMatching) {
+  if (dontCacheBustURLsMatching) {
     transformsToApply.push(
-      noRevisionForUrlsMatchingTransform(dontCacheBustUrlsMatching));
+        noRevisionForURLsMatchingTransform(dontCacheBustURLsMatching));
   }
 
   // Any additional manifestTransforms that were passed will be applied last.

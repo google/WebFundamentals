@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: El rol de semantics en la navegación de página
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-06-08 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Semantics y navegación por el contenido {: .page-title }
@@ -51,17 +51,17 @@ significa que una estructura de encabezado apropiada es más importante que nunc
 
 En la mayoría de las páginas bien estructuradas, los niveles de encabezado se anidan para indicar
 relaciones de principal-secundario entre los bloques de contenido. La [lista de comprobación
-WebAIM](http://webaim.org/standards/wcag/checklist) reiteradamente hace referencia a esta
+WebAIM](https://webaim.org/standards/wcag/checklist) reiteradamente hace referencia a esta
 técnica.
 
- - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
+ - [1.3.1](https://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
    menciona que el "lenguaje de marcado de semantic se usa para designar encabezados"
- - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
+ - [2.4.1](https://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
    menciona la estructura de encabezados como una técnica para evitar bloques de
    contenido
- - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
+ - [2.4.6](https://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
    discute algunos detalles para escribir encabezados útiles
- - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
+ - [2.4.10](https://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
    afirma que "las secciones individuales de contenido se designan usando encabezados,
    cuando corresponde"
 
@@ -84,7 +84,7 @@ accesibles *solo* para lectores de pantalla y otras tecnologías asistenciales.
     <h2 class="sr-only">This heading is offscreen.</h2>
 
 Note: El sitio de WebAIM discute esta técnica en profundidad en [este
-artículo sobre contenido fuera de la pantalla](http://webaim.org/techniques/css/invisiblecontent/).
+artículo sobre contenido fuera de la pantalla](https://webaim.org/techniques/css/invisiblecontent/).
 
 Para apps complejas, esta puede ser una buena forma de acomodar los encabezados cuando
 el diseño visual no requiere o no tiene espacio para un encabezado visible.

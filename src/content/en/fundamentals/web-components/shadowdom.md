@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2017-08-14 #}
+{# wf_updated_on: 2018-11-05 #}
 {# wf_published_on: 2016-08-01 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -39,7 +39,7 @@ familiar with the <a href="https://www.chromestatus.com/features/450724202807296
 v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills.
 The concepts are the same, but the v1 spec has important API differences. It's
 also the version that all major browsers have agreed to implement, with
-implementations already in Safari Tech Preview and Chrome Canary. Keep reading
+implementations already in Safari, Chrome and Firefox. Keep reading
 to see what's new or check out the section on <a href="#historysupport">
 History and browser support</a> for more info.
 
@@ -119,7 +119,7 @@ elements directly using JavaScript:
 
     const header = document.createElement('header');
     const h1 = document.createElement('h1');
-    h1.textContent = 'Hello world!';
+    h1.textContent = 'Hello DOM';
     header.appendChild(h1);
     document.body.appendChild(header);
 
@@ -166,7 +166,7 @@ create shadow DOM for an element, call `element.attachShadow()`:
 I'm using `.innerHTML` to fill the shadow root, but you could also use other DOM
 APIs. This is the web. We have choice.
 
-The spec [defines a list of elements](http://w3c.github.io/webcomponents/spec/shadow/#h-methods)
+The spec [defines a list of elements](https://dom.spec.whatwg.org/#dom-element-attachshadow)
 that can't host a shadow tree. There are several reasons an element might be
 on the list:
 
@@ -195,7 +195,7 @@ encapsulating its DOM/CSS:
     // using an ES6 class. Every instance of <fancy-tab> will have this same prototype.
     customElements.define('fancy-tabs', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to <fancy-tabs>.
         const shadowRoot = this.attachShadow({mode: 'open'});
@@ -438,8 +438,6 @@ Stylesheets are also scoped to the shadow tree:
 
 
     #shadow-root
-      <!-- Available in Chrome 54+ -->
-      <!-- WebKit bug: https://bugs.webkit.org/show_bug.cgi?id=160683 -->
       <link rel="stylesheet" href="styles.css">
       <div id="tabs">
         ...
@@ -734,7 +732,7 @@ Here's my summary of why you should never create web components with
 
         customElements.define('x-element', class extends HTMLElement {
           constructor() {
-            super(); // always call super() first in the ctor.
+            super(); // always call super() first in the constructor.
             this._shadowRoot = this.attachShadow({mode: 'closed'});
             this._shadowRoot.innerHTML = '<div class="wrapper"></div>';
           }
@@ -917,7 +915,7 @@ focus behavior of element's within a shadow tree:
     <script>
     customElements.define('x-focus', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         const root = this.attachShadow({mode: 'open', delegatesFocus: true});
         root.innerHTML = `
@@ -1113,19 +1111,6 @@ need to recursively traverse the shadow DOM of all elements used on the page.
     findAllCustomElements(document.querySelectorAll('*'));
 
 
-{% comment %}
-Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySelectorAll()`:
-
-
-    const allCustomElements = Array.from(document.querySelectorAll('html /deep/ *')).filter(el => {
-      const isAttr = el.getAttribute('is');
-      return el.localName.includes('-') || isAttr && isAttr.includes('-');
-    });
-
-
-For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
-{% endcomment %}
-
 ### Creating elements from a &lt;template&gt; {: #fromtemplate}
 
 Instead of populating a shadow root using `.innerHTML`, we can use a declarative
@@ -1155,11 +1140,9 @@ There's also a great comparison of the
 
 ### Browser support {: #support}
 
-Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)),
-Opera 40, and Safari 10 are shipping shadow DOM v1. Edge is under consideration
-[with high priority](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom/).
-Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=811542)
-to implement.
+Shadow DOM v1 is shipped in Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)),
+Opera 40, Safari 10, and Firefox 63. Edge 
+[has started development](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom/).
 
 To feature detect shadow DOM, check for the existence of `attachShadow`:
 
@@ -1261,3 +1244,7 @@ See [Closed shadow roots](#closed).
 [sd_spec_whatwg]: https://dom.spec.whatwg.org/#shadow-trees
 [differences]: http://hayato.io/2016/shadowdomv1/
 [css_props]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

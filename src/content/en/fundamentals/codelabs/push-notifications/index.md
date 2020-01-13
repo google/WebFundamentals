@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-04-12 #}
+{# wf_updated_on: 2018-05-15 #}
 {# wf_published_on: 2016-01-01 #}
 
 

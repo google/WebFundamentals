@@ -21,19 +21,11 @@
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
-  Copyright 2017 Google Inc.
+  Copyright 2018 Google LLC
 
-  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
 */
 
 import {WorkboxError} from &#x27;workbox-core/_private/WorkboxError.mjs&#x27;;
@@ -136,9 +128,9 @@ class CacheableResponse {
           &#x60;not meet the criteria for being cached.&#x60;);
 
         logger.groupCollapsed(&#x60;View cacheability criteria here.&#x60;);
-        logger.unprefixed.log(&#x60;Cacheable statuses: &#x60; +
+        logger.log(&#x60;Cacheable statuses: &#x60; +
           JSON.stringify(this._statuses));
-        logger.unprefixed.log(&#x60;Cacheable headers: &#x60; +
+        logger.log(&#x60;Cacheable headers: &#x60; +
           JSON.stringify(this._headers, null, 2));
         logger.groupEnd();
 
@@ -148,14 +140,14 @@ class CacheableResponse {
         });
 
         logger.groupCollapsed(&#x60;View response status and headers here.&#x60;);
-        logger.unprefixed.log(&#x60;Response status: &#x60; + response.status);
-        logger.unprefixed.log(&#x60;Response headers: &#x60; +
+        logger.log(&#x60;Response status: &#x60; + response.status);
+        logger.log(&#x60;Response headers: &#x60; +
           JSON.stringify(logFriendlyHeaders, null, 2));
         logger.groupEnd();
 
         logger.groupCollapsed(&#x60;View full response details here.&#x60;);
-        logger.unprefixed.log(response.headers);
-        logger.unprefixed.log(response);
+        logger.log(response.headers);
+        logger.log(response);
         logger.groupEnd();
 
         logger.groupEnd();
