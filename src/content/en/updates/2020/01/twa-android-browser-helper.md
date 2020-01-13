@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Introduces android-browser-helper, a new library to build Trusted Web Activities.
 
 {# wf_published_on: 2020-01-10 #}
-{# wf_updated_on: 2020-01-10 #}
+{# wf_updated_on: 2020-01-13 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}

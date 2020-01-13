@@ -61,3 +61,7 @@ redirects:
 
 - from: /web/g-co/twa
   to: /web/updates/2017/10/using-twa
+
+- from: /web/updates/2020/twa-android-browser-helper
+  to: /web/updates/2020/01/twa-android-browser-helper
+  
