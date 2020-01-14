@@ -1,13 +1,13 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-06-27 #}
+{# wf_updated_on: 2020-01-14 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_blink_components: N/A #}
 
 # Chrome User Experience Report {: .page-title }
 
-<img src="images/dataset.png" class="attempt-right" alt="">
+<img src="images/logo.png" class="attempt-right" alt="CrUX logo" style="max-width: 250px">
 
 The Chrome User Experience Report provides user experience metrics for how 
 real-world Chrome users experience popular destinations on the web.
@@ -89,6 +89,23 @@ Defined by the [HTML specification](https://html.spec.whatwg.org/#event-load):
 > “The load event is fired when the page and its dependent resources have 
 finished loading.” - 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/Events/load).
+
+#### First Input Delay {: #first-input-delay }
+
+TODO
+
+#### Largest Contentful Paint {: #largest-contentful-paint }
+
+TODO
+
+#### Cumulative Layout Shift {: #cumulative-layout-shift }
+
+> “Cumulative Layout Shift (CLS) is an important, user-centric metric for measuring visual stability because it helps quantify how often users experience unexpected layout shifts—a low CLS helps ensure that the page is delightful.” -
+[web.dev/cls/](https://web.dev/cls/)
+
+#### Time to First Byte {: #time-to-first-byte }
+
+TODO
 
 ### Dimensions {: #dimensions }
 
