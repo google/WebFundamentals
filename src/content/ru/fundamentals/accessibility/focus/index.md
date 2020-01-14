@@ -143,4 +143,4 @@ page](http://udacity.github.io/ud891/lesson2-focus/01-basic-form/){: .external }
 
 
 Translated by
-{% include "web/_shared/contributors/ann40a.html" %}
+{% include "web/_shared/contributors/annasorokina.html" %}
