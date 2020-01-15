@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2020-01-14 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_blink_components: N/A #}
 
@@ -92,11 +92,13 @@ finished loading.” -
 
 #### First Input Delay {: #first-input-delay }
 
-TODO
+> “First Input Delay (FID) is an important, user-centric metric for measuring load responsiveness because it quantifies the experience users feel when trying to interact with unresponsive pages—a low FID helps ensure that the page is usable.” -
+[web.dev/fid/](https://web.dev/fid/)
 
 #### Largest Contentful Paint {: #largest-contentful-paint }
 
-TODO
+> “Largest Contentful Paint (LCP) is an important, user-centric metric for measuring perceived load speed because it marks the point in the page load timeline when the page's main content has likely loaded—a fast LCP helps reassure the user that the page is useful.” -
+[web.dev/lcp/](https://web.dev/lcp/)
 
 #### Cumulative Layout Shift {: #cumulative-layout-shift }
 
@@ -105,7 +107,8 @@ TODO
 
 #### Time to First Byte {: #time-to-first-byte }
 
-TODO
+> “Time to first byte (TTFB) is a measurement used as an indication of the responsiveness of a webserver or other network resource. TTFB measures the duration from the user or client making an HTTP request to the first byte of the page being received by the client's browser. This time is made up of the socket connection time, the time taken to send the HTTP request, and the time taken to get the first byte of the page.” -
+[Wikipedia](https://en.wikipedia.org/wiki/Time_to_first_byte)
 
 ### Dimensions {: #dimensions }
 
