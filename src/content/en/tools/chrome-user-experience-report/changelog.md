@@ -9,9 +9,13 @@ book_path: /web/tools/_book.yaml
 
 ## Changelog {: #changelog }
 
-The CrUX dataset on BigQuery is updated on the second Tuesday of every month. Each release is numbered according to the year and calendar month of the data collection period, for example 201912 corresponds to the UX data collected during December 2019 and would be released on the second Tuesday of January 2020 after the data collection period has ended.
+The CrUX dataset on BigQuery is updated on the second Tuesday of every month. Each release is 
+numbered according to the year and calendar month of the data collection period, for example 201912 
+corresponds to the UX data collected during December 2019 and would be released on the second 
+Tuesday of January 2020 after the data collection period has ended.
 
-In the list below, we've curated some release notes for each monthly dataset. Follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release announcements.
+In the list below, we've curated some release notes for each monthly dataset. Follow 
+[@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release announcements.
 
 ### 201912
 
@@ -20,8 +24,10 @@ In the list below, we've curated some release notes for each monthly dataset. Fo
 ### 201911
 
 - 5,821,306 origins
-- the [FID](./#first-input-delay) metric was moved from `experimental.first_input_delay` to `first_input.delay`
-- the [CLS](./#cumulative-layout-shift) metric was moved from `experimental.cumulative_layout_shift` to `layout_instability.cumulative_layout_shift`
+- the [FID](./#first-input-delay) metric was moved from `experimental.first_input_delay` to 
+`first_input.delay`
+- the [CLS](./#cumulative-layout-shift) metric was moved from 
+`experimental.cumulative_layout_shift` to `layout_instability.cumulative_layout_shift`
 
 ### 201910
 
@@ -31,8 +37,11 @@ In the list below, we've curated some release notes for each monthly dataset. Fo
 
 - 6,008,004 origins
 - the [LCP](./#largest-contentful-paint) metric was launched as `largest_contentful_paint`
-- [CLS](./#cumulative-layout-shift) was updated to take [move distance](https://github.com/WICG/layout-instability/blob/master/README.md#distance-fraction) into account
-    - coverage may be lower while Chrome users upgrade to the latest version of the Layout Instability API
+- [CLS](./#cumulative-layout-shift) was updated to take 
+[move distance](https://github.com/WICG/layout-instability/blob/master/README.md#distance-fraction) 
+into account
+    - coverage may be lower while Chrome users upgrade to the latest version of the 
+    Layout Instability API
 
 ### 201908
 
@@ -51,12 +60,14 @@ In the list below, we've curated some release notes for each monthly dataset. Fo
 ### 201906
 
 - 5,624,797 origins
-- the [TTFB](./#time-to-first-byte) metric was added to the list of experimental metrics as `experimental.time_to_first_byte`
+- the [TTFB](./#time-to-first-byte) metric was added to the list of experimental metrics as 
+`experimental.time_to_first_byte`
 
 ### 201905
 
 - 5,884,155 origins
-- the [CLS](./#cumulative-layout-shift) metric was added to the list of experimental metrics as `experimental.cumulative_layout_shift`
+- the [CLS](./#cumulative-layout-shift) metric was added to the list of experimental metrics as 
+`experimental.cumulative_layout_shift`
 
 ### 201904
 
@@ -97,7 +108,8 @@ In the list below, we've curated some release notes for each monthly dataset. Fo
 ### 201808
 
 - 4,386,422 origins
-- histogram bins have been normalized to consistent widths ([more info](https://twitter.com/ChromeUXReport/status/1042443549676064768))
+- histogram bins have been normalized to consistent widths 
+([more info](https://twitter.com/ChromeUXReport/status/1042443549676064768))
 
 ### 201807
 
@@ -106,7 +118,8 @@ In the list below, we've curated some release notes for each monthly dataset. Fo
 ### 201806
 
 - 4,134,123 origins
-- the [FID](./#first-input-delay) metric was added to the list of experimental metrics as `experimental.first_input_delay`
+- the [FID](./#first-input-delay) metric was added to the list of experimental metrics as 
+`experimental.first_input_delay`
 
 ### 201805
 
