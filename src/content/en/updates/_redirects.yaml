@@ -2,6 +2,9 @@
 
 redirects:
 
+- from: /web/updates/2019/03/prefers-reduced-motion
+  to: https://web.dev/prefers-reduced-motion/
+
 - from: /web/updates/2019/08/periodic-background-sync
   to: https://web.dev/periodic-background-sync/
 
