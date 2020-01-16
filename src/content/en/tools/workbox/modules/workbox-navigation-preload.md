@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-navigation-preload.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-01-16 #}
 {# wf_published_on: 2018-07-12 #}
 
 # Workbox Navigation Preload {: .page-title }
@@ -58,10 +58,10 @@ const strategy = new NetworkFirst({
 });
 
 const navigationRoute = new NavigationRoute(strategy, {
-  // Optionally, provide a whitelist/blacklist of RegExp's to determine
+  // Optionally, provide a allow/denylist of RegExps to determine
   // which paths will match this route.
-  // whitelist: [],
-  // blacklist: [],
+  // allowlist: [],
+  // denylist: [],
 });
 
 registerRoute(navigationRoute);

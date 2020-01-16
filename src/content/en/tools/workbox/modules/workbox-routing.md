@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-01-16 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Routing {: .page-title }
@@ -168,39 +168,43 @@ return a specific response for all
 [navigation requests](/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
 
 ```javascript
-workbox.routing.registerNavigationRoute(
-  // Assuming '/single-page-app.html' has been precached,
-  // look up its corresponding cache key.
-  workbox.precaching.getCacheKeyForURL('/single-page-app.html')
-);
+import {createHandlerBoundToURL} from 'workbox-precaching';
+import {NavigationRoute, registerRoute} from 'workbox-routing';
+
+// This assumes /app-shell.html has been precached.
+const handler = createHandlerBoundToURL('/app-shell.html');
+const navigationRoute = new NavigationRoute(handler);
+registerRoute(navigationRoute);
 ```
 
 Whenever a user goes to your site in the browser, the request for the page
 will be a navigation request and it will be served the cached page
-`/single-page-app.html`. (Note: You should have the page cached via
+`/app-shell.html`. (Note: You should have the page cached via
 `workbox-precaching` or through your own installation step.)
 
 By default, this will respond to *all* navigation requests. If you want to
-restrict it to respond to a subset of URLs, you can use the `whitelist`
-and `blacklist` options to restrict which pages will match this route.
+restrict it to respond to a subset of URLs, you can use the `allowlist`
+and `denylist` options to restrict which pages will match this route.
 
 ```javascript
-workbox.routing.registerNavigationRoute(
-  // Assuming '/single-page-app.html' has been precached,
-  // look up its corresponding cache key.
-  workbox.precaching.getCacheKeyForURL('/single-page-app.html'), {
-    whitelist: [
-      new RegExp('/blog/'),
-    ],
-    blacklist: [
-      new RegExp('/blog/restricted/'),
-    ],
-  }
-);
+import {createHandlerBoundToURL} from 'workbox-precaching';
+import {NavigationRoute, registerRoute} from 'workbox-routing';
+
+// This assumes /app-shell.html has been precached.
+const handler = createHandlerBoundToURL('/app-shell.html');
+const navigationRoute = new NavigationRoute(handler, {
+  allowlist: [
+    new RegExp('/blog/'),
+  ],
+  denylist: [
+    new RegExp('/blog/restricted/'),
+  ],
+});
+registerRoute(navigationRoute);
 ```
 
-The only thing to note is that the `blacklist` will win if a URL is in both
-the `whitelist` and `blacklist`.
+The only thing to note is that the `denylist` will win if a URL is in both
+the `allowlist` and `denylist`.
 
 ## Set a Default Handler
 
