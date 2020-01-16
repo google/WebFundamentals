@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-01-16 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -169,3 +169,17 @@ to manually configure your bundler to minify your code and remove
 development-only logging when creating production builds. For details on how to
 do that, see [Using Bundlers (webpack/Rollup) with
 Workbox](/web/tools/workbox/guides/using-bundlers)
+
+### Disable Logging
+
+By default, Workbox will log messages to the console in development (as
+mentioned above). In some cases you might need to use a development build, but
+you want to limit or disable logs from being printed to the console.
+
+You can use DevTool's [console
+filters](https://developers.google.com/web/tools/chrome-devtools/console/reference#filter)
+to conditionally silence logs by level or that match a particular pattern (e.g.
+"workbox").
+
+Alternatively, to disable all logs, you can set the `self.__WB_DISABLE_DEV_LOGS`
+variable to `true` in your service worker prior to using any Workbox APIs.
