@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2019-12-21 #}
+{# wf_updated_on: 2020-01-16 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -151,8 +151,8 @@ setDefaultHandler(new StaleWhileRevalidate());
 setCatchHandler(({event}) => {
   // The FALLBACK_URL entries must be added to the cache ahead of time, either
   // via runtime or precaching. If they are precached, then call
-  // `getCacheKeyForURL(FALLBACK_URL)` (from the `workbox-precaching` package)
-  // to get the correct cache key to pass in to caches.match().
+  // `matchPrecache(FALLBACK_URL)` (from the `workbox-precaching` package)
+  // to get the response from the correct cache.
   //
   // Use event, request, and url to figure out how to respond.
   // One approach would be to use request.destination, see

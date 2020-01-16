@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-01-16 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -270,9 +270,10 @@ cache key that needs to be used when calling [`cache.match()`](https://developer
 might contain a versioning parameter that `workbox-precaching` automatically
 creates and maintains.
 
-The best practice is to call [`getCacheKeyForURL()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.getCacheKeyForURL), passing
-in the original URL, and then use the result to perform a `cache.match()` on the
-appropriate cache. In practice, this looks like:
+To get the correct cache key you can call
+[`getCacheKeyForURL()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.getCacheKeyForURL),
+passing in the original URL, and then use the result to perform a
+`cache.match()` on the appropriate cache.
 
 ```javascript
 import {cacheNames} from 'workbox-core';
@@ -284,12 +285,24 @@ const response = await cache.match(
 );
 ```
 
-Note: If you are
-[using your own `PrecacheController` instance](#using_precachecontroller_directly),
-instead of using the default instance via `precacheAndRoute`, you should
-call the
-[`getCacheKeyForURL()` method](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL)
-on that instance.
+Alternatively, if all you need is the precached `Response` object, you can call
+[`matchPrecache()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.matchPrecache),
+which will automatically use the correct cache key and search in the correct
+cache:
+
+```javascript
+import {matchPrecache} from 'workbox-precaching';
+
+const response = await matchPrecache('/precached-file.html');
+```
+
+Note: If you are [using your own `PrecacheController`
+instance](#using_precachecontroller_directly), instead of using the default
+instance via `precacheAndRoute`, you should call the
+[`matchPrecache()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#matchPrecache)
+or
+[`getCacheKeyForURL()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL)
+methods directly on that instance.
 
 ### Clean Up Old Precaches
 

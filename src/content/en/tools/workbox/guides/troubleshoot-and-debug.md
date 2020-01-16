@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to troubleshoot and debugging issues with Workbox.
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-01-16 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -149,7 +149,7 @@ debugging.
 
 Note: to prevent all Workbox messages from being logged to the console when in
 development mode, you can set the variable `self.__WB_DISABLE_DEV_LOGS` to
-`true`.
+`true` in your service worker.
 
 ## Stack Overflow
 
