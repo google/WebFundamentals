@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v4 to v5.
 
-{# wf_updated_on: 2019-12-18 #}
+{# wf_updated_on: 2020-01-17 #}
 {# wf_published_on: 2019-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -17,11 +17,11 @@ examples of what changes you'd need to make when upgrading from Workbox v4.
 
 A number of Workbox v4 packages included classes named `Plugin`. In v5, those classes have been renamed to follow the pattern package identifier + `Plugin`:
 
-* BackgroundSyncPlugin
-* BroadcastUpdatePlugin
-* CacheableResponsePlugin
-* ExpirationPlugin
-* RangeRequestsPlugin
+- `BackgroundSyncPlugin`
+- `BroadcastUpdatePlugin`
+- `CacheableResponsePlugin`
+- `ExpirationPlugin`
+- `RangeRequestsPlugin`
 
 This renaming applies whether you're using the classes via module imports or via the `workbox.*` namespaces.
 
@@ -39,22 +39,24 @@ precacheAndRoute([]);
 precacheAndRoute(self.__WB_MANIFEST);
 ```
 
-If needed, you can change this replacement string via the `injectionPoint` configuration option.
+As outlined in [this discussion](https://github.com/GoogleChrome/workbox/issues/2059#issue-448294745), we believe this change provides a simpler experience, while simultaneously giving developers more control over how the injected manifest is used within custom service worker code. If needed, you can change this replacement string via the `injectionPoint` configuration option.
 
-### Removal of registerNavigationRoute() from workbox-routing
+### Navigation route changes
+
+Two options that were previously supported for navigation routes, `blacklist` and `whitelist` have been renamed  `denylist` and `allowlist`.
 
 `workbox-routing` previously supported a method, `registerNavigationRoute()`, that, under the hood, did two things:
 
 1. Detected whether or not a given `fetch` event had a <code>[mode of 'navigate'](https://fetch.spec.whatwg.org/#concept-request-mode)</code>.
-1. If so, responding to that request using the contents of a previously cached, hardcoded URL, regardless of which URL being navigated to.
+1. If so, responded to that request using the contents of a previously cached, hardcoded URL, regardless of the URL being navigated to.
 
 This is a common pattern to use when implementing the [App Shell architecture](/web/fundamentals/architecture/app-shell).
 
-The second step, generating a response by reading from the cache, falls outside of what we envision `workbox-routing` accomplishing. Instead, we see it as functionality that should be part of `workbox-precaching`, via a new method, `createHandlerForURL()`. This new method can work hand-in-hand with the existing `NavigationRoute` class in `workbox-routing` to accomplish the same logic.
+The second step, generating a response by reading from the cache, falls outside of what we see as the responsibilities of `workbox-routing`. Instead, we see it as functionality that should be part of `workbox-precaching`, via a new method, `createHandlerBoundToURL()`. This new method can work hand-in-hand with the existing `NavigationRoute` class in `workbox-routing` to accomplish the same logic.
 
-If you're using the `navigateFallback` option in one of the build tool's "generate SW" mode, then the switchover will happen automatically, without requiring any change on your part.
+If you're using the `navigateFallback` option in one of the build tool's "generate SW" mode, then the switchover will happen automatically. If you previously configured either the `navigateFallbackBlacklist` or `navigateFallbackWhitelist` options, please change those to `navigateFallbackDenylist` or `navigateFallbackAllowlist`, respectively. 
 
-If you're using "inject manifest" mode and your Workbox v4 service worker calls `registerNavigationRoute()` directly, then you'll have to make a chance to your code to get the equivalent behavior.
+If you're using "inject manifest" mode or just writing the service worker yourself, and your Workbox v4 service worker calls `registerNavigationRoute()` directly, then you'll have to make a change to your code to get the equivalent behavior.
 
 ```javascript
 // v4:
@@ -73,8 +75,8 @@ import {NavigationRoute, registerRoute} from 'workbox-routing';
 
 const handler = createHandlerBoundToURL('/app-shell.html');
 const navigationRoute = new NavigationRoute(handler, {
-  whitelist: [...],
-  blacklist: [...],
+  allowlist: [...],
+  denylist: [...],
 });
 registerRoute(navigationRoute);
 ```
@@ -88,18 +90,20 @@ Calling `makeRequest()` is mostly equivalent to calling `handle()` on one of the
 ```javascript
 // v4:
 const strategy = new StaleWhileRevalidate({...});
-const response = await strategy.makeRequest({request});
+const response = await strategy.makeRequest({event, request});
 
 // v5:
 const strategy = new StaleWhileRevalidate({...});
-const response = await strategy.handle({request});
+const response = await strategy.handle({event, request});
 ```
+
+In v5, `handle()` treats `request` as a required parameter, and will not fall back to using `event.request`. Make sure that you pass in a valid request when calling `handle()`.
 
 ### workbox-broadcast-update Always Uses postMessage()
 
 In v4, the `workbox-broadcast-update` library would default to using the [Broadcast Channel API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) for sending messages when it was supported, and fall back to using <code>[postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage)</code> only when Broadcast Channel wasn't supported.
 
-We realized that having to listen for two potential sources of incoming messages made writing client-side code overly complicated. Additionally, on some browsers, `postMessage()` calls from the service worker sent to client pages are automatically buffered until a `message` event listener is set up. There is no buffering with the Broadcast Channel API, and broadcasted messages are just dropped if sent before a client page is ready to listen for them.
+We realized that having to listen for two potential sources of incoming messages made writing client-side code overly complicated. Additionally, on some browsers, `postMessage()` calls from the service worker sent to client pages are automatically buffered until a `message` event listener is set up. There is no buffering with the Broadcast Channel API, and broadcasted messages are just dropped if sent before a client page is ready to receive them.
 
 Because of those reasons, we've changed `workbox-broadcast-update` to always use `postMessage()` in v5. Messages are sent one-by-one to all client pages within scope of the current service worker.
 
@@ -114,6 +118,8 @@ updatesChannel.addEventListener('message', (event) => {
 });
 
 // v5:
+// This listener should be added as early as possible in your page's lifespan
+// to ensure that messages are properly buffered.
 navigator.serviceWorker.addEventListener('message', (event) => {
   // Optional: ensure the message came from workbox-broadcast-update
   if (event.meta === 'workbox-broadcast-update') {
@@ -147,11 +153,11 @@ The `generateSWString` mode has been removed from `workbox-build`. We expect the
 
 ### Using Module Imports
 
-While this change is a) optional and b) technically was possible when using Workbox v4, the biggest change that we anticipate while moving to v5 is a model where you create your own bundled service worker by using Workbox's module imports. This approach is an alternative to calling `importScripts('/path/to/workbox-sw.js')` at the top of your service worker, and using Workbox via the `workbox.*` namespace.
+While this change is a) optional and b) technically was possible when using Workbox v4, the biggest change that we anticipate while moving to v5 is a model where you create your own bundled service worker by importing Workbox's modules. This approach is an alternative to calling `importScripts('/path/to/workbox-sw.js')` at the top of your service worker, and using Workbox via the `workbox.*` namespace.
 
 If you're using one of the build tools (`workbox-webpack-plugin`, `workbox-build`, `workbox-cli`) in "generate SW" mode, then this change will happen for you automatically. All of those tools will output a local, custom bundle of the Workbox runtime alongside the actual code necessary to implement your service worker logic. In this scenario, there is no longer any dependency on <code>[workbox-sw](/web/tools/workbox/modules/workbox-sw)</code> or the CDN copy of Workbox. Depending on the value of your <code>inlineWorkboxRuntime</code> configuration, the Workbox runtime will either be split into a separate file that should be deployed alongside your service worker (when set to <code>false</code>, which is the default), or included inline along with the service worker logic (when set to <code>true</code>).
 
-If you're using the build tools in "inject manifest" mode, or if you're not using Workbox's build tools at all, you can learn more about creating your own Workbox runtime bundle in the existing "[Using Bundlers (webpack/Rollup) with Workbox](/web/tools/workbox/guides/using-bundlers)" guide.
+If you're using the build tools in "inject manifest" mode, or if you're not using Workbox's build tools at all, you can learn more about creating your own Workbox runtime bundle in the existing [Using Bundlers (webpack/Rollup) with Workbox](/web/tools/workbox/guides/using-bundlers) guide.
 
 The documentation and examples for v5 are written assuming the module imports syntax, though the `workbox.*` namespace will continue to be supported in Workbox v5.
 
@@ -162,7 +168,6 @@ Some developers need to read precached responses directly from the cache, instea
 To simplify this process, `workbox-precaching` in v5 supports a new, equivalent method, `matchPrecache()`:
 
 ```javascript
-
 // v4:
 import {cacheNames} from 'workbox-core';
 import {getCacheKeyForURL} from 'workbox-precaching';
@@ -175,6 +180,7 @@ const cachedResponse = await caches.match(
 
 // v5:
 import {matchPrecache} from 'workbox-precaching';
+
 const cachedResponse = await matchPrecache(`/somethingPrecached`);
 ```
 
