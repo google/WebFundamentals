@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2020-01-16 #}
+{# wf_updated_on: 2020-01-17 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -123,16 +123,70 @@ your custom value to `cacheName`.
 
 There are scenarios where returning a fallback response is better than failing
 to return a response at all. An example is returning a placeholder image when
-the original image can't be retrieved.
+the original image can't be retrieved, or an offline HTML experience instead of
+the browser's standard offline page.
+
+### Offline page only
+
+If your goal is to provide a custom offline HTML page, but not cache anything
+else, this is a baseline recipe to follow. It takes advantage of
+[navigation preload](/web/updates/2017/02/navigation-preload) (in supported
+browsers) to help mitigate the startup cost of a service worker.
+
+```javascript
+import {* as navigationPreload} from 'workbox-navigation-preload';
+import {registerRoute, NavigationRoute} from 'workbox-routing';
+import {NetworkOnly} from 'workbox-strategies';
+
+const CACHE_NAME = 'offline-html';
+// This assumes /offline.html is a URL for your self-contained
+// (no external images or styles) offline page.
+const FALLBACK_HTML_URL = '/offline.html';
+// Populate the cache with the offline HTML page when the
+// service worker is installed.
+self.addEventListener('install', async (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.add(FALLBACK_HTML_URL))
+  );
+});
+
+navigationPreload.enable();
+
+const networkOnly = new NetworkOnly();
+const navigationHandler = async (params) => {
+  try {
+    // Attempt a network request.
+    return await networkOnly.handle(params);
+  } catch (error) {
+    // If it fails, return the cached HTML.
+    return caches.match(FALLBACK_HTML_URL, {
+      cacheName: CACHE_NAME,
+    });
+  }
+};
+
+// Register this strategy to handle all navigations.
+registerRoute(
+  new NavigationRoute(navigationHandler)
+);
+```
+
+### Comprehensive fallbacks
 
 All of the built-in caching strategies reject in a consistent manner when there's a network failure
 and/or a cache miss. This promotes the pattern of [setting a global "catch"
 handler](/web/tools/workbox/reference-docs/latest/module-workbox-routing#.setCatchHandler) to deal with any
-failures in a single handler function:
+failures in a single handler function.
 
 ```javascript
+import {matchPrecache, precacheAndRoute} from 'workbox-precaching';
 import {registerRoute, setDefaultHandler, setCatchHandler} from 'workbox-routing';
 import {CacheFirst, StaleWhileRevalidate} from 'workbox-strategies';
+
+// Optional: use the injectManifest mode of one of the Workbox
+// build tools to precache a list of URLs, including fallbacks.
+precacheAndRoute(self.__WB_MANIFEST);
 
 // Use an explicit cache-first strategy and a dedicated cache for images.
 registerRoute(
@@ -159,14 +213,20 @@ setCatchHandler(({event}) => {
   // https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c
   switch (event.request.destination) {
     case 'document':
+      // If using precached URLs:
+      // return matchPrecache(FALLBACK_HTML_URL);
       return caches.match(FALLBACK_HTML_URL);
     break;
 
     case 'image':
+      // If using precached URLs:
+      // return matchPrecache(FALLBACK_IMAGE_URL);
       return caches.match(FALLBACK_IMAGE_URL);
     break;
 
     case 'font':
+      // If using precached URLs:
+      // return matchPrecache(FALLBACK_FONT_URL);
       return caches.match(FALLBACK_FONT_URL);
     break;
 
