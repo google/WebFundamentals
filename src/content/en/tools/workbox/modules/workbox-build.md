@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-build.
 
-{# wf_updated_on: 2018-07-09 #}
+{# wf_updated_on: 2020-01-17 #}
 {# wf_published_on: 2018-01-31 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -52,15 +52,8 @@ configuration.
 
 ### Full generateSW Config
 
-{% with anchor_prefix="generateSW-" %}
-<table class="responsive">
-  <tbody>
-{% include "web/tools/workbox/_shared/config/single/swDest.html" %}
-{% include "web/tools/workbox/_shared/config/groups/common-generate-schema.html" %}
-{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
-  </tbody>
-</table>
-{% endwith %}
+A full set of configuration options can be found on
+[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW).
 
 ## injectManifest Mode
 
@@ -86,50 +79,13 @@ it into your existing service worker file.
 
 ### Full injectManifest Config
 
-{% with anchor_prefix="injectManifest-" %}
-<table class="responsive">
-  <tbody>
-{% include "web/tools/workbox/_shared/config/single/swDest.html" %}
-{% include "web/tools/workbox/_shared/config/groups/common-inject-schema.html" %}
-{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
-  </tbody>
-</table>
-{% endwith %}
+A full set of configuration options can be found on
+[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-build#.injectManifest).
 
 ## Additional modes
 
-We expect that `generateSW` or `injectManifest` will suit most developers' needs. However, there are
-two other modes supported by `workbox-build` that might be appropriate for certain use cases.
-
-### generateSWString Mode
-
-This is conceptually similar to the `generateSW` mode, but instead of writing the generated service
-worker file to disk, it returns the contents of the service worker as a string.
-
-You can use the `generateSWSring` mode within a node-based build script like so:
-
-```javascript
-// Inside of build.js:
-const {generateSWString} = require('workbox-build');
-
-generateSWString({
-  // Configuration options...
-}).then((swString) => {
-  // Do something with the generated code in swString.
-});
-```
-
-The supported configuration options are:
-
-{% with anchor_prefix="generateSWString-" %}
-<table class="responsive">
-  <tbody>
-{% include "web/tools/workbox/_shared/config/groups/generate-sw-string-schema.html" %}
-{% include "web/tools/workbox/_shared/config/groups/common-generate-schema.html" %}
-{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
-  </tbody>
-</table>
-{% endwith %}
+We expect that `generateSW` or `injectManifest` will suit most developers' needs. However, there is
+one other mode supported by `workbox-build` that might be appropriate for certain use cases.
 
 ### getManifest Mode
 
@@ -150,13 +106,5 @@ getManifest({
 });
 ```
 
-The supported configuration options are:
-
-{% with anchor_prefix="getManifest-" %}
-<table class="responsive">
-  <tbody>
-{% include "web/tools/workbox/_shared/config/groups/get-manifest-schema.html" %}
-{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
-  </tbody>
-</table>
-{% endwith %}
+A full set of configuration options can be found on
+[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-build#.getManifest).
