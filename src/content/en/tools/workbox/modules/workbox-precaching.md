@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-16 #}
+{# wf_updated_on: 2020-01-17 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -328,3 +328,43 @@ your users to explicitly delete it. You can do this by adding
 [`cleanupOutdatedCaches()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.cleanupOutdatedCaches)
 to your service worker, or setting `cleanupOutdatedCaches: true` if you're using
 one of Workbox's build tools to generate your service worker.
+
+### Using Subresource Integrity
+
+Some developers might want the added guarantees offered by
+[subresource integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
+enforcement when retrieving precached URLs from the network.
+
+An additional, optional property called `integrity` can be added to any entry in
+the precache manifest. If provided, it will be used as the
+[`integrity` value](https://developer.mozilla.org/en-US/docs/Web/API/Request/integrity)
+when constructing the `Request` used to populate the cache. If there's a
+mismatch, the precaching process will fail.
+
+Determining which precache manifest entries should have `integrity` properties,
+and figuring out the appropriate values to use, is outside the scope of
+Workbox's build tools. Instead, developers who want to opt-in to this
+functionality should modify the precache manifest that Workbox generates to add
+in the appropriate info themselves. The `manifestTransform` option in Workbox's
+build tools configuration can help:
+
+```javascript
+const integrityManifestTransform = (originalManifest) => {
+  const warnings = [];
+  const manifest = originalManifest.map((entry) => {
+    // If some criteria match:
+    if (entry.url.startsWith('...')) {
+      // This has to be a synchronous function call:
+      entry.integrity = generateSRIInfo(entry.url);
+
+      // Push a message to warnings if needed.
+    }
+    return entry;
+  });
+
+  return {warnings, manifest};
+};
+
+// Then add manifestTransform: [integrityManifestTransform]
+// to your Workbox build configuration.
+```
