@@ -77,30 +77,41 @@ respond, instead of the cache-first strategy used by `workbox-precaching`.
 
 ## Explanation of the Precache List
 
-`workbox-precaching` expects an array of strings or an array of objects:
+`workbox-precaching` expects an array of objects with a `url` and `revision`
+property. This array is sometimes referred to as a precache manifest:
 
 ```javascript
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute([
-  {url: '/styles/example.ac29.css', revision: null},
-  {url: '/index.html', revision: 'abcd1234' },
+  {url: '/index.html', revision: '383676' },
+  {url: '/styles/app.0c9a31.css', revision: null},
+  {url: '/scripts/app.0d5770.js', revision: null},
   // ... other entries ...
 ]);
 ```
 
-This array is sometimes referred to as a precache manifest.
-
 This list references a set of URLs, each with their own piece of "revisioning"
-information. For the first item in the example above,
-`'/styles/example.ac29.css'`, the revisioning information
-**is in the URL itself**. This is a best practice for web as it allows
-browsers to safely cache these URLs for a long time. Assets with inline content hash
-revisioning can be added to the precache list by specifying `revision: null`.
+information.
 
-For assets where you don't have revisioning information in the URL,
-**there must be a revision property, which should be an auto-generated hash of the file contents**.
-This allows `workbox-precaching` to know when the file has changed and update it.
+For the second and third object in the example above, the `revision` property is
+set to `null`. This is because the revisioning information
+**is in the URL itself**, which is generally a best practice for static assets.
+
+The first object (`/index.html`) explicitly sets a revision property, which is
+an auto-generated hash of the file's contents. Unlike JavaScript and CSS resources, HTML files generally cannot
+include revisioning information in their URLs, otherwise links to these files on
+the web would break any time the content of the page changed.
+
+By passing a revision property to `precacheAndRoute()`, Workbox can know
+when the file has changed and update it accordingly.
+
+Note: previous versions of `workbox-precaching` allowed the precache manifest to
+contain string URLs in addition objects with a `url` and `revision` property. In
+version 5 this is deprecated. Now you must always pass an object and in order to
+prevent Workbox from revisioning the URL in the cache, you must explicitly set
+the `revision` property to `null`. Passing a string will continue to work (with
+a warning) in version 5, but in version 6 this will no longer be supported.
 
 Workbox comes with tools to help with generating this list:
 
@@ -141,9 +152,9 @@ You can ignore a different set of search parameters using `ignoreURLParametersMa
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute([
-  {'/styles/index.0c9a31.css', revision: null},
-  {'/scripts/main.0d5770.js', revision: null},
   {url: '/index.html', revision: '383676'},
+  {url: '/styles/app.0c9a31.css', revision: null},
+  {url: '/scripts/app.0d5770.js', revision: null},
 ], {
   // Ignore all URL parameters.
   ignoreURLParametersMatching: [/.*/]
@@ -162,9 +173,9 @@ You can alter this to something else, or disable it completely, by setting `dire
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute([
-  {'/styles/index.0c9a31.css', revision: null},
-  {'/scripts/main.0d5770.js', revision: null},
   {url: '/index.html', revision: '383676'},
+  {url: '/styles/app.0c9a31.css', revision: null},
+  {url: '/scripts/app.0d5770.js', revision: null},
 ], {
   directoryIndex: null,
 });
@@ -182,9 +193,7 @@ You can disable this behavior by setting `cleanUrls`:
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute([
-  {'/styles/index.0c9a31.css', revision: null},
-  {'/scripts/main.0d5770.js', revision: null},
-  {url: '/index.html', revision: '383676'},
+  {url: '/about.html', revision: 'b79cd4'},
 ], {
   cleanUrls: false,
 });
@@ -200,9 +209,9 @@ that returns an array of possible matches.
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute([
-  {'/styles/index.0c9a31.css', revision: null},
-  {'/scripts/main.0d5770.js', revision: null},
   {url: '/index.html', revision: '383676'},
+  {url: '/styles/app.0c9a31.css', revision: null},
+  {url: '/scripts/app.0d5770.js', revision: null},
 ], {
   urlManipulation: ({url}) => {
     // Your logic goes here...
