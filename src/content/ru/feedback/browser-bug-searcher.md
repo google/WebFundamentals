@@ -16,6 +16,35 @@ book_path: /web/feedback/_book.yaml
     }
   </style>
 
-
 <iframe src="https://browser-issue-tracker-search.appspot.com/devsite"
-scrolling="no"></iframe>   <script></script>#cdata-section&gt; {% endframebox %}
+scrolling="no"></iframe>   <script>
+    devsite.framebox.AutoSizeClient.initAutoSize();
+    document.querySelector('html').style.height = '100%';
+    document.querySelector('body').style.height = '100%';
+    var iframe = document.querySelector('iframe');
+    if (document.querySelector('body.staging-framebox')) {
+      console.log('Query String doesn
+iframe.src =
+'https://browser-issue-tracker-search.appspot.com/devsite?q=flexbox';
+    } else {
+      setTimeout(function() {
+devsite.framebox.AutoSizeClient.requestQueryAndFragment(function(query)
+{
+iframe.src =
+'https://browser-issue-tracker-search.appspot.com/devsite' + query;
+        });
+      }, 1500);
+    }
+  </script> {% endframebox %}t work on staging.');
+iframe.src =
+'https://browser-issue-tracker-search.appspot.com/devsite?q=flexbox';
+    } else {
+      setTimeout(function() {
+devsite.framebox.AutoSizeClient.requestQueryAndFragment(function(query)
+{
+iframe.src =
+'https://browser-issue-tracker-search.appspot.com/devsite' + query;
+        });
+      }, 1500);
+    }
+  </script> {% endframebox %}
