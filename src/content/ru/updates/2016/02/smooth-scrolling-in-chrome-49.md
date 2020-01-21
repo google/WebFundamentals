@@ -1,24 +1,22 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Tired of jittery scrolling? Great, because Chrome 49 is shipping with a new smooth scroll right out of the box!
+description: Устали от дёрганой прокрутки? Отлично, потому что Chrome 49 поставляется с новой плавной прокруткой прямо из коробки!
 
-{# wf_updated_on: 2019-09-03 #}
-{# wf_published_on: 2016-02-01 #}
-{# wf_tags: scroll,chrome49 #}
-{# wf_blink_components: Blink>Scroll #}
-{# wf_featured_image:
+{# wf_updated_on: 2019-09-03 #} {# wf_published_on: 2016-02-01 #}  {# wf_tags:
+scroll,chrome49 #}  {# wf_blink_components: Blink>Scroll #} {#
+wf_featured_image:
 /web/updates/images/2016/02/smooth-scrolling-in-chrome-49/smooth-scroll.png #}
 
 # Плавная прокрутка в Chrome 49 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-If there’s one thing that people really want from scrolling, it’s for it to be
-smooth. Historically Chrome has had smooth scrolling in some places, like -- say
--- when users scroll with their trackpads, or fling a page on mobile. But if the
-user has a mouse plugged in then they’d get a more jittery “stepped” scrolling
-behavior, which is way less aesthetically pleasing. That's all about to change
-in Chrome 49.
+Если и есть вещь, которую люди действительно хотят от прокрутки - это чтобы она
+была плавной. Исторически Chrome имел плавную прокрутку в некоторых местах,
+например, когда пользователи использовали свои трекпады или листали страницы на
+мобильных устройствах. Но если у пользователя подключена мышь, он получит более
+дёрганое «пошаговое» поведение при прокрутке, что не так эстетично. Это всё
+вот-вот изменится в Chrome 49.
 
 <div class="video-wrapper">
 <iframe class="devsite-embedded-youtube-video" data-video-id="QtpEpXYEbao"
@@ -26,22 +24,22 @@ data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-The solution to the stepped native, input-driven scroll behavior for many
-developers has been to use libraries, the goal of which being to remap it to
-something smoother and nicer on the eyes. Users also do this, too, through
-extensions. There are downsides to both libraries and extensions that change
-scrolling, though:
+Решением для пошаговой прокрутки, управляемой вводом, для многих разработчиков
+было использование библиотек, цель которых - преобразовать их в нечто более
+плавное и приятное для глаз. Пользователи тоже делают это через расширения. Есть
+недостатки как библиотек, так и расширений, которые изменяют прокрутку, через:
 
-- **An uncanny valley feel.** This manifests itself in two ways: firstly, one
-site may have a smooth scroll behavior, but another may not, so the user can end
-up feeling disoriented by the inconsistency. Secondly, the library’s smoothness
-physics won’t necessarily match those of the platform’s. So while the motion may
-be smooth it can feel wrong or uncanny.
-- **Increased propensity for main thread contention and jank.** As with any
-JavaScript added to the page, there will be an increased CPU load. That’s not
-necessarily a disaster, depending on what else the page is doing, but if there
-is some long-running work on the main thread, and scrolling has been coupled to
-the main thread, the net result can be stuttering scrolls and jank.
+- **Эффект «зловещей долины»** Это проявляется двумя способами: во-первых, у
+одного сайта может быть плавная прокрутка, а у другого - нет, поэтому
+пользователь может почувствовать себя дезориентированным из-за
+несогласованности. Во-вторых, физика гладкости библиотеки не обязательно будет
+соответствовать физике платформы. Таким образом, хотя движение может быть
+плавным, оно может быть неправильным или странным.
+- **Повышенная склонность к "заморозке" и рывка основного потока.** Как и в
+случае с любым JavaScript, добавленным на страницу, будет повышенная загрузка
+процессора. Это не обязательно катастрофа, в зависимости от того, что еще делает
+страница, но если в главном потоке выполняется длительная работа, а прокрутка
+связана с основным потоком, то в результате могут получиться заикания и рывки.
 - **Больше обслуживания для разработчиков, больше кода для загрузки
 пользователями.** Наличие библиотеки для плавной прокрутки - это то, что нужно
 постоянно обновлять и поддерживать, и это увеличит общий вес страницы сайта.
@@ -58,15 +56,15 @@ Chrome OS. Старый пошаговый режим прокрутки исч�
 возможно, удаления любых библиотек с плавной прокруткой, если вы их
 использовали.
 
-## More scrolling goodies
+## Ещё вкусности прокрутки
 
-There are other scroll-related goodies in the works that are also worth
-mentioning. Many of us want scroll-coupled effects, like parallaxing, smooth
-scrolling to a document fragment (like example.com/**#somesection**). As I
-mentioned earlier, the approaches that are used today can often be detrimental
-to both developers and users. There are two platform standards that are being
-worked on that could help: Compositor Worklets and the `scroll-behavior` CSS
-property.
+Есть и другие вкусности, связанные с прокруткой, о которых стоит упомянуть.
+Многим из нас нужны эффекты с прокруткой, такие как параллакс, плавная прокрутка
+к фрагменту документа (например, example.com/ **#somesection** ). Как я упоминал
+ранее, подходы, которые используются сегодня, часто могут нанести ущерб как
+разработчикам, так и пользователям. Есть два стандарта платформы, над которыми
+мы работаем, которые могут помочь: Compositor Worklets и свойство CSS
+`scroll-behavior` .
 
 ### Houdini
 
@@ -87,20 +85,21 @@ Houdini](https://drafts.css-houdini.org/) и поделитесь своими �
 
 ### scroll-behavior
 
-When it comes to fragment-based scrolling, the [`scroll-behavior` CSS
-property](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior) is
-something else that could help. If you want to try it out you’ll be pleased to
-know it’s shipped in Firefox already, and you can enable it in Chrome Canary
-using the **“Enable experimental Web Platform features”** flag. If you set --
-say -- the `<body>` element to `scroll-behavior: smooth`, all scrolls that are
-triggered either by fragment changes or by `window.scrollTo` will be animated
-smoothly! That’s way better than having to use and maintain code from a library
-that tries to do the same thing. With something as fundamental as scrolling,
-it’s really important to avoid breaking user expectation, so while these
-features are in flux it’s still worth adopting a Progressive Enhancement
-approach, and removing any libraries that attempt to polyfill these behaviors.
+Когда дело доходит до прокрутки на основе фрагментов, [CSS-свойство
+`scroll-behavior`](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)
+может помочь в этом. Если вы хотите попробовать его, вам будет приятно узнать,
+что он уже поставляется в Firefox, и вы можете включить его в Chrome Canary с
+помощью флага **«Включить экспериментальные функции веб-платформы»** . Если вы
+установите, скажем, элемент `<body>` на `scroll-behavior: smooth` , все
+`scroll-behavior: smooth` , которые запускаются либо при изменении фрагмента,
+либо при помощи {code6}window.scrollTo{/code6} будут плавно анимироваться! Это
+намного лучше, чем использовать и поддерживать код из библиотеки, которая
+пытается сделать то же самое. С такой фундаментальной вещью, как прокрутка,
+очень важно не нарушать ожидание пользователя, поэтому, хотя эти функции
+постоянно меняются, все же стоит принять подход прогрессивного улучшения и
+удалить все библиотеки, которые пытаются полифиллировать такое поведение.
 
-## Go forth and scroll
+## Идите и прокрутите
 
 Начиная с Chrome 49, прокрутка становится более плавной. Но это еще не все: есть
 и другие потенциальные улучшения, которые могут появиться благодаря свойствам
