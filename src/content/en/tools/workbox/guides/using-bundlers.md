@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-01-21 #}
 {# wf_blink_components: N/A #}
 
 # Using Bundlers (webpack/Rollup) with Workbox {: .page-title }
@@ -291,3 +291,12 @@ service worker APIs are promise-based.
   <a href="/web/tools/workbox/modules/workbox-window#loading_workbox_with_javascript_bundlers">
   <code>workbox-window</code> usage guide</a>.
 </aside>
+
+## Third-party bundler plugins
+
+The following is a list of bundler plugins that integrate with Workbox. Note:
+these plugins are not maintained by the Workbox core team, so they might not be
+up-to-date with the most recent Workbox version:
+
+- [rollup-plugin-workbox](https://www.npmjs.com/package/rollup-plugin-workbox)
+- [rollupl-plugin-workbox-inject](https://www.npmjs.com/package/rollup-plugin-workbox-inject)
