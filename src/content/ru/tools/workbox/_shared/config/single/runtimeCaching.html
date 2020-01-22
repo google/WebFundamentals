@@ -7,15 +7,8 @@
       <p>
         <em>Необязательный <code>Array</code> <code>Object</code> , по умолчанию <code>[]</code></em>
       </p>
-      <p>
-        Passing in an array of objects containing <code>urlPatterns</code>, <code>handlers</code>,
-        and potentially <code>options</code> will add the appropriate code to the generated
-        service worker to handle runtime caching.
-      </p>
-      <p>
-        Requests for precached URLs that are picked up via <code>globPatterns</code> are handled by
-        default, and don't need to be accommodated in <code>runtimeCaching</code>.
-      </p>
+      <p>Передача массива объектов, содержащих <code>urlPatterns</code>, <code>handlers</code> и, возможно, <code>options</code>, добавит соответствующий код к сгенерированному работнику службы для обработки кэширования во время выполнения.</p>
+      <p>Запросы для предварительно кэшированных URL-адресов, которые выбираются с помощью <code>globPatterns</code>, обрабатываются по умолчанию и не должны учитываться в <code>runtimeCaching</code>.</p>
       <p>Значения <code>handler</code> - это строки, соответствующие именам стратегий, поддерживаемых <a href="/web/tools/workbox/reference-docs/latest/workbox.strategies#methods"><code>workbox.strategies</code></a> .</p>
       <p>Свойства <code>options</code> можно использовать для настройки экземпляров истечения срока действия кэша, кэшируемого ответа и подключаемых модулей обновления для применения к данному маршруту.</p>
       <p>
