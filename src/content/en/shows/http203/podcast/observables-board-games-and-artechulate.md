@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Also, top fashion and career advice.
 
-{# wf_updated_on: 2020-01-21 #}
-{# wf_published_on: 2019-10-18 #}
+{# wf_updated_on: 2020-01-22 #}
+{# wf_published_on: 2020-01-22 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-27.m4a #}
 {# wf_podcast_duration: 01:00:26 #}
 {# wf_podcast_fileSize: 34218105 #}
