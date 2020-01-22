@@ -16,8 +16,6 @@ const {getLatestTags} = require('./get-latest-tags');
 const getSourceCode = require('./get-source-code');
 const buildJSDocs = require('./build-js-docs');
 
-// The oldest major version we publish docs for.
-const oldestMajorVersion = 2;
 
 /**
  * Given a set of tags - Loop through each one and build the docs if needed.
@@ -31,6 +29,8 @@ const oldestMajorVersion = 2;
  */
 const buildReferenceDocsForTags = async (
     latestTags, gitUrl, docPath, jsdocConfPath) => {
+
+
   for (const [folder, tag] of Object.entries(latestTags)) {
     const taggedOutputPath = path.join(docPath, folder);
 
@@ -39,7 +39,7 @@ const buildReferenceDocsForTags = async (
     // NOTE: if you need to rebuild the docs for some reason, you can do
     // so by deleting the folder before running this command.
     if (semver.lt(tag, latestTags.latest) &&
-      await fs.pathExists(taggedOutputPath)) {
+        await fs.pathExists(taggedOutputPath)) {
       continue;
     }
 
