@@ -2,9 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Как просмотреть данные кэша с панели приложений Chrome DevTools.
 
-{# wf_updated_on: 2019-09-03 #}
-{# wf_published_on: 2019-03-25 #}
-{# wf_blink_components: Platform>DevTools #}
+{# wf_updated_on: 2019-09-03 #} {# wf_published_on: 2019-03-25 #} {#
+wf_blink_components: Platform>DevTools #}
 
 # Просмотр данных кэша с помощью Chrome DevTools {: .page-title }
 
@@ -14,28 +13,25 @@ description: Как просмотреть данные кэша с панели
 DevTools](/web/tools/chrome-devtools) для проверки данных
 [кэша](https://developer.mozilla.org/en-US/docs/Web/API/Cache) {: .external }.
 
-If you're trying to inspect [HTTP
-cache](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching){: .external }
-data, this is not the guide you want.
-The **Size** column of the **Network Log** has the information you're looking
-for. See [Log network activity](/web/tools/chrome-devtools/network/#load).
+Если вы пытаетесь проверить данные
+[HTTP-кэша](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) {:
+.external }, это не то руководство, которое вам нужно. Столбец **Размер**
+**Cетевого Журнала** содержит информацию, которую вы ищете. См. [Журнал сетевой
+активности](/web/tools/chrome-devtools/network/#load) .
 
 ## Просмотр данных кэша {: #view }
 
-1. Click the **Application** tab to open the **Application** panel. The
-**Manifest** pane usually opens
-    by default.
+1. Перейдите на вкладку **Приложение**, чтобы открыть панель **Приложение**.
+Панель **Манифест** обычно открывается по умолчанию.
 
       <figure>
 <img src="/web/tools/chrome-devtools/storage/imgs/manifest.png" alt="The
 Manifest pane.">
-        <figcaption>
-          <b>Figure 1</b>. The Manifest pane.
-        </figcaption>
+        <figcaption><b>Рисунок 1</b> Панель Манифест.</figcaption>
       </figure>
     
 
-2. Expand the **Cache Storage** section to view available caches.
+2. Разверните раздел **Хранилище кеша** для просмотра доступных кешей.
 
       <figure>
 <img src="/web/tools/chrome-devtools/storage/imgs/cache.png"
@@ -65,15 +61,13 @@ alt="Viewing a resource's HTTP headers.">
       </figure>
     
 
-5. Click **Preview** to view a resource's content.
+5. Нажмите **Просмотр**, чтобы просмотреть содержимое ресурса.
 
       <figure>
 <img src="/web/tools/chrome-devtools/storage/imgs/cachecontent.png"
 alt="Viewing a resource's content.">
-        <figcaption>
-<b>Figure 5</b>. Viewing the content of the
-<b>/scripts.comlink.global.js</b> resource.
-        </figcaption>
+<figcaption><b>Рисунок 5</b> Просмотр содержимого ресурса
+<b>/scripts.comlink.global.js</b>.</figcaption>
       </figure>
     
 
@@ -100,8 +94,8 @@ alt="Selecting a resource.">
 
 1. [Просмотр данных кеша](#view) .
 
-2. Use the **Filter by Path** text box to filter out any resources that do not
-match the path that you provide.
+2. Используйте текстовое поле **Фильтровать по пути**, чтобы отфильтровать любые
+ресурсы, которые не соответствуют указанному вами пути.
 
       <figure>
 <img src="/web/tools/chrome-devtools/storage/imgs/cachefilter.png"
