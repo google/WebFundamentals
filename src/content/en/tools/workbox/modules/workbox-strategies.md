@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-01-23 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -202,8 +202,11 @@ following:
 
 ```javascript
 self.addEventListener('fetch', (event) => {
-  if (event.request.url === '/') {f
-    event.respondWith(new StaleWhileRevalidate().handle(event));
+  const {request} = event;
+  const url = new URL(request.url);
+
+  if (url.origin === location.origin && url.pathname === '/') {f
+    event.respondWith(new StaleWhileRevalidate().handle({event, request}));
   }
 });
 ```
