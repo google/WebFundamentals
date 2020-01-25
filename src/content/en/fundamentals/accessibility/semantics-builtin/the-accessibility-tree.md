@@ -147,14 +147,14 @@ touchscreen users. To associate a label with an element, either
 <div class="clearfix"></div>
 
     <label>
-      <input type="checkbox">Receive promotional offers?</input>
+      <input type="checkbox">Receive promotional offers?
     </label>
 
 
 {% framebox height="60px" %}
 <div style="margin: 10px;">
     <label style="font-size: 16px; color: #212121;">
-        <input type="checkbox">Receive promotional offers?</input>
+        <input type="checkbox">Receive promotional offers?
     </label>
 </div>
 {% endframebox %}
@@ -166,13 +166,13 @@ or
 
 <div class="clearfix"></div>
 
-    <input id="promo" type="checkbox"></input>
+    <input id="promo" type="checkbox">
     <label for="promo">Receive promotional offers?</label>
 
 
 {% framebox height="60px" %}
 <div style="margin: 10px;">
-    <input id="promo" type="checkbox"></input>
+    <input id="promo" type="checkbox">
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
