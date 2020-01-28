@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-navigation-preload.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-15 #}
+{# wf_updated_on: 2020-01-16 #}
 {# wf_published_on: 2018-07-12 #}
 
 # Workbox Navigation Preload {: .page-title }
@@ -42,33 +42,37 @@ HTML will be used unconditionally.
 ## Basic Usage
 
 ```javascript
+import * as navigationPreload from 'workbox-navigation-preload';
+import {NetworkFirst} from 'workbox-strategies';
+import {registerRoute, NavigationRoute} from 'workbox-routing';
+
 // Enable navigation preload.
-workbox.navigationPreload.enable();
+navigationPreload.enable();
 
 // Swap in NetworkOnly, CacheFirst, or StaleWhileRevalidate as needed.
-const strategy = new workbox.strategies.NetworkFirst({
+const strategy = new NetworkFirst({
   cacheName: 'cached-navigations',
   plugins: [
-    // Any plugins, like workbox.expiration, etc.
+    // Any plugins, like `ExpirationPlugin`, etc.
   ],
 });
 
-const navigationRoute = new workbox.routing.NavigationRoute(strategy, {
-  // Optionally, provide a whitelist/blacklist of RegExp's to determine
+const navigationRoute = new NavigationRoute(strategy, {
+  // Optionally, provide a allow/denylist of RegExps to determine
   // which paths will match this route.
-  // whitelist: [],
-  // blacklist: [],
+  // allowlist: [],
+  // denylist: [],
 });
 
-workbox.routing.registerRoute(navigationRoute);
+registerRoute(navigationRoute);
 ```
 
 ## What's the browser support story?
 
 Currently, Google Chrome is the only browser that supports navigation preload.
-`workbox.navigationPreload.enable()` will check for browser support at runtime, and only attempt to
-enable navigation preload if the current browser supports it. It's therefore safe to call
-`workbox.navigationPreload.enable()` unconditionally in your service worker.
+`enable()` will check for browser support at runtime, and only attempt to
+enable navigation preload if the current browser supports it. It's therefore
+safe to call `enable()` unconditionally in your service worker.
 
 You should be aware that those browsers will not benefit from the navigation latency reduction, and
 it's recommended that you carefully measure the performance implications of shipping a service

@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-12 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -42,13 +42,17 @@ automatically Queue up failed requests and retry them when  future `sync`
 events are fired.
 
 ```javascript
-const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName', {
+import {BackgroundSyncPlugin} from 'workbox-background-sync';
+import {registerRoute} from 'workbox-routing';
+import {NetworkOnly} from 'workbox-strategies';
+
+const bgSyncPlugin = new BackgroundSyncPlugin('myQueueName', {
   maxRetentionTime: 24 * 60 // Retry for max of 24 Hours (specified in minutes)
 });
 
-workbox.routing.registerRoute(
+registerRoute(
   /\/api\/.*\/*.json/,
-  new workbox.strategies.NetworkOnly({
+  new NetworkOnly({
     plugins: [bgSyncPlugin]
   }),
   'POST'
@@ -70,7 +74,9 @@ To create a Workbox Background Sync Queue you need to construct it with
 [origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin)):
 
 ```js
-const queue = new workbox.backgroundSync.Queue('myQueueName');
+import {Queue} from 'workbox-background-sync';
+
+const queue = new Queue('myQueueName');
 ```
 
 The queue name is used as part of the tag name that gets
@@ -91,14 +97,15 @@ You add failed request by invoking the `.pushRequest()` method. For example,
 the following code catches any requests that fail and adds them to the queue:
 
 ```js
-const queue = new workbox.backgroundSync.Queue('myQueueName');
+import {Queue} from 'workbox-background-sync';
+
+const queue = new Queue('myQueueName');
 
 self.addEventListener('fetch', (event) => {
   // Clone the request to ensure it's safe to read when
   // adding to the Queue.
-  const promiseChain = fetch(event.request.clone())
-  .catch((err) => {
-      return queue.pushRequest({request: event.request});
+  const promiseChain = fetch(event.request.clone()).catch((err) => {
+    return queue.pushRequest({request: event.request});
   });
 
   event.waitUntil(promiseChain);

@@ -3,39 +3,45 @@ toc:
 - title: Overview
   path: /web/tools/workbox/modules/
 
-- heading: Service Worker Libraries
-- title: workbox
-  path: /web/tools/workbox/modules/workbox-sw
-- title: workbox.core
-  path: /web/tools/workbox/modules/workbox-core
-- title: workbox.precaching
-  path: /web/tools/workbox/modules/workbox-precaching
-- title: workbox.routing
-  path: /web/tools/workbox/modules/workbox-routing
-- title: workbox.strategies
-  path: /web/tools/workbox/modules/workbox-strategies
-- title: workbox.expiration
-  path: /web/tools/workbox/modules/workbox-cache-expiration
-- title: workbox.backgroundSync
+- heading: Service Worker Packages
+- title: workbox-background-sync
   path: /web/tools/workbox/modules/workbox-background-sync
-- title: workbox.googleAnalytics
-  path: /web/tools/workbox/modules/workbox-google-analytics
-- title: workbox.cacheableResponse
-  path: /web/tools/workbox/modules/workbox-cacheable-response
-- title: workbox.broadcastUpdate
+- title: workbox-broadcast-update
   path: /web/tools/workbox/modules/workbox-broadcast-update
-- title: workbox.navigationPreload
+- title: workbox-cacheable-response
+  path: /web/tools/workbox/modules/workbox-cacheable-response
+- title: workbox-core
+  path: /web/tools/workbox/modules/workbox-core
+- title: workbox-expiration
+  path: /web/tools/workbox/modules/workbox-expiration
+- title: workbox-google-analytics
+  path: /web/tools/workbox/modules/workbox-google-analytics
+- title: workbox-navigation-preload
   path: /web/tools/workbox/modules/workbox-navigation-preload
+- title: workbox-precaching
+  path: /web/tools/workbox/modules/workbox-precaching
+- title: workbox-range-requests
+  path: /web/tools/workbox/modules/workbox-range-requests
+- title: workbox-routing
+  path: /web/tools/workbox/modules/workbox-routing
+- title: workbox-streams
+  path: /web/tools/workbox/modules/workbox-streams
+- title: workbox-strategies
+  path: /web/tools/workbox/modules/workbox-strategies
 
-- heading: Window Modules
+- heading: Window Packages
 - title: Workbox Window
   path: /web/tools/workbox/modules/workbox-window
   status: new
 
-- heading: Node Modules
+- heading: Node Packages
 - title: Workbox CLI
   path: /web/tools/workbox/modules/workbox-cli
 - title: workbox-build
   path: /web/tools/workbox/modules/workbox-build
 - title: workbox-webpack-plugin
   path: /web/tools/workbox/modules/workbox-webpack-plugin
+
+- heading: Loader (CDN)
+- title: workbox-sw
+  path: /web/tools/workbox/modules/workbox-sw

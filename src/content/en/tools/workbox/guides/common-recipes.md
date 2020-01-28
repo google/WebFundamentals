@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2019-07-04 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -28,24 +28,29 @@ HTTP `Cache-Control` header) and the max entries to 30 (to ensure we don't use
 up too much storage on the user's device).
 
 ```javascript
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst, StaleWhileRevalidate} from 'workbox-strategies';
+import {CacheableResponsePlugin} from 'workbox-cacheable-response';
+import {ExpirationPlugin} from 'workbox-expiration';
+
 // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
-workbox.routing.registerRoute(
+registerRoute(
   /^https:\/\/fonts\.googleapis\.com/,
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     cacheName: 'google-fonts-stylesheets',
   })
 );
 
 // Cache the underlying font files with a cache-first strategy for 1 year.
-workbox.routing.registerRoute(
+registerRoute(
   /^https:\/\/fonts\.gstatic\.com/,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'google-fonts-webfonts',
     plugins: [
-      new workbox.cacheableResponse.Plugin({
+      new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
-      new workbox.expiration.Plugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 60 * 60 * 24 * 365,
         maxEntries: 30,
       }),
@@ -60,12 +65,15 @@ You might want to use a cache-first strategy for images, by matching against a l
 known extensions.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   /\.(?:png|gif|jpg|jpeg|webp|svg)$/,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'images',
     plugins: [
-      new workbox.expiration.Plugin({
+      new ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),
@@ -80,9 +88,12 @@ You might want to use a stale-while-revalidate strategy for CSS and JavaScript f
 precached.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
   /\.(?:js|css)$/,
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     cacheName: 'static-resources',
   })
 );
@@ -95,9 +106,12 @@ origins in a single route. For example, you can cache assets from origins
 like `googleapis.com` and `gstatic.com` with a single route.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
   /.*(?:googleapis|gstatic)\.com/,
-  new workbox.strategies.StaleWhileRevalidate(),
+  new StaleWhileRevalidate(),
 );
 ```
 
@@ -105,16 +119,19 @@ An alternative to the above example is to cache the origins separately to
 store assets in  cache for each origin.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
   /.*googleapis\.com/,
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     cacheName: 'googleapis',
   })
 );
 
-workbox.routing.registerRoute(
+registerRoute(
   /.*gstatic\.com/,
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     cacheName: 'gstatic',
   })
 );
@@ -127,16 +144,21 @@ that cache. For example, the example below caches up to 50 requests for
 up to 5 minutes.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {CacheableResponsePlugin} from 'workbox-cacheable-response';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   'https://hacker-news.firebaseio.com/v0/api',
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
       cacheName: 'stories',
       plugins: [
-        new workbox.expiration.Plugin({
+        new ExpirationPlugin({
           maxEntries: 50,
           maxAgeSeconds: 5 * 60, // 5 minutes
         }),
-        new workbox.cacheableResponse.Plugin({
+        new CacheableResponsePlugin({
           statuses: [0, 200],
         }),
       ],
@@ -154,17 +176,21 @@ For this, you can use a `NetworkFirst` strategy with the
 `networkTimeoutSeconds` option configured.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {NetworkFirst} from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   'https://hacker-news.firebaseio.com/v0/api',
-  new workbox.strategies.NetworkFirst({
-      networkTimeoutSeconds: 3,
-      cacheName: 'stories',
-      plugins: [
-        new workbox.expiration.Plugin({
-          maxEntries: 50,
-          maxAgeSeconds: 5 * 60, // 5 minutes
-        }),
-      ],
+  new NetworkFirst({
+    networkTimeoutSeconds: 3,
+    cacheName: 'stories',
+    plugins: [
+      new ExpirationPlugin({
+        maxEntries: 50,
+        maxAgeSeconds: 5 * 60, // 5 minutes
+      }),
+    ],
   })
 );
 ```
@@ -176,9 +202,12 @@ specific directory. If we wanted to route requests to files in `/static/`,
 we could use the regular expression `new RegExp('/static/')`, like so:
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
   new RegExp('/static/'),
-  new workbox.strategies.StaleWhileRevalidate()
+  new StaleWhileRevalidate()
 );
 ```
 
@@ -192,13 +221,17 @@ of the request to determine a strategy.
 For example, when the target is `<audio>` data:
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   // Custom `matchCallback` function
   ({event}) => event.request.destination === 'audio',
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'audio',
     plugins: [
-      new workbox.expiration.Plugin({
+      new ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),
@@ -241,9 +274,12 @@ that were added by the web page itself:
 ```javascript
 // Inside service-worker.js:
 
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {StaleWhileRevalidate} from 'workbox-strategies';
+
+registerRoute(
   new RegExp('/static/'),
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     cacheName: 'my-cache', // Use the same cache name as before.
   })
 );

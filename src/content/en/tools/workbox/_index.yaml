@@ -136,27 +136,30 @@ landing_page:
       cache.</p>
 
       <pre class="prettyprint lang-javascript">
-      // Cache the Google Fonts stylesheets with a stale while revalidate strategy.
+      import {registerRoute} from 'workbox-routing';
+      import {CacheFirst, StaleWhileRevalidate} from 'workbox-strategies';
+      import {CacheableResponsePlugin} from 'workbox-cacheable-response';
+      import {ExpirationPlugin} from 'workbox-expiration';
 
-      workbox.routing.registerRoute(
+      // Cache the Google Fonts stylesheets with a stale while revalidate strategy.
+      registerRoute(
         /^https:\/\/fonts\.googleapis\.com/,
-        new workbox.strategies.StaleWhileRevalidate({
+        new StaleWhileRevalidate({
           cacheName: 'google-fonts-stylesheets',
         }),
       );
 
 
       // Cache the Google Fonts webfont files with a cache first strategy for 1 year.
-
-      workbox.routing.registerRoute(
+      registerRoute(
         /^https:\/\/fonts\.gstatic\.com/,
-        new workbox.strategies.CacheFirst({
+        new CacheFirst({
           cacheName: 'google-fonts-webfonts',
           plugins: [
-            new workbox.cacheableResponse.Plugin({
+            new CacheableResponsePlugin({
               statuses: [0, 200],
             }),
-            new workbox.expiration.Plugin({
+            new ExpirationPlugin({
               maxAgeSeconds: 60 * 60 * 24 * 365,
             }),
           ],
@@ -169,10 +172,10 @@ landing_page:
       while making sure they are updated in the background for the next use.</p>
 
       <pre class="prettyprint lang-javascript">
-      workbox.routing.registerRoute(
-        /\.(?:js|css)$/,
-        new workbox.strategies.StaleWhileRevalidate(),
-      );
+      import {registerRoute} from 'workbox-routing';
+      import {StaleWhileRevalidate} from 'workbox-strategies';
+
+      registerRoute(/\.(?:js|css)$/, new StaleWhileRevalidate());
       </pre>
 
       <h3>Cache Images</h3>
@@ -181,12 +184,16 @@ landing_page:
       them indefinitely, consuming your users' storage.</p>
 
       <pre class="prettyprint lang-javascript">
-      workbox.routing.registerRoute(
+      import {registerRoute} from 'workbox-routing';
+      import {CacheFirst} from 'workbox-strategies';
+      import {ExpirationPlugin} from 'workbox-expiration';
+
+      registerRoute(
         /\.(?:png|gif|jpg|jpeg|svg)$/,
-        new workbox.strategies.CacheFirst({
+        new CacheFirst({
           cacheName: 'images',
           plugins: [
-            new workbox.expiration.Plugin({
+            new ExpirationPlugin({
               maxEntries: 60,
               maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
             }),
@@ -232,7 +239,9 @@ landing_page:
       <p>Want offline analytics for your offline PWA? No problem.</p>
 
       <pre class="prettyprint lang-javascript">
-      workbox.googleAnalytics.initialize();
+      import {* as googleAnalytics} from 'workbox-google-analytics';
+
+      googleAnalytics.initialize();
       </pre>
 
   - heading: "Workbox @ Chrome Dev Summit"

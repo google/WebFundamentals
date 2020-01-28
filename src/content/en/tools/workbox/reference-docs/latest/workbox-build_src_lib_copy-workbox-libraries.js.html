@@ -29,12 +29,15 @@
 */
 
 const fse &#x3D; require(&#x27;fs-extra&#x27;);
-const path &#x3D; require(&#x27;path&#x27;);
+const upath &#x3D; require(&#x27;upath&#x27;);
 const errors &#x3D; require(&#x27;./errors&#x27;);
 
 
 // Used to filter the libraries to copy based on our package.json dependencies.
 const WORKBOX_PREFIX &#x3D; &#x27;workbox-&#x27;;
+
+// The directory within each package containing the final bundles.
+const BUILD_DIR &#x3D; &#x27;build&#x27;;
 
 /**
  * This copies over a set of runtime libraries used by Workbox into a
@@ -47,8 +50,7 @@ const WORKBOX_PREFIX &#x3D; &#x27;workbox-&#x27;;
  * [injectManifest()]{@link module:workbox-build.injectManifest} who would
  * prefer not to use the CDN copies of Workbox. Developers using
  * [generateSW()]{@link module:workbox-build.generateSW} don&#x27;t need to
- * explicitly call this method, as it&#x27;s called automatically when
- * &#x60;importWorkboxFrom&#x60; is set to &#x60;local&#x60;.
+ * explicitly call this method.
  *
  * @param {string} destDirectory The path to the parent directory under which
  * the new directory of libraries will be created.
@@ -63,19 +65,24 @@ module.exports &#x3D; async (destDirectory) &#x3D;&gt; {
   // pkg.version whenever one of the dependent libraries gets bumped, and we
   // care about versioning the dependent libraries.
   const workboxDirectoryName &#x3D; &#x60;workbox-v${thisPkg.version}&#x60;;
-  const workboxDirectoryPath &#x3D; path.join(destDirectory, workboxDirectoryName);
+  const workboxDirectoryPath &#x3D; upath.join(destDirectory, workboxDirectoryName);
   await fse.ensureDir(workboxDirectoryPath);
 
   const copyPromises &#x3D; [];
   const librariesToCopy &#x3D; Object.keys(thisPkg.dependencies).filter(
       (dependency) &#x3D;&gt; dependency.startsWith(WORKBOX_PREFIX));
+
   for (const library of librariesToCopy) {
-    const mainFilePath &#x3D; require.resolve(library);
-    const srcPath &#x3D; path.dirname(mainFilePath);
+    // Get the path to the package on the user&#x27;s filesystem by require-ing
+    // the package&#x27;s &#x60;package.json&#x60; file via the node resolution algorithm.
+    const libraryPath &#x3D; upath.dirname(
+        require.resolve(&#x60;${library}/package.json&#x60;));
+
+    const buildPath &#x3D; upath.join(libraryPath, BUILD_DIR);
 
     // fse.copy() copies all the files in a directory, not the directory itself.
     // See https://github.com/jprichardson/node-fs-extra/blob/master/docs/copy.md#copysrc-dest-options-callback
-    copyPromises.push(fse.copy(srcPath, workboxDirectoryPath));
+    copyPromises.push(fse.copy(buildPath, workboxDirectoryPath));
   }
 
   try {

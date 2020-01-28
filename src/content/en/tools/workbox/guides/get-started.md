@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-06-25 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -18,7 +18,7 @@ can cache and serve these files using a service worker and Workbox.
 ## Create and Register a Service Worker File
 
 Before we can use Workbox, we need to create a service worker file and
-register it to our website.
+register it from our web page.
 
 Start by creating a file called `service-worker.js` at the root of your site and add a
 console message to the file (this is so we can see it load).
@@ -50,10 +50,22 @@ Workbox.
 
 ## Importing Workbox
 
-To start using Workbox, you just need to import the `workbox-sw.js` file in your
-service worker.
+There two ways to import Workbox into your service worker:
 
-Change your service worker so that it has the following `importScripts()` call.
+- Using the [workbox-sw](/web/tools/workbox/modules/workbox-sw) loader, which
+  loads Workbox packages at runtime from our CDN.
+- Using a [bundler](/web/tools/workbox/guides/using-bundlers) to include Workbox
+  pages in your service worker at build time.
+
+For quick experimentation and prototyping, loading Workbox from the CDN is
+usually easiest. On the other hand, bundling your service worker is generally
+recommended for more control and better integrations with existing tooling (for
+example, editor integration or writing your service worker in TypeScript).
+
+### From the CDN
+
+To load Workbox from our CDN, update your service worker file to import the
+`workbox-sw.js` file via the `importScripts()` method.
 
 <pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
@@ -65,21 +77,51 @@ if (workbox) {
 }
 </pre>
 
-With this you should see the “Yay” message so we know that Workbox is
-officially loaded in our service worker.
+With this you should see the “Yay” message, which indicates that Workbox has
+loaded successfully.
 
 ![DevTools screenshot of Workbox loading in a service worker.](../images/guides/get-started/yay-loaded.png)
 
 Now we can start using Workbox.
 
-Warning: Importing `workbox-sw.js` will create a
-[`workbox` object](/web/tools/workbox/modules/workbox-sw) inside of your service worker, and that
-instance is responsible for importing other helper libraries, based on the features you use. Due to
-restrictions in the
-[service worker specification](https://www.chromestatus.com/feature/5748516353736704),
-these imports need to happen either inside of an `install` event handler, or synchronously in the
-top-level code for your service worker. More details, along with workarounds, can be found in the
-[`workbox-sw` documentation](/web/tools/workbox/modules/workbox-sw#avoid_async_imports).
+Warning: Importing `workbox-sw.js` will create a [`workbox`
+object](/web/tools/workbox/modules/workbox-sw) inside of your service worker,
+and that instance is responsible for importing all other helper libraries, based
+on the features you use. Due to restrictions in the [service worker
+specification](https://www.chromestatus.com/feature/5748516353736704), these
+imports need to happen either inside of an `install` event handler, or
+synchronously in the top-level code for your service worker. More details, along
+with workarounds, can be found in the [`workbox-sw`
+documentation](/web/tools/workbox/modules/workbox-sw#avoid_async_imports).
+
+### Using a bundler
+
+When loading Workbox from our CDN using the `workbox-sw` loader, a global
+`workbox` object is created, and each of the individual Workbox packages can be
+accessed via a property on the `workbox` global (e.g. `workbox.precaching`,
+`workbox.routing`, or `workbox.backgroundSync`).
+
+When using a bundler to create your service worker, you install the Workbox
+packages you want to use from [npm](https://www.npmjs.com/), and then you use
+`import` statements to directly reference the Workbox modules you want to use.
+In this scenario there is no global `workbox` object. Instead, your bundler will
+inline your imported Workbox modules directly into the service worker file it
+generates. For example:
+
+```javascript
+import {precaching} from 'workbox-precaching';
+import {registerRoute} from 'workbox-routing';
+import {BackgroundSyncPlugin} from 'workbox-background-sync';
+
+// Use the above modules somehow...
+```
+
+For more details see [Using Bundlers (webpack/Rollup) with
+Workbox](/web/tools/workbox/guides/using-bundlers).
+
+Alternatively, if you're using [webpack](https://webpack.js.org/) you can use
+the [workbox-webpack-plugin](/web/tools/workbox/modules/workbox-webpack-plugin)
+which handles bundling your service worker for you.
 
 ## Using Workbox
 
@@ -91,26 +133,36 @@ Let’s add a cache fallback to our JavaScript files. The easiest way to do this
 is to register a route with Workbox that will match any `.js` files that are
 requested, which we can do with a regular expression:
 
+Note: the examples in this guide all use `import` syntax to load the various
+Workbox modules. If you prefer to load Workbox from the CDN, see the
+`workbox-sw` documentation for details on how to convert these code examples to
+code that uses the `workbox` global.
+
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+
+registerRoute(
   /\.js$/,
-  …
+  /* ... */
 );
 ```
 
-This tells Workbox that when a request is made, it should see if the regular
-expression matches part of the URL, and if it does, do something with that
-request. For this guide, that “do something” is going to be passing the request
-through one of Workbox’s caching strategies.
+The above code tells Workbox that when a request is made, it should see if the
+regular expression matches part of the URL, and if it does, do something with
+that request. For this guide, that “do something” is going to be passing the
+request through one of Workbox’s caching strategies.
 
 If we want our JavaScript files to come from the network whenever possible,
 but fallback to the cached version if the network fails, we can use the
 “network first” strategy to achieve this.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {NetworkFirst} from 'workbox-strategies';
+
+registerRoute(
   /\.js$/,
-  new workbox.strategies.NetworkFirst()
+  new NetworkFirst()
 );
 ```
 
@@ -131,25 +183,29 @@ images could be cached and used until they're a week old, after which they’ll 
 updating.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst, StaleWhileRevalidate} from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   // Cache CSS files.
   /\.css$/,
   // Use cache but update in the background.
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     // Use a custom cache name.
     cacheName: 'css-cache',
   })
 );
 
-workbox.routing.registerRoute(
+registerRoute(
   // Cache image files.
   /\.(?:png|jpg|jpeg|svg|gif)$/,
   // Use the cache if it's available.
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     // Use a custom cache name.
     cacheName: 'image-cache',
     plugins: [
-      new workbox.expiration.Plugin({
+      new ExpirationPlugin({
         // Cache only 20 images.
         maxEntries: 20,
         // Cache for a maximum of a week.

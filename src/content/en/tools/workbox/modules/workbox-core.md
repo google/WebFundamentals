@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-02-19 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Core {: .page-title }
@@ -25,26 +25,28 @@ rather than the end developer.
 
 ## View and Change the Default Cache Names
 
-Workbox defines it's caches via `workbox.core.cacheNames`:
+Workbox defines it's caches via `cacheNames`:
 
 ```javascript
-console.log(workbox.core.cacheNames.precache);
+import {cacheNames} from 'workbox-core';
 
-console.log(workbox.core.cacheNames.runtime);
-
-console.log(workbox.core.cacheNames.googleAnalytics);
+console.log(cacheNames.precache);
+console.log(cacheNames.runtime);
+console.log(cacheNames.googleAnalytics);
 ```
 
 These cache names are constructed in the format of a prefix, a name and
 suffix, where the name changes based on the use of the cache.
 
-`<prefix>-<cache id (precache | runtime | googleAnalytics)>-<suffix>`
+`<prefix>-<cache-id>-<suffix>`
 
 You can change these default names by altering all or some of the values
-passed into `setCacheNameDetails()`.
+passed to `setCacheNameDetails()`.
 
 ```javascript
-workbox.core.setCacheNameDetails({
+import {cacheNames, setCacheNameDetails} from 'workbox-core';
+
+setCacheNameDetails({
   prefix: 'my-app',
   suffix: 'v1',
   precache: 'install-time',
@@ -53,17 +55,17 @@ workbox.core.setCacheNameDetails({
 });
 
 // Will print 'my-app-install-time-v1'
-console.log(workbox.core.cacheNames.precache);
+console.log(cacheNames.precache);
 
 // Will print 'my-app-run-time-v1'
-console.log(workbox.core.cacheNames.runtime);
+console.log(cacheNames.runtime);
 
 // Will print 'my-app-ga-v1'
-console.log(workbox.core.cacheNames.googleAnalytics);
+console.log(cacheNames.googleAnalytics);
 ```
 
 The main use case for the prefix and suffix is that if you use Workbox for
-multiple projects and use the same localhost for each project, setting a
+multiple projects and use the same localhost port for each project, setting a
 custom prefix for each module will prevent the caches from conflicting
 with each other.
 
@@ -77,8 +79,10 @@ If you find yourself wanting this behavior, `workbox-core` provides some helper
 methods to make this easy:
 
 <pre class="prettyprint js">
-workbox.core.skipWaiting();
-workbox.core.clientsClaim();
+import {skipWaiting, clientsClaim} from 'workbox-core';
+
+skipWaiting();
+clientsClaim();
 </pre>
 
 Note: If your web app lazy-loads resources that are uniquely versioned with, e.g., hashes in their

@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-sw.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-08 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox {: .page-title }
@@ -103,7 +103,7 @@ self.addEventListener('fetch', (event) => {
     // Oops! This causes workbox-strategies.js to be imported inside a fetch handler,
     // outside of the initial, synchronous service worker execution.
     const cacheFirst = new workbox.strategies.CacheFirst();
-    event.respondWith(cacheFirst.makeRequest({request: event.request}));
+    event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
 </pre>
@@ -122,7 +122,7 @@ self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png')) {
     // Referencing workbox.strategies will now work as expected.
     const cacheFirst = new workbox.strategies.CacheFirst();
-    event.respondWith(cacheFirst.makeRequest({request: event.request}));
+    event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
 </pre>
@@ -140,7 +140,7 @@ self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png')) {
     // Using the previously-initialized strategies will work as expected.
     const cacheFirst = new strategies.CacheFirst();
-    event.respondWith(cacheFirst.makeRequest({request: event.request}));
+    event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
 </pre>
@@ -167,3 +167,59 @@ workbox.setConfig({
   debug: &lt;true or false&gt;
 });
 </pre>
+
+## Convert code using import statements to use `workbox-sw`
+
+When loading Workbox using `workbox-sw`, all Workbox packages are accessed via
+the global `workbox.*` namespace.
+
+If you have a code sample that uses `import` statements that you want to convert
+to use `workbox-sw`, all you have to do is load `workbox-sw` and replace all `import` statements with local variables that reference
+those modules on the global namespace.
+
+This works because every Workbox [service worker
+package](/web/tools/workbox/modules/) published to npm is also
+available on the global `workbox` namespace via a
+[camelCase](https://en.wikipedia.org/wiki/Camel_case) version of the name (e.g.
+all modules exported from the `workbox-precaching` npm package can be found on
+`workbox.precaching.*`. And all the modules exported from the
+`workbox-background-sync` npm package can be found on
+`workbox.backgroundSync.*`).
+
+As an example, here's some code that uses `import` statements referencing
+Workbox modules:
+
+```javascript
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {CacheableResponse} from 'workbox-cacheable-response';
+
+registerRoute(
+  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  new CacheFirst({
+    plugins: [
+      new CacheableResponsePlugin({statuses: [0, 200]})
+    ],
+  })
+);
+```
+
+And here's the same code rewritten to use `workbox-sw` (notice that only the
+import statements have changed—the logic has not been touched):
+
+```javascript
+importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
+
+const {registerRoute} = workbox.routing;
+const {CacheFirst} = workbox.strategies;
+const {CacheableResponse} = workbox.cacheableResponse;
+
+registerRoute(
+  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  new CacheFirst({
+    plugins: [
+      new CacheableResponsePlugin({statuses: [0, 200]})
+    ],
+  })
+);
+```

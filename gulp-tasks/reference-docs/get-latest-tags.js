@@ -14,7 +14,7 @@ let remoteTags = null;
 
 /**
  * Gets the latest tags for each major version of a git repo. The object
- * returned will also inlude keys for `latest` as wella as`prerelease`,
+ * returned will also include keys for `latest` as well as `prerelease`,
  * if applicable.
  *
  * @param {string} gitUrl URL of the git repo you want to get tags for.

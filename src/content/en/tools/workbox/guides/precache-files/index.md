@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-06-17 #}
+{# wf_updated_on: 2020-01-16 #}
 {# wf_published_on: 2017-11-15 #}
 
 <style>
@@ -26,22 +26,28 @@ worker changes, the precached files are maintained efficiently, only
 downloading updated files and cleaning up after the service worker is made
 redundant.
 
-Precaching files with Workbox can be done like so:
+The most common way to precache files with Workbox is to call the
+[`precacheAndRoute`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)
+method and pass it a list of URLs along with their revision information:
 
 ```javascript
-workbox.precaching.precacheAndRoute([
-    '/styles/index.0c9a31.css',
-    '/scripts/main.0d5770.js',
-    { url: '/index.html', revision: '383676' },
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
+  {url: '/index.html', revision: '383676' },
+  {url: '/styles/app.0c9a31.css', revision: null},
+  {url: '/scripts/app.0d5770.js', revision: null},
 ]);
 ```
 
-The above snippet will download the files `/styles/index.0c9a31.css`,
-`/scripts/main.0d5770.js` and `/index.html` during the service worker install
+The above code will download the files `/styles/app.0c9a31.css`,
+`/scripts/app.0d5770.js` and `/index.html` during the service worker install
 event and create a route that serves these files directly from the cache.
 
+Notice that the CSS and JS file set their `revision` property to `null`. This is because these files have revision information in the filenames themselves.
+
 This list of files is normally generated using a tool that manages the
-versioning of files.
+versioning of files. The next sections lists the tools the Workbox provides.
 
 ### Generating a Precache Manifest
 
@@ -50,9 +56,9 @@ one of the following Workbox tools, although you can use any tool that outputs
 files with revisioning. Below is a list of tools that can generate this
 list of files.
 
-<aside class="note"><strong>Note:</strong> If you're not sure what option
-is best for you, <a href="./cli">start with the CLI</a> as it's easy to setup
-and will give you a better understanding of how the other tools work.</aside>
+Note: If you're not sure what option
+is best for you, [start with the CLI](./cli) as it's easy to setup
+and will give you a better understanding of how the other tools work.
 
 ###### Workbox Command Line Interface (CLI)
 

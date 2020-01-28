@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2019-07-01 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -23,21 +23,21 @@ you can implement your own plugins if you want to add custom logic.
 
 Workbox provides the following plugins:
 
-* [`workbox.backgroundSync.Plugin`](../reference-docs/latest/workbox.backgroundSync.Plugin):
+* [`BackgroundSyncPlugin`](../reference-docs/latest/module-workbox-background-sync.BackgroundSyncPlugin):
   If a network request ever fails, add it to a background sync queue and retry
   the request when the next sync event is triggered.
 
-* [`workbox.broadcastUpdate.Plugin`](../reference-docs/latest/workbox.broadcastUpdate.Plugin):
+* [`BroadcastUpdatePlugin`](../reference-docs/latest/module-workbox-broadcast-update.BroadcastUpdatePlugin):
   Whenever a cache is updated, dispatch a message on a Broadcast Channel or via
   `postMessage()`.
 
-* [`workbox.cacheableResponse.Plugin`](../reference-docs/latest/workbox.cacheableResponse.Plugin):
+* [`CacheableResponsePlugin`](../reference-docs/latest/module-workbox-cacheable-response.CacheableResponsePlugin):
   Only cache requests that meet a certain criteria.
 
-* [`workbox.expiration.Plugin`](../reference-docs/latest/workbox.expiration.Plugin):
+* [`ExpirationPlugin`](../reference-docs/latest/module-workbox-expiration.ExpirationPlugin):
   Manage the number and maximum age of items in the cache.
-  
-* [`workbox.rangeRequests.Plugin`](../reference-docs/latest/workbox.rangeRequests.Plugin):
+
+* [`RangeRequestsPlugin`](../reference-docs/latest/module-workbox-range-requests.RangeRequestsPlugin):
   Respond to requests that include a `Range:` header with partial content from
   a cache.
 
@@ -45,12 +45,16 @@ You can use these plugins with a Workbox strategy by adding an instance to
 the `plugins` property:
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
+
+registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'images',
     plugins: [
-      new workbox.expiration.Plugin({
+      new ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),
@@ -100,7 +104,7 @@ A plugin using all of these callbacks would look like this:
 ```javascript
 const myPlugin = {
   cacheWillUpdate: async ({request, response, event}) => {
-    // Return `response`, a different Response object or null
+    // Return `response`, a different `Response` object, or `null`.
     return response;
   },
   cacheDidUpdate: async ({cacheName, request, oldResponse, newResponse, event}) => {
@@ -111,17 +115,18 @@ const myPlugin = {
     // const freshResponse = await caches.match(request, {cacheName});
   },
   cacheKeyWillBeUsed: async ({request, mode}) => {
-  // request is the Request object that would otherwise be used as the cache key.
-  // mode is either 'read' or 'write'.
-  // Return either a string, or a Request whose url property will be used as the cache key.
-  // Returning the original request will make this a no-op.
+    // `request` is the `Request` object that would otherwise be used as the cache key.
+    // `mode` is either 'read' or 'write'.
+    // Return either a string, or a `Request` whose `url` property will be used as the cache key.
+    // Returning the original `request` will make this a no-op.
+    return request;
   },
   cachedResponseWillBeUsed: async ({cacheName, request, matchOptions, cachedResponse, event}) => {
-    // Return `cachedResponse`, a different Response object or null
+    // Return `cachedResponse`, a different `Response` object, or null.
     return cachedResponse;
   },
   requestWillFetch: async ({request}) => {
-    // Return `request` or a different Request
+    // Return `request` or a different `Request` object.
     return request;
   },
   fetchDidFail: async ({originalRequest, request, error, event}) => {
@@ -133,7 +138,7 @@ const myPlugin = {
   },
   fetchDidSucceed: async ({request, response}) => {
     // Return `response` to use the network response as-is,
-    // or alternatively create and return a new Response object.
+    // or alternatively create and return a new `Response` object.
     return response;
   }
 };
@@ -143,8 +148,8 @@ Note: the `event` object passed to each plugin callback above represents the
 original event that triggered the fetch or cache action. In some cases there
 will **not** be an original event, so your code should check for its existence
 before referencing it. Also, when invoking the
-[`makeRequest()`](/web/tools/workbox/guides/advanced-recipes#make-requests)
-method of a strategy, the `event` you pass to `makeRequest()` will be the event
+[`handle()`](/web/tools/workbox/guides/advanced-recipes#handle)
+method of a strategy, the `event` you pass to `handle()` will be the event
 passed to the plugin callbacks.
 
 ## Third-party Plugins
