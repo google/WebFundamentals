@@ -29,8 +29,6 @@ const buildJSDocs = require('./build-js-docs');
  */
 const buildReferenceDocsForTags = async (
     latestTags, gitUrl, docPath, jsdocConfPath) => {
-
-
   for (const [folder, tag] of Object.entries(latestTags)) {
     const taggedOutputPath = path.join(docPath, folder);
 
@@ -58,7 +56,7 @@ const buildReferenceDocsForTags = async (
  * @param {string} jsdocConfPath Path to the JSDoc config path/
  */
 const buildReferenceDocs = async (gitUrl, docPath, jsdocConfPath) => {
-  const latestTags = await getLatestTags(gitUrl, oldestMajorVersion);
+  const latestTags = await getLatestTags(gitUrl);
 
   await buildReferenceDocsForTags(
       latestTags, gitUrl, docPath, jsdocConfPath, 'latest');

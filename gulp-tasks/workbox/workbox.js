@@ -26,7 +26,8 @@ gulp.task('workbox', [
 
   const {srcPath, outputDir = 'latest'} = global.WF.options;
   if (!srcPath) {
-    throw new Error(`You must pass option '--srcPath' when using 'gulp workbox'`);
+    throw new Error(
+        `You must pass option '--srcPath' when using 'gulp workbox'`);
   }
   if (!fs.existsSync(srcPath)) {
     throw new Error(`srcPath '${srcPath}' does not exist.`);
