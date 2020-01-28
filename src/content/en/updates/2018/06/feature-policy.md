@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2019-09-30 #}
+{# wf_updated_on: 2020-01-27 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_tags: ux,chrome60,chrome74,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
@@ -143,8 +143,8 @@ embedded content:
 <iframe src="https://example.com..." allow="fullscreen *"></iframe>
 
 <!-- Allow only iframe content on a particular origin to access the user's location. -->
-<iframe src="https://google-developers.appspot.com/demos/..."
-        allow="geolocation https://google-developers.appspot.com"></iframe>
+<iframe src="https://another-example.com/demos/..."
+        allow="geolocation https://another-example.com"></iframe>
 ```
 
 Note: Frames inherit the policy settings of their parent page. If the page
@@ -232,7 +232,7 @@ document.featurePolicy.allowsFeature('geolocation');
 // → true
 
 /* @return {boolean} True if the provided origin allows the 'geolocation' feature. */
-document.featurePolicy.allowsFeature('geolocation', 'https://google-developers.appspot.com/');
+document.featurePolicy.allowsFeature('geolocation', 'https://another-example.com/');
 // → false
 
 /* @return {Array<string>} List of feature policies allowed by the browser
