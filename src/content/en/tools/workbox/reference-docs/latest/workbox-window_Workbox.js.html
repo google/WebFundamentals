@@ -319,7 +319,7 @@ class Workbox extends WorkboxEventTarget {
         // &#x60;updatefound&#x60; event fires, it likely means that this site is open
         // in another tab, or the user refreshed the page (and thus the previous
         // page wasn&#x27;t fully unloaded before this page started loading).
-        // https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#waiting
+        // /web/fundamentals/primers/service-workers/lifecycle#waiting
         const waitingSW &#x3D; this._registration.waiting;
         if (waitingSW &amp;amp;&amp;amp; urlsMatch(waitingSW.scriptURL, this._scriptURL)) {
             // Store the waiting SW as the &quot;own&quot; Sw, even if it means overwriting
@@ -505,7 +505,7 @@ export { Workbox };
 /**
  * The &#x60;installed&#x60; event is dispatched if the state of a
  * [&#x60;Workbox&#x60;]{@link module:workbox-window.Workbox} instance&#x27;s
- * [registered service worker]{@link https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw}
+ * [registered service worker]{@link /web/tools/workbox/modules/workbox-precaching#def-registered-sw}
  * changes to &#x60;installed&#x60;.
  *
  * Then can happen either the very first time a service worker is installed,
@@ -525,7 +525,7 @@ export { Workbox };
 /**
  * The &#x60;waiting&#x60; event is dispatched if the state of a
  * [&#x60;Workbox&#x60;]{@link module:workbox-window.Workbox} instance&#x27;s
- * [registered service worker]{@link https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw}
+ * [registered service worker]{@link /web/tools/workbox/modules/workbox-precaching#def-registered-sw}
  * changes to &#x60;installed&#x60; and then doesn&#x27;t immediately change to &#x60;activating&#x60;.
  * It may also be dispatched if a service worker with the same
  * [&#x60;scriptURL&#x60;]{@link https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/scriptURL}
@@ -554,7 +554,7 @@ export { Workbox };
  * and the [&#x60;scriptURL&#x60;]{@link https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/scriptURL}
  * of the new [controller]{@link https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controller}
  * matches the &#x60;scriptURL&#x60; of the &#x60;Workbox&#x60; instance&#x27;s
- * [registered service worker]{@link https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw}.
+ * [registered service worker]{@link /web/tools/workbox/modules/workbox-precaching#def-registered-sw}.
  *
  * @event module:workbox-window.Workbox#controlling
  * @type {WorkboxEvent}
@@ -569,7 +569,7 @@ export { Workbox };
 /**
  * The &#x60;activated&#x60; event is dispatched if the state of a
  * [&#x60;Workbox&#x60;]{@link module:workbox-window.Workbox} instance&#x27;s
- * [registered service worker]{@link https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw}
+ * [registered service worker]{@link /web/tools/workbox/modules/workbox-precaching#def-registered-sw}
  * changes to &#x60;activated&#x60;.
  *
  * @event module:workbox-window.Workbox#activated
@@ -585,7 +585,7 @@ export { Workbox };
 /**
  * The &#x60;redundant&#x60; event is dispatched if the state of a
  * [&#x60;Workbox&#x60;]{@link module:workbox-window.Workbox} instance&#x27;s
- * [registered service worker]{@link https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw}
+ * [registered service worker]{@link /web/tools/workbox/modules/workbox-precaching#def-registered-sw}
  * changes to &#x60;redundant&#x60;.
  *
  * @event module:workbox-window.Workbox#redundant
@@ -600,7 +600,7 @@ export { Workbox };
  */
 /**
  * The &#x60;externalinstalled&#x60; event is dispatched if the state of an
- * [external service worker]{@link https://developers.google.com/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found}
+ * [external service worker]{@link /web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found}
  * changes to &#x60;installed&#x60;.
  *
  * @event module:workbox-window.Workbox#externalinstalled
@@ -613,7 +613,7 @@ export { Workbox };
  */
 /**
  * The &#x60;externalwaiting&#x60; event is dispatched if the state of an
- * [external service worker]{@link https://developers.google.com/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found}
+ * [external service worker]{@link /web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found}
  * changes to &#x60;waiting&#x60;.
  *
  * @event module:workbox-window.Workbox#externalwaiting
@@ -626,7 +626,7 @@ export { Workbox };
  */
 /**
  * The &#x60;externalactivated&#x60; event is dispatched if the state of an
- * [external service worker]{@link https://developers.google.com/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found}
+ * [external service worker]{@link /web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found}
  * changes to &#x60;activated&#x60;.
  *
  * @event module:workbox-window.Workbox#externalactivated

@@ -16,11 +16,11 @@
         <div id="jsdoc-main" role="main">
           <header class="page-header">
             <h1><small><a href="module-workbox-window.html">workbox-window</a>.<wbr></small><span class="symbol-name">Workbox</span></h1>
-            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-inner"><small>inner</small></span></div>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v5.0.0</small></span>
+              <span class="label label-version"><small>5.0.0</small></span>
             </div>
             <p>A class to aid in handling service worker registration, updates, and
               reacting to service worker lifecycle events.</p>
@@ -94,7 +94,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing ServiceWorker</code> </p>
+                  <p><code>Promise containing ServiceWorker</code>&nbsp;</p>
                 </dd>
               </dl>
               <h3 id="controlling" class="symbol-name">controlling</h3>
@@ -110,7 +110,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing ServiceWorker</code> </p>
+                  <p><code>Promise containing ServiceWorker</code>&nbsp;</p>
                 </dd>
               </dl>
             </section>
@@ -132,7 +132,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing ServiceWorker</code> </p>
+                  <p><code>Promise containing ServiceWorker</code>&nbsp;</p>
                 </dd>
               </dl>
               <h3 id="messageSW" class="symbol-name">messageSW</h3>
@@ -168,7 +168,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Object</code> </p>
+                  <p><code>Promise containing Object</code>&nbsp;</p>
                 </dd>
               </dl>
               <h3 id="register" class="symbol-name">register</h3>
@@ -234,7 +234,7 @@
               <p class="type-signature">WorkboxEvent</p>
               <p>The <code>activated</code> event is dispatched if the state of a
                 <a href="module-workbox-window.Workbox.html"><code>Workbox</code></a> instance's
-                <a href="https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>
+                <a href="/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>
                 changes to <code>activated</code>.</p>
               <section>
                 <h4>Properties</h4>
@@ -305,7 +305,7 @@
                 and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/scriptURL"><code>scriptURL</code></a>
                 of the new <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controller">controller</a>
                 matches the <code>scriptURL</code> of the <code>Workbox</code> instance's
-                <a href="https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>.</p>
+                <a href="/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>.</p>
               <section>
                 <h4>Properties</h4>
                 <table class="function param responsive">
@@ -370,7 +370,7 @@
               <h3 id="event:externalactivated" class="symbol-name">externalactivated</h3>
               <p class="type-signature">WorkboxEvent</p>
               <p>The <code>externalactivated</code> event is dispatched if the state of an
-                <a href="https://developers.google.com/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
+                <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
                 changes to <code>activated</code>.</p>
               <section>
                 <h4>Properties</h4>
@@ -426,7 +426,7 @@
               <h3 id="event:externalinstalled" class="symbol-name">externalinstalled</h3>
               <p class="type-signature">WorkboxEvent</p>
               <p>The <code>externalinstalled</code> event is dispatched if the state of an
-                <a href="https://developers.google.com/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
+                <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
                 changes to <code>installed</code>.</p>
               <section>
                 <h4>Properties</h4>
@@ -482,7 +482,7 @@
               <h3 id="event:externalwaiting" class="symbol-name">externalwaiting</h3>
               <p class="type-signature">WorkboxEvent</p>
               <p>The <code>externalwaiting</code> event is dispatched if the state of an
-                <a href="https://developers.google.com/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
+                <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
                 changes to <code>waiting</code>.</p>
               <section>
                 <h4>Properties</h4>
@@ -539,7 +539,7 @@
               <p class="type-signature">WorkboxEvent</p>
               <p>The <code>installed</code> event is dispatched if the state of a
                 <a href="module-workbox-window.Workbox.html"><code>Workbox</code></a> instance's
-                <a href="https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>
+                <a href="/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>
                 changes to <code>installed</code>.</p>
               <p>Then can happen either the very first time a service worker is installed,
                 or after an update to the current service worker is found. In the case
@@ -663,7 +663,7 @@
               <p class="type-signature">WorkboxEvent</p>
               <p>The <code>redundant</code> event is dispatched if the state of a
                 <a href="module-workbox-window.Workbox.html"><code>Workbox</code></a> instance's
-                <a href="https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>
+                <a href="/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>
                 changes to <code>redundant</code>.</p>
               <section>
                 <h4>Properties</h4>
@@ -730,7 +730,7 @@
               <p class="type-signature">WorkboxEvent</p>
               <p>The <code>waiting</code> event is dispatched if the state of a
                 <a href="module-workbox-window.Workbox.html"><code>Workbox</code></a> instance's
-                <a href="https://developers.google.com/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>
+                <a href="/web/tools/workbox/modules/workbox-precaching#def-registered-sw">registered service worker</a>
                 changes to <code>installed</code> and then doesn't immediately change to <code>activating</code>.
                 It may also be dispatched if a service worker with the same
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/scriptURL"><code>scriptURL</code></a>

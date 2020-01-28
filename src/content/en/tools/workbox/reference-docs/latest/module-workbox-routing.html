@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v5.0.0</small></span>
+              <span class="label label-version"><small>5.0.0</small></span>
             </div>
           </header>
           <section>
@@ -29,19 +29,19 @@
               <h3 class="class-list"><a href="module-workbox-routing.NavigationRoute.html">NavigationRoute</a></h3>
               <p>NavigationRoute makes it easy to create a
                 <a href="module-workbox-routing.Route.html">Route</a> that matches for browser
-                <a href="https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests">navigation requests</a>.</p>
+                <a href="/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests">navigation requests</a>.</p>
               <p>It will only match incoming Requests whose
                 <a href="https://fetch.spec.whatwg.org/#concept-request-mode"><code>mode</code></a>
                 is set to <code>navigate</code>.</p>
               <p>You can optionally only apply this route to a subset of navigation requests
-                by using one or both of the <code>blacklist</code> and <code>whitelist</code> parameters.</p>
+                by using one or both of the <code>denylist</code> and <code>allowlist</code> parameters.</p>
               <h3 class="class-list"><a href="module-workbox-routing.RegExpRoute.html">RegExpRoute</a></h3>
               <p>RegExpRoute makes it easy to create a regular expression based
                 <a href="module-workbox-routing.Route.html">Route</a>.</p>
               <p>For same-origin requests the RegExp only needs to match part of the URL. For
                 requests against third-party servers, you must define a RegExp that matches
                 the start of the URL.</p>
-              <p><a href="https://developers.google.com/web/tools/workbox/modules/workbox-routing">See the module docs for info.</a></p>
+              <p><a href="/web/tools/workbox/modules/workbox-routing">See the module docs for info.</a></p>
               <h3 class="class-list"><a href="module-workbox-routing.Route.html">Route</a></h3>
               <p>A <code>Route</code> consists of a pair of callback functions, &quot;match&quot; and &quot;handler&quot;.
                 The &quot;match&quot; callback determine if a route should be used to &quot;handle&quot; a
@@ -115,7 +115,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code><a href="module-workbox-routing.Route.html">module:workbox-routing.Route</a></code> The generated <code>Route</code>(Useful for
+                  <p><code><a href="module-workbox-routing.Route.html">module:workbox-routing.Route</a></code>&nbsp;The generated <code>Route</code>(Useful for
                     unregistering).</p>
                 </dd>
               </dl>
@@ -265,7 +265,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Response</code> The response that will fulfill the request.</p>
+                  <p><code>Promise containing Response</code>&nbsp;The response that will fulfill the request.</p>
                 </dd>
               </dl>
               <h3 id="~matchCallback" class="symbol-name">matchCallback</h3>
@@ -344,7 +344,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>any type</code> To signify a match, return a truthy value.</p>
+                  <p><code>any type</code>&nbsp;To signify a match, return a truthy value.</p>
                 </dd>
               </dl>
             </section>

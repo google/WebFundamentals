@@ -37,7 +37,7 @@ import { WorkboxError } from &#x27;workbox-core/_private/WorkboxError.js&#x27;;
 import { messages } from &#x27;./utils/messages.js&#x27;;
 import &#x27;./_version.js&#x27;;
 /**
- * An implementation of a [cache-first]{@link https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network}
+ * An implementation of a [cache-first]{@link /web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network}
  * request strategy.
  *
  * A cache first strategy is useful for assets that have been revisioned,
@@ -55,7 +55,7 @@ class CacheFirst {
      * @param {string} options.cacheName Cache name to store and retrieve
      * requests. Defaults to cache names provided by
      * [workbox-core]{@link module:workbox-core.cacheNames}.
-     * @param {Array&amp;lt;Object&gt;} options.plugins [Plugins]{@link https://developers.google.com/web/tools/workbox/guides/using-plugins}
+     * @param {Array&amp;lt;Object&gt;} options.plugins [Plugins]{@link /web/tools/workbox/guides/using-plugins}
      * to use in conjunction with this caching strategy.
      * @param {Object} options.fetchOptions Values passed along to the
      * [&#x60;init&#x60;](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
@@ -74,12 +74,15 @@ class CacheFirst {
      * [Workbox Router]{@link module:workbox-routing.Router}.
      *
      * @param {Object} options
-     * @param {Request} options.request The request to run this strategy for.
+     * @param {Request|string} options.request A request to run this strategy for.
      * @param {Event} [options.event] The event that triggered the request.
      * @return {Promise&amp;lt;Response&gt;}
      */
     async handle({ event, request }) {
         const logs &#x3D; [];
+        if (typeof request &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+            request &#x3D; new Request(request);
+        }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
             assert.isInstance(request, Request, {
                 moduleName: &#x27;workbox-strategies&#x27;,

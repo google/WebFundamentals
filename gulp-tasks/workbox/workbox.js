@@ -32,8 +32,8 @@ gulp.task('workbox', [
     throw new Error(`srcPath '${srcPath}' does not exist.`);
   }
 
-  const tag = fs.readJsonSync(path.resolve(srcPath, 'lerna.json')).version;
+  const {version} = fs.readJsonSync(path.resolve(srcPath, 'lerna.json'));
   const outputPath = path.join(docsPath, outputDir);
 
-  await buildJSDocs(tag, srcPath, outputPath, jsdocConfPath);
+  await buildJSDocs(version, srcPath, outputPath, jsdocConfPath);
 });

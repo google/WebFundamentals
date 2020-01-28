@@ -16,17 +16,17 @@
         <div id="jsdoc-main" role="main">
           <header class="page-header">
             <h1><small><a href="module-workbox-strategies.html">workbox-strategies</a>.<wbr></small><span class="symbol-name">CacheOnly</span></h1>
-            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-inner"><small>inner</small></span></div>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v5.0.0</small></span>
+              <span class="label label-version"><small>5.0.0</small></span>
             </div>
             <p>An implementation of a
-              <a href="https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only">cache-only</a>
+              <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only">cache-only</a>
               request strategy.</p>
             <p>This class is useful if you want to take advantage of any
-              <a href="https://developers.google.com/web/tools/workbox/guides/using-plugins">Workbox plugins</a>.</p>
+              <a href="/web/tools/workbox/guides/using-plugins">Workbox plugins</a>.</p>
             <p>If there is no cache match, this will throw a <code>WorkboxError</code> exception.</p>
           </header>
           <section>
@@ -74,7 +74,7 @@
                               </td>
                               <td>
                                 <p class="details-table-types">Array of Object</p>
-                                <p><a href="https://developers.google.com/web/tools/workbox/guides/using-plugins">Plugins</a>
+                                <p><a href="/web/tools/workbox/guides/using-plugins">Plugins</a>
                                   to use in conjunction with this caching strategy.</p>
                               </td>
                             </tr>
@@ -83,7 +83,7 @@
                                 <p>matchOptions</p>
                               </td>
                               <td>
-                                <p class="details-table-types">unknown</p>
+                                <p class="details-table-types">Object</p>
                                 <p><a href="https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions"><code>CacheQueryOptions</code></a></p>
                               </td>
                             </tr>
@@ -134,8 +134,8 @@
                                 <p>request</p>
                               </td>
                               <td>
-                                <p class="details-table-types">Request</p>
-                                <p>The request to run this strategy for.</p>
+                                <p class="details-table-types">(Request or string)</p>
+                                <p>A request to run this strategy for.</p>
                               </td>
                             </tr>
                             <tr>
@@ -158,7 +158,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Response</code> </p>
+                  <p><code>Promise containing Response</code>&nbsp;</p>
                 </dd>
               </dl>
             </section>

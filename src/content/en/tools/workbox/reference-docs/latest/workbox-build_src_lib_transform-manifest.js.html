@@ -39,7 +39,7 @@ const noRevisionForURLsMatchingTransform &#x3D;
 /**
  * A &#x60;ManifestTransform&#x60; function can be used to modify the modify the &#x60;url&#x60; or
  * &#x60;revision&#x60; properties of some or all of the
- * {@link module:workbox-build#ManifestEntry|ManifestEntries} in the manifest.
+ * {@link module:workbox-build.ManifestEntry|ManifestEntries} in the manifest.
  *
  * Deleting the &#x60;revision&#x60; property of an entry will cause
  * the corresponding &#x60;url&#x60; to be precached without cache-busting parameters
@@ -47,8 +47,8 @@ const noRevisionForURLsMatchingTransform &#x3D;
  * proper versioning info. If the &#x60;revision&#x60; property is present, it must be
  * set to a string.
  *
- * @example &amp;lt;caption&gt;A transformation that prepended the origin of a CDN for any
- * URL starting with &#x27;/assets/&#x27; could be implemented as:&amp;lt;/caption&gt;
+ * @example A transformation that prepended the origin of a CDN for any
+ * URL starting with &#x27;/assets/&#x27; could be implemented as:
  *
  * const cdnTransform &#x3D; async (manifestEntries) &#x3D;&gt; {
  *   const manifest &#x3D; manifestEntries.map(entry &#x3D;&gt; {
@@ -61,15 +61,15 @@ const noRevisionForURLsMatchingTransform &#x3D;
  *   return {manifest, warnings: []};
  * };
  *
- * @example &amp;lt;caption&gt;A transformation that removes the revision field when the
+ * @example A transformation that nulls the revision field when the
  * URL contains an 8-character hash surrounded by &#x27;.&#x27;, indicating that it
- * already contains revision information:&amp;lt;/caption&gt;
+ * already contains revision information:
  *
  * const removeRevisionTransform &#x3D; async (manifestEntries) &#x3D;&gt; {
  *   const manifest &#x3D; manifestEntries.map(entry &#x3D;&gt; {
  *     const hashRegExp &#x3D; /\.\w{8}\./;
  *     if (entry.url.match(hashRegExp)) {
- *       delete entry.revision;
+ *       entry.revision &#x3D; null;
  *     }
  *     return entry;
  *   });

@@ -16,20 +16,20 @@
         <div id="jsdoc-main" role="main">
           <header class="page-header">
             <h1><small><a href="module-workbox-routing.html">workbox-routing</a>.<wbr></small><span class="symbol-name">NavigationRoute</span></h1>
-            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-inner"><small>inner</small></span></div>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v5.0.0</small></span>
+              <span class="label label-version"><small>5.0.0</small></span>
             </div>
             <p>NavigationRoute makes it easy to create a
               <a href="module-workbox-routing.Route.html">Route</a> that matches for browser
-              <a href="https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests">navigation requests</a>.</p>
+              <a href="/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests">navigation requests</a>.</p>
             <p>It will only match incoming Requests whose
               <a href="https://fetch.spec.whatwg.org/#concept-request-mode"><code>mode</code></a>
               is set to <code>navigate</code>.</p>
             <p>You can optionally only apply this route to a subset of navigation requests
-              by using one or both of the <code>blacklist</code> and <code>whitelist</code> parameters.</p>
+              by using one or both of the <code>denylist</code> and <code>allowlist</code> parameters.</p>
           </header>
           <section>
             <h2>Constructor</h2>
@@ -37,9 +37,9 @@
               <h3 id="NavigationRoute" class="symbol-name">NavigationRoute</h3>
               <p class="type-signature"> new
                 NavigationRoute(handler, options)</p>
-              <p>If both <code>blacklist</code> and <code>whiltelist</code> are provided, the <code>blacklist</code> will
+              <p>If both <code>denylist</code> and <code>allowlist</code> are provided, the <code>denylist</code> will
                 take precedence and the request will not match this route.</p>
-              <p>The regular expressions in <code>whitelist</code> and <code>blacklist</code>
+              <p>The regular expressions in <code>allowlist</code> and <code>denylist</code>
                 are matched against the concatenated
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname"><code>pathname</code></a>
                 and <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search"><code>search</code></a>
@@ -78,25 +78,25 @@
                           <tbody>
                             <tr>
                               <td class="details-table-name">
-                                <p>blacklist</p>
+                                <p>denylist</p>
                               </td>
                               <td>
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Array of RegExp</p>
                                 <p>If any of these patterns match,
-                                  the route will not handle the request (even if a whitelist RegExp matches).</p>
+                                  the route will not handle the request (even if a allowlist RegExp matches).</p>
                               </td>
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>whitelist</p>
+                                <p>allowlist</p>
                               </td>
                               <td>
                                 <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">unknown</p>
+                                <p class="details-table-types">Array of RegExp</p>
                                 <p>If any of these patterns
                                   match the URL's pathname and search parameter, the route will handle the
-                                  request (assuming the blacklist doesn't match).</p>
+                                  request (assuming the denylist doesn't match).</p>
                               </td>
                             </tr>
                           </tbody>

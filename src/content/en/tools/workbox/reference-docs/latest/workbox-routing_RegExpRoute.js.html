@@ -39,16 +39,16 @@ import &#x27;./_version.js&#x27;;
  * requests against third-party servers, you must define a RegExp that matches
  * the start of the URL.
  *
- * [See the module docs for info.]{@link https://developers.google.com/web/tools/workbox/modules/workbox-routing}
+ * [See the module docs for info.]{@link /web/tools/workbox/modules/workbox-routing}
  *
  * @memberof module:workbox-routing
  * @extends module:workbox-routing.Route
  */
 class RegExpRoute extends Route {
     /**
-     * If the regulard expression contains
+     * If the regular expression contains
      * [capture groups]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references},
-     * th ecaptured values will be passed to the
+     * the captured values will be passed to the
      * [handler&#x27;s]{@link module:workbox-routing~handlerCallback} &#x60;params&#x60;
      * argument.
      *

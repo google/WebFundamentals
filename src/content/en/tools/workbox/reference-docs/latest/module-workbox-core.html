@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v5.0.0</small></span>
+              <span class="label label-version"><small>5.0.0</small></span>
             </div>
             <p>All of the Workbox service worker libraries use workbox-core for shared
               code as well as setting default values that need to be shared (like cache
@@ -41,7 +41,7 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Object</code> An object with <code>precache</code>, <code>runtime</code>, <code>prefix</code>, and
+                  <p><code>Object</code>&nbsp;An object with <code>precache</code>, <code>runtime</code>, <code>prefix</code>, and
                     <code>googleAnalytics</code> properties.</p>
                 </dd>
               </dl>
@@ -216,8 +216,9 @@
               <h3 id=".skipWaiting" class="symbol-name">skipWaiting</h3>
               <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
               <p class="type-signature"> skipWaiting()</p>
-              <p>Force a service worker to become active, instead of waiting. This is
-                normally used in conjunction with <code>clientsClaim()</code>.</p>
+              <p>Force a service worker to activate immediately, instead of
+                <a href="/web/fundamentals/primers/service-workers/lifecycle#waiting">waiting</a>
+                for existing clients to close.</p>
               <dl class="dl-compact">
               </dl>
             </section>
