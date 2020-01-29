@@ -96,7 +96,7 @@ display web app manifest icons. DevTools now shows the exact same manifest icon 
 
 [Chromium issue #985402](https://crbug.com/985402)
 
-## Hover over content properties to see unescaped values {: #content }
+## Hover over CSS `content` properties to see unescaped values {: #content }
 
 Hover over the value of a `content` property to see the unescaped version of the value.
 
