@@ -299,4 +299,4 @@ these plugins are not maintained by the Workbox core team, so they might not be
 up-to-date with the most recent Workbox version:
 
 - [rollup-plugin-workbox](https://www.npmjs.com/package/rollup-plugin-workbox)
-- [rollupl-plugin-workbox-inject](https://www.npmjs.com/package/rollup-plugin-workbox-inject)
+- [rollup-plugin-workbox-inject](https://www.npmjs.com/package/rollup-plugin-workbox-inject)
