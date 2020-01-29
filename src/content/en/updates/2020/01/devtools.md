@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Moto G4 in Device Mode, new cookies features, and more.
 
-{# wf_updated_on: 2020-01-28 #}
-{# wf_published_on: 2020-01-28 #}
+{# wf_updated_on: 2020-01-29 #}
+{# wf_published_on: 2020-01-29 #}
 {# wf_tags: chrome81, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Moto G4 in Device Mode, new cookies features, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 81) {: .page-title }
@@ -85,7 +85,7 @@ Right-click a network request and select **Copy** > **Copy as Node.js fetch** to
 
 [Chromium issue #1029826](https://crbug.com/1029826)
 
-## More accurate manifest icons {: #manifesticons }
+## More accurate web app manifest icons {: #manifesticons }
 
 Previously, the Manifest pane in the Application panel would perform its own requests in order to
 display web app manifest icons. DevTools now shows the exact same manifest icon that Chrome uses.
@@ -113,40 +113,25 @@ When you hover over the `content` value you see the unescaped string:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2670a655e45c5a677e527dca07693200d7916ac3 #}
 
+## Source map errors in the Console {: #sourcemaperrors }
+
+The Console now tells you when a source map has failed to load or parse.
+
+![A source map loading error in the Console](/web/updates/images/2020/01/sourcemap.png)
+
 ## Setting for disabling scrolling past the end of a file {: #scrolling }
 
 Open [Settings](/web/tools/chrome-devtools/customize#settings) and then disable 
 **Preferences** > **Sources** > **Allow scrolling past end of file** to disable the default UI behavior
 that allows you to scroll well past the end of a file in the **Sources** panel.
 
+Here's a [GIF of the feature](https://imgur.com/zJytuf1).
+
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/564dcf4c071b93382616e9421610aa2ac655a833 #}
 
-## Feedback {: #feedback }
+<<../../_shared/devtools-feedback.md>>
 
-[ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
-[WF]: https://github.com/google/webfundamentals/issues/new
-[SO]: https://stackoverflow.com/questions/tagged/google-chrome-devtools
-
-{% include "web/_shared/helpful.html" %}
-
-To discuss the new features and changes in this post, or anything else related to DevTools:
-
-* File definite bug reports and feature requests at [Chromium Bugs](https://crbug.com){:.external}.
-* Discuss possible features, changes, and bugs on the [Mailing List][ML]{:.external}.
-* Get help on how to use DevTools on [Stack Overflow][SO]{:.external}.
-* Tweet us at [@ChromeDevTools](https://twitter.com/chromedevtools).
-* File bugs on this document in the [Web Fundamentals][WF]{:.external} repository.
-
-## Consider Canary {: #canary }
-
-[canary]: https://www.google.com/chrome/browser/canary.html
-
-If you're on Mac or Windows, consider using [Chrome Canary][canary] as your default
-development browser. Canary gives you access to the latest DevTools features.
-
-Note: Canary is released as soon as its built, without testing. This means that Canary
-breaks about once-a-month. It's usually fixed within a day. You can go back to using Chrome
-Stable while Canary is broken.
+<<../../_shared/canary.md>>
 
 <<../../_shared/discover.md>>
 

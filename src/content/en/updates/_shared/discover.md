@@ -2,6 +2,14 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 81 {: #discover81 .hide-from-toc }
+
+* [Moto G4 support in Device Mode](/web/updates/2020/01/devtools#motog4)
+* [Cookie-related updates](/web/updates/2020/01/devtools#cookies)
+* [More accurate web app manifest icons](/web/updates/2020/01/devtools#manifesticons)
+* [Hover over CSS `content` properties to see unescaped values](/web/updates/2020/01/devtools#content)
+* [Setting for disabling scrolling past the end of a file](/web/updates/2020/01/devtools#scrolling)
+
 ### Chrome 80 {: #discover80 .hide-from-toc }
 
 * [Support for `let` and `class` redeclarations in the Console](/web/updates/2019/12/devtools#redeclarations)
