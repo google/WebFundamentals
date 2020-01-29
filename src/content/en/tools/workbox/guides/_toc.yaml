@@ -23,7 +23,6 @@ toc:
   path: /web/tools/workbox/guides/enable-offline-analytics
 - title: "Using Bundlers (webpack/Rollup) with Workbox"
   path: /web/tools/workbox/guides/using-bundlers
-  status: new
 - title: "Troubleshoot and Debug"
   path: /web/tools/workbox/guides/troubleshoot-and-debug
 - title: "Understanding Storage Quota"
@@ -64,5 +63,7 @@ toc:
     path: /web/tools/workbox/guides/migrations/migrate-from-v2
   - title: "From Workbox v3 to v4"
     path: /web/tools/workbox/guides/migrations/migrate-from-v3
+  - title: "From Workbox v4 to v5"
+    path: /web/tools/workbox/guides/migrations/migrate-from-v4
     status: new
 
