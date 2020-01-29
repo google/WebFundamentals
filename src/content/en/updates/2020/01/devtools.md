@@ -107,9 +107,9 @@ escaped string in the Styles pane:
 
 ![The escaped string](/web/updates/images/2020/01/escapedstring.png)
 
-When you hover over the `content` value you see the unescaped string:
+When you hover over the `content` value you see the unescaped value:
 
-![The unescaped string](/web/updates/images/2020/01/unescapedstring.png)
+![The unescaped value](/web/updates/images/2020/01/unescapedstring.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2670a655e45c5a677e527dca07693200d7916ac3 #}
 
