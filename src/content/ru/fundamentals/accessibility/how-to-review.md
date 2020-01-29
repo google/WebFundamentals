@@ -1,6 +1,6 @@
-project_path: "/web/fundamentals/_project.yaml"
-book_path: "/web/fundamentals/_book.yaml"
-description: Как проверить сайт на наличие проблем доступности.
+project_path: /web/fundamentals/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: Как проверить сайт на наличие проблем c доступностью.
 
 {# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2017-03-12 #}
