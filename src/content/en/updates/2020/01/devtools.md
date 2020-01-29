@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Moto G4 in Device Mode, new cookies features, and more.
+description: Moto G4 in Device Mode, new cookie-related features, and more.
 
 {# wf_updated_on: 2020-01-29 #}
 {# wf_published_on: 2020-01-29 #}
 {# wf_tags: chrome81, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Moto G4 in Device Mode, new cookies features, and more. #}
+{# wf_featured_snippet: Moto G4 in Device Mode, new cookie-related features, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 81) {: .page-title }

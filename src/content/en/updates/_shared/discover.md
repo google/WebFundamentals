@@ -8,6 +8,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Cookie-related updates](/web/updates/2020/01/devtools#cookies)
 * [More accurate web app manifest icons](/web/updates/2020/01/devtools#manifesticons)
 * [Hover over CSS `content` properties to see unescaped values](/web/updates/2020/01/devtools#content)
+* [Source map errors in the Console](/web/updates/2020/01/devtools#sourcemaperrors)
 * [Setting for disabling scrolling past the end of a file](/web/updates/2020/01/devtools#scrolling)
 
 ### Chrome 80 {: #discover80 .hide-from-toc }
