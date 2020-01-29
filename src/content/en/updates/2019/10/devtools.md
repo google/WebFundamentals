@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Debug why cookies were blocked, simulate "prefers-color-scheme: dark", code coverage updates, and more.
 
-{# wf_updated_on: 2019-10-15 #}
+{# wf_updated_on: 2020-01-29 #}
 {# wf_published_on: 2019-10-15 #}
 {# wf_tags: chrome79, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -181,32 +181,9 @@ the line above. Press <kbd>Control</kbd>+<kbd>N</kbd> to move your cursor to the
 
 Chromium issue [#983874](https://crbug.com/983874)
 
-## Feedback {: #feedback }
+<<../../_shared/devtools-feedback.md>>
 
-[ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
-[WF]: https://github.com/google/webfundamentals/issues/new
-[SO]: https://stackoverflow.com/questions/tagged/google-chrome-devtools
-
-{% include "web/_shared/helpful.html" %}
-
-To discuss the new features and changes in this post, or anything else related to DevTools:
-
-* File definite bug reports and feature requests at [Chromium Bugs](https://crbug.com){:.external}.
-* Discuss possible features, changes, and bugs on the [Mailing List][ML]{:.external}.
-* Get help on how to use DevTools on [Stack Overflow][SO]{:.external}.
-* Tweet us at [@ChromeDevTools](https://twitter.com/chromedevtools).
-* File bugs on this document in the [Web Fundamentals][WF]{:.external} repository.
-
-## Consider Canary {: #canary }
-
-[canary]: https://www.google.com/chrome/browser/canary.html
-
-If you're on Mac or Windows, consider using [Chrome Canary][canary] as your default
-development browser. Canary gives you access to the latest DevTools features.
-
-Note: Canary is released as soon as its built, without testing. This means that Canary
-breaks about once-a-month. It's usually fixed within a day. You can go back to using Chrome
-Stable while Canary is broken.
+<<../../_shared/canary.md>>
 
 <<../../_shared/discover.md>>
 
