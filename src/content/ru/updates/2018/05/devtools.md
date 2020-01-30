@@ -225,4 +225,4 @@ Fundamentals](https://github.com/google/webfundamentals/issues/new)
 раз в месяц, и это обычно исправляется в течение дня. Вы можете вернуться к
 использованию Chrome Stable, пока Canary не работает.
 
-<<../../_shared/discover.md>>
+-
