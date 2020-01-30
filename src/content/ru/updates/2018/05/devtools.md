@@ -1,7 +1,6 @@
-project_path: "/web/_project.yaml"
-book_path: "/web/updates/_book.yaml"
-description: Упреждающее вычисление, подсказки аргументов, функция автозаполнения,
-  Lighthouse 3.0 и многое другое.
+project_path: /web/_project.yaml
+book_path: /web/updates/_book.yaml
+description: Упреждающее вычисление, подсказки аргументов, функция автозаполнения, Lighthouse 3.0 и многое другое.
 
 {# wf_updated_on: 2019-09-19 #} {# wf_published_on: 2018-05-21 #} {# wf_tags:
 chrome68,devtools,devtools-whatsnew #} {# wf_featured_image:
@@ -226,4 +225,4 @@ Fundamentals](https://github.com/google/webfundamentals/issues/new)
 раз в месяц, и это обычно исправляется в течение дня. Вы можете вернуться к
 использованию Chrome Stable, пока Canary не работает.
 
-<< ../../_ общий / discover.md >>
+<<../../_shared/discover.md>>
