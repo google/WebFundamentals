@@ -66,7 +66,7 @@ landing_page:
           the age of the cached request.
         buttons:
         - label: Learn more
-          path: /web/tools/workbox/modules/workbox-cache-expiration
+          path: /web/tools/workbox/modules/workbox-expiration
         - label: Reference
           path: /web/tools/workbox/reference-docs/latest/module-workbox-expiration
         - label: Demo
