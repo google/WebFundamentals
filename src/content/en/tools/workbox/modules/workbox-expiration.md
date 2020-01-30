@@ -1,19 +1,19 @@
 project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
-description: The module guide for workbox-cache-expiration.
+description: The module guide for workbox-expiration.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-01-30 #}
 {# wf_published_on: 2017-11-27 #}
 
-# Workbox Cache Expiration {: .page-title }
+# Workbox Expiration {: .page-title }
 
 ## What is Cache Expiration?
 
 It’s fairly common to want to put restrictions on a cache in terms of how long
 it should allow items to be stored in a cache or how many items should be kept
 in a cache. Workbox provides this functionality through the
-`workbox-cache-expiration` plugin that allows you to limit the number of
+`workbox-expiration` plugin that allows you to limit the number of
 entries in a cache and / or remove entries that have been cached for a long
 period of time.
 

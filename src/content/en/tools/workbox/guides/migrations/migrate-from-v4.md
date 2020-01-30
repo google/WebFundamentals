@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v4 to v5.
 
-{# wf_updated_on: 2020-01-17 #}
+{# wf_updated_on: 2020-01-30 #}
 {# wf_published_on: 2019-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -189,6 +189,10 @@ const cachedResponse = await matchPrecache(`/somethingPrecached`);
 In v5, the Workbox runtime libraries are written in [TypeScript](https://www.typescriptlang.org/). While we will continue to publish transpiled JavaScript modules and bundles to accommodate developers who have not adopted TypeScript, if you are using TypeScript, you should benefit from accurate, always up-to-date type information directly from the Workbox project.
 
 ## Example Migration
+
+[This commit](https://github.com/GoogleChromeLabs/so-pwa/commit/b1ecae0bc12b923506b4199dcabf4f15ca2a924e)
+illustrates is a fairly involved migration, with inline commentary. It uses Rollup to include a
+custom Workbox runtime in the final service worker instead of loading the runtime from the CDN.
 
 While it doesn't cover every breaking change, here's the [before](https://github.com/jeffposnick/jeffposnick.github.io/blob/ed13f6fc9feb60ee88434ccd3d53160d23ddac45/src/service-worker.js) and [after](https://github.com/jeffposnick/jeffposnick.github.io/blob/fedbdf87dc8ee26b66f0e12e2649d92b7a853d79/src/service-worker.ts) of upgrading one service worker file from v4 to v5, including a switch to TypeScript.
 
