@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2020-01-17 #}
+{# wf_updated_on: 2020-02-03 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -76,7 +76,7 @@ module.exports = {
 ```
 
 A full set of configuration options can be found on
-[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin-GenerateSW.html#GenerateSW).
+[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW.html#GenerateSW).
 
 ## InjectManifest Plugin
 
@@ -120,7 +120,7 @@ module.exports = {
 ```
 
 A full set of configuration options can be found on
-[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin-InjectManifest.html#InjectManifest).
+[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest#InjectManifest).
 
 ## Extra Info
 
