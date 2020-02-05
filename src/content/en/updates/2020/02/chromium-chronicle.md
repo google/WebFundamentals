@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
 {# wf_updated_on: 2020-02-05 #}
-{# wf_published_on: 2019-02-05 #}
+{# wf_published_on: 2020-02-05 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
 {# wf_featured_snippet: Chrome’s testing strategy relies heavily on automated functional correctness tests and manual testing, but neither of these reliably catch minor UI regressions. Use pixel tests to automate testing your desktop browser UI. #}
