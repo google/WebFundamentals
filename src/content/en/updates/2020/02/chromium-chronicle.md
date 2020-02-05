@@ -24,7 +24,8 @@ When writing a pixel test, avoid flakiness by (1) disabling animation,
 
 Here is a sample image used to verify pixel correctness for the omnibox:
 
-IMAGE
+<img src="/web/updates/images/2020/02/cc12-omnibox.png"
+     alt="Omnibox image used for pixel comparison.">
 
 And the code to verify the browser matches this image:
 
