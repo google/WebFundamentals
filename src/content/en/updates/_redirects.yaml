@@ -2,6 +2,9 @@
 
 redirects:
 
+- from: /web/updates/nic
+  to: /web/updates/2020/02/nic80
+
 - from: /web/updates/2019/03/prefers-reduced-motion
   to: https://web.dev/prefers-reduced-motion/
 
@@ -40,9 +43,6 @@ redirects:
 
 - from: /web/updates/2018/06/fresher-sw
   to: /web/updates/2019/09/fresher-sw
-
-- from: /web/updates/nic
-  to: /web/updates/2019/12/nic79
 
 - from: /web/updates/2018/11/writable-files
   to: https://web.dev/native-file-system/
