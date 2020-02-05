@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's New in Chrome 80 for developers?
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-02-04 #}
+{# wf_updated_on: 2020-02-05 #}
 {# wf_featured_image: /web/updates/images/2020/02/new-80.jpg #}
 {# wf_tags: chrome80,new-in-chrome,chromedevsummit,forms,formdata,lazy-loading,performance #}
 {# wf_featured_snippet: Chrome 80 is rolling out now, and there’s a ton of new stuff in it for developers! There’s support for modules in workers, optional chaining in JavaScript, new origin trials, features that have graduated from origin trial, and so much more. Let’s dive in and see what’s new for developers in Chrome 80! #}
@@ -19,7 +19,7 @@ Chrome 80 is rolling out now, and there’s a ton of new stuff in it for
 developers!
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lM0qZpxu0Fg"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -220,7 +220,7 @@ additional changes in Chrome 80.
 * [Chrome 80 deprecations & removals](/web/updates/2019/12/chrome-80-deps-rems)
 * [ChromeStatus.com updates for Chrome 80](https://www.chromestatus.com/features#milestone%3D80)
 * [What's new in JavaScript in Chrome 80](https://v8.dev/blog/v8-release-80)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/79.0.3945.82..80.0.TODO.XX)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/79.0.3945.82..80.0.3987.87)
 
 ## Subscribe {: .hide-from-toc }
 
