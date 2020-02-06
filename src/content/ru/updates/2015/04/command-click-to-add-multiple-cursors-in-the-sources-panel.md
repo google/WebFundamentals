@@ -2,13 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Узнайте, как редактировать c несколькими курсорами на панели источников DevTools.
 
-{# wf_updated_on: 2019-03-22 #}
-{# wf_published_on: 2015-04-24 #}
-{# wf_tags: devtools #}
-{# wf_featured_image:
+{# wf_updated_on: 2019-03-22 #} {# wf_published_on: 2015-04-24 #} {# wf_tags:
+devtools #} {# wf_featured_image:
 /web/updates/images/2015-05-19-devtools-command-click-to-add-multiple-cursors-in-the-sources-panel/multiple-cursors.gif
-#}
-{# wf_blink_components: N/A #}
+#} {# wf_blink_components: N/A #}
 
 # Клавиша 'command' и клик, чтобы добавить несколько курсоров на панели источников {: .page-title }
 
