@@ -14,6 +14,6 @@ devtools #} {# wf_featured_image:
 src="/web/updates/images/2015-05-19-alt-click-to-expand-all-child-nodes/alt-click-expand-node.gif"
 alt="Alt + Click to expand all child nodes">
 
-You can use <kbd class="kbd">Alt + Click</kbd> in the Elements Panel to expand
-all child nodes. Just click on the small arrow to the left of the DOM node while
-holding <kbd class="kbd">Alt</kbd>.
+Вы можете использовать <kbd class="kbd">Alt + Click</kbd> на панели элементов,
+чтобы развернуть все дочерние узлы. Просто нажмите на маленькую стрелку слева от
+узла DOM, удерживая <kbd class="kbd">Alt</kbd> .
