@@ -9,27 +9,26 @@ news,dom #} {# wf_blink_components: Blink>DOM #}
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-The Chrome team recently [announced that we are moving DOM properties to the
-prototype
-chain](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/H0MGw0jkdn4).
-This change, implemented in [Chrome
-43](https://www.chromestatus.com/feature/6052436003258368) - (Beta as of mid
-April 2015) -  brings Chrome more in line with the [Web IDL
-Spec](https://heycam.github.io/webidl/#es-attributes) and other browsers’
-implementations, such as IE and Firefox.  *Edit: clarified*   Older WebKit based
-browsers, are currently not compatible with the spec, however Safari now is.
+Команда Chrome недавно [объявила, что мы перемещаем свойства DOM в цепочку
+прототипов](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/H0MGw0jkdn4)
+. Это изменение, реализованное в [Chrome
+43](https://www.chromestatus.com/feature/6052436003258368) (бета-версия на
+середину апреля 2015 года), приводит Chrome в большее соответствие с [Web ID
+Spec](https://heycam.github.io/webidl/#es-attributes) и реализациями других
+браузеров, таких как IE и Firefox. *Изменено: уточнил* Старые браузеры на основе
+WebKit, в настоящее время не совместимы со спецификацией, кроме Safari.
 
-Note: The use of the word Attribute and Property are used interchangeably in
-this post, the ECMA Script spec defines 'Properties' that have 'Attributes'.  A
-JS property *is* a 'WebIDL Attribute'.  An Attribute in this article is not an
-HTML Attribute such as `class` on an image element.
+Примечание. Использование слова «атрибут» и «свойство» используются в этом посте
+взаимозаменяемо, спецификация ECMA Script определяет «свойства», имеющие
+«атрибуты». Свойство JS *является* «Атрибутом WebIDL». Атрибут в этой статье не
+является атрибутом HTML, таким как `class` для элемента изображения.
 
-The new behavior is positive in many ways. It:
+Новое поведение положительно во многих отношениях. Оно:
 
-- Improves compatibility across the web (IE and Firefox do this already) via
-compliance with the spec.
-- Allows you to consistently and efficiently create getters/setters on every DOM
-Object.
+- Улучшает совместимость через веб (IE и Firefox уже делают это) через
+соответствие спецификации.
+- Позволяет вам последовательно и эффективно создавать методы
+получения/установки для каждого объекта DOM.
 - Увеличивает возможность взлома DOM-программирования. Например, это позволит
 вам реализовать полизаполнения, которые позволят вам эффективно эмулировать
 функциональность, отсутствующую в некоторых браузерах и библиотеках JavaScript,
@@ -98,8 +97,9 @@ HTMLElement. Например, `HTMLDivElement` наследуется от `HTM
 true
 ```
 
-You are not locked in to using `hasOwnProperty`. We recommend to use the much
-simpler `in` operand as this will check property on the entire prototype chain.
+Вы не ограничены в использовании `hasOwnProperty` . Мы рекомендуем использовать
+более простой операнд  {code2}in{/code2}, так как он будет проверить свойство на
+всей цепочке прототипов.
 
 ```
 if("isContentEditable" in div) {
@@ -200,9 +200,9 @@ function foo() {
 }
 ```
 
-Chrome 42 and earlier the function would have continued and silently carried on
-executing the function, although `isContentEditable` would have not been
-changed.
+В Chrome 42 и более ранних `isContentEditable` функция продолжала бы и
+продолжала молча выполнять ее, хотя {code1}isContentEditable{/code1} не
+изменилась бы.
 
 ```
 // Chrome 42 and earlier behavior
@@ -228,10 +228,11 @@ Uncaught TypeError: Cannot set property isContentEditable of #<HTMLElement> whic
 
 ## Я видел сайт с проблемой, что мне делать?
 
-Great question.  Most issues with sites will be based on the fact a site has
-chosen to do Attribute presence detection with the `getOwnProperty` method, this
-is mostly done when a site owner has only targeted older WebKit browsers.  There
-are a couple of things that a developer can do:
+Отличный вопрос. Большинство проблем с сайтами будет основано на том факте, что
+сайт выбрал обнаружение атрибутов с `getOwnProperty` метода
+{code1}getOwnProperty{/code1}, это в основном происходит, когда владелец сайта
+использует только старые браузеры WebKit. Разработчик может сделать несколько
+вещей:
 
 - Зарегистрируйте проблему с уязвимым сайтом на нашем (Chrome) трекере
 - Зарегистрируйте проблему на радаре WebKit и укажите ссылку
@@ -245,5 +246,5 @@ https://bugs.webkit.org/show_bug.cgi?id=49739.
 - [Проверка кода](https://codereview.chromium.org/984523003/) {: .external } для
 коммита
 
-{% include "web/_shared/helpful.html" %}
-{% include "web/_shared/rss-widget-updates.html" %}
+{% include "web/_shared/helpful.html" %} {% include
+"web/_shared/rss-widget-updates.html" %}
