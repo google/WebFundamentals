@@ -1,6 +1,6 @@
 project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
-description: The module guide for workbox-routing.
+description: Модуль руководства по workbox-маршрутизации.
 
 {# wf_published_on: 2019-02-24 #} {# wf_updated_on: 2020-01-15 #} {#
 wf_blink_components: N/A #}
@@ -31,9 +31,9 @@ wf_blink_components: N/A #}
 можете импортировать его в свой код либо из нашей CDN, либо с помощью любого из
 популярных инструментов связывания JavaScript.
 
-### Using our CDN
+### Используя наш CDN
 
-The easiest way to import the `Workbox` class on your site is from our CDN:
+Самый простой способ импортировать класс `Workbox` на ваш сайт из нашего CDN:
 
 ```html
 <script type="module">
@@ -58,7 +58,7 @@ if ('serviceWorker' in navigator) {
 совершенно нормально предоставлять этот код любым браузерам (старые браузеры
 просто игнорируют его).
 
-### Loading Workbox with JavaScript bundlers
+### Загрузка Workbox с помощью JavaScript-пакетов
 
 Хотя для использования `workbox-window` совершенно не требуется никаких
 инструментов, если ваша инфраструктура разработки уже включает в себя такой
@@ -67,16 +67,16 @@ if ('serviceWorker' in navigator) {
 [npm](https://www.npmjs.com/), их можно использовать для загрузки
 `workbox-window` .
 
-The first step is to
-[install](https://docs.npmjs.com/downloading-and-installing-packages-locally)
-`workbox-window` as a dependency of your application:
+Первым шагом является
+[установка](https://docs.npmjs.com/downloading-and-installing-packages-locally)
+`workbox-window` как зависимости вашего приложения:
 
 ```
 npm install workbox-window
 ```
 
-Then, in one of your application's JavaScript files, `import` workbox by
-referencing the `workbox-window` package name:
+Затем в одном из файлов JavaScript вашего приложения `import` рабочий ящик,
+ссылаясь на имя пакета `workbox-window` :
 
 ```javascript
 import {Workbox} from 'workbox-window';
@@ -107,7 +107,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-### Advanced bundling concepts
+### Расширенные концепции комплектации
 
 В отличие от пакетов Workbox, которые запускаются в сервис-воркере, файлы
 сборки, на которые ссылаются `workbox-window` поля
@@ -144,7 +144,7 @@ import {Workbox} from 'workbox-window/Workbox.mjs';
 href="/web/tools/workbox/guides/using-bundlers">Использование упаковщиков
 (webpack/Rollup) с Workbox</a> для более подробной информации.</aside>
 
-### Examples
+### Примеры
 
 После того, как вы импортировали класс `Workbox`, вы можете использовать его для
 регистрации и взаимодействия с сервис-воркером. Вот несколько примеров того, как
@@ -188,8 +188,8 @@ wb.register();
 случаях, когда [перезагрузка текущей страницы не приводит к активации нового
 сервис-воркер](/web/fundamentals/primers/service-workers/lifecycle#waiting) .
 
-To help minimize confusion and make it clear when this situation is happening,
-the `Workbox` class provides a `waiting` event that you can listen for:
+Чтобы свести к минимуму путаницу и прояснить ситуацию, когда это происходит,
+класс `Workbox` предоставляет событие `waiting` которое вы можете прослушивать:
 
 ```javascript
 const wb = new Workbox('/sw.js');
@@ -203,19 +203,22 @@ wb.addEventListener('waiting', (event) => {
 wb.register();
 ```
 
-<h4 id="example-broadcast-updates" class="hide-from-toc">Notify the user of
-cache updates from the <code>workbox-broadcast-update</code> package</h4>
+<h4 id="example-broadcast-updates" class="hide-from-toc">Уведомить пользователя
+об обновлениях кэша из пакета <code>workbox-broadcast-update</code>
+</h4>
 
-The [`workbox-broadcast-update`
-package](/web/tools/workbox/modules/workbox-broadcast-update) is a great
+Пакет
+[`workbox-broadcast-update`](/web/tools/workbox/modules/workbox-broadcast-update)
+- это отличный
 
-way to be able to serve content from the cache (for fast delivery) while also
-being able to inform the user of updates to that content (using the
-[stale-while-revalidate
-strategy](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate)).
+способ предоставления контента из кэша (для быстрой доставки), а также
+возможность информировать пользователя об обновлениях этого контента (используя
+[стратегию
+stale-while-revalidate](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate)
+).
 
-To receive those updates from the window, you can listen to `message` events of
-type `CACHE_UPDATED`:
+Чтобы получать эти обновления из окна, вы можете прослушивать события `message`
+типа `CACHE_UPDATED` :
 
 ```javascript
 const wb = new Workbox('/sw.js');
@@ -235,9 +238,10 @@ wb.register();
 <h4 id="example-cache-urls" class="hide-from-toc">Отправьте сервис-воркеру
 список URL в кеш</h4>
 
-For some applications, it's possible to know all the assets that need to be
-precached at build time, but some applications serve completely different pages,
-based on what URL the user lands on first.
+Для некоторых приложений можно знать все ресурсы, которые необходимо
+предварительно кэшировать во время сборки, но некоторые приложения обслуживают
+совершенно разные страницы, в зависимости от того, на какой URL пользователь
+попадает первым.
 
 Для приложений последней категории может иметь смысл кэшировать только те
 ресурсы, которые нужны пользователю для конкретной страницы, которую они
@@ -333,10 +337,9 @@ href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
 Вы, вероятно, захотите относиться к самому первому случаю установки
 сервис-воркера иначе, чем к будущим обновлениям.
 
-In `workbox-window`, you can differentiate between the version first
-installation and future updates by checking the `isUpdate` property on any of
-the following events. For the very first installation, `isUpdate` will be
-`false`.
+В `workbox-window` вы можете различать версию первой установки и будущие
+обновления, проверив свойство `isUpdate` для любого из следующих событий. Для
+самой первой установки `isUpdate` будет `false` .
 
 ```javascript
 const wb = new Workbox('/sw.js');
@@ -353,8 +356,8 @@ wb.register();
 <table class="green">
   <tr>
     <th style="width: 25%">Момент</th>
-    <th>Event</th>
-    <th>Recommended action</th>
+    <th>Событие</th>
+    <th>Рекомендуемое действие</th>
   </tr>
   <tr>
     <td>Установлен новый сервис-воркер (впервые)</td>
@@ -413,14 +416,15 @@ href="/web/fundamentals/primers/service-workers/lifecycle#clientsclaim"><code>cl
 управляет существующей версией, свойство `isUpdate` всех следующих событий будет
 иметь значение `true` .
 
-How you react in this situation is typically different from the very first
-installation because you have to manage when and how the user gets this update.
+То, как вы реагируете в этой ситуации, обычно отличается от самой первой
+установки, потому что вы должны определить, когда и как пользователь получит это
+обновление.
 
 <table class="cyan">
   <tr>
     <th style="width: 25%">Момент</th>
-    <th>Event</th>
-    <th>Recommended action</th>
+    <th>Событие</th>
+    <th>Рекомендуемое действие</th>
   </tr>
   <tr>
     <td>Установлен новый сервис-воркер (обновляется предыдущий)</td>
@@ -430,8 +434,9 @@ installation because you have to manage when and how the user gets this update.
 <code>event.isUpdate === true</code> ), это означает, что была найдена и
 установлена более новая версия сервис-воркер (то есть версия, отличная от той,
 которая в настоящее время контролирует страницу).</p>
-      <p>This typically means a newer version of the site has been deployed to
-      your server, and new assets may have just finished precaching.</p>
+<p>Обычно это означает, что на вашем сервере была развернута более новая
+версия сайта, а новые ресурсы, возможно, только что завершили предварительное
+кэширование.</p>
 <p>Примечание. Некоторые разработчики используют <code>installed</code>
 событие для информирования пользователей о доступности новой версии их сайта.
 Однако, в зависимости от того, вызываете ли вы <a
@@ -500,23 +505,23 @@ href="/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users">
 
 ### При обнаружении неожиданной версии сервис-воркера
 
-Sometimes users will keep your site open in a background tab for a very long
-time. They might even open a new tab and navigate to your site without realizing
-they already have your site open in a background tab. In such cases it's
-possible to have two versions of your site running at the same time, and that
-can present some interesting problems for you as the developer.
+Иногда пользователи будут держать ваш сайт открытым в фоновой вкладке в течение
+очень долгого времени. Они могут даже открыть новую вкладку и перейти на ваш
+сайт, даже не подозревая, что ваш сайт уже открыт в фоновой вкладке. В таких
+случаях возможно, чтобы две версии вашего сайта работали одновременно, и это
+может создать некоторые интересные проблемы для вас как для разработчика.
 
-Consider a scenario where you have tab A running v1 of your site and tab B
-running v2. When tab B loads, it'll be controlled by the version of your service
-worker that shipped with v1, but the page returned by the server (if using a
-[network-first caching
-strategy](/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache)
-for your navigation requests) will contain all your v2 assets.
+Рассмотрим сценарий, в котором у вас есть вкладка A под управлением v1 вашего
+сайта и вкладка B под управлением v2. Когда загрузится вкладка B, она будет
+управляться версией вашего работника службы, поставляемой с v1, но страница,
+возвращаемая сервером (если используется [стратегия сетевого
+кэширования](/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache)
+для ваших запросов навигации), будет содержать все ваши ресурсы v2.
 
-This is generally not a problem for tab B though, since when you wrote your v2
-code, you were aware of how your v1 code worked. **However, it could be a
-problem for tab A,** since your v1 code could not have possibly predicted what
-changes your v2 code might introduce.
+Обычно это не проблема для вкладки B, поскольку, когда вы писали код v2, вы
+знали, как работает код v1. **Однако это может быть проблемой для вкладки A,**
+поскольку ваш код v1 не мог предсказать, какие изменения может внести ваш код
+v2.
 
 Чтобы помочь справиться с этими ситуациями, `workbox-window` также отправляет
 события жизненного цикла, когда обнаруживает обновление от «внешнего»
@@ -526,8 +531,8 @@ changes your v2 code might introduce.
 <table class="orange">
   <tr>
     <th style="width: 25%">Момент</th>
-    <th>Event</th>
-    <th>Recommended action</th>
+    <th>Событие</th>
+    <th>Рекомендуемое действие</th>
   </tr>
   <tr>
     <td>Установлен внешний сервис-воркер</td>
@@ -535,8 +540,8 @@ changes your v2 code might introduce.
     <td>
 <p>Если установлен внешний сервис-воркер, это, скорее всего, означает, что
 пользователь запускает более новую версию вашего сайта на другой вкладке.</p>
-      <p>How to respond likely depends on whether the installed service enters
-      the waiting or active phase.</p>
+<p>Вероятность ответа зависит от того, входит ли установленная служба в
+ожидающую или активную фазу.</p>
    </td>
   </tr>
   <tr>
@@ -546,10 +551,10 @@ changes your v2 code might introduce.
 <p>Если внешний сервис-воркер ожидает активации, это, вероятно, означает,
 что пользователь пытается получить новую версию вашего сайта на другой вкладке,
 но он заблокирован, потому что эта вкладка все еще открыта.</p>
-      <p>If this happens, you may consider showing showing a notification to the
-      user asking them to close this tab. In extreme cases, you may even
-      consider calling <code>window.reload()</code> if doing so won't cause the
-      user to lose any saved state.</p>
+<p>Если это произойдет, вы можете показать пользователям уведомление с
+просьбой закрыть эту вкладку. В крайних случаях вы можете даже подумать о вызове
+<code>window.reload()</code> если это не приведет к потере пользователем
+какого-либо сохраненного состояния.</p>
    </td>
   </tr>
   <tr>
@@ -562,7 +567,7 @@ changes your v2 code might introduce.
   </tr>
 </table>
 
-## Avoiding common mistakes
+## Как избежать распространенных ошибок
 
 Одна из самых полезных функций, предоставляемых Workbox - ведение журнала
 разработчика. И это особенно актуально для `workbox-window` .
@@ -609,36 +614,35 @@ changes your v2 code might introduce.
   <tr>
     <th>Свойство</th>
     <th>Обязательное?</th>
-    <th>Type</th>
-    <th>Description</th>
+    <th>Тип</th>
+    <th>Описание</th>
   </tr>
   <tr>
     <td><strong><code>type</code></strong></td>
-    <td><strong>Yes</strong></td>
+    <td><strong>да</strong></td>
     <td><code>string</code></td>
     <td>
-      <p>A unique string, identifying this message.</p>
-      <p>By convention, types are all uppercase with underscores separating
-      words. If a type represents an action to be taken, it should be a command
-      in present tense (e.g. <code>CACHE_URLS</code>), if type represent
-      information being reported, it should be in past tense (e.g.
-      <code>URLS_CACHED</code>).</p>
+      <p>Уникальная строка, идентифицирующая это сообщение.</p>
+<p>По соглашению, все типы пишутся в верхнем регистре с подчеркиванием,
+разделяющим слова. Если тип представляет действие, которое должно быть
+предпринято, это должна быть команда в настоящем времени (например,
+<code>CACHE_URLS</code> ), если тип представляет информацию, о которой сообщают,
+это должно быть в прошедшем времени (например, <code>URLS_CACHED</code> ).</p>
    </td>
   </tr>
   <tr>
     <td><strong><code>meta</code></strong></td>
-    <td>no</td>
+    <td>нет</td>
     <td><code>string</code></td>
-    <td>In Workbox this is always the name of the Workbox package sending the
-    message. When sending message yourself, you can either omit this property or
-    set it to whatever you like.</td>
+<td>В Workbox это всегда имя пакета Workbox, отправляющего сообщение.
+Отправляя сообщение самостоятельно, вы можете либо пропустить это свойство, либо
+установить его по своему усмотрению.</td>
   </tr>
   <tr>
     <td><strong><code>payload</code></strong></td>
-    <td>no</td>
+    <td>нет</td>
     <td><code>*</code></td>
-    <td>The data being sent. Usually this is an object, but it does not have to
-    be.</td>
+    <td>Данные отправляются. Обычно это объект, но это не обязательно.</td>
   </tr>
 </table>
 
@@ -652,7 +656,7 @@ changes your v2 code might introduce.
 Первый блок кода - это слушатель сообщений в сервис-воркере, а второй блок
 использует класс `Workbox` для отправки сообщения и ожидания ответа:
 
-**Code in sw.js:**
+**Код в sw.js:**
 
 ```javascript
 const SW_VERSION = '1.0.0';
@@ -664,7 +668,7 @@ addEventListener('message', (event) => {
 });
 ```
 
-**Code in main.js (running in the window):**
+**Код в main.js (работает в окне):**
 
 ```javascript
 const wb = new Workbox('/sw.js');
@@ -674,7 +678,7 @@ const swVersion = await wb.messageSW({type: 'GET_VERSION'});
 console.log('Service Worker version:', swVersion);
 ```
 
-### Managing version incompatibilities
+### Управление несовместимостями версий
 
 В приведенном выше примере показано, как можно реализовать проверку версии
 сервис-воркера из окна. Этот пример используется потому, что когда вы
@@ -684,13 +688,14 @@ console.log('Service Worker version:', swVersion);
 зависимости от того, обслуживаете ли вы свои страницы по сети или сначала по
 кешу.
 
-<h4 class="hide-from-toc">Network first</h4>
+<h4 class="hide-from-toc">Сеть первая</h4>
 
-When serving your pages network first, your users will always be getting the
-latest version of your HTML from your server. However, the first time a user
-revisits your site (after you've deployed an update) the HTML they get will be
-for the latest version, but the service worker running in their browser will be
-a version installed previously (possibly many versions old).
+При первичном обслуживании ваших страниц в сети ваши пользователи всегда будут
+получать последнюю версию HTML с вашего сервера. Однако в первый раз, когда
+пользователь повторно посещает ваш сайт (после того, как вы развернули
+обновление), HTML-код, который он получит, будет иметь самую последнюю версию,
+но у работника службы, работающего в его браузере, будет установленная ранее
+версия (возможно, много старых версий) ,
 
 Важно понимать эту возможность, потому что, если JavaScript, загруженный текущей
 версией вашей страницы, отправляет сообщение более старой версии вашего
@@ -709,7 +714,7 @@ a version installed previously (possibly many versions old).
 ожидания,](/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
 чтобы сразу активировать нового сервис-воркера.
 
-<h4 class="hide-from-toc">Cache first</h4>
+<h4 class="hide-from-toc">Кеш первый</h4>
 
 В отличие от того, когда вы обслуживаете страницы по сети, во время обслуживания
 кеша страниц, во-первых, вы знаете, что изначально ваша страница всегда будет
