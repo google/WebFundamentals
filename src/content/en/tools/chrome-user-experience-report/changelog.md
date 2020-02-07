@@ -63,15 +63,14 @@ into account
 ### 201908
 
 - 6,011,463 origins
-    - first time over the 6M origin threshold!
 - [FID](./#first-input-delay) coverage has returned to normal
 - the average percent of fast experiences for most metrics dropped by about 2%
-    - this appears to be due to a bug in Chrome (citation needed)
+    - this appears to be due to a [bug in Chrome](https://chromium.googlesource.com/chromium/src/+/master/docs/speed/metrics_changelog/2019_12_fcp.md)
 
 ### 201907
 
 - 5,612,504 origins
-- there was an incremental update to Chrome's [FID](./#first-input-delay) implementation
+- there was an [incremental update](https://chromium.googlesource.com/chromium/src/+/master/docs/speed/metrics_changelog/2019_07_fid.md) to Chrome's [FID](./#first-input-delay) implementation, which included pointer events on mobile
     - coverage will be lower while Chrome users update to the latest version
 
 ### 201906
@@ -136,7 +135,7 @@ into account
 
 - 4,134,123 origins
 - the [FID](./#first-input-delay) metric was added to the list of experimental metrics as 
-`experimental.first_input_delay`
+`experimental.first_input_delay` ([learn more](https://developers.google.com/web/updates/2018/07/first-input-delay-in-crux))
 
 ### 201805
 
@@ -157,6 +156,7 @@ into account
 ### 201801
 
 - 3,086,603 origins
+- added [country dimension](https://developers.google.com/web/updates/2018/01/crux)
 
 ### 201712
 
@@ -165,9 +165,9 @@ into account
 ### 201711
 
 - 1,237,407 origins
-- our first full dataset!
+- expanded dataset [with 1M+ origins](https://developers.google.com/web/updates/2017/12/crux)
 
 ### 201710
 
 - 10,000 origins
-- our first experimental dataset, limited to some of the most popular origins
+- [Chrome User Experience Report beta preview is launched](https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html) at Chrome Dev Summit
