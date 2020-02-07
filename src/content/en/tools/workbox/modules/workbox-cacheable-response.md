@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cacheable-response.
 
-{# wf_updated_on: 2019-07-14 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 {# wf_blink_components: N/A #}
 
@@ -25,15 +25,19 @@ with a specific value, or a combination of the two.
 
 You can configure a [Workbox strategy](./workbox-strategies) to consider
 a set of status codes as being eligible for caching by adding a
-`workbox.cacheableResponse.Plugin` instance to a strategy's `plugins` parameter:
+`CacheableResponsePlugin` instance to a strategy's `plugins` parameter:
 
 ```js
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {CacheableResponsePlugin} from 'workbox-cacheable-response';
+
+registerRoute(
   new RegExp('^https://third-party\\.example\\.com/images/'),
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     cacheName: 'image-cache',
     plugins: [
-      new workbox.cacheableResponse.Plugin({
+      new CacheableResponsePlugin({
         statuses: [0, 200],
       })
     ]
@@ -55,12 +59,16 @@ for the presence of specific header values as criteria for being added
 to the cache by setting the `headers` object when constructing the plugin:
 
 ```js
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {CacheableResponsePlugin} from 'workbox-cacheable-response';
+
+registerRoute(
   new RegExp('/path/to/api/'),
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     cacheName: 'api-cache',
     plugins: [
-      new workbox.cacheableResponse.Plugin({
+      new CacheableResponsePlugin({
         headers: {
           'X-Is-Cacheable': 'true',
         },
@@ -86,12 +94,16 @@ the response must have one of the configured status codes, **and** it must
 have at least one of the provided headers.
 
 ```js
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {CacheableResponsePlugin} from 'workbox-cacheable-response';
+
+registerRoute(
   new RegExp('/path/to/api/'),
-  new workbox.strategies.StaleWhileRevalidate({
+  new StaleWhileRevalidate({
     cacheName: 'api-cache',
     plugins: [
-      new workbox.cacheableResponse.Plugin({
+      new CacheableResponsePlugin({
         statuses: [200, 404],
         headers: {
           'X-Is-Cacheable': 'true',
@@ -105,7 +117,7 @@ workbox.routing.registerRoute(
 ## What Are the Defaults?
 
 If you use one of Workbox's built-in strategies without explicitly
-configuring a `cacheableResponse.Plugin`, the following default criteria is
+configuring a `cacheableResponse.CacheableResponsePlugin`, the following default criteria is
 used to determine whether a response received from the network should
 be cached:
 
@@ -142,7 +154,9 @@ If you want to use the same caching logic outside of a Workbox strategy, you
 can use the `CacheableResponse` class directly.
 
 ```js
-const cacheable = new workbox.cacheableResponse.CacheableResponse({
+import {CacheableResponse} from 'workbox-cacheable-response';
+
+const cacheable = new CacheableResponse({
   statuses: [0, 200],
   headers: {
     'X-Is-Cacheable': 'true',

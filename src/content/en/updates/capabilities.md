@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-11-26 #}
+{# wf_updated_on: 2020-01-10 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -104,7 +104,7 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         reach and connect with their friends and family.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> October 22nd, 2019
+        <b>Last Updated:</b> January, 2020
       </td>
     </tr>
     <tr>
@@ -150,8 +150,8 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         interfaces. Currently, the supported features are face detection,
         barcode detection, and text detection (Optical Character Recognition).
         <br><br>
-        <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> October 22nd, 2019
+        <b>Current Status:</b> Available behind a flag.<br>
+        <b>Last Updated:</b> January, 2020
       </td>
     <tr>
       <td>
@@ -168,6 +168,46 @@ considering on [crbug.com](https://crbug.com) and filtering issues with the
         <br><br>
         <b>Current Status:</b> Origin Trial.<br>
         <b>Last Updated:</b> November, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://web.dev/content-indexing-api/">Content Indexing API</a>
+      </td>
+      <td>
+        Your PWA might cache articles and media files, but how will your users
+        know that your pages work while offline? The Content Indexing API is
+        one answer to this question currently in an origin trial. Once the
+        index is populated with content from your PWA, as well as any other
+        installed PWAs, it will show up in dedicated areas of supported browsers.
+        <br><br>
+        <b>Current Status:</b> Origin Trial.<br>
+        <b>Last Updated:</b> December, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://web.dev/periodic-background-sync/">Periodic Background Sync API</a>
+      </td>
+      <td>
+        Periodic Background Sync enables web applications to periodically
+        synchronize data in the background, bringing web apps closer to
+        the behavior of a native app.
+        <br><br>
+        <b>Current Status:</b> Origin Trial.<br>
+        <b>Last Updated:</b> December, 2019
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://web.dev/sms-receiver-api-announcement/">SMS Receiver API</a>
+      </td>
+      <td>
+        Finding, memorizing, and typing OTPs sent via SMS is cumbersome.
+        The SMS Receiver API simplifies the OTP workflow for users.
+        <br><br>
+        <b>Current Status:</b> Origin Trial.<br>
+        <b>Last Updated:</b> October, 2019
       </td>
     </tr>
   </tbody>

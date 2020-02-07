@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-precaching/PrecacheController.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-precaching/PrecacheController.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2019 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
+import { cacheNames } from &#x27;workbox-core/_private/cacheNames.js&#x27;;
+import { cacheWrapper } from &#x27;workbox-core/_private/cacheWrapper.js&#x27;;
+import { fetchWrapper } from &#x27;workbox-core/_private/fetchWrapper.js&#x27;;
+import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
+import { WorkboxError } from &#x27;workbox-core/_private/WorkboxError.js&#x27;;
+import { copyResponse } from &#x27;workbox-core/copyResponse.js&#x27;;
+import { createCacheKey } from &#x27;./utils/createCacheKey.js&#x27;;
+import { printCleanupDetails } from &#x27;./utils/printCleanupDetails.js&#x27;;
+import { printInstallDetails } from &#x27;./utils/printInstallDetails.js&#x27;;
+import &#x27;./_version.js&#x27;;
+/**
+ * Performs efficient precaching of assets.
+ *
+ * @memberof module:workbox-precaching
+ */
+class PrecacheController {
+    /**
+     * Create a new PrecacheController.
+     *
+     * @param {string} [cacheName] An optional name for the cache, to override
+     * the default precache name.
+     */
+    constructor(cacheName) {
+        this._cacheName &#x3D; cacheNames.getPrecacheName(cacheName);
+        this._urlsToCacheKeys &#x3D; new Map();
+        this._urlsToCacheModes &#x3D; new Map();
+        this._cacheKeysToIntegrities &#x3D; new Map();
+    }
+    /**
+     * This method will add items to the precache list, removing duplicates
+     * and ensuring the information is valid.
+     *
+     * @param {
+     * Array&amp;lt;module:workbox-precaching.PrecacheController.PrecacheEntry|string&gt;
+     * } entries Array of entries to precache.
+     */
+    addToCacheList(entries) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            assert.isArray(entries, {
+                moduleName: &#x27;workbox-precaching&#x27;,
+                className: &#x27;PrecacheController&#x27;,
+                funcName: &#x27;addToCacheList&#x27;,
+                paramName: &#x27;entries&#x27;,
+            });
+        }
+        const urlsToWarnAbout &#x3D; [];
+        for (const entry of entries) {
+            // See https://github.com/GoogleChrome/workbox/issues/2259
+            if (typeof entry &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+                urlsToWarnAbout.push(entry);
+            }
+            else if (entry &amp;amp;&amp;amp; entry.revision &#x3D;&#x3D;&#x3D; undefined) {
+                urlsToWarnAbout.push(entry.url);
+            }
+            const { cacheKey, url } &#x3D; createCacheKey(entry);
+            const cacheMode &#x3D; (typeof entry !&#x3D;&#x3D; &#x27;string&#x27; &amp;amp;&amp;amp; entry.revision) ?
+                &#x27;reload&#x27; : &#x27;default&#x27;;
+            if (this._urlsToCacheKeys.has(url) &amp;amp;&amp;amp;
+                this._urlsToCacheKeys.get(url) !&#x3D;&#x3D; cacheKey) {
+                throw new WorkboxError(&#x27;add-to-cache-list-conflicting-entries&#x27;, {
+                    firstEntry: this._urlsToCacheKeys.get(url),
+                    secondEntry: cacheKey,
+                });
+            }
+            if (typeof entry !&#x3D;&#x3D; &#x27;string&#x27; &amp;amp;&amp;amp; entry.integrity) {
+                if (this._cacheKeysToIntegrities.has(cacheKey) &amp;amp;&amp;amp;
+                    this._cacheKeysToIntegrities.get(cacheKey) !&#x3D;&#x3D; entry.integrity) {
+                    throw new WorkboxError(&#x27;add-to-cache-list-conflicting-integrities&#x27;, {
+                        url,
+                    });
+                }
+                this._cacheKeysToIntegrities.set(cacheKey, entry.integrity);
+            }
+            this._urlsToCacheKeys.set(url, cacheKey);
+            this._urlsToCacheModes.set(url, cacheMode);
+            if (urlsToWarnAbout.length &gt; 0) {
+                const warningMessage &#x3D; &#x60;Workbox is precaching URLs without revision &#x60; +
+                    &#x60;info: ${urlsToWarnAbout.join(&#x27;, &#x27;)}\nThis is generally NOT safe. &#x60; +
+                    &#x60;Learn more at https://bit.ly/wb-precache&#x60;;
+                if (process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#x27;production&#x27;) {
+                    // Use console directly to display this warning without bloating
+                    // bundle sizes by pulling in all of the logger codebase in prod.
+                    console.warn(warningMessage);
+                }
+                else {
+                    logger.warn(warningMessage);
+                }
+            }
+        }
+    }
+    /**
+     * Precaches new and updated assets. Call this method from the service worker
+     * install event.
+     *
+     * @param {Object} options
+     * @param {Event} [options.event] The install event (if needed).
+     * @param {Array&amp;lt;Object&gt;} [options.plugins] Plugins to be used for fetching
+     * and caching during install.
+     * @return {Promise&amp;lt;module:workbox-precaching.InstallResult&gt;}
+     */
+    async install({ event, plugins } &#x3D; {}) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            if (plugins) {
+                assert.isArray(plugins, {
+                    moduleName: &#x27;workbox-precaching&#x27;,
+                    className: &#x27;PrecacheController&#x27;,
+                    funcName: &#x27;install&#x27;,
+                    paramName: &#x27;plugins&#x27;,
+                });
+            }
+        }
+        const toBePrecached &#x3D; [];
+        const alreadyPrecached &#x3D; [];
+        const cache &#x3D; await self.caches.open(this._cacheName);
+        const alreadyCachedRequests &#x3D; await cache.keys();
+        const existingCacheKeys &#x3D; new Set(alreadyCachedRequests.map((request) &#x3D;&gt; request.url));
+        for (const [url, cacheKey] of this._urlsToCacheKeys) {
+            if (existingCacheKeys.has(cacheKey)) {
+                alreadyPrecached.push(url);
+            }
+            else {
+                toBePrecached.push({ cacheKey, url });
+            }
+        }
+        const precacheRequests &#x3D; toBePrecached.map(({ cacheKey, url }) &#x3D;&gt; {
+            const integrity &#x3D; this._cacheKeysToIntegrities.get(cacheKey);
+            const cacheMode &#x3D; this._urlsToCacheModes.get(url);
+            return this._addURLToCache({
+                cacheKey,
+                cacheMode,
+                event,
+                integrity,
+                plugins,
+                url,
+            });
+        });
+        await Promise.all(precacheRequests);
+        const updatedURLs &#x3D; toBePrecached.map((item) &#x3D;&gt; item.url);
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            printInstallDetails(updatedURLs, alreadyPrecached);
+        }
+        return {
+            updatedURLs,
+            notUpdatedURLs: alreadyPrecached,
+        };
+    }
+    /**
+     * Deletes assets that are no longer present in the current precache manifest.
+     * Call this method from the service worker activate event.
+     *
+     * @return {Promise&amp;lt;module:workbox-precaching.CleanupResult&gt;}
+     */
+    async activate() {
+        const cache &#x3D; await self.caches.open(this._cacheName);
+        const currentlyCachedRequests &#x3D; await cache.keys();
+        const expectedCacheKeys &#x3D; new Set(this._urlsToCacheKeys.values());
+        const deletedURLs &#x3D; [];
+        for (const request of currentlyCachedRequests) {
+            if (!expectedCacheKeys.has(request.url)) {
+                await cache.delete(request);
+                deletedURLs.push(request.url);
+            }
+        }
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            printCleanupDetails(deletedURLs);
+        }
+        return { deletedURLs };
+    }
+    /**
+     * Requests the entry and saves it to the cache if the response is valid.
+     * By default, any response with a status code of less than 400 (including
+     * opaque responses) is considered valid.
+     *
+     * If you need to use custom criteria to determine what&#x27;s valid and what
+     * isn&#x27;t, then pass in an item in &#x60;options.plugins&#x60; that implements the
+     * &#x60;cacheWillUpdate()&#x60; lifecycle event.
+     *
+     * @private
+     * @param {Object} options
+     * @param {string} options.cacheKey The string to use a cache key.
+     * @param {string} options.url The URL to fetch and cache.
+     * @param {string} [options.cacheMode] The cache mode for the network request.
+     * @param {Event} [options.event] The install event (if passed).
+     * @param {Array&amp;lt;Object&gt;} [options.plugins] An array of plugins to apply to
+     * fetch and caching.
+     * @param {string} [options.integrity] The value to use for the &#x60;integrity&#x60;
+     * field when making the request.
+     */
+    async _addURLToCache({ cacheKey, url, cacheMode, event, plugins, integrity }) {
+        const request &#x3D; new Request(url, {
+            integrity,
+            cache: cacheMode,
+            credentials: &#x27;same-origin&#x27;,
+        });
+        let response &#x3D; await fetchWrapper.fetch({
+            event,
+            plugins,
+            request,
+        });
+        // Allow developers to override the default logic about what is and isn&#x27;t
+        // valid by passing in a plugin implementing cacheWillUpdate(), e.g.
+        // a &#x60;CacheableResponsePlugin&#x60; instance.
+        let cacheWillUpdatePlugin;
+        for (const plugin of (plugins || [])) {
+            if (&#x27;cacheWillUpdate&#x27; in plugin) {
+                cacheWillUpdatePlugin &#x3D; plugin;
+            }
+        }
+        const isValidResponse &#x3D; cacheWillUpdatePlugin ?
+            // Use a callback if provided. It returns a truthy value if valid.
+            // NOTE: invoke the method on the plugin instance so the &#x60;this&#x60; context
+            // is correct.
+            await cacheWillUpdatePlugin.cacheWillUpdate({ event, request, response }) :
+            // Otherwise, default to considering any response status under 400 valid.
+            // This includes, by default, considering opaque responses valid.
+            response.status &amp;lt; 400;
+        // Consider this a failure, leading to the &#x60;install&#x60; handler failing, if
+        // we get back an invalid response.
+        if (!isValidResponse) {
+            throw new WorkboxError(&#x27;bad-precaching-response&#x27;, {
+                url,
+                status: response.status,
+            });
+        }
+        // Redirected responses cannot be used to satisfy a navigation request, so
+        // any redirected response must be &quot;copied&quot; rather than cloned, so the new
+        // response doesn&#x27;t contain the &#x60;redirected&#x60; flag. See:
+        // https://bugs.chromium.org/p/chromium/issues/detail?id&#x3D;669363&amp;amp;desc&#x3D;2#c1
+        if (response.redirected) {
+            response &#x3D; await copyResponse(response);
+        }
+        await cacheWrapper.put({
+            event,
+            plugins,
+            response,
+            // &#x60;request&#x60; already uses &#x60;url&#x60;. We may be able to reuse it.
+            request: cacheKey &#x3D;&#x3D;&#x3D; url ? request : new Request(cacheKey),
+            cacheName: this._cacheName,
+            matchOptions: {
+                ignoreSearch: true,
+            },
+        });
+    }
+    /**
+     * Returns a mapping of a precached URL to the corresponding cache key, taking
+     * into account the revision information for the URL.
+     *
+     * @return {Map&amp;lt;string, string&gt;} A URL to cache key mapping.
+     */
+    getURLsToCacheKeys() {
+        return this._urlsToCacheKeys;
+    }
+    /**
+     * Returns a list of all the URLs that have been precached by the current
+     * service worker.
+     *
+     * @return {Array&amp;lt;string&gt;} The precached URLs.
+     */
+    getCachedURLs() {
+        return [...this._urlsToCacheKeys.keys()];
+    }
+    /**
+     * Returns the cache key used for storing a given URL. If that URL is
+     * unversioned, like &#x60;/index.html&#x27;, then the cache key will be the original
+     * URL with a search parameter appended to it.
+     *
+     * @param {string} url A URL whose cache key you want to look up.
+     * @return {string} The versioned URL that corresponds to a cache key
+     * for the original URL, or undefined if that URL isn&#x27;t precached.
+     */
+    getCacheKeyForURL(url) {
+        const urlObject &#x3D; new URL(url, location.href);
+        return this._urlsToCacheKeys.get(urlObject.href);
+    }
+    /**
+     * This acts as a drop-in replacement for [&#x60;cache.match()&#x60;](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)
+     * with the following differences:
+     *
+     * - It knows what the name of the precache is, and only checks in that cache.
+     * - It allows you to pass in an &quot;original&quot; URL without versioning parameters,
+     * and it will automatically look up the correct cache key for the currently
+     * active revision of that URL.
+     *
+     * E.g., &#x60;matchPrecache(&#x27;index.html&#x27;)&#x60; will find the correct precached
+     * response for the currently active service worker, even if the actual cache
+     * key is &#x60;&#x27;/index.html?__WB_REVISION__&#x3D;1234abcd&#x27;&#x60;.
+     *
+     * @param {string|Request} request The key (without revisioning parameters)
+     * to look up in the precache.
+     * @return {Promise&amp;lt;Response|undefined&gt;}
+     */
+    async matchPrecache(request) {
+        const url &#x3D; request instanceof Request ? request.url : request;
+        const cacheKey &#x3D; this.getCacheKeyForURL(url);
+        if (cacheKey) {
+            const cache &#x3D; await self.caches.open(this._cacheName);
+            return cache.match(cacheKey);
+        }
+        return undefined;
+    }
+    /**
+     * Returns a function that can be used within a
+     * {@link module:workbox-routing.Route} that will find a response for the
+     * incoming request against the precache.
+     *
+     * If for an unexpected reason there is a cache miss for the request,
+     * this will fall back to retrieving the &#x60;Response&#x60; via &#x60;fetch()&#x60; when
+     * &#x60;fallbackToNetwork&#x60; is &#x60;true&#x60;.
+     *
+     * @param {boolean} [fallbackToNetwork&#x3D;true] Whether to attempt to get the
+     * response from the network if there&#x27;s a precache miss.
+     * @return {module:workbox-routing~handlerCallback}
+     */
+    createHandler(fallbackToNetwork &#x3D; true) {
+        return async ({ request }) &#x3D;&gt; {
+            try {
+                const response &#x3D; await this.matchPrecache(request);
+                if (response) {
+                    return response;
+                }
+                // This shouldn&#x27;t normally happen, but there are edge cases:
+                // https://github.com/GoogleChrome/workbox/issues/1441
+                throw new WorkboxError(&#x27;missing-precache-entry&#x27;, {
+                    cacheName: this._cacheName,
+                    url: request instanceof Request ? request.url : request,
+                });
+            }
+            catch (error) {
+                if (fallbackToNetwork) {
+                    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                        logger.debug(&#x60;Unable to respond with precached response. &#x60; +
+                            &#x60;Falling back to network.&#x60;, error);
+                    }
+                    return fetch(request);
+                }
+                throw error;
+            }
+        };
+    }
+    /**
+     * Returns a function that looks up &#x60;url&#x60; in the precache (taking into
+     * account revision information), and returns the corresponding &#x60;Response&#x60;.
+     *
+     * If for an unexpected reason there is a cache miss when looking up &#x60;url&#x60;,
+     * this will fall back to retrieving the &#x60;Response&#x60; via &#x60;fetch()&#x60; when
+     * &#x60;fallbackToNetwork&#x60; is &#x60;true&#x60;.
+     *
+     * @param {string} url The precached URL which will be used to lookup the
+     * &#x60;Response&#x60;.
+     * @param {boolean} [fallbackToNetwork&#x3D;true] Whether to attempt to get the
+     * response from the network if there&#x27;s a precache miss.
+     * @return {module:workbox-routing~handlerCallback}
+     */
+    createHandlerBoundToURL(url, fallbackToNetwork &#x3D; true) {
+        const cacheKey &#x3D; this.getCacheKeyForURL(url);
+        if (!cacheKey) {
+            throw new WorkboxError(&#x27;non-precached-url&#x27;, { url });
+        }
+        const handler &#x3D; this.createHandler(fallbackToNetwork);
+        const request &#x3D; new Request(url);
+        return () &#x3D;&gt; handler({ request });
+    }
+}
+export { PrecacheController };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

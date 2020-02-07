@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2018-07-09 #}
+{# wf_updated_on: 2020-02-03 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -18,14 +18,14 @@ right plugin and configuration to use.
 
 ## Which Plugin to Use
 
-### GenerateSW Plugin
+### GenerateSW
 
 The `GenerateSW` plugin will create a service worker file for you and
 add it to the webpack asset pipeline.
 
 {% include "web/tools/workbox/_shared/when-to-use-generate-sw.html" %}
 
-### InjectManifest Plugin
+### InjectManifest
 
 The `InjectManifest` plugin will generate a list of URLs to precache and
 add that precache manifest to an existing service worker
@@ -75,21 +75,8 @@ module.exports = {
 };
 ```
 
-{% with anchor_prefix="generateSW-" %}
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan="2">These options apply to the webpack compilation.</th>
-    </tr>
-{% include "web/tools/workbox/_shared/config/groups/common-webpack.html" %}
-    <tr>
-      <th colspan="2">These options configure behavior unrelated to the webpack compilation.</th>
-    </tr>
-{% include "web/tools/workbox/_shared/config/groups/common-generate-schema.html" %}
-{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
-  </tbody>
-</table>
-{% endwith %}
+A full set of configuration options can be found on
+[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW.html#GenerateSW).
 
 ## InjectManifest Plugin
 
@@ -132,40 +119,8 @@ module.exports = {
 };
 ```
 
-{% with anchor_prefix="injectManifest-" %}
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan="2">These options are specifically for the webpack compilation.</th>
-    </tr>
-{% include "web/tools/workbox/_shared/config/groups/common-webpack.html" %}
-    <tr>
-      <th colspan="2">These options configure behavior unrelated to the webpack compilation.</th>
-    </tr>
-{% include "web/tools/workbox/_shared/config/groups/common-inject-schema.html" %}
-{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
-  </tbody>
-</table>
-{% endwith %}
-
-## Cache additional, non-webpack assets
-
-By default, both plugins generate a precache manifest that contains URLs for assets created by the
-current webpack compilation. Any assets that webpack doesn't "know" about will not be picked up.
-
-If you need to precache additional assets that are managed outside of webpack, then you can
-use the `globDirectory` and `globPatterns` options to specify how to find those additional assets.
-
-If you decide to use `globDirectory` and `globPatterns`, the following applies:
-
-- The [`glob` pattern matching](https://github.com/isaacs/node-glob#glob-primer) will be performed
-against the local file system, and the directory that `globDirectory` is set to must exist at the
-time the plugin runs. This might run afoul of
-[`webpack-dev-server` configurations](https://github.com/webpack/webpack-dev-server), where an
-in-memory file system is used.
-- The options that work with `glob`-based precache manifests, like `manifestTranforms` and
-`modifyUrlPrefix`, can also be used, but they'll apply **only** to the entries that are matched via
-`glob` patterns, and not to any assets that are picked up via the webpack compilation.
+A full set of configuration options can be found on
+[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest#InjectManifest).
 
 ## Extra Info
 

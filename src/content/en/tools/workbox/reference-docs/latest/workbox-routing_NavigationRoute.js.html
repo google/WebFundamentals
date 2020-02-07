@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-routing/NavigationRoute.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-routing/NavigationRoute.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
+import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
+import { Route } from &#x27;./Route.js&#x27;;
+import &#x27;./_version.js&#x27;;
+/**
+ * NavigationRoute makes it easy to create a
+ * [Route]{@link module:workbox-routing.Route} that matches for browser
+ * [navigation requests]{@link /web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests}.
+ *
+ * It will only match incoming Requests whose
+ * [&#x60;mode&#x60;]{@link https://fetch.spec.whatwg.org/#concept-request-mode}
+ * is set to &#x60;navigate&#x60;.
+ *
+ * You can optionally only apply this route to a subset of navigation requests
+ * by using one or both of the &#x60;denylist&#x60; and &#x60;allowlist&#x60; parameters.
+ *
+ * @memberof module:workbox-routing
+ * @extends module:workbox-routing.Route
+ */
+class NavigationRoute extends Route {
+    /**
+     * If both &#x60;denylist&#x60; and &#x60;allowlist&#x60; are provided, the &#x60;denylist&#x60; will
+     * take precedence and the request will not match this route.
+     *
+     * The regular expressions in &#x60;allowlist&#x60; and &#x60;denylist&#x60;
+     * are matched against the concatenated
+     * [&#x60;pathname&#x60;]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname}
+     * and [&#x60;search&#x60;]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search}
+     * portions of the requested URL.
+     *
+     * @param {module:workbox-routing~handlerCallback} handler A callback
+     * function that returns a Promise resulting in a Response.
+     * @param {Object} options
+     * @param {Array&amp;lt;RegExp&gt;} [options.denylist] If any of these patterns match,
+     * the route will not handle the request (even if a allowlist RegExp matches).
+     * @param {Array&amp;lt;RegExp&gt;} [options.allowlist&#x3D;[/./]] If any of these patterns
+     * match the URL&#x27;s pathname and search parameter, the route will handle the
+     * request (assuming the denylist doesn&#x27;t match).
+     */
+    constructor(handler, { allowlist &#x3D; [/./], denylist &#x3D; [] } &#x3D; {}) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            assert.isArrayOfClass(allowlist, RegExp, {
+                moduleName: &#x27;workbox-routing&#x27;,
+                className: &#x27;NavigationRoute&#x27;,
+                funcName: &#x27;constructor&#x27;,
+                paramName: &#x27;options.allowlist&#x27;,
+            });
+            assert.isArrayOfClass(denylist, RegExp, {
+                moduleName: &#x27;workbox-routing&#x27;,
+                className: &#x27;NavigationRoute&#x27;,
+                funcName: &#x27;constructor&#x27;,
+                paramName: &#x27;options.denylist&#x27;,
+            });
+        }
+        super((options) &#x3D;&gt; this._match(options), handler);
+        this._allowlist &#x3D; allowlist;
+        this._denylist &#x3D; denylist;
+    }
+    /**
+     * Routes match handler.
+     *
+     * @param {Object} options
+     * @param {URL} options.url
+     * @param {Request} options.request
+     * @return {boolean}
+     *
+     * @private
+     */
+    _match({ url, request }) {
+        if (request &amp;amp;&amp;amp; request.mode !&#x3D;&#x3D; &#x27;navigate&#x27;) {
+            return false;
+        }
+        const pathnameAndSearch &#x3D; url.pathname + url.search;
+        for (const regExp of this._denylist) {
+            if (regExp.test(pathnameAndSearch)) {
+                if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                    logger.log(&#x60;The navigation route ${pathnameAndSearch} is not &#x60; +
+                        &#x60;being used, since the URL matches this denylist pattern: &#x60; +
+                        &#x60;${regExp}&#x60;);
+                }
+                return false;
+            }
+        }
+        if (this._allowlist.some((regExp) &#x3D;&gt; regExp.test(pathnameAndSearch))) {
+            if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                logger.debug(&#x60;The navigation route ${pathnameAndSearch} &#x60; +
+                    &#x60;is being used.&#x60;);
+            }
+            return true;
+        }
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            logger.log(&#x60;The navigation route ${pathnameAndSearch} is not &#x60; +
+                &#x60;being used, since the URL being navigated to doesn&#x27;t &#x60; +
+                &#x60;match the allowlist.&#x60;);
+        }
+        return false;
+    }
+}
+export { NavigationRoute };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

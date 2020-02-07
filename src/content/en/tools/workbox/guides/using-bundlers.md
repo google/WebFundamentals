@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2019-07-13 #}
+{# wf_updated_on: 2020-01-21 #}
 {# wf_blink_components: N/A #}
 
 # Using Bundlers (webpack/Rollup) with Workbox {: .page-title }
@@ -34,7 +34,6 @@ When using Workbox without a bundler, you import Workbox into your service
 worker file using
 [`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts):
 
-
 <pre class="prettyprint js">
 // Import workbox-sw, which defines the global `workbox` object.
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
@@ -52,31 +51,8 @@ Here's how you'd import and run the above code using a bundler:
 
 ```javascript
 // Import just the `workbox-precaching` package.
-import * as precaching from 'workbox-precaching';
+import {precacheAndRoute} from 'workbox-precaching';
 
-precaching.precacheAndRoute([...]);
-```
-
-While the above code will work, it will import the entire `workbox-precaching`
-package, even though you're only using the `precachingAndRoute()` method. In
-many cases, your bundler can use tree-shaking techniques to remove unused
-exports, but depending on how your code is structured, it's not always 100%
-effective (and some bundlers are better at tree-shaking than others).
-
-The best way to ensure your bundles are as small as possible is to not rely on
-tree shaking in the first place. If you only import the methods you need, then
-there won't be anything to tree shake.
-
-Workbox makes it possible to do this because it defines all its public methods in
-their own file at the top level of the package directory. That means instead of
-referencing the package name in your import statements
-(e.g. `from 'workbox-precaching'`), you can reference a specific file:
-
-```javascript
-// Import the `precacheAndRoute` file directly.
-import {precacheAndRoute} from 'workbox-precaching/precacheAndRoute.mjs';
-
-// Use the method.
 precacheAndRoute([...]);
 ```
 
@@ -115,7 +91,7 @@ workbox.routing.registerRoute(
   new workbox.strategies.CacheFirst({
     cacheName: 'images',
     plugins: [
-      new workbox.expiration.Plugin({
+      new workbox.expiration.ExpirationPlugin({
         maxEntries: 60,
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),
@@ -315,3 +291,12 @@ service worker APIs are promise-based.
   <a href="/web/tools/workbox/modules/workbox-window#loading_workbox_with_javascript_bundlers">
   <code>workbox-window</code> usage guide</a>.
 </aside>
+
+## Third-party bundler plugins
+
+The following is a list of bundler plugins that integrate with Workbox. Note:
+these plugins are not maintained by the Workbox core team, so they might not be
+up-to-date with the most recent Workbox version:
+
+- [rollup-plugin-workbox](https://www.npmjs.com/package/rollup-plugin-workbox)
+- [rollup-plugin-workbox-inject](https://www.npmjs.com/package/rollup-plugin-workbox-inject)

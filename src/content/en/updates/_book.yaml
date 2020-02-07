@@ -15,6 +15,7 @@ upper_tabs:
       contents:
       - title: Capabilities
         path: /web/updates/capabilities
+      - include: /web/updates/2020/_toc.yaml
       - include: /web/updates/2019/_toc.yaml
       - include: /web/updates/2018/_toc.yaml
       - include: /web/updates/2017/_toc.yaml

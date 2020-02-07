@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox CLI.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-06-19 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with Workbox CLI {: .page-title }
@@ -32,11 +32,13 @@ workbox wizard --injectManifest
 
 ## Add an Injection Point
 
-Before the files can be "injected" into your service worker, you need to add
-this line of code to your service worker file:
+Before the files can be "injected" into your service worker, you need to add the
+placeholder variable `self.__WB_MANIFEST` to your service worker file. For example:
 
 ```javascript
-workbox.precaching.precacheAndRoute([]);
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute(self.__WB_MANIFEST);
 ```
 
 This piece of code will be replaced by the CLI with the list of files. (See
@@ -54,7 +56,10 @@ This command will create the list of files to precache, read your service
 worker file, inject the manifest and output a new service worker file
 with the manifest. The end result with look like this:
 
-<pre class="prettyprint lang-javascript"><code>workbox.precaching.precacheAndRoute([
+```javascript
+import {precacheAndRoute} from 'workbox-precaching';
+
+precacheAndRoute([
   {
     "url": "basic.html",
     "revision": "7ca37fd5b27f91cd07a2fc68f20787c3"
@@ -67,10 +72,9 @@ with the manifest. The end result with look like this:
     "url": "images/hamburger.svg",
     "revision": "d2cb0dda3e8313b990e8dcf5e25d2d0f"
   },
-
-  ...
-
-]);</code></pre>
+  // ...
+]);
+```
 
 When you make a change to your project, run the inject manifest command
 and you'll have an up to date service worker with precache support.

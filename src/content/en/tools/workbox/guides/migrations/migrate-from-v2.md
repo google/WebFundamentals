@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v2 to v3.
 
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2019-12-20 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: N/A #}
 
@@ -66,7 +66,7 @@ than a number of milliseconds.
 - There is now a required string, representing the queue name, that must be passed in as the first
 parameter when constructing either the Plugin or standalone class. (It was previously passed in as a
 property of the options.) Consult the
-[documentation](/web/tools/workbox/reference-docs/latest/workbox.backgroundSync) for the updated
+[documentation](/web/tools/workbox/reference-docs/latest/module-workbox-background-sync) for the updated
 API surface.
 
 ### workbox-broadcast-cache-update
@@ -92,7 +92,7 @@ new workbox.broadcastUpdate.Plugin(
 );
 ```
 
-Consult the [documentation](/web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate)
+Consult the [documentation](/web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update)
 for the updated API surface.
 
 ### workbox-build
@@ -193,7 +193,7 @@ const {manifestEntries, count, size, warnings} = await workboxBuild.getManifest(
 
 - The plugin API has stayed the same, which is the mode that most developers will end up using.
 However there are significant API changes impacting developers who use it as a standalone class.
-Consult the [documentation](/web/tools/workbox/reference-docs/latest/workbox.expiration) for the
+Consult the [documentation](/web/tools/workbox/reference-docs/latest/module-workbox-expiration) for the
 updated API surface.
 
 ### workbox-cli
@@ -234,7 +234,7 @@ previous, two-in-one functionality can switch to calling `precacheAndRoute()`.
 - Several options which used to be configured via the `WorkboxSW` constructor are now passed in as
 the `options` parameter in `workbox.precaching.precacheAndRoute([...], options)`. The defaults for
 those options, when not configured, are listed in the [reference
-docs](/web/tools/workbox/reference-docs/latest/workbox.precaching#.precacheAndRoute).
+docs](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute).
 
 - By default, URLs that lack any file extension will automatically be checked for a match against a
 cache entry containing a `.html` extension. For instance, if a request is made for `/path/to/index`

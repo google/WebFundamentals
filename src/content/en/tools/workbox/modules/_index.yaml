@@ -5,83 +5,13 @@ landing_page:
   header:
     description: <!-- No Description -->
   rows:
-    - heading: Service Worker Libraries
+    - heading: Service Worker Packages
       description: >
-        Below is the list of service worker libraries that Workbox provides.
-        Each library serves a specific need and can be used together or on its
+        Below is the list of service worker packages that Workbox provides.
+        Each packages serves a specific need and can be used together or on its
         own.
       items:
-      - heading: workbox
-        description: >
-          Manages loading modules as needed & provides helper methods.
-        buttons:
-        - label: Learn more
-          path: /web/tools/workbox/modules/workbox-sw
-        - label: Demo
-          path: https://glitch.com/edit/#!/workbox-sw
-
-      - heading: workbox.core
-        description: >
-          Alter log levels and change cache names via <code>workbox.core</code>.
-          Contains shared code used by all Workbox libraries.
-        buttons:
-        - label: Learn more
-          path: /web/tools/workbox/modules/workbox-core
-        - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.core
-        - label: Demo
-          path: https://glitch.com/edit/#!/workbox-core
-
-      - heading: workbox.precaching
-        description: >
-          Easily precache a set of files and efficiently manage updates to
-          files.
-        buttons:
-        - label: Learn more
-          path: /web/tools/workbox/modules/workbox-precaching
-        - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.precaching
-        - label: Demo
-          path: https://glitch.com/edit/#!/workbox-precaching
-
-      - heading: workbox.routing
-        description: >
-          Routes requests in your service worker to specific caching strategies
-          or callback functions.
-        buttons:
-        - label: Learn more
-          path: /web/tools/workbox/modules/workbox-routing
-        - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.routing.Router
-        - label: Demo
-          path: https://glitch.com/edit/#!/workbox-routing
-
-    - items:
-      - heading: workbox.strategies
-        description: >
-          A set of runtime caching strategies that will handle responding to a
-          request, normally used with <code>workbox.routing</code>.
-        buttons:
-        - label: Learn more
-          path: /web/tools/workbox/modules/workbox-strategies
-        - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.strategies
-        - label: Demo
-          path: https://glitch.com/edit/#!/workbox-strategies
-
-      - heading: workbox.expiration
-        description: >
-          Removed cached requests based on the number of items in a cache or
-          the age of the cached request.
-        buttons:
-        - label: Learn more
-          path: /web/tools/workbox/modules/workbox-cache-expiration
-        - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.expiration
-        - label: Demo
-          path: https://glitch.com/edit/#!/workbox-expiration
-
-      - heading: workbox.backgroundSync
+      - heading: workbox-background-sync
         description: >
           Use background sync to reliably make a network request even if the
           user is offline.
@@ -89,35 +19,11 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-background-sync
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-background-sync-demo
 
-      - heading: workbox.googleAnalytics
-        description: >
-          See how users are interacting with your site when they are offline.
-        buttons:
-        - label: Learn more
-          path: /web/tools/workbox/modules/workbox-google-analytics
-        - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.googleAnalytics
-        - label: Demo
-          path: https://glitch.com/edit/#!/workbox-google-analytics
-
-    - items:
-      - heading: workbox.cacheableResponse
-        description: >
-          Restrict which requests are cached based on a response's status code
-          or headers.
-        buttons:
-        - label: Learn more
-          path: /web/tools/workbox/modules/workbox-cacheable-response
-        - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse
-        - label: Demo
-          path: https://glitch.com/edit/#!/workbox-cacheable-response
-
-      - heading: workbox.broadcastUpdate
+      - heading: workbox-broadcast-update
         description: >
           Send messages to pages (via Broadcast Channels) when a cache is
           updated with a new response.
@@ -125,34 +31,59 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-broadcast-update
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-broadcast-update-demo
 
-      - heading: workbox.rangeRequest
+      - heading: workbox-cacheable-response
         description: >
-          This modules provides support for responding to a <code>Range:</code>
-          request using a slice of previously cached data.
+          Restrict which requests are cached based on a response's status code
+          or headers.
         buttons:
         - label: Learn more
-          path: /web/tools/workbox/modules/workbox-range-requests
+          path: /web/tools/workbox/modules/workbox-cacheable-response
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response
         - label: Demo
-          path: https://glitch.com/edit/#!/workbox-range-requests
+          path: https://glitch.com/edit/#!/workbox-cacheable-response
 
-      - heading: workbox.streams
+      - heading: workbox-core
         description: >
-          This modules provides support for composing a response from a series
-          of streaming sources.
+          Alter log levels and change cache names via <code>workbox-core</code>.
+          Contains shared code used by all Workbox libraries.
         buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-core
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.streams
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-core
         - label: Demo
-          path: https://glitch.com/edit/#!/workbox-streams
+          path: https://glitch.com/edit/#!/workbox-core
 
     - items:
-      - heading: workbox.navigationPreload
+      - heading: workbox-expiration
+        description: >
+          Removed cached requests based on the number of items in a cache or
+          the age of the cached request.
+        buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-expiration
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-expiration
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-expiration
+
+      - heading: workbox-google-analytics
+        description: >
+          See how users are interacting with your site when they are offline.
+        buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-google-analytics
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-google-analytics
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-google-analytics
+
+      - heading: workbox-navigation-preload
         description: >
           Enable navigation preload, to get a network response for navigation
           requests faster.
@@ -160,19 +91,73 @@ landing_page:
         - label: Learn more
           path: /web/tools/workbox/modules/workbox-navigation-preload
         - label: Reference
-          path: /web/tools/workbox/reference-docs/latest/workbox.navigationPreload
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-navigation-preload
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-navigation-preload
 
-      # Force Devsite 4-up layout
-      - heading: ""
-      - heading: ""
-      - heading: ""
+      - heading: workbox-precaching
+        description: >
+          Easily precache a set of files and efficiently manage updates to
+          files.
+        buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-precaching
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-precaching
 
-    - heading: Window Modules
+    - items:
+      - heading: workbox-range-request
+        description: >
+          This modules provides support for responding to a <code>Range:</code>
+          request using a slice of previously cached data.
+        buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-range-requests
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-range-requests
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-range-requests
+
+      - heading: workbox-routing
+        description: >
+          Routes requests in your service worker to specific caching strategies
+          or callback functions.
+        buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-routing
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-routing.Router
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-routing
+
+      - heading: workbox-strategies
+        description: >
+          A set of runtime caching strategies that will handle responding to a
+          request, normally used with <code>workbox-routing</code>.
+        buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-strategies
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-strategies
+
+      - heading: workbox-streams
+        description: >
+          This modules provides support for composing a response from a series
+          of streaming sources.
+        buttons:
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-streams
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-streams
+
+    - heading: Window Packages
       description: >
         Workbox provides modules that run in the window context and complement
-        the service worker modules.
+        the service worker packages.
       items:
       - heading: workbox-window
         description: >
@@ -226,4 +211,27 @@ landing_page:
           path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin
 
       # Force Devsite 4-up layout
+      - heading: ""
+
+    - heading: Loader (CDN)
+      description: >
+        Workbox provides a way to load its service worker packages from a CDN
+        (or custom endpoint). This makes it easy to get started with
+        Workbox without having to set up a build process.
+      items:
+      - heading: workbox-sw
+        description: >
+          Manages dynamic loading of Workbox service worker packages as needed
+          and provides additional helper methods.
+        buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-sw
+        - label: Demo
+          path: https://glitch.com/edit/#!/workbox-sw
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/workbox
+
+      # Force Devsite 4-up layout
+      - heading: ""
+      - heading: ""
       - heading: ""

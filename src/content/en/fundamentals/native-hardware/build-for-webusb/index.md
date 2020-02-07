@@ -760,7 +760,7 @@ and `bNumDeviceCaps` to account for it.
    <td>Minimum compatible Windows version (Windows 8.1)</td>
   </tr>
   <tr>
-   <td><code>0xB2</code></td>
+   <td><code>0x00B2</code></td>
    <td>wMSOSDescriptorSetTotalLength</td>
    <td>Total length of the descriptor set</td>
   </tr>

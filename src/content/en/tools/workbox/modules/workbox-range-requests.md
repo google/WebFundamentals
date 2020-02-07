@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-range-requests.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Range Requests {: .page-title }
@@ -30,11 +30,15 @@ You can use Workbox Range Requests by adding the plugin to the
 strategy you want to check for range requests against.
 
 ```javascript
-workbox.routing.registerRoute(
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+import {RangeRequestsPlugin} from 'workbox-range-requests';
+
+registerRoute(
   /\.mp4$/,
-  new workbox.strategies.CacheFirst({
+  new CacheFirst({
     plugins: [
-      new workbox.rangeRequests.Plugin(),
+      new RangeRequestsPlugin(),
     ],
   });
 );
@@ -50,7 +54,9 @@ If you want to make use of this logic outside of the Plugin you
 can use the `createPartialResponse()` function.
 
 ```javascript
-workbox.rangeRequests.createPartialResponse(request, cachedResponse);
+import {createPartialResponse} from 'workbox-range-requests';
+
+createPartialResponse(request, cachedResponse);
 ```
 
-For more info [see the reference docs](../reference-docs/latest/workbox.rangeRequests).
+For more info [see the reference docs](../reference-docs/latest/module-workbox-range-requests).

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-streams/strategy.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-streams/strategy.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
+import { createHeaders } from &#x27;./utils/createHeaders.js&#x27;;
+import { concatenateToResponse } from &#x27;./concatenateToResponse.js&#x27;;
+import { isSupported } from &#x27;./isSupported.js&#x27;;
+import &#x27;./_version.js&#x27;;
+/**
+ * A shortcut to create a strategy that could be dropped-in to Workbox&#x27;s router.
+ *
+ * On browsers that do not support constructing new &#x60;ReadableStream&#x60;s, this
+ * strategy will automatically wait for all the &#x60;sourceFunctions&#x60; to complete,
+ * and create a final response that concatenates their values together.
+ *
+ * @param {Array&amp;lt;function({event, request, url, params})&gt;} sourceFunctions
+ * An array of functions similar to {@link module:workbox-routing~handlerCallback}
+ * but that instead return a {@link module:workbox-streams.StreamSource} (or a
+ * Promise which resolves to one).
+ * @param {HeadersInit} [headersInit] If there&#x27;s no &#x60;Content-Type&#x60; specified,
+ * &#x60;&#x27;text/html&#x27;&#x60; will be used by default.
+ * @return {module:workbox-routing~handlerCallback}
+ * @memberof module:workbox-streams
+ */
+function strategy(sourceFunctions, headersInit) {
+    return async ({ event, request, url, params }) &#x3D;&gt; {
+        const sourcePromises &#x3D; sourceFunctions.map((fn) &#x3D;&gt; {
+            // Ensure the return value of the function is always a promise.
+            return Promise.resolve(fn({ event, request, url, params }));
+        });
+        if (isSupported()) {
+            const { done, response } &#x3D; concatenateToResponse(sourcePromises, headersInit);
+            if (event) {
+                event.waitUntil(done);
+            }
+            return response;
+        }
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            logger.log(&#x60;The current browser doesn&#x27;t support creating response &#x60; +
+                &#x60;streams. Falling back to non-streaming response instead.&#x60;);
+        }
+        // Fallback to waiting for everything to finish, and concatenating the
+        // responses.
+        const blobPartsPromises &#x3D; sourcePromises.map(async (sourcePromise) &#x3D;&gt; {
+            const source &#x3D; await sourcePromise;
+            if (source instanceof Response) {
+                return source.blob();
+            }
+            else {
+                // Technically, a &#x60;StreamSource&#x60; object can include any valid
+                // &#x60;BodyInit&#x60; type, including &#x60;FormData&#x60; and &#x60;URLSearchParams&#x60;, which
+                // cannot be passed to the Blob constructor directly, so we have to
+                // convert them to actual Blobs first.
+                return new Response(source).blob();
+            }
+        });
+        const blobParts &#x3D; await Promise.all(blobPartsPromises);
+        const headers &#x3D; createHeaders(headersInit);
+        // Constructing a new Response from a Blob source is well-supported.
+        // So is constructing a new Blob from multiple source Blobs or strings.
+        return new Response(new Blob(blobParts), { headers });
+    };
+}
+export { strategy };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

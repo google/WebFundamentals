@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-cacheable-response/CacheableResponse.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-cacheable-response/CacheableResponse.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2018 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
+import { WorkboxError } from &#x27;workbox-core/_private/WorkboxError.js&#x27;;
+import { getFriendlyURL } from &#x27;workbox-core/_private/getFriendlyURL.js&#x27;;
+import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
+import &#x27;./_version.js&#x27;;
+/**
+ * This class allows you to set up rules determining what
+ * status codes and/or headers need to be present in order for a
+ * [&#x60;Response&#x60;](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+ * to be considered cacheable.
+ *
+ * @memberof module:workbox-cacheable-response
+ */
+class CacheableResponse {
+    /**
+     * To construct a new CacheableResponse instance you must provide at least
+     * one of the &#x60;config&#x60; properties.
+     *
+     * If both &#x60;statuses&#x60; and &#x60;headers&#x60; are specified, then both conditions must
+     * be met for the &#x60;Response&#x60; to be considered cacheable.
+     *
+     * @param {Object} config
+     * @param {Array&amp;lt;number&gt;} [config.statuses] One or more status codes that a
+     * &#x60;Response&#x60; can have and be considered cacheable.
+     * @param {Object&amp;lt;string,string&gt;} [config.headers] A mapping of header names
+     * and expected values that a &#x60;Response&#x60; can have and be considered cacheable.
+     * If multiple headers are provided, only one needs to be present.
+     */
+    constructor(config &#x3D; {}) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            if (!(config.statuses || config.headers)) {
+                throw new WorkboxError(&#x27;statuses-or-headers-required&#x27;, {
+                    moduleName: &#x27;workbox-cacheable-response&#x27;,
+                    className: &#x27;CacheableResponse&#x27;,
+                    funcName: &#x27;constructor&#x27;,
+                });
+            }
+            if (config.statuses) {
+                assert.isArray(config.statuses, {
+                    moduleName: &#x27;workbox-cacheable-response&#x27;,
+                    className: &#x27;CacheableResponse&#x27;,
+                    funcName: &#x27;constructor&#x27;,
+                    paramName: &#x27;config.statuses&#x27;,
+                });
+            }
+            if (config.headers) {
+                assert.isType(config.headers, &#x27;object&#x27;, {
+                    moduleName: &#x27;workbox-cacheable-response&#x27;,
+                    className: &#x27;CacheableResponse&#x27;,
+                    funcName: &#x27;constructor&#x27;,
+                    paramName: &#x27;config.headers&#x27;,
+                });
+            }
+        }
+        this._statuses &#x3D; config.statuses;
+        this._headers &#x3D; config.headers;
+    }
+    /**
+     * Checks a response to see whether it&#x27;s cacheable or not, based on this
+     * object&#x27;s configuration.
+     *
+     * @param {Response} response The response whose cacheability is being
+     * checked.
+     * @return {boolean} &#x60;true&#x60; if the &#x60;Response&#x60; is cacheable, and &#x60;false&#x60;
+     * otherwise.
+     */
+    isResponseCacheable(response) {
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            assert.isInstance(response, Response, {
+                moduleName: &#x27;workbox-cacheable-response&#x27;,
+                className: &#x27;CacheableResponse&#x27;,
+                funcName: &#x27;isResponseCacheable&#x27;,
+                paramName: &#x27;response&#x27;,
+            });
+        }
+        let cacheable &#x3D; true;
+        if (this._statuses) {
+            cacheable &#x3D; this._statuses.includes(response.status);
+        }
+        if (this._headers &amp;amp;&amp;amp; cacheable) {
+            cacheable &#x3D; Object.keys(this._headers).some((headerName) &#x3D;&gt; {
+                return response.headers.get(headerName) &#x3D;&#x3D;&#x3D; this._headers[headerName];
+            });
+        }
+        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            if (!cacheable) {
+                logger.groupCollapsed(&#x60;The request for &#x60; +
+                    &#x60;&#x27;${getFriendlyURL(response.url)}&#x27; returned a response that does &#x60; +
+                    &#x60;not meet the criteria for being cached.&#x60;);
+                logger.groupCollapsed(&#x60;View cacheability criteria here.&#x60;);
+                logger.log(&#x60;Cacheable statuses: &#x60; +
+                    JSON.stringify(this._statuses));
+                logger.log(&#x60;Cacheable headers: &#x60; +
+                    JSON.stringify(this._headers, null, 2));
+                logger.groupEnd();
+                const logFriendlyHeaders &#x3D; {};
+                response.headers.forEach((value, key) &#x3D;&gt; {
+                    logFriendlyHeaders[key] &#x3D; value;
+                });
+                logger.groupCollapsed(&#x60;View response status and headers here.&#x60;);
+                logger.log(&#x60;Response status: &#x60; + response.status);
+                logger.log(&#x60;Response headers: &#x60; +
+                    JSON.stringify(logFriendlyHeaders, null, 2));
+                logger.groupEnd();
+                logger.groupCollapsed(&#x60;View full response details here.&#x60;);
+                logger.log(response.headers);
+                logger.log(response);
+                logger.groupEnd();
+                logger.groupEnd();
+            }
+        }
+        return cacheable;
+    }
+}
+export { CacheableResponse };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

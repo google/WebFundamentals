@@ -154,7 +154,7 @@ var dbPromise = idb.open('couches-n-things', 2, function(upgradeDb) {
 
 Save the code and reload the page in the browser. [Open IndexedDB](tools-for-pwa-developers#indexeddb) in your browser's developer tools and expand the `couches-n-things` database. You should see the empty `products` object store.
 
-Open the QUnit test page, `localhost:8080/app/test/test.html`, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the `products` object store exists in the database. Note that you may not be able to delete the database while the testing page is open.
+Open the QUnit test page, `localhost:8080/test/test.html`, in another browser tab. This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. Your app should pass the first test that checks whether the `products` object store exists in the database. Note that you may not be able to delete the database while the testing page is open.
 
 #### Explanation
 

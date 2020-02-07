@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-google-analytics.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-07-18 #}
+{# wf_updated_on: 2020-01-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Google Analytics  {: .page-title }
@@ -45,7 +45,9 @@ time of the original user interaction.
 To enable Workbox Google Analytics, call the `initialize()` method:
 
 ```js
-workbox.googleAnalytics.initialize();
+import * as googleAnalytics from 'workbox-google-analytics';
+
+googleAnalytics.initialize();
 ```
 
 This is the only code that's required to queue and retry failed requests to
@@ -65,7 +67,7 @@ retried request.
 
 If you want to be able to differentiate retried requests from non-retried
 requests, you can specify either the `parameterOverrides` or `hitFilter`
-[configuration options](/web/tools/workbox/reference-docs/latest/workbox.googleAnalytics#.initialize).
+[configuration options](/web/tools/workbox/reference-docs/latest/module-workbox-google-analytics#.initialize).
 
 These options let you modify the
 [Measurement Protocol parameters](/analytics/devguides/collection/protocol/v1/parameters)
@@ -103,7 +105,9 @@ in your Workbox Google Analytics code.
     `cd8`):
 
     <pre class="prettyprint js">
-    workbox.googleAnalytics.initialize({
+    import * as googleAnalytics from 'workbox-google-analytics';
+
+    googleAnalytics.initialize({
       parameterOverrides: {
         cd1: 'offline',
       },
@@ -171,7 +175,9 @@ as a param with the index of the newly created metric. If this is your
 first custom metric, the parameter name would be "cm1":
 
     <pre class="prettyprint js">
-    workbox.googleAnalytics.initialize({
+    import * as googleAnalytics from 'workbox-google-analytics';
+
+    googleAnalytics.initialize({
       hitFilter: (params) => {
         const queueTimeInSeconds = Math.round(params.get('qt') / 1000);
         params.set('cm1', queueTimeInSeconds);

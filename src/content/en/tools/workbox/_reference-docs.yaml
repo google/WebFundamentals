@@ -3,43 +3,45 @@ toc:
 - title: "Overview"
   path: /web/tools/workbox/reference-docs/latest/index
 
-- heading: Service Worker Libraries
-- title: "workbox"
-  path: /web/tools/workbox/reference-docs/latest/workbox
-- title: "workbox.core"
-  path: /web/tools/workbox/reference-docs/latest/workbox.core
-- title: "workbox.precaching"
-  path: /web/tools/workbox/reference-docs/latest/workbox.precaching
-- title: "workbox.routing"
-  path: /web/tools/workbox/reference-docs/latest/workbox.routing
-- title: "workbox.strategies"
-  path: /web/tools/workbox/reference-docs/latest/workbox.strategies
-- title: "workbox.expiration"
-  path: /web/tools/workbox/reference-docs/latest/workbox.expiration
-- title: "workbox.backgroundSync"
-  path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync
-- title: "workbox.googleAnalytics"
-  path: /web/tools/workbox/reference-docs/latest/workbox.googleAnalytics
-- title: "workbox.cacheableResponse"
-  path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse
-- title: "workbox.broadcastUpdate"
-  path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate
-- title: "workbox.rangeRequests"
-  path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests
-- title: "workbox.navigationPreload"
-  path: /web/tools/workbox/reference-docs/latest/workbox.navigationPreload
-- title: "workbox.streams"
-  path: /web/tools/workbox/reference-docs/latest/workbox.streams
+- heading: Service Worker Packages
+- title: "workbox-background-sync"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync
+- title: "workbox-broadcast-update"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update
+- title: "workbox-cacheable-response"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response
+- title: "workbox-core"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-core
+- title: "workbox-expiration"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-expiration
+- title: "workbox-google-analytics"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-google-analytics
+- title: "workbox-navigation-preload"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-navigation-preload
+- title: "workbox-precaching"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching
+- title: "workbox-rangeRequests"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-rangeRequests
+- title: "workbox-routing"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-routing
+- title: "workbox-strategies"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies
+- title: "workbox-streams"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-streams
 
-- heading: Window Modules
+- heading: Window Packages
 - title: workbox-window
   path: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
 
-- heading: Node Modules
+- heading: Node Packages
 - title: workbox-build
   path: /web/tools/workbox/reference-docs/latest/module-workbox-build
 - title: workbox-webpack-plugin
   path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin
+
+- heading: Workbox loader (CDN)
+- title: "workbox"
+  path: /web/tools/workbox/reference-docs/latest/workbox
 
 - title: "View Full API"
   style: accordion
