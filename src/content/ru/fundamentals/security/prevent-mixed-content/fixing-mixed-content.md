@@ -2,18 +2,17 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Поиск и исправление смешанного контента - важная задача, но она может занимать много времени. В этом руководстве обсуждаются некоторые инструменты, которые могут помочь с процессом.
 
-{# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2019-12-10 #}
-{# wf_blink_components: Blink>SecurityFeature #}
+{# wf_published_on: 2015-09-28 #} {# wf_updated_on: 2019-12-10 #} {#
+wf_blink_components: Blink>SecurityFeature #}
 
 # Предотвращение смешанного содержимого {: .page-title }
 
 {% include "web/_shared/contributors/johyphenel.html" %}
 
-Success: Supporting HTTPS for your website is an important step to protecting
-your site and your users from attack, but mixed content can render that
-protection useless. To protect your site and your users, it is very important to
-find and fix mixed content issues.
+Успех: поддержка HTTPS для вашего сайта - важный шаг к защите вашего сайта и
+ваших пользователей от атак, но смешанный контент может сделать эту защиту
+бесполезной. Чтобы защитить ваш сайт и ваших пользователей, очень важно найти и
+исправить проблемы связанные со смешанным контентом.
 
 Поиск и исправление смешанного контента - важная задача, но она может занимать
 много времени. В этом руководстве обсуждаются некоторые инструменты и методы,
@@ -36,110 +35,106 @@ find and fix mixed content issues.
 Chrome; однако большинство современных браузеров предоставляют подобные
 инструменты, чтобы помочь с этим процессом.
 
-### Finding mixed content by visiting your site
+### Поиск смешанного контента посещая сайт
 
 При посещении страницы HTTPS в Google Chrome браузер предупреждает вас о
 смешанном контенте в виде ошибок и предупреждений в консоли JavaScript.
 
-To view these alerts, go to our passive mixed content or active mixed content
-sample page and open the Chrome JavaScript console. You can open the console
-either from the View menu: *View* -> *Developer* -> *JavaScript Console*, or by
-right-clicking the page, selecting *Inspect Element*, and then selecting
-*Console*.
+Чтобы просмотреть эти оповещения, перейдите на нашу страницу образцов пассивного
+смешанного контента или активного смешанного контента и откройте JavaScript
+консоль в Chrome. Вы можете открыть консоль либо из меню «Вид»: *«Вид»* ->
+*«Разработчик»* -> *«Консоль JavaScript»*, либо щелкнув правой кнопкой мыши
+страницу, выбрав *«Проверка элемента»*, а затем выбрав *«Консоль»* .
 
-The [passive mixed content
-example](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html){:
-.external} on the [What Is Mixed
-Content](what-is-mixed-content#passive-mixed-content){: .external} page causes
-mixed content warnings to be displayed, like the ones below:
+Страница [примера пассивного смешанного
+содержимого](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html)
+{: .external} в статье [Что такое смешанное
+содержимое](what-is-mixed-content#passive-mixed-content){: .external} приводит к
+отображению предупреждений о смешанном содержимом, как показано ниже:
 
-<figure>
-<img src="imgs/passive-mixed-content-warnings.png" alt="Mixed Content: The
-page was loaded over HTTPS, but requested an insecure video. This content should
-also be served over HTTPS.">
-</figure>
-[Try
+<figure> <img src="imgs/passive-mixed-content-warnings.png" alt="Mixed Content:
+The page was loaded over HTTPS, but requested an insecure video. This content
+should also be served over HTTPS."> </figure> [Try
 it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html){:
-target="_blank" .external }
-While the active mixed content example causes mixed content errors to be
-displayed:
-<figure>
-<img src="imgs/active-mixed-content-errors.png" alt="Mixed Content: The page
-was loaded over HTTPS, but requested an insecure resource. This request has been
-blocked; the content must be served over HTTPS.">
-</figure>
-[Try
+target="_blank" .external }   В то время как пример активного смешанного
+содержимого приводит к отображению ошибок смешанного содержимого: <figure> <img
+src="imgs/active-mixed-content-errors.png" alt="Mixed Content: The page was
+loaded over HTTPS, but requested an insecure resource. This request has been
+blocked; the content must be served over HTTPS."> </figure> [Try
 it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/active-mixed-content.html){:
-target="_blank" .external }
-You need to fix the http:// URLs listed in these errors and warnings, in your
-site's source. It's helpful to make a list of these URLs, along with the page
-you found them on, for use when you fix them.
-Note: Mixed content errors and warnings are only shown for the page you are
-currently viewing, and the JavaScript console is cleared every time you navigate
-to a new  page. This means you will have to view every page of your site
-individually to find these errors. Some errors may only show up after you
-interact with part of the page, see the image gallery mixed content example from
-our previous guide.
-### Finding mixed content in your source code
-You can search for mixed content directly in your source code. Search for
-`http://` in your source and look for tags that include HTTP URL attributes.
-Specifically, look for tags listed in the [mixed content types & security
-threats
-associated](what-is-mixed-content#mixed-content-types--security-threats-associated){:
-.external} section of our previous guide.
-Note that having `http://` in the `href` attribute of anchor tags (`<a>`)
-is often not a mixed content issue, with some notable exceptions discussed
-later.
-If you have a list of HTTP URLs from Chrome mixed content errors and warnings,
-you can also search for these complete URLs in your source to find where they
-are included in your site.
-### Fixing mixed content
-Once you've found where the mixed content is included in your site's source,
-follow these steps to fix it.
-Using the following mixed content error in Chrome as an example:
-<figure>
-<img src="imgs/image-gallery-warning.png" alt="Mixed Content: The page was
-loaded over HTTPS, but requested an insecure image. This content should also be
-served over HTTPS.">
-</figure>
-Which you found in source here:
-    <img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg">
-#### Step 1
-Check that the URL is available over HTTPS by opening a new tab in
-your browser, entering the URL in the address bar, and changing `http://` to
-`https://`.
-If the resource displayed is the same over **HTTP** and **HTTPS**, everything is
-OK.
-Proceed to [Step 2](#step-2).
-<div class="attempt-left">
-  <figure>
-    <img src="imgs/puppy-http.png">
-    <figcaption class="success">
-      HTTP image loads without error.
-     </figcaption>
-  </figure>
-</div>
-<div class="attempt-right">
-  <figure>
-    <img src="imgs/puppy-https.png">
-    <figcaption class="success">
-HTTPS image loads without error, and image is the same as HTTP. Go to <a
-href="#step-2">step 2</a>!
-     </figcaption>
-  </figure>
-</div>
-</a>
+target="_blank" .external }   Вам необходимо исправить http:// URLы из этого
+списка ошибок и предупреждений в исходном коде вашего сайта. Полезно составить
+список этих URL-адресов вместе со страницей, на которой вы их нашли, чтобы
+использовать его при их исправлении. Note: Ошибки и предупреждения о смешанном
+содержимом показываются только для страницы, которую вы сейчас просматриваете, и
+JavaScript консоль очищается каждый раз когда вы переходите на новую страницу.
+Это означает что вы должны просмотреть каждую страницу вашего сайта отдельно,
+чтобы найти эти ошибки. Некоторые ошибки могут показаться только после
+взаимодействия с какой-либо частью страницы, например вы можете посмотреть
+пример с галереей из предыдущего руководства. ### Поиск смешанного содержимого в
+вашем исходном коде Вы можете искать смешанное содержимое напрямую в исходном
+коде. Ищите `http://` в вашем исходном коде и смотрите на тэги, которые включают
+HTTP URL атрибуты. Особенно обращайте внимание на тэги из списка в разделе [типы
+смешанного содержимого и связанные угрозы
+безопасности](what-is-mixed-content#mixed-content-types--security-threats-associated){:
+.external} из предыдущего руководства. Обратите внимание, что наличие `http: //`
+в атрибуте `href` тегов ссылки (` <a> `) часто не является проблемой смешанного
+содержимого, за некоторыми заметными исключениями, которые будут обсуждаться
+позже. Если у вас есть список HTTP URLов из ошибок и предупреждений Chrome, вы
+можете также найти эти полные URLы в вашем исходном коде и определить где они
+включаются в ваш сайт. ### Исправление смешанного содержимого Как только вы
+нашли где смешанное содержимое добавляется в исходном коде, следуйте этими
+шагами чтобы исправить его. Используйте эту ошибку смешанного содержимого как
+пример: <figure> <img src="imgs/image-gallery-warning.png" alt="Mixed Content:
+The page was loaded over HTTPS, but requested an insecure image. This content
+should also be served over HTTPS."> </figure> Который вы нашли в исходниках
+здесь: <img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg">
+#### Шаг 1 Проверьте что URL доступен по HTTPS, открыв его в новой вкладке
+вашего браузера, введя URL в адресной строке, и поменяв `http://` на `https://`.
+Если ресурс отображается одинаково и по **HTTP** и по **HTTPS** - всё OK.
+Переходите к [Шагу 2](#step-2). <div class="attempt-left">   <figure>     <img
+src="imgs/puppy-http.png">     <figcaption class="success">       HTTP
+изображение загружается без ошибок.      </figcaption>   </figure> </div> <div
+class="attempt-right">   <figure>     <img src="imgs/puppy-https.png">
+<figcaption class="success">       HTTPS изображение загружается без ошибок и
+оно такое же как и по HTTP. Переходим к <a href="#step-2">шагу 2</a>!
+</figcaption>   </figure> </div> <div style="clear:both;"></div> Если вы видите
+предупреждение о сертификате, или если содержимое не может быть отображено по
+**HTTPS**, это означает что ресурс не  доступен безопасно. <div
+class="attempt-left">   <figure>     <img src="imgs/https-not-available.png">
+<figcaption class="warning">       Ресурс не доступен по HTTPS.
+</figcaption>   </figure> </div> <div class="attempt-right">   <figure>     <img
+src="imgs/https-cert-warning.png">     <figcaption class="warning">
+Предупреждение о сертификате при попытке посмотреть ресурс по HTTPS.
+</figcaption>   </figure> </div> <div style="clear:both;"></div> В этом случае
+вы должны рассмотреть одну из следующих опций: * Включить ресурс с другого
+хоста, если таковой имеется. * Загрузить и разместить контент на вашем сайте
+напрямую, если вам это разрешено по закону. * Исключить ресурс из вашего сайта в
+целом. #### Шаг 2 Измените URL с `http: //` на `https: //`, сохраните исходный
+файл и при необходимости повторно загрузите на сервер обновленный файл. #### Шаг
+3 Просмотрите страницу, где вы изначально обнаружили ошибку, и убедитесь, что
+ошибка больше не появляется. ### Остерегайтесь нестандартного использования
+тегов Остерегайтесь нестандартного использования тегов на вашем сайте. Например,
+URLы в ссылке (`</a><a>`) не вызывают ошибок смешанного содержимого сами по
+себе, поскольку они заставляют браузер переходить на новую страницу. Это
+означает, что они обычно не должны быть исправлены. Однако некоторые скрипты
+гаререй изображений переопределяют функционал ссылки `</a><a>` и загружают HTTP
+ресурсы, описанные в атрибуте `href` в отображение лайтбокса (lightbox) на
+странице, вызывая проблему смешанного содержимого. <pre class="prettyprint"> {%
+includecode
+content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html"
+region_tag="snippet1" adjust_indentation="auto" %} </pre> </a>
 
 [Попробуй
 это](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html)
 {: target="_blank" .external }
 
-In the code above, it may seem safe to leave the `<a>` tag's `href` as
-`http://`;
-however if you view the sample and click the image, you'll see that it loads
-a mixed content resource and displays it on the page.
+В приведенном выше коде, может показаться безопасно оставить атрибут `href` тэга
+`<a>` как `http://`; однако, если вы посмотрите образец и нажмете на
+изображение, вы увидите, что он загружает смешанный ресурс контента и отображает
+его на странице.
 
-## Handle mixed content at scale
+## Массовая обработка смешанного содержимого
 
 Шаги, описанные выше, хорошо подходят для небольших сайтов; но для крупных
 веб-сайтов или сайтов с множеством отдельных групп разработчиков может быть
@@ -150,11 +145,12 @@ a mixed content resource and displays it on the page.
 
 ### Политика безопасности контента
 
-[**Content security policy**](/web/fundamentals/security/csp/) (CSP) is a
-multi-purpose browser feature that you can use to manage mixed content at
-scale. The CSP reporting mechanism can be used to track the mixed content on
-your site; and the enforcement policy, to protect users by upgrading or
-blocking mixed content.
+[**Политика безопасности контента**](/web/fundamentals/security/csp/) (Content
+Security Policy - CSP) - это многоцелевая функция браузера, которую можно
+использовать для массового управления смешанным контентом. Механизм отчетов CSP
+может использоваться для отслеживания смешанного контента на вашем сайте; и
+политика защиты, чтобы защитить пользователей путем обновления или блокировки
+смешанного контента.
 
 Вы можете включить эти функции для страницы, включив заголовок
 `Content-Security-Policy` или `Content-Security-Policy-Report-Only` в ответ,
@@ -163,24 +159,24 @@ blocking mixed content.
 используя `<meta>` в разделе `<head>` вашей страницы. Смотрите примеры в
 следующих разделах.
 
-CSP is useful for many things outside of its mixed content uses. Information
-about other CSP directives is available at the following resources:
+CSP полезен для многих вещей за пределами смешанного контента. Информация о
+других директивах CSP доступна на следующих ресурсах:
 
-- [Mozilla's intro to
-CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy){:
+- [Введение CSP от
+Mozilla](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy)
+{: .external}
+- [Введение CSP от HTML5
+Rocks](//www.html5rocks.com/en/tutorials/security/content-security-policy/) {:
 .external}
-- [HTML5 Rocks' intro to
-CSP](//www.html5rocks.com/en/tutorials/security/content-security-policy/){:
-.external}
-- [CSP playground](http://www.cspplayground.com/){: .external }
-- [CSP spec](//www.w3.org/TR/CSP/){: .external }
+- [CSP песочница](http://www.cspplayground.com/) {: .external }
+- [CSP спецификация](//www.w3.org/TR/CSP/) {: .external }
 
-Note: Browsers enforce <b>all</b> content security policies that they receive.
-Multiple CSP header values received by the browser in the response header or
-<code><meta></code> elements are combined and enforced as a single policy;
-reporting policies are likewise combined. Policies are combined by taking the
-intersection of the policies; that is to say, each policy after the first can
-only further restrict the allowed content, not broaden it.
+Note: Браузеры применяют <b>все</b> политики безопасности содержимого, которые
+они получают. Несколько значений CSP заголовка, полученного браузером в
+заголовке ответа или элементах <code><meta data-md-type="raw_html"></code>
+объединяются в единую политику; Политики отчетности также комбинируются.
+Политики объединяются путем пересечения политик; то есть каждая политика после
+первой может только ограничивать разрешенный контент, а не расширять его.
 
 ### Поиск смешанного контента с политикой безопасности контента
 
@@ -195,16 +191,16 @@ only further restrict the allowed content, not broaden it.
 Content-Security-Policy-Report-Only: default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://example.com/reportingEndpoint
 ```
 
-Whenever a user visits a page on your site, their browser sends JSON-formatted
-reports regarding anything that violates the content security policy to
-`https://example.com/reportingEndpoint`. In this case, anytime a
-subresource is loaded over HTTP, a report is sent. These reports include the
-page URL where the policy violation occurred and the subresource URL that
-violated the policy. If you configure your reporting endpoint to log these
-reports, you can  track the mixed content on your site without visiting each
-page yourself.
+Каждый раз, когда пользователь посещает страницу на вашем сайте, его браузер
+отправляет отчеты в формате JSON, касающиеся всего, что нарушает политику
+безопасности контента, на `https://example.com/reportingEndpoint` . В этом
+случае каждый раз, когда подресурс загружается по HTTP, отправляется отчет. Эти
+отчеты включают URL-адрес страницы, где произошло нарушение политики, и
+URL-адрес подресурса, который нарушил политику. Если вы настроите свою конечную
+точку отчетности для регистрации этих отчетов, вы можете отслеживать смешанный
+контент на своем сайте, не посещая каждую страницу самостоятельно.
 
-The two caveats to this are:
+Два предостережения:
 
 - Пользователи должны посетить вашу страницу в браузере, который понимает
 заголовок CSP. Это верно для большинства современных браузеров.
@@ -212,13 +208,14 @@ The two caveats to this are:
 что если у вас есть страницы, которые не получают много трафика, может пройти
 некоторое время, прежде чем вы получите отчеты по всему сайту.
 
-For more information on CSP header format, see the [Content Security Policy
-specification](https://w3c.github.io/webappsec/specs/content-security-policy/#violation-reports){:
-.external}.
+Дополнительные сведения о формате заголовка CSP см. в [спецификации политики
+безопасности
+содержимого](https://w3c.github.io/webappsec/specs/content-security-policy/#violation-reports)
+{: .external}.
 
-If you don't want to configure a reporting endpoint yourself,
-[https://report-uri.io/](https://report-uri.io/){: .external} is a reasonable
-alternative.
+Если вы не хотите настроить конечную точку отчетности самостоятельно,
+[https://report-uri.io/](https://report-uri.io/) {: .external} является разумной
+альтернативой.
 
 ### Обновление небезопасных запросов
 
@@ -234,10 +231,9 @@ alternative.
 <img src="http://example.com/image.jpg">
 ```
 
-The browser instead makes a secure request for
-<code><b>https:</b>//example.com/image.jpg</code>, thus saving the user from
-mixed
-content.
+Браузер вместо этого сделает безопасный запрос <code><b
+data-md-type="raw_html">https:</b>//example.com/image.jpg</code>, что обезопасит
+пользователя от смешанного содержимого.
 
 Вы можете включить это поведение, отправив заголовок `Content-Security-Policy` с
 этой директивой:
@@ -262,14 +258,14 @@ Content-Security-Policy: upgrade-insecure-requests
 
 ### Блокировка всего смешанного контента
 
-Not all browsers support the `upgrade-insecure-requests` directive, so an
-alternative for protecting users is the
-[**`block-all-mixed-content`**](http://www.w3.org/TR/mixed-content/#strict-checking){:
-.external}
-CSP directive. This directive instructs the browser to never load mixed content;
-all mixed content resource requests are blocked, including both active and
-passive mixed content. This option also cascades into `<iframe>` documents,
-ensuring the entire page is mixed content free.
+Не все браузеры поддерживают директиву `upgrade-insecure-requests`, поэтому
+альтернативой защиты пользователей является директива CSP
+[**`block-all-mixed-content`**](http://www.w3.org/TR/mixed-content/#strict-checking)
+{: .external}. Эта директива указывает браузеру никогда не загружать смешанный
+контент; все запросы ресурсов смешанного контента блокируются, включая как
+активный, так и пассивный смешанный контент. Этот параметр также
+распространяется на документы `<iframe>`, гарантируя, что вся страница не будет
+смешанной.
 
 Страница может присоединиться к этому поведению, отправив заголовок
 `Content-Security-Policy` с этой директивой:
@@ -285,22 +281,23 @@ Content-Security-Policy: block-all-mixed-content
 <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
 ```
 
-The downside of using `block-all-mixed-content` is, perhaps obviously, that all
-content is blocked. This is a security improvement, but it means that these
-resources are no longer available on the page. This might break features and
-content that your users expect to be available.
+Недостатком использования `block-all-mixed-content` является то, что, пожалуй,
+очевидно, что весь контент заблокирован. Это улучшение безопасности, но это
+означает, что эти ресурсы больше не доступны на странице. Это может поломать
+функции и содержимое, которое  должно быть доступным, как ожидают ваши
+пользователи.
 
 ### Альтернативы CSP
 
-If your site is hosted for you by a platform such as Blogger, you may not have
-access to modify headers & add a CSP.
-Instead, a viable alternative could be to use a website crawler to find issues
-across your site for you, such as
-[HTTPSChecker](https://httpschecker.net/how-it-works#httpsChecker){: .external }
-or
-[Mixed Content Scan](https://github.com/bramus/mixed-content-scan){: .external
-}.
+Если ваш сайт размещен вами на такой платформе, как Blogger, у вас может быть не
+доступа функция изменения заголовков и добавления CSP. Вместо этого
+жизнеспособной альтернативой может быть использование сканера веб-сайтов для
+поиска проблем на вашем сайте, таких как
+[HTTPSChecker](https://httpschecker.net/how-it-works#httpsChecker) {: .external
+} или [Сканер смешанного
+содержимого](https://github.com/bramus/mixed-content-scan) {: .external }.
 
 ## Обратная связь {: #feedback }
 
-{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/helpful.html" %}   Translated by {% include
+"web/_shared/contributors/dmitryskripunov.html" %}
