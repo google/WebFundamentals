@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Moto G4 in Device Mode, new cookie-related features, and more.
 
-{# wf_updated_on: 2020-01-29 #}
+{# wf_updated_on: 2020-02-07 #}
 {# wf_published_on: 2020-01-29 #}
 {# wf_tags: chrome81, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -113,9 +113,10 @@ When you hover over the `content` value you see the unescaped value:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2670a655e45c5a677e527dca07693200d7916ac3 #}
 
-## Source map errors in the Console {: #sourcemaperrors }
+## More detailed source map errors in the Console {: #sourcemaperrors }
 
-The Console now tells you when a source map has failed to load or parse.
+The Console now provides more detail on why a source map failed to load or parse. Previously
+it just provided an error without explaining what went wrong.
 
 ![A source map loading error in the Console](/web/updates/images/2020/01/sourcemap.png)
 
