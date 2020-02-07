@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Learn the quick console shortcut to get the currently selected DOM node.
+description: Изучите быстрые команды консоли, чтобы получить текущий выбранный DOM-узел.
 
 {# wf_updated_on: 2019-03-22 #} {# wf_published_on: 2015-04-22 #} {# wf_tags:
 devtools #} {# wf_featured_image:
@@ -15,7 +15,7 @@ devtools #} {# wf_featured_image:
 src="/web/updates/images/2015-05-19-console-shortcut-to-get-the-currently-selected-dom-node/dollar-zero.gif"
 alt="Console shortcut to get the currently selected DOM node">
 
-When you have a node selected in the Elements panel, use <strong>$0</strong> to
-access it in the Console panel. On this subject, you can also use
-<strong>$_</strong> to access the value of the most recently evaluated
-expression.
+Если на панели «Элементы» выбран узел, используйте <strong>$0</strong> для
+доступа к нему на панели «Консоль». По этому вопросу вы также можете
+использовать <strong>$ _</strong> для доступа к значению последнего вычисленного
+выражения.
