@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-02-06 #}
 {# wf_published_on: 2019-01-15 #}
 {# wf_blink_components: N/A #}
 
@@ -14,8 +14,25 @@ numbered according to the year and calendar month of the data collection period,
 corresponds to the UX data collected during December 2019 and would be released on the second 
 Tuesday of January 2020 after the data collection period has ended.
 
-In the list below, we've curated some release notes for each monthly dataset. Follow 
+In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow 
 [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release announcements.
+
+### 202001
+
+<dl>
+	<dt>Publication date</dt>
+	<dd>February 11, 2020</dd>
+	<dt>What's new</dt>
+	<dd>
+		Experimental metric on <a href="#todo">notification permission acceptance rates</a>
+	</dd>
+	<dt>Notable stats</dt>
+	<dd>
+		<ul>
+			<li>5,976,293 origins</li>
+		</ul>
+	</dd>
+</dl>
 
 ### 201912
 

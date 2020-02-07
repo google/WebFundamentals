@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-02-06 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_blink_components: N/A #}
 
@@ -119,6 +119,24 @@ HTTP request to the first byte of the page being received by the client's browse
 made up of the socket connection time, the time taken to send the HTTP request, and the time taken 
 to get the first byte of the page.” -
 [Wikipedia](https://en.wikipedia.org/wiki/Time_to_first_byte)
+
+#### Notification Permissions
+
+Defined by the [Notifications API](https://notifications.spec.whatwg.org/) and explained by [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API):
+
+> “The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.” -
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API)
+
+Chrome will show users a prompt to grant the active website permission to show notifications when initiated by the website. Users can take actively or passively take one of four actions:
+
+- Accept
+    - If the user has explicitly allowed the website to show them notifications.
+- Deny
+    - If the user has explicitly disallowed the website from showing them notifications.
+- Dismiss
+    - If the user closes the permission prompt without giving any explicit response.
+- Ignore
+    - If the user does not interact with the prompt at all.
 
 ### Dimensions {: #dimensions }
 
