@@ -2,35 +2,33 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Permissions API дает вам главную роль в проверке статуса разрешений API.
 
-{# wf_updated_on: 2019-03-22 #}
-{# wf_published_on: 2015-04-04 #}
-{# wf_tags: news,permissions #}
-{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-03-22 #} {# wf_published_on: 2015-04-04 #} {# wf_tags:
+news,permissions #} {# wf_blink_components: N/A #}
 
 # Permissions API для веба {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-If you've worked with the [Geolocation
+Если вы уже работали с [Geolocation
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)
-before, chances are you've wanted to check if you had permission to use
-Geolocation without causing a prompt. This simply wasn't possible. You had to
-request the current position and this would indicate the permission state or
-cause a prompt to be shown to the user.
+, скорее всего, вы хотели проверить, было ли у вас разрешение на использование
+Geolocation, не вызывая подсказку. Это просто невозможно. Вы должны были
+запросить текущую позицию, и это указывало бы на состояние разрешения или
+приводило к отображению подсказки пользователю.
 
-Not all APIs work this way. The Notifications API has its own way of allowing
-you to check the current permission state via
-[Notification.permission](https://notifications.spec.whatwg.org/#permission).
+Не все API работают таким образом. API уведомлений имеет свой собственный
+способ, позволяющий вам проверять текущее состояние разрешений через
+[Notification.permission](https://notifications.spec.whatwg.org/#permission) .
 
-As the web platform grows in API's, there needs to be a single, standard way for
-developers to check the status of a permission rather than having to remember
-how each and every API works. The [Permission
-API](https://w3c.github.io/permissions/){: .external }, available in [Chrome
-version 43](https://www.chromestatus.com/feature/6376494003650560), is
-intended to be this single, standard way to check the permission status of an
+По мере роста количества веб-платформ в API, разработчикам необходим единый
+стандартный способ проверки статуса разрешения, а не необходимость помнить, как
+работает каждый API. [API разрешений](https://w3c.github.io/permissions/) {:
+.external }, доступный в [Chrome версии
+43](https://www.chromestatus.com/feature/6376494003650560) , предназначен для
+того, чтобы быть единственным стандартным способом проверки статуса разрешений
 API.
 
-## permissions.query()
+## permissions.query ()
 
 Проверьте статус разрешения с помощью метода `permissions.query()`. Он [вернет
 статус](https://w3c.github.io/permissions/#h-status-of-a-permission) granted (у
@@ -59,17 +57,18 @@ navigator.permissions.query({name:'geolocation'})
 также реализовать обработчик событий для `permissionStatus.onchange` и обработки
 изменений состояния разрешения.
 
-### Supported PermissionDescriptors
+### Поддерживаемые PermissionDescriptors
 
-In the above example, we highlight how to query the permission state for
-geolocation with the following permission descriptor: `{name:'geolocation'}`.
+В приведенном выше примере мы подчеркиваем, как запрашивать состояние разрешения
+для геолокации с помощью следующего дескриптора разрешения:
+`{name:'geolocation'}` .
 
-The Notification permission descriptor is similar in that it only requires a
-name attribute: `{name:'notifications'}`.
+Дескриптор разрешения уведомления аналогичен тем, что для него требуется только
+атрибут имени: `{name:'notifications'}` .
 
-[Push](https://w3c.github.io/permissions/#h-push) and
-[midi](https://w3c.github.io/permissions/#h-midi) each have an additional
-parameter that is specific to that API.
+[Push](https://w3c.github.io/permissions/#h-push) и
+[midi](https://w3c.github.io/permissions/#h-midi) каждый имеют дополнительный
+параметр, специфичный для этого API.
 
 Для разрешения push вы можете указать параметр `userVisibleOnly`. Он указывает,
 хотите ли вы показывать уведомление для каждого push-сообщения или иметь
@@ -88,10 +87,11 @@ Midi допускает параметр `sysex` . Это указывает, н
 navigator.permissions.query({name:'midi', sysex:true})
 ```
 
-## Requesting Permissions
+## Запрос разрешений
 
-Requesting permission from the user depends on the specific API. For example,
-geolocation would show a permission prompt when you call `getCurrentPosition()`.
+Запрос разрешения от пользователя зависит от конкретного API. Например,
+геолокация будет отображать запрос разрешения при вызове `getCurrentPosition()`
+.
 
 ```
 navigator.geolocation.getCurrentPosition(function(position) {
@@ -101,7 +101,8 @@ navigator.geolocation.getCurrentPosition(function(position) {
 });
 ```
 
-Whereas notifications would prompt the user when you call `requestPermission()`.
+Принимая во внимание, что уведомления будут запрашивать пользователя при вызове
+`requestPermission()` .
 
 ```
 Notification.requestPermission(function(result) {
@@ -116,22 +117,22 @@ Notification.requestPermission(function(result) {
 });
 ```
 
-The point here is that the Permission API allows a consistent way to monitor the
-status of permissions while being able to support the range of APIs currently on
-the web.
+Дело в том, что Permission API позволяет согласованно отслеживать состояние
+разрешений, в то же время поддерживая диапазон API-интерфейсов, доступных в
+настоящее время в сети.
 
-The big advantage of this is that it allows you to build better experiences for
-your users, only prompting when it's obvious to the user why you need extra
-privileges and taking full advantage of these APIs when you know you have been
-granted permission.
+Большим преимуществом этого является то, что он позволяет вам создавать более
+удобные условия работы для ваших пользователей, предлагая только, когда для
+пользователя очевидно, зачем вам нужны дополнительные привилегии, и в полной
+мере использовать эти API, когда вы знаете, что получили разрешение.
 
-[You can find a full set of examples
-here](https://googlechrome.github.io/samples/permissions/){: .external }.
+[Вы можете найти полный набор примеров
+здесь](https://googlechrome.github.io/samples/permissions/) {: .external }.
 
 ## Поддержка браузером
 
-Chrome is the first browser to implement this, Mozilla are planning on shipping
-this, and Microsoft have shown interest in the API.
+Chrome - первый браузер, который реализует это, Mozilla планирует выпустить его,
+и Microsoft проявила интерес к API.
 
 ## Известные проблемы
 
