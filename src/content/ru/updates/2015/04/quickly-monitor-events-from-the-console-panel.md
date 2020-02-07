@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: You can log all the events dispatched to an object using the Command Line API method monitorEvents(object [, events]).
+description: Вы можете регистрировать все события, отправленные объекту, используя Command Line API метод monitorEvents (object [, events]).
 
 {# wf_updated_on: 2019-03-22 #} {# wf_published_on: 2015-04-25 #} {# wf_tags:
 devtools #} {# wf_featured_image:
@@ -15,7 +15,7 @@ devtools #} {# wf_featured_image:
 src="/web/updates/images/2015-05-19-devtools-quickly-monitor-events-from-the-console-panel/monitor-events.gif"
 alt="DevTools Quickly monitor events from the Console Panel">
 
-You can log all the events dispatched to an object using the Command Line API
-method <strong>monitorEvents(object [, events])</strong>. The event objects are
-then logged to the Console. Useful when you need a reminder of the available
-properties on the event object.﻿
+Вы можете регистрировать все события, отправленные объекту, используя Command
+Line API метод <strong>monitorEvents (object [, events])</strong>. Объекты
+событий затем записываются в консоль. Полезно, когда вам нужно напоминание о
+доступных свойствах объекта события.
