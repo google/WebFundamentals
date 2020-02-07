@@ -1,8 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 
-{# wf_updated_on: 2017-07-24 #}
-{# wf_published_on: 2016-08-26 #}
+{# wf_updated_on: 2017-07-24 #} {# wf_published_on: 2016-08-26 #}
 
 # Ресурсы {: .page-title }
 
@@ -69,9 +68,5 @@ tracker, пожалуйста, создайте её.
 ### Еще советы
 
 Для упрощения просмотра PR, пожалуйста сделайте в ваших HTML файлах перенос слов
-на 80 символов или меньше.
-
-
-
-Translated by
-{% include "web/_shared/contributors/dmitryskripunov.html" %}
+на 80 символов или меньше.   Translated by {% include
+"web/_shared/contributors/dmitryskripunov.html" %}
