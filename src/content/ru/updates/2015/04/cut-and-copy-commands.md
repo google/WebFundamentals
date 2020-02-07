@@ -9,19 +9,20 @@ news,cutandcopy,execcommand #} {# wf_blink_components: N/A #}
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-IE10 and above added support for the 'cut' and 'copy' commands through the
+В IE10 и более поздних версиях добавлена поддержка команд «вырезать» и
+«копировать» с помощью метода
 [Document.execCommand()](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand)
-method. As of Chrome version 43, these commands are also supported in Chrome.
+. Начиная с версии 43 Chrome, эти команды также поддерживаются в Chrome.
 
 Любой текст, выбранный в браузере при выполнении одной из этих команд, будет
 вырезан или скопирован в буфер обмена пользователя. Это позволяет предложить
 пользователю простой способ выделить часть текста и скопировать его в буфер
 обмена.
 
-This becomes extremely useful when you combine it with the [Selection
-API](https://developer.mozilla.org/en-US/docs/Web/API/Selection) to
-programmatically select text to determine what is copied to the clipboard, which
-we'll be looking at in more detail later on in this article.
+Это становится чрезвычайно полезным, когда вы комбинируете его с [Selection
+API](https://developer.mozilla.org/en-US/docs/Web/API/Selection) для
+программного выделения текста, чтобы определить, что копируется в буфер обмена,
+что мы рассмотрим более подробно позже в этой статье.
 
 ## Простой пример
 
@@ -67,25 +68,24 @@ copyEmailBtn.addEventListener('click', function(event) {
 });
 ```
 
-What we are doing here is using a method of the [Selection
-API](https://developer.mozilla.org/en-US/docs/Web/API/Selection),
-[window.getSelection()](https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection)
-to programmatically set the 'selection' of text to the anchor, which is the text
-we
-want to copy to the user's clipboard. After calling document.execCommand() we
-can remove the selection by calling
+Здесь мы используем метод [Selection
+API](https://developer.mozilla.org/en-US/docs/Web/API/Selection) ,
+[window.getSelection()](https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection),
+чтобы программно установить «выделение» текста для привязки, то есть текста,
+который мы хотим скопировать в буфер обмена пользователя. После вызова
+document.execCommand() мы можем удалить выделение, вызвав
 [window.getSelection().removeAllRanges()](https://developer.mozilla.org/en-US/docs/Web/API/Selection/removeAllRanges).
-If you wanted to confirm everything worked as expected you can examine the
-response of document.execCommand(); it returns false if the command is not
-supported or enabled. We wrap execCommand() in a try and catch since the 'cut'
-and 'copy' commands [can throw an
-error](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#the-copy-command)
-in a few scenarios.
+Если вы хотите подтвердить, что все работает как положено, вы можете проверить
+ответ document.execCommand(); Он возвращает false, если команда не
+поддерживается или не включена. Мы оборачиваем execCommand() в try/catch,
+поскольку команды 'cut' и 'copy' [могут выдавать
+ошибку](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#the-copy-command)
+в нескольких сценариях.
 
 Команда «вырезать» может использоваться для текстовых полей, где вы хотите
 удалить текстовое содержимое и сделать его доступным через буфер обмена.
 
-Using a textarea and a button in our HTML:
+Используя textarea и кнопку в нашем HTML:
 
 ```
 <p><textarea class="js-cuttextarea">Hello I'm some text</textarea></p>
@@ -93,7 +93,7 @@ Using a textarea and a button in our HTML:
 <p><button class="js-textareacutbtn" disable>Cut Textarea</button></p>
 ```
 
-We can do the following to cut the content:
+Мы можем сделать следующее, чтобы вырезать содержимое:
 
 ```
 var cutTextareaBtn = document.querySelector('.js-textareacutbtn');
@@ -114,25 +114,25 @@ cutTextareaBtn.addEventListener('click', function(event) {
 
 ## queryCommandSupported и queryCommandEnabled
 
-Ahead of calling document.execCommand(), you should ensure that this API is
-supported using the
+Перед вызовом document.execCommand() вы должны убедиться, что этот API
+поддерживается с помощью метода
 [document.queryCommandSupported()](https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandSupported)
-method. In our example above we could set the button disabled state based on
-support like so:
+. В нашем примере выше мы могли бы установить состояние отключения кнопки на
+основе поддержки следующим образом:
 
 ```
 copyEmailBtn.disabled = !document.queryCommandSupported('copy');
 ```
 
-The difference between
+Разница между
 [document.queryCommandSupported()](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#querycommandsupported())
-and
+и
 [document.queryCommandEnabled()](https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#querycommandenabled())
-is that cut and copy could be supported by a browser, but if no text is
-currently selected, they won't be enabled. This is useful in scenarios where you
-aren't
-setting the selection of text programmatically and want to ensure the command
-will do as expected, otherwise present a message to the user.
+заключается в том, что вырезка и копирование могут поддерживаться браузером, но
+если текст в настоящее время не выбран, они не будут включены. Это полезно в тех
+случаях, когда вы не настраиваете выделение текста программно и хотите
+убедиться, что команда будет работать так, как ожидается, в противном случае вы
+получите сообщение пользователю.
 
 ## Поддержка браузера
 
