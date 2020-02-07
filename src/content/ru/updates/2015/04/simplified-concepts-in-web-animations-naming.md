@@ -9,22 +9,22 @@ news,webanimations #} {# wf_blink_components: N/A #}
 
 {% include "web/_shared/contributors/samthorogood.html" %}
 
-Native support for Web Animations first shipped [in Chrome
-36](/web/updates/2014/05/Web-Animations-element-animate-is-now-in-Chrome-36),
-and was updated with playback control [in Chrome
-39](/web/updates/2014/12/web-animation-playback). The `Element.animate()` method
-can be used to trigger imperative animations directly from JavaScript, and its
-returned object can be leveraged to control the playback of these animations.
-These methods are detailed in the current draft of the [Web Animations W3C
-spec](https://w3c.github.io/web-animations/).
+Встроенная поддержка веб-анимации впервые появилась [в Chrome
+36](/web/updates/2014/05/Web-Animations-element-animate-is-now-in-Chrome-36) и
+была обновлена с управлением воспроизведением [в Chrome
+39](/web/updates/2014/12/web-animation-playback). Метод `Element.animate()`
+можно использовать для запуска императивных анимаций непосредственно из
+JavaScript, а его возвращенный объект можно использовать для управления
+воспроизведением этих анимаций. Эти методы подробно описаны в текущем проекте
+[спецификации W3C Web Animations](https://w3c.github.io/web-animations/).
 
-There's a [shipped
-polyfill](https://github.com/web-animations/web-animations-js) under active
-development that tracks all Web Animations features implemented natively, and
-which is supported in all modern browsers. These core methods are ready for use
-right now, and deserve to be part of your toolbox for building rich experiences
-that benefit from animations (such as for the [Google I/O 2015 web
-app](https://events.google.com/io2015/){: .external }).
+В стадии активной разработки находится [поставляемый
+полифилл,](https://github.com/web-animations/web-animations-js) который
+отслеживает все функции веб-анимации, реализованные изначально, и который
+поддерживается во всех современных браузерах. Эти основные методы уже готовы к
+использованию и заслуживают того, чтобы стать частью вашего инструментария для
+создания богатого опыта, основанного на анимации (например, для [веб-приложения
+Google I/O 2015](https://events.google.com/io2015/) {: .external }).
 
 ## Изменения в конструкторе и группах
 
@@ -36,22 +36,23 @@ app](https://events.google.com/io2015/){: .external }).
 разработчиков веб-анимации переименовывает эти функции, чтобы сделать их более
 понятными.
 
-The [FXTF](https://www.w3.org/Graphics/fx/){: .external } recently met in
-Sydney, Australia, and
-[discussed](https://www.mail-archive.com/public-fx@w3.org/msg00151.html)
-[naming](https://www.mail-archive.com/public-fx@w3.org/msg00158.html), as a
-number of developers raised valid points about some of the naming being
-confusing. As a result, the following naming changes were agreed on:
+[FXTF](https://www.w3.org/Graphics/fx/) {: .external } недавно встретился в
+Сиднее, Австралия, и
+[обсудил](https://www.mail-archive.com/public-fx@w3.org/msg00151.html)
+[наименование](https://www.mail-archive.com/public-fx@w3.org/msg00158.html),
+поскольку ряд разработчиков подняли обоснованные вопросы о том, что некоторые из
+названий вводят в заблуждение. В результате были согласованы следующие изменения
+именования:
 
-- **Animation** becomes **KeyframeEffect**
+- **Анимация** становится **KeyframeEffect**
 - **AnimationSequence** становится **SequenceEffect**
 - **AnimationGroup** становится **GroupEffect**
-- **AnimationPlayer** becomes **Animation**
+- **AnimationPlayer** становится **Animation**
 
-Remember that while animations and their players are available natively in
-Chrome and as part of the polyfill, they are currently created directly via the
-`Element.animate()` method. Existing code that uses the `Element.animate()`
-method will require no changes.
+Помните, что хотя анимации и их проигрыватели изначально доступны в Chrome и
+являются частью полифилла, в настоящее время они создаются непосредственно с
+помощью метода `Element.animate()`. Существующий код, который использует метод
+`Element.animate()` не требует никаких изменений.
 
 Новые имена более точно отражают поведение каждого объекта. Например,
 `KeyframeEffect` описывает эффекты на основе ключевых кадров, которые могут быть
@@ -60,12 +61,13 @@ method will require no changes.
 
 ## SourceCodeEffect
 
-If you're using parts of the draft spec via the web-animations-next polyfill,
-you'll have to update your code within the deprecation period to reflect these
-new names. As per the [polyfill changes
-policy](https://github.com/web-animations/web-animations-js#breaking-changes),
-we aim to support an old version for three months and provide console warning
-statements if your site use deprecated features or names.
+Если вы используете части черновой спецификации через полифилл
+web-animations-next, вам придется обновить код в течение периода устаревания,
+чтобы отразить эти новые имена. В соответствии с [политикой
+изменений](https://github.com/web-animations/web-animations-js#breaking-changes)
+в {a1}polyfill{/a1} мы стремимся поддерживать старую версию в течение трех
+месяцев и предоставлять консольные предупреждения, если ваш сайт использует
+устаревшие функции или имена.
 
 Если вы хотите опробовать эти функции, следите за
 [выпуском](https://github.com/web-animations/web-animations-js/releases)
