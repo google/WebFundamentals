@@ -24,7 +24,7 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 	<dd>February 11, 2020</dd>
 	<dt>What's new</dt>
 	<dd>
-		Experimental metric on <a href="https://developers.google.com/web/updates/2020/02/notification-permission-data-in-crux">notification permission acceptance rates</a>
+		Experimental metric on <a href="/web/updates/2020/02/notification-permission-data-in-crux">notification permission acceptance rates</a>
 	</dd>
 	<dt>Notable stats</dt>
 	<dd>
@@ -135,7 +135,7 @@ into account
 
 - 4,134,123 origins
 - the [FID](./#first-input-delay) metric was added to the list of experimental metrics as 
-`experimental.first_input_delay` ([learn more](https://developers.google.com/web/updates/2018/07/first-input-delay-in-crux))
+`experimental.first_input_delay` ([learn more](/web/updates/2018/07/first-input-delay-in-crux))
 
 ### 201805
 
@@ -156,7 +156,7 @@ into account
 ### 201801
 
 - 3,086,603 origins
-- added [country dimension](https://developers.google.com/web/updates/2018/01/crux)
+- added [country dimension](/web/updates/2018/01/crux)
 
 ### 201712
 
@@ -165,7 +165,7 @@ into account
 ### 201711
 
 - 1,237,407 origins
-- expanded dataset [with 1M+ origins](https://developers.google.com/web/updates/2017/12/crux)
+- expanded dataset [with 1M+ origins](/web/updates/2017/12/crux)
 
 ### 201710
 
