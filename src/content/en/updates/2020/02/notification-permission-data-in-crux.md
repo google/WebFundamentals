@@ -76,7 +76,7 @@ of responses.
 *Block* and *Accept* rates are the two most important metrics. As described in
 the [quieter notification permissions blog post][quieter-not-post],
 Chrome will automatically enroll sites with very low Accept rates into the
-quieter permissions UI. Block rate is also a strong signal. When a user clicks
+quieter UI. Block rate is also a strong signal. When a user clicks
 Block, the user has sent a clear message that they are not interested in
 receiving the site’s notification, not just at that moment, but at any time.
 Most often this means that the user does not understand the intended use of
@@ -104,16 +104,16 @@ as normal and expected.
   </iframe>
 </div>
 
-Let your users take the initiative. Integrate toggles or buttons into your
-website’s user interface and allow users to turn on notifications at their
-own pace. Only actively prompt for notifications when the benefit is obvious
-from the context. For example, on an ecommerce site an order delivery
-notification is an obvious value add to the user and sites asking for
-permission for this purpose have very high Accept rates.
+Let your users take the initiative and turn on notifications at their own
+pace. Introduce toggles or buttons discretely as part of preexisting UI
+surfaces so that they are shown at steps of the user’s workflow where there
+is good reason to believe that they might want to opt in to receiving timely 
+updates.
 
-Avoid requesting the notification permission immediately after a user
-lands on the site. The user’s browsing experience is interrupted without
-context as to why notifications are needed or useful to them.
+Avoid showing prompts and/or overlays without context or immediately after a
+user lands on the site. Prompts interrupt the user’s browsing experience
+without providing context as to why notifications are needed or useful to
+them.
 
 <div class="clearfix"></div>
 
