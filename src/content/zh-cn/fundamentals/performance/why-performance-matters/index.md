@@ -170,7 +170,7 @@ src="images/lighthouse-1x.png" alt="Lighthouse
 和 [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) 都擅长使用相对较少的代码创建简单和复杂的布局。
 [由于 CSS 是一种阻塞渲染的资源](/web/fundamentals/performance/critical-rendering-path/render-blocking-css)，CSS 框架的开销可能导致渲染延迟严重。
  您可以视情况移除不必要的开销，以加速渲染。
-- JavaScript 库非常方便，但不一定必需。 以 TakejQuery
+- JavaScript 库非常方便，但不一定必需。 以 jQuery
 为例：得益于
 [`querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 和
