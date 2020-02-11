@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2020-02-06 #}
+{# wf_updated_on: 2020-02-11 #}
 {# wf_published_on: 2019-01-15 #}
 {# wf_blink_components: N/A #}
 
@@ -24,7 +24,7 @@ In the list below, we've curated some release notes for each monthly dataset. Su
 	<dd>February 11, 2020</dd>
 	<dt>What's new</dt>
 	<dd>
-		Experimental metric on <a href="#todo">notification permission acceptance rates</a>
+		Experimental metric on <a href="https://developers.google.com/web/updates/2020/02/notification-permission-data-in-crux">notification permission acceptance rates</a>
 	</dd>
 	<dt>Notable stats</dt>
 	<dd>
