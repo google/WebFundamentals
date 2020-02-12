@@ -55,14 +55,18 @@ table below.
     <tr>
       <td><i>Dismiss</i></td>
       <td>
-        If the user closes the permission prompt without giving any explicit
-        response.
+        The user closes the permission prompt without any explicit
+        response. Tab close counts as a dismiss.  On mobile, tab switch also 
+		counts as a dismiss action, and the quiet UI has an explicit user 
+		dismiss option.  
       </td>
     </tr>
     <tr>
       <td><i>Ignore</i></td>
       <td>
-        If the user does not interact with the prompt at all.
+        The user does not interact with the prompt at all. Navigation events
+		also count as an ignore, such as the back button or navigation using the 
+		omnibox.  
       </td>
     </tr>
   </tbody>
@@ -87,14 +91,18 @@ are a clear indicator that the website should review the
 
 It is normal and expected that different types of sites will have different
 Accept and Block rates. For example, a chat app or email app has a very strong
-use case and we could expect Accept rates to be quite high. It’s also normal
-that rates for the same app may vary significantly between desktop and mobile,
-as the use cases can be different and users may have a strong preference for
-notification on one type of device over the other.
+use case and we could expect Accept rates to be quite high. 
+
+It’s also normal that rates for the same site may vary significantly between 
+desktop and mobile, as the use cases can be different and users may have a 
+strong preference for notification on one type of device over the other. The 
+large variance between mobile and desktop is the reason that automatic site 
+enrollment in quiet notification permission UI is separated by device type. 
+Some sites may be enrolled in quiet UI only on mobile or only on desktop.  
 
 As more users enroll in quieter notifications UI we expect that Ignore
-rates will increase relative to other metrics. You should view this trend
-as normal and expected.
+rates will increase over time relative to other metrics. You should view this 
+trend as normal and expected.
 
 ## Recommended patterns {: #recommened-patterns }
 
