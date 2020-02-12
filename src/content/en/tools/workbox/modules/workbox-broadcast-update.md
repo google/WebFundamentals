@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-02-12 #}
 {# wf_published_on: 2017-11-29 #}
 {# wf_blink_components: N/A #}
 
@@ -76,7 +76,7 @@ In your web app, you can listen for these events like so:
 ```js
 navigator.serviceWorker.addEventListener('message', async (event) => {
   // Optional: ensure the message came from workbox-broadcast-update
-  if (event.meta === 'workbox-broadcast-update') {
+  if (event.data.meta === 'workbox-broadcast-update') {
     const {cacheName, updatedUrl} = event.data.payload;
 
     // Do something with cacheName and updatedUrl.
