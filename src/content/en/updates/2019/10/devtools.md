@@ -101,6 +101,15 @@ dropdown.
 
 Chromium issue [#1004246](https://crbug.com/1004246)
 
+## Timezone emulation (: #timezone }
+
+The Sensors tab now lets you not only
+[override geolocation](/web/tools/chrome-devtools/device-mode/geolocation), but also emulate arbitrary
+timezones and test the impact on your web apps. Perhaps surprisingly, this new feature improves the
+reliability of geolocation emulation as well: previously, web apps could detect location spoofing by
+matching the location against the user's local timezone. Now that geolocation and timezone emulation
+are coupled, this category of mismatches is eliminated.
+
 ## Code coverage updates {: #coverage }
 
 The [Coverage tab](/web/tools/chrome-devtools/coverage) can help you [find unused JavaScript and
