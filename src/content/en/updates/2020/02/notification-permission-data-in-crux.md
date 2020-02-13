@@ -57,16 +57,16 @@ table below.
       <td>
         The user closes the permission prompt without any explicit
         response. Tab close counts as a dismiss.  On mobile, tab switch also 
-		counts as a dismiss action, and the quiet UI has an explicit user 
-		dismiss option.  
+        counts as a dismiss action, and the quiet UI has an explicit user 
+		    dismiss option.  
       </td>
     </tr>
     <tr>
       <td><i>Ignore</i></td>
       <td>
         The user does not interact with the prompt at all. Navigation events
-		also count as an ignore, such as the back button or navigation using the 
-		omnibox.  
+        also count as an ignore, such as the back button or navigation using the 
+        omnibox.  
       </td>
     </tr>
   </tbody>
@@ -103,6 +103,7 @@ Some sites may be enrolled in quiet UI only on mobile or only on desktop.
 As more users enroll in quieter notifications UI we expect that Ignore
 rates will increase over time relative to other metrics. You should view this 
 trend as normal and expected.
+
 
 ## Recommended patterns {: #recommened-patterns }
 
