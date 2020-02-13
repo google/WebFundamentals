@@ -55,14 +55,18 @@ table below.
     <tr>
       <td><i>Dismiss</i></td>
       <td>
-        If the user closes the permission prompt without giving any explicit
-        response.
+        The user closes the permission prompt without any explicit
+        response. Tab close counts as a dismiss.  On mobile, tab switch also 
+        counts as a dismiss action, and the quiet UI has an explicit user 
+		    dismiss option.  
       </td>
     </tr>
     <tr>
       <td><i>Ignore</i></td>
       <td>
-        If the user does not interact with the prompt at all.
+        The user does not interact with the prompt at all. Navigation events
+        also count as an ignore, such as the back button or navigation using the 
+        omnibox.  
       </td>
     </tr>
   </tbody>
@@ -76,7 +80,7 @@ of responses.
 *Block* and *Accept* rates are the two most important metrics. As described in
 the [quieter notification permissions blog post][quieter-not-post],
 Chrome will automatically enroll sites with very low Accept rates into the
-quieter permissions UI. Block rate is also a strong signal. When a user clicks
+quieter UI. Block rate is also a strong signal. When a user clicks
 Block, the user has sent a clear message that they are not interested in
 receiving the site’s notification, not just at that moment, but at any time.
 Most often this means that the user does not understand the intended use of
@@ -87,14 +91,19 @@ are a clear indicator that the website should review the
 
 It is normal and expected that different types of sites will have different
 Accept and Block rates. For example, a chat app or email app has a very strong
-use case and we could expect Accept rates to be quite high. It’s also normal
-that rates for the same app may vary significantly between desktop and mobile,
-as the use cases can be different and users may have a strong preference for
-notification on one type of device over the other.
+use case and we could expect Accept rates to be quite high. 
+
+It’s also normal that rates for the same site may vary significantly between 
+desktop and mobile, as the use cases can be different and users may have a 
+strong preference for notification on one type of device over the other. The 
+large variance between mobile and desktop is the reason that automatic site 
+enrollment in quiet notification permission UI is separated by device type. 
+Some sites may be enrolled in quiet UI only on mobile or only on desktop.  
 
 As more users enroll in quieter notifications UI we expect that Ignore
-rates will increase relative to other metrics. You should view this trend
-as normal and expected.
+rates will increase over time relative to other metrics. You should view this 
+trend as normal and expected.
+
 
 ## Recommended patterns {: #recommened-patterns }
 
@@ -104,16 +113,16 @@ as normal and expected.
   </iframe>
 </div>
 
-Let your users take the initiative. Integrate toggles or buttons into your
-website’s user interface and allow users to turn on notifications at their
-own pace. Only actively prompt for notifications when the benefit is obvious
-from the context. For example, on an ecommerce site an order delivery
-notification is an obvious value add to the user and sites asking for
-permission for this purpose have very high Accept rates.
+Let your users take the initiative and turn on notifications at their own
+pace. Introduce toggles or buttons discretely as part of preexisting UI
+surfaces so that they are shown at steps of the user’s workflow where there
+is good reason to believe that they might want to opt in to receiving timely 
+updates.
 
-Avoid requesting the notification permission immediately after a user
-lands on the site. The user’s browsing experience is interrupted without
-context as to why notifications are needed or useful to them.
+Avoid showing prompts and/or overlays without context or immediately after a
+user lands on the site. Prompts interrupt the user’s browsing experience
+without providing context as to why notifications are needed or useful to
+them.
 
 <div class="clearfix"></div>
 
