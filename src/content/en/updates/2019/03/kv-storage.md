@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An introduction to the new KV Storage API, built-in modules, and import maps.
 
-{# wf_updated_on: 2019-09-10 #}
+{# wf_updated_on: 2020-02-13 #}
 {# wf_published_on: 2019-03-11 #}
 {# wf_tags: chrome74, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
@@ -12,6 +12,8 @@ description: An introduction to the new KV Storage API, built-in modules, and im
 # KV Storage: the Web's First Built-in Module {: .page-title }
 
 {% include "web/_shared/contributors/philipwalton.html" %}
+
+Warning: KV Storage was experimental and has been **deprecated**.
 
 Browser vendors and web performance experts have been saying for the better part
 of the last decade that [`localStorage` is
