@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Debug why cookies were blocked, simulate "prefers-color-scheme: dark", code coverage updates, and more.
 
-{# wf_updated_on: 2020-01-29 #}
+{# wf_updated_on: 2020-02-13 #}
 {# wf_published_on: 2019-10-15 #}
 {# wf_tags: chrome79, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -100,6 +100,15 @@ dropdown.
 {# https://chromium.googlesource.com/chromium/src/+/9ca30329b8ee53b2462d72772dc189385b6e2a34 #}
 
 Chromium issue [#1004246](https://crbug.com/1004246)
+
+## Timezone emulation (: #timezone }
+
+The Sensors tab now lets you not only
+[override geolocation](/web/tools/chrome-devtools/device-mode/geolocation), but also emulate
+arbitrary timezones and test the impact on your web apps. Perhaps surprisingly, this new feature
+improves the reliability of geolocation emulation as well: previously, web apps could detect location
+spoofing by matching the location against the user's local timezone. Now that geolocation and
+timezone emulation are coupled, this category of mismatches is eliminated.
 
 ## Code coverage updates {: #coverage }
 
