@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An introduction to the new KV Storage API, built-in modules, and import maps.
 
-{# wf_updated_on: 2019-09-10 #}
+{# wf_updated_on: 2020-02-14 #}
 {# wf_published_on: 2019-03-11 #}
 {# wf_tags: chrome74, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
@@ -12,6 +12,9 @@ description: An introduction to the new KV Storage API, built-in modules, and im
 # KV Storage: the Web's First Built-in Module {: .page-title }
 
 {% include "web/_shared/contributors/philipwalton.html" %}
+
+Warning: KV Storage was originally launched as an origin trial. That trial has
+ended, and KV Storage is no longer available.
 
 Browser vendors and web performance experts have been saying for the better part
 of the last decade that [`localStorage` is
@@ -122,6 +125,9 @@ of the `StorageArea` instance.
 
 Here's an example of how to use the KV Storage module in your code:
 
+Warning: KV Storage was originally launched as an origin trial. That trial has
+ended, and KV Storage is no longer available.
+
 ```js
 import storage from 'std:kv-storage';
 
@@ -230,6 +236,9 @@ modules.
 
 ## KV Storage demo
 
+Warning: KV Storage was originally launched as an origin trial. That trial has
+ended, and KV Storage is no longer available.
+
 To illustrate that it's possible to use built-in modules while still supporting
 older browsers, I've put together a
 [demo](https://rollup-built-in-modules.glitch.me/) that incorporates all the
@@ -284,6 +293,9 @@ code or even put breakpoints in it!):
 </figure>
 
 ## Please give us feedback
+
+Warning: KV Storage was originally launched as an origin trial. That trial has
+ended, and KV Storage is no longer available.
 
 This introduction should have given you a taste of what may be possible with
 built-in modules. And hopefully, you're excited! We'd really love for developers
