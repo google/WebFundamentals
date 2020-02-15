@@ -78,9 +78,9 @@ Resets a count.
 
 ## console.debug(object [, object, ...]) {: #debug }
 
-[Log level][level]: `Info`
+[Log level][level]: `Verbose`
 
-Identical to [`console.log(object [, object, ...])`](#log).
+Identical to [`console.log(object [, object, ...])`](#log) except different log level.
 
     console.debug('debug');
 
