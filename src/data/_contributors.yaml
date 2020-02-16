@@ -963,6 +963,18 @@ captainpangyo:
   description:
     en: Josh is a Singing Computer Scientist
 
+wormwlrm:
+  name:
+    given: Jongyoon
+    family: Jeong
+  country: KR
+  role:
+    - translator
+  homepage: 'https://wormwlrm.github.io'
+  email: wormwlrm@naver.com
+  description:
+    en: Passionate junior front-end developer
+
 kazukikanamori:
   name:
     given: Kazuki
