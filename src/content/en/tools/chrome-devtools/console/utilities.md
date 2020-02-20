@@ -64,7 +64,7 @@ while `$1` returns the previously selected one:
 
 `$(selector)` returns the reference to the first DOM element
 with the specified CSS selector.
-This function is an alias for the
+When called with one argument, this function is an alias for the
 [document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 function.
 
