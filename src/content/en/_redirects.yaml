@@ -54,7 +54,13 @@ redirects:
   to: /web/fundamentals/integration/webapks
 
 - from: /web/updates/2017/06/user-centric-performance-metrics
-  to: /web/fundamentals/performance/user-centric-performance-metrics
+  to: https://web.dev/user-centric-performance-metrics/
+
+- from: /web/fundamentals/performance/user-centric-performance-metrics
+  to: https://web.dev/user-centric-performance-metrics/
+
+- from: /web/updates/2018/05/first-input-delay
+  to: https://web.dev/fid/
 
 - from: /web/g-co/dpwa
   to: /web/updates/2018/05/dpwa
@@ -64,4 +70,3 @@ redirects:
 
 - from: /web/updates/2020/twa-android-browser-helper
   to: /web/updates/2020/01/twa-android-browser-helper
-  
