@@ -21,7 +21,6 @@ announcement:
       .devsite-banner-announcement {
         background-color: #e8f0fe;
         color: #424242;
-
       }
       .devsite-banner-announcement :link,
       .devsite-banner-announcement :visited {
@@ -32,4 +31,4 @@ announcement:
         vertical-align: middle;
         margin-right: 8px;
       }
-    </style> Didn't make the <code>#ChromeDevSummit</code> this year? Catch all the content (and more!) in the <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIDA1uGhqy45bqlul0VcvKMr">Chrome Dev Summit 2019</a> playlist on our <a href="https://www.youtube.com/user/ChromeDevelopers/">Chrome Developers YouTube Channel</a>.
+    </style> Take the <a href="https://qsurvey.mozilla.com/s3/4f853f5f79cc">MDN Browser Compatibility Survey</a> and help us understand your issues, and what we and browser vendors can do to help make your life easier.
