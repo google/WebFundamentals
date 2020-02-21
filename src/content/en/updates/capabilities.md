@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2020-01-10 #}
+{# wf_updated_on: 2020-02-24 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -45,234 +45,9 @@ apps should be able to do anything native apps can.
 > platforms to the web platform, while maintaining user security, privacy,
 > trust, and other core tenets of the web.
 
-## The new capabilities
-
-You can see the [full list](https://crbug.com/?q=proj-fugu) of capabilities we're
-considering on [crbug.com](https://crbug.com) and filtering issues with the
-`proj-fugu` label.
-
 <aside class="note">
-  <b>Have a suggestion for a capability you think we should consider?</b>
-  Tell us about it by filing a <a href="https://goo.gl/qWhHXU">new feature
-  request</a>. Please be sure to include as much detail as you can, such as
-  the problem you're trying to solve, suggested use cases, and anything else
-  that might be helpful.
-</aside>
-
-### Capabilities in flight {: #in-flight }
-
-<aside class="success">
-  <b>New</b>
-  See a completely list of APIs we're working on and approximate time
-  lines in our <a href="https://goo.gle/fugu-api-tracker">API Tracker</a>.
-</aside>
-
-<table>
-  <thead>
-    <tr>
-      <th>Capability</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://web.dev/badging-api/">Badging API</a>
-      </td>
-      <td>
-        The Badging API is a new web platform API that allows installed web
-        apps to set an application-wide badge, shown in an
-        operating-system-specific place associated with the application, such
-        as the shelf or home screen. Badging makes it easy to subtly notify
-        the user that there is some new activity that might require their
-        attention, or it can be used to indicate a small amount of information,
-        such as an unread count.
-        <br><br>
-        <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> October 22nd, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/contact-picker/">Contact Picker API</a>
-      </td>
-      <td>
-        The Contact Picker API is a new, on-demand picker that allows users to
-        select entries from their contact list and share limited details of
-        the selected entries with a website. It allows users to share only
-        what they want, when they want, and makes it easier for users to
-        reach and connect with their friends and family.
-        <br><br>
-        <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> January, 2020
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/get-installed-related-apps/">
-          Get Installed Related Apps API
-        </a>
-      </td>
-      <td>
-        The Get Installed Related Apps API is a new web platform API
-        that allows your web app to check to see if your native app is
-        installed on the users device, and vice versa.
-        <br><br>
-        <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> October 22nd, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/native-file-system/">
-          Native File System API
-        </a>
-      </td>
-      <td>
-        The Native File System API (formerly known as the Writable Files API)
-        enables developers to build powerful web apps that interact with files
-        on the users local device, like IDEs, photo and video editors, text
-        editors, and more. After a user grants a web app access, this API
-        allows web apps to read or save changes directly to files and folders
-        on the users device.
-        <br><br>
-        <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> October 22nd, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/shape-detection/">Shape&nbsp;Detection API</a>
-      </td>
-      <td>
-        The Shape Detection API opens up native implementations of shape
-        detection services and exposes them through a set of JavaScript
-        interfaces. Currently, the supported features are face detection,
-        barcode detection, and text detection (Optical Character Recognition).
-        <br><br>
-        <b>Current Status:</b> Available behind a flag.<br>
-        <b>Last Updated:</b> January, 2020
-      </td>
-    <tr>
-      <td>
-        <a href="https://web.dev/wakelock/">Wake Lock API</a>
-      </td>
-      <td>
-        To avoid draining the battery, most devices will quickly fall asleep
-        when left idle. While this is fine for most of the time, there are
-        some applications that need to keep the screen or the device awake in
-        order to complete some work. The Wake Lock API provides a way to
-        prevent the device from dimming or locking the screen or prevent
-        the device from going to sleep when an application needs to keep
-        running.
-        <br><br>
-        <b>Current Status:</b> Origin Trial.<br>
-        <b>Last Updated:</b> November, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/content-indexing-api/">Content Indexing API</a>
-      </td>
-      <td>
-        Your PWA might cache articles and media files, but how will your users
-        know that your pages work while offline? The Content Indexing API is
-        one answer to this question currently in an origin trial. Once the
-        index is populated with content from your PWA, as well as any other
-        installed PWAs, it will show up in dedicated areas of supported browsers.
-        <br><br>
-        <b>Current Status:</b> Origin Trial.<br>
-        <b>Last Updated:</b> December, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/periodic-background-sync/">Periodic Background Sync API</a>
-      </td>
-      <td>
-        Periodic Background Sync enables web applications to periodically
-        synchronize data in the background, bringing web apps closer to
-        the behavior of a native app.
-        <br><br>
-        <b>Current Status:</b> Origin Trial.<br>
-        <b>Last Updated:</b> December, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/sms-receiver-api-announcement/">SMS Receiver API</a>
-      </td>
-      <td>
-        Finding, memorizing, and typing OTPs sent via SMS is cumbersome.
-        The SMS Receiver API simplifies the OTP workflow for users.
-        <br><br>
-        <b>Current Status:</b> Origin Trial.<br>
-        <b>Last Updated:</b> October, 2019
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### Launched capabilities {: #launched }
-
-<table>
-  <thead>
-    <tr>
-      <th>Capability</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <a href="https://web.dev/image-support-for-async-clipboard/">
-          Async&nbsp;Clipboard API (images)
-        </a>
-      </td>
-      <td>
-        In Chrome 66, we shipped the Asynchronous Clipboard API with
-        support for reading and writing text. In Chrome 76, we added support
-        for reading and writing images to the clipboard.
-        <br><br>
-        <b>Status:</b> Launched in Chrome 76<br>
-        <b>Last Updated:</b> October 22nd, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/web-share-target/">Web Share Target</a>
-      </td>
-      <td>
-        The Web Share Target API allows installed web apps to register with
-        the underlying OS as a share target to receive shared content from
-        either the Web Share API or system events, like the OS-level share
-        button.
-        <br><br>
-        <b>Status:</b> Launched in Chrome 71<br>
-        <b>Last Updated:</b> November 8th, 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://web.dev/web-share/">Web Share</a>
-      </td>
-      <td>
-        With the Web Share API, web apps are able to use the same
-        system-provided share capabilities as native apps. The Web Share API
-        makes it possible for web apps to share links, text, and files to other
-        apps installed on the device in the same way as native apps.
-        <br><br>
-        <b>Status:</b> Launched in Chrome 61<br>
-        <b>Last Updated:</b> November 8th, 2019
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<aside class="key-point">
-  <b>Want to try some of these new capabilities?</b> Check out the
-  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">
-  Web Capabilities Codelab</a>.
+  To see a list of all the APIs that are currently in development, check
+  out <a href="https://web.dev/fugu-status/">https://web.dev/fugu-status/</a>
 </aside>
 
 ## How will we design & implement these new capabilities? {: #process }
@@ -309,6 +84,16 @@ developer trying to accomplish? Who would use it? How are they doing it today?
 And what problems or frustrations are fixed by this new capability. Typically,
 these come in as feature request from developers, frequently through [bugs filed
 on bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/list?can=2&q=Type%3DFeature).
+
+<aside class="note">
+  <b>Have a suggestion for a capability you think we should consider?</b>
+  Tell us about it by filing a <a href="https://goo.gl/qWhHXU">new feature
+  request</a>. Please be sure to include as much detail as you can, such as
+  the problem you're trying to solve, suggested use cases, and anything else
+  that might be helpful.
+</aside>
+
+<div class="clearfix"></div>
 
 ### Create an explainer
 
