@@ -26,7 +26,7 @@
         Passive mixed content!
       </h1>
       <p>
-        View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html">HTTPS</a>
+        View page over: <a href="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html">HTTPS</a>
       </p>
       <p>
         Several examples of passive mixed content. When viewed over HTTPS most browsers do <b>not</b> block this content but instead display warnings in the JavaScript console.
@@ -34,10 +34,10 @@
 
       <!-- // [START snippet1] -->
       <!-- An insecure audio file loaded on a secure page -->
-      <audio src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/sleep.mp3" type="audio/mp3" controls></audio>
+      <audio src="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/sleep.mp3" type="audio/mp3" controls></audio>
 
       <!-- An insecure image loaded on a secure page -->
-      <img src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy.jpg">
+      <img src="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/puppy.jpg">
 
       <!-- An insecure video file loaded on a secure page -->
       <video src="http://storage.googleapis.com/webfundamentals-assets/videos/chrome.webm" type="video/webm" controls></video>
@@ -53,7 +53,7 @@
   var isCompleted = {};
   function sampleCompleted(sampleName){
     if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+      ga('send', 'event', 'WebCentralSample', sampleName, 'completed');
       isCompleted[sampleName] = true;
     }
   }

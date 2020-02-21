@@ -82,7 +82,7 @@ landing_page:
       description: >
         A new class of web app that is fast, integrated, reliable, and engaging.
       image_path: /web/images/content-responsive-2x.jpg
-      path: /web/progressive-web-apps/
+      path: https://web.dev/progressive-web-apps/
       path_attributes:
       - name: class
         value: gc-analytics-event
@@ -94,7 +94,7 @@ landing_page:
         value: web-home
       buttons:
       - label: Get started
-        path: /web/progressive-web-apps/
+        path: https://web.dev/progressive-web-apps/
         classname: button button-primary
         attributes:
         - name: class

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Native app install banners give you the ability to let users quickly and seamlessly install your native app on their device from the app store, without leaving the browser.
 
-{# wf_updated_on: 2019-02-08 #}
+{# wf_updated_on: 2020-02-21 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -20,7 +20,7 @@ meet the following criteria:
 * The web app nor the native app are already installed.
 * Meets a user engagement heuristic (currently, the user has interacted
   with the domain for at least 30 seconds)
-* Includes a [Web App Manifest](/web/fundamentals/web-app-manifest/) that includes:
+* Includes a [Web App Manifest](https://web.dev/add-manifest) that includes:
     - `short_name`
     - `name` (used in the banner prompt)
     - `icons` including a 192px and a 512px version

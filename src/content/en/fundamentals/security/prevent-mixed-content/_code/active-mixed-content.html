@@ -15,16 +15,16 @@
     <title>Active mixed content example</title>
     <!-- // [START snippet1] -->
     <!-- An insecure script file loaded on a secure page -->
-    <script src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.js"></script>
-  
+    <script src="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/simple-example.js"></script>
+
     <!-- An insecure stylesheet loaded on a secure page -->
-    <link href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/style.css" rel="stylesheet">
+    <link href="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/style.css" rel="stylesheet">
 
     <style>
       .insecure-background {
-        /* An insecure resources loaded from a style property on a secure page, this can   
+        /* An insecure resources loaded from a style property on a secure page, this can
            happen in many places including, @font-face, cursor, background-image, and so on. */
-        background: url('http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg') no-repeat;
+        background: url('http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/puppy-thumb.jpg') no-repeat;
       }
     </style>
     <!-- // [END snippet1] -->
@@ -54,7 +54,7 @@
         Active mixed content!
       </h1>
       <p>
-        View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/active-mixed-content.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/active-mixed-content.html">HTTPS</a>
+        View page over: <a href="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/active-mixed-content.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/active-mixed-content.html">HTTPS</a>
       </p>
       <p>
         Several examples of active mixed content. When viewed over HTTPS most browsers block this content and display errors in the JavaScript console.
@@ -69,8 +69,8 @@
       <p>Loading insecure iframe...</p>
       <!-- // [START snippet2] -->
       <!-- An insecure iframed page loaded on a secure page -->
-      <iframe src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html"></iframe>
-      
+      <iframe src="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html"></iframe>
+
       <!-- Flash resources also qualify as active mixed content and pose a
       serious security risk. Be sure to look for <object> tags with type set
       to "application/x-shockwave-flash", and an http:// data attribute. -->
@@ -83,7 +83,7 @@
           var jsonData = JSON.parse(request.responseText);
           document.getElementById('output').innerHTML += '<br>' + jsonData.data;
         });
-        request.open("GET", "http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-data.js", true);
+        request.open("GET", "http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-data.js", true);
         request.send();
       </script>
       <!-- // [END snippet2] -->
@@ -99,7 +99,7 @@
   var isCompleted = {};
   function sampleCompleted(sampleName){
     if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+      ga('send', 'event', 'WebCentralSample', sampleName, 'completed');
       isCompleted[sampleName] = true;
     }
   }
