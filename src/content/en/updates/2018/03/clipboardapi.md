@@ -242,6 +242,9 @@ the specification, but these come with additional implementation complexity and
 security concerns (remember those image bombs?). For now, Chrome is rolling out
 the simpler text parts of the API.
 
+Success: Copy and paste support for images has landed in Chrome 76.
+Read all about this new capability of the Async Clipboard API in the article
+[Image support for the async clipboard API](https://web.dev/image-support-for-async-clipboard/#images).
 
 ## More Information
 
