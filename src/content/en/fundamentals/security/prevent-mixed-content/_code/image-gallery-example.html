@@ -55,15 +55,15 @@
         Image gallery mixed content!
       </h1>
       <p>
-        View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html">HTTPS</a>
+        View page over: <a href="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html">HTTPS</a>
       </p>
-      <p> 
+      <p>
         Image galleries often rely on the &lt;img&gt; tag src attribute to display thumbnail images on the page, the anchor ( &lt;a&gt; ) tag href attribute is then used to load the full sized image for the gallery overlay. Normally &lt;a&gt; tags do not cause mixed content, but in this case the jQuery code overrides the default link behavior &mdash; to navigate to a new page &mdash; and instead loads the HTTP image on this page. While this content isn't blocked, modern browsers display a warning in the JavaScript console. This can be seen when the page is viewed over HTTPS and the thumbnail is clicked.
       </p>
       CLICK ME! -->
       <!-- // [START snippet1] -->
-      <a class="gallery" href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy.jpg">
-        <img src="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg">
+      <a class="gallery" href="http://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/puppy.jpg">
+        <img src="https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/puppy-thumb.jpg">
       </a>
       <!-- // [END snippet1] -->
       <div class="overlay overlay-background" style="display: none;"></div>
@@ -79,7 +79,7 @@
   var isCompleted = {};
   function sampleCompleted(sampleName){
     if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+      ga('send', 'event', 'WebCentralSample', sampleName, 'completed');
       isCompleted[sampleName] = true;
     }
   }

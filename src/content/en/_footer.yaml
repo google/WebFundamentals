@@ -4,10 +4,10 @@ footer:
     description: The latest news on the Chromium blog.
     icon: https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
     path: https://blog.chromium.org
-  - label: GitHub
-    description: Fork our code samples and other open-source projects.
-    path: https://github.com/googlechrome
-    icon: /site-assets/logo-github.svg
+  - label: web.dev
+    description: Useful guidance and analysis from web.dev for web developers.
+    path: https://web.dev/
+    icon: /web/images/web-dev-logo.png
   - label: Twitter
     description: Connect with @ChromiumDev on Twitter.
     icon: /site-assets/logo-twitter.svg
@@ -16,6 +16,7 @@ footer:
     description: Check out our videos.
     icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
     path: /web/shows/
+
 
 
 - linkboxes:
@@ -31,7 +32,7 @@ footer:
     - label: Developer Feedback Program
       path: /web/feedback/
     - label: Progressive Web Apps
-      path: /web/progressive-web-apps/
+      path: https://web.dev/progressive-web-apps/
 
   - name: Training and Partners
     icon_name: school

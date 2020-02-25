@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2019-07-25 #}
+{# wf_updated_on: 2020-02-21 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -14,7 +14,7 @@ description: When the user adds your Progressive Web App to their home screen on
 _This article contains contributions from Jeff Posnick and
 [Peter Kotwicz](https://groups.google.com/a/chromium.org/forum/#!msg/chromium-discuss/NUjaM4QtFrU/gTJ1kSONBAAJ)_.
 
-[Add to Home Screen](/web/fundamentals/app-install-banners/) on Android does
+[Installing a PWA](https://web.dev/progressive-web-apps/) on Android does
 more than just add the Progressive Web App to the user's Home Screen. Chrome
 automatically generates and installs a special APK of your app. We sometimes
 refer to this as a **WebAPK**. Being installed via an APK makes it possible
@@ -23,7 +23,7 @@ to register a set of intent filters.
 
 To
 [generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README),
-Chrome looks at the [web app manifest](/web/fundamentals/web-app-manifest/) and
+Chrome looks at the [web app manifest](https://web.dev/add-manifest/) and
 other metadata. [When an update to the manifest is detected](#update-webapk),
 Chrome will need to generate a new APK.
 
@@ -115,7 +115,7 @@ Let's take a look at a few examples:<br>
 <span class="compare-no"></span> `https://example.com/help/` - not in `/app/`<br>
 <span class="compare-no"></span> `https://example.com/about/` - not in `/app/`
 
-See [`scope`](/web/fundamentals/web-app-manifest/#scope) for more information about
+See [`scope`](https://web.dev/add-manifest/#scope) for more information about
 `scope`, what happens when you don't set it, and how you can use it to define
 the scope of your app.
 

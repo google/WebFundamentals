@@ -26,32 +26,8 @@ redirects:
 - from: /web/fundamentals/media
   to: /web/fundamentals/media/video
 
-- from: /web/updates/2018/05/dpwa
-  to: /web/progressive-web-apps/desktop
-
-- from: /web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android
-  to: /web/fundamentals/web-app-manifest/
-
-- from: /web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
-  to: /web/fundamentals/app-install-banners/
-
-- from: /web/updates/2015/09/using-manifest-to-set-sitewide-theme-color
-  to: /web/fundamentals/web-app-manifest/
-
-- from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
-  to: /web/fundamentals/web-app-manifest/
-
-- from: /web/updates/2015/10/splashscreen
-  to: /web/fundamentals/web-app-manifest/
-
-- from: /web/updates/2015/10/display-mode
-  to: /web/fundamentals/app-install-banners/#detect-mode
-
 - from: /web/updates/2016/02/save-data
   to: /web/fundamentals/performance/optimizing-content-efficiency/save-data
-
-- from: /web/updates/2017/02/improved-add-to-home-screen
-  to: /web/fundamentals/integration/webapks
 
 - from: /web/updates/2017/06/user-centric-performance-metrics
   to: https://web.dev/user-centric-performance-metrics/
@@ -62,11 +38,52 @@ redirects:
 - from: /web/updates/2018/05/first-input-delay
   to: https://web.dev/fid/
 
-- from: /web/g-co/dpwa
-  to: /web/updates/2018/05/dpwa
-
 - from: /web/g-co/twa
   to: /web/updates/2017/10/using-twa
 
 - from: /web/updates/2020/twa-android-browser-helper
   to: /web/updates/2020/01/twa-android-browser-helper
+
+# Progressive Web App Content
+
+- from: /web/progressive-web-apps/checklist
+  to: https://web.dev/pwa-checklist/
+
+- from: /web/progressive-web-apps/...
+  to: https://web.dev/progressive-web-apps/
+
+- from: /web/fundamentals/app-install-banners/
+  to: https://web.dev/customize-install/
+
+- from: /web/fundamentals/app-install-banners/promoting-install-mobile
+  to: https://web.dev/promote-install/
+
+- from: /web/fundamentals/web-app-manifest/...
+  to: https://web.dev/add-manifest/
+
+- from: /web/g-co/dpwa
+  to: https://web.dev/progressive-web-apps/
+
+- from: /web/updates/2018/05/dpwa
+  to: https://web.dev/progressive-web-apps/
+
+- from: /web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android
+  to: https://web.dev/customize-install/
+
+- from: /web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
+  to: https://web.dev/customize-install/
+
+- from: /web/updates/2015/09/using-manifest-to-set-sitewide-theme-color
+  to: https://web.dev/add-manifest/#splash-screen
+
+- from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
+  to: https://web.dev/add-manifest/#splash-screen
+
+- from: /web/updates/2015/10/splashscreen
+  to: https://web.dev/add-manifest/#splash-screen
+
+- from: /web/updates/2015/10/display-mode
+  to: https://web.dev/add-manifest/#display
+
+- from: /web/updates/2017/02/improved-add-to-home-screen
+  to: https://web.dev/customize-install/

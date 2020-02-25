@@ -2,16 +2,18 @@ toc:
 - title: Integration & Engagement
   style: accordion
   section:
-  - title: App Install Prompt
+  - title: Install Prompts
     section:
-    - title: Add to Home Screen (Web)
-      path: /web/fundamentals/app-install-banners/
-    - title: App Install Prompt (Native)
+    - title: PWA Install Prompt
+      status: external
+      path: https://web.dev/customize-install/
+    - title: Native App Install Prompt
       path: /web/fundamentals/app-install-banners/native
-    - title: Patterns for Promoting PWA Installation (mobile)
-      path: /web/fundamentals/app-install-banners/promoting-install-mobile
-    - title: Additional Colors and Icons
-      path: /web/fundamentals/design-and-ux/browser-customization/
+    - title: Patterns for Promoting PWA Installation
+      status: external
+      path: https://web.dev/promote-install/
+    - title: WebAPKs on Android
+      path: /web/fundamentals/integration/webapks
   - include: /web/fundamentals/native-hardware/_toc.yaml
   - title: Search Optimization
     path: /web/fundamentals/discovery/search-optimization/
@@ -26,7 +28,3 @@ toc:
       path: /web/fundamentals/design-and-ux/input/touch/
   - include: /web/fundamentals/payments/_toc.yaml
   - include: /web/fundamentals/push-notifications/_toc.yaml
-  - title: WebAPKs on Android
-    path: /web/fundamentals/integration/webapks
-  - title: Web App Manifest
-    path: /web/fundamentals/web-app-manifest/
