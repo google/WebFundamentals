@@ -16,9 +16,10 @@ description: Copycats rejoice! Async Clipboard API is unblocking copy and paste 
 
 
 Over the past few years, browsers have converged on using
-[`document.execCommand`][document.execCommand] for clipboard interactions. It's great to have a single
-widely-supported way to integrate copy and paste into web apps, but this came at
-a cost: clipboard access is synchronous, and can only read and write to the DOM.
+[`document.execCommand`][document.execCommand] for clipboard interactions. It's
+great to have a single widely-supported way to integrate copy and paste into web
+apps, but this came at a cost: clipboard access is synchronous, and can only
+read and write to the DOM.
 
 Synchronous copy and paste might seem fine for small bits of text, but there are a
 number of cases where blocking the page for clipboard transfer leads to a poor
