@@ -11,7 +11,7 @@ description: A round up of the deprecations and removals in Chrome 81 to help yo
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
 
-# Deprecations and removals in Chrome 80 {: .page-title }
+# Deprecations and removals in Chrome 81 {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
@@ -49,7 +49,7 @@ type filter in the browser:
 [Chromium Bug](https://crbug.com/981907)
 
 
-## Remove the \<discard\> element
+## Remove the <discard\> element
 
 Chrome 81 removes the `<discard>` element. It is only implemented in Chromium,
 and is thus not possible to use interoperably. For most use cases it can be
