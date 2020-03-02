@@ -24,8 +24,6 @@ toc:
   path: /web/tools/workbox/modules/workbox-range-requests
 - title: workbox-routing
   path: /web/tools/workbox/modules/workbox-routing
-- title: workbox-streams
-  path: /web/tools/workbox/modules/workbox-streams
 - title: workbox-strategies
   path: /web/tools/workbox/modules/workbox-strategies
 
