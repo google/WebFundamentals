@@ -1787,6 +1787,18 @@ rsolomakhin:
   twitter: rsolomakhin
   email: rouslan@google.com
 
+annasorokina:
+  name:
+    given: Anna
+    family: Sorokina
+  org:
+    name: Independent
+    unit: Developer
+  country: BY
+  role:
+    - translator
+  email: ann40a@yandex.ru
+
 emilystark:
   name:
     given: Emily
