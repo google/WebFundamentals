@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Explains how to create one application using Trusted Web Activities that supports opening multiple origins in full-screen.
 
 {# wf_published_on: 2020-01-17 #}
-{# wf_updated_on: 2020-01-17 #}
+{# wf_updated_on: 2020-03-03 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -134,7 +134,7 @@ Next, add a new `meta-data` tag inside the existing activity element that refere
 
     <meta-data
         android:name="android.support.customtabs.trusted.ADDITIONAL_TRUSTED_ORIGINS"
-        android:value="@array/additional_trusted_origins" />
+        android:resource="@array/additional_trusted_origins" />
 
 
     ...
@@ -146,8 +146,6 @@ Next, add a new `meta-data` tag inside the existing activity element that refere
 When using custom code to launch a TWA, adding extra origins can be achieved by calling
 `setAdditionalTrustedOrigins` when building the Intent to launch the TWA:
 
-
-com.example.CustomLauncherActivity
 ```java
 public void launcherWithMultipleOrigins(View view) {
   List<String> origins = Arrays.asList(
