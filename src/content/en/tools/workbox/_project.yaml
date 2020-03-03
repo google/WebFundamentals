@@ -15,20 +15,3 @@ social_media:
     width: 1200
     height: 675
 gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq
-announcement:
-  description: |
-    <style>
-      .devsite-banner-announcement {
-        background-color: #e8f0fe;
-        color: #424242;
-      }
-      .devsite-banner-announcement :link,
-      .devsite-banner-announcement :visited {
-        background: #e8f0fe;
-        color: #039BE5;
-      }
-      .devsite-banner-announcement span.material-icons {
-        vertical-align: middle;
-        margin-right: 8px;
-      }
-    </style> Take the <a href="https://qsurvey.mozilla.com/s3/4f853f5f79cc">MDN Browser Compatibility Survey</a> and help us understand your issues, and what we and browser vendors can do to help make your life easier.
