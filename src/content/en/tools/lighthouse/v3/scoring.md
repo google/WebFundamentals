@@ -33,7 +33,7 @@ score usually indicates an error in Lighthouse. If you see a 0 score repeatedly,
 represents the 98th percentile, a top-performing site. A score of 50 represents the 75th 
 percentile.
 
-[bug]: https://github.com/GoogleChrome/lighthouse/issues/new
+[bug]: https://github.com/GoogleChrome/lighthouse/issues/new/choose
 
 ### Which Performance audits contribute to your score {: #perf-audits }
 
