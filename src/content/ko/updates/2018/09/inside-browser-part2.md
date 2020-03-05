@@ -24,10 +24,7 @@ description: Learn how browser handles navigation request.
 
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part2/browserprocesses.png" alt="Browser processes">
-  <figcaption>
-    Figure 1: Browser UI at the top, diagram of the browser process with UI, network, and storage
-    thread inside at the bottom
-  </figcaption>
+  <figcaption>     Figure 1: 위는 브라우저 UI, 아래는 UI에 붙은 브라우저 프로세스, 네트워크, 스토리지 스레드의 도식도</figcaption>
 </figure>
 
 [파트 1: CPU, GPU, Memory, 그리고 멀티 프로세스 아키텍쳐](/web/updates/2018/09/inside-browser-part1)에서 보았듯이 탭 밖에 있는 것들은 모두 브라우저 프로세스가 담당합니다. 브라우저 프로세스는 버튼이나 입력창을 그리는 UI 스레드, 인터넷에서 데이터를 수신하기 위해 통신 스택을 건드리는 네트워크 스레드, 파일 같은 것들에 접근하기 위한 스토리지 스레드등을 가지고 있습니다. 주소창에서 URL을 입력하는 순간 브라우저 프로세스의 UI 스레드가 캐치하죠.
@@ -42,9 +39,7 @@ description: Learn how browser handles navigation request.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/input.png" alt="Handling user input">
-  <figcaption>
-    Figure 1: UI Thread asking if the input is a search query or a URL
-  </figcaption>
+  <figcaption>     Figure 1: 입력이 검색어인가 URL인가 확인하는 UI 스레드.</figcaption>
 </figure>
 
 ### Step 2: 탐색 시작
@@ -53,9 +48,7 @@ description: Learn how browser handles navigation request.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/navstart.png" alt="Navigation start">
-  <figcaption>
-    Figure 2: the UI thread talking to the network thread to navigate to mysite.com
-  </figcaption>
+  <figcaption>     Figure 2: mysite.com 사이트로 이동하기 위해 네트워크 스레드에게 알리는 UI 스레드.</figcaption>
 </figure>
 
 이 시점에서 네트워크 스레드는 HTTP 301 같은 서버의 리다이렉션 헤더를 수신할 수도 있습니다. 그럴 경우 네트워크 스레드는 UI 스레드에게 서버가 리다이렉션을 요청했음을 알리죠. 그러면 새로운 URL 요청을 초기화 합니다.
@@ -64,9 +57,7 @@ description: Learn how browser handles navigation request.
 
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part2/response.png" alt="HTTP response">
-  <figcaption>
-    Figure 3: response header which contains Content-Type and payload which is the actual data
-  </figcaption>
+  <figcaption>     Figure 3: Content-Type을 포함한 응답 헤더와 실질적 데이터인 페이로드</figcaption>
 </figure>
 
 응답 바디 (payload)가 들어오기 시작할 때, 필요하면 네트워크 스레드가 스트림의 처음 몇 바이트를 확인합니다. 응답의 Content-Type 헤더는 데이터 타입이 무엇인지 알려 줍니다만, 빠지거나 틀릴 수 있으므로, [MIME Type 스니핑](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 수행합니다. 이 부분은 [소스 코드](https://cs.chromium.org/chromium/src/net/base/mime_sniffer.cc?sq=package:chromium&dr=CS&l=5)에 코멘트되어 있는 것처럼 "까다로운 작업(tricky business)"입니다. 주석을 조금 더 읽으시면 다른 브라우저들이 content-type과 payload를 어떻게 처리하는 지 알 수 있습니다.
@@ -77,9 +68,7 @@ description: Learn how browser handles navigation request.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/sniff.png" alt="MIME type sniffing">
-  <figcaption>
-    Figure 4: Network thread asking if response data is HTML from a safe site
-  </figcaption>
+  <figcaption>     Figure 4: 응답 데이터가 안전한 사이트에서 전송된 HTML인지 확인하는 네트워크 스레드</figcaption>
 </figure>
 
 이 시점에서 [안전 브라우징](https://safebrowsing.google.com/) 체크도 수행합니다. 만약 도메인과 응답 데이터가 이미 알려진 악성 사이트와 일치 한다면, 네트워크 스레드는 warning 페이지를 보여주어 경고합니다. 추가적으로,  [**C**ross **O**rigin **R**ead **B**locking (**CORB**)](https://www.chromium.org/Home/chromium-security/corb-for-developers) 체크를 하여 반드시 민감한 cross-site 데이터가 렌더러 프로세스에 도달하지 못하게 합니다.
@@ -90,9 +79,7 @@ description: Learn how browser handles navigation request.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/findrenderer.png" alt="Find renderer process">
-  <figcaption>
-    Figure 5: Network thread telling UI thread to find Renderer Process
-  </figcaption>
+  <figcaption>     Figure 5: 렌더러 프로세스를 찾기 위해 UI 스레드에게 알리는 네트워크 스레드</figcaption>
 </figure>
 
 네트워크 요청이 응답을 받는데 수 백 밀리 초 정도 소요될 수 있으므로 이 과정을 빠르게 하는 최적화가 적용됩니다. Step 2에서 UI 스레드가 네트워크 스레드에게 URL 요청을 보내면, 어느 사이트로 가야 할 지 이미 알고 있는 상황이죠. UI 스레드는 네트워크 요청과 병행하여 적극적으로 렌더러 프로세스를 찾거나 시작하려 합니다. 이 경우, 모든 게 계획대로라면, 네트워크 스레드가 데이터를 수신했을 때 렌더러 프로세스는 이미 대기하고 있습니다. 만약 탐색 도중 cross-site로 리다이렉트한다면 준비된 프로세스는 사용되지 않고, 다른 프로세스가 필요할 겁니다.
@@ -105,9 +92,7 @@ description: Learn how browser handles navigation request.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/commit.png" alt="Commit the navigation">
-  <figcaption>
-    Figure 6: IPC between the browser and the renderer processes, requesting to render the page
-  </figcaption>
+  <figcaption>     Figure 6: 페이지 렌더를 요청하는 브라우저 프로세스와 렌더러 프로세스 간의 IPC</figcaption>
 </figure>
 
 ### Extra Step: 초기 로딩 완료
@@ -118,9 +103,7 @@ description: Learn how browser handles navigation request.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/loaded.png" alt="Page finish loading">
-  <figcaption>
-    Figure 7: IPC from the renderer to the browser process to notify the page has "loaded"
-  </figcaption>
+  <figcaption>Figure 7: 렌더러에서 브라우저 프로세스까지 페이지가 "로드"되었음을 알리는 IPC.</figcaption>
 </figure>
 
 ## 다른 사이트 탐색
@@ -133,10 +116,7 @@ description: Learn how browser handles navigation request.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/beforeunload.png" alt="beforeunload event handler">
-  <figcaption>
-    Figure 8: IPC from the browser process to a renderer process telling it that it's about to
-    navigate to a different site
-  </figcaption>
+  <figcaption>     Figure 8: 브라우저 프로세스부터 렌더러 프로세스까지 다른 사이트로 이동하여 탐색한다는 정보를 알리는 IPC.</figcaption>
 </figure>
 
 렌더러 프로세스가 탐색 과정을 초기화 하면 (사용자가 링크를 클릭하거나 클라이언트-사이드 JavaScript가 `window.location = "https://newsite.com"` 코드를 돌리는 등) 렌더러 프로세스는 우선 `beforeunload` 핸드러를 체크합니다. 이후, 브라우저 프로세스가 탐색 초기화하는 프로세스를 동일하게 진행하죠. 유일한 차이점은 렌더러 프로세스가 탐색 요청을 브라우저 프로세스에게 토스(kicked off) 한다는 것입니다.
@@ -145,37 +125,25 @@ description: Learn how browser handles navigation request.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/unload.png" alt="new navigation and unload">
-  <figcaption>
-    Figure 9: 2 IPCs from a browser process to a new renderer process telling to render the page
-    and telling old renderer process to unload
-  </figcaption>
+  <figcaption>     Figure 9: 2 브라우저 프로세스가 새 렌더러 프로세스에게 페이지 렌더링을 요청하고 이전 렌더러 프로세스에게는 페이지를 unload 하도록 요청하는 IPC 도식도</figcaption>
 </figure>
 
-## In case of Service Worker
+## Service Worker의 경우
 
-One recent change to this navigation process is the introduction of
-[service worker](/web/fundamentals/primers/service-workers/). Service worker is a way to write
-network proxy in your application code; allowing web developers to have more control over what to
-cache locally and when to get new data from the network. If service worker is set to load the page
-from the cache, there is no need to request the data from the network.
+탐색 프로세스에 있어 최근 변경점은 [service worker](/web/fundamentals/primers/service-workers/)의 도입입니다. Service Worker는 여러분의 앱 코드에 네트워크 프록시를 작성할 수 있는 수단이죠;웹 개발자로 하여금 로컬에 캐시할 데이터와 네트워크로부터 받아올 데이터를 컨트롤할 권한을 더 가지게 합니다. Service Worker가 페이지를 캐시에서 로드하도록 세팅되면, 네트워크에서 데이터를 받아올 필요가 없어지죠.
 
 기억해야 할 중요한 점은 서비스 워커가 렌더러 프로세스에서 돌아가는 Javascript 코드라는 것입니다. 근데 탐색 요청이 들어오자마자, 사이트에 서비스 워커가 있다는 걸 브라우저가 어떻게 알 수 있을까요?
 
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part2/scope_lookup.png" alt="Service worker scope lookup">
-  <figcaption>
-    Figure 10: the network thread in the browser process looking up service worker scope
-  </figcaption>
+  <figcaption>     Figure 10: 서비스 워커 범위를 검색하는 브라우저 프로세스의 네트워크 스레드.</figcaption>
 </figure>
 
 서비스 워커가 등록되면, 서비스 워커 스코프가 레퍼런스로 취급됩니다 (스코프에 대한 자세한 내용은 [The Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle) 글을 참조하세요). 탐색을 시작할 때, 네트워크 스레드는 등록된 서비스 워커 스코프와 도메인을 비교하여, 동일한 URL에 서비스 워커가 등록되어 있으면, UI 스레드가 해당 서비스 워커 코드를 실행하기 위해 렌더러 프로세스를 찾습니다. 서비스 워커는 데이터를 캐시에서 로드할테니, 네트워크 데이터 요청을 다 날리거나, 새로운 리소스를 요청할 겁니다.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/serviceworker.png" alt="serviceworker navigation">
-  <figcaption>
-    Figure 11: the UI thread in a browser process starting up a renderer process to handle service
-    workers; a worker thread in a renderer process then requests data from the network
-  </figcaption>
+  <figcaption>     Figure 11: 브라우저 프로세스의 UI 스레드가 서비스 워커를 처리하도록 렌더러 프로세스를 시작하는 모습. 렌더러 프로세스의 워커 스레드가 네트워크에 데이터 요청.</figcaption>
 </figure>
 
 ## 선제 탐색(Navigation Preload)
@@ -184,10 +152,7 @@ from the cache, there is no need to request the data from the network.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/navpreload.png" alt="Navigation preload">
-  <figcaption>
-    Figure 12: the UI thread in a browser process starting up a renderer process to handle service
-    worker while kicking off network request in parallel
-  </figcaption>
+  <figcaption>     Figure 12: 브라우저 프로세스의 UI 스레드가 서비스 워커를 처리하도록 렌더러 프로세스를 시작하면서 동시에 네트워크 요청을 병행하는 모습</figcaption>
 </figure>
 
 ## 마무리
