@@ -51,7 +51,7 @@ Amstelvar는 또한 너비(Width)축에 3개의 마스터를 가지고 있습니
 
 Amstelvar의 등록된 축(너비, 무게 및 광학 크기)으로 수천 가지 스타일을 만들 수 있습니다. 이것은 과도하게 많아 보일 수도 있지만, Amstelvar는 라틴어 시스템만 지원한다는 점을 고려하십시오. 전 세계 모든 언어들과 오늘날의 타이포그래피 응용 프로그램의 필요성을 고려한다면 글꼴 내에서 다양한 유형의 스타일을 사용하여 읽기 환경의 품질을 크게 향상시킬 수 있습니다. 또한 디자인에 따라 다르긴 하지만, 성능 저하가 없는 경우 사용자는 원하는 만큼 스타일을 사용할 수 있습니다.
 
-### Italics are slightly different
+### 이탤릭체는 약간 다릅니다
 
 가변 글꼴에서 기울임이 처리되는 방식은 두 가지 접근 방법이 있습니다. Helvetica 또는 Roboto와 같은 서체는 보간이 호환되는 윤곽을 가지므로,  로마체 및 이탤릭체 스타일 사이를 보간할 수 있기 때문에 **기울기(Slant)** 축을 사용하여 로마체에서 이탤릭체로 변환할 수 있습니다.
 
@@ -86,7 +86,7 @@ CSS에서 값을 설정하기 위해, 5개의 등록된 축과 그레이드는 4
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan="2">Axis names and CSS values</th>
+      <th colspan="2">축 이름 및 CSS 값</th>
     </tr>
     <tr>
       <td>두께(Weight)</td>
@@ -171,7 +171,7 @@ CSS에서 값을 설정하기 위해, 5개의 등록된 축과 그레이드는 4
 
 가변 글꼴로 애니메이션 캐릭터를 탐색할 수도 있습니다. 위는 Zycon 서체에서 사용되는 축들의 예입니다. [Axis Praxis의 라이브 애니메이션 예제](https://www.axis-praxis.org/specimens/zycon){: .external}를 참조하십시오
 
-## Variable fonts performance gains
+## 가변 글꼴 성능 향상
 
 OpenType 변수 글꼴을 사용하면 여러 유형의 변형을 하나의 글꼴 파일에 저장할 수 있습니다. [Monotype](https://goo.gl/9gonHT){: .external}은 3개의 너비와 8개의 두께, 이탤릭 및 로마 스타일을 생성하여 총 12개의 스타일을 설정할 수 있는 실험을 실행했습니다. 이 때 단일 가변 글꼴 파일에 48개의 개별 글꼴을 저장하면 **파일 크기가 88%나 감소**했습니다.
 
@@ -179,7 +179,7 @@ OpenType 변수 글꼴을 사용하면 여러 유형의 변형을 하나의 글�
 
 가변 글꼴을 사용하여, 앱 및 웹 사이트 제작자는 네트워크 지연 및 대기시간 없이 각 브랜드를 표현하는 풍부한 타이포그래피 경험을 제공 할 수 있습니다. 그러나 Roboto Regular와 같은 단일 글꼴을 사용하고 있는 경우, 축이 많은 가변 글꼴로 전환하면 글꼴 크기가 크게 증가 할 수 있습니다. 하지만 이는 항상 그렇듯, 사용 사례에 따라 다릅니다.
 
-## Fallbacks and browser support
+## 폴백 및 브라우저 지원
 
 가변 글꼴의 지원은 제한적이지만, Chrome 및 Safari에서 지원하고 있으며 Edge 17 및 Firefox에서도 곧 지원할 예정입니다. 자세한 소식은 [caniuse.com](https://caniuse.com/#search=font-variation-settings){: .external}에서 확인할 수 있습니다.
 
