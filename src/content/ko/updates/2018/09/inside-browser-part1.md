@@ -187,7 +187,7 @@ The same approach is applied to the browser process브라우저 프로세스에�
 
 재밌으셨나요? 궁금한 점이나 이어질 글에 의견이 있으시다면, 아래 코멘트란이나 트위터 [@kosamari](https://twitter.com/kosamari)로 언제든지 연락 주세요.
 
-<a class="button button-primary gc-analytics-event attempt-right" href="/web/updates/2018/09/inside-browser-part2" data-category="InsideBrowser" data-label="Part1 / Next">Next: What happens in navigation</a>
+<a class="button button-primary gc-analytics-event attempt-right" href="/web/updates/2018/09/inside-browser-part2" data-category="InsideBrowser" data-label="Part1 / Next">다음 : 탐색에서 발생하는 사항</a>
 
 <div class="clearfix"></div>
 
