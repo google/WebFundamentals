@@ -186,9 +186,7 @@ DOM, 스타일, 그리고 레이아웃이 있는 상태는 여전히 페이지�
     <video src="/web/updates/images/inside-browser/part3/composit.mp4" autoplay loop muted playsinline controls alt="composit">
     </video>
   </a>
-  <figcaption>
-    Figure 15: Animation of compositing process
-  </figcaption>
+  <figcaption>그림 15 : 합성 프로세스의 애니메이션</figcaption>
 </figure>
 
 컴포지팅은 한 페이지의 부분들을 여러 레이어로 나누고 그 것들을 각각 레스터하며  컴포지터 스레드에서 페이지를 합성하는 기술입니다. 만약 스크롤이 발생하면, 레이어들이 이미 레스터되었기 때문에, 해야 할 것은 새로운 프레임을 합성하는 것입니다. 에니메이션은 레이어들을 움직이는 동일한 방식으로 이뤄지고 새로운 프레임을 합성합니다.
