@@ -2,11 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn how browser handles navigation request.
 
-{# wf_published_on: 2018-09-07 #}
-{# wf_updated_on: 2018-09-21 #}
-{# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
-{# wf_featured_snippet: When you type a URL into the address bar, what happens after? When are security checks done and how does the browser speed up the process? Let's look at the page navigation process in browser! #}
-{# wf_blink_components: N/A #}
+{# wf_published_on: 2018-09-07 #} {# wf_updated_on: 2018-09-21 #} {# wf_featured_image: /web/updates/images/inside-browser/cover.png #} {# wf_featured_snippet: 여러분이 URL을 주소창에 입력할 때 어떤 일이 벌어질까요? 언제 보안 확인이 끝나고 어떻게 브라우저의 실행 속도를 빠르게 할 수 있을까요? 브라우저에서 페이지 탐색이 어떻게 진행되는 지 알아봅시다! #} {# wf_blink_components: N/A #}
 
 <style>
   figcaption {
@@ -38,7 +34,7 @@ description: Learn how browser handles navigation request.
 
 <div class="clearfix"></div>
 
-## A simple navigation
+## 단순한 탐색
 
 ### Step 1: 입력 처리
 
@@ -73,12 +69,7 @@ description: Learn how browser handles navigation request.
   </figcaption>
 </figure>
 
-Once the response body (payload) starts to come in, the network thread looks at the first few bytes
-of the stream if necessary. The response's Content-Type header should say what type of data it is,
-but since it may be missing or wrong,
-[MIME Type sniffing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
-is done here. This is a "tricky business" as commented in [the source code](https://cs.chromium.org/chromium/src/net/base/mime_sniffer.cc?sq=package:chromium&dr=CS&l=5).
-You can read the comment to see how different browsers treat content-type/payload pairs.
+응답 바디 (payload)가 들어오기 시작할 때, 필요하면 네트워크 스레드가 스트림의 처음 몇 바이트를 확인합니다. 응답의 Content-Type 헤더는 데이터 타입이 무엇인지 알려 줍니다만, 빠지거나 틀릴 수 있으므로, [MIME Type 스니핑](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 수행합니다. 이 부분은 [소스 코드](https://cs.chromium.org/chromium/src/net/base/mime_sniffer.cc?sq=package:chromium&dr=CS&l=5)에 코멘트되어 있는 것처럼 "까다로운 작업(tricky business)"입니다. 주석을 조금 더 읽으시면 다른 브라우저들이 content-type과 payload를 어떻게 처리하는 지 알 수 있습니다.
 
 <div class="clearfix"></div>
 
@@ -91,18 +82,11 @@ You can read the comment to see how different browsers treat content-type/payloa
   </figcaption>
 </figure>
 
-This is also where the [SafeBrowsing](https://safebrowsing.google.com/) check happens.
-If the domain and the response data seems to match a known malicious site, then the network thread
-alerts to display a warning page. Additionally,
-[**C**ross **O**rigin **R**ead **B**locking (**CORB**)](https://www.chromium.org/Home/chromium-security/corb-for-developers)
-check happens in order to make sure sensitive cross-site
-data does not make it to the renderer process.
+이 시점에서 [안전 브라우징](https://safebrowsing.google.com/) 체크도 수행합니다. 만약 도메인과 응답 데이터가 이미 알려진 악성 사이트와 일치 한다면, 네트워크 스레드는 warning 페이지를 보여주어 경고합니다. 추가적으로,  [**C**ross **O**rigin **R**ead **B**locking (**CORB**)](https://www.chromium.org/Home/chromium-security/corb-for-developers) 체크를 하여 반드시 민감한 cross-site 데이터가 렌더러 프로세스에 도달하지 못하게 합니다.
 
 ### Step 3: 렌더러 프로세스 찾기
 
-Once all of the checks are done and Network thread is confident that browser should navigate to the
-requested site, the Network thread tells UI thread that the data is ready. UI thread then finds a
-renderer process to carry on rendering of the web page.
+모든 확인 작업이 끝나고 네트워크 스레드가 브라우저가 요청된 사이트로 이동해야 함을 확신하면, 네트워크 스레드는 UI 스레드에게 데이터가 준비되었다고 알려줍니다. 그럼 UI 스레드는 웹 페이지를 렌더링을 담당 할 렌더러 프로세스를 찾죠.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/findrenderer.png" alt="Find renderer process">
@@ -111,21 +95,11 @@ renderer process to carry on rendering of the web page.
   </figcaption>
 </figure>
 
-Since the network request could take several hundred milliseconds to get a response back, an
-optimization to speed up this process is applied. When the UI thread is sending a URL request to
-the network thread at step 2, it already knows which site they are navigating to. The UI thread
-tries to proactively find or start a renderer process in parallel to the network request. This way,
-if all goes as expected, a renderer process is already in standby position when the network thread
-received data. This standby process might not get used if the navigation redirects cross-site, in
-which case a different process might be needed.
+네트워크 요청이 응답을 받는데 수 백 밀리 초 정도 소요될 수 있으므로 이 과정을 빠르게 하는 최적화가 적용됩니다. Step 2에서 UI 스레드가 네트워크 스레드에게 URL 요청을 보내면, 어느 사이트로 가야 할 지 이미 알고 있는 상황이죠. UI 스레드는 네트워크 요청과 병행하여 적극적으로 렌더러 프로세스를 찾거나 시작하려 합니다. 이 경우, 모든 게 계획대로라면, 네트워크 스레드가 데이터를 수신했을 때 렌더러 프로세스는 이미 대기하고 있습니다. 만약 탐색 도중 cross-site로 리다이렉트한다면 준비된 프로세스는 사용되지 않고, 다른 프로세스가 필요할 겁니다.
 
-### Step 4: Commit navigation
+### Step 4: 탐색 수행
 
-Now that the data and the renderer process is ready, an IPC is sent from the browser process to the
-renderer process to commit the navigation. It also passes on the data stream so the renderer
-process can keep receiving HTML data. Once the browser process hears confirmation that the commit
-has happened in the renderer process, the navigation is complete and the document loading phase
-begins.
+이제 데이터와 렌더러 프로세스가 준비 됐으니, 탐색을 커밋하기 위해 브라우저 프로세스에서 렌더러 프로세스로 IPC가 전송됩니다. 또 데이터 스트림을 전달하여 렌더러 프로세스가 HTML 데이터를 계속 받을 수 있게 합니다. 렌더러 프로세스에서 커밋이 확인되면 브라우저 프로세스는 탐색을 완료하고 문서 로딩 단계를 시작합니다.
 
 이 시점에서 주소창이 갱신되고 보안 알리미(security indicator)와 사이트 설정 UI가 새 페이지의 사이트 정보를 반영합니다. 탭의 세션 이력이 갱신되어 뒤로/앞으로 가기 버튼에 방금 방문한 사이트가 추가될 것이구요. 탭/세션 복구 기능을 위해 탭이나 윈도우를 닫을 때, 세션 이력은 디스크에 저장됩니다.
 
@@ -140,8 +114,7 @@ begins.
 
 탐색이 커밋되고 나면, 렌더러 프로세스가 리소스 로딩과 페이지 렌더를 지속합니다. 다음 포스트에서 이 단계에 대해 조금 더 자세히 알아볼 예정입니다. 렌더러 프로세스가 렌더링을 "끝"내면, 브라우저 프로세스에 IPC를 반환합니다(`onload` 이벤트가 페이지의 모든 프레임에서 발생하고 실행까지 완료된 후가 됩니다). 이 시점에서, UI 스레드는 탭의 로딩 스피너를 정지합니다.
 
-I say "finishes", because client side JavaScript could still load
-additional resources and render new views after this point.
+"끝"이라고 말한 이유는, 클라이언트 사이드 자바스크립트는 이 시점 이후에도 계속 추가적인 리소스를 로드하거나 새로운 뷰를 렌더할 수 있기 때문입니다.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/loaded.png" alt="Page finish loading">
@@ -152,19 +125,11 @@ additional resources and render new views after this point.
 
 ## 다른 사이트 탐색
 
-The simple navigation was complete! But what happens if a user puts different URL to address bar
-again? Well, the browser process goes through the same steps to navigate to the different site.
-But before it can do that, it needs to check with the currently rendered site if they care about
-[`beforeunload`](https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload) event.
+단순한 탐색이 완료되었습니다! 근데 사용자가 주소창에 다른 URL을 다시 입력하면 어떻게 될까요? 뭐, 브라우저가 동일한 방법으로 다른 사이트를 탐색하겠죠. 하지만 그 전에, 현재 렌더링된 사이트가 [`beforeunload`](https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload) 이벤트를 처리하는 지 확인할 필요가 있습니다.
 
-`beforeunload` can create "Leave this site?" alert when you try to navigate away or close the tab.
-Everything inside of a tab including your JavaScript code is handled by the renderer process, so
-the browser process has to check with current renderer process when new navigation request comes in.
+`beforeunload` 이벤트는 다른 사이트를 방문하거나 탭을 닫을 때 "이 사이트에서 나가시겠습니까?" 팝업을 띄울 수 있습니다. Javascript 코드를 포함한 탭 안의 모든 것들은 렌더러 프로세스가 처리하므로, 브라우저 프로세스는 새 탐색 요청이 들어올 때 렌더러 프로세스를 체크할 필요가 있습니다.
 
-Caution: Do not add unconditional `beforeunload` handlers. It creates more latency because the
-handler needs to be executed before the navigation can even be started. This event handler should
-be added only when needed, for example if users need to be warned that they might lose data they've
-entered on the page.
+주의: 무조건적으로 `beforeunload` 이벤트 핸들러들을 추가하지 마세요. 탐색을 시작하기도 전에 해당 이벤트에 대한 헨들러를 실행시켜야 하기 때문에 대기 시간이 더 생깁니다. 페이지에 작성한 데이터가 소실될 수 있음을 경고하는 등, 반드시 필요한 경우에만 추가하세요.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/beforeunload.png" alt="beforeunload event handler">
@@ -176,11 +141,7 @@ entered on the page.
 
 렌더러 프로세스가 탐색 과정을 초기화 하면 (사용자가 링크를 클릭하거나 클라이언트-사이드 JavaScript가 `window.location = "https://newsite.com"` 코드를 돌리는 등) 렌더러 프로세스는 우선 `beforeunload` 핸드러를 체크합니다. 이후, 브라우저 프로세스가 탐색 초기화하는 프로세스를 동일하게 진행하죠. 유일한 차이점은 렌더러 프로세스가 탐색 요청을 브라우저 프로세스에게 토스(kicked off) 한다는 것입니다.
 
-When the new navigation is made to a different site than currently rendered one, a separate render
-process is called in to handle the new navigation while current render process is kept around to
-handle events like `unload`. For more, see [an overview of page lifecycle states](/web/updates/2018/07/page-lifecycle-api#overview_of_page_lifecycle_states_and_events)
-and how you can hook into events with
-[the Page Lifecycle API](/web/updates/2018/07/page-lifecycle-api).
+새로운 탐색이 현재 렌더링된 사이트와는 다른 곳으로 새로 탐색하게 된다면, 현재 렌더러 프로세스가 `unload` 같은 이벤트를 처리하는 동안 별개의 렌더러 프로세스가 새 탐색을 처리하기 위해 호출됩니다. 더 자세히는, [페이지 라이프 사이클 현황 개요](/web/updates/2018/07/page-lifecycle-api#overview_of_page_lifecycle_states_and_events)와 어떻게 [ Page Lifecycle API](/web/updates/2018/07/page-lifecycle-api)로 이벤트들을 캐치하는 지 살펴보세요.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/unload.png" alt="new navigation and unload">
@@ -231,17 +192,11 @@ from the cache, there is no need to request the data from the network.
 
 ## 마무리
 
-In this post, we looked at what happens during a navigation and how your web application code such
-as response headers and client-side JavaScript interact with the browser. Knowing the steps browser
-goes through to get data from the network makes it easier to understand why APIs like navigation
-preload were developed. In the next post, we’ll dive into how the browser evaluates our
-HTML/CSS/JavaScript to render pages.
+이번 포스트에서, 탐색 과정에서 일어나는 일들과 응답 헤더와 클라이언트-사이드 Javascript 같은 여러분의 웹 어플리케이션 코드들이 브라우저와 어떻게 상호작용 하는지 알아보았습니다. 브라우저가 네트워크를 통해 데이터를 가져오는 단계를 알아두면 선제 탐색 같은 API들을 왜 개발했는지 이해하기 쉽습니다.  다음 포스트에서는, 브라우저가 페이지를 렌더링하기 위해 HTML/CSS/JavaScript를 어떻게 다루는 지 알아봅시다.
 
 재밌으셨나요? 궁금한 점이나 이어질 글에 의견이 있으시다면, 아래 코멘트란이나 트위터 [@kosamari](https://twitter.com/kosamari)로 언제든지 연락 주세요.
 
-<a class="button button-primary gc-analytics-event attempt-right" href="/web/updates/2018/09/inside-browser-part3" data-category="InsideBrowser" data-label="Part2 / Next">
-Next: Inner workings of a Renderer Process
-</a>
+<a class="button button-primary gc-analytics-event attempt-right" href="/web/updates/2018/09/inside-browser-part3" data-category="InsideBrowser" data-label="Part2 / Next"> 다음: 렌더러 프로세스의 내부 동작 살펴보기</a>
 
 <div class="clearfix"></div>
 
