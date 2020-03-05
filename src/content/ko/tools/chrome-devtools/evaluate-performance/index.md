@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Learn how to evaluate runtime performance in Chrome DevTools.
+description: Chrome 개발자 도구에서 런타임 성능을 평가하는 방법
 
 {# wf_updated_on: 2019-03-29 #} {# wf_published_on: 2017-04-06 #} {# wf_blink_components: Platform>DevTools #}
 
@@ -73,17 +73,11 @@ var feedback = {
 
       <figure>
         <img src="imgs/get-started.png" alt="The demo on the left, and DevTools on the right">
-        <figcaption>
-          <b>Figure 1</b>. The demo on the left, and DevTools on the right
-        </figcaption>
+        <figcaption>       <b>Figure 1</b>. 왼쪽은 데모, 오른쪽은 개발자 도구 화면입니다.</figcaption>
       </figure>
 
 
-      <aside class="note">
-        **Note**: For the rest of the screenshots, DevTools is [undocked to a
-        separate window](/web/tools/chrome-devtools/ui#placement) so that you
-        can see its contents better.
-      </aside>
+      <aside class="note">     **참고**: 스크린샷 개발자 도구는 [별도의 창에 분리 표시]되어(/web/tools/chrome-devtools/ui#placement) 콘텐츠를 명확하게 확인할 수 있습니다.</aside>
     
 
 ### 모바일 CPU 시뮬레이션하기
@@ -100,18 +94,11 @@ var feedback = {
 
       <figure>
         <img src="imgs/throttling.svg" alt="CPU throttling">
-        <figcaption>
-          <b>Figure 2</b>. CPU throttling, outlined in blue
-        </figcaption>
+        <figcaption>       <b>Figure 2</b>. CPU 스로틀 (파란색 테두리 표시)</figcaption>
       </figure>
 
 
-      <aside class="note">
-        **Note**: When testing other pages, if you want to ensure that they
-        work well on low-end mobile devices, set CPU Throttling to **20x
-        slowdown**. This demo doesn't work well with 20x slowdown, so it just
-        uses 2x slowdown for instructional purposes.
-      </aside>
+      <aside class="note">     **참고**: 다른 페이지를 테스트하기 위해 사양이 낮은 모바일 기기에서 테스트하는 경우 CPU 스로틀을 **20x slowdown**으로 설정합니다. 이 데모는 20x slowdown에서 정상적으로 작동하지 않으며, 학습 목적으로 2x slowdown에서 확인할 수 있습니다.</aside>
     
 
 ### 데모 설정하기
@@ -122,13 +109,7 @@ var feedback = {
 
 2. **Optimize**를 누르면 파란 사각형들은 더 빠르고 부드럽게 움직이게 됩니다.
 
-      <aside class="note">
-        **Note**: If you don't see a noticeable difference between the optimized
-        and un-optimized versions, try clicking **Subtract 10** a few times
-        and trying again. If you add too many blue squares, you're just going
-        to max out the CPU and you're not going to see a major difference in the
-        results for the two versions.
-      </aside>
+      <aside class="note">     **참고**: 최적화 및 비 최적화 버전에서 시각적인 차이가 없는 경우 **Subtract 10**를 몇 회 클릭하여 다시 시도합니다. 파란 사각형을 너무 많이 추가하는 경우 CPU를 최대로 사용하여 2개의 버전에서 중요한 차이점을 확인할 수 없을 것입니다.</aside>
     
 
 3. **Optimize**를 누르면 파란 사각형들은 더 빠르고 부드럽게 움직이게 됩니다.
@@ -141,9 +122,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/profiling.png" alt="Profiling the page">
-        <figcaption>
-          **Figure 3**: Profiling the page
-        </figcaption>
+        <figcaption>       **Figure 3**: 페이지 프로파일링</figcaption>
       </figure>
     
 
@@ -153,9 +132,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/results.png" alt="The results of the profile">
-        <figcaption>
-          **Figure 4**: The results of the profile
-        </figcaption>
+        <figcaption>       **Figure 4**: 프로파일 결과</figcaption>
       </figure>
     
 
@@ -173,9 +150,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/fps-chart.svg" alt="The FPS chart">
-        <figcaption>
-          **Figure 5**: The FPS chart, outlined in blue
-        </figcaption>
+        <figcaption>       **Figure 5**: FPS 차트(파란색 테두리 표시)</figcaption>
       </figure>
     
 
@@ -183,9 +158,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/cpu-summary.svg" alt="The CPU chart and Summary tab">
-        <figcaption>
-          **Figure 6**: The CPU chart and Summary tab, outlined in blue
-        </figcaption>
+        <figcaption>       **Figure 6**: CPU 차트 및 Summary 탭(파란색 테두리 표시)</figcaption>
       </figure>
     
 
@@ -193,10 +166,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/screenshot.png" alt="Viewing a screenshot">
-        <figcaption>
-          **Figure 7**: Viewing a screenshot of the page around the 2000ms mark
-          of the recording
-        </figcaption>
+        <figcaption>       **Figure 7**: 2000ms 표시 근처에서 기록된 스크린샷</figcaption>
       </figure>
     
 
@@ -204,9 +174,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/frame.png" alt="Hovering over a frame">
-        <figcaption>
-          **Figure 8**: Hovering over a frame
-        </figcaption>
+        <figcaption>       **Figure 8**: 마우스를 프레임 위로 이동</figcaption>
       </figure>
     
 
@@ -224,9 +192,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/fps-meter.png" alt="The FPS meter">
-        <figcaption>
-          **Figure 9**: The FPS meter
-        </figcaption>
+        <figcaption>       **Figure 9**: FPS Meter</figcaption>
       </figure>
     
 
@@ -240,9 +206,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/summary.svg" alt="The Summary tab">
-        <figcaption>
-          **Figure 10**: The Summary tab, outlined in blue
-        </figcaption>
+        <figcaption>       **Figure 10**: Summary 탭(파란색 테두리 표시)</figcaption>
       </figure>
     
 
@@ -250,9 +214,7 @@ var feedback = {
 
       <figure>
         <img src="imgs/main.svg" alt="The Main section">
-        <figcaption>
-          **Figure 11**: The Main section, outlined in blue
-        </figcaption>
+        <figcaption>       **Figure 11**: Main 섹션(파란색 테두리 표시)</figcaption>
       </figure>
     
 
@@ -260,41 +222,27 @@ var feedback = {
 
       <figure>
         <img src="imgs/zoomed.png" alt="Zoomed in on a single Animation Frame Fired event">
-        <figcaption>
-          **Figure 12**: Zoomed in on a single Animation Frame Fired event
-        </figcaption>
+        <figcaption>       **Figure 12**: 단일 Animation Frame Fired 이벤트 확대 표시</figcaption>
       </figure>
 
 
-      <aside class="note">
-        **Note**: Another way to zoom is to focus the **Main** section by
-        clicking its background or selecting an event, and then press the
-        <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys.
-      </aside>
+      <aside class="note">     **참고**: 확대 표시를 위한 다른 방법은 백그라운드를 클릭하거나 이벤트를 선택하여 **Main** 섹션에 초점을 맞춘 후, <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd> 키를 누릅니다.</aside>
     
 
 4. **Animation Frame Fired** 이벤트 오른쪽 위의 빨간 삼각형에 주의하세요. 빨간 삼각형이 있다는 것은 이 이벤트와 관련해서 문제가 있다는 경고입니다
 
-      <aside class="note">
-        **Note**: The **Animation Frame Fired** event occurs whenever a
-        [`requestAnimationFrame()`][raf] callback is executed.
-      </aside>
+      <aside class="note">     **Note**: [`requestAnimationFrame()`][raf] 콜백이 실행되면 **Animation Frame Fired** 이벤트가 발생합니다.</aside>
     
 
 1. **Animation Frame Fired** 이벤트를 클릭하세요. **Summary** 탭은 이벤트와 관련된 정보를 보여줍니다. **reveal** 링크를 봐 주세요. 링크를 클릭하면 개발자 도구는 **Animation Frame Fired** 이벤트를 발생시킨 이벤트를 하이라이트합니다. 또 **app.js:94** 링크도 봐 주세요. 이 링크를 클릭하면 소스 코드에서 관련된 라인으로 이동하게 됩니다.
 
       <figure>
         <img src="imgs/animation-frame-fired.png" alt="More information about the Animation Frame Fired event">
-        <figcaption>
-          **Figure 13**: More information about the Animation Frame Fired event
-        </figcaption>
+        <figcaption>       **Figure 13**: Animation Frame Fired 이벤트에 대한 상세 정보</figcaption>
       </figure>
 
 
-      <aside class="note">
-        **Note**: After selecting an event, use the arrow keys to select
-        the events next to it.
-      </aside>
+      <aside class="note">     **참고**: 이벤트를 선택한 후, 화살표 키를 사용하여 옆에 있는 이벤트를 선택합니다.</aside>
     
 
 2. **app.update** 이벤트 아래에 여러개의 보라색 이벤트가 있습니다. 만약 폭을 넓혀보면, 각각 빨간 삼각형을 가지고 있다는 것을 알 수 있습니다. 보라색 **Layout** 이벤트 중 하나를 클릭하세요. 개발자 도구는 **Summary** 탭에서 추가 정보를 보여줍니다. 실제로 강제 리플로우(forced reflows)(다른 말로 하면 레이아웃) 관련된 경고가 있습니다.
@@ -303,20 +251,11 @@ var feedback = {
 
       <figure>
         <img src="imgs/forced-layout-src.png" alt="The line of code that caused the forced layout">
-        <figcaption>
-          **Figure 13**: The line of code that caused the forced layout
-        </figcaption>
+        <figcaption>       **Figure 13**: Forced layout을 실행하는 코드</figcaption>
       </figure>
 
 
-      <aside class="note">
-        **Note**: The problem with this code is that, in each animation frame,
-        it changes the style for each square, and then queries the position
-        of each square on the page. Because the styles changed, the browser
-        doesn't know if each square's position changed, so it has to re-layout
-        the square in order to compute its position. See [Avoid forced
-        synchronous layouts][avoid] to learn more.
-      </aside>
+      <aside class="note">     **참고**: 이 코드의 문제점은 각 animation 프,레임에서 사각형의 스타일을 변경하고 페이지의 사각형의 위치를 쿼리합니다. 스타일이 변경되면 브라우저에서 사각형 위치의 변경을 인지하지 못하며, 각 사각형의 위치를 계산하기 위해 강제로 layout을 재조정합니다. 자세한 내용은 [Avoid forced     synchronous layouts][avoid]를 참조해 주십시오.</aside>
     
 
 해야 할 것이 많았습니다. 하지만 이제 런타임 성능 분석을 위한 기본 작업흐름의 기초를 단단히 쌓게 됐습니다. 수고 많았어요.
