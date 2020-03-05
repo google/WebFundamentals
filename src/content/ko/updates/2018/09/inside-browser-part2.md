@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Learn how browser handles navigation request.
+description: 브라우저가 탐색 요청을 처리하는 방법을 학습하십시오.
 
 {# wf_published_on: 2018-09-07 #} {# wf_updated_on: 2018-09-21 #} {# wf_featured_image: /web/updates/images/inside-browser/cover.png #} {# wf_featured_snippet: 여러분이 URL을 주소창에 입력할 때 어떤 일이 벌어질까요? 언제 보안 확인이 끝나고 어떻게 브라우저의 실행 속도를 빠르게 할 수 있을까요? 브라우저에서 페이지 탐색이 어떻게 진행되는 지 알아봅시다! #} {# wf_blink_components: N/A #}
 
