@@ -38,7 +38,7 @@ When using the [llama-pack CLI][5], a project is initialized with the `init` com
 default values from a Web Manifest, provided as a parameter:
 
 ```shell
-llama-pack init --manifest https://my-twa.com/manifest.json
+llama-pack init --manifest https://material.money/manifest.json
 ```
 
 The wizard will use the start_url from the Web Manifest as default and will ask users to confirm
@@ -50,8 +50,8 @@ Progressive Web App.
 #### Modifying an existing project
 
 When llama-pack generates a project, information for that particular project is stored in a file
-called twa-manifest.json. To modify the start url for existing project, developers need to modify
-the file:
+called `twa-manifest.json`, in the project folder. To modify the start url for existing project,
+developers need to modify the file:
 
 ```json
 {
