@@ -1,12 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline.
+description: 브라우저에서 사용자 코드를 하이레벨 아키텍처부터 렌더링 파이프라인 세부 기능에 이르는 기능성 웹사이트로 전환하는 방법
 
-{# wf_published_on: 2018-09-05 #}
-{# wf_updated_on: 2018-09-21 #}
-{# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
-{# wf_featured_snippet: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline. In part 1, we’ll take a look at core computing terminology and Chrome’s multi-process architecture. #}
-{# wf_blink_components: N/A #}
+{# wf_published_on: 2018-09-05 #} {# wf_updated_on: 2018-09-21 #} {# wf_featured_image: /web/updates/images/inside-browser/cover.png #} {# wf_featured_snippet: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline. In part 1, we’ll take a look at core computing terminology and Chrome’s multi-process architecture. #} {# wf_blink_components: N/A #}
 
 <style>
   figcaption {
@@ -35,9 +31,7 @@ Note: CPU/GPU의 구조나 프로세스/스레드에 박식하다면  [브라우
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part1/CPU.png" alt="CPU">
   
-  <figcaption>
-    Figure 1: 4 CPU cores as office workers sitting at each desk handling tasks as they come in
-  </figcaption>
+  <figcaption>     Figure 1: 업무를 수행하는 사무 기기의 핵심인 4개의 CPU 코어</figcaption>
 </figure>
 
 첫번째는 **C**entral **P**rocessing **U**nit - **CPU**입니다. CPU는 컴퓨터의 뇌라고 볼 수 있죠. 이 그림에서 한 명의 회사원으로 그려진 CPU 코어는 매우 다양한 작업들을 들어올 때마다 하나씩 처리할 수 있습니다. 고객이 요청하기만 한다면 수학부터 그림까지 못하는게 없죠. 과거에는 대부분의 CPU가 하나의 칩이였습니다. 이 당시 코어란 같은 칩에 들어 있을 뿐 다른 CPU라 볼 수 있었습니다(역주:이 부분의 뉘앙스가 노스브릿지를 경유하던 시절의 멀티코어 CPU를 의미하는 것인지 모호합니다.). 최근에는 스마트폰이나 노트북에서도 높은 성능을 발휘하는 멀티코어를 흔히 볼 수 있게 되었죠.
@@ -48,9 +42,7 @@ Note: CPU/GPU의 구조나 프로세스/스레드에 박식하다면  [브라우
 
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part1/GPU.png" alt="GPU">
-  <figcaption>
-    Figure 2: Many GPU cores with wrench suggesting they handle a limited task
-  </figcaption>
+  <figcaption>     Figure 2: 제한적인 작업을 처리하는 렌치를 갖춘 여러 대의 GPU 코어</figcaption>
 </figure>
 
 **G**raphics **P**rocessing **U**nit - **GPU** 는 또 하나의 중요한 부분입니다. CPU와는 달리 GPU는 간단한 작업을 수 많은 코어에서 동시에 처리하는데 특화되어 있습니다. 이름에서 알 수 있듯이 원래는 그래픽을 처리하기 위해 개발되었습니다. 컴퓨터 그래픽에서 "GPU 사용" 또는 "GPU 보조"라는 용어가 고속 렌더링과 자연스러운 처리를 의미하는 이유입니다. 최근에는 GPU 가속 연산 덕분에 GPU 혼자서 더 많은 종류의 연산을 처리 가능하도록 발전하고 있습니다.
@@ -61,24 +53,17 @@ Note: CPU/GPU의 구조나 프로세스/스레드에 박식하다면  [브라우
 
 <figure>
   <img src="/web/updates/images/inside-browser/part1/hw-os-app.png" alt="Hardware, OS, Application">
-  <figcaption>
-   Figure 3: Three layers of computer architecture. Machine Hardware at the bottom, Operating
-   System in the middle, and Application on top.
-  </figcaption>
+  <figcaption>    Figure 3: 컴퓨터 아키텍처 3개 레이어. 하단부의 Machine Hardware, 중앙부의 운영 체제, 상단부의 어플리케이션.</figcaption>
 </figure>
 
 ## 프로스세와 스레드에서 프로그램 실행
 
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part1/process-thread.png" alt="process and threads">
-  <figcaption>
-   Figure 4: Process as a bounding box, threads as abstract fish swimming inside of a process
-  </figcaption>
+  <figcaption>    Figure 4: 프로세스 - 테두리 상자, 스레드 - 프로세스 내부의 추상적 물고기 수영 경로</figcaption>
 </figure>
 
-Another concept to grasp before diving into browser architecture is Process and Thread.
-A process can be described as an application’s executing program. A thread is the one that lives
-inside of process and executes any part of its process's program.
+브라우저 아키텍처를 파악하기 전에 프로스세와 스레드 원리를 이해해야 합니다. 프로세스는 어플리케이션의 실행 프로그램이며, 스레드는 프로세스 내부에 있으며 프로세스의 프로그램을 실행하는 주체입니다.
 
 어플리케이션을 시작하면 프로세스가 생성됩니다. 프로그램은 작업을 위해 스레드(들)을 생성할 수도 있습니다. OS는 프로세스에 메모리 한 "조각"을 줘서 어플리케이션의 모든 상태 정보를 고유 메모리 공간에 저장할 수 있게 합니다. 어플리케이션을 종료하면 프로세스도 사라지고 OS가 메모리를 해제합니다.
 
@@ -88,12 +73,8 @@ inside of process and executes any part of its process's program.
   <a href="/web/updates/images/inside-browser/part1/memory.svg">
     <img src="/web/updates/images/inside-browser/part1/memory.png" alt="process and memory">
   </a>
-  <b>
-    <span class="material-icons">play_circle_outline</span>click on the image to see animation
-  </b>
-  <figcaption>
-    Figure 5: Diagram of a process using memory space and storing application data
-  </figcaption>
+  <b><span class="material-icons">play_circle_outline</span> 애니메이션을 보려면 이미지를 클릭하십시오</b>
+  <figcaption>     Figure 5: 메모리 공간을 사용하여 어플리케이션 데이터를 저장하는 프로세스 도식도</figcaption>
 </figure>
 
 프로세스는 다른 프로세스를 돌려서 별도의 작업을 수행하도록 OS에 요청할 수 있습니다. 이렇게 되면 OS는 별도의 메모리 공간을 새 프로세스에 할당하죠. 두 프로세스간 통신이 필요하다면 **I**nter **P**rocess **C**ommunication (**IPC**)을 이용합니다. 많은 어플리케이션들이 이 방식을 채택하고 있어 워커 프로세스가 무응답 상태에 빠지더라도 어플리케이션의 다른 부분을 수행하고 있는 프로세스들을 종료할 필요 없이 해당 프로세스만 재시작할 수 있습니다.
@@ -102,12 +83,8 @@ inside of process and executes any part of its process's program.
   <a href="/web/updates/images/inside-browser/part1/workerprocess.svg">
     <img src="/web/updates/images/inside-browser/part1/workerprocess.png" alt="worker process and IPC">
   </a>
-  <b>
-    <span class="material-icons">play_circle_outline</span>click on the image to see animation
-  </b>
-  <figcaption>
-    Figure 6: Diagram of separate processes communicating over IPC
-  </figcaption>
+  <b><span class="material-icons">play_circle_outline</span> 애니메이션을 보려면 이미지를 클릭하십시오</b>
+  <figcaption>     Figure 6: IPC 상에서 커뮤니케이션을 수행하는 분리된 프로세스 도식도</figcaption>
 </figure>
 
 ## 브라우저 아키텍쳐 {: #browser-architecture }
@@ -116,26 +93,18 @@ inside of process and executes any part of its process's program.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part1/browser-arch.png" alt="browser architecture">
-  <figcaption>
-   Figure 7: Different browser architectures in process/thread diagram
-  </figcaption>
+  <figcaption>    Figure 7: 프로세스/스레드 도식도의 다른 브라우저 아키텍처</figcaption>
 </figure>
 
 여기서 언급할 중요한 점은 이 두가지 아키텍쳐가 세부 구현일 뿐이라는 것입니다. 웹 브라우저가 어떻게 작동해야 한다는 표준은 없습니다. 한 브라우저의 접근 방식이 다른 것들과 완전히 다를 수도 있습니다.
 
 이 블로그 연작에서는 아래 도식도에서 묘사된 크롬의 최근 아키텍쳐를 기반으로 설명할 예정입니다.
 
-At the top is the browser process coordinating with other processes that take care of different
-parts of the application. For the renderer process, multiple processes are created and assigned to
-each tab. Until very recently, Chrome gave each tab a process when it could; now it tries to give
-each site its own process, including iframes (see [Site Isolation](#site-isolation)).
+최상위의 브라우저 프로세스는 어플리케이션의 다른 부분을 담당하는 프로세스들을 조율합니다. 렌더 프로세스는 다수의 프로세스가 생성되어 각 탭마다 할당됩니다. 극히 최근까지 크롬은 가능하면 각 탭마다 별도의 프로세스를 할당하였습니다. 이제는 iframe을 포함하여 각 사이트 별로 프로세스를 가지도록 변경되었습니다([사이트 격리](#site-isolation) 참조).
 
 <figure>
   <img src="/web/updates/images/inside-browser/part1/browser-arch2.png" alt="browser architecture">
-  <figcaption>
-   Figure 8: Diagram of Chrome’s multi-process architecture. Multiple layers are shown under
-   Renderer Process to represent Chrome running multiple Renderer Processes for each tab.
-  </figcaption>
+  <figcaption>    Figure 8: Chrome의 멀티프로세스 아키텍처 도식도. 복수의 계층은 렌더러 프로세스에 표시되며 각 탭의 여러 렌더러 프로세스를 구동하는 Chrome을 대표합니다.</figcaption>
 </figure>
 
 ## 어떤 프로세스가 무엇을 하나요?
@@ -144,38 +113,29 @@ each site its own process, including iframes (see [Site Isolation](#site-isolati
 
 <table class="responsive">
   <tr>
-    <th colspan="2">Process and What it controls</th>
+    <th colspan="2">프로세스 및 제어 방법</th>
   </tr>
   <tr>
-    <td>Browser</td>
-    <td>
-      Controls "chrome" part of the application including address bar, bookmarks, back and
-      forward buttons. <br>Also handles the invisible, privileged parts of a web browser such as
-      network requests and file access.
-    </td>
+    <td>브라우저</td>
+    <td>주소 창, 뒤로 및 앞으로 이동 버튼을 포함한 어플리케이션의 "chrome" 부분을 제어합니다. <br>또한 네트워크 요청 및 파일 액세스와 같은 웹 브라우저의 권한이 부여된 보이지 않는 부분을 제어합니다.</td>
   </tr>
   <tr>
-    <td>Renderer</td>
+    <td>렌더러</td>
     <td>웹사이트가 디스플레이 될 때 탭 안의 모든 것 담당.</td>
   </tr>
   <tr>
-    <td>Plugin</td>
+    <td>플러그인</td>
     <td>플래시와 같은 웹사이트가 사용하는 모든 플러그인 담당.</td>
   </tr>
   <tr>
     <td>GPU</td>
-    <td>
-      Handles GPU tasks in isolation from other processes. It is separated into different process
-      because GPUs handles requests from multiple apps and draw them in the same surface.
-    </td>
+    <td>다른 프로세스와 분리된 GPU 작업을 제어합니다. GPU는 여러 앱의 요청을 제어하고 동일한 표면에 표시하기 때문에 다른 프로세스로 분리됩니다.</td>
   </tr>
 </table>
 
 <figure>
   <img src="/web/updates/images/inside-browser/part1/browserui.png" alt="Chrome processes">
-  <figcaption>
-   Figure 9: Different processes pointing to different parts of browser UI
-  </figcaption>
+  <figcaption>    Figure 9: 브라우저 UI의 다른 부분을 포인트하는 다른 프로세스</figcaption>
 </figure>
 
 확장 프로세스나 유틸리티 프로세스등 몇몇 프로세스가 더 있습니다. 크롬에서 실행중인 프로세스를 보고 싶으시면 우측 상단의 옵션 메뉴 아이콘 <span class="material-icons">more_vert</span> 를 클릭하여 도구 더보기를 선택, 작업 관리자를 선택하세요. 실행 중인 프로세스 목록과 CPU/Memory를 얼마나 사용하고 있는지 보여줍니다.
@@ -188,18 +148,11 @@ each site its own process, including iframes (see [Site Isolation](#site-isolati
   <a href="/web/updates/images/inside-browser/part1/tabs.svg">
     <img src="/web/updates/images/inside-browser/part1/tabs.png" alt="multiple renderer for tabs">
   </a>
-  <b>
-    <span class="material-icons">play_circle_outline</span>click on the image to see animation
-  </b>
-  <figcaption>
-    Figure 10: Diagram showing multiple processes running each tab
-  </figcaption>
+  <b><span class="material-icons">play_circle_outline</span> 애니메이션을 보려면 이미지를 클릭하십시오</b>
+  <figcaption>Figure 10: 개별 탭에서 실행되는 여러 프로세스 도식도</figcaption>
 </figure>
 
-Another benefit of separating the browser's work into multiple processes is security and
-sandboxing. Since operating systems provide a way to restrict processes’ privileges, the browser
-can sandbox certain processes from certain features. For example, the Chrome browser restricts
-arbitrary file access for processes that handle arbitrary user input like the renderer process.
+브라우저 작업을 여러 프로세스로 분리하는 또 다른 이점은 보안 및 샌드 박싱입니다. 운영 체제는 프로세스의 권한을 제한하는 방법을 제공하므로 브라우저는 특정 기능에서 특정 프로세스를 샌드박스 할 수 있습니다. 예를 들어 Chrome 브라우저는 렌더러 프로세스와 같은 임의의 사용자 입력을 처리하는 프로세스에 대한 임의의 파일 액세스를 제한합니다.
 
 프로세스들은 개별 메모리 공간을 소유하므로 공통 인프라스트럭쳐는 보통 복사본을 가지고 있습니다. 동일한 프로세스 내의 스레드처럼 메모리를 공유할 수 없기에 이 말은 즉 메모리 사용량이 더 많아지는 것을 의미하죠. 메모리를 절약하기 위해 크롬은 돌 수 있는 프로세스 개수에 제한을 두었습니다. 제한 개수는 여러분의 장치가 CPU와 메모리를 얼마만큼 지니고 있는지에 따라 변하지만 한계에 다다를 경우 크롬은 한 프로세스에서 동일한 사이트를 오픈하는 여러 탭들을 실행하기 시작합니다.
 
@@ -213,36 +166,17 @@ The same approach is applied to the browser process브라우저 프로세스에�
   <a href="/web/updates/images/inside-browser/part1/servicfication.svg">
     <img src="/web/updates/images/inside-browser/part1/servicfication.png" alt="Chrome servicfication">
   </a>
-  <b>
-    <span class="material-icons">play_circle_outline</span>click on the image to see animation
-  </b>
-  <figcaption>
-   Figure 11: Diagram of Chrome’s servicification moving different services into multiple processes
-   and a single browser process
-  </figcaption>
+  <b><span class="material-icons">play_circle_outline</span> 애니메이션을 보려면 이미지를 클릭하십시오</b>
+  <figcaption>    Figure 11: 크롬이 여러 서비스를 개별 프로세스로 분리하거나 브라우저 프로세스로 통합하는 방식 도식도</figcaption>
 </figure>
 
 ## 프레임별 렌더러 프로세스 - 사이트 격리 {: #site-isolation }
 
-[Site Isolation](/web/updates/2018/07/site-isolation) is a recently
-introduced feature in Chrome that runs a separate renderer process for each cross-site iframe.
-We’ve been talking about one renderer process per tab model which allowed cross-site
-iframes to run in a single renderer process with sharing memory space between different sites.
-Running a.com and b.com in the same renderer process might seem okay.
-The [Same Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
-is the core security model of the web; it makes sure one site cannot access data from other sites
-without consent. Bypassing this policy is a primary goal of security attacks.
-Process isolation is the most effective way to separate sites. With
-[Meltdown and Spectre](/web/updates/2018/02/meltdown-spectre),
-it became even more apparent that we need to separate sites using processes.
-With Site Isolation enabled on desktop by default since Chrome 67,  each cross-site iframe in a tab
-gets a separate renderer process.
+[사이트 격리](/web/updates/2018/07/site-isolation) 는 각 교차 사이트 iframe에 대해 별도의 렌더러 프로세스를 실행하는 Chrome에 최근 도입된 기능입니다. 우리는 다른 사이트 간에 메모리 공간을 공유하면서 크로스 사이트 iframe이 단일 렌더러 프로세스에서 실행될 수 있도록 탭 모델당 하나의 렌더러 프로세스에 대해 설명합니다. 동일한 렌더러 프로세스에서 a.com 및 b.com을 실행하면 문제가 없는 것으로 나타납니다. [동일한 출처 정책](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)은 웹의 핵심 보안 모델입니다. 한 사이트가 동의 없이 다른 사이트의 데이터에 액세스 할 수 없습니다. 이 정책을 바이패스하는 것이 보안 공격의 주 목표입니다. 프로세스 격리는 사이트를 분리하는 가장 효과적인 방법입니다. [Meltdown과 Specter를](/web/updates/2018/02/meltdown-spectre) 사용하면 프로세스를 사용하여 사이트를 분리해야 한다는 것이 더욱 확실해집니다. Chrome 67부터 기본적으로 데스크톱에서 사이트 격리를 사용하도록 설정하면 탭의 각 사이트 간 iframe에 별도의 렌더러 프로세스가 적용됩니다.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part1/isolation.png" alt="site isolation">
-  <figcaption>
-Figure 12: Diagram of site isolation; multiple renderer processes pointing to iframes within a site
-  </figcaption>
+  <figcaption> Figure 12: 사이트 격리 도식도. 한 사이트 내의 iframe을 여러 렌더러 프로세스가 가리키고 있는 모습</figcaption>
 </figure>
 
 사이트 격리를 적용하기 위해 수 년간의 공학적 노력이 필요했습니다. 사이트 격리는 단순히 별개의 렌더러 프로세스를 할당하는 게 아닙니다; 이는 iframe들이 통신하는 방식을 근본부터 변경합니다. 별개의 프로세스들이 iframe들을 실행하는 한 페이지에서 개발자 도구를 실행하는 것만 해도 기존과 차이를 전혀 느끼지 못하도록 개발자 도구가 백단에서 자연스럽게 구현해야 한다는 의미입니다. 그저 Ctrl+F로 페이지에서 단어 하나 찾는 것도 전혀 다른 렌더러 프로세스를 뛰어 넘어야 하는거죠. 브라우저 개발자들이 왜 사이트 격리를 메이저 마일스톤으로 릴리즈한 지 아시겠죠!
