@@ -10,7 +10,7 @@ description: 우리는 가변 글꼴이 무엇이며, 이를 작업에서 어떻
 
 이 기사에서는 가변 글꼴(variable fonts)이 무엇이고 이를 작업에서 어떻게 사용할 수 있는지와 함께 가변 글꼴의 잠재적 가능성을 살펴볼 것입니다. 그러나 가변 글꼴을 제대로 이해하기 위해서는, 우선 현재 웹에서 타이포그래피와 글꼴 로딩이 어떻게 작동하는지에 대해 알아보아야합니다.
 
-## Introduction
+## 소개
 
 글꼴(font)과 서체(typeface)라는 용어는 개발 업계에서 비슷한 의미로 사용됩니다. 하지만 서체는 [Roboto](https://fonts.google.com/specimen/Roboto)와 같은 전체 디자인 모음이 포함되는 반면, 글꼴은 "Roboto Bold"나 "Roboto Italic"처럼 해당 제품군의 디지털 파일 중 하나를 일컫습니다. 다시 말해서, 서체는 당신이 *보는* 것이고, 폰트는 당신이 *사용*하는 것입니다.
 
@@ -202,16 +202,15 @@ OpenType 변수 글꼴을 사용하면 여러 유형의 변형을 하나의 글�
 }
 ```
 
-## Thanks {: .hide-from-toc }
+## 감사인사 {: .hide-from-toc }
 
-This article would have only been made possible with the help of the following
-people:
+이 글은 다음 분들의 도움이 없었으면 불가능했을 것입니다.
 
-- David Berlow, type designer and typographer at[Font Bureau](https://fontbureau.typenetwork.com/){: .external}
-- Laurence Penney, developer of [axis-praxis.org](https://axis-praxis.org){: .external}
+- [Font Bureau](https://fontbureau.typenetwork.com/){: .external}의 디자이너 겸 타이포그래퍼, David Berlow
+- [axis-praxis.org](https://axis-praxis.org){: .external}의 개발자, Laurence Penney
 - [Mandy Michael](https://twitter.com/Mandy_Kerr){: .external}
-- Dave Crossland, Program Manager, Google Fonts
+- 구글 폰트, 프로그램 관리자, Dave Crossland
 
-## Feedback {: #feedback }
+## 피드백 {: #feedback }
 
 {% include "web/_shared/helpful.html" %}
