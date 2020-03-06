@@ -49,7 +49,7 @@ the `files` property of the event object.
 &lt;video id="player" controls>&lt;/video>
 &lt;script>
   var recorder = document.getElementById('recorder');
-  var player = document.getElementById('player')'
+  var player = document.getElementById('player');
 
   recorder.addEventListener('change', function(e) {
     var file = e.target.files[0];
