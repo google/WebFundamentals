@@ -189,7 +189,6 @@ CSP is useful for many things outside of its mixed content uses. Information abo
 
 * [Mozilla's intro to CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy){: .external}
 * [HTML5 Rocks' intro to CSP](//www.html5rocks.com/en/tutorials/security/content-security-policy/){: .external}
-* [CSP playground](http://www.cspplayground.com/){: .external }
 * [CSP spec](//www.w3.org/TR/CSP/){: .external }
 
 Note: Browsers enforce <b>all</b> content security policies that they receive.
