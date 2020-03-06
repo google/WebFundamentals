@@ -59,7 +59,7 @@ intent.putExtra(Intent.EXTRA_REFERRER,
 
 Custom animations will make the transition from your application to the web content smoother. Make
 sure the finish animation is the reverse of the start animation, as it will help the user
-understand she’s returning to the content where the navigation started.
+understand them returning to the content where the navigation started.
 
 ```java
 //Setting custom enter/exit animations
@@ -99,7 +99,7 @@ intentBuilder.setActionButton(icon, shareLabel, pendingIntent);
 
 Remember the user may have more than one browser installed that supports 
 Custom Tabs. If there's more than one browser that supports Custom Tabs and 
-none if them is the preferred browser, ask the user how she wants to open 
+none if them is the preferred browser, ask the user how they want to open 
 the link
 
 ```java
@@ -136,7 +136,7 @@ browser before adding support for Custom Tabs.
 ## Let native applications handle the content
 
 Some URLs can be handled by native applications. If the user has the Twitter app installed and
-clicks on a link to a tweet. She expects that the Twitter application will handle it.
+clicks on a link to a tweet. They expect that the Twitter application will handle it.
 
 Before opening an url from your application, check if a native alternative is available and use it.
 
@@ -145,7 +145,7 @@ Before opening an url from your application, check if a native alternative is av
 Customize with your application's primary color if you want the user to feel that the content is a
 part of your application.
 
-If you want to make it clear for the user that she has left your application, don’t customize the
+If you want to make it clear for the user that they have left your application, don’t customize the
 color at all.
 
 ```java
@@ -229,6 +229,10 @@ click multiple times on the  link.
 
 If it's not possible to avoid the delay, make sure you application is prepared for when a user
 clicks multiple times on the same link and does not open a Custom Tab multiple times.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
 
 [1]: http://developer.android.com/reference/android/app/Activity.html#onStart()
 [2]: http://developer.android.com/reference/android/support/customtabs/CustomTabsClient.html#warmup%28long%29

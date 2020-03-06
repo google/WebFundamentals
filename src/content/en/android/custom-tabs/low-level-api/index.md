@@ -6,7 +6,7 @@ description: Low Level Custom Tabs API
 {# wf_updated_on: 2020-03-06 #}
 {# wf_blink_components: N/A #}
 
-## Custom Tabs Low level API {: .page-title }
+# Custom Tabs Low level API {: .page-title }
 
 Although the recommended method to integrate your application with Custom Tabs is using the Custom
 Tabs Support Library, a low level implementation is also available.
@@ -37,11 +37,11 @@ intent.putExtras(extras);
 ## Adding UI Customizations
 
 UI Customizations are included by adding Extras to the ACTION_VIEW Intent. A full list of the
-extras keys used to customise the UI can be found on the [CustomTabsIntent docs][3]. An example on
+extras keys used to customize the UI can be found on the [CustomTabsIntent docs][3]. An example on
 how to add a custom toolbar color follows:
 
 ```java
-// Extra that changes the background color for the omnibox. colorInt is an int
+// Extra that changes the background color for the address bar. colorInt is an int
 // that specifies a Color.
 
 private static final String EXTRA_CUSTOM_TABS_TOOLBAR_COLOR = "android.support.customtabs.extra.TOOLBAR_COLOR";
@@ -74,6 +74,10 @@ serviceIntent.setPackage(CUSTOM_TAB_PACKAGE_NAME);
 context.bindService(serviceIntent, mServiceConnection,
                     Context.BIND_AUTO_CREATE | Context.BIND_WAIVE_PRIORITY);    
 ```
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}		
 
 [1]: https://github.com/GoogleChrome/custom-tabs-client/tree/master/customtabs
 [2]: http://developer.android.com/guide/components/aidl.html

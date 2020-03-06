@@ -4,6 +4,7 @@ description: Trusted Web Activity
 
 {# wf_published_on: 2020-02-04 #}
 {# wf_updated_on: 2020-03-06 #}
+{# wf_blink_components: N/A #}
 
 # Trusted Web Activity {: .page-title }
 
@@ -67,6 +68,9 @@ Web activities use. While the host app has the final say on what browser gets
 opened, we recommend the same policy as for Custom Tabs: use the user's default
 browser, so long as that browser provides the required capabilities.
 
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
 
 [1]: https://developers.google.com/web/updates/2019/02/using-twa
 [2]: https://developers.google.com/web/updates/2019/08/twas-quickstart

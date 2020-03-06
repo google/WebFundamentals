@@ -33,7 +33,7 @@ content for faster loading.
 
 <img src="https://developer.chrome.com/multidevice/images/customtab/performance.gif">
 
-You can test this now with our [sample][1] on Github. 
+You can test this now with our [sample][1] on GitHub. 
 
 ## When should I use Custom Tabs vs WebView?
 
@@ -51,7 +51,8 @@ that you use Custom Tabs for these reasons:
 	- Bottom toolbar
 - Navigation awareness: the browser delivers a callback to the application upon
 an external navigation.
-- Security: the browser uses Google's Safe Browsing to protect the user and the device from dangerous sites.
+- Security: the browser uses Google's Safe Browsing to protect the user and the device from
+dangerous sites.
 - Performance optimization:
 	- Pre-warming of the Browser in the background, while avoiding stealing
 	resources from the application.
@@ -60,7 +61,7 @@ an external navigation.
 - Lifecycle management: the browser prevents the application from being evicted
 	by the system while on top of it, by raising its importance to the
 	"foreground" level.
-- Shared cookie jar and permissions model so users don't have to log in to sites
+- Shared cookie jar and permissions model so users don't have to sign-in to sites
 	they are already connected to, or re-grant permissions they have already
 	granted.
 - If the user has turned on Data Saver, they will still benefit from it.
@@ -80,7 +81,7 @@ issues on [crbug.com][3] and ask questions to our Twitter account
 [@ChromiumDev][4].
 
 ## Useful Links
-- [Github Demo][5]
+- [GitHub Demo][5]
 - [Chrome Custom Tabs on StackOverflow][6]
 
 ## FAQ
@@ -88,7 +89,11 @@ issues on [crbug.com][3] and ask questions to our Twitter account
 - When will this be available on stable channel?
     - Chrome Custom Tabs are available as of Chrome 45.
 - Where can I ask questions?
-    - Stackoverflow tag: [chrome-custom-tabs][6].
+    - StackOverflow tag: [chrome-custom-tabs][6].
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}		
 
 [1]: https://github.com/GoogleChrome/custom-tabs-client
 [2]: https://play.google.com/store/apps/details?id=com.chrome

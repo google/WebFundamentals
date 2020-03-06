@@ -4,6 +4,7 @@ description: Trusted Web Activity
 
 {# wf_published_on: 2020-02-04 #}
 {# wf_updated_on: 2020-03-06 #}
+{# wf_blink_components: N/A #}
 
 # Trusted Web Activity Integration Guide {: .page-title }
 

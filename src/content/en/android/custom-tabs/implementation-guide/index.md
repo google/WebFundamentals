@@ -52,7 +52,7 @@ One of the most important (and simplest to implement) aspects of Chrome Custom T
 for you to change the color of the address bar to be consistent with your app's theme.
 
 ```java
-// Changes the background color for the omnibox. colorInt is an int
+// Changes the background color for the address bar. colorInt is an int
 // that specifies a <a href="http://developer.android.com/reference/android/graphics/Color.html">Color</a>.
 
 builder.setToolbarColor(colorInt);
@@ -138,7 +138,8 @@ likely set of web pages the user will visit.  Chrome will then be able to perfor
 The process for warming up Chrome is as follows:
 
 - Use [`CustomTabsClient#bindCustomTabsService`][8] to connect to the service.
-- Once the service is connected, call [`CustomTabsClient#warmup`][9] to start Chrome behind the scenes.
+- Once the service is connected, call [`CustomTabsClient#warmup`][9] to start Chrome behind the
+scenes.
 - Call [`CustomTabsClient#newSession`][10] to create a new session. This session is used for all
 requests to the API.
 - Optionally, attach a [`CustomTabsCallback`][11] as a parameter when creating a new session, so
@@ -214,7 +215,7 @@ completed successfully.
 [`void onNavigationEvent(int navigationEvent, Bundle extras)`][19]
 
 Will be called when a navigation event happens in the custom tab. The `navigationEvent int` 
-is one of 6 values that defines the state of the the page is in.  See below for more information.
+is one of 6 values that defines the state of the page is in.  See below for more information.
 
 ```java
 /**
@@ -263,6 +264,10 @@ extras to provide a similar customized interface.
 All versions of Chrome supporting Chrome Custom Tabs expose a service. To check whether Chrome
 supports custom tabs, try to bind to the service. If it succeeds, then custom tabs can safely be
 used. 
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
 
 [1]: https://github.com/GoogleChrome/custom-tabs-client
 [2]: http://developer.android.com/tools/support-library/features.html#custom-tabs
