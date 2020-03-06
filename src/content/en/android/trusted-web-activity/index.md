@@ -14,12 +14,11 @@ description: Trusted Web Activity
   </iframe>
 </div>
 
-**Trusted Web Activities** are a new way to integrate _your_ web-app content
-such as _your_ PWA with _your_ Android app using a protocol based on Custom
+**Trusted Web Activity** is a new way to open _your_ web-app content
+such as _your_ Progressive Web App (PWA) from _your_ Android app using a protocol based on Custom
 Tabs.
 
-Note: Trusted Web Activities are available in [Chrome on Android](https://play.google.com/store/apps/details?id=com.android.chrome),
-version 72 and above.
+Note: Trusted Web Activity is available in [Chrome on Android][6], version 72 and above.
 
 _Looking for the code?_
 
@@ -28,16 +27,16 @@ _Looking for the code?_
 
 <div class="clearfix"></div>
 
-There are a few things that make Trusted Web Activities different from other
-ways to integrate web content with your app:
+There are a few things that make Trusted Web Activity different from other
+ways to open web content from your Android app:
 
 1. Content in a Trusted Web activity is **trusted** -- the app and the site it
    opens are expected to come from the same developer. (This is verified using
    [Digital Asset Links](/digital-asset-links/v1/getting-started).)
-1. Trusted Web activities come from the **web**: they're rendered by the user's
-   browser, in exactly the same way as a user would see it in their browser
-   except they are run fullscreen. Web content should be accessible and useful
-   in the browser first.
+1. The content rendered in a Trusted Web Activity comes from the **web**: they're
+   rendered by the user's browser, in exactly the same way as a user would see
+   it in their browser except they are run fullscreen. Web content should be
+   accessible and useful in the browser first.
 1. Browsers are also updated independent of Android and your app -- Chrome, for
    example, is available back to Android Jelly Bean. That saves on APK size and
    ensures you can use a modern web runtime. (Note that since Lollipop, WebView
@@ -45,10 +44,10 @@ ways to integrate web content with your app:
    number](https://developer.android.com/about/dashboards/index.html) of
    pre-Lollipop Android users.)
 1. The host app doesn't have direct access to web content in a Trusted Web
-   activity or any other kind of web state, like cookies and `localStorage`.
+   Activity or any other kind of web state, like cookies and `localStorage`.
    Nevertheless, you can coordinate with the web content by passing data to and
-   from the page in URLs (e.g. through query parameters, custom HTTP headers,
-   and [intent URIs](https://developer.chrome.com/multidevice/android/intents).)
+   from the page in URLs (e.g. through query parameters and 
+   [intent URIs](https://developer.chrome.com/multidevice/android/intents).)
 1. Transitions between web and native content are between **activities**. Each
    activity (i.e. screen) of your app is either completely provided by the web,
    or by an Android activity
@@ -68,6 +67,14 @@ Web activities use. While the host app has the final say on what browser gets
 opened, we recommend the same policy as for Custom Tabs: use the user's default
 browser, so long as that browser provides the required capabilities.
 
+## Where to go next
+
+If you are looking for quickly building an Android app that just starts and opens your PWA,
+checkout out the [Quick Start Guide][7].
+
+If integrating Trusted Web Activity into an existing Android App, the [Integration Guide][8]
+is a good place to get started.
+
 ## Feedback {: #feedback .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
@@ -77,3 +84,6 @@ browser, so long as that browser provides the required capabilities.
 [3]: https://developers.google.com/web/updates/2020/01/twa-multi-origin
 [4]: https://developers.google.com/web/updates/2020/01/twa-android-browser-helper
 [5]: https://developers.google.com/web/updates/2020/02/twa-lay-of-the-land
+[6]: https://play.google.com/store/apps/details?id=com.android.chrome
+[7]: /web/android/trusted-web-activity/quick-start/
+[8]: /web/android/trusted-web-activity/integration-guide/

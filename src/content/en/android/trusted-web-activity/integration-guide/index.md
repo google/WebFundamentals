@@ -12,7 +12,7 @@ Note: A simpler
 [quick start guide for Trusted Web Activities](/web/updates/2019/08/twas-quickstart)
 is now available.
 
-Setting up a Trusted Web Activity (TWA) doesn’t require developers to author
+Setting up a Trusted Web Activity doesn’t require developers to author
 Java code, but [Android Studio](https://developer.android.com/studio/) is
 required. This guide was created using *Android Studio 3.3*. Check the [docs on
 how to install it](https://developer.android.com/studio/install).
@@ -23,11 +23,11 @@ When using Trusted Web Activities, the project must target API 16 or higher.
 
 Note: This section will guide you on setting up a new project on Android
 Studio. If you are already familiar with the tool feel free to skip to the
-[Getting the TWA Library](#get-support-lib) section.
+[Getting the Trusted Web Activity Library](#get-support-lib) section.
 
 Open Android Studio and click on _Start a new Android Studio project_.
 
-Android Studio will prompt to choose an Activity type. Since TWAs use an
+Android Studio will prompt to choose an Activity type. Since Trusted Web Activities use an
 Activity provided by support library, choose _Add No Activity_ and click
 _Next_.
 
@@ -51,9 +51,9 @@ short description of each field:
 Leave the remaining checkboxes unchecked, as we will not be using Instant Apps
 or AndroidX artifacts, and click _Finish_.
 
-## Get the TWA Support Library {: #get-support-lib }
+## Get the Trusted Web Activity Support Library {: #get-support-lib }
 
-To setup the TWA library in the project you will need to edit the Application
+To setup the Trusted Web Activity library in the project you will need to edit the Application
 build file. Look for the _Gradle Scripts_ section in the _Project Navigator_.
 There are two files called `build.gradle`, which may be a bit confusing and the
 descriptions in parenthesis help identifying the correct one.
@@ -76,21 +76,21 @@ android {
 }
 ```
 
-The next step will add the TWA Support Library to the project. Add a new
+The next step will add the Trusted Web Activity Support Library to the project. Add a new
 dependency to the `dependencies` section:
 
 ```
 dependencies {
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.0.0'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.1.0'
 }
 ```
 
 Android Studio will show prompt asking to synchronize the project once more.
 Click on the _Sync Now_ link and synchronize it.
 
-## Add the TWA Activity {: #add-activity }
+## Launch the Trusted Web Activity {: #add-activity }
 
-Setting up the TWA Activity is achieved by editing the
+Setting up the Trusted Web Activity is achieved by editing the
 [Android App Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro).
 
 On the _Project Navigator_, expand the _app_ section, followed by the
@@ -99,7 +99,7 @@ _manifests_ and double click on `AndroidManifest.xml` to open the file.
 Since we asked Android Studio not to add any Activity to our project when
 creating it, the manifest is empty and contains only the application tag.
 
-Add the TWA Activity by inserting an `activity` tag into the `application` tag:
+Add the Trusted Web Activity by inserting an `activity` tag into the `application` tag:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -117,19 +117,19 @@ Add the TWA Activity by inserting an `activity` tag into the `application` tag:
         <activity
             android:name="com.google.androidbrowserhelper.trusted.LauncherActivity">
 
-           <!-- Edit android:value to change the url opened by the TWA -->
+           <!-- Edit android:value to change the url opened by the Trusted Web Activity -->
            <meta-data
                android:name="android.support.customtabs.trusted.DEFAULT_URL"
                android:value="https://airhorner.com" />
 
-           <!-- This intent-filter adds the TWA to the Android Launcher -->
+           <!-- This intent-filter adds the Trusted Web Activity to the Android Launcher -->
            <intent-filter>
                <action android:name="android.intent.action.MAIN" />
                <category android:name="android.intent.category.LAUNCHER" />
            </intent-filter>
 
            <!--
-             This intent-filter allows the TWA to handle Intents to open
+             This intent-filter allows the Trusted Web Activity to handle Intents to open
              airhorner.com.
            -->
            <intent-filter>
@@ -152,12 +152,12 @@ The tags added to the XML are standard
 There are two relevant pieces of information for the context of Trusted Web
 Activities:
 
-1. The `meta-data` tag tells the TWA Activity which URL it should open. Change
+1. The `meta-data` tag tells the Trusted Web Activity which URL it should open. Change
    the `android:value` attribute with the URL of the PWA you want to open. In
    this example, it is `https://airhorner.com`.
-2. The **second** `intent-filter` tag allows the TWA to intercept Android
+2. The **second** `intent-filter` tag allows the Trusted Web Activity to intercept Android
    Intents that open `https://airhorner.com`. The `android:host` attribute
-   inside the `data` tag must point to the domain being opened by the TWA.
+   inside the `data` tag must point to the domain being opened by the Trusted Web Activity.
 
 Note: When running the project at this stage, the URL Bar from Custom Tabs will
 still show on the top of the screen. **This is not a bug**.
@@ -188,7 +188,7 @@ Digital AssetLinks statement below:
 
 ```xml
 <resources>
-    <string name="app_name">AirHorner TWA</string>
+    <string name="app_name">AirHorner Trusted Web Activity</string>
     <string name="asset_statements">
         [{
             \"relation\": [\"delegate_permission/common.handle_all_urls\"],
@@ -201,7 +201,7 @@ Digital AssetLinks statement below:
 ```
 
 Change the contents for the `site` attribute to match the schema and domain
-opened by the TWA.
+opened by the Trusted Web Activity.
 
 Back in the Android App Manifest file, `AndroidManifest.xml`, link to the
 statement by adding a new `meta-data` tag, but this time as a child of the
@@ -361,7 +361,7 @@ The Splash Screen can be set up by adding a few new image files and configuratio
 project.
 
 Make sure to update to **Chrome 75 or above** and use the
-[latest version of TWA Support Library](https://jitpack.io/#GoogleChrome/custom-tabs-client).
+[latest version of Trusted Web Activity Support Library](https://jitpack.io/#GoogleChrome/custom-tabs-client).
 
 ### Generating the images for the Splash Screen {: #create-images }
 

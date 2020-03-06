@@ -13,7 +13,7 @@ description: Introduces android-browser-helper, a new library to build Trusted W
 {% include "web/_shared/contributors/andreban.html" %}
 
 We have released version [1.0.0][9] of, [android-browser-helper][1], a new Android Library for
-[Trusted Web Activity (TWA)][8] which, besides being built on top of the modern
+[Trusted Web Activity][8] which, besides being built on top of the modern
 [Android JetPack][2] libraries, makes it easier for developers to use Trusted Web Activity to build
 their Android applications.
 
@@ -27,13 +27,14 @@ previous library.
 More features and development experience improvements will be added this library. This is a short
 list of what has already been added:
 
- - Handles opening the content in a browser that supports TWA and, if one is not installed,
-implements a fallback strategy.
+ - Handles opening the content in a browser that supports Trusted Web Activities and, if one is not
+installed, implements a fallback strategy.
  - Makes the fallback strategy customizable, so developers can customize how their application
- behaves when a browser the supports TWA is not installed. The [twa-webview-fallback][3] demo shows
- how to use a fallback strategy that uses the [Android WebView][6], for example.
- - Makes configuring TWAs that work with multiple origins easier, as illustrated on the 
-[twa-multi-domain][4] demo.
+ behaves when a browser the supports Trusted Web Activities is not installed. The
+ [twa-webview-fallback][3] demo shows how to use a fallback strategy that uses the
+ [Android WebView][6], for example.
+ - Makes configuring Trusted Web Actitivities that work with multiple origins easier, as
+ illustrated on the twa-multi-domain][4] demo.
 
 The library can be added to Android application by using the following dependency to the
 appllication `build.gradle`:
@@ -67,7 +68,7 @@ the changes required when migrating an existing project using `custom-tabs-clien
 ## Are we missing anything?
 
 android-browser-helper has the goal of simplifying the development of applications using Trusted
-Web Activities. The library will continue to evolve as TWAs get more features.
+Web Activities. The library will continue to evolve as Trusted Web Activity get more features.
 
 If you are missing a feature in Trusted Web Activities, think of ways that
 android-browser-helper could make make the development work simpler, or have a question on how to

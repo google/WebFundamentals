@@ -13,8 +13,9 @@ description: Explains how to create one application using Trusted Web Activities
 {% include "web/_shared/contributors/andreban.html" %}
 
 
-*If you are new to Trusted Web Activities (TWAs), you may want to read the
-[TWA Quick Start Guide][1] or the [Introduction to TWAs][2] before reading this documentation.*
+*If you are new to Trusted Web Activities, you may want to read the
+[Trusted Web Activity Quick Start Guide][1] or the [Introduction to Trusted Web Activities][2]
+before reading this documentation.*
 ________________
 
 **Trusted Web Activities** are a new way to integrate your web-app content such as your PWA with
@@ -45,9 +46,9 @@ same application, but also because the top bar could make the user think they le
 and abandon the checkout.
 
 
-TWAs allow developers to validate multiple origins, and the user will remain in full-screen when
-navigating across those origins. As with the main domain, the developer must be able to control
-each validated origin.
+Trusted Web Activities allow developers to validate multiple origins, and the user will remain in
+full-screen when navigating across those origins. As with the main domain, the developer must be
+able to control each validated origin.
 
 ## Setting up validation for multiple origins
 As in the main origin, the validation is achieved via Digital Asset Links and each domain to be
@@ -76,8 +77,8 @@ files would contain something similar to the following:
 }]
 ```
 
-Note: An application using TWAs can have any number of validated domains, as long as Digital Asset
-Links are implemented for all of them.
+Note: An application using Trusted Web Activities can have any number of validated domains, as long
+as Digital Asset Links are implemented for all of them.
 
 ### Add multiple origins to the Android Application
 On the Android application, the `asset_statements` declaration needs to be updated to contain all
@@ -143,8 +144,8 @@ Next, add a new `meta-data` tag inside the existing activity element that refere
 ```
 
 ## Using a custom LauncherActivity
-When using custom code to launch a TWA, adding extra origins can be achieved by calling
-`setAdditionalTrustedOrigins` when building the Intent to launch the TWA:
+When using custom code to launch a Trusted Web Activity, adding extra origins can be achieved by
+calling `setAdditionalTrustedOrigins` when building the Intent to launch the Trusted Web Activity:
 
 ```java
 public void launcherWithMultipleOrigins(View view) {
@@ -162,15 +163,16 @@ public void launcherWithMultipleOrigins(View view) {
 ```
 
 ## Conclusion
-With those steps, the TWA is now ready to support multiple origins. android-browser-helper has a
-[sample application][9] for multi origin TWAs. Make sure to check it. 
+With those steps, the Trusted Web Activity is now ready to support multiple origins.
+android-browser-helper has a [sample application][9] for multi origin Trusted Web Activities. Make
+sure to check it. 
 
 ## Troubleshooting
 Setting up Digital Asset Links has a few moving parts. If the application is still showing the
 Custom Tabs bar on the top, it’s likely that something is wrong with the configuration.
 
-The [TWA Quick Start Guide][1] has a great [troubleshooting section][10] on how to debug Digital
-Asset Link issues.
+The [Trusted Web Activity Quick Start Guide][1] has a great [troubleshooting section][10] on how to
+debug Digital Asset Link issues.
 
 There’s also the amazing [Peter’s Asset Link Tool][11], which helps debuggint Digital Asset Links
 on applications installed on the device..

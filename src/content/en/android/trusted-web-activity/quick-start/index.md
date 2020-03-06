@@ -14,16 +14,17 @@ description: A guide to get started building a basic, bare-bones Trusted Web Act
 
 <div class="clearfix"></div>
 
-Trusted Web Activities (TWAs) can be a bit tricky to set up, especially if all you want to do is
+Trusted Web Activities can be a bit tricky to set up, especially if all you want to do is
 display your website.
-This guide will take you through creating a basic TWA, covering all the gotchas.
+This guide will take you through creating a basic project that uses Trusted Web Activities,
+covering all the gotchas.
 
 By the end of this guide, you will:
 
-* Have built a Trusted Web Activity that passes verification.
+* Have built an application that uses Trusted Web Activity and passes verification.
 * Understand when your debug keys and your release keys are used.
-* Be able to determine the signature your TWA is being built with.
-* Know how to create a basic Digital Asset Links file.
+* Be able to determine the signature your Android Application is being built with.
+* Know how to create a basic [Digital Asset Links](/digital-asset-links/v1/getting-started) file.
 
 To follow this guide you'll need:
 
@@ -31,7 +32,7 @@ To follow this guide you'll need:
 * An Android phone or emulator connected and set up for development
 ([Enable USB debugging](https://developer.android.com/studio/debug/dev-options.html#enable) if
 you’re using a physical phone).
-* A browser that supports Trusted Web Activities on your development phone.
+* A browser that supports Trusted Web Activity on your development phone.
   Chrome 72 or later will work. Support in other browsers is on its way.
 * A website you'd like to view in the Trusted Web Activity.
 
@@ -50,8 +51,8 @@ If verification fails, the browser will fall back to displaying your website as 
 
 ## Clone and customize the example repo {: #clone-and-customize-the-example-repo }
 
-The [svgomg-twa](https://github.com/GoogleChromeLabs/svgomg-twa) repo contains an example TWA that
-you can customize to launch your website:
+The [svgomg-twa](https://github.com/GoogleChromeLabs/svgomg-twa) repo contains an example
+Android application that launches a Trusted Web Activity. You can customize to launch your website:
 
 1. Clone the project (`git clone https://github.com/GoogleChromeLabs/svgomg-twa.git`).
 2. Import the Project into Android Studio, using **File** > **New** > **Import Project**, and select
@@ -72,9 +73,9 @@ you can customize to launch your website:
 ## Build and run {: #build-and-run }
 
 In Android Studio hit **Run**, **Run ‘app’** (where ‘app’ is your module name, if you’ve changed it)
-and the TWA will be built and run on your device!
+and the application will be built and run on your device!
 You’ll notice that your website is launched as a Custom Tab, not a Trusted Web Activity, this is
-because we haven’t set up our Digital Asset Links yet, but first...
+because we haven’t set up our Digital Asset Links validation yet, but first...
 
 ### A note on signing keys {: #a-note-on-signing-keys }
 
@@ -90,8 +91,8 @@ use a different signature, one that you’ll have created yourself (and protecte
 That means that if your Digital Asset Links file specifies your *production key*, verification
 will fail when you build with your *debug key*.
 This also can happen the other way around - if the Digital Asset Links file has your *debug key*,
-your TWA will work fine locally, but then when you download the signed version from the Play Store,
-verification will fail.
+your Trusted Web Activity will work fine locally, but then when you download the signed version
+from the Play Store, verification will fail.
 
 You can put both your *debug key* and *production key* in your asset link file
 (see [Adding More Keys](#adding-more-keys) below),
@@ -249,8 +250,8 @@ file (Be wary of confusing your debug and release keys. Look at the
 ### Checking your browser {: #checking-your-browser }
 
 A Trusted Web Activity will try to adhere to the user’s default choice of browser.
-If the user’s default browser supports TWAs, it will be launched.
-Failing that, if any installed browser supports TWAs, it will be chosen.
+If the user’s default browser supports Trusted Web Activities, it will be launched.
+Failing that, if any installed browser supports Trusted Web Activities, it will be chosen.
 Finally, the default behavior is to fall back to a Custom Tabs mode.
 
 This means that if you’re debugging something to do with Trusted Web Activities, you should
