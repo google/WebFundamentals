@@ -1,0 +1,9 @@
+toc:
+- title: Home
+  path: /web/android/custom-tabs/
+- title: Implementation Guide
+  path: /web/android/custom-tabs/implementation-guide
+- title: Best Practices
+  path: /web/android/custom-tabs/best-practices
+- title: Low Level API
+  path: /web/android/custom-tabs/low-level-api

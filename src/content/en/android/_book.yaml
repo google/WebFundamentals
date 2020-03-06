@@ -1,0 +1,56 @@
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - include: /web/_upper_tabs-Tools.yaml  
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml
+  - name: Android
+    heading: Android
+    path: /web/android/
+    lower_tabs:
+      other:
+      - name: Home
+        contents:
+        - title: Home
+          path: /web/android/
+      - name: Trusted Web Activity
+        contents:
+          - include: /web/android/trusted-web-activity/_toc.yaml
+      - name: Custom Tabs
+        contents:
+          - include: /web/android/custom-tabs/_toc.yaml
+
+
+# upper_tabs:
+#   - include: /web/_upper_tabs-Fundamentals.yaml
+#   - name: Tools
+#     heading: Tools
+#     path: /web/tools/
+#     lower_tabs:
+#       other:
+#       - name: Home
+#         contents:
+#         - title: Home
+#           path: /web/tools/
+#         - include: /web/tools/setup/_toc.yaml
+#         - title: Web Starter Kit
+#           path: /web/tools/starter-kit/
+#           status: deprecated
+#       - name: Chrome DevTools
+#         contents:
+#         - include: /web/tools/chrome-devtools/_toc.yaml
+#       - name: Lighthouse
+#         contents:
+#         - include: /web/tools/lighthouse/_toc.yaml
+#       - name: Puppeteer
+#         contents:
+#         - include: /web/tools/puppeteer/_toc.yaml
+#       - name: Workbox
+#         contents:
+#         - title: Workbox
+#           path: /web/tools/workbox/
+#       - name: Chrome User Experience Report
+#         contents:
+#         - include: /web/tools/chrome-user-experience-report/_toc.yaml
+#   - include: /web/_upper_tabs-Updates.yaml
+#   - include: /web/_upper_tabs-Showcase.yaml
+
