@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2020-02-11 #}
+{# wf_updated_on: 2020-03-10 #}
 {# wf_published_on: 2019-02-11 #}
 {# wf_blink_components: N/A #}
 
@@ -16,6 +16,19 @@ Tuesday of January 2020 after the data collection period has ended.
 
 In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow 
 [@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release announcements.
+
+### 202002
+
+<dl>
+	<dt>Publication date</dt>
+	<dd>March 10, 2020</dd>
+	<dt>Notable stats</dt>
+	<dd>
+		<ul>
+			<li>6,366,736 origins</li>
+		</ul>
+	</dd>
+</dl>
 
 ### 202001
 
