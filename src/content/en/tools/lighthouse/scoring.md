@@ -37,7 +37,7 @@ score usually indicates an error in Lighthouse. If you see a 0 score repeatedly,
 [file a bug on the Lighthouse repo][bug]{:.external}. 100 is the best possible score. Typically
 a score above 90 represents the top 5 percent of top-performing pages.
 
-[bug]: https://github.com/GoogleChrome/lighthouse/issues/new
+[bug]: https://github.com/GoogleChrome/lighthouse/issues/new/choose
 
 ### Which Performance audits contribute to your score {: #perf-audits }
 

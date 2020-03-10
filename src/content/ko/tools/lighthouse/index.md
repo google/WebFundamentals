@@ -58,7 +58,7 @@ Lighthouse에 확인할 URL을 지정하고, 페이지에 대한 테스트를 �
   </a>
   <a class="button button-primary gc-analytics-event"
      data-category="ligthhouse" data-action="bug"
-     href="https://github.com/GoogleChrome/lighthouse/issues/new"
+     href="https://github.com/GoogleChrome/lighthouse/issues/new/choose"
      title="File an issue or feature request" target="_blank">
     <span class="material-icons">bug_report</span>
     이슈 찾기
