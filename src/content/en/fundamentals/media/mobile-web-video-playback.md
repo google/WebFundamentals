@@ -140,7 +140,7 @@ visible.
         videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
         videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
       }
-    }
+    });
 
 When the video ends, we simply change button state to "play", set video
 `currentTime` back to 0 and show video controls for now. Note that we could
