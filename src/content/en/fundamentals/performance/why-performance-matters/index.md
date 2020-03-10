@@ -44,11 +44,10 @@ goals:
 
 - [The BBC found they lost an additional 10% of users][BBC] for every additional second
   their site took to load.
-- [DoubleClick by Google found 53% of mobile site visits were abandoned][DoubleClick] if a page
-  took longer than 3 seconds to load.
+- DoubleClick by Google found 53% of mobile site visits were abandoned if a page took
+  longer than 3 seconds to load.
 
 [BBC]: https://www.creativebloq.com/features/how-the-bbc-builds-websites-that-scale
-[DoubleClick]: https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/
 
 In the same DoubleClick by Google study cited above, it
 was found that sites loading within 5 seconds had 70% longer sessions, 35% lower
@@ -80,9 +79,8 @@ $380,000**](http://resources.mobify.com/2016-Q2-mobile-insights-benchmark-report
 Additionally, a 100ms decrease in checkout page load speed amounted to a **1.55%
 increase** in session-based conversion, which in turn yielded an average annual
 revenue increase of **nearly $530,000**.
-- DoubleClick found [publishers whose sites loaded within five seconds earned up
-to **twice as much ad revenue** than sites loading within 19
-seconds](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/).
+- DoubleClick found publishers whose sites loaded within five seconds earned up
+to **twice as much ad revenue** than sites loading within 19 seconds.
 - [When AutoAnything reduced page load time by half, they saw **a boost of 12-13%
 in
 sales**](https://www.digitalcommerce360.com/2010/08/19/web-accelerator-revs-conversion-and-sales-autoanything/).
