@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2019-12-10 #}
+{# wf_updated_on: 2020-03-06 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Preventing Mixed Content {: .page-title }
@@ -189,7 +189,6 @@ CSP is useful for many things outside of its mixed content uses. Information abo
 
 * [Mozilla's intro to CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy){: .external}
 * [HTML5 Rocks' intro to CSP](//www.html5rocks.com/en/tutorials/security/content-security-policy/){: .external}
-* [CSP playground](http://www.cspplayground.com/){: .external }
 * [CSP spec](//www.w3.org/TR/CSP/){: .external }
 
 Note: Browsers enforce <b>all</b> content security policies that they receive.
