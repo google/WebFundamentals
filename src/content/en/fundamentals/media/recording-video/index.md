@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's camera.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2020-03-06 #}
 {# wf_published_on: 2017-09-24 #}
 {# wf_blink_components: Blink>GetUserMedia #}
 
@@ -49,7 +49,7 @@ the `files` property of the event object.
 &lt;video id="player" controls>&lt;/video>
 &lt;script>
   var recorder = document.getElementById('recorder');
-  var player = document.getElementById('player')'
+  var player = document.getElementById('player');
 
   recorder.addEventListener('change', function(e) {
     var file = e.target.files[0];
