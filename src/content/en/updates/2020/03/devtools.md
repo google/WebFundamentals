@@ -39,14 +39,21 @@ DevTools can emulate blurred vision and the following
 * Achromatopsia. The inability to perceive any color except for shades of grey (extremely rare).
 * Achromatomaly. A reduced sensitivity to green, red, and blue light (extremely rare).
 
+The `-anomaly` forms are the (rare) extreme versions of the `-ia` forms. Every person
+with an `-ia` vision deficiency is different and might see things differently (being able
+to perceive more/less of the relevant colors). The DevTools emulations are just a visual
+approximation of how someone might experience one of these vision deficiencies. Although the
+approximation should be good enough for you to identify and resolve issues, there's no way
+to simulate exactly what a given person would experience.
+
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e847a020093fbd3c367eda02a7008feae5e28641 #}
 
 {# Send feedback to [Chromium issue #1003700](https://crbug.com/1003700). #}
 
 ## **Dock to left** from the Command Menu {: #dock-to-left }
 
-Open the [Command Menu](/web/tools/chrome-devtools/command-menu) and run the `Dock to left` command to
-move DevTools to the left of your viewport.
+Open the [Command Menu](/web/tools/chrome-devtools/command-menu) and run the `Dock to left`
+command to move DevTools to the left of your viewport.
 
 ![DevTools docked to the left of the viewport](/web/updates/images/2020/03/dock-to-left.png)
 
@@ -112,8 +119,9 @@ Send feedback to [Chromium issue #1054447](https://crbug.com/1054447).
 
 Android Oreo introduced adaptive icons, which display app icons in a variety
 of shapes across different device models. [Maskable icons](https://web.dev/maskable-icon/)
-are a new icon format that support adaptive icons, which will enable you to ensure that
-your [PWA](https://web.dev/progressive-web-apps) icon looks good on Android Oreo devices.
+are a new icon format that support adaptive icons, which enable you to ensure that
+your [PWA](https://web.dev/progressive-web-apps) icon looks good on devices that support the
+maskable icons standard.
 
 Enable the new **Show only the minimum safe area for maskable icons** checkbox in the
 **Manifest** pane to check that your maskable icon will look good on Android Oreo
