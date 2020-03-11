@@ -17,6 +17,9 @@ redirects:
 - from: /web/updates/2020/02/twa-lay-of-the-land
   to: /web/android/trusted-web-activity/lay-of-the-land/
 
+- from: /web/updates/2020/03/trusted-web-activity-passing-information
+  to: /web/android/trusted-web-activity/query-parameters/
+
 - from: /web/updates/nic
   to: /web/updates/2020/02/nic80
 
