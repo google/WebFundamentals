@@ -3,18 +3,18 @@ book_path: /web/android/_book.yaml
 description: An overview of the libraries and tools for creating Trusted Web Activities.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-03-11 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs {: .page-title }
 
-## What are Chrome Custom Tabs?
+## What are Custom Tabs?
 
 App developers face a choice when a user taps a URL to either launch a
 browser, or build their own in-app browser using WebViews.
 
 Both options present challenges - launching the browser is a heavy context
-switch that isn't customizable, while WebViews don't share state with the
+switch for users that isn't customizable, while WebViews don't share state with the
 browser and add maintenance overhead.
 
 Chrome Custom Tabs give apps more control over their web experience, and make

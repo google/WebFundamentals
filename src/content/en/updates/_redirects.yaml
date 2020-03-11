@@ -2,6 +2,21 @@
 
 redirects:
 
+- from: /web/updates/2019/02/using-twa
+  to: /web/android/trusted-web-activity/
+
+- from: /web/updates/2019/08/twas-quickstart
+  to: /web/android/trusted-web-activity/quick-start/
+
+- from: /web/updates/2020/01/twa-android-browser-helper  
+  to: /web/android/trusted-web-activity/android-browser-helper-migration/
+
+- from: /web/updates/2020/01/twa-multi-origin
+  to: /web/android/trusted-web-activity/multi-origin/
+
+- from: /web/updates/2020/02/twa-lay-of-the-land
+  to: /web/android/trusted-web-activity/lay-of-the-land/
+
 - from: /web/updates/nic
   to: /web/updates/2020/02/nic80
 

@@ -23,8 +23,8 @@ footer:
   - name: Key Topics
     icon_name: star
     contents:
-    - label: Building for Billions
-      path: /web/billions/
+    - label: Web on Android
+      path: /web/android/
     - label: Chrome Extension Docs
       path: https://developers.chrome.com/extensions/api_index
     - label: Site-Kit
