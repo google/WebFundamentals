@@ -48,7 +48,7 @@ to simulate exactly what a given person would experience.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e847a020093fbd3c367eda02a7008feae5e28641 #}
 
-{# Send feedback to [Chromium issue #1003700](https://crbug.com/1003700). #}
+Send feedback to [Chromium issue #1003700](https://crbug.com/1003700).
 
 ## **Dock to left** from the Command Menu {: #dock-to-left }
 
