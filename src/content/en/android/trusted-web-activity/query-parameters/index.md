@@ -28,7 +28,7 @@ Activity.
 
 ### Using Bubblewrap
 
-[Bubblewrap][4] 🦙 is a tool created to helps developers to creating a Project for an
+[Bubblewrap][4] is a tool created to helps developers to creating a Project for an
 Android application that launches an existing PWAs using a Trusted Web
 Activity. It contains both a [library][6] and a [Command Line Interface (CLI)][5].
 

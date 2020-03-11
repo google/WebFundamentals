@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: An overview of the libraries and tools for creating Trusted Web Activities.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-03-11 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -21,16 +21,16 @@ This article hopes to address that.
 If you are new to Trusted Web Activities or just looking for the recommended set of tools you
 should be using today, here’s what you need to be aware of:
 
-* [llama-pack][12]: a NodeJS tool that allows developers to create and build an Android APK that
+* [Bubblewrap][12]: a NodeJS tool that allows developers to create and build an Android APK that
   wraps an existing PWA.
   The generated application is powered by Trusted Web Activities, but this is transparent to the
   developer. No Android development experience is required.
-  Check the [llama-pack documentation][13] to get started.
+  Check the [Bubblewrap documentation][13] to get started.
 * [android-browser-helper][8]: an Android Library that encapsulates the Trusted Web Activities
   protocol.
   Recommended for developers who are familiar with Android development and want to use Trusted Web
   Activities as one of the Activities in their Android App or make customisations that are not
-  supported by llama-pack.
+  supported by Bubblewrap.
   To get started with android-browser-helper, check the [documentation][14] and our [demos][15].
 
 The next section gives a brief summary of all the projects in relation to each other.
@@ -117,7 +117,7 @@ build it and produce a Trusted Web Activity without touching any Java code.
 **svgomg-twa** started out depending on custom-tabs-client, but then moved over to the Android
 Browser Helper (and transitively androidx.browser).
 
-The newest and shiniest tool is [llama-pack][12], a Node.js tool that will take your Web App
+The newest and shiniest tool is [Bubblewrap][12], a Node.js tool that will take your Web App
 Manifest and generate a Trusted Web Activity for you.
 This is the easiest way to create a Trusted Web Activity from an existing PWA and doesn’t require
 any Android development knowledge.
@@ -126,17 +126,17 @@ any Android development knowledge.
 
 We will be deprecating **svgomg-twa** for two reasons:
 
-* **llama-pack** essentially generates a filled out **svgomg-twa** for a developer.
+* **Bubblewrap** essentially generates a filled out **svgomg-twa** for a developer.
   It does this interactively and can take the configuration from a Web App manifest (which a PWA
   will likely already have).
 * If developers want a reference for how to start their own Trusted Web Activity project from
   scratch, they can look at the Android Browser Helpers [demos][15] directory.
 
-New developers should use **llama-pack** to generate their project instead.
+New developers should use **Bubblewrap** to generate their project instead.
 If you’re already using **svgomg-twa** and have made some heavy modifications, you’ll be fine to
 continue doing so, but won’t get updates.
 
-We plan to make **llama-pack** as capable as possible, so if there’s an obvious feature missing or
+We plan to make **Bubblewrap** as capable as possible, so if there’s an obvious feature missing or
 you come across a bug, feel free to [create an issue][16].
 
 ## Feedback {: #feedback .hide-from-toc }
@@ -156,8 +156,8 @@ you come across a bug, feel free to [create an issue][16].
 [9]: https://github.com/GoogleChromeLabs/svgomg-twa
 [10]: https://github.com/GoogleChromeLabs/svgomg-twa/blob/master/app/build.gradle
 [11]: https://developers.google.com/web/updates/2019/08/twas-quickstart
-[12]: https://github.com/GoogleChromeLabs/llama-pack
-[13]: https://github.com/GoogleChromeLabs/llama-pack/blob/master/README.md
+[12]: https://github.com/GoogleChromeLabs/bubblewrap/
+[13]: https://github.com/GoogleChromeLabs/bubblewrap/blob/master/README.md
 [14]: https://developers.google.com/web/updates/2019/02/using-twa
 [15]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos
-[16]: https://github.com/GoogleChromeLabs/llama-pack/issues/new
+[16]: https://github.com/GoogleChromeLabs/bubblewrap/issues/new
