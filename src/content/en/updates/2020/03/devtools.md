@@ -50,6 +50,28 @@ to simulate exactly what a given person would experience.
 
 Send feedback to [Chromium issue #1003700](https://crbug.com/1003700).
 
+## Cross-Origin Opener Policy (COOP) and Cross-Origin Embedder Policy (COEP) debugging {: #COOP-COEP }
+
+[COOP]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.tu4hyy6v12wn
+[COEP]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.uo6kivyh0ge2
+
+The Network panel now provides [Cross-Origin Opener Policy][COOP] and [Cross-Origin Embedder Policy][COEP]
+debugging information.
+
+The **Status** column now provides a quick explanation of why a request was blocked as well as a
+link to view that request's headers for further debugging:
+
+![Blocked requests in the Status column](/web/updates/images/2020/03/status.png)
+
+The **Response Headers** section of the **Headers** tab provides more guidance on how to resolve
+the issues:
+
+![More guidance in the Response Headers section](/web/updates/images/2020/03/guidance.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2afe0b0d0b307a2bc2c1a8e9ed5c97f1b89569c #}
+
+Send feedback to [Chromium issue #1051466](https://crbug.com/1051466).
+
 ## **Dock to left** from the Command Menu {: #dock-to-left }
 
 Open the [Command Menu](/web/tools/chrome-devtools/command-menu) and run the `Dock to left`
@@ -64,18 +86,6 @@ The new feature in Chrome 82 is that you can now access this feature from the Co
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7ff2e8eda31b86a8e249983f182e20e65c303556 #}
 
 Send feedback to [Chromium issue #1011679](https://crbug.com/1011679).
-
-<!--
-
-## COEP {: #COEP }
-
-{# Not sure if COEP is launching behind a flag in Chrome 82. We usually don't cover web platform or DevTools experiments. #}
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2afe0b0d0b307a2bc2c1a8e9ed5c97f1b89569c #}
-
-Send feedback to [Chromium issue #1051466](https://crbug.com/1051466).
-
--->
 
 ## The **Audits** panel is now the **Lighthouse** panel {: #lighthouse }
 
