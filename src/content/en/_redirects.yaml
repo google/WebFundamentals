@@ -17,6 +17,9 @@ redirects:
 - from: /web/update
   to: /web/updates/
 
+- from: /web/android
+  to: /web/android/
+
 - from: /web/starter-kit/...
   to: /web/tools/starter-kit/...
 
