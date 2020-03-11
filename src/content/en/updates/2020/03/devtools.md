@@ -1,23 +1,23 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more.
 
 {# wf_updated_on: 2020-03-10 #}
-{# wf_published_on: 2020-03-09 #}
-{# wf_tags: chrome81, devtools, devtools-whatsnew #}
+{# wf_published_on: 2020-03-10 #}
+{# wf_tags: chrome82, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 82) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-## Emulate color vision deficiencies {: #color-vision-deficiencies }
+## Emulate vision deficiencies {: #vision-deficiencies }
 
 Open the [Rendering tab](/web/tools/chrome-devtools/evaluate-performance/reference#rendering)
 and use the new **Emulate vision deficiencies** feature to get a better idea of how people with
-different types of color vision deficiencies experience your site.
+different types of vision deficiencies experience your site.
 
 <figure>
   <img src="/web/updates/images/2020/03/vision.png"
@@ -27,10 +27,9 @@ different types of color vision deficiencies experience your site.
   </figcaption>
 </figure>
 
-DevTools can emulate the following
-[types of color vision deficiency](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/):
+DevTools can emulate blurred vision and the following
+[types of color vision deficiencies](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/):
 
-* Blurred vision
 * Protanopia
 * Protanomaly
 * Deuteranopia
@@ -42,7 +41,7 @@ DevTools can emulate the following
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e847a020093fbd3c367eda02a7008feae5e28641 #}
 
-Send feedback to [Chromium issue #1003700](https://crbug.com/1003700).
+{# Send feedback to [Chromium issue #1003700](https://crbug.com/1003700). #}
 
 ## **Dock to left** in the Command Menu {: #dock-to-left }
 
@@ -59,6 +58,8 @@ The new feature in Chrome 82 is that you can now access this feature from the Co
 
 Send feedback to [Chromium issue #1011679](https://crbug.com/1011679).
 
+<!--
+
 ## COEP {: #COEP }
 
 {# Not sure if COEP is launching behind a flag in Chrome 82. We usually don't cover web platform or DevTools experiments. #}
@@ -66,6 +67,8 @@ Send feedback to [Chromium issue #1011679](https://crbug.com/1011679).
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2afe0b0d0b307a2bc2c1a8e9ed5c97f1b89569c #}
 
 Send feedback to [Chromium issue #1051466](https://crbug.com/1051466).
+
+-->
 
 ## Lighthouse updates {: #lighthouse }
 
@@ -110,6 +113,15 @@ Local Overrides in that folder.
 Send feedback to [Chromium issue #1016501](https://crbug.com/1016501).
 
 ## Updated Long tasks UI {: #long-tasks }
+
+A [Long Task](https://web.dev/long-tasks-devtools/#what-are-long-tasks) is JavaScript code that
+monopolizes the main thread for a long time, causing a web page to freeze.
+
+You've been able to [visualize Long Tasks in the Performance panel](https://web.dev/long-tasks-devtools/#are-there-long-tasks-in-my-page-that-could-delay-interactivity)
+for a while now, but in Chrome 82 the Long Task visualization UI in the Performance panel has been updated.
+The Long Task portion of a task is now colored with a striped red background.
+
+![The new Long Task UI](/web/updates/images/2020/03/long-task.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e19afdbb2fb24f4123dc7b8b62f38d359ff2d916 #}
 
