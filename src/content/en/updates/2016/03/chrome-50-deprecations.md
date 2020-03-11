@@ -184,7 +184,7 @@ with the attributes `position` and `totalSize`.
 
 This event existed to support the Gecko compatibility properties `position` and
 `totalSize`. Support for all three was dropped in Mozilla 22 and the
-functionality has long been superceded by the
+functionality has long been superseded by the
 [`ProgressEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent).
 
 
