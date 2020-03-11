@@ -1,9 +1,9 @@
-project_path: /web/_project.yaml
-book_path: /web/updates/_book.yaml
+project_path: /web/android/_project.yaml
+book_path: /web/android/_book.yaml
 description: An overview of the libraries and tools for creating Trusted Web Activities.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-02-04 #}
+{# wf_updated_on: 2020-03-06 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -23,13 +23,14 @@ should be using today, here’s what you need to be aware of:
 
 * [llama-pack][12]: a NodeJS tool that allows developers to create and build an Android APK that
   wraps an existing PWA.
-  The generated application is powered by TWAs, but this is transparent to the developer.
-  No Android development experience is required.
+  The generated application is powered by Trusted Web Activities, but this is transparent to the
+  developer. No Android development experience is required.
   Check the [llama-pack documentation][13] to get started.
-* [android-browser-helper][8]: an Android Library that encapsulates the TWA protocol.
-  Recommended for developers who are familiar with Android development and want to use TWAs as one
-  of the Activities in their Android App or make customisations that are not supported by
-  llama-pack.
+* [android-browser-helper][8]: an Android Library that encapsulates the Trusted Web Activities
+  protocol.
+  Recommended for developers who are familiar with Android development and want to use Trusted Web
+  Activities as one of the Activities in their Android App or make customisations that are not
+  supported by llama-pack.
   To get started with android-browser-helper, check the [documentation][14] and our [demos][15].
 
 The next section gives a brief summary of all the projects in relation to each other.
@@ -104,7 +105,7 @@ We took this opportunity to generally separate the roles of these two libraries:
 ### Bootstrapping {: #bootstrapping }
 
 Developers are busy people, with a lot of work to do and deadlines to match.
-To help with this, we created two tools to let user’s bootstrap their TWA.
+To help with this, we created two tools to let user’s bootstrap their Trusted Web Activity.
 
 The first (and oldest) is [svgomg-twa][9], which is a GitHub hosted Android Project that launches a
 Trusted Web Activity.

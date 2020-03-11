@@ -1,0 +1,17 @@
+toc:
+- title: Home
+  path: /web/android/trusted-web-activity/
+- title: Quick Start Guide
+  path: /web/android/trusted-web-activity/quick-start/
+- title: Integration Guide
+  path: /web/android/trusted-web-activity/integration-guide/
+- title: How-To's
+  section:
+  - title: Multi Origin Trusted Web Activiy
+    path: /web/android/trusted-web-activity/multi-origin/
+  - title: Adding query parameters at launch
+    path: /web/android/trusted-web-activity/query-parameters/
+  - title: Migrating from custom-tabs-client to android-browser-helper
+    path: /web/android/trusted-web-activity/android-browser-helper-migration/
+- title: Map of Trusted Web Activity libraries and tools
+  path: /web/android/trusted-web-activity/lay-of-the-land/

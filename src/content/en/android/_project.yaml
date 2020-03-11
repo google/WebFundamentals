@@ -1,0 +1,18 @@
+parent_project_metadata_path: /web/_project.yaml
+name: Web On Android
+description: Libraries and APIs to render web content on Android Apps
+home_url: /web/android/
+buganizer_id: 180451
+color: google-blue
+content_license: cc-apache
+footer_path: /web/_footer.yaml
+google_analytics_ids:
+  - UA-52746336-1
+icon:
+  path: /web/images/web-fundamentals-icon192x192.png
+social_media:
+  image:
+    path: /web/images/social-webfu-16x9.png
+    width: 1200
+    height: 675
+gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq

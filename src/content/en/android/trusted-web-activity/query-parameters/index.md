@@ -1,9 +1,9 @@
-project_path: /web/_project.yaml
-book_path: /web/updates/_book.yaml
+project_path: /web/android/_project.yaml
+book_path: /web/android/_book.yaml
 description: How to pass information from the native shell into the web application when launching a Trusted Web Activity.
 
 {# wf_published_on: 2020-01-17 #}
-{# wf_updated_on: 2020-03-05 #}
+{# wf_updated_on: 2020-03-06 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
