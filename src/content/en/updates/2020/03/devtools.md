@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more.
 
-{# wf_updated_on: 2020-03-10 #}
+{# wf_updated_on: 2020-03-11 #}
 {# wf_published_on: 2020-03-10 #}
 {# wf_tags: chrome82, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -43,7 +43,7 @@ DevTools can emulate blurred vision and the following
 
 {# Send feedback to [Chromium issue #1003700](https://crbug.com/1003700). #}
 
-## **Dock to left** in the Command Menu {: #dock-to-left }
+## **Dock to left** from the Command Menu {: #dock-to-left }
 
 Open the [Command Menu](/web/tools/chrome-devtools/command-menu) and run the `Dock to left` command to
 move DevTools to the left of your viewport.
@@ -70,9 +70,7 @@ Send feedback to [Chromium issue #1051466](https://crbug.com/1051466).
 
 -->
 
-## Lighthouse updates {: #lighthouse }
-
-### The **Audits** panel is now the **Lighthouse** panel {: #audits }
+## The **Audits** panel is now the **Lighthouse** panel {: #lighthouse }
 
 The DevTools and Lighthouse teams frequently got feedback from web developers that they
 would hear that it's possible to run [Lighthouse](/web/tools/lighthouse) from DevTools, but when
@@ -82,23 +80,6 @@ they went to try it out they couldn't find the "Lighthouse" panel, so the **Audi
 ![The Lighthouse panel](/web/updates/images/2020/03/lighthouse.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2ae53ef04d84c4201836eb63238e97bc180ea54d #}
-
-<!--
-
-### New audits {: #new-audits }
-
-New audits:
-
-* [CLS](https://github.com/GoogleChrome/lighthouse/commit/a8a0f8fd369faaa23b97d8803bfc220db31e4769#diff-eb7e207cabf22c8000b5abe8f18c6daf)
-* [Legacy JS](https://github.com/GoogleChrome/lighthouse/pull/10303)
-* [Maskable icon](https://github.com/GoogleChrome/lighthouse/pull/10370)
-* [Duplicate JS](https://github.com/GoogleChrome/lighthouse/commit/ea9d226606c5b534d4259253baac5f709a9e3d7c#diff-eb7e207cabf22c8000b5abe8f18c6daf)
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/933525c2bdcf22d49b5688c04cad7bc30c476b3d #}
-
-Send feedback to [Chromium issue #772558](https://crbug.com/772558).
-
--->
 
 ## Delete all Local Overrides in a folder {: #overrides }
 
