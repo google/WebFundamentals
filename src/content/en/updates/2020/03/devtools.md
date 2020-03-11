@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2020-03-09 #}
+{# wf_updated_on: 2020-03-10 #}
 {# wf_published_on: 2020-03-09 #}
 {# wf_tags: chrome81, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -13,19 +13,47 @@ description: TODO
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-## Emulate vision deficiencies 
+## Emulate color vision deficiencies {: #color-vision-deficiencies }
+
+Open the [Rendering tab](/web/tools/chrome-devtools/evaluate-performance/reference#rendering)
+and use the new **Emulate vision deficiencies** feature to get a better idea of how people with
+different types of color vision deficiencies experience your site.
+
+<figure>
+  <img src="/web/updates/images/2020/03/vision.png"
+       alt="Emulating blurred vision."/>
+  <figcaption>
+    Emulating blurred vision.
+  </figcaption>
+</figure>
+
+DevTools can emulate the following
+[types of color vision deficiency](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/):
+
+* Blurred vision
+* Protanopia
+* Protanomaly
+* Deuteranopia
+* Deuteranomaly
+* Tritanopia
+* Tritanomaly
+* Achromatopsia
+* Achromatomaly
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e847a020093fbd3c367eda02a7008feae5e28641 #}
 
 Send feedback to [Chromium issue #1003700](https://crbug.com/1003700).
 
-## Clear filters button in Network panel {: #TODO }
+## **Dock to left** in the Command Menu {: #dock-to-left }
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2604c1917006056e82007ef892e6223218cbc346 #}
+Open the [Command Menu](/web/tools/chrome-devtools/command-menu) and run the `Dock to left` command to
+move DevTools to the left of your viewport.
 
-Send feedback to [Chromium issue #1056666](https://crbug.com/1056666).
+![DevTools docked to the left of the viewport](/web/updates/images/2020/03/dock-to-left.png)
 
-## Dock-to-left in the Command Menu {: #dock-to-left }
+Note: DevTools has had the **Dock to left** feature for a long time but it was previously only
+accessible from the [**Main Menu**](/web/tools/chrome-devtools/customize/placement#menu).
+The new feature in Chrome 82 is that you can now access this feature from the Command Menu.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7ff2e8eda31b86a8e249983f182e20e65c303556 #}
 
@@ -39,7 +67,22 @@ Send feedback to [Chromium issue #1011679](https://crbug.com/1011679).
 
 Send feedback to [Chromium issue #1051466](https://crbug.com/1051466).
 
-## Lighthouse 5.7.1 {: #lighthouse }
+## Lighthouse updates {: #lighthouse }
+
+### The **Audits** panel is now the **Lighthouse** panel {: #audits }
+
+The DevTools and Lighthouse teams frequently got feedback from web developers that they
+would hear that it's possible to run [Lighthouse](/web/tools/lighthouse) from DevTools, but when
+they went to try it out they couldn't find the "Lighthouse" panel, so the **Audits** panel is now the
+**Lighthouse** panel.
+
+![The Lighthouse panel](/web/updates/images/2020/03/lighthouse.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2ae53ef04d84c4201836eb63238e97bc180ea54d #}
+
+<!--
+
+### New audits {: #new-audits }
 
 New audits:
 
@@ -52,11 +95,15 @@ New audits:
 
 Send feedback to [Chromium issue #772558](https://crbug.com/772558).
 
-## Audits panel renamed to Lighthouse {: #lighthouse }
+-->
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/2ae53ef04d84c4201836eb63238e97bc180ea54d #}
+## Delete all Local Overrides in a folder {: #overrides }
 
-## Clear all Local Overrides in a folder {: #TODO }
+After setting up [Local Overrides](/web/updates/2018/01/devtools#overrides) you can now
+right-click a folder and select the new **Delete all overrides** option to delete all
+Local Overrides in that folder.
+
+![Delete all overrides](/web/updates/images/2020/03/overrides.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0fc949c8b168dea42d12432f4591ee4c5dabb9a5 #}
 
@@ -67,12 +114,6 @@ Send feedback to [Chromium issue #1016501](https://crbug.com/1016501).
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e19afdbb2fb24f4123dc7b8b62f38d359ff2d916 #}
 
 Send feedback to [Chromium issue #1054447](https://crbug.com/1054447).
-
-## `$$` now returns elements across shadow DOM boundaries {: #querySelectorAll }
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a848518f85a1e81c17a3a15b5579c950852d82a3 #}
-
-Send feedback to [Chromium issue #1044632](https://crbug.com/1044632).
 
 <<../../_shared/devtools-feedback.md>>
 
