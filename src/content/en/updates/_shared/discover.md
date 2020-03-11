@@ -2,6 +2,15 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 82 {: #discover82 .hide-from-toc }
+
+* [Emulate vision deficiencies](/web/updates/2020/03/devtools#vision-deficiencies)
+* [Dock to left from the Command Menu](/web/updates/2020/03/devtools#dock-to-left)
+* [The Audits panel is now the Lighthouse panel](/web/updates/2020/03/devtools#lighthouse)
+* [Delete all Local Overrides in a folder](/web/updates/2020/03/devtools#overrides)
+* [Updated Long Tasks UI](/web/updates/2020/03/devtools#long-tasks)
+* [Maskable icon support in the Manifest pane](/web/updates/2020/03/devtools#maskable-icons)
+
 ### Chrome 81 {: #discover81 .hide-from-toc }
 
 * [Moto G4 support in Device Mode](/web/updates/2020/01/devtools#motog4)
