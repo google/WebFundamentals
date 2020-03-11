@@ -127,6 +127,23 @@ The Long Task portion of a task is now colored with a striped red background.
 
 Send feedback to [Chromium issue #1054447](https://crbug.com/1054447).
 
+## Maskable icon support in the Manifest pane {: #maskable-icons }
+
+Android Oreo introduced adaptive icons, which display app icons in a variety
+of shapes across different device models. [Maskable icons](https://web.dev/maskable-icon/)
+are a new icon format that support adaptive icons, which will enable you to ensure that
+your [PWA](https://web.dev/progressive-web-apps) icon looks good on Android Oreo devices.
+
+Enable the new **Show only the minimum safe area for maskable icons** checkbox in the
+**Manifest** pane to check that your maskable icon will look good on Android Oreo
+devices. Check out [Are my current icons ready?](https://web.dev/maskable-icon/#are-my-current-icons-ready)
+to learn more.
+
+![The "Show only the minimum safe area for maskable icons" checkbox](/web/updates/images/2020/03/maskable-icons.png)
+
+Note: This feature launched in Chrome 81. We're covering it here in Chrome 82 because we forgot to cover it
+in What's New In DevTools (Chrome 81).
+
 <<../../_shared/devtools-feedback.md>>
 
 <<../../_shared/canary.md>>
