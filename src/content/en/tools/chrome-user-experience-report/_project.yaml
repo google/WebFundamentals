@@ -1,0 +1,9 @@
+name: Chrome UX Report
+full_name: Chrome User Experience Report
+home_url: /web/tools/chrome-user-experience-report/
+description: The Chrome User Experience Report provides user experience metrics for how real-world Chrome users experience popular destinations on the web.
+buganizer_id: 844265
+feedback:
+  product_id: 5166371
+  bucket: CrUX Docs
+  context: DevSite feedback link
