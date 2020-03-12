@@ -1,0 +1,13 @@
+name: Chrome UX Report
+home_url: /web/tools/chrome-user-experience-report/
+description: The Chrome User Experience Report provides user experience metrics for how real-world Chrome users experience popular destinations on the web.
+color: google-blue
+content_license: cc-apache
+buganizer_id: 844265
+icon:
+  path: /web/tools/chrome-user-experience-report/images/logo.png
+footer_path: /web/tools/chrome-user-experience-report/_footer.yaml
+google_analytics_ids:
+  - UA-52746336-1
+feedback:
+  product_id: 5166371
