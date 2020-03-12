@@ -13,6 +13,12 @@ description: Moto G4 in Device Mode, new cookie-related features, and more.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="HJNaNDspffM"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## Moto G4 support in Device Mode {: #motog4 }
 
 After [enabling the Device Toolbar](/web/tools/chrome-devtools/device-mode#viewport) you can now
