@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: How to pass information from the native shell into the web application when launching a Trusted Web Activity.
 
 {# wf_published_on: 2020-01-17 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-03-11 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -26,30 +26,30 @@ launches, the parameter can be appended directly to the launch URL. An example o
 when developers want to measure the number of navigation sessions created from a Trusted Web
 Activity.
 
-### Using llama-pack
+### Using Bubblewrap
 
-[Llama Pack][4] 🦙 is a tool created to helps developers to creating a Project for an
+[Bubblewrap][4] is a tool created to helps developers to creating a Project for an
 Android application that launches an existing PWAs using a Trusted Web
 Activity. It contains both a [library][6] and a [Command Line Interface (CLI)][5].
 
 #### Creating a new project:
 
-When using the [llama-pack CLI][5], a project is initialized with the `init` command, and creates
+When using the [Bubblewrap CLI][5], a project is initialized with the `init` command, and creates
 default values from a Web Manifest, provided as a parameter:
 
 ```shell
-llama-pack init --manifest https://material.money/manifest.json
+bubblewrap init --manifest https://material.money/manifest.json
 ```
 
 The wizard will use the start_url from the Web Manifest as default and will ask users to confirm
 the value, giving developers the change to add extra parameters to the url used to start the
 Progressive Web App.
 
-![Showing the llama-pack CLI output](/web/updates/images/2020/03/llama-pack-init-custom-start-url.png)
+![Showing the Bubblewrap CLI output](/web/updates/images/2020/03/llama-pack-init-custom-start-url.png)
 
 #### Modifying an existing project
 
-When llama-pack generates a project, information for that particular project is stored in a file
+When Bubblewrap generates a project, information for that particular project is stored in a file
 called `twa-manifest.json`, in the project folder. To modify the start url for existing project,
 developers need to modify the file:
 
@@ -66,7 +66,7 @@ developers need to modify the file:
 Then, re-generate the project files and apply the new start URL
 
 ```
-llama-pack update
+bubblewrap update
 ```
 
 ### Using Android Studio
@@ -85,7 +85,7 @@ modifying it:
 </activity>
 ```
 
-Note: llama-pack takes care of ensuring the URLs across the application match the same origin and,
+Note: Bubblewrap takes care of ensuring the URLs across the application match the same origin and,
 therefore, uses a relative for start URL. When modifying AndroidManifest.xml, the entire URL,
 including schema and domain must be used.
 
@@ -131,9 +131,9 @@ public class CustomQueryStringLauncherActivity extends LauncherActivity {
 </activity>
 ```
 
-Note: llama-pack doesn’t support dynamically generating query parameters at this moment. We’re
-interested in hearing from developers who have the need for this feature. Check out the llama-pack
-issue tracker and tell us about your use-case.
+Note: Bubblewrap doesn’t support dynamically generating query parameters at this moment. We’re
+interested in hearing from developers who have the need for this feature. Check out the Bubblewrap
+[issue tracker][3] and tell us about your use-case.
 
 ## Conclusion
 
@@ -159,8 +159,8 @@ you are looking for new or upcoming Web APIs, check out the [New Capabilities st
 
 [1]: https://developers.google.com/web/tools/lighthouse/audits/noopener
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Location
-[3]: https://github.com/GoogleChromeLabs/llama-pack/issues
-[4]: https://github.com/GoogleChromeLabs/llama-pack
-[5]: https://www.npmjs.com/package/@llama-pack/cli
-[6]: https://www.npmjs.com/package/@llama-pack/core
+[3]: https://github.com/GoogleChromeLabs/bubblewrap/issues
+[4]: https://github.com/GoogleChromeLabs/bubblewrap
+[5]: https://www.npmjs.com/package/@bubblewrap/cli
+[6]: https://www.npmjs.com/package/@bubblewrap/core
 [7]: https://web.dev/fugu-status/
