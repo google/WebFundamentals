@@ -40,6 +40,9 @@ new for developers in Chrome 81!
 
 ## Modernized form controls {: #modernized-forms }
 
+Warning: Modernized form controls did not make the cut and has slipped to
+Chrome 82.
+
 I’ve been really impressed by the work Microsoft has been doing to modernize
 the appearance of form controls and I’m excited to see it land in Chrome 81 on
 Windows, ChromeOS, and Linux. Mac and Android support are coming soon.
