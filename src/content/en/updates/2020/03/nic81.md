@@ -15,11 +15,11 @@ description: What's New in Chrome 81 for developers?
 
 <div class="clearfix"></div>
 
-Chrome 81 is rolling out now, and there’s a ton of new stuff in it for
-developers!
+Chrome 81 is starting to roll out March 17th, 2020, and there's a ton of new
+stuff in it for developers!
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="3SipN5DWAQk"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -56,8 +56,6 @@ Beyond the nicer visual style, they bring better touch support, and better
 accessibility, including improved keyboard support! Check out Microsoft’s
 [blog post][ms-form] for full details!
 
-[ms-form]: https://blogs.windows.com/msedgedev/2019/10/15/form-controls-microsoft-edge-chromium/
-
 <div class="clearfix"></div>
 
 ## WebXR hit testing {: #hit-testing }
@@ -75,10 +73,6 @@ Check out the Immersive Web Working Group's [Hit Testing sample][ht-sample]
 ([code][ht-sample-code]) where you can place virtual sunflowers on surfaces in
 the real world, or [Positioning virtual objects in real-world views][hit-test-article]
 for more details.
-
-[hit-test-article]: https://web.dev/ar-hit-test/
-[ht-sample]: https://immersive-web.github.io/webxr-samples/hit-test.html
-[ht-sample-code]: https://github.com/immersive-web/webxr-samples/blob/master/hit-test.html
 
 <div class="clearfix"></div>
 
@@ -103,18 +97,16 @@ peoples posts.  Or for games, to indicate to a user that it’s their turn.
 
 Check out my [Badging API][wd-badging] article on web.dev for full details.
 
-[wd-badging]: https://web.dev/badging-api/
-
 <div class="clearfix"></div>
 
 ## New origin trials {: #ot-new }
 
 ### Web NFC {: #web-nfc }
 
-Web NFC is starting its origin trial in Chrome 81. Web NFC allows a web app to
-read and write to NFC tags. This opens new use cases, including providing
-more details about museum exhibits, inventory management, reading information
-from a conference badge, and more.
+[Web NFC is starting its origin trial][nfc-ot] in Chrome 81. Web NFC allows a
+web app to read and write to NFC tags. This opens new use cases, including
+providing more details about museum exhibits, inventory management, reading
+information from a conference badge, and more.
 
 It’s super easy to use. To read a tag, create a new instance of the `NDEFReader`
 API, and start the scan.
@@ -154,9 +146,6 @@ Of course, there’s plenty more!
   gets the localized names of languages, currency, and other commonly used
   names, no more having to include that yourself.
 
-[ms-tracking]: https://googlechrome.github.io/samples/media-session/video.html
-[intl-display-names]: https://github.com/tc39/proposal-intl-displaynames
-
 ## Further reading
 
 This covers only some of the key highlights. Check the links below for
@@ -183,3 +172,14 @@ here to tell you -- what’s new in Chrome!
 {% include "web/_shared/helpful.html" %}
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+[nfc-ot]: https://developers.chrome.com/origintrials/#/view_trial/236438980436951041
+[ms-tracking]: https://googlechrome.github.io/samples/media-session/video.html
+[intl-display-names]: https://github.com/tc39/proposal-intl-displaynames
+[wd-nfc]: https://web.dev/nfc/
+[wd-badging]: https://web.dev/badging-api/
+[ms-form]: https://blogs.windows.com/msedgedev/2019/10/15/form-controls-microsoft-edge-chromium/
+[hit-test-article]: https://web.dev/ar-hit-test/
+[ht-sample]: https://immersive-web.github.io/webxr-samples/hit-test.html
+[ht-sample-code]: https://github.com/immersive-web/webxr-samples/blob/master/hit-test.html
+[amazon-nfc-stickers]: https://www.amazon.com/s?k=nfc+stickers
