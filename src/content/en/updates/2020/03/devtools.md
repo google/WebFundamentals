@@ -37,7 +37,7 @@ DevTools can emulate blurred vision and the following
 
 Less extreme versions of these color vision deficiencies exist, and in fact they are more common. For example, _protanomaly_ is a reduced sensitivity to red light (as opposed to _protanopia_, which is the complete inability to perceive red light). However, these “-anomaly” vision deficiencies are not as clearly-defined: every person with such a vision deficiency is different and might see things differently (being able to perceive more/less of the relevant colors).
 
-By simulating the more extreme variants through DevTools, you can make sure that your web apps are accessible to anyone with protanomaly, deuteranomaly, tritanomaly, and achromatomaly as well.
+By designing for the more extreme simulations in DevTools, your web apps are guaranteed to be accessible to anyone with protanomaly, deuteranomaly, tritanomaly, and achromatomaly as well.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e847a020093fbd3c367eda02a7008feae5e28641 #}
 
