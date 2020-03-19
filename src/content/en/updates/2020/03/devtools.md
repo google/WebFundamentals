@@ -31,20 +31,13 @@ DevTools can emulate blurred vision and the following
 [types of color vision deficiencies](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/):
 
 * Protanopia. The inability to perceive red light.
-* Protanomaly. A reduced sensitivity to red light.
 * Deuteranopia. The inability to perceive green light.
-* Deuteranomaly. A reduced sensitivity to green light.
 * Tritanopia. The inability to perceive blue light.
-* Tritanomaly. A reduced sensitivity to blue light (extremely rare).
 * Achromatopsia. The inability to perceive any color except for shades of grey (extremely rare).
-* Achromatomaly. A reduced sensitivity to green, red, and blue light (extremely rare).
 
-The `-anomaly` forms are the (rare) extreme versions of the `-ia` forms. Every person
-with an `-ia` vision deficiency is different and might see things differently (being able
-to perceive more/less of the relevant colors). The DevTools emulations are just a visual
-approximation of how someone might experience one of these vision deficiencies. Although the
-approximation should be good enough for you to identify and resolve issues, there's no way
-to simulate exactly what a given person would experience.
+Less extreme versions of these color vision deficiencies exist, and in fact they are more common. For example, _protanomaly_ is a reduced sensitivity to red light (as opposed to _protanopia_, which is the complete inability to perceive red light). However, these “-anomaly” vision deficiencies are not as clearly-defined: every person with such a vision deficiency is different and might see things differently (being able to perceive more/less of the relevant colors).
+
+By simulating the more extreme variants through DevTools, you can make sure that your web apps are accessible to anyone with protanomaly, deuteranomaly, tritanomaly, and achromatomaly as well.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e847a020093fbd3c367eda02a7008feae5e28641 #}
 
