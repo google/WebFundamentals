@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more.
 
-{# wf_updated_on: 2020-03-11 #}
+{# wf_updated_on: 2020-03-19 #}
 {# wf_published_on: 2020-03-10 #}
 {# wf_tags: chrome82, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
