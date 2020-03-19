@@ -42,7 +42,7 @@ deficiencies are not as clearly defined: every person with such a vision deficie
 and might see things differently (being able to perceive more/less of the relevant colors).
 
 By designing for the more extreme simulations in DevTools, your web apps are guaranteed to be
-accessible to anyone with protanomaly, deuteranomaly, tritanomaly, and achromatomaly as well.
+accessible to people with protanomaly, deuteranomaly, tritanomaly, and achromatomaly as well.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e847a020093fbd3c367eda02a7008feae5e28641 #}
 
