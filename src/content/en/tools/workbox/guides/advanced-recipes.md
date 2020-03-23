@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2020-01-17 #}
+{# wf_updated_on: 2020-03-23 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -19,18 +19,16 @@ To do this you'll need to add some code to your page and to your service worker.
 
 ```html
 <script type="module">
-import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/{% include "web/tools/workbox/_shared/workbox-latest-version.html" %}/workbox-window.prod.mjs';
+import {Workbox, messageSW} from 'https://storage.googleapis.com/workbox-cdn/releases/{% include "web/tools/workbox/_shared/workbox-latest-version.html" %}/workbox-window.prod.mjs';
 
 if ('serviceWorker' in navigator) {
   const wb = new Workbox('/sw.js');
 
-  // Add an event listener to detect when the registered
-  // service worker has installed but is waiting to activate.
-  wb.addEventListener('waiting', (event) => {
+  const showSkipWaitingPrompt = (event) => {
     // `event.wasWaitingBeforeRegister` will be false if this is
     // the first time the updated service worker is waiting.
     // When `event.wasWaitingBeforeRegister` is true, a previously
-    // updated same service worker is still waiting.
+    // updated service worker is still waiting.
     // You may want to customize the UI prompt accordingly.
 
     // Assumes your app has some sort of prompt UI element
@@ -44,18 +42,23 @@ if ('serviceWorker' in navigator) {
           window.location.reload();
         });
 
-        // Send a message telling the service worker to skip waiting.
-        // This will trigger the `controlling` event handler above.
+        // Send a message to the waiting service worker instructing
+        // it to skip waiting, which will trigger the `controlling`
+        // event listener above.
         // Note: for this to work, you have to add a message
         // listener in your service worker. See below.
-        wb.messageSW({type: 'SKIP_WAITING'});
+        messageSW(event.originalEvent.sw, {type: 'SKIP_WAITING'});
       },
 
       onReject: () => {
         prompt.dismiss();
       }
-    })
-  });
+    }
+
+  // Add an event listener to detect when the registered
+  // service worker has installed but is waiting to activate.
+  wb.addEventListener('waiting', showSkipWaitingPrompt);
+  wb.addEventListener('externalwaiting', showSkipWaitingPrompt);
 
   wb.register();
 }
