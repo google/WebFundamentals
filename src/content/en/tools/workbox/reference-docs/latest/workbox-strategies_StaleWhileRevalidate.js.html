@@ -74,7 +74,7 @@ class StaleWhileRevalidate {
         this._cacheName &#x3D; cacheNames.getRuntimeName(options.cacheName);
         this._plugins &#x3D; options.plugins || [];
         if (options.plugins) {
-            let isUsingCacheWillUpdate &#x3D; options.plugins.some((plugin) &#x3D;&gt; !!plugin.cacheWillUpdate);
+            const isUsingCacheWillUpdate &#x3D; options.plugins.some((plugin) &#x3D;&gt; !!plugin.cacheWillUpdate);
             this._plugins &#x3D; isUsingCacheWillUpdate ?
                 options.plugins : [cacheOkAndOpaquePlugin, ...options.plugins];
         }
@@ -148,7 +148,7 @@ class StaleWhileRevalidate {
         }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
             logger.groupCollapsed(messages.strategyStart(&#x27;StaleWhileRevalidate&#x27;, request));
-            for (let log of logs) {
+            for (const log of logs) {
                 logger.log(log);
             }
             messages.printFinalResponse(response);

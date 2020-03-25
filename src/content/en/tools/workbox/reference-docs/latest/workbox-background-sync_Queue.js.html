@@ -38,6 +38,25 @@ const TAG_PREFIX &#x3D; &#x27;workbox-background-sync&#x27;;
 const MAX_RETENTION_TIME &#x3D; 60 * 24 * 7; // 7 days in minutes
 const queueNames &#x3D; new Set();
 /**
+ * Converts a QueueStore entry into the format exposed by Queue. This entails
+ * converting the request data into a real request and omitting the &#x60;id&#x60; and
+ * &#x60;queueName&#x60; properties.
+ *
+ * @param {Object} queueStoreEntry
+ * @return {Object}
+ * @private
+ */
+const convertEntry &#x3D; (queueStoreEntry) &#x3D;&gt; {
+    const queueEntry &#x3D; {
+        request: new StorableRequest(queueStoreEntry.requestData).toRequest(),
+        timestamp: queueStoreEntry.timestamp,
+    };
+    if (queueStoreEntry.metadata) {
+        queueEntry.metadata &#x3D; queueStoreEntry.metadata;
+    }
+    return queueEntry;
+};
+/**
  * A class to manage storing failed requests in IndexedDB and retrying them
  * later. All parts of the storing and replaying process are observable via
  * callbacks.
@@ -366,25 +385,6 @@ class Queue {
         return queueNames;
     }
 }
-/**
- * Converts a QueueStore entry into the format exposed by Queue. This entails
- * converting the request data into a real request and omitting the &#x60;id&#x60; and
- * &#x60;queueName&#x60; properties.
- *
- * @param {Object} queueStoreEntry
- * @return {Object}
- * @private
- */
-const convertEntry &#x3D; (queueStoreEntry) &#x3D;&gt; {
-    const queueEntry &#x3D; {
-        request: new StorableRequest(queueStoreEntry.requestData).toRequest(),
-        timestamp: queueStoreEntry.timestamp,
-    };
-    if (queueStoreEntry.metadata) {
-        queueEntry.metadata &#x3D; queueStoreEntry.metadata;
-    }
-    return queueEntry;
-};
 export { Queue };
 </code></pre>
           </article>

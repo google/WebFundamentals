@@ -86,7 +86,7 @@ class ExpirationPlugin {
             if (!cachedResponse) {
                 return null;
             }
-            let isFresh &#x3D; this._isResponseDateFresh(cachedResponse);
+            const isFresh &#x3D; this._isResponseDateFresh(cachedResponse);
             // Expire entries to ensure that even if the expiration date has
             // expired, it&#x27;ll only be used once.
             const cacheExpiration &#x3D; this._getCacheExpiration(cacheName);

@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.0.0</small></span>
+              <span class="label label-version"><small>5.1.2</small></span>
             </div>
             <p>This class supports compiling a service worker file provided via <code>swSrc</code>,
               and injecting into that service worker a list of URLs and revision
@@ -89,6 +89,19 @@
                                 <p class="details-table-types">Array of string</p>
                                 <p>One or more chunk names whose corresponding
                                   output files should be included in the precache manifest.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>compileSrc</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">boolean</p>
+                                <p>When <code>true</code> (the default), the
+                                  <code>swSrc</code> file will be compiled by webpack. When <code>false</code>, compilation will
+                                  not occur (and <code>webpackCompilationPlugins</code> can't be used.) Set to <code>false</code>
+                                  if you want to inject the manifest into, e.g., a JSON file.</p>
                               </td>
                             </tr>
                             <tr>

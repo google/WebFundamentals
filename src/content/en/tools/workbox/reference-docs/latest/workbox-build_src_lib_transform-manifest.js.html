@@ -109,7 +109,7 @@ module.exports &#x3D; async ({
     };
   });
 
-  let transformsToApply &#x3D; [];
+  const transformsToApply &#x3D; [];
 
   if (maximumFileSizeToCacheInBytes) {
     transformsToApply.push(maximumSizeTransform(maximumFileSizeToCacheInBytes));

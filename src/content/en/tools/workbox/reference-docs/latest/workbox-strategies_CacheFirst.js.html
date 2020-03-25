@@ -126,7 +126,7 @@ class CacheFirst {
         }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
             logger.groupCollapsed(messages.strategyStart(&#x27;CacheFirst&#x27;, request));
-            for (let log of logs) {
+            for (const log of logs) {
                 logger.log(log);
             }
             messages.printFinalResponse(response);
