@@ -30,9 +30,9 @@ different types of vision deficiencies experience your site.
 DevTools can emulate blurred vision and the following
 [types of color vision deficiencies](http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/):
 
-* Protanopia: the inability to perceive red light.
-* Deuteranopia: the inability to perceive green light.
-* Tritanopia: the inability to perceive blue light.
+* Protanopia: the inability to perceive any red light.
+* Deuteranopia: the inability to perceive any green light.
+* Tritanopia: the inability to perceive any blue light.
 * Achromatopsia: the inability to perceive any color except for shades of grey (extremely rare).
 
 Less extreme versions of these color vision deficiencies exist, and in fact they are more common.
