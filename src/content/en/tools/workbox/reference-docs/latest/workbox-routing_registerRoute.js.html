@@ -70,7 +70,7 @@ function registerRoute(capture, handler, method) {
                 captureUrl.pathname : capture;
             // See https://github.com/pillarjs/path-to-regexp#parameters
             const wildcards &#x3D; &#x27;[*:?+]&#x27;;
-            if (valueToCheck.match(new RegExp(&#x60;${wildcards}&#x60;))) {
+            if ((new RegExp(&#x60;${wildcards}&#x60;)).exec(valueToCheck)) {
                 logger.debug(&#x60;The &#x27;$capture&#x27; parameter contains an Express-style wildcard &#x60; +
                     &#x60;character (${wildcards}). Strings are now always interpreted as &#x60; +
                     &#x60;exact matches; use a RegExp for partial or wildcard matches.&#x60;);
@@ -112,7 +112,6 @@ function registerRoute(capture, handler, method) {
     defaultRouter.registerRoute(route);
     return route;
 }
-;
 export { registerRoute };
 </code></pre>
           </article>

@@ -98,7 +98,7 @@ class Workbox extends WorkboxEventTarget {
             // script it registered or from a registration attempt made by a newer
             // version of the page running in another tab.
             // To minimize the possibility of a false positive, we use the logic here:
-            let updateLikelyTriggeredExternally &#x3D; 
+            const updateLikelyTriggeredExternally &#x3D; 
             // Since we enforce only calling &#x60;register()&#x60; once, and since we don&#x27;t
             // add the &#x60;updatefound&#x60; event listener until the &#x60;register()&#x60; call, if
             // &#x60;_updateFoundCount&#x60; is &gt; 0 then it means this method has already

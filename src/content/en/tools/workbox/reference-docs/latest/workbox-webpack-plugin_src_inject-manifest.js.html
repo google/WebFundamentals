@@ -29,7 +29,7 @@
 */
 
 const {RawSource} &#x3D; require(&#x27;webpack-sources&#x27;);
-const SingleEntryPlugin &#x3D; require(&#x27;webpack/lib/SingleEntryPlugin&#x27;);
+const {SingleEntryPlugin} &#x3D; require(&#x27;webpack&#x27;);
 const replaceAndUpdateSourceMap &#x3D; require(
     &#x27;workbox-build/build/lib/replace-and-update-source-map&#x27;);
 const stringify &#x3D; require(&#x27;fast-json-stable-stringify&#x27;);
@@ -74,6 +74,11 @@ class InjectManifest {
    *
    * @param {Array&amp;lt;string&gt;} [config.chunks] One or more chunk names whose corresponding
    * output files should be included in the precache manifest.
+   *
+   * @param {boolean} [config.compileSrc&#x3D;true] When &#x60;true&#x60; (the default), the
+   * &#x60;swSrc&#x60; file will be compiled by webpack. When &#x60;false&#x60;, compilation will
+   * not occur (and &#x60;webpackCompilationPlugins&#x60; can&#x27;t be used.) Set to &#x60;false&#x60;
+   * if you want to inject the manifest into, e.g., a JSON file.
    *
    * @param {RegExp} [config.dontCacheBustURLsMatching] Assets that match this will be
    * assumed to be uniquely versioned via their URL, and exempted from the normal
@@ -120,7 +125,7 @@ class InjectManifest {
    * configured here, the &#x60;mode&#x60; value configured in the current &#x60;webpack&#x60;
    * compilation will be used.
    *
-   * @param {Object&amp;lt;string, string&gt;} [config.modifyURLPrefix] A mapping of prefixes
+   * @param {object&amp;lt;string, string&gt;} [config.modifyURLPrefix] A mapping of prefixes
    * that, if present in an entry in the precache manifest, will be replaced with
    * the corresponding value. This can be used to, for example, remove or add a
    * path prefix from a manifest entry if your web hosting setup doesn&#x27;t match
@@ -164,14 +169,75 @@ class InjectManifest {
     compiler.hooks.make.tapPromise(
         this.constructor.name,
         (compilation) &#x3D;&gt; this.handleMake(compilation, compiler).catch(
-            (error) &#x3D;&gt; compilation.errors.push(error))
+            (error) &#x3D;&gt; compilation.errors.push(error)),
     );
 
     compiler.hooks.emit.tapPromise(
         this.constructor.name,
         (compilation) &#x3D;&gt; this.handleEmit(compilation).catch(
-            (error) &#x3D;&gt; compilation.errors.push(error))
+            (error) &#x3D;&gt; compilation.errors.push(error)),
     );
+  }
+
+  /**
+   * @param {Object} compilation The webpack compilation.
+   * @param {Object} parentCompiler The webpack parent compiler.
+   *
+   * @private
+   */
+  async performChildCompilation(compilation, parentCompiler) {
+    const outputOptions &#x3D; {
+      path: parentCompiler.options.output.path,
+      filename: this.config.swDest,
+    };
+
+    const childCompiler &#x3D; compilation.createChildCompiler(
+        this.constructor.name,
+        outputOptions,
+    );
+
+    childCompiler.context &#x3D; parentCompiler.context;
+    childCompiler.inputFileSystem &#x3D; parentCompiler.inputFileSystem;
+    childCompiler.outputFileSystem &#x3D; parentCompiler.outputFileSystem;
+
+    if (Array.isArray(this.config.webpackCompilationPlugins)) {
+      for (const plugin of this.config.webpackCompilationPlugins) {
+        plugin.apply(childCompiler);
+      }
+    }
+
+    new SingleEntryPlugin(
+        parentCompiler.context,
+        this.config.swSrc,
+        this.constructor.name,
+    ).apply(childCompiler);
+
+    await new Promise((resolve, reject) &#x3D;&gt; {
+      childCompiler.runAsChild((error, entries, childCompilation) &#x3D;&gt; {
+        if (error) {
+          reject(error);
+        } else {
+          compilation.warnings &#x3D; compilation.warnings.concat(
+              childCompilation.warnings);
+          compilation.errors &#x3D; compilation.errors.concat(
+              childCompilation.errors);
+
+          resolve();
+        }
+      });
+    });
+  }
+
+  /**
+   * @param {Object} compilation The webpack compilation.
+   * @param {Object} parentCompiler The webpack parent compiler.
+   *
+   * @private
+   */
+  addSrcToAssets(compilation, parentCompiler) {
+    const source &#x3D; parentCompiler.inputFileSystem.readFileSync(
+        this.config.swSrc).toString();
+    compilation.assets[this.config.swDest] &#x3D; new RawSource(source);
   }
 
   /**
@@ -191,41 +257,11 @@ class InjectManifest {
     this.config.swDest &#x3D; relativeToOutputPath(compilation, this.config.swDest);
     _generatedAssetNames.add(this.config.swDest);
 
-    const outputOptions &#x3D; {
-      path: parentCompiler.options.output.path,
-      filename: this.config.swDest,
-    };
-
-    const childCompiler &#x3D; compilation.createChildCompiler(
-        this.constructor.name,
-        outputOptions,
-        this.config.webpackCompilationPlugins
-    );
-
-    childCompiler.context &#x3D; parentCompiler.context;
-    childCompiler.inputFileSystem &#x3D; parentCompiler.inputFileSystem;
-    childCompiler.outputFileSystem &#x3D; parentCompiler.outputFileSystem;
-
-    new SingleEntryPlugin(
-        parentCompiler.context,
-        this.config.swSrc,
-        this.constructor.name
-    ).apply(childCompiler);
-
-    await new Promise((resolve, reject) &#x3D;&gt; {
-      childCompiler.runAsChild((error, entries, childCompilation) &#x3D;&gt; {
-        if (error) {
-          reject(error);
-        } else {
-          compilation.warnings &#x3D; compilation.warnings.concat(
-              childCompilation.warnings);
-          compilation.errors &#x3D; compilation.errors.concat(
-              childCompilation.errors);
-
-          resolve();
-        }
-      });
-    });
+    if (this.config.compileSrc) {
+      await this.performChildCompilation(compilation, parentCompiler);
+    } else {
+      this.addSrcToAssets(compilation, parentCompiler);
+    }
   }
 
   /**
@@ -257,6 +293,7 @@ class InjectManifest {
 
     const swAsset &#x3D; compilation.assets[config.swDest];
     const initialSWAssetString &#x3D; swAsset.source();
+
     if (!initialSWAssetString.includes(config.injectionPoint)) {
       throw new Error(&#x60;Can&#x27;t find ${config.injectionPoint} in your SW source.&#x60;);
     }
@@ -264,8 +301,11 @@ class InjectManifest {
     const manifestEntries &#x3D; await getManifestEntriesFromCompilation(
         compilation, config);
 
-    // See https://github.com/GoogleChrome/workbox/issues/2263
-    const manifestString &#x3D; stringify(manifestEntries).replace(/&quot;/g, &#x60;&#x27;&#x60;);
+    let manifestString &#x3D; stringify(manifestEntries);
+    if (this.config.compileSrc) {
+      // See https://github.com/GoogleChrome/workbox/issues/2263
+      manifestString &#x3D; manifestString.replace(/&quot;/g, &#x60;&#x27;&#x60;);
+    }
 
     const sourcemapAssetName &#x3D; getSourcemapAssetName(
         compilation, initialSWAssetString, config.swDest);

@@ -149,7 +149,7 @@ class GenerateSW {
    * configured here, the &#x60;mode&#x60; value configured in the current &#x60;webpack&#x60; compiltion
    * will be used.
    *
-   * @param {Object&amp;lt;string, string&gt;} [config.modifyURLPrefix] A mapping of prefixes
+   * @param {object&amp;lt;string, string&gt;} [config.modifyURLPrefix] A mapping of prefixes
    * that, if present in an entry in the precache manifest, will be replaced with
    * the corresponding value. This can be used to, for example, remove or add a
    * path prefix from a manifest entry if your web hosting setup doesn&#x27;t match
@@ -237,7 +237,7 @@ class GenerateSW {
     compiler.hooks.emit.tapPromise(
         this.constructor.name,
         (compilation) &#x3D;&gt; this.handleEmit(compilation).catch(
-            (error) &#x3D;&gt; compilation.errors.push(error))
+            (error) &#x3D;&gt; compilation.errors.push(error)),
     );
   }
 

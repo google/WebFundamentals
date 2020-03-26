@@ -156,9 +156,9 @@ class Router {
             }
             return;
         }
-        let { params, route } &#x3D; this.findMatchingRoute({ url, request, event });
+        const { params, route } &#x3D; this.findMatchingRoute({ url, request, event });
         let handler &#x3D; route &amp;amp;&amp;amp; route.handler;
-        let debugMessages &#x3D; [];
+        const debugMessages &#x3D; [];
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
             if (handler) {
                 debugMessages.push([
@@ -258,7 +258,7 @@ class Router {
         const routes &#x3D; this._routes.get(request.method) || [];
         for (const route of routes) {
             let params;
-            let matchResult &#x3D; route.match({ url, request, event });
+            const matchResult &#x3D; route.match({ url, request, event });
             if (matchResult) {
                 // See https://github.com/GoogleChrome/workbox/issues/2079
                 params &#x3D; matchResult;

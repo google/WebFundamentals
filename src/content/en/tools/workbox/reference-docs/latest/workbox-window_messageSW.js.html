@@ -44,14 +44,13 @@ import &#x27;./_version.js&#x27;;
  */
 function messageSW(sw, data) {
     return new Promise((resolve) &#x3D;&gt; {
-        let messageChannel &#x3D; new MessageChannel();
+        const messageChannel &#x3D; new MessageChannel();
         messageChannel.port1.onmessage &#x3D; (event) &#x3D;&gt; {
             resolve(event.data);
         };
         sw.postMessage(data, [messageChannel.port2]);
     });
 }
-;
 export { messageSW };
 </code></pre>
           </article>
