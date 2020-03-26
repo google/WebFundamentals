@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2020-03-22 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -151,7 +151,7 @@ navigation icons or function buttons, for example -- it could save you many, man
 to the server.
 
 You can find a brief but excellent article about this technique, including working examples,
-at [WellStyled](http://wellstyled.com/css-nopreload-rollovers.html).
+at [WellStyled](https://wellstyled.com/css-nopreload-rollovers.html).
 
 ## A Caveat
 
@@ -186,7 +186,7 @@ Common convention is to put script blocks in the page head. The problem with thi
 is that, typically, little to none of the script is really meant to execute until the page is
 displayed but, while it is loading, it unnecessarily blocks page rendering. Identifying
 render-blocking script is one of the reporting rules of
-[PageSpeed Insights](speed/docs/insights/BlockingJS).
+[PageSpeed Insights](/speed/docs/insights/BlockingJS).
 
 A simple and effective solution is to reposition the deferred script block at the end of the
 page. That is, put the script reference last, just before the closing body tag. This allows
