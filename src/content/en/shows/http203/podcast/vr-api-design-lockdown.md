@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Also native filesystem, Q&A, and TMI.
+description: Also native filesystem, listener questions, and TMI.
 
-{# wf_updated_on: 2020-03-25 #}
+{# wf_updated_on: 2020-03-26 #}
 {# wf_published_on: 2020-03-25 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-29.m4a #}
 {# wf_podcast_duration: 01:13:21 #}
 {# wf_podcast_fileSize: 30000087 #}
-{# wf_podcast_subtitle: Also native filesystem, Q&A, and TMI. #}
+{# wf_podcast_subtitle: Also native filesystem, listener questions, and TMI. #}
 {# wf_featured_image: /web/shows/http203/podcast/images/surma-and-jake-2.jpg #}
 {# wf_blink_components: Blink>JavaScript #}
 
