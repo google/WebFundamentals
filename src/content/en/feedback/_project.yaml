@@ -1,6 +1,6 @@
 parent_project_metadata_path: /web/_project.yaml
 name: Developer Feedback Program
-description: 'Committed to helping you make your site work across platforms and browsers, so you can be successful. '
+description: 'Committed to helping you make your site work across platforms and browsers, so you can be successful.'
 home_url: /web/feedback/
 buganizer_id: 180451
 color: google-blue

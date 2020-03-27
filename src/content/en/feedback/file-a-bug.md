@@ -1,8 +1,8 @@
 project_path: /web/feedback/_project.yaml
 book_path: /web/feedback/_book.yaml
 
-{# wf_updated_on: 2016-10-24 #}
 {# wf_published_on: 2016-10-24 #}
+{# wf_updated_on: 2020-03-27 #}
 
 # How to File a Good Bug {: .page-title }
 
@@ -20,7 +20,7 @@ might help you translate an abstract problem into a specific broken API. It
 might also give you a workaround for the short term.
 
 Once you have an idea of what the bug is, search for it on the
-[browser bug searcher](/web/feedback/).
+[browser bug searcher](https://browser-issue-tracker-search.appspot.com/).
 If you find an existing bug that describes the problem, it’s much more useful
 to add your support by starring, favoriting, or commenting on that bug.
 If not, it's time to file a bug.
@@ -68,7 +68,7 @@ the odds of your bug getting fixed.
 
 Here are a few tips for minimizing a test case:
 
-* Download the web page, add `<base href="http://original.url">` and verify that
+* Download the web page, add `<base href="https://original.url">` and verify that
 the bug exists locally. This may require a live HTTPS server if the URL uses
 HTTPS.
 * Test the local files on the latest builds of as many browsers as you can.
