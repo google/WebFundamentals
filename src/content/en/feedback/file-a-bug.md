@@ -1,6 +1,7 @@
 project_path: /web/feedback/_project.yaml
 book_path: /web/feedback/_book.yaml
 
+{# wf_blink_components: N/A #}
 {# wf_published_on: 2016-10-24 #}
 {# wf_updated_on: 2020-03-27 #}
 
