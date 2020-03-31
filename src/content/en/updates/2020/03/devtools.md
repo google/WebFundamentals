@@ -115,7 +115,7 @@ at a glance.
 
 Send feedback to [Chromium issue #1041830](https://crbug.com/1041830).
 
-## View network requests that set a specific cookie {: #cookie-path }
+## View network requests that set a specific cookie path {: #cookie-path }
 
 [path]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
 [properties]: https://developers.google.com/web/tools/chrome-devtools/network/reference#filter-by-property
