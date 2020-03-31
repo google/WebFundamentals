@@ -139,7 +139,7 @@ command to move DevTools to the left of your viewport.
 
 Note: DevTools has had the **Dock to left** feature for a long time but it was previously only
 accessible from the [**Main Menu**](/web/tools/chrome-devtools/customize/placement#menu).
-The new feature in Chrome 82 is that you can now access this feature from the Command Menu.
+The new feature in Chrome 83 is that you can now access this feature from the Command Menu.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7ff2e8eda31b86a8e249983f182e20e65c303556 #}
 
@@ -187,7 +187,7 @@ A [Long Task](https://web.dev/long-tasks-devtools/#what-are-long-tasks) is JavaS
 monopolizes the main thread for a long time, causing a web page to freeze.
 
 You've been able to [visualize Long Tasks in the Performance panel](https://web.dev/long-tasks-devtools/#are-there-long-tasks-in-my-page-that-could-delay-interactivity)
-for a while now, but in Chrome 82 the Long Task visualization UI in the Performance panel has been updated.
+for a while now, but in Chrome 83 the Long Task visualization UI in the Performance panel has been updated.
 The Long Task portion of a task is now colored with a striped red background.
 
 ![The new Long Task UI](/web/updates/images/2020/03/long-task.png)
@@ -211,7 +211,7 @@ to learn more.
 
 ![The "Show only the minimum safe area for maskable icons" checkbox](/web/updates/images/2020/03/maskable-icons.png)
 
-Note: This feature launched in Chrome 81. We're covering it here in Chrome 82 because we forgot to cover it
+Note: This feature launched in Chrome 81. We're covering it here in Chrome 83 because we forgot to cover it
 in What's New In DevTools (Chrome 81).
 
 <<../../_shared/devtools-feedback.md>>
