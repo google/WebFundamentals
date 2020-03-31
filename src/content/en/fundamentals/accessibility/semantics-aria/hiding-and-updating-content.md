@@ -4,7 +4,7 @@ description: Hiding content from assistive technology
 
 
 {# wf_blink_components: Blink>Accessibility #}
-{# wf_updated_on: 2019-06-08 #}
+{# wf_updated_on: 2020-03-22 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Hiding and Updating Content {: .page-title }
@@ -116,7 +116,7 @@ with its "live" counterpart.
    server error and your changes are not saved; please refresh the page", or
    updates to an input field as a direct result of a user action, such as
    buttons on a stepper widget.
- - `aria-live="off"` tells assistive technology to temporarly suspend
+ - `aria-live="off"` tells assistive technology to temporarily suspend
    `aria-live` interruptions.
 
 There are some tricks to making sure your live regions work correctly.
