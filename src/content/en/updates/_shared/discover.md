@@ -2,7 +2,7 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
-### Chrome 82 {: #discover82 .hide-from-toc }
+### Chrome 83 {: #discover83 .hide-from-toc }
 
 * [Emulate vision deficiencies](/web/updates/2020/03/devtools#vision-deficiencies)
 * [Dock to left from the Command Menu](/web/updates/2020/03/devtools#dock-to-left)
@@ -10,6 +10,10 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Delete all Local Overrides in a folder](/web/updates/2020/03/devtools#overrides)
 * [Updated Long Tasks UI](/web/updates/2020/03/devtools#long-tasks)
 * [Maskable icon support in the Manifest pane](/web/updates/2020/03/devtools#maskable-icons)
+
+### Chrome 82 {: #discover82 .hide-from-toc }
+
+[Chrome 82 was cancelled](https://blog.chromium.org/2020/03/chrome-and-chrome-os-release-updates.html).
 
 ### Chrome 81 {: #discover81 .hide-from-toc }
 
@@ -124,7 +128,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Initiator and priority information now in HAR imports and exports](/web/updates/2018/10/devtools)
 * [Access the Command Menu from the Main Menu](/web/updates/2018/10/devtools)
 * [Picture-in-Picture breakpoints](/web/updates/2018/10/devtools)
-* Bonus tip: [Use `monitorEvents()` to log a node's fired events in the 
+* Bonus tip: [Use `monitorEvents()` to log a node's fired events in the
   Console](https://youtu.be/fJxFZO8OEEs?t=154) (video)
 
 ### Chrome 70 {: #discover70 .hide-from-toc }

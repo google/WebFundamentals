@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more.
+description: Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more.
 
 {# wf_updated_on: 2020-03-31 #}
 {# wf_published_on: 2020-03-10 #}
 {# wf_tags: chrome83, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more. #}
+{# wf_featured_snippet: Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 83) {: .page-title }
