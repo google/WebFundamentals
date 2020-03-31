@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
 
-{# wf_updated_on: 2019-06-08 #}
+{# wf_updated_on: 2020-03-31 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: Blink>CSS #}
 
@@ -305,10 +305,9 @@ for areas where you may be relying too heavily on color to convey important
 information.
 
 If you're curious about how your site looks to different people, or if you rely
-heavily on the use of color in your UI, you can use the
-[NoCoffee Chrome extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
-to simulate various forms of visual impairment, including different types of
-color blindness.
+heavily on the use of color in your UI, you can [use DevTools to simulate various
+forms of visual impairment](/web/updates/2020/03/devtools#vision-deficiencies),
+including different types of color blindness.
 
 ### High contrast mode
 
