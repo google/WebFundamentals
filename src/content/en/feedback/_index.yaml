@@ -6,7 +6,7 @@ landing_page:
   header:
     buttons:
     - label: Browser Bug Searcher
-      path: /web/feedback/browser-bug-searcher
+      path: https://browser-issue-tracker-search.appspot.com/
 
   rows:
   - classname: devsite-landing-row-50
@@ -32,7 +32,7 @@ landing_page:
       image_path: images/content-search-for-bugs-responsive-2x.png
       buttons:
       - label: Browser Bug Searcher
-        path: /web/feedback/browser-bug-searcher
+        path: https://browser-issue-tracker-search.appspot.com/
 
   - classname: devsite-landing-row-67
     items:
