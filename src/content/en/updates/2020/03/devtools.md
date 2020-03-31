@@ -2,16 +2,23 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more.
 
-{# wf_updated_on: 2020-03-26 #}
+{# wf_updated_on: 2020-03-30 #}
 {# wf_published_on: 2020-03-10 #}
 {# wf_tags: chrome82, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
-# What's New In DevTools (Chrome 82) {: .page-title }
+# What's New In DevTools (Chrome 83) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+## m83
+
+* [new breakpoint/logpoint icons](https://chromium.googlesource.com/devtools/devtools-frontend/+/98b339fb3c0121567f615235bf63bc354d5af73e)
+* [emulate locales](https://chromium.googlesource.com/devtools/devtools-frontend/+/a36992378f7bcb0f159bfb7f0de2dd02ac859c93)
+* [cookie-path filter](https://chromium.googlesource.com/devtools/devtools-frontend/+/c97591098b64904cb779a83747f75a2542513da3)
+* [settings menu item moved](https://chromium.googlesource.com/devtools/devtools-frontend/+/4fef3cd08b39d311fe30607c9566cc26840864dd)
 
 ## Emulate vision deficiencies {: #vision-deficiencies }
 
