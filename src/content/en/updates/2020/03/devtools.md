@@ -1,15 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more.
+description: Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more.
 
-{# wf_updated_on: 2020-03-26 #}
+{# wf_updated_on: 2020-03-31 #}
 {# wf_published_on: 2020-03-10 #}
-{# wf_tags: chrome82, devtools, devtools-whatsnew #}
+{# wf_tags: chrome83, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Emulate color vision deficiencies, Dock To Left in the Command Menu, and more. #}
+{# wf_featured_snippet: Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more. #}
 {# wf_blink_components: Platform>DevTools #}
 
-# What's New In DevTools (Chrome 82) {: .page-title }
+# What's New In DevTools (Chrome 83) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -48,6 +48,29 @@ accessible to people with protanomaly, deuteranomaly, tritanomaly, and achromato
 
 Send feedback to [Chromium issue #1003700](https://crbug.com/1003700).
 
+## Emulate locales {: #locales }
+
+[lang]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language
+[CM]: /web/tools/chrome-devtools/command-menu
+
+You can now emulate locales by setting `navigator.language` in the **Console** or
+by setting a location in **Sensors** > **Location**. [Open the **Command Menu**][CM] and
+type `Sensors` to access the **Sensors** tab. After performing these actions
+DevTools modifies the [`Accept-Language`][lang] HTTP request header to match your emulated location.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lZEFwACYPo0"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+Check out [Locale-dependent code example](https://mathiasbynens.be/demo/locale) to try it
+yourself.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a36992378f7bcb0f159bfb7f0de2dd02ac859c93 #}
+
+Send feedback to [Chromium issue #1051822](https://crbug.com/1051822).
+
 ## Cross-Origin Opener Policy (COOP) and Cross-Origin Embedder Policy (COEP) debugging {: #COOP-COEP }
 
 [COOP]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.tu4hyy6v12wn
@@ -70,6 +93,43 @@ the issues:
 
 Send feedback to [Chromium issue #1051466](https://crbug.com/1051466).
 
+## New icons for breakpoints, conditional breakpoints, and logpoints {: #debugging-icons }
+
+The **Sources** panel has new icons for breakpoints, conditional breakpoints, and logpoints:
+
+* [Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints#loc)
+  ![Breakpoint](/web/updates/images/2020/03/breakpoint.png){: .inline-icon }
+  are represented by red circles.
+* [Conditional Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints#conditional-loc)
+  ![Conditional Breakpoint](/web/updates/images/2020/03/conditional.png){: .inline-icon }
+  are represented by half-red half-white circles.
+* [Logpoints](/web/updates/2019/01/devtools#logpoints)
+  ![Logpoint](/web/updates/images/2020/03/logpoint.png){: .inline-icon }
+  are represented by red squares with Console icons.
+
+The motivation for the new icons was to make the UI more consistent with other GUI debugging tools
+(which usually color breakpoints red) and to make it easier to distinguish between the 3 features
+at a glance.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/98b339fb3c0121567f615235bf63bc354d5af73e #}
+
+Send feedback to [Chromium issue #1041830](https://crbug.com/1041830).
+
+## View network requests that set a specific cookie {: #cookie-path }
+
+[path]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
+[properties]: https://developers.google.com/web/tools/chrome-devtools/network/reference#filter-by-property
+
+Use the new `cookie-path` filter keyword in the **Network** panel to focus on
+the network requests that set a specific [cookie path][path].
+
+Check out [Filter requests by properties][properties] to discover more special keywords
+like `cookie-path`.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/c97591098b64904cb779a83747f75a2542513da3 #}
+
+{# The CL doesn't have a crbug entry associated to it. #}
+
 ## **Dock to left** from the Command Menu {: #dock-to-left }
 
 Open the [Command Menu](/web/tools/chrome-devtools/command-menu) and run the `Dock to left`
@@ -84,6 +144,19 @@ The new feature in Chrome 82 is that you can now access this feature from the Co
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7ff2e8eda31b86a8e249983f182e20e65c303556 #}
 
 Send feedback to [Chromium issue #1011679](https://crbug.com/1011679).
+
+## The `Settings` option in the **Main Menu** has moved {: #settings }
+
+[settings]: /web/tools/chrome-devtools/customize#settings
+
+The option for opening [Settings][settings] from the **Main Menu** can now be found under
+**More Tools**.
+
+![Main Menu > More Tools > Settings](/web/updates/images/2020/03/settings.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/4fef3cd08b39d311fe30607c9566cc26840864dd #}
+
+Send feedback to [Chromium issue #1050855](https://crbug.com/1050855).
 
 ## The **Audits** panel is now the **Lighthouse** panel {: #lighthouse }
 
