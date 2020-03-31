@@ -306,7 +306,8 @@ information.
 
 If you're curious about how your site looks to different people, or if you rely
 heavily on the use of color in your UI, you can [use DevTools to simulate various
-forms of visual impairment](https://developers.google.com/web/updates/2020/03/devtools#vision-deficiencies), including different types of color blindness.
+forms of visual impairment](/web/updates/2020/03/devtools#vision-deficiencies),
+including different types of color blindness.
 
 ### High contrast mode
 
