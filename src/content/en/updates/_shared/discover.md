@@ -5,7 +5,12 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 ### Chrome 83 {: #discover83 .hide-from-toc }
 
 * [Emulate vision deficiencies](/web/updates/2020/03/devtools#vision-deficiencies)
+* [Emulate locales](/web/updates/2020/03/devtools#locales)
+* [Cross-Origin Opener Policy (COOP) and Cross-Origin Embedder Policy (COEP) debugging](/web/updates/2020/03/devtools#COOP-COEP)
+* [New icons for breakpoints, conditional breakpoints, and logpoints](/web/updates/2020/03/devtools#debugging-icons)
+* [View network requests that set a specific cookie](/web/updates/2020/03/devtools#cookie-path)
 * [Dock to left from the Command Menu](/web/updates/2020/03/devtools#dock-to-left)
+* [The Settings option in the Main Menu has moved](/web/updates/2020/03/devtools#settings)
 * [The Audits panel is now the Lighthouse panel](/web/updates/2020/03/devtools#lighthouse)
 * [Delete all Local Overrides in a folder](/web/updates/2020/03/devtools#overrides)
 * [Updated Long Tasks UI](/web/updates/2020/03/devtools#long-tasks)
