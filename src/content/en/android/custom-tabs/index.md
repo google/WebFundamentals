@@ -44,7 +44,7 @@ You can test this now with our [sample][1] on GitHub.
 ## When should I use Custom Tabs vs WebView?
 
 The Android WebView is good solution if you are hosting your own content inside your app. Since the
-WebView doesn't support all the the Web Platform features browsers support, we recommend using
+WebView doesn't support all the Web Platform features browsers support, we recommend using
 Custom Tabs open opening content that directs people to URLs outside your domain. Those are a few
 reasons why we recommend Custom Tabs:
 

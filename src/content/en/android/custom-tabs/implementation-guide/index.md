@@ -165,14 +165,14 @@ the same order as they appear in the list, and return the first one that support
 
 ## Warm up the browser to make pages load faster
 
-By default, when [`CustomTabsIntent#launchUrl`][7] is called, it will spin up the browser and launch the
-URL. This can take up precious time and impact on the perception of smoothness.
+By default, when [`CustomTabsIntent#launchUrl`][7] is called, it will spin up the browser and
+ aunch the URL. This can take up precious time and impact on the perception of smoothness.
 
 We believe that users demand a near instantaneous experience, so we have provided a Service that
 your app can connect to and tell the browser to warmpup.
 
-Custom Tabs also support the ability for you, the developer to tell the browser the likely set of web
-pages the user will visit.
+Custom Tabs also support the ability for you, the developer to tell the browser the likely set of
+web pages the user will visit.
 
 In Chrome, the following steps are performed:
 
@@ -189,7 +189,8 @@ scenes.
 requests to the API.
 - Optionally, attach a [`CustomTabsCallback`][11] as a parameter when creating a new session, so
 that you know a page was loaded.
-- Tell the browser which pages the user is likely to load with [`CustomTabsSession#mayLaunchUrl`][12]
+- Tell the browser which pages the user is likely to load with
+[`CustomTabsSession#mayLaunchUrl`][12]
 - Call the [`CustomTabsIntent.Builder`][4] constructor passing the created
 [`CustomTabsSession`][13] as a parameter.
 
