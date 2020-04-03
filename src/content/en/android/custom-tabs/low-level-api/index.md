@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Low Level Custom Tabs API
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-04-03 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Low level API {: .page-title }
@@ -80,5 +80,5 @@ context.bindService(serviceIntent, mServiceConnection,
 {% include "web/_shared/helpful.html" %}		
 
 [1]: https://github.com/GoogleChrome/custom-tabs-client/tree/master/customtabs
-[2]: http://developer.android.com/guide/components/aidl.html
-[3]: http://developer.android.com/reference/android/support/customtabs/CustomTabsIntent.html
+[2]: https://developer.android.com/guide/components/aidl.html
+[3]: https://developer.android.com/reference/android/support/customtabs/CustomTabsIntent.html

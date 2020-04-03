@@ -3,33 +3,39 @@ book_path: /web/android/_book.yaml
 description: An overview of the libraries and tools for creating Trusted Web Activities.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-11 #}
+{# wf_updated_on: 2020-04-03 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs {: .page-title }
 
 ## What are Custom Tabs?
 
-App developers face a choice when a user taps a URL to either launch a
-browser, or build their own in-app browser using WebViews.
+App developers face a choice when a user taps a URL to either launch a browser, or use an in-app
+browser.
 
-Both options present challenges - launching the browser is a heavy context
-switch for users that isn't customizable, while WebViews don't share state with the
-browser and add maintenance overhead.
+In the past, the only option for developers who wanted to use an in-app browser was to implement
+one from scratch, using the Android WebView.
 
-Chrome Custom Tabs give apps more control over their web experience, and make
-transitions between native and web content more seamless without having to
-resort to a WebView.
+While the Android WebView is a powerful component and makes a best effort to maintain
+compatibility with the Web Platform, it doesn't fully support all features and APIs provided by
+full fledged browsers.
 
-Chrome Custom Tabs allow an app to customize how Chrome looks and feels. An app
+WebViews are also unable to share state with the browser, and building and maintaining an in-app
+browser using WebViews adds development overhead.
+
+Custom Tabs is a feature implemented by most browsers on Android which gives apps more control over
+their web experience, and makes transitions between native and web content more seamless without
+having to resort to a WebView.
+
+Custom Tabs allow an app to customize how the browser looks and feels. An app
 can change things like:
 
 - Toolbar color
 - Enter and exit animations
 - Add custom actions to the Chrome toolbar, overflow menu and bottom toolbar
+- Add a bottom toolbar with custom content, using [RemoteViews][7].
 
-Chrome Custom Tabs also allow the developer to pre-start Chrome and pre-fetch
-content for faster loading.
+Custom Tabs also allow the developer to pre-start Chrome and pre-fetch content for faster loading.
 
 <img src="https://developer.chrome.com/multidevice/images/customtab/performance.gif">
 
@@ -37,9 +43,10 @@ You can test this now with our [sample][1] on GitHub.
 
 ## When should I use Custom Tabs vs WebView?
 
-The WebView is good solution if you are hosting your own content inside your
-app. If your app directs people to URLs outside your domain, we recommend
-that you use Custom Tabs for these reasons:
+The Android WebView is good solution if you are hosting your own content inside your app. Since the
+WebView doesn't support all the the Web Platform features browsers support, we recommend using
+Custom Tabs open opening content that directs people to URLs outside your domain. Those are a few
+reasons why we recommend Custom Tabs:
 
 - Simple to implement. No need to build code to manage requests, permission
 	grants or cookie stores.
@@ -71,14 +78,13 @@ dangerous sites.
 - You want to use the latest browser implementations on devices pre-Lollipop
 (auto updating WebView) instead of older WebViews.
 
-## When will this be available?
+## Which browsers support Custom Tabs?
 
-As of Chrome 45, Chrome Custom Tabs is now generally available to all users of [Chrome][2], on all
-of Chrome's supported Android versions (Jellybean onwards).
+Custom Tabs is supported in all major browser in Android, including [Chrome][2], Firefox, Samsung
+Internet, and Edge.
 
 We are looking for feedback, questions and suggestions on this project, so we encourage you to file
-issues on [crbug.com][3] and ask questions to our Twitter account
-[@ChromiumDev][4].
+issues on [crbug.com][3] and ask questions to our Twitter account [@ChromiumDev][4].
 
 ## Useful Links
 - [GitHub Demo][5]
@@ -86,8 +92,9 @@ issues on [crbug.com][3] and ask questions to our Twitter account
 
 ## FAQ
 
-- When will this be available on stable channel?
-    - Chrome Custom Tabs are available as of Chrome 45.
+- Which browsers support Custom Tabs?
+    - Custom Tabs is supported in all major browser in Android, including [Chrome][2], Firefox,
+		 Samsung Internet, and Edge.
 - Where can I ask questions?
     - StackOverflow tag: [chrome-custom-tabs][6].
 
@@ -100,4 +107,5 @@ issues on [crbug.com][3] and ask questions to our Twitter account
 [3]: https://crbug.com
 [4]: https://twitter.com/ChromiumDev
 [5]: https://github.com/GoogleChrome/custom-tabs-client
-[6]: http://stackoverflow.com/questions/tagged/chrome-custom-tabs
+[6]: https://stackoverflow.com/questions/tagged/chrome-custom-tabs
+[7]: https://developer.android.com/reference/android/widget/RemoteViews

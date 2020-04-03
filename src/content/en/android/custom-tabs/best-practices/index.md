@@ -3,12 +3,12 @@ book_path: /web/android/_book.yaml
 description: Best Practices for Custom Tabs implementations.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-04-03 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Best Practices {: .page-title }
 
-Since Chrome Custom Tabs was launched, we've seen various implementations with different levels of
+Since Custom Tabs was launched, we've seen various implementations with different levels of 
 quality. This section describes a set of best practices we've found to create a good integration.
 
 ## Connect to the Custom Tabs service and call `warmup()`
@@ -36,24 +36,6 @@ Custom Tabs is smart and knows if the user is using the phone on a metered netwo
 end device and pre-rendering will have a negative effect on the overall performance of the device
 and won’t pre-fetch or pre-render on those scenarios. So, there’s no need to optimize your
 application for those cases.
-
-## Provide a fallback for when Custom Tabs is not installed
-
-Although Custom Tabs is available for the great majority of users, there are some scenarios where a
-browser that supports Custom Tabs is not installed on the device or the device does not support a
-browser version that has Custom Tabs enabled.
-
-**Make sure to provide a fallback that provides a good user experience** by either opening the
-default browser or using your own [WebView][4] implementation.
-
-## Add your app as the referrer
-It's usually very important for websites to track where their traffic is coming from. Make sure you
-let them know you are sending them users by setting the referrer when launching your Custom Tab:
-
-```
-intent.putExtra(Intent.EXTRA_REFERRER, 
-        Uri.parse(Intent.URI_ANDROID_APP_SCHEME + "//" + context.getPackageName()));
-```
 
 ## Add custom animations
 
@@ -154,27 +136,14 @@ CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
 intentBuilder.setToolbarColor(Color.BLUE);
 ```
 
-## Add a Share Action
+## Enable the Share Action
 
 Make sure you add the Share Action to the overflow menu, as users expect to be able to share the
 link to the content they are seeing in most use cases, and Custom Tabs doesn’t add one by default.
 
 ```java
-//Sharing content from CustomTabs with on a BroadcastReceiver
-public void onReceive(Context context, Intent intent) {
-    String url = intent.getDataString();
-
-    if (url != null) {
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, url);
-
-        Intent chooserIntent = Intent.createChooser(shareIntent, "Share url");
-        chooserIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        context.startActivity(chooserIntent);
-    }
-}
+CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
+intentBuilder.addDefaultShareMenuItem();
 ```
 
 ## Customize the close button
