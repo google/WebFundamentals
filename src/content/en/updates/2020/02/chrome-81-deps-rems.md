@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 81 to help you plan.
 
-{# wf_updated_on: 2020-03-30 #}
+{# wf_updated_on: 2020-04-06 #}
 {# wf_published_on: 2020-02-26 #}
 {# wf_tags: deprecations,removals,chrome81 #}
 {# wf_blink_components: Blink>Payments,Blink>SVG,Internals>Network>SSL #}
@@ -63,8 +63,8 @@ replaced with a combination of animation of the `display` property and a removal
 
 ## Remove TLS 1.0 and TLS 1.1
 
-Note: Removal of TLS 1.0 and TLS 1.1 has been delayed to Chrome 83, which is
-expected to ship in late May 2020.
+Note: Removal of TLS 1.0 and TLS 1.1 has been delayed to Chrome 84, which is
+expected to ship in July 2020.
 
 TLS (Transport Layer Security) is the protocol which secures HTTPS. It has a
 long history stretching back to the nearly twenty-year-old TLS 1.0 and its even
