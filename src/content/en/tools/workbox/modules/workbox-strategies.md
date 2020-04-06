@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-02-13 #}
+{# wf_updated_on: 2020-04-06 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -68,7 +68,7 @@ will be cached so that the next request is served directly from the cache.
 
 ```javascript
 import {registerRoute} from 'workbox-routing';
-import {StaleWhileRevalidate} from 'workbox-strategies';
+import {CacheFirst} from 'workbox-strategies';
 
 registerRoute(
   new RegExp('/styles/'),
