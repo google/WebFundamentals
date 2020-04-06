@@ -58,7 +58,8 @@ You can now emulate locales by setting a location in **Sensors** > **Location**.
 DevTools modifies the current default locale, affecting the following:
 
 - `Intl.*` APIs, e.g. `new Intl.NumberFormat().resolvedOptions().locale`
-- other locale-aware JavaScript APIs such as `String.prototype.localeCompare` and `*.prototype.toLocaleString`, e.g. `123_456..toLocaleString()`
+- other locale-aware JavaScript APIs such as `String.prototype.localeCompare` and
+  `*.prototype.toLocaleString`, e.g. `123_456..toLocaleString()`
 - DOM APIs such as `navigator.language` and `navigator.languages`
 - the [`Accept-Language`][lang] HTTP request header
 
