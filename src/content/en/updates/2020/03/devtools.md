@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more.
 
-{# wf_updated_on: 2020-03-31 #}
+{# wf_updated_on: 2020-04-06 #}
 {# wf_published_on: 2020-03-10 #}
 {# wf_tags: chrome83, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -53,10 +53,14 @@ Send feedback to [Chromium issue #1003700](https://crbug.com/1003700).
 [lang]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language
 [CM]: /web/tools/chrome-devtools/command-menu
 
-You can now emulate locales by setting `navigator.language` in the **Console** or
-by setting a location in **Sensors** > **Location**. [Open the **Command Menu**][CM] and
-type `Sensors` to access the **Sensors** tab. After performing these actions
-DevTools modifies the [`Accept-Language`][lang] HTTP request header to match your emulated location.
+You can now emulate locales by setting a location in **Sensors** > **Location**. [Open the
+**Command Menu**][CM] and type `Sensors` to access the **Sensors** tab. After performing these actions
+DevTools modifies the current default locale, affecting the following:
+
+- `Intl.*` APIs, e.g. `new Intl.NumberFormat().resolvedOptions().locale`
+- other locale-aware JavaScript APIs such as `String.prototype.localeCompare` and `*.prototype.toLocaleString`, e.g. `123_456..toLocaleString()`
+- DOM APIs such as `navigator.language` and `navigator.languages`
+- the [`Accept-Language`][lang] HTTP request header
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="lZEFwACYPo0"
