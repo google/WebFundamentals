@@ -94,7 +94,7 @@ and the security of the page is compromised.
 
 This scenario has traditionally been
 quite common on the web, which is why many browsers haven't just blocked all mixed
-requests, so as not to restrict the functionality of many sites. However, as HTTPS has become [overwhelmingly adopted on the web](https://transparencyreport.google.com/https/overview?hl=en), some browsers have announced that they will begin blocking mixed content ([more below](#blocking-optionally-blockable-content)).
+requests, so as not to restrict the functionality of many sites. However, as HTTPS has become [overwhelmingly adopted on the web](https://transparencyreport.google.com/https/overview), some browsers have announced that they will begin blocking mixed content ([more below](#blocking-optionally-blockable-content)).
 
 <figure>
   <img src="imgs/image-gallery-warning.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure image. This content should also be served over HTTPS.">
