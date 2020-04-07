@@ -1,4 +1,4 @@
-enabled: false
+enabled: true
 description: >
     <style>
       .devsite-banner-announcement {
@@ -15,6 +15,7 @@ description: >
         margin-right: 8px;
       }
     </style>
-    Take the <a href="https://qsurvey.mozilla.com/s3/4f853f5f79cc">MDN Browser
-    Compatibility Survey</a> and help us understand your issues, and what we
-    and browser vendors can do to help make your life easier.
+    We've created a
+    <a href="https://web.dev/covid19/" target="_blank" rel="nofollow">set of resources</a>
+    to help you ensure your site remains available and accessible to all during
+    the COVID-19 situation.
