@@ -14,3 +14,6 @@ redirects:
 
 - from: /web/fundamentals/security/credential-management/store-credentials
   to: /web/fundamentals/security/credential-management/save-forms#store_the_credential
+
+- from: /web/fundamentals/security/encrypt-in-transit/why-https
+  to: https://web.dev/why-https-matters

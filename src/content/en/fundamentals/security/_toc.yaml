@@ -8,8 +8,9 @@ toc:
       path: /web/fundamentals/security/csp/
     - title: Encrypting Data In Transit
       section:
-      - title: Why HTTPS
+      - title: Why HTTPS matters
         path: /web/fundamentals/security/encrypt-in-transit/why-https
+        status: external
         step_group: security-https
       - title: Important Security Terminology
         path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
