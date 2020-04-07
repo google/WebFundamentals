@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Web Payments allows any websites to act as a payment handler for the Payment Request API. Learn how to do it.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2020-04-06 #}
+{# wf_updated_on: 2020-04-07 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Web based payment apps developer guide {: .page-title }
@@ -419,13 +419,12 @@ payment method your app supports.
 
 Following are the conditions to enable skip-the-sheet:
 
-1. Only one payment method identifier is specified in the `PaymentRequest`
-   constructor. The payment method identifier must be URL-based.
-2. There is only a single payment handler (installed or JIT installable) with
+1. There is only a single payment handler (installed or JIT installable) with
    full delegation support (i.e. only a single available payment handler can
    provide all merchant requested information including shipping address and/or
-   contact information whenever needed) that matches the payment method
-   identifier.
+   contact information whenever needed).
+2. The available payment handler with full delegation should support the
+   requested URL-based payment method.
 3. `show()` is triggered with a user gesture.
 
 See a skip-the-sheet example here:
