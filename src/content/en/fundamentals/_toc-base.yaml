@@ -13,6 +13,7 @@ toc:
       path: /web/fundamentals/primers/modules
     - title: Promises
       path: /web/fundamentals/primers/promises
+      status: external
     - title: Service Workers
       section:
       - title: Overview
