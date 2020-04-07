@@ -275,7 +275,7 @@ and is blocked by the browser.
 
 ### Blocking optionally blockable content
 
-In recent years, [HTTPS usage has risen dramatically](https://transparencyreport.google.com/https/overview?hl=en), and has become the clear default on the web. This makes it more feasible now for browsers to consider blocking all mixed content, even those subresource types defined in the [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external } as **optionally blockable**.
+In recent years, [HTTPS usage has risen dramatically](https://transparencyreport.google.com/https/overview), and has become the clear default on the web. This makes it more feasible now for browsers to consider blocking all mixed content, even those subresource types defined in the [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external } as **optionally blockable**.
 
 At the time of writing, at least one major browser (Chrome) has announced a [timetable for blocking passive mixed content](https://security.googleblog.com/2019/10/no-more-mixed-messages-about-https_3.html), which also involves attempting to "upgrade" the connection to mixed resources from HTTP to HTTPS before applying the block. Under this plan, images, audio, and video which are embedded using an `http://` URL, but which **are** accessible over `https://` as well, should continue to function as the browser securely fetches them over HTTPS. Images, audio, and video which **are not** available over `https://` will not be loaded by the browser, in order to protect users.
 
