@@ -15,3 +15,20 @@ social_media:
     width: 1200
     height: 675
 gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq
+announcement:
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style> We've created a <a href="https://web.dev/covid19/" target="_blank" rel="nofollow">set of resources</a> to help you ensure your site remains available and accessible to all during the COVID-19 situation.

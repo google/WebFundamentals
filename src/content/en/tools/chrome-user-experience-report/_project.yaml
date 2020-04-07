@@ -11,3 +11,20 @@ google_analytics_ids:
   - UA-52746336-1
 feedback:
   product_id: 5166371
+announcement:
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style> We've created a <a href="https://web.dev/covid19/" target="_blank" rel="nofollow">set of resources</a> to help you ensure your site remains available and accessible to all during the COVID-19 situation.
