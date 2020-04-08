@@ -117,8 +117,8 @@ web app to read and write to NFC tags. This opens new use cases, including
 providing more details about museum exhibits, inventory management, reading
 information from a conference badge, and more.
 
-It’s super easy to use. To read a tag, create a new instance of the `NDEFReader`
-API, and start the scan.
+It’s super easy to use. To read a tag, create a new instance of an `NDEFReader`
+object, and start the scan.
 
 ```js
 const reader = new NDEFReader();
@@ -131,7 +131,7 @@ async function startScan() {
 }
 ```
 
-Then, when an NFC tag is scanned, the reader will fire a `read` event that you
+Then, when an NFC tag is scanned, the reader will fire a `reading` event that you
 can use to loop through the incoming messages.
 
 Francois has a great [post][wd-nfc] that covers all the details and it
