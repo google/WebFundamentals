@@ -8,3 +8,6 @@ redirects:
 
 - from: /web/fundamentals/primers/
   to: /web/fundamentals/
+
+- from: /web/fundamentals/primers/promises
+  to: https://web.dev/promises
