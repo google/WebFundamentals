@@ -423,8 +423,8 @@ Following are the conditions to enable skip-the-sheet:
    full delegation support (i.e. only a single available payment handler can
    provide all merchant requested information including shipping address and/or
    contact information whenever needed).
-2. The available payment handler with full delegation should support the
-   requested URL-based payment method.
+2. The available payment handler with full delegation should support a requested
+   URL-based payment method.
 3. `show()` is triggered with a user gesture.
 
 See a skip-the-sheet example here:
