@@ -9,7 +9,7 @@ toc:
     - title: Encrypting Data In Transit
       section:
       - title: Why HTTPS matters
-        path: /web/fundamentals/security/encrypt-in-transit/why-https
+        path: https://web.dev/why-https-matters
         status: external
         step_group: security-https
       - title: Important Security Terminology
