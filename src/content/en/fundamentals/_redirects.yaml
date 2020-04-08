@@ -163,7 +163,3 @@ redirects:
 
 - from: /web/fundamentals/design-and-ux/input/
   to: /web/fundamentals/design-and-ux/input/forms/
-
-- from: /web/fundamentals/primers/promises
-  to: https://web.dev/promises
-  
