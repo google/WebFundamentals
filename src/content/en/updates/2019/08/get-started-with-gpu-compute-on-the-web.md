@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2019-12-13 #}
+{# wf_updated_on: 2020-04-10 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -293,15 +293,15 @@ group layout defines the input/output interface expected by a shader, while a
 bind group represents the actual input/output data for a shader.
 
 In the example below, the bind group layout expects two readonly storage buffers at
-numbered bindings `0`, `1`, and a storage buffer at `2` for the compute shader.
+numbered entry bindings `0`, `1`, and a storage buffer at `2` for the compute shader.
 The bind group on the other hand, defined for this bind group layout, associates
-GPU buffers to the bindings: `gpuBufferFirstMatrix` to the binding `0`,
+GPU buffers to the entries: `gpuBufferFirstMatrix` to the binding `0`,
 `gpuBufferSecondMatrix` to the binding `1`, and `resultMatrixBuffer` to the
 binding `2`.
 
 ```js
 const bindGroupLayout = device.createBindGroupLayout({
-  bindings: [
+  entries: [
     {
       binding: 0,
       visibility: GPUShaderStage.COMPUTE,
@@ -322,7 +322,7 @@ const bindGroupLayout = device.createBindGroupLayout({
 
 const bindGroup = device.createBindGroup({
   layout: bindGroupLayout,
-  bindings: [
+  entries: [
     {
       binding: 0,
       resource: {
@@ -551,7 +551,7 @@ An illustration of `getBindGroupLayout` for the previous sample is [available].
 ```
 -// Bind group layout and bind group
 - const bindGroupLayout = device.createBindGroupLayout({
--   bindings: [
+-   entries: [
 -     {
 -       binding: 0,
 -       visibility: GPUShaderStage.COMPUTE,
@@ -573,7 +573,7 @@ An illustration of `getBindGroupLayout` for the previous sample is [available].
   const bindGroup = device.createBindGroup({
 -  layout: bindGroupLayout,
 +  layout: computePipeline.getBindGroupLayout(0 /* index */),
-   bindings: [
+   entries: [
 ```
 
 ## Performance findings
