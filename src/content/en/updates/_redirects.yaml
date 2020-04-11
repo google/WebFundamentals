@@ -21,7 +21,7 @@ redirects:
   to: /web/android/trusted-web-activity/query-parameters/
 
 - from: /web/updates/nic
-  to: /web/updates/2020/02/nic80
+  to: /web/updates/2020/04/nic81
 
 - from: /web/updates/2019/03/prefers-reduced-motion
   to: https://web.dev/prefers-reduced-motion/
