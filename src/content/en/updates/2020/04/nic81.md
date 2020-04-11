@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's New in Chrome 81 for developers?
 
 {# wf_published_on: 2020-04-07 #}
-{# wf_updated_on: 2020-04-07 #}
+{# wf_updated_on: 2020-04-11 #}
 {# wf_featured_image: /web/updates/images/2020/03/new-81.jpg #}
 {# wf_tags: chrome81,new-in-chrome #}
 {# wf_featured_snippet: Chrome 81 is rolling out now! App icon badging graduates from it's origin trial. Hit testing for augmented reality is now available in the browser. Web NFC starts its origin trial. And I've got an update on the adjusted Chrome release schedule. Let’s dive in and see what’s new for developers in Chrome 81! #}
@@ -160,7 +160,7 @@ This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 81.
 
 * [What's new in Chrome DevTools (81)](/web/updates/2020/01/devtools)
-* [Chrome 81 deprecations & removals](/web/updates/2020/01/chrome-81-deps-rems)
+* [Chrome 81 deprecations & removals](/web/updates/2020/02/chrome-81-deps-rems)
 * [ChromeStatus.com updates for Chrome 81](https://www.chromestatus.com/features#milestone%3D81)
 * [What's new in JavaScript in Chrome 81](https://v8.dev/blog/v8-release-81)
 * [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/80.0.3987.87..81.0.4044.99)
