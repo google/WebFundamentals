@@ -132,12 +132,11 @@ And File Sizes Small** audit is always available in all Lighthouse runtime envir
 By convention the budget file is usually called `budget.json` but you can call it whatever you like.
 The example below sets the following budgets:
 
-* 300 kilobytes for all scripts
-* 100 kilobytes for all images
-* 200 kilobytes for all third-party resources
-* 1000 kilobytes total
-* 10 network requests for third-party resources
-* 50 network requests total
+* Overall transfer size of JavaScript resources on the page: 300 kilobytes
+* Overall transfer size of third-party resources on the page: 200 kilobytes
+* Total number of requests made: 50 requests
+* Time to Interactive: 5000ms
+* First Meaningful Paint: 2000ms
 
 ```json
 [
@@ -148,92 +147,31 @@ The example below sets the following budgets:
         "budget": 300
       },
       {
-        "resourceType": "image",
-        "budget": 100
-      },
-      {
         "resourceType": "third-party",
         "budget": 200
-      },
-      {
-        "resourceType": "total",
-        "budget": 1000
       }
     ],
-    "resourceCounts": [
-      {
-        "resourceType": "third-party",
-        "budget": 10
-      },
       {
         "resourceType": "total",
         "budget": 50
+      }
+    ],
+    "timings": [
+      {
+        "metric": "interactive",
+        "budget": 5000
+      },
+      {
+        "metric": "first-meaningful-paint",
+        "budget": 2000
       }
     ]
   }
 ]
 ```
-
-When you set a `resourceSizes` budget, you're specifying the maximum total transfer size for all
-resources in that category. For example, in the code above there's a budget of 300 kilobytes for
-`script` resources. If `main.js` is 200 kilobytes and `ads.js` is 150 kilobytes, you've exceeded
-your budget.
-
 The table below describes each of the `budget.json` properties.
 
-<table>
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Valid Value(s)</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>resourceSizes</code></td>
-      <td>Array</td>
-      <td>
-        An array of objects. Each object must have a <code>resourceType</code> and <code>budget</code> property.
-      </td>
-      <td>
-        The <code>budget</code> value specifies the total size limit in kilobytes for the category that's specified
-        in <code>resourceType</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>resourceCounts</code></td>
-      <td>Array</td>
-      <td>
-        An array of objects. Each object must have a <code>resourceType</code> and <code>budget</code> property.
-      </td>
-      <td>
-        The <code>budget</code> value specifies the total resource count limit for the category that's specified
-        in <code>resourceType</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>resourceType</code></td>
-      <td>String</td>
-      <td>
-        <code>total</code>, <code>document</code>, <code>script</code>, <code>stylesheet</code>, <code>image</code>,
-        <code>media</code>, <code>font</code>, <code>other</code>, or <code>third-party</code>.
-      </td>
-      <td>
-        <code>total</code> measures all page resources. <code>document</code> measures HTML document requests.
-        <code>other</code> includes any resource that does not match the other categories, including XHR or Fetch requests, 
-        and data transfers over WebSocket connections. <code>third-party</code> measures all resources from third-party domains.
-      </td>
-    </tr>
-    <tr>
-      <td><code>budget</code></td>
-      <td>Integer</td>
-      <td>Any positive integer.</td>
-      <td>
-        Depending on context, the transfer size limit or resource count limit. 
-      </td>
-    </tr>
-  </tbody>
-</table>
+For a complete list of supported performance metrics and resource types, refer to the [Performance Budgets](https://github.com/GoogleChrome/lighthouse/blob/master/docs/performance-budgets.md) section of the Lighthouse docs.
 
 ### Pass the budget file as a flag {: #flags }
 
