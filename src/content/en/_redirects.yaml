@@ -90,3 +90,6 @@ redirects:
 
 - from: /web/updates/2017/02/improved-add-to-home-screen
   to: https://web.dev/customize-install/
+
+- from: /web/updates/2019/02/trusted-types
+  to: https://web.dev/trusted-types/
