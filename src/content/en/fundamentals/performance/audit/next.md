@@ -15,8 +15,8 @@ Having completed a site audit, you will have accurate review data in a form that
 developers and other stakeholders to prioritize and justify changes.
 
 Next, you may want to revisit the sections on this site that provide in-depth advice on how to
-improve [load performance](http://localhost:8080/web/fundamentals/performance/get-started/) and
-[rendering performance](http://localhost:8080/web/fundamentals/performance/rendering/).
+improve [load performance](/web/fundamentals/performance/get-started/) and
+[rendering performance](/web/fundamentals/performance/rendering/).
 
 ## Find out more
 

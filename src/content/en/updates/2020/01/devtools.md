@@ -36,7 +36,7 @@ Related features:
 * Open the [Command Menu](/web/tools/chrome-devtools/command-menu/) and run the `Capture screenshot`
   command to take a screenshot of the viewport that includes the Moto G4 hardware (after enabling
   **Show Device Frame**).
-* [Throttle the network and CPU](http://localhost:8080/web/tools/chrome-devtools/device-mode/#throttle)
+* [Throttle the network and CPU](/web/tools/chrome-devtools/device-mode/#throttle)
   to more accurately simulate a mobile user's web browsing conditions.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/49e4673403214c99cc9d358fb5f311727dcf47e8 #}
