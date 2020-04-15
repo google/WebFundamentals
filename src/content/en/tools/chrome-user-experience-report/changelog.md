@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2020-03-10 #}
+{# wf_updated_on: 2020-04-14 #}
 {# wf_published_on: 2019-02-11 #}
 {# wf_blink_components: N/A #}
 
@@ -14,20 +14,44 @@ numbered according to the year and calendar month of the data collection period,
 corresponds to the UX data collected during December 2019 and would be released on the second 
 Tuesday of January 2020 after the data collection period has ended.
 
-In the list below, we've curated some release notes for each monthly dataset. Subscribe to our [CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) mailing list or follow 
-[@ChromeUXReport](https://twitter.com/ChromeUXReport) on Twitter for release announcements.
+In the list below, we've curated some release notes for each monthly dataset. Subscribe to our 
+[CrUX Announce](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report-announce) 
+mailing list or follow [@ChromeUXReport](https://twitter.com/ChromeUXReport) 
+on Twitter for release announcements.
+
+### 202003
+
+<dl>
+    <dt><a href="https://groups.google.com/a/chromium.org/forum/#!topic/chrome-ux-report-announce/PnEMrAcBJwE">
+        Announcement
+    </a></dt>
+    <dt>Publication date</dt>
+    <dd>April 14, 2020</dd>
+    <dt>What's new</dt>
+    <dd>
+        CLS histogram start/end values changed from <code>INT64</code> to <code>NUMERIC</code> type
+        and divided by 100. This change aligns CLS with the fractional layout shift values provided 
+        by the <a href="https://github.com/WICG/layout-instability">Layout Instability API</a>.
+    </dd>
+    <dt>Notable stats</dt>
+    <dd>
+        <ul>
+            <li>5,937,298 origins</li>
+        </ul>
+    </dd>
+</dl>
 
 ### 202002
 
 <dl>
-	<dt>Publication date</dt>
-	<dd>March 10, 2020</dd>
-	<dt>Notable stats</dt>
-	<dd>
-		<ul>
-			<li>6,366,736 origins</li>
-		</ul>
-	</dd>
+    <dt>Publication date</dt>
+    <dd>March 10, 2020</dd>
+    <dt>Notable stats</dt>
+    <dd>
+        <ul>
+            <li>6,366,736 origins</li>
+        </ul>
+    </dd>
 </dl>
 
 ### 202001
