@@ -63,18 +63,23 @@ async loaded bundle:
 ```html
 <link rel="manifest" href="manifest.webmanifest" />
 <!-- include PWACompat _after_ your manifest -->
-<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js"
-    integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
-    crossorigin="anonymous"></script>
+<script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
 ```
 
 PWACompat will fetch your manifest file and do the work needed for your user's browser, regardless of
 whether they're on a mobile device or desktop.
 
-## More details
+We still recommend adding at least one high-quality shortcut icon, for search indexing:
 
-For supported browsers, what does PWACompat actually do? As of July 2018, PWACompat will load your
-Web App Manifest and:
+```html
+<link rel="icon" type="image/png" href="res/icon-128.png" sizes="128x128" />
+```
+
+For more information, see the [best practices]([PWACompat](https://github.com/GoogleChromeLabs/pwacompat).
+
+## In Depth
+
+For supported browsers, what does PWACompat actually do? PWACompat will load your Web App Manifest and:
 
 * Create meta icon tags for all icons in the manifest (e.g. for a favicon, older browsers)
 * Create fallback meta tags for various browsers (e.g. iOS, WebKit/Chromium forks, etc.) describing
