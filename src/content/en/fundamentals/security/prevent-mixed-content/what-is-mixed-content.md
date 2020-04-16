@@ -14,18 +14,19 @@ description: Mixed occurs when initial HTML is loaded over a secure HTTPS connec
 connection, but other resources (such as images, videos, stylesheets, scripts)
 are loaded over an insecure HTTP connection. This is called mixed content
 because both HTTP and HTTPS content are being loaded to display the same page,
-and the initial request was secure over HTTPS. Modern browsers display warnings
-about this type of content to indicate to the user that this page contains
-insecure resources.
+and the initial request was secure over HTTPS. 
+
+Modern browsers may block this content, or will display warnings about this type of content to indicate to the user that this page contains insecure resources. Browsers that block mixed content may first attempt to "upgrade" the connection to this content from HTTP to HTTPS.
 
 ### TL;DR {: .hide-from-toc }
 
 * HTTPS is important to protect both your site and your users from attack.
 * Mixed content degrades the security and user experience of your HTTPS site.
+* Browsers may block mixed content altogether over time, in order to protect your site's users.
 
 ## Resource requests and web browsers
 
-When a browser _visits_ a website page, it is requesting for an HTML resource. The web server then returns the HTML content, which the browser parses and displays to users. Often a single HTML file isn't enough to display a complete page, so the HTML file includes references to other resources that the browser needs to request. These subresources can be things like images, videos, extra HTML, CSS, or JavaScript, which are each fetched using separate requests.
+When a browser _visits_ a website page, it is requesting an HTML resource. The web server then returns the HTML content, which the browser parses and displays to users. Often a single HTML file isn't enough to display a complete page, so the HTML file includes references to other resources that the browser needs to request. These subresources can be things like images, videos, extra HTML, CSS, or JavaScript, which are each fetched using separate requests.
 
 ## HTTPS benefits
 
@@ -89,9 +90,11 @@ resource.
 
 Although many browsers report mixed content warnings to the user, by the time
 this happens, it is too late: the insecure requests have already been performed
-and the security of the page is compromised. This scenario is, unfortunately,
-quite common on the web, which is why browsers can't just block all mixed
-requests without restricting the functionality of many sites.
+and the security of the page is compromised. 
+
+This scenario has traditionally been
+quite common on the web, which is why many browsers haven't just blocked all mixed
+requests, so as not to restrict the functionality of many sites. However, as HTTPS has become [overwhelmingly adopted on the web](https://transparencyreport.google.com/https/overview), some browsers have announced that they will begin blocking mixed content ([more below](#blocking-optionally-blockable-content)).
 
 <figure>
   <img src="imgs/image-gallery-warning.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure image. This content should also be served over HTTPS.">
@@ -250,9 +253,9 @@ The following contains examples of active mixed content:
 ## Browser behavior with mixed content
 
 Due to the threats described above, it would be ideal for browsers to block all
-mixed content. However, this would break a large number of websites that millions
-of users rely on every day. The current compromise is to block the most
-dangerous types of mixed content and allow the less dangerous types to still be
+mixed content. Historically, this would have broken a large number of websites that millions
+of users rely on every day, and so browsers have generally compromised by blocking the most
+dangerous types of mixed content and allowing the less dangerous types to still be
 requested.
 
 Modern browsers follow the [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external }, which defines the [**optionally blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable){: .external} and [**blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable){: .external} categories.
@@ -260,13 +263,23 @@ Modern browsers follow the [mixed content specification](https://w3c.github.io/w
 From the spec, a resource qualifies as optionally blockable content "when the risk
 of allowing its usage as mixed content is outweighed by the risk of breaking
 significant portions of the web"; this is a subset of the [passive mixed
-content](#passive-mixed-content) category described above. At the time of this writing, images,
+content](#passive-mixed-content) category described above. 
+
+At the time of this writing, images,
 video, and audio resources, as well as prefetched links, are the only
-resource types included in optionally blockable content. This category is
+resource types defined in the spec as optionally blockable content. This category is
 likely to get smaller as time goes on.
 
 All content that is not **optionally blockable** is considered **blockable**,
 and is blocked by the browser.
+
+### Blocking optionally blockable content
+
+In recent years, [HTTPS usage has risen dramatically](https://transparencyreport.google.com/https/overview), and has become the clear default on the web. This makes it more feasible now for browsers to consider blocking all mixed content, even those subresource types defined in the [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external } as **optionally blockable**.
+
+At the time of writing, at least one major browser (Chrome) has announced a [timetable for blocking passive mixed content](https://security.googleblog.com/2019/10/no-more-mixed-messages-about-https_3.html), which also involves attempting to "upgrade" the connection to mixed resources from HTTP to HTTPS before applying the block. Under this plan, images, audio, and video which are embedded using an `http://` URL, but which **are** accessible over `https://` as well, should continue to function as the browser securely fetches them over HTTPS. Images, audio, and video which **are not** available over `https://` will not be loaded by the browser, in order to protect users.
+
+Other browsers may adopt different strategies. However, as the use of HTTPS continues to grow, developers should expect that passive mixed content may stop functioning in modern browsers over time.
 
 ### Browser versions
 
