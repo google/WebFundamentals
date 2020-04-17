@@ -24,7 +24,7 @@ Codelab:  [IndexedDB](lab-indexeddb)
 
 
 
-This text guides you through the basics of the  [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). We are using Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which is very similar to the IndexedDB API, but uses promises rather than events. This simplifies the API while maintaining its structure, so anything you learn using this library can be applied to the IndexedDB API directly.
+This text guides you through the basics of the  [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). We are using Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/idb) library, which is very similar to the IndexedDB API, but uses promises rather than events. This simplifies the API while maintaining its structure, so anything you learn using this library can be applied to the IndexedDB API directly.
 
 <div id="what"></div>
 
@@ -90,10 +90,23 @@ We simply place this function at the beginning of our scripts and we're ready to
 With IndexedDB you can create multiple databases with any names you choose. In general, there is just one database per app. To open a database, we use:
 
 ```
-idb.open(name, version, upgradeCallback)
+idb.open(name, version, {
+  upgrade(db, oldVersion, newVersion, transaction) {
+    // …
+  },
+  blocked() {
+    // …
+  },
+  blocking() {
+    // …
+  },
+  terminated() {
+    // …
+  },
+});
 ```
 
-This method returns a promise that resolves to a database object. When using `idb.open`, you provide a name, version number, and an optional callback to set up the database.
+This method returns a promise that resolves to a database object. When using `idb.open`, you provide a name, version number, and an optional set of callbacks to set up the database.
 
 Here is an example of `idb.open` in context:
 
@@ -552,35 +565,48 @@ Note: The browser throws an error if we try to create object stores or indexes t
 
 
 
-The UpgradeDB object has a special `oldVersion` property, which indicates the version number of the database existing in the browser. We can pass this version number into a `switch` statement to execute blocks of code inside the upgrade callback based on the existing database version number. Let's look at an example:
+The `upgrade` callback has a special `oldVersion` property, which indicates the version number of the database existing in the browser. We can pass this version number into a `switch` statement to execute blocks of code inside the upgrade callback based on the existing database version number. Let's look at an example:
 
 ```
-var dbPromise = idb.open('test-db7', 2, function(upgradeDb) {
-  switch (upgradeDb.oldVersion) {
-    case 0:
-      upgradeDb.createObjectStore('store', {keyPath: 'name'});
-    case 1:
-      var peopleStore = upgradeDb.transaction.objectStore('store');
-      peopleStore.createIndex('price', 'price');
-  }
+var dbPromise = idb.open('test-db7', 2, {
+  upgrade(db, oldVersion, newVersion, transaction) {
+    switch (oldVersion) {
+      case 0:
+        db.createObjectStore('store', {keyPath: 'name'});
+      case 1:
+        var peopleStore = transaction.objectStore('store');
+        peopleStore.createIndex('price', 'price');
+  },
+  blocked() {
+    // …
+  },
+  blocking() {
+    // …
+  },
+  terminated() {
+    // …
+  },
+} 
 });
 ```
 
-In the example we have set the newest version of the database at 2. When this code first executes, since the database doesn't yet exist in the browser, `upgradeDb.oldVersion` is 0 and the `switch` statement starts at `case 0`. In our example, this results in a "store" object store being added to the database. Usually, in switch statements, there is a break after each case, but we are deliberately not doing that here. This way, if the existing database is a few versions behind (or if it doesn't exist), the code continues through the rest of the case blocks until it has executed all the latest changes. So in our example, the browser continues executing through `case 1`, creating a "price" index on the "store" object store. Once this has finished executing, the database in the browser is at version 2 and contains a "store" object store with a "price" index.
+In the example we have set the newest version of the database at 2. When this code first executes, since the database doesn't yet exist in the browser, `oldVersion` is 0 and the `switch` statement starts at `case 0`. In our example, this results in a "store" object store being added to the database. Usually, in switch statements, there is a break after each case, but we are deliberately not doing that here. This way, if the existing database is a few versions behind (or if it doesn't exist), the code continues through the rest of the case blocks until it has executed all the latest changes. So in our example, the browser continues executing through `case 1`, creating a "price" index on the "store" object store. Once this has finished executing, the database in the browser is at version 2 and contains a "store" object store with a "price" index.
 
 Let's say we now want to create a "description" index on the "store" object store. We need to update the version number and add a case, like this:
 
 ```
-var dbPromise = idb.open('test-db7', 3, function(upgradeDb) {
-  switch (upgradeDb.oldVersion) {
-    case 0:
-      upgradeDb.createObjectStore('store', {keyPath: 'name'});
-    case 1:
-      var storeOS = upgradeDb.transaction.objectStore('store');
-      storeOS.createIndex('price', 'price');
-    case 2:
-      var storeOS = upgradeDb.transaction.objectStore('store');
-      storeOS.createIndex('description', 'description');
+var dbPromise = idb.open('test-db7', 3, {
+  upgrade(db, oldVersion, newVersion, transaction) {
+    switch (oldVersion) {
+      case 0:
+        upgradeDb.createObjectStore('store', {keyPath: 'name'});
+      case 1:
+        var storeOS = upgradeDb.transaction.objectStore('store');
+        storeOS.createIndex('price', 'price');
+      case 2:
+        var storeOS = upgradeDb.transaction.objectStore('store');
+        storeOS.createIndex('description', 'description');
+    }
   }
 });
 ```
@@ -711,6 +737,3 @@ Here is a short reference of the differences between the IndexedDB API and the I
 <p><code>request.onerror</code></p>
 </td>
 </tr></table>
-
-
-
