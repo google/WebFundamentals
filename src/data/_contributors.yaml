@@ -2125,3 +2125,18 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
+  
+  meko:
+  name:
+    given: Berkay
+    family: Toptan
+  homepage: 'https://berkay.co'
+  email: bt@berkay.co
+  twitter: mekotr
+  github: meko
+  org:
+    name: Google
+    unit: Product Expert
+  description:
+    en: 
+  country: TR
