@@ -84,7 +84,7 @@ they're not as important as the rest of your site's code!
 ```html
 <script type="module">
   // detect iOS Safari
-  if ('standalone' in navigator) {
+  if (('standalone' in navigator) && (!navigator.standalone)) {
     import('https://unpkg.com/pwacompat');
   }
 </script>
