@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use the PWACompat library to bring your Web App Manifest to all browsers.
 
-{# wf_updated_on: 2018-08-07 #}
+{# wf_updated_on: 2020-04-21 #}
 {# wf_published_on: 2018-07-17 #}
 {# wf_tags: manifest,mobile #}
 {# wf_featured_image: /web/updates/images/2018/07/pwacompat.png #}
@@ -38,10 +38,10 @@ for icons of different sizes, the favicon, startup mode, colors etc.
   </figcaption>
 </figure>
 
-This means you no longer have to add innumerable, standard and non-standard tags (like `<link rel="icon" ... />`
-or `<meta name="orientation" ... />`) to your pages. And for iOS home screen applications, PWACompat
-will even dynamically create splash screens so you don't have to generate one for every different
-screen size.
+This means you no longer have to add innumerable, standard and non-standard tags (like
+`<link rel="icon" ... />` or `<meta name="orientation" ... />`) to your pages. And for iOS home
+screen applications, PWACompat will even dynamically create splash screens so you don't have to
+generate one for every different screen size.
 
 <figure class="figure-center">
   <video autoplay muted loop src="/web/updates/images/2018/07/emojityper-ios.mp4"></video>
@@ -66,20 +66,25 @@ async loaded bundle:
 <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
 ```
 
-PWACompat will fetch your manifest file and do the work needed for your user's browser, regardless of
-whether they're on a mobile device or desktop.
+PWACompat will fetch your manifest file and do the work needed for your user's browser, regardless
+of whether they're on a mobile device or desktop.
 
 We still recommend adding at least one high-quality shortcut icon, for search indexing:
 
 ```html
-<link rel="icon" type="image/png" href="res/icon-128.png" sizes="128x128" />
+<link rel="icon" type="image/png" href="icon-128.png" sizes="128x128" />
 ```
 
-For more information, see the [best practices]([PWACompat](https://github.com/GoogleChromeLabs/pwacompat).
+For more information, see the [best practices](https://github.com/GoogleChromeLabs/pwacompat).
+
+Note: Alternatively, consider loading the library after your main bundle with a dynamic `import()`
+stement. While it's great to have splash screens, they're not as important as the rest of your
+site's code!
 
 ## In Depth
 
-For supported browsers, what does PWACompat actually do? PWACompat will load your Web App Manifest and:
+For supported browsers, what does PWACompat actually do? PWACompat will load your Web App Manifest
+and:
 
 * Create meta icon tags for all icons in the manifest (e.g. for a favicon, older browsers)
 * Create fallback meta tags for various browsers (e.g. iOS, WebKit/Chromium forks, etc.) describing
@@ -103,8 +108,8 @@ If you'd like to contribute more or help with additional browser support,
 
 ## Try it out
 
-PWACompat is live on [Airhorner](https://airhorner.com) and
-[Emojityper](https://emojityper.com). Both sites' header HTML can be simple: just specify
+PWACompat is live on [Airhorner](https://airhorner.com), [v8.dev](https://v8.dev) and 
+[Emojityper](https://emojityper.com). Your sites' header HTML can be simple: just specify
 [the manifest](https://emojityper.com/manifest.json) and let PWACompat handle the rest.
 
 📢🤣🎉
