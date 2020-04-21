@@ -78,18 +78,18 @@ We still recommend adding at least one high-quality shortcut icon, for search in
 For more information, see the [best practices](https://github.com/GoogleChromeLabs/pwacompat).
 
 Note: Alternatively, consider loading the library after your main bundle with a dynamic `import()`
-stement. While it's great to have splash screens, they're not as important as the rest of your
-site's code!
+stement on platforms that are important to you. While it's great to have splash screens,
+they're not as important as the rest of your site's code!
 
 ```html
 <script type="module">
-  if (
-    /\b(iPad|iPhone|iPod)\b/.test(navigator.userAgent) &&
-    !matchMedia("(display-mode: standalone)").matches
-  ) {
+  // detect iOS Safari
+  if ('standalone' in navigator) {
     import('https://unpkg.com/pwacompat');
   }
 </script>
+```
+
 ## In Depth
 
 For supported browsers, what does PWACompat actually do? PWACompat will load your Web App Manifest
