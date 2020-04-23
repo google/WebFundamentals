@@ -1,17 +1,18 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-08-27 #} {# wf_published_on: 2019-02-06 #} {# wf_tags:
-fundamentals, performance, app-shell #} {# wf_featured_image:
-/web/updates/images/2019/02/rendering-on-the-web/icon.png #} {#
-wf_featured_snippet: Где нам следует реализовывать логику и рендеринг в наших
-приложениях? Должны ли мы использовать Рендеринг на Стороне Сервера? Что такое
-Регидратация? Давайте найдём ответы! #} {# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-08-27 #}
+{# wf_published_on: 2019-02-06 #}
+{# wf_tags: fundamentals, performance, app-shell #}
+{# wf_featured_image: /web/updates/images/2019/02/rendering-on-the-web/icon.png #}
+{# wf_blink_components: N/A #}
 
 # Рендеринг в Интернете {: .page-title }
 
-{% include "web/_shared/contributors/developit.html" %} {% include
-"web/_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/developit.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
+
+{% include "web/_shared/machine-translation.html" %}
 
 Как разработчики, мы часто сталкиваемся с решениями, которые влияют на всю
 архитектуру наших приложений. Одно из основных решений, которые должны принять
