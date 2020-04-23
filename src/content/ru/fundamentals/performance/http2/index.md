@@ -11,7 +11,7 @@ description: HTTP/2 (или h2) - это двоичный протокол, ко
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 {% include "web/_shared/contributors/surma.html" %}
 
-{% include "web/_shared/machine-translation.html" %}
+{% include "web/_shared/translation-out-of-date.html" %}
 
 Примечание. Следующее содержимое является выдержкой из [Высокопроизводительная
 Браузерная Сеть](http://shop.oreilly.com/product/0636920028048.do) (О'Рейли,

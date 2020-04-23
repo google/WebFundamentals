@@ -12,7 +12,7 @@ book_path: /web/updates/_book.yaml
 {% include "web/_shared/contributors/developit.html" %}
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-{% include "web/_shared/machine-translation.html" %}
+{% include "web/_shared/translation-out-of-date.html" %}
 
 Как разработчики, мы часто сталкиваемся с решениями, которые влияют на всю
 архитектуру наших приложений. Одно из основных решений, которые должны принять
