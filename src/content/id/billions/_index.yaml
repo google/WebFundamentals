@@ -10,6 +10,12 @@ landing_page:
   - classname: devsite-landing-row-50
     items:
     - youtube_id: E6hGubMkNfM
+      description: "Satu miliar pengguna berikutnya hampir semua akan menggunakan
+        perangkat seluler. \n  Hal tersebut merupakan tantangan yang unik bagi developer
+        web karena harus mengabaikan pendekatan pengutamaan perangkat seluler yang
+        terbatas dan mendahulukan strategi perangkat seluler yang menyeluruh.\n \n
+        \ Anda bisa mengatasi tantangan ini dengan menekankan pada beberapa bidang
+        utama yang tercantum di bawah ini.\n"
   - classname: devsite-landing-row-cards
     items:
     - buttons:
@@ -151,5 +157,11 @@ landing_page:
         path: https://support.google.com/webmasters/answer/182192/
       heading: Rencana untuk pelokalan
       image_path: images/localization.png
+      description: Pelokalan dapat membantu Anda mengakses pasar yang baru. Banyak
+        situs web yang terbit hanya dalam bahasa Inggris, namun bahasa Inggris bukanlah
+        bahasa ibu dari kebanyakan pengguna yang online. Hanya 5,52% penduduk dunia
+        yang merupakan penutur asli bahasa Inggris dan adat budaya AS atau Eropa mungkin
+        tidak familiar atau intuitif. Petunjuk atau perintah yang singkat dan ringkas
+        dalam bahasa Inggris mungkin menjadi panjang dan monoton dalam bahasa lain.
 project_path: "/web/_project.yaml"
 title: Membangun untuk Miliaran Pengguna
