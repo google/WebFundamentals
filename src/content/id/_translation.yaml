@@ -1,2 +1,15 @@
 ---
 title: Permintaan terjemahan DevSite untuk /web/
+ignore_paths:
+- "/web/_translation.yaml"
+- "/web/_common-links.md"
+- "/web/manifest.json"
+- "/web/_shared/sample.html"
+- "/ web / sumber daya / ..."
+- "/ web / showcase / ..."
+- "/ web / pertunjukan / ..."
+- "/ web / pembaruan / ..."
+- "/web/fundamentals/atom.xml"
+- "/web/fundamentals/rss.xml"
+- "/web/tools/atom.xml"
+- "/web/tools/rss.xml"
