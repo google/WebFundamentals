@@ -16,7 +16,8 @@ toc:
       path: /web/fundamentals/integration/webapks
   - include: /web/fundamentals/native-hardware/_toc.yaml
   - title: Search Optimization
-    path: /web/fundamentals/discovery/search-optimization/
+    path: https://web.dev/lighthouse-seo/
+    status: external
   - include: /web/fundamentals/security/credential-management/_toc.yaml
   - title: Social Discovery
     path: /web/fundamentals/discovery/social-discovery/
