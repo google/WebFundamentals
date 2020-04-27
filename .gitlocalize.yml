@@ -3,3 +3,6 @@ settings:
     - "true"
   frontmatter_not_escaped:
     - "true"
+  popup_for_contributors:
+    enabled: true
+    message_text: WebFundamentals is transitioning to web.dev, and for now, this project is no longer accepting translations from contributors. Your translations will no longer be reviewed and sent as Pull Requests. Please stay tuned for future updates on the <a href="https://web.dev">web.dev</a> project.
