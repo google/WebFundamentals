@@ -91,7 +91,8 @@ toc:
           - title: Offline Storage for Progressive Web Apps
             path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
           - title: Using the Cache API
-            path: /web/fundamentals/instant-and-offline/web-storage/cache-api
+            path: https://web.dev/cache-api-quick-guide/
+            status: external
           - title: IndexedDB Best Practices
             path: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices
         - title: Offline UX Considerations
