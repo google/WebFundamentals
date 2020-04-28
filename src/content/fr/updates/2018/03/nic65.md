@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: What's new in Chrome 65 for developers?
+description: Quelles nouveautés présente Chrome 65 pour les développeurs ?
 
 {# wf_published_on: 2018-03-06 #} {# wf_updated_on: 2018-03-07 #} {#
 wf_featured_image: /web/updates/images/generic/new-in-chrome.png #} {# wf_tags:
@@ -138,9 +138,7 @@ Par défaut, le `div` interne est contenu dans le `div` externe.
 </style>
 
 <div class="disp-contents-outer">
-  <div class="disp-contents-inner">
-    I'm the inner <div>
-  </div>
+  <div class="disp-contents-inner">     Je suis la <div> interne</div>
 </div>
 
  Ajouter `display: contents` au div externe le fait disparaître, ses contraintes
@@ -148,10 +146,8 @@ ne s'appliquent plus au `div` interne. Le `div` interne a maintenant une largeur
 de 100%.
 
 <div class="disp-contents-outer disp-contents">
-  <div class="disp-contents-inner">
-    Use DevTools to inspect the DOM, and notice the outer <code>div</code> still
-exists.
-  </div>
+  <div class="disp-contents-inner">     Utilisez DevTools pour inspecter le DOM
+et vous constaterez que le <code>div</code> externe existe encore.</div>
 </div>
 
  Il y a beaucoup de cas où cela pourrait être utile, le cas le plus commun est
