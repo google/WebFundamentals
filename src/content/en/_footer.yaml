@@ -55,3 +55,9 @@ footer:
       path: /web/resources/
     - label: Translating
       path: /web/resources/translations
+
+  - name: Help
+    icon_name: help
+    contents:
+    - label: Need help?
+      path: https://support.google.com/webmasters/community
