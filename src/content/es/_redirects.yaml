@@ -16,3 +16,16 @@ redirects:
   to: "/web/resources/"
 - from: "/web/fundamentals/media"
   to: "/web/fundamentals/media/video"
+- 
+- 
+- 
+- 
+- to: "/web/fundamentals/web-app-manifest/"
+- 
+- 
+- 
+- 
+- 
+- 
+- from: "/web/g-co/twa"
+  to: "/web/updates/2017/10/using-twa"
