@@ -1,0 +1,13 @@
+---
+toc:
+- name: Fundamentos
+  heading: Fundamentos web
+  attributes:
+  - name: data-category
+    value: webFu
+  - name: data-label
+    value: upper-webfu
+  lower_tabs:
+    guides:
+    - title: Inicio
+      path: "/web/fundamentals/"
