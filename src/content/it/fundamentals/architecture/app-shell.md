@@ -226,9 +226,7 @@ data-parent-segment-id="2886628">
   </header>
 
 
-  <nav class="nav">
-  ...
-  </nav>
+  <nav class="nav">   ...</nav>
 
 
   <main class="main">
@@ -236,9 +234,7 @@ data-parent-segment-id="2886628">
   </main>
 
 
-  <div class="dialog-container">
-  ...
-  </div>
+  <div class="dialog-container">   ...</div>
 
 
   <div class="loader">
@@ -289,8 +285,7 @@ data-parent-segment-id="973834">gulp.task('generate-service-worker',
 function(callback) {
   var path = require('path');
   var swPrecache = require('sw-precache');
-  var rootDir = 'app';
-</code></pre>
+  var rootDir = 'app';</code></pre>
 
 swPrecache.write(path.join(rootDir, 'service-worker.js'), { staticFileGlobs:
 [rootDir + '/**/*.{js,html,css,png,jpg,gif}'], stripPrefix: rootDir },
