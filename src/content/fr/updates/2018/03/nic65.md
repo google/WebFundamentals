@@ -89,8 +89,8 @@ en ajoutant en en-tête `Server-Timing` à votre réponse:
 src="https://github.com/google/WebFundamentals/blob/master/web/updates/images/2018/03/nic65-server-timing-devtools.png?raw=true"
 class="attempt-right">
 
-They’re shown in Chrome DevTools, or you can pull them out of the response
-header and save them with your other performance analytics.
+Ils sont affichés dans Chrome DevTools ou vous pouvez les extraire de l'en-tête
+de réponse et les enregistrer avec vos autres analyses de performances.
 
 <div class="clearfix"></div>
 
@@ -158,9 +158,9 @@ exists.
 avec flexbox.  Avec flexbox, seuls les enfants immédiats d'un conteneur flexible
 deviennent des objets flexibles.
 
-But, once you apply `display: contents` to a child, its children become flex
-items and are laid out using the same rules that would have been applied to
-their parent.
+Mais, une fois que vous appliquez `display: contents` à un enfant, ses enfants
+deviennent des éléments flex et sont disposés en utilisant les mêmes règles qui
+auraient été appliquées à leur parent.
 
 Jetez un coup d’œil à l'excellent article de [Rachel
 Andrew](https://twitter.com/rachelandrew), [Vanishing boxes with display
@@ -169,13 +169,14 @@ pour plus de détails et d'autres exemples.
 
 ## Et bien plus! {: #more }
 
-These are just a few of the changes in Chrome 65 for developers, of course,
-there’s plenty more.
+Ce ne sont que quelques-uns des changements dans Chrome 65 pour les
+développeurs, bien sûr, il y en a beaucoup plus.
 
-- The syntax for specifying `HSL` and `HSLA`, and `RGB` and `RGBA`
-coordinatesfor the color property
-now[match](https://drafts.csswg.org/css-color/#the-hsl-notation) the[CSS Color 4
-spec](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
+- La syntaxe pour spécifier `HSL` et `HSLA` , et les coordonnées `RGB` et `RGBA`
+pour la propriété de couleur
+[correspondent](https://drafts.csswg.org/css-color/#the-hsl-notation) maintenant
+[à](https://drafts.csswg.org/css-color/#the-hsl-notation) la [spécification CSS
+Color 4](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) .
 - Il y a une nouvelle [politique de
 confidentialité](http://xhr.featurepolicy.rocks/) qui vous permet de contrôler
 les XHR synchrones par le biais d'une en-tête HTTP ou de l'attribut `allow` de
