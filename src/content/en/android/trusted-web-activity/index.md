@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Trusted Web Activity
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-04-28 #}
 {# wf_blink_components: N/A #}
 
 # Trusted Web Activity {: .page-title }
@@ -22,8 +22,9 @@ Note: Trusted Web Activity is available in [Chrome on Android][6], version 72 an
 
 _Looking for the code?_
 
-* [TrustedWebUtils Android Support Library API reference](https://developer.android.com/reference/android/support/customtabs/TrustedWebUtils.html)
-* [Sample Trusted Web Activity application](https://github.com/GoogleChromeLabs/svgomg-twa)
+* [android-browser-helper library on GitHub][9]
+* [Trusted Web Activity demos][10]
+* [Bubblewrap, a NodeJs library / CLI to generate and build Trusted Web Activity projects][11]
 
 <div class="clearfix"></div>
 
@@ -87,3 +88,6 @@ is a good place to get started.
 [6]: https://play.google.com/store/apps/details?id=com.android.chrome
 [7]: /web/android/trusted-web-activity/quick-start/
 [8]: /web/android/trusted-web-activity/integration-guide/
+[9]: https://github.com/GoogleChrome/android-browser-helper
+[10]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos
+[11]: https://github.com/GoogleChromeLabs/bubblewrap
