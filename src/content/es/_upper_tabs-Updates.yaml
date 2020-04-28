@@ -1,0 +1,12 @@
+---
+toc:
+- name: Actualizaciones
+  attributes:
+  - name: data-category
+    value: webFu
+  - name: data-label
+    value: upper-updates
+  lower_tabs:
+    guides:
+    - title: Inicio
+      path: "/web/updates/"
