@@ -1,0 +1,48 @@
+---
+footer:
+- promos:
+  - label: Chromium Blog
+    description: Últimas noticias en Chromium blog.
+    icon: https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
+    path: https://blog.chromium.org
+  - label: GitHub
+    description: Copia nuestros ejemplos de código y otros proyectos de código fuente
+      abierto.
+    path: https://github.com/googlechrome
+    icon: "/site-assets/logo-github.svg"
+  - label: Twitter
+    description: Conecta con @ChromiumDev en Twitter.
+    icon: "/site-assets/logo-twitter.svg"
+    path: https://twitter.com/chromiumdev
+  - label: Vídeos
+    description: Echa un vistazo a nuestros vídeos.
+    icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
+    path: "/web/shows/"
+- linkboxes:
+  - name: Temas principales
+    icon_name: estrella
+    contents:
+    - label: Building for Billions
+      path: "/web/billions/"
+    - label: Chrome Extension Docs
+      path: https://developers.chrome.com/extensions/api_index
+  - icon_name: escuela
+    contents:
+    - label: Formación online con instructor
+      path: "/web/ilt/"
+    - label: Cursos online en Udacity
+      path: "/web/shows/udacity/"
+    - label: Agencias
+      path: "/web/agencies/"
+    name: Formación y colaboradores
+  - name: Contribuye
+    icon_name: bug_report
+    contents:
+    - label: Informar de un problema
+      path: https://github.com/google/WebFundamentals/issues
+    - label: Ver código fuente
+      path: https://github.com/google/WebFundamentals
+    - label: Recursos
+      path: "/web/resources/"
+    - label: Traducción
+      path: "/web/resources/translations"
