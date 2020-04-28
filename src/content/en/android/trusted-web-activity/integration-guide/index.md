@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Trusted Web Activity
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-04-28 #}
 {# wf_blink_components: N/A #}
 
 # Trusted Web Activity Integration Guide {: .page-title }
@@ -81,7 +81,7 @@ dependency to the `dependencies` section:
 
 ```
 dependencies {
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.1.0'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.2.0'
 }
 ```
 
