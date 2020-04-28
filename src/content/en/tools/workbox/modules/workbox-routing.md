@@ -50,7 +50,7 @@ custom match and handler function is the best option.
 A
 [match callback function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
 is passed a
-[`FetchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent),
+[`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent),
 [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request), and a
 [`URL` object](https://developer.mozilla.org/en-US/docs/Web/API/URL) you can
 match by returning a truthy value. For a simple example, you could match against
@@ -68,7 +68,7 @@ Most use cases can be covered by examining / testing either the `url` or the
 A
 [handler callback function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~handlerCallback)
 will be given the same
-[`FetchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent),
+[`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent),
 [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request), and
 [`URL` object](https://developer.mozilla.org/en-US/docs/Web/API/URL) along with
 a `params` value, which is the value returned by the "match" function.
