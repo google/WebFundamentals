@@ -1,0 +1,17 @@
+---
+upper_tabs:
+- include: "/web/_upper_tabs-Fundamentals.yaml"
+- include: "/web/_upper_tabs-Tools.yaml"
+- include: "/web/_upper_tabs-Updates.yaml"
+- include: "/web/_upper_tabs-Showcase.yaml"
+- name: Sugerencias
+  path: "/web/feedback/"
+  lower_tabs:
+    other:
+    - name: Sugerencias
+      contents:
+      - path: "/web/feedback/"
+      - title: Cómo Reportar un Buen Bug
+        path: "/web/feedback/file-a-bug"
+      - title: Buscador de Errores del Navegador
+        path: "/web/feedback/browser-bug-searcher"
