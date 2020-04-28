@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: All of the ways that you can open Chrome DevTools.
+description: Todas las formas posibles de abrir las herramientas para desarrolladores Chrome DevTools.
 
 {# wf_updated_on: 2018-12-14 #} {# wf_published_on: 2018-12-14 #} {#
 wf_blink_components: Platform>DevTools #}
@@ -22,9 +22,7 @@ el botón derecho del raton en el elemento y seleccione **Inspeccionar**.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/web/tools/chrome-devtools/images/inspect.png?raw=true"
 alt="The Inspect option">
-  <figcaption>
-    <b>Figure 1</b>. The <b>Inspect</b> option
-  </figcaption>
+  <figcaption>     <b>Figura 1</b>. La opción <b>Inspeccionar</b></figcaption>
 </figure>
 
 O presione <kbd>Comando</kbd> + <kbd>Opción</kbd> + <kbd>C</kbd> (Mac) o
@@ -59,9 +57,8 @@ desarrollador** .
   <img
 src="https://github.com/google/WebFundamentals/blob/master/web/tools/chrome-devtools/images/open-from-main.png?raw=true"
 alt="Opening DevTools from Chrome's main menu.">
-  <figcaption>
-    <b>Figure 2</b>. Opening DevTools from Chrome's main menu
-  </figcaption>
+  <figcaption>     <b>Figura 2</b>. Cómo abrir DevTools desde el menú principal
+de Chrome</figcaption>
 </figure>
 
 ## Abrir DevTools automáticamente en cada nueva pestaña {: #auto}
