@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-16 #}
+{# wf_updated_on: 2020-04-28 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Routing {: .page-title }
@@ -39,47 +39,52 @@ expressions or Route instances.
 
 ## Matching and Handling in Routes
 
-A "route" in workbox is nothing more than two functions: a “matching” function
-to determine if the route should match a request and a “handling” function,
-which should handle the request and respond with a Response.
+A "route" in workbox is nothing more than two functions: a "matching" function
+to determine if the route should match a request and a "handling" function,
+which should handle the request and respond with a response.
 
-Workbox comes with some helpers that’ll perform the matching and handling for
-you, but if you ever find yourself wanting different behaviour, writing a
+Workbox comes with some helpers that'll perform the matching and handling for
+you, but if you ever find yourself wanting different behavior, writing a
 custom match and handler function is the best option.
 
-A match function will be given a `FetchEvent` and a URL object and you can
-match against a request by returning a truthy value. For a simple example,
-you could match against a specific URL like so:
+A
+[match callback function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
+is passed a
+[`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent),
+[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request), and a
+[`URL` object](https://developer.mozilla.org/en-US/docs/Web/API/URL) you can
+match by returning a truthy value. For a simple example, you could match against
+a specific URL like so:
 
 ```js
-const matchCb = ({url, event}) => {
+const matchCb = ({url, request, event}) => {
   return (url.pathname === '/special/url');
 };
 ```
 
 Most use cases can be covered by examining / testing either the `url` or the
-`event.request` to match against a Request.
+`request`.
 
-A "handler" will be given the URL and event as well and you can determine how
-to respond, whether it’s from the network, from the cache or generated in the
-service worker.
+A
+[handler callback function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~handlerCallback)
+will be given the same
+[`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent),
+[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request), and
+[`URL` object](https://developer.mozilla.org/en-US/docs/Web/API/URL) along with
+a `params` value, which is the value returned by the "match" function.
 
 ```js
-const handlerCb = ({url, event, params}) => {
-  return fetch(event.request)
-  .then((response) => {
-    return response.text();
-  })
-  .then((responseBody) => {
-    return new Response(`${responseBody} <!-- Look Ma. Added Content. -->`);
-  });
+const handlerCb = async ({url, request, event, params}) => {
+  const response = await fetch(request);
+  const responseBody = await response.text();
+  return new Response(`${responseBody} <!-- Look Ma. Added Content. -->`); 
 };
 ```
 
-Your handler must return a Promise that resolves to a Response. The `params`
-value is the value returned by the "match" function. This may
-be useful if you parsed the URL or request and want to pass values into
-the “handler” for a matching request.
+Your handler must return a promise that resolves to a `Response`. In this
+example, we're using
+[`async` and `await`](/web/fundamentals/primers/async-functions).
+Under the hood, the return `Response` value will be wrapped in a promise.
 
 You can register these callbacks like so:
 
@@ -93,11 +98,6 @@ The only limitation is that the "match" callback **must synchronously** return a
 value, you can’t perform any asynchronous work. The reason for this is that
 the `Router` must synchronously respond to the fetch event or allow falling
 through to other fetch events.
-
-The "handler" callback should return a Promise that resolves to a
-[Response](https://developer.mozilla.org/en-US/docs/Web/API/Response).
-Where that Response comes from is up to you; it could come from the
-network, from a cache, or it could be generated in the service worker.
 
 Normally the "handler" callback would use one of the strategies provided
 by [workbox-strategies](./workbox-strategies) like so:
