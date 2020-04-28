@@ -1,12 +1,12 @@
 ---
 toc:
-- name: Herramientas
-  attributes:
+- attributes:
   - name: data-category
     value: webFu
   - name: data-label
     value: upper-tools
   lower_tabs:
     guides:
-    - title: Inicio
-      path: "/web/tools/"
+    - path: "/web/tools/"
+      title: Inicio
+  name: Herramientas
