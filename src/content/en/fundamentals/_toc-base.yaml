@@ -10,7 +10,8 @@ toc:
     - title: Async Functions
       path: /web/fundamentals/primers/async-functions
     - title: Modules
-      path: /web/fundamentals/primers/modules
+      path: https://v8.dev/features/modules
+      status: external
     - title: Promises
       path: https://web.dev/promises
       status: external

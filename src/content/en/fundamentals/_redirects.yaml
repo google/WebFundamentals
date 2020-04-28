@@ -12,6 +12,9 @@ redirects:
 - from: /web/fundamentals/performance/prpl-pattern
   to: https://web.dev/apply-instant-loading-with-prpl/
 
+- from: /web/fundamentals/instant-and-offline/web-storage/cache-api
+  to: https://web.dev/cache-api-quick-guide/
+
 - from: /web/fundamentals/layouts/...
   to: /web/fundamentals/design-and-ux/responsive/
 
