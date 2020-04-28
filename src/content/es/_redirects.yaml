@@ -1,0 +1,18 @@
+---
+redirects:
+- from: "/web/chrome-devtools"
+  to: "/web/tools/chrome-devtools"
+- from: "/web/feed.xml"
+  to: "/web/fundamentals/rss.xml"
+- from: "/web/fundamentals/resources/contributors/"
+  to: "/web/resources/contributors/"
+- from: "/web/fundamentals/resources/example-article/"
+  to: "/web/resources/styleguide/sample-article"
+- from: "/web/update"
+  to: "/web/updates/"
+- from: "/web/starter-kit/..."
+  to: "/web/tools/starter-kit/..."
+- from: "/web/fundamentals/resources/..."
+  to: "/web/resources/"
+- from: "/web/fundamentals/media"
+  to: "/web/fundamentals/media/video"
