@@ -11,6 +11,7 @@ upper_tabs:
     - name: Sugerencias
       contents:
       - path: "/web/feedback/"
+        title: Casa
       - title: Cómo Reportar un Buen Bug
         path: "/web/feedback/file-a-bug"
       - title: Buscador de Errores del Navegador
