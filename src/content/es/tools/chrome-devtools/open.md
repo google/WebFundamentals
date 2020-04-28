@@ -2,23 +2,21 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: All of the ways that you can open Chrome DevTools.
 
-{# wf_updated_on: 2018-12-14 #}
-{# wf_published_on: 2018-12-14 #}
-{# wf_blink_components: Platform>DevTools #}
+{# wf_updated_on: 2018-12-14 #} {# wf_published_on: 2018-12-14 #} {#
+wf_blink_components: Platform>DevTools #}
 
 # Abrir Chrome DevTools {: .page-title}
 
 {% include "web / _shared / contributors / kaycebasques.html"%}
 
-There are many ways to open Chrome DevTools, because different users want fast
-access to different
-parts of the DevTools UI.
+Hay muchas maneras de abrir las herramientas de desarrollo de Chrome, ya que
+diferentes tipos de usuarios desean un acceso rápido a diferentes partes de la
+interfaz de usuario de herramientas de desarrollo (DevTools).
 
-## Open the Elements panel to inspect the DOM or CSS {: #elements }
+## Abra el panel Elementos para inspeccionar el DOM o CSS {: #elements}
 
-When you want to inspect a DOM node's styles or attributes, right-click the
-element
-and select **Inspect**.
+Cuando desee inspeccionar los estilos o atributos de un nodo DOM, haga clic con
+el botón derecho del raton en el elemento y seleccione **Inspeccionar**.
 
 <figure>
   <img
@@ -33,24 +31,23 @@ O presione <kbd>Comando</kbd> + <kbd>Opción</kbd> + <kbd>C</kbd> (Mac) o
 <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> (Windows, Linux, Chrome
 OS).
 
-See [Get Started With Viewing And Changing
-CSS](/web/tools/chrome-devtools/css/).
+Consulte [Comenzar a ver y cambiar CSS](/web/tools/chrome-devtools/css/).
 
-## Open the Console panel to view logged messages or run JavaScript {: #console }
+## Abrir el panel de la Consola para ver los mensajes de debugeo o ejecute JavaScript {: #console}
 
 Presione <kbd>Comando</kbd> + <kbd>Opción</kbd> + <kbd>J</kbd> (Mac) o
 <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> (Windows, Linux, Chrome OS)
 para saltar directamente al panel de la **consola** .
 
-See [Get Started With The
-Console](/web/tools/chrome-devtools/console/get-started).
+Consulte [Empezando a trabajar con la
+Consola](/web/tools/chrome-devtools/console/get-started).
 
-## Open the last panel you had open {: #last }
+## Reabrir el último panel abierto {: #last}
 
 Presione <kbd>Comando</kbd> + <kbd>Opción</kbd> + <kbd>I</kbd> (Mac) o
 <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>I.</kbd>
 
-## Open DevTools from Chrome's main menu {: #chrome }
+## Abrir DevTools desde el menú principal de Chrome {: #chrome}
 
 Haga clic en **Personalizar y controlar Google Chrome** ![Personaliza y controla
 Google
@@ -67,7 +64,7 @@ alt="Opening DevTools from Chrome's main menu.">
   </figcaption>
 </figure>
 
-## Auto-open DevTools on every new tab {: #auto }
+## Abrir DevTools automáticamente en cada nueva pestaña {: #auto}
 
 Abra Chrome desde la línea de comandos y pase el `--auto-open-devtools-for-tabs`
 .
