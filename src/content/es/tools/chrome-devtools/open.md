@@ -7,7 +7,7 @@ wf_blink_components: Platform>DevTools #}
 
 # Abrir Chrome DevTools {: .page-title}
 
-{% include "web / _shared / contributors / kaycebasques.html"%}
+{% include "web/_shared/contributors/kaycebasques.html"%}
 
 Hay muchas maneras de abrir las herramientas de desarrollo de Chrome, ya que
 diferentes tipos de usuarios desean un acceso rápido a diferentes partes de la
@@ -74,4 +74,4 @@ Mac:
 
 ## Comentarios {: #feedback .hide-from-toc}
 
-{% include "web / _shared / helpful.html"%}
+{% include "web/_shared/helpful.html" %}
