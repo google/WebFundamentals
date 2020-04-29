@@ -66,7 +66,8 @@ toc:
           path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
           step_group: perf-oce
         - title: HTTP Caching
-          path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
+          path: https://web.dev/http-cache/
+          status: external
           step_group: perf-oce
         - title: Adapting to Users with Client Hints
           path: /web/fundamentals/performance/optimizing-content-efficiency/client-hints/
