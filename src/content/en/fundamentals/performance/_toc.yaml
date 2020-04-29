@@ -89,7 +89,8 @@ toc:
           - title: Overview
             path: /web/fundamentals/instant-and-offline/web-storage/
           - title: Offline Storage for Progressive Web Apps
-            path: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+            path: https://web.dev/storage-for-the-web/
+            status: external
           - title: Using the Cache API
             path: https://web.dev/cache-api-quick-guide/
             status: external

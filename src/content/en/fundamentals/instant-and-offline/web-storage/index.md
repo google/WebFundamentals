@@ -91,119 +91,6 @@ is particularly onerous in web browsers, where the storage request is sharing
 the main thread with the UI. For efficiency and performance reasons,
 asynchronous storage APIs are to be preferred.
 
-## Comparison
-
-In this section we take a look at the current APIs available for web developers
-and compare them across the dimensions described above.
-
-<table>
-  <thead>
-    <th>API</th>
-    <th>Data
-Model</th>
-    <th>Persistence</th>
-    <th>Browser
-Support</th>
-    <th>Transactions</th>
-    <th>Sync/Async</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem">File system</a></td>
-      <td>Byte stream</td>
-      <td>device</td>
-      <td><a href="http://caniuse.com/#feat=filesystem">52%</a></td>
-      <td>No</td>
-      <td>Async</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">
-          Local Storage
-        </a>
-      </td>
-      <td>key/value</td>
-      <td>device</td>
-      <td><a href="http://caniuse.com/#feat=namevalue-storage">93%</a></td>
-      <td>No</td>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">
-          Session Storage
-        </a>
-      </td>
-      <td>key/value</td>
-      <td>session</td>
-      <td><a href="http://caniuse.com/#feat=namevalue-storage">93%</a></td>
-      <td>No</td>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">Cookies</a></td>
-      <td>structured</td>
-      <td>device</td>
-      <td>100%</td>
-      <td>No</td>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <td><a href="https://www.w3.org/TR/webdatabase/">WebSQL</a></td>
-      <td>structured</td>
-      <td>device</td>
-      <td><a href="http://caniuse.com/#feat=sql-storage">77%</a></td>
-      <td>Yes</td>
-      <td>Async</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">Cache</a>
-      </td>
-      <td>key/value</td>
-      <td>device</td>
-      <td><a href="http://caniuse.com/#feat=serviceworkers">60%</a></td>
-      <td>No</td>
-      <td>Async</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>
-      </td>
-      <td>hybrid</td>
-      <td>device</td>
-      <td><a href="http://caniuse.com/#feat=indexeddb">83%</a></td>
-      <td>Yes</td>
-      <td>Async</td>
-    </tr>
-    <tr>
-      <td><a href="https://cloud.google.com/storage/">cloud storage</a></td>
-      <td>byte stream</td>
-      <td>global</td>
-      <td>100%</td>
-      <td>No</td>
-      <td>Both</td>
-    </tr>
-  <tbody>
-</table>
-
-As noted above, it’s wise to choose APIs that are widely supported across as
-many browsers as possible and which offer asynchronous call models, to maximize
-interoperability with the UI. These criteria lead naturally to the following
-technology choices:
-
-* For offline storage, use the [Cache API](cache-api). This API is available in any browser that
-supports [Service Worker technology](https://jakearchibald.github.io/isserviceworkerready/)
-necessary for creating offline apps. The Cache API is ideal for storing resources associated with a
-known URL.
-
-* For storing application state and user-generated content, use IndexedDB. This enables users to
-  work offline in more browsers than just those that support the Cache API.
-
-* For global byte stream storage: use a Cloud Storage service.
-
-This combination satisfies the basic storage needs for many mobile web apps.
-
 ## Debugging storage in Chrome DevTools {: #devtools }
 
 Check out the following docs to learn more about using Chrome DevTools to
@@ -230,8 +117,8 @@ mechanisms and compared the most popular APIs and services available today,
 we'll be adding more content soon to dive more deeply into one or more topics
 of interest:
 
-* [Offline Storage Recommendations for Progressive Web Apps](offline-for-pwa)
-* [Deep Dive: Cache API](cache-api)
+* [Storage for the web](https://web.dev/storage-for-the-web/){: .external }
+* [Cache API: An introduction](https://web.dev/cache-api-quick-guide/){: .external }
 
 ## Feedback {: #feedback }
 
