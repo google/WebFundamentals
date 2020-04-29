@@ -5,4 +5,3 @@ redirects:
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
   to: https://web.dev/http-cache/
-  status: external
