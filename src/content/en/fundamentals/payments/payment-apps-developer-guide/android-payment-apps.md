@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Web Payments allows any Android payment apps to act as a payment handler for the Payment Request API. Learn how to do it.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2019-05-31 #}
+{# wf_updated_on: 2020-04-30 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Android payment apps developer guide {: .page-title }
@@ -288,6 +288,16 @@ If the payment app returns `RESULT_CANCELED`, then the browser may let the user
 choose a different payment app. The merchant website does not observe this, so
 there’s no need for detailed error codes to be sent from the payment app to the
 merchant website.
+
+Note: In Chrome 84 or later, if the activity result of a payment response
+received from the invoked payment app is set to `RESULT_OK`, then Chrome will
+check for non-empty `methodName` and `details` in its extras. If the validation
+fails Chrome will reject the `request.show()` promise with one of the following
+developer facing error messages:
+<pre class="prettyprint devsite-code-highlight">
+'Payment app returned invalid response. Missing field "details".'
+'Payment app returned invalid response. Missing field "methodName".'
+</pre>
 
 ## Algorithms
 
