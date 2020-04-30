@@ -522,7 +522,7 @@ to find out:
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/addblock.png"
             alt="Blocking main.css"/>
        <figcaption>
-         <b>Figure 32</b>. Blocking <code>main.css</code></main>
+         <b>Figure 32</b>. Blocking <code>main.css</code>
        </figcaption>
      </figure>
 
