@@ -15,6 +15,9 @@ redirects:
 - from: /web/fundamentals/instant-and-offline/web-storage/cache-api
   to: https://web.dev/cache-api-quick-guide/
 
+- from: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
+  to: https://web.dev/storage-for-the-web/
+
 - from: /web/fundamentals/layouts/...
   to: /web/fundamentals/design-and-ux/responsive/
 
