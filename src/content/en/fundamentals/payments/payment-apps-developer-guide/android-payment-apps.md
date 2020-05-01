@@ -289,7 +289,7 @@ choose a different payment app. The merchant website does not observe this, so
 there’s no need for detailed error codes to be sent from the payment app to the
 merchant website.
 
-Note: In Chrome 84 or later, if the activity result of a payment response
+Note: In Chrome 84 and later, if the activity result of a payment response
 received from the invoked payment app is set to `RESULT_OK`, then Chrome will
 check for non-empty `methodName` and `details` in its extras. If the validation
 fails Chrome will reject the `request.show()` promise with one of the following
