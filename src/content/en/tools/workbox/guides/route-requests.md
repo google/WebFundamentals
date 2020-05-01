@@ -128,7 +128,7 @@ registerRoute(
 ## Matching a Route with a Callback Function
 
 To allow developers to do anything they want to match a request, you can also
-provide a [`matchCallback` function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
+provide a [`matchCallback` function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
 that can determine whether a request should match a route on any criteria it wishes.
 
 The function is passed an

@@ -106,7 +106,7 @@ registerRoute(
 
 You can create regular expressions to cache similar requests from multiple
 origins in a single route by combining multiple checks into a single
-[`matchCallback` function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback).
+[`matchCallback` function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback).
 
 ```javascript
 import {registerRoute} from 'workbox-routing';
@@ -182,7 +182,7 @@ registerRoute(
 You can route requests to files in a specific directory on your local web app by checking the
 `origin` and `pathname` properties of the
 [URL object](https://developer.mozilla.org/en-US/docs/Web/API/URL) passed to the
-[`matchCallback` function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback):
+[`matchCallback` function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback):
 
 ```javascript
 import {registerRoute} from 'workbox-routing';
