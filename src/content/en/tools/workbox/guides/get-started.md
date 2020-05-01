@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -130,8 +130,9 @@ modules. It allows you to listen for requests from your web page and determine
 if and how that request should be cached and responded to.
 
 Let’s add a cache fallback to our JavaScript files. The easiest way to do this
-is to register a route with Workbox that will match any `.js` files that are
-requested, which we can do with a regular expression:
+is to register a route with Workbox that will match any requests that have a
+[`destination`](https://developer.mozilla.org/en-US/docs/Web/API/RequestDestination) property
+set to `'script'`.
 
 Note: the examples in this guide all use `import` syntax to load the various
 Workbox modules. If you prefer to load Workbox from the CDN, see the
@@ -142,13 +143,13 @@ code that uses the `workbox` global.
 import {registerRoute} from 'workbox-routing';
 
 registerRoute(
-  /\.js$/,
+  ({request}) => request.destination === 'script',
   /* ... */
 );
 ```
 
 The above code tells Workbox that when a request is made, it should see if the
-regular expression matches part of the URL, and if it does, do something with
+function returns a "truthy" value, and if it does, do something with
 that request. For this guide, that “do something” is going to be passing the
 request through one of Workbox’s caching strategies.
 
@@ -161,7 +162,7 @@ import {registerRoute} from 'workbox-routing';
 import {NetworkFirst} from 'workbox-strategies';
 
 registerRoute(
-  /\.js$/,
+  ({request}) => request.destination === 'script',
   new NetworkFirst()
 );
 ```
@@ -171,7 +172,7 @@ has JavaScript files in it, you should see some logs similar to this:
 
 ![Example console logs from routing a JavaScript file.](../images/guides/get-started/routing-example.png)
 
-Workbox has routed the request for any `.js` files and used the network first
+Workbox has routed the request for any script resources and used the network first
 strategy to determine how to respond to the request. You can look in the
 caches of DevTools to check that the request has actually been cached.
 
@@ -188,8 +189,8 @@ import {CacheFirst, StaleWhileRevalidate} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
-  // Cache CSS files.
-  /\.css$/,
+  // Cache style resources, i.e. CSS files.
+  ({request}) => request.destination === 'style',
   // Use cache but update in the background.
   new StaleWhileRevalidate({
     // Use a custom cache name.
@@ -199,7 +200,7 @@ registerRoute(
 
 registerRoute(
   // Cache image files.
-  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  ({request}) => request.destination === 'image',
   // Use the cache if it's available.
   new CacheFirst({
     // Use a custom cache name.

@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on configuring Workbox to avoid storage quota issues.
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_blink_components: N/A #}
 
@@ -30,8 +30,7 @@ import {CacheFirst} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
-  // Match common image extensions.
-  new RegExp('\\.(?:png|gif|jpg|jpeg|svg)$'),
+  ({request}) => request.destination === 'image',
   // Use a cache-first strategy with the following config:
   new CacheFirst({
     // You need to provide a cache name when using expiration.

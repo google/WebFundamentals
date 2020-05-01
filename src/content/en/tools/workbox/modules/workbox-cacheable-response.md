@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cacheable-response.
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-27 #}
 {# wf_blink_components: N/A #}
 
@@ -33,7 +33,8 @@ import {CacheFirst} from 'workbox-strategies';
 import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 
 registerRoute(
-  new RegExp('^https://third-party\\.example\\.com/images/'),
+  ({url}) => url.origin === 'https://third-party.example.com' &&
+             url.pathname.startsWith('/images/'),
   new CacheFirst({
     cacheName: 'image-cache',
     plugins: [
@@ -64,7 +65,7 @@ import {CacheFirst} from 'workbox-strategies';
 import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 
 registerRoute(
-  new RegExp('/path/to/api/'),
+  ({url}) => url.pathname.startsWith('/path/to/api/'),
   new StaleWhileRevalidate({
     cacheName: 'api-cache',
     plugins: [
@@ -99,7 +100,7 @@ import {CacheFirst} from 'workbox-strategies';
 import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 
 registerRoute(
-  new RegExp('/path/to/api/'),
+  ({url}) => url.pathname.startsWith('/path/to/api/'),
   new StaleWhileRevalidate({
     cacheName: 'api-cache',
     plugins: [

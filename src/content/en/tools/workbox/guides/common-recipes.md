@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -35,7 +35,7 @@ import {ExpirationPlugin} from 'workbox-expiration';
 
 // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
 registerRoute(
-  /^https:\/\/fonts\.googleapis\.com/,
+  ({url}) => url.origin === 'https://fonts.googleapis.com',
   new StaleWhileRevalidate({
     cacheName: 'google-fonts-stylesheets',
   })
@@ -43,7 +43,7 @@ registerRoute(
 
 // Cache the underlying font files with a cache-first strategy for 1 year.
 registerRoute(
-  /^https:\/\/fonts\.gstatic\.com/,
+  ({url}) => url.origin === 'https://fonts.gstatic.com',
   new CacheFirst({
     cacheName: 'google-fonts-webfonts',
     plugins: [
@@ -61,15 +61,15 @@ registerRoute(
 
 ## Caching Images
 
-You might want to use a cache-first strategy for images, by matching against a list of
-known extensions.
+You might want to use a cache-first strategy for images, by matching against the intended
+[destination](https://developer.mozilla.org/en-US/docs/Web/API/Request/destination) of the request.
 
 ```javascript
 import {registerRoute} from 'workbox-routing';
 import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
-  /\.(?:png|gif|jpg|jpeg|webp|svg)$/,
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'images',
     plugins: [
@@ -85,14 +85,17 @@ registerRoute(
 ## Cache CSS and JavaScript Files
 
 You might want to use a stale-while-revalidate strategy for CSS and JavaScript files that aren't
-precached.
+precached, by matching against the
+[destination](https://developer.mozilla.org/en-US/docs/Web/API/Request/destination) of the incoming
+request.
 
 ```javascript
 import {registerRoute} from 'workbox-routing';
 import {StaleWhileRevalidate} from 'workbox-strategies';
 
 registerRoute(
-  /\.(?:js|css)$/,
+  ({request}) => request.destination === 'script' ||
+                  request.destination === 'style',
   new StaleWhileRevalidate({
     cacheName: 'static-resources',
   })
@@ -102,38 +105,17 @@ registerRoute(
 ## Caching Content from Multiple Origins
 
 You can create regular expressions to cache similar requests from multiple
-origins in a single route. For example, you can cache assets from origins
-like `googleapis.com` and `gstatic.com` with a single route.
+origins in a single route by combining multiple checks into a single
+[`matchCallback` function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback).
 
 ```javascript
 import {registerRoute} from 'workbox-routing';
 import {StaleWhileRevalidate} from 'workbox-strategies';
 
 registerRoute(
-  /.*(?:googleapis|gstatic)\.com/,
+  ({url}) => url.origin === 'https://fonts.googleapis.com' ||
+             url.origin === 'https://fonts.gstatic.com',
   new StaleWhileRevalidate(),
-);
-```
-
-An alternative to the above example is to cache the origins separately to
-store assets in  cache for each origin.
-
-```javascript
-import {registerRoute} from 'workbox-routing';
-import {StaleWhileRevalidate} from 'workbox-strategies';
-
-registerRoute(
-  /.*googleapis\.com/,
-  new StaleWhileRevalidate({
-    cacheName: 'googleapis',
-  })
-);
-
-registerRoute(
-  /.*gstatic\.com/,
-  new StaleWhileRevalidate({
-    cacheName: 'gstatic',
-  })
 );
 ```
 
@@ -150,7 +132,7 @@ import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
-  'https://hacker-news.firebaseio.com/v0/api',
+  ({url}) => url.origin === 'https://hacker-news.firebaseio.com',
   new CacheFirst({
       cacheName: 'stories',
       plugins: [
@@ -181,7 +163,7 @@ import {NetworkFirst} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
-  'https://hacker-news.firebaseio.com/v0/api',
+  ({url}) => url.origin === 'https://hacker-news.firebaseio.com',
   new NetworkFirst({
     networkTimeoutSeconds: 3,
     cacheName: 'stories',
@@ -197,16 +179,18 @@ registerRoute(
 
 ## Cache Resources from a Specific Subdirectory
 
-You can use a regular expression to easily route requests to files in a
-specific directory. If we wanted to route requests to files in `/static/`,
-we could use the regular expression `new RegExp('/static/')`, like so:
+You can route requests to files in a specific directory on your local web app by checking the
+`origin` and `pathname` properties of the
+[URL object](https://developer.mozilla.org/en-US/docs/Web/API/URL) passed to the
+[`matchCallback` function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback):
 
 ```javascript
 import {registerRoute} from 'workbox-routing';
 import {StaleWhileRevalidate} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('/static/'),
+  ({url}) => url.origin === self.location.origin &&
+             url.pathname.startsWith('/static/'),
   new StaleWhileRevalidate()
 );
 ```
@@ -227,7 +211,7 @@ import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
   // Custom `matchCallback` function
-  ({event}) => event.request.destination === 'audio',
+  ({request}) => request.destination === 'audio',
   new CacheFirst({
     cacheName: 'audio',
     plugins: [
@@ -278,7 +262,8 @@ import {registerRoute} from 'workbox-routing';
 import {StaleWhileRevalidate} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('/static/'),
+  ({url}) => url.origin === self.location.origin &&
+             url.pathname.startsWith('/static/'),
   new StaleWhileRevalidate({
     cacheName: 'my-cache', // Use the same cache name as before.
   })

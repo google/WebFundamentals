@@ -46,7 +46,7 @@ the service worker at build-time.
     workbox.core.clientsClaim();
 
     workbox.routing.registerRoute(
-      new RegExp('https://hacker-news.firebaseio.com'),
+      ({url}) => url.origin === 'https://hacker-news.firebaseio.com',
       new workbox.strategies.StaleWhileRevalidate()
     );
 

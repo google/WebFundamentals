@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Learn how to make a webpack-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-10-31 #}
 {# wf_blink_components: N/A #}
 
@@ -205,7 +205,7 @@ the service worker at build-time.
     workbox.core.clientsClaim();
 
     workbox.routing.registerRoute(
-      new RegExp('https://hacker-news.firebaseio.com'),
+      ({url}) => url.origin === 'https://hacker-news.firebaseio.com',
       new workbox.strategies.StaleWhileRevalidate()
     );
 

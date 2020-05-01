@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to route requests with Workbox.
 
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -128,18 +128,22 @@ registerRoute(
 ## Matching a Route with a Callback Function
 
 To allow developers to do anything they want to match a request, you can also
-provide a function that can determine whether a request should match a route on
-any criteria it wishes.
+provide a [`matchCallback` function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
+that can determine whether a request should match a route on any criteria it wishes.
 
-The callback will receive an object with the request's URL and the `FetchEvent`
-received in the service worker.
+The function is passed an
+[`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent),
+[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request), and a
+[`URL` object](https://developer.mozilla.org/en-US/docs/Web/API/URL).
+You indicate a match by returning a truthy value.
+
+For a simple example, you could match against a specific URL like so:
 
 ```javascript
 import {registerRoute} from 'workbox-routing';
 
-const matchFunction = ({url, event}) => {
-  // Return true if the route should match
-  return false;
+const matchFunction = ({url, request, event}) => {
+  return url.href === 'https://example.com/app.js';
 };
 
 registerRoute(
@@ -162,26 +166,26 @@ There are two ways you can  handle a request:
 Most routes can be handled with one of the built in caching strategies.
 
 - Stale While Revalidate
-    - This strategy will use a cached response for a request if it is
-    available and update the cache in the background with a response form
-    the network. (If it’s not cached it will wait for the network response
-    and use that.) This is a fairly safe strategy as it means users are
-    regularly updating their cache. The downside of this strategy is that
-    it’s always requesting an asset from the network, using up the user’s
-    bandwidth.
+  - This strategy will use a cached response for a request if it is
+  available and update the cache in the background with a response form
+  the network. (If it’s not cached it will wait for the network response
+  and use that.) This is a fairly safe strategy as it means users are
+  regularly updating their cache. The downside of this strategy is that
+  it’s always requesting an asset from the network, using up the user’s
+  bandwidth.
 - Network First
-    - This will try to get a response from the network first. If it receives
-    a response, it’ll pass that to the browser and also save it to a cache.
-    If the network request fails, the last cached response will be used.
+  - This will try to get a response from the network first. If it receives
+  a response, it’ll pass that to the browser and also save it to a cache.
+  If the network request fails, the last cached response will be used.
 - Cache First
-    - This strategy will check the cache for a response first and use that
-    if one is available. If the request isn’t in the cache, the network will
-    be used and any valid response will be added to the cache before being
-    passed to the browser.
+  - This strategy will check the cache for a response first and use that
+  if one is available. If the request isn’t in the cache, the network will
+  be used and any valid response will be added to the cache before being
+  passed to the browser.
 - Network Only
-    - Force the response to come from the network.
+  - Force the response to come from the network.
 - Cache Only
-    - Force the response to come from the cache.
+  - Force the response to come from the cache.
 
 Using these as your `handler` can be done like so:
 
@@ -261,10 +265,12 @@ it’ll be passed into the `handler` callback as a `params` argument.
 import {registerRoute} from 'workbox-routing';
 
 const match = ({url, event}) => {
-  return {
-    name: 'Workbox',
-    type: 'guide',
-  };
+  if (url.pathname === '/example') {
+    return {
+      name: 'Workbox',
+      type: 'guide',
+    };
+  }
 };
 
 const handler = async ({url, event, params}) => {

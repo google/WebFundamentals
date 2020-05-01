@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2020-01-28 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -83,7 +83,7 @@ import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 
 registerRoute(
-  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'my-image-cache',
   })
@@ -114,7 +114,7 @@ import {registerRoute} from 'workbox-routing';
 import {NetworkFirst} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('https://third-party\\.example\\.com/'),
+  ({url}) => url.origin === 'https://third-party.example.com',
   new NetworkFirst({
     fetchOptions: {
       credentials: 'include',

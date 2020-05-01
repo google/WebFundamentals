@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-sw.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox {: .page-title }
@@ -87,7 +87,7 @@ importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}
 
 // This will work!
 workbox.routing.registerRoute(
-  new RegExp('\\.png$'),
+  ({request}) => request.destination === 'image',
   new workbox.strategies.CacheFirst()
 );
 </pre>
@@ -195,7 +195,7 @@ import {CacheFirst} from 'workbox-strategies';
 import {CacheableResponse} from 'workbox-cacheable-response';
 
 registerRoute(
-  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     plugins: [
       new CacheableResponsePlugin({statuses: [0, 200]})
@@ -215,7 +215,7 @@ const {CacheFirst} = workbox.strategies;
 const {CacheableResponse} = workbox.cacheableResponse;
 
 registerRoute(
-  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     plugins: [
       new CacheableResponsePlugin({statuses: [0, 200]})

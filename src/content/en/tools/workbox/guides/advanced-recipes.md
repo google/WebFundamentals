@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2020-03-23 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -193,7 +193,7 @@ precacheAndRoute(self.__WB_MANIFEST);
 
 // Use an explicit cache-first strategy and a dedicated cache for images.
 registerRoute(
-  new RegExp('/images/'),
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'images',
     plugins: [...],
@@ -354,7 +354,7 @@ import {RangeRequestsPlugin} from 'workbox-range-requests';
 // but it won't populate the cache at runtime.
 // If there is a cache match, then it will properly serve partial responses.
 registerRoute(
-  /.*\.mp4/,
+  ({url}) => url.pathname.endsWith('.mp4'),
   new CacheFirst({
     cacheName: 'your-cache-name-here',
     plugins: [

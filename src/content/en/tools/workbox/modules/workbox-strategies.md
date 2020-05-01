@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-04-06 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -47,7 +47,7 @@ import {registerRoute} from 'workbox-routing';
 import {StaleWhileRevalidate} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('/images/avatars/'),
+  ({url}) => url.pathname.startsWith('/images/avatars/'),
   new StaleWhileRevalidate()
 );
 ```
@@ -71,7 +71,7 @@ import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('/styles/'),
+  ({request}) => request.destination === 'style',
   new CacheFirst()
 );
 ```
@@ -92,7 +92,7 @@ import {registerRoute} from 'workbox-routing';
 import {NetworkFirst} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('/social-timeline/'),
+  ({url}) => url.pathname.startsWith('/social-timeline/'),
   new NetworkFirst()
 );
 ```
@@ -110,7 +110,7 @@ import {registerRoute} from 'workbox-routing';
 import {NetworkOnly} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('/admin/'),
+  ({url}) => url.pathname.startsWith('/admin/'),
   new NetworkOnly()
 );
 ```
@@ -128,7 +128,7 @@ import {registerRoute} from 'workbox-routing';
 import {CacheOnly} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('/app/v2/'),
+  ({url}) => url.pathname.startsWith('/app/v2/'),
   new CacheOnly()
 );
 ```
@@ -151,7 +151,7 @@ import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 
 registerRoute(
-  new RegExp('/images/'),
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'image-cache',
   })
@@ -177,7 +177,7 @@ import {CacheFirst} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
-  new RegExp('/images/'),
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'image-cache',
     plugins: [
