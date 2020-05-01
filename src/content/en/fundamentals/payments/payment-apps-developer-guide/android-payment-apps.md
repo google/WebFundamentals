@@ -294,6 +294,7 @@ received from the invoked payment app is set to `RESULT_OK`, then Chrome will
 check for non-empty `methodName` and `details` in its extras. If the validation
 fails Chrome will reject the `request.show()` promise with one of the following
 developer facing error messages:
+
 <pre class="prettyprint devsite-code-highlight">
 'Payment app returned invalid response. Missing field "details".'
 'Payment app returned invalid response. Missing field "methodName".'
