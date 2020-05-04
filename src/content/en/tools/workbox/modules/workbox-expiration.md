@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-expiration.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-30 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Expiration {: .page-title }
@@ -28,7 +28,7 @@ import {CacheFirst} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
-  new RegExp('/images/'),
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'image-cache',
     plugins: [
@@ -58,7 +58,7 @@ import {CacheFirst} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
 
 registerRoute(
-  /\/images\//,
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'image-cache',
     plugins: [

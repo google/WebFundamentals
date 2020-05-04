@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2020-02-12 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-29 #}
 {# wf_blink_components: N/A #}
 
@@ -62,7 +62,7 @@ import {StaleWhileRevalidate} from 'workbox-strategies';
 import {BroadcastUpdatePlugin} from 'workbox-broadcast-update';
 
 registerRoute(
-  new RegExp('/api/'),
+  ({url}) => url.pathname.startsWith('/api/'),
   new StaleWhileRevalidate({
     plugins: [
       new BroadcastUpdatePlugin(),
@@ -127,7 +127,7 @@ import {StaleWhileRevalidate} from 'workbox-strategies';
 import {BroadcastUpdatePlugin} from 'workbox-broadcast-update';
 
 registerRoute(
-  new RegExp('/api/'),
+  ({url}) => url.pathname.startsWith('/api/'),
   new StaleWhileRevalidate({
     plugins: [
       new BroadcastUpdatePlugin({

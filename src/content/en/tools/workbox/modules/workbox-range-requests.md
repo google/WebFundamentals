@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-range-requests.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Range Requests {: .page-title }
@@ -35,7 +35,7 @@ import {CacheFirst} from 'workbox-strategies';
 import {RangeRequestsPlugin} from 'workbox-range-requests';
 
 registerRoute(
-  /\.mp4$/,
+  ({url}) => url.pathname.endsWith('.mp4'),
   new CacheFirst({
     plugins: [
       new RangeRequestsPlugin(),

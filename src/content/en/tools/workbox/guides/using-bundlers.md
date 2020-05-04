@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2020-04-23 #}
+{# wf_updated_on: 2020-05-01 #}
 {# wf_blink_components: N/A #}
 
 # Using Bundlers (webpack/Rollup) with Workbox {: .page-title }
@@ -108,7 +108,7 @@ import {CacheFirst} from 'workbox-strategies/CacheFirst.mjs';
 import {ExpirationPlugin} from 'workbox-expiration/ExpirationPlugin.mjs';
 
 registerRoute(
-  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  ({request}) => request.destination === 'image',
   new CacheFirst({
     cacheName: 'images',
     plugins: [
