@@ -24,6 +24,12 @@ redirects:
 - from: /web/tools/chrome-devtools/console/console-reference
   to: /web/tools/chrome-devtools/console/api
 
+- from: /web/tools/lighthouse/v3/scoring
+  to: https://web.dev/performance-scoring/
+  
+- from: /web/tools/lighthouse/scoring
+  to: https://web.dev/performance-scoring/
+  
 - from: /web/tools/lighthouse/audits/required-aria-attributes
   to: https://dequeuniversity.com/rules/axe/2.2/aria-required-attr
 
