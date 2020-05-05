@@ -206,24 +206,24 @@ The code in Chrome that parses this JSON is quite strict, so make sure you donâ€
 extra comma at the end of the list.
 
 ```json
-[{  
-  "relation": ["delegate_permission/common.handle_all_urls"],  
-  "target": {  
-    "namespace": "android_app",  
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
     "package_name": "com.appspot.pwa_directory",
     "sha256_cert_fingerprints": [
       "FA:2A:03:CB:38:9C:F3:BE:28:E3:CA:7F:DA:2E:FA:4F:4A:96:F3:BC:45:2C:08:A2:16:A1:5D:FD:AB:46:BC:9D",
     ]
-  }  
-},{  
-  "relation": ["delegate_permission/common.handle_all_urls"],  
-  "target": {  
-    "namespace": "android_app",  
+  }
+},{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
     "package_name": "com.appspot.pwa_directory",
     "sha256_cert_fingerprints": [
       "4F:FF:49:FF:C6:1A:22:E3:BB:6F:E6:E1:E6:5B:40:17:55:C0:A9:F9:02:D9:BF:28:38:0B:AE:A7:46:A0:61:8C",
     ]
-  }  
+  }
 }]
 ```
 
