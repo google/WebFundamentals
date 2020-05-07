@@ -51,7 +51,3 @@ footer:
       path: https://github.com/google/WebFundamentals/issues
     - label: View Page Source
       path: https://github.com/google/WebFundamentals
-    - label: Resources
-      path: /web/resources/
-    - label: Translating
-      path: /web/resources/translations
