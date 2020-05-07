@@ -27,20 +27,22 @@ footer:
       path: /web/android/
     - label: Chrome Extension Docs
       path: https://developers.chrome.com/extensions/api_index
-    - label: Site-Kit
-      path: /web/site-kit/
+    - label: Site-Kit Plugin for WordPress
+      path: https://sitekit.withgoogle.com/
     - label: Developer Feedback Program
       path: /web/feedback/
     - label: Progressive Web Apps
       path: https://web.dev/progressive-web-apps/
 
-  - name: Training and Partners
+  - name: More Topics
     icon_name: school
     contents:
+    - label: Search Console Help Center
+      path: https://support.google.com/webmasters/
+    - label: Search Console Community
+      path: https://support.google.com/webmasters/community
     - label: Instructor Led Training
       path: /web/ilt/
-    - label: Web Courses at Udacity
-      path: /web/shows/udacity/
     - label: Agencies
       path: /web/agencies/
 
@@ -51,7 +53,3 @@ footer:
       path: https://github.com/google/WebFundamentals/issues
     - label: View Page Source
       path: https://github.com/google/WebFundamentals
-    - label: Resources
-      path: /web/resources/
-    - label: Translating
-      path: /web/resources/translations
