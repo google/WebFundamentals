@@ -1,3 +1,7 @@
+#
+# ATTENTION: Put redirects for content migrated to web.dev in /en/_redirects.yaml
+#
+
 redirects:
 
 - from: /web/fundamentals/codelabs/your-first-pwapp
@@ -8,15 +12,6 @@ redirects:
 
 - from: /web/fundamentals/codelabs/your-first-pwapp/
   to: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
-
-- from: /web/fundamentals/performance/prpl-pattern
-  to: https://web.dev/apply-instant-loading-with-prpl/
-
-- from: /web/fundamentals/instant-and-offline/web-storage/cache-api
-  to: https://web.dev/cache-api-quick-guide/
-
-- from: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
-  to: https://web.dev/storage-for-the-web/
 
 - from: /web/fundamentals/layouts/...
   to: /web/fundamentals/design-and-ux/responsive/
@@ -60,14 +55,8 @@ redirects:
 - from: /web/fundamentals/design-and-ui/...
   to: /web/fundamentals/design-and-ux/...
 
-- from: /web/fundamentals/engage-and-retain/app-install-banners/...
-  to: https://web.dev/customize-install/
-
 - from: /web/fundamentals/engage-and-retain/push-notifications/...
   to: /web/fundamentals/push-notifications/...
-
-- from: /web/fundamentals/engage-and-retain/web-app-manifest/...
-  to: https://web.dev/add-manifest/
 
 - from: /web/fundamentals/engage-and-retain/...
   to: /web/fundamentals/
