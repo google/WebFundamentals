@@ -76,13 +76,11 @@ yourself.
 
 Send feedback to [Chromium issue #1051822](https://crbug.com/1051822).
 
-## Cross-Origin Opener Policy (COOP) and Cross-Origin Embedder Policy (COEP) debugging {: #COOP-COEP }
+## Cross-Origin Embedder Policy (COEP) debugging {: #COEP }
 
-[COOP]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.tu4hyy6v12wn
 [COEP]: https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.uo6kivyh0ge2
 
-The Network panel now provides [Cross-Origin Opener Policy][COOP] and [Cross-Origin Embedder Policy][COEP]
-debugging information.
+The Network panel now provides [Cross-Origin Embedder Policy][COEP] debugging information.
 
 The **Status** column now provides a quick explanation of why a request was blocked as well as a
 link to view that request's headers for further debugging:
