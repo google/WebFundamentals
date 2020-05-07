@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: A guide to get started building a basic, bare-bones Trusted Web Activity.
 
 {# wf_published_on: 2019-08-28 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-05-05 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -21,14 +21,15 @@ covering all the gotchas.
 
 By the end of this guide, you will:
 
-* Have built an application that uses Trusted Web Activity and passes verification.
-* Understand when your debug keys and your release keys are used.
+* Have used [Bubblewrap](https://github.com/GoogleChromeLabs/bubblewrap) to build an application
+that uses a Trusted Web Activity and passes verification.
+* Understand when your signing keys are used.
 * Be able to determine the signature your Android Application is being built with.
 * Know how to create a basic [Digital Asset Links](/digital-asset-links/v1/getting-started) file.
 
 To follow this guide you'll need:
 
-* [Android Studio Installed](https://developer.android.com/studio/install)
+* [Node.js](https://nodejs.org/en/) 10 or above installed on the development computer.
 * An Android phone or emulator connected and set up for development
 ([Enable USB debugging](https://developer.android.com/studio/debug/dev-options.html#enable) if
 you’re using a physical phone).
@@ -49,32 +50,75 @@ out, this is called **verification**.
 If verification fails, the browser will fall back to displaying your website as a
 [Custom Tab](https://developer.chrome.com/multidevice/android/customtabs).
 
-## Clone and customize the example repo {: #clone-and-customize-the-example-repo }
+## Install and configure Bubblewrap {: #install-and-configure-bubblewrap }
 
-The [svgomg-twa](https://github.com/GoogleChromeLabs/svgomg-twa) repo contains an example
-Android application that launches a Trusted Web Activity. You can customize to launch your website:
+[Bubblewrap](https://github.com/GoogleChromeLabs/bubblewrap) is a set of libraries and a command
+line tool (CLI) for Node.js that helps developers generate, build and run Progressive Web Apps
+inside Android applications, using Trusted Web Activity.
 
-1. Clone the project (`git clone https://github.com/GoogleChromeLabs/svgomg-twa.git`).
-2. Import the Project into Android Studio, using **File** > **New** > **Import Project**, and select
-   the folder to which the project was cloned.
-3. Open the app's `build.gradle` and modify the values in `twaManifest`.
-   There are two `build.gradle` files.
-   You want the module one at `app/build.gradle`.
+The CLI can be installed with the following command:
 
-    * Change `hostName` to point to your website.
-      Your website must be available on HTTPS, though you omit that from the `hostName` field.
-    * Change `name` to whatever you want.
-    * Change `applicationId` to something specific to your project.
-      This translates into the app’s package name and is
-      [how the app is identified](https://developer.android.com/studio/build/application-id) on the
-      Play Store - no two apps can share the `applicationId` and if you change it you’ll need to
-      create a new Play Store listing.
+```shell
+npm i -g @bubblewrap/cli
+```
 
-## Build and run {: #build-and-run }
+### Setting up the Environment
 
-In Android Studio hit **Run**, **Run ‘app’** (where ‘app’ is your module name, if you’ve changed it)
-and the application will be built and run on your device!
-You’ll notice that your website is launched as a Custom Tab, not a Trusted Web Activity, this is
+#### Get the Java Development Kit (JDK) 8.
+The Android Command line tools requires the correct version of the JDK to run. To prevent version
+conflicts with a JDK version that is already installed, Bubblewrap uses a JDK that can unzipped in
+a separate folder.
+
+Warning: Using a version lower than 8 will make it impossible to compile the project and higher
+versions are incompatible with the Android command line tools.
+
+Download a version of JDK 8 that is compatible with your OS from
+[AdoptOpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=hotspot)
+and extract it in its own folder.
+
+#### Get the Android command line tools
+Download a version of Android command line tools that is compatible with your OS from
+[https://developer.android.com/studio#command-tools](https://developer.android.com/studio#command-tools).
+Create a folder and extract the downloaded file into it. The tool will further install its
+dependencies, without the need to install the whole Android IDE.
+
+When running `bubblewrap` for the first time, it will ask where it can find the JDK and Android
+command line tools. So, take note of the location where both were decompressed.
+
+## Initialize and build project {: initialize-and-build}
+
+Initializing an Android project that wraps a PWA is done by running the init command:
+
+```shell
+bubblewrap init --manifest https://my-twa.com/manifest.json
+```
+
+Bubblewrap will read the [Web Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest),
+ask developers to confirm values to be used in the Android project, and generate the project using
+those values. Once the project has been generated, generate an APK by running:
+
+```shell
+bubblewrap build
+```
+
+## Run {: #build-and-run }
+
+The build step will output a file called `app-release-signed.apk`. This file can be installed on a
+development device for testing or uploaded to the Play Store for release.
+
+To install and test on a local device, the
+[adb](https://developer.android.com/studio/command-line/adb#move) tool can be used. With the
+development device connected to the computer run:
+
+```
+adb install app-release-signed.apk
+```
+
+Note: the `adb` command-line tool is located inside the Android command-line tools in
+`android_sdk/platform-tools/`.
+
+The application should now be available on the device launcher. When opening the application you’ll
+notice that your website is launched as a Custom Tab, not a Trusted Web Activity, this is
 because we haven’t set up our Digital Asset Links validation yet, but first...
 
 ### A note on signing keys {: #a-note-on-signing-keys }
@@ -83,74 +127,12 @@ Digital Asset Links take into account the key that an APK has been signed with a
 cause for verification failing is to use the wrong signature.
 (Remember, failing verification means you'll launch your website as a Custom Tab with
 browser UI at the top of the page.)
-When you hit **Run** or **Build APK** in Android Studio, the APK will be created with your developer
-*debug key*, which Android Studio automatically generated for you.
-
-If you deploy your app to the Play Store, you’ll hit **Build** > **Generate Signed APK**, which will
-use a different signature, one that you’ll have created yourself (and protected with a password).
-That means that if your Digital Asset Links file specifies your *production key*, verification
-will fail when you build with your *debug key*.
-This also can happen the other way around - if the Digital Asset Links file has your *debug key*,
-your Trusted Web Activity will work fine locally, but then when you download the signed version
-from the Play Store, verification will fail.
-
-You can put both your *debug key* and *production key* in your asset link file
-(see [Adding More Keys](#adding-more-keys) below),
-but your debug key is less secure.
-Anyone who gets a copy of the file can use it.
-Finally, if you have your app installed on your device with one key, you can’t install the version
-with the other key. You must uninstall the previous version first.
-
-### Building your app {: #building }
-
-* To build with debug keys:
-    1. Click **Run 'app'** where 'app' is the name of your module if you changed it.
-* To build with release keys:
-    1. Click **Build**, then **Generate Signed APK**.
-    2. Choose **APK**.
-    3. If you're doing this for the first time, on the next page press **Create New**
-       to create a new key and follow the
-       [Android documentation](https://developer.android.com/studio/publish/app-signing#generate-key).
-       Otherwise, select your previously created key.
-    4. Press **Next** and pick the *release* build variant.
-    5. Make sure you check both the V1 and the V2 signatures (the Play Store won’t let you upload
-       the APK otherwise).
-    6. Click **Finish**.
-
-If you built with debug keys, your app will be automatically deployed to your device.
-On the other hand if you built with release keys, after a few seconds a pop up will appear in the
-bottom right corner giving you the option to locate or analyze the APK.
-(If you miss it, you can press on the *Event Log* in the bottom right.)
-You’ll need to use [adb](https://developer.android.com/studio/command-line/adb#move) manually to
-install the signed APK with `adb install app-release.apk`.
-
-This table shows which key is used based on how you create your APK.
-
-<table>
-  <tr><th>Key</th><th>Debug</th><th>Release</th></tr>
-  <tr>
-    <td>When is it created?</td>
-    <td>Automatically by Android Studio.</td>
-    <td>Manually by you.</td>
-  </tr>
-  <tr>
-    <td>When is it used?</td>
-    <td><ul>
-      <li><b>Run 'app'</b>.</li>
-      <li><b>Debug 'app'</b>.</li>
-      <li><b>Build APK</b>.</li>
-    </ul></td>
-    <td><ul>
-      <li><b>Generate Signed APK</b>.</li>
-      <li>When the app is downloaded from the Play Store.</li>
-    </ul></td>
-  </tr>
-</table>
+When Bubblwrap builds the application, an APK will be created with a key setup during the `init`
+step.
 
 ## Creating your asset link file {: #creating-your-asset-link-file }
 
-Now that your app is installed (with either the debug or release key), you can generate the Digital
-Asset Link file.
+Now that your app is installed, you can generate the Digital Asset Link file.
 I’ve created the
 [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) to help you
 do this.
@@ -173,6 +155,11 @@ Put the Digital Asset Link in a file called `assetlinks.json` and upload it to y
 If you opt in to
 [App signing by Google Play](https://developer.android.com/studio/publish/app-signing#app-signing-google-play),
 Google manages your app's signing key.
+
+When opted in, the key used the sign the APK that is downloaded from the Play Store
+will be different from the key that Bubblewrap used when building the APK. This means that the
+`assetlinks.json` file will need the be updated with the new signature.
+
 There are two ways you can get the correct Digital Asset Link file for a Google managed app signing
 key:
 
@@ -186,6 +173,9 @@ key:
     4. Copy the **SHA-256 certificate fingerprint** from under the **App signing certificate**
        section.
     5. Use this value in your Digital Asset Link file.
+
+It is possible to have both keys in the `assetlinks.json`. See
+[Adding More Keys](#adding-more-keys) below for more information on how to do it.
 
 ### Ensuring your asset link file is accessible {: #ensuring-your-asset-link-file-is-accessible }
 
@@ -223,8 +213,15 @@ extra comma at the end of the list.
     "package_name": "com.appspot.pwa_directory",
     "sha256_cert_fingerprints": [
       "FA:2A:03:CB:38:9C:F3:BE:28:E3:CA:7F:DA:2E:FA:4F:4A:96:F3:BC:45:2C:08:A2:16:A1:5D:FD:AB:46:BC:9D",
-      "4F:FF:49:FF:C6:1A:22:E3:BB:6F:E6:E1:E6:5B:40:17:55:C0:A9:F9:02:D9:BF:28:38:0B:AE:A7:46:A0:61:8C"
-
+    ]
+  }
+},{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.appspot.pwa_directory",
+    "sha256_cert_fingerprints": [
+      "4F:FF:49:FF:C6:1A:22:E3:BB:6F:E6:E1:E6:5B:40:17:55:C0:A9:F9:02:D9:BF:28:38:0B:AE:A7:46:A0:61:8C",
     ]
   }
 }]
