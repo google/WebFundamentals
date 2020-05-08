@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2020-05-01 #}
+{# wf_updated_on: 2020-05-07 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -23,6 +23,7 @@ import {Workbox, messageSW} from 'https://storage.googleapis.com/workbox-cdn/rel
 
 if ('serviceWorker' in navigator) {
   const wb = new Workbox('/sw.js');
+  let registration;
 
   const showSkipWaitingPrompt = (event) => {
     // `event.wasWaitingBeforeRegister` will be false if this is
@@ -42,12 +43,13 @@ if ('serviceWorker' in navigator) {
           window.location.reload();
         });
 
-        // Send a message to the waiting service worker instructing
-        // it to skip waiting, which will trigger the `controlling`
-        // event listener above.
-        // Note: for this to work, you have to add a message
-        // listener in your service worker. See below.
-        messageSW(event.originalEvent.sw, {type: 'SKIP_WAITING'});
+        if (registration && registration.waiting) {
+          // Send a message to the waiting service worker,
+          // instructing it to activate.  
+          // Note: for this to work, you have to add a message
+          // listener in your service worker. See below.
+          messageSW(registration.waiting, {type: 'SKIP_WAITING'});
+        }
       },
 
       onReject: () => {
@@ -60,7 +62,7 @@ if ('serviceWorker' in navigator) {
   wb.addEventListener('waiting', showSkipWaitingPrompt);
   wb.addEventListener('externalwaiting', showSkipWaitingPrompt);
 
-  wb.register();
+  registration = await wb.register();
 }
 </script>
 ```
