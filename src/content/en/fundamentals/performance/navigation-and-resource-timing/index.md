@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When we measure loading performance, we often do so using testing tools that only describe performance from the perspective of the tester. If we want to measure loading performance from the user's perspective, we must rely on the Navigation and Resource Timing APIs.
 
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2020-05-07 #}
 {# wf_published_on: 2018-06-08 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>PerformanceAPIs>NavigationTiming,Blink>PerformanceAPIs>ResourceTiming #}
 
@@ -281,14 +281,14 @@ You can also measure a bunch of other useful stuff as the code below
 demonstrates:
 
 ```javascript
-// Request plus response time (network only)
-var totalTime = pageNav.responseEnd - pageNav.requestStart;
+// Request time only (excluding unload, redirects, DNS, and connection time)
+var requestTime = pageNav.responseStart - pageNav.requestStart;
 
 // Response time only (download)
-var downloadTime = pageNav.responseEnd - pageNav.responseStart;
+var responseTime = pageNav.responseEnd - pageNav.responseStart;
 
-// Time to First Byte (TTFB)
-var ttfb = pageNav.responseStart - pageNav.requestStart;
+// Request + response time
+var requestResponseTime = pageNav.responseEnd - pageNav.requestStart;
 ```
 
 ### The other stuff
@@ -573,26 +573,28 @@ exhaustive reference on RUM data collection, it's a place to start.
 You've collected performance entries, and now you're ready to send them
 someplace to be analyzed later. But what's the best way?
 
-Normally we'd POST timings to an endpoint during an `unload` event, because this
-is when we know definitively the user is finished with the page. The problem,
-however, is that running code during `unload` can hold the next page up from
-downloading and rendering. We need to send data back in a way that won't tie up
-the browser while it loads a new page. For this, we have
-[`navigator.sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon),
-which queues non-blocking requests with POST data to be sent asynchronously at a
-time of the browser's choosing:
+APIs like
+[`navigator.sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)
+(or the more recent [fetch `keepalive`
+flag](https://www.chromestatus.com/feature/5760375567941632)) can send requests
+in a non-blocking way, which is ideal for RUM analytics or other types of
+requests that don't require waiting for a response.
 
 ```javascript
-window.addEventListener("unload", function() {
-  // Caution: If you have a _lot_ of performance entries, don't send _everything_ via getEntries. This is just an example.
-  let rumData = new FormData();
-  rumData.append("entries", JSON.stringify(performance.getEntries()));
+// Caution: If you have a _lot_ of performance entries, don't send _everything_ via getEntries. This is just an example.
+let rumData = JSON.stringify(performance.getEntries()));
 
-  // Queue beacon request and inspect for failure
-  if(!navigator.sendBeacon("/phone-home", rumData)) {
-    // Recover here (XHR or fetch maybe)
+// Check for sendBeacon support:
+if ('sendBeacon' in navigator) {
+  // Beacon the requested
+  if (navigator.sendBeacon('/analytics', rumData)) {
+    // sendBeacon worked! We're good!
+  } else {
+    // sendBeacon failed! Use XHR or fetch instead
   }
-}, false);
+} else {
+  // sendBeacon not available! Use XHR or fetch instead
+}
 ```
 
 On the other end would be some back end code that looks at the POST form data
@@ -602,36 +604,6 @@ application back end.
 Note: `navigator.sendBeacon` only _queues_ the request when called, and may not
 fulfill it immediately. Additionally, user agents pose restrictions on how much
 data may be sent, and may reject the request if that limit is exceeded.
-
-### When navigator.sendBeacon is unavailable
-
-[While `navigator.sendBeacon` is well
-supported](https://caniuse.com/#feat=beacon), you can't use it in all browsers.
-Thus, some basic feature checking is necessary:
-
-```javascript
-window.addEventListener("unload", function() {
-  // Collect RUM data like before
-  let rumData = new FormData();
-  rumData.append("entries", JSON.stringify(performance.getEntries()));
-
-  // Check for sendBeacon support:
-  if("sendBeacon" in navigator) {
-    // Beacon the requested
-    if(navigator.sendBeacon(endpoint, rumData)) {
-      // sendBeacon worked! We're good!
-    } else {
-      // sendBeacon failed! Use XHR or fetch instead
-    }
-  } else {
-    // sendBeacon not available! Use XHR or fetch instead
-  }
-}, false);
-```
-
-With this approach, you'll be able to reliably transmit RUM data in most
-browsers. If total coverage isn't crucial, you can always opt to _not_ transmit
-data when `navigator.sendBeacon` is unavailable.
 
 ## Wrapping up
 
