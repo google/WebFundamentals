@@ -3,5 +3,7 @@ toc:
   path: /web/tools/lighthouse/
 - title: Lighthouse Scoring Guide
   path: https://web.dev/performance-scoring/
+  status: external
 - title: Audit Documentation
   path: https://web.dev/learn/#lighthouse
+  status: external
