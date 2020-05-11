@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view, edit, and delete a page's HTTP cookies using Chrome DevTools.
 
-{# wf_updated_on: 2019-03-12 #}
+{# wf_updated_on: 2020-05-11 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -50,6 +50,7 @@ The **Cookies** table contains the following fields:
 [session]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Session_cookies
 [secure]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Secure_and_HttpOnly_cookies
 [samesite]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#SameSite_cookies
+[priority]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693
 
 * **Name**. The cookie's name.
 * **Value**. The cookie's value.
@@ -66,6 +67,8 @@ The **Cookies** table contains the following fields:
   over a secure, HTTPS connection. See [Secure cookies][secure]{: .external }.
 * **SameSite**. Contains `strict` or `lax` if the cookie is using the experimental
   [SameSite][samesite]{: .external } attribute.
+* **Priority**. Contains `low`, `medium` (default), or `high` if using depreciated [cookie Priority](https://bugs.chromium.org/p/chromium/issues/detail?id=232693) attribute.
+  
 
 ## Filter cookies {: #filter }
 
