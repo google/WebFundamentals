@@ -277,7 +277,10 @@ function getFiles() {
           globs.push(`${lang}/**/*`);
         });
       }
+      // Skip Puppeteer docs
       globs.push('!en/tools/puppeteer/_src/**/*');
+      // Skip any _README.MD files
+      globs.push('!_README.MD');
       resolve(glob.find(globs, opts));
     });
   } else {
