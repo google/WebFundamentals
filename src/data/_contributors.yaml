@@ -2125,3 +2125,19 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
+
+rowanmerewood:
+  name:
+    given: Rowan
+    family: Merewood
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  twitter: rowan_m
+  github: rowan-m
+  email: merewood@google.com
+  description:
+    en: Rowan is a Developer Advocate
