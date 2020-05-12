@@ -81,7 +81,7 @@ as `resolved`:
 
 The Console now uses the term `fulfilled`, which aligns with the `Promise` spec:
 
-![An example of the Console using the new "fulfilled" terminology.](/web/updates/images/2020/05/fulfilled.png)
+![An example of the Console using the new "fulfilled" terminology.](/web/updates/images/2020/05/fulfilled.jpg)
 
 {# https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2141673 #}
 
