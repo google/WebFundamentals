@@ -87,7 +87,7 @@ Chromium Bug: [#1040019](https://crbug.com/1040019)
 
 ### Support for space-separated functional color notations {: #functional-color-notation }
 
-[CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/#changes-from-3)
+[CSS Color Module Level 4](https://drafts.csswg.org/css-color/#changes-from-3)
 specifies that color functions like `rgb()` should support space-separated
 arguments. For example, `rgb(0, 0, 0)` is equivalent to `rbg(0 0 0)`. The Styles
 pane now recognizes the space-separated syntax.
