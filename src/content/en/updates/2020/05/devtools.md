@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: The new Issues tab, accessibility information in the Inspect Mode tooltip, and more.
 
 {# wf_updated_on: 2020-05-12 #}
-{# wf_published_on: 2020-05-11 #}
+{# wf_published_on: 2020-05-12 #}
 {# wf_tags: chrome84, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: The new Issues tab, accessibility information in the Inspect Mode tooltip, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 84) {: .page-title }
@@ -18,8 +18,11 @@ description: TODO
 The new **Issues** tab in the Drawer was built to help reduce the notification 
 fatigue and clutter of the **Console**. Currently, the Console is the central
 place for website developers, libraries, frameworks, and Chrome itself to log
-messages, warnings, and errors. The Issues tab structures and aggregates all of
-these messages into a more actionable format.
+messages, warnings, and errors. The Issues tab aggregates warnings from the
+browser in a structured, aggregated, and actionable way, links to affected resources
+within DevTools, and provides guidance on how to fix the issues. Over time, more
+and more browser warnings will be surfaced in the Issues tab rather than the Console,
+which should help reduce the Console's clutter.
 
 {# TODO(kayce): Link to Sam's doc. #}
 
@@ -62,6 +65,7 @@ for approximating First Input Delay, which is one of Google's new
 
 Chromium Bug: [#1054381](https://crbug.com/1054381)
 
+
 <!--
 
 ### Cumulative Layout Shift (CLS) movement records {: #cls }
@@ -77,7 +81,7 @@ Chromium Bug: [#1054381](https://crbug.com/1054381)
 When logging a `Promise` the Console used to incorrectly describe the state of the `Promise`
 as `resolved`:
 
-![An example of the Console using the old "resolved" terminology.](/web/updates/images/2020/05/resolved.png)
+![An example of the Console using the old "resolved" terminology.](/web/updates/images/2020/05/resolved.jpg)
 
 The Console now uses the term `fulfilled`, which aligns with the `Promise` spec:
 
@@ -98,7 +102,7 @@ The Styles pane's autocomplete UI now detects the [`revert`][revert] CSS keyword
 reverts the cascaded value of a property to what the value would have been if no changes
 had been made to the element's styling.
 
-![Setting the value of a property to `revert`](/web/updates/images/2020/05/revert.jpg)
+![Setting the value of a property to revert.](/web/updates/images/2020/05/revert.jpg)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/811c6e98ee25baf3f6f5a6145e1896fbe4362d7a #}
 
@@ -109,7 +113,7 @@ Chromium Bug: [#1075437](https://crbug.com/1075437)
 Hover over a `background-image` value in the Styles pane to see a preview of
 the image in a tooltip.
 
-![Hovering over a `background-image` value](/web/updates/images/2020/05/image-preview.jpg)
+![Hovering over a background-image value.](/web/updates/images/2020/05/image-preview.jpg)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/1ebbb30be21f07d6a4d3ccd3b8dc7bd0dd37b41d #}
 
@@ -121,19 +125,17 @@ Chromium Bug: [#1040019](https://crbug.com/1040019)
 specifies that color functions like `rgb()` should support space-separated
 arguments. For example, `rgb(0, 0, 0)` is equivalent to `rbg(0 0 0)`.
 
-When you choose color with the [Color Picker](/web/tools/chrome-devtools/css/reference#color-picker)
+When you choose colors with the [Color Picker](/web/tools/chrome-devtools/css/reference#color-picker)
 or alternate between color representations in the Styles pane by holding <kbd>Shift</kbd> and then
 clicking the color value, you'll now see the space-separated argument syntax.
 
-![Using space-separated arguments in the Styles pane](/web/updates/images/2020/05/color.jpg)
+![Using space-separated arguments in the Styles pane.](/web/updates/images/2020/05/color.jpg)
 
-DevTools is using the new syntax because [upcoming CSS features like `color() do not
+DevTools is using the new syntax because [upcoming CSS features like `color()` do not
 support the deprecated comma-separated argument syntax](https://twitter.com/mathias/status/1253242715304857601).
 
 The space-separated argument syntax has been supported in most browsers for a while. 
-See the **Space-separated functional color notations** entry in MDN's
-[Browser compatibility](https://caniuse.com/#feat=mdn-css_types_color_space_separated_functional_notation)
-table.
+See [Can I use Space-separated functional color notations?](https://caniuse.com/#feat=mdn-css_types_color_space_separated_functional_notation)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e858e4aa92e7b4f31de0d4eaccadba512bdc3c36 #}
 
@@ -144,7 +146,7 @@ Chromium Bug: [#1072952](https://crbug.com/1072952)
 The **Properties** pane in the **Elements** panel has been deprecated.
 Run `console.dir($0)` in the **Console** instead.
 
-![The Properties pane](/web/updates/images/2020/05/properties.jpg)
+![The deprecated Properties pane.](/web/updates/images/2020/05/properties.jpg)
 
 References:
 
