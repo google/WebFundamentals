@@ -94,7 +94,7 @@ as `resolved`:
 
 ![An example of the Console using the old "resolved" terminology.](/web/updates/images/2020/05/resolved.jpg)
 
-The Console now uses the term `fulfilled`, which aligns with the `Promise` spec:
+The Console now uses the term `fulfilled`, which [aligns with the `Promise` spec](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md):
 
 ![An example of the Console using the new "fulfilled" terminology.](/web/updates/images/2020/05/fulfilled.jpg)
 
