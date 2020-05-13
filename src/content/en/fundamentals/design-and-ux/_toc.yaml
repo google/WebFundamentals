@@ -11,7 +11,8 @@ toc:
     - title: What Makes a Good Mobile Site?
       path: /web/fundamentals/design-and-ux/principles/
     - title: Introduction to variable fonts on the web
-      path: /web/fundamentals/design-and-ux/typography/variable-fonts/
+      path: https://web.dev/variable-fonts/
+      status: external
     - title: Additional Colors and Icons
       path: /web/fundamentals/design-and-ux/browser-customization/
   - include: /web/fundamentals/accessibility/_toc.yaml
