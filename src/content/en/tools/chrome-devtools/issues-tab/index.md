@@ -103,7 +103,7 @@ this example, click `samesite-sandbox.glitch.me` under the **Name** column to sh
      <strong>More tools</strong> menu.
    </figcaption> -->
   </figure>
-1. Scroll to view the item with a problem: in this case, the cookie ck02. Hover over the 
+1. Scroll to view the item with a problem: in this case, the cookie `ck02`. Hover over the 
 information icon on the right to see the problem and how to fix it.
 <figure>
    <img src="/web/tools/chrome-devtools/issues-tab/images/issues-tab-view-issue.png"
