@@ -17,8 +17,8 @@ by the browser, such as cookie issues and mixed content.
 
 The **Issues** tab aggregates warnings from the browser. 
 
-1. Visit a page such as <a href="https://samesite-sandbox.glitch.me/" 
-title="SameSite cookie tests">samesite-sandbox.glitch.me</a> with issues to fix. 
+1. Visit a page (such as <a href="https://samesite-sandbox.glitch.me/" 
+title="SameSite cookie tests">samesite-sandbox.glitch.me</a>) with issues to fix. 
 1. [Open DevTools](/web/tools/chrome-devtools/open). 
 1. Click the **Go to Issues** button in the yellow warning bar. 
   <figure>
