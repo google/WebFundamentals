@@ -6,7 +6,7 @@ description: Use the Issues Tab to find and fix problems with your website.
 {# wf_published_on: 2020-05-16 #}
 {# wf_blink_components: Security, Platform>DevTools #}
 
-# Find and Fix Problems With the Chrome DevTools Issues Tab {: .page-title }
+# Find And Fix Problems With The Chrome DevTools Issues Tab {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
