@@ -114,20 +114,6 @@ information icon on the right to see the problem and how to fix it.
    </figcaption> -->
   </figure>
 
-<aside class="note">
-  <p>In Chrome 84, the Issues tab supports three types of issue:</p> 
-  <ul>
-    <li><a href="https://web.dev/samesite-cookies-explained" 
-      title="Article on web.dev: SameSite cookies explained">Cookie 
-    problems</a></li>
-    <li><a href="/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content" 
-      title="Web Fundamentals article: What Is Mixed Content?">Mixed content</a></li>
-    <li><a href="https://web.dev/coop-coep/" title="Article on web.dev: 
-      Making your website 'cross-origin isolated' using COOP and COEP">COEP 
-    issues</a></li>
-  </ul>
-  <p>Future versions of Chrome will support more issue types.</p>
-</aside>
 
 ## Feedback {: #feedback }
 
