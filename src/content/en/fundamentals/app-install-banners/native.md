@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Native app install banners give you the ability to let users quickly and seamlessly install your native app on their device from the app store, without leaving the browser.
 
-{# wf_updated_on: 2020-02-21 #}
+{# wf_updated_on: 2020-05-08 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -32,6 +32,13 @@ meet the following criteria:
 When these criteria are met, will fire a `beforeinstallprompt` event that you
 can use to prompt the user to install your native app, and may show a
 [mini-info bar](#mini-info-bar).
+
+{# https://bugs.chromium.org/p/chromium/issues/detail?id=964314 #}
+
+Note: On Chrome, the native app install prompt is only supported in the
+current stable release. On other Chrome channels (Beta/Dev/Canary), the
+`beforeinstallprompt` event will **not** fire, even if the above criteria
+are met.
 
 ### Required manifest properties {: #prefer_related }
 
