@@ -142,6 +142,8 @@ clicking the color value, you'll now see the space-separated argument syntax.
 
 ![Using space-separated arguments in the Styles pane.](/web/updates/images/2020/05/color.jpg)
 
+You'll also see the syntax in the Computed pane and the Inspect Mode tooltip. 
+
 DevTools is using the new syntax because [upcoming CSS features like `color()` do not
 support the deprecated comma-separated argument syntax](https://twitter.com/mathias/status/1253242715304857601).
 
