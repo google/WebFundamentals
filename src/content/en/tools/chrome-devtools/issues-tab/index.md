@@ -94,7 +94,7 @@ example, one cookie and one request.
 ## View issues in context {: #issues-devtools }
 
 1. Click on a resource link to view the item in the appropriate context within DevTools. <br><br>In 
-this example, click samesite-sandbox.glitch.me to show cookies for that request.
+this example, click `samesite-sandbox.glitch.me` under the **Name** column to show cookies for that request.
 <figure>
    <img src="/web/tools/chrome-devtools/issues-tab/images/issues-tab-view-request.png"
         alt="Chrome DevTools screenshot showing affected resources open in the Issues tab."/>
