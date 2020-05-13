@@ -21,7 +21,7 @@ place for website developers, libraries, frameworks, and Chrome itself to log
 messages, warnings, and errors. The Issues tab aggregates warnings from the
 browser in a structured, aggregated, and actionable way, links to affected resources
 within DevTools, and provides guidance on how to fix the issues. Over time, more
-and more browser warnings will be surfaced in the Issues tab rather than the Console,
+and more of Chrome's warnings will be surfaced in the Issues tab rather than the Console,
 which should help reduce the Console's clutter.
 
 {# TODO(kayce): Link to Sam's doc. #}
@@ -37,7 +37,7 @@ Chromium Bug: [#1068116](https://crbug.com/1068116)
 The [Inspect Mode tooltip](/web/updates/2019/01/devtools#inspect) now
 indicates whether the element has an accessible
 [name and role](https://web.dev/labels-and-text-alternatives/)
-and is [keyboard focusable](https://web.dev/control-focus-with-tabindex/).
+and is [keyboard-focusable](https://web.dev/control-focus-with-tabindex/).
 
 ![The Inspect Mode tooltip with accessibility information.](/web/updates/images/2020/05/a11y.jpg)
 
@@ -57,7 +57,15 @@ to become usable. It essentially measures how long a page *appears* to be usable
 because JavaScript is blocking the main thread and therefore the page can't respond
 to user input. TBT is the main [lab metric](https://web.dev/how-to-measure-speed/#lab-data-vs-field-data)
 for approximating First Input Delay, which is one of Google's new
-[Core Web Vitals](https://web.dev/vitals/#core-web-vitals).
+[Core Web Vitals][CWV].
+
+To get Total Blocking Time information, **do not** use the **Reload Page**
+![Reload Page](/web/tools/chrome-devtools/evaluate-performance/imgs/reload-page.png){: .inline-icon } 
+workflow for recording page load performance. Instead, click **Record** 
+![Record](/web/tools/chrome-devtools/evaluate-performance/imgs/record.png){: .inline-icon },
+manually reload the page, wait for the page to load, and then stop recording.
+If you see `Total Blocking Time: Unavailable` it means that DevTools did not get the
+information it needs from Chrome's internal profiling data.
 
 ![Total Blocking Time information in the footer of a Performance panel recording.](/web/updates/images/2020/05/tbt.jpg)
 
@@ -65,16 +73,19 @@ for approximating First Input Delay, which is one of Google's new
 
 Chromium Bug: [#1054381](https://crbug.com/1054381)
 
+### Layout Shift events in the new Experience section {: #cls }
 
-<!--
+The new **Experience** section of the Performance panel can help you detect
+[layout shifts](https://web.dev/cls/). Cumulative Layout Shift (CLS) is a metric that can
+help you quantify unwanted visual instability and is one of Google's new [Core Web Vitals][CWV].
 
-### Cumulative Layout Shift (CLS) movement records {: #cls }
+Click a **Layout Shift** event to see the details of the layout shift in the **Summary** tab.
+Hover over the **Moved from** and **Moved to** fields to visualize where the layout shift
+occurred.
 
-{# TODO(kayce): Get a working screenshot of the UI. }
+![The details of a layout shift.](/web/updates/images/2020/05/cls.jpg)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f130314cc50ccd2c933017ee9bb06eefd68ed206 #}
-
--->
 
 ## More accurate promise terminology in the Console {: #promises }
 
@@ -162,3 +173,5 @@ References:
 <<../../_shared/discover.md>>
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+[CWV]: https://web.dev/vitals/#core-web-vitals
