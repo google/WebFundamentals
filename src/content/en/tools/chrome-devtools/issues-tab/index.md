@@ -6,119 +6,128 @@ description: Use the Issues Tab to find and fix problems with your website.
 {# wf_published_on: 2020-05-16 #}
 {# wf_blink_components: Security #}
 
-# Find and Fix WebSite Problems With The Chrome DevTools Issues Panel {: .page-title }
+# Find and Fix Problems With the Chrome DevTools Issues Tab {: .page-title }
 
-{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
-[why-https]: /web/fundamentals/security/encrypt-in-transit/why-https
+Use the **Issues** tab in Chrome DevTools to find solutions to problems detected 
+by the browser, such as cookie issues and mixed content.
 
-Use the **Security** Panel in Chrome DevTools to make sure HTTPS is properly implemented
-on a page. See [Why HTTPS Matters][why-https] to learn why every website should be protected
-with HTTPS, even sites that don't handle sensitive user data.
+## Open the Issues tab {: #open }
 
-## Open the Security panel {: #open }
+The **Issues** tab aggregates warnings from the browser. 
 
-The **Security** panel is the main place in DevTools for inspecting the security of a page.
-
-1. [Open DevTools](/web/tools/chrome-devtools/open).
-1. Click the **Security** tab to open the **Security** panel.
-
-     <figure>
-       <img src="/web/tools/chrome-devtools/security/imgs/panel.png"
-            alt="The Security panel"/>
-       <figcaption>
-         <b>Figure 1</b>. The Security panel
-       </figcaption>
-     </figure>
-
-## Common problems {: #problems }
-
-### Non-secure main origins {: #main }
-
-When the main origin of a page is not secure, the **Security Overview** says
-**This page is not secure**.
-
-<figure>
-  <img src="/web/tools/chrome-devtools/security/imgs/nonsecuremain.png"
-       alt="A non-secure page"/>
-  <figcaption>
-    <b>Figure 2</b>. A non-secure page
-  </figcaption>
+1. Visit a page such as <a href="https://samesite-sandbox.glitch.me/" 
+title="SameSite cookie tests">samesite-sandbox.glitch.me</a> with issues to fix. 
+1. [Open DevTools](/web/tools/chrome-devtools/open). 
+1. Click the **Go to Issues** button in the yellow warning bar. 
+  <figure>
+   <img src="/web/tools/chrome-devtools/issues-tab/images/open-issues-tab.png"
+        alt="Chrome DevTools screenshot showing yellow warning bar for Issues 
+        detected."/>
+  <!--        <figcaption>
+     <b>Figure 1</b>. Open the <strong>Issues</strong> tab with the 
+     <strong>Go to Issues</strong> button.
+   </figcaption> -->
+  </figure>
+  Alternatively, select **Issues** from the **More tools** menu.
+  <figure>
+   <img src="/web/tools/chrome-devtools/issues-tab/images/more-tools-menu.png"
+        alt="Chrome DevTools screenshot showing Issues tab in More tools menu."/>
+  <!--      <figcaption>
+     <b>Figure 2</b>. Open the <strong>Issues</strong> tab from the 
+     <strong>More tools</strong> menu.
+   </figcaption> -->
+  </figure>
+1. Click the **Reload page** button if necessary.
+  <figure>
+   <img src="/web/tools/chrome-devtools/issues-tab/images/issues-tab-before-reload.png"
+        alt="Chrome DevTools screenshot showing Issues tab with 'Reload page' button."/>
+  <!--      <figcaption>
+     <b>Figure 2</b>. Open the <strong>Issues</strong> tab from the 
+     <strong>More tools</strong> menu.
+   </figcaption> -->
+  </figure>
+  You'll notice that issues reported in the Console (such as the cookie warnings here) are quite 
+  hard to understand. It's not clear what needs to be done to fix the issues reported.
+  <figure>
+ <img src="/web/tools/chrome-devtools/issues-tab/images/issues-tab-after-reload.png"
+      alt="Chrome DevTools screenshot showing Issues tab with two 
+           cookie issues."/>
+<!--      <figcaption>
+   <b>Figure 2</b>. Open the <strong>Issues</strong> tab from the 
+   <strong>More tools</strong> menu.
+ </figcaption> -->
 </figure>
 
-This problem occurs when the URL that you visited was requested over HTTP. To make it secure
-you need to request it over HTTPS. For example, if you look at the URL in your address bar,
-it probably looks similar to `http://example.com`. To make it secure the URL should be
-`https://example.com`.
+## View items in the Issues tab {: #view-issues }
 
-If you've already got HTTPS set up on your server, all you need to do to fix this problem is configure
-your server to redirect all HTTP requests to HTTPS.
+1. Click an item in the **Issues** tab.
+<figure>
+ <img src="/web/tools/chrome-devtools/issues-tab/images/issues-tab-issue-open.png"
+      alt="Chrome DevTools screenshot showing a cookie issue open in the Issues tab."/>
+<!--      <figcaption>
+   <b>Figure 2</b>. Open the <strong>Issues</strong> tab from the 
+   <strong>More tools</strong> menu.
+ </figcaption> -->
+</figure>
+Each item has four components:
+<ul>
+  <li>A summary of the issue.</li>
+  <li>A **RESOLVE BY** section explaining how to fix the issue.</li>
+  <li>An **AFFECTED RESOURCES** section that links to resources within the appropriate context 
+  within DevTools, such as the Network panel.</li>
+  <li>A link to further guidance.</li>
+</ul>
+<br>
+1. Click on items within **AFFECTED RESOURCES** to view details: in this 
+example, one cookie and one request.
+<figure>
+ <img src="/web/tools/chrome-devtools/issues-tab/images/issues-tab-affected-resources.png"
+      alt="Chrome DevTools screenshot showing affected resources open in the Issues tab."/>
+<!--      <figcaption>
+   <b>Figure 2</b>. Open the <strong>Issues</strong> tab from the 
+   <strong>More tools</strong> menu.
+ </figcaption> -->
+</figure>
 
-If you don't have HTTPS set up on your server, [Let's Encrypt](https://letsencrypt.org/){: .external }
-provides a free and relatively-easy way to start the process. Or, you might consider hosting your site
-on a CDN. Most major CDNs host sites on HTTPS by default now.
+## View issues in context {: #issues-devtools }
 
-<aside class="objective">
-  <b>Tip</b> The <a href="/web/tools/lighthouse/audits/http-redirects-to-https">Redirect HTTP Traffic To HTTPS</a>
-  audit in <a href="/web/tools/lighthouse/">Lighthouse</a> can help automate the process of making sure that
-  all HTTP requests are redirected to HTTPS.
+1. Click on a resource link to view the item in the appropriate context within DevTools. <br><br>In 
+this example, click samesite-sandbox.glitch.me to show cookies for that request.
+<figure>
+   <img src="/web/tools/chrome-devtools/issues-tab/images/issues-tab-view-request.png"
+        alt="Chrome DevTools screenshot showing affected resources open in the Issues tab."/>
+  <!--      <figcaption>
+     <b>Figure 2</b>. Open the <strong>Issues</strong> tab from the 
+     <strong>More tools</strong> menu.
+   </figcaption> -->
+  </figure>
+1. Scroll to view the item with a problem: in this case, the cookie ck02. Hover over the 
+information icon on the right to see the problem and how to fix it.
+<figure>
+   <img src="/web/tools/chrome-devtools/issues-tab/images/issues-tab-view-issue.png"
+        alt="Chrome DevTools screenshot showing issue with a resource opened from the Issues tab."/>
+  <!--      <figcaption>
+     <b>Figure 2</b>. Open the <strong>Issues</strong> tab from the 
+     <strong>More tools</strong> menu.
+   </figcaption> -->
+  </figure>
+
+<aside class="note">
+  <p>In Chrome 84, the Issues tab supports three types of issue:</p> 
+  <ul>
+    <li><a href="https://web.dev/samesite-cookies-explained" 
+      title="Article on web.dev: SameSite cookies explained">Cookie 
+    problems</a></li>
+    <li><a href="/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content" 
+      title="Web Fundamentals article: What Is Mixed Content?">Mixed content</a></li>
+    <li><a href="https://web.dev/coop-coep/" title="Article on web.dev: 
+      Making your website 'cross-origin isolated' using COOP and COEP">COEP 
+    issues</a></li>
+  </ul>
+  <p>Future versions of Chrome will support more issue types.</p>
 </aside>
-
-### Mixed content {: #mixed }
-
-[mixed]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
-
-[Mixed content][mixed] means that the main origin of a page is secure, but the page requested resources
-from non-secure origins. Mixed content pages are only partially protected because the HTTP content is
-accessible to sniffers and vulnerable to man-in-the-middle attacks.
-
-<figure>
-  <img src="/web/tools/chrome-devtools/security/imgs/mixedoverview.png"
-       alt="Mixed content"/>
-  <figcaption>
-    <b>Figure 3</b>. Mixed content
-  </figcaption>
-</figure>
-
-In **Figure 3** above, clicking **View 1 request in Network panel** opens the **Network** panel
-and applies the `mixed-content:displayed` filter so that the **Network Log** only shows non-secure
-resources.
-
-<figure>
-  <img src="/web/tools/chrome-devtools/security/imgs/mixedresources.png"
-       alt="Mixed resources in the Network Log"/>
-  <figcaption>
-    <b>Figure 4</b>. Mixed resources in the Network Log
-  </figcaption>
-</figure>
-
-## View details {: #details }
-
-### View main origin certificate {: #certificate }
-
-From the **Security Overview** click **View certificate** to quickly inspect the main origin's certificate.
-
-<figure>
-  <img src="/web/tools/chrome-devtools/security/imgs/certificate.png"
-       alt="A main origin certificate"/>
-  <figcaption>
-    <b>Figure 5</b>. A main origin certificate
-  </figcaption>
-</figure>
-
-### View origin details {: #origindetails }
-
-Click one of the entries in the left-hand nav to view the origin's details. From the details
-page you can view connection and certificate information. Certificate transparency information
-is also shown when available.
-
-<figure>
-  <img src="/web/tools/chrome-devtools/security/imgs/origindetails.png"
-       alt="Main origin details"/>
-  <figcaption>
-    <b>Figure 6</b>. Main origin details
-  </figcaption>
-</figure>
 
 ## Feedback {: #feedback }
 
