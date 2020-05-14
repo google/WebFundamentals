@@ -13,9 +13,9 @@
       }
     </style>
     <title>Image gallery mixed content example</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/_static/js/jquery-bundle.js"></script>
     <script>
-      $(document).ready(function() {
+      $(function() {
         $('.gallery').click(function(e) {
           e.preventDefault();
           $('.overlay-foreground').css('background-image', 'url(' + $(this).attr('href') + ')');

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2019-03-04 #}
+{# wf_updated_on: 2020-05-14 #}
 {# wf_published_on: 2016-09-13 #}
 {# wf_blink_components: N/A #}
 
@@ -87,9 +87,9 @@ served in the same locale as the page.
 <p id="demopara">Click the button to toggle the border.
   <button id="demobutton">Click Me</button>
 </p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="/_static/js/jquery-bundle.js"></script>
 <script>
-$(document).ready(function() {
+$(function() {
   $('#demobutton').click(function(event) {
     if ($('#demopara').hasClass('borderdemo')) {
       $('#demopara').removeClass('borderdemo');
@@ -110,9 +110,9 @@ The code for this example:
 <p id="demopara">Click the button to toggle the border.
   <button id="demobutton">Click Me</button>
 </p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="/_static/js/jquery-bundle.js"></script>
 <script>
-$(document).ready(function() {
+$(function() {
   $('#demobutton').click(function(event) {
     if ($('#demopara').hasClass('borderdemo')) {
       $('#demopara').removeClass('borderdemo');
