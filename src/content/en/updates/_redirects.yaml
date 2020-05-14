@@ -1,6 +1,13 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
+#
+# ATTENTION: Put redirects for content migrated to web.dev in /en/_redirects.yaml
+#
 
 redirects:
+
+- from: /web/updates/nic
+  to: /web/updates/2020/04/nic81
+
+# Redirects for TWA content
 
 - from: /web/updates/2019/02/using-twa
   to: /web/android/trusted-web-activity/
@@ -20,59 +27,16 @@ redirects:
 - from: /web/updates/2020/03/trusted-web-activity-passing-information
   to: /web/android/trusted-web-activity/query-parameters/
 
-- from: /web/updates/nic
-  to: /web/updates/2020/04/nic81
-
-- from: /web/updates/2011/11/Quota-Management-API-Fast-Facts
-  to: https://web.dev/storage-for-the-web/
-
-- from: /web/updates/2019/03/prefers-reduced-motion
-  to: https://web.dev/prefers-reduced-motion/
-
-- from: /web/updates/2019/08/periodic-background-sync
-  to: https://web.dev/periodic-background-sync/
-
-- from: /web/updates/2018/12/badging-api
-  to: https://web.dev/badging-api/
-
-- from: /web/updates/2018/12/web-share-target
-  to: https://web.dev/web-share-target/
-
-- from: /web/updates/2019/05/web-share-files
-  to: https://web.dev/web-share/#sharing-files
-
-- from: /web/updates/2016/09/navigator-share
-  to: https://web.dev/web-share/
-
-- from: /web/updates/2019/08/contact-picker
-  to: https://web.dev/contact-picker/
-
-- from: /web/updates/2018/12/get-installed-related-apps
-  to: https://web.dev/get-installed-related-apps/
-
-- from: /web/updates/2019/08/native-file-system
-  to: https://web.dev/native-file-system/
-
-- from: /web/updates/2019/01/shape-detection
-  to: https://web.dev/shape-detection/
-
-- from: /web/updates/2018/12/wakelock
-  to: https://web.dev/wakelock/
-
-- from: /web/updates/2019/07/image-support-for-async-clipboard
-  to: https://web.dev/image-support-for-async-clipboard/
+- from: /web/updates/2020/twa-android-browser-helper
+  to: /web/updates/2020/01/twa-android-browser-helper
 
 - from: /web/updates/2018/06/fresher-sw
-  to: /web/updates/2019/09/fresher-sw
-
-- from: /web/updates/2018/11/writable-files
-  to: https://web.dev/native-file-system/
-
-- from: /web/updates/2017/04/getinstalledrelatedapps
-  to: https://web.dev/get-installed-related-apps/
+  to: /web/android/trusted-web-activity/
 
 - from: /web/updates/2017/10/using-twa
-  to: /web/updates/2019/02/using-twa
+  to: /web/android/trusted-web-activity/
+
+# Redirects for content migrated from H5R
 
 - from: /web/updates/2011/06/HTML5-Libraries---Late-June
   to: /web/updates/2011/06/HTML5-Libraries-Late-June
@@ -341,8 +305,10 @@ redirects:
 - from: /web/updates/2016/04/geolocation-on-secure-contexts-
   to: /web/updates/2016/04/geolocation-on-secure-contexts-only
 
-- from: /web/updates/2016/10/navigator-share
-  to: /web/updates/2016/09/navigator-share
+- from: /web/updates/2015/05/19/...
+  to: /web/updates/2015/05/...
+
+# Redirects for tags & pages
 
 - from: /web/updates/tag/datalist
   to: /web/updates/tags/datalist
@@ -385,6 +351,3 @@ redirects:
 
 - from: /web/updates/chrome-devtools/...
   to: /web/updates/devtools/
-
-- from: /web/updates/2015/05/19/...
-  to: /web/updates/2015/05/...
