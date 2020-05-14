@@ -5,7 +5,7 @@ description: Handling Heavy Ad Interventions
 {# wf_published_on: 2020-05-14 #}
 {# wf_updated_on: 2020-05-14 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
-{# wf_tags: ads,devtools,performance #}
+{# wf_tags: devtools,performance #}
 {# wf_featured_snippet: Chrome’s Heavy Ad Intervention will unload ads that exceed their allowance for CPU or network usage. Learn how to monitor these with the Reporting API and update your ads to avoid issues. #}
 {# wf_blink_components: UI>Browser>AdFilter #}
 
@@ -355,3 +355,6 @@ applied, then you can
 [raise an issue via this template](https://goo.gle/heavy-ads-crbug). Please
 ensure you have captured an example of the intervention report and have a sample
 URL to reproduce the issue.
+
+{% include "web/_shared/rss-widget-updates.html" %}
+{% include "web/_shared/helpful.html" %}
