@@ -1,7 +1,8 @@
+#
+# ATTENTION: Put redirects for content migrated to web.dev in /en/_redirects.yaml
+#
+
 redirects:
 
 - from: /web/fundamentals/performance/
   to: /web/fundamentals/performance/why-performance-matters
-
-- from: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
-  to: https://web.dev/http-cache/

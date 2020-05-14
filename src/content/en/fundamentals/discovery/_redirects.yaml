@@ -1,7 +1,8 @@
+#
+# ATTENTION: Put redirects for content migrated to web.dev in /en/_redirects.yaml
+#
+
 redirects:
 
 - from: /web/fundamentals/discovery/
   to: /web/fundamentals/
-
-- from: /web/fundamentals/discovery/search-optimization
-  to: https://web.dev/lighthouse-seo/

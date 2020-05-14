@@ -1,3 +1,7 @@
+#
+# ATTENTION: Put redirects for content migrated to web.dev in /en/_redirects.yaml
+#
+
 redirects:
 
 - from: /web/fundamentals/primers/service-worker
@@ -8,6 +12,3 @@ redirects:
 
 - from: /web/fundamentals/primers/
   to: /web/fundamentals/
-
-- from: /web/fundamentals/primers/promises
-  to: https://web.dev/promises

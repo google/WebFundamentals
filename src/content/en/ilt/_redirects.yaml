@@ -4,7 +4,6 @@ redirects:
 
 - from: /web/ilt/
   to: /web/ilt/pwa/
-  temporary: true
 
 - from: /web/ilt/pwa/using-sw-precache-and-sw-toolbox-slides
   to: /web/ilt/pwa/lab-workbox

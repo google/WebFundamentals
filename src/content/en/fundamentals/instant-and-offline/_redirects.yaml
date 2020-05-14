@@ -1,3 +1,7 @@
+#
+# ATTENTION: Put redirects for content migrated to web.dev in /en/_redirects.yaml
+#
+
 redirects:
 
 - from: /web/fundamentals/instant-and-offline/
