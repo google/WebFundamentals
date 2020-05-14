@@ -86,6 +86,8 @@ toc:
   - title: Inspect and Manage Storage, Databases, and Caches
     path: /web/tools/chrome-devtools/manage-data/local-storage
     status: deprecated
+- title: Issues
+  path: /web/tools/chrome-devtools/issues/
 - title: Command Menu
   path: /web/tools/chrome-devtools/command-menu/
 - title: Mobile Simulation
