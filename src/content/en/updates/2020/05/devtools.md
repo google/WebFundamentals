@@ -15,10 +15,10 @@ description: The new Issues tab, accessibility information in the Inspect Mode t
 
 ## Fix site issues with the new Issues tab {: #issues }
 
-The new **Issues** tab in the Drawer was built to help reduce the notification 
+The new **Issues** tab in the Drawer aims to help reduce the notification 
 fatigue and clutter of the **Console**. Currently, the Console is the central
 place for website developers, libraries, frameworks, and Chrome itself to log
-messages, warnings, and errors. The Issues tab aggregates warnings from the
+messages, warnings, and errors. The Issues tab presents warnings from the
 browser in a structured, aggregated, and actionable way, links to affected resources
 within DevTools, and provides guidance on how to fix the issues. Over time, more
 and more of Chrome's warnings will be surfaced in the Issues tab rather than the Console,
