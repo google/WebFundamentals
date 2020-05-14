@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The new Issues tab, accessibility information in the Inspect Mode tooltip, and more.
 
-{# wf_updated_on: 2020-05-12 #}
+{# wf_updated_on: 2020-05-14 #}
 {# wf_published_on: 2020-05-12 #}
 {# wf_tags: chrome84, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -24,7 +24,8 @@ within DevTools, and provides guidance on how to fix the issues. Over time, more
 and more of Chrome's warnings will be surfaced in the Issues tab rather than the Console,
 which should help reduce the Console's clutter.
 
-{# TODO(kayce): Link to Sam's doc. #}
+Check out [Find And Fix Problems With The Chrome DevTools Issues Tab](/web/tools/chrome-devtools/issues/)
+to get started.
 
 ![The Issues tab.](/web/updates/images/2020/05/issues.jpg)
 
