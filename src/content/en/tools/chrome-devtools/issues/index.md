@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Issues Tab to find and fix problems with your website.
 
-{# wf_updated_on: 2020-05-13 #}
-{# wf_published_on: 2020-05-16 #}
+{# wf_updated_on: 2020-05-14 #}
+{# wf_published_on: 2020-05-14 #}
 {# wf_blink_components: Security, Platform>DevTools #}
 
 # Find And Fix Problems With The Chrome DevTools Issues Tab {: .page-title }
