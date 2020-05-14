@@ -158,6 +158,3 @@ redirects:
 
 - from: /web/fundamentals/design-and-ux/input/
   to: /web/fundamentals/design-and-ux/input/forms/
-
-- from: /web/fundamentals/design-and-ux/typography/variable-fonts
-  to: https://web.dev/variable-fonts/
