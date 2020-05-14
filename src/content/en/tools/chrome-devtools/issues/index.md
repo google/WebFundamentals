@@ -90,8 +90,8 @@ Each item has four components:
 <ul>
   <li>A summary of the issue.</li>
   <li>A **RESOLVE BY** section explaining how to fix the issue.</li>
-  <li>An **AFFECTED RESOURCES** section that links to resources within the appropriate DevTools context, 
-  such as the Network panel.</li>
+  <li>An **AFFECTED RESOURCES** section that links to resources within the appropriate DevTools 
+    context, such as the Network panel.</li>
   <li>A link to further guidance.</li>
 </ul>
 <br>
