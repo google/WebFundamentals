@@ -118,6 +118,8 @@ had been made to the element's styling.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/811c6e98ee25baf3f6f5a6145e1896fbe4362d7a #}
 
+{# https://chromestatus.com/metrics/feature/timeline/popularity/3252 #}
+
 Chromium Bug: [#1075437](https://crbug.com/1075437)
 
 ### Image previews {: #image-previews }
