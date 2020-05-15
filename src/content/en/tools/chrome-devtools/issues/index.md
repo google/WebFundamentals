@@ -79,8 +79,8 @@ title="SameSite cookie tests">samesite-sandbox.glitch.me</a>) with issues to fix
 The **Issues** tab presents warnings from the browser in a structured, aggregated, and 
 actionable way. 
 
-1. Click an item in the **Issues** tab to get guidance on how to fix the issue and view 
-the affected resources.
+1. Click an item in the **Issues** tab to get guidance on how to fix issues and find 
+affected resources.
 <figure>
  <img src="/web/tools/chrome-devtools/issues/images/issues-tab-issue-open.png"
       alt="Chrome DevTools screenshot showing a cookie issue open in the Issues tab."/>
