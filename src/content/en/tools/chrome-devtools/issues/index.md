@@ -10,8 +10,9 @@ description: Use the Issues Tab to find and fix problems with your website.
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-Use the **Issues** tab in Chrome DevTools to find solutions to problems detected 
-by the browser, such as cookie issues and mixed content.
+The **Issues** tab in Chrome DevTools reduces the notification fatigue and clutter of the 
+Console. Use it to find solutions to problems detected by the browser, such as cookie 
+issues and mixed content.
 
 <aside class="note">
   <p>In Chrome 84, the Issues tab supports three types of issue:</p> 
@@ -29,8 +30,6 @@ by the browser, such as cookie issues and mixed content.
 </aside>
 
 ## Open the Issues tab {: #open }
-
-The **Issues** tab aggregates warnings from the browser. 
 
 1. Visit a page (such as <a href="https://samesite-sandbox.glitch.me/" 
 title="SameSite cookie tests">samesite-sandbox.glitch.me</a>) with issues to fix. 
@@ -77,7 +76,11 @@ title="SameSite cookie tests">samesite-sandbox.glitch.me</a>) with issues to fix
 
 ## View items in the Issues tab {: #view-issues }
 
-1. Click an item in the **Issues** tab.
+The **Issues** tab presents warnings from the browser in a structured, aggregated, and 
+actionable way. 
+
+1. Click an item in the **Issues** tab to get guidance on how to fix the issue and find 
+affected resources.
 <figure>
  <img src="/web/tools/chrome-devtools/issues/images/issues-tab-issue-open.png"
       alt="Chrome DevTools screenshot showing a cookie issue open in the Issues tab."/>
@@ -88,15 +91,15 @@ title="SameSite cookie tests">samesite-sandbox.glitch.me</a>) with issues to fix
 </figure>
 Each item has four components:
 <ul>
-  <li>A summary of the issue.</li>
-  <li>A **RESOLVE BY** section explaining how to fix the issue.</li>
+  <li>A headline describing the issue.</li>
+  <li>A description providing the context and the solution.</li>
   <li>An **AFFECTED RESOURCES** section that links to resources within the appropriate DevTools 
     context, such as the Network panel.</li>
-  <li>A link to further guidance.</li>
+  <li>Links to further guidance.</li>
 </ul>
 <br>
 1. Click on items within **AFFECTED RESOURCES** to view details. In this 
-example, there is one cookie and one request.
+example, there is one cookie and one request affected.
 <figure>
  <img src="/web/tools/chrome-devtools/issues/images/issues-tab-affected-resources.png"
       alt="Chrome DevTools screenshot showing affected resources open in the Issues tab."/>
@@ -109,8 +112,8 @@ example, there is one cookie and one request.
 ## View issues in context {: #issues-devtools }
 
 1. Click on a resource link to view the item in the appropriate context within DevTools. In 
-this example, click `samesite-sandbox.glitch.me` under the **Name** column to show cookies for that 
-request.
+this example, click `samesite-sandbox.glitch.me` under the **Name** column to show the cookies 
+attached to that request.
 <figure>
    <img src="/web/tools/chrome-devtools/issues/images/issues-tab-view-request.png"
         alt="Chrome DevTools screenshot showing affected resources open in the Issues tab."/>
