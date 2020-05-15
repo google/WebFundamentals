@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more.
 
-{# wf_updated_on: 2020-04-06 #}
+{# wf_updated_on: 2020-05-08 #}
 {# wf_published_on: 2020-03-10 #}
 {# wf_tags: chrome83, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -108,7 +108,7 @@ The **Sources** panel has new icons for breakpoints, conditional breakpoints, an
   are represented by half-red half-white circles.
 * [Logpoints](/web/updates/2019/01/devtools#logpoints)
   ![Logpoint](/web/updates/images/2020/03/logpoint.png){: .inline-icon }
-  are represented by red squares with Console icons.
+  are represented by red circles with Console icons.
 
 The motivation for the new icons was to make the UI more consistent with other GUI debugging tools
 (which usually color breakpoints red) and to make it easier to distinguish between the 3 features
