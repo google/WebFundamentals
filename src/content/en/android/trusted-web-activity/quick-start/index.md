@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: A guide to get started building a basic, bare-bones Trusted Web Activity.
 
 {# wf_published_on: 2019-08-28 #}
-{# wf_updated_on: 2020-05-05 #}
+{# wf_updated_on: 2020-05-18 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -120,6 +120,13 @@ Note: the `adb` command-line tool is located inside the Android command-line too
 The application should now be available on the device launcher. When opening the application you’ll
 notice that your website is launched as a Custom Tab, not a Trusted Web Activity, this is
 because we haven’t set up our Digital Asset Links validation yet, but first...
+
+### Graphical User Interface (GUI) alternatives for Bubblewrap
+
+[PWA Builder](https://www.pwabuilder.com/) provides a GUI interface that uses the Bubblewrap
+library to power the generation of Trusted Web Activity projects. Find more instructions on how to
+use PWA Builder to create an Android App that opens your PWA in
+[this blogpost](https://www.davrous.com/2020/02/07/publishing-your-pwa-in-the-play-store-in-a-couple-of-minutes-using-pwa-builder/).
 
 ### A note on signing keys {: #a-note-on-signing-keys }
 
