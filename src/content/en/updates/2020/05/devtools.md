@@ -27,7 +27,7 @@ which should help reduce the Console's clutter.
 Check out [Find And Fix Problems With The Chrome DevTools Issues Tab](/web/tools/chrome-devtools/issues/)
 to get started.
 
-![The Issues tab.](/web/updates/images/2020/05/issues.jpg)
+![The Issues tab.](/web/updates/images/2020/05/issues.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/39aac148144c5464a67e9013f3c218f6ea65dfdf #}
 
