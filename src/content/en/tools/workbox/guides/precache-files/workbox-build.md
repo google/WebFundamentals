@@ -23,7 +23,7 @@ Before the files can be "injected" into your service worker, you need to add
 this line of code to your service worker file:
 
 ```javascript
-workbox.precaching.precacheAndRoute([]);
+workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 ```
 
 This piece of code will be replaced by `workbox-build` with the list of files. (See
