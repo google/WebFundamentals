@@ -6,7 +6,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 
 * [Emulate vision deficiencies](/web/updates/2020/03/devtools#vision-deficiencies)
 * [Emulate locales](/web/updates/2020/03/devtools#locales)
-* [Cross-Origin Opener Policy (COOP) and Cross-Origin Embedder Policy (COEP) debugging](/web/updates/2020/03/devtools#COOP-COEP)
+* [Cross-Origin Embedder Policy (COEP) debugging](/web/updates/2020/03/devtools#COEP)
 * [New icons for breakpoints, conditional breakpoints, and logpoints](/web/updates/2020/03/devtools#debugging-icons)
 * [View network requests that set a specific cookie](/web/updates/2020/03/devtools#cookie-path)
 * [Dock to left from the Command Menu](/web/updates/2020/03/devtools#dock-to-left)
