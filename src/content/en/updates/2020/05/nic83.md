@@ -18,7 +18,7 @@ description: What's New in Chrome 83 for developers?
 Chrome 83 is starting to roll out to stable now.
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="RsMikJZhnSQ"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -31,12 +31,19 @@ Here's what you need to know:
 * There’s a new way to [detect memory leaks](#memory).
 * The [native file system API](#nfs) starts a new origin trial with added
   functionality.
+* There are new [cross-origin policies](#coop)
+* We've introduced the [Web Vitals](#web-vitals) program, to provide unified
+  guidance for quality signals that, we believe, are essential to delivering
+  a great user experience on the web.
 * And [more](#more).
 
 I’m [Pete LePage](https://twitter.com/petele), working and shooting from home,
 let’s dive in and see what’s new for developers in Chrome 83!
 
 <div class="clearfix"></div>
+
+Note: App shortcuts were supposed to be landing in Chrome 83, but were
+delayed until Chrome 84, scheduled for July 14th.
 
 ## Trusted types {: #trusted-types }
 
@@ -189,12 +196,63 @@ on web.dev with all the details, and how to get your new origin trial token.
 Check <https://developers.chrome.com/origintrials/#/trials/active> for
 a complete list of features in origin trial.
 
+## New cross-origin policies {: #coop }
+
+Some web APIs increase the risk of side-channel attacks like Spectre.
+To mitigate that risk, browsers offer an opt-in-based isolated environment
+called cross-origin isolated. The cross-origin isolated state also prevents
+modifications of `document.domain`. Being able to alter `document.domain`
+allows communication between same-site documents and has been considered
+a loophole in the same-origin policy.
+
+Check out Eiji's post
+[Making your website "cross-origin isolated" using COOP and COEP][wd-coop] for
+complete details.
+
+## Web vitals {: #web-vitals }
+
+Measuring the quality of user experience has many facets. While some aspects
+of user experience are site and context specific, there is a common set of
+signals — "**Core Web Vitals**" — that is critical to all web experiences.
+Such [core user experience needs][wd-ucpm] include loading experience,
+interactivity, and visual stability of page content, and combined are the
+foundation of the 2020 Core Web Vitals.
+
+<img src="/web/updates/images/2020/05/vitals-core.jpg">
+
+* [**Largest Contentful Paint**][wd-lcp] measures perceived load speed and
+  marks the point in the page load timeline when the page's main content has
+  likely loaded.
+* [**First Input Delay**][wd-fid] measures responsiveness and quantifies the
+  experience users feel when trying to first interact with the page.
+* [**Cumulative Layout Shift**][wd-cls] measures visual stability and
+  quantifies the amount of unexpected layout shift of visible page content.
+
+All of these metrics capture important user-centric outcomes, are field
+measurable, and have supporting lab diagnostic metric equivalents and
+tooling. For example, while Largest Contentful Paint is the topline loading
+metric, it is also highly dependent on First Contentful Paint (FCP) and
+Time to First Byte (TTFB), which remain critical to monitor and improve.
+
+To learn more, check out
+[Introducing Web Vitals: essential metrics for a healthy site][crb-vitals]
+on the Chromium Blog for complete details.
+
 ## And more {: #more }
 
 * Chrome now supports the [Barcode Detection API][wd-barcode-api], which
   provides the ability to detect and decode barcodes.
 * The new [CSS @supports function][css-supports] provides feature detection
   for CSS selectors.
+* New [ARIA annotations](https://www.chromestatus.com/feature/4666935918723072)
+  support screen reader accessibility for comments, suggestions, and text
+  highlights with semantic meanings (similar to `<mark>`).
+* The [`prefers-color-scheme` media query][wd-dark] lets authors support
+  their own dark theme so they have full control over experiences they build.
+* JavaScript now supports [modules in shared workers][wd-module-workers].
+
+Note: Curious about what's coming in the future? Check out the
+[Fugu API Tracker](https://goo.gle/fugu-api-tracker) to see!
 
 ## Further reading
 
@@ -225,7 +283,15 @@ released, I’ll be right here to tell you -- what’s new in Chrome!
 
 [css-supports]: https://drafts.csswg.org/css-conditional-4/#dfn-support-selector
 [crb-forms]: https://blog.chromium.org/2020/03/updates-to-form-controls-and-focus.html
+[crb-vitals]: https://blog.chromium.org/2020/05/introducing-web-vitals-essential-metrics.html
 [wd-tt]: https://web.dev/trusted-types/
 [wd-memory]: https://web.dev/monitor-total-page-memory-usage/
 [wd-nfs]: https://web.dev/native-file-system/
 [wd-barcode-api]: https://web.dev/shape-detection/
+[wd-coop]: https://web.dev/coop-coep/
+[wd-lcp]: https://web.dev/lcp/
+[wd-fid]: https://web.dev/fid/
+[wd-cls]: https://web.dev/cls/
+[wd-ucpm]: https://web.dev/user-centric-performance-metrics/#defining-metrics
+[wd-dark]: https://web.dev/color-scheme/
+[wd-module-workers]: https://web.dev/module-workers/#what-about-shared-workers
