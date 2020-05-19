@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Issues Tab to find and fix problems with your website.
 
-{# wf_updated_on: 2020-05-14 #}
+{# wf_updated_on: 2020-05-16 #}
 {# wf_published_on: 2020-05-14 #}
 {# wf_blink_components: Security, Platform>DevTools #}
 
@@ -31,12 +31,12 @@ issues and mixed content.
 
 ## Open the Issues tab {: #open }
 
-1. Visit a page (such as <a href="https://samesite-sandbox.glitch.me/" 
-title="SameSite cookie tests">samesite-sandbox.glitch.me</a>) with issues to fix. 
+1. Visit a page  with issues to fix, such as <a href="https://samesite-sandbox.glitch.me/" 
+title="SameSite cookie tests">samesite-sandbox.glitch.me</a>. 
 1. [Open DevTools](/web/tools/chrome-devtools/open). 
 1. Click the **Go to Issues** button in the yellow warning bar. 
   <figure>
-   <img src="/web/tools/chrome-devtools/issues/images/open-issues-tab.png"
+   <img src="/web/tools/chrome-devtools/issues/images/issues-detected.png"
         alt="Chrome DevTools screenshot showing yellow warning bar for Issues 
         detected."/>
   <!--        <figcaption>
@@ -53,7 +53,7 @@ title="SameSite cookie tests">samesite-sandbox.glitch.me</a>) with issues to fix
      <strong>More tools</strong> menu.
    </figcaption> -->
   </figure>
-1. Click the **Reload page** button if necessary.
+1. Once you're on the Issues tab, click the **Reload page** button if necessary.
   <figure>
    <img src="/web/tools/chrome-devtools/issues/images/issues-tab-before-reload.png"
         alt="Chrome DevTools screenshot showing Issues tab with 'Reload page' button."/>
@@ -98,7 +98,7 @@ Each item has four components:
   <li>Links to further guidance.</li>
 </ul>
 <br>
-1. Click on items within **AFFECTED RESOURCES** to view details. In this 
+1. Click on **AFFECTED RESOURCES** items to view details. In this 
 example, there is one cookie and one request affected.
 <figure>
  <img src="/web/tools/chrome-devtools/issues/images/issues-tab-affected-resources.png"
@@ -112,8 +112,7 @@ example, there is one cookie and one request affected.
 ## View issues in context {: #issues-devtools }
 
 1. Click on a resource link to view the item in the appropriate context within DevTools. In 
-this example, click `samesite-sandbox.glitch.me` under the **Name** column to show the cookies 
-attached to that request.
+this example, click `samesite-sandbox.glitch.me` to show the cookies attached to that request.
 <figure>
    <img src="/web/tools/chrome-devtools/issues/images/issues-tab-view-request.png"
         alt="Chrome DevTools screenshot showing affected resources open in the Issues tab."/>
