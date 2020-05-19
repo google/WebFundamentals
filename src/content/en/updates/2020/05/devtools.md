@@ -172,7 +172,7 @@ References:
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5f6928b9570ed35c4a0b4c1de9b0d1f62370c636 #}
 
 
-## App shortcuts support in the Manifest pane
+## App shortcuts support in the Manifest pane {: #app-shortcuts }
 
 App shortcuts help users quickly start common or recommended tasks within a web
 app. The app shortcuts menu is shown only for Progressive Web Apps that are
