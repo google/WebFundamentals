@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The new Issues tab, accessibility information in the Inspect Mode tooltip, and more.
 
-{# wf_updated_on: 2020-05-14 #}
+{# wf_updated_on: 2020-05-19 #}
 {# wf_published_on: 2020-05-12 #}
 {# wf_tags: chrome84, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -170,6 +170,20 @@ References:
 * [`$0`](/web/tools/chrome-devtools/console/utilities#dom)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5f6928b9570ed35c4a0b4c1de9b0d1f62370c636 #}
+
+
+## App shortcuts support in the Manifest pane
+
+App shortcuts help users quickly start common or recommended tasks within a web
+app. The app shortcuts menu is shown only for Progressive Web Apps that are
+installed on the user's desktop or mobile device.
+
+Check out [Get things done quickly with app
+shortcuts](https://web.dev/app-shortcuts) to learn more.
+
+![App shortcuts in the Manifest pane.](/web/updates/images/2020/05/app-shortcuts.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/9fee874360dbc0f891609a8aa1a9f8947b510253 #}
 
 <<../../_shared/devtools-feedback.md>>
 
