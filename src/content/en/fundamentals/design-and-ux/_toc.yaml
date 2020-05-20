@@ -39,7 +39,8 @@ toc:
   - title: Responsive Web Design
     section:
     - title: Overview
-      path: /web/fundamentals/design-and-ux/responsive/
+      path: https://web.dev/responsive-web-design-basics/
+      status: external
     - title: Patterns
       path: /web/fundamentals/design-and-ux/responsive/patterns
     - title: Responsive Images
