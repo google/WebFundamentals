@@ -28,6 +28,7 @@ upper_tabs:
           path: /web/tools/workbox/
       - name: Chrome User Experience Report
         contents:
-        - include: /web/tools/chrome-user-experience-report/_toc.yaml
+        - title: Chrome User Experience Report
+          path: /web/tools/chrome-user-experience-report/
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml
