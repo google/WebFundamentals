@@ -660,7 +660,7 @@ page loads, and find ways to defer or remove unnecessary work.
    more hardware constraints than laptops or desktops, so these settings let you experience the
    page load as if you were using a less powerful device.
 1. Click **Reload** ![Reload](imgs/reload.png){:.inline-icon}. DevTools reloads the page and
-   then produces a visualization of all the it had to do in order to load the page.
+   then produces a visualization of all it had to do in order to load the page.
    This visualization will be referred to as the *trace*.
 
      <figure>
