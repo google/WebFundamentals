@@ -102,6 +102,9 @@ redirects:
 - from: /web/updates/2016/10/navigator-share
   to: https://web.dev/web-share/
 
+- from: /web/updates/2016/10/resizeobserver
+  to: https://web.dev/resize-observer
+
 - from: /web/updates/2017/02/improved-add-to-home-screen
   to: https://web.dev/customize-install/
 
