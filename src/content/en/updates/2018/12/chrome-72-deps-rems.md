@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 72 to help you plan.
 
-{# wf_updated_on: 2020-02-26 #}
+{# wf_updated_on: 2020-05-27 #}
 {# wf_published_on: 2018-12-18 #}
 {# wf_tags: deprecations,removals,chrome72 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
@@ -65,6 +65,9 @@ downloaded rather than rendered in the browser.
 
 ### Deprecate TLS 1.0 and TLS 1.1
 
+Note: Removal of TLS 1.0 and TLS 1.1 was delayed to Chrome 84, which is
+expected to ship in July 2020.
+
 TLS (Transport Layer Security) is the protocol which secures HTTPS. It has a
 long history stretching back to the nearly twenty-year-old TLS 1.0 and its even
 older predecessor, SSL. Both TLS 1.0 and 1.1 have a number of weaknesses.
@@ -74,7 +77,7 @@ older predecessor, SSL. Both TLS 1.0 and 1.1 have a number of weaknesses.
 * TLS 1.0 and 1.1 use MD5 and SHA-1 in the server signature. (Note: this is not
   the signature in the certificate.)
 * TLS 1.0 and 1.1 only support RC4 and CBC ciphers. RC4 is broken and has since
-  been removed. TLS’s CBC mode construction is flawed and was vulnerable to
+  been removed. TLS’s CBC mode construction is flawed and is vulnerable to
   attacks.
 * TLS 1.0’s CBC ciphers additionally construct their initialization vectors
   incorrectly.
@@ -83,8 +86,6 @@ older predecessor, SSL. Both TLS 1.0 and 1.1 have a number of weaknesses.
 Supporting TLS 1.2 is a prerequisite to avoiding the above problems. The TLS
 working group has deprecated TLS 1.0 and 1.1. Chrome has now also deprecated
 these protocols. 
-
-Note: These were removed in Chrome 81.
 
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/EHSnAn2rucg/discussion) &#124;
