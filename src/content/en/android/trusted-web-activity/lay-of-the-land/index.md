@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: An overview of the libraries and tools for creating Trusted Web Activities.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-11 #}
+{# wf_updated_on: 2020-05-27 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -45,14 +45,14 @@ Here’s a short, single sentence summary of each of the libraries you may end u
   device.
 * The [Android Browser Helper][8], a library building on androidx.browser for Trusted Web Activity
   clients providing convenience methods and sensible defaults.
-* [Llama-pack][12], a tool to create Trusted Web Activities from PWAs without touching any Java
+* [Bubblewrap][12], a tool to create Trusted Web Activities from PWAs without touching any Java
   code.
 
 In addition, each of these libraries/tools replaces an older one:
 
 * **androidx.browser** replaces the [Custom Tabs Support Library][2].
 * The **Android Browser Helper** should be used instead of the [custom-tabs-client][3].
-* **Llama-pack** should be used instead of [svgomg-twa][9].
+* **Bubblewrap** should be used instead of [svgomg-twa][9].
 
 ## History {: #history }
 
