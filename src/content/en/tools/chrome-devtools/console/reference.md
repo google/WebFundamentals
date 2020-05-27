@@ -151,7 +151,7 @@ default message grouping behavior. See [Log XHR and Fetch requests](#xhr) for an
   </figcaption>
 </figure>
 
-The top message in **Figure X** shows the Console's default grouping behavior. **Figure X** shows
+The top message in **Figure 8** shows the Console's default grouping behavior. **Figure 9** shows
 how the same log looks after [disabling message grouping](#group).
 
 <figure>
