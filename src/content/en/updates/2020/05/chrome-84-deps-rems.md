@@ -16,7 +16,7 @@ Note: Chrome expects to start the spec-mandated turn down of AppCache in Chrome
 [Preparing for AppCache removal](https://web.dev/appcache-removal/). For
 information on a feature that will help you identify uses of this and other
 deprecated APIs, see [Know your code
-health](https://web.dev/reporting-observer)/
+health](https://web.dev/reporting-observer/)
 
 # Deprecations and removals in Chrome 84 {: .page-title }
 
