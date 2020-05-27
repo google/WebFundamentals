@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit your web apps.
 
-{# wf_updated_on: 2019-02-26 #}
+{# wf_updated_on: 2020-05-27 #}
 {# wf_published_on: 2016-09-27 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -284,6 +284,17 @@ To view a report that's been saved as a Gist:
 * Open the [Viewer][viewer], and paste the URL of a Gist into it.
 
 [share]: images/share.png
+
+## Save results in the cloud with Automated Lighthouse Check {: #automated-lighthouse-check }
+
+[Automated Lighthouse Check](https://www.automated-lighthouse-check.com/) is one of [many integrations](https://github.com/GoogleChrome/lighthouse#lighthouse-integrations) utilizing Lighthouse. It can be used to run Lighthouse automatically on a schedule. A key feature includes the ability to maintain a historical record.
+
+<figure>
+  <img src="images/automated-ligthouse-check.png" alt="Automated Lighthouse Results saved and displayed in a timeline view">
+  <figcaption>
+    <b>Figure 7</b>. Automated Lighthouse Check results in a timeline (<a href="https://www.automated-lighthouse-check.com/dashboard/page/5d1d459641e33a002f256efc" title="Example Automated Lighthouse Check results" target="_blank">full example</a>)
+  </figcaption>
+</figure>
 
 ## Lighthouse extensibility {: #extensibility }
 
