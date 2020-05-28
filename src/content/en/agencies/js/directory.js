@@ -564,7 +564,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
 
     var dropdownIcon = span.cloneNode(false);
     dropdownIcon.className = 'material-icons';
-    dropdownIcon.innerHTML = 'arrow_drop_down';
+    dropdownIcon.textContent = 'arrow_drop_down';
     filterTitleEl.appendChild(dropdownIcon);
     filterEl.appendChild(filterTitleEl);
 

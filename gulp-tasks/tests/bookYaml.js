@@ -24,6 +24,7 @@ const BOOK_ROOT = {
     reference: {type: 'array', items: {$ref: '/TOCElement'}},
     other: {type: 'array', items: {$ref: '/TOCOther'}},
     toc: {type: 'array', items: {$ref: '/TOCElement'}},
+    included: {type: 'array'},
     upper_tabs: {type: 'array', items: {$ref: '/UpperTabs'}},
   },
   dependencies: {
@@ -45,6 +46,7 @@ const UPPER_TABS = {
     custom_html: {type: 'string'},
     lower_tabs: {type: 'object', $ref: '/LowerTabs'},
     include: {type: 'string'},
+    menu: {type: 'object', $ref: '/TOCMenu'},
   },
 };
 
@@ -61,15 +63,27 @@ const LOWER_TABS = {
   },
 };
 
+const TOC_MENU = {
+  id: '/TOCMenu',
+  additionalProperties: true,
+  properties: {
+    include: {type: 'string'},
+  },
+};
+
 const TOC_ELEMENT = {
   id: '/TOCElement',
   type: 'object',
   additionalProperties: false,
   properties: {
+    attributes: {type: 'array', items: {$ref: '/Attribute'}},
     alternate_paths: {type: 'array'},
     break: {type: 'boolean'},
     heading: {type: 'string'},
+    name: {type: 'string'},
     include: {type: 'string'},
+    lower_tabs: {type: 'object', $ref: '/LowerTabs'},
+    menu: {type: 'object', $ref: '/TOCMenu'},
     path: {type: 'string'},
     path_attributes: {type: 'array', items: {$ref: '/Attribute'}},
     platform: {enum: VALID_PLATFORM},
@@ -139,6 +153,7 @@ function test(filename, project) {
     validator.addSchema(LOWER_TABS, LOWER_TABS.id);
     validator.addSchema(UPPER_TABS, UPPER_TABS.id);
     validator.addSchema(TOC_OTHER, TOC_OTHER.id);
+    validator.addSchema(TOC_MENU, TOC_MENU.id);
     validator.validate(project, BOOK_ROOT).errors.forEach((err) => {
       let msg = `${err.stack || err.message}`;
       msg = msg.replace('{}', '(' + err.instance + ')');

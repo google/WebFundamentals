@@ -418,7 +418,8 @@ function testFile(filename, opts) {
   }
 
   // Check _book.yaml & _toc.yaml files
-  if (filenameObj.base === '_book.yaml' || filenameObj.base === '_toc.yaml') {
+  if (filenameObj.base === '_book.yaml' ||
+      filenameObj.base.endsWith('_toc.yaml')) {
     return validateYaml.test(filename, contents)
       .then((parsed) => testBook.test(filename, parsed));
   }

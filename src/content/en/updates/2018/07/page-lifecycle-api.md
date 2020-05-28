@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Page Lifecycle API brings app lifecycle features common on mobile operating systems to the web. Browsers are now able to safely freeze and discard background pages to conserve resources, and developers can safely handle these interventions without affecting the user experience.
 
-{# wf_updated_on: 2019-03-01 #}
+{# wf_updated_on: 2020-05-27 #}
 {# wf_published_on: 2018-07-24 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink #}
@@ -175,7 +175,7 @@ use to observe changes.
       can do and how long they can run.</p>
       <p>Browsers freeze pages as a way to preserve CPU/battery/data usage; they
       also do it as a way to enable faster
-      <a href="#page-navigation-cache">
+      <a href="#back-forward-cache">
       back/forward navigations</a> &mdash; avoiding the need for a full page
       reload.</p>
       <p>
@@ -385,8 +385,8 @@ that pertain to lifecycle and lists what states they may transition to and from.
     <td>
       <p>A session history entry is being traversed to.</p>
       <p>This could be either a brand new page load or a page taken from the
-        <a href="#page-navigation-cache">page navigation cache</a>. If the page
-        was taken from the page navigation cache, the event's
+        <a href="#back-forward-cache">Back-Forward Cache</a>. If the page
+        was taken from the Back-Forward Cache, the event's
         <code>persisted</code> property is <code>true</code>, otherwise it is
         <code>false</code>.
       </p>
@@ -414,8 +414,8 @@ that pertain to lifecycle and lists what states they may transition to and from.
     <td>
       <p>A session history entry is being traversed from.</p>
       <p>If the user is navigating to another page and the browser is able to add
-      the current page to the <a href="#page-navigation-cache">page navigation
-      cache</a> to be reused later, the event's <code>persisted</code> property
+      the current page to the <a href="#back-forward-cache">Back-Forward
+      Cache</a> to be reused later, the event's <code>persisted</code> property
       is <code>true</code>. When <code>true</code>, the page is entering the
       <i>frozen</i> state, otherwise it is entering the <i>terminated</i> state.</p>
       <p>
@@ -595,7 +595,7 @@ window.addEventListener('freeze', () => {
 window.addEventListener('pagehide', (event) => {
   if (event.persisted) {
     // If the event's persisted property is `true` the page is about
-    // to enter the page navigation cache, which is also in the frozen state.
+    // to enter the Back-Forward Cache, which is also in the frozen state.
     logStateChange('frozen');
   } else {
     // If the event's persisted property is not `true` the page is
@@ -650,7 +650,7 @@ implemented consistently. For example:
 * Some browsers do not fire a `blur` event when switching tabs. This means
   (contrary to the diagram and tables above) a page could go from the active
   state to the hidden state without going through passive first.
-* Several browsers implement a [page navigation cache](#page-navigation-cache),
+* Several browsers implement a [Back-Forward Cache](#back-forward-cache),
   and the Page Lifecycle API classifies cached pages as being in the frozen
   state. Since this API is brand new, these browsers do not yet implement the
   `freeze` and `resume` events, though this state can still be observed via
@@ -757,8 +757,8 @@ enumerating.
       <p>This means when the page changes from <i>hidden</i> to <i>frozen</i>
       it's essential that you stop any timers or tear down any connections that,
       if frozen, could affect other open tabs in the same origin, or affect the
-      browser's ability to put the page in the <a href="#page-navigation-cache">
-      page navigation cache</a>.<p>
+      browser's ability to put the page in the <a href="#back-forward-cache">
+      Back-Forward Cache</a>.<p>
       <p>In particular, it's important that you:</p>
       <ul>
         <li>Close all open
@@ -848,7 +848,7 @@ ends, and consider the hidden state the
 
 Furthermore, the mere presence of a registered `unload` event handler (via
 either `onunload` or `addEventListener()`) can prevent browsers from being able
-to put pages in the [page navigation cache](#page-navigation-cache) for faster
+to put pages in the [Back-Forward Cache](#back-forward-cache) for faster
 back and forward loads.
 
 In all modern browsers (including IE11), it's recommended to always use the
@@ -867,10 +867,10 @@ addEventListener(terminationEvent, (event) => {
 }, {capture: true});
 ```
 
-For more information on page navigation caches, and why the unload event harms them, see:
+For more information on Back-Forward Cache, and why the unload event harms them, see:
 
 * [WebKit Page Cache](https://webkit.org/blog/427/webkit-page-cache-i-the-basics/)
-* [Firefox Back-Forward Cache](https://developer.mozilla.org/en-US/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
+* [Firefox bfcache](https://developer.mozilla.org/en-US/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
 
 ### The beforeunload event {: #the-beforeunload-event}
 
@@ -883,14 +883,14 @@ For more information on page navigation caches, and why the unload event harms t
 
 The `beforeunload` event has a similar problem to the `unload` event, in that
 when present it prevents browsers from caching the page in their
-[page navigation cache](#page-navigation-cache).
+[Back-Forward Cache](#back-forward-cache).
 
 The difference between `beforeunload` and `unload`, though, is that there are
 legitimate uses of `beforeunload`. For instance, when you want to warn the user
 that they have unsaved changes they'll lose if they continue unloading the page.
 
 Since there are valid reasons to use `beforeunload` but using it prevents pages
-from being added to the page navigation cache, it's recommended that you *only*
+from being added to the Back-Forward Cache, it's recommended that you *only*
 add `beforeunload` listeners when a user has unsaved changes and then remove
 them immediately after the unsaved changes are saved.
 
@@ -981,17 +981,17 @@ in Chrome.
   freeze or discard the page but still show changes to the tab title or favicon.
 </aside>
 
-<h3 id="page-navigation-cache" class="hide-from-toc">
-  What is the page navigation cache?
+<h3 id="back-forward-cache" class="hide-from-toc">
+  <span id="page-navigation-cache">
+    What is the Back-Forward Cache?
+  </span>
 </h3>
 
-The page navigation cache is a general term used to describe a navigation
-optimization some browsers implement that makes using the back and forward
-buttons faster. Webkit calls it the
-[Page Cache](https://webkit.org/blog/427/webkit-page-cache-i-the-basics/) and
-Firefox calls it the
-[Back-Forwards Cache](https://developer.mozilla.org/en-US/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
-(or bfcache for short).
+The Back-Forward Cache (or
+[bfcache](https://developer.mozilla.org/en-US/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
+or [Page Cache](https://webkit.org/blog/427/webkit-page-cache-i-the-basics/))
+is a term used to describe a navigation optimization some browsers implement
+that makes using the back and forward buttons faster.
 
 When a user navigates away from a page, these browsers freeze a version of that
 page so that it can be quickly resumed in case the user navigates back using

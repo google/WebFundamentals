@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Explains how to create one application using Trusted Web Activities that supports opening multiple origins in full-screen.
 
 {# wf_published_on: 2020-01-17 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-05-27 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -103,7 +103,7 @@ origins that need to be validated:
 </string>
 ```
 
-Note: Applications based on the [svgomg-twa demo][6] application or [llama-pack][7] have the
+Note: Applications based on the [svgomg-twa demo][6] application or [bubblewrap][7] have the
 `asset_statements` declaration inside `app/build.gradle`. Even though the location of the
 declaration is different, the JSON content is the same.
 
@@ -189,7 +189,7 @@ on applications installed on the device..
 [4]: https://github.com/GoogleChrome/android-browser-helper/
 [5]: https://github.com/GoogleChrome/android-browser-helper/blob/master/androidbrowserhelper/src/main/java/com/google/androidbrowserhelper/trusted/LauncherActivity.java
 [6]: https://github.com/GoogleChromeLabs/svgomg-twa
-[7]: https://github.com/GoogleChromeLabs/llama-pack
+[7]: https://github.com/GoogleChromeLabs/bubblewrap
 [8]: https://github.com/GoogleChromeLabs/svgomg-twa/blob/master/app/build.gradle#L73-L80
 [9]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/twa-multi-domain
 [10]: https://developers.google.com/web/updates/2019/08/twas-quickstart#troubleshooting

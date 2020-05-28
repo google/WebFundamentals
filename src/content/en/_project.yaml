@@ -32,4 +32,7 @@ announcement:
         vertical-align: middle;
         margin-right: 8px;
       }
-    </style> We've created a <a href="https://web.dev/covid19/" target="_blank" rel="nofollow">set of resources</a> to help you ensure your site remains available and accessible to all during the COVID-19 situation.
+      .goog-font {
+        font-family: Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+      }
+    </style> Join us for <b class="goog-font">web.dev LIVE</b>, a digital event from June 30th to July 2nd to learn modern web techniques. More at <a href="https://web.dev/live/" target="_blank" rel="nofollow">web.dev/live</a>

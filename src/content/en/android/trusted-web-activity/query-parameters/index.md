@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: How to pass information from the native shell into the web application when launching a Trusted Web Activity.
 
 {# wf_published_on: 2020-01-17 #}
-{# wf_updated_on: 2020-03-11 #}
+{# wf_updated_on: 2020-05-27 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -45,7 +45,7 @@ The wizard will use the start_url from the Web Manifest as default and will ask 
 the value, giving developers the change to add extra parameters to the url used to start the
 Progressive Web App.
 
-![Showing the Bubblewrap CLI output](/web/updates/images/2020/03/llama-pack-init-custom-start-url.png)
+![Showing the Bubblewrap CLI output](/web/updates/images/2020/03/bubblewrap-init-custom-start-url.png)
 
 #### Modifying an existing project
 

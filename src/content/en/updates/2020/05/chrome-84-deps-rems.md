@@ -33,7 +33,6 @@ sheet.replace("@import('some.css');")
 This use case is being removed. Calls to `replace()` now throw an exception if
 `@import` rules are found in the replaced content.
 
-
 [Intent to Remove](https://groups.google.com/a/chromium.org/g/blink-dev/c/RKG8oxp22RY/m/fdFnG1rGCgAJ) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/4735925877735424) &#124;
 [Chromium Bug](https://crbug.com/1055943)
@@ -63,6 +62,7 @@ these protocols.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/EHSnAn2rucg/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5654791610957824) &#124;
 [Chromium Bug](https://crbug.com/896013)
+
 
 
 {% include "web/updates/_shared/deprecations-policy.html" %}

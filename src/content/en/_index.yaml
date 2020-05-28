@@ -47,6 +47,19 @@ landing_page:
   #   items:
   #   - youtube_id: nImH_dq1NpM
 
+  - items:
+    - image_path: /web/images/wd-live-wide.png
+      image_left: true
+      description: >
+        Join us for a three day digital event, to celebrate the web
+        community’s actions, learn modern web techniques and connect with
+        each other.
+      buttons:
+      - label: Learn more
+        path: https://web.dev/live/
+        classname: button button-primary
+      path: https://web.dev/live/
+
   - classname: wf-landing-row
     items:
     - heading: Move to HTTPS
