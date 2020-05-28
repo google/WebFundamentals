@@ -188,17 +188,9 @@ Debug mixed content issues, certificate problems, and more.
   }
 </style>
 
-The best place to file feature requests for Chrome DevTools is the mailing list.
-The team needs to understand use cases, gauge community interest, and discuss
-feasibility before implementing any new features.
+File bug reports and feature requests in Crbug, which is the engineering team's bug tracker.
 
-<a class="button button-primary gc-analytics-event cdt-but"
-   href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools"
-   data-category="DevTools" data-label="Home / Mailing List">Mailing List</a>
-
-File bug reports in Crbug, which is the engineering team's bug tracker.
-
-<a class="button button-primary gc-analytics-event" href="https://crbug.com"
+<a class="button button-primary gc-analytics-event" href="https://crbug.com/new"
    data-category="DevTools" data-label="Home / Crbug">Crbug</a>
 
 If you want to alert us to a bug or feature request but don't have much time,
