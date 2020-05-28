@@ -33,10 +33,37 @@ sheet.replace("@import('some.css');")
 This use case is being removed. Calls to `replace()` now throw an exception if
 `@import` rules are found in the replaced content.
 
+[Intent to Remove](https://groups.google.com/a/chromium.org/g/blink-dev/c/RKG8oxp22RY/m/fdFnG1rGCgAJ) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/4735925877735424) &#124;
+[Chromium Bug](https://crbug.com/1055943)
 
-[Intent to Remove]() &#124;
-[Chrome Platform Status]() &#124;
-[Chromium Bug](https://crbug.com/)
+## Remove TLS 1.0 and TLS 1.1
+
+
+TLS (Transport Layer Security) is the protocol which secures HTTPS. It has a
+long history stretching back to the nearly twenty-year-old TLS 1.0 and its even
+older predecessor, SSL. Both TLS 1.0 and 1.1 have a number of weaknesses.
+
+* TLS 1.0 and 1.1 use MD5 and SHA-1, both weak hashes, in the transcript hash
+  for the Finished message.
+* TLS 1.0 and 1.1 use MD5 and SHA-1 in the server signature. (Note: this is not
+  the signature in the certificate.)
+* TLS 1.0 and 1.1 only support RC4 and CBC ciphers. RC4 is broken and has since
+  been removed. TLS’s CBC mode construction is flawed and is vulnerable to
+  attacks.
+* TLS 1.0’s CBC ciphers additionally construct their initialization vectors
+  incorrectly.
+* TLS 1.0 is no longer PCI-DSS compliant.
+
+Supporting TLS 1.2 is a prerequisite to avoiding the above problems. The TLS
+working group has deprecated TLS 1.0 and 1.1. Chrome has now also deprecated
+these protocols.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/EHSnAn2rucg/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5654791610957824) &#124;
+[Chromium Bug](https://crbug.com/896013)
+
+
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 

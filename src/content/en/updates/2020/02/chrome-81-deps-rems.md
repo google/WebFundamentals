@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 81 to help you plan.
 
-{# wf_updated_on: 2020-04-06 #}
+{# wf_updated_on: 2020-05-27 #}
 {# wf_published_on: 2020-02-26 #}
 {# wf_tags: deprecations,removals,chrome81 #}
 {# wf_blink_components: Blink>Payments,Blink>SVG,Internals>Network>SSL #}
@@ -63,7 +63,7 @@ replaced with a combination of animation of the `display` property and a removal
 
 ## Remove TLS 1.0 and TLS 1.1
 
-Note: Removal of TLS 1.0 and TLS 1.1 has been delayed to Chrome 84, which is
+Note: Removal of TLS 1.0 and TLS 1.1 was delayed to Chrome 84, which is
 expected to ship in July 2020.
 
 TLS (Transport Layer Security) is the protocol which secures HTTPS. It has a
@@ -75,7 +75,7 @@ older predecessor, SSL. Both TLS 1.0 and 1.1 have a number of weaknesses.
 * TLS 1.0 and 1.1 use MD5 and SHA-1 in the server signature. (Note: this is not
   the signature in the certificate.)
 * TLS 1.0 and 1.1 only support RC4 and CBC ciphers. RC4 is broken and has since
-  been removed. TLS’s CBC mode construction is flawed and was vulnerable to
+  been removed. TLS’s CBC mode construction is flawed and is vulnerable to
   attacks.
 * TLS 1.0’s CBC ciphers additionally construct their initialization vectors
   incorrectly.
