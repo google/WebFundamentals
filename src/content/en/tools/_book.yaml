@@ -1,34 +1,36 @@
 upper_tabs:
-  - include: /web/_upper_tabs-Fundamentals.yaml
-  - name: Tools
-    heading: Tools
-    path: /web/tools/
-    lower_tabs:
-      other:
-      - name: Home
-        contents:
-        - title: Home
-          path: /web/tools/
-        - include: /web/tools/setup/_toc.yaml
-        - title: Web Starter Kit
-          path: /web/tools/starter-kit/
-          status: deprecated
-      - name: Chrome DevTools
-        contents:
-        - include: /web/tools/chrome-devtools/_toc.yaml
-      - name: Lighthouse
-        contents:
-        - include: /web/tools/lighthouse/_toc.yaml
-      - name: Puppeteer
-        contents:
-        - include: /web/tools/puppeteer/_toc.yaml
-      - name: Workbox
-        contents:
-        - title: Workbox
-          path: /web/tools/workbox/
-      - name: Chrome User Experience Report
-        contents:
-        - title: Chrome User Experience Report
-          path: /web/tools/chrome-user-experience-report/
-  - include: /web/_upper_tabs-Updates.yaml
-  - include: /web/_upper_tabs-Showcase.yaml
+- include: /web/_upper_tabs-Fundamentals.yaml
+- name: Tools
+  heading: Tools
+  path: /web/tools/
+  menu:
+  - include: /web/tools/_menu_toc.yaml
+  lower_tabs:
+    other:
+    - name: Home
+      contents:
+      - title: Home
+        path: /web/tools/
+      - include: /web/tools/setup/_toc.yaml
+      - title: Web Starter Kit
+        path: /web/tools/starter-kit/
+        status: deprecated
+    - name: Chrome DevTools
+      contents:
+      - include: /web/tools/chrome-devtools/_toc.yaml
+    - name: Lighthouse
+      contents:
+      - include: /web/tools/lighthouse/_toc.yaml
+    - name: Puppeteer
+      contents:
+      - include: /web/tools/puppeteer/_toc.yaml
+    - name: Workbox
+      contents:
+      - title: Workbox
+        path: /web/tools/workbox
+    - name: Chrome User Experience Report
+      contents:
+      - title: Chrome User Experience Report
+        path: /web/tools/chrome-user-experience-report
+- include: /web/_upper_tabs-Updates.yaml
+- include: /web/_upper_tabs-Showcase.yaml
