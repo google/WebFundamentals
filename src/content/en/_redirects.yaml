@@ -34,6 +34,9 @@ redirects:
 #
 ## Redirects for Fundamentals content migrated to web.dev
 
+- from: /web/fundamentals/accessibility/accessible-styles
+  to:  https://web.dev/accessible/
+
 - from: /web/fundamentals/design-and-ux/responsive
   to: https://web.dev/responsive-web-design-basics/
 
