@@ -30,7 +30,8 @@ toc:
     - title: Hiding and Updating Content
       path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
   - title: Accessible Styles
-    path: /web/fundamentals/accessibility/accessible-styles
+    path: https://web.dev/accessible/#create-a-design-and-css-that-supports-users-with-different-needs
+    status: external
   - title: How To Do an Accessibility Review
     path: /web/fundamentals/accessibility/how-to-review
   - title: Accessibility for Teams
