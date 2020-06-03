@@ -182,7 +182,7 @@ for people to use your site on a wide variety of devices.
 - Interactive elements, like links and buttons, should be distinguishable from
   non-interactive elements. It is difficult for users to navigate a site or app
   when they cannot tell if an element is clickable. There are many valid methods to
-  accomplish this goal. One common practice is underlying links to differentiate them
+  accomplish this goal. One common practice is underlining links to differentiate them
   from their surrounding text.
 
 - Similar to the focus requirement, interactive elements like links and buttons require
