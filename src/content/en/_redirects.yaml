@@ -73,6 +73,18 @@ redirects:
 - from: /web/fundamentals/security/encrypt-in-transit/why-https
   to: https://web.dev/why-https-matters
 
+- from: /web/fundamentals/performance/get-started/measuringperf-2
+  to: https://web.dev/how-to-measure-speed
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video
+  to: https://web.dev/replace-gifs-with-videos
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
+  to: https://web.dev/fast/#optimize-your-images
+
+- from: /web/fundamentals/performance/optimizing-javascript/code-splitting
+  to: https://web.dev/reduce-javascript-payloads-with-code-splitting
+
 ## Redirects for Updates content migrated to web.dev
 
 - from: /web/updates/2011/11/Quota-Management-API-Fast-Facts
