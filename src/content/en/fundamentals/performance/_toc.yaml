@@ -13,7 +13,8 @@ toc:
       - title: Get Started
         section:
         - title: Measuring Performance
-          path: /web/fundamentals/performance/get-started/measuringperf-2
+          path: https://web.dev/how-to-measure-speed
+          status: external
         - title: Text Content
           path: /web/fundamentals/performance/get-started/textcontent-3
         - title: Graphical Content
@@ -51,11 +52,11 @@ toc:
           path: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
           step_group: perf-oce
         - title: Automating Image Optimization
-          path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization/
-          step_group: perf-oce
+          path: https://web.dev/fast/#optimize-your-images
+          status: external
         - title: Replace Animated GIFs with Video
-          path: /web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/
-          step_group: perf-oce
+          path: https://web.dev/replace-gifs-with-videos
+          status: external
         - title: JavaScript Start-up Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/
           step_group: perf-oce
@@ -80,7 +81,8 @@ toc:
         - title: Reduce JavaScript Payloads with Tree Shaking
           path: /web/fundamentals/performance/optimizing-javascript/tree-shaking/
         - title: Reduce JavaScript Payloads with Code Splitting
-          path: /web/fundamentals/performance/optimizing-javascript/code-splitting/
+          path: https://web.dev/reduce-javascript-payloads-with-code-splitting
+          status: external
       - title: Never Load the Same Resource Twice
         section:
         - title: Offline Cookbook
