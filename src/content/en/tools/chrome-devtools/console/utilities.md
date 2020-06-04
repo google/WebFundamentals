@@ -386,6 +386,18 @@ Result in the profiles panel:
 Note: Multiple CPU profiles can operate at once and you aren't required to close them out
 in creation order.
 
+
+## queryObjects(Constructor) {: #queryObjects }
+
+Call `queryObjects(Constructor)` from the console to return an array of objects that were created with the specified constructor. For example:
+
+- `queryObjects(Promise)`. Returns all Promises.
+- `queryObjects(HTMLElement)`. Returns all HTML elements.
+- `queryObjects(foo)`, where `foo` is a function name. Returns all objects that were instantiated via `new foo()`.
+
+The scope of `queryObjects()` is the currently-selected execution context in the console.
+
+
 ## table(data[, columns]) {: #table }
 
 Log object data with table formatting by passing in a data object
