@@ -130,10 +130,6 @@ redirects:
 - from: /web/fundamentals/feed.xml
   to: /web/fundamentals/rss.xml
 
-- from: /web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps/
-  to: https://web.dev/android-payment-apps-overview/
-
-
 # From list of 404s
 - from: /web/fundamentals/primers/push-notifications/
   to: /web/fundamentals/push-notifications/
