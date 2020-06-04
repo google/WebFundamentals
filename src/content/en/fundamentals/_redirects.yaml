@@ -130,7 +130,6 @@ redirects:
 - from: /web/fundamentals/feed.xml
   to: /web/fundamentals/rss.xml
 
-
 # From list of 404s
 - from: /web/fundamentals/primers/push-notifications/
   to: /web/fundamentals/push-notifications/

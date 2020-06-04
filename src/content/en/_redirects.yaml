@@ -58,6 +58,9 @@ redirects:
 - from: /web/fundamentals/instant-and-offline/web-storage/offline-for-pwa
   to: https://web.dev/storage-for-the-web/
 
+- from: /web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps
+  to: https://web.dev/android-payment-apps-overview/
+
 - from: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
   to: https://web.dev/http-cache/
 
