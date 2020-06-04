@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more.
 
-{# wf_updated_on: 2020-05-08 #}
+{# wf_updated_on: 2020-06-04 #}
 {# wf_published_on: 2020-03-10 #}
 {# wf_tags: chrome83, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -62,6 +62,10 @@ DevTools modifies the current default locale, affecting the following:
   `*.prototype.toLocaleString`, e.g. `123_456..toLocaleString()`
 - DOM APIs such as `navigator.language` and `navigator.languages`
 - the [`Accept-Language`][lang] HTTP request header
+
+Note: updates to `navigator.language` and `navigator.languages` are not visible immediately, but only
+after the next navigation or page reload. Changes to the `Accept-Language` HTTP header are only
+reflected for subsequent requests.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="lZEFwACYPo0"
