@@ -170,7 +170,7 @@ nodes.
 
 Here's a simple example of detached DOM nodes. 
 
-    var detachedNodes;
+    var detachedTree;
     
     function create() {
       var ul = document.createElement('ul');
@@ -178,7 +178,7 @@ Here's a simple example of detached DOM nodes.
         var li = document.createElement('li');
         ul.appendChild(li);
       }
-      detachedNodes = ul;
+      detachedTree = ul;
     }
     
     document.getElementById('create').addEventListener('click', create);
