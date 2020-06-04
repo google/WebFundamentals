@@ -63,6 +63,10 @@ DevTools modifies the current default locale, affecting the following:
 - DOM APIs such as `navigator.language` and `navigator.languages`
 - the [`Accept-Language`][lang] HTTP request header
 
+Note: updates to `navigator.language` and `navigator.languages` are not visible immediately, but only
+after the next navigation or page reload. Changes to the `Accept-Language` HTTP header are only
+reflected for subsequent requests.
+
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="lZEFwACYPo0"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
