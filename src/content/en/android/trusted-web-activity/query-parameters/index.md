@@ -28,7 +28,7 @@ Activity.
 
 ### Using Bubblewrap
 
-[Bubblewrap][4] is a tool created to helps developers to creating a Project for an
+[Bubblewrap][4] is a tool created to help developers to creating a Project for an
 Android application that launches an existing PWAs using a Trusted Web
 Activity. It contains both a [library][6] and a [Command Line Interface (CLI)][5].
 
@@ -42,7 +42,7 @@ bubblewrap init --manifest https://material.money/manifest.json
 ```
 
 The wizard will use the start_url from the Web Manifest as default and will ask users to confirm
-the value, giving developers the change to add extra parameters to the url used to start the
+the value, giving developers the chance to add extra parameters to the url used to start the
 Progressive Web App.
 
 ![Showing the Bubblewrap CLI output](/web/updates/images/2020/03/bubblewrap-init-custom-start-url.png)
