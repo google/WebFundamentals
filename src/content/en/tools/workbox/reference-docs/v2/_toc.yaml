@@ -1,3 +1,4 @@
+noindex: true
 toc:
 - title: "BaseCacheManager"
   path: /web/tools/workbox/reference-docs/v2/module-workbox-precaching.BaseCacheManager

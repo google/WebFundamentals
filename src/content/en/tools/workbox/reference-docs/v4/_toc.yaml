@@ -1,3 +1,4 @@
+noindex: true
 toc:
 - title: "BroadcastCacheUpdate"
   path: /web/tools/workbox/reference-docs/v4/workbox.broadcastUpdate.BroadcastCacheUpdate
