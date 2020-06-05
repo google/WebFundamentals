@@ -7,6 +7,7 @@
  * @author Jeff Posnick <jeffy@google.com>
  */
 
+const del = require('del');
 const gulp = require('gulp');
 const replace = require('gulp-replace');
 
@@ -15,7 +16,5 @@ gulp.task('workbox-no-index', () => {
     .pipe(replace('<head>\n', '<head><meta name="robots" content="noindex">\n'))
     .pipe(gulp.dest('src/content/en/tools/workbox/reference-docs'));
 
-  gulp.src(['src/content/en/tools/workbox/reference-docs/v*/*.yaml'])
-    .pipe(replace(/^toc:/, 'noindex: true\ntoc:'))
-    .pipe(gulp.dest('src/content/en/tools/workbox/reference-docs'));
+  return del(['src/content/en/tools/workbox/reference-docs/v*/*.yaml']);
 });
