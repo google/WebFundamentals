@@ -134,7 +134,7 @@ Digital Asset Links take into account the key that an APK has been signed with a
 cause for verification failing is to use the wrong signature.
 (Remember, failing verification means you'll launch your website as a Custom Tab with
 browser UI at the top of the page.)
-When Bubblwrap builds the application, an APK will be created with a key setup during the `init`
+When Bubblewrap builds the application, an APK will be created with a key setup during the `init`
 step.
 
 ## Creating your asset link file {: #creating-your-asset-link-file }
@@ -163,9 +163,9 @@ If you opt in to
 [App signing by Google Play](https://developer.android.com/studio/publish/app-signing#app-signing-google-play),
 Google manages your app's signing key.
 
-When opted in, the key used the sign the APK that is downloaded from the Play Store
+When opted in, the key used to sign the APK that is downloaded from the Play Store
 will be different from the key that Bubblewrap used when building the APK. This means that the
-`assetlinks.json` file will need the be updated with the new signature.
+`assetlinks.json` file will need to be updated with the new signature.
 
 There are two ways you can get the correct Digital Asset Link file for a Google managed app signing
 key:
