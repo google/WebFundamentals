@@ -190,7 +190,11 @@ def expandBook(book, lang='en'):
           results = results + expandBook(items, lang)
         else:
           newItems = yaml.load(tocFileContents)
-          results = results + expandBook(newItems['toc'], lang)
+          if 'toc' in newItems:
+            results = results + expandBook(newItems['toc'], lang)
+          else:
+            logging.error('Unable to get \'toc\' element from %s\n%s',
+                          item['include'], tocFileContents)
       else:
         results.append(expandBook(item, lang))
     return results
