@@ -36,7 +36,7 @@ Console logging is a powerful way to inspect what your page or application does.
 console.log("Node count:", a.childNodes.length, "and the current time is:", Date.now());
 ```
 
-将在控制台中输出以下内容： ![示例替代输出](https://github.com/google/WebFundamentals/blob/master/src/content/zh-cn/tools/chrome-devtools/console/images/console-write-log-multiple.png?raw=true)
+将在控制台中输出以下内容： ![Log Multiple](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/console/images/console-write-log-multiple.png?raw=true)
 
 ## 自动填充命令 {:#autocomplete}
 
@@ -65,7 +65,7 @@ if (!authenticated) {
 console.groupEnd();
 ```
 
-示例输出： ![简单的控制台组输出](https://github.com/google/WebFundamentals/blob/master/src/content/zh-cn/tools/chrome-devtools/console/images/console-write-group.png?raw=true)
+示例输出： ![Simple console group output](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/console/images/console-write-group.png?raw=true)
 
 #### 嵌套组
 
@@ -92,7 +92,7 @@ console.groupEnd();
 console.log("A group-less log trace.");
 ```
 
-下面是控制台中的嵌套组输出： ![简单的控制台组输出](https://github.com/google/WebFundamentals/blob/master/src/content/zh-cn/tools/chrome-devtools/console/images/console-write-nestedgroup.png?raw=true)
+下面是控制台中的嵌套组输出： ![Simple console group output](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/console/images/console-write-nestedgroup.png?raw=true)
 
 #### 自动折叠组
 
@@ -206,6 +206,6 @@ console.log("%cThis will be formatted with large, blue text", "color: blue; font
 
 ![Logging an element using dir()](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/console/images/dir-element.png?raw=true)
 
-## Feedback {: #feedback }
+## 反馈 {: #feedback }
 
 {% include "web/_shared/helpful.html" %}
