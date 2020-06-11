@@ -4,7 +4,7 @@ description: Chrome、Opera 和 Yandex 浏览器中的 Save-Data 客户端提示
 
 {# wf_updated_on: 2018-04-19 #} {# wf_published_on: 2016-02-18 #} {# wf_tags: savedata,clienthints,chrome49 #} {# wf_blink_components: Blink>Fonts,Blink>CSS,Blink>JavaScript #} {# wf_featured_image: /web/updates/images/2016/02/save-data/data-saver-chrome.png #}
 
-# 使用Save-Data提供快速和轻便的应用程序{: .page-title}
+# 使用Save-Data提供快速和轻便的应用程序 {: .page-title}
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %} {% include "web/_shared/contributors/dgash.html" %} {% include "web/_shared/contributors/jeremywagner.html" %}
 
