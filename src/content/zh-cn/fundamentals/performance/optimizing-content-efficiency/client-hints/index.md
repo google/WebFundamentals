@@ -14,8 +14,7 @@ description: Client hints are a set of HTTP request headers we can use to change
 
 ## 关于内容协商
 
-Client hints are another method of *content negotiation*, which means changing
-content responses based on browser request headers.
+客户端提示是*内容协商的*另一种方法，这意味着根据浏览器请求标头更改内容响应。
 
 这个内容协商的示例涉及[`Accept`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept)请求标头。它描述了浏览器理解的*内容*类型，服务器可以使用它来*协商*响应。对于图片请求，Chrome的`Accept`标头的内容为：
 
@@ -39,11 +38,7 @@ $imageFile = $webp ? "whats-up.webp" : "whats-up.jpg";
 
 ## 选择性使用
 
-Unlike the `Accept` header, client hints don’t just magically appear (with the
-exception of `Save-Data`, which we’ll discuss later). In the interest of keeping
-request headers at a minimum, you’ll need to opt into which client hints you’ll
-want to receive by sending an `Accept-CH` header when a user requests a
-resource:
+与`Accept`标头不同，客户端提示不仅仅是神奇地出现（ `Save-Data`除外，我们将在后面讨论）。为了将请求标头保持在最低限度，您需要在用户请求资源时通过发送`Accept-CH`标头来选择您希望接收哪些客户端提示：
 
 ```http
 Accept-CH: Viewport-Width, Downlink
@@ -51,9 +46,7 @@ Accept-CH: Viewport-Width, Downlink
 
 `Accept-CH`的值是以逗号分隔的请求提示列表，站点将在确定后续资源请求的结果时使用这些提示。当客户端读取此标题时，会被告知“此站点需要`Viewport-Width`和`Downlink`客户端提示。”不要担心这些提示本身的细节。我们稍后会讲到。
 
-There’s also an optional `Accept-CH-Lifetime` header which specifies the length
-of time, in seconds, the browser should remember the value you set for
-`Accept-CH` for your origin.
+还有一个可选的`Accept-CH-Lifetime`标头，它指定浏览器应记住您为`Accept-CH`设置的值的时间长度（以秒为单位）。
 
 Note: 客户首次访问您的网站时，客户提示不会出现在导航请求中。但是，如果您使用`Accept-CH-Lifetime`保留提示，则此信息将在导航请求中提供。
 
@@ -70,11 +63,9 @@ Note: 要使客户端提示完全正常工作，您的网站必须通过HTTPS提
 
 客户端提示提供了两件信息：您的用户*使用*的网络和他们用来访问您的网站的设备。让我们简要介绍一下可用的所有提示。
 
-### Device hints
+### 设备提示
 
-Some client hints describe characteristics of the user’s device, usually screen
-characteristics. Some of them can help you choose the optimal media resource for
-a given user’s screen, but not all of them are necessarily media-centric.
+一些客户端提示描述了用户设备的特征，通常是屏幕特征。其中一些可以帮助您为给定用户的屏幕选择最佳媒体资源，但并非所有这些都必须以媒体为中心。
 
 在我们开始介绍设备提示之前，学习一些用于描述屏幕和媒体解析的关键术语可能会对您有所帮助：
 
@@ -106,7 +97,7 @@ modifies the <img> element' s layout so that its extrinsic size differs from int
 
 #### Viewport-Width
 
-`Viewport-Width` is the width of the user’s viewport in CSS pixels:
+`Viewport-Width`是CSS像素中用户视口的宽度：
 
 ```http
 Viewport-Width: 320
@@ -160,21 +151,15 @@ Note: 由于此信息[可用于用户设备指纹识别](https://blog.mozilla.or
 
 此提示的一个可能的例子是减少发送到内存有限的设备上的浏览器的JavaScript数量， [因为JavaScript通常是浏览器加载的资源最密集的内容类型](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4) 。或者您可以发送较低的DPR图像，因为它们使用较少的内存进行解码。
 
-### Network hints
+### 网络提示
 
-The [Network Information API](https://wicg.github.io/netinfo/) provides another
-category of client hints that describe the performance of the user’s network
-connection. In my opinion, these are the most useful set of hints. With them, we
-have the ability to tailor experiences to users by changing how we deliver
-resources to clients on slow connections.
+[Network Information API](https://wicg.github.io/netinfo/)提供了另一类客户端提示，用于描述用户网络连接的性能。在我看来，这些是最有用的提示。有了它们，我们就能够通过改变我们在缓慢连接上向客户提供资源的方式来为用户定制体验。
 
 Note: 网络提示值是基于过去延迟和带宽读数的预测。因此，它们不是100％准确的，但足够为客户端提示提供参考。
 
 #### RTT
 
-The `RTT` hint provides the approximate *Round Trip Time*, in milliseconds, on
-the application layer. The `RTT` hint, unlike transport layer RTT, includes
-server processing time.
+`RTT`提示提供应用层上的近似*往返时间* （以毫秒为单位）。与传输层RTT不同， `RTT`提示包括服务器处理时间。
 
 ```http
 RTT: 125
@@ -194,8 +179,7 @@ Downlink: 2.5
 
 Note: `Downlink`的值四舍五入到最接近的25千比特/秒的倍数。原因还是，指纹识别。
 
-In conjunction with `RTT`, `Downlink` can be useful in changing how content is
-delivered to users based on the quality of a network connection.
+结合`RTT` ， `Downlink`可用于根据网络连接的质量更改内容的交付方式。
 
 #### ECT
 
@@ -207,9 +191,7 @@ delivered to users based on the quality of a network connection.
 ECT: 2g
 ```
 
-Valid values for `ECT` are `4g`, `3g`, `2g`, and `slow-2g`. This hint can be
-used as a starting point for assessing connection quality, and subsequently
-refined using the `RTT` and `Downlink` hints.
+`ECT`有效值为`4g` ， `3g` ， `2g`和`slow-2g` 。此提示可用作评估连接质量的起点，然后使用`RTT`和`Downlink`提示进行细化。
 
 #### Save-Data
 
@@ -229,7 +211,7 @@ Save-Data: on
 
 您*对*客户提示的处理取决于您。因为它们提供了如此多的信息，所以您有很多选择。为了获得一些想法，让我们看看客户端提示可以为[Sconnie Timber](https://github.com/malchata/client-hints-example)做些什么， [Sconnie Timber](https://github.com/malchata/client-hints-example)是一家位于Upper Midwest乡村的虚构木材公司。 [与偏远地区的情况一样](https://www.technologyreview.com/s/603083/the-unacceptable-persistence-of-the-digital-divide/) ，那里的网络连接可能很脆弱。这就是像客户端提示这样的技术可以真正为用户带来改变的地方。
 
-### Responsive Images
+### 响应式图像
 
 除了最简单的响应式图像之外的情况都会变得复杂。如果您针对不同的屏幕尺寸*和*不同的格式对同一图像进行多种处理*和*变换，该怎么办？这些标记[很快会变得*非常*复杂](https://dev.opera.com/articles/responsive-images/#changing-image-sizes-high-dpi-images-different-image-types--art-direction-use-case) 。这很容易弄错，容易忘记或误解重要概念（如`sizes` ）。
 
@@ -262,7 +244,7 @@ Save-Data: on
 </picture>
 ```
 
-I was able to reduce it to the following based on individual browser support:
+我能够根据个人浏览器支持将其减少到以下内容：
 
 ```html
 <img src="/image/sizes:true/company-photo.jpg"
@@ -270,11 +252,7 @@ I was able to reduce it to the following based on individual browser support:
      alt="SAY CHEESY PICKLES.">
 ```
 
-In this example, the `/image` URL is a PHP script followed by parameters
-rewritten by
-[mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). It
-takes an image filename and additional parameters to help a back-end script
-choose the best image in the given conditions.
+在此示例中， `/image` URL是一个PHP脚本，后跟[mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)重写的参数。它需要一个图像文件名和附加参数来帮助后端脚本在给定条件下选择最佳图像。
 
 您可能会首先问*“但这不就是重新实现`<picture>`和`srcset`吗？”*。
 
@@ -292,9 +270,7 @@ choose the best image in the given conditions.
 
 在Sconnie Timber的网站示例中，我们在后端代码中通过检查`Save-Data` ， `ECT` ， `RTT`和`Downlink`标头等在低俗网络下减轻负载。然后，我们会生成一个网络质量得分，我们可以用它来确定是否应该进行干预以获得更好的用户体验。此网络分数介于`0`和`1`之间，其中`0`表示网络质量最差， `1`表示最佳。
 
-Initially, we check if `Save-Data` is present. If it is, the score is set to
-`0`, as we’re assuming the user wants us to do whatever is necessary to make the
-experience lighter and faster.
+最初，我们检查是否存在`Save-Data` 。如果是，则将分数设置为`0` ，因为我们假设用户希望我们做任何必要的操作以使体验更轻松，更快。
 
 但是，如果没有`Save-Data` ，我们继续并权衡`ECT` ， `RTT`和`Downlink`提示的值，以计算描述网络连接质量的分数。 [网络分数生成源代码](https://github.com/malchata/client-hints-example/blob/master/includes/functions.php#L8)可在Github上获得。另外，如果我们以*某种*方式使用与网络相关的提示，我们就可以为那些使用慢速网络的人提供更好的体验。
 
@@ -311,8 +287,7 @@ images/figure-2-1x.png 1x" alt="A comparison of a site that doesn" t use client 
 <figure>
   <img src="https://github.com/google/WebFundamentals/blob/master/src/content/en/fundamentals/performance/optimizing-content-efficiency/client-hints/images/figure-3.png?raw=true" alt="A WebPagetest waterfall of the Sconnie
 Timber site loading all resources on a slow network connection.">
-  <figcaption><em><strong>Figure 3</strong>. A resource heavy site loading images,
-scripts, and fonts on a slow connection.</em></figcaption>
+  <figcaption><em><strong>图3</strong> 。资源繁重的站点在慢速连接上加载图像，脚本和字体。</em></figcaption>
 </figure>
 
 现在，在同样慢速连接上同一站点的瀑布图，这次，该站点使用客户端提示来消除非关键页面资源：
@@ -345,11 +320,7 @@ Vary: DPR, Width
 
 然而有一个*重要的*提醒：您可能永远不需要在`Vary`上设置经常变化的报头（如缓存响应`Cookie` ），因为这些资源实际上会变为不可缓存。因此，您可能想避免为`Vary`设置比如`RTT`或`Downlink`这些标头 ，因为这些和网络连接状况相关，可能经常发生变化。如果您必须要根据这些标头作出响应，请考虑仅使用`ECT`标头，这将最大限度地减少缓存失效的情况。
 
-Of course, this only applies if you’re caching a response in the first place.
-For example, you won’t cache HTML assets if their content is dynamic, because
-that can break the user experience on repeat visits. In cases like these, feel
-free to modify such responses on whatever basis you feel is necessary and not
-concern yourself with `Vary`.
+当然，这仅适用于您首先缓存响应的情况。例如，如果HTML资源的内容是动态的，则不会对其进行缓存，因为这可能会破坏重复访问时的用户体验。在这样的情况下，随意修改任何基础，你觉得是必要的这种反应，而不是与担心自己`Vary` 。
 
 ## 服务工作线程中的客户端提示
 
