@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources panel of Chrome DevTools.
+description: Visualize e edite arquivos, crie Snippets, depure JavaScript e configure o Workspaces no painel Sources do Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #} {# wf_updated_on: 2019-01-30 #} {#
 wf_published_on: 2018-01-09 #}
@@ -29,22 +29,21 @@ Use o painel **Page** para visualizar todos os recursos que a página carregou.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/images/sources-page-pane.png?raw=true"
 alt="The Page pane">
-  <figcaption>
-    <b>Figure 1</b>. The <b>Page</b> pane
-  </figcaption>
+  <figcaption>     <b>Figura 1</b>. O painel <b>Page</b></figcaption>
 </figure>
 
 Como o painel **Page** é organizado:
 
-- The top-level, such as `top` in <b>Figure 1</b>, represents an [HTML
-frame](https://www.w3.org/TR/html401/present/frames.html).You'll find `top` on
-every page that you visit. `top` represents the main documentframe.
+- O primeiro nível, tal como `top` da <b>Figura 1</b>,  representa um [HTML
+frame](https://www.w3.org/TR/html401/present/frames.html). Você encontrará em
+`top` todas as páginas que está visitando. `top` representa o document frame
+principal.
 - O segundo nível, como `developers.google.com` na <b>Figura 1</b>, representa
 uma [origem](https://www.w3.org/TR/2011/WD-html5-20110525/origin-0.html).
-- The third-level, fourth-level, and so on, represent directories and resources
-thatwere loaded from that origin. For example, in <b>Figure 1</b> the full path
-to theresource `devsite-googler-button`
-is`developers.google.com/_static/19aa27122b/css/devsite-googler-button`
+- O terceiro e quarto níveis (e assim por diante) representam diretórios   e
+recursos que foram carregados a partir daquela origem. Por exemplo, na <b>Figura
+1</b>, o caminho completo do recurso `devsite-googler-button` é
+`developers.google.com/_static/19aa27122b/css/devsite-googler-button`
 
 Clique em um arquivo no painel **Page** para visualizar seu conteúdo no painel
 **Editor**. Você pode ver qualquer tipo de arquivo. Para imagens, você visualiza
@@ -54,11 +53,8 @@ uma prévia da imagem.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/images/sources-editor-pane.png?raw=true"
 alt="Viewing a file in the Editor pane">
-  <figcaption>
-    <b>Figure 2</b>. Viewing the contents of <code>jquery-bundle.js</code> in
-the <b>Editor</b>
-    pane
-  </figcaption>
+  <figcaption>     <b>Figura 2</b>. Visualização do conteúdo de
+<code>jquery-bundle.js</code> no painel <b>Editor</b></figcaption>
 </figure>
 
 ## Edite CSS e JavaScript {: #edit }
@@ -72,11 +68,9 @@ imediatamente.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/images/edit-css.gif?raw=true"
 alt="Editing CSS in the Editor pane">
-  <figcaption>
-    <b>Figure 3</b>. Editing CSS in the <b>Editor</b> pane to change the
-background color of an
-    element from blue to red
-  </figcaption>
+  <figcaption>     <b>Figura 3</b>. Edição de CSS no painel <b>Editor</b> para
+alterar a cor de plano de fundo de um elemento de azul para
+vermelho</figcaption>
 </figure>
 
 As alterações de CSS entram em vigor imediatamente, sem a necessidade de salvar.
@@ -93,9 +87,8 @@ texto `A` teria sido registrado no **Console**.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/images/edit-js.gif?raw=true"
 alt="Editing JavaScript in the Editor pane">
-  <figcaption>
-    <b>Figure 4</b>. Editing JavaScript in the <b>Editor</b> pane
-  </figcaption>
+  <figcaption>     <b>Figura 4</b>. Edição de JavaScript no painel
+<b>Editor</b></figcaption>
 </figure>
 
 O DevTools apaga suas alterações de CSS e JavaScript quando você recarrega a
@@ -125,10 +118,8 @@ sistema de arquivos.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/images/snippet.png?raw=true"
 alt="A Snippet that inserts the jQuery library into a page.">
-  <figcaption>
-    <b>Figure 5</b>. A <b>Snippet</b> that inserts the jQuery library into a
-page
-  </figcaption>
+  <figcaption>     <b>Figura 5</b>. Um <b>Snippet</b> que insere a biblioteca
+jQuery em uma página</figcaption>
 </figure>
 
 Para executar um **Snippet**:
@@ -160,9 +151,7 @@ básicas de depuração no DevTools.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/images/debugging.png?raw=true"
 alt="Debugging JavaScript">
-  <figcaption>
-    <b>Figure 6</b>. Debugging JavaScript
-  </figcaption>
+  <figcaption>     <b>Figura 6</b>. Depuração de JavaScript</figcaption>
 </figure>
 
 ## Configure uma Workspace {: #workspace }
