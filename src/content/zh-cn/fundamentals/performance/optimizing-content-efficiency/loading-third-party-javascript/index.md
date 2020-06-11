@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Third-party scripts provide a wide range of useful functionality, making the web more dynamic. Learn how to optimize the loading of third-party scripts to reduce their impact on performance.
+description: 第三方脚本提供了各种有用的功能，让网络更动态。学习如何优化第三方脚本的加载以降低它们对性能的影响。
 
 {＃wf_updated_on: 2018-10-31＃} {＃wf_published_on: 2018-02-28＃} {＃wf_blink_components: Blink> JavaScript＃}
 
@@ -417,7 +417,6 @@ Content-Security-Policy: script-src https://example.com/
 // The following third-party script will not be loaded or executed
 
 <script src="https://not-example.com/js/library.js"></script>
-
 ```
 
 ## 结论
