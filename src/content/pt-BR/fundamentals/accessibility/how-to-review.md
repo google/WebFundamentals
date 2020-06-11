@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: How to review your site for accessibility issues.
+description: Como revisar seu site para problemas de acessibilidade.
 
 {# wf_updated_on: 2018-09-20 #} {# wf_published_on: 2017-03-12 #} {#
 wf_blink_components: Blink>Accessibility #}
@@ -9,14 +9,14 @@ wf_blink_components: Blink>Accessibility #}
 
 {% include "web/_shared/contributors/robdodson.html" %}
 
-<div>   <div class="video-wrapper">     <iframe
-class="devsite-embedded-youtube-video" data-video-id="cOmehxAU_4s"
-data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen="">
-    </iframe>   </div> Determining if your web site or application is accessible
-can seem like an overwhelming task. If you are approaching accessibility for the
-first time, the sheer breadth of the topic can leave you wondering where to
-start - after all, working to accommodate a diverse range of abilities means
-there are a correspondingly diverse range of issues to consider. </div>
+<div><div class="video-wrapper"> <iframe class="devsite-embedded-youtube-video"
+data-video-id="cOmehxAU_4s" data-autohide="1" data-showinfo="0" frameborder="0"
+allowfullscreen=""> </iframe> </div> Determinar se seu site ou aplicativo está
+acessível pode parecer uma
+tarefa cansativa. Se está é sua primeira introdução a acessibilidade, a
+amplitude do tópico pode fazer você se questionar por onde começar - afinal,
+trabalhar para fornecer uma gama diversa de habilidades significa que existe
+correspondentemente uma game diversa de questões a serem consideradas.</div>
 
 Neste post, vou explicar essas questões em um processo lógico, de como revisar a
 acessibilidade de um site existente, passo a passo.
