@@ -10,9 +10,9 @@
 </tr>
 <tr>
 <td class="locki-notrack">description</td>
-<td data-parent-segment-id="3512866">Application shell architecture keeps your
-UI local and loads content dynamically without sacrificing the linkability and
-discoverability of the web.</td>
+<td data-parent-segment-id="3512866">L’architettura dell'app shell mantiene
+localmente l’interfaccia utente e carica i contenuti dinamicamente senza
+compromettere la navigabilità e l’accessibilità del web.</td>
 </tr>
 </table>
 </div>
