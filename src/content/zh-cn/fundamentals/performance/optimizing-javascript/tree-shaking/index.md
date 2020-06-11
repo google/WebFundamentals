@@ -60,7 +60,7 @@ import { unique, implode, explode } from "array-utils";
 <figure>
   <img srcset="images/figure-3-2x.png 2x, images/figure-3-1x.png 1x" src="https://github.com/google/WebFundamentals/blob/master/src/content/en/fundamentals/performance/optimizing-javascript/tree-shaking/images/figure-3-1x.png?raw=true" alt="A screenshot of a sample one page application
 for searching a database of guitar effect pedals.">
-  <figcaption><b>Figure 3</b>. A screenshot of the sample app.</figcaption>
+  <figcaption><b>图3</b> 。示例应用程序的屏幕截图。</figcaption>
 </figure>
 
 可以预见，驱动此应用程序行为的脚本被分为vendor（即[Preact](https://preactjs.com/)和[Emotion](https://emotion.sh/) ）和特定于应用程序的代码块（或“chunk”，按webpack的说法）：
@@ -68,8 +68,7 @@ for searching a database of guitar effect pedals.">
 <figure>
   <img srcset="images/figure-4-2x.png 2x, images/figure-4-1x.png 1x" src="https://github.com/google/WebFundamentals/blob/master/src/content/en/fundamentals/performance/optimizing-javascript/tree-shaking/images/figure-4-1x.png?raw=true" alt="A screenshot of two application code bundles
 (or chunks) shown in the network panel of Chrome's DevTools.">
-  <figcaption><b>Figure 4</b>. The app's two JavaScript bundles. These are are
-uncompressed sizes.</figcaption>
+  <figcaption><b>图4</b> 。该应用程序的两个JavaScript包。这些都是未压缩的尺寸。</figcaption>
 </figure>
 
 上图中显示的JavaScript包是生产版本，这意味着它们通过[uglification](http://lisperator.net/uglifyjs/)进行了优化。特定于应用程序的js包大小为21.1 KB，还不算糟糕（或者*并不是这样* ）。但是！应该注意的是，这里并没有使用tree shaking。让我们看看应用程序代码，看看我们可以做些什么来解决这个问题。
@@ -91,8 +90,7 @@ import * as utils from "../../utils/utils";
 <figure>
   <img srcset="images/figure-5-2x.png 2x, images/figure-5-1x.png 1x" src="https://github.com/google/WebFundamentals/blob/master/src/content/en/fundamentals/performance/optimizing-javascript/tree-shaking/images/figure-5-1x.png?raw=true" alt="A screenshot of a search in a text editor for
 'utils.', returning only 3 results.">
-  <figcaption><b>Figure 5</b>. The utils namespace we've imported tons of modules
-from is only invoked three times within the main component file.</figcaption>
+  <figcaption><b>图5</b> 。我们从中导入大量模块的utils命名空间仅在主组件文件中调用三次。</figcaption>
 </figure>
 
 嗯， *这*真是有点糟糕。我们只在应用程序代码中的三个位置使用了`utils`对象。但是针对于什么功能呢？如果我们再次查看主要组件文件，它似乎只有一个函数，即`utils.simpleSort` ，它用于在排序下拉列表更改时按照许多条件对搜索结果进行排序：
