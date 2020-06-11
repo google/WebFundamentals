@@ -22,13 +22,13 @@ description: The Save-Data client hint request header available in Chrome, Opera
 
 在没有直接开发人员参与的情况下，还有其他方法可以提高站点速度，例如代理浏览器和转码服务。虽然这些服务非常受欢迎，但它们具有很大的缺点 - 过于简单（有时是不可接受的）的图像和文本压缩，无法处理安全（HTTPS）页面，只优化通过搜索结果访问的页面等等。这些服务的普及本身就表明Web开发人员无法正确满足用户对快速和轻量级应用程序和页面的高需求。但实现这一目标是一条复杂而有时很艰难的道路。
 
-## The `Save-Data` request header
+## `Save-Data`请求标头
 
 一种相当简单的技术是使用`Save-Data`请求标头让浏览器提供帮助。通过识别此标头，网页可以为成本和性能受限的用户提供定制并优化的交付以提高用户体验。
 
 支持的浏览器（如下所示）允许用户启用*流量节省模式，该模式允许浏览器应用一系列优化措施以减少呈现页面所需的数据量。当此功能时默认启用或被打开时，浏览器可以请求较低分辨率的图像，推迟加载某些资源，或通过应用其他特定内容优化（例如图像和文本资源压缩）的服务来发起请求。
 
-## Browser support
+## 浏览器支持
 
 - 当用户在移动设备上[启用](https://support.google.com/chrome/answer/2392284) “流量节省模式”选项或桌面浏览器上的“流量节省模式”扩展程序时，**Chrome 49+**会应用`Save-Data` 。
 - 当用户在桌面上启用“ [Opera Turbo](http://www.opera.com/computer/features/fast-browser) ”模式或在Android浏览器上启用“ [流量节省](http://www.opera.com/help/mobile/android#turbo) ”选项时， **Opera 35+会**应用`Save-Data` 。
@@ -63,7 +63,7 @@ Data Saver extension.">
 
 > *提示: 如果您使用[PageSpeed for Apache or Nginx](/speed/pagespeed/module/)来优化您的网页，请参阅[此评论](https://github.com/pagespeed/mod_pagespeed/issues/1258)以了解如何为您的用户启用`Save-Data`节流。*
 
-## Implementation tips and best practices
+## 实施技巧和最佳实践
 
 1. 使用`Save-Data` ，请提供一些支持它的UI设备，并允许用户轻松切换体验。例如：
     - 通知用户当前浏览器支持`Save-Data`并鼓励他们使用它。
@@ -101,7 +101,7 @@ if (isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) 
 
 如果在将任何标记发送到客户端之前进行此检查， `$saveData`变量将包含`Save-Data`状态，并且可以在页面上的任何地方使用。通过这种机制，让我们看几个例子，说明我们如何使用它来限制我们发送给用户的数据量。
 
-### Serve low resolution images for high resolution screens
+### 为高分辨率屏幕提供低分辨率图像
 
 Web上图像的常见模式包括以两个为一组提供图像：一个用于“标准”屏幕(1x)的图像，另一个用于高分辨率屏幕(例如， [Retina显示](https://en.wikipedia.org/wiki/Retina_Display) )的两倍大(2x)的图像。这类高分辨率屏幕不一定限于高端设备，并且变得越来越普遍。如果首选较轻的应用程序体验，可能需要优先将较低分辨率(1x)图像发送到这些屏幕而不是较大(2x)图像。要使用`Save-Data`标头实现此目的，我们只需修改发送给客户端的标记：
 
