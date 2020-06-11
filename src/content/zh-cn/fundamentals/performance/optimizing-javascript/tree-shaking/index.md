@@ -4,7 +4,7 @@ description: 了解从何处开始优化应用的 JavaScript 可能令人望而�
 
 {# wf_updated_on: 2018-10-23 #} {# wf_published_on: 2018-06-14 #} {# wf_blink_components: Blink>JavaScript #}
 
-# 使用Tree Shaking减少JavaScript负载{: .page-title}
+# 使用Tree Shaking减少JavaScript负载 {: .page-title}
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
 
