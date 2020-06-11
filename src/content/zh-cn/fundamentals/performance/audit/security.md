@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: You won't be able to build a PWA without HTTPS. Serving your site over HTTPS is fundamental for security, and many APIs won't work without it. If you need to justify implementation costs, find out why HTTPS matters.
+description: 没有 HTTPS，您将无法构建 PWA。通过 HTTPS 提供您的网站是确保安全的基础，许多 API 都无法在非 HTTPS 状态下运行。如果您需要证明实现成本，不妨了解 HTTPS 为何重要。
 
 {# wf_updated_on: 2018-08-16 #} {# wf_published_on: 2018-08-16 #} {# wf_blink_components: N/A #}
 
