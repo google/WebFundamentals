@@ -84,7 +84,7 @@ também. Veja o guia em [ Modais e Armadilhas de
 Teclado](/web/fundamentals/accessibility/focus/using-tabindex#modals_and_keyboard_traps)
 Por exemplo.
 
-### Just because something is focusable doesn’t mean it’s usable
+### Só porque algo é focalizável não significa que é utilizável
 
 Caso tenha criado uma forma personalizada de controle, tenha com alvo a
 capacidade do usuário alcançar *toda* funcionalidade usando apenas o teclado.
@@ -170,14 +170,15 @@ NVDA](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqv
 
 ### `aria-hidden` não previne foco do teclado
 
-It’s important to understand that ARIA can only affect the *semantics* of an
-element; it has no effect on the *behavior* of the element. While you can make
-an element hidden to screen readers with `aria-hidden=”true”`, that does not
-change the focus behavior for that element. For offscreen interactive content,
-you will often need to combine `aria-hidden=”true”` and `tabindex=”-1”` to make
-sure it’s truly removed from the keyboard flow. The proposed [inert
-attribute](https://github.com/WICG/inert) aims to make this easier by combining
-the behavior of both attributes.
+É importante entender que o ARIA pode afetar apenas a *semântica* de um
+elemento; não tem efeito no *comportamento* do elemento. Enquanto você pode
+fazer um elemento oculto para os leitores de tela com `aria-hidden=”true”` , que
+não altere o comportamento do foco para esse elemento. Para conteúdo interativo
+fora da tela, muitas vezes você precisará combinar `aria-hidden=”true”` e
+`tabindex=”-1”` para criar verifique se ele está realmente removido do fluxo do
+teclado. O [inerte](https://github.com/WICG/inert) proposto [ O
+atributo](https://github.com/WICG/inert) visa facilitar isso combinando o
+comportamento de ambos os atributos.
 
 ## Elementos iterativos como links e botões devem indicar seus propósitos e estados
 
@@ -200,7 +201,7 @@ estão passando o mouse sobre algo clicável. No entanto, o elemento interativo
 ainda deve ser distinguido por si só. Basear-se apenas no estado de hover para
 indicar elementos clicáveis não ajuda a usabilidade em dispositivos touch.
 
-## Take advantage of headings and landmarks
+## Aproveite os títulos e pontos de referência
 
 
 <img src="imgs/ic_map_black_24px.svg" class="attempt-right" alt="" width="100">
@@ -240,7 +241,7 @@ página. Isso significa que as teclas que os usuários de leitores de tela
 normalmente usam para se mover pela página não funcionarão mais, e você
 precisará implementar *todo* tratamento de teclado sozinho.
 
-### Quickly review headings and landmarks with a screen reader
+### Revise rapidamente títulos e pontos de referência com um leitor de tela
 
 Leitores de tela como VoiceOver e NVDA fornecem um menu de contexto para ir para
 regiões importantes da página. Se você estiver fazendo uma verificação de
@@ -253,7 +254,7 @@ e
 [NVDA](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=4)
 .
 
-## Automate the process
+## Automatize o processo
 
 
 <img src="imgs/ic_build_black_24px.svg" class="attempt-right" alt=""
@@ -264,7 +265,7 @@ propenso a erros. Eventualmente, você desejará automatizar o processo o máxim
 possível. Isso pode ser feito através do uso de extensões de navegador e suite
 de testes de acessibilidade via linha de comando.
 
-### Key points
+### Pontos chave
 
 - A página passa em todos os testes das extensões de navegador
 [aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
@@ -278,10 +279,11 @@ você prefere fazer coisas na linha de comando,
 que  a extensão de navegador aXe, porem pode ser facilmente usada do seu
 terminal.
 
-- To avoid regressions, especially in a continuous integration environment,
-incorporate a library like [axe-core](https://github.com/dequelabs/axe-core)
-into your automated test suite. axe-core is the same engine that powers the aXe
-chrome extension, but in an easy-to-run command line utility.
+- Para evitar regressões, especialmente em um ambiente de integração contínua,
+incorporar uma biblioteca como [ax-core](https://github.com/dequelabs/axe-core)
+em seu conjunto de testes automatizado. ax-core é o mesmo motor que alimenta o
+machado extensão chrome, mas em um utilitário de linha de comando fácil de
+executar.
 
 - Se você estiver usando um framework ou biblioteca, ela fornece suas próprias
 ferramentas de acessibilidade? Alguns exemplos incluem
@@ -309,10 +311,10 @@ essas verificações o mais cedo possível  e de forma frequente podem ajudar a
 melhorar a experiência geral do uso seu site. Lembre-se de que uma boa
 acessibilidade é uma boa UX!
 
-### Additional Resources
+### Recursos adicionais
 
-- [Web Accessibility by Google](https://bit.ly/web-a11y)
-- [Accessibility Fundamentals](/web/fundamentals/accessibility/)
+- Acessibilidade na Web pelo Google
+- Fundamentos da acessibilidade
 - A11ycasts
 
 ## Feedback {: #feedback }
