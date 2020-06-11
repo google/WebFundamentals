@@ -1,23 +1,14 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
-description: Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
-robots: noindex
+project_path: /web/tools/_project.yaml book_path: /web/tools/_book.yaml description: 控制台记录功能强大，可以检查您的页面或应用的功能。我们从 console.log() 开始并探索其他高级用法。robots: noindex
 
-{# wf_updated_on: 2019-03-28 #}
-{# wf_published_on: 2015-04-13 #}
-{# wf_blink_components: Platform>DevTools #}
+{# wf_updated_on: 2019-03-28 #} {# wf_published_on: 2015-04-13 #} {# wf_blink_components: Platform>DevTools #}
 
 # 诊断并记录到控制台中 {: .page-title }
 
-{% include "web/_shared/contributors/pbakaus.html" %}
-{% include "web/_shared/contributors/megginkearney.html" %}
-{% include "web/_shared/contributors/flaviocopes.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %} {% include "web/_shared/contributors/megginkearney.html" %} {% include "web/_shared/contributors/flaviocopes.html" %}
 
-<aside class="warning">
-  This page is deprecated.
-</aside>
+<aside class="warning">此页面已遭弃用。</aside>
 
-Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
+控制台记录功能强大，可以检查您的页面或应用的功能。我们从 console.log() 开始并探索其他高级用法。
 
 ### TL;DR {: .hide-from-toc }
 
