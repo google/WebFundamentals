@@ -189,11 +189,11 @@ dispositivos.
 
 ### Pontos chave
 
-- Interactive elements, like links and buttons, should be distinguishable from
-non-interactive elements. It is difficult for users to navigate a site or app
-when they cannot tell if an element is clickable. There are many valid methods
-to accomplish this goal. One common practice is underlining links to
-differentiate them from their surrounding text.
+- Elementos interativos, como links e botões, devem ser distinguíveis de
+elementos não interativos. É difícil para os usuários navegar em um site ou
+aplicativo quando não sabem se um elemento é clicável. Existem muitos métodos
+válidos para atingir esse objetivo. Uma prática comum é sublinhar links para
+diferenciá-los do texto ao redor.
 
 - Semelhante ao requisito de foco, elementos interativos como links e botões
 exigem um estado de foco para os usuários de mouse, para que eles saibam se
