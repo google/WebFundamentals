@@ -4,7 +4,7 @@ description: 客户端提示是一组 HTTP 请求标头，我们可以使用客�
 
 {# wf_updated_on: 2018-11-27 #} {# wf_published_on: 2018-11-22 #} {# wf_blink_components: UI>Browser>Mobile>Settings>DataSaver,Blink>Fonts,Blink>CSS,Blink>JavaScript #}
 
-# 使用客户端提示以适应用户{: .page-title}
+# 使用客户端提示以适应用户 {: .page-title}
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
 
