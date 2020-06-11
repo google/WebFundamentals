@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: A comprehensive reference of accessibility features in Chrome DevTools.
+description: Uma referência abrangente dos recursos de acessibilidade no Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #} {# wf_updated_on: 2019-03-08 #} {#
 wf_published_on: 2018-07-13 #}
@@ -20,10 +20,10 @@ O objetivo dessa referência é ajudá-lo a descobrir todas as ferramentas
 disponíveis no DevTools que podem ajudá-lo a examinar a acessibilidade de uma
 página.
 
-See [Navigating Chrome DevTools With Assistive
-Technology](/web/tools/chrome-devtools/accessibility/navigation)
-if you're looking for help on navigating DevTools with an assistive technology
-like a screen reader.
+Consulte [Navegação no Chrome DevTools com tecnologia
+assistiva](/web/tools/chrome-devtools/accessibility/navigation) se estiver em
+busca de ajuda sobre DevTools de navegação com tecnologia assistiva, como
+leitura de tela.
 
 ## Visão geral dos recursos de acessibilidade no Chrome DevTools {: #overview}
 
@@ -65,20 +65,15 @@ configuração.
         <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/config.png?raw=true"
 alt="Configuring audits.">
-        <figcaption>
-          <b>Figure 1</b>. Configuring audits
-        </figcaption>
+        <figcaption>       <b>Figura 1</b>. Configurando auditorias</figcaption>
       </figure>
 
 
-      <aside class="note">
-        <b>Note</b>: The screenshots in this section were taken with version 69
-of Chrome. You can
-        check what version you're running at <code>chrome://version</code>. The
-Audits panel UI looks
-        different in earlier versions of Chrome, but the general workflow is the
-same.
-      </aside>
+      <aside class="note">     <b>Observação</b>: As capturas de tela desta
+seção foram obtidas com a versão 69 do Chrome. Você pode conferir qual versão
+está executando em <code>chrome://version</code>. O UI do painel Audits é
+levemente diferente em versões anteriores do Chrome, mas o fluxo de trabalho
+geral é o mesmo.</aside>
     
 
 3. Em **Device**, selecione **Mobile** se você quiser simular um dispositivo
@@ -109,9 +104,7 @@ acessibilidade da página.
         <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/report.png?raw=true"
 alt="A report.">
-        <figcaption>
-          <b>Figure 2</b>. A report
-        </figcaption>
+        <figcaption>       <b>Figura 2</b>. Um relatório</figcaption>
       </figure>
     
 
@@ -121,9 +114,8 @@ alt="A report.">
         <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/attributes.png?raw=true"
 alt="More information about an audit.">
-        <figcaption>
-          <b>Figure 3</b>. More information about an audit
-        </figcaption>
+        <figcaption>       <b>Figura 3</b>. Mais informações sobre uma
+auditoria</figcaption>
       </figure>
     
 
@@ -133,9 +125,8 @@ alt="More information about an audit.">
         <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/documentation.png?raw=true"
 alt="Viewing an audit's documentation.">
-        <figcaption>
-          <b>Figure 4</b>. Viewing an audit's documentation
-        </figcaption>
+        <figcaption>       <b>Figura 4</b>. Visualização da documentação de uma
+auditoria</figcaption>
       </figure>
     
 
@@ -153,9 +144,7 @@ inspecionar e destacar falhas node.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/aXe.png?raw=true"
 alt="The aXe extension.">
-  <figcaption>
-    <b>Figure 5</b>. The aXe extension
-  </figcaption>
+  <figcaption>     <b>Figura 5</b>. A extensão aXe</figcaption>
 </figure>
 
 ## O painel Accessibility {: #pane }
@@ -177,11 +166,8 @@ Tabs](https://github.com/google/WebFundamentals/blob/master/web/tools/chrome-dev
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/a11y-pane.png?raw=true"
 alt="Inspecting the h1 element of the DevTools homepage in the Accessibility
 pane.">
-  <figcaption>
-    <b>Figure 6</b>. Inspecting the <code>h1</code> element of the DevTools
-homepage in the
-    Accessibility pane
-  </figcaption>
+  <figcaption>     <b>Figura 6</b>. Inspeção do elemento <code>h1</code> da
+homepage DevTools, no painel Accessibility</figcaption>
 </figure>
 
 ### Visualizar a posição de um elemento em accessibility tree {: #tree }
@@ -198,9 +184,7 @@ Accessibility](#pane).
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/a11y-tree.png?raw=true"
 alt="The Accessibility Tree section">
-  <figcaption>
-    <b>Figure 7</b>. The Accessibility Tree section
-  </figcaption>
+  <figcaption>     <b>Figura 7</b>. A seção Accessibility Tree</figcaption>
 </figure>
 
 ### Visualizar um elemento em ARIA attributes {: #aria }
@@ -214,9 +198,7 @@ Visualize os atributos ARIA de um elemento no [painel Accessibility](#pane).
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/aria.png?raw=true"
 alt="The ARIA Attributes section">
-  <figcaption>
-    <b>Figure 8</b>. The ARIA Attributes section
-  </figcaption>
+  <figcaption>     <b>Figura 8</b>. A seção ARIA Attributes</figcaption>
 </figure>
 
 ### Visualizar elemento calculado em Computed Properties {: #computed }
@@ -235,9 +217,8 @@ Accessibility](#pane).
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/computed-a11y.png?raw=true"
 alt="The Computed (Accessibility) Properties section.">
-  <figcaption>
-    <b>Figure 9</b>. The Computed (Accessibility) Properties section
-  </figcaption>
+  <figcaption>     <b>Figura 9</b>. A seção Computed (Accessibility)
+Properties</figcaption>
 </figure>
 
 ## Visualizar o contrast ratio de um elemento de texto no seletor de cores {: #contrast }
@@ -261,9 +242,8 @@ inspecionar.
         <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/inspect.png?raw=true"
 alt="Inspecting a paragraph in the DOM Tree.">
-        <figcaption>
-          <b>Figure 10</b>. Inspecting a paragraph in the DOM Tree
-        </figcaption>
+        <figcaption>       <b>Figura 10</b>. Inspeção de um parágrafo no DOM
+Tree</figcaption>
       </figure>
     
 
@@ -274,9 +254,8 @@ valor da `cor` do elemento.
         <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/color.png?raw=true"
 alt="The color property of the element.">
-        <figcaption>
-          <b>Figure 11</b>. The <code>color</code> property of the element
-        </figcaption>
+        <figcaption>       <b>Figura 11</b>. A propriedade <code>color</code> do
+elemento</figcaption>
       </figure>
     
 
@@ -291,11 +270,9 @@ recomendado](https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced){:.extern
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/color-picker.png?raw=true"
 alt="The Contrast Ratio section of the Color Picker shows 2 checkmarks and a
                   value of 16.10.">
-        <figcaption>
-          <b>Figure 12</b>. The Contrast Ratio section of the Color Picker shows
-2 checkmarks
-          and a value of <code>16.10</code>
-        </figcaption>
+        <figcaption>       <b>Figura 12</b>. A seção Contrast Ratio do Seletor
+de cor (Color Picker) exibe 2 marcas de seleção e um valor de
+<code>16.10</code></figcaption>
       </figure>
     
 
@@ -309,9 +286,8 @@ qualquer coisa no mesmo lado também não atenderá às recomendações.
         <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/contrast-ratio-line.png?raw=true"
 alt="The Contrast Ratio Line in the visual picker.">
-        <figcaption>
-          <b>Figure 13</b>. The Contrast Ratio Line in the visual picker
-        </figcaption>
+        <figcaption>       <b>Figura 13</b>. A Contrast Ratio Line no seletor
+visual</figcaption>
       </figure>
     
 
