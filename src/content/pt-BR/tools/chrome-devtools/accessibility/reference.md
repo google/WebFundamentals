@@ -17,25 +17,26 @@ DevTools. Destina-se a desenvolvedores web que:
 - São familiarizados com [princípios de acessibilidade e melhores
 práticas](/web/fundamentals/accessibility/).
 
-The purpose of this reference is to help you discover all of the tools available
-in
-DevTools that can help you examine a page's accessibility.
+O objetivo dessa referência é ajudá-lo a descobrir todas as ferramentas
+disponíveis no DevTools que podem ajudá-lo a examinar a acessibilidade de uma
+página.
 
 See [Navigating Chrome DevTools With Assistive
 Technology](/web/tools/chrome-devtools/accessibility/navigation)
 if you're looking for help on navigating DevTools with an assistive technology
 like a screen reader.
 
-## Overview of accessibility features in Chrome DevTools {: #overview }
+## Visão geral dos recursos de acessibilidade no Chrome DevTools {: #overview}
 
-This section explains how DevTools fits into your overall accessibility toolkit.
+Esta seção explica como o DevTools se encaixa no seu kit de ferramentas de
+acessibilidade geral.
 
 Ao determinar se uma página tem acessibilidade, você precisa ter duas questões
 básicas em mente:
 
 1. Posso navegar na página com um teclado ou [leitor de
 tela](/web/fundamentals/accessibility/semantics-builtin/#screen_readers)?
-2. Are the page's elements properly marked up for screen readers?
+2. Os elementos da página estão devidamente marcados para leitores de tela?
 
 Em geral, o DevTools pode ajudá-lo a corrigir erros relacionados à pergunta nº
 2, porque esses erros são fáceis de detectar de maneira automatizada. A questão
@@ -45,16 +46,16 @@ página com um teclado ou leitor de tela por conta própria. Veja [Como fazer um
 revisão de acessibilidade](/web/fundamentals/accessibility/how-to-review) para
 mais informações.
 
-## Audit a page's accessibility {: #audits }
+## Auditar a acessibilidade de uma página {: #audits}
 
 Em geral, use o painel de auditar para determinar se:
 
-- A page is properly marked up for screen readers.
+- Uma página está devidamente marcada para leitores de tela.
 - Os elementos de texto em uma página têm taxas de contraste suficientes.
 Consulte também [Exibir a taxa de contraste de um elemento de texto no Seletor
 de cores](#contrast).
 
-To audit a page:
+Para auditar uma página:
 
 1. Vá até a URL que você deseja auditar.
 
@@ -315,6 +316,6 @@ alt="The Contrast Ratio Line in the visual picker.">
       </figure>
     
 
-## Feedback {: #feedback }
+## Comentários {: #feedback}
 
 {% include "web/_shared/helpful.html" %}
