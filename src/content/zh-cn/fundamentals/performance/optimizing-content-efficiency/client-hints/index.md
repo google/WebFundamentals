@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Client hints are a set of HTTP request headers we can use to change how we deliver page resources based on characteristics of a user's device and network connection. In this article, you'll learn all about client hints, how they work, and a few ideas on how you can use them to make your site faster for users.
+description: 客户端提示是一组 HTTP 请求标头，我们可以使用客户端提示根据用户的设备和网络连接更改提供页面资源的方式。在本文中，您将了解客户端提示的概念、它们的工作原理，以及有关如何使用它们来向用户更快显示站点的几点意见。
 
 {# wf_updated_on: 2018-11-27 #} {# wf_published_on: 2018-11-22 #} {# wf_blink_components: UI>Browser>Mobile>Settings>DataSaver,Blink>Fonts,Blink>CSS,Blink>JavaScript #}
 
