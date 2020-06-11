@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: The Save-Data client hint request header available in Chrome, Opera, and Yandex browsers enables developers to deliver fast and light applications to users who have opted-in to 'data saving' mode in the browser.
+description: Chrome、Opera 和 Yandex 浏览器中的 Save-Data 客户端提示请求标头让开发者可以向已在浏览器中选择启用“流量节省”模式的用户提供快速和轻便的应用。
 
 {# wf_updated_on: 2018-04-19 #} {# wf_published_on: 2016-02-18 #} {# wf_tags: savedata,clienthints,chrome49 #} {# wf_blink_components: Blink>Fonts,Blink>CSS,Blink>JavaScript #} {# wf_featured_image: /web/updates/images/2016/02/save-data/data-saver-chrome.png #}
 
