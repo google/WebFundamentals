@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Knowing where to begin optimizing your application's JavaScript can be daunting. If you're taking advantage of modern tooling such as webpack, however, tree shaking might be a good place to start!
+description: 了解从何处开始优化应用的 JavaScript 可能令人望而却步。不过，如果您充分利用 webpack 等现代工具，Tree Shaking 可能会是一个不错的起点！
 
 {# wf_updated_on: 2018-10-23 #} {# wf_published_on: 2018-06-14 #} {# wf_blink_components: Blink>JavaScript #}
 
