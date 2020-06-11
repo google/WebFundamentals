@@ -13,7 +13,7 @@ book_path: /web/feedback/_book.yaml
 
 一旦你知道了 Bug 是什么，请使用[浏览器 Bug 搜索](/web/feedback/)。如果这是个已知 Bug，您可用通过星标，收藏或评论该 Bug 来支持 Bug 解决。如果没有，是时候提交错误了。
 
-## What's the correct behavior?
+## 什么是正确的行为？
 
 首先，了解“正确”行为应该是什么。
 
