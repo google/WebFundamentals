@@ -18,34 +18,31 @@ description: Third-party scripts provide a wide range of useful functionality, m
 
 为什么需要[小心](https://css-tricks.com/potential-dangers-of-third-party-javascript/)第三方JavaScript？
 
-- They can be a **performance** concern
+- 它们可能是一个**性能**问题
 - 他们可能是一个**隐私**问题
-- They might be a **security** concern
+- 他们可能是一个**安全**问题
 - 它们可能在您不知情的情况下发生**无法预测**的变化
-- They can have **unintended consequences**
+- 他们可能会产生**意想不到的后果**
 
 理想情况下，您需要确保第三方JavaScript不会影响[关键渲染路径](/web/fundamentals/performance/critical-rendering-path/) 。在本指南中，我们将介绍如何查找和修复与加载第三方JavaScript相关的问题。
 
 ## 第三方JavaScript是什么？
 
-Third-party JavaScript often refers to scripts that can be embedded into any
-site directly from a third-party vendor. These scripts can include ads,
-analytics, widgets and other scripts that make the web more dynamic and
-interactive.
+第三方JavaScript通常是指可以直接从第三方供应商嵌入到任何站点的脚本。这些脚本可以包括广告，分析，小部件和其他脚本，使Web更具动态性和交互性。
 
 第三方脚本的示例：
 
-- Social sharing buttons (e.g Twitter, Facebook, G+)
+- 社交分享按钮（例如Twitter，Facebook，G +）
 
-- Video player embeds (e.g YouTube, Vimeo)
+- 视频播放器嵌入（例如YouTube，Vimeo）
 
-- Advertising iframes
+- 广告iframe
 
 - 分析和测量指标脚本
 
-- A/B testing scripts for experiments
+- 用于实验的A / B测试脚本
 
-- Helper libraries (e.g date formatting, animation, functional libraries etc)
+- 辅助库（例如日期格式，动画，功能库等）
 
 <img src="https://github.com/google/WebFundamentals/blob/master/src/content/en/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/images/image_0.jpg?raw=true" alt="example of a youtube video embed">
 
@@ -56,12 +53,11 @@ interactive.
 </iframe>
 ```
 
-One example of this is the YouTube video player embed script that allows you to
-embed a video into your page.
+其中一个例子是YouTube视频播放器嵌入脚本，允许您将视频嵌入到您的页面中。
 
 不幸的是，嵌入第三方脚本意味着我们经常依赖它们来加快速度，而避免减慢我们的页面速度。通常情况下，第三方脚本是由您控制之外的资源引起性能下降的主要原因。
 
-These issues can include:
+这些问题包括：
 
 - 向多个服务器发送过多网络请求。必须发出的网络请求越多，加载所需的时间就越长。
 
@@ -73,9 +69,7 @@ These issues can include:
 
 - [HTTP缓存](/web/fundamentals/performance/optimizing-content-efficiency/http-caching)不足，经常迫使不得不从网络中获取资源
 
-- Lack of sufficient [server
-    compression](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer)
-    of resources
+- 缺乏足够的[服务器压缩](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer)资源
 
 - 阻止内容显示直到脚本处理完成。对于异步A/B测试脚本也是如此。
 
@@ -89,7 +83,7 @@ These issues can include:
 
 上下文很重要，对昂贵的第三方资源的解决方案可能取决于您的站点配置能力和第三方代码的加载方式。值得庆幸的是，存在许多方案和工具来查找和修复第三方资源的问题。
 
-## How do you identify third-party script on a page?
+## 您如何识别页面上的第三方脚本？
 
 除非您知道您的网站加载了哪些第三方脚本以及它们对性能的影响，否则无法知道如何优化它们。许多免费的网页速度测试工具可以识别出昂贵的第三方资源，包括[Chrome DevTools](https://developer.chrome.com/devtools) ， [PageSpeed Insights](/speed/pagespeed/insights/)和[WebPageTest](https://www.webpagetest.org/) 。这些工具能够提供丰富的诊断信息，告诉您站点加载*了多少*个第三方脚本，以及哪些脚本占用时间最多。
 
@@ -119,7 +113,7 @@ feature from the DevTools command menu">
 <img src="images/image_5.png" alt="DevTools third-party badging in the network
 panel">
 
-## How do I measure the impact of third-party script on my page?
+## 如何衡量第三方脚本对我页面的影响？
 
 ### Lighthouse 启动时间审查
 
@@ -153,9 +147,7 @@ Chrome DevTools中的 [Performance面板](/web/tools/chrome-devtools/evaluate-pe
 <img src="images/image_8.png" alt="DevTools Performance panel showing the
 Bottom-up view grouped by (third-party) products">
 
-To learn more about how to analyze page load performance with the Chrome
-DevTools, see [Get started with analyzing runtime
-performance](/web/tools/chrome-devtools/evaluate-performance/).
+要了解有关如何使用Chrome DevTools分析页面加载性能的更多信息，请参阅[分析运行时性能入门](/web/tools/chrome-devtools/evaluate-performance/) 。
 
 衡量第三方脚本影响比较好的**工作流程**是：
 
@@ -178,9 +170,9 @@ performance](/web/tools/chrome-devtools/evaluate-performance/).
 <img src="images/image_9.png" alt="WebPageTest advanced settings < Block.
 Displays a text area for specifying domains to block.">
 
-A workflow for using this feature is to:
+使用此功能的工作流程是：
 
-- Test a page as normal
+- 正常测试页面
 
 - 在某些第三方资源被阻断的情况下重复测试
 
@@ -240,11 +232,9 @@ to fail">
 
 ## 如何高效地加载第三方脚本？
 
-If a third-party script is slowing down your page load, you have several options
-to improve performance:
+如果第三方脚本减慢了页面加载速度，您可以通过多种方法来提高性能：
 
-- Load the script using the async or defer attribute to avoid blocking document
-    parsing.
+- 使用async或defer属性加载脚本以避免阻止文档解析。
 
 - 如果第三方服务运行缓慢，请考虑自托管脚本。
 
@@ -272,8 +262,7 @@ after script fetch and HTML parsing is done.">
 
 通常情况下，您应该始终对第三方脚本使用`async`或`defer` （除非脚本执行中包含关键渲染路径所需的操作）：
 
-- Use `async` if it's important to have the script run earlier in the loading
-    process. This might include some analytics scripts, for example.
+- 如果在加载过程中让脚本先运行很重要，请使用`async` 。例如，这可能包括一些分析脚本。
 
 - 对不太重要的资源使用`defer` 。例如，首屏之外的播放器。
 
@@ -281,11 +270,7 @@ Notes：如果性能是您首要关注的问题，您可以等到页面到用户
 
 注意：在基于Blink的浏览器中， `async`和`defer`通常会[降低网络资源请求的优先级，](https://docs.google.com/document/d/1bCDuq9H1ih9iNjgzyAL0gpwNFiEP4TZS-YLRp_RuMlc/edit#)因此它可能导致其加载时间明显晚于阻塞型脚本。这对于分析脚本特别有用。
 
-Should you ever load third-party scripts without `async` or `defer`? You could
-make a case for this if the script is a crucial part of your site functionality.
-For example, if you're loading your main UI library or framework from a CDN, it
-will be badged as "third-party script" in DevTools, but should be treated as an
-essential part of your site, not an add-on.
+您是否应该在没有`async`或`defer`情况下加载第三方脚本？如果脚本是您网站功能的关键部分，您可以为此做一个案例。例如，如果您从CDN加载主UI库或框架，它将被标记为DevTools中的“第三方脚本”，但应被视为您网站的重要部分，而不是附加组件。
 
 请注意，如果使用异步方式加载，并非所有脚本都能正常工作。检查您正在使用的任何第三方脚本的文档。如果您使用的是无法异步加载的脚本，则可能需要考虑替代方法，或者尽可能舍弃脚本。某些第三方可能*强烈建议*加载其脚本同步（以优先其他脚本），即使它们可以正常工作，因此在评估加载第三方脚本的策略时应做详尽调研。
 
@@ -313,14 +298,13 @@ Note： `async`不是银弹。如果营销团队想要在页面上加载大量�
 
 Note：Chrome还在探索对[功能策略](https://www.chromestatus.com/feature/5694225681219584)的支持 - 一系列允许开发人员有选择地禁用对某些浏览器功能访问的策略。这可以防止第三方内容向网站引入不需要的行为。
 
-### Self-host third-party scripts
+### 自托管第三方脚本
 
 如果您希望更好地控制脚本的加载情况，可以选择自托管第三方脚本。例如，如果您想减少DNS或往返时间，请改进HTTP缓存标头或利用HTTP/2服务器推送等高级技术。如果脚本被认为是关键性的，那么自托管可能是一个可行的考虑因素。
 
 采用自托管的一些重要警告：
 
-- Scripts can go out of date. This can be a large issue as it prevents you from
-    getting important security fixes without manually updating.
+- 脚本可能会过时。这可能是一个大问题，因为它会阻止您在没有手动更新的情况下获得重要的安全修复程序。
 
 - 当API有更改，自托管的脚本无法获得自动更新。比如：发布商90％的广告收入发现，由于他们的自托管脚本没有考虑API更改，广告半天没有服务，导致收入损失。
 
@@ -336,7 +320,7 @@ A/B测试是分析用户体验和行为非常有用的工具。
 
 在这种情况下，一个很好的替代方案是仅为您提供测试用户的一部分发送A/B测试脚本（例如10％vs100％），最好尝试在服务器端确定它们是否属于测试群体。这样可以改善大多数用户的加载体验，同时仍然可以进行拆分测试。
 
-### Lazy-load Third Party Resources
+### 延迟加载第三方资源
 
 嵌入式第三方资源（例如广告或视频）可能会在构建开销较高时导致页面速度变慢。延迟加载可用于仅在必要时加载嵌入的资源。例如，仅当用户向下滚动页面时才在页脚中提供的广告。另一种模式是在主页面内容加载之后但在用户可能以其他方式与页面交互之前延迟加载内容。
 
@@ -348,7 +332,7 @@ Note： [LazySizes](https://github.com/aFarkas/lazysizes)是一个用于延迟�
 
 DoubleClick在其[官方文档](https://support.google.com/dfp_premium/answer/4578089#lazyloading)中提供了有关如何加载延迟广告的指导。如果使用得当，延迟加载可以提高广告可见度的整体百分比。例如，MediaVine调整到[延迟加载广告](https://www.mediavine.com/lazy-loading-ads-mediavine-ads-load-200-faster/)，使页面加载速度提高了200％。
 
-#### Efficient lazy-loading with Intersection Observer
+#### 使用Intersection Observer进行高效的延迟加载
 
 从历史上看，用于检测元素在视口中是否可见的解决方案（为了延迟加载其内容）容易出错，而且通常会导致浏览器变得缓慢。解决方案通常会监听[scroll](https://developer.mozilla.org/en-US/docs/Web/Events/scroll)或[resize](https://developer.mozilla.org/en-US/docs/Web/Events/resize)事件，然后使用像[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)这样的DOM API来计算元素相对于视口的位置。这虽然有效，但效率并不高。
 
@@ -384,8 +368,7 @@ Note：使用GTM时请务必小心。虽然它可以最大限度地减少第三�
 
 随着营销团队希望添加更多方式来理解用户和开发者尝试以最小化标签可能对用户体验产生的影响，管理这些标签可能会变得非常混乱。为了保持快速体验，我们建议使用标记管理器。标签管理器：
 
-- allow many pieces of third-party embed code to be managed from a single place
-    (usually a user-interface)
+- 允许从一个地方（通常是用户界面）管理许多第三方嵌入代码
 
 - 尝试降低需要部署到站点的多个第三方标记。
 
@@ -397,10 +380,9 @@ Note：即使可以异步加载各个标记，仍然需要单独读取和执行�
 
 标记管理器可以通过减少需要多次外部资源的调用来提高页面加载性能 - 只要您不拉取大量标签。它们还允许标签在一个独特的位置收集数据。对于GTM，这是[Data Layer](/tag-manager/devguide) 。如果多个第三方希望触发转化跟踪数据，则可以通过从Data Layer拉取数据来实现此目的。
 
-**Risks when using Tag managers**
+**使用标记管理器时的风险**
 
-When using a tag manager, great care needs to be taken to avoid slowing down how
-quickly pages load. This is because:
+使用标签管理器时，需要非常小心，以避免减慢页面加载的速度。这是因为：
 
 - 拥有凭据和访问权限的任何人不仅可以轻松添加更多标签，还可以添加他们想要的*任何* JavaScript。尽管标记管理器可以异步加载标记，但这仍然会导致生成和执行过多的昂贵开销的HTTP请求。你可以通过仅允许一个用户发布版本来减少这种影响。
 
@@ -438,7 +420,7 @@ Content-Security-Policy: script-src https://example.com/
 
 ```
 
-## Conclusion
+## 结论
 
 由于站点依赖于比以往更多的第三方脚本，因此最重要的是不要忽略第三方脚本性能。你可以做的有：
 
@@ -448,7 +430,7 @@ Content-Security-Policy: script-src https://example.com/
 
 在第三方脚本优化之后，应该对脚本进行持续的实时性能监控，并与第三方提供商进行沟通。网络正在快速发展中，在本地观察到的脚本性能无法保证它在未来或其他地方都能表现良好。
 
-## Further reading
+## 进一步阅读
 
 [Performance and Resilience: Stress-Testing Third Parties](https://csswizardry.com/2017/07/performance-and-resilience-stress-testing-third-parties/)
 
