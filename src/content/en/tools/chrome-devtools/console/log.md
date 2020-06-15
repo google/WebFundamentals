@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to log messages to the Console.
 
-{# wf_updated_on: 2019-04-19 #}
+{# wf_updated_on: 2020-06-19 #}
 {# wf_published_on: 2019-04-19 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -217,6 +217,8 @@ The browser logs messages to the Console, too. This usually happens when there's
 1. Click the **Log Levels** dropdown and enable the **Verbose** option if it's disabled. You'll learn more
    about filtering in the next section. You need to do this to make sure that the next message you log
    is visible.
+   **Note:** If the Default Levels dropdown is disabled, you may need to close the Console Sidebar. Filter
+   by Message Source below for more information about the Console Sidebar.
 
      <figure>
        <img src="/web/tools/chrome-devtools/console/images/enablingverbose.png"
