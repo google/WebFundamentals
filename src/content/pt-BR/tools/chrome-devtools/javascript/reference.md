@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging features.
+description: Descubra novas formas de depuração nesta referência abrangente dos recursos de depuração do Chrome DevTools.
 
 {# wf_updated_on: 2019-01-31 #} {# wf_published_on: 2017-01-04 #} {#
 wf_blink_components: Platform>DevTools #}
@@ -49,9 +49,8 @@ over](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-over-outline.svg?raw=true"
 alt="Selecting 'Step over'.">
-  <figcaption>
-    <b>Figure 1</b>. <b>Step over</b>, outlined in blue
-  </figcaption>
+  <figcaption>     <b>Figura 1</b>. <b>Step over</b>, destacado em
+azul</figcaption>
 </figure>
 
 Por exemplo, suponha que você esteja depurando o seguinte código:
@@ -83,9 +82,8 @@ para investigar mais essa função.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-into-outline.svg?raw=true"
 alt="Selecting 'Step into'.">
-  <figcaption>
-    <b>Figure 2</b>. <b>Step into</b>, outlined in blue
-  </figcaption>
+  <figcaption>     <b>Figura 2</b>. <b>Step into</b>, destacado em
+azul</figcaption>
 </figure>
 
 Por exemplo, suponha que você esteja depurando o seguinte código:
@@ -116,9 +114,8 @@ para executar o restante do código da função.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-out-outline.svg?raw=true"
 alt="Selecting 'Step out'.">
-  <figcaption>
-    <b>Figure 3</b>. <b>Step out</b>, outlined in blue
-  </figcaption>
+  <figcaption>     <b>Figura 3</b>. <b>Step out</b>, destacado em
+azul</figcaption>
 </figure>
 
 Por exemplo, suponha que você está depurando o seguinte código:
@@ -158,9 +155,8 @@ e, em seguida, faz uma pausa nessa linha.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/continue-to-here.png?raw=true"
 alt="Selecting 'Continue to here'.">
-  <figcaption>
-    <b>Figure 4</b>. Selecting <b>Continue to here</b>
-  </figcaption>
+  <figcaption>     <b>Figura 4</b>. Seleção de <b>Continue to
+here</b></figcaption>
 </figure>
 
 ### Reinicie a função principal na pilha de chamadas {: # restart-frame }
@@ -190,9 +186,7 @@ execution**.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/restart-frame.png?raw=true"
 alt="Selecting 'Restart Frame'.">
-  <figcaption>
-    <b>Figure 5</b>. Selecting <b>Restart Frame</b>
-  </figcaption>
+  <figcaption>     <b>Figura 5</b>. Seleção de <b>Restart Frame</b></figcaption>
 </figure>
 
 ### Retomar a execução do script {: #resume }
@@ -207,9 +201,8 @@ houver.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/resume-script-execution-outline.svg?raw=true"
 alt="Selecting 'Resume script execution'.">
-  <figcaption>
-    <b>Figure 6</b>. <b>Resume script execution</b>, outlined in blue
-  </figcaption>
+  <figcaption>     <b>Figura 6</b>. <b>Resume script execution</b>, destacado em
+azul</figcaption>
 </figure>
 
 #### Forçar a execução de um script {: #force-resume }
@@ -224,9 +217,8 @@ execution](https://github.com/google/WebFundamentals/blob/master/src/content/en/
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/selecting-force-script-execution.png?raw=true"
 alt="Selecting 'Force script execution'.">
-  <figcaption>
-    <b>Figure 7</b>. Selecting <b>Force script execution</b>
-  </figcaption>
+  <figcaption>     <b>Figura 7</b>. Seleção de <b>Force script
+execution</b></figcaption>
 </figure>
 
 ### Alterar o contexto de thread {: #threads }
@@ -239,9 +231,8 @@ representa  qual contexto está selecionado no momento.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/threads.svg?raw=true"
 alt="The Threads pane.">
-  <figcaption>
-    <b>Figure 8</b>. The Threads pane, outlined in blue
-  </figcaption>
+  <figcaption>     <b>Figura 8</b>. O painel Threads, destacado em
+azul</figcaption>
 </figure>
 
 Por exemplo, suponha que você está pausado em um breakpoint no script principal
@@ -263,9 +254,8 @@ closures.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/scope.svg?raw=true"
 alt="The Scope pane.">
-  <figcaption>
-    <b>Figure 9</b>. The Scope pane, outlined in blue
-  </figcaption>
+  <figcaption>     <b>Figura 9</b>. O painel Scope, destacado em
+azul</figcaption>
 </figure>
 
 ## Veja a atual pilha de chamadas {: #call-stack }
@@ -284,9 +274,8 @@ destacando no momento.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/call-stack.svg?raw=true"
 alt="The Call Stack pane.">
-  <figcaption>
-    <b>Figure 10</b>. The Call Stack pane, outlined in blue
-  </figcaption>
+  <figcaption>     <b>Figura 10</b>. O painel Call Stack, destacado em
+azul</figcaption>
 </figure>
 
 Nota: Quando não estiver em pausa numa linha de código, o painel Call Stack
@@ -306,9 +295,8 @@ para a área de transferência.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/copy-stack-trace.png?raw=true"
 alt="Selecting 'Copy Stack Trace'.">
-  <figcaption>
-    <b>Figure 11</b>. Selecting <b>Copy Stack Trace</b>
-  </figcaption>
+  <figcaption>     <b>Figura 11</b>. Seleção de <b>Copy Stack
+Trace</b></figcaption>
 </figure>
 
 Abaixo está um exemplo do resultado:
@@ -352,9 +340,8 @@ Para aplicar a caixa preta em um script no painel Editor:
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/blackbox-editor-pane.png?raw=true"
 alt="Blackboxing a script from the Editor pane.">
-  <figcaption>
-    <b>Figure 12</b>. Blackboxing a script from the Editor pane
-  </figcaption>
+  <figcaption>     <b>Figura 12</b>. Blackbox script no painel
+Editor</figcaption>
 </figure>
 
 ### Caixa preta de um script no painel Call Stack {: #call-stack-blackbox }
@@ -368,9 +355,8 @@ Para aplicar a caixa preta em um script no painel Call Stack:
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/blackbox-call-stack-pane.png?raw=true"
 alt="Blackboxing a script from the Call Stack pane.">
-  <figcaption>
-    <b>Figure 13</b>. Blackboxing a script from the Call Stack pane
-  </figcaption>
+  <figcaption>     <b>Figura 13</b>. Blackbox script no painel Call
+Stack</figcaption>
 </figure>
 
 ### Scripts de caixa preta nas configurações {: #settings-blackbox }
@@ -389,9 +375,7 @@ caixa preta.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/blackbox.png?raw=true"
 alt="Blackboxing a script from Settings.">
-  <figcaption>
-    <b>Figure 14</b>. Blackboxing a script from Settings
-  </figcaption>
+  <figcaption>     <b>Figura 14</b>. Blackbox script em Settings</figcaption>
 </figure>
 
 ## Executar snippets de código em qualquer página {: #snippets }
@@ -412,7 +396,7 @@ pode assistir a qualquer expressão JavaScript válida.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/watch.svg?raw=true"
 alt="The Watch pane.">
-  <figcaption><b>Figure 15</b>. The Watch pane, outlined in blue</figcaption>
+  <figcaption><b>Figura 15</b>. O painel Watch, destacado em azul</figcaption>
 </figure>
 
 - Clique em **Add Expression** ![Add
@@ -436,7 +420,7 @@ para tornar um arquivo minificado legível para humanos.
   <img
 src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/format.svg?raw=true"
 alt="The Format button.">
-  <figcaption><b>Figure 16</b>. <b>Format</b>, outlined in blue</figcaption>
+  <figcaption><b>Figura 16</b>. <b>Format</b>, destacado em azul</figcaption>
 </figure>
 
 ## Editar um script {: #edit }
