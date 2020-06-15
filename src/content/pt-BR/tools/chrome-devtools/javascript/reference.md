@@ -54,7 +54,7 @@ alt="Selecting 'Step over'.">
   </figcaption>
 </figure>
 
-For example, suppose you're debugging the following code:
+Por exemplo, suponha que você esteja depurando o seguinte código:
 
 ```
 function updateHeader() {
@@ -88,7 +88,7 @@ alt="Selecting 'Step into'.">
   </figcaption>
 </figure>
 
-For example, suppose you're debugging the following code:
+Por exemplo, suponha que você esteja depurando o seguinte código:
 
 ```
 function updateHeader() {
@@ -170,7 +170,7 @@ mouse em qualquer lugar no painel Call Stack e selecione **Restart Frame** para
 pausar na primeira linha da função principal em sua pilha de chamadas. A função
 que estiver acima é a última função que foi chamada.
 
-For example, suppose you're stepping through the following code:
+Por exemplo, suponha que você esteja percorrendo o seguinte código:
 
 ```
 function factorial(n) {
@@ -256,7 +256,7 @@ Enquanto pausado em uma linha de código, use o painel Scope para visualizar e
 editar os valores de propriedades e variáveis nos escopos local, global e
 closures.
 
-- Double-click a property value to change it.
+- Clique duas vezes em um valor de propriedade para alterá-lo.
 - Propriedades não enumeráveis são ignoradas.
 
 <figure>
@@ -326,7 +326,7 @@ durante a depuração. Quando estiver em caixa preta, um script é obscurecido n
 painel Call Stack e você nunca entra nas funções do script quando percorre seu
 código.
 
-For example, suppose you're stepping through this code:
+Por exemplo, suponha que você esteja percorrendo este código:
 
 ```
 function animate() {
@@ -344,8 +344,8 @@ faz sentido usar a caixa preta script.
 
 Para aplicar a caixa preta em um script no painel Editor:
 
-1. Open the file.
-2. Right-click anywhere.
+1. Abra o arquivo.
+2. Clique com o botão direito em qualquer lugar.
 3. Selecione **Blackbox script**.
 
 <figure>
@@ -361,7 +361,7 @@ alt="Blackboxing a script from the Editor pane.">
 
 Para aplicar a caixa preta em um script no painel Call Stack:
 
-1. Right-click on a function from the script.
+1. Clique com o botão direito do mouse em uma função do script.
 2. Selecione **Blackbox script**.
 
 <figure>
@@ -405,8 +405,8 @@ página](/web/tools/chrome-devtools/snippets) para saber mais.
 
 ## Assista os valores das expressões personalizadas de JavaScript {: #watch }
 
-Use the Watch pane to watch the values of custom expressions.
-You can watch any valid JavaScript expression.
+Use o painel Watch para observar os valores das expressões personalizadas. Você
+pode assistir a qualquer expressão JavaScript válida.
 
 <figure>
   <img
@@ -445,10 +445,10 @@ Ao corrigir um bug, muitas vezes você precisa testar algumas alterações no se
 código  JavaScript. Você não precisa fazer as alterações em uma fonte externa e,
 em seguida, recarregar  a página. Você pode editar seu script no DevTools.
 
-To edit a script:
+Para editar um script:
 
 1. Abra o arquivo no painel Editor do painel Sources.
-2. Make your changes in the Editor pane.
+2. Faça suas alterações no painel Editor.
 3. Pressione <kbd>Command</kbd>+<kbd>S</kbd> (Mac) ou
 <kbd>Ctrl</kbd>+<kbd>S</kbd> (Windows, Linux) para salvar. O DevTools corrige
 todo o arquivo JS no mecanismo JavaScript do Chrome.
