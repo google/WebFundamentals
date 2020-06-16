@@ -1,6 +1,6 @@
 /**
- * @fileoverview Ensure that Workbox reference docs that shouldn't be indexed
- * have the appropriate <meta> tag.
+ * @fileoverview Ensures versioned Workbox reference docs that shouldn't be
+ * indexed have the appropriate <meta> tag.
  *
  * See https://github.com/GoogleChrome/workbox/issues/2513
  *
