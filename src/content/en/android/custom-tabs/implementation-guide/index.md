@@ -15,7 +15,7 @@ lifecycle of both the application and the custom tab activity.
 If you follow the guidance from this page, you will be able to create a great integration.
 
 The first step for a Custom Tabs integration is adding the [AndroidX Browser Library][2] to your
-project. Open the `app/build.gradle` file and add the support library to the dependencies section.
+project. Open the `app/build.gradle` file and add the browser library to the dependencies section.
 
 ```gradle
 dependencies {
