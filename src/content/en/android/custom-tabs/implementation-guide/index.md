@@ -31,7 +31,7 @@ Once the Browser Library is added to your project there are two sets of possible
 
 The UI Customizations are done by using the [`CustomTabsIntent`][3] and the
 [`CustomTabsIntent.Builder`][4] classes; the performance improvements are achieved by using the
-[`CustomTabsClient`][5] to connect to the Custom Tabs service, warm-up Chrome and let it know which
+[`CustomTabsClient`][5] to connect to the Custom Tabs service, warm-up the browser and let it know which
 urls will be opened.
 
 ## Opening a Custom Tab
