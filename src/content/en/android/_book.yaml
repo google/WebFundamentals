@@ -15,6 +15,6 @@ upper_tabs:
     - name: Trusted Web Activity
       contents:
       - include: /web/android/trusted-web-activity/_toc.yaml
-#      - name: Custom Tabs
-#        contents:
-#          - include: /web/android/custom-tabs/_toc.yaml
+    - name: Custom Tabs
+      contents:
+      - include: /web/android/custom-tabs/_toc.yaml
