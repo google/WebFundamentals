@@ -24,7 +24,7 @@ dependencies {
 }
 ```
 
-Once the Support Library is added to your project there are two sets of possible customizations:
+Once the Browser Library is added to your project there are two sets of possible customizations:
 
 - Customizing the UI and interaction with the custom tabs.
 - Making the page load faster, and keeping the application alive.
