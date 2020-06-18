@@ -65,7 +65,6 @@ function exportAndUpdate(srcPath, destBase, flatten, bookPath, projPath) {
 }
 
 
-
 gulp.task('claat:ilt-pwa', function() {
   const srcPath = 'src/data/ilt-pwa';
   const destPath = path.join(global.WF.src.content, 'ilt/pwa');
