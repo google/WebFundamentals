@@ -105,7 +105,8 @@ toc:
       - title: Lazy Loading Resources
         section:
           - title: Images and Video
-            path: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
+            path: https://web.dev/fast
+            status: external
       - title: Order Loading Thoughtfully
         section:
         - title: Critical Rendering Path

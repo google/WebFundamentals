@@ -17,6 +17,7 @@ const buildJSDocs = require('../reference-docs/build-js-docs');
 gulp.task('workbox', [
     'workbox-generate-contributors',
     'workbox-generate-includes',
+    'workbox-no-index',
   ], async () => {
   const toolsPath =
       path.join(__dirname, '..', '..', 'src', 'content', 'en', 'tools');
