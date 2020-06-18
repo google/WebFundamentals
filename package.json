@@ -21,6 +21,7 @@
     "eslint": "^4.12.0",
     "eslint-config-google": "^0.9.1",
     "gulp-remark": "^3.0.0",
+    "gulp-replace": "^1.0.0",
     "husky": "^0.14.3",
     "inquirer": "^3.3.0",
     "jsdoc-baseline": "^0.1.5",

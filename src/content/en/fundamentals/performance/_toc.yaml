@@ -5,7 +5,8 @@ toc:
     - title: Overview
       path: /web/fundamentals/performance/why-performance-matters/
     - title: Measure Performance with the RAIL Model
-      path: /web/fundamentals/performance/rail
+      path: https://web.dev/rail/
+      status: external
     - title: Loading Performance
       section:
       - title: Overview
@@ -104,7 +105,8 @@ toc:
       - title: Lazy Loading Resources
         section:
           - title: Images and Video
-            path: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
+            path: https://web.dev/fast
+            status: external
       - title: Order Loading Thoughtfully
         section:
         - title: Critical Rendering Path

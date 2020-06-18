@@ -64,6 +64,12 @@ redirects:
 - from: /web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps
   to: https://web.dev/android-payment-apps-overview/
 
+- from: /web/fundamentals/performance/rail
+  to:  https://web.dev/rail/
+
+- from: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
+  to: https://web.dev/fast/
+
 - from: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
   to: https://web.dev/http-cache/
 
