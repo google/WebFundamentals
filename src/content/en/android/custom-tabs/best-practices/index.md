@@ -3,18 +3,18 @@ book_path: /web/android/_book.yaml
 description: Best Practices for Custom Tabs implementations.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-06-17 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Best Practices {: .page-title }
 
-Since Chrome Custom Tabs was launched, we've seen various implementations with different levels of
+Since Custom Tabs was launched, we've seen various implementations with different levels of
 quality. This section describes a set of best practices we've found to create a good integration.
 
 ## Connect to the Custom Tabs service and call `warmup()`
 
 You can **save up to 700 ms** when opening a link with the Custom Tabs by connecting to the service
-and pre-loading Chrome.
+and pre-loading the browser.
 
 Connect to the Custom Tabs service on the [`onStart()`][1] method of the Activities you plan to
 launch a Custom Tab from. Upon connection, call [`warmup()`][2].
@@ -52,7 +52,7 @@ let them know you are sending them users by setting the referrer when launching 
 
 ```
 intent.putExtra(Intent.EXTRA_REFERRER, 
-        Uri.parse(Intent.URI_ANDROID_APP_SCHEME + "//" + context.getPackageName()));
+        Uri.parse("android-app://" + context.getPackageName()));
 ```
 
 ## Add custom animations
@@ -109,7 +109,10 @@ the link
 public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
     PackageManager pm = context.getPackageManager();
     // Get default VIEW intent handler.
-    Intent activityIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.example.com"));
+    Intent activityIntent = new Intent()
+        .setAction(Intent.ACTION_VIEW)
+        .addCategory(Intent.CATEGORY_BROWSABLE)
+        .setData(Uri.fromParts("http", "", null));
 
     // Get all apps that can handle VIEW intents.
     List<ResolveInfo> resolvedActivityList = pm.queryIntentActivities(activityIntent, 0);
@@ -154,27 +157,14 @@ CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
 intentBuilder.setToolbarColor(Color.BLUE);
 ```
 
-## Add a Share Action
+## Enable the default Share Action or add your own
 
-Make sure you add the Share Action to the overflow menu, as users expect to be able to share the
-link to the content they are seeing in most use cases, and Custom Tabs doesn’t add one by default.
+Make sure you eanble the Share Action to the overflow menu, as users expect to be able to share the
+link to the content they are seeing in most use cases:
 
 ```java
-//Sharing content from CustomTabs with on a BroadcastReceiver
-public void onReceive(Context context, Intent intent) {
-    String url = intent.getDataString();
-
-    if (url != null) {
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, url);
-
-        Intent chooserIntent = Intent.createChooser(shareIntent, "Share url");
-        chooserIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        context.startActivity(chooserIntent);
-    }
-}
+    CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
+    intentBuilder.addDefaultShareMenuItem();
 ```
 
 ## Customize the close button
@@ -234,8 +224,8 @@ clicks multiple times on the same link and does not open a Custom Tab multiple t
 
 {% include "web/_shared/helpful.html" %}
 
-[1]: http://developer.android.com/reference/android/app/Activity.html#onStart()
-[2]: http://developer.android.com/reference/android/support/customtabs/CustomTabsClient.html#warmup%28long%29
-[3]: http://developer.android.com/reference/android/support/customtabs/CustomTabsSession.html#mayLaunchUrl%28android.net.Uri,%20android.os.Bundle,%20java.util.List%3Candroid.os.Bundle%3E%29
-[4]: http://developer.android.com/reference/android/webkit/WebView.html
-[5]: http://developer.android.com/reference/android/widget/TextView.html#attr_android:autoLink
+[1]: https://developer.android.com/reference/android/app/Activity.html#onStart()
+[2]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)
+[3]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,%20android.os.Bundle,%20java.util.List%3Candroid.os.Bundle%3E)
+[4]: https://developer.android.com/reference/android/webkit/WebView.html
+[5]: https://developer.android.com/reference/android/widget/TextView.html#attr_android:autoLink

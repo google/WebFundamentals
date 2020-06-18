@@ -3,13 +3,13 @@ book_path: /web/android/_book.yaml
 description: Low Level Custom Tabs API
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2020-06-17 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Low level API {: .page-title }
 
-Although the recommended method to integrate your application with Custom Tabs is using the Custom
-Tabs Support Library, a low level implementation is also available.
+Although the recommended method to integrate your application with Custom Tabs is using the
+AndroidX Browser Library, a low level implementation is also available.
 
 The complete implementation of the Support Library is available on [Github][1] and an be used as a
 start point. It also contains the [AIDL files][2] required to connect to the service, as the ones
@@ -80,5 +80,5 @@ context.bindService(serviceIntent, mServiceConnection,
 {% include "web/_shared/helpful.html" %}		
 
 [1]: https://github.com/GoogleChrome/custom-tabs-client/tree/master/customtabs
-[2]: http://developer.android.com/guide/components/aidl.html
-[3]: http://developer.android.com/reference/android/support/customtabs/CustomTabsIntent.html
+[2]: https://developer.android.com/guide/components/aidl.html
+[3]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent
