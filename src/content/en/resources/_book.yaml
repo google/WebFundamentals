@@ -13,23 +13,10 @@ upper_tabs:
         contents:
         - title: Overview
           path: /web/resources/
-        - title: Writing an article
-          path: /web/resources/writing-an-article
-        - title: Writing an update or case study
-          path: /web/resources/writing-an-update
-        - title: YAML Front Matter & Attribute Reference
-          path: /web/resources/yaml-and-attr-reference
-        - title: Writing style guide
-          path: /style/
+        - title: DevSite Reference Guide
+          path: https://developers.google.com/devsite/reference
           status: external
-        - title: Markdown syntax
-          path: /web/resources/markdown-syntax
-        - title: Widgets
-          path: /web/resources/widgets
-        - title: Including videos
-          path: /web/resources/including-videos
-        - title: Contributors
-          path: /web/resources/contributors
         - title: Translation guidance
           path: /web/resources/translations
-
+        - title: Contributors
+          path: /web/resources/contributors
