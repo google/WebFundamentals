@@ -4,7 +4,7 @@ description: Introduction to ARIA and non-native HTML semantics
 
 
 {# wf_blink_components: Blink>Accessibility #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2020-06-15 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introduction to ARIA {: .page-title }
@@ -119,7 +119,7 @@ with plain HTML.
 
 <div class="clearfix"></div>
 
-    <div aria-live="true">
+    <div aria-live="polite">
       <span>GOOG: $400</span>
     </div>
 
