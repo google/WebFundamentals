@@ -64,13 +64,7 @@ function exportAndUpdate(srcPath, destBase, flatten, bookPath, projPath) {
   });
 }
 
-gulp.task('claat:codelabs', function() {
-  const srcPath = 'src/data/codelabs';
-  const destPath = path.join(global.WF.src.content, 'fundamentals/codelabs');
-  const bookPath = '/web/fundamentals/_book.yaml';
-  const projPath = '/web/fundamentals/_project.yaml';
-  return exportAndUpdate(srcPath, destPath, false, bookPath, projPath);
-});
+
 
 gulp.task('claat:ilt-pwa', function() {
   const srcPath = 'src/data/ilt-pwa';
@@ -81,9 +75,5 @@ gulp.task('claat:ilt-pwa', function() {
 });
 
 gulp.task('claat:all', function(callback) {
-  runSequence(
-    ['claat:codelabs',
-    'claat:ilt-pwa'],
-    callback
-  );
+  runSequence(['claat:ilt-pwa'], callback);
 });

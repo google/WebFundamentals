@@ -40,6 +40,21 @@ redirects:
 - from: /web/fundamentals/accessibility/accessible-styles
   to:  https://web.dev/accessible/#create-a-design-and-css-that-supports-users-with-different-needs
 
+- from: /web/fundamentals/codelabs/offline/...
+  to: https://codelabs.developers.google.com/codelabs/offline/
+
+- from: /web/fundamentals/codelabs/payment-request-api/...
+  to: https://codelabs.developers.google.com/codelabs/payment-request-api/
+
+- from: /web/fundamentals/codelabs/push-notifications/...
+  to: https://codelabs.developers.google.com/codelabs/push-notifications/
+
+- from: /web/fundamentals/codelabs/web-perf/...
+  to: https://codelabs.developers.google.com/codelabs/web-perf/
+
+- from: /web/fundamentals/codelabs/...
+  to: https://codelabs.developers.google.com/?cat=Web
+
 - from: /web/fundamentals/design-and-ux/responsive
   to: https://web.dev/responsive-web-design-basics/
 
