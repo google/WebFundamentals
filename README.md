@@ -29,9 +29,9 @@ git clone https://github.com/google/WebFundamentals.git
 
 ## Getting set up
 The new DevSite infrastructure simplifies the dependencies a lot. Ensure
-you have [Node](https://nodejs.org/en/) 10 or greater, and the
-[AppEngine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
-already installed.
+you have [Python](https://www.python.org/downloads/), [Node](https://nodejs.org/en/) 10-12, and the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts) already installed.
+
+Login to [Google Cloud via command line](https://cloud.google.com/sdk/gcloud/reference/auth/login).
 
 1. Run `npm install` (needed for the build process)
 
