@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Step over code, set breakpoints, and resolve stack traces in your source languages from within DevTools.
 
-{# wf_updated_on: 2019-12-05 #}
+{# wf_updated_on: 2020-06-19 #}
 {# wf_published_on: 2019-12-05 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -48,11 +48,13 @@ On the other hand, many native languages already have a common debugging format,
 While there are still some WebAssembly-specific features that need to be added for full compatibility, compilers like Clang and Rust already support emitting DWARF information in WebAssembly modules, which enabled the DevTools team to start using it
 directly in DevTools.
 
-As a first step, DevTools now supports native source mapping using this information, so you can start debugging Wasm modules produced by any of these compilers without resorting to the disassembled format or having to use any custom scripts.
+As the first step, DevTools now supports native source mapping using this information, so you can start debugging Wasm modules produced by any of these compilers without resorting to the disassembled format or having to use any custom scripts.
 
-Instead, you just need to tell your compiler to include debug info like you normally would on other platforms. For example, in Clang this can be done by passing the `-g` flag during compilation:
+Instead, you just need to tell your compiler to include debug info like you normally would on other platforms. For example, in Clang and Emscripten this can be done by passing a `-g` flag during compilation:
 
-    clang -g ...sources… -target wasm32 -o out.wasm
+    clang -g …sources… -target wasm32 -o out.wasm
+
+    emcc -g …sources… -o out.js
 
 You can use same `-g` flag in Rust:
 
@@ -72,7 +74,7 @@ This new DevTools integration with DWARF already covers support for stepping ove
 ## The future
 
 There is still quite a bit of work to do though.
-For example, on the tooling side, Emscripten (Binaryen) and wasm-pack (wasm-bindgen) don’t support updating DWARF information on transformations they perform yet. For now, they won’t benefit from this integration. 
+For example, on the tooling side, ~~Emscripten (Binaryen) and~~ wasm-pack (wasm-bindgen) doesn’t support updating DWARF information on transformations they perform yet. For now, they won’t benefit from this integration. 
 
 And on the Chrome DevTools side, we’ll be evolving integration more over time to ensure a seamless debugging experience, including: 
 
@@ -82,5 +84,7 @@ And on the Chrome DevTools side, we’ll be evolving integration more over time 
 * …and much more!
 
 Stay tuned for future updates!
+
+*Updated 2020-06-19*: The original blog post used to state that Emscripten doesn’t support DWARF yet. This has been fixed since, and Emscripten preserves debug information end-to-end, throughout any transformations and optimisations.
 
 {% include "web/_shared/rss-widget-updates.html" %}
