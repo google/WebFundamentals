@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2019-09-01 #}
+{# wf_updated_on: 2020-06-19 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Content Security Policy {: .page-title }
