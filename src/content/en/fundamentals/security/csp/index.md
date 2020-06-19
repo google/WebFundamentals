@@ -234,7 +234,7 @@ This can't be used for `frame-ancestors`, `report-uri`, or `sandbox`.
 
 It should be clear that CSP is based on allowlist origins, as that's an
 unambiguous way of instructing the browser to treat specific sets of resources
-as acceptable and to reject the rest. Origin-based allowlist doesn't,
+as acceptable and to reject the rest. Origin-based allowlists don't,
 however, solve the biggest threat posed by XSS attacks: inline script injection.
 If an attacker can inject a script tag that directly contains some malicious
 payload (<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>),
