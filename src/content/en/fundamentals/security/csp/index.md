@@ -35,13 +35,13 @@ This overview highlights a defense that can significantly reduce the risk and
 impact of XSS attacks in modern browsers: Content Security Policy (CSP).
 
 ### TL;DR {: .hide-from-toc }
-* Use whitelists to tell the client what's allowed and what isn't.
+* Use allowlists to tell the client what's allowed and what isn't.
 * Learn what directives are available.
 * Learn the keywords they take.
 * Inline code and `eval()` are considered harmful.
 * Report policy violations to your server before enforcing them.
 
-## Source whitelists
+## Source allowlists
 
 
 The issue exploited by XSS attacks is the browser's inability to distinguish
@@ -55,10 +55,10 @@ probably isn't. The browser happily downloads and executes any code a page
 requests, regardless of source.
 
 Instead of blindly trusting _everything_ that a server delivers, CSP defines the
-`Content-Security-Policy` HTTP header, which allows you to create a whitelist of
+`Content-Security-Policy` HTTP header, which allows you to create a allowlist of
 sources of trusted content, and instructs the browser to only execute or render
 resources from those sources. Even if an attacker can find a hole through which
-to inject script, the script won't match the whitelist, and therefore won't be
+to inject script, the script won't match the allowlist, and therefore won't be
 executed.
 
 Since we trust `apis.google.com` to deliver valid code, and we trust ourselves
@@ -232,9 +232,9 @@ This can't be used for `frame-ancestors`, `report-uri`, or `sandbox`.
 
 ## Inline code is considered harmful
 
-It should be clear that CSP is based on whitelisting origins, as that's an
+It should be clear that CSP is based on allowlisting origins, as that's an
 unambiguous way of instructing the browser to treat specific sets of resources
-as acceptable and to reject the rest. Origin-based whitelisting doesn't,
+as acceptable and to reject the rest. Origin-based allowlisting doesn't,
 however, solve the biggest threat posed by XSS attacks: inline script injection.
 If an attacker can inject a script tag that directly contains some malicious
 payload (<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>),
@@ -301,7 +301,7 @@ out-of-line, but that's a tradeoff that's well worth making.
 ### If you absolutely must use it ...
 
 CSP Level 2 offers backward compatibility for inline scripts by allowing you to
-whitelist specific inline scripts using either a cryptographic nonce (number
+allowlist specific inline scripts using either a cryptographic nonce (number
 used once) or a hash. Although this may be cumbersome, it is useful
 in a pinch.
 
