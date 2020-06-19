@@ -301,7 +301,7 @@ out-of-line, but that's a tradeoff that's well worth making.
 ### If you absolutely must use it ...
 
 CSP Level 2 offers backward compatibility for inline scripts by allowing you to
-allowlist specific inline scripts using either a cryptographic nonce (number
+add specific inline scripts to the allowlist using either a cryptographic nonce (number
 used once) or a hash. Although this may be cumbersome, it is useful
 in a pinch.
 
