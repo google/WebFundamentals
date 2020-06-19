@@ -55,7 +55,7 @@ probably isn't. The browser happily downloads and executes any code a page
 requests, regardless of source.
 
 Instead of blindly trusting _everything_ that a server delivers, CSP defines the
-`Content-Security-Policy` HTTP header, which allows you to create a allowlist of
+`Content-Security-Policy` HTTP header, which allows you to create an allowlist of
 sources of trusted content, and instructs the browser to only execute or render
 resources from those sources. Even if an attacker can find a hole through which
 to inject script, the script won't match the allowlist, and therefore won't be
@@ -232,9 +232,9 @@ This can't be used for `frame-ancestors`, `report-uri`, or `sandbox`.
 
 ## Inline code is considered harmful
 
-It should be clear that CSP is based on allowlisting origins, as that's an
+It should be clear that CSP is based on allowlist origins, as that's an
 unambiguous way of instructing the browser to treat specific sets of resources
-as acceptable and to reject the rest. Origin-based allowlisting doesn't,
+as acceptable and to reject the rest. Origin-based allowlist doesn't,
 however, solve the biggest threat posed by XSS attacks: inline script injection.
 If an attacker can inject a script tag that directly contains some malicious
 payload (<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>),
