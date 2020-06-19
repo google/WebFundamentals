@@ -133,7 +133,7 @@ auditoria</figcaption>
 ### Veja também: Extensão aXe {: #axe }
 
 Você pode preferir usar a [extensão
-aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US){:.external}
+aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd){:.external}
 em vez do painel Audits. Eles geralmente fornecem as mesmas informações, já que
 aXe é o mecanismo subjacente que alimenta o Painel Audits. A extensão aXe tem
 uma UI diferente e descreve as auditorias de uma forma ligeiramente diferente.
