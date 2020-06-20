@@ -2131,16 +2131,6 @@ kinukoyasuda:
   description:
     en: "Software Engineer at Google working on the web platform"
 
-maciejzasada:
-  name:
-    given: Maciej
-    family: Zasada
-  org:
-    name: UNIT9
-  country: UK
-  role:
-    - author
-  email: maciej@unit9.com
 jecelynyeen:
   name:
     given: Jecelyn
@@ -2157,3 +2147,14 @@ jecelynyeen:
   email: jec@google.com
   description:
     en: Developer advocate working on Chrome DevTools at Google
+
+maciejzasada:
+  name:
+    given: Maciej
+    family: Zasada
+  org:
+    name: UNIT9
+  country: UK
+  role:
+    - author
+  email: maciej@unit9.com
