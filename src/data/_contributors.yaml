@@ -2141,3 +2141,19 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
+jecelynyeen:
+  name:
+    given: Jecelyn
+    family: Yeen
+  org:
+    name: Google
+    unit: Developer Relations
+  country: Germany
+  role:
+    - author
+  homepage: https://jec.fyi
+  twitter: JecelynYeen
+  github: chybie
+  email: jec@google.com
+  description:
+    en: Developer advocate working on Chrome DevTools at Google
