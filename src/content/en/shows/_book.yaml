@@ -39,7 +39,6 @@ upper_tabs:
           section:
           - include: /web/shows/pwa-devsummit/_toc.yaml
           - include: /web/shows/polymer-devsummit/_toc.yaml
-        - include: /web/shows/lazyweb/_toc.yaml
         - include: /web/shows/polycasts/_toc.yaml
         - include: /web/shows/udacity/_toc.yaml
         - include: /web/shows/webrtc/_toc.yaml

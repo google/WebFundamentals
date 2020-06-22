@@ -32,6 +32,10 @@ redirects:
 - from: /web/shows/google-io/2016/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP
 
+- from: /web/shows/lazyweb/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAphRfFANEdt5WTb87aZZDk
+
+
 
 - from: /web/shows/feed.xml
   to: /web/shows/rss.xml
@@ -66,8 +70,6 @@ redirects:
 - from: /web/shows/new-in-chrome/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
 
-- from: /web/shows/lazyweb/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAphRfFANEdt5WTb87aZZDk
 
 - from: /web/shows/devbytes/...
   to: https://www.youtube.com/user/ChromeDevelopers/
