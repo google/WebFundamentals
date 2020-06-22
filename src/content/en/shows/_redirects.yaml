@@ -50,21 +50,14 @@ redirects:
 - from: /web/shows/webrtc/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICT_h7pn39XpU4JkqOja3p-
 
-- from: /web/shows/feed.xml
-  to: /web/shows/rss.xml
-
-- from: /web/shows/http203/series-1/
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-
-- from: /web/shows/http203/series-2/
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-
-- from: /web/shows/http203/series-3/
+- from: /web/shows/http203/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
 
 - from: /web/shows/new-in-chrome/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
 
+- from: /web/shows/feed.xml
+  to: /web/shows/rss.xml
 
-- from: /web/shows/devbytes/...
+- from: /web/shows/...
   to: https://www.youtube.com/user/ChromeDevelopers/

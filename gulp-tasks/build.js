@@ -192,14 +192,13 @@ gulp.task('build:showcase', function() {
 gulp.task('build:shows', async function() {
   gutil.log(' ', 'Generating recent videos...');
   await wfYouTubeShows.getVideos(global.WF.options.buildType).then((videos) => {
+    // Define the variables we'll use
+    let context;
+    let template;
+    let outputFile;
+
     // build the RSS & ATOM feeds
     wfYouTubeShows.buildFeeds(videos);
-
-    // build the shows index.md page
-    let context = {videos};
-    let template = path.join(global.WF.src.templates, 'shows', 'index.md');
-    let outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
-    wfTemplateHelper.renderTemplate(template, context, outputFile);
 
     // build the latest show widget
     context = {video: videos[0]};

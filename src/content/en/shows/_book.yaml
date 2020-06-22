@@ -11,25 +11,14 @@ upper_tabs:
       other:
       - name: Shows
         contents:
-        - title: Home
+        - title: Chrome Developers on YouTube
           path: /web/shows/
-        - title: New in Chrome
-          path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
-          status: external
-        - title: New in Chrome DevTools
-          path: https://www.youtube.com/watch?list=PLNYkxOF6rcIBDSojZWBv4QJNoT4GNYzQD
           status: external
         - include: /web/shows/designer-vs-developer/_toc.yaml
-        - title: A11ycasts with Rob Dodson
-          path: https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g
-          status: external
         - title: HTTP203
           section:
+          - title: Podcasts
+            path: /web/shows/http203/podcast/
           - title: YouTube
             path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
             status: external
-          - title: Podcasts
-            path: /web/shows/http203/podcast/
-        - title: Developer Diary with Paul Lewis
-          path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBykcJ7bvTpqU7vt-oey72J
-          status: external
