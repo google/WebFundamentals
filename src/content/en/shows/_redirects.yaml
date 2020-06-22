@@ -26,14 +26,23 @@ redirects:
 - from: /web/shows/cds/2016/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj
 
+- from: /web/shows/designer-vs-developer/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ
+
 - from: /web/shows/google-io/2014/...
   to: https://www.youtube.com/playlist?list=PLOU2XLYxmsII8L540LbY5hdC23cmoZMhV
 
 - from: /web/shows/google-io/2016/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP
 
+- from: /web/shows/http203/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
+
 - from: /web/shows/lazyweb/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAphRfFANEdt5WTb87aZZDk
+
+- from: /web/shows/new-in-chrome/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
 
 - from: /web/shows/polycasts/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo
@@ -49,12 +58,6 @@ redirects:
 
 - from: /web/shows/webrtc/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICT_h7pn39XpU4JkqOja3p-
-
-- from: /web/shows/http203/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-
-- from: /web/shows/new-in-chrome/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
 
 - from: /web/shows/feed.xml
   to: /web/shows/rss.xml
