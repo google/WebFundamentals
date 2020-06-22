@@ -47,6 +47,9 @@ redirects:
 - from: /web/shows/ttt/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIB3ci6nwNyLYNU6RDOU3YyL
 
+- from: /web/shows/webrtc/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICT_h7pn39XpU4JkqOja3p-
+
 - from: /web/shows/feed.xml
   to: /web/shows/rss.xml
 
@@ -58,9 +61,6 @@ redirects:
 
 - from: /web/shows/http203/series-3/
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-
-- from: /web/shows/webrtc/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICT_h7pn39XpU4JkqOja3p-
 
 - from: /web/shows/new-in-chrome/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
