@@ -35,7 +35,7 @@ Muted autoplay for video is supported by Chrome for Android as of version 53. Pl
       <source src="video.webm" type="video/webm" />
       <source src="video.mp4" type="video/mp4" />
     </video>
-    
+
 
 You can see this in action by visiting [this sample](https://googlechrome.github.io/samples/muted-autoplay/index.html). Playback of the `muted` video starts automatically in Chrome 53 or later.
 
@@ -72,7 +72,7 @@ Compare the following — the first is a video and the second is an animated GIF
 
 They look pretty similar, but the video is less than 200KB in size and the animated GIF is over 900KB.
 
-Chrome and other browser vendors are extremely cautious about user bandwidth. For many users in many contexts [high data cost is often a greater barrier to access than poor connectivity](/web/billions/#conserve-data-usage). Given the prevalence of workarounds, muted autoplay isn't something that can be blocked, so offering good APIs and defaults is the best the platform can do.
+Chrome and other browser vendors are extremely cautious about user bandwidth. For many users in many contexts high data cost is often a greater barrier to access than poor connectivity. Given the prevalence of workarounds, muted autoplay isn't something that can be blocked, so offering good APIs and defaults is the best the platform can do.
 
 The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html). Designers and developers continue to find new and unforeseen ways to use video — and they want consistent behavior across platforms, for example when using background video as a design element. Muted autoplay enables functionality like this on both mobile and desktop.
 
@@ -95,5 +95,3 @@ The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/c
 * [Intent to Implement](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/Q1cnzNI2GpI)
 * [Feature dashboard](https://www.chromestatus.com/features/4864052794753024)
 * [Convert animated GIFs to videos with ffmpeg](http://rigor.com/blog/2015/12/optimizing-animated-gifs-with-html5-video)
-
-

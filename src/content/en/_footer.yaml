@@ -29,7 +29,7 @@ footer:
       path: https://developers.chrome.com/extensions/api_index
     - label: Site-Kit Plugin for WordPress
       path: https://sitekit.withgoogle.com/
-    - label: Developer Feedback Program
+    - label: How to file a good browser bug
       path: /web/feedback/
     - label: Progressive Web Apps
       path: https://web.dev/progressive-web-apps/
