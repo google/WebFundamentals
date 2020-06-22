@@ -2,6 +2,19 @@
 
 redirects:
 
+- from: /web/shows/blinkon/4/...
+  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UJNn8CSB0YFywnNIjfDXH5i
+
+- from: /web/shows/blinkon/5/...
+  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UKZdsQFXJJWrwgZAgeAaFWa
+
+- from: /web/shows/blinkon/6/...
+  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UL-7hTmxb3WQjMwQmANbVPL
+
+- from: /web/shows/blinkon/...
+  to: https://www.youtube.com/user/blinkontalks/
+
+
 - from: /web/shows/feed.xml
   to: /web/shows/rss.xml
 
@@ -58,15 +71,3 @@ redirects:
 
 - from: /web/shows/cds/2013/...
   to: https://www.youtube.com/playlist?list=PLOU2XLYxmsIJblRBPqrwisutm3dxoa43P
-
-- from: /web/shows/blinkon/6/...
-  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UL-7hTmxb3WQjMwQmANbVPL
-
-- from: /web/shows/blinkon/5/...
-  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UKZdsQFXJJWrwgZAgeAaFWa
-
-- from: /web/shows/blinkon/4/...
-  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UJNn8CSB0YFywnNIjfDXH5i
-
-- from: /web/shows/blinkon/...
-  to: https://www.youtube.com/user/blinkontalks/

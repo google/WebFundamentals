@@ -40,7 +40,6 @@ upper_tabs:
           - include: /web/shows/cds/_toc.yaml
           - include: /web/shows/pwa-devsummit/_toc.yaml
           - include: /web/shows/polymer-devsummit/_toc.yaml
-          - include: /web/shows/blinkon/_toc.yaml
         - include: /web/shows/google-io/_toc.yaml
         - include: /web/shows/lazyweb/_toc.yaml
         - include: /web/shows/polycasts/_toc.yaml
