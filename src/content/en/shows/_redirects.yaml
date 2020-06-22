@@ -35,6 +35,9 @@ redirects:
 - from: /web/shows/google-io/2016/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP
 
+- from: /web/shows/http203/podcast/...
+  to: https://http203.libsyn.com/
+
 - from: /web/shows/http203/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
 

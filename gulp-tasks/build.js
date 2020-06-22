@@ -237,33 +237,6 @@ gulp.task('build:shows', async function() {
 });
 
 /**
- * Builds RSS & ATOM feeds for the HTTP203 Podcast
- */
-gulp.task('build:http203Podcast', function() {
-  const src = 'shows/http203/podcast/';
-  const baseOutputPath = path.join(global.WF.src.content, src);
-  const summary = 'Surma and Jake talk about whatever\'s going on in the ' +
-      'world of web development.';
-  const image = 'https://developers.google.com/web/shows/http203/podcast/' +
-      'images/surma-and-jake-2.jpg';
-  const options = {
-    title: 'HTTP 203',
-    subtitle: 'Where Surma and Jake occasionally talk web.',
-    author: {name: 'Surma & Jake', email: 'jaffathecake@gmail.com'},
-    summary: summary,
-    image: image,
-    section: 'shows',
-    outputPath: baseOutputPath,
-    baseUrl: 'https://developers.google.com/web/shows/http203/podcast/',
-  };
-  let files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
-  files.sort(wfHelper.publishedComparator);
-  wfTemplateHelper.generateListPage(files, options);
-  wfTemplateHelper.generatePodcastFeed(files, options);
-});
-
-
-/**
  * Builds RSS & ATOM feeds for Designer vs Developer podcast
  */
 gulp.task('build:DVDPodcast', function() {
@@ -412,7 +385,6 @@ gulp.task('build', function(cb) {
       'build:glossary',
       'build:fundamentals',
       'build:showcase',
-      'build:http203Podcast',
       'build:DVDPodcast',
       'build:tools',
       'build:updates',
