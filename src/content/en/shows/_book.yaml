@@ -37,7 +37,6 @@ upper_tabs:
           status: external
         - title: Summits
           section:
-          - include: /web/shows/cds/_toc.yaml
           - include: /web/shows/pwa-devsummit/_toc.yaml
           - include: /web/shows/polymer-devsummit/_toc.yaml
         - include: /web/shows/google-io/_toc.yaml
