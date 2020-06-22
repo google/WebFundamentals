@@ -15,10 +15,3 @@ upper_tabs:
           path: /web/shows/
           status: external
         - include: /web/shows/designer-vs-developer/_toc.yaml
-        - title: HTTP203
-          section:
-          - title: Podcasts
-            path: /web/shows/http203/podcast/
-          - title: YouTube
-            path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-            status: external
