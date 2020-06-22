@@ -26,18 +26,15 @@ redirects:
 - from: /web/shows/cds/2016/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj
 
+- from: /web/shows/google-io/2014/...
+  to: https://www.youtube.com/playlist?list=PLOU2XLYxmsII8L540LbY5hdC23cmoZMhV
+
+- from: /web/shows/google-io/2016/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP
+
 
 - from: /web/shows/feed.xml
   to: /web/shows/rss.xml
-
-- from: /web/shows/google-io/2014/
-  to: /web/shows/google-io/
-
-- from: /web/shows/google-io/2015/
-  to: /web/shows/google-io/
-
-- from: /web/shows/google-io/2016/
-  to: /web/shows/google-io/
 
 - from: /web/shows/http203/series-1/
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
