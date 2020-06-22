@@ -30,7 +30,7 @@ footer:
     - label: Site-Kit Plugin for WordPress
       path: https://sitekit.withgoogle.com/
     - label: How to file a good browser bug
-      path: /web/feedback/
+      path: https://web.dev/how-to-file-a-good-bug/
     - label: Progressive Web Apps
       path: https://web.dev/progressive-web-apps/
 
