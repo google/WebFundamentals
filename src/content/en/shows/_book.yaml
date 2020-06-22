@@ -38,6 +38,5 @@ upper_tabs:
         - title: Summits
           section:
           - include: /web/shows/pwa-devsummit/_toc.yaml
-          - include: /web/shows/polymer-devsummit/_toc.yaml
         - include: /web/shows/udacity/_toc.yaml
         - include: /web/shows/webrtc/_toc.yaml
