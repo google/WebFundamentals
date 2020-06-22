@@ -33,5 +33,4 @@ upper_tabs:
         - title: Developer Diary with Paul Lewis
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBykcJ7bvTpqU7vt-oey72J
           status: external
-        - include: /web/shows/udacity/_toc.yaml
         - include: /web/shows/webrtc/_toc.yaml
