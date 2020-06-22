@@ -31,7 +31,6 @@ upper_tabs:
             status: external
           - title: Podcasts
             path: /web/shows/http203/podcast/
-        - include: /web/shows/supercharged/_toc.yaml
         - title: Developer Diary with Paul Lewis
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBykcJ7bvTpqU7vt-oey72J
           status: external
