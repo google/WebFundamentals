@@ -149,7 +149,7 @@ entire line is copied to the clipboard and deleted.
 
 Chromium issue [#1066415](https://crbug.com/1066415)
 
-## New breakpoints icons {: #breakpoint-icons }
+## New breakpoint icons {: #breakpoint-icons }
 
 The Debugger pane in Sources panel has new icons for activating and deactivating breakpoints.
 
