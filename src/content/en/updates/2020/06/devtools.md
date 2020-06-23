@@ -9,11 +9,9 @@ description: Style-editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScr
 {# wf_featured_snippet: Style-editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
-
 # What's New In DevTools (Chrome 85) {: .page-title }
 
 {% include "web/_shared/contributors/jecelynyeen.html" %}
-
 
 ## Style editing for CSS-in-JS frameworks {: #css-in-js }
 
@@ -109,7 +107,9 @@ Chromium issue [#1066579](https://crbug.com/1066579)
 
 The computed pane in the Elements panel now displays consistently as a pane across all viewport sizes. Previously the Computed pane would merge inside the Styles pane when the width of the DevTools' viewport was narrow. 
 
-![Computed pane](/web/updates/images/2020/06/computed-pane.gif)
+<video autoplay loop muted playsinline>
+  <source src="/web/updates/images/2020/06/computed-pane.mp4" type="video/mp4">
+</video>
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0b38e248bc279ca0747dd64380fb6934bbb26e62 #}
 
@@ -132,7 +132,9 @@ Chromium issue [#1071432](https://crbug.com/1071432)
 
 When performing copy (<kbd>Ctrl</kbd> + <kbd>C</kbd>) or cut (<kbd>Ctrl</kbd> + <kbd>X</kbd>) with no selection in the [Sources panel editor][sources], DevTools will copy and cut the current line content. 
 
-![Line-wise cut](/web/updates/images/2020/06/line-wise-cut.gif)
+<video autoplay loop muted playsinline>
+  <source src="/web/updates/images/2020/06/line-wise-cut.mp4" type="video/mp4">
+</video>
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/05d110464566dabd3b90e8123d3d2e33aebc9434 #}
 
@@ -159,7 +161,9 @@ The "**Group similar**" toggle in the Console settings now applies to the same m
 
 For example, previously, DevTools did not ungroup the messages “hello” although the “Group similar” is unchecked. Now, the messages “hello” are ungrouped:
 
-![Ungroup same messages when "Group similar" is unchecked](/web/updates/images/2020/06/ungroup-similar.gif)
+<video autoplay loop muted playsinline>
+  <source src="/web/updates/images/2020/06/ungroup-similar.mp4" type="video/mp4">
+</video>
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c84588184b0074cd229ae4dc496e2f11b92dc340 #}
 
