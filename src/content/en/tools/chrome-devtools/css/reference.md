@@ -183,7 +183,7 @@ tutorial.
 
 To view a page in print mode:
 
-1. Open the [Command Menu](/web/tools/chrome-devtools/ui#command-menu).
+1. Open the [Command Menu](/web/tools/chrome-devtools/command-menu).
 1. Start typing `Rendering` and select `Show Rendering`.
 1. For the **Emulate CSS Media** dropdown, select **print**.
 
