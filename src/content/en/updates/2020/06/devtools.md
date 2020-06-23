@@ -111,7 +111,7 @@ The Timing tab of the Network panel now includes service worker `respondWith` ev
 Chromium issue [#1066579](https://crbug.com/1066579)
 
 
-## Consistent display of the Computed pane {: #compute-pane }
+## Consistent display of the Computed pane {: #computed-pane }
 
 The Computed pane in the Elements panel now displays consistently as a pane across all viewport sizes. Previously the Computed pane would merge inside the Styles pane when the width of the DevTools' viewport was narrow. 
 
