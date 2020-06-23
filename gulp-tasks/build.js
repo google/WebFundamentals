@@ -236,33 +236,6 @@ gulp.task('build:shows', async function() {
   });
 });
 
-/**
- * Builds RSS & ATOM feeds for Designer vs Developer podcast
- */
-gulp.task('build:DVDPodcast', function() {
-  const src = 'shows/designer-vs-developer/podcast/';
-  const baseOutputPath = path.join(global.WF.src.content, src);
-  const subtitle = 'A show that tries to solve the challenges faced in ' +
-      'industry by having an open conversation between the two.';
-  const baseUrl = 'https://developers.google.com/web/shows/' +
-      'designer-vs-developer/podcast/';
-  const image = baseUrl + 'images/dvd-series-cover-large.jpg';
-  const options = {
-    title: 'Designer Vs Developer',
-    subtitle: subtitle,
-    author: {name: 'Mustafa Kurtuldu', email: 'mustafa.kurtuldu@gmail.com'},
-    summary: subtitle,
-    image: image,
-    section: 'shows',
-    outputPath: baseOutputPath,
-    baseUrl: baseUrl,
-  };
-  let files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
-  files.sort(wfHelper.publishedComparator);
-  wfTemplateHelper.generateListPage(files, options);
-  wfTemplateHelper.generatePodcastFeed(files, options);
-});
-
 
 /**
  * Builds RSS & ATOM feeds /web/tools/
@@ -385,7 +358,6 @@ gulp.task('build', function(cb) {
       'build:glossary',
       'build:fundamentals',
       'build:showcase',
-      'build:DVDPodcast',
       'build:tools',
       'build:updates',
       'build:shows',

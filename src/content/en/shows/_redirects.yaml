@@ -65,5 +65,8 @@ redirects:
 - from: /web/shows/feed.xml
   to: /web/shows/rss.xml
 
+- from: /web/shows/
+  to: https://www.youtube.com/user/ChromeDevelopers/
+
 - from: /web/shows/...
   to: https://www.youtube.com/user/ChromeDevelopers/
