@@ -286,13 +286,13 @@ In addition to different lossy and lossless compression algorithms, different im
   <td data-th="format"><a href="http://en.wikipedia.org/wiki/JPEG_XR">JPEG XR</a></td>
   <td data-th="transparency">Yes</td>
   <td data-th="animation">Yes</td>
-  <td data-th="browser">IE</td>
+  <td data-th="browser">Edge, IE</td>
 </tr>
 <tr>
   <td data-th="format"><a href="http://en.wikipedia.org/wiki/WebP">WebP</a></td>
   <td data-th="transparency">Yes</td>
   <td data-th="animation">Yes</td>
-  <td data-th="browser">Chrome, Opera, Android</td>
+  <td data-th="browser">Chrome, Opera, Android, and latest Firefox and Edge</td>
 </tr>
 </tbody>
 </table>
