@@ -2,6 +2,31 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 85 {: #discover85 .hide-from-toc }
+
+* [Style editing for CSS-in-JS frameworks](/web/updates/2020/06/devtools#css-in-js)
+* [Lighthouse 6 in the Lighthouse panel](/web/updates/2020/06/devtools#lighthouse)
+* [First Meaningful Paint (FMP) deprecation](/web/updates/2020/06/devtools#fmp-deprecation)
+* [Support for new JavaScript features](/web/updates/2020/06/devtools#javascript)
+* [New app shortcut warnings in the Manifest pane](/web/updates/2020/06/devtools#app-shortcut-warnings)
+* [Service worker `respondWith` events in the Timing tab](/web/updates/2020/06/devtools#timing-tab)
+* [Consistent display of the Computed pane](/web/updates/2020/06/devtools#compute-pane)
+* [Bytecode offsets for WebAssembly files](/web/updates/2020/06/devtools#wasm)
+* [Line-wise copy and cut in Sources Panel](/web/updates/2020/06/devtools#sources-panel)
+* [Console settings updates](/web/updates/2020/06/devtools#console-settings)
+* [Performance panel updates](/web/updates/2020/06/devtools#perf-panel)
+
+### Chrome 84 {: #discover84 .hide-from-toc }
+
+* [Fix site issues with the new Issues tab](/web/updates/2020/05/devtools#issues)
+* [View accessibility information in the Inspect Mode tooltip](/web/updates/2020/05/devtools#a11y)
+* [Performance panel updates](/web/updates/2020/05/devtools#performance)
+* [More accurate promise terminology in the Console](/web/updates/2020/05/devtools#promises)
+* [Styles pane updates](/web/updates/2020/05/devtools#styles)
+* [Deprecation of the **Properties** pane in the Elements panel](/web/updates/2020/05/devtools#properties)
+* [App shortcuts support in the Manifest pane](/web/updates/2020/05/devtools#app-shortcuts)
+
+
 ### Chrome 83 {: #discover83 .hide-from-toc }
 
 * [Emulate vision deficiencies](/web/updates/2020/03/devtools#vision-deficiencies)
