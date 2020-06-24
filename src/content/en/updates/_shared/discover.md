@@ -15,7 +15,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Line-wise copy and cut in Sources Panel](/web/updates/2020/06/devtools#sources-panel)
 * [New icons for the activate and deactivate breakpoints buttons](/web/updates/2020/06/devtools#breakpoints-buttons)
 * [Console settings updates](/web/updates/2020/06/devtools#console-settings)
-
+* [Code caching information in Summary tab](/web/updates/2020/06/devtools#code-caching)
 
 ### Chrome 84 {: #discover84 .hide-from-toc }
 

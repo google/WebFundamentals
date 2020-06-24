@@ -194,6 +194,17 @@ This change makes the setting behavior consistent with other Console Settings op
 
 Chromium issue [#1055875](https://crbug.com/1055875)
 
+
+## Code caching information in Summary tab {:code-caching}
+[V8 code caching](https://v8.dev/blog/code-caching-for-devs) information is now always displayed in the Summary tab of the Performance panel. Previously, DevTools wouldn’t show anything related to code caching if code caching didn’t happen.
+
+![V8 code caching](/web/updates/images/2020/06/code-caching.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/bff241dc95433dccd0621c81d93aae793d46a48e #}
+
+Chromium issue [#912581](https://crbug.com/912581)
+
+
 <<../../_shared/devtools-feedback.md>>
 
 <<../../_shared/canary.md>>
