@@ -13,7 +13,6 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Consistent display of the Computed pane](/web/updates/2020/06/devtools#compute-pane)
 * [Bytecode offsets for WebAssembly files](/web/updates/2020/06/devtools#wasm)
 * [Line-wise copy and cut in Sources Panel](/web/updates/2020/06/devtools#sources-panel)
-* [New icons for the activate and deactivate breakpoints buttons](/web/updates/2020/06/devtools#breakpoints-buttons)
 * [Console settings updates](/web/updates/2020/06/devtools#console-settings)
 * [Code caching information in Summary tab](/web/updates/2020/06/devtools#code-caching)
 

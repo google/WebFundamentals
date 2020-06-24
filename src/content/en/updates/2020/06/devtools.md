@@ -152,17 +152,6 @@ entire line is copied to the clipboard and deleted.
 
 Chromium issue [#800028](https://crbug.com/800028)
 
-## New breakpoint icons {: #breakpoint-icons }
-
-The Debugger pane in Sources panel has new icons for activating and deactivating breakpoints.
-
-The motivation for the new icons was to make the UI more consistent with other GUI debugging tools (which usually styles breakpoints as circles).
-
-![Breakpoints buttons](/web/updates/images/2020/06/breakpoints-buttons.png)
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/f2bfe982cac5808bbcc9a02a1c1403d273095e7e #}
-
-Chromium issue [#1041830](https://crbug.com/1041830).
 
 ## Console Settings updates {: #console-settings }
 
