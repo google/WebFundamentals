@@ -23,9 +23,13 @@ The Styles pane now has better support for editing styles that were created with
 [CSS Object Model][cssom] (CSSOM) APIs. Many CSS-in-JS frameworks and libraries
 use the CSSOM APIs under the hood to construct styles.
 
-Styles added in JavaScript using [Constructable Stylesheets](constructable) are
-also now editable. Constructable Stylesheets are a new way
-to create and distribute reusable styles when using [Shadow DOM][shadowdom].
+You can also edit styles added in JavaScript using [Constructable Stylesheets](constructable) now. Constructable Stylesheets are a new way to create and distribute reusable styles when using [Shadow DOM][shadowdom].
+
+For example, the `h1` styles added with `CSSStyleSheet` (CSSOM APIs) are not editable previously. There are editable now in the Styles pane:
+
+<video autoplay loop muted playsinline>
+  <source src="/web/updates/images/2020/06/css-in-js.mp4" type="video/mp4">
+</video>
 
 {# https://chromium.googlesource.com/chromium/src.git/+/4609670fb4303585928d9784840459f04ca91f03 #}
 
