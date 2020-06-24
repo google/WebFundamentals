@@ -194,7 +194,7 @@ Chromium issue [#1055875](https://crbug.com/1055875)
 
 Chromium issue [#912581](https://crbug.com/912581)
 
-### Align navigation timing in Performance panel {:nav-timing}
+### Navigation timing alignment in the Performance panel {:nav-timing}
 The Performance panel used to show times in the rulers based on when the recording started. This has now changed for recordings where the user navigates, where we now show ruler times relative to the navigation instead.
 
 ![Align navigation timing in Performance panel](/web/updates/images/2020/06/nav-timing.png)
