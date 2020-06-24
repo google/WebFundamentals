@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more.
 
-{# wf_updated_on: 2020-06-24 #}
+{# wf_updated_on: 2020-06-25 #}
 {# wf_published_on: 2020-06-24 #}
 {# wf_tags: chrome85, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -183,8 +183,9 @@ This change makes the setting behavior consistent with other Console Settings op
 
 Chromium issue [#1055875](https://crbug.com/1055875)
 
+## Performance panel updates {: #perf-panel }
 
-## JavaScript compilation cache information in Performance panel {:js-compilation-cache}
+### JavaScript compilation cache information in Performance panel {:js-compilation-cache}
 [JavaScript compilation cache information](https://v8.dev/blog/code-caching-for-devs) information is now always displayed in the Summary tab of the Performance panel. Previously, DevTools wouldn’t show anything related to code caching if code caching didn’t happen.
 
 ![JavaScript compilation cache information](/web/updates/images/2020/06/js-compilation-cache.png)
@@ -192,6 +193,17 @@ Chromium issue [#1055875](https://crbug.com/1055875)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/bff241dc95433dccd0621c81d93aae793d46a48e #}
 
 Chromium issue [#912581](https://crbug.com/912581)
+
+### Align navigation timing in Performance panel {:nav-timing}
+The Performance panel used to show times in the rulers based on when the recording started. This has now changed for recordings where the user navigates, where we now show ruler times relative to the navigation instead.
+
+![Align navigation timing in Performance panel](/web/updates/images/2020/06/nav-timing.png)
+
+We've also updated times for `DOMContentLoaded`, First Paint, First Contentful Paint, and Largest Contentful Paint events to be relative to the start of the navigation, which means they match the timings reported by `PerformanceObserver`.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ead457578785b3efe6ba2f4bf7bd4b94a5936d9d #}
+
+Chromium issue [#974550](https://crbug.com/974550)
 
 
 <<../../_shared/devtools-feedback.md>>
