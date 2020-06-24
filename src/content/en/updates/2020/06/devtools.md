@@ -16,14 +16,13 @@ description: Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScr
 ## Style editing for CSS-in-JS frameworks {: #css-in-js }
 
 [cssom]: https://drafts.csswg.org/cssom/
-[constructable]: /web/updates/2019/02/constructable-stylesheets
 [shadowdom]: /web/fundamentals/web-components/shadowdom
 
 The Styles pane now has better support for editing styles that were created with the
 [CSS Object Model][cssom] (CSSOM) APIs. Many CSS-in-JS frameworks and libraries
 use the CSSOM APIs under the hood to construct styles.
 
-You can also edit styles added in JavaScript using [Constructable Stylesheets](constructable) now. Constructable Stylesheets are a new way to create and distribute reusable styles when using [Shadow DOM][shadowdom].
+You can also edit styles added in JavaScript using [Constructable Stylesheets](/web/updates/2019/02/constructable-stylesheets) now. Constructable Stylesheets are a new way to create and distribute reusable styles when using [Shadow DOM][shadowdom].
 
 For example, the `h1` styles added with `CSSStyleSheet` (CSSOM APIs) are not editable previously. There are editable now in the Styles pane:
 
