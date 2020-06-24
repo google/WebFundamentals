@@ -150,7 +150,7 @@ entire line is copied to the clipboard and deleted.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/05d110464566dabd3b90e8123d3d2e33aebc9434 #}
 
-Chromium issue [#1066415](https://crbug.com/1066415)
+Chromium issue [#800028](https://crbug.com/800028)
 
 ## New breakpoint icons {: #breakpoint-icons }
 
