@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Implementation Guide for Custom Tabs.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-06-17 #}
+{# wf_updated_on: 2020-06-23 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Implementation guide {: .page-title }
@@ -262,10 +262,11 @@ it will automatically pick up the EXTRAS and present a customized UI.
 It is possible to use the [`PackageManager`][20] to query the Android device for applications that
 can handle Custom Tabs. We query for applications that are able to handle `http` Intents, then
 check if those applications also declare support for the Custom Tabs Service:
+
 ```java
 /**
-  * Returns a list of packages that support Custom Tabs.
-  */	
+* Returns a list of packages that support Custom Tabs.
+*/	
 public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
     PackageManager pm = context.getPackageManager();
     // Get default VIEW intent handler.
