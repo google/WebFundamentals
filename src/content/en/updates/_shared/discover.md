@@ -14,7 +14,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Bytecode offsets for WebAssembly files](/web/updates/2020/06/devtools#wasm)
 * [Line-wise copy and cut in Sources Panel](/web/updates/2020/06/devtools#sources-panel)
 * [Console settings updates](/web/updates/2020/06/devtools#console-settings)
-* [Code caching information in Summary tab](/web/updates/2020/06/devtools#code-caching)
+* [JavaScript compilation cache information in Summary tab](/web/updates/2020/06/devtools#js-compilation-cache)
 
 ### Chrome 84 {: #discover84 .hide-from-toc }
 
