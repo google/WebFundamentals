@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Implementation Guide for Custom Tabs.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-06-17 #}
+{# wf_updated_on: 2020-06-24 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Implementation guide {: .page-title }
@@ -31,8 +31,8 @@ Once the Browser Library is added to your project there are two sets of possible
 
 The UI Customizations are done by using the [`CustomTabsIntent`][3] and the
 [`CustomTabsIntent.Builder`][4] classes; the performance improvements are achieved by using the
-[`CustomTabsClient`][5] to connect to the Custom Tabs service, warm-up the browser and let it know which
-urls will be opened.
+[`CustomTabsClient`][5] to connect to the Custom Tabs service, warm-up the browser and let it know
+which urls will be opened.
 
 ## Opening a Custom Tab
 A [`CustomTabsIntent.Builder`][4] can be used to configure a the Custom Tab. Once ready, call
@@ -61,7 +61,17 @@ builder.setToolbarColor(colorInt);
 
 ## Configure a custom action button
 
-![Screenshot of the Action Button in the Tumblr app](tumblr_action.png)
+```java
+builder.setActionButton(icon, description, pendingIntent, tint);
+```
+
+<figure class="attempt-right">
+  <img src="/web/android/custom-tabs/implementation-guide/tumblr_action.png"
+      alt="Screenshot of the Action Button in the Tumblr app"/>
+  <figcaption>
+    <b>Figure 1</b>. Screenshot of the Action Button in the Tumblr app
+  </figcaption>
+</figure>
 
 As the developer of your app, you have full control over the Action Button that is presented to
 your users inside the browser tab.
@@ -75,10 +85,6 @@ The icon is currenlty 24dp in height and 24-48 dp in width.
 
 It can be customized by calling [`CustomTabsIntentBuilder#setActionButton`][30]:
 
-```java
-builder.setActionButton(icon, description, pendingIntent, tint);
-```
-
  - `icon` is a [`Bitmap`][23] to be used as the [image source][24] for the action button.
  - `description` is a [`String`][25] be used as an accessible description for the button.
  - `pendingIntent` is a [`PendingIntent`][26] to launch when the action button or menu item was
@@ -86,9 +92,21 @@ builder.setActionButton(icon, description, pendingIntent, tint);
  as data. The client app can call [`Intent#getDataString`][28] to get the url.
  - `tint` is a [boolean][29] that defines if the Action Button should be tinted.
 
+<div class="clearfix"></div>
+
 ## Configure a custom menu
 
-![Screenshot of the menu on the Twitter app](twitter_menu.png)
+```java
+builder.addMenuItem(menuItemTitle, menuItemPendingIntent);
+```
+
+<figure class="attempt-right">
+  <img src="/web/android/custom-tabs/implementation-guide/twitter_menu.png"
+      alt="Screenshot of the menu on the Twitter app"/>
+  <figcaption>
+    <b>Figure 2</b>. Screenshot of the menu on the Twitter app
+  </figcaption>
+</figure>
 
 The browser has a comprehensive menu of actions that users will perform frequently inside a
 browser, however they may not be relevant to your application context.
@@ -103,9 +121,7 @@ A menu item is added by calling [`CustomTabsIntent.Builder#addMenuItem`][6] with
 [`PendingIntent`][26] that browser will call on your behalf when the user taps the item are passed
 as parameters.
 
-```java
-builder.addMenuItem(menuItemTitle, menuItemPendingIntent);
-```
+<div class="clearfix"></div>
 
 ## Configure custom enter and exit animations
 
@@ -262,6 +278,7 @@ it will automatically pick up the EXTRAS and present a customized UI.
 It is possible to use the [`PackageManager`][20] to query the Android device for applications that
 can handle Custom Tabs. We query for applications that are able to handle `http` Intents, then
 check if those applications also declare support for the Custom Tabs Service:
+
 ```java
 /**
   * Returns a list of packages that support Custom Tabs.
