@@ -281,8 +281,8 @@ check if those applications also declare support for the Custom Tabs Service:
 
 ```java
 /**
-  * Returns a list of packages that support Custom Tabs.
-  */	
+* Returns a list of packages that support Custom Tabs.
+*/	
 public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
     PackageManager pm = context.getPackageManager();
     // Get default VIEW intent handler.
