@@ -37,10 +37,9 @@ Chromium issue [#946975](https://crbug.com/946975)
 ## Lighthouse 6 in the Lighthouse panel {: #lighthouse }
 
 [changelog]: https://github.com/GoogleChrome/lighthouse/releases/tag/v6.0.0
-[lighthouse]: https://web.dev/lighthouse-whats-new-6.0/
 
 The Lighthouse panel is now running Lighthouse 6.
-Check out [What's New in Lighthouse 6.0](lighthouse) for a summary of all the major
+Check out [What's New in Lighthouse 6.0](https://web.dev/lighthouse-whats-new-6.0/) for a summary of all the major
 changes, or the [v6.0.0 release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/v6.0.0)
 for a full list of all changes.
 
