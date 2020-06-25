@@ -15,6 +15,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Line-wise copy and cut in Sources Panel](/web/updates/2020/06/devtools#sources-panel)
 * [Console settings updates](/web/updates/2020/06/devtools#console-settings)
 * [Performance panel updates](/web/updates/2020/06/devtools#perf-panel)
+* [New icons for breakpoints, conditional breakpoints, and logpoints](/web/updates/2020/06/devtools#breakpoints)
 
 ### Chrome 84 {: #discover84 .hide-from-toc }
 

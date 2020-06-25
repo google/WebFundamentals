@@ -204,6 +204,14 @@ We've also updated times for `DOMContentLoaded`, First Paint, First Contentful P
 
 Chromium issue [#974550](https://crbug.com/974550)
 
+## New icons for breakpoints, conditional breakpoints, and logpoints {: #breakpoints }
+The **Sources** panel has new designs for breakpoints, conditional breakpoints, and logpoints. Breakpoints get a refreshed flag design with brighter and friendlier colors. Icons are added to differentiate conditional breakpoints and logpoints. 
+
+![Breakpoints](/web/updates/images/2020/06/breakpoints.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/464172eeb4925056c541876785ab56295aa29e6b #}
+
+Chromium issue [#1041830](https://crbug.com/1041830)
 
 <<../../_shared/devtools-feedback.md>>
 
