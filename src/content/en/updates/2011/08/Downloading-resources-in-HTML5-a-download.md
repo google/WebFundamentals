@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-16 #}
+{# wf_updated_on: 2020-06-26 #}
 {# wf_published_on: 2011-08-01 #}
 {# wf_tags: news #}
 {# wf_blink_components: N/A #}
@@ -28,7 +28,7 @@ For example, clicking the following link downloads the .png as "MyGoogleLogo.png
 The real benefit of `a[download]` will be when working with [blob: URLs](//www.html5rocks.com/en/tutorials/workers/basics/#toc-inlineworkers-bloburis) and [filesystem: URLs](http://html5-demos.appspot.com/static/filesystem/generatingResourceURIs.html) URLs.
 It'll give users a way to download content created/modified within your app.
 
-[Full Demo](http://html5-demos.appspot.com/static/a.download.html)
+[Full Demo](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_a_download)
 
 Browser support: only the current Chrome dev channel release (14.0.835.15+) supports this attribute.
 
