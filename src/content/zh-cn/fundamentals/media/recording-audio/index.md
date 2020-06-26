@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:大多数浏览器都可访问用户的麦克风。
 
-{# wf_updated_on:2016-08-22 #}
+{# wf_updated_on:2020-06-26 #}
 {# wf_published_on:2016-08-23 #}
 
 # 录制用户的音频 {: .page-title }
@@ -114,7 +114,7 @@ Web Audio API 是一个简单的 API，用于获取输入源并将这些输入�
 &lt;script>  
   var handleSuccess = function(stream) {
     <strong>var context = new AudioContext();
-    var input = context.createMediaStreamSource(stream)
+    var source = context.createMediaStreamSource(stream)
     var processor = context.createScriptProcessor(1024,1,1);
 
     source.connect(processor);

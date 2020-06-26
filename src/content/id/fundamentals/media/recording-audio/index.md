@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Sebagian besar browser bisa mengakses mikrofon pengguna.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-06-26 #}
 {# wf_published_on: 2016-08-23 #}
 
 # Merekam Audio dari Pengguna {: .page-title }
@@ -116,7 +116,7 @@ dan menyimpannya untuk digunakan nanti.
 &lt;script>  
   var handleSuccess = function(stream) {
     <strong>var context = new AudioContext();
-    var input = context.createMediaStreamSource(stream)
+    var source = context.createMediaStreamSource(stream)
     var processor = context.createScriptProcessor(1024,1,1);
 
     source.connect(processor);

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ほとんどのブラウザはユーザーのマイクにアクセスできます。
 
-{# wf_updated_on:2016-08-22 #}
+{# wf_updated_on:2020-06-26 #}
 {# wf_published_on:2016-08-23 #}
 
 # ユーザーから音声データを取得する {: .page-title }
@@ -114,7 +114,7 @@ Web Audio API はシンプルな API であり、入力ソースを取得する�
 &lt;script>  
   var handleSuccess = function(stream) {
     <strong>var context = new AudioContext();
-    var input = context.createMediaStreamSource(stream)
+    var source = context.createMediaStreamSource(stream)
     var processor = context.createScriptProcessor(1024,1,1);
 
     source.connect(processor);

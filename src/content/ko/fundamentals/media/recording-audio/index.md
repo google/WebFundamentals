@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 대부분 브라우저는 사용자 마이크에 액세스할 수 있습니다.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-06-26 #}
 {# wf_published_on: 2016-08-23 #}
 
 # 사용자에게서 오디오 녹음 {: .page-title }
@@ -116,7 +116,7 @@ API를 사용하여 마이크에 직접 액세스할 수 있습니다. `getUserM
 &lt;script>  
   var handleSuccess = function(stream) {
     <strong>var context = new AudioContext();
-    var input = context.createMediaStreamSource(stream)
+    var source = context.createMediaStreamSource(stream)
     var processor = context.createScriptProcessor(1024,1,1);
 
     source.connect(processor);
