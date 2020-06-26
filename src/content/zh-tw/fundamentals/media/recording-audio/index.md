@@ -37,13 +37,14 @@ description:大多數瀏覽器都可訪問用戶的麥克風。
     <input type="file" accept="audio/*" capture="microphone" id="recorder">
     <audio id="player" controls></audio>
     <script>
-      var recorder = document.getElementById('recorder');
-      var player = document.getElementById('player')'
+      const recorder = document.getElementById('recorder');
+      const player = document.getElementById('player')'
 
       recorder.addEventListener('change', function(e) {
-        var file = e.target.files[0]; 
+        const file = e.target.files[0];
+        const url = URL.createObjectURL(file); 
         // Do something with the audio file.
-        player.src =  URL.createObjectURL(file);
+        player.src = url;
       });
     </script>
 
@@ -82,18 +83,18 @@ description:大多數瀏覽器都可訪問用戶的麥克風。
 
     <audio id="player" controls></audio>
     <script>  
-      var player = document.getElementById('player');
+      const player = document.getElementById('player');
 
-      var handleSuccess = function(stream) {
+      const handleSuccess = function(stream) {
         if (window.URL) {
-          player.src = window.URL.createObjectURL(stream);
+          player.srcObject = stream;
         } else {
           player.src = stream;
         }
       };
 
       navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-          .then(handleSuccess)
+          .then(handleSuccess);
     </script>
 
 這段代碼本身的用處並不大。我們所能做的就是獲取音頻數據並進行播放。
@@ -112,10 +113,10 @@ Web Audio API 是一個簡單的 API，用於獲取輸入源並將這些輸入�
 
 <pre class="prettyprint">
 &lt;script>  
-  var handleSuccess = function(stream) {
-    <strong>var context = new AudioContext();
-    var source = context.createMediaStreamSource(stream)
-    var processor = context.createScriptProcessor(1024,1,1);
+  const handleSuccess = function(stream) {
+    <strong>const context = new AudioContext();
+    const source = context.createMediaStreamSource(stream)
+    const processor = context.createScriptProcessor(1024,1,1);
 
     source.connect(processor);
     processor.connect(context.destination);
@@ -161,7 +162,7 @@ Web Audio API 是一個簡單的 API，用於獲取輸入源並將這些輸入�
     shouldStop = true;
   })
 
-  var handleSuccess = function(stream) {  
+  const handleSuccess = function(stream) {  
     const options = {mimeType: 'video/webm;codecs=vp9'};
     const recordedChunks = [];
     <strong>const mediaRecorder = new MediaRecorder(stream, options);  
