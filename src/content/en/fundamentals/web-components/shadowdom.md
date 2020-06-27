@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2018-11-05 #}
+{# wf_updated_on: 2020-06-27 #}
 {# wf_published_on: 2016-08-01 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -43,11 +43,13 @@ implementations already in Safari, Chrome and Firefox. Keep reading
 to see what's new or check out the section on <a href="#historysupport">
 History and browser support</a> for more info.
 
-Shadow DOM is one of the four Web Component standards:
+Shadow DOM is one of the three Web Component standards:
 [HTML Templates](https://www.html5rocks.com/en/tutorials/webcomponents/template/),
-[Shadow DOM][sd_spec_whatwg],
-[Custom elements](/web/fundamentals/web-components/customelements) and
-[HTML Imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/).
+[Shadow DOM][sd_spec_whatwg] and
+[Custom elements](/web/fundamentals/web-components/customelements).
+[HTML Imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/)
+used to be part of the list but now are considered 
+[deprecated](/web/updates/2018/09/chrome-70-deps-rems#deprecate_html_imports).
 
 You don't have to author web components that use shadow DOM. But when you do,
 you take advantage of its benefits (CSS scoping, DOM encapsulation,
