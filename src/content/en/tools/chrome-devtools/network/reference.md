@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2019-07-15 #}
+{# wf_updated_on: 2020-06-27 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -446,8 +446,8 @@ Requests table and select **Response Headers** > **Manage Header Columns**.
 
 Use the Waterfall to view the timing of requests in relation to one another.
 By default, the Waterfall is organized by the start time of the requests.
-So, requests that are farther to the left started earlier than those that
-are farther to the right.
+So, requests that are farther to the right started earlier than those that
+are farther to the left.
 
 See [Sort by activity phase](#sort-by-activity) to see the different ways
 that you can sort the Waterfall.
