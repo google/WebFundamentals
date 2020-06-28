@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emscripting a C library to Wasm
 
-{# wf_updated_on: 2019-09-15 #}
+{# wf_updated_on: 2020-06-27 #}
 {# wf_published_on: 2018-03-05 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2018/03/emscripting-a-c-library/wasmcode.png #}
@@ -69,8 +69,11 @@ calculates the n<sup>th</sup> fibonacci number:
 
     EMSCRIPTEN_KEEPALIVE
     int fib(int n) {
+      if(n <= 0){
+        return 0;
+      }
       int i, t, a = 0, b = 1;
-      for (i = 0; i < n; i++) {
+      for (i = 1; i < n; i++) {
         t = a + b;
         a = b;
         b = t;
