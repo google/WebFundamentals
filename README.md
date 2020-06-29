@@ -33,6 +33,10 @@ you have [Python](https://www.python.org/downloads/), [Node](https://nodejs.org/
 
 Login to [Google Cloud via command line](https://cloud.google.com/sdk/gcloud/reference/auth/login).
 
+**Note:** This project does not support Windows and there are no plans to do so in the near future. Please make sure you have 
+[WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), [Cygwin](https://www.cygwin.com/) or some other method to 
+run `.sh` files set up, otherwise you won't be able to run the project.
+
 1. Run `npm install` (needed for the build process)
 
 ## Build the auto-generated files
