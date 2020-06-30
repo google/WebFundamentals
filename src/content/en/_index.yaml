@@ -51,11 +51,11 @@ landing_page:
     - image_path: /web/images/wd-live-wide.png
       image_left: true
       description: >
-        Join us for a three day digital event, to celebrate the web
-        community’s actions, learn modern web techniques and connect with
-        each other.
+        <b class="goog-font">web.dev LIVE</b> has kicked off! Join us for the
+        three day digital event, to celebrate the web community’s actions,
+        learn modern web techniques and connect with each other.
       buttons:
-      - label: Learn more
+      - label: Join now
         path: https://web.dev/live/
         classname: button button-primary
       path: https://web.dev/live/
