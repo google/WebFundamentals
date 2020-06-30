@@ -185,7 +185,7 @@ Chromium issue [#1055875](https://crbug.com/1055875)
 ## Performance panel updates {: #perf-panel }
 
 ### JavaScript compilation cache information in Performance panel {:js-compilation-cache}
-[JavaScript compilation cache information](https://v8.dev/blog/code-caching-for-devs) information is now always displayed in the Summary tab of the Performance panel. Previously, DevTools wouldn’t show anything related to code caching if code caching didn’t happen.
+[JavaScript compilation cache information](https://v8.dev/blog/code-caching-for-devs) is now always displayed in the Summary tab of the Performance panel. Previously, DevTools wouldn’t show anything related to code caching if code caching didn’t happen.
 
 ![JavaScript compilation cache information](/web/updates/images/2020/06/js-compilation-cache.png)
 
