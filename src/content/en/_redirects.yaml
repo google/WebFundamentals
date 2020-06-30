@@ -34,6 +34,9 @@ redirects:
 #
 ## Redirects for Fundamentals content migrated to web.dev
 
+- from: /web/billions/...
+  to: https://web.dev/
+
 - from: /web/feedback/...
   to: https://web.dev/how-to-file-a-good-bug/
 

@@ -29,8 +29,8 @@ footer:
       path: https://developers.chrome.com/extensions/api_index
     - label: Site-Kit Plugin for WordPress
       path: https://sitekit.withgoogle.com/
-    - label: Developer Feedback Program
-      path: /web/feedback/
+    - label: How to file a good browser bug
+      path: https://web.dev/how-to-file-a-good-bug/
     - label: Progressive Web Apps
       path: https://web.dev/progressive-web-apps/
 
