@@ -87,7 +87,7 @@ served in the same locale as the page.
 <p id="demopara">Click the button to toggle the border.
   <button id="demobutton">Click Me</button>
 </p>
-<script src="/_static/js/jquery-bundle.js"></script>
+<script src="https://www.gstatic.com/external_hosted/jquery2.min.js"></script>
 <script>
 $(function() {
   $('#demobutton').click(function(event) {
@@ -110,7 +110,7 @@ The code for this example:
 <p id="demopara">Click the button to toggle the border.
   <button id="demobutton">Click Me</button>
 </p>
-<script src="/_static/js/jquery-bundle.js"></script>
+<script src="https://www.gstatic.com/external_hosted/jquery2.min.js"></script>
 <script>
 $(function() {
   $('#demobutton').click(function(event) {
