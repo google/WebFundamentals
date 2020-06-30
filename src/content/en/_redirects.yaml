@@ -34,6 +34,9 @@ redirects:
 #
 ## Redirects for Fundamentals content migrated to web.dev
 
+- from: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+  to: https://web.dev/fast/#optimize-your-images
+
 - from: /web/feedback/...
   to: https://web.dev/how-to-file-a-good-bug/
 
