@@ -170,7 +170,7 @@ For example, previously, DevTools did not ungroup the messages `hello` even thou
 
 Chromium issue [#1082963](https://crbug.com/1082963)
 
-### Persisting **Selected context only** settings {: #maskable-icons }
+### Persisting **Selected context only** settings {: #selected-context }
 
 The **Selected context only** settings in Console Settings is now persisted.
 Previously the settings were reset every time you closed and reopened DevTools.
