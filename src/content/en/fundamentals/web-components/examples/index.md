@@ -64,7 +64,7 @@ comprehensible code that is densely commented.
 because they are not meant to be used in production. For the sake of terse,
 readable code, we are using modern JavaScript APIs and are supporting modern
 browsers which implement the Web Components standards. The idea is that you, the
-reader, are able adapt the code to fit your own needs after reading these
+reader, are able to adapt the code to fit your own needs after reading these
 implementations.
 
 ### Be backwards compatible
