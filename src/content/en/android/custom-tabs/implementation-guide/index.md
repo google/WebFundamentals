@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Implementation Guide for Custom Tabs.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-06-24 #}
+{# wf_updated_on: 2020-07-02 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Implementation guide {: .page-title }
@@ -307,6 +307,19 @@ public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
 }
 ```
 
+Android 11 has introduced [package visiblity changes][31]. If your Android app is targeting API
+level 30 or above, adding a `queries` section to `AndroidManifest.xml` is needed, otherwise the
+code snippet above won't return results:
+
+```xml
+<queries>
+    <intent>
+        <action android:name=
+            "android.support.customtabs.action.CustomTabsService" />
+    </intent>
+</queries>
+```
+
 ## Feedback {: #feedback .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
@@ -341,3 +354,4 @@ public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
 [28]: https://developer.android.com/reference/android/content/Intent#getDataString()
 [29]: https://developer.android.com/reference/java/lang/Boolean
 [30]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder#setActionButton(android.graphics.Bitmap,%20java.lang.String,%20android.app.PendingIntent,%20boolean)
+[31]: https://developer.android.com/preview/privacy/package-visibility
