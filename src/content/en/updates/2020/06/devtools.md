@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more.
 
 {# wf_updated_on: 2020-06-25 #}
-{# wf_published_on: 2020-06-24 #}
+{# wf_published_on: 2020-07-01 #}
 {# wf_tags: chrome85, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more. #}
@@ -170,7 +170,7 @@ For example, previously, DevTools did not ungroup the messages `hello` even thou
 
 Chromium issue [#1082963](https://crbug.com/1082963)
 
-### Persisting **Selected context only** settings {: #maskable-icons }
+### Persisting **Selected context only** settings {: #selected-context }
 
 The **Selected context only** settings in Console Settings is now persisted.
 Previously the settings were reset every time you closed and reopened DevTools.
