@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Descubra novas formas de depuração nesta referência abrangente dos recursos de depuração do Chrome DevTools.
 
-{# wf_updated_on: 2019-01-31 #} {# wf_published_on: 2017-01-04 #} {#
-wf_blink_components: Platform>DevTools #}
+{# wf_updated_on: 2019-01-31 #}
+{# wf_published_on: 2017-01-04 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -41,16 +42,15 @@ caminho.
 ### Passe por uma linha de código {: #step-over }
 
 Quando pausado em uma linha de código que contém uma função que não é relevante
-para o problema que você está depurando, clique em **Step over**![Step
-over](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-over.png?raw=true)
-{:.devtools-inline} para executar a função sem entrar nela.
+para o problema que você está depurando, clique em **Step over**![Step over](imgs/step-over.png){:.devtools-inline} 
+para executar a função sem entrar nela.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-over-outline.svg?raw=true"
-alt="Selecting 'Step over'.">
-  <figcaption>     <b>Figura 1</b>. <b>Step over</b>, destacado em
-azul</figcaption>
+  <img src="imgs/step-over-outline.svg"
+       alt="Selecting 'Step over'."/>
+  <figcaption>
+    <b>Figura 1</b>. <b>Step over</b>, destacado em azul
+  </figcaption>
 </figure>
 
 Por exemplo, suponha que você esteja depurando o seguinte código:
@@ -74,16 +74,15 @@ uma pausa em `D`.
 ### Entre em uma linha de código {: #step-into }
 
 Quando pausado em uma linha de código que contém uma chamada de função
-relacionada ao problema que você está depurando, clique em **Step into** ![Step
-into](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-into.png?raw=true){:.devtools-inline}
+relacionada ao problema que você está depurando, clique em **Step into** ![Step into](imgs/step-into.png){:.devtools-inline} 
 para investigar mais essa função.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-into-outline.svg?raw=true"
-alt="Selecting 'Step into'.">
-  <figcaption>     <b>Figura 2</b>. <b>Step into</b>, destacado em
-azul</figcaption>
+  <img src="imgs/step-into-outline.svg"
+       alt="Selecting 'Step into'."/>
+  <figcaption>
+    <b>Figura 2</b>. <b>Step into</b>, destacado em azul
+  </figcaption>
 </figure>
 
 Por exemplo, suponha que você esteja depurando o seguinte código:
@@ -106,16 +105,15 @@ linha de código, em seguida, faz uma pausa em `B`.
 ### Saia de uma linha de código {: #step-out }
 
 Quando estiver pausado em uma função que não está relacionada ao problema que
-você está depurando, clique em **Step out** ![Step
-out](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-out.png?raw=true){:.devtools-inline}
+você está depurando, clique em **Step out** ![Step out](imgs/step-out.png){:.devtools-inline}
 para executar o restante do código da função.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/step-out-outline.svg?raw=true"
-alt="Selecting 'Step out'.">
-  <figcaption>     <b>Figura 3</b>. <b>Step out</b>, destacado em
-azul</figcaption>
+  <img src="imgs/step-out-outline.svg"
+       alt="Selecting 'Step out'."/>
+  <figcaption>
+    <b>Figura 3</b>. <b>Step out</b>, destacado em azul
+  </figcaption>
 </figure>
 
 Por exemplo, suponha que você está depurando o seguinte código:
@@ -144,7 +142,7 @@ problema que você está depurando.
 Você *poderia* percorrer todas as linhas, mas isso pode ser entediante. Você
 *pode* definir um breakpoint na linha em que está interessado e, em seguida,
 pressionar **Resume Script Execution** ![Resume Script
-Execution](https://github.com/google/WebFundamentals/blob/master/web/tools/chrome-devtools/images/resume-script-execution.png?raw=true){:.devtools-inline},
+Execution][resume]{:.devtools-inline},
 porém há um caminho mais rápido.
 
 Clique com o botão direito na linha de código em que você está interessado e
@@ -152,11 +150,10 @@ selecione **Continue to here**. O DevTools executa todo o código até esse pont
 e, em seguida, faz uma pausa nessa linha.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/continue-to-here.png?raw=true"
-alt="Selecting 'Continue to here'.">
-  <figcaption>     <b>Figura 4</b>. Seleção de <b>Continue to
-here</b></figcaption>
+  <img src="imgs/continue-to-here.png" alt="Selecting 'Continue to here'."/>
+  <figcaption>
+    <b>Figura 4</b>. Seleção de <b>Continue to here</b>
+  </figcaption>
 </figure>
 
 ### Reinicie a função principal na pilha de chamadas {: # restart-frame }
@@ -183,42 +180,40 @@ pausado em `B`, sem precisar definir um breakpoint ou pressionar **Resume script
 execution**.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/restart-frame.png?raw=true"
-alt="Selecting 'Restart Frame'.">
-  <figcaption>     <b>Figura 5</b>. Seleção de <b>Restart Frame</b></figcaption>
+  <img src="imgs/restart-frame.png"
+    alt="Selecting 'Restart Frame'."/>
+  <figcaption>
+    <b>Figura 5</b>. Seleção de <b>Restart Frame</b>
+  </figcaption>
 </figure>
 
 ### Retomar a execução do script {: #resume }
 
 Para continuar a execução de seu script após uma pausa, clique em **Resume
-Script Execution** ![Resume Script
-Execution](https://github.com/google/WebFundamentals/blob/master/web/tools/chrome-devtools/images/resume-script-execution.png?raw=true){:
-.devtools-inline}. O DevTools executa o script até o próximo breakpoint, se
-houver.
+Script Execution** ![Resume Script Execution][resume]{:.devtools-inline}. 
+O DevTools executa o script até o próximo breakpoint, se houver.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/resume-script-execution-outline.svg?raw=true"
-alt="Selecting 'Resume script execution'.">
-  <figcaption>     <b>Figura 6</b>. <b>Resume script execution</b>, destacado em
-azul</figcaption>
+  <img src="imgs/resume-script-execution-outline.svg"
+       alt="Selecting 'Resume script execution'."/>
+  <figcaption>
+    <b>Figura 6</b>. <b>Resume script execution</b>, destacado em azul
+  </figcaption>
 </figure>
 
 #### Forçar a execução de um script {: #force-resume }
 
 Para ignorar todos os breakpoints e forçar o seu script a retomar a execução,
 clique e  mantenha em **Resume Script Execution** ![Resume Script
-Execution](https://github.com/google/WebFundamentals/blob/master/web/tools/chrome-devtools/images/resume-script-execution.png?raw=true){:
-.devtools-inline} e selecione **Force script execution** ![Force script
-execution](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/force-script-execution.png?raw=true){:.devtools-inline}.
+Execution][resume]{:.devtools-inline} e selecione **Force script execution** ![Force script
+execution](imgs/force-script-execution.png){:.devtools-inline}.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/selecting-force-script-execution.png?raw=true"
-alt="Selecting 'Force script execution'.">
-  <figcaption>     <b>Figura 7</b>. Seleção de <b>Force script
-execution</b></figcaption>
+  <img src="imgs/selecting-force-script-execution.png"
+       alt="Selecting 'Force script execution'."/>
+  <figcaption>
+    <b>Figure 7</b>. Seleção de <b>Force script execution</b>
+  </figcaption>
 </figure>
 
 ### Alterar o contexto de thread {: #threads }
@@ -227,12 +222,12 @@ Ao trabalhar com web workers ou service workers, clique em um contexto listado
 no painel Threads para alternar para esse contexto. O ícone da seta azul
 representa  qual contexto está selecionado no momento.
 
+
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/threads.svg?raw=true"
-alt="The Threads pane.">
-  <figcaption>     <b>Figura 8</b>. O painel Threads, destacado em
-azul</figcaption>
+  <img src="imgs/threads.svg" alt="The Threads pane."/>
+  <figcaption>
+    <b>Figura 8</b>. O painel Threads, destacado em azul
+  </figcaption>
 </figure>
 
 Por exemplo, suponha que você está pausado em um breakpoint no script principal
@@ -251,11 +246,10 @@ closures.
 - Propriedades não enumeráveis são ignoradas.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/scope.svg?raw=true"
-alt="The Scope pane.">
-  <figcaption>     <b>Figura 9</b>. O painel Scope, destacado em
-azul</figcaption>
+  <img src="imgs/scope.svg" alt="The Scope pane."/>
+  <figcaption>
+    <b>Figura 9</b>. O painel Scope, destacado em azul
+  </figcaption>
 </figure>
 
 ## Veja a atual pilha de chamadas {: #call-stack }
@@ -271,11 +265,11 @@ chamada. O ícone da seta azul representa qual função que o DevTools está
 destacando no momento.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/call-stack.svg?raw=true"
-alt="The Call Stack pane.">
-  <figcaption>     <b>Figura 10</b>. O painel Call Stack, destacado em
-azul</figcaption>
+  <img src="imgs/call-stack.svg"
+    alt="The Call Stack pane."/>
+  <figcaption>
+    <b>Figura 10</b>. O painel Call Stack, destacado em azul
+  </figcaption>
 </figure>
 
 Nota: Quando não estiver em pausa numa linha de código, o painel Call Stack
@@ -292,11 +286,11 @@ chamadas e selecione **Copy stack trace** para copiar a pilha de chamadas atual
 para a área de transferência.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/copy-stack-trace.png?raw=true"
-alt="Selecting 'Copy Stack Trace'.">
-  <figcaption>     <b>Figura 11</b>. Seleção de <b>Copy Stack
-Trace</b></figcaption>
+  <img src="imgs/copy-stack-trace.png"
+    alt="Selecting 'Copy Stack Trace'."/>
+  <figcaption>
+    <b>Figura 11</b>. Seleção de <b>Copy Stack Trace</b>
+  </figcaption>
 </figure>
 
 Abaixo está um exemplo do resultado:
@@ -337,11 +331,11 @@ Para aplicar a caixa preta em um script no painel Editor:
 3. Selecione **Blackbox script**.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/blackbox-editor-pane.png?raw=true"
-alt="Blackboxing a script from the Editor pane.">
-  <figcaption>     <b>Figura 12</b>. Blackbox script no painel
-Editor</figcaption>
+  <img src="imgs/blackbox-editor-pane.png"
+    alt="Blackboxing a script from the Editor pane."/>
+  <figcaption>
+    <b>Figura 12</b>. Blackbox script no painel Editor
+  </figcaption>
 </figure>
 
 ### Caixa preta de um script no painel Call Stack {: #call-stack-blackbox }
@@ -352,11 +346,11 @@ Para aplicar a caixa preta em um script no painel Call Stack:
 2. Selecione **Blackbox script**.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/blackbox-call-stack-pane.png?raw=true"
-alt="Blackboxing a script from the Call Stack pane.">
-  <figcaption>     <b>Figura 13</b>. Blackbox script no painel Call
-Stack</figcaption>
+  <img src="imgs/blackbox-call-stack-pane.png"
+    alt="Blackboxing a script from the Call Stack pane."/>
+  <figcaption>
+    <b>Figura 13</b>. Blackbox script no painel Call
+  </figcaption>
 </figure>
 
 ### Scripts de caixa preta nas configurações {: #settings-blackbox }
@@ -372,10 +366,11 @@ caixa preta.
 5. Clique em **Add**.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/blackbox.png?raw=true"
-alt="Blackboxing a script from Settings.">
-  <figcaption>     <b>Figura 14</b>. Blackbox script em Settings</figcaption>
+  <img src="imgs/blackbox.png"
+    alt="Blackboxing a script from Settings."/>
+  <figcaption>
+    <b>Figura 14</b>. Blackbox script em Settings
+  </figcaption>
 </figure>
 
 ## Executar snippets de código em qualquer página {: #snippets }
@@ -393,33 +388,29 @@ Use o painel Watch para observar os valores das expressões personalizadas. Voc�
 pode assistir a qualquer expressão JavaScript válida.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/watch.svg?raw=true"
-alt="The Watch pane.">
+  <img src="imgs/watch.svg"
+    alt="The Watch pane."/>
   <figcaption><b>Figura 15</b>. O painel Watch, destacado em azul</figcaption>
 </figure>
 
 - Clique em **Add Expression** ![Add
-Expression](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/add-expression.png?raw=true){:.devtools-inline}
-para criar uma nova expressão de observação.
-- Clique em **Refresh**
-![Refresh](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/refresh.png?raw=true){:.devtools-inline}
-para atualizar os valores de todas as expressões existentes. Os valores são
-atualizados automaticamente ao percorrer o código.
+  Expression](imgs/add-expression.png){:.devtools-inline} 
+  para criar uma nova expressão de observação.
+- Clique em **Refresh** ![Refresh](imgs/refresh.png){:.devtools-inline} 
+  para atualizar os valores de todas as expressões existentes. Os valores são
+  atualizados automaticamente ao percorrer o código.
 - Passe o mouse sobre uma expressão e clique em **Delete Expression** ![Delete
-Expression](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/delete-expression.png?raw=true){:.devtools-inline}
-para excluí-la.
+  Expression](imgs/delete-expression.png){:.devtools-inline} 
+  para excluí-la.
 
 ## Tornar um arquivo minificado legível {: #format }
 
-Clique em **Format**
-![Format](https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/format.png?raw=true){:.devtools-inline}
-para tornar um arquivo minificado legível para humanos.
+Clique em **Format** ![Format](imgs/format.png){:.devtools-inline} para 
+tornar um arquivo minificado legível para humanos.
 
 <figure>
-  <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/format.svg?raw=true"
-alt="The Format button.">
+  <img src="imgs/format.svg"
+    alt="The Format button."/>
   <figcaption><b>Figura 16</b>. <b>Format</b>, destacado em azul</figcaption>
 </figure>
 
@@ -438,12 +429,10 @@ Para editar um script:
 todo o arquivo JS no mecanismo JavaScript do Chrome.
 
  <figure>
-   <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/javascript/imgs/editor.svg?raw=true"
-alt="The Editor pane.">
+   <img src="imgs/editor.svg"
+     alt="The Editor pane."/>
    <figcaption><b>Figura 17</b>. O painel Editor, destacado em azul</figcaption>
  </figure>
-
 
 ## Desabilitar JavaScript {: #disable }
 
