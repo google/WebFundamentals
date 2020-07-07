@@ -6,7 +6,7 @@
 'use strict';
 
 const fs = require('fs-extra');
-const gulp = require('gulp');
+const { task, series } = require('gulp');
 const path = require('path');
 const buildJSDocs = require('../reference-docs/build-js-docs');
 
@@ -14,11 +14,11 @@ const buildJSDocs = require('../reference-docs/build-js-docs');
 // reference docs for the passed `srcPath` and `outputDir` options.
 // `outputDir` defaults to `latest`, but can be used to build any doc set
 // assuming your local `srcPath` repo has that version checked out.
-gulp.task('workbox', [
+task('workbox', series([
     'workbox-generate-contributors',
     'workbox-generate-includes',
     'workbox-no-index',
-  ], async () => {
+  ]), async () => {
   const toolsPath =
       path.join(__dirname, '..', '..', 'src', 'content', 'en', 'tools');
 

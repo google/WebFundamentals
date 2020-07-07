@@ -20,6 +20,7 @@
   "devDependencies": {
     "eslint": "^4.12.0",
     "eslint-config-google": "^0.9.1",
+    "gulp-cli": "^2.3.0",
     "gulp-remark": "^3.0.0",
     "gulp-replace": "^1.0.0",
     "husky": "^0.14.3",

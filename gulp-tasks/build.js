@@ -7,17 +7,17 @@
 'use strict';
 
 const fs = require('fs');
-const gulp = require('gulp');
+const { task, series, parallel } = require('gulp');
 const path = require('path');
 const glob = require('globule');
 const jsYaml = require('js-yaml');
 const gutil = require('gulp-util');
 const wfHelper = require('./wfHelper');
 const wfGlossary = require('./wfGlossary');
-const runSequence = require('run-sequence');
 const wfContributors = require('./wfContributors');
 const wfYouTubeShows = require('./wfYouTubeShows');
 const wfTemplateHelper = require('./wfTemplateHelper');
+const { puppeteerBuild } = require('./puppeteer/build_docs');
 
 
 /**
@@ -55,16 +55,17 @@ function generateFeedsForEveryYear(files, options) {
  * Builds the contributors listing and individual pages
  * @todo - Move this gulp task to wfContributors.js
  */
-gulp.task('build:contributors', function() {
+const buildContributors = function(done) {
   wfContributors.build();
-});
+  done();
+}
 
 
 /**
  * Reads src/data/announcement.yaml and adds/removes the announcement
  * to all _project.yaml files.
  */
-gulp.task('build:announcement', function() {
+const buildAnnouncement = function(done) {
   const globOpts = {
     srcBase: 'src/content/en/',
     prefixBase: true,
@@ -87,22 +88,24 @@ gulp.task('build:announcement', function() {
     }
     fs.writeFileSync(file, jsYaml.safeDump(projYaml, dumpYamlOpts));
   });
-});
+  done();
+};
 
 
 /**
  * Builds the WebFu glossary
  * @todo - Move this gulp task to wfGlossary.js
  */
-gulp.task('build:glossary', function() {
+const buildGlossary = function(done) {
   wfGlossary.build();
-});
+  done();
+};
 
 
 /**
  * Builds the RSS & ATOM feeds for /web/fundamentals/
  */
-gulp.task('build:fundamentals', function() {
+const buildFundamentals = function(done) {
   const section = 'fundamentals';
   const baseOutputPath = path.join(global.WF.src.content, section);
   const description = 'The latest changes to ' +
@@ -119,13 +122,15 @@ gulp.task('build:fundamentals', function() {
   wfTemplateHelper.generateFeeds(files, options);
 
   generateFeedsForEveryYear(files, options);
-});
+  done();
+};
+
 
 /**
  * Builds all of the listing pages, including RSS & ATOM feeds
  * for /web/showcase/
  */
-gulp.task('build:showcase', function() {
+const buildShowcase = function(done) {
   const section = 'showcase';
   const baseOutputPath = path.join(global.WF.src.content, section);
   const description = 'Learn why and how other developers have used the web ' +
@@ -183,13 +188,14 @@ gulp.task('build:showcase', function() {
   wfTemplateHelper.generateFeeds(files, options);
 
   generateFeedsForEveryYear(files, options);
-});
+  done();
+};
 
 
 /**
  * Builds index page and RSS & ATOM feeds for /web/shows/
  */
-gulp.task('build:shows', async function() {
+const buildShows = async function() {
   gutil.log(' ', 'Generating recent videos...');
   await wfYouTubeShows.getVideos(global.WF.options.buildType).then((videos) => {
     // build the RSS & ATOM feeds
@@ -235,12 +241,12 @@ gulp.task('build:shows', async function() {
         });
       });
   });
-});
+};
 
 /**
  * Builds RSS & ATOM feeds for the HTTP203 Podcast
  */
-gulp.task('build:http203Podcast', function() {
+const buildHttp203Podcast = function(done) {
   const src = 'shows/http203/podcast/';
   const baseOutputPath = path.join(global.WF.src.content, src);
   const summary = 'Surma and Jake talk about whatever\'s going on in the ' +
@@ -261,13 +267,14 @@ gulp.task('build:http203Podcast', function() {
   files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateListPage(files, options);
   wfTemplateHelper.generatePodcastFeed(files, options);
-});
+  done();
+};
 
 
 /**
  * Builds RSS & ATOM feeds for Designer vs Developer podcast
  */
-gulp.task('build:DVDPodcast', function() {
+const buildDVDPodcast = function(done) {
   const src = 'shows/designer-vs-developer/podcast/';
   const baseOutputPath = path.join(global.WF.src.content, src);
   const subtitle = 'A show that tries to solve the challenges faced in ' +
@@ -289,13 +296,14 @@ gulp.task('build:DVDPodcast', function() {
   files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateListPage(files, options);
   wfTemplateHelper.generatePodcastFeed(files, options);
-});
 
+  done();
+};
 
 /**
  * Builds RSS & ATOM feeds /web/tools/
  */
-gulp.task('build:tools', function() {
+const buildTools = function(done) {
   const section = 'tools';
   const baseOutputPath = path.join(global.WF.src.content, section);
   const options = {
@@ -310,13 +318,14 @@ gulp.task('build:tools', function() {
   wfTemplateHelper.generateFeeds(files, options);
 
   generateFeedsForEveryYear(files, options);
-});
+  done();
+};
 
 
 /**
  * Builds Site Kit pages at /web/site-kit/
  */
-gulp.task('build:sitekit', function() {
+const buildSitekit = function(done) {
   const section = 'site-kit';
   const baseOutputPath = path.join(global.WF.src.content, section);
   const options = {
@@ -331,14 +340,15 @@ gulp.task('build:sitekit', function() {
   wfTemplateHelper.generateFeeds(files, options);
 
   generateFeedsForEveryYear(files, options);
-});
+  done();
+};
 
 
 /**
  * Builds all of the listing pages, including RSS & ATOM feeds
  * for /web/updates/
  */
-gulp.task('build:updates', function() {
+const buildUpdates = function(done) {
   const section = 'updates';
   const baseOutputPath = path.join(global.WF.src.content, section);
   const description = 'The latest and freshest updates from the Web teams ' +
@@ -392,33 +402,26 @@ gulp.task('build:updates', function() {
     outputPath: baseOutputPath,
   };
   generateFeedsForEveryYear(files, options);
-});
+  done();
+};
 
 /**
  * Builds all the things!
  */
-gulp.task('post-install', function(cb) {
-  runSequence('puppeteer:build', 'build', cb);
-});
 
+const build = parallel([
+  buildAnnouncement,
+  buildContributors,
+  buildGlossary,
+  buildFundamentals,
+  buildShowcase,
+  buildHttp203Podcast,
+  buildDVDPodcast,
+  buildTools,
+  buildUpdates,
+  buildShows,
+  buildSitekit,
+]);
 
-/**
- * Builds all the things!
- */
-gulp.task('build', function(cb) {
-  runSequence(
-    [
-      'build:announcement',
-      'build:contributors',
-      'build:glossary',
-      'build:fundamentals',
-      'build:showcase',
-      'build:http203Podcast',
-      'build:DVDPodcast',
-      'build:tools',
-      'build:updates',
-      'build:shows',
-      'build:sitekit',
-    ],
-    cb);
-});
+task('build', build);
+task('post-install', series(puppeteerBuild, build));

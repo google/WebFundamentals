@@ -97,7 +97,7 @@ function extractRegion(content, region) {
   return m && m[0] || null;
 }
 
-gulp.task('puppeteer:build', async () => {
+const puppeteerBuild = async () => {
   const result = await wfHelper.promisedExec(
       `git ls-remote --tags ${GITHUB_PROJECT_URL}`, '.');
   const refs = result.split('\n');
@@ -125,4 +125,8 @@ gulp.task('puppeteer:build', async () => {
   }
 
   await generateTOC(path.join(PPTR_FOLDER_PATH, '_toc.yaml'), tags);
-});
+}
+
+gulp.task('puppeteer:build', puppeteerBuild);
+
+exports.puppeteerBuild = puppeteerBuild;

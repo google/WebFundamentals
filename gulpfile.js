@@ -108,7 +108,7 @@ gutil.log('');
 /**
  * Cleans any generated files.
  */
-gulp.task('clean', function() {
+gulp.task('clean', async function() {
   const filesToDelete = [
     'test-results.json',
     'src/content/en/_shared/contributors/*',
@@ -140,7 +140,7 @@ gulp.task('clean', function() {
     '!src/content/*/**/_generated.md',
   ];
   const opts = {dryRun: false, dot: true};
-  const deletedFiles = del.sync(filesToDelete, opts);
+  const deletedFiles = await del(filesToDelete, opts);
   gutil.log(' ', 'Deleted', chalk.magenta(deletedFiles.length + ' files'));
 });
 

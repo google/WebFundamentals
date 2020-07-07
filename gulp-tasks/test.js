@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const gulp = require('gulp');
+const { task, series } = require('gulp');
 const chalk = require('chalk');
 const glob = require('globule');
 const jsYaml = require('js-yaml');
@@ -504,7 +504,7 @@ function printTestResults(results) {
  * Get PR data to potentially ignore any tests
  *****************************************************************************/
 
-gulp.task('test:travis-init', function() {
+const testTravisInit = function() {
   // Get the PR number and GitHub Token
   const prNumber = parseInt(process.env.TRAVIS_PULL_REQUEST, 10);
   const gitToken = process.env.GIT_TOKEN;
@@ -560,13 +560,13 @@ gulp.task('test:travis-init', function() {
       global.WF.options.ignoreHelpfulWidget = true;
     }
   });
-});
+};
 
 /** ***************************************************************************
  * Gulp Test Task
  *****************************************************************************/
 
-gulp.task('test', ['test:travis-init'], function() {
+task('test', series([testTravisInit]), function() {
   if (global.WF.options.help) {
     gutil.log(' ', chalk.cyan('--help'), 'Shows this message');
     gutil.log(' ', chalk.cyan('--testAll'), 'Tests all files');
