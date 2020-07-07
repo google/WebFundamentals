@@ -34,6 +34,9 @@ redirects:
 #
 ## Redirects for Fundamentals content migrated to web.dev
 
+- from: /web/billions/...
+  to: https://web.dev/
+
 - from: /web/feedback/...
   to: https://web.dev/how-to-file-a-good-bug/
 
@@ -72,6 +75,9 @@ redirects:
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
   to: https://web.dev/http-cache/
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+  to: https://web.dev/fast/#optimize-your-images
 
 - from: /web/fundamentals/performance/prpl-pattern
   to: https://web.dev/apply-instant-loading-with-prpl/

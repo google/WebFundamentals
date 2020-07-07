@@ -51,11 +51,12 @@ landing_page:
     - image_path: /web/images/wd-live-wide.png
       image_left: true
       description: >
-        Join us for a three day digital event, to celebrate the web
-        community’s actions, learn modern web techniques and connect with
-        each other.
+        <b class="goog-font">web.dev LIVE</b> is now over! Head to
+        <a href="https://web.dev/live/" target="_blank" rel="nofollow">web.dev/live</a>
+        to watch all the sessions, see top Q&amp;A and more from our three
+        day digital event for web developers.
       buttons:
-      - label: Learn more
+      - label: Watch now
         path: https://web.dev/live/
         classname: button button-primary
       path: https://web.dev/live/
