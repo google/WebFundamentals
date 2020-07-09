@@ -97,6 +97,10 @@ const SCHEMA_PROJECT = {
       },
       additionalProperties: false,
     },
+    include: {
+      type: 'string',
+      pattern: /racialequity/,
+    },
   },
   additionalProperties: false,
 };
