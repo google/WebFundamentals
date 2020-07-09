@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: コンソール API を使用すると、実行時間を測定したり、文の実行回数をカウントしたりすることができます。
 
-{# wf_updated_on:2015-05-11 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 #  実行の測定とカウント {: .page-title }

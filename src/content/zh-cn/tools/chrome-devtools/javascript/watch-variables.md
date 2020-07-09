@@ -1,9 +1,9 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:利用 Chrome DevTools，您可以轻松地查看整个应用中的多个变量。
 
 {# wf_published_on:2016-02-11 #}
-{# wf_updated_on:2016-02-11 #}
+{# wf_updated_on:2020-07-10 #}
 
 # 在 Sources 中观察变量 {: .page-title }
 

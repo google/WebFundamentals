@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:控制台日志是一种可以检查您的页面或应用所进行操作的强大方式。我们将先了解 console.log()，然后再探索其他高级用途。
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 诊断并记录到控制台中 {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: A guide on navigating Chrome DevTools using assistive technology like screen readers.
 
-{# wf_updated_on: 2019-03-08 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2019-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 

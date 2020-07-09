@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Usa el panel Timeline de Chrome DevTools para registrar y analizar toda la actividad de tu app mientras se ejecuta. Es el mejor punto de partida para investigar los problemas percibidos sobre el rendimiento de tu app.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-06-08 #}
 
 # Cómo usar la herramienta Timeline {: .page-title }

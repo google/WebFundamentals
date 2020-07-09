@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome と DevTools を使用して、メモリリーク、メモリの肥大化、頻繁なガベージ コレクションなど、ページのパフォーマンスに影響するメモリの問題を見つける方法について説明します。
 
-{# wf_updated_on:2015-08-03 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # メモリの問題の解決 {: .page-title }

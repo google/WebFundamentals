@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:使用 Application 面板检查、修改和调试网络应用清单、服务工作线程和服务工作线程缓存。
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on:2016-07-25 #}
 
 # 调试 Progressive Web App {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Learn how to log messages to the Console.
 
-{# wf_updated_on: 2020-06-19 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2019-04-19 #}
 {# wf_blink_components: Platform>DevTools #}
 

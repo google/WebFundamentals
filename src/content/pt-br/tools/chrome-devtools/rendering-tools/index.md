@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Os usuários esperam que as páginas sejam interativas e suaves. Cada etapa no pipeline de pixels representa uma oportunidade para introduzir instabilidade. Conheça ferramentas e estratégias para identificar e consertar problemas comuns que prejudicam o desempenho em tempo de execução.
 
-{# wf_updated_on: 2016-03-15 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Analisar o desempenho em tempo de execução {: .page-title }

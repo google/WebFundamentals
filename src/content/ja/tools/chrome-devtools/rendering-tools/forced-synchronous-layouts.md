@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:このインタラクティブなガイドに従って、レイアウトの強制同期の診断に DevTools を使う方法を習得します。
 
-{# wf_updated_on: 2016-03-31 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # レイアウトの強制同期の診断 {: .page-title }

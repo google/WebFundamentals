@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: En esta sección se describen términos comunes que se usan en el análisis de memoria y que se pueden aplicar a una variedad de herramientas de generación de perfiles de memoria para diferentes idiomas.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-05-18 #}
 
 # Terminología de memoria {: .page-title }

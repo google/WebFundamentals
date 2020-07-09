@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:利用 Chrome DevTools 的 Device Mode，您可以在一系列設備上模擬開發網站在生產環境中的運行。
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 測試自適應和設備特定的視口 {: .page-title }

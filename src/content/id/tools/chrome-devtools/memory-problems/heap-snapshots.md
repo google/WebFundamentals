@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Pelajari cara merekam cuplikan heap dengan profiler heap Chrome DevTools dan menemukan kebocoran memori.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-06-08 #}
 
 # Cara Merekam Cuplikan Heap {: .page-title }

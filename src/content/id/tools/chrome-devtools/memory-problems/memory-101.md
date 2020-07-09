@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Bagian ini menjelaskan istilah utama yang digunakan dalam analisis memori dan berlaku untuk berbagai alat pembuat profil memori untuk bahasa yang berbeda.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-05-18 #}
 
 # Terminologi Memori {: .page-title }

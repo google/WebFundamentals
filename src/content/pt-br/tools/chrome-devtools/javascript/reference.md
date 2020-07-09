@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Descubra novas formas de depuração nesta referência abrangente dos recursos de depuração do Chrome DevTools.
 
-{# wf_updated_on: 2020-07-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2017-01-04 #}
 {# wf_blink_components: Platform>DevTools #}
 

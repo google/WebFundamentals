@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools의 Timeline 패널을 사용하면 애플리케이션에서 작업이 실행될 때 모든 작업을 기록하고 분석할 수 있습니다. 이는 애플리케이션에서 인지된 성능 문제를 조사하는 데 가장 좋은 출발점입니다.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-06-08 #}
 
 # 타임라인 도구 사용법 {: .page-title }

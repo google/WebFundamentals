@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome 개발자 도구를 사용하여 네이티브 Android 앱에서 WebView를 디버그합니다.
 
-{# wf_updated_on: 2015-07-29 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # WebView 원격 디버깅 {: .page-title }

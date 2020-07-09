@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: O modo de eventos de linha do tempo exibe todos os eventos acionados durante uma gravação. Use a referência ao evento de linha do tempo para saber mais sobre cada tipo de evento de linha do tempo.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Referência aos eventos de linha do tempo {: .page-title }

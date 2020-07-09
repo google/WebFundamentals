@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: コードを行または関数ごとに実行すると、データやページ内の変更を観察して、何が起こっているかを正確に把握できます。
 
-{# wf_updated_on: 2015-09-01 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # コードをステップ実行する方法 {: .page-title }

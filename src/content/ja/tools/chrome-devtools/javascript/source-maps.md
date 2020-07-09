@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: クライアント側のコードを結合、圧縮、またはコンパイルした後も、読みやすく、デバッグ可能な状態にしておきます。
 
-{# wf_updated_on:2015-04-21 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # ソースコードへの前処理済みコードのマッピング {: .page-title }

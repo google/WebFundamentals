@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Pengguna mengharapkan laman berjalan mulus dan interaktif. Setiap tahap di pipeline piksel menyatakan peluang timbulnya jank. Pelajari tentang alat dan strategi untuk mengidentifikasi dan memperbaiki masalah umum yang memperlambat kinerja waktu proses.
 
-{# wf_updated_on: 2016-03-15 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Analisis Kinerja Waktu Proses {: .page-title }

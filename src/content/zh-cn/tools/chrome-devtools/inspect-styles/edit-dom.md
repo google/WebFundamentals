@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:Chrome DevTools 的 Elements 面板中的 DOM 树视图可以显示当前网页的 DOM 结构。通过 DOM 更新实时修改页面的内容和结构。
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-29 #}
 
 # 编辑 DOM {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: How to view and change IndexedDB data with the Application panel and Snippets.
 
-{# wf_updated_on: 2020-06-19 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2019-03-18 #}
 {# wf_blink_components: Platform>DevTools #}
 

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: A vista da árvore do DOM no painel Elements do Chrome DevTools exibe a estrutura do DOM da página web atual. Edite em tempo real o conteúdo e a estrutura da sua página com atualizações do DOM.
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Editar o DOM {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools의 Device Mode를 사용하면 개발 사이트가 제작을 마친 뒤 다양한 기기에서 어떻게 보일지 흉내 낼 수 있습니다.
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 

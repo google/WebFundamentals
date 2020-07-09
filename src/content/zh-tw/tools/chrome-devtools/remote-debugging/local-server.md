@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:在開發計算機網絡服務器上託管網站，然後從 Android 設備訪問內容。
 
-{# wf_updated_on:2016-04-07 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 訪問本地服務器 {: .page-title }

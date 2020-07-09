@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Users expect pages to be interactive and smooth. Each stage in  the pixel pipeline represents an opportunity to introduce jank. Learn about  tools and strategies to identify and fix common problems that slow down  runtime performance.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 

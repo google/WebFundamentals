@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Use a ferramenta do criador de perfil de alocação para encontrar objetos que não foram coletados da lixeira corretamente e continuam retendo memória.
 
-{# wf_updated_on: 2015-07-08 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Como usar a ferramenta do criador de perfil de alocação {: .page-title }

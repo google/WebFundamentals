@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Inspect and modify animations with the Chrome DevTools  Animation Inspector.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2016-05-02 #}
 {# wf_blink_components: Platform>DevTools #}
 
