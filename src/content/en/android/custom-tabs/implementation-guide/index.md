@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Implementation Guide for Custom Tabs.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-07-02 #}
+{# wf_updated_on: 2020-07-09 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Implementation guide {: .page-title }
@@ -160,7 +160,7 @@ that you know a page was loaded.
 - Tell the browser which pages the user is likely to load with
 [`CustomTabsSession#mayLaunchUrl`][12]
 - Call the [`CustomTabsIntent.Builder`][4] constructor passing the created
-[`CustomTabsSession`][13] as a parameter.
+[`CustomTabsSession`][12] as a parameter.
 
 ## Connect to the Custom Tabs Service
 
@@ -215,7 +215,7 @@ CustomTabsCallback or a null value will return false.
 
 ## Tell the browser what URLs the user is likely to open
 
-[`boolean mayLaunchUrl(Uri url, Bundle extras, List<Bundle> otherLikelyBundles)`][18]
+[`boolean mayLaunchUrl(Uri url, Bundle extras, List<Bundle> otherLikelyBundles)`][12]
 
 This CustomTabsSession method tells the browser of a likely future navigation to a URL. The method
 [`warmup()`][9] should be called first as a best practice. The most likely URL has to be specified
@@ -335,13 +335,11 @@ code snippet above won't return results:
 [9]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)
 [10]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#newSession(androidx.browser.customtabs.CustomTabsCallback)
 [11]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsCallback
-[12]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,%20android.os.Bundle,%20java.util.List%3Candroid.os.Bundle%3E)(android.net.Uri, android.os.Bundle, java.util.List<android.os.Bundle>)
-[13]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession
+[12]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession
 [14]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsServiceConnection
 [15]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsServiceConnection#onCustomTabsServiceConnected(android.content.ComponentName,%20androidx.browser.customtabs.CustomTabsClient)
 [16]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#warmup(long)
 [17]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsClient#newSession(androidx.browser.customtabs.CustomTabsCallback)
-[18]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsSession#mayLaunchUrl(android.net.Uri,%20android.os.Bundle,%20java.util.List%3Candroid.os.Bundle%3E)(android.net.Uri, android.os.Bundle, java.util.List<android.os.Bundle>)
 [19]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsCallback#onNavigationEvent(int,%20android.os.Bundle)
 [20]: https://developer.android.com/reference/android/content/pm/PackageManager
 [21]: https://developer.android.com/reference/android/graphics/Color
