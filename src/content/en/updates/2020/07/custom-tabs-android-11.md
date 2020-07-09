@@ -4,7 +4,7 @@ description: How to use Custom Tabs with Android 11
 
 {# wf_updated_on: 2020-07-09 #}
 {# wf_published_on: 2020-07-09 #}
-{# wf_tags: android, android-11, custom-tabs #}
+{# wf_tags: android, custom-tabs #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
 
