@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="192px" height="192px" viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Master</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="152" height="152" rx="12"></rect>
+        <radialGradient cx="14.9352841%" cy="13.6441477%" fx="14.9352841%" fy="13.6441477%" r="100.42392%" id="radialGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0.12" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="-0.166812227%" cy="0.103182828%" fx="-0.166812227%" fy="0.103182828%" r="136.320873%" id="radialGradient-4">
+            <stop stop-color="#1A237E" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#1A237E" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="85.0843087%" cy="13.3997553%" fx="85.0843087%" fy="13.3997553%" r="153.654535%" id="radialGradient-5">
+            <stop stop-color="#1A237E" stop-opacity="0.12" offset="0%"></stop>
+            <stop stop-color="#1A237E" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="41.3400842%" cy="0%" fx="41.3400842%" fy="0%" r="56.5435174%" id="radialGradient-6">
+            <stop stop-color="#1A237E" stop-opacity="0.15" offset="0%"></stop>
+            <stop stop-color="#1A237E" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <path d="M76,136 C109.137085,136 136,109.137085 136,76 C136,42.862915 109.137085,16 76,16 C42.862915,16 16,42.862915 16,76 C16,109.137085 42.862915,136 76,136 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="120" height="120" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <circle id="path-9" cx="76" cy="76" r="28"></circle>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="56" height="56" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <circle id="path-11" cx="76" cy="76" r="20"></circle>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Master">
+            <g id="Logo" transform="translate(20.000000, 20.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#2879FF" xlink:href="#path-1"></use>
+                <g id="Grid" mask="url(#mask-2)" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="0.5">
+                    <g transform="translate(-20.000000, -20.000000)">
+                        <path d="M0,0 L192,192" id="Shape"></path>
+                        <path d="M192,0 L0,192" id="Shape"></path>
+                        <path d="M123.75,0 L123.75,192" id="Shape"></path>
+                        <path d="M68.25,0 L68.25,192" id="Shape"></path>
+                        <path d="M192,123.75 L0,123.75" id="Shape"></path>
+                        <path d="M192,68.25 L0,68.25" id="Shape"></path>
+                        <circle id="Oval" cx="96" cy="96" r="39"></circle>
+                        <path d="M0,96 L192,96" id="Shape"></path>
+                        <path d="M96,0 L96,192" id="Shape"></path>
+                    </g>
+                </g>
+                <circle id="Lux" fill="url(#radialGradient-3)" cx="76" cy="76" r="60"></circle>
+                <path d="M140,0 L12,0 C5.4,0 0,5.4 0,12 L0,13 C0,6.4 5.4,1 12,1 L140,1 C146.6,1 152,6.4 152,13 L152,12 C152,5.4 146.6,0 140,0 L140,0 Z" id="Shadow-Top" fill="#FFFFFF" opacity="0.2"></path>
+                <path d="M140,151 L12,151 C5.4,151 0,145.6 0,139 L0,140 C0,146.6 5.4,152 12,152 L140,152 C146.6,152 152,146.6 152,140 L152,139 C152,145.6 146.6,151 140,151 L140,151 Z" id="Shadow-Bottom" fill="#000000" opacity="0.1"></path>
+                <path d="M49.4867414,67.4824642 L25,43 L51.7233318,88.827902 C49.5318758,84.891635 48.2834423,80.3583697 48.2834423,75.5335171 C48.2834423,72.7315553 48.7044808,70.0279322 49.4867414,67.4824642 Z" id="Inner-Shadow-Left" fill="url(#radialGradient-4)"></path>
+                <path d="M81.9694034,102.997052 L73,136.461143 L99.5643269,90.004364 L99.5567672,90 C95.8071292,96.4812972 89.476015,101.282307 81.9694034,102.997052 Z" id="Inner-Shadow-Bottom" fill="url(#radialGradient-5)"></path>
+                <path d="M96.1004568,57.4344593 L129.523625,48.5031408 L76.2891479,48.5031408 C76.1497592,48.5010494 76.010118,48.5 75.8702316,48.5 C60.7540701,48.5 48.5,60.7540701 48.5,75.8702316 C48.5,90.9863932 60.7540701,103.240463 75.8702316,103.240463 C90.9863932,103.240463 103.240463,90.9863932 103.240463,75.8702316 C103.240463,68.7686547 100.535839,62.2987766 96.100452,57.4344581 Z" id="Inner-Shadow-Top" fill="url(#radialGradient-6)"></path>
+                <use id="Circle-Outer" stroke="#FFFFFF" mask="url(#mask-8)" stroke-width="4" xlink:href="#path-7"></use>
+                <use id="Circle-Middle" stroke="#FFFFFF" mask="url(#mask-10)" stroke-width="4" xlink:href="#path-9"></use>
+                <use id="Circle-Inner" stroke="#FFFFFF" mask="url(#mask-12)" stroke-width="4" xlink:href="#path-11"></use>
+                <rect id="Right" fill="#FFFFFF" x="76" y="48" width="53" height="2"></rect>
+                <rect id="Bottom" fill="#FFFFFF" transform="translate(86.132686, 112.449673) rotate(-240.000000) translate(-86.132686, -112.449673) " x="59.6326859" y="111.449673" width="53" height="2"></rect>
+                <rect id="Left" fill="#FFFFFF" transform="translate(39.367314, 66.550327) rotate(-120.000000) translate(-39.367314, -66.550327) " x="12.8673141" y="65.5503268" width="53" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

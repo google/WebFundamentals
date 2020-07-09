@@ -1,0 +1,37 @@
+name: Chrome DevTools
+description: Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome.
+home_url: /web/tools/chrome-devtools/
+buganizer_id: 180451
+color: google-blue
+content_license: cc-apache
+footer_path: /web/_footer.yaml
+google_analytics_ids:
+  - UA-52746336-1
+icon:
+  path: /web/images/devtools-icon.svg
+social_media:
+  image:
+    path: /web/images/social-webfu-16x9.png
+    width: 1200
+    height: 675
+gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq
+announcement:
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+      .goog-font {
+        font-family: Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+      }
+    </style> <b class="goog-font">web.dev LIVE</b> is now over! Head to <a href="https://web.dev/live/" target="_blank" rel="nofollow">web.dev/live</a> to watch all the sessions, see top Q&amp;A, and more.
