@@ -6,7 +6,7 @@ color: google-blue
 content_license: cc-apache
 footer_path: /web/_footer.yaml
 google_analytics_ids:
-  - UA-52746336-1
+- UA-52746336-1
 icon:
   path: /web/images/devtools-icon.svg
 social_media:
