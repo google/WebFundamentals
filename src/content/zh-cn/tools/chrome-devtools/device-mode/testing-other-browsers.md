@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: 您的任务不只局限于确保网站在 Chrome 和 Android 上出色运行。 即使 Device Mode 可以模拟 iPhone 等多种其他设备，我们仍鼓励您查看其他浏览器模拟解决方案。
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 

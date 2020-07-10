@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: 타임라인 이벤트 모드는 기록을 작성하는 동안 트리거된 모든 이벤트를 표시합니다. 타임라인 이벤트 참조를 이용하여 각 타임라인 이벤트 유형에 대해 자세히 알아봅니다.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 타임라인 이벤트 참조 {: .page-title }

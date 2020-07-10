@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Saiba como registrar resumos de pilha com o criador de perfil de pilha do Chrome DevTools e encontrar vazamentos de memória.
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-06-08 #}
 
 # Como registrar instantâneos de pilha {: .page-title }

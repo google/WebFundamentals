@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:控制檯日誌是一種可以檢查您的頁面或應用所進行操作的強大方式。我們將先了解 console.log()，然後再探索其他高級用途。
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 診斷並記錄到控制檯中 {: .page-title }

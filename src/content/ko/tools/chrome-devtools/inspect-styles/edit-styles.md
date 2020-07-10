@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools의 Styles 창을 사용하여 요소와 연관된 CSS 스타일을 검사하고 수정합니다.
 
-{# wf_updated_on: 2016-02-25 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 스타일 편집 {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:用戶希望頁面可以交互並且非常流暢。像素管道的每個階段均可能出現卡頓現象。瞭解用於確定和解決會降低運行時性能的常見問題的工具和策略。
 
-{# wf_updated_on:2016-03-15 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 分析運行時性能 {: .page-title }

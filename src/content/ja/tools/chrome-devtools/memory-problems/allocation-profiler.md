@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Allocation Profiler Tool を使って、ガーベジ コレクションが正しく行われていないオブジェクトを探し、引き続きメモリを保持します。
 
-{# wf_updated_on:2015-07-08 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # Allocation Profiler Tool の使い方 {: .page-title }

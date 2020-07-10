@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Buat agar kode sisi klien tetap bisa dibaca dan di-debug bahkan setelah Anda mengombinasikan, mengecilkan, atau mengompilasinya.
 
-{# wf_updated_on: 2015-04-21 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Memetakan Kode Praproses ke Kode Sumber {: .page-title }

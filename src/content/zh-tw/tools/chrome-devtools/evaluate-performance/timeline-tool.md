@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:使用 Chrome DevTools 的 Timeline 面板可以記錄和分析您的應用在運行時的所有活動。這裏是開始調查應用中可覺察性能問題的最佳位置。
 
-{# wf_updated_on:2016-03-07 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-06-08 #}
 
 # 如何使用 Timeline 工具 {: .page-title }

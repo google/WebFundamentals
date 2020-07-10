@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:使用 Chrome DevTools 動畫檢查器檢查和修改動畫。
 
-{# wf_updated_on: 2016-05-02 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2016-05-02 #}
 
 # 檢查動畫 {: .page-title }

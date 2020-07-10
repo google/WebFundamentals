@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:點擊 Chrome DevTools 中的 Pretty-Print 圖標，將您的 JavaScript 轉換成更便於閱讀的形式。
 
-{# wf_updated_on:2016-02-21 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 美化 JavaScript 外觀 {: .page-title }

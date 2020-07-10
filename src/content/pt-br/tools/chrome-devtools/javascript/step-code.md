@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Ao executar uma linha ou função do código por vez, é possível observar as mudanças dos dados e da página e entender exatamente o que está acontecendo.
 
-{# wf_updated_on: 2015-09-01 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Como percorrer o código {: .page-title }

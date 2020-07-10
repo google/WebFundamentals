@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Las pantallas táctiles, los chips de GPS y los acelerómetros pueden ser difíciles de probar ya que la mayoría de las computadoras de escritorio no los tienen. Los emuladores de sensores de Chrome DevTools reducen la sobrecarga de la prueba al emular los sensores de dispositivos móviles comunes.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Emulación de sensores: Ubicación geográfica y acelerómetro {: .page-title }

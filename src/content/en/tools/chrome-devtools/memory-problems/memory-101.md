@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-05-18 #}
 {# wf_blink_components: Platform>DevTools #}
 

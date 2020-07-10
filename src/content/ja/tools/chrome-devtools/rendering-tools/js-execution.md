@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:Chrome DevTools の CPU Profiler を使って負荷の高い関数を見極めます。
 
-{# wf_updated_on:2016-03-30 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # JavaScript 実行の高速化 {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Dengan mengeksekusi kode baris per baris atau fungsi per fungsi, Anda bisa mengamati perubahan dalam data dan dalam laman untuk memahami secara persis apa yang sedang terjadi.
 
-{# wf_updated_on: 2015-09-01 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Cara meyusuri kode Anda {: .page-title }

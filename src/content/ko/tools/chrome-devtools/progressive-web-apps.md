@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Application 패널을 사용하여 웹 앱 매니페스트, 서비스 워커 및 서비스 워커 캐시를 검사, 수정 및 디버그합니다.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Progressive Web App 디버그 {: .page-title }

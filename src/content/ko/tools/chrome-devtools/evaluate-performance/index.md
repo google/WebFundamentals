@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome 개발자 도구에서 런타임 성능을 평가하는 방법
 
-{# wf_updated_on: 2019-03-29 #} {# wf_published_on: 2017-04-06 #} {# wf_blink_components: Platform>DevTools #}
+{# wf_updated_on: 2020-07-10 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 

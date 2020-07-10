@@ -1,9 +1,9 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools では、アプリケーション全体での複数の変数を簡単に確認できます。
 
 {# wf_published_on:2016-02-11 #}
-{# wf_updated_on:2016-02-11 #}
+{# wf_updated_on:2020-07-10 #}
 
 # [Sources] での変数の監視 {: .page-title }
 

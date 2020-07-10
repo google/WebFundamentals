@@ -1,5 +1,5 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Как просмотреть данные кэша с панели приложений Chrome DevTools.
 
 {# wf_updated_on: 2019-09-03 #} {# wf_published_on: 2019-03-25 #} {#

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: 콘솔 로깅은 페이지 또는 애플리케이션이 수행하는 작업을 검사하는 강력한 방법입니다. console.log()로 시작하고 다른 고급 용도를 탐구해 봅시다.
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 진단 및 콘솔에 로그 {: .page-title }

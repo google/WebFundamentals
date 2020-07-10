@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:利用 Chrome DevTools 提供的工具，您可以修复引发异常的网页和在 JavaScript 中调试错误。
 
-{# wf_updated_on:2015-05-12 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 异常和错误处理 {: .page-title }

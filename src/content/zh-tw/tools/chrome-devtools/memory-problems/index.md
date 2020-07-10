@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:瞭解如何使用 Chrome 和 DevTools 查找影響頁面性能的內存問題，包括內存泄漏、內存膨脹和頻繁的垃圾回收。
 
-{# wf_updated_on:2015-08-03 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 解決內存問題 {: .page-title }

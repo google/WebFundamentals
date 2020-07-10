@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Usa la herramienta de generación de perfiles de asignación para buscar objetos que la recolección de elementos no usados no procese correctamente, y que sigan reteniendo memoria.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Cómo usar la herramienta de generación de perfiles de asignación {: .page-title }
