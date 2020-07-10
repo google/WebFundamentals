@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools のヒープ プロファイラを使ってヒープのスナップショットを記録し、メモリリークを見つける方法について説明します。
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-06-08 #}
 
 # ヒープのスナップショットを記録する方法 {: .page-title }

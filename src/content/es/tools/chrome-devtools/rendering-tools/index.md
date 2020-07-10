@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Los usuarios esperan que las páginas sean interactivas y fluidas. Cada etapa en la canalización de píxeles representa una oportunidad para introducir bloqueos. Conoce herramientas y estrategias para identificar y solucionar problemas comunes que lentifican el rendimiento del tiempo de ejecución.
 
-{# wf_updated_on: 2016-03-15 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Analiza el rendimiento del tiempo de ejecución {: .page-title }

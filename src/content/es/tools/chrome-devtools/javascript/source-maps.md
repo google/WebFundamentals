@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Haz que tu código del lado del cliente sea legible y depurable aún después de combinarlo, comprimirlo y compilarlo.
 
-{# wf_updated_on: 2015-04-21 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Asigna código previamente procesado al código fuente {: .page-title }

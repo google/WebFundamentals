@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 
-{# wf_updated_on:2016-02-01 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-05-10 #}
 
 # 使用控制檯 {: .page-title }

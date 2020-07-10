@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Console API를 사용하여 실행 시간을 측정하고 문 실행을 계산합니다.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 실행 측정 및 계산 {: .page-title }

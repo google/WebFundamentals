@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: タッチ スクリーン、GPS チップ、および加速度計は、ほとんどの PC に搭載されていないので、テストが難しい場合があります。Chrome DevTools センサー エミュレータでは、一般的なモバイル端末センサーをエミュレートすることによって、テストのオーバーヘッドを削減できます。
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # センサーのエミュレート: 位置情報と加速度計 {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Mantenha o código do lado do cliente legível e depurável mesmo depois de combinar, minificar ou compilar.
 
-{# wf_updated_on: 2015-04-21 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mapear código pré-processado no código-fonte {: .page-title }

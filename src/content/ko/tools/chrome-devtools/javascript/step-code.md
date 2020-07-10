@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: 코드를 한 번에 한 줄씩 또는 한 함수씩 실행함으로써, 데이터와 페이지의 변경사항을 관찰하여 무슨 일이 발생하는지 정확히 이해할 수 있습니다.
 
-{# wf_updated_on: 2015-09-01 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 코드를 단계별로 실행하는 방법 {: .page-title }

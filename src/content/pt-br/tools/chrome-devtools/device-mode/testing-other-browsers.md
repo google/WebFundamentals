@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Seu trabalho não acaba depois de garantir que o site funcione perfeitamente no Chrome e no Android. Embora o Device Mode possa simular diversos outros dispositivos, como iPhones, recomendamos que você confira soluções de emulação para outros navegadores.
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 

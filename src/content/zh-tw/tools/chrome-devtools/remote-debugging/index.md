@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上的實時內容。
 
-{# wf_updated_on:2016-12-09 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 <style>

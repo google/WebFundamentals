@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:使用 table() 方法比較類似的數據對象。
 
-{# wf_updated_on:2015-05-11 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 比較類似的數據對象 {: .page-title }

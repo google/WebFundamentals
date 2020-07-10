@@ -1,9 +1,9 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 
 {# wf_published_on: 2016-12-29 #}
-{# wf_updated_on: 2019-02-08 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Understanding Resource Timing {: .page-title }

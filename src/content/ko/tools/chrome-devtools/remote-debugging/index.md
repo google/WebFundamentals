@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Windows, Mac 또는 Linux 컴퓨터에서 Android 기기의 라이브 콘텐츠를 원격으로 디버그합니다.
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 

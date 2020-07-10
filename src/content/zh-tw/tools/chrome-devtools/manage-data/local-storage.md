@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:從 Application 面板檢查和管理存儲、數據庫與緩存。
 
-{# wf_updated_on:2016-07-28 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 檢查和管理存儲、數據庫與緩存 {: .page-title }

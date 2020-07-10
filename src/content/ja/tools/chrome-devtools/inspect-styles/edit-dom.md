@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools の [Elements] パネルの DOM ツリービューには、現在のウェブページの DOM 構造が表示されます。DOM のアップデートを通じて、ページのコンテンツと構造をライブ編集します。
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-29 #}
 
 # DOM の編集 {: .page-title }

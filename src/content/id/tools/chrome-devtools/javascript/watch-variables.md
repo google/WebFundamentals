@@ -1,9 +1,9 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools memudahkan Anda melihat banyak variabel sekaligus dalam aplikasi.
 
 {# wf_published_on: 2016-02-11 #}
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2020-07-10 #}
 
 # Melihat variabel di Sources {: .page-title }
 

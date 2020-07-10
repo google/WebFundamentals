@@ -1,9 +1,9 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools를 사용하면 애플리케이션 전체에 걸쳐 여러 변수를 쉽게 확인할 수 있습니다.
 
 {# wf_published_on: 2016-02-11 #}
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2020-07-10 #}
 
 # 소스에서 변수 조사 {: .page-title }
 

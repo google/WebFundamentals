@@ -1,9 +1,9 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Learn how to save changes made within DevTools to disk.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-12-14 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2018-04-10 #}
 
 {# Links #}

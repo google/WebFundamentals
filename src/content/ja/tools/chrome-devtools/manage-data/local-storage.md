@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: ストレージ、データベース、およびキャッシュを [Application] パネルから調査および管理します。
 
-{# wf_updated_on:2016-07-28 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # ストレージ、データベース、およびキャッシュの調査と管理 {: .page-title }

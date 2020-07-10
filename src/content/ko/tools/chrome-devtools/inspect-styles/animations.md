@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools Animation Inspector로 애니메이션을 검사하고 수정합니다.
 
-{# wf_updated_on: 2016-05-02 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2016-05-02 #}
 
 # 애니메이션 검사 {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Manfaatkan Console API untuk mengukur waktu eksekusi dan menghitung eksekusi pernyataan.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Mengukur dan menghitung eksekusi {: .page-title }

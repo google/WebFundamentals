@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:本部分將介紹內存分析中的常用術語，適用於不同語言的各種內存分析工具。
 
-{# wf_updated_on:2015-05-18 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-05-18 #}
 
 # 內存術語 {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Aprende a usar Chrome y DevTools para encontrar problemas de memoria que afecten el rendimiento de la página, incluidos fugas o aumentos de memoria y recolecciones frecuentes de elementos no usados.
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Solucionar problemas de memoria {: .page-title }

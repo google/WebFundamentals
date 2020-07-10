@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: 개발용 컴퓨터 웹 서버에서 사이트를 호스팅한 다음 Android 기기에서 콘텐츠에 액세스합니다.
 
-{# wf_updated_on: 2016-04-07 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 로컬 서버 액세스 {: .page-title }

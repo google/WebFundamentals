@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:保持您的客户端代码便于阅读和调试，即使在您组合、缩减或编译代码后也应如此。
 
-{# wf_updated_on:2015-04-21 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 将预处理代码映射到源代码 {: .page-title }

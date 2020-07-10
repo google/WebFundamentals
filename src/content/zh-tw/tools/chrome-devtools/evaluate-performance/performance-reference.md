@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:時間線事件模式可以顯示記錄時觸發的所有事件。使用時間線事件參考可以詳細瞭解每一個時間線事件類型。
 
-{# wf_updated_on:2015-05-11 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 時間線事件參考 {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Use the Security Panel to make sure that a page is fully protected by HTTPS.
 
-{# wf_updated_on: 2019-03-12 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-12-21 #}
 {# wf_blink_components: Security #}
 

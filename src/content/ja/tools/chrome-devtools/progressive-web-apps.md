@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: [Application] パネルを使用して、ウェブアプリ マニフェスト、Service Worker、Service Worker のキャッシュの調査、変更、およびデバッグを行うことができます。
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on:2016-07-25 #}
 
 # Progressive Web App のデバッグ {: .page-title }

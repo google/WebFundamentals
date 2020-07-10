@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Command Line API de Chrome DevTools ofrece varias formas de observar e inspeccionar a los receptores de eventos
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Controlar eventos {: .page-title }

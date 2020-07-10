@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:请遵循此互动指南，了解如何使用 DevTools 诊断强制同步布局。
 
-{# wf_updated_on: 2016-03-31 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 诊断强制同步布局 {: .page-title }

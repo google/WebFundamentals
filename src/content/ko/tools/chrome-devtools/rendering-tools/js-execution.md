@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools CPU Profiler를 사용하여 고비용 함수를 식별합니다.
 
-{# wf_updated_on: 2016-03-30 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 자바스크립트 실행 속도 개선 {: .page-title }

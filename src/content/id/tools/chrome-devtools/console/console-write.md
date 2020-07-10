@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Log konsol adalah cara andal untuk memeriksa apa yang dilakukan laman atau aplikasi Anda. Mari kita mulai dengan console.log() dan mendalami penggunaan tingkat lanjut lainnya.
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Diagnosis dan Penulisan Log ke Konsol {: .page-title }

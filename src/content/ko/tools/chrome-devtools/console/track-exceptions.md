@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools는 예외가 발생한 웹페이지를 수정하고 자바스크립트 오류를 디버그하는 데 도움이 되는 도구를 제공합니다.
 
-{# wf_updated_on: 2015-05-12 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 예외 및 오류 처리 {: .page-title }

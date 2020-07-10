@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Tampilan pohon DOM di panel Elemen Chrome DevTools menampilkan struktur DOM laman web saat ini. Edit materi dan struktur laman Anda secara langsung melalui pembaruan DOM.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Mengedit DOM {: .page-title }

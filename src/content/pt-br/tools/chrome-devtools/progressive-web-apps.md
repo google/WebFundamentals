@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Use o painel Application para inspecionar, modificar e depurar manifestos, service workers e caches de service worker de aplicativos da Web.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Depurar Progressive Web Apps {: .page-title }
