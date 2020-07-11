@@ -10,6 +10,9 @@ upper_tabs:
     - name: Guides
       contents:
       - include: /web/tools/chrome-devtools/_toc.yaml
+    - name: Blog
+      contents:
+      - include: /web/tools/chrome-devtools/blog/_toc.yaml
     - name: What's new
       contents:
       - include: /web/tools/chrome-devtools/updates/_toc.yaml
