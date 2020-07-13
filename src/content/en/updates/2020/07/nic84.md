@@ -258,7 +258,7 @@ additional changes in Chrome 83.
 * [Chrome 84 deprecations & removals](/web/updates/2020/05/chrome-84-deps-rems)
 * [ChromeStatus.com updates for Chrome 84](https://www.chromestatus.com/features#milestone%3D84)
 * [What's new in JavaScript in Chrome 84](https://v8.dev/blog/v8-release-84)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/83.0.4103.64..85.0.TODO.64)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/83.0.4103.64..84.0.4147.92)
 
 ## Subscribe {: .hide-from-toc }
 
