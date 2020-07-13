@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Snippets are small scripts that you can author and execute within the Sources panel of Chrome DevTools. You can access and run them from any page. When you run a Snippet, it executes from the context of the currently open page.
 
-{# wf_updated_on: 2019-07-03 #}
+{# wf_updated_on: 2020-07-13 #}
 {# wf_published_on: 2015-10-12 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -167,12 +167,12 @@ See [Rename Snippets](#rename) if you'd like to give your new Snippet a custom n
 ### Run a Snippet with the Command Menu {: #runcommandmenu }
 
 1. Focus your cursor somewhere inside of DevTools.
-1. Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
-   <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu.
-1. Delete the `>` character and type the `!` character followed by the name of the Snippet that you want to run.
+1. Press <kbd>Control</kbd>+<kbd>O</kbd> or
+   <kbd>Command</kbd>+<kbd>O</kbd> (Mac) to open the Command Menu.
+1. Type the `!` character followed by the name of the Snippet that you want to run.
 
      <figure>
-       <img src="/web/tools/chrome-devtools/javascript/imgs/runsnippetcommand.png"
+       <img src="/web/tools/chrome-devtools/javascript/imgs/run-snippet-command.png"
             alt="Running a Snippet from the Command Menu."/>
        <figcaption>
          <b>Figure 10</b>. Running a Snippet from the Command Menu.
