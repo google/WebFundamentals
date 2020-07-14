@@ -3,7 +3,7 @@ book_path: /web/tools/chrome-devtools/_book.yaml
 description: A comprehensive reference of accessibility features in Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-14 #}
 {# wf_published_on: 2018-07-13 #}
 
 # Accessibility Reference {: .page-title }
@@ -122,7 +122,7 @@ Audits panel. The aXe extension has a different UI and describes audits slightly
 One advantage that the aXe extension has over the Audits panel is that it lets you inspect and
 highlight failing nodes.
 
-[aXe]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
+[aXe]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd
 
 <figure>
   <img src="imgs/aXe.png"
