@@ -132,7 +132,7 @@ public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
 
 ### Applications targeting Android 11 (API level 30) or above
 
-Android 11 has introduced [package visiblity changes][31]. If your Android app is targeting API
+Android 11 has introduced [package visibility changes][7]. If your Android app is targeting API
 level 30 or above, adding a `queries` section to `AndroidManifest.xml` is needed, otherwise the
 code snippet above won't return results:
 
@@ -347,3 +347,4 @@ clicks multiple times on the same link and does not open a Custom Tab multiple t
 [4]: https://developer.android.com/reference/android/webkit/WebView.html
 [5]: https://developer.android.com/reference/android/widget/TextView.html#attr_android:autoLink
 [6]: https://developer.android.com/reference/android/content/Intent#FLAG_ACTIVITY_REQUIRE_NON_BROWSER
+[7]: https://developer.android.com/preview/privacy/package-visibility
