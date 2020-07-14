@@ -79,6 +79,9 @@ redirects:
 - from: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
   to: https://web.dev/fast/#optimize-your-images
 
+- from: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+  to: https://web.dev/fast/#optimize-web-fonts
+
 - from: /web/fundamentals/performance/prpl-pattern
   to: https://web.dev/apply-instant-loading-with-prpl/
 
