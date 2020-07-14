@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: コンソールログは、ページやアプリケーションの動作を調査するための効果的な方法です。まずは console.log() から始め、その他の高度な使用方法を確認しましょう。
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 #  診断とコンソールへのログ出力 {: .page-title }

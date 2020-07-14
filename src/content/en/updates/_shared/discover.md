@@ -1,4 +1,4 @@
-## Discover other DevTools features {: #discover }
+## Discover DevTools features {: #discover }
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:使用分配分析器工具可以查找未正確執行垃圾回收的對象，並繼續保留內存。
 
-{# wf_updated_on:2015-07-08 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 如何使用分配分析器工具 {: .page-title }

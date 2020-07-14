@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Tugas Anda belum selesai di tahap memastikan bahwa situs berjalan mulus di Chrome dan Android. Meskipun Device Mode bisa menyimulasikan berbagai perangkat lain seperti iPhone, kami sarankan agar Anda memeriksa solusi browser lain untuk emulasi.
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 

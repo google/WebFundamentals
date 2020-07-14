@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools の [Styles] ペインを使用して、要素に関連付けられている CSS スタイルを調査して変更します。
 
-{# wf_updated_on: 2016-02-25 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # スタイルの編集 {: .page-title }

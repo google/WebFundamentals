@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:ユーザーは、ページがインタラクティブでスムーズに操作できることを期待します。ピクセル パイプラインの各段階で、問題が発生する可能性があります。ここでは、実行時のパフォーマンスを低下させる一般的な問題を特定して解決するためのツールと戦略について説明します。
 
-{# wf_updated_on:2016-03-15 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 実行時のパフォーマンスの分析 {: .page-title }

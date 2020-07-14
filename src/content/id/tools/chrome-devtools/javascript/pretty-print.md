@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Transformasikan JavaScript Anda ke dalam bentuk yang lebih mudah dibaca dengan mengeklik ikon Pretty-Print di Chrome DevTools.
 
-{# wf_updated_on: 2016-02-21 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Buatlah Agar JavaScript Terlihat Cantik {: .page-title }

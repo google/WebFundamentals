@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Timeline イベントモードでは、記録中に発生したイベントがすべて表示されます。この Timeline イベント リファレンスを使って、各種 Timeline イベントを確認します。
 
-{# wf_updated_on:2015-05-11 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # Timeline イベント リファレンス {: .page-title }

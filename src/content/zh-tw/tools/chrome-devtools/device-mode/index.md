@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description:使用 Chrome 的 Device Mode 下的虛擬設備打造移動設備優先的網站。
 
-{# wf_updated_on:2016-03-07 #}
+{# wf_updated_on:2020-07-10 #}
 {# wf_published_on:2015-04-13 #}
 
 # 使用 Device Mode 模擬移動設備 {: .page-title }

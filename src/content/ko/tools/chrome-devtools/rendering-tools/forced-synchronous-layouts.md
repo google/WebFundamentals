@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: 이 대화형 가이드를 따라 DevTools를 사용하여 강제 동기식 레이아웃을 진단하는 방법을 배워보세요.
 
-{# wf_updated_on: 2016-03-31 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 강제 동기식 레이아웃 진단 {: .page-title }

@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Una referencia de todas las combinaciones de teclas en Chrome DevTools.
 
-{# wf_updated_on: 2016-11-28 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Referencia de combinaciones de teclas {: .page-title }

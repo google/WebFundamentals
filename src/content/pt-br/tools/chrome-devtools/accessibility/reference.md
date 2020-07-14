@@ -1,5 +1,5 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: Uma referência abrangente dos recursos de acessibilidade no Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #} {# wf_updated_on: 2019-03-08 #} {#

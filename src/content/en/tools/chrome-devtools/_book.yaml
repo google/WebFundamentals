@@ -1,0 +1,17 @@
+upper_tabs:
+- include: /web/_upper_tabs-Fundamentals.yaml
+- name: Tools
+  heading: Chrome DevTools
+  path: /web/tools/
+  menu:
+  - include: /web/tools/_menu_toc.yaml
+  lower_tabs:
+    other:
+    - name: Guides
+      contents:
+      - include: /web/tools/chrome-devtools/_toc.yaml
+    - name: What's new
+      contents:
+      - include: /web/tools/chrome-devtools/updates/_toc.yaml
+- include: /web/_upper_tabs-Updates.yaml
+- include: /web/_upper_tabs-Showcase.yaml

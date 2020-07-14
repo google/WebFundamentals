@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: 할당 프로파일러 도구를 사용하면 적절하게 가비지 수집되지 않은 객체를 찾아내고 계속해서 메모리 공간을 유지할 수 있습니다.
 
-{# wf_updated_on: 2015-07-08 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 할당 프로파일러 도구 사용법 {: .page-title }

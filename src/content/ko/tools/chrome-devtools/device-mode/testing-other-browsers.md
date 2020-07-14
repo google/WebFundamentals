@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/chrome-devtools/_project.yaml
+book_path: /web/tools/chrome-devtools/_book.yaml
 description: 사이트가 Chrome과 Android에서 모두 잘 실행되는 것을 확인했다고 해서 할 일이 끝난 것은 아닙니다. Device Mode로 iPhone과 같은 여러 다른 기기를 시뮬레이션할 수 있지만, 그래도 에뮬레이션을 위한 다른 브라우저의 솔루션을 확인해보는 것이 좋습니다.
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
