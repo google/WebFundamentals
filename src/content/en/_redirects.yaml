@@ -71,7 +71,7 @@ redirects:
   to:  https://web.dev/rail/
 
 - from: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
-  to: https://web.dev/fast/
+  to: https://web.dev/fast/#lazy-load-images-and-video
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
   to: https://web.dev/http-cache/
