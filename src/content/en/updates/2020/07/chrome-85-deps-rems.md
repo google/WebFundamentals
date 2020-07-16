@@ -5,7 +5,7 @@ description: A round up of the deprecations and removals in Chrome 85 to help yo
 {# wf_updated_on: 2020-07-22 #}
 {# wf_published_on: 2020-07-22 #}
 {# wf_tags: deprecations,removals,chrome85 #}
-{# wf_blink_components: Blink>Layout,Blink>Network #}
+{# wf_blink_components: Blink>Layout,Blink>Network,Blink>Storage>AppCache #}
 {# wf_featured_image: /web/updates/images/2020/05/dep-rem_480.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 85 to help you plan. #}
 
@@ -14,6 +14,19 @@ description: A round up of the deprecations and removals in Chrome 85 to help yo
 # Deprecations and removals in Chrome 84 {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
+
+## AppCache Removal Begins
+
+Chrome 85 starts a spec-mandated turn down of AppCache in Chrome. For details
+and instructions for managing the transition gracefully, see [Preparing for
+AppCache removal](https://web.dev/appcache-removal/). For information on a
+feature that will help you identify uses of this and other deprecated APIs, see
+[Know your code health](https://web.dev/reporting-observer/)
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/g/blink-dev/c/FvM-qo7BfkI/m/0daqyD8kCQAJ) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/features/6192449487634432) &#124;
+[Chromium Bug](https://crbug.com/582750)
+
 
 ## Reject insecure SameSite=None cookies
 
