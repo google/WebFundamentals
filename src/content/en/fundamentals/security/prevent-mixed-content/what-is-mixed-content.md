@@ -281,6 +281,12 @@ At the time of writing, at least one major browser (Chrome) has announced a [tim
 
 Other browsers may adopt different strategies. However, as the use of HTTPS continues to grow, developers should expect that passive mixed content may stop functioning in modern browsers over time.
 
+### Blocking mixed downloads
+
+Mixed downloads refer to insecurely-delivered downloads started on HTTPS pages. This includes downloads that redirect to another page if any URL in the redirect trace is non-HTTPS.
+
+Mixed downloads pose a security and privacy risk to your site and users since they can be modified or eavesdropped on by attackers. At the time of writing, at least one major browser (Chrome) has [announced its plan to block mixed downloads](https://blog.chromium.org/2020/02/protecting-users-from-insecure.html). 
+
 ### Browser versions
 
 It is important to remember that not every visitor to your website uses
