@@ -73,7 +73,7 @@ The [`InjectManifest` plugin](/web/tools/workbox/modules/workbox-webpack-plugin#
 
 ### CLI setup
 
-Instead of using a bundler plugin, you can run [`workbox-cli`](https://developers.google.com/web/tools/workbox/modules/workbox-cli) in [`injectManifest` mode](https://developers.google.com/web/tools/workbox/modules/workbox-cli#injectmanifest).
+Instead of using a bundler plugin, you can run [`workbox-cli`](/web/tools/workbox/modules/workbox-cli) in [`injectManifest` mode](/web/tools/workbox/modules/workbox-cli#injectmanifest).
 
 If you take this approach, you should run the `injectManifest` step immediately following each successful build, passing in your freshly bundled service worker file as the `swSrc` option
 
@@ -91,4 +91,4 @@ These examples feature build processes that use bundling, and in some cases also
 
 ## Using the CDN is an alternative to bundling
 
-While we expect that most developers will eventually migrate to a bundler approach, using the Workbox runtime code from the official CDN, loaded via `workbox-sw`, remains a supported alternative. For more information, please see the [`workbox-sw` documentation](https://developers.google.com/web/tools/workbox/modules/workbox-sw).
+While we expect that most developers will eventually migrate to a bundler approach, using the Workbox runtime code from the official CDN, loaded via `workbox-sw`, remains a supported alternative. For more information, please see the [`workbox-sw` documentation](/web/tools/workbox/modules/workbox-sw).
