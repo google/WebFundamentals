@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Host a site on a development machine web server, and then access the content from an Android device.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -36,25 +36,25 @@ the connection doesn't depend on your network configuration.
 
 To enable port forwarding:
 
-1. Set up [remote debugging](.) between your development machine
-   and your Android device. When you're finished, you should see your Android
-   device in the left-hand menu of the **Inspect Devices** dialog and a 
-   **Connected** status indicator. 
-1. In the **Inspect Devices** dialog in DevTools, enable **Port forwarding**.
-1. Click **Add rule**.
+1. Set up [remote debugging](.) between your development machine and your
+   Android device. When you're finished, you should see your Android device in
+   the list.
+1. Click **Port forwarding** button. `localhost:8080` is set up by default.
    ![adding a port forwarding rule](imgs/add-rule.png)
-1. In the **Device port** textfield on the left, enter the `localhost` port 
-   number from which you want to be able to access the site on your Android 
-   device. For example, if you wanted to access the site from `localhost:5000` 
-   you would enter `5000`.
-1. In the **Local address** textfield on the right, enter the IP address or 
-   hostname on which your site is running on your development machine's web
-   server, followed by the port number. For example, if your site is running 
-   on `localhost:7331` you would enter `localhost:7331`. 
-1. Click **Add**.
+1. Check **Enable port forwarding**. If you want to set up other ports, follow
+   the steps 4 and 5. Otherwise skip to step 6.
+1. In the **Port** textfield on the left, enter the `localhost` port number from
+   which you want to be able to access the site on your Android device. For
+   example, if you wanted to access the site from `localhost:5000` you would
+   enter `5000`.
+1. In the **IP address and port** textfield on the right, enter the IP address
+   or hostname on which your site is running on your development machine's web
+   server, followed by the port number. For example, if your site is running on
+   `localhost:7331` you would enter `localhost:7331`. 
+1. Click **Done**.
 
 Port forwarding is now set up. You can see a status indicator of the port
-forward on the device's tab within the **Inspect Devices** dialog.
+forward at the top as well as besides the device name.
 
 ![port forwarding status](imgs/port-forwarding-status.png)
 
