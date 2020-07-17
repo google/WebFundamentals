@@ -304,8 +304,15 @@
   width: 100%;
 }
 
-.filters__search .devsite-search-image {
+.filters__search .devsite-search-image.material-icons {
+  color: rgba(0, 0, 0, .54);
   left: 14px;
+  position: absolute;
+  top: 6px;
+}
+
+.filters__search .devsite-search-image::before {
+  content: 'search';
 }
 
 .filters__dropdowns {
