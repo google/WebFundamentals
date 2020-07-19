@@ -137,7 +137,7 @@ Chromium Bug: [#1040019](https://crbug.com/1040019)
 
 [CSS Color Module Level 4](https://drafts.csswg.org/css-color/#changes-from-3)
 specifies that color functions like `rgb()` should support space-separated
-arguments. For example, `rgb(0, 0, 0)` is equivalent to `rbg(0 0 0)`.
+arguments. For example, `rgb(0, 0, 0)` is equivalent to `rgb(0 0 0)`.
 
 When you choose colors with the [Color Picker](/web/tools/chrome-devtools/css/reference#color-picker)
 or alternate between color representations in the Styles pane by holding <kbd>Shift</kbd> and then
