@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2019-08-06 #}
+{# wf_updated_on: 2020-07-22 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -94,17 +94,16 @@ User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 As a developer, you may want to change Chrome autoplay policy behavior locally
 to test your website depending on user engagement.
 
-- You can decide to disable entirely the autoplay policy by setting the Chrome
-  flag "Autoplay Policy" to "No user gesture is required" at
-  `chrome://flags/#autoplay-policy`. This allows you to test your website as if
-  user were strongly engaged with your site and playback autoplay would be
-  always allowed.
+- You can disable entirely the autoplay policy by using an [internal switch]
+  with `chrome.exe --autoplay-policy=no-user-gesture-required`.
+  This allows you to test your website as if user were strongly engaged with
+  your site and playback autoplay would be always allowed.
 
 - You can also decide to make sure playback autoplay is never allowed by
   disabling use of MEI, applying autoplay policy to Web Audio, and whether
   sites with the highest overall MEI get playback autoplay by default for new
   users. This can be done with three [internal switches] with `chrome.exe
-  --disable-features=PreloadMediaEngagementData,AutoplayIgnoreWebAudio,
+  --disable-features=PreloadMediaEngagementData,
   MediaEngagementBypassAutoplayPolicies`.
 
 ### Iframe delegation {: #iframe }
@@ -257,10 +256,6 @@ asynchronously.
 
 For info, checkout the small [Pull Request] that fixes Web Audio playback due to
 these autoplay policy changes for [https://airhorner.com].
-
-By default, the Web Audio API is not currently affected by the autoplay policy.
-To enable the autoplay policy for Web Audio, launch Chrome with the following
-[internal switch]: `chrome.exe --disable-features=AutoplayIgnoreWebAudio`.
 
 Note: Web Audio FAQs can be found [here].
 
