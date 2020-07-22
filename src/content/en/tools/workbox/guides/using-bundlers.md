@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: Using build tools to bundle the Workbox runtime into a custom service worker.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2020-07-16 #}
+{# wf_updated_on: 2020-07-22 #}
 {# wf_blink_components: N/A #}
 
 # Using bundlers with Workbox {: .page-title }
@@ -22,16 +22,16 @@ Any [bundler that supports JavaScript modules](https://bundlers.tooling.report/)
 - [Rollup](https://rollupjs.org/guide/en/)
 - [Parcel](https://parceljs.org/)
 
-If you're already using a bundler for other parts of your web app, the using the same one for your service worker as part of your existing build process should work fine.
+If you're already using a bundler for other parts of your web app, then using the same one for your service worker as part of your existing build process should work fine.
 
 Please consult the documentation for each bundler to learn more about general configuration. There are a few Workbox-specific build options that are explained in the following sections.
 
 ### Write your service worker source code
 
-The following example is a hypothetical service worker source file that imports a few different Workbox libraries. This source file needs to be processed by a bundler before it could be run in a browser.
+The following example is a hypothetical service worker source file that imports a few different Workbox libraries. This source file needs to be processed by a bundler before it can be run in a browser.
 
 ```javascript
-// These JavaScript module imports that need to be bundled:
+// These JavaScript module imports need to be bundled:
 import {precacheAndRoute} from 'workbox-precaching';
 import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
