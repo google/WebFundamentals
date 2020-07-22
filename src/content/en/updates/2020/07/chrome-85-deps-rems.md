@@ -6,12 +6,12 @@ description: A round up of the deprecations and removals in Chrome 85 to help yo
 {# wf_published_on: 2020-07-22 #}
 {# wf_tags: deprecations,removals,chrome85 #}
 {# wf_blink_components: Blink>Layout,Blink>Network,Blink>Storage>AppCache #}
-{# wf_featured_image: /web/updates/images/2020/05/dep-rem_480.jpg #}
+{# wf_featured_image: /web/updates/images/2020/07/dep-rem_485.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 85 to help you plan. #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
 
-# Deprecations and removals in Chrome 84 {: .page-title }
+# Deprecations and removals in Chrome 85 {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
