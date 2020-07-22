@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description:Chrome と Android でサイトがうまく実行できることを確認したら作業完了というわけではありません。 Device Mode では iPhone などの他のさまざまな端末をシミュレートできますが、他のブラウザ ソリューションでエミュレーションを行ってみることをおすすめします。
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-21 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -106,7 +106,7 @@ Mac OS X 用の iOS シミュレータは、[App Store からインストール]
   <figcaption>Modern IE VM</figcaption>
 </figure>
 
-Modern.IE 仮想マシンを使用すると、VirtualBox（または VMWare）を使用してコンピュータでさまざまなバージョンの IE にアクセスできます。 <a href="https://modern.ie/en-us/virtualization-tools#downloads">このダウンロード ページ</a>で仮想マシンを選択します。
+Modern.IE 仮想マシンを使用すると、VirtualBox（または VMWare）を使用してコンピュータでさまざまなバージョンの IE にアクセスできます。 <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">このダウンロード ページ</a>で仮想マシンを選択します。
 
 
 ## クラウドベースのエミュレータとシミュレータ
