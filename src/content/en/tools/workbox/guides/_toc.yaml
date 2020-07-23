@@ -1,6 +1,8 @@
 toc:
 - title: "Get Started"
   path: /web/tools/workbox/guides/get-started
+- title: "Using bundlers with Workbox"
+  path: /web/tools/workbox/guides/using-bundlers
 - title: "Precache Files"
   path: /web/tools/workbox/guides/precache-files
   style: accordion

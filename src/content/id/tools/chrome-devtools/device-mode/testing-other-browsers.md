@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Tugas Anda belum selesai di tahap memastikan bahwa situs berjalan mulus di Chrome dan Android. Meskipun Device Mode bisa menyimulasikan berbagai perangkat lain seperti iPhone, kami sarankan agar Anda memeriksa solusi browser lain untuk emulasi.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-21 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -107,7 +107,7 @@ Note: Agar tidak perlu membuka Xcode setiap kali Anda ingin menggunakan Simulato
   <figcaption>VM Modern IE</figcaption>
 </figure>
 
-Mesin Virtual Modern.IE memungkinkan Anda mengakses versi IE yang berbeda di komputer Anda melalui VirtualBox (atau VMWare). Pilih mesin virtual di <a href="https://modern.ie/en-us/virtualization-tools#downloads">halaman download di sini</a>.
+Mesin Virtual Modern.IE memungkinkan Anda mengakses versi IE yang berbeda di komputer Anda melalui VirtualBox (atau VMWare). Pilih mesin virtual di <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">halaman download di sini</a>.
 
 
 ## Emulator dan simulator berbasis cloud

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit your web apps.
 
-{# wf_updated_on: 2019-02-26 #}
+{# wf_updated_on: 2020-07-19 #}
 {# wf_published_on: 2016-09-27 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -28,7 +28,7 @@ figure {
   background-color: #2979ff;
 }
 .button-primary.lighthouse-primary-call-to-action {
-  background: url('images/lighthouse-icon-128.png') no-repeat 0 50%;
+  background: url('/web/tools/lighthouse/images/lighthouse-icon-128.png') no-repeat 0 50%;
   background-size: 63px;
   background-color: #304ffe;
   padding: 32px 16px 32px 64px;

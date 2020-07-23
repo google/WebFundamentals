@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Seu trabalho não acaba depois de garantir que o site funcione perfeitamente no Chrome e no Android. Embora o Device Mode possa simular diversos outros dispositivos, como iPhones, recomendamos que você confira soluções de emulação para outros navegadores.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-21 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -107,7 +107,7 @@ Note: Para evitar a necessidade de abrir o Xcode sempre que quiser usar o iOS Si
   <figcaption>VM do Modern IE</figcaption>
 </figure>
 
-As máquinas virtuais do Modern.IE permitem acessar diferentes versões do IE no computador pelo VirtualBox (ou VMWare). Escolha uma máquina virtual na página de <a href="https://modern.ie/en-us/virtualization-tools#downloads">download aqui</a>.
+As máquinas virtuais do Modern.IE permitem acessar diferentes versões do IE no computador pelo VirtualBox (ou VMWare). Escolha uma máquina virtual na página de <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">download aqui</a>.
 
 
 ## Emuladores e simuladores baseados na nuvem

@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Remote debug live content on an Android device from a Windows, Mac, or Linux computer.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -46,23 +46,7 @@ Android device](#troubleshooting) for more help.
    Options](https://developer.android.com/studio/debug/dev-options.html){:.external}.
 1. Select **Enable USB Debugging**.
 1. On your development machine, open Chrome.
-1. [Open DevTools](/web/tools/chrome-devtools/#open).
-1. In DevTools, click the **Main Menu** ![Main Menu][main]{:.devtools-inline} 
-   then select **More tools** > **Remote devices**. 
-
-     <figure>
-       <img src="imgs/open-remote-devices.png"
-            alt="Opening the Remote Devices tab via the Main Menu."/>
-       <figcaption>
-         <b>Figure 2</b>. Opening the <b>Remote Devices</b> tab via the <b>Main Menu</b>
-       </figcaption>
-     </figure>
-
-[main]: /web/tools/chrome-devtools/images/three-dot.png
-[open]: /web/tools/chrome-devtools/remote-debugging/imgs/open-remote-devices.png
-
-1. In DevTools, open the **Settings** tab.
-
+1. Go to `chrome://inspect#devices`.
 1. Make sure that the **Discover USB devices** checkbox is enabled.
 
      <figure>
@@ -76,16 +60,16 @@ Android device](#troubleshooting) for more help.
 [discover]: /web/tools/chrome-devtools/remote-debugging/imgs/discover-usb-devices.png
 
 1. Connect your Android device directly to your development machine using a USB
-   cable. The first time you do this, you usually see that DevTools has detected an unknown
-   device. If you see a green dot and the text **Connected** below the model name of
-   your Android device, then DevTools has successfully established the connection to
-   your device. Continue to [Step 2](#debug).
+   cable. The first time you do this, you usually see that DevTools has detected
+   an offline device. If you see the model name of your Android device, then
+   DevTools has successfully established the connection to your device. Continue
+   to [Step 2](#debug).
 
      <figure>
-       <img src="imgs/unknown-device.png" alt="The Remote Devices tab has successfully detected
-           an unknown device that is pending authorization."/>
+       <img src="imgs/offline-device.png" alt="The Remote Target has successfully detected
+           an offline device that is pending authorization."/>
        <figcaption>
-         <b>Figure 4</b>. The <b>Remote Devices</b> tab has successfully detected an unknown
+         <b>Figure 4</b>. The <b>Remote Traget</b> has successfully detected an offline
          device that is pending authorization
        </figcaption>
      </figure>
@@ -93,7 +77,7 @@ Android device](#troubleshooting) for more help.
 
 [unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
 
-1. If your device is showing up as **Unknown**, accept the **Allow USB
+1. If your device is showing up as **Offline**, accept the **Allow USB
    Debugging** permission prompt on your Android device. 
 
 ### Troubleshooting: DevTools is not detecting the Android device {: #troubleshooting }
@@ -139,12 +123,13 @@ Overflow question, or [open an issue in the webfundamentals repository][issue]{:
 ## Step 2: Debug content on your Android device from your development machine {: #debug }
 
 1. Open Chrome on your Android device.
-1. In the **Remote Devices** tab, click the tab that matches your Android device model name.
-   At the top of this page, you see your Android device's model name, followed by its serial
-   number. Below that, you can see the version of Chrome that's running on the device, with
-   the version number in parentheses. Each open Chrome tab gets its own section. You can
-   interact with that tab from this section. If there are any apps using WebView, you see a
-   section for each of those apps, too. In <b>Figure 5</b> there are no tabs or WebViews open.
+1. In the **`chrome://inspect/#devices`**, you see your Android device's model
+   name, followed by its serial number. Below that, you can see the version of
+   Chrome that's running on the device, with the version number in parentheses.
+   Each open Chrome tab gets its own section. You can interact with that tab
+   from this section. If there are any apps using WebView, you see a section for
+   each of those apps, too. In <b>Figure 5</b> there are no tabs or WebViews
+   open.
 
      <figure>
        <img src="imgs/connected-remote-device.png" alt="A connected remote device."/>
@@ -153,7 +138,7 @@ Overflow question, or [open an issue in the webfundamentals repository][issue]{:
        </figcaption>
      </figure>
 
-1. In the **New tab** text box, enter a URL and then click **Open**. The page opens
+1. In the **Open tab with url** text box, enter a URL and then click **Open**. The page opens
    in a new tab on your Android device.
 
 1. Click **Inspect** next to the URL that you just opened. A new DevTools
@@ -162,17 +147,14 @@ Overflow question, or [open an issue in the webfundamentals repository][issue]{:
    So, if your Android device is running a very old version of Chrome, the
    DevTools instance may look very different than what you're used to.
 
-### More actions: reload, focus, or close a tab {: #more-actions }
+### More actions: pause, focus tab, reload, or close a tab {: #more-actions }
 
-Click **More Options** ![More Options][more]{:.devtools-inline} next to the
-tab that you want to reload, focus, or close.
-
-[more]: /web/tools/chrome-devtools/images/three-dot.png
+Below the URL you can find a menu to pause, focus tab, reload or close.
 
 <figure>
-  <img src="imgs/reload.png" alt="The menu for reloading, focusing, or closing a tab."/>
+  <img src="imgs/reload.png" alt="The menu for pausing, reloading, focusing, or closing a tab."/>
   <figcaption>
-    <b>Figure 6</b>. The menu for reloading, focusing, or closing a tab
+    <b>Figure 6</b>. The menu for pausing, reloading, focusing, or closing a tab
   </figcaption>
 </figure>
 
