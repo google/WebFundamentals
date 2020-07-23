@@ -204,6 +204,9 @@ redirects:
 - from: /web/tools/workbox/modules/workbox-cache-expiration
   to: /web/tools/workbox/modules/workbox-expiration
 
+- from: /web/tools/workbox/guides/enable-offline-analytics
+  to: /web/tools/workbox/modules/workbox-google-analytics
+
 - from: /web/tools/lighthouse/audits/critical-request-chains
   to: https://web.dev/critical-request-chains/
 
