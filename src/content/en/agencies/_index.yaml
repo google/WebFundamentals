@@ -3,6 +3,8 @@ book_path: /web/_book.yaml
 title: Find a qualified web dev agency to help you build optimized web apps
 
 landing_page:
+  header:
+    hide_lower_section: true
   body_class: web-landing-page web-landing-page--agencies
   custom_css_path: /web/agencies/css/web-agencies-styles.css
   rows:
