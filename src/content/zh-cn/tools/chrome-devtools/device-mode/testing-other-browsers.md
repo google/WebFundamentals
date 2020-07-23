@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: 您的任务不只局限于确保网站在 Chrome 和 Android 上出色运行。 即使 Device Mode 可以模拟 iPhone 等多种其他设备，我们仍鼓励您查看其他浏览器模拟解决方案。
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-21 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -106,7 +106,7 @@ Chromium Content Shell for Android，请保持模拟器运行并在命令提示�
   <figcaption>Modern IE VM</figcaption>
 </figure>
 
-利用 Modern.IE 虚拟机，您可以在自己的计算机上通过 VirtualBox（或 VMWare）访问不同版本的 IE。 在<a href="https://modern.ie/en-us/virtualization-tools#downloads">此处的下载页面</a>上选择一款虚拟机。
+利用 Modern.IE 虚拟机，您可以在自己的计算机上通过 VirtualBox（或 VMWare）访问不同版本的 IE。 在<a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">此处的下载页面</a>上选择一款虚拟机。
 
 
 ## 基于云的模拟器

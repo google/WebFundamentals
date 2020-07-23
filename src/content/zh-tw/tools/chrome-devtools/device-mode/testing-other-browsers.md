@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description:您的任務不只侷限於確保網站在 Chrome 和 Android 上出色運行。即使 Device Mode 可以模擬 iPhone 等多種其他設備，我們仍鼓勵您查看其他瀏覽器模擬解決方案。
 
-{# wf_updated_on:2020-07-10 #}
+{# wf_updated_on:2020-07-21 #}
 {# wf_published_on:2015-04-13 #}
 
 # 模擬和測試其他瀏覽器 {: .page-title }
@@ -104,7 +104,7 @@ Note: 爲了避免在每次想要使用 iOS 模擬器時都要打開 Xcode，請
   <figcaption>Modern IE VM</figcaption>
 </figure>
 
-利用 Modern.IE 虛擬機，您可以在自己的計算機上通過 VirtualBox（或 VMWare）訪問不同版本的 IE。在<a href="https://modern.ie/en-us/virtualization-tools#downloads">此處的下載頁面</a>上選擇一款虛擬機。
+利用 Modern.IE 虛擬機，您可以在自己的計算機上通過 VirtualBox（或 VMWare）訪問不同版本的 IE。在<a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">此處的下載頁面</a>上選擇一款虛擬機。
 
 
 ## 基於雲的模擬器

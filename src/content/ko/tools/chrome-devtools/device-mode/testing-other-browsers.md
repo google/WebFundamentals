@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: 사이트가 Chrome과 Android에서 모두 잘 실행되는 것을 확인했다고 해서 할 일이 끝난 것은 아닙니다. Device Mode로 iPhone과 같은 여러 다른 기기를 시뮬레이션할 수 있지만, 그래도 에뮬레이션을 위한 다른 브라우저의 솔루션을 확인해보는 것이 좋습니다.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-21 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -107,7 +107,7 @@ Mac OS X용 iOS 시뮬레이터는 Xcode가 함께 제공되며,
   <figcaption>Modern IE VM</figcaption>
 </figure>
 
-Modern.IE 가상 머신을 사용하면 VirtualBox(또는 VMWare)를 통해 사용자의 컴퓨터에서 여러 가지 버전의 IE에 액세스할 수 있습니다. <a href="https://modern.ie/en-us/virtualization-tools#downloads">여기의 다운로드 페이지</a>에서 가상 머신을 선택하세요.
+Modern.IE 가상 머신을 사용하면 VirtualBox(또는 VMWare)를 통해 사용자의 컴퓨터에서 여러 가지 버전의 IE에 액세스할 수 있습니다. <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">여기의 다운로드 페이지</a>에서 가상 머신을 선택하세요.
 
 
 ## 클라우드 기반 에뮬레이터 및 시뮬레이터
