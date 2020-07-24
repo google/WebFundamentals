@@ -148,7 +148,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 
 请注意，此处 `crossorigin` 的使用非常重要，该属性如果缺失，浏览器将忽略预加载的字体，并执行不同的提取
  这是因为浏览器预计将以匿名方式提取字体，只有使用
