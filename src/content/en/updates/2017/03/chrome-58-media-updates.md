@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 58.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2017-03-21 #}
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
@@ -43,8 +43,8 @@ This API offers a way to show or hide native media controls that do not make
 sense or are not part of the expected user experience, or only whitelist a
 limited set of features.
 
-The current implementation for now is a blacklist mechanism on native controls
-with the ability to set them directly from HTML content using the new 
+The current implementation for now is blocklist mechanism on native controls
+with the ability to set them directly from HTML content using the new
 attribute `controlsList`. Check out the [official
 sample](https://googlechrome.github.io/samples/media/controlslist.html).
 
@@ -138,11 +138,11 @@ approximate range of colors supported by Chrome and output devices using the
 `color-gamut` media query.
 
 If you're not familiar yet with the definitions of color space, color profile,
-gamut, wide-gamut and color depth, I highly recommend you read the 
+gamut, wide-gamut and color depth, I highly recommend you read the
 [Improving Color on the Web] WebKit blog post. It goes into much detail on how
 to use the `color-gamut` media query to serve wide-gamut images when the user
 is on wide-gamut displays and fallback to sRGB images otherwise.
- 
+
 The current implementation in Chrome accepts the `srgb`, `p3` (gamut specified
 by the DCI P3 Color Space), and `rec2020` (gamut specified by the ITU-R
 Recommendation BT.2020 Color Space) keywords. Check out the [official
@@ -163,13 +163,13 @@ Usage in CSS:
     main {
       background-image: url("photo-srgb.jpg");
     }
-    
+
     @media (color-gamut: p3) {
       main {
         background-image: url("photo-p3.jpg");
       }
     }
-    
+
     @media (color-gamut: rec2020) {
       main {
         background-image: url("photo-rec2020.jpg");
@@ -182,7 +182,7 @@ Usage in JavaScript:
     if (window.matchMedia("(color-gamut: srgb)").matches) {
       document.querySelector('main').style.backgroundImage = 'url("photo-srgb.jpg")';
     }
-    
+
     if (window.matchMedia("(color-gamut: p3)").matches) {
       document.querySelector('main').style.backgroundImage = 'url("photo-p3.jpg")';
     }
@@ -219,7 +219,7 @@ Usage in JavaScript:
 </ul>
 
 <script>
-  document.querySelector('#srgb').innerHTML = 
+  document.querySelector('#srgb').innerHTML =
       (window.matchMedia("(color-gamut: srgb)").matches) ? '&#x2714;' : '&#x274C;';
   document.querySelector('#p3').innerHTML =
       (window.matchMedia("(color-gamut: p3)").matches) ? '&#x2714;' : '&#x274C;';
