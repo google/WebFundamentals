@@ -40,6 +40,9 @@ redirects:
 - from: /web/feedback/...
   to: https://web.dev/how-to-file-a-good-bug/
 
+- from: /web/fundamentals/performance/why-performance-matters
+  to: https://web.dev/why-speed-matters/
+
 - from: /web/fundamentals/accessibility/accessible-styles
   to:  https://web.dev/accessible/#create-a-design-and-css-that-supports-users-with-different-needs
 
