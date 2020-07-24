@@ -157,7 +157,7 @@ Chrome의 현재 우선순위 상태에 대해 자세히 설명하고 있습니�
 `<link rel="preload">`를 HTML에 사용하면
 글꼴이 필요하다는 것을 브라우저가 즉시 알 수 있습니다.
 
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 
 여기에서 `crossorigin`의 사용이 중요하다는 점에 유의하세요. 이 속성 없이는
 브라우저가 미리 로드된 글꼴을 무시하고 새로 가져온 항목이
