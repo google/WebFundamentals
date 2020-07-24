@@ -6,6 +6,7 @@ description: Learn all about the new Security Panel in Chrome DevTools.
 {# wf_published_on: 2015-12-13 #}
 {# wf_tags: devtools,update #}
 {# wf_featured_image: /web/updates/images/2015/12/security-panel/security-panel.png #}
+{# wf_blink_components: N/A #}
 
 # Security Panel Debuts in Chrome DevTools {: .page-title }
 

@@ -6,6 +6,7 @@ description: Learn how to get started building Progressive Web Apps
 {# wf_published_on: 2015-12-15 #}
 {# wf_tags: progressive-web-apps,serviceworker #}
 {# wf_featured_image: /web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg #}
+{# wf_blink_components: N/A #}
 
 # Getting Started with Progressive Web Apps {: .page-title }
 
