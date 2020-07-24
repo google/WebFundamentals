@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:豐富的離線體驗、定期的後臺同步以及推送通知等通常需要將面向本機應用的功能將引入到網絡應用中。服務工作線程提供了所有這些功能所依賴的技術基礎。
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2016-01-18 #}
+{# wf_updated_on: 2020-07-24 #}
 
 # 服務工作線程：簡介 {: .page-title }
 
@@ -321,13 +321,13 @@ Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/
 
     self.addEventListener('activate', function(event) {
 
-      var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+      var cacheAllowlist = ['pages-cache-v1', 'blog-posts-cache-v1'];
 
       event.waitUntil(
         caches.keys().then(function(cacheNames) {
           return Promise.all(
             cacheNames.map(function(cacheName) {
-              if (cacheWhitelist.indexOf(cacheName) === -1) {
+              if (cacheAllowlist.indexOf(cacheName) === -1) {
                 return caches.delete(cacheName);
               }
             })

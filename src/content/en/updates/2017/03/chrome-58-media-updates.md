@@ -40,7 +40,7 @@ download, fullscreen and [remoteplayback] buttons using the new [ControlsList AP
 </div>
 
 This API offers a way to show or hide native media controls that do not make
-sense or are not part of the expected user experience, or only whitelist a
+sense or are not part of the expected user experience, or only allow a
 limited set of features.
 
 The current implementation for now is blocklist mechanism on native controls

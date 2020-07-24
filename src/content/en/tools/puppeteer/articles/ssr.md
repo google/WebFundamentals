@@ -432,8 +432,8 @@ async function ssr(url) {
   page.on('request', req => {
     // 2. Ignore requests for resources that don't produce DOM
     // (images, stylesheets, media).
-    const whitelist = ['document', 'script', 'xhr', 'fetch'];
-    if (!whitelist.includes(req.resourceType())) {
+    const allowlist = ['document', 'script', 'xhr', 'fetch'];
+    if (!allowlist.includes(req.resourceType())) {
       return req.abort();
     }
 
@@ -449,7 +449,7 @@ async function ssr(url) {
 }
 ```
 
-Note: I'm using a whitelist to play it safe and allowing all other types of
+Note: I'm using an allowlist to play it safe and allowing all other types of
 requests to continue. This may preemptively avoid any gotchas that arise
 from aborting more resources than necessary.
 
