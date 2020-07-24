@@ -165,7 +165,7 @@ testuale del tuo sito e per evitare fastidiosi flash tra i font di sistema e
 quelli preferiti puoi usare `<link rel="preload">` nel tuo HTML per far sapere
 immediatamente al browser che è necessario un font.
 
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 
 Si noti che l'uso di `crossorigin` qui è importante; senza questo attributo,
 il font precaricato viene ignorato dal browser e viene eseguito un nuovo
