@@ -3,7 +3,8 @@ toc:
     style: accordion
     section:
     - title: Overview
-      path: /web/fundamentals/performance/why-performance-matters/
+      path: https://web.dev/why-speed-matters/
+      status: external
     - title: Measure Performance with the RAIL Model
       path: https://web.dev/rail/
       status: external
