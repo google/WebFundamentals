@@ -157,7 +157,7 @@ do seu site e também evitar dissonâncias desagradáveis entre as fontes do sis
 favoritas, você pode usar o `<link rel="preload">` no seu HTML. Dessa forma, o
 navegador entenderá imediatamente que uma fonte é necessária.
 
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 
 O uso de `crossorigin` aqui é importante. Sem esse atributo,
 a fonte pré-carregada é ignorada pelo navegador e uma nova busca é
