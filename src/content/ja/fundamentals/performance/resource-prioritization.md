@@ -147,7 +147,7 @@ as 属性以外の部分はおそらく予想どおりでしょう。
 
 
 
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 
 ここで重要なのは `crossorigin` を使用していることです。この属性がないと、プリロードされたフォントはブラウザで無視され、新たなフェッチが行われます。
  これは、フォントはブラウザにより匿名でフェッチされることが予期されているためです。プリロード リクエストは、`crossorigin` 属性を指定した場合にのみ匿名になります。
