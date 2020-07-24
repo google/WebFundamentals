@@ -157,7 +157,7 @@ de tu sitio, así como para evitar cambios molestos entre las fuentes del sistem
 que configuraste para el sitio, puedes usar `<link rel="preload">` en tu código HTML con el objetivo de informar de inmediato al
 navegador que se necesita una fuente.
 
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 
 Ten en cuenta que el uso de `crossorigin` aquí es importante. Sin este atributo,
 el navegador ignora la fuente precargada y se realiza una nueva operación
