@@ -86,7 +86,7 @@ The Payment Request API is not yet supported on desktop as of Chrome 58, so you 
 
 First, let's add add a feature detection for the Payment Request API. And if it's available, let a user process payment with it.
 
-Replace "TODO PAY-2.1" in __app/scripts/modules/app.js__ with the following code and remove the dummy conditional of `if (false) {` to add PaymentRequest feature detection:
+Replace "TODO PAY-2.1" in __app/scripts/modules/app.js__ with the following code and remove the placeholder conditional of `if (false) {` to add PaymentRequest feature detection:
 
 #### app.js
 
@@ -538,5 +538,3 @@ To learn more about the Payment Request API, visit the following links.
 *  [https://paymentrequest.show/demo/](https://paymentrequest.show/demo/)
 *  [https://googlechrome.github.io/samples/paymentrequest/](https://googlechrome.github.io/samples/paymentrequest/)
 *  [https://woocommerce.paymentrequest.show/](https://woocommerce.paymentrequest.show/)
-
-
