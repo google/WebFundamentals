@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: One key benefit that WebAssembly offers is _predictable_ performance across browsers. But how do you turn hot path written in JavaScript into WebAssembly?
 
-{# wf_updated_on: 2019-02-15 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2019-02-14 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2019/02/hotpath-with-wasm/social.png #}
@@ -239,7 +239,7 @@ the end of this article.
 
 Rust is a new, modern programming language with a rich type system, no runtime
 and an ownership model that guarantees memory-safety and thread-safety. Rust
-also supports WebAssembly as a first-class citizen and the Rust team has
+also supports WebAssembly as a core feature and the Rust team has
 contributed a lot of excellent tooling to the WebAssembly ecosystem.
 
 One of these tools is [`wasm-pack`](https://rustwasm.github.io/wasm-pack/), by
