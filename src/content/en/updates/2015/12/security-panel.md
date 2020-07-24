@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn all about the new Security Panel in Chrome DevTools.
 
-{# wf_updated_on: 2015-12-13 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-12-13 #}
 {# wf_tags: devtools,update #}
 {# wf_featured_image: /web/updates/images/2015/12/security-panel/security-panel.png #}
+{# wf_blink_components: N/A #}
 
 # Security Panel Debuts in Chrome DevTools {: .page-title }
 
@@ -17,7 +18,7 @@ description: Learn all about the new Security Panel in Chrome DevTools.
   </iframe>
 </div>
 
-The Chrome Security team has been [hard at work](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) (rewatch the video above for a great overview) to realize a future without HTTP, a future where you and your users can be reasonably sure that whatever data you’re sending to the web stays between you and the site you’re looking at. And to to make it even easier to jump ship and join the glorious HTTPS future, we’ve made Security a first-class citizen in DevTools.
+The Chrome Security team has been [hard at work](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) (rewatch the video above for a great overview) to realize a future without HTTP, a future where you and your users can be reasonably sure that whatever data you’re sending to the web stays between you and the site you’re looking at. And to to make it even easier to jump ship and join the glorious HTTPS future, we’ve made Security a core feature in DevTools.
 
 ![The new Security Panel](/web/updates/images/2015/12/security-panel/security-panel.png)
 
@@ -53,12 +54,10 @@ Have **mixed content** appear out of nowhere? No worries. We show it directly on
 
 ![Connection tab](/web/updates/images/2015/12/security-panel/connection.png)
 
-If you need information about a specific TLS connection, the **Origin view** will help. Reload the page and you’ll see every individual origin for all resources appear in the left hand navigation. 
+If you need information about a specific TLS connection, the **Origin view** will help. Reload the page and you’ll see every individual origin for all resources appear in the left hand navigation.
 
 From here, you can find out everything about the **certificate** used and the **connection type**. In addition, it gives you the handy ability to drill down further to inspect all resources coming from that origin via the Network Panel.
 
 - - -
 
 Give the new Security panel a try and and let us know what you think on [Twitter](https://twitter.com/ChromeDevTools) or via [bug/feature ticket](https://crbug.com/new)!
-
-

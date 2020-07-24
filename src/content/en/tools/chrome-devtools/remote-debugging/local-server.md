@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Host a site on a development machine web server, and then access the content from an Android device.
 
-{# wf_updated_on: 2020-07-17 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -11,11 +11,11 @@ description: Host a site on a development machine web server, and then access th
 {% include "web/_shared/contributors/kaycebasques.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Host a site on a development machine web server, then 
+Host a site on a development machine web server, then
 access the content from an Android device.
 
 With a USB cable and Chrome DevTools, you can run a site from a development
-machine and then view the site on an Android device. 
+machine and then view the site on an Android device.
 
 
 ### TL;DR {: .hide-from-toc }
@@ -50,7 +50,7 @@ To enable port forwarding:
 1. In the **IP address and port** textfield on the right, enter the IP address
    or hostname on which your site is running on your development machine's web
    server, followed by the port number. For example, if your site is running on
-   `localhost:7331` you would enter `localhost:7331`. 
+   `localhost:7331` you would enter `localhost:7331`.
 1. Click **Done**.
 
 Port forwarding is now set up. You can see a status indicator of the port
@@ -58,10 +58,10 @@ forward at the top as well as besides the device name.
 
 ![port forwarding status](imgs/port-forwarding-status.png)
 
-To view the content, open up Chrome on your Android device and go to 
-the `localhost` port that you specified in the **Device port** field. For 
-example, if you entered `5000` in the field, then you would go to 
-`localhost:5000`. 
+To view the content, open up Chrome on your Android device and go to
+the `localhost` port that you specified in the **Device port** field. For
+example, if you entered `5000` in the field, then you would go to
+`localhost:5000`.
 
 ## Map to custom local domains {:#custom-domains}
 
@@ -69,26 +69,26 @@ Custom domain mapping enables you to view content on an Android device
 from a web server on your development machine that is using a custom domain.
 
 For example, suppose that your site uses a third-party JavaScript library
-that only works on the whitelisted domain `chrome.devtools`. So, you create
-an entry in your `hosts` file on your development machine to map this domain 
-to `localhost` (i.e. `127.0.0.1 chrome.devtools`). After setting up custom 
+that only works on the allow-listed domain `chrome.devtools`. So, you create
+an entry in your `hosts` file on your development machine to map this domain
+to `localhost` (i.e. `127.0.0.1 chrome.devtools`). After setting up custom
 domain mapping and port forwarding, you'll be able to view the site on your
-Android device at the URL `chrome.devtools`. 
+Android device at the URL `chrome.devtools`.
 
 ### Set up port forwarding to proxy server
 
-To map a custom domain you must run a proxy server on your development 
-machine. Examples of proxy servers are [Charles][charles], [Squid][squid], 
+To map a custom domain you must run a proxy server on your development
+machine. Examples of proxy servers are [Charles][charles], [Squid][squid],
 and [Fiddler][fiddler].
 
 To set up port forwarding to a proxy:
 
-1. Run the proxy server and note the port that it's using. **Note**: The 
-   proxy server and your web server must run on different ports. 
+1. Run the proxy server and note the port that it's using. **Note**: The
+   proxy server and your web server must run on different ports.
 1. Set up [port forwarding](#port-forwarding) to your Android device. For the
    **local address** field, enter `localhost:` followed by the port that your
    proxy server is running on. For example, if it's running on port `8000`,
-   then you would enter `localhost:8000`. In the **device port** field enter 
+   then you would enter `localhost:8000`. In the **device port** field enter
    the number that you want your Android device to listen on, such as `3333`.
 
 [charles]: http://www.charlesproxy.com/
@@ -97,34 +97,34 @@ To set up port forwarding to a proxy:
 
 ### Configure proxy settings on your device
 
-Next, you need to configure your Android device to communicate with the 
-proxy server. 
+Next, you need to configure your Android device to communicate with the
+proxy server.
 
 1. On your Android device go to **Settings** > **Wi-Fi**.
-1. Long-press the name of the network that you are currently connected to. 
+1. Long-press the name of the network that you are currently connected to.
    **Note**: Proxy settings apply per network.
 3. Tap **Modify network**.
-4. Tap **Advanced options**. The proxy settings display. 
+4. Tap **Advanced options**. The proxy settings display.
 5. Tap the **Proxy** menu and select **Manual**.
 6. For the **Proxy hostname** field, enter `localhost`.
 7. For the **Proxy port** field, enter the port number that you entered for
-   **device port** in the previous section. 
+   **device port** in the previous section.
 8. Tap **Save**.
 
-With these settings, your device forwards all of its requests to the proxy on 
-your development machine. The proxy makes requests on behalf of your device, 
+With these settings, your device forwards all of its requests to the proxy on
+your development machine. The proxy makes requests on behalf of your device,
 so requests to your customized local domain are properly resolved.
 
-Now you can access custom domains on your Android device Android just as you 
-would on the development machine. 
+Now you can access custom domains on your Android device Android just as you
+would on the development machine.
 
 If your web server is running off of a non-standard port,
 remember to specify the port when requesting the content from your Android
-device. For example, if your web server is using the custom domain 
+device. For example, if your web server is using the custom domain
 `chrome.devtools` on port `7331`, when you view the site from your Android
-device you should be using the URL `chrome.devtools:7331`. 
+device you should be using the URL `chrome.devtools:7331`.
 
-**Tip**: To resume normal browsing, remember to revert the proxy settings on 
+**Tip**: To resume normal browsing, remember to revert the proxy settings on
 your Android device after you disconnect from the development machine.
 
 ## Feedback {: #feedback }

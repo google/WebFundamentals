@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Están llegando a la Web ricas experiencias sin conexión, sincronizaciones periódicas en segundo plano, notificaciones push: funcionalidad que normalmente requiere una aplicación nativa. Los service workers brindan la base técnica que hace posibles todas estas funciones.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Introducción a los service workers {: .page-title }
@@ -358,13 +358,13 @@ de la caché.
 
     self.addEventListener('activate', function(event) {
 
-      var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+      var cacheAllowlist = ['pages-cache-v1', 'blog-posts-cache-v1'];
 
       event.waitUntil(
         caches.keys().then(function(cacheNames) {
           return Promise.all(
             cacheNames.map(function(cacheName) {
-              if (cacheWhitelist.indexOf(cacheName) === -1) {
+              if (cacheAllowlist.indexOf(cacheName) === -1) {
                 return caches.delete(cacheName);
               }
             })

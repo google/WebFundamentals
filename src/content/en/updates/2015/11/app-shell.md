@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Application shell architecture is a method of building progressive web apps today, taking advantage of a range of technologies.
 
-{# wf_updated_on: 2019-01-16 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-11-16 #}
 {# wf_tags: app-shell,serviceworker #}
 {# wf_blink_components: Platform>Apps>Shell #}
@@ -17,7 +17,7 @@ description: Application shell architecture is a method of building progressive 
 An **application shell** is the minimal HTML, CSS, and JavaScript powering a user interface. The application shell should:
 
 * load fast
-* be cached 
+* be cached
 * dynamically display content
 
 An application shell is the secret to reliably good performance. Think of your app's shell like the bundle of code you'd publish to an app store if you were building a native app. It's the load needed to get off the ground, but might not be the whole story. It keeps your UI local and pulls in content dynamically through an API.
@@ -133,7 +133,7 @@ During the first load experience, your goal is to get meaningful content to the 
 
 ## A practical implementation
 
-We’ve written a fully working [sample](https://github.com/GoogleChrome/application-shell) using the application shell architecture, vanilla ES2015 JavaScript for the client, and Express.js for the server. There is of course nothing stopping you from using your own stack for either the client or the server portions (e.g PHP, Ruby, Python). 
+We’ve written a fully working [sample](https://github.com/GoogleChrome/application-shell) using the application shell architecture, vanilla ES2015 JavaScript for the client, and Express.js for the server. There is of course nothing stopping you from using your own stack for either the client or the server portions (e.g PHP, Ruby, Python).
 
 ### Service worker lifecycle
 
@@ -169,12 +169,12 @@ Understandably, your server-side setup may drastically differ from the one we us
 
 * Endpoints are defined for three parts of your application: the user facing URL’s (index/wildcard), the application shell (service worker) and your HTML partials.
 
-* Each endpoint has a controller that pulls in a [handlebars](https://www.npmjs.com/package/handlebars-layouts) layout which in turn can pull in handlebar partials and views. Simply put, partials are views that are chunks of HTML that are copied into the final page. 
+* Each endpoint has a controller that pulls in a [handlebars](https://www.npmjs.com/package/handlebars-layouts) layout which in turn can pull in handlebar partials and views. Simply put, partials are views that are chunks of HTML that are copied into the final page.
 Note: JavaScript frameworks that do more advanced data synchronization are often way easier to port to an Application Shell architecture. They tend to use data-binding and sync rather than partials.
 
 * The user is initially served a static page with content. This page registers a service worker, if it’s supported, which caches the application shell and everything it depends on (CSS, JS etc).
 
-* The app shell will then act as a single page web app, using javascript to XHR in the content for a specific URL. The XHR calls are made to a /partials* endpoint which returns the small chunk of HTML, CSS and JS needed to display that content. 
+* The app shell will then act as a single page web app, using javascript to XHR in the content for a specific URL. The XHR calls are made to a /partials* endpoint which returns the small chunk of HTML, CSS and JS needed to display that content.
 Note: There are many ways to approach this and XHR is just one of them. Some applications will inline their data (maybe using JSON) for initial render and therefore aren’t "static" in the flattened HTML sense.
 
 * Browsers **without** service worker support should always be served a fall-back experience. In our demo, we fall back to basic static server-side rendering, but this is only one of many options. The service worker aspect provides you with new opportunities for enhancing the performance of your Single-page Application style app using the cached application shell.
@@ -217,7 +217,7 @@ Use [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) for runtime caching
 
 Application shell architectures comes with several benefits but only makes sense for some classes of applications. The model is still young and it will be worth evaluating the effort and overall performance benefits of this architecture.
 
-In our experiments, we took advantage of template sharing between the client and server to minimize the work of building two application layers. This ensures progressive enhancement is still a first-class citizen.
+In our experiments, we took advantage of template sharing between the client and server to minimize the work of building two application layers. This ensures progressive enhancement is still a core feature.
 
 If you’re already considering using service workers in your app, take a look at the architecture and evaluate if it makes sense for your own projects.
 

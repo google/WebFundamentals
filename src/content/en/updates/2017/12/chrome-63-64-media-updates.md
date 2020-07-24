@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 63/64.
 
-{# wf_updated_on: 2019-06-06 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2017-12-08 #}
 {# wf_tags: news,chrome63,chrome64,media,audio,video,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -222,7 +222,7 @@ example above needs to be updated based on your video encoding properties.
   </li>
 </ul>
 <script>
-  document.querySelector('#colorDepth').innerHTML = 
+  document.querySelector('#colorDepth').innerHTML =
       (Math.sign(screen.colorDepth - 47) == 1) ? '&#x2714;' : '&#x274C;';
   document.querySelector('#p3').innerHTML =
       (window.matchMedia("(color-gamut: p3)").matches) ? '&#x2714;' : '&#x274C;';
@@ -331,8 +331,8 @@ similar change that was only applying to [MSE videos in Chrome 62].
 Before Chrome 64, sound was muted when `playbackRate` was below 0.5 or above 4
 as the quality degraded significantly. As Chrome has switched to a
 Waveform-Similarity-Overlap-Add (WSOLA) approach for quality degrading, sound
-doesn’t need to be muted anymore. It means you can play sound crazy slow and
-crazy fast now.
+doesn’t need to be muted anymore. It means you can play sound super slow and
+super fast now.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=289354)
 

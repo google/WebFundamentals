@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 풍부한 오프라인 경험, 주기적 백그라운드 동기화, 푸시 알림(일반적으로 기본 애플리케이션을 요구하는 기능)이 웹에서 지원되고 있습니다. 서비스 워커는 이러한 모든 기능의 기술적 기반을 제공합니다.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # 서비스 워커: 소개 {: .page-title }
@@ -44,15 +44,15 @@ AppCache API에는 다양한 문제가 있으며 서비스 워커는 이를 방�
   서비스 워커는
   [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage)
   인터페이스를 통해 전달된 메시지에 응답하는 방식으로 제어 대상 페이지와 통신할 수 있으며, 해당 페이지는 필요한 경우 DOM을 조작할 수 있습니다.
-* 서비스 워커는 프로그래밍 가능한 네트워크 프록시이며, 페이지의 
+* 서비스 워커는 프로그래밍 가능한 네트워크 프록시이며, 페이지의
   네트워크 요청 처리 방법을 제어할 수 있습니다.
-* 서비스 워커는 사용하지 않을 때는 종료되고 다음에 필요할 때 다시 시작되므로 
-  서비스 워커의 `onfetch` 및 
-  `onmessage` 핸들러의 전역 상태에 의존할 수 없습니다. 보관했다가 다시 시작할 때 재사용해야 하는 정보가 있는 경우 
-  서비스 워커가 
+* 서비스 워커는 사용하지 않을 때는 종료되고 다음에 필요할 때 다시 시작되므로
+  서비스 워커의 `onfetch` 및
+  `onmessage` 핸들러의 전역 상태에 의존할 수 없습니다. 보관했다가 다시 시작할 때 재사용해야 하는 정보가 있는 경우
+  서비스 워커가
   [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)에 대한 액세스 권한을 가집니다.
-* 서비스 워커는 프라미스를 광범위하게 사용하므로 프라미스에 대해 잘 모르는 경우 
-  이 가이드를 읽는 것을 멈추고 
+* 서비스 워커는 프라미스를 광범위하게 사용하므로 프라미스에 대해 잘 모르는 경우
+  이 가이드를 읽는 것을 멈추고
   [프라미스 소개](/web/fundamentals/getting-started/primers/promises)를 확인해 보세요.
 
 ## 서비스 워커 수명 주기
@@ -92,10 +92,10 @@ AppCache API에는 다양한 문제가 있으며 서비스 워커는 이를 방�
 ### 브라우저 지원
 
 브라우저 옵션은 성장하고 있습니다. Chrome, Firefox와
-Opera가 서비스 워커를 지원합니다. Microsoft Edge는 현재 
+Opera가 서비스 워커를 지원합니다. Microsoft Edge는 현재
 [공적 지원을 표명](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/)하고 있습니다.
 Safari도 [향후 개발 예정](https://trac.webkit.org/wiki/FiveYearPlanFall2015)임을 밝혔습니다.
-Jake Archibald의 
+Jake Archibald의
 [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external }사이트에서 모든 브라우저의 진행 상황을 확인할 수
 있습니다.
 
@@ -149,8 +149,8 @@ Jake Archibald의
 파일의 위치입니다. 이 예에서는 서비스 워커 파일이 도메인의
 루트에 있습니다. 즉, 서비스 워커의 범위는 전체
 원천(origin)입니다. 다시 말하면, 서비스 워커는 이 도메인의 모든 항목에 대한
-`fetch` 이벤트를 수신합니다. 
-`/example/sw.js`에 있는 서비스 워커 파일을 등록하면 서비스 워커는 `/example/`로 시작하는 
+`fetch` 이벤트를 수신합니다.
+`/example/sw.js`에 있는 서비스 워커 파일을 등록하면 서비스 워커는 `/example/`로 시작하는
 URL 페이지(예: `/example/page1/`, `/example/page2/`)에 대해서만 `fetch` 이벤트를 처리합니다.
 
 이제
@@ -311,8 +311,8 @@ Incognito 창에서 서비스 워커를 테스트하면
 2. 응답을 받으면 다음을 확인합니다.
     1. 응답이 유효한지 확인합니다.
     2. 응답에서 상태가 `200`인지 확인합니다.
-    3. 응답 유형이 자사에서 요청한 것임을 나타내는 
-      **basic**인지 확인합니다. 이는 타사 자산에 대한 요청은 
+    3. 응답 유형이 자사에서 요청한 것임을 나타내는
+      **basic**인지 확인합니다. 이는 타사 자산에 대한 요청은
       캐시되지 않음을 의미합니다.
 3. 확인을 통과하면 응답을 [복제](https://fetch.spec.whatwg.org/#dom-response-clone)
 합니다. 그 이유는 응답이
@@ -358,13 +358,13 @@ Incognito 창에서 서비스 워커를 테스트하면
 
     self.addEventListener('activate', function(event) {
 
-      var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+      var cacheAllowlist = ['pages-cache-v1', 'blog-posts-cache-v1'];
 
       event.waitUntil(
         caches.keys().then(function(cacheNames) {
           return Promise.all(
             cacheNames.map(function(cacheName) {
-              if (cacheWhitelist.indexOf(cacheName) === -1) {
+              if (cacheAllowlist.indexOf(cacheName) === -1) {
                 return caches.delete(cacheName);
               }
             })

@@ -86,7 +86,7 @@ The Payment Request API is not yet supported on desktop as of Chrome 58, so you 
 
 First, let's add add a feature detection for the Payment Request API. And if it's available, let a user process payment with it.
 
-Replace "TODO PAY-3.1" in __app/scripts/modules/app.js__ with the following code and remove the dummy conditional of `if (false) {` to add `PaymentRequest` feature detection:
+Replace "TODO PAY-3.1" in __app/scripts/modules/app.js__ with the following code and remove the placeholder conditional of `if (false) {` to add `PaymentRequest` feature detection:
 
 #### app.js
 
@@ -495,5 +495,5 @@ If you are interested in enabling Android Pay on top of the Payment Request API,
 
 
 ## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an 
+Help us make our code labs better by submitting an
 [issue](https://github.com/google-developer-training/pwa-ecommerce-demo/issues) today. And thanks!

@@ -276,13 +276,13 @@ Add the following activate event listener to `sw.js`:
 self.addEventListener('activate', event => {
   console.log('Activating new service worker...');
 
-  const cacheWhitelist = [staticCacheName];
+  const cacheAllowlist = [staticCacheName];
 
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
+          if (cacheAllowlist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }
         })
@@ -337,5 +337,3 @@ You have learned the basics of using the Cache API in the service worker. We hav
 #### Learn more about using service workers
 
 *  [Using Service Workers - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-
-

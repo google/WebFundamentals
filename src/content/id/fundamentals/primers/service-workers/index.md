@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Pengalaman offline lengkap, sinkronisasi latar belakang berkala, notifikasi push&mdash;fungsi yang biasanya memerlukan aplikasi yang sudah ada di perangkat&mdash;akan hadir di web. Service worker menyediakan fondasi teknis yang diperlukan oleh semua fitur ini.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Service Worker: Pengantar {: .page-title }
@@ -211,7 +211,7 @@ Di dalam callback `install`, kita perlu mengambil langkah-langkah berikut:
 
 Di sini Anda dapat melihat kita menampilkan `caches.open()` dengan nama cache yang diinginkan, setelah itu
 kita menampilkan `cache.addAll()` dan meneruskannya dalam array file. Ini adalah rantai
-promise (`caches.open()` dan `cache.addAll()`). Metode `event.waitUntil()` 
+promise (`caches.open()` dan `cache.addAll()`). Metode `event.waitUntil()`
 mengambil promise dan menggunakannya untuk mengetahui berapa lama waktu yang diperlukan penginstalan, dan apakah
 berhasil atau tidak.
 
@@ -357,13 +357,13 @@ daftar putih cache.
 
     self.addEventListener('activate', function(event) {
 
-      var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+      var cacheAllowlist = ['pages-cache-v1', 'blog-posts-cache-v1'];
 
       event.waitUntil(
         caches.keys().then(function(cacheNames) {
           return Promise.all(
             cacheNames.map(function(cacheName) {
-              if (cacheWhitelist.indexOf(cacheName) === -1) {
+              if (cacheAllowlist.indexOf(cacheName) === -1) {
                 return caches.delete(cacheName);
               }
             })

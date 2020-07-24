@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chromium의 새로운 레이아웃 엔진
 
 {# wf_published_on: 2019-06-06 #}
-{# wf_updated_on: 2019-06-10 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_featured_image: /web/updates/images/2019/06/layoutNG-header.jpg #}
 {# wf_tags: layout,performance,chrome76,layoutng #}
 {# wf_featured_snippet: LayoutNG is a new layout engine for Chromium that has been designed for the needs of modern scalable web applications. It improves performance isolation, better supports scripts other than Latin, and fixes many float, margin, and web compatibility issues. #}
@@ -13,7 +13,7 @@ description: Chromium의 새로운 레이아웃 엔진
 
 {% include "web/_shared/contributors/emilaeklund.html" %}
 
-Chrome76에 릴리즈 예정인 LayoutNG는 다년간의 노력을 기울이고 있는 새로운 레이아웃 엔진입니다. 몇가지 흥미로운 개선사항이 있으며, 추가적으로 성능 향상과 고급 레이아웃 기능이 제공될 예정입니다. 
+Chrome76에 릴리즈 예정인 LayoutNG는 다년간의 노력을 기울이고 있는 새로운 레이아웃 엔진입니다. 몇가지 흥미로운 개선사항이 있으며, 추가적으로 성능 향상과 고급 레이아웃 기능이 제공될 예정입니다.
 
 ## What's new?
 
@@ -22,7 +22,7 @@ Chrome76에 릴리즈 예정인 LayoutNG는 다년간의 노력을 기울이고 
 3. floats, margins에 대한 **이슈 해결**
 4. 웹 호환성 **이슈 해결**
 
-LayoutNG는 **단계적으로 실행**된다는 점에 유의하세요. 
+LayoutNG는 **단계적으로 실행**된다는 점에 유의하세요.
 Chrome 76에서 LayoutNG는 inline, block 레이아웃에 적용됩니다. 그 외 레이아웃(table, flexbox, grid, block fragmentation 같은)은 후속 릴리스에서 제공할 예정입니다.
 
 ### 개발자가 확인할 수 있는 변경 사항
@@ -37,7 +37,7 @@ LayoutNG 재구성은 다른 콘텐츠와 연관된 플롯 배치의 정확성 �
 
 #### 중첩된 콘텐츠
 
-과거의 플롯 구현은 플로팅 요소 주변에 콘텐츠를 배치할 때 마진을 정확하게 계산하지 못하여, 플롯 자체를 부분적으로 또는 완전히 겹치게 했습니다. 이 버그는 일반적으로 이미지가 단락 옆에 위치할 때 나타납니다. 
+과거의 플롯 구현은 플로팅 요소 주변에 콘텐츠를 배치할 때 마진을 정확하게 계산하지 못하여, 플롯 자체를 부분적으로 또는 완전히 겹치게 했습니다. 이 버그는 일반적으로 이미지가 단락 옆에 위치할 때 나타납니다.
 이 버그는 일반적으로 회피 로직이 선의 높이를 계산하지 못하는 단락 옆에 이미지를 배치할 때 나타납니다.
 ([Chromium bug #861540](https://crbug.com/861540)를 참조하세요.)
 
@@ -74,7 +74,7 @@ LayoutNG 재구성은 다른 콘텐츠와 연관된 플롯 배치의 정확성 �
 
 #### 컨텍스트 위치 구성 방식
 
-블록 서식 컨텍스트를 형성하는 요소가 플롯된 다음에 크기를 설정할 때, 
+블록 서식 컨텍스트를 형성하는 요소가 플롯된 다음에 크기를 설정할 때,
 레거시 레이아웃 엔진은 포기하기 전까지 고정된 횟수로 블록의 크기를 조정하려 시도합니다. 이 접근 방식은 예측할 수 없고 불안정한 행동으로 이어지며, 다른 동작과 일치하지 않습니다. LayoutNG에서는 블록의 크기를 조정할 때 모든 플롯을 고려합니다.
 ([Chromium bug #548033](https://crbug.com/548033)를 참조하세요.)
 
@@ -113,7 +113,7 @@ LayoutNG에서 텍스트는 단락 레벨에서 배열한 후 다음 행으로 �
 
 #### 요소 경계를 넘어서 결합
 
-일부 스크립트에서는 인접한 특정 문자를 시각적으로 결합할 수 있습니다. 
+일부 스크립트에서는 인접한 특정 문자를 시각적으로 결합할 수 있습니다.
 아랍어에서 이 예제 확인해보세요:
 
 LayoutNG에서 이제는 문자가 다른 요소에 있어도 결합합니다.
@@ -158,7 +158,7 @@ LayoutNG는 이 제약을 제거하고 문자에 관계없이 합자를 지원�
   <figcaption>
     <small>Fig 4a, Legacy layout engine</small><br>
     MHz는 정확하게 합자를 형성합니다.<br>
-    그러나 マンション, 10点는 그렇지 않습니다. 
+    그러나 マンション, 10点는 그렇지 않습니다.
   </figcaption>
 </figure>
 <figure class="attempt-right" style="text-align:center;">
@@ -173,10 +173,10 @@ LayoutNG는 이 제약을 제거하고 문자에 관계없이 합자를 지원�
 ### Size-to-content 요소
 
 Size-to-content(인라인 블록 같은) 요소의 경우 현재 레이아웃 엔진은 먼저 블록의 크기를 계산한 다음 내용에 대한 레이아웃을 수행합니다.
-글꼴이 적극적으로 커닝하는 경우, 
+글꼴이 적극적으로 커닝하는 경우,
 이로 인해 콘텐츠의 크기와 블록간의 부조화가 발생할 수 있습니다. LayoutNG에서 블록은 실제 내용에 따라 크기가 정해지기 때문에 이 장애 모드는 제거되었습니다.
 
-아래의 예는 내용에 맞는 크기의 노란색 블록을 보여줍니다. 커닝을 사용하여 T와 - 사이의 간격을 조정하는 Lato 글꼴을 사용합니다. 
+아래의 예는 내용에 맞는 크기의 노란색 블록을 보여줍니다. 커닝을 사용하여 T와 - 사이의 간격을 조정하는 Lato 글꼴을 사용합니다.
 노란 상자의 경계는 텍스트의 경계와 일치해야합니다.
 
 <figure class="attempt-left" style="text-align:center;">
@@ -219,7 +219,7 @@ Size-to-content(인라인 블록 같은) 요소의 경우 현재 레이아웃 �
 
 - [LayoutNG README](https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/core/layout/ng/README.md)
 - [Layout NG design document](https://docs.google.com/document/d/1uxbDh4uONFQOiGuiumlJBLGgO4KDWB8ZEkp7Rd47fw4/)
-- [Master tracking bug](https://crbug.com/591099)
+- [Primary tracking bug](https://crbug.com/591099)
 
 LayoutNG에서 수정한 특정 호환성 문제 및 버그에 대한 자세한 내용은 위의 링크를 참조하세요. 또는 Chromium Bug Database에서 [Fixed-In-LayoutNG](https://bugs.chromium.org/p/chromium/issues/list?can=1&q=label%3AFixed-In-LayoutNG)로 표시된 버그를 검색할 수 있습니다.
 

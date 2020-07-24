@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini is a collection of APIs that expose the CSS engine’s internals to developers
 
-{# wf_updated_on: 2019-03-14 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2016-05-19 #}
 {# wf_blink_components: N/A #}
 {# wf_tags: houdini,css #}
@@ -269,7 +269,7 @@ and animations, which is also being considered.
 
 Font metrics is exactly what it sounds like. What is the bounding box (or the
 bounding boxes when we are wrapping) when I render string X with font Y at size
-Z? What if I go all crazy unicode on you like using [ruby annotations]? This has
+Z? What if I go all super unicode on you like using [ruby annotations]? This has
 been requested a lot and Houdini should finally make these wishes
 come true.
 

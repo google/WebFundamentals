@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn how to get started building Progressive Web Apps
 
-{# wf_updated_on: 2017-10-11 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-12-15 #}
 {# wf_tags: progressive-web-apps,serviceworker #}
 {# wf_featured_image: /web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg #}
+{# wf_blink_components: N/A #}
 
 # Getting Started with Progressive Web Apps {: .page-title }
 
@@ -172,7 +173,7 @@ One-shot Background Sync has been [enabled](https://codereview.chromium.org/1514
 
 There's really nothing stopping you from applying any of the above principles to an existing application or framework you're building with. A few other principles worth keeping in mind while building your Progressive Web App are the [RAIL](/web/tools/chrome-devtools/profile/evaluate-performance/rail) user-centric performance model and [FLIP](https://aerotwist.com/blog/flip-your-animations/) based animations.
 
-I'm hopeful that during 2016, we'll see an increasing number of boilerplates and seed projects organically baking in support for Progressive Web Apps as a first-class citizen. Until then, the barrier to adding these features to your own apps isn't very high and are IMHO, quite worth the effort.
+I'm hopeful that during 2016, we'll see an increasing number of boilerplates and seed projects organically baking in support for Progressive Web Apps as a core feature. Until then, the barrier to adding these features to your own apps isn't very high and are IMHO, quite worth the effort.
 
 ## Architecture
 
@@ -274,8 +275,3 @@ Paul Kinlan is currently [planning](https://github.com/google/WebFundamentals/is
 * [Progressive Web App: A New Way to Experience Mobile](http://tech-blog.flipkart.net/2015/11/progressive-web-app/)
 * [Introducing Pokedex.org: a progressive webapp for Pokémon fans](http://www.pocketjavascript.com/blog/2015/11/23/introducing-pokedex-org)
 * [Chrome Developer Summit Recap: Progressive Web Apps](https://medium.com/@davideast/chrome-developer-summit-recap-1137b022b2dc#.nmj5drhvi)
-
-
-
-
-

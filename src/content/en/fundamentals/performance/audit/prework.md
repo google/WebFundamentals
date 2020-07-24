@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Before gathering performance metrics for a site audit, there are several checks you can do to identify easy fixes and areas for focus. Some of these checks are relatively subjective, but can identify problems that affect perceived performance.
 
-{# wf_updated_on: 2018-08-16 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: N/A #}
 
@@ -13,7 +13,7 @@ description: Before gathering performance metrics for a site audit, there are se
 Before gathering performance metrics for a site audit, there are several checks you can do to
 identify easy fixes and areas for focus.
 
-## Sanity check: architecture and code
+## Validity check: architecture and code
 
 [Pay down technical debt!](http://wiki.c2.com/?TechnicalDebt){: .external}
 

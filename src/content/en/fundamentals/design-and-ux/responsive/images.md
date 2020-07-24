@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
 
-{# wf_updated_on: 2018-12-15 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_blink_components: Blink>Image #}
 {# wf_published_on: 2014-04-29 #}
 
@@ -758,7 +758,7 @@ Start with these guidelines when choosing the appropriate format:
 You can reduce image file size considerably by "post-processing" the images
 after saving. There are a number of tools for image compression&mdash;lossy and
 lossless, online, GUI, command line.  Where possible, it's best to try
-automating image optimization so that it's a first-class citizen in your
+automating image optimization so that it's a built-in to your
 workflow.
 
 Several tools are available that perform further, lossless compression on `JPG`

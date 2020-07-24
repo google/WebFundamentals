@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -229,7 +229,7 @@ reactions**.
 </table>
 
 Note: The browser calls the `attributeChangedCallback()` for any attributes
-whitelisted in the `observedAttributes` array (see [Observing changes to
+listed in the `observedAttributes` array (see [Observing changes to
 attributes](#attrchanges)). Essentially, this is a performance optimization.
 When users change a common attribute like `style` or `class`, you don't want to
 be spammed with tons of callbacks.
@@ -781,12 +781,12 @@ There's no better way to write a [progressive web
 app](/web/progressive-web-apps/) than to **progressively enhance existing HTML
 elements**.
 
-Note: Only Chrome 67 supports customized built-in elements 
+Note: Only Chrome 67 supports customized built-in elements
 ([status](https://www.chromestatus.com/feature/4670146924773376))
 right now. Edge and Firefox will implement it, but Safari
 has chosen not to implement it. This is unfortunate for accessibility and
-progressive enhancement. If you think extending native HTML elements is 
-useful, voice your thoughts on 
+progressive enhancement. If you think extending native HTML elements is
+useful, voice your thoughts on
 <a href='https://github.com/w3c/webcomponents/issues/509'>509</a> and <a href='https://github.com/w3c/webcomponents/issues/662'>662</a> on Github.
 
 To extend an element, you'll need to create a class definition that inherits
@@ -980,7 +980,7 @@ article](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/){:
 Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)),
 Safari 10.1 ([status](https://webkit.org/status/#feature-custom-elements)), and
 Firefox 63 ([status](https://platform-status.mozilla.org/#custom-elements)) have
-Custom Elements v1. Edge has [begun 
+Custom Elements v1. Edge has [begun
 development](https://developer.microsoft.com/microsoft-edge/platform/status/customelements/).
 
 To feature detect custom elements, check for the existence of
@@ -1016,7 +1016,7 @@ Usage:
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
 
     <!-- Load a custom element definitions in `waitFor` and return a promise -->
-    <script type="module"> 
+    <script type="module">
       function loadScript(src) {
         return new Promise(function(resolve, reject) {
           const script = document.createElement('script');
@@ -1026,7 +1026,7 @@ Usage:
           document.head.appendChild(script);
         });
       }
-    
+
       WebComponents.waitFor(() => {
         // At this point we are guaranteed that all required polyfills have
         // loaded, and can use web components APIs.

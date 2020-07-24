@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better crawler indexability.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2018-04-01 #}
 {# wf_blink_components: Internals>Headless #}
 {# wf_tags: puppeteer,headless,testing,ssr,prerender,search,crawler #}
@@ -432,8 +432,8 @@ async function ssr(url) {
   page.on('request', req => {
     // 2. Ignore requests for resources that don't produce DOM
     // (images, stylesheets, media).
-    const whitelist = ['document', 'script', 'xhr', 'fetch'];
-    if (!whitelist.includes(req.resourceType())) {
+    const allowlist = ['document', 'script', 'xhr', 'fetch'];
+    if (!allowlist.includes(req.resourceType())) {
       return req.abort();
     }
 
@@ -449,7 +449,7 @@ async function ssr(url) {
 }
 ```
 
-Note: I'm using a whitelist to play it safe and allowing all other types of
+Note: I'm using an allowlist to play it safe and allowing all other types of
 requests to continue. This may preemptively avoid any gotchas that arise
 from aborting more resources than necessary.
 
@@ -752,8 +752,8 @@ to load the Analytics library.
 ```
 page.on('request', req => {
   // Don't load Google Analytics lib requests so pageviews aren't 2x.
-  const blacklist = ['www.google-analytics.com', '/gtag/js', 'ga.js', 'analytics.js'];
-  if (blacklist.find(regex => req.url().match(regex))) {
+  const blockist = ['www.google-analytics.com', '/gtag/js', 'ga.js', 'analytics.js'];
+  if (blocklist.find(regex => req.url().match(regex))) {
     return req.abort();
   }
   ...

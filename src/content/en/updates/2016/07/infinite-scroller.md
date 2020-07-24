@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Infinite scrollers are a common UI pattern. Here we explore how to implement this pattern in a memory conservative way that performs at 60fps.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2016-07-01 #}
 {# wf_blink_components: Blink>Scroll #}
 {# wf_tags: javascript,css #}
@@ -345,7 +345,7 @@ definitely something to improve on.
 
 We hope you see how challenging simple problems can become when you want to
 combine a great user experience with high performance standards. With
-Progressive Web Apps becoming first-class citizens on mobile phones, this will
+Progressive Web Apps becoming core experiences on mobile phones, this will
 become more important and web developers will have to continue investing into
 using patterns that respect performance constraints.
 
@@ -358,5 +358,3 @@ npm or as a separate repo. The primary use is educational.
 [Containment]: /web/updates/2016/06/css-containment
 [IntersectionObserver]: /web/updates/2016/04/intersectionobserver
 [Compositor Worklet]: /web/updates/2016/05/houdini
-
-

@@ -163,7 +163,7 @@ Note: Solution code can be found in the __lab2-add-to-homescreen__ folder.
 
 
 
-To complete TODO SW-5 in __app/service-worker.js__, write the code to delete unused caches in the  [`activate` event handler](/web/fundamentals/instant-and-offline/offline-cookbook/#on-activate). You should create a "whitelist" of caches currently in use that should not be deleted (such as the `e-commerce-v1` cache). Use `caches.keys()` to get a list of the cache names. Then, inside `Promise.all`, map the array containing the cache names to a function that deletes each cache not in the whitelist. Save the file when you have completed this step.
+To complete TODO SW-5 in __app/service-worker.js__, write the code to delete unused caches in the  [`activate` event handler](/web/fundamentals/instant-and-offline/offline-cookbook/#on-activate). You should create an "allowlist" of caches currently in use that should not be deleted (such as the `e-commerce-v1` cache). Use `caches.keys()` to get a list of the cache names. Then, inside `Promise.all`, map the array containing the cache names to a function that deletes each cache not in the allowlist. Save the file when you have completed this step.
 
 
 
@@ -196,5 +196,3 @@ Open the browser and navigate to localhost:8080.  [Inspect the cache](tools-for-
 
 
 You have added a service worker to the E-Commerce App. In the sw-precache and sw-toolbox lab, we will generate a service worker in our build process to accomplish the same result with less code.
-
-

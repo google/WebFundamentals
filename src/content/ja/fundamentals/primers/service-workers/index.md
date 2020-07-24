@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:リッチなオフライン体験、定期的なバックグラウンド同期、プッシュ通知など、これまでネイティブ アプリを必要としていた機能が Web にもやってきます。 Service Worker はそれらの機能を提供する基盤技術です。
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Service Worker の紹介 {: .page-title }
@@ -93,7 +93,7 @@ Service Worker を使うと接続のハイジャック、改ざん、フィル�
 
 
 
-[GitHub Pages](https://pages.github.com/){: .external } 
+[GitHub Pages](https://pages.github.com/){: .external }
 は HTTPS で提供されるので、デモをホストするには絶好の環境です。
 
 サーバーに HTTPS を設定する場合は、TLS 証明書を取得してサーバーにセットアップしなければなりません。
@@ -329,13 +329,13 @@ Service Worker がインストールされた状態で、他のページヘ移�
 
     self.addEventListener('activate', function(event) {
 
-      var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+      var cacheAllowlist = ['pages-cache-v1', 'blog-posts-cache-v1'];
 
       event.waitUntil(
         caches.keys().then(function(cacheNames) {
           return Promise.all(
             cacheNames.map(function(cacheName) {
-              if (cacheWhitelist.indexOf(cacheName) === -1) {
+              if (cacheAllowlist.indexOf(cacheName) === -1) {
                 return caches.delete(cacheName);
               }
             })

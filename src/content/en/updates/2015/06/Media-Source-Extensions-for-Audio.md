@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback.
 
-{# wf_updated_on: 2019-03-22 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-06-11 #}
 {# wf_tags: news,audio,codecs,mse #}
 {# wf_blink_components: N/A #}
@@ -303,7 +303,7 @@ This is written inside an ID3 tag within the MP3 container and within a metadata
     }
 
 
-On the flip side, most open source MP3 encoders will store the gapless metadata within a special [Xing header](http://gabriel.mp3-tech.org/mp3infotag.html) placed inside of a silent MPEG frame (it's silent so decoders which don't understand the Xing header will simply play silence). Sadly this tag is not always present and has a number of optional fields. For the purposes of this demo, we have control over the media, but in practice some additional sanity checks will be required to know when gapless metadata is actually available.
+On the flip side, most open source MP3 encoders will store the gapless metadata within a special [Xing header](http://gabriel.mp3-tech.org/mp3infotag.html) placed inside of a silent MPEG frame (it's silent so decoders which don't understand the Xing header will simply play silence). Sadly this tag is not always present and has a number of optional fields. For the purposes of this demo, we have control over the media, but in practice some additional checks will be required to know when gapless metadata is actually available.
 
 First we'll parse the total sample count. For simplicity we'll read this from the Xing header, but it could be constructed from the normal [MPEG audio header](https://www.codeproject.com/Articles/8295/MPEG-Audio-Frame-Header). Xing headers can be marked by either a `Xing` or `Info` tag. Exactly 4 bytes after this tag there are 32-bits representing the total number of frames in the file; multiplying this value by the number of samples per frame will give us the total samples in the file.
 
@@ -366,4 +366,3 @@ Ranges can be removed via the [`remove()`](https://w3c.github.io/media-source/#w
 On desktop Chrome, you can keep approximately 12 megabytes of audio content and 150 megabytes of video content in memory at once. You should not rely on these values across browsers or platforms; e.g., they are most certainly not representative of mobile devices.
 
 Garbage collection only impacts data added to `SourceBuffers`; there are no limits on how much data you can keep buffered in JavaScript variables. You may also reappend the same data in the same position if necessary.
-

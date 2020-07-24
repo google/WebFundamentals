@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Learn how to make a gulp-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2017-11-17 #}
 {# wf_blink_components: N/A #}
 
@@ -128,7 +128,7 @@ Workbox is installed, but you're not using it in your gulp build process, yet.
 * The `build` task builds the app. In this case, it just copies the source files to the output
   directory.
 * The `generate-service-worker` task creates your service worker code, using Workbox.
-* The `default` task is the "master" task that ensures that all of the other tasks run in
+* The `default` task is the "primary" task that ensures that all of the other tasks run in
   the proper order.
 
 The object that you pass to `workbox.generateSW()` configures how Workbox runs.

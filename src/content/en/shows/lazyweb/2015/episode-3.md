@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Chrome 42 lands with Push notifications, Jacob Kaplan-Moss debunks myths about programmers, protocol relative URLs are now anti-patterns, the mobile friendly badge hits Google, git tips with First Aid Git, and optimizing your app with RAIL.
 
-{# wf_updated_on: 2015-04-27 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-04-27 #}
 {# wf_youtube_id: voo5mxStFKg #}
+{# wf_blink_components: N/A #}
 
 # Push notifications for the web {: .page-title }
 
@@ -60,13 +61,13 @@ Check to see if your site is mobile friendly. A recent article on the Google Web
 
 ### GITTING UP TO SPEED
 
-Learning git can be tough. A look at StackOverflow reveals over 53000 git related questions, but help is on the way. First Aid Git is a searchable index of the most commonly asked git questions. Curious how to undo a change that you’ve just pushed to master? You can find the answer and more, or submit a pull request to add to the index.
+Learning git can be tough. A look at StackOverflow reveals over 53000 git related questions, but help is on the way. First Aid Git is a searchable index of the most commonly asked git questions. Curious how to undo a change that you’ve just pushed to the main branch? You can find the answer and more, or submit a pull request to add to the index.
 
 [http://ricardofilipe.com/projects/firstaidgit/#/](http://ricardofilipe.com/projects/firstaidgit/#/)
 
 ### OPTIMIZING RAIL
 
-60 frames per second is the target for a smooth web experience, but it’s easy to fall off the fast path. Paul Lewis and Cameron Pittman show you how to optimize the 4 major areas of your app Response, Animate, Idle, and Load aka RAIL in this FREE 6 part Udacity course. Blast jank invaders and master DevTools all while learning the secrets to a faster web app.
+60 frames per second is the target for a smooth web experience, but it’s easy to fall off the fast path. Paul Lewis and Cameron Pittman show you how to optimize the 4 major areas of your app Response, Animate, Idle, and Load aka RAIL in this FREE 6 part Udacity course. Blast jank invaders and learn DevTools all while learning the secrets to a faster web app.
 
 [https://www.udacity.com/course/browser-rendering-optimization--ud860](https://www.udacity.com/course/browser-rendering-optimization--ud860)
 

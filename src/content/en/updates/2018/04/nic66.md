@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 66 for developers?
 
 {# wf_published_on: 2018-04-17 #}
-{# wf_updated_on: 2018-04-18 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome66,new-in-chrome,cssom #}
 {# wf_featured_snippet: Chrome 66 makes CSS manipulation easier with the new CSS Typed Model Object, access to the clipboard is now asynchronous, there’s a new rendering context for canvas elements, and a better way to process Audio using JavaScript. Let’s dive in and see what’s new for developers in Chrome 66! #}
@@ -62,7 +62,7 @@ function step(timestamp) {
 
 With the new CSS Typed Object Model, CSS values are exposed as typed
 JavaScript objects, eliminating a lot of the type manipulation, and providing
-a more sane way of working with CSS.
+a more sensible way of working with CSS.
 
 Instead of using `element.style`, you access styles through the
 `.attributeStyleMap` property or `.styleMap`. They return a map-like object
@@ -222,4 +222,3 @@ I’m Pete LePage, and as soon as Chrome 67 is released, I’ll be right
 here to tell you -- what’s new in Chrome!
 
 {% include "web/_shared/rss-widget-updates.html" %}
-

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Push Messaging and Notifications are Landing in Chrome 42.
 
 
-{# wf_updated_on: 2019-03-28 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-03-11 #}
 {# wf_tags: news,webpush,notifications,serviceworker #}
 {# wf_blink_components: N/A #}
@@ -451,7 +451,7 @@ The key aspects to remember when calling FCM are:
   API key from Firebase project.
     * The API key is used by FCM to find the appropriate sender ID, ensure
       the user has given permission for your project and finally
-      ensuring that the server's IP address is whitelisted for that project.
+      ensuring that the server's IP address is allowlisted for that project.
 * An appropriate **Content-Type** header of **application/json** or
   **application/x-www-form-urlencoded;charset=UTF-8** depending on whether you
   send the data as JSON or form data.
@@ -460,7 +460,7 @@ The key aspects to remember when calling FCM are:
 
 Please do [check out the docs](https://firebase.google.com/docs/cloud-messaging/server)
 about how to send push messages from your server,
-but for a quick sanity check of your service worker you can use
+but for a quick check of your service worker you can use
 [cURL](http://www.google.com/url?q=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCURL&sa=D&sntz=1&usg=AFQjCNHRhFnXmOaG9ZHmto3zw6T_7B15Ng)
 to send a push message to your browser.
 
@@ -888,5 +888,3 @@ FCM has a 'collapse_key' parameter you can use to tell FCM to replace any pendin
 message which has the same 'collapse_key', with the new message.
 
 [More details can be found here](https://firebase.google.com/docs/cloud-messaging/concept-options#collapsible_and_non-collapsible_messages).
-
-

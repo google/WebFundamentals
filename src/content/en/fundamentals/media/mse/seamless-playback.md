@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-06-11 #}
 {# wf_tags: news,audio,codecs,mse #}
 {# wf_blink_components: Blink>Media #}
@@ -423,7 +423,7 @@ within a special [Xing header](http://gabriel.mp3-tech.org/mp3infotag.html)
 placed inside of a silent MPEG frame (it's silent so decoders which don't
 understand the Xing header will simply play silence). Sadly this tag is not
 always present and has a number of optional fields. For the purposes of this
-demo, we have control over the media, but in practice some additional sanity
+demo, we have control over the media, but in practice some additional sensibility
 checks will be required to know when gapless metadata is actually available.
 
 First we'll parse the total sample count. For simplicity we'll read this from

@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2020-03-22 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -33,7 +33,7 @@ separate files during testing. Those are all valid reasons to have multiple reso
 But because each file requires its own HTTP request, and each request takes time, we can speed
 up page load by combining files; one request instead of three or four will certainly save
 time. At first blush, this seems like a no-brainer -- just put all the CSS (for example) into
-a master stylesheet and then remove all but one <link> from the page. Every extra file you
+a primary stylesheet and then remove all but one <link> from the page. Every extra file you
 eliminate in this way removes one HTTP request and saves round-trip time. But there are caveats.
 
 For Cascading Style Sheets, beware the "C". Cascade precedence allows later rules to override
@@ -41,11 +41,11 @@ earlier ones without warning -- literally. CSS doesn't throw an error when a pre
 property is reset by a more recent rule, so just tossing stylesheets together is asking for
 trouble. Instead, look for conflicting rules and determine whether one should always supersede
 the other, or if one should use more specific selectors to be applied properly. For example,
-consider these two simple rules, the first from a master stylesheet, the second imported from
+consider these two simple rules, the first from a primary stylesheet, the second imported from
 a stylesheet provided by Marketing.
 
 ```
-h2 { font-size: 1em; color: #000080; } /* master stylesheet */
+h2 { font-size: 1em; color: #000080; } /* primary stylesheet */
 
 . . .
 

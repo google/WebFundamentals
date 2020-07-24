@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: A guide on navigating Chrome DevTools using assistive technology like screen readers.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2019-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -35,14 +35,14 @@ For example:
 
 Within the content area of each panel, there are a number of different
 tools, often referred to as *tabs* or *panes* in the documentation.
-For instance, the **Elements** panel contains additional tabs to inspect 
+For instance, the **Elements** panel contains additional tabs to inspect
 event listeners, the accessibility tree, and much more. The distinction between
 tabs and panes is somewhat arbitrary. The only reason you'll see one term or the
 other is to maintain consistency with the rest of the official DevTools documentation.
 
 ## Keyboard shortcuts {: #shortcuts }
 
-The [DevTools Keyboard Shortcuts reference](/web/tools/chrome-devtools/shortcuts) 
+The [DevTools Keyboard Shortcuts reference](/web/tools/chrome-devtools/shortcuts)
 is a helpful cheatsheet. Be sure to bookmark it and refer back to it as you explore the different panels.
 
 ## Open DevTools {: #open }
@@ -55,7 +55,7 @@ There are a number of ways to open DevTools, either through keyboard shortcuts o
 ### Navigate by keyboard {: #keynav }
 
 * With DevTools open, press <kbd>Control</kbd>+<kbd>]</kbd> or
-  <kbd>Command</kbd>+<kbd>]</kbd> (Mac) to focus the next panel. 
+  <kbd>Command</kbd>+<kbd>]</kbd> (Mac) to focus the next panel.
 * Press <kbd>Control</kbd>+<kbd>[</kbd> or <kbd>Command</kbd>+<kbd>[</kbd> (Mac)
   to focus the previous panel.
 * It's also possible to use <kbd>Shift</kbd>+<kbd>Tab</kbd> to move focus into a panel's
@@ -141,7 +141,7 @@ for an example.
 * Press <kbd>Control</kbd>+<kbd>Enter</kbd> or <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) to
   accept the change.
 
-For example, typing `h3` and pressing <kbd>Control</kbd>+<kbd>Enter</kbd> or 
+For example, typing `h3` and pressing <kbd>Control</kbd>+<kbd>Enter</kbd> or
 <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) changes the element's start and end tags to `h3`.
 
 ## Elements panel tabs {: #elementstabs }
@@ -150,7 +150,7 @@ The **Elements** panel contains additional tabs for inspecting things like the C
 applied to an element or its place in the accessibility tree.
 
 * With focus on a node in the **DOM Tree**, press <kbd>Tab</kbd> until you hear that
-  the **Styles** pane is selected. 
+  the **Styles** pane is selected.
 * Use the <kbd>Right Arrow</kbd> to explore other available
   tabs.
 
@@ -184,10 +184,10 @@ node that you're interested in.
 #### Navigate the Styles pane {: #stylesnav }
 
 Because all of the style tools connect in one way or another back to the **Styles**
-pane, it makes sense to master this tool first.
+pane, it makes sense to become an expert in this tool first.
 
 * With focus on the **Styles** pane, press <kbd>Tab</kbd> to move focus inside and explore
-  its contents. 
+  its contents.
 * Press <kbd>Tab</kbd> until the first style
   becomes active. If you're using a screen reader this first style will be
   announced as "element.style {}".
@@ -213,15 +213,15 @@ for additional shortcuts.
 
 #### Toggle element state {: #togglestate }
 
-To toggle an element's state, such as `:active` or `:focus`: 
+To toggle an element's state, such as `:active` or `:focus`:
 
 1. Navigate to the **Styles** pane and press <kbd>Tab</kbd> until the **Toggle Element State** button has
-   focus. 
+   focus.
 1. Press <kbd>Enter</kbd> to expand the collection of element states. The element states are presented
-   as a group of checkboxes. 
+   as a group of checkboxes.
 1. Press <kbd>Tab</kbd> until the first state, `:active`, has focus.
 1. Press <kbd>Space</kbd> to enable it. If the currently-selected element in the DOM Tree has an `:active`
-   style, it's now applied. 
+   style, it's now applied.
 1. Continue pressing <kbd>Tab</kbd> to explore all of the available states.
 
 #### Add an exiting class {: #addclass }
@@ -316,10 +316,10 @@ other categories.
 
 1. When the **Audits** panel is first opened, focus is placed on the **Run Audit**
    button at the end of the form. By default the form is configured to run audits for every category
-   using mobile emulation on a simulated 3G connection. 
+   using mobile emulation on a simulated 3G connection.
 1. Use <kbd>Shift</kbd>+<kbd>Tab</kbd> or navigate back in Browse mode to change the audit settings.
 1. When you're ready to run the audit, navigate back to the **Run Audit** button and
-   press <kbd>Enter</kbd>. 
+   press <kbd>Enter</kbd>.
 1. Focus moves into a modal window with a **Cancel** button which
    allows you to exit the audit. You may hear a series of earcons as the audit runs
    and refreshes the page multiple times.
@@ -338,7 +338,7 @@ other categories.
 
 The audit report is organized into sections that correspond with each of the
 audit categories. The report opens with a list of scores for each category. These scores are also
-links which can be used to skip to the relevant sections. Within each section are 
+links which can be used to skip to the relevant sections. Within each section are
 expandable `details` elements, which contain information
 relating to passed or failed audits. By default, only failing audits are shown.
 Each section ends with a final `details` element which contains all of the

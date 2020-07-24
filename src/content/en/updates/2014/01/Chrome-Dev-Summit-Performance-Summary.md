@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Performance Matters
 
-{# wf_updated_on: 2019-03-16 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2014-01-07 #}
 {# wf_tags: news,mobile,performance #}
 {# wf_blink_components: N/A #}
@@ -13,7 +13,7 @@ description: Performance Matters
 
 ## #perfmatters: Tooling techniques for the performance ninja
 
-Knowing your way around your development tools is key to becoming a performance Grand Master. Colt stepped through the three pillars of performance: network, compute and render, providing a tour of the key problem in each area and the tools available for finding and eradicating them.
+Knowing your way around your development tools is key to becoming a performance expert. Colt stepped through the three pillars of performance: network, compute and render, providing a tour of the key problem in each area and the tools available for finding and eradicating them.
 
 [Slides](https://docs.google.com/a/google.com/presentation/d/1Aa9dn8S4su_8mrm8Pb3CDlWvrWiJU_3AB6HKp3zaJUs/edit)
 
@@ -83,5 +83,3 @@ The Critical Rendering Path refers to anything (JavaScript, HTML, CSS, images) t
 + Render the initial view server-side as HTML and augment with JavaScript.
 + Minimize render-blocking CSS; deliver only the styles needed to display the initial viewport, then deliver the rest.
 + Large data URIs inlined in render-blocking CSS are harmful for render performance; they are blocking resources where image URLs are non-blocking.
-
-

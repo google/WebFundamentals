@@ -1,10 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Akamai gives an overview of HTTP/2, Kathy Sierra teachers metaskills to master new information, the WebKit status page goes live, browser makers meet to find consensus on Shadow DOM, Philip Roberts explains the inner workings of JavaScript, and Elevator.js scrolls you back to top in style.
+description: Akamai gives an overview of HTTP/2, Kathy Sierra teachers metaskills to learn new information, the WebKit status page goes live, browser makers meet to find consensus on Shadow DOM, Philip Roberts explains the inner workings of JavaScript, and Elevator.js scrolls you back to top in style.
 
-{# wf_updated_on: 2015-05-04 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-05-04 #}
 {# wf_youtube_id: 4Q6Nurtb_9c #}
+{# wf_blink_components: N/A #}
 
 # How hard is it to be a web developer? {: .page-title }
 
@@ -18,7 +19,7 @@ description: Akamai gives an overview of HTTP/2, Kathy Sierra teachers metaskill
 
 ## In this Week's Episode
 
-Akamai gives an overview of HTTP/2, Kathy Sierra teachers metaskills to master new information, the WebKit status page goes live, browser makers meet to find consensus on Shadow DOM, Philip Roberts explains the inner workings of JavaScript, and Elevator.js scrolls you back to top in style.
+Akamai gives an overview of HTTP/2, Kathy Sierra teachers metaskills to learn new information, the WebKit status page goes live, browser makers meet to find consensus on Shadow DOM, Philip Roberts explains the inner workings of JavaScript, and Elevator.js scrolls you back to top in style.
 
 ### HTTP/2 IS COMING
 [https://www.youtube.com/watch?v=GIDXISQs67w](https://www.youtube.com/watch?v=GIDXISQs67w)
@@ -72,4 +73,3 @@ Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.
 HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/){: .external }
 
 Subscribe to the Google Developers channel at: [https://goo.gl/mQyv5L](https://goo.gl/mQyv5L)
-

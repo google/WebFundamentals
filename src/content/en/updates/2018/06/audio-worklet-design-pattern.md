@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 {# wf_published_on: 2018-06-18 #}
-{# wf_updated_on: 2019-05-28 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_featured_image: /web/updates/images/generic/webaudio.png #}
 {# wf_tags: chrome68,webaudio,worklet #}
 {# wf_featured_snippet: Advanced design patterns to unlock Audio Worklet's fullest power with WebAssembly and SharedArrayBuffer. #}
@@ -185,8 +185,8 @@ regular AudioNode; AudioWorkletNode handles the interaction with other codes
 while AudioWorkletProcessor takes care of internal audio processing. Because a
 regular AudioNode processes 128
 [frames](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers_frames_samples_and_channels)
-at a time, AudioWorkletProcessor must do the same to become a first-class
-citizen. This is one of the advantages of the Audio Worklet design that ensures
+at a time, AudioWorkletProcessor must do the same to become a core feature.
+This is one of the advantages of the Audio Worklet design that ensures
 no additional latency due to internal buffering is introduced within the
 AudioWorkletProcessor, but it can be a problem if a processing function requires
 a buffer size different than 128 frames. The common solution for such case is to
@@ -401,4 +401,3 @@ Special thanks to Chris Wilson, Jason Miller, Joshua Bell and Raymond Toy for
 reviewing a draft of this article and giving insightful feedback.
 
 {% include "web/_shared/rss-widget-updates.html" %}
-
