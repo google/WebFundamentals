@@ -5,6 +5,7 @@ description: Chrome 42 lands with Push notifications, Jacob Kaplan-Moss debunks 
 {# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-04-27 #}
 {# wf_youtube_id: voo5mxStFKg #}
+{# wf_blink_components: N/A #}
 
 # Push notifications for the web {: .page-title }
 

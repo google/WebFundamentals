@@ -4,6 +4,7 @@ book_path: /web/shows/_book.yaml
 {# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-11-17 #}
 {# wf_youtube_id: NrEjkflqPxQ #}
+{# wf_blink_components: N/A #}
 
 # Quantify and improve real-world RAIL (Chrome Dev Summit 2015) {: .page-title }
 

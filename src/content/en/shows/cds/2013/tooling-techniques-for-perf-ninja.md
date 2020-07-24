@@ -5,6 +5,7 @@ description: Colt stepped through the three pillars of performance: network, com
 {# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: 8MMmg3bDOjc #}
+{# wf_blink_components: N/A #}
 
 # Tooling Techniques for the Performance Ninja {: .page-title }
 

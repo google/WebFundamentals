@@ -5,6 +5,7 @@ description: Akamai gives an overview of HTTP/2, Kathy Sierra teachers metaskill
 {# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-05-04 #}
 {# wf_youtube_id: 4Q6Nurtb_9c #}
+{# wf_blink_components: N/A #}
 
 # How hard is it to be a web developer? {: .page-title }
 

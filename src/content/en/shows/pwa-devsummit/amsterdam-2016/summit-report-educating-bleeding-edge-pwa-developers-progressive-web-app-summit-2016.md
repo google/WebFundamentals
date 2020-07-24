@@ -4,6 +4,7 @@ book_path: /web/shows/_book.yaml
 {# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2016-06-20 #}
 {# wf_youtube_id: 80X7_KsgKLo #}
+{# wf_blink_components: N/A #}
 
 # Summit Report: Educating bleeding edge PWA developers (Progressive Web App Summit 2016) {: .page-title }
 

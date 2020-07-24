@@ -5,6 +5,7 @@ description: The core-header-panel is a great next step after you've become an e
 {# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: ZAc51_0Xa_M #}
+{# wf_blink_components: N/A #}
 
 # Core Header Panel {: .page-title }
 
