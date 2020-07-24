@@ -157,7 +157,7 @@ situs Anda, serta menghindari konflik antara font sistem dan
 font yang dipilih, Anda dapat menggunakan `<link rel="preload">` di HTML agar
 browser segera mengetahui bahwa font diperlukan.
 
-    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 
 Perhatikan bahwa penggunaan `crossorigin` di sini sangat penting; tanpa atribut ini,
 font yang dimuat sebelumnya akan diabaikan oleh browser, dan dilakukan pengambilan
