@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: CSS Typed Object Model (Typed OM) brings types, methods, and a flexible object model to working with CSS values. Shipped in Chrome 66.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2018-03-26 #}
 {# wf_tags: css,style,cssom,houdini,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
@@ -50,7 +50,7 @@ document.styleSheets[0].cssRules[0].style.opacity = 0.3;
 The new [CSS Typed Object Model][spec] (Typed OM), part of the
 [Houdini][houdini] effort, expands this worldview by adding types, methods,
 and a <u>proper</u> object model to CSS values. Instead of strings, values are
-exposed as JavaScript objects to facilitate performant (and sane) manipulation
+exposed as JavaScript objects to facilitate performant (and sensible) manipulation
 of CSS.
 
 Instead of using `element.style`, you'll be accessing styles through a new

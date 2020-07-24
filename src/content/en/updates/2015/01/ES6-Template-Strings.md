@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Template String literals with embedded expressions. We've been waiting for this for ages. Literally
 
-{# wf_updated_on: 2019-07-16 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,es6,javascript,ecmascript #}
 {# wf_blink_components: N/A #}
@@ -47,9 +47,9 @@ As all string substitutions in Template Strings are JavaScript expressions, we c
 
     var a = 10;
     var b = 10;
-    console.log(`JavaScript first appeared ${a+b} years ago. Crazy!`);
+    console.log(`JavaScript first appeared ${a+b} years ago. Wow!`);
 
-    //=> JavaScript first appeared 20 years ago. Crazy!
+    //=> JavaScript first appeared 20 years ago. Wow!
 
     console.log(`The number of JS MVC frameworks is ${2 * (a + b)} and not ${10 * (a + b)}.`);
     //=> The number of JS frameworks is 40 and not 200.
@@ -211,5 +211,3 @@ One of the most significant features they bring are tagged templates - a critica
 * [https://leanpub.com/understandinges6/read/#leanpub-auto-tagged-templates](https://leanpub.com/understandinges6/read/#leanpub-auto-tagged-templates)
 * [https://jaysoo.ca/2014/03/20/i18n-with-es2015-template-literals/](https://jaysoo.ca/2014/03/20/i18n-with-es2015-template-literals/)
 * [https://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx](https://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx)
-
-

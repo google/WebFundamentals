@@ -1,10 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: It might seem crazy, but using an element for AJAX is actually pretty great! In this episode I’ll show you how to build a simple GitHub issue fetcher, using primarily HTML. When you combine data providers with the magic of bindings, you can remove most of the JavaScript in your app, and that makes things much easier to maintain!
+description: It might seem unexpected, but using an element for AJAX is actually pretty great! In this episode I’ll show you how to build a simple GitHub issue fetcher, using primarily HTML. When you combine data providers with the magic of bindings, you can remove most of the JavaScript in your app, and that makes things much easier to maintain!
 
-{# wf_updated_on: 2015-09-10 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2015-09-10 #}
 {# wf_youtube_id: k1eR_3KqJms #}
+{# wf_blink_components: N/A #}
 
 # iron-ajax… wat?! {: .page-title }
 
@@ -16,7 +17,7 @@ description: It might seem crazy, but using an element for AJAX is actually pret
 </div>
 
 
-It might seem crazy, but using an element for AJAX is actually pretty great! In this episode I’ll show you how to build a simple GitHub issue fetcher, using primarily HTML. When you combine data providers with the magic of bindings, you can remove most of the JavaScript in your app, and that makes things much easier to maintain!
+It might seem unexpected, but using an element for AJAX is actually pretty great! In this episode I’ll show you how to build a simple GitHub issue fetcher, using primarily HTML. When you combine data providers with the magic of bindings, you can remove most of the JavaScript in your app, and that makes things much easier to maintain!
 
 ## Read More
 

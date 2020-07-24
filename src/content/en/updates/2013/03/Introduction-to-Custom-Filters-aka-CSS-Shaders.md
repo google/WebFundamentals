@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-03-09 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2013-03-24 #}
 {# wf_tags: news,webgl,shaders,css,filters #}
 {# wf_blink_components: N/A #}
@@ -103,7 +103,7 @@ I've included a recorded version of a presentation I recently delivered to Londo
 </figure>
 </p>
 
-<p>Each one of those vertices then gets passed through to our vertex shader for manipulation, and that means we can start moving them around in 3D space as we need. It's not long before you can make some pretty crazy effects!</p>
+<p>Each one of those vertices then gets passed through to our vertex shader for manipulation, and that means we can start moving them around in 3D space as we need. It's not long before you can make some pretty fabulous effects!</p>
 
 <p><figure><img src="/web/updates/images/2013/03/custom-filters/weird.jpg" alt="An accordion effect" />
 <figcaption>An image being warped by an accordion effect</figcaption>
@@ -166,5 +166,3 @@ I've included a recorded version of a presentation I recently delivered to Londo
 <li><a href="http://learningwebgl.com/blog/?page_id=1217">Learning WebGL</a></li>
 <li><a href="https://github.com/adobe/cssfilterlab">Adobe CSS Filter Lab</a></li>
 </ul>
-
-
