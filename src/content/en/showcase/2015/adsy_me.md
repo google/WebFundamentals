@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2015-05-04 #}
-{# wf_updated_on: 2015-05-04 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/adsy_me/card.jpg #}
 {# wf_tags: spotlight #}
@@ -59,7 +59,7 @@ By the way, I wrote an article called "7 reasons why appstores are doomed"
 ### What worked really well during development?
 
 Tough question because, to be honest, it's not that easy (1) to properly
-develop for the web (2) to find the right talents who master JS & HTML5 at an
+develop for the web (2) to find the right talent who grasps JS & HTML5 at an
 execution level matching our requirements (3) to attract those talents to a
 bootstrapped startup who can't afford Silicon Valley salaries.
 
@@ -77,4 +77,3 @@ plugins, without the need to reinvent the wheel.
 
 Who knows, you might read in the near future that adsy goes Wordpress ;-)
 Stay tuned.
-

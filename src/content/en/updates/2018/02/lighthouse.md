@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New perf and SEO audits, perf as the first section in reports, and more.
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2018-02-09 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -119,7 +119,7 @@ DevTools.
 ## New Lighthouse release guide {: #release }
 
 Check out the [Release Guide For Maintainers][release]{:.external} for information on
-release timing, masters, naming conventions, and more.
+release timing, naming conventions, and more.
 
 [release]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/releasing.md
 

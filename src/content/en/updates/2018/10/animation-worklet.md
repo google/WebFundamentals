@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Animation Worklet allows you to write imperative animations that run at the device's native frame rate for that extra buttery jank-free smoothness™, make your animations more resilient against main thread jank and are linkable to scroll instead of time.
 
-{# wf_updated_on: 2018-10-11 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_published_on: 2018-10-06 #}
 {# wf_tags: houdini,css #}
 {# wf_featured_image: /web/updates/images/2018/10/animation-worklet/social.png #}
@@ -251,7 +251,7 @@ the worklet, the WAAPI and the AnimationWorklet above behave exactly the
 same, as you can see in the
 [demo](https://animation-worklet-article.glitch.me/index.html).
 
-## Master of time
+## Time
 
 The `currentTime` parameter of our `animate()` method is the `currentTime` of the
 timeline we passed to the `WorkletAnimation()` constructor. In the previous
@@ -489,4 +489,3 @@ options and can be much simpler for basic animations. But if you need to go
 fancy, AnimationWorklet has your back!
 
 {% include "web/_shared/rss-widget-updates.html" %}
-
