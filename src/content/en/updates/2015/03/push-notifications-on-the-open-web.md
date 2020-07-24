@@ -460,7 +460,7 @@ The key aspects to remember when calling FCM are:
 
 Please do [check out the docs](https://firebase.google.com/docs/cloud-messaging/server)
 about how to send push messages from your server,
-but for a quick sanity check of your service worker you can use
+but for a quick check of your service worker you can use
 [cURL](http://www.google.com/url?q=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCURL&sa=D&sntz=1&usg=AFQjCNHRhFnXmOaG9ZHmto3zw6T_7B15Ng)
 to send a push message to your browser.
 
