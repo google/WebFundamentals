@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Implementation Guide for Custom Tabs.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-07-09 #}
+{# wf_updated_on: 2020-07-25 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Implementation guide {: .page-title }
@@ -35,7 +35,7 @@ The UI Customizations are done by using the [`CustomTabsIntent`][3] and the
 which urls will be opened.
 
 ## Opening a Custom Tab
-A [`CustomTabsIntent.Builder`][4] can be used to configure a the Custom Tab. Once ready, call
+A [`CustomTabsIntent.Builder`][4] can be used to configure a Custom Tab. Once ready, call
 [`CustomTabsIntent.Builder.build`][22] to create a [`CustomTabsIntent`][3] and launch the desired
 Url with [`CustomTabsIntent.launchUrl`][7].
 
@@ -139,7 +139,7 @@ builder.setExitAnimations(this, R.anim.slide_in_left, R.anim.slide_out_right);
 By default, when [`CustomTabsIntent#launchUrl`][7] is called, it will spin up the browser and launch
 the URL. This can take up precious time and impact on the perception of smoothness.
 
-We believe that users demand a near instantaneous experience, so we have provided a Service that 
+We believe that users demand a near instantaneous experience, so we have provided a Service that
 your app can connect to and tell the browser and its native components to warm up.
 Custom Tabs also provide the ability for you, the developer to tell the browser the
 likely set of web pages the user will visit. Browsers will then be able to perform:
@@ -170,7 +170,7 @@ the Custom Tabs service.
 Create a class that extends [`CustomTabsServiceConnection`][14] and use
 [`onCustomTabsServiceConnected`][15] to get an instance of the [`CustomTabsClient`][5]. This
 instance will be needed on the next steps.
-	
+
 ```java
 // Package name for the Chrome channel the client wants to connect to. This
 // depends on the channel name.
@@ -228,7 +228,7 @@ completed successfully.
 
 [`void onNavigationEvent(int navigationEvent, Bundle extras)`][19]
 
-Will be called when a navigation event happens in the custom tab. The `navigationEvent int` 
+Will be called when a navigation event happens in the custom tab. The `navigationEvent int`
 is one of 6 values that defines the state of the page is in.  See below for more information.
 
 ```java
@@ -282,7 +282,7 @@ check if those applications also declare support for the Custom Tabs Service:
 ```java
 /**
 * Returns a list of packages that support Custom Tabs.
-*/	
+*/
 public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
     PackageManager pm = context.getPackageManager();
     // Get default VIEW intent handler.
