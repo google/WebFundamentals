@@ -68,7 +68,10 @@ redirects:
   to: https://web.dev/storage-for-the-web/
 
 - from: /web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps
-  to: https://web.dev/android-payment-apps-overview/
+  to: https://web.dev/android-payment-apps-developers-guide/
+
+- from: /web/fundamentals/payments/payment-apps-developer-guide/web-payment-apps
+  to: https://web.dev/web-based-payment-apps-overview/
 
 - from: /web/fundamentals/performance/rail
   to:  https://web.dev/rail/

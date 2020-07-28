@@ -23,7 +23,8 @@ toc:
   - title: Payment Apps Developer Guide
     section:
     - title: Android payment apps developer guide
-      path: https://web.dev/android-payment-apps-overview/
+      path: https://web.dev/android-payment-apps-developers-guide/
       status: external
     - title: Web based payment apps developer guide
-      path: /web/fundamentals/payments/payment-apps-developer-guide/web-payment-apps
+      path: https://web.dev/web-based-payment-apps-overview/
+      status: external
