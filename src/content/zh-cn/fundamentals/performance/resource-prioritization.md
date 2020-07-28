@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2019-05-25 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -74,7 +74,7 @@ book_path: /web/fundamentals/_book.yaml
 研究您网站的加载性能时，优先级十分重要。
 除了[测量](/web/fundamentals/performance/critical-rendering-path/measure-crp)和[分析关键渲染路径](/web/fundamentals/performance/critical-rendering-path/analyzing-crp)等常用技巧外，了解 Chrome 针对各种资源的优先级也常有用。
  您可以在 Chrome 开发者工具中的 Network 面板中找到优先级的相关内容。
- 请参考以下示例：
+ 请参考以下示例:
 
 
 <figure>
@@ -83,7 +83,7 @@ book_path: /web/fundamentals/_book.yaml
     <img src="images/res-prio-priorities.png"
     alt="优先级在 Chrome 开发者工具中的显示方式示例">
   </div>
-  <figcaption><b>图 1</b>：Chrome 开发者工具中的优先级。 您可能需要右键点击 Priority 列的列标题，以启用该列。
+  <figcaption><b>图 1</b>: Chrome 开发者工具中的优先级。 您可能需要右键点击 Priority 列的列标题，以启用该列。
 
   </figcaption>
 </figure>
@@ -99,7 +99,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 本文介绍三种不同的声明式解决方案，均为比较新的
-`<link>` 类型。 如果您的资源对于用户体验至关重要，但加载优先级过低，您可以尝试通过以下两种方式之一解决该问题：预加载或预连接。
+`<link>` 类型。 如果您的资源对于用户体验至关重要，但加载优先级过低，您可以尝试通过以下两种方式之一解决该问题: 预加载或预连接。
  另一方面，如果您希望浏览器仅在处理完其他所有任务后再提取某些资源，请尝试进行预提取。
 
 
@@ -109,7 +109,7 @@ book_path: /web/fundamentals/_book.yaml
 ## 预加载
 
 `<link rel="preload">` 告知浏览器当前导航需要某个资源，应尽快开始提取。
- 以下为相关使用示例：
+ 以下为相关使用示例:
 
     <link rel="preload" as="script" href="super-important.js">
     <link rel="preload" as="style" href="critical.css">
@@ -138,7 +138,7 @@ book_path: /web/fundamentals/_book.yaml
   </div>
 </figure>
 
-### 用例：字体
+### 用例: 字体
 
 字体是典型的必须提取且次序靠后的资源示例，通常位于页面加载的若干 CSS 文件的最末尾处。
 
@@ -148,7 +148,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 
 请注意，此处 `crossorigin` 的使用非常重要，该属性如果缺失，浏览器将忽略预加载的字体，并执行不同的提取
  这是因为浏览器预计将以匿名方式提取字体，只有使用
@@ -161,7 +161,7 @@ Note: 如果您要使用 CDN（例如 Google Fonts），请确保您要预加载
  为了便于维护，不妨考虑使用 `<link rel="preconnect">`。
 
 
-### 用例：关键路径 CSS 和 JavaScript
+### 用例: 关键路径 CSS 和 JavaScript
 
 讨论页面性能时，了解“关键路径”这一概念十分有用。
 关键路径是指在首次渲染之前必须加载的资源。
@@ -180,7 +180,7 @@ Note: 如果您要使用 CDN（例如 Google Fonts），请确保您要预加载
     <link rel="preload" as="script" href="super-important.js">
     <link rel="preload" as="style" href="critical.css">
 
-采用预加载有一个缺点：您仍然将受额外往返的约束。
+采用预加载有一个缺点: 您仍然将受额外往返的约束。
 造成额外往返的原因在于浏览器首先需要提取 HTML，然后才能了解后续资源。
 
 
@@ -205,7 +205,7 @@ Note: 如果您要使用 CDN（例如 Google Fonts），请确保您要预加载
 
 
 只需向您的页面添加一个 link
-标记，便可告知浏览器您的意图：
+标记，便可告知浏览器您的意图:
 
     <link rel="preconnect" href="https://example.com">
 
@@ -220,14 +220,14 @@ Note: 如果您要使用 CDN（例如 Google Fonts），请确保您要预加载
 一般而言，请尽可能使用 `<link rel="preload">`，以更加全面地提升性能，但仅在极端情况下使用 `<link rel="preconnect">`。
  我们来看两个示例。
 
-注：实际上，还有一种与连接相关的 `<link>` 类型：
+注: 实际上，还有一种与连接相关的 `<link>` 类型:
 `<link rel="dns-prefetch">`。 此类型仅处理 DNS 查询，因此它属于 `<link rel="preconnect">` 的小型子集，但因其受浏览器的支持更广泛，可作为不错的回退方案。
-使用方法完全一样：
+使用方法完全一样:
 `<link rel="dns-prefetch" href="https://example.com">`
 
-### 用例：了解资源的*路径*，而不是您要提取的*资源*
+### 用例: 了解资源的*路径*，而不是您要提取的*资源*
 
-由于依赖项版本受到控制，您有时会遇到这种情况：您知道您将从给定的 CDN 检索资源，但不知道其确切的路径。
+由于依赖项版本受到控制，您有时会遇到这种情况: 您知道您将从给定的 CDN 检索资源，但不知道其确切的路径。
  在其他情况下，可能会检索若干资源中的一个，具体视用户浏览器的媒体查询或运行时功能检查而定。
 
 
@@ -238,7 +238,7 @@ Note: 如果您要使用 CDN（例如 Google Fonts），请确保您要预加载
 
 
 
-### 用例：流式传输媒体
+### 用例: 流式传输媒体
 
 另一个您想在连接阶段节省时间但无需立即开始检索内容的示例是从不同的起点流式传输媒体。
 
@@ -274,7 +274,7 @@ Note: 如果您要使用 CDN（例如 Google Fonts），请确保您要预加载
 ### 预提取不会替换内容
 
 值得注意的是，您不可使用 `<link rel="prefetch">` 来降低现有资源的优先级。
- 在以下 HTML 中，您可能认为在预提取中声明 `optional.css` 将会降低随后的 `<link rel="stylesheet">` 的优先级：
+ 在以下 HTML 中，您可能认为在预提取中声明 `optional.css` 将会降低随后的 `<link rel="stylesheet">` 的优先级:
 
 
 
@@ -289,7 +289,7 @@ Note: 如果您要使用 CDN（例如 Google Fonts），请确保您要预加载
     </html>
 
 但是，实际上，这将导致您的样式表被提取两次（虽然第二次可能导致缓存命中），一次是以默认的 **Highest**
-优先级，另一次是以 **Lowest** 优先级，因为预提取将启动单独的提取：
+优先级，另一次是以 **Lowest** 优先级，因为预提取将启动单独的提取:
 
 
 
