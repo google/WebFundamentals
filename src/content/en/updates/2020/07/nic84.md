@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's New in Chrome 84 for developers?
 
 {# wf_published_on: 2020-07-14 #}
-{# wf_updated_on: 2020-07-14 #}
+{# wf_updated_on: 2020-07-24 #}
 {# wf_featured_image: /web/updates/images/2020/07/new-84.jpg #}
 {# wf_tags: chrome84,new-in-chrome,progressive-web-apps,install,webanimations,offline,capabilities,wake-lock,webassembly,origintrials #}
 {# wf_featured_snippet: Chrome 84 is rolling out now! Users can start common tasks within your app with App Icon Shortcuts. The Web Animations API adds support for a slew of previously unsupported features. Wake Lock, and the Content Indexing API graduate from origin trial. There are new origin trials for Idle detection and SIMD. And there’s a whole bunch more. Let’s dive in and see what’s new for developers in Chrome 84! #}
@@ -53,13 +53,11 @@ let’s dive in and see what’s new for developers in Chrome 84!
 
 App icon shortcuts make it easy for users to quick start common tasks
 within your app. For example, compose a new tweet, send a message, or see
-their notifications. They’re supported in Chrome and Edge, and on both
-desktop and mobile.
+their notifications. They’re supported in Chrome for Android.
 
-These shortcuts are invoked by right-clicking the app icon on Windows and
-macOS,  or long pressing the app icon on Android. Adding a shortcut to your
-PWA is easy,  create a new `shortcuts` property in your web app manifest,
-describe the shortcut, and add your icons.
+These shortcuts are invoked by long pressing the app icon on Android. Adding
+a shortcut to your PWA is easy,  create a new `shortcuts` property in your web
+app manifest, describe the shortcut, and add your icons.
 
 <div class="clearfix"></div>
 
