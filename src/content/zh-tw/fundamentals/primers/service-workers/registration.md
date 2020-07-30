@@ -88,7 +88,7 @@ description:確定服務工作線程註冊時間的最佳做法。
 
 
 
-因此，如果有活動的服務工作線程，那麼，何時調用 `navigator.serviceWorker.register()`，或事實上*無論您是否調用它*都無關緊要。除非您更改服務工作線程腳本的網址，否則 `navigator.serviceWorker.register()` 在後續訪問期間實際上是一個 [no-op](https://en.wikipedia.org/wiki/NOP)。因此，何時調用它都無關禁用。
+因此，如果有活動的服務工作線程，那麼，何時調用 `navigator.serviceWorker.register()`，或事實上*無論您是否調用它*都無關緊要。除非您更改服務工作線程腳本的網址，否則 `navigator.serviceWorker.register()` 在後續訪問期間實際上是一個 [no-op](https://en.wikipedia.org/wiki/NOP)。因此，何時調用它都無關緊要。
 
 
 ## 儘早註冊的原因
