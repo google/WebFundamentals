@@ -106,7 +106,7 @@ event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlo
 因此，如果有活动的 Service Worker，那么，何时调用 `navigator.serviceWorker.register()`，或事实上*无论您是否调用它*都无关紧要。
 除非您更改 Service Worker 脚本的网址，否则
 `navigator.serviceWorker.register()` 在后续访问期间实际上是一个 [no-op](https://en.wikipedia.org/wiki/NOP)。
- 因此，何时调用它都无关禁用。
+ 因此，何时调用它都无关紧要。
 
 
 ## 尽早注册的原因
