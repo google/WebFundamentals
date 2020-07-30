@@ -118,11 +118,11 @@ https://site-two.example/…:
   man-in-the-middle-attacks.
 - Within the same origin, the `Referer` header value is the full URL.
 
-**Example:**
+For example:
+Same-origin request, sent from https://site-one.example/**stuff/detail?tag=red** to 
+https://site-one.example/…:
 
-Same-origin request, sent from https://site-one.example/**stuff/detail?tag=red** that has a
-`strict-origin-when-cross-origin` policy, to https://site-one.example/:<br/> Referer:
-https://site-one.example/**stuff/detail?tag=red**.
+ - With `strict-origin-when-cross-origin`: Referer: https://site-one.example/**stuff/detail?tag=red**
 
 ## What's the impact?
 
@@ -221,10 +221,6 @@ questions at [@maudnals](https://twitter.com/maudnals).
 _With many thanks for contributions and feedback to all reviewers - especially Kaustubha Govind,
 David Van Cleve, Mike West, Sam Dutton, Rowan Merewood, Jxck and Kayce Basque._
 
-{% include "web/_shared/helpful.html" %}
-
-{% include "web/_shared/rss-widget-updates.html" %}
-
 ## Resources
 
 - [Referer and Referrer-Policy: best practices](web.dev/referrer-best-practices)
@@ -235,3 +231,7 @@ David Van Cleve, Mike West, Sam Dutton, Rowan Merewood, Jxck and Kayce Basque._
   implement](https://groups.google.com/a/chromium.org/d/msg/blink-dev/aBtuQUga1Tk/n4BLwof4DgAJ)
 - [Blink intent to
   ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/lqFuqwZDDR8)
+
+{% include "web/_shared/helpful.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
