@@ -138,7 +138,7 @@ arguments, in that order:
 
 If you [run this
 code](https://googlechrome.github.io/samples/webassembly/index.html), you should
-see the "233" in the console, which is the 12th Fibonacci number.
+see the "144" in the console, which is the 12th Fibonacci number.
 
 Note: Emscripten offers a couple of options to handle loading multiple modules.
 More about that in their
