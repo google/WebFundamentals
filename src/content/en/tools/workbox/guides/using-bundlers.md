@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: Using build tools to bundle the Workbox runtime into a custom service worker.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2020-07-22 #}
+{# wf_updated_on: 2020-07-29 #}
 {# wf_blink_components: N/A #}
 
 # Using bundlers with Workbox {: .page-title }
@@ -38,7 +38,7 @@ import {CacheFirst} from 'workbox-strategies';
 
 // Use the imported Workbox libraries to implement caching,
 // routing, and other logic:
-precacheAndRoute([self.__WB_MANIFEST]);
+precacheAndRoute(self.__WB_MANIFEST);
 registerRoute(
   ({request}) => request.destination === 'image',
   new CacheFirst({cacheName: 'images'}),
