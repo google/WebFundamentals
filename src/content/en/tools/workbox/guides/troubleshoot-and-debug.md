@@ -1,155 +1,93 @@
 project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
-description: A guide on how to troubleshoot and debugging issues with Workbox.
+description: A guide to general service worker debugging, and Workbox-specific logging.
 
-{# wf_updated_on: 2020-01-16 #}
+{# wf_updated_on: 2020-07-31 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
-# Troubleshoot and Debug {: .page-title }
+# Troubleshoot and debug {: .page-title }
 
-Working with service workers can be challenging, especially when
-starting out. This page will cover a few useful tips to help working
-with service workers and help with Workbox.
+Building a service workers can be challenging, especially when starting out.
+This page will cover a few general resources for debugging service workers,
+focused on Chrome's Developer Tools, and explain how to enable additional
+debugging when using with Workbox.
 
-## Get to Know Your Developer Tools
+## Get to know the available tools
 
-Chrome's developer tools have a number of tools to make it easier to
-work with service workers.
+### Chrome & Edge
 
-The most common features used are the following.
+Chrome (and recent versions of Edge, featuring a similar underlying codebase)
+have a robust set of Developer Tools for inspecting service workers and the
+Cache Storage API. The following resources provide an overview of those tools
+and tips for how to use Chrome's Developer Tools effectively:
 
-### Update on Reload
+- [Debug Progressive Web Apps](/web/tools/chrome-devtools/progressive-web-apps)
+- [Inspect Network Activity In Chrome DevTools](/web/tools/chrome-devtools/network)
+- Video: [Debugging Service Workers in Chrome](https://www.youtube.com/watch?v=tuRPSaSiK_c)
+- Codelab: [Debugging Service Workers](https://codelabs.developers.google.com/codelabs/debugging-service-workers/index.html)
 
-The "update on reload" toggle will force Chrome to check for a new service
-worker every time you refresh the page. This means that any new changes will
-be found on each page load.
+### Firefox
 
-![Highlighting where Update on Reload is in DevTools](../images/guides/troubleshoot-and-debug/devtools-update-on-reload.png)
+Firefox users can refer to the following resources:
 
-### Clear Storage
+- [Debugging service workers using the Firefox DevTools Application Panel](https://developer.mozilla.org/en-US/docs/Tools/Application/Service_workers)
+- Video: [Debugging Service Workers in Firefox](https://www.youtube.com/watch?v=ranU2qe1JVA)
 
-There will come a point where you'll want to start from a clean state.
-No service workers, not caching, nothing. You can clear everything with
-the "Clear site data" button.
+### Safari
 
-![Clear site data in DevTools](../images/guides/troubleshoot-and-debug/devtools-clear-site-data.png)
+Safari users currently have a more limited set of Developer Tools available for
+debugging service workers. You can learn more about them at:
 
-## Bypass for Network
-
-When you aren't working with service workers at all, you can make the browser
-go straight to the network (i.e. not use the service worker) with the "Bypass
-for Network" toggle.
-
-![Bybass for Network Checkbox in DevTools](../images/guides/troubleshoot-and-debug/devtools-bypass-for-network.png)
-
-You'll know that this is working because the network panel will stop showing
-"(from ServiceWorker)".
-
-![Network panel in DevTools showing a request through service workers](../images/guides/troubleshoot-and-debug/devtools-through-sw-network.png)
-
-There are plenty more features, but the above list should help as you start
-working on your service worker files.
-[Learn what other features exist in DevTools here](/web/tools/chrome-devtools/progressive-web-apps#service-workers).
-
-## Common Problems
-
-There are a set of problems that are common for developers to hit when
-working with service workers.
-
-**_Q:_** Why does my service worker load, but not get used?
-
-**_A:_** This can occur if the "scope" of your service worker doesn't
-match your page.
-
-You can check if this is the problem by following these steps:
-
-1. Open DevTools for your site and go to `Application > Service Workers`.
-1. Find your service worker and look for a `Clients` entry. If you don't see
-   it, like the image below, then scoping is likely to be an
-   issue.
-
-    ![DevTools screenshot where clients is missing from a service worker](../images/guides/troubleshoot-and-debug/scope-no-clients.png)
-
-    If the scoping is correct, your web page will show up as a client, as shown
-    below.
-
-    ![DevTools screenshot where clients are displayed for a service worker](../images/guides/troubleshoot-and-debug/scope-with-clients.png)
-
-This normally occurs because the location of the service worker is not
-at the root of the site (i.e. instead of `/sw.js` it's under a directory
-like `/scripts/sw.js`).
-
-The easiest solution is to move your service worker to the root of your domain.
-An alternative solution is to add a `Service-Worker-Allowed` header to the
-service worker response. You can then change the scope and register your service
-worker like so:
-
-```javascript
-// OK when 'Service-Worker-Allowed' header is set to '/'
-navigator.serviceWorker.register('/blog/sw.js', {scope: '/'});
-```
-
-You can [learn more about service worker scope here](/web/fundamentals/primers/service-workers/lifecycle#scope_and_control).
-
-**_Q:_** Why are changes to my service worker not shown?
-
-**_A:_** The reason that you might find that your service worker isn't
-updating is because it's stuck in a pending state. This is normally caused
-by having multiple tabs or windows open that are using the service worker.
-
-You can determine if this is the case by looking under your service worker
-in `Application > Service Workers`.
-
-![A service worker in pending state on service worker](../images/guides/troubleshoot-and-debug/devtools-pending.png)
-
-You can fix this by clicking the "skipWaiting" link or by closing the extra
-tabs so you only have one tab using the website (this enables the service
-worker to update on a refresh).
-
-**_Q:_** My service worker isn't pending, but it's still not loading new changes.
-
-**_A:_** Browsers will actually use a cached version of a service worker if
-the service worker file is served with a cache expiration header. The cached
-version will only be used for up to 24 hours, but it can still be difficult
-to reason with.
-**The best practice is to set the cache expiration header to 0 for your service worker file**.
-This forces the browser to update the service worker whenever your page loads.
+- [Workers at Your Service](https://webkit.org/blog/8090/workers-at-your-service/#post-8090:~:text=Web%20Inspector%20supports%20debugging%20service%20workers.)
+- Video: [Debugging Service Workers in Safari](https://www.youtube.com/watch?v=87RU7v6Y-bk)
 
 ## Debugging Workbox
 
-If you are finding it difficult to debug what Workbox is doing, there are a few
-things you can do to get some extra information.
-
-### Use a Debug Build
-
-The debug builds of Workbox perform extra checks on the input and output
-arguments, provide extra logging and come unminified. This should help you
-debug a range of issues.
-
-If you are using `workbox-sw`, you just need to set the config to `debug: true`
-to force Workbox to use debug builds.
-
-```javascript
-workbox.setConfig({
-  debug: true
-});
-```
-
-### Enable 'debug' Logs
-
-The debug builds of Workbox will, by default, log extensive messages to the [JavaScript
-console](/web/tools/chrome-devtools/console/). These messages are tagged with specific log levels,
-and your JavaScript console might not be configured to show all log levels by default.
-
-We recommend checking your JavaScript console's [log level
-filtering](/web/tools/chrome-devtools/console/log#level) and adjusting it accordingly. Setting it to
-display the "Verbose" level will result in seeing the most detailed messages, and can help in your
-debugging.
+If you are finding it difficult to debug something specific to Workbox, rather
+than a general service worker problem, there are a few things you can do to get
+some extra logging information via the libraries' development builds.
 
 Note: to prevent all Workbox messages from being logged to the console when in
 development mode, you can set the variable `self.__WB_DISABLE_DEV_LOGS` to
 `true` in your service worker.
+
+### Bundled Workbox runtime usage
+
+If you're using
+[`generateSW`](/web/tools/workbox/modules/workbox-build#generatesw_mode)/[`GenerateSW`](/web/tools/workbox/modules/workbox-webpack-plugin#generatesw_plugin)
+with Workbox v5+ to create your bundled service worker, then you can toggle
+between the development and production builds of Workbox by changing the
+[`mode` parameter](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW#parameter_1:~:text=patterns.-,mode).
+
+If you're bundling your own copy of the Workbox libraries, you can
+[learn more](https://developers.google.com/web/tools/workbox/guides/using-bundlers#configure_your_bundler_for_a_development_or_production_build)
+about using `NODE_ENV` to switch between the production and development builds.
+
+### Legacy workbox-sw usage
+
+If you are loading Workbox via
+[`workbox-sw`](/web/tools/workbox/modules/workbox-sw), then you have dynamic
+control over whether the development or production builds are run.
+
+By default, `workbox-sw` will detect whether your service worker is currently
+running on `http://localhost`, and use that as a signal to load the development
+builds of the Workbox libraries. Otherwise, the production builds will be used.
+
+You can explicitly override this default behavior, and explicitly control
+whether the production or development builds are loaded, via
+[`workbox.setConfig()`](https://developers.google.com/web/tools/workbox/modules/workbox-sw#force_use_of_debug_or_production_builds):
+
+```javascript
+importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
+
+// This needs to come before any other workbox.* methods.
+workbox.setConfig({
+  debug: true,
+});
+
+// Now use workbox.routing.*, workbox.precaching.*, etc.
+```
 
 ## Stack Overflow
 
