@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Introduces android-browser-helper, a new library to build Trusted Web Activities.
 
 {# wf_published_on: 2020-01-10 #}
-{# wf_updated_on: 2020-04-28 #}
+{# wf_updated_on: 2020-07-31 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -42,7 +42,7 @@ appllication `build.gradle`:
 ```gradle
 dependencies {
     //...
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.2.0'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.3.2'
 }
 ```
 
@@ -87,7 +87,7 @@ use the library, make sure to pop by the [GitHub repository][1] and file an [iss
 [5]: https://jitpack.io/#GoogleChrome/custom-tabs-client
 [6]: https://developer.android.com/guide/webapps/webview
 [7]: https://github.com/GoogleChromeLabs/svgomg-twa/pull/76/files
-[8]: https://developers.google.com/web/updates/2019/02/using-twa
+[8]: /web/android/trusted-web-activity/
 [9]: https://github.com/GoogleChrome/android-browser-helper/releases/tag/1.0.0
 [10]: https://github.com/GoogleChromeLabs/svgomg-twa
 [11]: https://maven.google.com/

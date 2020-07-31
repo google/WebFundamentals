@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: An overview of the libraries and tools for creating Trusted Web Activities.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-05-27 #}
+{# wf_updated_on: 2020-07-31 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -31,7 +31,7 @@ should be using today, here’s what you need to be aware of:
   Recommended for developers who are familiar with Android development and want to use Trusted Web
   Activities as one of the Activities in their Android App or make customisations that are not
   supported by Bubblewrap.
-  To get started with android-browser-helper, check the [documentation][14] and our [demos][15].
+  To get started with android-browser-helper, check the [documentation][17] and our [demos][15].
 
 The next section gives a brief summary of all the projects in relation to each other.
 Finally (for the really curious) there’s a history section to show you how we got here and where
@@ -148,16 +148,17 @@ you come across a bug, feel free to [create an issue][16].
 [1]: https://developer.android.com/topic/libraries/support-library
 [2]: https://developer.android.com/topic/libraries/support-library/packages#custom-tabs
 [3]: https://github.com/GoogleChrome/custom-tabs-client
-[4]: https://developer.chrome.com/multidevice/android/customtabs
+[4]: /web/android/custom-tabs
 [5]: https://developer.android.com/jetpack/androidx
 [6]: https://developer.android.com/jetpack
 [7]: https://developer.android.com/jetpack/androidx/releases/browser
 [8]: https://github.com/GoogleChrome/android-browser-helper
 [9]: https://github.com/GoogleChromeLabs/svgomg-twa
 [10]: https://github.com/GoogleChromeLabs/svgomg-twa/blob/master/app/build.gradle
-[11]: https://developers.google.com/web/updates/2019/08/twas-quickstart
+[11]: /web/android/trusted-web-activity/quick-start
 [12]: https://github.com/GoogleChromeLabs/bubblewrap/
 [13]: https://github.com/GoogleChromeLabs/bubblewrap/blob/master/README.md
-[14]: https://developers.google.com/web/updates/2019/02/using-twa
+[14]: /web/android/trusted-web-activity
 [15]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos
 [16]: https://github.com/GoogleChromeLabs/bubblewrap/issues/new
+[17]: /web/android/trusted-web-activity/integration-guide
