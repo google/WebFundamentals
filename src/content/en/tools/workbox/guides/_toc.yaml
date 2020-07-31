@@ -1,7 +1,7 @@
 toc:
 - title: "Get Started"
   path: /web/tools/workbox/guides/get-started
-- title: "Using bundlers with Workbox"
+- title: "Using Bundlers with Workbox"
   path: /web/tools/workbox/guides/using-bundlers
 - title: "Precache Files"
   path: /web/tools/workbox/guides/precache-files
@@ -21,8 +21,6 @@ toc:
   path: /web/tools/workbox/guides/handle-third-party-requests
 - title: "Using Plugins"
   path: /web/tools/workbox/guides/using-plugins
-- title: "Using Bundlers (webpack/Rollup) with Workbox"
-  path: /web/tools/workbox/guides/using-bundlers
 - title: "Troubleshoot and Debug"
   path: /web/tools/workbox/guides/troubleshoot-and-debug
 - title: "Understanding Storage Quota"
