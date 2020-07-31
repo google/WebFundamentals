@@ -15,8 +15,6 @@ footer:
     contents:
     - label: "@workboxjs on Twitter"
       path: https://twitter.com/workboxjs
-    - label: Join the Slack Channel
-      path: /web/tools/workbox/community
 
   - name: Contribute
     icon_name: bug_report

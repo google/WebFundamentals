@@ -207,6 +207,9 @@ redirects:
 - from: /web/tools/workbox/guides/enable-offline-analytics
   to: /web/tools/workbox/modules/workbox-google-analytics
 
+- from: /web/tools/workbox/community
+  to: https://twitter.com/workboxjs
+
 - from: /web/tools/lighthouse/audits/critical-request-chains
   to: https://web.dev/critical-request-chains/
 
