@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A new default Referrer-Policy for Chrome: strict-origin-when-cross-origin
 
 {# wf_published_on: 2020-07-30 #}
-{# wf_updated_on: 2020-07-30 #}
+{# wf_updated_on: 2020-07-31 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_tags: security #}
 {# wf_featured_snippet: Starting in 85, Chrome is switching its default referrer policy from no-referrer-when-downgrade to the more privacy-preserving strict-origin-when-cross-origin. #}
@@ -219,7 +219,7 @@ ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/lqFuqwZDD
 questions at [@maudnals](https://twitter.com/maudnals).
 
 _With many thanks for contributions and feedback to all reviewers - especially Kaustubha Govind,
-David Van Cleve, Mike West, Sam Dutton, Rowan Merewood, Jxck and Kayce Basque._
+David Van Cleve, Mike West, Sam Dutton, Rowan Merewood, Jxck and Kayce Basques._
 
 ## Resources
 
