@@ -61,7 +61,7 @@ between the development and production builds of Workbox by changing the
 [`mode` parameter](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW#parameter_1:~:text=patterns.-,mode).
 
 If you're bundling your own copy of the Workbox libraries, you can
-[learn more](https://developers.google.com/web/tools/workbox/guides/using-bundlers#configure_your_bundler_for_a_development_or_production_build)
+[learn more](/web/tools/workbox/guides/using-bundlers#configure_your_bundler_for_a_development_or_production_build)
 about using `NODE_ENV` to switch between the production and development builds.
 
 ### Legacy workbox-sw usage
@@ -76,7 +76,7 @@ builds of the Workbox libraries. Otherwise, the production builds will be used.
 
 You can explicitly override this default behavior, and explicitly control
 whether the production or development builds are loaded, via
-[`workbox.setConfig()`](https://developers.google.com/web/tools/workbox/modules/workbox-sw#force_use_of_debug_or_production_builds):
+[`workbox.setConfig()`](/web/tools/workbox/modules/workbox-sw#force_use_of_debug_or_production_builds):
 
 ```javascript
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
