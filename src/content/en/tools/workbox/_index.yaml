@@ -246,13 +246,32 @@ landing_page:
     items:
     - heading: ""
       description: >
-        In this talk, Jeff Posnick gives an overview of Workbox's support for
+        In this talk, <a href="https://twitter.com/jeffposnick">Jeff Posnick</a>
+        gives an overview of Workbox's support for
         caching strategies, precaching, and handling navigation requests. It's
         filled throughout with real-world examples of how companies are using
         Workbox in production.
       youtube_id: DtuJ55tmjps
 
+  - heading: "Case Studies"
+    items:
+    - heading: ""
+      description: >
+        <p>Learn more about how developers are using Workbox in production:</p>
+        <ul>
+          <li>
+            <a href="https://medium.com/@addyosmani/a-tinder-progressive-web-app-performance-case-study-78919d98ece0">A Tinder Progressive Web App Performance Case Study</a>
+          </li>
+          <li>
+            <a href="https://medium.com/dev-channel/a-pinterest-progressive-web-app-performance-case-study-3bd6ed2e6154">A Pinterest Progressive Web App Performance Case Study</a>
+          </li>
+          <li>
+            <a href="https://web.dev/opensooq-case-study/">How OpenSooq increased engagement by investing in the web</a>
+          </li>
+        </ul>
+
   - heading: "Contributors"
+    background: grey
     description: >
       <p>Workbox is built and maintained by a
       <a href="https://github.com/GoogleChrome/workbox/graphs/contributors">friendly bunch of contributors</a>,
