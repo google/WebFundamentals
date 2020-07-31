@@ -34,7 +34,7 @@ landing_page:
         Welcome, Workbox is a set of libraries and Node modules that make it
         easy to cache assets and take full advantage of features used to
         build
-        <a href="/web/progressive-web-apps/">Progressive Web Apps</a>.
+        <a href="https://web.dev/progressive-web-apps/">Progressive Web Apps</a>.
 
   - custom_html: >
       <style>
