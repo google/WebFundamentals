@@ -6,7 +6,7 @@ description: A new default Referrer-Policy for Chrome: strict-origin-when-cross-
 {# wf_updated_on: 2020-07-31 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_tags: security #}
-{# wf_featured_snippet: Starting in 85, Chrome is switching its default referrer policy from no-referrer-when-downgrade to the more privacy-preserving strict-origin-when-cross-origin. #}
+{# wf_featured_snippet: Starting in 85, Chrome plans to switch its default referrer policy from no-referrer-when-downgrade to the more privacy-preserving strict-origin-when-cross-origin. #}
 {# wf_blink_components: N/A #}
 
 # A new default Referrer-Policy for Chrome: strict-origin-when-cross-origin {: .page-title }
@@ -68,9 +68,8 @@ has been a widespread default policy across browsers. But now many browsers are 
 [moving to more privacy-enhancing
 defaults](https://web.dev/referrer-best-practices/#default-referrer-policies-in-browsers).
 
-**[Starting in Chrome 85](https://blog.chromium.org/2020/07/chrome-85-upload-streaming-human.html),
-Chrome is switching its default policy from `no-referrer-when-downgrade` to
-`strict-origin-when-cross-origin`.**
+Chrome plans to switch its default policy from `no-referrer-when-downgrade` to
+`strict-origin-when-cross-origin`, [starting in version 85](https://blog.chromium.org/2020/07/chrome-85-upload-streaming-human.html).
 
 This means that if no policy is set for your website, Chrome will use
 `strict-origin-when-cross-origin` by default. Note that you can still set a policy of your choice;
