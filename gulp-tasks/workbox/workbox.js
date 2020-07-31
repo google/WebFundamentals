@@ -10,12 +10,11 @@ const gulp = require('gulp');
 const path = require('path');
 const buildJSDocs = require('../reference-docs/build-js-docs');
 
-// This will generate contributors, update the CDN and build the
-// reference docs for the passed `srcPath` and `outputDir` options.
+// This will update the CDN and build the reference docs for the passed
+// `srcPath` and `outputDir` options.
 // `outputDir` defaults to `latest`, but can be used to build any doc set
 // assuming your local `srcPath` repo has that version checked out.
 gulp.task('workbox', [
-    'workbox-generate-contributors',
     'workbox-generate-includes',
     'workbox-no-index',
   ], async () => {
