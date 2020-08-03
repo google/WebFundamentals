@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Explains how to create one application using Trusted Web Activities that supports opening multiple origins in full-screen.
 
 {# wf_published_on: 2020-01-17 #}
-{# wf_updated_on: 2020-05-27 #}
+{# wf_updated_on: 2020-07-31 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -183,8 +183,8 @@ on applications installed on the device..
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-[1]: https://developers.google.com/web/updates/2019/08/twas-quickstart
-[2]: https://developers.google.com/web/updates/2019/02/using-twa
+[1]: /web/android/trusted-web-activity/quick-start
+[2]: /web/android/trusted-web-activity
 [3]: https://developers.google.com/digital-asset-links
 [4]: https://github.com/GoogleChrome/android-browser-helper/
 [5]: https://github.com/GoogleChrome/android-browser-helper/blob/master/androidbrowserhelper/src/main/java/com/google/androidbrowserhelper/trusted/LauncherActivity.java
@@ -192,5 +192,5 @@ on applications installed on the device..
 [7]: https://github.com/GoogleChromeLabs/bubblewrap
 [8]: https://github.com/GoogleChromeLabs/svgomg-twa/blob/master/app/build.gradle#L73-L80
 [9]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/twa-multi-domain
-[10]: https://developers.google.com/web/updates/2019/08/twas-quickstart#troubleshooting
+[10]: /web/android/trusted-web-activity/quick-start#troubleshooting
 [11]: https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool

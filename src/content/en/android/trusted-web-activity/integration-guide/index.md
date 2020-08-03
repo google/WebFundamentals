@@ -3,13 +3,13 @@ book_path: /web/android/_book.yaml
 description: Trusted Web Activity
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-05-18 #}
+{# wf_updated_on: 2020-07-31 #}
 {# wf_blink_components: N/A #}
 
 # Trusted Web Activity Integration Guide {: .page-title }
 
 Note: A simpler
-[quick start guide for Trusted Web Activities](/web/updates/2019/08/twas-quickstart)
+[quick start guide for Trusted Web Activities](/web/android/trusted-web-activity/quick-start)
 is now available.
 
 Setting up a Trusted Web Activity doesn’t require developers to author
@@ -81,7 +81,7 @@ dependency to the `dependencies` section:
 
 ```
 dependencies {
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.3.0'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.3.2'
 }
 ```
 
@@ -282,7 +282,7 @@ Extract the SHA-256 fingerprint using the
 with the following command:
 
 <pre class="devsite-terminal devsite-click-to-copy">
-keytool -list -v -keystore <path> -alias <alias> -storepass <password> -keypass <password>
+keytool -list -v -keystore [path] -alias [alias] -storepass [password] -keypass [password]
 </pre>
 
 The value for the *SHA-256 fingerprint* is printed under the *Certificate*
@@ -361,7 +361,7 @@ The Splash Screen can be set up by adding a few new image files and configuratio
 project.
 
 Make sure to update to **Chrome 75 or above** and use the
-[latest version of Trusted Web Activity Support Library](https://jitpack.io/#GoogleChrome/custom-tabs-client).
+[latest version of Trusted Web Activity Support Library](https://github.com/GoogleChrome/android-browser-helper/).
 
 ### Generating the images for the Splash Screen {: #create-images }
 

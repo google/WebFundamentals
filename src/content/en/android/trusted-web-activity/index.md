@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Trusted Web Activity
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-04-28 #}
+{# wf_updated_on: 2020-07-31 #}
 {# wf_blink_components: N/A #}
 
 # Trusted Web Activity {: .page-title }
@@ -56,7 +56,7 @@ ways to open web content from your Android app:
 To make it easier to test, there are currently no qualifications for content
 opened in the preview of Trusted Web activities. You can expect, however, that
 Trusted Web activities will need to meet the same
-[Add to Home Screen](/web/fundamentals/app-install-banners/#criteria)
+[Add to Home Screen](https://web.dev/customize-install/#criteria)
 requirements. You can audit your site for these requirements using the
 [Lighthouse](/web/tools/lighthouse/) "*user can be prompted to Add to Home
 screen*" audit.
@@ -80,11 +80,6 @@ is a good place to get started.
 
 {% include "web/_shared/helpful.html" %}
 
-[1]: https://developers.google.com/web/updates/2019/02/using-twa
-[2]: https://developers.google.com/web/updates/2019/08/twas-quickstart
-[3]: https://developers.google.com/web/updates/2020/01/twa-multi-origin
-[4]: https://developers.google.com/web/updates/2020/01/twa-android-browser-helper
-[5]: https://developers.google.com/web/updates/2020/02/twa-lay-of-the-land
 [6]: https://play.google.com/store/apps/details?id=com.android.chrome
 [7]: /web/android/trusted-web-activity/quick-start/
 [8]: /web/android/trusted-web-activity/integration-guide/
