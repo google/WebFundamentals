@@ -34,7 +34,7 @@ landing_page:
         Welcome, Workbox is a set of libraries and Node modules that make it
         easy to cache assets and take full advantage of features used to
         build
-        <a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Apps</a>.
+        <a href="https://web.dev/progressive-web-apps/">Progressive Web Apps</a>.
 
   - custom_html: >
       <style>
@@ -112,7 +112,7 @@ landing_page:
     background: grey
     items:
     - description: >
-        <p>Workbox is a library that bakes in a set of best practices and removes the boilerplate every  developer writes when working with <a href="https://developers.google.com/web/fundamentals/primers/service-workers/">service workers</a>.</p>
+        <p>Workbox is a library that bakes in a set of best practices and removes the boilerplate every  developer writes when working with <a href="/web/fundamentals/primers/service-workers/">service workers</a>.</p>
 
         <ul>
         <li>Precaching</li>
@@ -121,7 +121,6 @@ landing_page:
         <li>Request routing</li>
         <li>Background sync</li>
         <li>Helpful debugging</li>
-        <li>Greater flexibility and feature set than sw-precache and sw-toolbox</li>
         </ul>
 
   - custom_html: >
@@ -247,50 +246,33 @@ landing_page:
     items:
     - heading: ""
       description: >
-        In this talk, Jeff Posnick gives an overview of Workbox's support for
+        In this talk, <a href="https://twitter.com/jeffposnick">Jeff Posnick</a>
+        gives an overview of Workbox's support for
         caching strategies, precaching, and handling navigation requests. It's
-        filled throughout with real-world examples of how companies like
-        Pinterest and WIRED are using Workbox in production.
+        filled throughout with real-world examples of how companies are using
+        Workbox in production.
       youtube_id: DtuJ55tmjps
 
-  - heading: "Who's using Workbox?"
-    description: >
-      <style>
-      .using-workbox {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .using-workbox div {
-        flex-basis: 33%;
-        text-align: center;
-      }
-      </style>
-      <div class="using-workbox">
-      <div><img src="./images/third_party/logos/wired.png" alt="Wired Logo" /></div>
-      <div><img src="./images/third_party/logos/pinterest.png" alt="Pinterest Logo" /></div>
-      <div><img src="./images/third_party/logos/starbucks.png" alt="Starbucks Logo" /></div>
-
-      <div><img src="./images/third_party/logos/forbes.png" alt="Forbes Logo" /></div>
-      <div><img src="./images/third_party/logos/iheartradio.png" alt="iHeart Radio Logo" /></div>
-      <div><img src="./images/third_party/logos/bbva.png" alt="BBVA Logo" /></div>
-      <div><img src="./images/third_party/logos/tinder.png" alt="Tinder Logo" /></div>
-      </div>
-
-  - background: grey
+  - heading: "Case Studies"
     items:
-    - custom_html: >
-        <div style="width: 100%; text-align: center;">
-          <h2>Learn how to use Workbox</h2>
-          <p><a class="button button-primary" href="/web/tools/workbox/guides/get-started">Get started</a></p>
-        </div>
+    - heading: ""
+      description: >
+        <p>Learn more about how developers are using Workbox in production:</p>
+        <ul>
+          <li>
+            <a href="https://medium.com/@addyosmani/a-tinder-progressive-web-app-performance-case-study-78919d98ece0">A Tinder Progressive Web App Performance Case Study</a>
+          </li>
+          <li>
+            <a href="https://medium.com/dev-channel/a-pinterest-progressive-web-app-performance-case-study-3bd6ed2e6154">A Pinterest Progressive Web App Performance Case Study</a>
+          </li>
+          <li>
+            <a href="https://web.dev/opensooq-case-study/">How OpenSooq increased engagement by investing in the web</a>
+          </li>
+        </ul>
 
   - heading: "Contributors"
+    background: grey
     description: >
-      <p>Workbox is built and maintained by a friendly bunch of contributors
+      <p>Workbox is built and maintained by a
+      <a href="https://github.com/GoogleChrome/workbox/graphs/contributors">friendly bunch of contributors</a>,
       without whom none of this would be possible.</p>
-
-      {% include 'web/tools/workbox/_shared/contributors.html' %}
