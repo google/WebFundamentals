@@ -146,7 +146,8 @@ toc:
       - title: PRPL Pattern
         path: /web/fundamentals/performance/prpl-pattern/
       - title: Resource Prioritization
-        path: /web/fundamentals/performance/resource-prioritization
+        status: external
+        path: https://web.dev/fast/#prioritize-resources
       - title: Web Performance Optimization with webpack
         section:
           - title: Introduction
