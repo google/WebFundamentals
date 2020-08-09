@@ -502,7 +502,7 @@ HTML 属性は、ユーザーが初期状態を宣言するための便利な方
     
     let promises = [...undefinedButtons].map(socialButton => {
       return customElements.whenDefined(socialButton.localName);
-    ));
+    });
     
     // Wait for all the social-buttons to be upgraded.
     Promise.all(promises).then(() => {
