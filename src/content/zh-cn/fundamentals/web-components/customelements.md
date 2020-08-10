@@ -503,7 +503,7 @@ HTML 属性可方便地让用户声明初始状态：
 
     let promises = [...undefinedButtons].map(socialButton => {
       return customElements.whenDefined(socialButton.localName);
-    ));
+    });
 
     // Wait for all the social-buttons to be upgraded.
     Promise.all(promises).then(() => {

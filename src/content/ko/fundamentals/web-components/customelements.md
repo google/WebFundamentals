@@ -508,7 +508,7 @@ HTML 속성은 사용자가 초기 상태를 선언할 수 있는 간편한 방�
     
     let promises = [...undefinedButtons].map(socialButton => {
       return customElements.whenDefined(socialButton.localName);
-    ));
+    });
     
     // Wait for all the social-buttons to be upgraded.
     Promise.all(promises).then(() => {

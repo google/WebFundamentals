@@ -421,7 +421,7 @@ element becomes defined.
 
     let promises = [...undefinedButtons].map(socialButton => {
       return customElements.whenDefined(socialButton.localName);
-    ));
+    });
 
     // Wait for all the social-buttons to be upgraded.
     Promise.all(promises).then(() => {
