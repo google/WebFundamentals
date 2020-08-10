@@ -1636,6 +1636,20 @@ yvoschaap:
   description:
     en: "Loves to code and build great things."
 
+janscheffler:
+  name:
+    given: Jan
+    family: Scheffler
+  org:
+    name: Google
+    unit: Chrome DevTools
+  country: Germany
+  role:
+    - author
+  email: janscheffler@google.com
+  description:
+    en: Software Engineer working on Chrome DevTools at Google
+
 moinshaikh:
   name:
     given: Moin
@@ -2163,7 +2177,7 @@ jecelynyeen:
   email: jec@google.com
   description:
     en: Developer advocate working on Chrome DevTools at Google
-
+    
 maciejzasada:
   name:
     given: Maciej
