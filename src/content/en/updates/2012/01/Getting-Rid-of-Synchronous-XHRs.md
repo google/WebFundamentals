@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 
-{# wf_updated_on: 2019-11-21 #}
+{# wf_updated_on: 2020-08-11 #}
 {# wf_published_on: 2012-01-25 #}
 {# wf_tags: news,xhr2,binary,deprecations,removals #}
 {# wf_blink_components: Blink>Network>XHR #}
@@ -13,7 +13,7 @@ book_path: /web/updates/_book.yaml
 
 Note: We expect to [remove support for synchronous use of
 `XMLHTTPRequest()` during page unloads](https://www.chromestatus.com/feature/4664843055398912)
-in Chrome in version 80, scheduled to ship early in 2020.
+in Chrome in version 88, scheduled to ship in January 2021.
 
 Heads up! The [XMLHttpRequest2 spec](https://www.w3.org/TR/XMLHttpRequest/) was
 recently changed to prohibit sending a synchronous request when
