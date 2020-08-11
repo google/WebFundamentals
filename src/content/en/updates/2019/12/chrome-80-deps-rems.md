@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 80 to help you plan.
 
-{# wf_updated_on: 2020-01-09 #}
+{# wf_updated_on: 2020-08-11 #}
 {# wf_published_on: 2019-12-19 #}
 {# wf_tags: deprecations,removals,chrome80 #}
 {# wf_blink_components: Blink #}
@@ -26,7 +26,7 @@ To ensure that data is sent to the server when a page unloads, we recommend
 `AllowSyncXHRInPageDismissal` policy flag and developers can use the origin
 trial flag `allow-sync-xhr-in-page-dismissal` to allow synchronous XHR requests
 during page unload. This is a temporary "opt-out" measure, and we expect to
-remove this flag in Chrome 82. 
+remove this flag in Chrome 88. 
 
 For details about this and the alternatives, see [Disallowing synchronous
 XMLHTTPRequest() during page dismissal]().
