@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2020-04-10 #}
+{# wf_updated_on: 2020-08-11 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -78,21 +78,24 @@ process isn’t straightforward because of the sandboxing model used in modern w
 browsers.
 
 The example below shows you how to write four bytes to buffer memory accessible
-from the GPU. It calls `device.createBufferMapped()` which takes the size of
-the buffer and its usage. Even though the usage flag `GPUBufferUsage.MAP_WRITE`
-is not required for this specific call, let's be explicit that we want to write
-to this buffer. It results in a GPU buffer object and its associated raw binary
-data buffer.
+from the GPU. It calls `device.createBuffer()` which takes the size of the
+buffer and its usage. Even though the usage flag `GPUBufferUsage.MAP_WRITE` is
+not required for this specific call, let's be explicit that we want to write
+to this buffer. It results in a GPU buffer object mapped at creation thanks to
+`mappedAtCreation` set to true. Then the associated raw binary data buffer can
+be retrieved by calling the GPU buffer method `getMappedRange()`.
 
 Writing bytes is familiar if you’ve already played with `ArrayBuffer`; use a
 `TypedArray` and copy the values into it.
 
 ```js
 // Get a GPU buffer in a mapped state and an arrayBuffer for writing.
-const [gpuBuffer, arrayBuffer] = device.createBufferMapped({
+const gpuBuffer = device.createBuffer({
+  mappedAtCreation: true,
   size: 4,
   usage: GPUBufferUsage.MAP_WRITE
 });
+const arrayBuffer = gpuBuffer.getMappedRange();
 
 // Write bytes to buffer.
 new Uint8Array(arrayBuffer).set([0, 1, 2, 3]);
@@ -111,17 +114,19 @@ Now let’s see how to copy a GPU buffer to another GPU buffer and read it back.
 
 Since we’re writing in the first GPU buffer and we want to copy it to a second
 GPU buffer, a new usage flag `GPUBufferUsage.COPY_SRC` is required. The second
-GPU buffer is created in an unmapped state with the synchronous
+GPU buffer is created in an unmapped state this time with
 `device.createBuffer()`. Its usage flag is `GPUBufferUsage.COPY_DST |
 GPUBufferUsage.MAP_READ` as it will be used as the destination of the first GPU
 buffer and read in JavaScript once GPU copy commands have been executed.
 
 ```js
 // Get a GPU buffer in a mapped state and an arrayBuffer for writing.
-const [gpuWriteBuffer, arrayBuffer] = device.createBufferMapped({
+const gpuWriteBuffer = device.createBuffer({
+  mappedAtCreation: true,
   size: 4,
   usage: GPUBufferUsage.MAP_WRITE | GPUBufferUsage.COPY_SRC
 });
+const arrayBuffer = gpuWriteBuffer.getMappedRange();
 
 // Write bytes to buffer.
 new Uint8Array(arrayBuffer).set([0, 1, 2, 3]);
@@ -169,13 +174,16 @@ device.defaultQueue.submit([copyCommands]);
 ```
 
 At this point, GPU queue commands have been sent, but not necessarily executed.
-To read the second GPU buffer, call `gpuReadBuffer.mapReadAsync()`. It returns a
-promise that will resolve with an `ArrayBuffer` containing the same values as
-the first GPU buffer once all queued GPU commands have been executed.
+To read the second GPU buffer, call `gpuReadBuffer.mapAsync()` with
+`GPUMapMode.READ`. It returns a promise that will resolve when the GPU buffer is
+mapped. Then get the mapped range with `gpuReadBuffer.getMappedRange()` that
+contains the same values as the first GPU buffer once all queued GPU commands
+have been executed.
 
 ```js
 // Read buffer.
-const copyArrayBuffer = await gpuReadBuffer.mapReadAsync();
+await gpuReadBuffer.mapAsync(GPUMapMode.READ);
+const copyArrayBuffer = gpuReadBuffer.getMappedRange();
 console.log(new Uint8Array(copyArrayBuffer));
 ```
 
@@ -185,8 +193,8 @@ In short, here’s what you need to remember regarding buffer memory operations:
 
 - GPU buffers have to be unmapped to be used in device queue submission.
 - When mapped, GPU buffers can be read and written in JavaScript.
-- GPU buffers are mapped when `mapReadAsync()`, `mapWriteAsync()`, and
-  `createBufferMapped()` are called.
+- GPU buffers are mapped when `mapAsync()` and `createBuffer()` with
+  `mappedAtCreation` set to true are called.
 
 ## Shader programming
 
@@ -251,10 +259,12 @@ const firstMatrix = new Float32Array([
   5, 6, 7, 8
 ]);
 
-const [gpuBufferFirstMatrix, arrayBufferFirstMatrix] = device.createBufferMapped({
+const gpuBufferFirstMatrix = device.createBuffer({
+  mappedAtCreation: true,
   size: firstMatrix.byteLength,
   usage: GPUBufferUsage.STORAGE,
 });
+const arrayBufferFirstMatrix = gpuBufferFirstMatrix.getMappedRange();
 new Float32Array(arrayBufferFirstMatrix).set(firstMatrix);
 gpuBufferFirstMatrix.unmap();
 
@@ -507,8 +517,10 @@ device.defaultQueue.submit([gpuCommands]);
 
 ### Read result matrix
 
-Reading the result matrix is as easy as calling `gpuReadBuffer.mapReadAsync()`
-and logging the `ArrayBuffer` returned by the resulting promise.
+Reading the result matrix is as easy as calling `gpuReadBuffer.mapAsync()` with
+`GPUMapMode.READ` and waiting for the returning promise to resolve which indicates
+the GPU buffer is now mapped. At this point, it is possible to get the mapped
+range with `gpuReadBuffer.getMappedRange()`.
 
 <figure>
   <img src="/web/updates/images/2019/08/matrix-multiplication-result.jpg"
@@ -524,7 +536,8 @@ In our code, the result logged in DevTools JavaScript console is “2, 2, 50, 60
 
 ```js
 // Read buffer.
-const arrayBuffer = await gpuReadBuffer.mapReadAsync();
+await gpuReadBuffer.mapAsync(GPUMapMode.READ);
+const arrayBuffer = gpuReadBuffer.getMappedRange();
 console.log(new Float32Array(arrayBuffer));
 ```
 
