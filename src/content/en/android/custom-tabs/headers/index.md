@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Guide for adding HTTP CORS Headers in Custom Tab Intents.
 
 {# wf_published_on: 2020-08-12 #}
-{# wf_updated_on: 2020-08-12 #}
+{# wf_updated_on: 2020-08-13 #}
 {# wf_blink_components: N/A #}
 
 # How to add extra HTTP Request Headers to Custom Tab Intents {: .page-title }
@@ -22,10 +22,7 @@ not owned by the same party. This guide discusses launching such requests throug
 filtering all except [whitelisted][4] cross-origin headers, since non-whitelisted headers posed
 a security risk. Starting with Chrome 86, it is possible to attach non-whitelisted headers to 
 cross-origin requests, when the server and client are related using a [digital asset link][5]. 
-This behaviour is summarised in [Table 1](#table-1).
-
-
-<a name="table-1"></a>
+This behaviour is summarised in the following table:
 
 **Chrome version** | **CORS headers allowed**
 ---------------- | ----------------------
@@ -45,9 +42,7 @@ send whitelisted as well as non-whitelisted http headers. You can skip to
 ### Whitelisted vs. Non-whitelisted CORS Request Headers
 [Cross-Origin Resource Sharing (CORS)][6] allows a web application from one origin to request
 resources of a different origin. The list of **CORS-whitelisted** headers is maintained in the
-[HTML Standard][]. Example whitelisted headers are shown in [Table 2](#table-2).
-
-<a name="table-2"></a>
+[HTML Standard][]. Example whitelisted headers are shown in the next table:
 
 **Header**       | **Description**
 ---------------- | ----------------------
@@ -60,9 +55,7 @@ content-type     | indicates the media type of the resource
 The whitelisted headers are considered safe because they don’t contain sensitive 
 user information and are unlikely to cause the server to perform potentially damaging operations.
 
-Examples of non-whitelisted headers are shown in [Table 3](#table-3).
-
-<a name="table-3"></a>
+Examples of non-whitelisted headers are shown in the following table:
 
 **Header**   | **Description**
 -------------| ----------------------
