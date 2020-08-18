@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Shipping in Chrome 73, Constructable Stylesheets provide a seamless way to create and distribute styles to documents or shadow roots without worrying about FOUC.
 
 {# wf_published_on: 2019-02-08 #}
-{# wf_updated_on: 2019-02-08 #}
+{# wf_updated_on: 2020-08-18 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_tags: chrome73,css,style #}
 {# wf_featured_snippet: Shipping in Chrome 73, Constructable Stylesheets provide a seamless way to create and distribute styles to documents or shadow roots without worrying about FOUC. #}
