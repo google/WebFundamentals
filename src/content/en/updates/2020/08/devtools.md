@@ -38,12 +38,13 @@ The Issues banner on the Console panel is now replaced with a regular message.
 
 ![Issues in console message](/web/updates/images/2020/08/issue-console-msg.png)
 
-Third party issues are now hidden by default in the Issues tab. To view all issues including those originating from third parties, tick the newly added “Include third-party issues” checkbox.
+Third party cookie issues are now hidden by default in the Issues tab. Tick the newly added “Include third-party cookie issues” checkbox to view them.
 
-![thrid party issues checkbox](/web/updates/images/2020/08/third-party-issues.png)
+![thrid party cookie issues checkbox](/web/updates/images/2020/08/third-party-cookies.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/bb660b996589727edf16be103343f91d38b571fa #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dea8897a72d4954ec04723bb0bbdf5c90440a0f1 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/760ee9c0d70d6bce108532c164fbdbc5cb2c2951 #}
 
 Chromium issues: [1096481](https://crbug.com/1096481), [1068116](https://crbug.com/1068116), [1080589](https://crbug.com/1080589)
 
