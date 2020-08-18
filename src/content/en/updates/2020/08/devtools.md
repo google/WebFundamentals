@@ -78,7 +78,7 @@ Chromium issue: [1090802](https://crbug.com/1090802)
 ## Emulate `prefers-reduced-data` {: #emulate-prefers-reduced-data }
 
 <aside class="note">
-  <p>In Chrome 86, `prefers-reduced-data` is available behind
+  <p>In Chrome 86, this feature is available behind
 the [chrome://flags/#enable-experimental-web-platform-features] flag. You can see this emulation option only if the flag is enabled.
   </p>
 </aside>
