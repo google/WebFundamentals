@@ -79,7 +79,7 @@ Chromium issue: [1090802](https://crbug.com/1090802)
 
 <aside class="note">
   <p>In Chrome 86, this feature is available behind
-the [chrome://flags/#enable-experimental-web-platform-features] flag. You can see this emulation option only if the flag is enabled.
+the <a href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a> flag. You can see this emulation option only if the flag is enabled.
   </p>
 </aside>
 
