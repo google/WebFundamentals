@@ -50,7 +50,7 @@ Chromium issues: [1096481](https://crbug.com/1096481), [1068116](https://crbug.c
 
 ## Emulate missing local fonts {: #emulate-local-fonts }
 
-Open the [Rendering tab](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#rendering) and use the new “Disable local fonts” feature to emulate missing `local() sources in @font-face rules.
+Open the [Rendering tab](/web/tools/chrome-devtools/evaluate-performance/reference#rendering) and use the new “Disable local fonts” feature to emulate missing `local() sources in @font-face rules.
 
 For example, when the font “Rubik” is installed on your device and the `@font-face src` rule uses it as a  `local()` font, Chrome uses the local font file from your device.
 
@@ -196,7 +196,7 @@ Chromium issue: [1106221](https://crbug.com/1106221)
 
 When inspecting a network resource in the Network panel, DevTools now formats any `X-Client-Data` header values in Headers pane as code.
 
-The `X-Client-Data` HTTP header contains a list of experiment IDs and Chrome flags that are enabled in your browser. The raw header values look like opaque strings since they are base-64-encoded, serialized [protocol buffers](https://developers.google.com/protocol-buffers). To make the contents more transparent to developers, DevTools is now showing the decoded values.
+The `X-Client-Data` HTTP header contains a list of experiment IDs and Chrome flags that are enabled in your browser. The raw header values look like opaque strings since they are base-64-encoded, serialized [protocol buffers](/protocol-buffers). To make the contents more transparent to developers, DevTools is now showing the decoded values.
 
 ![Human-readable `X-Client-Data` header values](/web/updates/images/2020/08/x-client-data.png)
 
