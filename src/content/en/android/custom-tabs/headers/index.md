@@ -1,14 +1,12 @@
 project_path: /web/android/_project.yaml
 book_path: /web/android/_book.yaml
-description: Guide for adding HTTP CORS Headers in Custom Tab Intents.
+description: Guide for adding HTTP CORS headers in custom tab intents.
 
 {# wf_published_on: 2020-08-12 #}
-{# wf_updated_on: 2020-08-13 #}
+{# wf_updated_on: 2020-08-18 #}
 {# wf_blink_components: N/A #}
 
 # How to add extra HTTP Request Headers to Custom Tab Intents {: .page-title }
-
-## Introduction
 
 HTTP requests contain headers such as User-Agent or Content-Type. Apart from headers attached by
 browsers, Android apps may add extra headers, like Cookie or Referrer through the 
@@ -16,26 +14,26 @@ browsers, Android apps may add extra headers, like Cookie or Referrer through th
 depending on how and where an intent is launched.
 
 [Cross-origin][2] requests require an additional layer of security as the client and server are
-not owned by the same party. This guide discusses launching such requests through Chrome 
+not owned by the same party. This guide discusses launching such requests through Chrome
 [custom tabs][3], i.e. intents launched from apps that open a URL in the browser tab. Until Chrome
-83, developers could add any headers when launching a Custom Tab. From version 83, Chrome started 
-filtering all except [whitelisted][4] cross-origin headers, since non-whitelisted headers posed
-a security risk. Starting with Chrome 86, it is possible to attach non-whitelisted headers to 
-cross-origin requests, when the server and client are related using a [digital asset link][5]. 
+83, developers could add any headers when launching a Custom Tab. From version 83 onward, Chrome
+started filtering all except [whitelisted][4] cross-origin headers, since non-whitelisted headers
+posed a security risk. Starting with Chrome 86, it is possible to attach non-whitelisted headers to
+cross-origin requests, when the server and client are related using a [digital asset link][5].
 This behaviour is summarised in the following table:
 
-**Chrome version** | **CORS headers allowed**
----------------- | ----------------------
-before v83       | whitelisted, non-whitelisted
-v83 to v85       | whitelisted
-v86 onwards      | whitelisted, non-whitelisted when a digital asset link is set up
+**Chrome version**     | **CORS headers allowed**
+---------------------- | ----------------------
+before Chrome 83       | whitelisted, non-whitelisted
+Chrome 83 to Chrome 85 | whitelisted
+from Chrome 86 onwards | whitelisted, non-whitelisted when a digital asset link is set up
 
 **Table 1.:** Filtering of non-whitelisted CORS headers.
 
 
-This guide shows how to set up a verified connection between the server and client and use that to 
-send whitelisted as well as non-whitelisted http headers. You can skip to 
-[Adding Extra Headers to CustomTab Intents for the code](#adding-extra-headers). 
+This article shows how to set up a verified connection between the server and client and use that
+to send whitelisted as well as non-whitelisted http headers. You can skip to
+[Adding Extra Headers to CustomTab Intents](#adding-extra-headers) for the code.
 
 ## Background
 
@@ -73,7 +71,7 @@ authenticate malicious server transactions that would otherwise not be possible.
 
 ### Attaching CORS whitelisted headers to Custom Tabs requests
 [Custom Tabs][8] are a special way of launching web pages in a customised browser tab. Custom Tab
-intents can be created using `CustomTabsIntent.Builder()`. Headers can also be attached to these
+intents can be created using `CustomTabsIntent.Builder()`. You can also attach headers to these
 intents using a `Bundle` with the [`Borwser.EXTRA_HEADERS` flag][9]:
 
 
@@ -88,7 +86,7 @@ intent.intent.putExtra(Browser.EXTRA_HEADERS, headers);
 intent.launchUrl(Activity.this, Uri.parse("http://www.google.com"));
 ```
 
-Whitelisted headers can always be attached to custom tabs CORS requests. However, Chrome filters 
+We can always attach whitelisted headers to custom tabs CORS requests. However, Chrome filters 
 non-whitelisted headers by default. Although other browsers may have different behaviour, 
 developers should expect non-whitelisted headers to be blocked in general.
 
@@ -107,8 +105,8 @@ Follow the [official guide][10] to set up a digital asset link. For the link rel
 "delegate_permission/common.use_as_origin"` which indicates that both apps belong to the same 
 origin once the link is verified.
 
-### Create custom tab intent with extra headers
-There are multiple ways for creating a [Custom Tabs intent][11]. You can use the builder available
+### Create Custom Tab Intent with Extra Headers
+There are multiple ways for creating a [custom tabs intent][11]. You can use the builder available
 in androidX by adding the library to the build dependencies:
 
 ```gradle
@@ -129,7 +127,14 @@ CustomTabsIntent constructExtraHeadersIntent(CustomTabsSession session) {
     return intent;
 }
 ```
-### Set up a custom tabs connection to validate the asset link
+### Set up a Custom Tabs Connection to Validate the Asset Link
+
+A Custom Tabs connection is used for setting up a `CustomTabsSession` between the app and the
+Chrome tab. We need the session to verify the app nad web app belong to the same origin.
+The verification only passes if the digital asset links were set up correctly.
+
+It is encouraged to call `CustomTabsClient.warmup()`. It allows the browser application to
+pre-initialize in the background and speed up the URL opening process.
 
 ```java
 // Set up a connection that warms up and validates a session.
@@ -149,7 +154,12 @@ CustomTabsServiceConnection connection = new CustomTabsServiceConnection() {
 };
 ```
 
-### Set up a callback that launches the intent after validation
+### Set up a Callback that Launches the Intent after Validation
+
+The `CustomTabsCallback` was passed into the session. We set up its
+`onRelationshipValidationResult()` to launch the previously created `CustomTabsIntent`
+once the origin verification succeeds.
+
 ```java
 // Set up a callback that launches the intent after session validated.
 CustomTabsCallback callback = new CustomTabsCallback() {
@@ -183,8 +193,8 @@ unbindService(connection);
 
 ### Demo application code
 
-More details about Custom Tabs Service can be found [here][12]. A working example app can be found
-in the [android-browser-helper][13] GitHub repository.
+You can find more details about Custom Tabs Service [here][12]. See the
+[android-browser-helper][13] GitHub repository for a working example app.
 
 ## Summary
 This guide demonstated how to add arbitrary headers to custom tabs CORS requests.
