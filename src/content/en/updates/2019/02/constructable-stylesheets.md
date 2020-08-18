@@ -99,8 +99,9 @@ sheet.replace('@import url("styles.css"); a { color: red; }');
 <strong>Note:</strong> In earlier versions of the specification,
 <code>replace()</code> allowed <code>@import</code> rules and returned
 a Promise that resolved when these were finished loading. This feature was
-<a href="https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-642300024">removed from the specification</a>
-and <code>@import</code> rules are ignored with a warning as of Chrome 84.
+<a href="https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-642300024">
+removed from the specification</a> and <code>@import</code> rules are
+ignored with a warning as of Chrome 84.
 
 </aside>
 
