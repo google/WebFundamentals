@@ -22,7 +22,7 @@ DevTools now displays media players information in the [Media panel](/web/tools/
 
 Prior to the new media panel in DevTools, logging and debug information about video players could be found in [chrome://media-internals](chrome://media-internals).
 
-The new Media panel provides an easier way to view events, logs, properties, and a timeline of frame decodes in the same browser tab as the video player itself. You can live view and inspect on potential issues quicker (e.g. why dropped frames are occuring, why javascript is interacting with the player in an unexpected way).
+The new Media panel provides an easier way to view events, logs, properties, and a timeline of frame decodes in the same browser tab as the video player itself. You can live view and inspect on potential issues quicker (e.g. why dropped frames are occuring, why JavaScript is interacting with the player in an unexpected way).
 
 For engineers who are constantly testing video playback quality, working on a JavaScript front-end to a media player, or working on re-encoding tools, this new Media panel could greatly increase your productivity.
 
