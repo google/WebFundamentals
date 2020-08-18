@@ -87,9 +87,6 @@ The [`prefers-reduced-data`](https://drafts.csswg.org/mediaqueries-5/#descdef-me
 
 You can now use DevTools to emulate the `prefers-reduced-data` media query.
 
-**Notes: `prefers-reduced-data` is currently available behind
-the chrome://flags/#enable-experimental-web-platform-features flag. You can see this emulation option only if the flag is enabled.
-
 ![Emulate prefers-reduced-data](/web/updates/images/2020/08/emulate-prefers-reduced-data.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e7d0d2dc314502571a7bddffe70e78bc990c19fe #}
