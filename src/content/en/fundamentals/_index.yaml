@@ -105,7 +105,7 @@ landing_page:
       description: >
         Web Components are a new set of standards which let you create your own HTML elements.
         You can use them to build anything, from simple UI elements, to entire applications.
-      path: web-components/
+      path: web/fundamentals/web-components/
       buttons:
       - label: Learn more
         path: /web/fundamentals/web-components/
