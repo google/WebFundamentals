@@ -68,9 +68,9 @@ The
 [`replace()`](https://wicg.github.io/construct-stylesheets/#dom-cssstylesheet-replace)
 and
 [`replaceSync()`](https://wicg.github.io/construct-stylesheets/#dom-cssstylesheet-replacesync)
-methods both replace the stylesheet with a string of CSS, `replace()` returns a
-Promise. In both cases, external stylesheet references are not supported - any
-`@import` rules are ignored and will produce a warning.
+methods both replace the stylesheet with a string of CSS, and `replace()`
+returns a Promise. In both cases, external stylesheet references are not
+supported - any `@import` rules are ignored and will produce a warning.
 
 ```js
 const sheet = new CSSStyleSheet();
@@ -96,11 +96,11 @@ sheet.replace('@import url("styles.css"); a { color: red; }');
 
 <aside class="key-point">
 
-**Note:** In earlier versions of the specification, `replace()` allowed
-`@import` rules and returned a Promise that resolved when these were finished
-loading. This feature was
-[removed from the specification](https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-642300024)
-and `@import` rules are ignored with a warning as of Chrome 84.
+<strong>Note:</strong> In earlier versions of the specification,
+<code>replace()</code> allowed <code>@import</code> rules and returned
+a Promise that resolved when these were finished loading. This feature was
+<a href="https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-642300024">removed from the specification</a>
+and <code>@import</code> rules are ignored with a warning as of Chrome 84.
 
 </aside>
 
