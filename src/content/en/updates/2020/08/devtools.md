@@ -20,7 +20,7 @@ DevTools now displays media players information in the [Media panel](/web/tools/
 
 ![New Media panel](/web/updates/images/2020/08/media-panel.png)
 
-Prior to the new media panel in DevTools, logging and debug information about video players could be found in chrome://media-internals.
+Prior to the new media panel in DevTools, logging and debug information about video players could be found in [chrome://media-internals](chrome://media-internals).
 
 The new Media panel provides an easier way to view events, logs, properties, and a timeline of frame decodes in the same browser tab as the video player itself. You can live view and inspect on potential issues quicker (e.g. why dropped frames are occuring, why javascript is interacting with the player in an unexpected way).
 
@@ -100,8 +100,8 @@ DevTools now has better support for some of the latest JavaScript language featu
 - [Logical assignment operators](https://v8.dev/features/logical-assignment) - DevTools now supports logical assignment with the new operators `&&=`, `||=`, and `??=` in the Console and Source panels.
 - Pretty-print [numeric separators](https://v8.dev/features/numeric-separators) - DevTools now properly pretty-prints the numeric separators in the Sources panel.
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/c55849a7826fcabbae137b0f85cd44c93498581d #}
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ca50c1ef5f527bd1e8dd86b53278c7da62d25681 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/1f7986a53e18d158b02666d60b5e6c2fa46fd3ab #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/660b9dfbe395bb6e230ca639fce11afa025d9ae3 #}
 
 Chromium issues: [1086817](https://crbug.com/1086817), [1080569](https://crbug.com/1080569)
 
@@ -110,20 +110,22 @@ Chromium issues: [1086817](https://crbug.com/1086817), [1080569](https://crbug.c
 The Lighthouse panel is now running Lighthouse 6.2. Lighthouse will now enhance the unused-javascript audit if a page has publicly-accessible JavaScript source maps. Check out the [release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/v6.2.0) for a full list of all changes.
 
 These are the new audits added in Lighthouse:
+
 - **Avoid long main thread tasks**. Reports the longest tasks on the main thread, useful for identifying worst contributors to input delay.
 - **Links are crawlable**. Check if the `href` attribute of anchor elements links to an appropriate destination, so the links can be discovered.
 - **Unsized image elements** - Check if an explicit `width` and `height` is set on image elements. Explicit image size can reduce layout shifts and improve CLS.
 - **Avoid non-composited animations**. Reports [non-composited animations](https://web.dev/non-composited-animations/) that appear janky and reduce CLS.
 - **Listens for the `unload` events**. Reports the `unload` event. Consider using the `pagehide` or `visibilitychange` events instead as the `unload` event does not fire reliably.
 
-{#  #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/c55849a7826fcabbae137b0f85cd44c93498581d #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/ca50c1ef5f527bd1e8dd86b53278c7da62d25681 #}
 
 Chromium issue: [772558](https://crbug.com/772558)
 
 
 ## Deprecation of “other origins” listing in the Service Workers pane {: #deprecate-sw-other-origins }
 
-DevTools now provides a link to view the full list of service workers from other origins in a new browser tab - [chrome://serviceworker-internals/?devtools].
+DevTools now provides a link to view the full list of service workers from other origins in a new browser tab - [chrome://serviceworker-internals/?devtools](chrome://serviceworker-internals/?devtools).
 
 Previously DevTools displayed a list nested under the Application panel > Service workers.
 
