@@ -197,10 +197,9 @@ In the example below, `h1` has low contrast text. To fix it, open the color pick
   <source src="/web/updates/images/2020/08/contrast-color-suggestion.mp4" type="video/mp4">
 </video> 
 
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/aca27b0f3913e75503959d6bb7404d1dfd761e1e #}
+
 Chromium issue: [1093227](https://crbug.com/1093227)
-
-
-
 
 
 ### Human-readable `X-Client-Data` header values in the Network panel {: #x-client-data }
