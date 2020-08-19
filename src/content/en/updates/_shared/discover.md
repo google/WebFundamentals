@@ -16,8 +16,9 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [New frame detailed view in Application panel](/web/updates/2020/08/devtools#rame-detailed-view)
 * [Frame details for opened windows](/web/updates/2020/08/devtools#pop-up-frame-details)
 * [Capture node screenshots via Elements panel context menu](/web/updates/2020/08/devtools#capture-node-screenshot)
-* [Auto-complete custom fonts in the Styles pane](/web/updates/2020/08/devtools#auto-complete-custom-fonts)
+* [Accessible color suggestion in the Styles pane](/web/updates/2020/08/devtools#accessible-color)
 * [Human-readable `X-Client-Data` header values in the Network panel](/web/updates/2020/08/devtools#x-client-data)
+* [Auto-complete custom fonts in the Styles pane](/web/updates/2020/08/devtools#auto-complete-custom-fonts)
 * [Consistently display resource type in Network panel](/web/updates/2020/08/devtools#redirect-resource-type)
 * [Clear buttons in the Elements and Network panels](/web/updates/2020/08/devtools#clear-input-button)
 

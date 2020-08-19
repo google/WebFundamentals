@@ -188,16 +188,19 @@ For example, you can take a screenshot of the table of content by right clicking
 Chromium issue: [1100253](https://crbug.com/1100253)
 
 
-### Auto-complete custom fonts in the Styles pane {: #auto-complete-custom-fonts }
-Imported font faces are now added to the list of CSS auto-completion when editing the `font-family` property in the Style pane.
+### Accessible color suggestion in the Styles pane {: #accessible-color }
+DevTools now provides color suggestions for low color contrast text.
 
-In this example, ‘Noto Sans’ is a custom font installed in the local machine. It is displayed in the CSS completion list. Previously, it was not.
+In the example below, `h1` has low contrast text. To fix it, open the color picker of the `color` property in the Styles pane. Expand the “Contrast ratio” section, DevTools provides color suggestions for both level AA and AAA. Click on the suggested color to apply the color. 
 
-![Auto-complete custom fonts](/web/updates/images/2020/08/font-auto-complete.png)
+<video autoplay loop muted playsinline>
+  <source src="/web/updates/images/2020/08/contrast-color-suggestion.mp4" type="video/mp4">
+</video> 
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/86616f113ccfde9ecb5dc5aa32492d5befef9bfb #}
+Chromium issue: [1093227](https://crbug.com/1093227)
 
-Chromium issue: [1106221](https://crbug.com/1106221)
+
+
 
 
 ### Human-readable `X-Client-Data` header values in the Network panel {: #x-client-data }
@@ -212,6 +215,18 @@ The `X-Client-Data` HTTP header contains a list of experiment IDs and Chrome fla
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e071c96e5d1fdf514e2c6a610a22efc35de00456 #}
 
 Chromium issue: [1103854](https://crbug.com/1103854)
+
+
+### Auto-complete custom fonts in the Styles pane {: #auto-complete-custom-fonts }
+Imported font faces are now added to the list of CSS auto-completion when editing the `font-family` property in the Style pane.
+
+In this example, ‘Noto Sans’ is a custom font installed in the local machine. It is displayed in the CSS completion list. Previously, it was not.
+
+![Auto-complete custom fonts](/web/updates/images/2020/08/font-auto-complete.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/86616f113ccfde9ecb5dc5aa32492d5befef9bfb #}
+
+Chromium issue: [1106221](https://crbug.com/1106221)
 
 
 ### Consistently display resource type in Network panel {: #redirect-resource-type }
