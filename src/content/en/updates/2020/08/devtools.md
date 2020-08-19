@@ -109,6 +109,8 @@ Chromium issues: [1086817](https://crbug.com/1086817), [1080569](https://crbug.c
 ## Lighthouse 6.2 in the Lighthouse panel {: #lighthouse }
 The Lighthouse panel is now running Lighthouse 6.2. Lighthouse will now enhance the unused-javascript audit if a page has publicly-accessible JavaScript source maps. Check out the [release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/v6.2.0) for a full list of all changes.
 
+![Unsize image](/web/updates/images/2020/08/lighthouse-unsize-img.png)
+
 These are the new audits added in Lighthouse:
 
 - **Avoid long main thread tasks**. Reports the longest tasks on the main thread, useful for identifying worst contributors to input delay.
