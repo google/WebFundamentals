@@ -34,7 +34,7 @@ Chromium issues: [1018414](https://crbug.com/1018414)
 
 ## Issues tab updates {: #issues-tab }
 
-The Issues banner on the Console panel is now replaced with a regular message. 
+The Issues warning bar on the Console panel is now replaced with a regular message. 
 
 ![Issues in console message](/web/updates/images/2020/08/issue-console-msg.png)
 
