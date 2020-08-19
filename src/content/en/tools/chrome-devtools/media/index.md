@@ -18,7 +18,7 @@ Use the Media Panel in Chrome DevTools to view information and debug the media p
 
 The **Media** panel is the main place in DevTools for inspecting the media player of a page.
 
-1. [Open DevTools](https://developers.google.com/web/tools/chrome-devtools/open).
+1. [Open DevTools](/web/tools/chrome-devtools/open).
 2. Click the **More Options**  ![More](/web/tools/chrome-devtools/images/shared/more.png){: .inline-icon } > **More tools** > **Media** to open the Media panel.
 
 ![Media panel](/web/tools/chrome-devtools/media/images/01-empty.png)
