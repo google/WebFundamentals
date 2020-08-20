@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Shipping in Chrome 73, Constructable Stylesheets provide a seamless way to create and distribute styles to documents or shadow roots without worrying about FOUC.
 
 {# wf_published_on: 2019-02-08 #}
-{# wf_updated_on: 2019-02-08 #}
+{# wf_updated_on: 2020-08-18 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_tags: chrome73,css,style #}
 {# wf_featured_snippet: Shipping in Chrome 73, Constructable Stylesheets provide a seamless way to create and distribute styles to documents or shadow roots without worrying about FOUC. #}
@@ -57,17 +57,20 @@ be used as a direct interface to the browser’s CSS parser, making it easy to
 preload stylesheets without injecting them into the DOM.
 
 ## Constructing a StyleSheet
+
 Rather than introducing a new API to accomplish this, the [Constructable
 StyleSheets](https://wicg.github.io/construct-stylesheets) specification makes
 it possible to create stylesheets imperatively by invoking the `CSSStyleSheet()`
 constructor. The resulting CSSStyleSheet object has two new methods that make it
 safer to add and update stylesheet rules without triggering [Flash of Unstyled
 Content](https://en.wikipedia.org/wiki/Flash_of_unstyled_content) (FOUC).
+The
 [`replace()`](https://wicg.github.io/construct-stylesheets/#dom-cssstylesheet-replace)
-returns a Promise that resolves once any external references (`@imports`) are
-loaded, whereas
+and
 [`replaceSync()`](https://wicg.github.io/construct-stylesheets/#dom-cssstylesheet-replacesync)
-doesn’t allow external references at all:
+methods both replace the stylesheet with a string of CSS, and `replace()`
+returns a Promise. In both cases, external stylesheet references are not
+supported - any `@import` rules are ignored and will produce a warning.
 
 ```js
 const sheet = new CSSStyleSheet();
@@ -75,22 +78,32 @@ const sheet = new CSSStyleSheet();
 // replace all styles synchronously:
 sheet.replaceSync('a { color: red; }');
 
-// this throws an exception:
-try {
-  sheet.replaceSync('@import url("styles.css")');
-} catch (err) {
-  console.error(err); // imports are not allowed
-}
-
-// replace all styles, allowing external resources:
-sheet.replace('@import url("styles.css")')
-  .then(sheet => {
-    console.log('Styles loaded successfully');
+// replace all styles:
+sheet.replace('a { color: blue; }')
+  .then(() => {
+    console.log('Styles replaced');
   })
   .catch(err => {
-    console.error('Failed to load:', err);
+    console.error('Failed to replace styles:', err);
   });
+
+// Any @import rules are ignored.
+// Both of these still apply the a{} style:
+sheet.replaceSync('@import url("styles.css"); a { color: red; }');
+sheet.replace('@import url("styles.css"); a { color: red; }');
+// Console warning: "@import rules are not allowed here..."
 ```
+
+<aside class="key-point">
+
+<strong>Note:</strong> In earlier versions of the specification,
+<code>replace()</code> allowed <code>@import</code> rules and returned
+a Promise that resolved when these were finished loading. This feature was
+<a href="https://github.com/WICG/construct-stylesheets/issues/119#issuecomment-642300024">
+removed from the specification</a> and <code>@import</code> rules are
+ignored with a warning as of Chrome 84.
+
+</aside>
 
 ## Using Constructed StyleSheets
 
