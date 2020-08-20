@@ -1665,6 +1665,21 @@ janscheffler:
   description:
     en: Software Engineer working on Chrome DevTools at Google
 
+sigurds:
+  name:
+    given: Sigurd
+    family: Schneider
+  org:
+    name: Google
+    unit: Chrome
+  country: DE
+  role:
+    - author
+  twitter: sigurdschn
+  email: sigurds@google.com
+  description:
+    en: Software Engineer working on Chrome DevTools at Google
+
 moinshaikh:
   name:
     given: Moin
