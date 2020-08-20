@@ -39,7 +39,7 @@ The Issues warning bar on the Console panel is now replaced with a regular messa
 
 Third-party cookie issues are now hidden by default in the Issues tab. Enable the new **Include third-party cookie issues** checkbox to view them.
 
-![thrid party cookie issues checkbox](/web/updates/images/2020/08/third-party-cookies.png)
+![third-party cookie issues checkbox](/web/updates/images/2020/08/third-party-cookies.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/bb660b996589727edf16be103343f91d38b571fa #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dea8897a72d4954ec04723bb0bbdf5c90440a0f1 #}
