@@ -2,6 +2,26 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 86 {: #discover86 .hide-from-toc }
+
+* [New Media panel](/web/updates/2020/08/devtools#media-panel)
+* [Capture node screenshots via Elements panel context menu](/web/updates/2020/08/devtools#capture-node-screenshot)
+* [Issues tab updates](/web/updates/2020/08/devtools#issues-tab)
+* [Emulate missing local fonts](/web/updates/2020/08/devtools#emulate-local-fonts)
+* [Emulate inactive users](/web/updates/2020/08/devtools#emulate-inactive-users)
+* [Emulate `prefers-reduced-data`](/web/updates/2020/08/devtools#emulate-prefers-reduced-data)
+* [Support for new JavaScript features](/web/updates/2020/08/devtools#javascript)
+* [Lighthouse 6.2 in the Lighthouse panel](/web/updates/2020/08/devtools#lighthouse)
+* [Deprecation of “other origins” listing in the Service Workers pane](/web/updates/2020/08/devtools#deprecate-sw-other-origins)
+* [Show coverage summary for filtered items](/web/updates/2020/08/devtools#filter-coverage-summary)
+* [New frame detailed view in Application panel](/web/updates/2020/08/devtools#rame-detailed-view)
+* [Frame details for opened windows](/web/updates/2020/08/devtools#pop-up-frame-details)
+* [Accessible color suggestion in the Styles pane](/web/updates/2020/08/devtools#accessible-color)
+* [Human-readable `X-Client-Data` header values in the Network panel](/web/updates/2020/08/devtools#x-client-data)
+* [Auto-complete custom fonts in the Styles pane](/web/updates/2020/08/devtools#auto-complete-custom-fonts)
+* [Consistently display resource type in Network panel](/web/updates/2020/08/devtools#redirect-resource-type)
+* [Clear buttons in the Elements and Network panels](/web/updates/2020/08/devtools#clear-input-button)
+
 ### Chrome 85 {: #discover85 .hide-from-toc }
 
 * [Style editing for CSS-in-JS frameworks](/web/updates/2020/06/devtools#css-in-js)
