@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Remote debug live content on an Android device from a Windows, Mac, or Linux computer.
 
-{# wf_updated_on: 2020-07-17 #}
+{# wf_updated_on: 2020-08-21 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -69,7 +69,7 @@ Android device](#troubleshooting) for more help.
        <img src="imgs/offline-device.png" alt="The Remote Target has successfully detected
            an offline device that is pending authorization."/>
        <figcaption>
-         <b>Figure 4</b>. The <b>Remote Traget</b> has successfully detected an offline
+         <b>Figure 4</b>. The <b>Remote Target</b> has successfully detected an offline
          device that is pending authorization
        </figcaption>
      </figure>
