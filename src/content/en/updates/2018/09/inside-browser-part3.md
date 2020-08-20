@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Inner workings of a browser rendering engine
 
 {# wf_published_on: 2018-09-20 #}
-{# wf_updated_on: 2019-05-30 #}
+{# wf_updated_on: 2020-08-18 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: Once the browser receives page data, what happens inside of the renderer process to display a page? #}
 {# wf_blink_components: N/A #}
@@ -381,7 +381,7 @@ GPU.
 <figure>
   <img src="/web/updates/images/inside-browser/part3/composit.png" alt="composit">
   <figcaption>
-    Figure 18: Compositor thread creating compositing frame. Fame is sent to the browser process
+    Figure 18: Compositor thread creating compositing frame. Frame is sent to the browser process
     then to GPU
   </figcaption>
 </figure>
@@ -417,4 +417,3 @@ hear from you in the comment section below or [@kosamari](https://twitter.com/ko
 <div class="clearfix"></div>
 
 {% include "web/_shared/rss-widget-updates.html" %}
-
