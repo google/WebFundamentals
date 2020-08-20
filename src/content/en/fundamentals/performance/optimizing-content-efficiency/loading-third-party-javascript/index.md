@@ -560,7 +560,7 @@ connections.
 DoubleClick have guidance on how to lazy-load ads in their [official
 documentation](https://support.google.com/dfp_premium/answer/4578089#lazyloading).
 If used properly, lazy loading can increase the overall viewability percentage
-of an ad. For example, MediaVine switched to[ lazy-loading
+of an ad. For example, Mediavine switched to[ lazy-loading
 ads](https://www.mediavine.com/lazy-loading-ads-mediavine-ads-load-200-faster/)
 and saw a 200% improvement in page load speed.
 
