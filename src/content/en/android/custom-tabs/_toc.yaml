@@ -5,5 +5,7 @@ toc:
   path: /web/android/custom-tabs/implementation-guide/
 - title: Best Practices
   path: /web/android/custom-tabs/best-practices/
+- title: Custom Tabs CORS Headers
+  path: /web/android/custom-tabs/headers/
 # - title: Low Level API
 #   path: /web/android/custom-tabs/low-level-api/
