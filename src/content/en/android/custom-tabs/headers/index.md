@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Guide for adding HTTP CORS headers in custom tab intents.
 
 {# wf_published_on: 2020-08-12 #}
-{# wf_updated_on: 2020-08-18 #}
+{# wf_updated_on: 2020-08-20 #}
 {# wf_blink_components: N/A #}
 
 # How to add extra HTTP Request Headers to Custom Tab Intents {: .page-title }
@@ -130,7 +130,7 @@ CustomTabsIntent constructExtraHeadersIntent(CustomTabsSession session) {
 ### Set up a Custom Tabs Connection to Validate the Asset Link
 
 A Custom Tabs connection is used for setting up a `CustomTabsSession` between the app and the
-Chrome tab. We need the session to verify the app nad web app belong to the same origin.
+Chrome tab. We need the session to verify that the app and web app belong to the same origin.
 The verification only passes if the digital asset links were set up correctly.
 
 It is encouraged to call `CustomTabsClient.warmup()`. It allows the browser application to
