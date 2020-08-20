@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: New Media panel, Issues tab updates, emulate missing local fonts, inactive users and prefers-reduced-data.
+description: New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts, inactive users and prefers-reduced-data.
 
 {# wf_updated_on: 2020-08-20 #}
 {# wf_published_on: 2020-08-20 #}
@@ -30,6 +30,17 @@ The new Media panel provides an easier way to view events, logs, properties, and
 
 Chromium issue: [1018414](https://crbug.com/1018414)
 
+## Capture node screenshots via Elements panel context menu {: #capture-node-screenshot }
+
+You can now capture node screenshots via the context menu in the Elements panel.
+
+For example, you can take a screenshot of the table of content by right clicking the element and select **Capture node screenshot**.
+
+![Capture node screenshots](/web/updates/images/2020/08/capture-node-screenshot.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/6ac0cbc48c94ed3d62fd69b69b24f10f9797b913  #}
+
+Chromium issue: [1100253](https://crbug.com/1100253)
 
 ## Issues tab updates {: #issues-tab }
 
@@ -179,19 +190,6 @@ Chromium issue: [1107766](https://crbug.com/1107766)
 
 
 ## Elements and Network panel updates {: #elements-network }
-
-### Capture node screenshots via Elements panel context menu {: #capture-node-screenshot }
-
-You can now capture node screenshots via the context menu in the Elements panel.
-
-For example, you can take a screenshot of the table of content by right clicking the element and select **Capture node screenshot**.
-
-![Capture node screenshots](/web/updates/images/2020/08/capture-node-screenshot.png)
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/6ac0cbc48c94ed3d62fd69b69b24f10f9797b913  #}
-
-Chromium issue: [1100253](https://crbug.com/1100253)
-
 
 ### Accessible color suggestion in the Styles pane {: #accessible-color }
 DevTools now provides color suggestions for low color contrast text.
