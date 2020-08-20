@@ -26,7 +26,6 @@ about video players could be found in `chrome://media-internals`.
 The new Media panel provides an easier way to view events, logs, properties, and a timeline of frame decodes in the same browser tab as the video player itself. You can live view and inspect on potential issues quicker (e.g. why dropped frames are occurring, why JavaScript is interacting with the player in an unexpected way).
 
 
-
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/bf98fea787a8c2db4e0763ae2095faf8112458eb #}
 
 Chromium issue: [1018414](https://crbug.com/1018414)
@@ -61,7 +60,7 @@ When **Disable local fonts** is enabled, DevTools ignores the `local()` fonts an
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5b6a769ee19c084fdda6482d2d8f1ce9f7e37ac0  #}
 
-Chromium issues: [384968](https://crbug.com/384968)
+Chromium issue: [384968](https://crbug.com/384968)
 
 
 ## Emulate inactive users {: #emulate-inactive-users }
@@ -91,7 +90,7 @@ You can now use DevTools to emulate the `prefers-reduced-data` media query.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e7d0d2dc314502571a7bddffe70e78bc990c19fe #}
 
-Chromium issues: [1096068](https://crbug.com/1096068)
+Chromium issue: [1096068](https://crbug.com/1096068)
 
 
 ## Support for new JavaScript features {: #javascript }
