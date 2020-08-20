@@ -66,7 +66,7 @@ Chromium issues: [384968](https://crbug.com/384968)
 
 ## Emulate inactive users {: #emulate-inactive-users }
 
-The [Idle Detection API](https://web.dev/idle-detection) allows developers to detect inactive users and react on idle state changes. You can now use DevTools to emulate idle state changes in the Sensors tab for both the user state and the screen state instead of waiting for the actual idle state to change.
+The [Idle Detection API](https://web.dev/idle-detection) allows developers to detect inactive users and react on idle state changes. You can now use DevTools to emulate idle state changes in the **Sensors** tab for both the user state and the screen state instead of waiting for the actual idle state to change. You can open the **Sensors** tab from the [**Drawer**](/web/tools/chrome-devtools/customize/#drawer).
 
 ![Emulate inactive users](/web/updates/images/2020/08/emulate-idle.png)
 
