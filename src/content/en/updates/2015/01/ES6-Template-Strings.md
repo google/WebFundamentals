@@ -69,10 +69,10 @@ The `${}` works fine with any kind of expression, including member expressions a
     // => "Thanks for getting this into V8, CAITLIN POTTER";
 
     // And another example
-    var thing = 'drugs';
-    console.log(`Say no to ${thing}. Although if you're talking to ${thing} you may already be on ${thing}.`);
+    var thing = 'template strings';
+    console.log(`Say hello to ${thing}.`);
 
-    // => Say no to drugs. Although if you're talking to drugs you may already be on drugs.
+    // => Say hello to template strings
 
 If you require backticks inside of your string, it can be escaped using the backslash character `\ ` as follows:
 
