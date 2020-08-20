@@ -20,16 +20,16 @@ DevTools now displays media players information in the [Media panel](/web/tools/
 
 ![New Media panel](/web/updates/images/2020/08/media-panel.png)
 
-Prior to the new media panel in DevTools, logging and debug information about video players could be found in [chrome://media-internals](chrome://media-internals).
+Prior to the new media panel in DevTools, logging and debug information 
+about video players could be found in `chrome://media-internals`.
 
 The new Media panel provides an easier way to view events, logs, properties, and a timeline of frame decodes in the same browser tab as the video player itself. You can live view and inspect on potential issues quicker (e.g. why dropped frames are occurring, why JavaScript is interacting with the player in an unexpected way).
 
-For engineers who are constantly testing video playback quality, working on a JavaScript front-end to a media player, or working on re-encoding tools, this new Media panel could greatly increase your productivity.
 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/bf98fea787a8c2db4e0763ae2095faf8112458eb #}
 
-Chromium issues: [1018414](https://crbug.com/1018414)
+Chromium issue: [1018414](https://crbug.com/1018414)
 
 
 ## Issues tab updates {: #issues-tab }
@@ -38,7 +38,7 @@ The Issues warning bar on the Console panel is now replaced with a regular messa
 
 ![Issues in console message](/web/updates/images/2020/08/issue-console-msg.png)
 
-Third party cookie issues are now hidden by default in the Issues tab. Tick the newly added “Include third-party cookie issues” checkbox to view them.
+Third-party cookie issues are now hidden by default in the Issues tab. Enable the new **Include third-party cookie issues** checkbox to view them.
 
 ![thrid party cookie issues checkbox](/web/updates/images/2020/08/third-party-cookies.png)
 
@@ -51,11 +51,11 @@ Chromium issues: [1096481](https://crbug.com/1096481), [1068116](https://crbug.c
 
 ## Emulate missing local fonts {: #emulate-local-fonts }
 
-Open the [Rendering tab](/web/tools/chrome-devtools/evaluate-performance/reference#rendering) and use the new “Disable local fonts” feature to emulate missing `local() sources in @font-face rules.
+Open the [Rendering tab](/web/tools/chrome-devtools/evaluate-performance/reference#rendering) and use the new **Disable local fonts** feature to emulate missing `local()` sources in `@font-face` rules.
 
 For example, when the font “Rubik” is installed on your device and the `@font-face src` rule uses it as a  `local()` font, Chrome uses the local font file from your device.
 
-When “Disable local fonts” is ticked, DevTools ignores the `local()` fonts and fetches them from the network.
+When **Disable local fonts** is enabled, DevTools ignores the `local()` fonts and fetches them from the network.
 
 ![Emulate missing local fonts](/web/updates/images/2020/08/disable-font.png)
 
@@ -97,7 +97,7 @@ Chromium issues: [1096068](https://crbug.com/1096068)
 ## Support for new JavaScript features {: #javascript }
 DevTools now has better support for some of the latest JavaScript language features:
 
-- [Logical assignment operators](https://v8.dev/features/logical-assignment) - DevTools now supports logical assignment with the new operators `&&=`, `||=`, and `??=` in the Console and Source panels.
+- [Logical assignment operators](https://v8.dev/features/logical-assignment) - DevTools now supports logical assignment with the new operators `&&=`, `||=`, and `??=` in the Console and Sources panels.
 - Pretty-print [numeric separators](https://v8.dev/features/numeric-separators) - DevTools now properly pretty-prints the numeric separators in the Sources panel.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/1f7986a53e18d158b02666d60b5e6c2fa46fd3ab #}
@@ -107,17 +107,21 @@ Chromium issues: [1086817](https://crbug.com/1086817), [1080569](https://crbug.c
 
 
 ## Lighthouse 6.2 in the Lighthouse panel {: #lighthouse }
-The Lighthouse panel is now running Lighthouse 6.2. Lighthouse will now enhance the unused-javascript audit if a page has publicly-accessible JavaScript source maps. Check out the [release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/v6.2.0) for a full list of all changes.
+The Lighthouse panel is now running Lighthouse 6.2. Check out the [release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/v6.2.0) for a full list of changes.
 
 ![Unsize image](/web/updates/images/2020/08/lighthouse-unsize-img.png)
 
-These are the new audits added in Lighthouse:
+New audits in Lighthouse 6.2:
 
 - **Avoid long main thread tasks**. Reports the longest tasks on the main thread, useful for identifying worst contributors to input delay.
 - **Links are crawlable**. Check if the `href` attribute of anchor elements links to an appropriate destination, so the links can be discovered.
 - **Unsized image elements** - Check if an explicit `width` and `height` is set on image elements. Explicit image size can reduce layout shifts and improve CLS.
 - **Avoid non-composited animations**. Reports [non-composited animations](https://web.dev/non-composited-animations/) that appear janky and reduce CLS.
 - **Listens for the `unload` events**. Reports the `unload` event. Consider using the `pagehide` or `visibilitychange` events instead as the `unload` event does not fire reliably.
+
+Updated audits in Lighthouse 6.2:
+
+- **Remove unused JavaScript**. Lighthouse will now enhance the audit if a page has publicly-accessible JavaScript source maps. 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/c55849a7826fcabbae137b0f85cd44c93498581d #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ca50c1ef5f527bd1e8dd86b53278c7da62d25681 #}
@@ -127,9 +131,9 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 ## Deprecation of “other origins” listing in the Service Workers pane {: #deprecate-sw-other-origins }
 
-DevTools now provides a link to view the full list of service workers from other origins in a new browser tab - [chrome://serviceworker-internals/?devtools](chrome://serviceworker-internals/?devtools).
+DevTools now provides a link to view the full list of service workers from other origins in a new browser tab - `chrome://serviceworker-internals/?devtools`.
 
-Previously DevTools displayed a list nested under the Application panel > Service workers.
+Previously DevTools displayed a list nested under the **Application** panel > **Service workers** pane.
 
 ![Link to other origins](/web/updates/images/2020/08/sw-other-origins.png)
 
@@ -140,9 +144,11 @@ Chromium issue: [807440](https://crbug.com/807440)
 
 
 ## Show coverage summary for filtered items {: #filter-coverage-summary }
-DevTools now recalculates and displays a summary of coverage information dynamically when filters are applied in the Coverage tab. Previously, the Coverage tab always displays a summary of all coverage information. 
+DevTools now recalculates and displays a summary of coverage information dynamically when filters are applied in the [**Coverage**](/web/tools/chrome-devtools/coverage) tab. Previously, the **Coverage** tab always displayed a summary of all coverage information. 
 
-The following example shows the coverage summary when no filter applied versus after applying filter by CSS type. 
+In the example below notice how the summary initially says
+`446 kB of 2.0 MB (22%) used so far. 1.5 MB unused.` and then says
+`57 kB of 604 kB (10%) used so far. 546 kB unused.` after CSS filtering has been applied.
 
 ![Coverage summary for filtered items](/web/updates/images/2020/08/coverage-compare.png)
 
@@ -152,7 +158,7 @@ Chromium issue: [1061385](https://crbug.com/1090802)
 
 
 ## New frame detailed view in Application panel {: #frame-detailed-view }
-DevTools now show a detailed view for each frame. Access it by clicking a frame under the Frames menu in the Application panel.
+DevTools now show a detailed view for each frame. Access it by clicking a frame under the **Frames** menu in the **Application** panel.
 
 ![New frame detailed view in Application panel](/web/updates/images/2020/08/frame-details.png)
 
@@ -179,7 +185,7 @@ Chromium issue: [1107766](https://crbug.com/1107766)
 
 You can now capture node screenshots via the context menu in the Elements panel.
 
-For example, you can take a screenshot of the table of content by right clicking the element and select “Capture node screenshot”.
+For example, you can take a screenshot of the table of content by right clicking the element and select **Capture node screenshot**.
 
 ![Capture node screenshots](/web/updates/images/2020/08/capture-node-screenshot.png)
 
@@ -191,7 +197,9 @@ Chromium issue: [1100253](https://crbug.com/1100253)
 ### Accessible color suggestion in the Styles pane {: #accessible-color }
 DevTools now provides color suggestions for low color contrast text.
 
-In the example below, `h1` has low contrast text. To fix it, open the color picker of the `color` property in the Styles pane. Expand the “Contrast ratio” section, DevTools provides color suggestions for both level AA and AAA. Click on the suggested color to apply the color. 
+In the example below, `h1` has low contrast text. To fix it, open the color picker of the `color`
+property in the Styles pane. After you expand the **Contrast ratio** section, DevTools
+provides AA and AAA color suggestions. Click on the suggested color to apply the color. 
 
 <video autoplay loop muted playsinline>
   <source src="/web/updates/images/2020/08/contrast-color-suggestion.mp4" type="video/mp4">
@@ -217,9 +225,9 @@ Chromium issue: [1103854](https://crbug.com/1103854)
 
 
 ### Auto-complete custom fonts in the Styles pane {: #auto-complete-custom-fonts }
-Imported font faces are now added to the list of CSS auto-completion when editing the `font-family` property in the Style pane.
+Imported font faces are now added to the list of CSS auto-completion when editing the `font-family` property in the **Styles** pane.
 
-In this example, ‘Noto Sans’ is a custom font installed in the local machine. It is displayed in the CSS completion list. Previously, it was not.
+In this example, `'Noto Sans'` is a custom font installed in the local machine. It is displayed in the CSS completion list. Previously, it was not.
 
 ![Auto-complete custom fonts](/web/updates/images/2020/08/font-auto-complete.png)
 
@@ -229,9 +237,9 @@ Chromium issue: [1106221](https://crbug.com/1106221)
 
 
 ### Consistently display resource type in Network panel {: #redirect-resource-type }
-DevTools now consistently display the same resource type as the original network request and append “/ Redirect” in it when redirection (status 302) happens. 
+DevTools now consistently displays the same resource type as the original network request and appends `/ Redirect` to the **Type** column value when redirection (status 302) happens. 
 
-Previously DevTools changed the type to “Other” sometimes.
+Previously DevTools changed the type to `Other` sometimes.
 
 ![Display redirect resource type](/web/updates/images/2020/08/network-redirect.png)
 
@@ -242,7 +250,9 @@ Chromium issue: [997694](https://crbug.com/997694)
 
 ### Clear buttons in the Elements and Network panels {: #clear-input-button }
 
-You can now clear the filter input with the new clear button in the Network panel. Clear button also added for the filter in Style pane and search input in the Elements panel.
+The filter text boxes in the **Styles** pane and **Network** panel,
+as well as the DOM search text box in the **Elements** panel, now have **Clear**
+buttons. Clicking **Clear** removes any text that you have input.
 
 ![Clear buttons in the Elements and Network panels](/web/updates/images/2020/08/clear-button.png)
 
