@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts, inactive users and prefers-reduced-data.
 
-{# wf_updated_on: 2020-08-20 #}
+{# wf_updated_on: 2020-08-21 #}
 {# wf_published_on: 2020-08-20 #}
 {# wf_tags: chrome86, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -160,7 +160,7 @@ In the example below notice how the summary initially says
 `446 kB of 2.0 MB (22%) used so far. 1.5 MB unused.` and then says
 `57 kB of 604 kB (10%) used so far. 546 kB unused.` after CSS filtering has been applied.
 
-![Coverage summary for filtered items](/web/updates/images/2020/08/coverage-compare.png)
+![Coverage summary for filtered items](/web/updates/images/2020/08/coverage-compare-2.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/d6a5f02987283478ffaec6af72a2da59fc552132 #}
 
