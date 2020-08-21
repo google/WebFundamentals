@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-07-30 #}
+{# wf_updated_on: 2020-08-21 #}
 {# wf_published_on: 2019-07-30 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
@@ -110,6 +110,6 @@ emails-here-will-be-cc@chromium.org
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-[web-platform-tests]: https://www.web-platform-tests.org
+[web-platform-tests]: https://web-platform-tests.org
 [wpt-fyi]: https://wpt.fyi
 [test-harness]: https://github.com/w3c/testharness.js/
