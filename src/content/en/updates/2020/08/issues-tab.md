@@ -64,7 +64,12 @@ With those requirements in mind, the team started to look into how to implement 
 - [DevTools frontend](https://github.com/ChromeDevTools/devtools-frontend), the JavaScript implementation of Chrome DevTools
 - [Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) (CDP), the layer connecting the two
 
-Inside of Chromium, we had to identify the components that have the information we want to surface and make that information accessible to the DevTools Protocol without compromising speed or security. We then needed to design the Chrome DevTools Protocol (CDP) to define the API that exposes the information to clients, such as the DevTools frontend. Finally, we needed to implement a component in DevTools frontend that requests the information from the browser via CDP and displays it in an appropriate UI such that developers can easily interpret and interact with the information.
+Implementation was then comprised of three tasks:
+
+- Inside **Chromium**, we had to identify the components that have the information we want to surface and make that information accessible to the DevTools Protocol without compromising speed or security. 
+- We then needed to design the **Chrome DevTools Protocol** (CDP) to define the API that exposes the information to clients, such as the DevTools frontend. 
+- Finally, we needed to implement a component in **DevTools frontend** that requests the information from the browser via CDP and displays it in an appropriate UI such that developers can easily interpret and interact with the information.
+
 
 For the browser side, we first looked into how console messages were handled, because their behavior is very similar to what we had in mind for issues. [CodeSearch](https://source.chromium.org/chromium/chromium/src/+/master:content/public/browser/console_message.h) is usually a good starting point for explorations like these. It allows you to search and explore the whole source code of the Chromium project online. That way, we learned about the implementation of console messages and could build up a [parallel, but more structured way](https://chromium-review.googlesource.com/c/chromium/src/+/1991507) around the requirements we collected for the issues. 
 
