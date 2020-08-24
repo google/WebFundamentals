@@ -33,7 +33,7 @@ To find a better solution to the problems we discovered, we first started thinki
 
 Our goal is to present issues in a way that clearly **explains the problem**, and **how to fix it**. 
 
-From our design process we realised that each issue should contain the following four parts:
+From our design process we realized that each issue should contain the following four parts:
 
 - Title
 - Description
@@ -100,3 +100,11 @@ Furthermore, we are thinking how to integrate issues from other sources besides 
 We are looking into ways to keep the Issues tab tidy and improve usability. Searching, filtering, and better aggregation are on our list for this year. To structure the increasing number of reported issues, we are in the process of introducing issue categories that would, for example, make it possible to only show issues that are about upcoming deprecations. We are also thinking about adding a snooze feature, that a developer can use to hide issues temporarily.
 
 To keep issues actionable, we want to make it easier to discover which part of a page triggered an issue. In particular, we are thinking about ways to distinguish and filter issues that are genuinely from your page (i.e. first-party) from issues that are triggered by resources you embed, but are not directly under your control (such as an ad network). As a first step, it will be possible to hide third-party cookie issues in Chrome 86.
+
+<<../../_shared/devtools-feedback.md>>
+
+<<../../_shared/canary.md>>
+
+<<../../_shared/discover.md>>
+
+{% include "web/_shared/rss-widget-updates.html" %}
