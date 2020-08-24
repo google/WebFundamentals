@@ -104,8 +104,8 @@ We are looking into ways to keep the Issues tab tidy and improve usability. Sear
 
 To keep issues actionable, we want to make it easier to discover which part of a page triggered an issue. In particular, we are thinking about ways to distinguish and filter issues that are genuinely from your page (i.e. first-party) from issues that are triggered by resources you embed, but are not directly under your control (such as an ad network). As a first step, it will be possible to hide third-party cookie issues in Chrome 86.
 
-<<../../_shared/devtools-feedback.md>>
+<<../../../_shared/devtools-feedback.md>>
 
-<<../../_shared/discover-devtools-blog.md>>
+<<../../../_shared/discover-devtools-blog.md>>
 
 {% include "web/_shared/rss-widget-updates.html" %}
