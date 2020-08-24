@@ -27,9 +27,9 @@ If you also use the console for messages from your own application, you’ll som
 As well as humans, it's also difficult for automated processes to interact with console messages. For example, developers might use Chrome Headless and Puppeteer in a Continuous Integration/Continuous Deployment scenario. Because console messages are just strings, developers need to write regular expressions or some other parser to extract actionable information. 
 
 
-## The solution: Structured and actionable issue reporting
+## The solution: structured and actionable issue reporting
 
-To find a better solution to the problems we discovered, we first started thinking about the requirements and collected them in a [Design Doc](https://docs.google.com/document/d/1F6R5Bpb3qHNzGPNBSXwEJ_eP8L-anIj0WinxOIyAh54/edit#heading=h.ronwk0bge64o).
+To find a better solution to the problems we discovered, we first started thinking about the requirements and collected them in a [Design Doc](https://docs.google.com/document/d/1F6R5Bpb3qHNzGPNBSXwEJ_eP8L-anIj0WinxOIyAh54/edit).
 
 Our goal is to present issues in a way that clearly **explains the problem**, and **how to fix it**. 
 
@@ -71,6 +71,7 @@ For the browser side, we first looked into how console messages were handled, be
 The work here is especially challenging because of all the security implications we always have to keep in mind. The Chromium project goes a long way to separate things into different processes and have them only communicate through controlled communication channels to prevent information leaks. Issues may contain sensitive information, so we have to take care to not send that information to a part of the browser that shouldn't know about it.
 
 ### In DevTools frontend
+
 [DevTools](https://github.com/ChromeDevTools/devtools-frontend) itself is a web application written in JavaScript and CSS. It’s a lot like many other web applications - except that it’s been around for more than 10 years. And of course its back-end is basically a direct communication channel to the browser: the Chrome DevTools Protocol.
 
 For the Issues tab, we first thought about [user stories](https://docs.google.com/document/d/1F6R5Bpb3qHNzGPNBSXwEJ_eP8L-anIj0WinxOIyAh54/edit#heading=h.7xl44gtucf0p) and what developers would have to do to resolve an issue. Our ideas mostly evolved around having the Issues tab as a central starting point for investigations that linked people to the panels that show more detailed information. We decided to put the Issues tab with the other tabs at the bottom of DevTools so it can stay open while a developer interacts with another DevTools component, such as the Network or the Application panel.
@@ -85,7 +86,8 @@ Another very important factor was the **discoverability** of the Issues tab. In 
 
 ![Related issues](/web/updates/images/2020/08/chrome-devtools-issues-tab/related-issues.png)
 
-### In the Protocol
+
+### In the protocol
 The communication between the frontend and the backend works over a protocol called [Chromium DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) (CDP). The CDP can be thought of as the back-end of the web app that is Chrome DevTools. The CDP is subdivided into multiple domains and every domain contains a number of commands and events. 
 
 For the Issues tab, we decided to add a new [event](https://chromedevtools.github.io/devtools-protocol/tot/Audits/#event-issueAdded) to the Audits domain that triggers whenever a new issue is encountered. To make sure that we can also report on issues that arise while DevTools is not yet opened, the Audits domain stores the most recent issues and dispatches them as soon as DevTools connects. DevTools then collects all those issues and aggregates them.
@@ -93,6 +95,7 @@ For the Issues tab, we decided to add a new [event](https://chromedevtools.githu
 The CDP also enables other protocol clients, such as [Puppeteer](https://pptr.dev/), to receive and process issues. We hope the [structured issue information](https://chromedevtools.github.io/devtools-protocol/tot/Audits/#type-InspectorIssue) sent over the CDP will enable and simplify integration into existing continuous integration infrastructure. This way, issues can be detected and fixed even before the page is deployed!
 
 ## Future
+
 First of all, a lot more messages have to move from the console to the Issues tab. This will take some time, especially because we want to provide clear, actionable documentation for every new issue we add. We hope that in the future developers will go looking for issues in the Issues tab instead of the console!
 
 Furthermore, we are thinking how to integrate issues from other sources besides the Chromium back-end into the Issues tab.
