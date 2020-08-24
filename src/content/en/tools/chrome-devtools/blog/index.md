@@ -8,6 +8,6 @@ description: Chrome DevTools Engineering Blog
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Engineering blog {: .page-title }
+# Engineering Blog {: .page-title }
 
 <<../../../updates/_shared/discover-devtools-blog.md>>

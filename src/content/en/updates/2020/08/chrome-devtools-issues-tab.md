@@ -103,8 +103,6 @@ To keep issues actionable, we want to make it easier to discover which part of a
 
 <<../../_shared/devtools-feedback.md>>
 
-<<../../_shared/canary.md>>
-
-<<../../_shared/discover.md>>
+<<../../_shared/discover-devtools-blog.md>>
 
 {% include "web/_shared/rss-widget-updates.html" %}
