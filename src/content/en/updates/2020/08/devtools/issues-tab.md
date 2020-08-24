@@ -18,7 +18,7 @@ In the last quarter of 2019, the Chrome DevTools team started improving the deve
 
 While researching the tools that DevTools already provides, we often found ourselves in a situation like the following:
 
-![Issues in the Console panel](/web/updates/images/2020/08/chrome-devtools-issues-tab/issues-clutter.png)
+![Issues in the Console panel](/web/updates/images/2020/08/devtools/issues-clutter.png)
 
 The console was full of warnings and error messages, that contained rather technical explanations and sometimes links to [chromestatus.com](https://chromestatus.com). All messages looked roughly equally important, making it hard to figure out **which to address first**. More importantly, the text was not linking to additional information inside DevTools, making it difficult to understand **what happened**. And finally, the messages often left it entirely to the web developer to figure out **how to fix the problem** or even learn about the technical context.
 
@@ -78,13 +78,13 @@ For the Issues tab, we first thought about [user stories](https://docs.google.co
 
 With that in mind, our UX designer understood what we were aiming at, and prototyped the following initial proposals:
 
-![Prototypes](/web/updates/images/2020/08/chrome-devtools-issues-tab/prototypes.png)
+![Prototypes](/web/updates/images/2020/08/devtools/prototypes.png)
 
 After a lot of discussion around the best solution, we started implementing the design and reiterating decisions to gradually arrive at what the Issues tablooks like today.
 
 Another very important factor was the **discoverability** of the Issues tab. In the past, many great Devtools features were not discoverable without the developer knowing what specifically to look for. For the Issues tab, we decided to highlight issues in multiple different areas to increase the likelihood of developers opening it. The most prominent highlight is probably in the Console panel. But we also added an icon to the warnings and errors counter in the top right of the DevTools window. Finally, the Issues tab not only links to other DevTools panels, but resources that are related to an issue also link back to the Issues tab.
 
-![Related issues](/web/updates/images/2020/08/chrome-devtools-issues-tab/related-issues.png)
+![Related issues](/web/updates/images/2020/08/devtools/related-issues.png)
 
 
 ### In the protocol
