@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Trusted Web Activity
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-07-31 #}
+{# wf_updated_on: 2020-08-24 #}
 {# wf_blink_components: N/A #}
 
 # Trusted Web Activity Integration Guide {: .page-title }
@@ -81,7 +81,7 @@ dependency to the `dependencies` section:
 
 ```
 dependencies {
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.3.2'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.0.0'
 }
 ```
 
@@ -451,27 +451,13 @@ tag matches the value defined of the `android:authorities` attribute inside the
 ### Making the LauncherActivity transparent {: #transparent-launcher }
 
 Additionally, make sure the LauncherActivity is transparent to avoid a white screen
-showing before the splash.
-
-Add a new theme to `res/styles.xml`:
-
-```xml
-<style name="Theme.LauncherActivity" parent="Theme.AppCompat.NoActionBar">
-     <item name="android:windowAnimationStyle">@null</item>
-     <item name="android:windowIsTranslucent">true</item>
-     <item name="android:windowNoTitle">true</item>
-     <item name="android:windowBackground">@android:color/transparent</item>
-     <item name="android:backgroundDimEnabled">false</item>
- </style>
-```
-
-Then, add a reference to the new style in the Android Manifest:
+showing before the splash by setting a translucent theme for the LauncherActivity:
 
 ```xml
 <application>
     ...
     <activity android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
-              android:theme="@style/Theme.LauncherActivity">
+              android:theme="@android:style/Theme.Translucent.NoTitleBar">
     ...
     </activity>
 </application>
