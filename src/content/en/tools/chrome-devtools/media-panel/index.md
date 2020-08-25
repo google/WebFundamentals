@@ -3,7 +3,7 @@ book_path: /web/tools/chrome-devtools/_book.yaml
 description: Use the Media Panel to view information and debug the media players per browser tab. 
 
 
-{# wf_updated_on: 2020-08-19 #}
+{# wf_updated_on: 2020-08-25 #}
 {# wf_published_on: 2020-08-20 #}
 {# wf_blink_components: Platform>DevTools #}
 
