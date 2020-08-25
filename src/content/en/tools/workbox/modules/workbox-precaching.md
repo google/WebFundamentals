@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-17 #}
+{# wf_updated_on: 2020-08-25 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -28,7 +28,7 @@ the API and ensuring assets are downloaded efficiently.
 When a web app is loaded for the first time, `workbox-precaching` will look at all
 the assets you want to download, remove any duplicates and hook up the relevant
 service worker events to download and store the assets. URLs that
-[already include](/web/tools/workbox/modules/workbox-build#generateSW-dontCacheBustURLsMatching)
+[already include](/web/tools/workbox/reference-docs/latest/module-workbox-build#parameter_2:~:text=index.-,dontCacheBustURLsMatching)
 versioning information (like a content hash) are used as cache keys without any
 further modification. URLs that don't include versioning information have an extra
 URL query parameter appended to their cache key representing a hash of their content
