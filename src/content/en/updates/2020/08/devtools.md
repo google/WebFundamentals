@@ -220,7 +220,7 @@ Chromium issue: [1093227](https://crbug.com/1093227)
 
 
 ### Reinstate **Properties** pane in the Elements panel {: #properties }
-The Properties pane is back, it was [deprecated in Chrome 84](https://developers.google.com/web/updates/2020/05/devtools#properties). In a future version of DevTools, we are going to improve the workflow for inspecting properties of elements.
+The Properties pane is back, it was [deprecated in Chrome 84](/web/updates/2020/05/devtools#properties). In a future version of DevTools, we are going to improve the workflow for inspecting properties of elements.
 
 ![Properties pane in the Elements panel](/web/updates/images/2020/08/properties-pane.png)
 
