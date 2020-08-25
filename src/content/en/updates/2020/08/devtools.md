@@ -167,10 +167,10 @@ In the example below notice how the summary initially says
 Chromium issue: [1061385](https://crbug.com/1090802)
 
 
-## New frame detailed view in Application panel {: #frame-detailed-view }
+## New frame details view in Application panel {: #frame-detailed-view }
 DevTools now show a detailed view for each frame. Access it by clicking a frame under the **Frames** menu in the **Application** panel.
 
-![New frame detailed view in Application panel](/web/updates/images/2020/08/frame-details.png)
+![New frame details view in Application panel](/web/updates/images/2020/08/frame-details.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/760462e3a489859865956ea33d1afe5648418a73  #}
 
@@ -178,9 +178,9 @@ Chromium issue: [1093247](https://crbug.com/1093247)
 
 ### Frame details for opened windows {: #pop-up-frame-details }
 
-DevTools now displays opened windows / pop-ups under the frame tree as well. The frame detailed view of the opened windows includes additional security information.
+DevTools now displays opened windows / pop-ups under the frame tree as well. The frame details view of the opened windows includes additional security information.
 
-![New frame detailed view in Application panel](/web/updates/images/2020/08/window-opener.png)
+![New frame details view in Application panel](/web/updates/images/2020/08/window-opener.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3b4747f0e2791ad844c93b52c1758208e1e4789c #}
 
@@ -193,7 +193,7 @@ DevTools now display secure context, [Cross-Origin-Embedder-Policy (COEP) and Cr
 
 ![Security and isolation information](/web/updates/images/2020/08/coep-coop.png)
 
-More security information will be added to the frame detailed view soon.
+More security information will be added to the frame details view soon.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/680531a670360136bc32952ff0d57edb6d054bbd #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/aef2982079e5110ed9ccc9be7b96bf3e6dd7a47b #}
