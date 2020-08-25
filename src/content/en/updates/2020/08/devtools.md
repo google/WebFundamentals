@@ -16,7 +16,7 @@ description: New Media panel, capture node screenshot, Issues tab updates, emula
 
 ## New Media panel {: #media-panel }
 
-DevTools now displays media players information in the [Media panel](/web/tools/chrome-devtools/media). 
+DevTools now displays media players information in the [Media panel](/web/tools/chrome-devtools/media-panel). 
 
 ![New Media panel](/web/updates/images/2020/08/media-panel.png)
 
@@ -63,7 +63,7 @@ Chromium issues: [1096481](https://crbug.com/1096481), [1068116](https://crbug.c
 
 Open the [Rendering tab](/web/tools/chrome-devtools/evaluate-performance/reference#rendering) and use the new **Disable local fonts** feature to emulate missing `local()` sources in `@font-face` rules.
 
-For example, when the font “Rubik” is installed on your device and the `@font-face src` rule uses it as a  `local()` font, Chrome uses the local font file from your device.
+For example, when the font "Rubik" is installed on your device and the `@font-face src` rule uses it as a  `local()` font, Chrome uses the local font file from your device.
 
 When **Disable local fonts** is enabled, DevTools ignores the `local()` fonts and fetches them from the network.
 
@@ -139,7 +139,7 @@ Updated audits in Lighthouse 6.2:
 Chromium issue: [772558](https://crbug.com/772558)
 
 
-## Deprecation of “other origins” listing in the Service Workers pane {: #deprecate-sw-other-origins }
+## Deprecation of "other origins" listing in the Service Workers pane {: #deprecate-sw-other-origins }
 
 DevTools now provides a link to view the full list of service workers from other origins in a new browser tab - `chrome://serviceworker-internals/?devtools`.
 
