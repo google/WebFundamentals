@@ -18,7 +18,7 @@ description: What's New in Chrome 85 for developers?
 Chrome 85 is starting to roll out to stable now.
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="htAiPOarIwI"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -232,7 +232,7 @@ additional changes in Chrome 85.
 * [Chrome 85 deprecations & removals](/web/updates/2020/07/chrome-85-deps-rems)
 * [ChromeStatus.com updates for Chrome 85](https://www.chromestatus.com/features#milestone%3D85)
 * [What's new in JavaScript in Chrome 85](https://v8.dev/blog/v8-release-85)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/84.0.4147.92..85.0.TODO.92)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/84.0.4147.92..85.0.4183.85)
 
 ## Subscribe {: .hide-from-toc }
 
