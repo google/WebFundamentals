@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2020-06-10 #}
+{# wf_updated_on: 2020-08-25 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -63,7 +63,7 @@ if ('serviceWorker' in navigator) {
   wb.addEventListener('waiting', showSkipWaitingPrompt);
   wb.addEventListener('externalwaiting', showSkipWaitingPrompt);
 
-  registration = await wb.register();
+  wb.register().then((r) => registration = r);
 }
 </script>
 ```

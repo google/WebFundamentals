@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: Using build tools to bundle the Workbox runtime into a custom service worker.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2020-07-29 #}
+{# wf_updated_on: 2020-08-25 #}
 {# wf_blink_components: N/A #}
 
 # Using bundlers with Workbox {: .page-title }
@@ -59,9 +59,11 @@ Your bundler is responsible for replacing `process.env.NODE_ENV` inside of Workb
 
 ## Optional: inject a precache manifest
 
-Many developers use Workbox for [precaching](/web/tools/workbox/modules/workbox-precaching) URLs that are generated as part of a build process. The convention is to use `self.__WB_MANIFEST` as a placeholder for these URLs in your service worker source code.
+Some developers use Workbox for [precaching](/web/tools/workbox/modules/workbox-precaching), which adds entries to a cache during service worker [installation](/web/fundamentals/primers/service-workers/lifecycle#install). If you use precaching, Workbox needs a [specially formatted list](/web/tools/workbox/modules/workbox-precaching#explanation_of_the_precache_list) of URLs and revision information in order to determine what gets cached. This list is known as a precache manifest.
 
-Replacing `self.__WB_MANIFEST` with a the actual URLs to precache isn't technically part of bundling, but bundling often happens as part of a larger build process. It's common to want to both bundle your service worker and perform the precache manifest injection using the same build tools.
+The precache manifest is commonly generated during your build process, and then swapped in to your service worker code. The convention is to use the symbol `self.__WB_MANIFEST` as a placeholder for where the manifest will be injected.
+
+Replacing `self.__WB_MANIFEST` with the precache manifest isn't technically part of bundling, but bundling often happens as part of a larger build process. It's common to want to both bundle your service worker and perform the precache manifest injection using the same build tools.
 
 ### webpack setup
 
@@ -70,6 +72,8 @@ The [`InjectManifest` plugin](/web/tools/workbox/modules/workbox-webpack-plugin#
 ### Rollup setup
 
 [`rollup-plugin-workbox-inject`](https://github.com/chromeos/static-site-scaffold-modules/blob/master/modules/rollup-plugin-workbox-inject/README.md) handles the precache manifest injection step for you, and assumes that you've already configured Rollup to bundle your service worker source file.
+
+Note: [`rollup-plugin-workbox`](https://github.com/modernweb-dev/web/tree/master/packages/rollup-plugin-workbox#injectmanifest) can perform a similar replacement with a slightly different interface and set of options. Feel free to use either!
 
 ### CLI setup
 
