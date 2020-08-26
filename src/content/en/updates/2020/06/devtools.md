@@ -14,7 +14,7 @@ description: Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScr
 {% include "web/_shared/contributors/jecelynyeen.html" %}
 
 <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="2EiPb1opH3g"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="NOal2gTzftI"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
