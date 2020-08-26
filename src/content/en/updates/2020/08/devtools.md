@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts, inactive users and prefers-reduced-data.
 
-{# wf_updated_on: 2020-08-21 #}
+{# wf_updated_on: 2020-08-25 #}
 {# wf_published_on: 2020-08-20 #}
 {# wf_tags: chrome86, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -16,7 +16,7 @@ description: New Media panel, capture node screenshot, Issues tab updates, emula
 
 ## New Media panel {: #media-panel }
 
-DevTools now displays media players information in the [Media panel](/web/tools/chrome-devtools/media). 
+DevTools now displays media players information in the [Media panel](/web/tools/chrome-devtools/media-panel). 
 
 ![New Media panel](/web/updates/images/2020/08/media-panel.png)
 
@@ -167,10 +167,10 @@ In the example below notice how the summary initially says
 Chromium issue: [1061385](https://crbug.com/1090802)
 
 
-## New frame detailed view in Application panel {: #frame-detailed-view }
+## New frame details view in Application panel {: #frame-detailed-view }
 DevTools now show a detailed view for each frame. Access it by clicking a frame under the **Frames** menu in the **Application** panel.
 
-![New frame detailed view in Application panel](/web/updates/images/2020/08/frame-details.png)
+![New frame details view in Application panel](/web/updates/images/2020/08/frame-details.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/760462e3a489859865956ea33d1afe5648418a73  #}
 
@@ -178,15 +178,27 @@ Chromium issue: [1093247](https://crbug.com/1093247)
 
 ### Frame details for opened windows {: #pop-up-frame-details }
 
-DevTools now displays opened windows / pop-ups under the frame tree as well. The frame detailed view of the opened windows includes additional security information.
+DevTools now displays opened windows / pop-ups under the frame tree as well. The frame details view of the opened windows includes additional security information.
 
-![New frame detailed view in Application panel](/web/updates/images/2020/08/window-opener.png)
-
-More security information will be added to the frame detailed view soon.
+![New frame details view in Application panel](/web/updates/images/2020/08/window-opener.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3b4747f0e2791ad844c93b52c1758208e1e4789c #}
 
 Chromium issue: [1107766](https://crbug.com/1107766) 
+
+
+### Security and isolation information (COEP / COOP) {: #security-frame-details }
+
+DevTools now display secure context, [Cross-Origin-Embedder-Policy (COEP) and Cross-Origin-Opener-Policy (COOP)](https://web.dev/coop-coep/) in the frame details. 
+
+![Security and isolation information](/web/updates/images/2020/08/coep-coop.png)
+
+More security information will be added to the frame details view soon.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/680531a670360136bc32952ff0d57edb6d054bbd #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/aef2982079e5110ed9ccc9be7b96bf3e6dd7a47b #}
+
+Chromium issue: [1051466](https://crbug.com/1051466) 
 
 
 ## Elements and Network panel updates {: #elements-network }
@@ -205,6 +217,17 @@ provides AA and AAA color suggestions. Click on the suggested color to apply the
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/aca27b0f3913e75503959d6bb7404d1dfd761e1e #}
 
 Chromium issue: [1093227](https://crbug.com/1093227)
+
+
+### Reinstate **Properties** pane in the Elements panel {: #properties }
+The Properties pane is back, it was [deprecated in Chrome 84](/web/updates/2020/05/devtools#properties). In a future version of DevTools, we are going to improve the workflow for inspecting properties of elements.
+
+![Properties pane in the Elements panel](/web/updates/images/2020/08/properties-pane.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b36c2d9991f17c060047c1f1a668b37f94117126 #}
+
+Chromium issue: [1105205](https://crbug.com/1105205), [1116085](https://crbug.com/1116085)
+
 
 
 ### Human-readable `X-Client-Data` header values in the Network panel {: #x-client-data }
