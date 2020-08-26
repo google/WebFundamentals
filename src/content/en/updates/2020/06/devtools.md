@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more.
 
-{# wf_updated_on: 2020-06-25 #}
+{# wf_updated_on: 2020-08-26 #}
 {# wf_published_on: 2020-07-01 #}
 {# wf_tags: chrome85, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,6 +12,12 @@ description: Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScr
 # What's New In DevTools (Chrome 85) {: .page-title }
 
 {% include "web/_shared/contributors/jecelynyeen.html" %}
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="NOal2gTzftI"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Style editing for CSS-in-JS frameworks {: #css-in-js }
 
