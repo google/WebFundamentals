@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's New in Chrome 84 for developers?
 
 {# wf_published_on: 2020-07-14 #}
-{# wf_updated_on: 2020-07-24 #}
+{# wf_updated_on: 2020-08-20 #}
 {# wf_featured_image: /web/updates/images/2020/07/new-84.jpg #}
 {# wf_tags: chrome84,new-in-chrome,progressive-web-apps,install,webanimations,offline,capabilities,wake-lock,webassembly,origintrials #}
 {# wf_featured_snippet: Chrome 84 is rolling out now! Users can start common tasks within your app with App Icon Shortcuts. The Web Animations API adds support for a slew of previously unsupported features. Wake Lock, and the Content Indexing API graduate from origin trial. There are new origin trials for Idle detection and SIMD. And there’s a whole bunch more. Let’s dive in and see what’s new for developers in Chrome 84! #}
@@ -250,7 +250,7 @@ out.
 ## Further reading
 
 This covers only some of the key highlights. Check the links below for
-additional changes in Chrome 83.
+additional changes in Chrome 84.
 
 * [What's new in Chrome DevTools (84)](/web/updates/2020/05/devtools)
 * [Chrome 84 deprecations & removals](/web/updates/2020/05/chrome-84-deps-rems)
