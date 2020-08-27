@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts, inactive users and prefers-reduced-data.
 
-{# wf_updated_on: 2020-08-25 #}
+{# wf_updated_on: 2020-08-27 #}
 {# wf_published_on: 2020-08-20 #}
 {# wf_tags: chrome86, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -68,6 +68,18 @@ For example, when the font “Rubik” is installed on your device and the `@fon
 When **Disable local fonts** is enabled, DevTools ignores the `local()` fonts and fetches them from the network.
 
 ![Emulate missing local fonts](/web/updates/images/2020/08/disable-font.png)
+
+Oftentimes, developers and designers use two different copies of the same font during development:
+
+- A local font for your design tools, and
+- A web font for your code
+
+Disabling local fonts makes it easier for you to:
+
+- Debug and measure web fonts loading performance and optimization
+- Verify correctness of your CSS `@font-face` rules
+- Discover any differences between web fonts and their local versions
+
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5b6a769ee19c084fdda6482d2d8f1ce9f7e37ac0  #}
 
