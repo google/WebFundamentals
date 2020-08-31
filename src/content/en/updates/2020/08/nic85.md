@@ -154,7 +154,7 @@ both Chrome and Edge.
     "icons": [
       { "src": "//play-later.png", "sizes": "192x192" }
     ]
-  },
+  }
 ]
 ```
 
