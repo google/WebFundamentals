@@ -6,7 +6,7 @@ description: A round up of the deprecations and removals in Chrome 86 to help yo
 {# wf_published_on: 2020-09-03 #}
 {# wf_tags: deprecations,removals,chrome86 #}
 {# wf_blink_components: Blink>Layout,Blink>Network,Blink>Storage>AppCache #}
-{# wf_featured_image: /web/updates/images/2020/07/dep-rem_86.jpg #}
+{# wf_featured_image: /web/updates/images/2020/09/dep-rem_86.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 86 to help you plan. #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
