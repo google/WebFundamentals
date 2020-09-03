@@ -204,6 +204,9 @@ redirects:
 - from: /web/updates/2019/08/periodic-background-sync
   to: https://web.dev/periodic-background-sync/
 
+- from: /web/updates/2018/03/clipboardapi
+  to: https://web.dev/async-clipboard
+
 ## Redirects for PWA content migrated to web.dev
 
 - from: /web/g-co/dpwa
