@@ -2053,6 +2053,22 @@ johyphenel:
   twitter: johyphenel
   email: jo-el@google.com
 
+tvanderlippe:
+  name:
+    given: Tim
+    family: van der Lippe
+  org:
+    name: Google
+    unit: Chrome
+  country: United Kingdom
+  role:
+    - author
+  twitter: timvdlippe
+  github: timvdlippe
+  email: tvanderlippe@google.com
+  description:
+    en: Software Engineer working on Chrome DevTools at Google
+
 rviscomi:
   name:
     given: Rick
@@ -2207,22 +2223,6 @@ jecelynyeen:
   email: jec@google.com
   description:
     en: Developer advocate working on Chrome DevTools at Google
-
-tvanderlippe:
-  name:
-    given: Tim
-    family: van der Lippe
-  org:
-    name: Google
-    unit: Chrome
-  country: United Kingdom
-  role:
-    - author
-  twitter: timvdlippe
-  github: timvdlippe
-  email: tvanderlippe@google.com
-  description:
-    en: Software Engineer working on Chrome DevTools at Google
 
 maciejzasada:
   name:
