@@ -48,10 +48,10 @@ However, DevTools remained using the `module.json` format.
 
 While DevTools remained working, there were a couple of downsides of using a non-standardized and unique module system:
 
-1. The `module.json` format required custom build tooling, akin to modern bundlers
-2. There was no IDE integration, which required custom tooling to generate files modern IDEs could understand ([the original script to generate jsconfig.json files for VS Code](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2098602/3/scripts/generate_jsconfig.js))
-3. Functions, classes and objects were all put on the global scope to make sharing between modules possible
-4. Files were order-dependent, meaning the order in which `sources` were listed was important. There was no guarantee that code you rely on would be loaded, other than that a human had verified it
+1. The `module.json` format required custom build tooling, akin to modern bundlers.
+2. There was no IDE integration, which required custom tooling to generate files modern IDEs could understand ([the original script to generate jsconfig.json files for VS Code](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2098602/3/scripts/generate_jsconfig.js)).
+3. Functions, classes and objects were all put on the global scope to make sharing between modules possible.
+4. Files were order-dependent, meaning the order in which `sources` were listed was important. There was no guarantee that code you rely on would be loaded, other than that a human had verified it.
 
 All in all, when evaluating the current state of the module system in DevTools and the other (more widely used) module formats, we concluded that the `module.json` pattern was creating more problems than it solved and it was time to plan our move away from it.
 
@@ -61,7 +61,7 @@ Out of the existing module systems, we chose ES modules as the one to migrate to
 At the time of that decision ES modules were still shipping behind a flag in Node.js and a large amount of packages available on NPM did not have an ES modules bundle we could use.
 Despite this, we concluded that ES modules were the best option.
 
-The primary benefit of ES modules is that it is **the** standardized module format for JavaScript.
+The primary benefit of ES modules is that it is **the standardized module format for JavaScript**.
 When we listed the downsides of the `module.json` (see above), we realized that almost all of them were related to using a non-standardized and unique module format.
 
 > Choosing a module format that is non-standardized means that we have to invest time ourselves into building integrations with the build tools and tools our maintainers used.
@@ -79,7 +79,8 @@ But when ES modules became available we had a choice to make: either keep mainta
 
 Even though ES modules had plenty of benefits that we would like to use, we remained in the non-standard `module.json` world.
 Reaping the benefits of ES modules meant that we had to significantly invest in cleaning up technical debt, performing a migration that could potentially break features and introduce regression bugs.
-At this point, it was not a question of "Do we want to use ES modules?", but a question of "How expensive is it to be able to use ES modules?".
+
+At this point, it was not a question of "Do we want to use ES modules?", but a question of **"How expensive is it to be able to use ES modules?"**.
 Here, we had to balance the risk of breaking our users with regressions, the cost of engineers spending (a large amount of) time migrating and the temporary worse state we would work in.
 
 That last point turned out to be very important. Even though we could in theory get to ES modules, during a migration we would end up with code that would have to take into account **both** `module.json` and ES modules.
@@ -91,9 +92,9 @@ They would have to continuously ask themselves "For this part of the codebase, i
 After the cost analysis, we concluded that it was still worthwhile to migrate to ES modules.
 Therefore, our main goals were the following:
 
-1. Make sure that the usage of ES modules reaps the benefits to the fullest extent possible
-2. Make sure that the integration with the existing `module.json`-based system is safe and does not lead to negative user impact (regression bugs, user frustration)
-3. Guide all DevTools maintainers through the migration, primarily with checks and balances built-in to prevent accidental mistakes
+1. Make sure that the usage of ES modules reaps the benefits to the fullest extent possible.
+2. Make sure that the integration with the existing `module.json`-based system is safe and does not lead to negative user impact (regression bugs, user frustration).
+3. Guide all DevTools maintainers through the migration, primarily with checks and balances built-in to prevent accidental mistakes.
 
 ## Spreadsheets, transformations and technical debt
 
@@ -217,8 +218,8 @@ We also have [a style guide for our usage of ES modules](https://docs.google.com
 
 ### Statistics
 
-Conservative estimates for the number of CLs (abbreviation for changelist - the term used in Gerrit that represents a change - similar to a GitHub pull request) involved in this migration are around 250 CLs, largely performed by 2 engineers.
-We don't have definitive statistics on the size of changes made, but a conservative estimate of lines changed (calculated as the sum of absolute difference between insertions and deletions for each CL) to be around 30,000 (~20% of all of DevTools frontend code).
+Conservative estimates for the number of CLs (abbreviation for changelist - the term used in Gerrit that represents a change - similar to a GitHub pull request) involved in this migration are around **250 CLs, largely performed by 2 engineers**.
+We don't have definitive statistics on the size of changes made, but a conservative estimate of lines changed (calculated as the sum of absolute difference between insertions and deletions for each CL) to be around **30,000 (~20% of all of DevTools frontend code)**.
 
 The first file using `export` shipped in Chrome 79, released to stable in December 2019.
 The last change to migrate to `import` shipped in Chrome 83, released to stable in May 2020.
