@@ -15,10 +15,10 @@ description: How we migrate Chrome DevTools to JavaScript modules. The Chrome De
 
 As you might know, [Chrome DevTools](/web/tools/chrome-devtools) is a web application written using HTML, CSS and JavaScript.
 Over the years, DevTools has gotten more feature-rich, smarter and knowledgeable about the broader web platform. 
-While DevTools has expanded over the years, its architecture largely resembles the original architecture while it was still part of [WebKit](https://webkit.org/web-inspector/).
+While DevTools has expanded over the years, its architecture largely resembles the original architecture when it was still part of [WebKit](https://webkit.org/web-inspector/).
 
 This post is part of a **series of blog posts** describing **the changes we are making to DevTools' architecture and how it is built**.
-We will explain how DevTools has historically worked, what the benefits and limitations were and what we have done to alleviate the limitations.
+We will explain how DevTools has historically worked, what the benefits and limitations were and what we have done to alleviate these limitations.
 Therefore, let's dive deep into module systems, how to load code and how we ended up using JavaScript modules.
 
 ## In the beginning, there was nothing
@@ -43,8 +43,8 @@ An example `module.json` file:
 ```
 
 Since 2014, the `module.json` pattern has been used in DevTools to specify its modules and source files.
-Meanwhile, the web ecosystem was rapidly iterating and multiple module formats were created, including UMD, CommonJS and the eventually standardized JavaScript modules.
-However, DevTools remained using the `module.json` format.
+Meanwhile, the web ecosystem rapidly evolved and multiple module formats were created, including UMD, CommonJS and the eventually standardized JavaScript modules.
+However, DevTools stuck with the `module.json` format.
 
 While DevTools remained working, there were a couple of downsides of using a non-standardized and unique module system:
 
@@ -66,12 +66,12 @@ When we listed the downsides of the `module.json` (see above), we realized that 
 
 > Choosing a module format that is non-standardized means that we have to invest time ourselves into building integrations with the build tools and tools our maintainers used.
 
-These integrations often were brittle and lacking support for features, requiring additional maintenance time, sometimes leading to subtle bugs that would eventually ship to users.
+These integrations often were brittle and lacked of support for features, requiring additional maintenance time, sometimes leading to subtle bugs that would eventually ship to users.
 
 Since JavaScript modules were the standard, it meant that IDEs like VS Code, type checkers like Closure Compiler/TypeScript and build tools like Rollup/minifiers would be able to understand the source code we wrote.
 Moreover, when a new maintainer would join the DevTools team, they would not have to spend time learning a proprietary `module.json` format, whereas they would (likely) already be familiar with JavaScript modules.
 
-Of course, when DevTools was initially built, none of the above benefits were there.
+Of course, when DevTools was initially built, none of the above benefits existed.
 It took years of work in standards groups, runtime implementations and developers using JavaScript modules providing feedback to get to the point where they are now.
 But when JavaScript modules became available we had a choice to make: either keep maintaining our own format, or invest in migrating to the new one.
 
@@ -219,12 +219,12 @@ We also have [a style guide for our usage of JavaScript modules](https://docs.go
 ### Statistics
 
 Conservative estimates for the number of CLs (abbreviation for changelist - the term used in Gerrit that represents a change - similar to a GitHub pull request) involved in this migration are around **250 CLs, largely performed by 2 engineers**.
-We don't have definitive statistics on the size of changes made, but a conservative estimate of lines changed (calculated as the sum of absolute difference between insertions and deletions for each CL) to be around **30,000 (~20% of all of DevTools frontend code)**.
+We don't have definitive statistics on the size of changes made, but a conservative estimate of lines changed (calculated as the sum of absolute difference between insertions and deletions for each CL) is roughly **30,000 (~20% of all of DevTools frontend code)**.
 
 The first file using `export` shipped in Chrome 79, released to stable in December 2019.
 The last change to migrate to `import` shipped in Chrome 83, released to stable in May 2020.
 
-We are aware of 1 regression that shipped to Chrome stable and that was introduced as part of this migration.
+We are aware of one regression that shipped to Chrome stable and that was introduced as part of this migration.
 The auto-completion of snippets in the command menu [broke](https://bugs.chromium.org/p/chromium/issues/detail?id=1060565) due to an [extraneous `default` export](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2107222/2/front_end/snippets/SnippetsQuickOpen.js).
 We have had several other regressions, but our automated test suites and Chrome Canary users reported these and we fixed them before they were able to reach Chrome stable users.
 
@@ -232,7 +232,7 @@ You can see the full journey (not all CLs are attached to this bug, but most of 
 
 ## What we learned
 
-1. Decisions made in the past can have a long lasting impact on your project.
+1. Decisions made in the past can have a long-lasting impact on your project.
 Even though JavaScript modules (and other module formats) were available for quite some time, DevTools was not in a position to justify the migration.
 Deciding when to and when not to migrate is difficult and based on educated guesses.
 2. Our initial time estimates were in weeks rather than months.
