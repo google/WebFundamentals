@@ -66,7 +66,7 @@ When we listed the downsides of the `module.json` (see above), we realized that 
 
 > Choosing a module format that is non-standardized means that we have to invest time ourselves into building integrations with the build tools and tools our maintainers used.
 
-These integrations often were brittle and lacked of support for features, requiring additional maintenance time, sometimes leading to subtle bugs that would eventually ship to users.
+These integrations often were brittle and lacked support for features, requiring additional maintenance time, sometimes leading to subtle bugs that would eventually ship to users.
 
 Since JavaScript modules were the standard, it meant that IDEs like VS Code, type checkers like Closure Compiler/TypeScript and build tools like Rollup/minifiers would be able to understand the source code we wrote.
 Moreover, when a new maintainer would join the DevTools team, they would not have to spend time learning a proprietary `module.json` format, whereas they would (likely) already be familiar with JavaScript modules.
