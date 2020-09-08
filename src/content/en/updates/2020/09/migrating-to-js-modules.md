@@ -21,7 +21,7 @@ This post is part of a **series of blog posts** describing **the changes we are 
 We will explain how DevTools has historically worked, what the benefits and limitations were and what we have done to alleviate these limitations.
 Therefore, let's dive deep into module systems, how to load code and how we ended up using JavaScript modules.
 
-## In the beginning, there was nothing
+## In the beginning, there was nothing {: #beginning }
 While the current frontend landscape has a variety of module systems with tools built around them, as well as the [now-standardized JavaScript modules format](https://v8.dev/features/modules), none of these existed when DevTools was first built.
 DevTools is built on top of code that initially shipped in WebKit more than 12 years ago.
 
@@ -55,7 +55,7 @@ While DevTools remained working, there were a couple of downsides of using a non
 
 All in all, when evaluating the current state of the module system in DevTools and the other (more widely used) module formats, we concluded that the `module.json` pattern was creating more problems than it solved and it was time to plan our move away from it.
 
-## The benefits of standards
+## The benefits of standards {: #standards }
 
 Out of the existing module systems, we chose JavaScript modules as the one to migrate to.
 At the time of that decision JavaScript modules were still shipping behind a flag in Node.js and a large amount of packages available on NPM did not have an JavaScript modules bundle we could use.
@@ -75,7 +75,7 @@ Of course, when DevTools was initially built, none of the above benefits existed
 It took years of work in standards groups, runtime implementations and developers using JavaScript modules providing feedback to get to the point where they are now.
 But when JavaScript modules became available we had a choice to make: either keep maintaining our own format, or invest in migrating to the new one.
 
-## The cost of the shiny new
+## The cost of the shiny new {: #cost }
 
 Even though JavaScript modules had plenty of benefits that we would like to use, we remained in the non-standard `module.json` world.
 Reaping the benefits of JavaScript modules meant that we had to significantly invest in cleaning up technical debt, performing a migration that could potentially break features and introduce regression bugs.
@@ -96,7 +96,7 @@ Therefore, our main goals were the following:
 2. Make sure that the integration with the existing `module.json`-based system is safe and does not lead to negative user impact (regression bugs, user frustration).
 3. Guide all DevTools maintainers through the migration, primarily with checks and balances built-in to prevent accidental mistakes.
 
-## Spreadsheets, transformations and technical debt
+## Spreadsheets, transformations and technical debt {: #debt }
 
 While the goal was clear, the limitations imposed by the `module.json` format proved to be difficult to workaround.
 It took several iterations, prototypes and architectural changes before we developed a solution we were comfortable with.
@@ -205,7 +205,7 @@ However, if you require an `import`, the circular dependency would be made expli
 This isn't a problem immediately, unless you have side-effect function calls in your global scope code, which DevTools also had.
 All in all, it required some surgery and refactoring to make the transformation safe.
 
-## A whole new world with JavaScript modules
+## A whole new world with JavaScript modules {: #new-world }
 
 In February 2020, 6 months after the start in September 2019, [the last cleanups](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2055066) were performed in the `ui/` folder.
 This marked the unofficial end to the migration.
@@ -230,7 +230,7 @@ We have had several other regressions, but our automated test suites and Chrome 
 
 You can see the full journey (not all CLs are attached to this bug, but most of them are) logged on [crbug.com/1006759](https://crbug.com/1006759).
 
-## What we learned
+## What we learned {: #learned }
 
 1. Decisions made in the past can have a long-lasting impact on your project.
 Even though JavaScript modules (and other module formats) were available for quite some time, DevTools was not in a position to justify the migration.
