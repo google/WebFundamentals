@@ -3,4 +3,4 @@
 Below is a list of everything that's been covered in the *Chrome DevTools Engineering Blog* series.
 
 
-* [Migrating to ES modules](/web/updates/2020/09/migrating-to-es-modules)
+* [DevTools architecture refresh: Migrating to JavaScript modules](/web/updates/2020/09/migrating-to-js-modules)

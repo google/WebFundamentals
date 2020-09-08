@@ -1,15 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: How we migrate Chrome DevTools to ES modules. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+description: How we migrate Chrome DevTools to JavaScript modules. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
 {# wf_updated_on: 2020-09-08 #}
 {# wf_published_on: 2020-09-08 #}
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: How we migrate Chrome DevTools to ES modules. #}
+{# wf_featured_snippet: How we migrate Chrome DevTools to JavaScript modules. #}
 {# wf_blink_components: N/A #}
 
-# Migrating to ES modules {: .page-title }
+# DevTools architecture refresh: Migrating to JavaScript modules {: .page-title }
 
 {% include "web/_shared/contributors/tvanderlippe.html" %}
 
@@ -19,10 +19,10 @@ While DevTools has expanded over the years, its architecture largely resembles t
 
 This post is part of a **series of blog posts** describing **the changes we are making to DevTools' architecture and how it is built**.
 We will explain how DevTools has historically worked, what the benefits and limitations were and what we have done to alleviate the limitations.
-Therefore, let's dive deep into module systems, how to load code and how we ended up using ES modules.
+Therefore, let's dive deep into module systems, how to load code and how we ended up using JavaScript modules.
 
 ## In the beginning, there was nothing
-While the current frontend landscape has a variety of module systems with tools built around them, as well as the [now-standardized ES modules format](https://v8.dev/features/modules), none of these existed when DevTools was first built.
+While the current frontend landscape has a variety of module systems with tools built around them, as well as the [now-standardized JavaScript modules format](https://v8.dev/features/modules), none of these existed when DevTools was first built.
 DevTools is built on top of code that initially shipped in WebKit more than 12 years ago.
 
 The first mention of a module system in DevTools stems from 2012: [the introduction of a list of modules with an associated list of sources](https://chromium.googlesource.com/chromium/src/+/3a68bf939c8c8909ca84fea932fd42739e796638%5E%21/).
@@ -43,7 +43,7 @@ An example `module.json` file:
 ```
 
 Since 2014, the `module.json` pattern has been used in DevTools to specify its modules and source files.
-Meanwhile, the web ecosystem was rapidly iterating and multiple module formats were created, including UMD, CommonJS and the eventually standardized ES modules.
+Meanwhile, the web ecosystem was rapidly iterating and multiple module formats were created, including UMD, CommonJS and the eventually standardized JavaScript modules.
 However, DevTools remained using the `module.json` format.
 
 While DevTools remained working, there were a couple of downsides of using a non-standardized and unique module system:
@@ -57,42 +57,42 @@ All in all, when evaluating the current state of the module system in DevTools a
 
 ## The benefits of standards
 
-Out of the existing module systems, we chose ES modules as the one to migrate to.
-At the time of that decision ES modules were still shipping behind a flag in Node.js and a large amount of packages available on NPM did not have an ES modules bundle we could use.
-Despite this, we concluded that ES modules were the best option.
+Out of the existing module systems, we chose JavaScript modules as the one to migrate to.
+At the time of that decision JavaScript modules were still shipping behind a flag in Node.js and a large amount of packages available on NPM did not have an JavaScript modules bundle we could use.
+Despite this, we concluded that JavaScript modules were the best option.
 
-The primary benefit of ES modules is that it is **the standardized module format for JavaScript**.
+The primary benefit of JavaScript modules is that it is **the standardized module format for JavaScript**.
 When we listed the downsides of the `module.json` (see above), we realized that almost all of them were related to using a non-standardized and unique module format.
 
 > Choosing a module format that is non-standardized means that we have to invest time ourselves into building integrations with the build tools and tools our maintainers used.
 
 These integrations often were brittle and lacking support for features, requiring additional maintenance time, sometimes leading to subtle bugs that would eventually ship to users.
 
-Since ES modules were the standard, it meant that IDEs like VS Code, type checkers like Closure Compiler/TypeScript and build tools like Rollup/minifiers would be able to understand the source code we wrote.
-Moreover, when a new maintainer would join the DevTools team, they would not have to spend time learning a proprietary `module.json` format, whereas they would (likely) already be familiar with ES modules.
+Since JavaScript modules were the standard, it meant that IDEs like VS Code, type checkers like Closure Compiler/TypeScript and build tools like Rollup/minifiers would be able to understand the source code we wrote.
+Moreover, when a new maintainer would join the DevTools team, they would not have to spend time learning a proprietary `module.json` format, whereas they would (likely) already be familiar with JavaScript modules.
 
 Of course, when DevTools was initially built, none of the above benefits were there.
-It took years of work in standards groups, runtime implementations and developers using ES modules providing feedback to get to the point where they are now.
-But when ES modules became available we had a choice to make: either keep maintaining our own format, or invest in migrating to the new one.
+It took years of work in standards groups, runtime implementations and developers using JavaScript modules providing feedback to get to the point where they are now.
+But when JavaScript modules became available we had a choice to make: either keep maintaining our own format, or invest in migrating to the new one.
 
 ## The cost of the shiny new
 
-Even though ES modules had plenty of benefits that we would like to use, we remained in the non-standard `module.json` world.
-Reaping the benefits of ES modules meant that we had to significantly invest in cleaning up technical debt, performing a migration that could potentially break features and introduce regression bugs.
+Even though JavaScript modules had plenty of benefits that we would like to use, we remained in the non-standard `module.json` world.
+Reaping the benefits of JavaScript modules meant that we had to significantly invest in cleaning up technical debt, performing a migration that could potentially break features and introduce regression bugs.
 
-At this point, it was not a question of "Do we want to use ES modules?", but a question of **"How expensive is it to be able to use ES modules?"**.
+At this point, it was not a question of "Do we want to use JavaScript modules?", but a question of **"How expensive is it to be able to use JavaScript modules?"**.
 Here, we had to balance the risk of breaking our users with regressions, the cost of engineers spending (a large amount of) time migrating and the temporary worse state we would work in.
 
-That last point turned out to be very important. Even though we could in theory get to ES modules, during a migration we would end up with code that would have to take into account **both** `module.json` and ES modules.
+That last point turned out to be very important. Even though we could in theory get to JavaScript modules, during a migration we would end up with code that would have to take into account **both** `module.json` and JavaScript modules.
 Not only was this technically difficult to achieve, it also meant that all engineers working on DevTools would need to know how to work in this environment.
-They would have to continuously ask themselves "For this part of the codebase, is it `module.json` or ES modules and how do I make changes?".
+They would have to continuously ask themselves "For this part of the codebase, is it `module.json` or JavaScript modules and how do I make changes?".
 
 > Sneak peek: The hidden cost of guiding our fellow maintainers through a migration was bigger than we anticipated.
 
-After the cost analysis, we concluded that it was still worthwhile to migrate to ES modules.
+After the cost analysis, we concluded that it was still worthwhile to migrate to JavaScript modules.
 Therefore, our main goals were the following:
 
-1. Make sure that the usage of ES modules reaps the benefits to the fullest extent possible.
+1. Make sure that the usage of JavaScript modules reaps the benefits to the fullest extent possible.
 2. Make sure that the integration with the existing `module.json`-based system is safe and does not lead to negative user impact (regression bugs, user frustration).
 3. Guide all DevTools maintainers through the migration, primarily with checks and balances built-in to prevent accidental mistakes.
 
@@ -105,13 +105,13 @@ The design doc also listed our initial time estimation: 2-4 weeks.
 
 > Spoiler alert: the most intensive part of the migration took 4 months and from start to finish took 7 months!
 
-The initial plan, however, stood the test of time: we would teach the DevTools runtime to load all files listed in the `scripts` array in the `module.json` file using the old way, while all files in listed in the `modules` array with [ES modules dynamic import](https://v8.dev/features/dynamic-import).
+The initial plan, however, stood the test of time: we would teach the DevTools runtime to load all files listed in the `scripts` array in the `module.json` file using the old way, while all files in listed in the `modules` array with [JavaScript modules dynamic import](https://v8.dev/features/dynamic-import).
 Any file that would reside in the `modules` array would be able to use ES imports/exports.
 
 Additionally, we would perform the migration in 2 phases (we eventually split up the last phase into 2 sub-phases, see below): the `export`- and `import`-phases.
 The status of which module would be in which phase was tracked in a large spreadsheet:
 
-![ES module migration spreadsheet](/web/updates/images/2020/09/es-migrate-spreadsheet.png)
+![JavaScript modules migration spreadsheet](/web/updates/images/2020/09/es-migrate-spreadsheet.png)
 
 A snippet of the progress sheet is publicly available [here](https://docs.google.com/spreadsheets/d/1V3__BKLaiVHF7t9cgX-4DNwO1FgZdteF35hOlH0QLVo/preview).
 
@@ -159,7 +159,7 @@ Since adding the `export` keyword in a file transforms the file from a "script" 
 This included the runtime (with dynamic import), but also tools like `ESLint` to run in module mode.
 
 One discovery we made while working through these issues is that our tests were running in "sloppy" mode.
-Since ES modules imply that files run in `"use strict"` mode, this would also affect our tests.
+Since JavaScript modules imply that files run in `"use strict"` mode, this would also affect our tests.
 As it turned out, [a non-trivial amount of tests](https://chromium-review.googlesource.com/c/chromium/src/+/1958116) were relying on this sloppiness, including [a test](https://chromium-review.googlesource.com/c/chromium/src/+/1958116/3/third_party/blink/web_tests/http/tests/devtools/console/console-eval-scoped.js) that used a `with`-statement 😱.
 
 In the end, updating the very first folder to include `export`-statements [took about a week](https://chromium-review.googlesource.com/c/chromium/src/+/1816563) and [multiple attempts with relands](https://chromium-review.googlesource.com/c/chromium/src/+/1825420).
@@ -205,16 +205,16 @@ However, if you require an `import`, the circular dependency would be made expli
 This isn't a problem immediately, unless you have side-effect function calls in your global scope code, which DevTools also had.
 All in all, it required some surgery and refactoring to make the transformation safe.
 
-## A whole new ES world
+## A whole new world with JavaScript modules
 
 In February 2020, 6 months after the start in September 2019, [the last cleanups](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2055066) were performed in the `ui/` folder.
 This marked the unofficial end to the migration.
 After letting the dust settle down, we officially marked the migration as [finished on March 5th 2020](https://bugs.chromium.org/p/chromium/issues/detail?id=1006759#c410). 🎉
 
-Now, all modules in DevTools use ES modules to share code.
+Now, all modules in DevTools use JavaScript modules to share code.
 We still put some symbols on the global scope (in the `module-legacy.js` files) for our legacy tests or to integrate with other parts of the DevTools architecture.
 These will be removed over time, but we don't consider them a blocker for future development.
-We also have [a style guide for our usage of ES modules](https://docs.google.com/presentation/d/1KaTDaKEcLmgv3Wum79gPP9mv9x2fm3kuEgx_b8wLVug/preview).
+We also have [a style guide for our usage of JavaScript modules](https://docs.google.com/presentation/d/1KaTDaKEcLmgv3Wum79gPP9mv9x2fm3kuEgx_b8wLVug/preview).
 
 ### Statistics
 
@@ -233,12 +233,12 @@ You can see the full journey (not all CLs are attached to this bug, but most of 
 ## What we learned
 
 1. Decisions made in the past can have a long lasting impact on your project.
-Even though ES modules (and other module formats) were available for quite some time, DevTools was not in a position to justify the migration.
+Even though JavaScript modules (and other module formats) were available for quite some time, DevTools was not in a position to justify the migration.
 Deciding when to and when not to migrate is difficult and based on educated guesses.
 2. Our initial time estimates were in weeks rather than months.
 This largely stems from the fact that we found more unexpected problems than we anticipated in our initial cost analysis.
 Even though the migration plan was solid, technical debt was (more often than we would have liked) the blocker.
-3. The ES modules migration included a large amount of (seemingly unrelated) technical debt cleanups.
+3. The JavaScript modules migration included a large amount of (seemingly unrelated) technical debt cleanups.
 The migration to a modern standardized module format allowed us to realign our coding best practices with modern day web development.
 For example, we were able to replace our custom Python bundler with a minimal Rollup configuration.
 4. Despite the large impact on our codebase (~20% of code changed), very few regressions were reported.
