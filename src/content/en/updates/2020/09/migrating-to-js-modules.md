@@ -5,7 +5,7 @@ description: How we migrate Chrome DevTools to JavaScript modules. The Chrome De
 {# wf_updated_on: 2020-09-08 #}
 {# wf_published_on: 2020-09-08 #}
 {# wf_tags: devtools-blog #}
-{# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
+{# wf_featured_image: /web/updates/images/2020/09/devtools-blog.jpg #}
 {# wf_featured_snippet: How we migrate Chrome DevTools to JavaScript modules. #}
 {# wf_blink_components: N/A #}
 
