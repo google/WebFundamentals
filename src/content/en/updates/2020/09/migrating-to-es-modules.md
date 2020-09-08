@@ -13,7 +13,7 @@ description: How we migrate Chrome DevTools to ES modules. The Chrome DevTools e
 
 {% include "web/_shared/contributors/tvanderlippe.html" %}
 
-As you might know, [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) is a web application written using HTML, CSS and JavaScript.
+As you might know, [Chrome DevTools](/web/tools/chrome-devtools) is a web application written using HTML, CSS and JavaScript.
 Over the years, DevTools has gotten more feature-rich, smarter and knowledgeable about the broader web platform. 
 While DevTools has expanded over the years, its architecture largely resembles the original architecture while it was still part of [WebKit](https://webkit.org/web-inspector/).
 
