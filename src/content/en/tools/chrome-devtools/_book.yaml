@@ -13,5 +13,8 @@ upper_tabs:
     - name: What's new
       contents:
       - include: /web/tools/chrome-devtools/updates/_toc.yaml
+    - name: Engineering blog
+      contents:
+      - include: /web/tools/chrome-devtools/blog/_toc.yaml
 - include: /web/_upper_tabs-Updates.yaml
 - include: /web/_upper_tabs-Showcase.yaml
