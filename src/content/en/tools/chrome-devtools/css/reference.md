@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Discover new workflows for viewing and changing CSS in Chrome DevTools.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-09-08 #}
 {# wf_published_on: 2017-06-09 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -397,60 +397,6 @@ add the style rule to.
   </figcaption>
 </figure>
 
-#### Add a style rule to a specific location {: #style-rule-location }
-
-To add a style rule to a specific location in the **Styles** tab:
-
-1. Hover over the style rule that is directly above where you want to
-   add your new style rule.
-1. [Reveal the **More Actions** toolbar](#reveal-more-actions).
-1. Click **Insert Style Rule Below** ![Insert Style Rule
-   Below][ISRB]{:.cdt-inl}.
-
-[ISRB]: imgs/new-style-rule.png
-
-<figure>
-  <img src="imgs/insert-style-rule-below.png" alt="Insert Style Rule Below"/>
-  <figcaption>
-    <b>Figure 17</b>. <b>Insert Style Rule Below</b>
-  </figcaption>
-</figure>
-
-### Reveal the More Actions toolbar {: #reveal-more-actions }
-
-The **More Actions** toolbar lets you: 
-
-* Insert a style rule directly below the one you're focused on.
-* Add a `background-color`, `color`, `box-shadow`, or `text-shadow`
-  declaration to the style rule you're focused on.
-
-To reveal the **More Actions** toolbar:
-
-1. In the **Styles** tab, hover over a style rule. **More Actions**
-   ![More](imgs/more.png){:.cdt-inl} is revealed in the bottom-right of the
-   style rule's section.
-
-     <figure>
-       <img src="imgs/reveal-more.png" alt="Revealing \"More\" Actions"/>
-       <figcaption>
-         <b>Figure 18</b>. After hovering over the <code>.devsite-article
-         h1:first-of-type</code> style rule, <b>More Actions</b> is revealed
-         in the bottom-right of the style rule's section
-       </figcaption>
-     </figure>
-
-1. Hover over **More Actions** ![More](imgs/more.png){:.cdt-inl} to reveal
-   the actions mentioned above.
-
-     <figure>
-       <img src="imgs/insert-style-rule-below.png"
-            alt="The \"More Actions \" toolbar"/>
-       <figcaption>
-         <b>Figure 19</b>. The <b>Insert Style Rule Below</b> action is
-         revealed after hovering over <b>More Actions</b>
-       </figcaption>
-     </figure>
-
 ### Toggle a declaration {: #toggle-declaration }
 
 To toggle a single declaration on or off:
@@ -467,78 +413,6 @@ To toggle a single declaration on or off:
   <figcaption>
     <b>Figure 20</b>. The <code>color</code> property for the
     currently-selected element has been toggled off
-  </figcaption>
-</figure>
-
-### Add a background-color declaration {: #background-color }
-
-To add a `background-color` declaration to an element:
-
-1. Hover over the style rule that you want to add the `background-color`
-   declaration to.
-1. [Reveal the **More Actions** toolbar](#reveal-more-actions).
-1. Click **Add Background Color** ![Add Background Color][ABC]{:.cdt-inl}.
-
-[ABC]: imgs/add-background-color-icon.png
-
-<figure>
-  <img src="imgs/add-background-color.png" alt="Add Background Color"/>
-  <figcaption>
-    <b>Figure 21</b>. <b>Add Background Color</b>
-  </figcaption>
-</figure>
-
-### Add a color declaration {: #color }
-
-To add a `color` declaration to an element:
-
-1. Hover over the style rule that you want to add the `color`
-   declaration to.
-1. [Reveal the **More Actions** toolbar](#reveal-more-actions).
-1. Click **Add Color** ![Add Color][AC]{:.cdt-inl}.
-
-[AC]: imgs/add-color-icon.png
-
-<figure>
-  <img src="imgs/add-color.png" alt="Add Color"/>
-  <figcaption>
-    <b>Figure 22</b>. <b>Add Color</b>
-  </figcaption>
-</figure>
-
-### Add a box-shadow declaration {: #box-shadow }
-
-To add a `box-shadow` declaration to an element:
-
-1. Hover over the style rule that you want to add the `box-shadow`
-   declaration to.
-1. [Reveal the **More Actions** toolbar](#reveal-more-actions).
-1. Click **Add Box Shadow** ![Add Box Shadow][ABS]{:.cdt-inl}.
-
-[ABS]: imgs/add-box-shadow-icon.png
-
-<figure>
-  <img src="imgs/add-box-shadow.png" alt="Add Box Shadow"/>
-  <figcaption>
-    <b>Figure 22</b>. <b>Add Box Shadow</b>
-  </figcaption>
-</figure>
-
-### Add a text-shadow declaration {: #text-shadow }
-
-To add a `text-shadow` declaration to an element:
-
-1. Hover over the style rule that you want to add the `text-shadow`
-   declaration to.
-1. [Reveal the **More Actions** toolbar](#reveal-more-actions).
-1. Click **Add Text Shadow** ![Add Text Shadow][ATS]{:.cdt-inl}.
-
-[ATS]: imgs/add-text-shadow-icon.png
-
-<figure>
-  <img src="imgs/add-text-shadow.png" alt="Add Text Shadow"/>
-  <figcaption>
-    <b>Figure 23</b>. <b>Add Text Shadow</b>
   </figcaption>
 </figure>
 
