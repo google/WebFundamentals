@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: How we migrate Chrome DevTools to JavaScript modules. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
-{# wf_updated_on: 2020-09-08 #}
+{# wf_updated_on: 2020-09-09 #}
 {# wf_published_on: 2020-09-08 #}
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/2020/09/devtools-blog.jpg #}
@@ -30,6 +30,7 @@ This was part of the Python infrastructure used back then to compile and build D
 A follow-up change extracted all modules into a separate `frontend_modules.json` file ([commit](https://chromium.googlesource.com/chromium/src/+/f8dbf1efbac98ffb266a10a32469b28ca0dff7b4)) in 2013 and then into separate `module.json` files ([commit](https://chromium.googlesource.com/chromium/src/+/f0148d511def6522b3166ec507a18328e72ea652)) in 2014.
 
 An example `module.json` file:
+
 ```js
 {
   "dependencies": [
