@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2020-09-14 #}
 {# wf_published_on: 2014-01-16 #}
 {# wf_blink_components: Blink>Media #}
 
@@ -385,7 +385,7 @@ How to chunk and play back media encoded at different bitrates? See the
 
 You can see MSE in action at [simpl.info/mse](http://simpl.info/mse);
 for the purposes of this example, a WebM video is split into five chunks using
-the File APIs. In a production application, chunks of video would be retrieved via Ajax.
+the File APIs. In a production application, chunks of video would be retrieved via AJAX.
 
 First a SourceBuffer is created:
 
