@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2020-09-14 #}
 {# wf_published_on: 2014-01-16 #}
 {# wf_blink_components: Blink>Media #}
 
@@ -359,7 +359,7 @@ use with Clear Key can be done for WebM as per the webm_crypt instructions.
 Commercial services are also available (for ISO BMFF/MP4 at least) and other
 solutions are being developed.
 
-## Related technology &num;1&colon; Media Source Extensions (MSE)
+## Related technology 1: Media Source Extensions (MSE)
 
 The [HTMLMediaElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement)
 is a creature of simple beauty.
@@ -385,7 +385,7 @@ How to chunk and play back media encoded at different bitrates? See the
 
 You can see MSE in action at [simpl.info/mse](http://simpl.info/mse);
 for the purposes of this example, a WebM video is split into five chunks using
-the File APIs. In a production application, chunks of video would be retrieved via Ajax.
+the File APIs. In a production application, chunks of video would be retrieved via AJAX.
 
 First a SourceBuffer is created:
 
@@ -410,7 +410,7 @@ using the appendBuffer() method:
 Find out more about MSE in the
 [MSE primer](/web/fundamentals/media/mse/basics).
 
-## Related technology &num;2&colon; Dynamic Adaptive Streaming over HTTP (DASH)
+## Related technology 2: Dynamic Adaptive Streaming over HTTP (DASH)
 
 Multi-device, multi-platform, mobile — whatever you call it, the web is often
 experienced under conditions of changeable connectivity. Dynamic, adaptive
