@@ -359,7 +359,7 @@ use with Clear Key can be done for WebM as per the webm_crypt instructions.
 Commercial services are also available (for ISO BMFF/MP4 at least) and other
 solutions are being developed.
 
-## Related technology &num;1&colon; Media Source Extensions (MSE)
+## Related technology 1: Media Source Extensions (MSE)
 
 The [HTMLMediaElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement)
 is a creature of simple beauty.
@@ -410,7 +410,7 @@ using the appendBuffer() method:
 Find out more about MSE in the
 [MSE primer](/web/fundamentals/media/mse/basics).
 
-## Related technology &num;2&colon; Dynamic Adaptive Streaming over HTTP (DASH)
+## Related technology 2: Dynamic Adaptive Streaming over HTTP (DASH)
 
 Multi-device, multi-platform, mobile — whatever you call it, the web is often
 experienced under conditions of changeable connectivity. Dynamic, adaptive
