@@ -233,6 +233,25 @@ redirects:
 - from: /web/fundamentals/web-app-manifest/...
   to: https://web.dev/add-manifest/
 
+# Media redirects
+
+- from: /web/fundamentals/media/video#accessibility_matters
+  to: https://web.dev/media-accessibility/
+
+- from: /web/fundamentals/media/video#video_element_attributes
+  to: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#Attributes
+
+- from: /web/fundamentals/media/video
+  to: https://web.dev/video-and-source-tags/
+
+- from: /web/fundamentals/media/manipulating/applications
+  to: https://web.dev/media-application-basics/
+
+- from: /web/fundamentals/media/manipulating/files
+  to: https://web.dev/media/#prepare-media-files-for-the-web
+
+- from: /web/fundamentals/media/manipulating/cheatsheet
+  to: https://web.dev/media-cheat-sheet/
 
 #
 # Other redirects
