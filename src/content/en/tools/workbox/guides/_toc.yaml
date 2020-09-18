@@ -63,5 +63,7 @@ toc:
     path: /web/tools/workbox/guides/migrations/migrate-from-v3
   - title: "From Workbox v4 to v5"
     path: /web/tools/workbox/guides/migrations/migrate-from-v4
+  - title: "From Workbox v5 to v6"
+    path: /web/tools/workbox/guides/migrations/migrate-from-v5
     status: new
 
