@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v5 to v5.
 
-{# wf_updated_on: 2020-09-18 #}
+{# wf_updated_on: 2020-09-22 #}
 {# wf_published_on: 2020-09-17 #}
 {# wf_blink_components: N/A #}
 
@@ -133,7 +133,7 @@ handlers.
 
 A new method, `messageSkipWaiting()`, has been added to the `workbox-window` module to simplify the
 process of telling the ["waiting" service
-worker](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#waiting) to
+worker](/web/fundamentals/primers/service-workers/lifecycle#waiting) to
 activate. This offers some improvements:
 
 - It calls `postMessage()` with the de facto standard message body, `{type: 'SKIP_WAITING'}`, that a
@@ -144,7 +144,7 @@ activate. This offers some improvements:
 
 #### Removal of "external" events in favor of an isExternal property
 
-All ["external"](https://developers.google.com/web/tools/workbox/modules/workbox-window) events in
+All ["external"](/web/tools/workbox/modules/workbox-window) events in
 `workbox-window` have been removed in place of "normal" events with an `isExternal` property set to
 `true`. This allows developers who care about the distinction to still detect it, and developers who
 don't need to know can ignore the property.
@@ -152,7 +152,7 @@ don't need to know can ignore the property.
 #### Cleaner "Offer a page reload for users" recipe
 
 Thanks to both of the above changes, the ["Offer a page reload for
-users"](https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users)
+users"](/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users)
 recipe can be simplified:
 
 ```html
@@ -192,7 +192,7 @@ if ('serviceWorker' in navigator) {
 ### workbox-routing
 
 A new boolean parameter, `sameOrigin`, is passed to the
-[`matchCallback`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
+[`matchCallback`](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
 function used in `workbox-routin`g. It's set to `true` if the request is for a same-origin URL, and
 false otherwise.
 
