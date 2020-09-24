@@ -85,7 +85,7 @@ With that in mind, our UX designer understood what we were aiming at, and protot
 
 ![Prototypes](/web/updates/images/2020/09/devtools/prototypes.png)
 
-After a lot of discussion around the best solution, we started implementing the design and reiterating decisions to gradually arrive at what the Issues tablooks like today.
+After a lot of discussion around the best solution, we started implementing the design and reiterating decisions to gradually arrive at what the Issues tab looks like today.
 
 Another very important factor was the **discoverability** of the Issues tab. In the past, many great Devtools features were not discoverable without the developer knowing what specifically to look for. For the Issues tab, we decided to highlight issues in multiple different areas to make sure developers wouldn't miss important issues. 
 
