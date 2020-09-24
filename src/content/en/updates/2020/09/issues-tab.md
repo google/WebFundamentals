@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: How we built the Chrome DevTools Issues tab - Chrome DevTools engineering blog
+description: How we built the Chrome DevTools Issues tab. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
 {# wf_updated_on: 2020-09-24 #}
 {# wf_published_on: 2020-09-24 #}
 {# wf_tags: devtools-blog #}
-{# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
+{# wf_featured_image: /web/updates/images/2020/09/devtools/how-we-built-issues-tab.png #}
 {# wf_featured_snippet: How we built the Chrome DevTools Issues tab. #}
 {# wf_blink_components: N/A #}
 
