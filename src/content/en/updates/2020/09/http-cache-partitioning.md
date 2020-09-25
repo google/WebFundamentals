@@ -1,9 +1,9 @@
-project_path: /web/_project.yaml
-book_path: /web/updates/_book.yaml
-description: HTTP cache partitioning bought to Chrome 85 helps with better security and privacy. 
+project_path: /web/\_project.yaml
+book_path: /web/updates/\_book.yaml
+description: HTTP cache partitioning bought to Chrome 85 helps with better security and privacy.
 
-{# wf_published_on: 2020-07-23 #}
-{# wf_updated_on: 2020-07-23 #}
+{# wf_published_on: 2020-09-23 #}
+{# wf_updated_on: 2020-09-25 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 {# wf_tags: storage-isolation, http-cache-partitioning #}
 {# wf_featured_snippet: HTTP cache partitioning bought to Chrome 85 helps with better security and privacy. #}
@@ -96,13 +96,12 @@ browser to security and privacy attacks, like the following:
 - **Cross-site tracking**: The cache can be used to store cookie-like
   identifiers as a cross-site tracking mechanism.
 
-To mitigate these risks, Chrome will partition its HTTP cache starting in Chrome
-85.
+To mitigate these risks, Chrome will partition its HTTP cache starting in Chrome 85.
 
 ## How will cache partitioning affect Chrome's HTTP Cache?
 
 With cache partitioning, cached resources will be keyed using a new "Network
-Isolation Key" in addition to  the resource URL. The Network Isolation Key is
+Isolation Key" in addition to the resource URL. The Network Isolation Key is
 composed of the top-level site and the current-frame site.
 
 Note: The "site" is recognized using "scheme://eTLD+1" so if requests are from
@@ -182,7 +181,6 @@ In this case, the image is downloaded from the network because there is no
 resource in the cache that matches the key `https://a.example` +
 `https://c.example` + `https://x.example/doge.png`.
 
-
 **Cache Key**: { `https://a.example`, `https://c.example`, `https://x.example/doge.png` }
 
 <div class="clearfix"></div>
@@ -254,9 +252,9 @@ explainer](https://github.com/shivanigithub/http-cache-partitioning#impact-on-me
 
 "HTTP cache partitions" is [standardized in the fetch spec](https://fetch.spec.whatwg.org/#http-cache-partitions) though browsers behave differently:
 
-* Chrome: Uses top-level scheme://eTLD+1 and frame scheme://eTLD+1
-* Safari: Uses [top-level eTLD+1](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/)   
-* Firefox: [Planning to
+- Chrome: Uses top-level scheme://eTLD+1 and frame scheme://eTLD+1
+- Safari: Uses [top-level eTLD+1](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/)
+- Firefox: [Planning to
   implement](https://bugzilla.mozilla.org/show_bug.cgi?id=1536058) with
   top-level scheme://eTLD+1 and considering including a second key like Chrome
 
@@ -267,5 +265,6 @@ shared workers are more complicated since they may be shared among multiple
 top-level sites. The solution for them is currently under discussion.
 
 ## Resources
-- [Storage Isolation Project](https://docs.google.com/document/d/1V8sFDCEYTXZmwKa_qWUfTVNAuBcPsu6FC0PhqMD6KKQ/edit#heading=h.oixrt0wpp8h5)   
+
+- [Storage Isolation Project](https://docs.google.com/document/d/1V8sFDCEYTXZmwKa_qWUfTVNAuBcPsu6FC0PhqMD6KKQ/edit#heading=h.oixrt0wpp8h5)
 - [Explainer - Partition the HTTP Cache](https://github.com/shivanigithub/http-cache-partitioning)
