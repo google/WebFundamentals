@@ -1,12 +1,12 @@
-project_path: /web/\_project.yaml
-book_path: /web/updates/\_book.yaml
-description: HTTP cache partitioning bought to Chrome 85 helps with better security and privacy.
+project_path: /web/_project.yaml
+book_path: /web/updates/_book.yaml
+description: Chrome's http cache partitioning helps with better security and privacy.
 
-{# wf_published_on: 2020-09-23 #}
-{# wf_updated_on: 2020-09-25 #}
+{# wf_published_on: 2020-09-30 #}
+{# wf_updated_on: 2020-09-30 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 {# wf_tags: storage-isolation, http-cache-partitioning #}
-{# wf_featured_snippet: HTTP cache partitioning bought to Chrome 85 helps with better security and privacy. #}
+{# wf_featured_snippet: Chrome's http cache partitioning helps with better security and privacy. #}
 {# wf_blink_components: Blinke>Network #}
 
 # Gaining security and privacy by partitioning the cache {: page-title}
@@ -23,7 +23,7 @@ such examples.
 
 ## How Chrome's HTTP Cache currently works
 
-As of version 84, Chrome caches resources fetched from the network, using their
+As of version 85, Chrome caches resources fetched from the network, using their
 respective resource URLs as the cache key. (A cache key is used to identify a
 cached resource.)
 
@@ -31,9 +31,9 @@ The following example illustrates how a single image is cached and treated in
 three different contexts:
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-1.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-1.png">
   <figcaption>
-    <code>https://a.example</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -41,14 +41,12 @@ A user visits a page (`https://a.example`) that requests an image
 (`https://x.example/doge.png`). The image is requested from the network and
 cached using `https://x.example/doge.png` as the key.
 
-**Cache Key**: { `https://x.example/doge.png` }
-
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-2.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-2.png">
   <figcaption>
-    <code>https://b.example</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -59,14 +57,12 @@ if it already has this resource cached, using the image URL as the key. The
 browser finds a match in its Cache, so it uses the cached version of the
 resource.
 
-**Cache Key**: { `https://x.example/doge.png` }
-
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-3.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-3.png">
   <figcaption>
-    <code>https://c.example</code> with an iframe <code>https://d.example</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -75,8 +71,6 @@ visits another website (`https://c.example`) with an iframe
 (`https://d.example`) and the iframe requests the same image
 (`https://x.example/doge.png`), the browser can still load the image from its
 cache because the cache key is the same across all of the pages.
-
-**Cache Key**: { `https://x.example/doge.png` }
 
 <div class="clearfix"></div>
 
@@ -96,7 +90,7 @@ browser to security and privacy attacks, like the following:
 - **Cross-site tracking**: The cache can be used to store cookie-like
   identifiers as a cross-site tracking mechanism.
 
-To mitigate these risks, Chrome will partition its HTTP cache starting in Chrome 85.
+To mitigate these risks, Chrome will partition its HTTP cache starting in Chrome 86.
 
 ## How will cache partitioning affect Chrome's HTTP Cache?
 
@@ -114,9 +108,9 @@ Let's revisit the previous example to see how cache partitioning works in
 different contexts:
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-1.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-1.png">
   <figcaption>
-    <code>https://a.example</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://a.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -128,14 +122,12 @@ resource URL) as the key. (Note that when the resource request is from the
 top-level -frame, the top-level site and current-frame site in the Network
 Isolation Key are the same.)
 
-**Cache Key**: { `https://a.example`, `https://a.example`, `https://x.example/doge.png` }
-
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-2.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-2.png">
   <figcaption>
-    <code>https://b.example</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://b.example</code>, <code>https://b.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -146,14 +138,12 @@ the previous example, since the key doesn't match it will not be a cache hit.
 The image is requested from the network and cached using `https://b.example` +
 `https://b.example` + `https://x.example/doge.png` as the key.
 
-**Cache Key**: { `https://b.example`, `https://b.example`, `https://x.example/doge.png` }
-
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-6.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-6.png">
   <figcaption>
-    <code>https://a.example</code> with an iframe <code>https://a.example</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://a.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -163,14 +153,12 @@ key is `https://a.example` + `https://a.example` + `https://x.example/doge.png`
 and a cache hit occurs. (Note that when the top-level site and the iframe are
 the same site, the resource cached with the top-level frame can be used.
 
-**Cache Key**: { `https://a.example`, `https://a.example`, `https://x.example/doge.png` }
-
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-4.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-4.png">
   <figcaption>
-    <code>https://a.example</code> with an iframe <code>https://c.example</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://c.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -181,14 +169,12 @@ In this case, the image is downloaded from the network because there is no
 resource in the cache that matches the key `https://a.example` +
 `https://c.example` + `https://x.example/doge.png`.
 
-**Cache Key**: { `https://a.example`, `https://c.example`, `https://x.example/doge.png` }
-
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-7.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-7.png">
   <figcaption>
-    <code>https://subdomain.a.example</code> with an iframe <code>https://c.example:8080</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://c.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -199,14 +185,12 @@ What if the domain contains a subdomain or a port number? The user visits
 Because the key is created based on "scheme://eTLD+1", subdomains and port
 numbers are ignored, hence a cache hit occurs.
 
-**Cache Key**: { `https://a.example`, `https://c.example`, `https://x.example/doge.png` }
-
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/07/http-cache-partitioning-5.png">
+  <img src="/web/updates/images/2020/09/http-cache-partitioning-5.png">
   <figcaption>
-    <code>https://a.example</code> with an iframe <code>https://b.example</code> with an iframe <code>https://c.example</code> that requests an image <code>https://x.example/doge.png</code>
+    <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://c.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
 </figure>
 
@@ -217,8 +201,6 @@ yet another iframe (`https://c.example`), which finally requests the image.
 Because the key is taken from the top-frame (`https://a.example`) and the
 immediate frame which loads the resource (`https://c.example`), a cache hit
 occurs.
-
-**Cache Key**: { `https://a.example`, `https://c.example`, `https://x.example/doge.png` }
 
 <div class="clearfix"></div>
 
@@ -250,11 +232,13 @@ explainer](https://github.com/shivanigithub/http-cache-partitioning#impact-on-me
 
 ### Is this standardized? Do other browsers behave differently?
 
-"HTTP cache partitions" is [standardized in the fetch spec](https://fetch.spec.whatwg.org/#http-cache-partitions) though browsers behave differently:
+"HTTP cache partitions" is [standardized in the fetch
+spec](https://fetch.spec.whatwg.org/#http-cache-partitions) though browsers
+behave differently:
 
-- Chrome: Uses top-level scheme://eTLD+1 and frame scheme://eTLD+1
-- Safari: Uses [top-level eTLD+1](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/)
-- Firefox: [Planning to
+- **Chrome**: Uses top-level scheme://eTLD+1 and frame scheme://eTLD+1
+- **Safari**: Uses [top-level eTLD+1](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/)
+- **Firefox**: [Planning to
   implement](https://bugzilla.mozilla.org/show_bug.cgi?id=1536058) with
   top-level scheme://eTLD+1 and considering including a second key like Chrome
 
@@ -266,5 +250,6 @@ top-level sites. The solution for them is currently under discussion.
 
 ## Resources
 
-- [Storage Isolation Project](https://docs.google.com/document/d/1V8sFDCEYTXZmwKa_qWUfTVNAuBcPsu6FC0PhqMD6KKQ/edit#heading=h.oixrt0wpp8h5)
+- [Storage Isolation
+  Project](https://docs.google.com/document/d/1V8sFDCEYTXZmwKa_qWUfTVNAuBcPsu6FC0PhqMD6KKQ/edit#heading=h.oixrt0wpp8h5)
 - [Explainer - Partition the HTTP Cache](https://github.com/shivanigithub/http-cache-partitioning)
