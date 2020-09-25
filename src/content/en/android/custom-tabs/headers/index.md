@@ -3,10 +3,14 @@ book_path: /web/android/_book.yaml
 description: Guide for adding HTTP CORS headers in custom tab intents.
 
 {# wf_published_on: 2020-08-12 #}
-{# wf_updated_on: 2020-08-20 #}
+{# wf_updated_on: 2020-09-25 #}
 {# wf_blink_components: N/A #}
 
 # How to add extra HTTP Request Headers to Custom Tab Intents {: .page-title }
+
+{% include "web/_shared/contributors/pavoldrotar.html" %}
+
+<div class="clearfix"></div>
 
 HTTP requests contain headers such as User-Agent or Content-Type. Apart from headers attached by
 browsers, Android apps may add extra headers, like Cookie or Referrer through the 
@@ -40,7 +44,7 @@ to send whitelisted as well as non-whitelisted http headers. You can skip to
 ### Whitelisted vs. Non-whitelisted CORS Request Headers
 [Cross-Origin Resource Sharing (CORS)][6] allows a web application from one origin to request
 resources of a different origin. The list of **CORS-whitelisted** headers is maintained in the
-[HTML Standard][]. Example whitelisted headers are shown in the next table:
+[HTML Standard][7]. Example whitelisted headers are shown in the next table:
 
 **Header**       | **Description**
 ---------------- | ----------------------
