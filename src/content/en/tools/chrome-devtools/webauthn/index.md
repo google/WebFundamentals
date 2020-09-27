@@ -1,12 +1,12 @@
 project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
-description: Emulate Authenticators and Debug WebAuthn in DevTools.
+description: Emulate Authenticators and Debug WebAuthn in Chrome DevTools.
 
 {# wf_updated_on: 2020-09-27 #}
 {# wf_published_on: 2020-09-28 #}
 {# wf_blink_components: Security, Platform>DevTools #}
 
-# WebAuthn {: .page-title }
+# Emulate Authenticators and Debug WebAuthn in Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/fawazm.html" %}
 {% include "web/_shared/contributors/jecelynyeen.html" %}
