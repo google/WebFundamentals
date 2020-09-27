@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-09-27 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -255,6 +255,10 @@ not supported.
 
 Below is a complete list of supported properties.
 
+* `cookie-domain`. Show the resources that set a specific [cookie domain](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives)..
+* `cookie-name`. Show the resources that set a specific [cookie name](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives).
+* `cookie-path`. Show the resources that set a specific [cookie path](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives).
+* `cookie-value`. Show the resources that set a specific [cookie value](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives).
 * `domain`. Only display resources from the specified domain. You can use
   a wildcard character (`*`) to include multiple domains. For example, `*.com`
   displays resources from all domain names ending in `.com`. DevTools
@@ -273,6 +277,9 @@ Below is a complete list of supported properties.
   dropdown with all MIME types it has encountered.
 * `mixed-content`. Show all mixed content resources (`mixed-content:all`) or
   just the ones that are currently displayed (`mixed-content:displayed`).
+* `priority`. xxx.
+* `resource-type`. Show resources of a resource type, e.g. image. DevTools populates the
+  dropdown with all resource types it has encountered.
 * `scheme`. Show resources retrieved over unprotected HTTP (`scheme:http`)
   or protected HTTPS (`scheme:https`).
 * `set-cookie-domain`. Show the resources that have a `Set-Cookie` header
@@ -288,6 +295,7 @@ Below is a complete list of supported properties.
 * `status-code`. Only show resources whose HTTP status code match the
   specified code. DevTools populates the autocomplete dropdown menu with all
   of the status codes it has encountered.
+* `url`. Show the resources that have a `url` with a value that matches the specified value.
 
 ### Filter requests by type {: #filter-by-type }
 
