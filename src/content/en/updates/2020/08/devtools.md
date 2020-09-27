@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts, inactive users and prefers-reduced-data.
 
-{# wf_updated_on: 2020-08-27 #}
+{# wf_updated_on: 2020-09-27 #}
 {# wf_published_on: 2020-08-20 #}
 {# wf_tags: chrome86, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -13,6 +13,11 @@ description: New Media panel, capture node screenshot, Issues tab updates, emula
 
 {% include "web/_shared/contributors/jecelynyeen.html" %}
 
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="koUsK58dpNo"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## New Media panel {: #media-panel }
 
