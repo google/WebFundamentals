@@ -209,6 +209,8 @@ toc:
     path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
 - title: Media
   path: /web/tools/chrome-devtools/media-panel/
+- title: WebAuthn
+  path: /web/tools/chrome-devtools/webauthn/
 - title: Workspaces
   path: /web/tools/chrome-devtools/workspaces/
 - title: Progressive Web Apps
