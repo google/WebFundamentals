@@ -18,7 +18,8 @@ Use the **WebAuthn** tab in Chrome DevTools to create and interact with software
 
 1. Visit a page that uses WebAuthn, such as our demo page here - [webauthndemo.appspot.com/](https://webauthndemo.appspot.com/) (please login to access the page).
 2. [Open DevTools](https://developers.google.com/web/tools/chrome-devtools/open).
-3. Click the **More Options**  ![More](/web/tools/chrome-devtools/images/shared/more.png){: .inline-icon } > **More tools** > **WebAuthn** to open the WebAuthn tab.
+3. Click the **More Options**
+![More](/web/tools/chrome-devtools/images/shared/more.png){: .inline-icon } > **More tools** > **WebAuthn** to open the WebAuthn tab.
 
 ![WebAuthn tab](/web/tools/chrome-devtools/webauthn/images/01-webauthn-tab.png)
 
