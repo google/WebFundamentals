@@ -18,7 +18,7 @@ Use the **WebAuthn** tab in Chrome DevTools to create and interact with software
 
 1. Visit a page that uses WebAuthn, such as our demo page here - [webauthndemo.appspot.com/](https://webauthndemo.appspot.com/) (please login to access the page).
 2. [Open DevTools](/chrome-devtools/open).
-3. Click the **More Options** 
+3. Click **More Options** 
 ![More](/web/tools/chrome-devtools/images/shared/more.png){: .inline-icon } > **More tools** > **WebAuthn** to open the WebAuthn tab.
 
 ![WebAuthn tab](/web/tools/chrome-devtools/webauthn/images/01-webauthn-tab.png)
@@ -39,7 +39,7 @@ Use the **WebAuthn** tab in Chrome DevTools to create and interact with software
 3. You can now see a new section of your newly-created authenticator.
 ![Authenticator](/web/tools/chrome-devtools/webauthn/images/03-authenticor.png)
 
-The **Authenticator** section includes a **Credentials** table. The table will empty until a credential is registered to the authenticator.
+The **Authenticator** section includes a **Credentials** table. The table is empty until a credential is registered to the authenticator.
 
 ![No credentials](/web/tools/chrome-devtools/webauthn/images/03-no-cred.png)
 
@@ -72,7 +72,7 @@ You can export or remove a credential by clicking the **Export** or **Remove** b
 
 A newly created authenticator will be set active automatically. DevTools supports **only one active virtual authenticator** at any point of time. 
 
-No authenticator will be set active upon removing the currently active authenticator.
+Removing the currently active authenticator results in no authenticator being active.
 
 To set an authenticator as the active authenticator, select the **Active** radio button of an authenticator. 
 
@@ -82,7 +82,7 @@ To set an authenticator as the active authenticator, select the **Active** radio
 
 ## Remove a virtual authenticator {: .remove }
 
-To remove a virtual authenticator, click on the **Remove** button of the authenticator. 
+To remove a virtual authenticator, click the **Remove** button of the authenticator. 
 
 ![Remove authenticator](/web/tools/chrome-devtools/webauthn/images/06-remove-authenticor.png)
 
