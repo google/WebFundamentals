@@ -545,6 +545,21 @@ tdresser:
   description:
     en: Software Engineer working on performance metrics at Google
 
+pavoldrotar:
+  name:
+    given: Pavol
+    family: Drotar
+  org:
+    name: Google
+    unit: Web Platform
+  country: UK
+  homepage: 'https://pavoldrotar.com'
+  twitter: DrotarPavol
+  github: padr31
+  email: pavol.drotar3@gmail.com
+  description:
+    en: I am a Software Engineer Intern wroking on the Web Platform.
+
 samdutton:
   name:
     given: Sam
@@ -2234,3 +2249,4 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
+
