@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2020-09-27 #}
+{# wf_updated_on: 2020-09-28 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -271,15 +271,16 @@ Below is a complete list of supported properties.
 * `larger-than`. Show resources that are larger than the specified size,
   in bytes. Setting a value of `1000` is equivalent to setting a value of `1k`.
 * `method`. Show resources that were retrieved over a specified HTTP method
-  type. DevTools populates the dropdown with all of the HTTP methods it
+  type. DevTools populates the autocomplete dropdown with all of the HTTP methods it
   has encountered.
 * `mime-type`. Show resources of a specified MIME type. DevTools populates the
-  dropdown with all MIME types it has encountered.
+  autocomplete dropdown with all MIME types it has encountered.
 * `mixed-content`. Show all mixed content resources (`mixed-content:all`) or
   just the ones that are currently displayed (`mixed-content:displayed`).
-* `priority`. xxx.
+* `priority`. Show resources whose priority level matches the
+  specified value.
 * `resource-type`. Show resources of a resource type, e.g. image. DevTools populates the
-  dropdown with all resource types it has encountered.
+  autocomplete dropdown with all resource types it has encountered.
 * `scheme`. Show resources retrieved over unprotected HTTP (`scheme:http`)
   or protected HTTPS (`scheme:https`).
 * `set-cookie-domain`. Show the resources that have a `Set-Cookie` header
