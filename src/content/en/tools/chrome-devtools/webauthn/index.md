@@ -2,9 +2,9 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Emulate Authenticators and Debug WebAuthn in Chrome DevTools.
 
-{# wf_updated_on: 2020-09-27 #}
+{# wf_updated_on: 2020-09-29 #}
 {# wf_published_on: 2020-09-28 #}
-{# wf_blink_components: Security, Platform>DevTools #}
+{# wf_blink_components: Security, Platform>DevTools, Blink>WebAuthentication #}
 
 # Emulate Authenticators and Debug WebAuthn in Chrome DevTools {: .page-title }
 

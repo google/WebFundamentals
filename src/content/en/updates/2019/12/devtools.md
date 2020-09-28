@@ -7,7 +7,7 @@ description: Support for let and class redeclarations in the Console, improved W
 {# wf_tags: chrome80, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Support for let and class redeclarations in the Console, improved WebAssembly debugging, and more. #}
-{# wf_blink_components: Platform>DevTools, Blink>WebAuthentication #}
+{# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 80) {: .page-title }
 
