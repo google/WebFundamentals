@@ -255,13 +255,13 @@ not supported.
 
 Below is a complete list of supported properties.
 
-* `cookie-domain`. Show the resources that set a specific [cookie domain](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives)..
+* `cookie-domain`. Show the resources that set a specific [cookie domain](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives).
 * `cookie-name`. Show the resources that set a specific [cookie name](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives).
 * `cookie-path`. Show the resources that set a specific [cookie path](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives).
 * `cookie-value`. Show the resources that set a specific [cookie value](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives).
 * `domain`. Only display resources from the specified domain. You can use
   a wildcard character (`*`) to include multiple domains. For example, `*.com`
-  displays resources from all domain names ending in `.com`. DevTools
+  displays resources from all domain names ending in `.com`. DevTools shows a
   populates the autocomplete dropdown menu with all of the domains
   it has encountered.
 * `has-response-header`. Show the resources that contain the specified
@@ -295,7 +295,7 @@ Below is a complete list of supported properties.
 * `status-code`. Only show resources whose HTTP status code match the
   specified code. DevTools populates the autocomplete dropdown menu with all
   of the status codes it has encountered.
-* `url`. Show the resources that have a `url` with a value that matches the specified value.
+* `url`. Show the resources that have a `url` matching the specified value.
 
 ### Filter requests by type {: #filter-by-type }
 
