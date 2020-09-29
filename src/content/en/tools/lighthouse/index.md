@@ -301,6 +301,8 @@ Lighthouse Plugins allow domain experts in the community to extend the functiona
 
 For more information about how to create your own plugin, check out our [Plugin Handbook](https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md) in the Lighthouse GitHub repo. 
 
+## Integrate Lighthouse {: #integrate }
+If you are a company or an individual who is integrating Lighthouse as part of the products / services you're offering, first things first - we're so excited you are! We want as many people as possible to use Lighthouse, and this [Guidelines and Brand Assets for Integrating Lighthouse](https://docs.google.com/document/d/e/2PACX-1vRWKW9RiB3suYt1KqgBJhwLnvV-AiFne8iAudADtwK-LWLNParYsFts92InHNtB_BV5x-xtSVcnTO2n/pub) is meant to make it straightforward for you to show that Lighthouse is under the hood while protecting our brand. 
 
 ## Contribute to Lighthouse {: #contribute }
 
