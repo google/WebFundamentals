@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome's http cache partitioning helps with better security and privacy.
 
-{# wf_published_on: 2020-09-30 #}
-{# wf_updated_on: 2020-09-30 #}
+{# wf_published_on: 2020-10-01 #}
+{# wf_updated_on: 2020-10-01 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
-{# wf_tags: storage-isolation, http-cache-partitioning #}
+{# wf_tags: storage-isolation, cache #}
 {# wf_featured_snippet: Chrome's http cache partitioning helps with better security and privacy. #}
-{# wf_blink_components: Blinke>Network #}
+{# wf_blink_components: Blink>Network #}
 
-# Gaining security and privacy by partitioning the cache {: page-title}
+# Gaining security and privacy by partitioning the cache {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
@@ -31,7 +31,7 @@ The following example illustrates how a single image is cached and treated in
 three different contexts:
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-1.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-1.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -44,7 +44,7 @@ cached using `https://x.example/doge.png` as the key.
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-2.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-2.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -60,7 +60,7 @@ resource.
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-3.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-3.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -108,7 +108,7 @@ Let's revisit the previous example to see how cache partitioning works in
 different contexts:
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-1.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-1.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://a.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -125,7 +125,7 @@ Isolation Key are the same.)
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-2.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-2.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://b.example</code>, <code>https://b.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -141,7 +141,7 @@ The image is requested from the network and cached using `https://b.example` +
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-6.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-6.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://a.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -156,7 +156,7 @@ the same site, the resource cached with the top-level frame can be used.
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-4.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-4.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://c.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -172,7 +172,7 @@ resource in the cache that matches the key `https://a.example` +
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-7.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-7.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://c.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -188,7 +188,7 @@ numbers are ignored, hence a cache hit occurs.
 <div class="clearfix"></div>
 
 <figure class="attempt-left">
-  <img src="/web/updates/images/2020/09/http-cache-partitioning-5.png">
+  <img src="/web/updates/images/2020/10/http-cache-partitioning-5.png">
   <figcaption>
     <b>Cache Key</b>: { <code>https://a.example</code>, <code>https://c.example</code>, <code>https://x.example/doge.png</code> }
   </figcaption>
@@ -253,3 +253,9 @@ top-level sites. The solution for them is currently under discussion.
 - [Storage Isolation
   Project](https://docs.google.com/document/d/1V8sFDCEYTXZmwKa_qWUfTVNAuBcPsu6FC0PhqMD6KKQ/edit#heading=h.oixrt0wpp8h5)
 - [Explainer - Partition the HTTP Cache](https://github.com/shivanigithub/http-cache-partitioning)
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
