@@ -4,7 +4,7 @@ description: New CSS Grid debugging tools, Web Authn tab, moveable tools and Com
 
 {# wf_updated_on: 2020-10-01 #}
 {# wf_published_on: 2020-10-01 #}
-{# wf_tags: chrome86, devtools, devtools-whatsnew #}
+{# wf_tags: chrome7, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New CSS Grid debugging tools, Web Authn tab, moveable tools and Computed sidebar pane. #}
 {# wf_blink_components: Platform>DevTools #}

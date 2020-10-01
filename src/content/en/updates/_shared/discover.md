@@ -2,6 +2,21 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 87 {: #discover87 .hide-from-toc }
+
+* [New CSS Grid debugging tools](/web/updates/2020/10/devtools#css-grid)
+* [New WebAuthn tab](/web/updates/2020/10/devtools#webauthn)
+* [Move tools between top and bottom panel](/web/updates/2020/10/devtools#moveable-tools)
+* [New Computed sidebar pane in the Styles pane](/web/updates/2020/10/devtools#computed-sidebar-pane)
+* [Grouping CSS properties in the Computed pane](/web/updates/2020/10/devtools#grouping-css-prop)
+* [Lighthouse 6.3 in the Lighthouse panel](/web/updates/2020/10/devtools#lighthouse)
+* [`performance.mark()` events in the Timings section](/web/updates/2020/10/devtools#perf-mark)
+* [New `resource-type` and `url` filters in the Network panel](/web/updates/2020/10/devtools#network-filters)
+* [Frame details view updates](/web/updates/2020/10/devtools#rame-details)
+* [Deprecation of `Settings` in the More tools menu](/web/updates/2020/10/devtools#deprecate-settings)
+* [[Experimental] View and fix color contrast issues in the CSS Overview panel](/web/updates/2020/10/devtools#css-overview)
+* [[Experimental] Customize keyboard shortcuts in DevTools](/web/updates/2020/10/devtools#customize keyboard-shortcuts)
+
 ### Chrome 86 {: #discover86 .hide-from-toc }
 
 * [New Media panel](/web/updates/2020/08/devtools#media-panel)
