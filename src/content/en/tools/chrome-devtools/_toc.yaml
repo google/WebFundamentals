@@ -13,6 +13,8 @@ toc:
     path: /web/tools/chrome-devtools/coverage/
   - title: Inspect Animations
     path: /web/tools/chrome-devtools/inspect-styles/animations
+  - title: Inspect CSS Grid
+    path: /web/tools/chrome-devtools/css/grid
   - title: Edit Styles
     path: /web/tools/chrome-devtools/inspect-styles/edit-styles
     status: deprecated
