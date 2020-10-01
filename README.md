@@ -20,7 +20,7 @@ Welcome to the new Web**Fundamentals**! An effort to showcase best practices and
 * We want your contributions, either PRs, issues, whatever!
 * The latest is staged at https://web-central.appspot.com/web/
 
-## Cloning the repo
+## Cloning the repository
 If you have a high-bandwidth connection, I recommend starting with a fresh clone
 of the repo.
 
