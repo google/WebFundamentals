@@ -90,22 +90,18 @@ On the **Elements** panel, select an element. Toggle the **Group** checkbox to g
 
 Chromium issues: [1096230](https://crbug.com/1096230), [1084673](https://crbug.com/1084673), [1106251](https://crbug.com/1106251)  
 
-## Lighthouse 6.3 in the Lighthouse panel {: #lighthouse }
-The **Lighthouse** panel is now running Lighthouse 6.3. Check out the release notes for a full list of changes.
+## Lighthouse 6.4 in the Lighthouse panel {: #lighthouse }
+The **Lighthouse** panel is now running Lighthouse 6.4. Check out the [release notes](https://github.com/GoogleChrome/lighthouse/releases) for a full list of changes.
 
 ![Lighthouse](/web/updates/images/2020/10/devtools/07-lighthouse.png)
 
-New audits in Lighthouse 6.3:
+New audits in Lighthouse 6.4:
 
-- **Preload fonts**. Validates if all fonts that use`font-display: optional` were preloaded.
-- **Large JavaScript library**. Large JavaScript libraries can lead to poor performance. This audit suggests cheaper alternatives to common, large JavaScript libraries like `moment.js`. 
+- **Preload fonts**. Validates if all fonts that use`font-display: optional` were preloaded. 
 - **Valid sourcemaps**. Audits if a page has valid sourcemaps for large, first-party JavaScript.
+- **[Experimental] Large JavaScript library**. Large JavaScript libraries can lead to poor performance. This audit suggests cheaper alternatives to common, large JavaScript libraries like `moment.js`.
 
-Updated audits in Lighthouse 6.3:
-
-- **Unsized image elements**. This audit is now reverted to experimental temporarily due to performance impact.
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/aac228ce1bbf6d5377401f622620ab469f4168c5 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/b8265a3093143b59922e93c0ad3af6c3e1858c8e #}
 
 Chromium issue: [772558](https://crbug.com/772558) 
 
