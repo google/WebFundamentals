@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: A list of ways you can customize Chrome DevTools.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-10-01 #}
 {# wf_published_on: 2019-05-02 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -19,10 +19,10 @@ This page lists the ways you can customize Chrome DevTools.
 To open Settings, do one of the following:
 
 * Press <kbd>F1</kbd> while DevTools is in focus.
-* Open the [Main Menu](#main-menu) and then select **Settings**.
+* Click **Settings** ![Settings icon](/web/tools/chrome-devtools/images/shared/capture-settings.png){: .inline-icon }.
 
 <figure>
-  <img src="images/settings.png" alt="Settings."/>
+  <img src="images/settings-menu.png" alt="Settings."/>
   <figcaption>
     <b>Figure 1</b>. Settings.
   </figcaption>
