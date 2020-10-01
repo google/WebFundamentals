@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
 [![License](https://img.shields.io/github/license/google/WebFundamentals)](https://github.com/google/WebFundamentals/blob/master/LICENSE)
 
-Welcome to the new Web**Fundamentals**! An effort to showcase best practices and tools for modern Web Development.
+Welcome to the new Web**Fundamentals**! An effort to show case best practices and tools for modern Web Development.
 
 
 ### What's changed?
@@ -22,7 +22,7 @@ Welcome to the new Web**Fundamentals**! An effort to showcase best practices and
 
 ## Cloning the repo
 If you have a high-bandwidth connection, I recommend starting with a fresh clone
-of the repo.
+of the repositry.
 
 ```
 git clone https://github.com/google/WebFundamentals.git
