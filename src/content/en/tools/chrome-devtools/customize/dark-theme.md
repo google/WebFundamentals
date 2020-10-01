@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: How to turn on the dark theme in Chrome DevTools.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-10-01 #}
 {# wf_published_on: 2019-05-03 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -22,19 +22,10 @@ You can enable dark theme in [Settings](#settings) or the [Command Menu](#comman
 
 ## Set up dark theme from Settings {: #settings }
 
-[icon]: /web/tools/chrome-devtools/images/shared/main-menu.png
+[icon]: /web/tools/chrome-devtools/images/shared/capture-settings.png
 
-1. Click **Customize And Control DevTools** ![Customize And Control
-   DevTools][icon]{: .inline-icon } and then select **Settings**. You can also open
+1. Click **Settings** ![Settings icon][icon]{: .inline-icon }. You can also open
    **Settings** by pressing <kbd>F1</kbd>.
-
-     <figure>
-       <img src="images/opensettings.png"
-            alt="Opening Settings."/>
-       <figcaption>
-         <b>Figure 2</b>. Opening Settings.
-       </figcaption>
-     </figure>
 
 1. Under **Preferences** > **Appearance** > **Theme** select **Dark**.
 
