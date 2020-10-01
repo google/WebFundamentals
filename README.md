@@ -1,4 +1,4 @@
-# Web Fundamentals on DevSite
+# Web Development Fundamentals on DevSite
 
 [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
 [![License](https://img.shields.io/github/license/google/WebFundamentals)](https://github.com/google/WebFundamentals/blob/master/LICENSE)
@@ -30,7 +30,7 @@ git clone https://github.com/google/WebFundamentals.git
 
 ## Getting set up
 The new DevSite infrastructure simplifies the dependencies a lot. Ensure
-you have [Python](https://www.python.org/downloads/), [Node](https://nodejs.org/en/) 10-12, and the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts) already installed.
+you have [Python](https://www.python.org/downloads/), [Node](https://nodejs.org/en/) 10-12, and the [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts) already installed in your Systems.
 
 Login to [Google Cloud via command line](https://cloud.google.com/sdk/gcloud/reference/auth/login).
 
