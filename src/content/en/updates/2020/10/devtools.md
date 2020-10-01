@@ -135,6 +135,8 @@ Chromium issues: [1121141](https://crbug.com/1121141),  [1104188](https://crbug.
 ### Display COEP and COOP `reporting to` endpoint {: #reporting-to }
 
 You can now view the Cross-Origin Embedder Policy (COEP)  and Cross-Origin Opener Policy (COOP)`reporting to` endpoint under the **Security & Isolation** section.
+
+The [Reporting API](/web/updates/2018/09/reportingapi) defines a new HTTP header, `Report-To`, that gives web developers a way to specify server endpoints for the browser to send warnings and errors to.
  
 ![reporting to endpoint](/web/updates/images/2020/10/devtools/10-reporting-endpoint.png)
 
