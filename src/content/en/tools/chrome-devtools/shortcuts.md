@@ -98,7 +98,7 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
       <td><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td>
     </tr>
     <tr>
-      <td>Open the <b><a href="/web/tools/chrome-devtools/ui#command-menu">Command Menu</a></b></td>
+      <td>Open the <b><a href="/web/tools/chrome-devtools/command-menu">Command Menu</a></b></td>
       <td><kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td>
       <td><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></td>
     </tr>
@@ -151,8 +151,8 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
     </tr>
     <tr>
       <td>Run snippet</td>
-      <td>Press <kbd>Command</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/ui#command-menu">Command Menu</a></b>, type <kbd>!</kbd> followed by the name of the script, then press <kbd>Enter</kbd></td>
-      <td>Press <kbd>Control</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/ui#command-menu">Command Menu</a></b>, type <kbd>!</kbd> followed by the name of the script, then press <kbd>Enter</kbd></td>
+      <td>Press <kbd>Command</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/command-menu">Command Menu</a></b>, type <kbd>!</kbd> followed by the name of the script, then press <kbd>Enter</kbd></td>
+      <td>Press <kbd>Control</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/command-menu">Command Menu</a></b>, type <kbd>!</kbd> followed by the name of the script, then press <kbd>Enter</kbd></td>
     </tr>
   </tbody>
 </table>
@@ -323,13 +323,13 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
     </tr>
     <tr>
       <td>Jump to a line number of the currently-open file</td>
-      <td>Press <kbd>Command</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/ui#command-menu">Command Menu</a></b>, type <kbd>:</kbd> followed by the line number, then press <kbd>Enter</kbd></td>
-      <td>Press <kbd>Control</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/ui#command-menu">Command Menu</a></b>, type <kbd>:</kbd> followed the line number, then press <kbd>Enter</kbd></td>
+      <td>Press <kbd>Command</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/command-menu">Command Menu</a></b>, type <kbd>:</kbd> followed by the line number, then press <kbd>Enter</kbd></td>
+      <td>Press <kbd>Control</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/command-menu">Command Menu</a></b>, type <kbd>:</kbd> followed the line number, then press <kbd>Enter</kbd></td>
     </tr>
     <tr>
       <td>Jump to a column of the currently-open file (for example line 5, column 9)</td>
-      <td>Press <kbd>Command</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/ui#command-menu">Command Menu</a></b>, type <kbd>:</kbd>, then the line number, then another <kbd>:</kbd>, then the column number, then press <kbd>Enter</kbd></td>
-      <td>Press <kbd>Control</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/ui#command-menu">Command Menu</a></b>, type <kbd>:</kbd>, then the line number, then another <kbd>:</kbd>, then the column number, then press <kbd>Enter</kbd></td>
+      <td>Press <kbd>Command</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/command-menu">Command Menu</a></b>, type <kbd>:</kbd>, then the line number, then another <kbd>:</kbd>, then the column number, then press <kbd>Enter</kbd></td>
+      <td>Press <kbd>Control</kbd>+<kbd>O</kbd> to open the <b><a href="/web/tools/chrome-devtools/command-menu">Command Menu</a></b>, type <kbd>:</kbd>, then the line number, then another <kbd>:</kbd>, then the column number, then press <kbd>Enter</kbd></td>
     </tr>
     <tr>
       <td>Go to a function declaration (if currently-open file is HTML or a script), or a rule set (if currently-open file is a stylesheet)</td>
