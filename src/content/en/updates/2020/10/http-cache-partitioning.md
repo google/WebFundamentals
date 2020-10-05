@@ -18,8 +18,7 @@ for the same data are served faster. For example, a cached resource from the
 network can avoid a round trip to the server. A cached computational result can
 omit the time to do the same calculation.
 
-In Chrome, the cache mechanism is used in various ways and HTTP Cache is one of
-such examples.
+In Chrome, the cache mechanism is used in various ways and HTTP Cache is one example.
 
 ## How Chrome's HTTP Cache currently works
 
@@ -79,14 +78,14 @@ time. However, the time a website takes to respond to HTTP requests can reveal
 that the browser has accessed the same resource in the past, which opens the
 browser to security and privacy attacks, like the following:
 
-- **Detection if a user has visited a specific site**: An adversary can detect a
+- **Detect if a user has visited a specific site**: An adversary can detect a
   user's browsing history by checking if the cache has a resource which might be
   specific to a particular site or cohort of sites.
 - **[Cross-site search
   attack](https://portswigger.net/daily-swig/new-xs-leak-techniques-reveal-fresh-ways-to-expose-user-information)**:
   An adversary can detect if an arbitrary string is in the user's search results
   by checking whether a 'no search results' image used by a particular website
-  is in the browser's cache or not.
+  is in the browser's cache.
 - **Cross-site tracking**: The cache can be used to store cookie-like
   identifiers as a cross-site tracking mechanism.
 
@@ -104,7 +103,7 @@ they will use the same cache partition. To learn more about this, read
 [Understanding "same-site" and
 "same-origin"](https://web.dev/same-site-same-origin/).
 
-Let's revisit the previous example to see how cache partitioning works in
+Look again at the previous example to see how cache partitioning works in
 different contexts:
 
 <figure class="attempt-left">
@@ -148,7 +147,7 @@ The image is requested from the network and cached using `https://b.example` +
 </figure>
 
 Now the user comes back to `https://a.example` but this time the image
-(`https://x.example/doge.png`) is embedded within an iframe. In this case, the
+(`https://x.example/doge.png`) is embedded in an iframe. In this case, the
 key is `https://a.example` + `https://a.example` + `https://x.example/doge.png`
 and a cache hit occurs. (Note that when the top-level site and the iframe are
 the same site, the resource cached with the top-level frame can be used.
@@ -183,7 +182,7 @@ What if the domain contains a subdomain or a port number? The user visits
 (`https://c.example:8080`), which requests the image.
 
 Because the key is created based on "scheme://eTLD+1", subdomains and port
-numbers are ignored, hence a cache hit occurs.
+numbers are ignored. Hence a cache hit occurs.
 
 <div class="clearfix"></div>
 
@@ -225,7 +224,7 @@ still under consideration.)
 ### What is the impact of this behavioral change?
 
 The overall cache miss rate increases by about 3.6%, changes to the FCP (First
-Contentful Paint) are modest (~0.3%) and the overall fraction of bytes loaded
+Contentful Paint) are modest (~0.3%), and the overall fraction of bytes loaded
 from the network increases by around 4%. You can learn more about the impact on
 performance in [the HTTP cache partitioning
 explainer](https://github.com/shivanigithub/http-cache-partitioning#impact-on-metrics).
