@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome's http cache partitioning helps with better security and privacy.
 
-{# wf_published_on: 2020-10-01 #}
-{# wf_updated_on: 2020-10-01 #}
+{# wf_published_on: 2020-10-06 #}
+{# wf_updated_on: 2020-10-06 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 {# wf_tags: storage-isolation, cache #}
 {# wf_featured_snippet: Chrome's http cache partitioning helps with better security and privacy. #}
@@ -97,7 +97,7 @@ With cache partitioning, cached resources will be keyed using a new "Network
 Isolation Key" in addition to the resource URL. The Network Isolation Key is
 composed of the top-level site and the current-frame site.
 
-Note: The "site" is recognized using "scheme://eTLD+1" so if requests are from
+Note: The "site" is recognized using "[scheme://eTLD+1](https://web.dev/same-site-same-origin/)" so if requests are from
 different pages, but they have the same scheme and effective top-level domain+1
 they will use the same cache partition. To learn more about this, read
 [Understanding "same-site" and
@@ -115,8 +115,8 @@ different contexts:
 
 A user visits a page (`https://a.example`) which requests an image
 (`https://x.example/doge.png`). In this case, the image is requested from the
-network and cached using `https://a.example` (the top-level site) +
-`https://a.example` (the current-frame site) + `https://x.example/doge.png` (the
+network and cached using a tuple consisting of `https://a.example` (the top-level site),
+`https://a.example` (the current-frame site), and `https://x.example/doge.png` (the
 resource URL) as the key. (Note that when the resource request is from the
 top-level -frame, the top-level site and current-frame site in the Network
 Isolation Key are the same.)
@@ -134,8 +134,8 @@ The same user visits a different page (`https://b.example`) which requests the
 same image (`https://x.example/doge.png`). Though the same image was loaded in
 the previous example, since the key doesn't match it will not be a cache hit.
 
-The image is requested from the network and cached using `https://b.example` +
-`https://b.example` + `https://x.example/doge.png` as the key.
+The image is requested from the network and cached using a tuple consisting of `https://b.example`,
+`https://b.example`, and `https://x.example/doge.png` as the key.
 
 <div class="clearfix"></div>
 
@@ -148,7 +148,7 @@ The image is requested from the network and cached using `https://b.example` +
 
 Now the user comes back to `https://a.example` but this time the image
 (`https://x.example/doge.png`) is embedded in an iframe. In this case, the
-key is `https://a.example` + `https://a.example` + `https://x.example/doge.png`
+key is a tuple containing `https://a.example`, `https://a.example`, and `https://x.example/doge.png`
 and a cache hit occurs. (Note that when the top-level site and the iframe are
 the same site, the resource cached with the top-level frame can be used.
 
@@ -165,8 +165,8 @@ The user is back at `https://a.example` but this time the image is hosted in an
 iframe from `https://c.example`.
 
 In this case, the image is downloaded from the network because there is no
-resource in the cache that matches the key `https://a.example` +
-`https://c.example` + `https://x.example/doge.png`.
+resource in the cache that matches the key consisting of `https://a.example`,
+`https://c.example`, and `https://x.example/doge.png`.
 
 <div class="clearfix"></div>
 
