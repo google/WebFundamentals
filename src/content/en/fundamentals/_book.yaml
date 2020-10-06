@@ -14,7 +14,6 @@ upper_tabs:
         - title: Media & VR
           style: accordion
           section:
-          - include: /web/fundamentals/media/_toc.yaml
           - include: /web/fundamentals/vr/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/security/_toc.yaml
