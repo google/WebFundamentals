@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Chrome's http cache partitioning helps with better security and privacy.
+description: Chrome's HTTP cache partitioning helps with better security and privacy.
 
 {# wf_published_on: 2020-10-06 #}
 {# wf_updated_on: 2020-10-06 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 {# wf_tags: storage-isolation, cache #}
-{# wf_featured_snippet: Chrome's http cache partitioning helps with better security and privacy. #}
+{# wf_featured_snippet: Chrome's HTTP cache partitioning helps with better security and privacy. #}
 {# wf_blink_components: Blink>Network #}
 
 # Gaining security and privacy by partitioning the cache {: .page-title }
