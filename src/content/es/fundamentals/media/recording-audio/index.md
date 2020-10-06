@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La mayoría de los navegadores podrán tener acceso al micrófono del usuario.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2020-09-11 #}
 {# wf_published_on: 2016-08-23 #}
 
 # Grabación de audio del usuario {: .page-title }
@@ -116,7 +116,7 @@ para usarlos más tarde.
 &lt;script>  
   var handleSuccess = function(stream) {
     <strong>var context = new AudioContext();
-    var input = context.createMediaStreamSource(stream)
+    var source = context.createMediaStreamSource(stream)
     var processor = context.createScriptProcessor(1024,1,1);
 
     source.connect(processor);
