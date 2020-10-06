@@ -21,9 +21,11 @@ toc:
     - title: Preventing Mixed Content
       section:
       - title: What Is Mixed Content?
-        path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+        path: https://web.dev/what-is-mixed-content
+        status: external
         step_group: security-mixed-content
       - title: Preventing Mixed Content
-        path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+        path: https://web.dev/fixing-mixed-content
+        status: external
         step_group: security-mixed-content
     - include: /web/fundamentals/security/hacked/_toc.yaml

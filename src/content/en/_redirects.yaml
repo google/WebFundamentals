@@ -40,6 +40,12 @@ redirects:
 - from: /web/feedback/...
   to: https://web.dev/how-to-file-a-good-bug/
 
+- from: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+  to: https://web.dev/what-is-mixed-content
+
+- from: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+  to: https://web.dev/fixing-mixed-content
+
 - from: /web/fundamentals/performance/resource-prioritization
   to: https://web.dev/fast/#prioritize-resources
 
