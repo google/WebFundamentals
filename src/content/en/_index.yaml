@@ -48,18 +48,17 @@ landing_page:
   #   - youtube_id: nImH_dq1NpM
 
   - items:
-    - image_path: /web/images/wd-live-wide.png
+    - image_path: /web/images/cds20-wide.png
       image_left: true
       description: >
-        <b class="goog-font">web.dev LIVE</b> is now over! Head to
-        <a href="https://web.dev/live/" target="_blank" rel="nofollow">web.dev/live</a>
-        to watch all the sessions, see top Q&amp;A and more from our three
-        day digital event for web developers.
+        <b>Chrome Dev Summit 2020</b> is back on December 9-10, but this time
+        we're coming to you. We’re bringing all the latest updates, just as
+        much content, and many more Chromies.
       buttons:
-      - label: Watch now
-        path: https://web.dev/live/
+      - label: Learn more
+        path: http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website
         classname: button button-primary
-      path: https://web.dev/live/
+      path: http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website
 
   - classname: wf-landing-row
     items:
