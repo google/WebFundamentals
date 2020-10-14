@@ -47,18 +47,30 @@ landing_page:
   #   items:
   #   - youtube_id: nImH_dq1NpM
 
-  - items:
-    - image_path: /web/images/cds20-wide.png
-      image_left: true
+  - options:
+    - large-headings
+    - marquee
+    - description-50
+    classname: cds20-marquee-margin-fix petexxx
+    items:
+    - image_path: /web/images/cds20-art.png
+      classname: petexy
+      heading: "Chrome Dev Summit 2020"
       description: >
-        <b>Chrome Dev Summit 2020</b> is back on December 9-10, but this time
-        we're coming to you. We’re bringing all the latest updates, just as
-        much content, and many more Chromies.
+        Chrome Dev Summit is back with its 8th chapter, but this time we’re coming to you. We’re
+        bringing all the latest updates, lots of new content, and plenty of Chromies. All delivered
+        virtually.
+      list:
+      - heading: December 9-10
+        description: Sessions, Live Q&A, Workshops, Office Hours & More!
+        icon:
+          icon_name: event
       buttons:
       - label: Learn more
         path: http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website
         classname: button button-primary
       path: http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website
+
 
   - classname: wf-landing-row
     items:
