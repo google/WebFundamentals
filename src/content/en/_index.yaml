@@ -51,10 +51,9 @@ landing_page:
     - large-headings
     - marquee
     - description-50
-    classname: cds20-marquee-margin-fix petexxx
+    classname: cds20-marquee-margin-fix
     items:
     - image_path: /web/images/cds20-art.png
-      classname: petexy
       heading: "Chrome Dev Summit 2020"
       description: >
         Chrome Dev Summit is back with its 8th chapter, but this time we’re coming to you. We’re
