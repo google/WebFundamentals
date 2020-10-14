@@ -18,5 +18,5 @@ description: >
         font-family: Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
       }
     </style>
-    <b>Chrome Dev Summit 2020</b> is back & going virtual on on December 9-10.
+    <b class="goog-font">Chrome Dev Summit 2020</b> is back & going virtual on December 9-10.
     <a href="http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website">Learn more</a>
