@@ -11,6 +11,7 @@ from google.appengine.api import memcache
 
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 
+
 def slugify(str):
   # Very simply slugify
   slug = str.encode('ascii', 'ignore').lower()
