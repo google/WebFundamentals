@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What can #SmooshGate teach us about standards development and the Web Platform? This write-up gives an overview.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2020-10-19 #}
 {# wf_published_on: 2018-03-19 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
@@ -110,8 +110,8 @@ objects you don’t own!
 
 In 1996, before CSS became widespread, and long before “HTML5” became a
 thing, [the Space Jam
-website](https://www.warnerbros.com/archive/spacejam/movie/jam.htm) went
-live. Today, the website still works the same way it did 22 years ago.
+website](https://www.spacejam.com/) went live. Today, the website still works
+the same way it did 22 years ago.
 
 How did that happen? Did someone maintain that website for all these years,
 updating it every time browser vendors shipped a new feature?
