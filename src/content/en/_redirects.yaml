@@ -132,6 +132,9 @@ redirects:
 - from: /web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
   to: https://web.dev/customize-install/
 
+- from: /web/updates/2015/07/interact-with-ble-devices-on-the-web
+  to: https://web.dev/bluetooth/
+
 - from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
   to: https://web.dev/add-manifest/#splash-screen
 
@@ -143,6 +146,9 @@ redirects:
 
 - from: /web/updates/2015/10/splashscreen
   to: https://web.dev/add-manifest/#splash-screen
+
+- from: /web/updates/2016/03/access-usb-devices-on-the-web
+  to: https://web.dev/usb/
 
 - from: /web/updates/2016/06/persistent-storage
   to: https://web.dev/persistent-storage/
