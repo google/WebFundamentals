@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chrome's HTTP cache partitioning helps with better security and privacy.
 
 {# wf_published_on: 2020-10-06 #}
-{# wf_updated_on: 2020-10-06 #}
+{# wf_updated_on: 2020-10-24 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 {# wf_tags: storage-isolation, cache #}
 {# wf_featured_snippet: Chrome's HTTP cache partitioning helps with better security and privacy. #}
@@ -204,6 +204,31 @@ occurs.
 <div class="clearfix"></div>
 
 ## FAQs
+
+### Is it already enabled on my Chrome? How can I check?
+
+The feature is being rolled out through late 2020. To check whether your Chrome instance is
+already in effect, follow the instructions below:
+
+1. Open `chrome://net-export/` and press **Start Logging to Disk**.
+2. Specify where to save the log file on your computer.
+3. Browse the web on Chrome for a minute.
+4. Go back to `chrome://net-export/` and press **Stop Logging**.
+5. Go to `https://netlog-viewer.appspot.com/#import`.
+6. Press **Choose File** and pass the log file you saved.
+7. You will see the output of the log file.
+
+On the same page, find `SplitCacheByNetworkIsolationKey`. If it is followed by
+`Experiment_[****]`, HTTP Cache Partitioning is enabled on your Chrome. If it is
+followed by `Control_[****]` or `Default_[****]`, not enabled.
+
+### How can I test HTTP Cache Partitioning on my Chrome?
+
+To test HTTP Cache Partitioning on your Chrome, you need to launch Chrome with a
+command line flag `--enable-features=SplitCacheByNetworkIsolationKey`. Follow
+the instruction at [Run Chromium with
+flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to
+learn how to launch Chrome with a command line flag on your platform.
 
 ### As a web developer, are there any action I should take in response to this change?
 
