@@ -12,6 +12,7 @@ description: How we built the Chrome DevTools WebAuthn tab. The Chrome DevTools 
 # How we built the Chrome DevTools WebAuthn tab {: .page-title }
 
 {% include "web/_shared/contributors/fawazm.html" %}
+{% include "web/_shared/contributors/nsatragno.html" %}
 
 The [Web Authentication API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API), also known as **WebAuthn**, allows servers to use public key cryptography - rather than passwords - to register and authenticate users. It does this by enabling integration between these servers and strong authenticators. These authenticators may be dedicated physical devices (e.g. security keys) or integrated with platforms (e.g. fingerprint readers). You can read more about WebAuthn here at [webauthn.guide](https://webauthn.guide/).
 
