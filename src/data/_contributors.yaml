@@ -1605,6 +1605,21 @@ rupl:
   description:
     en: Chris is a frontend developer and web performance advocate.
 
+nsatragno:
+  name:
+    given: Nina
+    family: Satragno
+  org:
+    name: Google
+    unit: Chrome
+  country: CA
+  role:
+    - author
+  twitter: nsatragno
+  email: nsatragno@google.com
+  description:
+    en: Google Chrome engineer making authentication on the web safe & easy.
+
 satyakresna:
   name:
     given: Kresna
