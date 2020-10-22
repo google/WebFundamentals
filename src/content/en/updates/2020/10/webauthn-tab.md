@@ -36,6 +36,8 @@ The WebAuthn DevTools tab makes debugging WebAuthn much easier by allowing devel
 
 Adding debugging support to WebAuthn was a two-part process.
 
+![Two-part process](/web/updates/images/2020/10/webauthn/02-process.png)
+
 ### Part 1: Adding WebAuthn Domain to the Chrome DevTools Protocol
 
 First, we implemented a new domain in the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/) which hooks into a handler that communicates with the WebAuthn backend.
