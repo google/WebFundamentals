@@ -386,7 +386,7 @@ import sortBy from "lodash-es/sortBy";
 
 If you prefer your `import` syntax to be consistent, you _could_ just use the
 standard `lodash` package, and install
-[`babel-plugin-lodash`](http://babel-plugin-lodash/). Once you add the plugin to
+[`babel-plugin-lodash`](https://www.npmjs.com/package/babel-plugin-lodash). Once you add the plugin to
 your Babel config, you can use the typical `import` syntax you would otherwise
 use to shake unused exports.
 
