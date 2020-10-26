@@ -798,10 +798,7 @@ To save all network requests to a HAR file:
    request.
 
 Once you've got a HAR file, you can import it back into DevTools for analysis. Just
-drag-and-drop the HAR file into the Requests table. See also [HAR Analyzer][HAR
-Analyzer]{: .external }.
-
-[HAR Analyzer]: https://toolbox.googleapps.com/apps/har_analyzer/
+drag-and-drop the HAR file into the Requests table. See also [HAR Analyzer](https://toolbox.googleapps.com/apps/har_analyzer/){: .external }.
 
 <figure>
   <img src="imgs/save-as-har.png"
