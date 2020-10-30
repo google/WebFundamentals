@@ -244,12 +244,6 @@ redirects:
 
 # Media redirects
 
-- from: /web/fundamentals/media/video#accessibility_matters
-  to: https://web.dev/media-accessibility/
-
-- from: /web/fundamentals/media/video#video_element_attributes
-  to: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#Attributes
-
 - from: /web/fundamentals/media/video
   to: https://web.dev/video-and-source-tags/
 
