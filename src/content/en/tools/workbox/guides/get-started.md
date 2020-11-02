@@ -1,5 +1,5 @@
-project_path: /web/tools/workbox/\_project.yaml
-book_path: /web/tools/workbox/\_book.yaml
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
