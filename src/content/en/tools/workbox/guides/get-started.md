@@ -8,7 +8,7 @@ Workbox is a set of libraries to help you write and manage [service workers](htt
 
 ## Installation
 
-Starting with the [v5 release](https://github.com/GoogleChrome/workbox/releases/tag/v5.0.0), Workbox can be used inside of a service worker source file through [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) by using [npm](https://www.npmjs.com/) to install the [Workbox modules](https://developers.google.com/web/tools/workbox/modules#service-worker-packages) you need and importing what you plan to use.
+Starting with the [v5 release](https://github.com/GoogleChrome/workbox/releases/tag/v5.0.0), Workbox can be used inside of a service worker source file through [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) by using [npm](https://www.npmjs.com/) to install the [Workbox modules](/web/tools/workbox/modules#service-worker-packages) you need and importing what you plan to use.
 
 Unfortunately, JavaScript modules don’t work inside service workers, so you’ll need a [bundler that supports JavaScript modules](https://bundlers.tooling.report/) to compile your service worker to a single file. Popular choices include [webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/guide/en/), and [Parcel](https://parceljs.org/). Please consult the documentation for your bundler of choice for setup and configuration.
 
@@ -16,7 +16,7 @@ Note: While there are a number of ways you can use Workbox in your project, what
 
 ## Creating a service worker
 
-Before you can use Workbox, you need to create a service worker and [register](https://developers.google.com/web/fundamentals/primers/service-workers/registration) it from a web page. Start by creating a file called `service-worker.js` at the root of your site and add a console message to it to ensure it loads.
+Before you can use Workbox, you need to create a service worker and [register](/web/fundamentals/primers/service-workers/registration) it from a web page. Start by creating a file called `service-worker.js` at the root of your site and add a console message to it to ensure it loads.
 
 ```javascript
 console.log('Hello from service-worker.js');
@@ -42,11 +42,11 @@ Now that you have a registered service worker, we can bring in Workbox.
 
 ## Using Workbox
 
-Workbox is distributed as a number of [npm modules](https://developers.google.com/web/tools/workbox/modules). When you want to use one, first install it from [npm](https://npmjs.com/) then `import` the portions of the modules you need for your service worker. One of Workbox’s primary features is its routing and caching strategy modules, so it’s a good place to start.
+Workbox is distributed as a number of [npm modules](/web/tools/workbox/modules). When you want to use one, first install it from [npm](https://npmjs.com/) then `import` the portions of the modules you need for your service worker. One of Workbox’s primary features is its routing and caching strategy modules, so it’s a good place to start.
 
 ### Routing and Caching Strategies
 
-Workbox allows you to manage caching for your web app's HTTP requests using different caching strategies. The first step is to determine whether the request being worked on matches your criteria, and if so, applying a caching strategy to it. Matching happens via a [callback function](https://developers.google.com/web/tools/workbox/modules/workbox-routing#matching_and_handling_in_routes) that returns a truthy value. Caching strategies can either be one of Workbox’s [pre-defined strategies](https://developers.google.com/web/tools/workbox/modules/workbox-strategies#using_strategies), or you can create your own. A basic service worker utilizing routing and caching could look something like this:
+Workbox allows you to manage caching for your web app's HTTP requests using different caching strategies. The first step is to determine whether the request being worked on matches your criteria, and if so, applying a caching strategy to it. Matching happens via a [callback function](/web/tools/workbox/modules/workbox-routing#matching_and_handling_in_routes) that returns a truthy value. Caching strategies can either be one of Workbox’s [pre-defined strategies](/web/tools/workbox/modules/workbox-strategies#using_strategies), or you can create your own. A basic service worker utilizing routing and caching could look something like this:
 
 ```javascript
 import { registerRoute } from 'workbox-routing';
@@ -121,13 +121,13 @@ registerRoute(
 );
 ```
 
-This service worker caches navigation requests (for new HTML pages) with a [Network First strategy](https://developers.google.com/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache) storing cached pages in a cache named pages, but only if it comes back with a 200 status code. It also caches stylesheets, javascript, and web workers with a [Stale While Revalidate strategy](https://developers.google.com/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate) storing cached assets in a cache named assets, again, only if they come back with a 200 status code. Finally, it caches images with a [Cache First strategy](https://developers.google.com/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) storing cached images in a cache named images, only if they come back with a 200 status code, expiring cached items after 30 days and only allowing 50 entries at once.
+This service worker caches navigation requests (for new HTML pages) with a [Network First strategy](/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache) storing cached pages in a cache named pages, but only if it comes back with a 200 status code. It also caches stylesheets, javascript, and web workers with a [Stale While Revalidate strategy](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate) storing cached assets in a cache named assets, again, only if they come back with a 200 status code. Finally, it caches images with a [Cache First strategy](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) storing cached images in a cache named images, only if they come back with a 200 status code, expiring cached items after 30 days and only allowing 50 entries at once.
 
 ### Precaching
 
-In addition to caching as requests are made, sometimes called runtime caching, Workbox also supports [precaching](https://developers.google.com/web/tools/workbox/modules/workbox-precaching), the ability to cache resources when the service worker is installed. There are a number of items that are great candidates for precaching: your web app's [start URL](https://web.dev/add-manifest/#start-url), your [offline fallback](#offline_fallback) page, and key JavaScript and CSS files. By precaching files, you’ll guarantee that they’re available in the cache when the service worker takes control of the page.
+In addition to caching as requests are made, sometimes called runtime caching, Workbox also supports [precaching](/web/tools/workbox/modules/workbox-precaching), the ability to cache resources when the service worker is installed. There are a number of items that are great candidates for precaching: your web app's [start URL](https://web.dev/add-manifest/#start-url), your [offline fallback](#offline_fallback) page, and key JavaScript and CSS files. By precaching files, you’ll guarantee that they’re available in the cache when the service worker takes control of the page.
 
-You can use precaching inside your new service worker by using a bundler plugin ([webpack](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin) or [rollup](https://github.com/chromeos/static-site-scaffold-modules/blob/master/modules/rollup-plugin-workbox-inject/README.md)) that supports precache manifest injection:
+You can use precaching inside your new service worker by using a bundler plugin ([webpack](/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin) or [rollup](https://github.com/chromeos/static-site-scaffold-modules/blob/master/modules/rollup-plugin-workbox-inject/README.md)) that supports precache manifest injection:
 
 ```javascript
 import { precacheAndRoute } from 'workbox-precaching';
@@ -164,4 +164,8 @@ This service worker precaches an offline page and, if a user is offline, returns
 
 ## Do more with Workbox
 
-There’s lots more you can do with Workbox! Read the [guides](/web/tools/workbox/guides) for a deeper dive into different aspects of Workbox. Check out all of the available [Workbox modules](https://developers.google.com/web/tools/workbox/modules) to see even more things Workbox can do, like managing Google Analytics when offline, retrying form submissions that failed when offline, or broadcast updates when a cache is updated. With Workbox, you can harness the power of service workers to improve performance and give your site a great experience, independent of the network.
+There’s lots more you can do with Workbox! Read the [guides](/web/tools/workbox/guides) for a deeper dive into different aspects of Workbox. Check out all of the available [Workbox modules](/web/tools/workbox/modules) to see even more things Workbox can do, like managing Google Analytics when offline, retrying form submissions that failed when offline, or broadcast updates when a cache is updated. With Workbox, you can harness the power of service workers to improve performance and give your site a great experience, independent of the network.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
