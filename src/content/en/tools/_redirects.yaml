@@ -497,3 +497,12 @@ redirects:
 
 - from: /web/tools/lighthouse/audits/manifest-contains-theme_color
   to: https://web.dev/themed-omnibox/
+
+- from: /web/tools/workbox/guides/precache-files
+  to: /web/tools/workbox/modules/workbox-precaching
+
+- from: /web/tools/workbox/guides/precache-files/...
+  to: /web/tools/workbox/modules/workbox-precaching
+
+- from: /web/tools/workbox/guides/codelabs/...
+  to: /codelabs/workbox-lab
