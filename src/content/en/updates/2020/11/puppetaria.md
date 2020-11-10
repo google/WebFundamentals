@@ -48,7 +48,7 @@ On the other hand, a Puppeteer script is an external observer of a page, so when
 The effect is that such scripts can be brittle and susceptible to source code changes. Suppose, for example, that one uses Puppeteer scripts for automated testing for a web application containing the node `<button>Submit</button>` as the third child of the `body` element. One snippet from a test case might look like this:
 
 ```javascript
-const button = await page.$('body:nth-child(3)');     // problematic selector
+const button = await page.$('body:nth-child(3)'); // problematic selector
 await button.click();
 ```
 
@@ -58,7 +58,7 @@ This is not news to test writers: Puppeteer users already attempt to pick select
 
 Puppeteer now ships with an **alternative query handler based on querying the accessibility tree rather than relying on CSS selectors**. The underlying philosophy here is that if the concrete element we want to select has not changed, then the corresponding accessibility node should not have changed either. 
 
-We name such selectors [ARIA](https://w3c.github.io/aria/) selectors and support querying for the computed accessible name and role of the accessibility tree. Compared to the CSS selectors, these properties are semantic in nature. They are not tied to syntactic properties of the DOM but instead descriptors for how the page is observed through assistive technologies such as screen readers.
+We name such selectors “[ARIA](https://w3c.github.io/aria/) selectors” and support querying for the computed accessible name and role of the accessibility tree. Compared to the CSS selectors, these properties are semantic in nature. They are not tied to syntactic properties of the DOM but instead descriptors for how the page is observed through assistive technologies such as screen readers.
 
 In the test script example above, we could instead use the selector `aria/Submit[role="button"]` to select the wanted button, where `Submit` refers to the accessible name of the element:
 
@@ -73,13 +73,13 @@ Now, if we later decide to change the text content of our button from `Submit` t
 Going back to the larger example with the search bar, we could leverage the new `aria` handler and replace
 
 ```javascript
-   const search = await page.$('devsite-search > form > div.devsite-search-container');
+const search = await page.$('devsite-search > form > div.devsite-search-container');
 ```
 
 with 
 
 ```javascript
-   const search = await page.$('aria/Open search[role="button"]');
+const search = await page.$('aria/Open search[role="button"]');
 ```
 to locate the search bar!
 
@@ -144,7 +144,7 @@ Even though enabling caching looks desirable here, it does come with a cost of a
 ### DevTools test suite benchmark {: .benchmark }
 The previous benchmark showed that implementing our querying mechanism at the CDP layer gives a performance boost in a clinical unit-test scenario.
 
-To see if the difference is pronounced enough to make it noticeable in a more realistic scenario of running a full test suite, we [patched the DevTools end-to-end test suite](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2360013) to make use of the JavaScript and CDP-based prototypes and compared the runtimes. In this benchmark, we changed a total of 43 selectors from `[aria-label=...]` to a custom query handler `aria/…`, which we then implemented using each of the prototypes.
+To see if the difference is pronounced enough to make it noticeable in a more realistic scenario of running a full test suite, we [patched the DevTools end-to-end test suite](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2360013) to make use of the JavaScript and CDP-based prototypes and compared the runtimes. In this benchmark, we changed a total of 43 selectors from `[aria-label=…]` to a custom query handler `aria/…`, which we then implemented using each of the prototypes.
 
 Some of the selectors are used multiple times in test scripts, so the actual number of executions of the `aria` query handler was 113 per run of the suite. The total number of query selections was 2253, so only a fraction of the query selections happened through the prototypes.
 
