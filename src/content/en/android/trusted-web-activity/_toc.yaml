@@ -13,5 +13,7 @@ toc:
     path: /web/android/trusted-web-activity/query-parameters/
   - title: Migrating from custom-tabs-client to android-browser-helper
     path: /web/android/trusted-web-activity/android-browser-helper-migration/
+  - title: Enable Web Share Target
+    path: /web/android/trusted-web-activity/web-share-target/
 - title: Map of Trusted Web Activity libraries and tools
   path: /web/android/trusted-web-activity/lay-of-the-land/
