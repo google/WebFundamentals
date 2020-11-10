@@ -4,7 +4,7 @@ description: Learn how to enable Web Share Target in a project using Trusted Web
 
 {# wf_published_on: 2020-11-10 #}
 {# wf_updated_on: 2020-11-10 #}
-{# wf_tags: trusted-web-activity web-share-target #}
+{# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
 
@@ -12,9 +12,9 @@ description: Learn how to enable Web Share Target in a project using Trusted Web
 
 {% include "web/_shared/contributors/andreban.html" %}
 
-[Web Share Target][1] enables PWAs to receive shared content from other applications installed on the
-device. This feature can be used, for instance,  by applications such as image editors to receive
-an image from a camera app, or a social network to receive an image or a video for sharing.
+[Web Share Target][1] enables PWAs to receive shared content from other applications installed on
+the device. This feature can be used, for instance,  by applications such as image editors to
+receive an image from a camera app, or a social network to receive an image or a video for sharing.
 
 Starting with Chrome 86, Web Share Target is now also available to applications using
 [Trusted Web Activity][2]. While the PWA should work out of the box, a few changes are required to
@@ -26,9 +26,9 @@ the technology can get started with the [Integration Guide][3].
 Along the same lines, a full explanation of the Web Share Target implementation in a PWA is outside
 scope and developers can find more information in [this article][1].
 
-The demo application at [https://scrapbook-pwa.web.app/][4] will be used as the PWA for this article,
-and its source code is available on [Github][5], and the Android Application is based on the
-[basic Trusted Web Activity demo][6].
+The demo application at [https://scrapbook-pwa.web.app/][4] will be used as the PWA for this
+article, and its source code is available on [Github][5], and the Android Application is based on
+the [basic Trusted Web Activity demo][6].
 
 ## Add Web Share Target to the Android app
 
@@ -168,7 +168,11 @@ category, and `mime-types` handled by the application.
 There are a few things that can cause this. This is a checklist of things to look at:
 
  - Ensure that the Digital Asset Links validation is successful.
- - Check the JSON inside strings.xml for correctness. 
+ - Check the JSON inside strings.xml for correctness.
+
+{% include "web/_shared/helpful.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 [1]: https://web.dev/web-share-target/
 [2]: /web/android/trusted-web-activity/
