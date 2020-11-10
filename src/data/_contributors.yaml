@@ -175,6 +175,20 @@ kaycebasques:
   description:
     en: Technical Writer, Chrome DevTools & Lighthouse
 
+jobay:
+  name:
+    given: Johan
+    family: Bay
+  org:
+    name: Google
+    unit: Chrome DevTools
+  country: DK
+  role:
+    - author
+  github: johanbay
+  description:
+    en: Software Development Intern working on Puppeteer
+
 beaufortfrancois:
   name:
     given: François
