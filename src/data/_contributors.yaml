@@ -185,6 +185,7 @@ jobay:
   country: DK
   role:
     - author
+  github: johanbay
   description:
     en: Software Development Intern working on Puppeteer
 
