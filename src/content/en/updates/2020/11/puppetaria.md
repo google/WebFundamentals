@@ -20,7 +20,7 @@ Puppeteer is a browser automation library for Node: it lets you control a browse
 
 The most prominent browser task is, of course, browsing web pages. Automating this task essentially amounts to automating interactions with the webpage. 
 
-In Puppeteer, this is achieved by querying for DOM elements using string-based selectors and performing actions such as clicking or typing text on the elements. For example, a script that opens opens [developer.google.com], finds the search box, and searches for `puppetaria` could look like this:
+In Puppeteer, this is achieved by querying for DOM elements using string-based selectors and performing actions such as clicking or typing text on the elements. For example, a script that opens opens [developer.google.com](https://developer.google.com), finds the search box, and searches for `puppetaria` could look like this:
 
 ```javascript
 (async () => {
@@ -132,7 +132,7 @@ For this prototype, we implemented a new CDP endpoint specifically for querying 
 ### Unit test benchmark
 The following figure compares the total runtime of querying four elements 1000 times for the 3 prototypes. The benchmark was executed in 3 different configurations varying the page size and whether or not caching of accessibility elements was enabled.
 
-![Benchmark: Total runtime of querying four elements 1000 times](/web/updates/images/2020/11/puppetaria/puppetaria-02.jpg)
+![Benchmark: Total runtime of querying four elements 1000 times](/web/updates/images/2020/11/puppetaria/puppetaria-02.svg)
 
 It is quite clear that there is a considerable performance gap between the CDP-backed querying mechanism and the two others implemented solely in Puppeteer, and the relative difference seems to increase dramatically with the page size. It is somewhat interesting to see that the JS DOM traversal prototype responds so well to enabling accessibility caching. With caching disabled, the  accessibility tree is computed on demand and discards the tree after each interaction if the domain is diabled. Enabling the domain makes Chromium cache the computed tree instead.
 
@@ -149,7 +149,7 @@ To see if the difference is pronounced enough to make it noticeable in a more re
 Some of the selectors are used multiple times in test scripts, so the actual number of executions of the `aria` query handler was 113 per run of the suite. The total number of query selections was 2253, so only a fraction of the query selections happened through the prototypes.
 
 
-![Benchmark: e2e test suite](/web/updates/images/2020/11/puppetaria/puppetaria-03.jpg)
+![Benchmark: e2e test suite](/web/updates/images/2020/11/puppetaria/puppetaria-03.svg)
 
 As seen in the figure above, there is a discernible difference in the total runtime. The data is too noisy to conclude anything specific, but it is clear that the performance gap between the two prototypes shows in this scenario as well.
 ### A new CDP endpoint
@@ -159,7 +159,7 @@ For our use case in Puppeteer, we need the endpoint to take so-called [`RemoteOb
 
 As seen in the chart below, we tried quite a few approaches satisfying this interface. From this, we found that the size of the returned objects, i.e whether or not we returned full accessibility nodes or only the `backendNodeIds` made no discernible difference. On the other hand, we found that using the existing [`NextInPreOrderIncludingIgnored`](codesearch link) was a poor choice for implementing the traversal logic here, as that yielded a noticeable slow-down.
 
-![benchmark](/web/updates/images/2020/11/puppetaria/puppetaria-04.jpg)
+![Benchmark: Comparison of CDP-based AXTree traversal prototypes](/web/updates/images/2020/11/puppetaria/puppetaria-04.svg)
 
 ### Wrapping it all up {: .wrapping-up }
 Now, with the CDP endpoint in place, we implemented the query handler on [the Puppeteer side](https://github.com/puppeteer/puppeteer/issues/6307). The grunt of the work here was to restructure the query handling code to enable queries to resolve directly through CDP instead of querying through JavaScript evaluated in the page context.
