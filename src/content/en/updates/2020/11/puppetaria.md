@@ -157,7 +157,7 @@ In light of the above benchmarks, and since the launch flag-based approach was u
 
 For our use case in Puppeteer, we need the endpoint to take so-called [`RemoteObjectIds`](https://chromedevtools.github.io/devtools-protocol/tot/Runtime/#type-RemoteObjectId) as argument and, to enable us to find the corresponding DOM elements afterwards, it should return a list of objects that contains the [`backendNodeIds`](https://chromedevtools.github.io/devtools-protocol/tot/DOM/#type-BackendNodeId) for the DOM elements. 
 
-As seen in the chart below, we tried quite a few approaches satisfying this interface. From this, we found that the size of the returned objects, i.e whether or not we returned full accessibility nodes or only the `backendNodeIds` made no discernible difference. On the other hand, we found that using the existing [`NextInPreOrderIncludingIgnored`](codesearch link) was a poor choice for implementing the traversal logic here, as that yielded a noticeable slow-down.
+As seen in the chart below, we tried quite a few approaches satisfying this interface. From this, we found that the size of the returned objects, i.e whether or not we returned full accessibility nodes or only the `backendNodeIds` made no discernible difference. On the other hand, we found that using the existing [`NextInPreOrderIncludingIgnored`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/accessibility/ax_object.h;l=977-982;drc=92569ee6b4ff7e0344f7780d2b2e843b1c359d05) was a poor choice for implementing the traversal logic here, as that yielded a noticeable slow-down.
 
 ![Benchmark: Comparison of CDP-based AXTree traversal prototypes](/web/updates/images/2020/11/puppetaria/puppetaria-04.svg)
 
