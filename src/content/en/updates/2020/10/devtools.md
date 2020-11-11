@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New CSS Grid debugging tools, Web Authn tab, moveable tools and Computed sidebar pane.
 
-{# wf_updated_on: 2020-10-01 #}
+{# wf_updated_on: 2020-11-12 #}
 {# wf_published_on: 2020-10-01 #}
 {# wf_tags: chrome7, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -13,6 +13,11 @@ description: New CSS Grid debugging tools, Web Authn tab, moveable tools and Com
 
 {% include "web/_shared/contributors/jecelynyeen.html" %}
 
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="bE3O6EhLjPc"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## New CSS Grid debugging tools {: #css-grid }
 DevTools now has better support for CSS grid debugging! 
