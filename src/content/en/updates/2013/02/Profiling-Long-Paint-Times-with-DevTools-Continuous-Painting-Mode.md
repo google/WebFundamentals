@@ -175,10 +175,6 @@ they are finally here. But it's important to know when and where to use them.
 Avoid using them in areas with lots of repaints and avoid overusing them in
 general.
 </p>
-<p>Learn more about painting and related topics on <a href="http://jankfree.com">jankfree.com</a>
-</p>
-
-
 
 <aside class="bio clearfix" style="border: 3px double #CCC; padding: 10px;">
 Eberhard Gräther is student of <a href="https://multimediatechnology.at/in-english/">MultiMediaTechnology</a> at <a href="https://www.fh-salzburg.ac.at/en/">Salzburg University of Applied Sciences</a>. He interned in the Chrome GPU team from 10/2012 to 03/2013 where he worked on rendering profiling tools. Follow him at  <a href="https://twitter.com/egraether">@egraether</a> or visit <a href="http://egraether.com">his site</a> to find graphics demos and web games he has built.
