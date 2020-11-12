@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web Vitals lane and more.
 
-{# wf_updated_on: 2020-11-12 #}
+{# wf_updated_on: 2020-11-13 #}
 {# wf_published_on: 2020-11-12 #}
 {# wf_tags: chrome7, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -31,7 +31,7 @@ Chromium issue: [1029427](https://crbug.com/1029427)
 
 DevTools now has better support for CSS angle debugging!
 
-![CSS angle](/web/updates/images/2020/11/devtools/01-css-angle.png)
+![CSS angle](/web/updates/images/2020/11/devtools/01-angle.png)
 
 When an HTML element on your page has CSS angle applied to it (e.g.  `background: linear-gradient(angle, color-stop1, color-stop2)`, `transform: rotate(angle)`), a clock icon is shown next to the angle in the Styles pane. Click on the clock icon to toggle the clock overlay. Click anywhere in the clock or drag the needle to change the angle! 
 
