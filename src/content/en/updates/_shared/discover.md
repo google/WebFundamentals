@@ -2,6 +2,25 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 88 {: #discover88 .hide-from-toc }
+
+* [Faster DevTools startup](/web/updates/2020/11/devtools#fast-startup)
+* [New CSS angle visualization tools](/web/updates/2020/11/devtools#css-angle)
+* [Emulate unsupported image types](/web/updates/2020/11/devtools#mulate-image)
+* [Simulate storage quota size in the Storage pane](/web/updates/2020/11/devtools#simulate-storage)
+* [New Web Vitals lane in the Performance panel](/web/updates/2020/11/devtools#web-vitals)
+* [Report CORS errors in the Network panel](/web/updates/2020/11/devtools#cors)
+* [Cross-origin isolation information in the Frame details view](/web/updates/2020/11/devtools#cross-origin)
+* [New Web Workers information in the Frame details view](/web/updates/2020/11/devtools#web-worker)
+* [Display opener frame details for opened windows](/web/updates/2020/11/devtools#opener-frame)
+* [Open Network panel from the Service Workers pane](/web/updates/2020/11/devtools#sw)
+* [Copy property value](/web/updates/2020/11/devtools#copy-value)
+* [Copy stacktrace for network initiator](/web/updates/2020/11/devtools#copy-stacktrace)
+* [Preview Wasm variable value on mouseover](/web/updates/2020/11/devtools#wasm)
+* [Consistent units of measurement for file/memory sizes](/web/updates/2020/11/devtools#onsistent-kb)
+* [[Experimental] CSS Flexbox debugging tools](/web/updates/2020/11/devtools#flexbox)
+* [[Experimental] Customize chords keyboard shortcuts](/web/updates/2020/11/devtools#keyboard-shortcuts)
+
 ### Chrome 87 {: #discover87 .hide-from-toc }
 
 * [New CSS Grid debugging tools](/web/updates/2020/10/devtools#css-grid)
