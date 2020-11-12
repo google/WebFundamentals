@@ -15,7 +15,7 @@ description: New CSS angle visualization tools, emulate unsupported image types 
 
 ## Faster DevTools startup {: #fast-startup }
 
-DevTools startup now is ~37% faster (from 6.9s down to 5s)! 🎉
+DevTools startup now is ~37% faster in terms of JavaScript compilation (from 6.9s down to 5s)! 🎉
 
 The team did some optimization to reduce the performance overhead of serialisation, parsing and deserialisation during the startup.
 
