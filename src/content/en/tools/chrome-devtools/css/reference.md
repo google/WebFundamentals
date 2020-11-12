@@ -537,7 +537,7 @@ To open the **Angle Clock**:
 
 1. Change the angle value by clicking on the **Angle Clock** circle or scroll your mouse to increase / decrease the angle value by 1. 
 
-1. There are more keyboard shortcuts to change the angle value. Find out more in the [Styles pane keyboard shortcuts](https://developers.google.com/web/tools/chrome-devtools/shortcuts#styles).
+1. There are more keyboard shortcuts to change the angle value. Find out more in the [Styles pane keyboard shortcuts](/web/tools/chrome-devtools/shortcuts#styles).
 
 ## Feedback {: #feedback }
 
