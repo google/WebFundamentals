@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Discover new workflows for viewing and changing CSS in Chrome DevTools.
 
-{# wf_updated_on: 2020-09-08 #}
+{# wf_updated_on: 2020-11-12 #}
 {# wf_published_on: 2017-06-09 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -11,6 +11,7 @@ description: Discover new workflows for viewing and changing CSS in Chrome DevTo
 # CSS Reference {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/jecelynyeen.html" %}
 
 Discover new workflows in this comprehensive reference of Chrome DevTools
 features related to viewing and changing CSS.
@@ -156,7 +157,7 @@ All** checkbox.
 
 ### Toggle a pseudo-class {: #pseudo-class }
 
-To toggle a pseudo-class like `:active`, `:focus`, `:hover`, or `:visited`:
+To toggle a pseudo-class like `:active`, `:focus`, `:hover`, `:visited`, `:focus-within` or `focus-visible`:
 
 1. [Select an element](#select).
 1. On the **Elements** panel, go to the **Styles** tab.
@@ -493,6 +494,50 @@ change the selected color to some other color on the page:
          the viewport once the blue was clicked
        </figcaption>
      </figure>
+
+### Change angle value with the Angle Clock {: #angle-clock }
+
+The **Angle Clock** provides a GUI for changing `angle` declarations.
+
+To open the **Angle Clock**:
+
+1. [Select an element](#select) with angle declaration. For example, select the text below. 
+    {% framebox width="auto" height="auto" enable_widgets="true" %}
+      <style>
+      p {
+        font-weight: bold;
+        text-align: center;
+        margin-top: 40px;
+        transform: rotate(-5deg);
+        background: linear-gradient(0.25turn, pink, lavender);
+      }
+      </style>
+      <p>Inspect me!</p>
+    {% endframebox %}
+
+1. In the **Styles** tab, find the `transform` or `background` declaration
+   that you want to change. Click on the **Angle Preview** box next to the angle value.
+
+    <figure>
+      <img src="imgs/angle-preview.png" alt="Angle preview"/>
+      <figcaption>
+        <b>Figure 28</b>. The small clock to the left of
+        <code>-5deg</code> and <code>0.25turn</code> are preview of the angle.
+      </figcaption>
+     </figure>
+
+1. Click the preview to open the **Angle Clock**.
+
+    <figure>
+      <img src="imgs/angle-clock.png" alt="Angle clock"/>
+      <figcaption>
+        <b>Figure 29</b>. The Angle Clock.
+       </figcaption>
+    </figure>
+
+1. Change the angle value by clicking on the **Angle Clock** circle or scroll your mouse to increase / decrease the angle value by 1. 
+
+1. There are more keyboard shortcuts to change the angle value. Find out more in the [Styles pane keyboard shortcuts](https://developers.google.com/web/tools/chrome-devtools/shortcuts#styles).
 
 ## Feedback {: #feedback }
 
