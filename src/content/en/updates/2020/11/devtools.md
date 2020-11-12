@@ -253,6 +253,12 @@ Beside that, new alignment icons are added in the following flexbox properties:
 - `justify-items`
 - `justify-content` 
 
+On top of that, these icons are context-aware. The icon direction will be adjusted according to:
+
+- `flex-direction`
+- `direction`
+- `writing-mode`
+
 These icons aim to help you better visualize the flexbox layout of the page.
 
 ![CSS Flex debugging](/web/updates/images/2020/11/devtools/13-flex-debugging.png)
