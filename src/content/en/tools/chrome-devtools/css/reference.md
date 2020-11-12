@@ -497,7 +497,7 @@ change the selected color to some other color on the page:
 
 ### Change angle value with the Angle Clock {: #angle-clock }
 
-The **Angle Clock** provides a GUI for changing `angle` declarations.
+The **Angle Clock** provides a GUI for changing `<angle>`s in CSS property values.
 
 To open the **Angle Clock**:
 
