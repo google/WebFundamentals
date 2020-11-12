@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: The canonical documentation for Chrome DevTools keyboard shortcuts.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-11-12 #}
 {# wf_published_on: 2015-04-29 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -262,6 +262,26 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
       <td>Increment / decrement a property value by 100</td>
       <td>Click a value then press <kbd>Command</kbd>+<kbd>Up Arrow</kbd> / <kbd>Command</kbd>+<kbd>Down Arrow</kbd></td>
       <td>Click a value then press <kbd>Control</kbd>+<kbd>Up Arrow</kbd> / <kbd>Control</kbd>+<kbd>Down Arrow</kbd></td>
+    </tr>
+    <tr>
+      <td>Cycle through the degrees (deg), gradians (grad), radians (rad) and turns (turn) representations of an angle value</td>
+      <td>Hold <kbd>Shift</kbd> then click the <b>Angle Preview</b> box next to the value</td>
+      <td>Hold <kbd>Shift</kbd> then click the <b>Angle Preview</b> box next to the value</td>
+    </tr>
+    <tr>
+      <td>Increment / decrement an angle value by 1</td>
+      <td>Click the <b>Angle Preview</b> box next to the value then press <kbd>Up Arrow</kbd> / <kbd>Down Arrow</kbd></td>
+      <td>Click the <b>Angle Preview</b> box next to the value then press <kbd>Up Arrow</kbd> / <kbd>Down Arrow</kbd></td>
+    </tr>
+    <tr>
+      <td>Increment / decrement an angle value by 10</td>
+      <td>Click the <b>Angle Preview</b> box next to the value then press <kbd>Shift</kbd>+<kbd>Up Arrow</kbd> / <kbd>Shift</kbd>+<kbd>Down Arrow</kbd></td>
+      <td>Click the <b>Angle Preview</b> box next to the value then press <kbd>Shift</kbd>+<kbd>Up Arrow</kbd> / <kbd>Shift</kbd>+<kbd>Down Arrow</kbd></td>
+    </tr>
+    <tr>
+      <td>Increment / decrement an angle value by 15</td>
+      <td>Click the <b>Angle Preview</b> box next to the value then press <kbd>Shift</kbd>, click / mouse slide on the <b>Angle Clock Overlay</b></td>
+      <td>Click the <b>Angle Preview</b> box next to the value then press <kbd>Shift</kbd>, click / mouse slide on the <b>Angle Clock Overlay</b></td>
     </tr>
   </tbody>
 </table>
