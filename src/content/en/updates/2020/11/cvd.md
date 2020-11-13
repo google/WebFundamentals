@@ -308,14 +308,14 @@ To make this valid standalone SVG (and thus XML), we need to make two changes. C
 </svg>
 ``` -->
 <pre class="prettyprint">
-    &lt;svg <strong>xmlns=&quot;http://www.w3.org/2000/svg&quot;</strong>&gt;
-      &lt;filter id=&quot;deuteranopia&quot;&gt;
-        &lt;feColorMatrix values=&quot;0.367  0.861 -0.228  0.000  0.000
-                              0.280  0.673  0.047  0.000  0.000
-                              -0.012  0.043  0.969  0.000  0.000
-                              0.000  0.000  0.000  1.000  0.000&quot; <strong>/&gt;</strong>
-      &lt;/filter&gt;
-    &lt;/svg&gt;
+&lt;svg <strong>xmlns=&quot;http://www.w3.org/2000/svg&quot;</strong>&gt;
+  &lt;filter id=&quot;deuteranopia&quot;&gt;
+    &lt;feColorMatrix values=&quot;0.367  0.861 -0.228  0.000  0.000
+                          0.280  0.673  0.047  0.000  0.000
+                          -0.012  0.043  0.969  0.000  0.000
+                          0.000  0.000  0.000  1.000  0.000&quot; <strong>/&gt;</strong>
+  &lt;/filter&gt;
+&lt;/svg&gt;
 </pre>
 
 The first change is the XML namespace declaration at the top. The second addition is the so-called “solidus” — the slash that indicates the `<feColorMatrix>` tag both opens and closes the element. The HTML parser couldn’t care less about `/>` vs. `>`, but in XML the difference matters.
