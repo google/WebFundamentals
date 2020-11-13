@@ -58,8 +58,9 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
     <picture>
       <!-- <source srcset="/web/updates/images/2020/11/cvd/0-regular@2x.avif 2x, /web/updates/images/2020/11/cvd/0-regular.avif 1x" type="image/avif" />
       <source srcset="/web/updates/images/2020/11/cvd/0-regular@2x.webp 2x, /web/updates/images/2020/11/cvd/0-regular.webp 1x" type="image/webp" /> -->
-      <img srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x, /web/updates/images/2020/11/cvd/0-regular.png 1x"
-        alt="A colorful picture of melted crayons, with no color vision deficiencies simulated"/>
+     <img src="/web/updates/images/2020/11/cvd/0-regular.png"
+       srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x"
+       alt="A colorful picture of melted crayons, with no color vision deficiencies simulated">
     </picture>
   <figcaption>
     A colorful <a href="https://unsplash.com/photos/keMdIzsNzsM">picture of melted crayons</a>, with no color vision deficiencies simulated.
