@@ -20,7 +20,7 @@ This article describes why and how we implemented color vision deficiency simula
 
 [Low-contrast text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) is the most common automatically-detectable accessibility issue on the web.
 
-![CDP](/web/updates/images/2020/11/cvd/common-a11y-issues.svg)
+![A list of common accessibility issues on the web. Low-contrast text is by far the most common issue.](/web/updates/images/2020/11/cvd/common-a11y-issues.svg)
 
 According to [WebAIM’s accessibility analysis of the top 1-million web sites](https://webaim.org/projects/million/update#wcag:~:text=Low%20contrast%20text%0985.3%25%0986.1%25), over *86%* of home pages have low contrast. On average, each home page has [36 distinct instances](https://webaim.org/projects/million/#contrast:~:text=On%20average%2C%20home%20pages%20had%2036%20distinct%20instances%20of%20low%2Dcontrast%20text.) of low-contrast text.
 
@@ -62,7 +62,7 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
         alt="A colorful picture of melted crayons, with no color vision deficiencies simulated"/>
     </picture>
   <figcaption>
-    <b>Figure 1</b>. Description: A colorful <a href="https://unsplash.com/photos/keMdIzsNzsM">picture of melted crayons</a>, with no color vision deficiencies simulated.
+    A colorful <a href="https://unsplash.com/photos/keMdIzsNzsM">picture of melted crayons</a>, with no color vision deficiencies simulated.
   </figcaption>
 </figure>
 
@@ -74,7 +74,7 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
       alt="The impact of simulating achromatopsia on a colorful picture of melted crayons."/>
   </picture>
   <figcaption>
-    <b>Figure 2</b>. Description: The impact of simulating achromatopsia on a colorful picture of melted crayons.
+    The impact of simulating achromatopsia on a colorful picture of melted crayons.
   </figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
       alt="The impact of simulating deuteranopia on a colorful picture of melted crayons."/>
   </picture>
   <figcaption>
-    <b>Figure 3</b>. Description: The impact of simulating deuteranopia on a colorful picture of melted crayons.
+    The impact of simulating deuteranopia on a colorful picture of melted crayons.
   </figcaption>
 </figure>
 
@@ -98,7 +98,7 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
       alt="The impact of simulating protanopia on a colorful picture of melted crayons."/>
   </picture>
   <figcaption>
-    <b>Figure 4</b>. Description: The impact of simulating protanopia on a colorful picture of melted crayons.
+    The impact of simulating protanopia on a colorful picture of melted crayons.
   </figcaption>
 </figure>
 
@@ -110,14 +110,16 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
       alt="The impact of simulating tritanopia on a colorful picture of melted crayons."/>
   </picture>
   <figcaption>
-    <b>Figure 5</b>. Description: The impact of simulating tritanopia on a colorful picture of melted crayons.
+    The impact of simulating tritanopia on a colorful picture of melted crayons.
   </figcaption>
 </figure>
 
 As a developer with regular vision, you might see DevTools display a bad contrast ratio for color pairs that visually look okay to you. This happens because the contrast ratio formulas take into account these color vision deficiencies! _You_ might still be able to read low-contrast text in some cases, but people with vision impairments don’t have that privilege.
 
 By letting designers and developers simulate the effect of these vision deficiencies on their own web apps, we aim to provide the missing piece: not only can DevTools help you *find* and *fix* contrast issues, now you can also *understand* them!
+
 ## Simulating color vision deficiencies with HTML, CSS, SVG, and C++
+
 Before we dive into the Blink Renderer implementation of our feature, it helps to understand how you’d implement equivalent functionality using web technology.
 
 You can think of each of these color vision deficiency simulations as an overlay covering the entire page. The Web Platform has a way to do that: CSS filters! With the CSS `filter` property, you can use some predefined filter functions, such as `blur`, `contrast`, `grayscale`, `hue-rotate`, and many more. For even more control, the `filter` property also accepts a URL which can point to a custom SVG filter definition:
@@ -399,7 +401,6 @@ Okay, so we’ve figured out how to construct SVG filters and turn them into dat
 
 Edge cases aside, we’ve made some good progress. Because we no longer depend on inline `<svg>` being present in the same document, we’ve effectively reduced our solution to just a single self-contained CSS `filter` property definition. Great! Now let’s get rid of that too.
 
-
 ### Avoiding the in-document CSS dependency
 
 Just to recap, this is where we’re at so far:
@@ -438,7 +439,6 @@ scoped_refptr<ComputedStyle> StyleResolver::StyleForViewport() {
 You don't need to understand C++ or the intricacies of Blink’s Style engine to see that this code handles the viewport’s (or more accurately: the initial containing block’s) `z-index`, `display`, `position`, and `overflow`. Those are all concepts you might be familiar with from CSS! There’s some other magic related to stacking contexts, which doesn’t _directly_ translate to a CSS property, but overall you could think of this `viewport` object as something that can be styled using CSS from within Blink, just like a DOM element — except it’s not part of the DOM.
 
 *This gives us exactly what we want!* We can apply our `filter` styles to the `viewport` object, which visually affects the rendering, without interfering with the observable page styles or the DOM in any way.
-
 
 ## Conclusion {: #conclusion }
 
