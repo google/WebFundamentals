@@ -71,7 +71,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
   <picture>
     <!-- <source srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.avif 2x, /web/updates/images/2020/11/cvd/1-achromatopsia.avif 1x" type="image/avif" />
     <source srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.webp 2x, /web/updates/images/2020/11/cvd/1-achromatopsia.webp 1x" type="image/webp" /> -->
-    <img srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.png 2x, /web/updates/images/2020/11/cvd/1-achromatopsia.png 1x"
+    <img src="/web/updates/images/2020/11/cvd/1-achromatopsia.png" 
+      srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.png 2x"
       alt="The impact of simulating achromatopsia on a colorful picture of melted crayons."/>
   </picture>
   <figcaption>
@@ -83,7 +84,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
   <picture>
     <!-- <source srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.avif 2x, /web/updates/images/2020/11/cvd/2-deuteranopia.avif 1x" type="image/avif" />
     <source srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.webp 2x, /web/updates/images/2020/11/cvd/2-deuteranopia.webp 1x" type="image/webp" /> -->
-    <img srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.png 2x, /web/updates/images/2020/11/cvd/2-deuteranopia.png 1x"
+    <img src="/web/updates/images/2020/11/cvd/2-deuteranopia.png"
+      srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.png 2x"
       alt="The impact of simulating deuteranopia on a colorful picture of melted crayons."/>
   </picture>
   <figcaption>
@@ -95,7 +97,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
   <picture>
     <!-- <source srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.avif 2x, /web/updates/images/2020/11/cvd/3-protanopia.avif 1x" type="image/avif" />
     <source srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.webp 2x, /web/updates/images/2020/11/cvd/3-protanopia.webp 1x" type="image/webp" /> -->
-    <img srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.png 2x, /web/updates/images/2020/11/cvd/3-protanopia.png 1x"
+    <img src="/web/updates/images/2020/11/cvd/3-protanopia.png"
+      srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.png 2x"
       alt="The impact of simulating protanopia on a colorful picture of melted crayons."/>
   </picture>
   <figcaption>
@@ -107,7 +110,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
   <picture>
     <!-- <source srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.avif 2x, /web/updates/images/2020/11/cvd/4-tritanopia.avif 1x" type="image/avif" />
     <source srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.webp 2x, /web/updates/images/2020/11/cvd/4-tritanopia.webp 1x" type="image/webp" /> -->
-    <img srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.png 2x, /web/updates/images/2020/11/cvd/4-tritanopia.png 1x"
+    <img src="/web/updates/images/2020/11/cvd/4-tritanopia.png"
+      srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.png 2x"
       alt="The impact of simulating tritanopia on a colorful picture of melted crayons."/>
   </picture>
   <figcaption>
@@ -250,9 +254,9 @@ Anyway, we have this SVG filter, and we can now apply it to arbitrary elements o
 
 If we wanted to, we could build our DevTools feature as follows: when the user emulates a vision deficiency in the DevTools UI, we inject the SVG filter into the inspected document, and then we apply the filter style on the root element. However, there are several problems with that approach:
 
-The page might already have a filter on its root element, which our code might then override.
-The page might already have an element with `id="deuteranopia"`, clashing with our filter definition.
-The page might rely on a certain DOM structure, and by inserting the `<svg>` into the DOM we might violate these assumptions.
+- The page might already have a filter on its root element, which our code might then override.
+- The page might already have an element with `id="deuteranopia"`, clashing with our filter definition.
+- The page might rely on a certain DOM structure, and by inserting the `<svg>` into the DOM we might violate these assumptions.
 
 Edge cases aside, the main problem with this approach is that *we’d be making programmatically observable changes to the page*. If a DevTools user inspects the DOM, they might suddenly see an `<svg>` element they never added, or a CSS `filter` they never wrote. That would be confusing! To implement this functionality in DevTools, we need a solution that doesn’t have these drawbacks.
 
@@ -445,9 +449,9 @@ You don't need to understand C++ or the intricacies of Blink’s Style engine to
 
 To recap our little journey here, we started out by building a prototype using web technology instead of C++, and then started working on moving parts of it to the Blink Renderer.
 
-We first made our prototype more self-contained by inlining data URLs.
-We then made those internal data URLs CSP-friendly, by special-casing their loading.
-We made our implementation DOM-agnostic and programmatically unobservable by moving styles to the Blink-internal `viewport`.
+- We first made our prototype more self-contained by inlining data URLs.
+- We then made those internal data URLs CSP-friendly, by special-casing their loading.
+- We made our implementation DOM-agnostic and programmatically unobservable by moving styles to the Blink-internal `viewport`.
 
 What’s unique about this implementation is that our HTML/CSS/SVG prototype ended up influencing the final technical design. We found a way to use the Web Platform, even within the Blink Renderer!
 
