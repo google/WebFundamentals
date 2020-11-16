@@ -119,15 +119,16 @@ landing_page:
           path: /web/tools/workbox/reference-docs/latest/module-workbox-range-requests
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-range-requests
-      
+
       - heading: workbox-recipes
-          description: >
-            Easily use common workbox patterns without needing to set them up yourself from individual packages.
-          buttons:
-          - label: Learn more
-            path: /web/tools/workbox/modules/workbox-recipes
-          - label: Reference
-            path: /web/tools/workbox/reference-docs/latest/module-workbox-recipes.Router
+        description: >
+          Easily use common workbox patterns without needing to set them up
+          yourself from individual packages.
+        buttons:
+        - label: Learn more
+          path: /web/tools/workbox/modules/workbox-recipes
+        - label: Reference
+          path: /web/tools/workbox/reference-docs/latest/module-workbox-recipes
 
       - heading: workbox-routing
         description: >
