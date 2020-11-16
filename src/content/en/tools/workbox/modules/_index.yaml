@@ -124,10 +124,10 @@ landing_page:
           description: >
             Easily use common workbox patterns without needing to set them up yourself from individual packages.
           buttons:
-            - label: Learn more
-              path: /web/tools/workbox/modules/workbox-recipes
-            - label: Reference
-              path: /web/tools/workbox/reference-docs/latest/module-workbox-recipes.Router
+          - label: Learn more
+            path: /web/tools/workbox/modules/workbox-recipes
+          - label: Reference
+            path: /web/tools/workbox/reference-docs/latest/module-workbox-recipes.Router
 
       - heading: workbox-routing
         description: >

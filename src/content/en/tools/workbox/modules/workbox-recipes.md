@@ -3,6 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-recipes.
 
 {# wf_blink_components: N/A #}
+{# wf_updated_on: 2020-11-16 #}
 {# wf_published_on: 2020-11-13 #}
 
 # Workbox Recipes {: .page-title }
@@ -17,7 +18,7 @@ Each recipe combines a number of [Workbox modules](/web/tools/workbox/modules) t
 
 ### Offline fallback
 
-The offline fallback recipe allows your service worker to serve a [precached](/web/tools/workbox/modules/workbox-precaching) webpage, image, or font if there's a routing error for any of the three, for instance if a user is offline and there isn't a cache hit.
+The offline fallback recipe allows your service worker to serve a [precached](/web/tools/workbox/modules/workbox-precaching) web page, image, or font if there's a routing error for any of the three, for instance if a user is offline and there isn't a cache hit.
 
 This recipe, by default, assumes the fallback page in your precache is `offline.html` and that there isn't an image or font fallback. See the [offline fallback options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~offlineFallback) for a list of all configuration options.
 
@@ -278,3 +279,8 @@ imageCache();
 
 offlineFallback();
 ```
+
+## Feedback {: #feedback .hide-from-toc }
+
+
+{% include "web/_shared/helpful.html" %}
