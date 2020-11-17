@@ -28,7 +28,7 @@ Note: If you prefer watching a presentation over reading articles, then enjoy th
 
 ![A list of common accessibility issues on the web. Low-contrast text is by far the most common issue.](/web/updates/images/2020/11/cvd/common-a11y-issues.svg)
 
-According to [WebAIM’s accessibility analysis of the top 1-million web sites](https://webaim.org/projects/million/update#wcag:~:text=Low%20contrast%20text%0985.3%25%0986.1%25), over *86%* of home pages have low contrast. On average, each home page has [36 distinct instances](https://webaim.org/projects/million/#contrast:~:text=On%20average%2C%20home%20pages%20had%2036%20distinct%20instances%20of%20low%2Dcontrast%20text.) of low-contrast text.
+According to [WebAIM’s accessibility analysis of the top 1-million websites](https://webaim.org/projects/million/update#wcag:~:text=Low%20contrast%20text%0985.3%25%0986.1%25), over *86%* of home pages have low contrast. On average, each home page has [36 distinct instances](https://webaim.org/projects/million/#contrast:~:text=On%20average%2C%20home%20pages%20had%2036%20distinct%20instances%20of%20low%2Dcontrast%20text.) of low-contrast text.
 
 
 ## Using DevTools to find, understand, and fix contrast issues {: #fix }
