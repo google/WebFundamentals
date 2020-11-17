@@ -48,9 +48,7 @@ Chrome DevTools can help developers and designers to improve contrast and to pic
 We’ve recently added a new tool to this list, and it’s a bit different from the others. The above tools mainly focus on *surfacing contrast ratio information* and giving you options to *fix* it. We realized that DevTools was still missing a way for developers to get a deeper *understanding* of this problem space. To address this, we implemented [vision deficiency simulation](/web/updates/2020/03/devtools#vision-deficiencies) in the DevTools Rendering tab.
 
 <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="mK_XmFb8E_w"
-          data-showinfo="0" allowfullscreen>
-  </iframe>
+  <iframe class="devsite-embedded-youtube-video" data-video-id="mK_XmFb8E_w" allowfullscreen></iframe>
 </div>
 
 In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.com/puppeteer/puppeteer/blob/v5.4.1/docs/api.md#pageemulatevisiondeficiencytype) lets you programmatically enable these simulations.
