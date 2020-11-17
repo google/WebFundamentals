@@ -309,16 +309,7 @@ To make this valid standalone SVG (and thus XML), we need to make two changes. C
   </filter>
 </svg>
 ``` -->
-<pre class="prettyprint">
-&lt;svg <strong>xmlns=&quot;http://www.w3.org/2000/svg&quot;</strong>&gt;
-  &lt;filter id=&quot;deuteranopia&quot;&gt;
-    &lt;feColorMatrix values=&quot;0.367  0.861 -0.228  0.000  0.000
-                          0.280  0.673  0.047  0.000  0.000
-                          -0.012  0.043  0.969  0.000  0.000
-                          0.000  0.000  0.000  1.000  0.000&quot; <strong>/&gt;</strong>
-  &lt;/filter&gt;
-&lt;/svg&gt;
-</pre>
+<pre class="prettyprint"><code class="html"><span class="tag"><span class="tag">&lt;svg </span></span><mark><span class="atn"><span class="atn">xmlns</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"http://www.w3.org/2000/svg"</span></span></mark><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln"><br>&nbsp; </span></span><span class="tag"><span class="tag">&lt;filter</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">id</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"deuteranopia"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln"><br>&nbsp; &nbsp; </span></span><span class="tag"><span class="tag">&lt;feColorMatrix</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">values</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"0.367 &nbsp;0.861 -0.228 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.280 &nbsp;0.673 &nbsp;0.047 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.012 &nbsp;0.043 &nbsp;0.969 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.000 &nbsp;0.000 &nbsp;0.000 &nbsp;1.000 &nbsp;0.000"</span></span><mark><span class="tag"><span class="tag"> /&gt;</span></span></mark><span class="pln"><span class="pln"><br>&nbsp; </span></span><span class="tag"><span class="tag">&lt;/filter&gt;</span></span><span class="pln"><span class="pln"><br></span></span><span class="tag"><span class="tag">&lt;/svg&gt;</span></span><span class="pln"><span class="pln"><br></span></span></code></pre>
 
 The first change is the XML namespace declaration at the top. The second addition is the so-called “solidus” — the slash that indicates the `<feColorMatrix>` tag both opens and closes the element. The HTML parser couldn’t care less about `/>` vs. `>`, but in XML the difference matters.
 
