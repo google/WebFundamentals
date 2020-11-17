@@ -18,7 +18,7 @@ description: What's New in Chrome 87 for developers?
 Chrome 87 is starting to roll out to stable now.
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="2UtSuQ_dP9U"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="NCKMMzVn1c8"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
