@@ -147,7 +147,7 @@ You can think of each of these color vision deficiency simulations as an overlay
 </svg>
 ```
 
-The above example uses a custom filter definition based on a color matrix. Conceptually, every pixel’s `[Red, Green, Blue, Alpha]` color value is matrix-multiplied to create a new color `[R', G', B', A']`.
+The above example uses a custom filter definition based on a color matrix. Conceptually, every pixel’s `[Red, Green, Blue, Alpha]` color value is matrix-multiplied to create a new color `[R′, G′, B′, A′]`.
 
 Each row in the matrix contains 5 values: a multiplier for (from left to right) R, G, B, and A, as well as a fifth value for a constant shift value. There are 4 rows: the first row of the matrix is used to compute the new Red value, the second row Green, the third row Blue, and the last row Alpha.
 
