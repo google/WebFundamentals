@@ -20,6 +20,7 @@ This article describes why and how we implemented color vision deficiency simula
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="LnapsmokM_4" allowfullscreen></iframe>
 </div>
+
 ## Background: bad color contrast {: #background }
 
 [Low-contrast text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) is the most common automatically-detectable accessibility issue on the web.
