@@ -15,7 +15,13 @@ description: Simulating color vision deficiencies in the Blink Renderer. The Chr
 
 
 This article describes why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer.
+**Note:** If you prefer watching a presentation over reading articles, then enjoy the video below! If not, skip the video and read on.
 
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="LnapsmokM_4"
+          data-showinfo="0" allowfullscreen>
+  </iframe>
+</div>
 ## Background: bad color contrast {: #background }
 
 [Low-contrast text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) is the most common automatically-detectable accessibility issue on the web.
@@ -35,7 +41,7 @@ Chrome DevTools can help developers and designers to improve contrast and to pic
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Mje2wYgPYP0"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+          data-showinfo="0" allowfullscreen>
   </iframe>
 </div>
 
@@ -43,7 +49,7 @@ We’ve recently added a new tool to this list, and it’s a bit different from 
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="mK_XmFb8E_w"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+          data-showinfo="0" allowfullscreen>
   </iframe>
 </div>
 
