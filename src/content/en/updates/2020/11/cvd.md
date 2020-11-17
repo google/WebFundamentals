@@ -39,9 +39,7 @@ Chrome DevTools can help developers and designers to improve contrast and to pic
 - Both [the CSS Overview panel](/web/updates/2020/10/devtools#css-overview) and [the Lighthouse Accessibility audit report](https://web.dev/color-contrast/) lists low-contrast text elements as found on your page.
 
 <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="Mje2wYgPYP0"
-          data-showinfo="0" allowfullscreen>
-  </iframe>
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Mje2wYgPYP0" allowfullscreen></iframe>
 </div>
 
 We’ve recently added a new tool to this list, and it’s a bit different from the others. The above tools mainly focus on *surfacing contrast ratio information* and giving you options to *fix* it. We realized that DevTools was still missing a way for developers to get a deeper *understanding* of this problem space. To address this, we implemented [vision deficiency simulation](/web/updates/2020/03/devtools#vision-deficiencies) in the DevTools Rendering tab.
