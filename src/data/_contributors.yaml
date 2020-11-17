@@ -302,7 +302,7 @@ mathiasbynens:
     family: Bynens
   org:
     name: Google
-    unit: V8
+    unit: Chrome DevTools
   country: DE
   role:
     - author
@@ -312,7 +312,7 @@ mathiasbynens:
   email: mths@google.com
   lanyrd: mathias
   description:
-    en: V8 JavaScript whisperer
+    en: JavaScript whisperer
 
 owencm:
   name:
