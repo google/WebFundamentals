@@ -61,7 +61,7 @@ Starting in Chrome 87, once a user has granted permission you can now control
 the PTZ features on a camera.
 
 Feature detection is a little different from what you're probably used to.
-You’ll need to call `navigator.mediaDevices.getSupportedContraints()` to see
+You’ll need to call `navigator.mediaDevices.getSupportedConstraints()` to see
 if the _browser_ supports PTZ.
 
 ```js
