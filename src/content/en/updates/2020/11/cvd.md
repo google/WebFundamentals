@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Simulating color vision deficiencies in the Blink Renderer. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
-{# wf_updated_on: 2020-11-13 #}
+{# wf_updated_on: 2020-11-18 #}
 {# wf_published_on: 2020-11-13 #}
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/2020/11/cvd/cvd.png #}
@@ -58,8 +58,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
 
 <figure>
     <picture>
-      <!-- <source srcset="/web/updates/images/2020/11/cvd/0-regular@2x.avif 2x, /web/updates/images/2020/11/cvd/0-regular.avif 1x" type="image/avif" />
-      <source srcset="/web/updates/images/2020/11/cvd/0-regular@2x.webp 2x, /web/updates/images/2020/11/cvd/0-regular.webp 1x" type="image/webp" /> -->
+      <source srcset="/web/updates/images/2020/11/cvd/0-regular@2x.avif 2x, /web/updates/images/2020/11/cvd/0-regular.avif" type="image/avif" />
+      <source srcset="/web/updates/images/2020/11/cvd/0-regular@2x.webp 2x, /web/updates/images/2020/11/cvd/0-regular.webp" type="image/webp" />
      <img src="/web/updates/images/2020/11/cvd/0-regular.png"
        srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x"
        alt="A colorful picture of melted crayons, with no color vision deficiencies simulated">
@@ -71,8 +71,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
 
 <figure>
   <picture>
-    <!-- <source srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.avif 2x, /web/updates/images/2020/11/cvd/1-achromatopsia.avif 1x" type="image/avif" />
-    <source srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.webp 2x, /web/updates/images/2020/11/cvd/1-achromatopsia.webp 1x" type="image/webp" /> -->
+    <source srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.avif 2x, /web/updates/images/2020/11/cvd/1-achromatopsia.avif" type="image/avif" />
+    <source srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.webp 2x, /web/updates/images/2020/11/cvd/1-achromatopsia.webp" type="image/webp" />
     <img src="/web/updates/images/2020/11/cvd/1-achromatopsia.png" 
       srcset="/web/updates/images/2020/11/cvd/1-achromatopsia@2x.png 2x"
       alt="The impact of simulating achromatopsia on a colorful picture of melted crayons."/>
@@ -84,8 +84,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
 
 <figure>
   <picture>
-    <!-- <source srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.avif 2x, /web/updates/images/2020/11/cvd/2-deuteranopia.avif 1x" type="image/avif" />
-    <source srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.webp 2x, /web/updates/images/2020/11/cvd/2-deuteranopia.webp 1x" type="image/webp" /> -->
+    <source srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.avif 2x, /web/updates/images/2020/11/cvd/2-deuteranopia.avif" type="image/avif" />
+    <source srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.webp 2x, /web/updates/images/2020/11/cvd/2-deuteranopia.webp" type="image/webp" />
     <img src="/web/updates/images/2020/11/cvd/2-deuteranopia.png"
       srcset="/web/updates/images/2020/11/cvd/2-deuteranopia@2x.png 2x"
       alt="The impact of simulating deuteranopia on a colorful picture of melted crayons."/>
@@ -97,8 +97,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
 
 <figure>
   <picture>
-    <!-- <source srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.avif 2x, /web/updates/images/2020/11/cvd/3-protanopia.avif 1x" type="image/avif" />
-    <source srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.webp 2x, /web/updates/images/2020/11/cvd/3-protanopia.webp 1x" type="image/webp" /> -->
+    <source srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.avif 2x, /web/updates/images/2020/11/cvd/3-protanopia.avif" type="image/avif" />
+    <source srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.webp 2x, /web/updates/images/2020/11/cvd/3-protanopia.webp" type="image/webp" />
     <img src="/web/updates/images/2020/11/cvd/3-protanopia.png"
       srcset="/web/updates/images/2020/11/cvd/3-protanopia@2x.png 2x"
       alt="The impact of simulating protanopia on a colorful picture of melted crayons."/>
@@ -110,8 +110,8 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
 
 <figure>
   <picture>
-    <!-- <source srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.avif 2x, /web/updates/images/2020/11/cvd/4-tritanopia.avif 1x" type="image/avif" />
-    <source srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.webp 2x, /web/updates/images/2020/11/cvd/4-tritanopia.webp 1x" type="image/webp" /> -->
+    <source srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.avif 2x, /web/updates/images/2020/11/cvd/4-tritanopia.avif" type="image/avif" />
+    <source srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.webp 2x, /web/updates/images/2020/11/cvd/4-tritanopia.webp" type="image/webp" />
     <img src="/web/updates/images/2020/11/cvd/4-tritanopia.png"
       srcset="/web/updates/images/2020/11/cvd/4-tritanopia@2x.png 2x"
       alt="The impact of simulating tritanopia on a colorful picture of melted crayons."/>
@@ -222,13 +222,13 @@ Anyway, we have this SVG filter, and we can now apply it to arbitrary elements o
 </svg>
 <picture>
   <!-- Photo source: https://unsplash.com/photos/keMdIzsNzsM -->
-  <!-- <source type="image/avif" srcset="crayons.avif, crayons@2x.avif 2x">
-  <source type="image/webp" srcset="crayons.webp, crayons@2x.webp 2x"> -->
+  <source type="image/avif" srcset="/web/updates/images/2020/11/cvd/0-regular.avif, /web/updates/images/2020/11/cvd/0-regular@2x.avif 2x">
+  <source type="image/webp" srcset="/web/updates/images/2020/11/cvd/0-regular.webp, /web/updates/images/2020/11/cvd/0-regular@2x.webp 2x">
   <img src="/web/updates/images/2020/11/cvd/0-regular.png" srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x" width="600" height="338" alt="A photo of melted crayons">
 </picture>
 <picture>
-  <!-- <source type="image/avif" srcset="crayons.avif, crayons@2x.avif 2x">
-  <source type="image/webp" srcset="crayons.webp, crayons@2x.webp 2x"> -->
+  <source type="image/avif" srcset="/web/updates/images/2020/11/cvd/0-regular.avif, /web/updates/images/2020/11/cvd/0-regular@2x.avif 2x">
+  <source type="image/webp" srcset="/web/updates/images/2020/11/cvd/0-regular.webp, /web/updates/images/2020/11/cvd/0-regular@2x.webp 2x">
   <img src="/web/updates/images/2020/11/cvd/0-regular.png" srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x" width="600" height="338" alt="The same photo of melted crayons, optionally with CSS and SVG filter effects applied" class="filtered">
 </picture>
 <div class="settings">

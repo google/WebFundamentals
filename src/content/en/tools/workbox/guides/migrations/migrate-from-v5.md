@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v5 to v5.
 
-{# wf_updated_on: 2020-09-22 #}
+{# wf_updated_on: 2020-11-18 #}
 {# wf_published_on: 2020-09-17 #}
 {# wf_blink_components: N/A #}
 
