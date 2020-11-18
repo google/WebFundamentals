@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web Vitals lane and more.
 
-{# wf_updated_on: 2020-11-13 #}
+{# wf_updated_on: 2020-11-19 #}
 {# wf_published_on: 2020-11-12 #}
 {# wf_tags: chrome7, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -209,8 +209,11 @@ Right-click a network request, then select **Copy stacktrace** to copy the stack
 Chromium issue: [1139615](https://crbug.com/1139615)
 
 
-## Preview Wasm variable value on mouseover {: #wasm }
-When hovering over a variable in WebAssembly (Wasm) disassembly while paused on a breakpoint,  DevTools now shows the variable current value. 
+## Wasm debugging updates {: #wasm }
+
+### Preview Wasm variable value on mouseover {: #wasm-mouseover }
+
+When hovering over a variable in WebAssembly (Wasm) disassembly while paused on a breakpoint, DevTools now shows the variable current value. 
 
 In the **Sources** panel, open a Wasm file, put a breakpoint and refresh the page. Hover to a variable to see the value.
 
@@ -219,6 +222,27 @@ In the **Sources** panel, open a Wasm file, put a breakpoint and refresh the pag
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/00fb56b476530e0e240971e62af7ae4696df246b #}
 
 Chromium issues: [1058836](https://crbug.com/1058836), [1071432](https://crbug.com/1071432)
+
+### Evaluate Wasm variable in the Console {: #wasm-console }
+
+You can now evaluate Wasm variable in the Console while paused on a breakpoint.
+
+In this example, we put a breakpoint on the line `local.get $input`. When debugging, type `$input` in the Console will return the current value of the variable, which is `4` in this case.
+
+![Evaluate Wasm variable in the Console](/web/updates/images/2020/11/devtools/12-wasm-console.png)
+
+Chromium issues: [1127914](https://crbug.com/1127914)
+
+
+## Highlight pseudo elements in the Elements panel {: #pseudo }
+
+DevTools has increased the color contrast of pseudo elements to help you better spot them. 
+
+![Highlight pseudo elementse](/web/updates/images/2020/11/devtools/15-pseudo.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/eb8e1e991bc97fc53becc9550baba0799ebd6a49 #}
+
+Chromium issues: [1143833](https://crbug.com/1143833)
 
 
 ## Consistent units of measurement for file/memory sizes {: #consistent-kb }
