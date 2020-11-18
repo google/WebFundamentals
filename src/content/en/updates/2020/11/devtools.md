@@ -231,7 +231,7 @@ In this example, we put a breakpoint on the line `local.get $input`. When debugg
 
 ![Evaluate Wasm variable in the Console](/web/updates/images/2020/11/devtools/12-wasm-console.png)
 
-Chromium issues: [1127914](https://crbug.com/1127914)
+Chromium issue: [1127914](https://crbug.com/1127914)
 
 
 ## Highlight pseudo elements in the Elements panel {: #pseudo }
@@ -242,7 +242,7 @@ DevTools has increased the color contrast of pseudo elements to help you better 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/eb8e1e991bc97fc53becc9550baba0799ebd6a49 #}
 
-Chromium issues: [1143833](https://crbug.com/1143833)
+Chromium issue: [1143833](https://crbug.com/1143833)
 
 
 ## Consistent units of measurement for file/memory sizes {: #consistent-kb }
