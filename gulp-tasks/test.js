@@ -46,7 +46,7 @@ const MAX_FILES_CHANGED_ERROR = 1000; // Max # of files changed before error
 const MD_FILES = ['.md', '.mdown', '.markdown'];
 const EXTENSIONS_TO_SKIP = ['.css', '.vtt', '.xml', '.txt'];
 const MEDIA_FILES = [
-  '.gif', '.ico', '.jpg', '.png', '.psd', '.svg',
+  '.gif', '.ico', '.jpg', '.png', '.psd', '.svg', '.webp', '.avif',
   '.mov', '.mp3', '.mp4', '.webm',
   '.pdf',
 ];
