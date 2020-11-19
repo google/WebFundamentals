@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Simulating color vision deficiencies in the Blink Renderer. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
-{# wf_updated_on: 2020-11-18 #}
-{# wf_published_on: 2020-11-13 #}
+{# wf_updated_on: 2020-11-19 #}
+{# wf_published_on: 2020-11-19 #}
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/2020/11/cvd/cvd.png #}
 {# wf_featured_snippet: Simulating color vision deficiencies in the Blink Renderer. #}
@@ -155,7 +155,7 @@ You might be wondering where the exact numbers in our example come from. What ma
 
 Anyway, we have this SVG filter, and we can now apply it to arbitrary elements on the page using CSS. We can repeat the same pattern for other vision deficiencies. Here’s a demo of what that looks like:
 
-{% framebox id="ttt" width="auto" height="860px" enable_widgets="true" %}
+{% framebox width="auto" height="860px" enable_widgets="true" %}
 <style>
   body {
     padding: 0.7rem;
