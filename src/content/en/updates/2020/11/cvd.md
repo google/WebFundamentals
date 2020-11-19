@@ -58,11 +58,11 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
 
 <figure>
     <picture>
-      <source srcset="/web/updates/images/2020/11/cvd/0-regular.avif, /web/updates/images/2020/11/cvd/0-regular@2x.avif 2x" type="image/avif" />
-      <source srcset="/web/updates/images/2020/11/cvd/0-regular.webp, /web/updates/images/2020/11/cvd/0-regular@2x.webp 2x" type="image/webp" />
-     <img src="/web/updates/images/2020/11/cvd/0-regular.png"
-       srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x"
-       alt="A colorful picture of melted crayons, with no color vision deficiencies simulated">
+      <source srcset="/web/updates/images/2020/11/cvd/0-regular@2x.avif 2x, /web/updates/images/2020/11/cvd/0-regular.avif" type="image/avif" />
+      <source srcset="/web/updates/images/2020/11/cvd/0-regular@2x.webp 2x, /web/updates/images/2020/11/cvd/0-regular.webp" type="image/webp" />
+      <img src="/web/updates/images/2020/11/cvd/0-regular.png"
+        srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x"
+        alt="A colorful picture of melted crayons, with no color vision deficiencies simulated">
     </picture>
   <figcaption>
     A colorful <a href="https://unsplash.com/photos/keMdIzsNzsM">picture of melted crayons</a>, with no color vision deficiencies simulated.
@@ -222,13 +222,13 @@ Anyway, we have this SVG filter, and we can now apply it to arbitrary elements o
 </svg>
 <picture>
   <!-- Photo source: https://unsplash.com/photos/keMdIzsNzsM -->
-  <source type="image/avif" srcset="/web/updates/images/2020/11/cvd/0-regular.avif, /web/updates/images/2020/11/cvd/0-regular@2x.avif 2x">
-  <source type="image/webp" srcset="/web/updates/images/2020/11/cvd/0-regular.webp, /web/updates/images/2020/11/cvd/0-regular@2x.webp 2x">
+  <source type="image/avif" srcset="/web/updates/images/2020/11/cvd/0-regular@2x.avif 2x, /web/updates/images/2020/11/cvd/0-regular.avif">
+  <source type="image/webp" srcset="/web/updates/images/2020/11/cvd/0-regular@2x.webp 2x, /web/updates/images/2020/11/cvd/0-regular.webp">
   <img src="/web/updates/images/2020/11/cvd/0-regular.png" srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x" width="600" height="338" alt="A photo of melted crayons">
 </picture>
 <picture>
-  <source type="image/avif" srcset="/web/updates/images/2020/11/cvd/0-regular.avif, /web/updates/images/2020/11/cvd/0-regular@2x.avif 2x">
-  <source type="image/webp" srcset="/web/updates/images/2020/11/cvd/0-regular.webp, /web/updates/images/2020/11/cvd/0-regular@2x.webp 2x">
+  <source type="image/avif" srcset="/web/updates/images/2020/11/cvd/0-regular@2x.avif 2x, /web/updates/images/2020/11/cvd/0-regular.avif">
+  <source type="image/webp" srcset="/web/updates/images/2020/11/cvd/0-regular@2x.webp 2x, /web/updates/images/2020/11/cvd/0-regular.webp">
   <img src="/web/updates/images/2020/11/cvd/0-regular.png" srcset="/web/updates/images/2020/11/cvd/0-regular@2x.png 2x" width="600" height="338" alt="The same photo of melted crayons, optionally with CSS and SVG filter effects applied" class="filtered">
 </picture>
 <div class="settings">
