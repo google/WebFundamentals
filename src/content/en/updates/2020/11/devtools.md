@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web Vitals lane and more.
 
-{# wf_updated_on: 2020-11-19 #}
+{# wf_updated_on: 2020-11-20 #}
 {# wf_published_on: 2020-11-12 #}
 {# wf_tags: chrome7, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -234,6 +234,16 @@ In this example, we put a breakpoint on the line `local.get $input`. When debugg
 Chromium issue: [1127914](https://crbug.com/1127914)
 
 
+## Consistent units of measurement for file/memory sizes {: #consistent-kb }
+
+DevTools now consistently use kB for displaying file/memory sizes. Previously DevTools mixed kB (1000 bytes) and KiB (1024 bytes). For example, the Network panel previously used “kB” labels but actually performed calculations using KiB, which caused needless confusion. 
+
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/d451ecdd037b600479f949767ed401cf489fb5e3 #}
+
+Chromium issue: [1035309](https://crbug.com/1035309)
+
+
 ## Highlight pseudo elements in the Elements panel {: #pseudo }
 
 DevTools has increased the color contrast of pseudo elements to help you better spot them. 
@@ -243,16 +253,6 @@ DevTools has increased the color contrast of pseudo elements to help you better 
 {# https://chromium.googlesource.com/devtools/devtools-frontend.git/+/eb8e1e991bc97fc53becc9550baba0799ebd6a49 #}
 
 Chromium issue: [1143833](https://crbug.com/1143833)
-
-
-## Consistent units of measurement for file/memory sizes {: #consistent-kb }
-
-DevTools now consistently use kB for displaying file/memory sizes. Previously DevTools mixed kB (1000 bytes) and KiB (1024 bytes). For example, the Network panel previously used “kB” labels but actually performed calculations using KiB, which caused needless confusion. 
-
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/d451ecdd037b600479f949767ed401cf489fb5e3 #}
-
-Chromium issue: [1035309](https://crbug.com/1035309)
 
 
 ## Experimental features {: #experimental }
