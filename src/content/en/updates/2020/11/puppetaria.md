@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Puppetaria: accessibility-first Puppeteer scripts. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
-{# wf_updated_on: 2020-11-10 #}
+{# wf_updated_on: 2020-11-20 #}
 {# wf_published_on: 2020-11-10 #}
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/2020/11/puppetaria/puppetaria.png #}
-{# wf_featured_snippet: Puppetaria: accessibility-first Puppeteer scripts. #}
+{# wf_featured_snippet: This article dives into the details on how we implemented Puppetaria, the accessibility-first Puppeteer scripts. #}
 {# wf_blink_components: N/A #}
 
 # Puppetaria: accessibility-first Puppeteer scripts {: .page-title }

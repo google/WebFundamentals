@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Simulating color vision deficiencies in the Blink Renderer. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
-{# wf_updated_on: 2020-11-19 #}
+{# wf_updated_on: 2020-11-20 #}
 {# wf_published_on: 2020-11-19 #}
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/2020/11/cvd/cvd.png #}
-{# wf_featured_snippet: Simulating color vision deficiencies in the Blink Renderer. #}
+{# wf_featured_snippet: This article describes why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer. #}
 {# wf_blink_components: N/A #}
 
 # Simulating color vision deficiencies in the Blink Renderer {: .page-title }
