@@ -16,8 +16,10 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Open Network panel from the Service Workers pane](/web/updates/2020/11/devtools#sw)
 * [Copy property value](/web/updates/2020/11/devtools#copy-value)
 * [Copy stacktrace for network initiator](/web/updates/2020/11/devtools#copy-stacktrace)
-* [Preview Wasm variable value on mouseover](/web/updates/2020/11/devtools#wasm)
+* [Preview Wasm variable value on mouseover](/web/updates/2020/11/devtools#wasm-mouseover)
+* [Evaluate Wasm variable in the Console](/web/updates/2020/11/devtools#wasm-console)
 * [Consistent units of measurement for file/memory sizes](/web/updates/2020/11/devtools#onsistent-kb)
+* [Highlight pseudo elements in the Elements panel](/web/updates/2020/11/devtools#pseudo)
 * [[Experimental] CSS Flexbox debugging tools](/web/updates/2020/11/devtools#flexbox)
 * [[Experimental] Customize chords keyboard shortcuts](/web/updates/2020/11/devtools#keyboard-shortcuts)
 
