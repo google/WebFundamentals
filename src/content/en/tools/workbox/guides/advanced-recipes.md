@@ -257,7 +257,7 @@ To help with these sort of use cases, you can use any of the Workbox strategies 
 fashion via the `handle()` method.
 
 ```javascript
-import {StaleWhileRevalidate} from 'workbox-strategies';
+import {NetworkFirst} from 'workbox-strategies';
 
 // Inside your service worker code:
 const strategy = new NetworkFirst({networkTimeoutSeconds: 10});
