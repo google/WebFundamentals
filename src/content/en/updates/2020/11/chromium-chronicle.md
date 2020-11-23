@@ -71,7 +71,16 @@ headers by adding an `include_rule` forbidding them.
 errors until you try to upload a change. To test `include_rules` without
 uploading, run `buildtools/checkdeps/checkdeps.py <directory>`.
 
+## Resources
+
+* [Patterns you can use to restrict visibility in GN][gn-ref]
+* [Documentation of `DEPS` files and the `checkdeps` tool][deps-docs]
+
+[gn-ref]: https://gn.googlesource.com/gn/+/master/docs/reference.md#var_visibility
+[deps-docs]: https://chromium.googlesource.com/chromium/src/+/master/buildtools/checkdeps/README.md
+
 <div class="clearfix"></div>
+
 
 {% include "web/_shared/helpful.html" %}
 
