@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's New in Chrome 87 for developers?
 
 {# wf_published_on: 2020-11-17 #}
-{# wf_updated_on: 2020-11-17 #}
+{# wf_updated_on: 2020-11-23 #}
 {# wf_featured_image: /web/updates/images/2020/11/nic87.png #}
 {# wf_tags: chrome87,new-in-chrome,progressive-web-apps,origintrials #}
 {# wf_featured_snippet: Chrome 87 is rolling out now! You can now control pan, tilt, and zoom on webcams that support it, range requests and service workers don’t require as many workarounds, the font access API starts it’s origin trial, and plenty more. Let’s dive in and see what’s new for developers in Chrome 87! #}
@@ -179,7 +179,7 @@ on web.dev.
   </figcaption>
 </figure>
 
-Bringing design apps like Figma, Gravit, and Photopea, to the web is great,
+Bringing design apps like Figma, Gravit Designer, and Photopea, to the web is great,
 and we’re seeing a lot more coming. While the web has the ability to offer a
 plethora of fonts, not everything is available on the web.
 
