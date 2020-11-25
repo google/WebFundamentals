@@ -15,5 +15,7 @@ toc:
     path: /web/android/trusted-web-activity/android-browser-helper-migration/
   - title: Enable Web Share Target
     path: /web/android/trusted-web-activity/web-share-target/
+  - title: Use Play Billing in your Trusted Web Activity
+    path: /web/android/trusted-web-activity/play-billing/
 - title: Map of Trusted Web Activity libraries and tools
   path: /web/android/trusted-web-activity/lay-of-the-land/
