@@ -1,6 +1,6 @@
 project_path: /web/android/_project.yaml
 book_path: /web/android/_book.yaml
-description: Learn how to enable Web Share Target in a project using Trusted Web Activity.
+description: Learn about the new features for web applications that use Trusted Web Activity.
 
 {# wf_published_on: 2020-11-25 #}
 {# wf_updated_on: 2020-11-25 #}
