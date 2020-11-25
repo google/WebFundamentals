@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Learn how to enable Web Share Target in a project using Trusted Web Activity.
 
 {# wf_published_on: 2020-11-10 #}
-{# wf_updated_on: 2020-11-10 #}
+{# wf_updated_on: 2020-11-25 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -85,6 +85,7 @@ like:
 ```
 
 And the new string element will look like the following:
+
 ```xml
 <string name="share_target">
 {
