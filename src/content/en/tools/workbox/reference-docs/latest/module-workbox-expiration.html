@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.0.0</small></span>
             </div>
           </header>
           <section>
@@ -31,10 +31,14 @@
                 limit on the number of responses stored in a
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache"><code>Cache</code></a>.</p>
               <h3 class="class-list"><a href="module-workbox-expiration.ExpirationPlugin.html">ExpirationPlugin</a></h3>
-              <p>This plugin can be used in the Workbox APIs to regularly enforce a
+              <p>This plugin can be used in a <code>workbox-strategy</code> to regularly enforce a
                 limit on the age and / or the number of cached requests.</p>
+              <p>It can only be used with <code>workbox-strategy</code> instances that have a
+                <a href="/web/tools/workbox/guides/configure-workbox#custom_cache_names_in_strategies">custom <code>cacheName</code> property set</a>.
+                In other words, it can't be used to expire entries in strategy that uses the
+                default runtime cache name.</p>
               <p>Whenever a cached request is used or updated, this plugin will look
-                at the used Cache and remove any old or extra requests.</p>
+                at the associated cache and remove any old or extra requests.</p>
               <p>When using <code>maxAgeSeconds</code>, requests may be used <em>once</em> after expiring
                 because the expiration clean up will not have occurred until <em>after</em> the
                 cached request has been used. If the request has a &quot;Date&quot; header, then

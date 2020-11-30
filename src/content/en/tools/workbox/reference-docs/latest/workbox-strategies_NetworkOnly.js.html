@@ -28,9 +28,10 @@
   https://opensource.org/licenses/MIT.
 */
 import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
-import { fetchWrapper } from &#x27;workbox-core/_private/fetchWrapper.js&#x27;;
 import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
+import { timeout } from &#x27;workbox-core/_private/timeout.js&#x27;;
 import { WorkboxError } from &#x27;workbox-core/_private/WorkboxError.js&#x27;;
+import { Strategy } from &#x27;./Strategy.js&#x27;;
 import { messages } from &#x27;./utils/messages.js&#x27;;
 import &#x27;./_version.js&#x27;;
 /**
@@ -43,61 +44,59 @@ import &#x27;./_version.js&#x27;;
  *
  * If the network request fails, this will throw a &#x60;WorkboxError&#x60; exception.
  *
+ * @extends module:workbox-strategies.Strategy
  * @memberof module:workbox-strategies
  */
-class NetworkOnly {
+class NetworkOnly extends Strategy {
     /**
-     * @param {Object} options
-     * @param {string} options.cacheName Cache name to store and retrieve
-     * requests. Defaults to cache names provided by
-     * [workbox-core]{@link module:workbox-core.cacheNames}.
-     * @param {Array&amp;lt;Object&gt;} options.plugins [Plugins]{@link /web/tools/workbox/guides/using-plugins}
+     * @param {Object} [options]
+     * @param {Array&amp;lt;Object&gt;} [options.plugins] [Plugins]{@link /web/tools/workbox/guides/using-plugins}
      * to use in conjunction with this caching strategy.
-     * @param {Object} options.fetchOptions Values passed along to the
+     * @param {Object} [options.fetchOptions] Values passed along to the
      * [&#x60;init&#x60;](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
      * of all fetch() requests made by this strategy.
+     * @param {number} [options.networkTimeoutSeconds] If set, any network requests
+     * that fail to respond within the timeout will result in a network error.
      */
     constructor(options &#x3D; {}) {
-        this._plugins &#x3D; options.plugins || [];
-        this._fetchOptions &#x3D; options.fetchOptions;
+        super(options);
+        this._networkTimeoutSeconds &#x3D; options.networkTimeoutSeconds || 0;
     }
     /**
-     * This method will perform a request strategy and follows an API that
-     * will work with the
-     * [Workbox Router]{@link module:workbox-routing.Router}.
-     *
-     * @param {Object} options
-     * @param {Request|string} options.request The request to run this strategy for.
-     * @param {Event} [options.event] The event that triggered the request.
+     * @private
+     * @param {Request|string} request A request to run this strategy for.
+     * @param {module:workbox-strategies.StrategyHandler} handler The event that
+     *     triggered the request.
      * @return {Promise&amp;lt;Response&gt;}
      */
-    async handle({ event, request }) {
-        if (typeof request &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
-            request &#x3D; new Request(request);
-        }
+    async _handle(request, handler) {
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
             assert.isInstance(request, Request, {
                 moduleName: &#x27;workbox-strategies&#x27;,
-                className: &#x27;NetworkOnly&#x27;,
-                funcName: &#x27;handle&#x27;,
+                className: this.constructor.name,
+                funcName: &#x27;_handle&#x27;,
                 paramName: &#x27;request&#x27;,
             });
         }
-        let error;
+        let error &#x3D; undefined;
         let response;
         try {
-            response &#x3D; await fetchWrapper.fetch({
-                request,
-                event,
-                fetchOptions: this._fetchOptions,
-                plugins: this._plugins,
-            });
+            const promises &#x3D; [handler.fetch(request)];
+            if (this._networkTimeoutSeconds) {
+                const timeoutPromise &#x3D; timeout(this._networkTimeoutSeconds * 1000);
+                promises.push(timeoutPromise);
+            }
+            response &#x3D; await Promise.race(promises);
+            if (!response) {
+                throw new Error(&#x60;Timed out the network response after &#x60; +
+                    &#x60;${this._networkTimeoutSeconds} seconds.&#x60;);
+            }
         }
         catch (err) {
             error &#x3D; err;
         }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-            logger.groupCollapsed(messages.strategyStart(&#x27;NetworkOnly&#x27;, request));
+            logger.groupCollapsed(messages.strategyStart(this.constructor.name, request));
             if (response) {
                 logger.log(&#x60;Got response from network.&#x60;);
             }

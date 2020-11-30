@@ -85,11 +85,6 @@ const validate &#x3D; require(&#x27;./lib/validate-options&#x27;);
  * prevents you from inadvertently precaching very large files that might have
  * accidentally matched one of your patterns.
  *
- * @param {string} [config.mode&#x3D;&#x27;production&#x27;] If set to &#x27;production&#x27;, then an
- * optimized service worker bundle that excludes debugging info will be
- * produced. If not explicitly configured here, the &#x60;process.env.NODE_ENV&#x60; value
- * will be used, and failing that, it will fall back to &#x60;&#x27;production&#x27;&#x60;.
- *
  * @param {object&amp;lt;string, string&gt;} [config.modifyURLPrefix] A mapping of prefixes
  * that, if present in an entry in the precache manifest, will be replaced with
  * the corresponding value. This can be used to, for example, remove or add a
@@ -106,9 +101,9 @@ const validate &#x3D; require(&#x27;./lib/validate-options&#x27;);
  * version the URL. If used with a single string, it will be interpreted as
  * unique versioning information that you&#x27;ve generated for a given URL.
  *
- * @return {Promise&amp;lt;{count: number, filePaths: Array&amp;lt;string&gt;, size: number, warnings: Array&amp;lt;string&gt;}&gt;}
- * A promise that resolves once the service worker and related files
- * (indicated by &#x60;filePaths&#x60;) has been written to &#x60;swDest&#x60;. The &#x60;size&#x60; property
+ * @return {Promise&amp;lt;{count: number, manifestEntries: Array&amp;lt;module:workbox-build.ManifestEntry&gt;, size: number, warnings: Array&amp;lt;string&gt;}&gt;}
+ * A promise that resolves once the precache manifest (available in the
+ * &#x60;manifestEntries&#x60; property) has been determined. The &#x60;size&#x60; property
  * contains the aggregate size of all the precached entries, in bytes, and the
  * &#x60;count&#x60; property contains the total number of precached entries. Any
  * non-fatal warning messages will be returned via &#x60;warnings&#x60;.

@@ -28,6 +28,7 @@
   https://opensource.org/licenses/MIT.
 */
 import { canConstructResponseFromBodyStream } from &#x27;./_private/canConstructResponseFromBodyStream.js&#x27;;
+import { WorkboxError } from &#x27;./_private/WorkboxError.js&#x27;;
 import &#x27;./_version.js&#x27;;
 /**
  * Allows developers to copy a response and modify its &#x60;headers&#x60;, &#x60;status&#x60;,
@@ -41,11 +42,23 @@ import &#x27;./_version.js&#x27;;
  * either modify the passed parameter(s) and return it, or return a totally
  * new object.
  *
+ * This method is intentionally limited to same-origin responses, regardless of
+ * whether CORS was used or not.
+ *
  * @param {Response} response
  * @param {Function} modifier
  * @memberof module:workbox-core
  */
 async function copyResponse(response, modifier) {
+    let origin &#x3D; null;
+    // If response.url isn&#x27;t set, assume it&#x27;s cross-origin and keep origin null.
+    if (response.url) {
+        const responseURL &#x3D; new URL(response.url);
+        origin &#x3D; responseURL.origin;
+    }
+    if (origin !&#x3D;&#x3D; self.location.origin) {
+        throw new WorkboxError(&#x27;cross-origin-copy-response&#x27;, { origin });
+    }
     const clonedResponse &#x3D; response.clone();
     // Create a fresh &#x60;ResponseInit&#x60; object by cloning the headers.
     const responseInit &#x3D; {

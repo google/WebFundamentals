@@ -42,7 +42,7 @@ class BroadcastUpdatePlugin {
      * calls its [&#x60;notifyIfUpdated()&#x60;]{@link module:workbox-broadcast-update.BroadcastCacheUpdate~notifyIfUpdated}
      * method whenever the plugin&#x27;s &#x60;cacheDidUpdate&#x60; callback is invoked.
      *
-     * @param {Object} options
+     * @param {Object} [options]
      * @param {Array&amp;lt;string&gt;} [options.headersToCheck&#x3D;[&#x27;content-length&#x27;, &#x27;etag&#x27;, &#x27;last-modified&#x27;]]
      *     A list of headers that will be used to determine whether the responses
      *     differ.
@@ -62,7 +62,7 @@ class BroadcastUpdatePlugin {
          * @param {Response} [options.oldResponse] The previous cached value, if any.
          * @param {Response} options.newResponse The new value in the cache.
          * @param {Request} options.request The request that triggered the update.
-         * @param {Request} [options.event] The event that triggered the update.
+         * @param {Request} options.event The event that triggered the update.
          */
         this.cacheDidUpdate &#x3D; async (options) &#x3D;&gt; {
             dontWaitFor(this._broadcastUpdate.notifyIfUpdated(options));

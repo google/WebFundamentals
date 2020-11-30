@@ -70,7 +70,7 @@ const writeServiceWorkerUsingDefaultTemplate &#x3D;
  * may be served from the same &#x60;http://localhost:port&#x60; origin.
  *
  * @param {boolean} [config.cleanupOutdatedCaches&#x3D;false] Whether or not Workbox
- * should attempt to identify an delete any precaches created by older,
+ * should attempt to identify and delete any precaches created by older,
  * incompatible versions.
  *
  * @param {boolean} [config.clientsClaim&#x3D;false] Whether or not the service
@@ -110,7 +110,7 @@ const writeServiceWorkerUsingDefaultTemplate &#x3D;
  * definition of &#x60;strict&#x60; in the &#x60;glob&#x60;
  * [documentation](https://github.com/isaacs/node-glob#options).
  *
- * @param {Array&amp;lt;RegExp&gt;} [config.ignoreURLParametersMatching&#x3D;[/^utm_/]]
+ * @param {Array&amp;lt;RegExp&gt;} [config.ignoreURLParametersMatching&#x3D;[/^utm_/, /^fbclid$/]]
  * Any search parameter names that match against one of the RegExp in this array
  * will be removed before looking for a precache match. This is useful if your
  * users might request URLs that contain, for example, URL parameters used to
@@ -193,7 +193,8 @@ const writeServiceWorkerUsingDefaultTemplate &#x3D;
  * @param {boolean} [config.skipWaiting&#x3D;false] Whether to add an
  * unconditional call to [&#x60;skipWaiting()&#x60;]{@link module:workbox-core.skipWaiting}
  * to the generated service worker. If &#x60;false&#x60;, then a &#x60;message&#x60; listener will
- * be added instead, allowing you to conditionally call &#x60;skipWaiting()&#x60;.
+ * be added instead, allowing you to conditionally call &#x60;skipWaiting()&#x60; by posting
+ * a message containing {type: &#x27;SKIP_WAITING&#x27;}.
  *
  * @param {boolean} [config.sourcemap&#x3D;true] Whether to create a sourcemap
  * for the generated service worker files.

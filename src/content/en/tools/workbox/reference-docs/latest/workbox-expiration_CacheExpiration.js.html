@@ -51,6 +51,8 @@ class CacheExpiration {
      * Entries used the least will be removed as the maximum is reached.
      * @param {number} [config.maxAgeSeconds] The maximum age of an entry before
      * it&#x27;s treated as stale and removed.
+     * @param {Object} [config.matchOptions] The [&#x60;CacheQueryOptions&#x60;](https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete#Parameters)
+     * that will be used when calling &#x60;delete()&#x60; on the cache.
      */
     constructor(cacheName, config &#x3D; {}) {
         this._isRunning &#x3D; false;
@@ -76,7 +78,6 @@ class CacheExpiration {
                     funcName: &#x27;constructor&#x27;,
                     paramName: &#x27;config.maxEntries&#x27;,
                 });
-                // TODO: Assert is positive
             }
             if (config.maxAgeSeconds) {
                 assert.isType(config.maxAgeSeconds, &#x27;number&#x27;, {
@@ -85,11 +86,11 @@ class CacheExpiration {
                     funcName: &#x27;constructor&#x27;,
                     paramName: &#x27;config.maxAgeSeconds&#x27;,
                 });
-                // TODO: Assert is positive
             }
         }
         this._maxEntries &#x3D; config.maxEntries;
         this._maxAgeSeconds &#x3D; config.maxAgeSeconds;
+        this._matchOptions &#x3D; config.matchOptions;
         this._cacheName &#x3D; cacheName;
         this._timestampModel &#x3D; new CacheTimestampsModel(cacheName);
     }
@@ -108,7 +109,7 @@ class CacheExpiration {
         // Delete URLs from the cache
         const cache &#x3D; await self.caches.open(this._cacheName);
         for (const url of urlsExpired) {
-            await cache.delete(url);
+            await cache.delete(url, this._matchOptions);
         }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
             if (urlsExpired.length &gt; 0) {

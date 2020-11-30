@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.0.0</small></span>
             </div>
             <p>The <code>CacheExpiration</code> class allows you define an expiration and / or
               limit on the number of responses stored in a
@@ -85,6 +85,17 @@
                                 <p class="details-table-types">number</p>
                                 <p>The maximum age of an entry before
                                   it's treated as stale and removed.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>matchOptions</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Object</p>
+                                <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete#Parameters"><code>CacheQueryOptions</code></a>
+                                  that will be used when calling <code>delete()</code> on the cache.</p>
                               </td>
                             </tr>
                           </tbody>

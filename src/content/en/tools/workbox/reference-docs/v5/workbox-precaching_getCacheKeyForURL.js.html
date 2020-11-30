@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html devsite>
 
-<head>
+<head><meta name="robots" content="noindex">
   <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
   <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
-  <title>Source: workbox-precaching/createHandler.js</title>
+  <title>Source: workbox-precaching/getCacheKeyForURL.js</title>
   <link href="jsdoc.css" rel="stylesheet">
 </head>
 
@@ -17,7 +17,7 @@
         </div>
         <div id="jsdoc-main" role="main">
           <header class="page-header">
-            <h1>Source: workbox-precaching/createHandler.js</h1>
+            <h1>Source: workbox-precaching/getCacheKeyForURL.js</h1>
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
@@ -30,25 +30,29 @@
 import { getOrCreatePrecacheController } from &#x27;./utils/getOrCreatePrecacheController.js&#x27;;
 import &#x27;./_version.js&#x27;;
 /**
- * Helper function that calls
- * {@link PrecacheController#createHandler} on the default
- * {@link PrecacheController} instance.
+ * Takes in a URL, and returns the corresponding URL that could be used to
+ * lookup the entry in the precache.
  *
- * If you are creating your own {@link PrecacheController}, then call the
- * {@link PrecacheController#createHandler} on that instance,
- * instead of using this function.
+ * If a relative URL is provided, the location of the service worker file will
+ * be used as the base.
  *
- * @param {boolean} [fallbackToNetwork&#x3D;true] Whether to attempt to get the
- * response from the network if there&#x27;s a precache miss.
- * @return {module:workbox-routing~handlerCallback}
+ * For precached entries without revision information, the cache key will be the
+ * same as the original URL.
+ *
+ * For precached entries with revision information, the cache key will be the
+ * original URL with the addition of a query parameter used for keeping track of
+ * the revision info.
+ *
+ * @param {string} url The URL whose cache key to look up.
+ * @return {string} The cache key that corresponds to that URL.
  *
  * @memberof module:workbox-precaching
  */
-function createHandler(fallbackToNetwork &#x3D; true) {
+function getCacheKeyForURL(url) {
     const precacheController &#x3D; getOrCreatePrecacheController();
-    return precacheController.createHandler(fallbackToNetwork);
+    return precacheController.getCacheKeyForURL(url);
 }
-export { createHandler };
+export { getCacheKeyForURL };
 </code></pre>
           </article>
         </div>

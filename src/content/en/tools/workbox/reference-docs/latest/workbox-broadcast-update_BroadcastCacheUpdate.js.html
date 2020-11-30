@@ -65,7 +65,7 @@ class BroadcastCacheUpdate {
      * Construct a BroadcastCacheUpdate instance with a specific &#x60;channelName&#x60; to
      * broadcast messages on
      *
-     * @param {Object} options
+     * @param {Object} [options]
      * @param {Array&amp;lt;string&gt;} [options.headersToCheck&#x3D;[&#x27;content-length&#x27;, &#x27;etag&#x27;, &#x27;last-modified&#x27;]]
      *     A list of headers that will be used to determine whether the responses
      *     differ.
@@ -104,7 +104,7 @@ class BroadcastCacheUpdate {
      * @param {Request} options.request The request.
      * @param {string} options.cacheName Name of the cache the responses belong
      *     to. This is included in the broadcast message.
-     * @param {Event} [options.event] event An optional event that triggered
+     * @param {Event} options.event event The event that triggered
      *     this possible cache update.
      * @return {Promise} Resolves once the update is sent.
      */

@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.0.0</small></span>
             </div>
             <p>All of the Workbox service worker libraries use workbox-core for shared
               code as well as setting default values that need to be shared (like cache
@@ -68,6 +68,8 @@
                 be used as the <code>ResponseInit</code> for the new <code>Response</code>. To change the values
                 either modify the passed parameter(s) and return it, or return a totally
                 new object.</p>
+              <p>This method is intentionally limited to same-origin responses, regardless of
+                whether CORS was used or not.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -216,9 +218,8 @@
               <h3 id=".skipWaiting" class="symbol-name">skipWaiting</h3>
               <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
               <p class="type-signature"> skipWaiting()</p>
-              <p>Force a service worker to activate immediately, instead of
-                <a href="/web/fundamentals/primers/service-workers/lifecycle#waiting">waiting</a>
-                for existing clients to close.</p>
+              <p>This method is deprecated, and will be removed in Workbox v7.</p>
+              <p>Calling self.skipWaiting() is equivalent, and should be used instead.</p>
               <dl class="dl-compact">
               </dl>
             </section>
