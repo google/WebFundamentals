@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-recipes/offlineFallback.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-recipes/offlineFallback.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2020 Google LLC
+
+  Use of this source code is governed by an MIT-style
+  license that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+*/
+import { setCatchHandler } from &#x27;workbox-routing/setCatchHandler.js&#x27;;
+import { matchPrecache } from &#x27;workbox-precaching/matchPrecache.js&#x27;;
+import &#x27;./_version.js&#x27;;
+/**
+ * An implementation of the [comprehensive fallbacks recipe]{@link /web/tools/workbox/guides/advanced-recipes#comprehensive_fallbacks}. Be sure to include the fallbacks in your precache injection
+ *
+ * @memberof module:workbox-recipes
+ *
+ * @param {Object} [options]
+ * @param {string} [options.pageFallback] Precache name to match for pag fallbacks. Defaults to offline.html
+ * @param {string} [options.imageFallback] Precache name to match for image fallbacks.
+ * @param {string} [options.fontFallback] Precache name to match for font fallbacks.
+ */
+function offlineFallback(options &#x3D; {}) {
+    const pageFallback &#x3D; options.pageFallback || &#x27;offline.html&#x27;;
+    const imageFallback &#x3D; options.imageFallback || false;
+    const fontFallback &#x3D; options.fontFallback || false;
+    const handler &#x3D; async (options) &#x3D;&gt; {
+        const dest &#x3D; options.request.destination;
+        if (dest &#x3D;&#x3D;&#x3D; &quot;document&quot;) {
+            return (await matchPrecache(pageFallback)) || Response.error();
+        }
+        if (dest &#x3D;&#x3D;&#x3D; &quot;image&quot; &amp;amp;&amp;amp; imageFallback !&#x3D;&#x3D; false) {
+            return (await matchPrecache(imageFallback)) || Response.error();
+        }
+        if (dest &#x3D;&#x3D;&#x3D; &quot;font&quot; &amp;amp;&amp;amp; fontFallback !&#x3D;&#x3D; false) {
+            return (await matchPrecache(fontFallback)) || Response.error();
+        }
+        return Response.error();
+    };
+    setCatchHandler(handler);
+}
+export { offlineFallback };
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

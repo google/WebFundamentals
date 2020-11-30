@@ -27,34 +27,32 @@
   license that can be found in the LICENSE file or at
   https://opensource.org/licenses/MIT.
 */
-import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
 import { addPlugins } from &#x27;./addPlugins.js&#x27;;
 import { addRoute } from &#x27;./addRoute.js&#x27;;
 import { cleanupOutdatedCaches } from &#x27;./cleanupOutdatedCaches.js&#x27;;
-import { createHandler } from &#x27;./createHandler.js&#x27;;
 import { createHandlerBoundToURL } from &#x27;./createHandlerBoundToURL.js&#x27;;
 import { getCacheKeyForURL } from &#x27;./getCacheKeyForURL.js&#x27;;
 import { matchPrecache } from &#x27;./matchPrecache.js&#x27;;
 import { precache } from &#x27;./precache.js&#x27;;
 import { precacheAndRoute } from &#x27;./precacheAndRoute.js&#x27;;
 import { PrecacheController } from &#x27;./PrecacheController.js&#x27;;
+import { PrecacheRoute } from &#x27;./PrecacheRoute.js&#x27;;
+import { PrecacheStrategy } from &#x27;./PrecacheStrategy.js&#x27;;
+import { PrecacheFallbackPlugin } from &#x27;./PrecacheFallbackPlugin.js&#x27;;
 import &#x27;./_version.js&#x27;;
-if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-    assert.isSWEnv(&#x27;workbox-precaching&#x27;);
-}
 /**
  * Most consumers of this module will want to use the
  * [precacheAndRoute()]{@link module:workbox-precaching.precacheAndRoute}
- * method to add assets to the Cache and respond to network requests with these
+ * method to add assets to the cache and respond to network requests with these
  * cached assets.
  *
- * If you require finer grained control, you can use the
+ * If you require more control over caching and routing, you can use the
  * [PrecacheController]{@link module:workbox-precaching.PrecacheController}
- * to determine when performed.
+ * interface.
  *
  * @module workbox-precaching
  */
-export { addPlugins, addRoute, cleanupOutdatedCaches, createHandler, createHandlerBoundToURL, getCacheKeyForURL, matchPrecache, precache, precacheAndRoute, PrecacheController, };
+export { addPlugins, addRoute, cleanupOutdatedCaches, createHandlerBoundToURL, getCacheKeyForURL, matchPrecache, precache, precacheAndRoute, PrecacheController, PrecacheRoute, PrecacheStrategy, PrecacheFallbackPlugin, };
 </code></pre>
           </article>
         </div>

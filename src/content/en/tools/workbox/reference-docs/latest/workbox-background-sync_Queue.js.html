@@ -284,14 +284,14 @@ class Queue {
             try {
                 await fetch(entry.request.clone());
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-                    logger.log(&#x60;Request for &#x27;${getFriendlyURL(entry.request.url)}&#x27;&#x60; +
+                    logger.log(&#x60;Request for &#x27;${getFriendlyURL(entry.request.url)}&#x27; &#x60; +
                         &#x60;has been replayed in queue &#x27;${this._name}&#x27;&#x60;);
                 }
             }
             catch (error) {
                 await this.unshiftRequest(entry);
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-                    logger.log(&#x60;Request for &#x27;${getFriendlyURL(entry.request.url)}&#x27;&#x60; +
+                    logger.log(&#x60;Request for &#x27;${getFriendlyURL(entry.request.url)}&#x27; &#x60; +
                         &#x60;failed to replay, putting it back in queue &#x27;${this._name}&#x27;&#x60;);
                 }
                 throw new WorkboxError(&#x27;queue-replay-failed&#x27;, { name: this._name });
@@ -331,7 +331,7 @@ class Queue {
             self.addEventListener(&#x27;sync&#x27;, (event) &#x3D;&gt; {
                 if (event.tag &#x3D;&#x3D;&#x3D; &#x60;${TAG_PREFIX}:${this._name}&#x60;) {
                     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-                        logger.log(&#x60;Background sync for tag &#x27;${event.tag}&#x27;&#x60; +
+                        logger.log(&#x60;Background sync for tag &#x27;${event.tag}&#x27; &#x60; +
                             &#x60;has been received&#x60;);
                     }
                     const syncComplete &#x3D; async () &#x3D;&gt; {

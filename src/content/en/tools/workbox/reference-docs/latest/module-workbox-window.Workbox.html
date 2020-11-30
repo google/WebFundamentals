@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.0.0</small></span>
             </div>
             <p>A class to aid in handling service worker registration, updates, and
               reacting to service worker lifecycle events.</p>
@@ -75,9 +75,6 @@
                 <dd><a href="module-workbox-window.Workbox.html#event:controlling">controlling</a></dd>
                 <dd><a href="module-workbox-window.Workbox.html#event:activated">activated</a></dd>
                 <dd><a href="module-workbox-window.Workbox.html#event:redundant">redundant</a></dd>
-                <dd><a href="module-workbox-window.Workbox.html#event:externalinstalled">externalinstalled</a></dd>
-                <dd><a href="module-workbox-window.Workbox.html#event:externalwaiting">externalwaiting</a></dd>
-                <dd><a href="module-workbox-window.Workbox.html#event:externalactivated">externalactivated</a></dd>
               </dl>
             </section>
           </section>
@@ -117,7 +114,6 @@
             <h2>Methods</h2>
             <section>
               <h3 id="getSW" class="symbol-name">getSW</h3>
-              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> getSW()&nbsp;returns&nbsp;Promise containing ServiceWorker</p>
               <p>Resolves with a reference to a service worker that matches the script URL
                 of this instance, as soon as it's available.</p>
@@ -134,6 +130,14 @@
                 <dd>
                   <p><code>Promise containing ServiceWorker</code>&nbsp;</p>
                 </dd>
+              </dl>
+              <h3 id="messageSkipWaiting" class="symbol-name">messageSkipWaiting</h3>
+              <p class="type-signature"> messageSkipWaiting()</p>
+              <p>Sends a <code>{type: 'SKIP_WAITING'}</code> message to the service worker that's
+                currently in the <code>waiting</code> state associated with the current registration.</p>
+              <p>If there is no current registration or no service worker is <code>waiting</code>,
+                calling this will have no effect.</p>
+              <dl class="dl-compact">
               </dl>
               <h3 id="messageSW" class="symbol-name">messageSW</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
@@ -276,6 +280,16 @@
                     </tr>
                     <tr>
                       <td class="details-table-name">
+                        <p>isExternal</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">(boolean or undefined)</p>
+                        <p>True if this event is associated
+                          with an <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
                         <p>type</p>
                       </td>
                       <td>
@@ -367,174 +381,6 @@
               </section>
               <dl class="dl-compact">
               </dl>
-              <h3 id="event:externalactivated" class="symbol-name">externalactivated</h3>
-              <p class="type-signature">WorkboxEvent</p>
-              <p>The <code>externalactivated</code> event is dispatched if the state of an
-                <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
-                changes to <code>activated</code>.</p>
-              <section>
-                <h4>Properties</h4>
-                <table class="function param responsive">
-                  <tr>
-                    <th colspan="2">
-                      <h4>Parameter</h4>
-                    </th>
-                  </tr>
-                  <tbody>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>sw</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">ServiceWorker</p>
-                        <p>The service worker instance.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>originalEvent</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">Event</p>
-                        <p>The original <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onstatechange"><code>statechange</code></a>
-                          event.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>type</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">string</p>
-                        <p><code>externalactivated</code>.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>target</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">Workbox</p>
-                        <p>The <code>Workbox</code> instance.</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-              </dl>
-              <h3 id="event:externalinstalled" class="symbol-name">externalinstalled</h3>
-              <p class="type-signature">WorkboxEvent</p>
-              <p>The <code>externalinstalled</code> event is dispatched if the state of an
-                <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
-                changes to <code>installed</code>.</p>
-              <section>
-                <h4>Properties</h4>
-                <table class="function param responsive">
-                  <tr>
-                    <th colspan="2">
-                      <h4>Parameter</h4>
-                    </th>
-                  </tr>
-                  <tbody>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>sw</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">ServiceWorker</p>
-                        <p>The service worker instance.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>originalEvent</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">Event</p>
-                        <p>The original <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onstatechange"><code>statechange</code></a>
-                          event.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>type</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">string</p>
-                        <p><code>externalinstalled</code>.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>target</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">Workbox</p>
-                        <p>The <code>Workbox</code> instance.</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-              </dl>
-              <h3 id="event:externalwaiting" class="symbol-name">externalwaiting</h3>
-              <p class="type-signature">WorkboxEvent</p>
-              <p>The <code>externalwaiting</code> event is dispatched if the state of an
-                <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>
-                changes to <code>waiting</code>.</p>
-              <section>
-                <h4>Properties</h4>
-                <table class="function param responsive">
-                  <tr>
-                    <th colspan="2">
-                      <h4>Parameter</h4>
-                    </th>
-                  </tr>
-                  <tbody>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>sw</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">ServiceWorker</p>
-                        <p>The service worker instance.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>originalEvent</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">Event</p>
-                        <p>The original <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onstatechange"><code>statechange</code></a>
-                          event.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>type</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">string</p>
-                        <p><code>externalwaiting</code>.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>target</p>
-                      </td>
-                      <td>
-                        <p class="details-table-types">Workbox</p>
-                        <p>The <code>Workbox</code> instance.</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-              </dl>
               <h3 id="event:installed" class="symbol-name">installed</h3>
               <p class="type-signature">WorkboxEvent</p>
               <p>The <code>installed</code> event is dispatched if the state of a
@@ -580,6 +426,16 @@
                         <p class="details-table-types">(boolean or undefined)</p>
                         <p>True if a service worker was already
                           controlling when this <code>Workbox</code> instance called <code>register()</code>.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>isExternal</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">(boolean or undefined)</p>
+                        <p>True if this event is associated
+                          with an <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>.</p>
                       </td>
                     </tr>
                     <tr>
@@ -774,6 +630,16 @@
                         <p class="details-table-types">(boolean or undefined)</p>
                         <p>True if a service worker was already
                           controlling when this <code>Workbox</code> instance called <code>register()</code>.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>isExternal</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">(boolean or undefined)</p>
+                        <p>True if this event is associated
+                          with an <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>.</p>
                       </td>
                     </tr>
                     <tr>

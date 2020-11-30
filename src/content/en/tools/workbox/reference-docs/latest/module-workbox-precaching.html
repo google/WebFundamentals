@@ -20,28 +20,49 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.0.0</small></span>
             </div>
             <p>Most consumers of this module will want to use the
               <a href="module-workbox-precaching.html#.precacheAndRoute">precacheAndRoute()</a>
-              method to add assets to the Cache and respond to network requests with these
+              method to add assets to the cache and respond to network requests with these
               cached assets.</p>
-            <p>If you require finer grained control, you can use the
+            <p>If you require more control over caching and routing, you can use the
               <a href="module-workbox-precaching.PrecacheController.html">PrecacheController</a>
-              to determine when performed.</p>
+              interface.</p>
           </header>
           <section>
-            <h2>Class</h2>
+            <h2>Classes</h2>
             <section id='members-links'>
               <h3 class="class-list"><a href="module-workbox-precaching.PrecacheController.html">PrecacheController</a></h3>
               <p>Performs efficient precaching of assets.</p>
+              <h3 class="class-list"><a href="module-workbox-precaching.PrecacheFallbackPlugin.html">PrecacheFallbackPlugin</a></h3>
+              <p><code>PrecacheFallbackPlugin</code> allows you to specify an &quot;offline fallback&quot;
+                response to be used when a given strategy is unable to generate a response.</p>
+              <p>It does this by intercepting the <code>handlerDidError</code> plugin callback
+                and returning a precached response, taking the expected revision parameter
+                into account automatically.</p>
+              <p>Unless you explicitly pass in a <code>PrecacheController</code> instance to the
+                constructor, the default instance will be used. Generally speaking, most
+                developers will end up using the default.</p>
+              <h3 class="class-list"><a href="module-workbox-precaching.PrecacheRoute.html">PrecacheRoute</a></h3>
+              <p>A subclass of <a href="module-workbox-routing.Route.html">Route</a> that takes a
+                <a href="module-workbox-precaching.PrecacheController.html">PrecacheController</a>
+                instance and uses it to match incoming requests and handle fetching
+                responses from the precache.</p>
+              <h3 class="class-list"><a href="module-workbox-precaching.PrecacheStrategy.html">PrecacheStrategy</a></h3>
+              <p>A <a href="module-workbox-strategies.Strategy.html">Strategy</a> implementation
+                specifically designed to work with
+                <a href="module-workbox-precaching.PrecacheController.html">PrecacheController</a>
+                to both cache and fetch precached assets.</p>
+              <p>Note: an instance of this class is created automatically when creating a
+                <code>PrecacheController</code>; it's generally not necessary to create this yourself.</p>
             </section>
             <h2>Methods</h2>
             <section>
               <h3 id=".addPlugins" class="symbol-name">addPlugins</h3>
               <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> addPlugins(newPlugins)</p>
-              <p>Adds plugins to precaching.</p>
+              <p class="type-signature"> addPlugins(plugins)</p>
+              <p>Adds plugins to the precaching strategy.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -52,7 +73,7 @@
                   <tbody>
                     <tr>
                       <td class="details-table-name">
-                        <p>newPlugins</p>
+                        <p>plugins</p>
                       </td>
                       <td>
                         <p class="details-table-types">Array of Object</p>
@@ -88,61 +109,8 @@
                       <td>
                         <p class="details-table-optional">Optional</p>
                         <p class="details-table-types">Object</p>
-                        <p>Values in <code>options</code> have the following properties:</p>
-                        <table class="function param responsive">
-                          <tr>
-                            <th colspan="2">
-                              <h4>Parameter</h4>
-                            </th>
-                          </tr>
-                          <tbody>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>directoryIndex</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">string</p>
-                                <p>The <code>directoryIndex</code> will
-                                  check cache entries for a URLs ending with '/' to see if there is a hit when
-                                  appending the <code>directoryIndex</code> value.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>ignoreURLParametersMatching</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">Array of RegExp</p>
-                                <p>An
-                                  array of regex's to remove search params when looking for a cache match.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>cleanURLs</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">boolean</p>
-                                <p>The <code>cleanURLs</code> option will
-                                  check the cache for the URL with a <code>.html</code> added to the end of the end.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>urlManipulation</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types"><a href="module-workbox-precaching.html#~urlManipulation">module:workbox-precaching~urlManipulation</a></p>
-                                <p>This is a function that should take a URL and return an array of
-                                  alternative URLs that should be checked for precache matches.</p>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <p>See
+                          <a href="module-workbox-precaching.PrecacheRoute.html">PrecacheRoute options</a>.</p>
                       </td>
                     </tr>
                   </tbody>
@@ -156,43 +124,6 @@
               <p>Adds an <code>activate</code> event listener which will clean up incompatible
                 precaches that were created by older versions of Workbox.</p>
               <dl class="dl-compact">
-              </dl>
-              <h3 id=".createHandler" class="symbol-name">createHandler</h3>
-              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> createHandler(fallbackToNetwork)&nbsp;returns&nbsp;<a href="module-workbox-routing.html#~handlerCallback">module:workbox-routing~handlerCallback</a></p>
-              <p>Helper function that calls
-                PrecacheController#createHandler on the default
-                PrecacheController instance.</p>
-              <p>If you are creating your own PrecacheController, then call the
-                PrecacheController#createHandler on that instance,
-                instead of using this function.</p>
-              <section>
-                <table class="function param responsive">
-                  <tr>
-                    <th colspan="2">
-                      <h4>Parameter</h4>
-                    </th>
-                  </tr>
-                  <tbody>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>fallbackToNetwork</p>
-                      </td>
-                      <td>
-                        <p class="details-table-optional">Optional</p>
-                        <p class="details-table-types">boolean</p>
-                        <p>Whether to attempt to get the
-                          response from the network if there's a precache miss.</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-                <dt>Returns</dt>
-                <dd>
-                  <p><code><a href="module-workbox-routing.html#~handlerCallback">module:workbox-routing~handlerCallback</a></code>&nbsp;</p>
-                </dd>
               </dl>
               <h3 id=".createHandlerBoundToURL" class="symbol-name">createHandlerBoundToURL</h3>
               <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
@@ -384,7 +315,7 @@
                         <p class="details-table-optional">Optional</p>
                         <p class="details-table-types">Object</p>
                         <p>See
-                          <a href="module-workbox-precaching.html#.addRoute">addRoute() options</a>.</p>
+                          <a href="module-workbox-precaching.PrecacheRoute.html">PrecacheRoute options</a>.</p>
                       </td>
                     </tr>
                   </tbody>

@@ -27,17 +27,18 @@
   license that can be found in the LICENSE file or at
   https://opensource.org/licenses/MIT.
 */
-import { precachePlugins } from &#x27;./utils/precachePlugins.js&#x27;;
+import { getOrCreatePrecacheController } from &#x27;./utils/getOrCreatePrecacheController.js&#x27;;
 import &#x27;./_version.js&#x27;;
 /**
- * Adds plugins to precaching.
+ * Adds plugins to the precaching strategy.
  *
- * @param {Array&amp;lt;Object&gt;} newPlugins
+ * @param {Array&amp;lt;Object&gt;} plugins
  *
  * @memberof module:workbox-precaching
  */
-function addPlugins(newPlugins) {
-    precachePlugins.add(newPlugins);
+function addPlugins(plugins) {
+    const precacheController &#x3D; getOrCreatePrecacheController();
+    precacheController.strategy.plugins.push(...plugins);
 }
 export { addPlugins };
 </code></pre>

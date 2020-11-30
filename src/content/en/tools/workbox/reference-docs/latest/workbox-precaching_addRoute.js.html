@@ -26,9 +26,10 @@
   license that can be found in the LICENSE file or at
   https://opensource.org/licenses/MIT.
 */
-import { addFetchListener } from &#x27;./utils/addFetchListener.js&#x27;;
+import { registerRoute } from &#x27;workbox-routing/registerRoute.js&#x27;;
+import { getOrCreatePrecacheController } from &#x27;./utils/getOrCreatePrecacheController.js&#x27;;
+import { PrecacheRoute } from &#x27;./PrecacheRoute.js&#x27;;
 import &#x27;./_version.js&#x27;;
-let listenerAdded &#x3D; false;
 /**
  * Add a &#x60;fetch&#x60; listener to the service worker that will
  * respond to
@@ -39,25 +40,15 @@ let listenerAdded &#x3D; false;
  * responded to, allowing the event to fall through to other &#x60;fetch&#x60; event
  * listeners.
  *
- * @param {Object} [options]
- * @param {string} [options.directoryIndex&#x3D;index.html] The &#x60;directoryIndex&#x60; will
- * check cache entries for a URLs ending with &#x27;/&#x27; to see if there is a hit when
- * appending the &#x60;directoryIndex&#x60; value.
- * @param {Array&amp;lt;RegExp&gt;} [options.ignoreURLParametersMatching&#x3D;[/^utm_/]] An
- * array of regex&#x27;s to remove search params when looking for a cache match.
- * @param {boolean} [options.cleanURLs&#x3D;true] The &#x60;cleanURLs&#x60; option will
- * check the cache for the URL with a &#x60;.html&#x60; added to the end of the end.
- * @param {module:workbox-precaching~urlManipulation} [options.urlManipulation]
- * This is a function that should take a URL and return an array of
- * alternative URLs that should be checked for precache matches.
+ * @param {Object} [options] See
+ * [PrecacheRoute options]{@link module:workbox-precaching.PrecacheRoute}.
  *
  * @memberof module:workbox-precaching
  */
 function addRoute(options) {
-    if (!listenerAdded) {
-        addFetchListener(options);
-        listenerAdded &#x3D; true;
-    }
+    const precacheController &#x3D; getOrCreatePrecacheController();
+    const precacheRoute &#x3D; new PrecacheRoute(precacheController, options);
+    registerRoute(precacheRoute);
 }
 export { addRoute };
 </code></pre>
