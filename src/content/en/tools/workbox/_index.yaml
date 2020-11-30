@@ -115,12 +115,12 @@ landing_page:
         <p>Workbox is a library that bakes in a set of best practices and removes the boilerplate every  developer writes when working with <a href="/web/fundamentals/primers/service-workers/">service workers</a>.</p>
 
         <ul>
-        <li>Precaching</li>
-        <li>Runtime caching</li>
-        <li>Strategies</li>
-        <li>Request routing</li>
-        <li>Background sync</li>
-        <li>Helpful debugging</li>
+          <li>Precaching</li>
+          <li>Runtime caching</li>
+          <li>Strategies</li>
+          <li>Request routing</li>
+          <li>Background sync</li>
+          <li>Helpful debugging</li>
         </ul>
 
   - custom_html: >

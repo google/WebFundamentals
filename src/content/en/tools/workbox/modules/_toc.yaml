@@ -22,6 +22,8 @@ toc:
   path: /web/tools/workbox/modules/workbox-precaching
 - title: workbox-range-requests
   path: /web/tools/workbox/modules/workbox-range-requests
+- title: workbox-recipes
+  path: /web/tools/workbox/modules/workbox-recipes
 - title: workbox-routing
   path: /web/tools/workbox/modules/workbox-routing
 - title: workbox-strategies
