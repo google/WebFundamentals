@@ -86,7 +86,7 @@ can use the `injectManifest` mode. This mode assumes that you have an
 existing service worker file (the location of which is specified in config.js).
 
 When `workbox injectManifest` is run, it looks for a specific string
-(`precaching.precacheAndRoute([])` by default) in your source
+(`precacheAndRoute(self.__WB_MANIFEST)` by default) in your source
 service worker file. It replaces the empty array with a list of
 URLs to precache and writes the service worker file to its
 destination location, based on the configuration options in `config.js`.
