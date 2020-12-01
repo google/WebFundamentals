@@ -31,7 +31,7 @@ landing_page:
         Welcome! Workbox is a set of libraries that can power a production-ready
         <a href="https://web.dev/service-workers-cache-storage/">service worker</a>
         for your
-        <a href="https://web.dev/progressive-web-apps/">progressive web app</a>.
+        <a href="https://web.dev/progressive-web-apps/">Progressive Web App</a>.
 
   - custom_html: >
       <style>
