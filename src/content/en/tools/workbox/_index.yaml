@@ -22,19 +22,16 @@ landing_page:
       </style>
       <div class="workbox-heading">
       <p><img class="workbox-heading__logo" src="./images/Workbox-Logo-Grey.svg" alt="Workbox Logo" /></p>
-
-      <p class="devsite-landing-row-description">JavaScript Libraries for adding offline support to web apps</p>
-
       <p><a class="button button-primary" href="/web/tools/workbox/guides/get-started">Get started</a></p>
       </div>
 
   - background: grey
     items:
     - description: >
-        Welcome, Workbox is a set of libraries and Node modules that make it
-        easy to cache assets and take full advantage of features used to
-        build
-        <a href="https://web.dev/progressive-web-apps/">Progressive Web Apps</a>.
+        Welcome! Workbox is a set of libraries that can power a production-ready
+        <a href="https://web.dev/service-workers-cache-storage/">service worker</a>
+        for your
+        <a href="https://web.dev/progressive-web-apps/">progressive web app</a>.
 
   - custom_html: >
       <style>
@@ -267,6 +264,9 @@ landing_page:
           </li>
           <li>
             <a href="https://web.dev/opensooq-case-study/">How OpenSooq increased engagement by investing in the web</a>
+          </li>
+          <li>
+            <a href="https://web.dev/rakuten-24/">Rakuten 24’s investment in PWA increases user retention by 450%</a>
           </li>
         </ul>
 

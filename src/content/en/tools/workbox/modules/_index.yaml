@@ -165,6 +165,11 @@ landing_page:
         - label: Demo
           path: https://glitch.com/edit/#!/workbox-streams
 
+      # Force Devsite 4-up layout
+      - heading: ""
+      - heading: ""
+      - heading: ""
+
     - heading: Window Packages
       description: >
         Workbox provides modules that run in the window context and complement

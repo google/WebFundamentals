@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-recipes.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-11-16 #}
+{# wf_updated_on: 2020-12-01 #}
 {# wf_published_on: 2020-11-13 #}
 
 # Workbox Recipes {: .page-title }
@@ -152,7 +152,7 @@ registerRoute(
 
 ### Image cache
 
-The image cache recipe allows your service worker to respond to a request for images with a [stale-while-revalidate](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) caching strategy so that once they're available in cache a user doesn't need to make another request for them.
+The image cache recipe allows your service worker to respond to a request for images with a [cache-first](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) caching strategy so that once they're available in cache a user doesn't need to make another request for them.
 
 This recipe, by default, caches a maximum of 60 images, each for 30 days. See the [image cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~imageCache) for a list of all configuration options.
 

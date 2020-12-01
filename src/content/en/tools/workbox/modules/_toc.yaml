@@ -24,6 +24,7 @@ toc:
   path: /web/tools/workbox/modules/workbox-range-requests
 - title: workbox-recipes
   path: /web/tools/workbox/modules/workbox-recipes
+  status: new
 - title: workbox-routing
   path: /web/tools/workbox/modules/workbox-routing
 - title: workbox-strategies
@@ -32,7 +33,6 @@ toc:
 - heading: Window Packages
 - title: Workbox Window
   path: /web/tools/workbox/modules/workbox-window
-  status: new
 
 - heading: Node Packages
 - title: Workbox CLI
