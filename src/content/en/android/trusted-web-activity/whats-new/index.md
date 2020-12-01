@@ -2,8 +2,8 @@ project_path: /web/android/_project.yaml
 book_path: /web/android/_book.yaml
 description: Learn about the new features for web applications that use Trusted Web Activity.
 
-{# wf_published_on: 2020-11-25 #}
-{# wf_updated_on: 2020-11-25 #}
+{# wf_published_on: 2020-12-02 #}
+{# wf_updated_on: 2020-12-02 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -33,13 +33,13 @@ You can still choose to use an existing installation of the dependencies, if you
 and the new `doctor` command helps find issues and recommends fixes to the configuration, which can
 now be updated from the command line using the `updateConfig` command.
 
-### Improved Wizard
+### Improved wizard
 
 When creating a project with `init`, Bubblewrap needs information to generate the Android app. The
-tool extracts values from the Web Manifest and provides defaults where possible.
+tool extracts values from the Web App Manifest and provides defaults where possible.
 
-You can change those values when creating a new project, but the meaning of each field was not
-clear. The initialization dialogs were rebuilt with better description and validation for each
+You can change those values when creating a new project, but previously the meaning of each field was not
+clear. The initialization dialogs were rebuilt with better descriptions and validation for each
 input field.
 
 ### display: fullscreen and orientation support
@@ -54,7 +54,7 @@ The `orientation` field from the Web Manifest defines whether the application sh
 portrait mode, landscape mode, or in the orientation the device is currently using. Bubblewrap now
 reads the Web Manifest field and uses it as a default when creating the Android app.
 
-Both configurations can be customized as part of the `bubblewrap init` flow.
+You can customize both configurations can be customized as part of the `bubblewrap init` flow.
 
 ### AppBundles Output
 
@@ -63,7 +63,7 @@ signing to Play. In practice, this enables smaller files to be served to users w
 app from the store.
 
 Bubblewrap now packages the application as an App Bundle, in a file called
-`app-release-bundle.aab`. You should prefer this format, when publishing apps to the Play Store,
+`app-release-bundle.aab`. You should prefer this format when publishing apps to the Play Store
 as it will be [required by the store starting in the second half of 2021][5].
 
 ### Geolocation delegation
@@ -112,14 +112,14 @@ bubblewrap build
 
 ## Updates to the Quality Criteria
 Chrome 86 introduced changes to the Trusted Web Activity Quality Criteria, which are explained in
-full in this [blogpost][7].
+full in [Changes to quality criteria for PWAs using Trusted Web Activity][7].
 
 A quick summary is that you should ensure your applications handle the following scenarios to
 prevent them from crashing:
 
  - Failure to verify digital asset links at application launch
  - Failure to return HTTP 200 for an offline network resource request
- - An HTTP 404 or 5xx error in the application.
+ - Return of an HTTP 404 or 5xx error in the application.
 
 Besides ensuring that the application passes the [Digital Asset Links validation][8], the remaining
 scenarios can be handled by a service worker:
@@ -162,7 +162,7 @@ async function fetchAndHandleError(request) {
 }
 ```
 
-[Workbox][9] bakes best practices and removes boiler plate when using service workers.
+[Workbox][9] bakes in best practices and removes boilerplate when using service workers.
 Alternatively, consider using a Workbox plugin to handle those scenarios:
 
 ```javascript
@@ -218,7 +218,7 @@ Besides allowing your app to sell digital goods and subscriptions on the Play St
 reports, and a checkout flow powered by the Play Store that is already familiar to your users. It
 is also a requirement for applications published on the Play Store that sell digital goods.
 
-Chrome 88 will launch with an Origin Trial on Android that enables the integration of
+Chrome 88 will launch with an origin trial on Android that enables the integration of
 [Trusted Web Activities][1], the [Payment Request API][11] and the [Digital Goods API][12] to
 implement purchase flows via Google Play Billing. We expect this Origin Trial to also be available
 for Chrome OS on version 89.
@@ -235,7 +235,7 @@ production application.
   <img src="/web/android/trusted-web-activity/whats-new/play-menu.jpg"
       alt="Play Console menu"/>
   <figcaption>
-    <b>Figure 1</b>. Play Console menu
+    <b>Figure 1.</b> Play Console menu
   </figcaption>
 </figure>
 
@@ -255,7 +255,7 @@ find the create button for adding new ones.
   <img src="/web/android/trusted-web-activity/whats-new/in-app-products.jpg"
       alt="In-app Products"/>
   <figcaption>
-    <b>Figure 2</b>. In-app Products.
+    <b>Figure 2.</b> In-app Products.
   </figcaption>
 </figure>
 
@@ -263,11 +263,11 @@ find the create button for adding new ones.
   <img src="/web/android/trusted-web-activity/whats-new/product-details.jpg"
       alt="Product Details"/>
   <figcaption>
-    <b>Figure 3</b>. Product Details.
+    <b>Figure 3.</b> Product Details.
   </figcaption>
 </figure>
 
-To create a new in-app product you will need a product ID, name, description and a price. It’s
+To create a new in-app product you will need a product ID, name, description, and a price. It’s
 important to create meaningful and easy to remember product IDs, you’ll need them later and the IDs
 can’t be changed once created.
 
@@ -282,13 +282,13 @@ If you prefer you can add your products via the [Play Developers API][15].
 <div class="clearfix"></div>
 
 Once your catalog is configured, the next step is to configure the checkout flow from the PWA. You
-will use a combination for the [Digital Goods API][12] and the [Payment Request API][11] to achieve
+will use a combination of the [Digital Goods API][12] and the [Payment Request API][11] to achieve
 this.
 
 #### Fetch a product price with the Digital Goods API:
 
 When using Google Play Billing, you will want to ensure that the price displayed to users matches
-the price from the store listing. Manually keeping those prices in sync would be impossible, and
+the price from the store listing. Manually keeping those prices in sync would be impossible, so
 the Digital Goods API provides a way for the web application to query the underlying payment
 provider for prices:
 
@@ -331,7 +331,7 @@ async function populatePrice(sku) {
 }
 ```
 
-You can detect support for the Digital Goods API by checking if `getDigitalGoodsService` is
+You can detect support for the Digital Goods API by checking if `getDigitalGoodsService()` is
 available on the `window` object.
 
 Then call `window.getDigitalGoodsService()` with the Google Play Billing identifier as a parameter.
@@ -345,11 +345,11 @@ currency for the item that can be displayed to the user.
 #### Start the purchase flow:
 
 The Payment Request API enables purchase flows on the web and is also used for the Google Play
-Billing integration. Check out this [blog post][16] to learn more if you are new to the Payment
+Billing integration. Check out this [How Payment Request API Works][16] to learn more if you are new to the Payment
 Request API.
 
 In order to use the API with Google Play Billing you will need to add a payment instrument which
-has a supportedMethod called `https://play.google.com/billing` and add the SKU as part of the data
+has a supported metod called `https://play.google.com/billing` and add the SKU as part of the data
 for the instrument:
 
 ```javascript
@@ -361,7 +361,7 @@ const supportedInstruments = [{
 }]
 ```
 
-Then, build a PaymentRequest object as usual and use the API as usual
+Then, build a `PaymentRequest` object as usual and use the API as usual
 
 ```javascript
 const request = new PaymentRequest(supportedInstruments, details);
@@ -370,7 +370,7 @@ const request = new PaymentRequest(supportedInstruments, details);
 #### Acknowledge the purchase
 
 Once the transaction is complete, you will need to use the Digital Goods API to acknowledge the
-payment. The response object from the PaymentRequest will contain a token you will use to
+payment. The response object from the `PaymentRequest` will contain a token you will use to
 acknowledge the transaction:
 
 ```javascript
@@ -407,8 +407,8 @@ for (p of purchases) {
 
 ## Upload to the Chrome OS Play Store
 
-Trusted Web Activities are also available, since Chrome 85 in the ChromeOS Play Store. The process
-to list your app on the store is the same for Chrome OS as it is for Android.
+Trusted Web Activities are also available since Chrome 85 in the Chrome OS Play Store. The process
+to list your app in the store is the same for Chrome OS as it is for Android.
 
 Once you’ve created your app bundle, the [Play Console][18] will guide you through the required
 steps to list the app on the Play Store. In the Play Console documentation you can find help to
@@ -429,8 +429,8 @@ Android manifest:
 <uses-feature  android:name="org.chromium.arc" android:required="true"/>
 ```
 
-If your listing is shared with an Android app, the ChromeOS only package version will always have
-to be higher than the Android app package version. You can set up the ChromeOS bundle version to a
+If your listing is shared with an Android app, the Chrome OS only package version will always have
+to be higher than the Android app package version. You can set up the Chrome OS bundle version to a
 way higher number than the Android version, so you don’t have to update both versions with each
 release.
 
