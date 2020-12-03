@@ -53,7 +53,7 @@ Android device](#troubleshooting) for more help.
        <img src="imgs/discover-usb-devices.png" alt="The Discover USB Devices checkbox is
            enabled."/>
        <figcaption>
-         <b>Figure 3</b>. The <b>Discover USB Devices</b> checkbox is enabled
+         <b>Figure 2</b>. The <b>Discover USB Devices</b> checkbox is enabled
        </figcaption>
      </figure>
 
@@ -69,11 +69,10 @@ Android device](#troubleshooting) for more help.
        <img src="imgs/offline-device.png" alt="The Remote Target has successfully detected
            an offline device that is pending authorization."/>
        <figcaption>
-         <b>Figure 4</b>. The <b>Remote Target</b> has successfully detected an offline
+         <b>Figure 3</b>. The <b>Remote Target</b> has successfully detected an offline
          device that is pending authorization
        </figcaption>
      </figure>
-
 
 [unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
 
@@ -134,7 +133,7 @@ Overflow question, or [open an issue in the webfundamentals repository][issue]{:
      <figure>
        <img src="imgs/connected-remote-device.png" alt="A connected remote device."/>
        <figcaption>
-         <b>Figure 5</b>. A connected remote device
+         <b>Figure 4</b>. A connected remote device
        </figcaption>
      </figure>
 
@@ -147,14 +146,14 @@ Overflow question, or [open an issue in the webfundamentals repository][issue]{:
    So, if your Android device is running a very old version of Chrome, the
    DevTools instance may look very different than what you're used to.
 
-### More actions: pause, focus tab, reload, or close a tab {: #more-actions }
+### More actions: pause, focus, reload, or close a tab {: #more-actions }
 
-Below the URL you can find a menu to pause, focus tab, reload or close.
+Below the URL you can find a menu to pause, focus, reload or close a tab.
 
 <figure>
   <img src="imgs/reload.png" alt="The menu for pausing, reloading, focusing, or closing a tab."/>
   <figcaption>
-    <b>Figure 6</b>. The menu for pausing, reloading, focusing, or closing a tab
+    <b>Figure 5</b>. The menu for pausing, reloading, focusing, or closing a tab
   </figcaption>
 </figure>
 
