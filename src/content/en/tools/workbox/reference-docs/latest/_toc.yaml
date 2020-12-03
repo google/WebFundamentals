@@ -31,8 +31,6 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController
 - title: "PrecacheFallbackPlugin"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheFallbackPlugin
-- title: "PrecacheInstallReportPlugin"
-  path: /web/tools/workbox/reference-docs/latest/PrecacheInstallReportPlugin
 - title: "PrecacheRoute"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheRoute
 - title: "PrecacheStrategy"
