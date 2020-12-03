@@ -44,15 +44,15 @@ input field.
 
 ### display: fullscreen and orientation support
 In some cases, you may want your application to use as much of the screen as possible and, when
-building PWAs, this is implemented by setting the `display` field from the Web Manifest to
+building PWAs, this is implemented by setting the `display` field from the Web App Manifest to
 `fullscreen`.
 
-When Bubblewrap detects the fullscreen option in the Web Manifest, it will configure the Android
+When Bubblewrap detects the fullscreen option in the Web App Manifest, it will configure the Android
 application to also launch in full screen, or [immersive mode][3], in Android specific terms.
 
-The `orientation` field from the Web Manifest defines whether the application should be started in
+The `orientation` field from the Web App Manifest defines whether the application should be started in
 portrait mode, landscape mode, or in the orientation the device is currently using. Bubblewrap now
-reads the Web Manifest field and uses it as a default when creating the Android app.
+reads the Web App Manifest field and uses it as a default when creating the Android app.
 
 You can customize both configurations can be customized as part of the `bubblewrap init` flow.
 
