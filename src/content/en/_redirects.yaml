@@ -256,6 +256,11 @@ redirects:
 - from: /web/fundamentals/media/manipulating/cheatsheet
   to: https://web.dev/media-cheat-sheet/
 
+# Device APIs redirects
+
+- from: /web/fundamentals/native-hardware/build-for-webusb
+  to: https://web.dev/build-for-webusb/
+
 #
 # Other redirects
 #
