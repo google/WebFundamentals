@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 87 to help you plan.
 
-{# wf_updated_on: 2020-10-15 #}
+{# wf_updated_on: 2020-12-04 #}
 {# wf_published_on: 2020-10-15 #}
 {# wf_tags: deprecations,removals,chrome87 #}
 {# wf_blink_components: Blink>Layout,Blink>Network,Blink>Storage>AppCache #}
@@ -12,6 +12,9 @@ description: A round up of the deprecations and removals in Chrome 87 to help yo
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Deprecations and removals in Chrome 87 {: .page-title }
+
+Chrome 87 beta was released on October 15, 2020 and stable was released on
+November 17, 2020ß.
 
 ## Comma separator in iframe allow attribute
 
