@@ -992,6 +992,20 @@ captainpangyo:
   description:
     en: Josh is a Singing Computer Scientist
 
+adrianajara:
+  name:
+    given: Adriana
+    family: Jara
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  email: ajara@google.com
+  description:
+    en: Adriana is a Developer Advocate
+
 kazukikanamori:
   name:
     given: Kazuki
