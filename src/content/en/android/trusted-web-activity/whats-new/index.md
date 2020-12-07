@@ -250,7 +250,6 @@ hand side menu on the Play Console:
 Here you’ll find the option to view your existing in-app products and subscriptions and you’ll also
 find the create button for adding new ones.
 
-<!-- Add Image here -->
 <figure class="center">
   <img src="/web/android/trusted-web-activity/whats-new/in-app-products.jpg"
       alt="In-app Products"/>
