@@ -20,7 +20,6 @@
         margin-left: auto;
         margin-right: auto;
       }
-
     </style>
   </head>
   <body>
@@ -69,7 +68,6 @@
       var beta = document.getElementById("beta");
       var gamma = document.getElementById("gamma");
 
-
       /* // [START devori] */
       if (window.DeviceOrientationEvent) {
         window.addEventListener('deviceorientation', deviceOrientationHandler, false);
@@ -90,14 +88,19 @@
           // Account for difference in coordinate systems between Device
           // Orientation and CSS by inverting some signs, and apply the
           // rotations in the order specified by the Device Orientation spec.
+          // Alpha and beta have their signs inverted because of the different
+          // rotation orientations; gamma is not inverted because the Y axis
+          // has opposite directions in the two coordinate systems, which also
+          // makes them both have the same rotation orientation.
+          // Also apply a perspective() transformation to make it easier to see
+          // the rotations around the X and Y axes.
           const rotation =
-              `rotateZ(${-evt.alpha}deg) rotateX(${evt.beta}deg) rotateY(${-evt.gamma}deg)`;
+              `perspective(50rem) rotateZ(${-evt.alpha}deg) rotateX(${-evt.beta}deg) rotateY(${evt.gamma}deg)`;
           h5logo.style.transform = rotation;
         } catch (ex) {
           document.getElementById("doeSupported").innerText = "NOT";
         }
       }
-
 
     </script>
   </body>
