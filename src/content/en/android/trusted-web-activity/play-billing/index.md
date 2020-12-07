@@ -17,7 +17,7 @@ Besides allowing your app to sell digital goods and subscriptions on the Play St
 reports, and a checkout flow powered by the Play Store that is already familiar to your users. It
 is also a requirement for applications published on the Play Store that sell digital goods.
 
-Chrome 88 is launching with an Origin Trial on Android that enables the integration of
+Chrome 88 is launching with an [Origin Trial][11] on Android that enables the integration of
 [Trusted Web Activities][2] with the [Payment Request API][3] and the [Digital Goods API][4] to
 implement purchase flows via Google Play Billing. We expect this Origin Trial to also be available
 for Chrome OS on version 89.
@@ -139,4 +139,5 @@ application in production.
 [8]: https://developer.android.com/google/play/billing/terminology
 [9]: https://github.com/GoogleChromeLabs/bubblewrap
 [10]: https://github.com/GoogleChromeLabs/bubblewrap/issues/376
+[11]: https://web.dev/origin-trials/
 
