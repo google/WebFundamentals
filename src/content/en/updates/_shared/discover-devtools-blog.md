@@ -2,7 +2,7 @@
 
 Below is a list of everything that's been covered in the *Chrome DevTools Engineering Blog* series.
 
-* [DevTools architecture refresh: Migrating to web components](/web/updates/2020/12/migrating-to-web-components)
+* [DevTools architecture refresh: migrating to web components](/web/updates/2020/12/migrating-to-web-components)
 * [Simulating color vision deficiencies in the Blink Renderer](/web/updates/2020/11/cvd)
 * [Puppetaria: accessibility-first Puppeteer scripts](/web/updates/2020/11/puppetaria)
 * [How we built the Chrome DevTools WebAuthn tab](/web/updates/2020/10/webauthn-tab)

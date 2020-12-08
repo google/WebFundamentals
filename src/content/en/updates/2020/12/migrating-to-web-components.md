@@ -9,7 +9,7 @@ description: How we migrate Chrome DevTools to web components. The Chrome DevToo
 {# wf_featured_snippet: Web components is a great fit for building new UI elements in DevTools. To help with the transition, we created a guide to building UI elements in DevTools to share with the wider DevTools team. #}
 {# wf_blink_components: N/A #}
 
-# DevTools architecture refresh: Migrating to web components {: .page-title }
+# DevTools architecture refresh: migrating to web components {: .page-title }
 
 {% include "web/_shared/contributors/jackfranklin.html" %}
 
