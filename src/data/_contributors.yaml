@@ -632,6 +632,23 @@ flackr:
     - author
   email: flackr@google.com
 
+jackfranklin:
+  name:
+    given: Jack
+    family: Franklin
+  org:
+    name: Google
+    unit: Chrome
+  country: London
+  role:
+    - author
+  homepage: https://www.jackfranklin.co.uk/
+  twitter: Jack_Franklin
+  github: jackfranklin
+  email: jacktfranklin@chromium.org
+  description:
+    en: Googler building Chrome DevTools and Puppeteer and web tooling.
+
 jonathangarbee:
   name:
     given: Jonathan
