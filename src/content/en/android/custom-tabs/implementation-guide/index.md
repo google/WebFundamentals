@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Implementation Guide for Custom Tabs.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-07-25 #}
+{# wf_updated_on: 2020-12-08 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs Implementation guide {: .page-title }
@@ -20,7 +20,7 @@ project. Open the `app/build.gradle` file and add the browser library to the dep
 ```gradle
 dependencies {
     ...
-    implementation "androidx.browser:browser:1.2.0"
+    implementation "androidx.browser:browser:1.3.0"
 }
 ```
 

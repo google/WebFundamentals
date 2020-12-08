@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Trusted Web Activity
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-11-10 #}
+{# wf_updated_on: 2020-12-08 #}
 {# wf_blink_components: N/A #}
 
 # Trusted Web Activity Integration Guide {: .page-title }
@@ -81,7 +81,7 @@ dependency to the `dependencies` section:
 
 ```
 dependencies {
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.0.1'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.1.0'
 }
 ```
 
@@ -258,6 +258,12 @@ command line. Go to _Android Settings > Apps & notifications > Chrome_,
 and click on _Force stop_.
 
 ## Establish an association from the website to the app {: #link-site-to-app }
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="3bAQPnxLd4c"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 There are 2 pieces of information that the developer needs to collect from the
 app in order to create the association:

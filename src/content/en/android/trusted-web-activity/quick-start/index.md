@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: A guide to get started building a basic, bare-bones Trusted Web Activity.
 
 {# wf_published_on: 2019-08-28 #}
-{# wf_updated_on: 2020-07-31 #}
+{# wf_updated_on: 2020-12-08 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -64,26 +64,10 @@ npm i -g @bubblewrap/cli
 
 ### Setting up the Environment
 
-#### Get the Java Development Kit (JDK) 8.
-The Android Command line tools requires the correct version of the JDK to run. To prevent version
-conflicts with a JDK version that is already installed, Bubblewrap uses a JDK that can unzipped in
-a separate folder.
-
-Warning: Using a version lower than 8 will make it impossible to compile the project and higher
-versions are incompatible with the Android command line tools.
-
-Download a version of JDK 8 that is compatible with your OS from
-[AdoptOpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=hotspot)
-and extract it in its own folder.
-
-#### Get the Android command line tools
-Download a version of Android command line tools that is compatible with your OS from
-[https://developer.android.com/studio#command-tools](https://developer.android.com/studio#command-tools).
-Create a folder and extract the downloaded file into it. The tool will further install its
-dependencies, without the need to install the whole Android IDE.
-
-When running `bubblewrap` for the first time, it will ask where it can find the JDK and Android
-command line tools. So, take note of the location where both were decompressed.
+When running Bubblewrap for the first time, it will offer to automatically download and install the
+required external dependencies. We recommend allowing the tool do do this, as it guarantees that
+the dependencies are configured correctly. Check the [Bubblewrap documentation][1] to use an
+existing Java Development Kit (JDK) or Android command line tools installation.
 
 ## Initialize and build project {: initialize-and-build}
 
@@ -144,6 +128,12 @@ When Bubblewrap builds the application, an APK will be created with a key setup 
 step.
 
 ## Setting up your asset link file {: #creating-your-asset-link-file }
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="3bAQPnxLd4c"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Besides the APK file, Bubblewrap output an `assetlinks.json` file that matches the key used to sign
 the APK.
@@ -283,3 +273,5 @@ With that done, you can consider deploying your app to the Play Store.
 {% include "web/_shared/helpful.html" %}
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+[1]: https://github.com/GoogleChromeLabs/bubblewrap/blob/master/packages/cli/README.md
