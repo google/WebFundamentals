@@ -1518,6 +1518,22 @@ maudnalpas:
   description:
     en: Developer advocate at Google, working on Chrome privacy and security
 
+maudnalpas:
+  name:
+    given: Maud
+    family: Nalpas
+  org:
+    name: Google
+    unit: Developer Relations
+  country: Germany
+  role:
+    - author
+  twitter: maudnals
+  github: maudnals
+  email: maudn@google.com
+  description:
+    en: Developer advocate at Google, working on Chrome privacy and security
+
 jacquerie:
   name:
     given: Jacopo
