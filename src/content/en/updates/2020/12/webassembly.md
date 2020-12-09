@@ -57,7 +57,7 @@ Emscripten](https://github.com/emscripten-core/emsdk#downloads--how-do-i-get-the
 and pass a `-g` flag, just like in the original post, to include debug
 information:
 
-```bash
+```
 $ emcc -g temp.c -o temp.html
 ```
 
@@ -175,7 +175,7 @@ I’m going to compile it with the same `-g` flag as above to include
 debug information, and also I’ll ask Emscripten to provide the SDL2
 library and allow arbitrarily-sized memory:
 
-```bash
+```
 $ emcc -g mandelbrot.cc -o mandelbrot.html \
     -s USE_SDL=2 \
     -s ALLOW_MEMORY_GROWTH=1
@@ -360,7 +360,7 @@ expected, except for function inlining. We plan to address the remaining
 issues in the future, but, for now, please use `-fno-inline` to
 disable it when compiling with any `-O` level optimizations, e.g.:
 
-```bash
+```
 $ emcc -g temp.c -o temp.html \
     -O3 -fno-inline
 ```
@@ -377,7 +377,7 @@ want to split out this debug information into a separate WebAssembly
 file. To do that in Emscripten, pass a `-gseparate-dwarf=…` flag with
 a desired filename:
 
-```bash
+```
 $ emcc -g temp.c -o temp.html \
     -gseparate-dwarf=temp.debug.wasm
 ```
@@ -392,7 +392,7 @@ application, and later debug them with a local side file. In this case,
 we’ll additionally need to override the stored URL to help the extension
 find the side file, for example:
 
-```bash
+```
 $ emcc -g temp.c -o temp.html \
     -O3 -fno-inline \
     -gseparate-dwarf=temp.debug.wasm \
