@@ -291,8 +291,8 @@ option called **Inspect memory**:
 
 ![Context menu on the `env.memory` in the Scope pane showing an "Inspect Memory" item](/web/updates/images/2020/12/webassembly/image4.png)
 
-Once clicked, it will bring up a viewer of the WebAssembly memory, in
-which you can inspect the memory in hexadecimal and ASCII views,
+Once clicked, it will bring up a **Memory Inspector**, in
+which you can inspect the WebAssembly memory in hexadecimal and ASCII views,
 navigate to specific addresses, as well as interpret the data in
 different formats:
 
