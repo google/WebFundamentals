@@ -21,10 +21,10 @@ We demonstrated basic stepping support and talked about opportunities
 usage of [DWARF](http://dwarfstd.org/) information instead of
 source maps opens for us in the future:
 
-    > - Resolving variable names
-    > - Pretty-printing types
-    > - Evaluating expressions in source languages
-    > - …and much more!
+> - Resolving variable names
+> - Pretty-printing types
+> - Evaluating expressions in source languages
+> - …and much more!
 
 Today, we’re excited to showcase the promised features come into life
 and the progress Emscripten and Chrome DevTools teams have made over
