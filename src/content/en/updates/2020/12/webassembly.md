@@ -427,8 +427,8 @@ issues to
 
 Stay tuned for future updates!
 
-## Feedback {: #feedback .hide-from-toc }
+<<../../_shared/devtools-feedback.md>>
 
-{% include "web/_shared/helpful.html" %}
+<<../../_shared/discover-devtools-blog.md>>
 
 {% include "web/_shared/rss-widget-updates.html" %}
