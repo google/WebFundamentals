@@ -183,7 +183,7 @@ ALLOW_MEMORY_GROWTH=1
 When I visit the generated page in the browser, I can see the beautiful
 fractal shape with some random colors:
 
-![](/web/updates/images/2020/12/webassembly/image15.png)
+![Demo page](/web/updates/images/2020/12/webassembly/image15.png)
 
 When I open DevTools, once again, I can see the original C++ file. This
 time, however, we don’t have an error in the code (whew!), so let’s set
@@ -192,7 +192,7 @@ some breakpoint at the beginning of our code instead.
 When we reload the page again, the debugger will pause right inside our
 C++ source:
 
-![](/web/updates/images/2020/12/webassembly/image3.png)
+![DevTools paused on the `SDL_Init` call](/web/updates/images/2020/12/webassembly/image3.png)
 
 We can already see all our variables on the right, but only `width`
 and `height` are initialized at the moment, so there isn’t much to
@@ -201,7 +201,7 @@ inspect.
 Let’s set another breakpoint inside our main Mandelbrot loop, and resume
 execution to skip a bit forward.
 
-![](/web/updates/images/2020/12/webassembly/image6.png)
+![DevTools paused inside the nested loops](/web/updates/images/2020/12/webassembly/image6.png)
 
 At this point our `palette` has been filled with some random colors,
 and we can expand both the array itself, as well as the individual
@@ -215,19 +215,19 @@ navigate to via the **Scope** view, you can use the **Console**
 evaluation, too! However, note that more complex C++ expressions are not
 yet supported.
 
-![](/web/updates/images/2020/12/webassembly/image12.png)
+![Console panel showing the result of `palette[10].r`](/web/updates/images/2020/12/webassembly/image12.png)
 
 Let’s resume execution a few times and we can see how the inner `x` is
 changing as well – either by looking in the **Scope** view again, adding
 the variable name to the watch list, evaluating it in the console, or by
 hovering over the variable in the source code:
 
-![](/web/updates/images/2020/12/webassembly/image10.png)
+![Tooltip over the variable `x` in the source showing its value `3`](/web/updates/images/2020/12/webassembly/image10.png)
 
 From here, we can step-in or step-over C++ statements, and observe how
 other variables are changing too:
 
-![](/web/updates/images/2020/12/webassembly/image8.png)
+![Tooltips and Scope view showing values of `color`, `point` and other variables](/web/updates/images/2020/12/webassembly/image8.png)
 
 Okay, so this all works great when a debug information is available, but
 what if we want to debug a code that wasn’t built with the debugging
@@ -240,7 +240,7 @@ us, instead of compiling it ourselves from the source, so – at least
 currently – there’s no way for the debugger to find associated sources.
 Let’s step-in again to get into the `SDL_RenderDrawColor`:
 
-![](/web/updates/images/2020/12/webassembly/image1.png)
+![DevTools showing disassembly view of `mandelbrot.wasm`](/web/updates/images/2020/12/webassembly/image1.png)
 
 We’re back to the raw WebAssembly debugging experience.
 
@@ -288,14 +288,14 @@ with this, too: a linear memory inspector.
 If you right-click on the `env.memory`, you should now see a new
 option called **Inspect memory**:
 
-![](/web/updates/images/2020/12/webassembly/image4.png)
+![Context menu on the `env.memory` in the Scope pane showing an "Inspect Memory" item](/web/updates/images/2020/12/webassembly/image4.png)
 
 Once clicked, it will bring up a viewer of the WebAssembly memory, in
 which you can inspect the memory in hexadecimal and ASCII views,
 navigate to specific addresses, as well as interpret the data in
 different formats:
 
-![](/web/updates/images/2020/12/webassembly/image14.png)
+![Memory Inspector pane in DevTools showing a hex and ASCII views of the memory](/web/updates/images/2020/12/webassembly/image14.png)
 
 ## Advanced scenarios and caveats {: #advanced }
 
@@ -313,7 +313,7 @@ panel](/web/tools/chrome-devtools/evaluate-performance/reference)
 which will run the code at the full speed and provide you with a
 detailed breakdown of the time spent in different functions:
 
-![](/web/updates/images/2020/12/webassembly/image2.png)
+![Profiling panel showing various Wasm functions](/web/updates/images/2020/12/webassembly/image2.png)
 
 Alternatively, you can run your application with DevTools closed, and
 open them once finished to inspect the **Console**.
@@ -340,11 +340,11 @@ For example, if the project on your host machine is under a path
 that path was represented as `/mnt/c/src/my_project`, you can remap
 it back during debugging by specifying those paths as prefixes:
 
-![](/web/updates/images/2020/12/webassembly/image13.png)
+![Options page of the C/C++ debugging extension](/web/updates/images/2020/12/webassembly/image13.png)
 
 The first matched prefix “wins”. If you’re familiar with other C++
 debuggers, this option is similar to the `set substitute-path` command
-in GDB or a ` target.source-map` setting in LLDB.
+in GDB or a `target.source-map` setting in LLDB.
 
 ### Debugging optimized builds {: #release-builds }
 
