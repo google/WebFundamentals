@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-08-25 #}
+{# wf_updated_on: 2020-12-09 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -349,13 +349,16 @@ in the appropriate info themselves. The `manifestTransform` option in Workbox's
 build tools configuration can help:
 
 ```javascript
-const integrityManifestTransform = (originalManifest) => {
+const ssri = require('ssri');
+
+const integrityManifestTransform = (originalManifest, compilation) => {
   const warnings = [];
   const manifest = originalManifest.map((entry) => {
     // If some criteria match:
     if (entry.url.startsWith('...')) {
-      // This has to be a synchronous function call:
-      entry.integrity = generateSRIInfo(entry.url);
+      // This has to be a synchronous function call, for example:
+      const asset = compilation.getAsset(entry.url);
+      entry.integrity = ssri.fromData(asset.source.source()).toString();
 
       // Push a message to warnings if needed.
     }
