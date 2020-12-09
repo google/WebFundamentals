@@ -123,7 +123,7 @@ int main() {
   SDL_CreateWindowAndRenderer(width, height, SDL_WINDOW_OPENGL, &window,
                               &renderer);
 
-  // Generate a palette with random colours.
+  // Generate a palette with random colors.
   enum { MAX_ITER_COUNT = 256 };
   SDL_Color palette[MAX_ITER_COUNT];
   srand(time(0));
@@ -409,13 +409,16 @@ working on from here on:
 
 - Cleaning up the rough edges in the debugging experience.
 - Adding support for custom type formatters.
-- Working on improvements to the [profiling](/web/tools/chrome-devtools/evaluate-performance/reference) for WebAssembly apps.
-- Adding support for [code coverage](/web/tools/chrome-devtools/coverage) to make it easier to find unused code.
+- Working on improvements to the
+  [profiling](/web/tools/chrome-devtools/evaluate-performance/reference) for WebAssembly apps.
+- Adding support for [code coverage](/web/tools/chrome-devtools/coverage) to make it easier to find
+  unused code.
 - Improving support for expressions in console evaluation.
 - Adding support for more languages.
 - …and more!
 
-Meanwhile, please help us out by trying the current beta on your own code and reporting any found issues to
+Meanwhile, please help us out by trying the current beta on your own code and reporting any found
+issues to
 [https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue](https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue).
 
 Stay tuned for future updates!
