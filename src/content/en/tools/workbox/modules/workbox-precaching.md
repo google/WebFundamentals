@@ -357,6 +357,9 @@ const integrityManifestTransform = (originalManifest, compilation) => {
     // If some criteria match:
     if (entry.url.startsWith('...')) {
       // This has to be a synchronous function call, for example:
+      // compilation will be set when using workbox-webpack-plugin.
+      // When using workbox-build directly, you can read the file's
+      // contents from disk using, e.g., the fs module.
       const asset = compilation.getAsset(entry.url);
       entry.integrity = ssri.fromData(asset.source.source()).toString();
 
