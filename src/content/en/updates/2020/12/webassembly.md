@@ -176,8 +176,9 @@ debug information, and also I’ll ask Emscripten to provide the SDL2
 library and allow arbitrarily-sized memory:
 
 ```bash
-$ emcc -g mandelbrot.cc -o mandelbrot.html -s USE_SDL=2 -s
-ALLOW_MEMORY_GROWTH=1
+$ emcc -g mandelbrot.cc -o mandelbrot.html \
+    -s USE_SDL=2 \
+    -s ALLOW_MEMORY_GROWTH=1
 ```
 
 When I visit the generated page in the browser, I can see the beautiful
@@ -255,8 +256,8 @@ debugging experience, too.
 
 First of all, if you used raw WebAssembly debugging before, you might
 notice that the entire disassembly is now shown in a single file – no
-more guessing which function a **Sources** entry “wasm-53834e3e/
-wasm-53834e3e-7” possibly corresponds to.
+more guessing which function a **Sources** entry `wasm-53834e3e/
+wasm-53834e3e-7` possibly corresponds to.
 
 ### New name generation scheme {: #names }
 
@@ -267,7 +268,7 @@ Now we’re generating names similarly to other disassembly tools, by
 using hints from the [WebAssembly name
 section](https://webassembly.github.io/spec/core/appendix/custom.html#name-section),
 import/export paths and, finally, if everything else fails, generating
-them based on the type and the index of the item like $func123. You can
+them based on the type and the index of the item like `$func123`. You can
 see how, in the screenshot above, this already helps to get slightly
 more readable stacktraces and disassembly.
 
@@ -380,7 +381,7 @@ $ emcc -g -gseparate-dwarf=temp.debug.wasm temp.c -o temp.html
 ```
 
 In this case, the main application will only store a filename
-“temp.debug.wasm”, and the helper extension will be able to locate and
+`temp.debug.wasm`, and the helper extension will be able to locate and
 load it when you open DevTools.
 
 When combined with optimizations like described above, this feature can
@@ -390,9 +391,10 @@ we’ll additionally need to override the stored URL to help the extension
 find the side file, for example:
 
 ```bash
-$ emcc -g -O3 -fno-inline -gseparate-dwarf=temp.debug.wasm -s
-SEPARATE_DWARF_URL=file://[local path to temp.debug.wasm] temp.c -o
-temp.html
+$ emcc -g temp.c -o temp.html \
+    -O3 -fno-inline \
+    -gseparate-dwarf=temp.debug.wasm \
+    -s SEPARATE_DWARF_URL=file://[local path to temp.debug.wasm]
 ```
 
 ## To be continued… {: #future-plans }
