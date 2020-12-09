@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Learn how to enable Web Share Target in a project using Trusted Web Activity.
 
 {# wf_published_on: 2020-11-10 #}
-{# wf_updated_on: 2020-11-25 #}
+{# wf_updated_on: 2020-12-08 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -43,7 +43,7 @@ first step, update the application to use a version that is higher or equal to 2
 ```gradle
 dependencies {
     ...
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.0.1'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.1.0'
 }
 ```
 

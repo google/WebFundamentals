@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Learn how to integrate Google Play Billing into your Trusted Web Activity project.
 
 {# wf_published_on: 2020-11-25 #}
-{# wf_updated_on: 2020-11-25 #}
+{# wf_updated_on: 2020-12-08 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -41,8 +41,8 @@ You will also need to add an implementation declaration for the billing extensio
 ```groovy
 dependencies {
     ...
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.1.0-alpha02'
-    implementation 'com.google.androidbrowserhelper:billing:1.0.0-alpha04'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.1.0'
+    implementation 'com.google.androidbrowserhelper:billing:1.0.0-alpha05'
 }
 ```
 
