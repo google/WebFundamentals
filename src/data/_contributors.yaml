@@ -1503,7 +1503,7 @@ kuu:
   email: miyazaqui@gmail.com
   description:
     en: "Kuu is interested in media technology on the Web"
-    
+
 fawazm:
   name:
     given: Fawaz
@@ -1991,7 +1991,7 @@ ingvarstepanyan:
   role:
     - author
   description:
-    en: Developer Advocate, V8 & WebAssembly
+    en: WebAssembly Developer Advocate at Google
 
 sunyunjia:
   name:
