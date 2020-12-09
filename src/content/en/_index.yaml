@@ -67,7 +67,7 @@ landing_page:
       buttons:
       - label: Join now
         path: http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website
-        classname: button button-primary
+        classname: button button-primary cds20-now
       path: http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website
 
 

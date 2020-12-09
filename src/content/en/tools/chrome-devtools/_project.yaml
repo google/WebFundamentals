@@ -19,13 +19,17 @@ announcement:
   description: |
     <style>
       .devsite-banner-announcement {
-        background-color: #e8f0fe;
-        color: #424242;
+        /*background-color: #e8f0fe;*/
+        background-color: #F6AEA9;
+        /*color: #424242;*/
+        color: #000000;
       }
       .devsite-banner-announcement :link,
       .devsite-banner-announcement :visited {
-        background: #e8f0fe;
-        color: #039BE5;
+        /*background: #e8f0fe;*/
+        background-color: #F6AEA9;
+        /*color: #039BE5;*/
+        color: #ffffff;
       }
       .devsite-banner-announcement span.material-icons {
         vertical-align: middle;
@@ -34,4 +38,4 @@ announcement:
       .goog-font {
         font-family: Google Sans,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
       }
-    </style> <b class="goog-font">Chrome Dev Summit 2020</b> is here. Join us at <a href="https://goo.gle/cds2020">goo.gle/cds2020</a> on Dec 9 and 10.
+    </style> <b class="goog-font">Chrome Dev Summit 2020</b> is <b>LIVE</b>! Join the livestream <a href="https://goo.gle/cds2020">goo.gle/cds2020</a> now!
