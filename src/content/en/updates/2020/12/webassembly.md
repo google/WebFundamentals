@@ -361,7 +361,8 @@ issues in the future, but, for now, please use `-fno-inline` to
 disable it when compiling with any `-O` level optimizations, e.g.:
 
 ```bash
-$ emcc -g -O3 -fno-inline temp.c -o temp.html
+$ emcc -g temp.c -o temp.html \
+    -O3 -fno-inline
 ```
 
 ### Separating the debug information {: #separate-dwarf }
@@ -377,7 +378,8 @@ file. To do that in Emscripten, pass a `-gseparate-dwarf=…` flag with
 a desired filename:
 
 ```bash
-$ emcc -g -gseparate-dwarf=temp.debug.wasm temp.c -o temp.html
+$ emcc -g temp.c -o temp.html \
+    -gseparate-dwarf=temp.debug.wasm
 ```
 
 In this case, the main application will only store a filename
