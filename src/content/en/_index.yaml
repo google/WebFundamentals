@@ -56,16 +56,16 @@ landing_page:
     - image_path: /web/images/cds20-art.png
       heading: "Chrome Dev Summit 2020"
       description: >
-        Chrome Dev Summit is back with its 8th chapter, but this time we’re coming to you. We’re
-        bringing all the latest updates, lots of new content, and plenty of Chromies. All delivered
-        virtually.
+        Chrome Dev Summit is <b>here</b>! We've got all the latest updates
+        coming to the web and a whole new way to experience the summit with
+        CDS Adventure!.
       list:
       - heading: December 9-10
         description: Sessions, Live Q&A, Workshops, Office Hours & More!
         icon:
           icon_name: event
       buttons:
-      - label: Learn more
+      - label: Join now
         path: http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website
         classname: button button-primary
       path: http://developer.chrome.com/devsummit/?utm_source=webfuhp&utm_medium=website
