@@ -373,6 +373,7 @@
   "Platform>Apps>Shell",
   "Platform>DevTools",
   "Platform>DevTools>JavaScript",
+  "Platform>DevTools>WebAssembly",
   "Platform>Extensions",
   "Platform>Extensions>API",
   "Platform>NaCl",

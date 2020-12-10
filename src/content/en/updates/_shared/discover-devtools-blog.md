@@ -2,6 +2,7 @@
 
 Below is a list of everything that's been covered in the *Chrome DevTools Engineering Blog* series.
 
+* [Debugging WebAssembly with modern tools](/web/updates/2020/12/webassembly)
 * [DevTools architecture refresh: migrating to Web Components](/web/updates/2020/12/migrating-to-web-components)
 * [Simulating color vision deficiencies in the Blink Renderer](/web/updates/2020/11/cvd)
 * [Puppetaria: accessibility-first Puppeteer scripts](/web/updates/2020/11/puppetaria)
