@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Debugging WebAssembly, built from C/C++, in Chrome DevTools.
+description: Step-by-step overview of the new debugging experience for WebAssembly in Chrome DevTools.
 
 {# wf_updated_on: 2020-12-10 #}
 {# wf_published_on: 2020-12-10 #}
