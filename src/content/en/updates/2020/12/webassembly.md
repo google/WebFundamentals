@@ -69,7 +69,7 @@ Canary](https://www.google.com/chrome/canary/).
 This time we’ll also need a helper extension that integrates with Chrome
 DevTools and helps it make sense of all the debugging information
 encoded in the WebAssembly file. Please install it by going to this
-link: [goo.gle/wasm-debugging-extension](about:blank)
+link: [goo.gle/wasm-debugging-extension](https://goo.gle/wasm-debugging-extension)
 
 You’ll also want to enable WebAssembly debugging in the DevTools
 **Experiments**. Open Chrome DevTools, click the gear (**⚙**) icon in
