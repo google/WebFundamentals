@@ -36,7 +36,7 @@ method that it applies to, defaulting to `'GET'`.
 
 - If you use `setDefaultHandler()` and all your requests are `GET`, then no changes need to be made.
 
-- If have any requests that are not `GET` (`POST`, `PUT`, etc...), `setDefaultHandler()` will no
+- If you have any requests that are not `GET` (`POST`, `PUT`, etc...), `setDefaultHandler()` will no
   longer cause those requests to match.
 
 ### Build Configuration
