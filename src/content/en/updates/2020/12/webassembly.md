@@ -7,10 +7,17 @@ description: Step-by-step overview of the new debugging experience for WebAssemb
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/2020/12/webassembly/image5.png #}
 {# wf_blink_components: Platform>DevTools>WebAssembly #}
+{# wf_youtube_id: VBMHswhun-s #}
 
 # Debugging WebAssembly with modern tools {: .page-title }
 
 {% include "web/_shared/contributors/ingvarstepanyan.html" %}
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="VBMHswhun-s"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## The road so far {: #past }
 
