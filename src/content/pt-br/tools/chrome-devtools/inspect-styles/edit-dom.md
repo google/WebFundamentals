@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: A vista da árvore do DOM no painel Elements do Chrome DevTools exibe a estrutura do DOM da página web atual. Edite em tempo real o conteúdo e a estrutura da sua página com atualizações do DOM.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Editar o DOM {: .page-title }
@@ -25,7 +25,7 @@ A vista da árvore do DOM no painel Elements do Chrome DevTools exibe a estrutur
 Use o **painel Elements** para inspecionar todos os elementos na sua página em uma
 árvore do DOM. Selecione qualquer elemento e inspecione os estilos aplicados a ele.
 
-<video autoplay muted src="animations/inspect-element.mp4">
+<video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
 Existem diversas maneiras de inspecionar um elemento:
@@ -110,7 +110,7 @@ Para editar o nome ou um atributo de um nó do DOM:
 
 A tag de fechamento é automaticamente atualizada quando você termina.
 
-<video autoplay muted src="animations/edit-element-name.mp4">
+<video autoplay muted src="animations-img/edit-element-name.mp4">
 </video>
 
 ### Editar um nó do DOM e seus filhos como HTML
@@ -129,7 +129,7 @@ Para editar um nó do DOM e seus filhos como HTML:
 
 Clique, segure e arraste um nó para movê-lo.
 
-<video autoplay muted src="animations/move-node.mp4">
+<video autoplay muted src="animations-img/move-node.mp4">
 </video>
 
 ## Excluir um nó do DOM

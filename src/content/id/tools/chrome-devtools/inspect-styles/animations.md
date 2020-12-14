@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Memeriksa dan mengubah animasi dengan Chrome DevTools Animation Inspector.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2016-05-02 #}
 
 # Memeriksa animasi {: .page-title }
@@ -80,7 +80,7 @@ animasi saat Animation Inspector terbuka. Jika animasi dipicu
 saat laman dimuat, Anda bisa membantu Animation Inspector untuk mendeteksi animasi dengan 
 memuat ulang laman. 
 
-<video src="animations/capture-animations.mp4"
+<video src="animations-img/capture-animations.mp4"
        autoplay loop muted controls></video>
 
 ## Memeriksa animasi {:#inspect}

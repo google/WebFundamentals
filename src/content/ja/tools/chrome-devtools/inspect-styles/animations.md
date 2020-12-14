@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools のアニメーション インスペクターでアニメーションを調査して変更します。
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2016-05-02 #}
 
 # アニメーションの調査 {: .page-title }
@@ -75,7 +75,7 @@ Chrome DevTools のアニメーション インスペクターの目的は主に
 
  
 
-<video src="animations/capture-animations.mp4"
+<video src="animations-img/capture-animations.mp4"
        autoplay loop muted controls></video>
 
 ##  アニメーションの調査{:#inspect}

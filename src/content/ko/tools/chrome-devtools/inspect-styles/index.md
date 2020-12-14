@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: 페이지의 HTML 및 CSS를 검사하고 편집합니다.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 페이지와 스타일 검사 및 편집 {: .page-title }
@@ -28,7 +28,7 @@ HTML 및 CSS를 검사하고 실시간 편집할 수 있습니다.
 DOM 노드를 실시간 편집하려면
 [선택한 요소](#inspect-an-element)를 두 번 클릭한 뒤 변경하기만 하면 됩니다.
 
-<video src="animations/edit-element-name.mp4" style="max-width:100%;"
+<video src="animations-img/edit-element-name.mp4" style="max-width:100%;"
        loop muted autoplay controls></video>
 
 DOM 트리 뷰에 현재 트리 상태가 표시됩니다.
@@ -81,7 +81,7 @@ Styles 창에 있는 속성 값을 수정하는 방법과 같습니다. 다만 �
 
 ## 로컬 변경 사항 보기
 
-<video src="animations/revisions.mp4" style="max-width:100%;"
+<video src="animations-img/revisions.mp4" style="max-width:100%;"
        autoplay loop muted controls></video>
 
 페이지에 적용된 실시간 편집 기록을 보려면:

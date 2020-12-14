@@ -3,7 +3,7 @@ book_path: /web/tools/chrome-devtools/_book.yaml
 description: The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates.
 robots: noindex
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -31,7 +31,7 @@ The DOM tree view in the Chrome DevTools Elements panel displays the DOM structu
 Use the **Elements panel** to inspect all elements in your page in one
 DOM tree. Select any element and inspect the styles applied to it.
 
-<video autoplay muted src="animations/inspect-element.mp4">
+<video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
 There are several ways to inspect an element:
@@ -148,7 +148,7 @@ To edit a DOM node name or attribute:
 
 The closing tag is automatically updated when you're finished.
 
-<video autoplay muted src="animations/edit-element-name.mp4">
+<video autoplay muted src="animations-img/edit-element-name.mp4">
 </video>
 
 ### Edit DOM node and its children as HTML
@@ -167,7 +167,7 @@ To edit a DOM node and its children as HTML:
 
 Click, hold, and drag a node to move it.
 
-<video autoplay muted src="animations/move-node.mp4">
+<video autoplay muted src="animations-img/move-node.mp4">
 </video>
 
 ## Delete DOM node

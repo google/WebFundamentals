@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: En la vista de árbol del DOM del panel Elements de Chrome DevTools se muestra la estructura del DOM de la página web actual. Edita en tiempo real el contenido y la estructura de tu página mediante actualizaciones del DOM.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Editar el DOM {: .page-title }
@@ -25,7 +25,7 @@ En la vista de árbol del DOM del panel Elements de Chrome DevTools se muestra l
 Usa el **panel Elements** para inspeccionar todos los elementos en tu página en un
 árbol del DOM. Selecciona cualquier elemento e inspecciona los estilos que se les aplicó.
 
-<video autoplay muted src="animations/inspect-element.mp4">
+<video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
 Existen varias formas de inspeccionar un elemento:
@@ -110,7 +110,7 @@ Para editar el nombre o atributo de un nodo del DOM:
 
 La etiqueta de cierre se actualiza automáticamente cuando terminas.
 
-<video autoplay muted src="animations/edit-element-name.mp4">
+<video autoplay muted src="animations-img/edit-element-name.mp4">
 </video>
 
 ### Editar el nodo del DOM y sus elementos secundarios como HTML
@@ -129,7 +129,7 @@ Para editar un nodo del DOM y sus elementos secundarios como HTML:
 
 Haz clic en un nodo, mantenlo presionado y muévelo.
 
-<video autoplay muted src="animations/move-node.mp4">
+<video autoplay muted src="animations-img/move-node.mp4">
 </video>
 
 ## Borrar nodo del DOM
