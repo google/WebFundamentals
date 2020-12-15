@@ -113,7 +113,7 @@ CSR by email, or something else. Some CAs (or their resellers) may even automate
 some or all of the process (including, in some cases, key pair and CSR
 generation).
 
-Send the CA to your CSR, and follow their instructions to receive your final
+Send the CSR to your CA, and follow their instructions to receive your final
 certificate or certificate chain.
 
 Different CAs charge different amounts of money for the service of vouching
