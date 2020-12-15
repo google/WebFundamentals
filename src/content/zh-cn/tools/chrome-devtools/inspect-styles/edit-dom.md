@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description:Chrome DevTools 的 Elements 面板中的 DOM 树视图可以显示当前网页的 DOM 结构。通过 DOM 更新实时修改页面的内容和结构。
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 
 # 编辑 DOM {: .page-title }
@@ -25,7 +25,7 @@ Chrome DevTools 的 Elements 面板中的 DOM 树视图可以显示当前网页�
 使用 **Elements** 面板可以在一个 DOM 树中检查页面中的所有元素。
 选择任何元素并检查应用到该元素的样式。
 
-<video autoplay muted src="animations/inspect-element.mp4">
+<video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
 可以通过多种方式检查元素：
@@ -105,7 +105,7 @@ DevTools 会在记录中显示尽可能多的项目。如果状态栏无法显�
 
 完成后，结束标记将自动更新。
 
-<video autoplay muted src="animations/edit-element-name.mp4">
+<video autoplay muted src="animations-img/edit-element-name.mp4">
 </video>
 
 ### 以 HTML 形式编辑 DOM 节点及其子级
@@ -123,7 +123,7 @@ DevTools 会在记录中显示尽可能多的项目。如果状态栏无法显�
 
 点击、按住并拖动节点可将其移动。
 
-<video autoplay muted src="animations/move-node.mp4">
+<video autoplay muted src="animations-img/move-node.mp4">
 </video>
 
 ## 删除 DOM 节点

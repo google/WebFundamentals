@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Memeriksa dan mengedit HTML dan CSS laman.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Memeriksa dan Mengedit Laman dan Gaya {: .page-title }
@@ -28,7 +28,7 @@ Chrome DevTools.
 Untuk mengedit langsung simpul DOM, cukup klik dua kali 
 [elemen yang dipilih](#inspect-an-element) dan buat perubahan:
 
-<video src="animations/edit-element-name.mp4" style="max-width:100%;"
+<video src="animations-img/edit-element-name.mp4" style="max-width:100%;"
        loop muted autoplay controls></video>
 
 Tampilan pohon DOM menampilkan keadaan terkini pohon tersebut, yang belum tentu sesuai dengan 
@@ -81,7 +81,7 @@ elemen sebenarnya.
 
 ## Menampilkan perubahan lokal
 
-<video src="animations/revisions.mp4" style="max-width:100%;"
+<video src="animations-img/revisions.mp4" style="max-width:100%;"
        autoplay loop muted controls></video>
 
 Untuk menampilkan riwayat pengeditan langsung yang dibuat pada laman Anda:
