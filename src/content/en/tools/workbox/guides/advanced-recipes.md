@@ -140,7 +140,7 @@ else, this is a baseline recipe to follow. It takes advantage of
 browsers) to help mitigate the startup cost of a service worker.
 
 ```javascript
-import {* as navigationPreload} from 'workbox-navigation-preload';
+import * as navigationPreload from 'workbox-navigation-preload';
 import {registerRoute, NavigationRoute} from 'workbox-routing';
 import {NetworkOnly} from 'workbox-strategies';
 
