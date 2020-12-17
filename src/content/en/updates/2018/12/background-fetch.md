@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Background fetch lets you handle large downloads, even if the browser closes.
 
-{# wf_updated_on: 2018-12-07 #}
+{# wf_updated_on: 2020-12-17 #}
 {# wf_published_on: 2018-12-03 #}
 {# wf_tags: serviceworker #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -25,8 +25,7 @@ battery.
 
 So, what if you need to download something that might take a long time, like a movie, podcasts, or
 levels of a game. That's what Background Fetch is for. Background Fetch is a [web
-standard](https://wicg.github.io/background-fetch/) implemented behind the *Experimental Web
-Platform features* flag in Chrome 71.
+standard](https://wicg.github.io/background-fetch/) available by default since Chrome 74.
 
 Here's a quick two minute demo showing the traditional state of things, vs using Background Fetch:
 
