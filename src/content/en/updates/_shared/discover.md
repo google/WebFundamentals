@@ -6,7 +6,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 
 * [Faster DevTools startup](/web/updates/2020/11/devtools#fast-startup)
 * [New CSS angle visualization tools](/web/updates/2020/11/devtools#css-angle)
-* [Emulate unsupported image types](/web/updates/2020/11/devtools#mulate-image)
+* [Emulate unsupported image types](/web/updates/2020/11/devtools#emulate-image)
 * [Simulate storage quota size in the Storage pane](/web/updates/2020/11/devtools#simulate-storage)
 * [New Web Vitals lane in the Performance panel](/web/updates/2020/11/devtools#web-vitals)
 * [Report CORS errors in the Network panel](/web/updates/2020/11/devtools#cors)
