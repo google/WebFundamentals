@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-11-02 #}
+{# wf_updated_on: 2020-12-29 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -168,7 +168,7 @@ This service worker precaches an offline page and, if a user is offline, returns
 
 ## Do more with Workbox
 
-There’s lots more you can do with Workbox! Read the [guides](/web/tools/workbox/guides) for a deeper dive into different aspects of Workbox. Check out all of the available [Workbox modules](/web/tools/workbox/modules) to see even more things Workbox can do, like managing Google Analytics when offline, retrying form submissions that failed when offline, or broadcast updates when a cache is updated. With Workbox, you can harness the power of service workers to improve performance and give your site a great experience, independent of the network.
+There’s lots more you can do with Workbox! Read the [guides](/web/tools/workbox/guides/get-started) for a deeper dive into different aspects of Workbox. Check out all of the available [Workbox modules](/web/tools/workbox/modules) to see even more things Workbox can do, like managing Google Analytics when offline, retrying form submissions that failed when offline, or broadcast updates when a cache is updated. With Workbox, you can harness the power of service workers to improve performance and give your site a great experience, independent of the network.
 
 ## Feedback {: #feedback .hide-from-toc }
 
