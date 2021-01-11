@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2020-08-11 #}
+{# wf_updated_on: 2021-01-05 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -279,10 +279,12 @@ const secondMatrix = new Float32Array([
   7, 8
 ]);
 
-const [gpuBufferSecondMatrix, arrayBufferSecondMatrix] = device.createBufferMapped({
+const gpuBufferSecondMatrix = device.createBufferMapped({
+  mappedAtCreation: true,
   size: secondMatrix.byteLength,
   usage: GPUBufferUsage.STORAGE,
 });
+const arrayBufferSecondMatrix = gpuBufferSecondMatrix.getMappedRange();
 new Float32Array(arrayBufferSecondMatrix).set(secondMatrix);
 gpuBufferSecondMatrix.unmap();
 
