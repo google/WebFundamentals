@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
-{# wf_updated_on: 2021-01-05 #}
+{# wf_updated_on: 2021-01-13 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -317,17 +317,23 @@ const bindGroupLayout = device.createBindGroupLayout({
     {
       binding: 0,
       visibility: GPUShaderStage.COMPUTE,
-      type: "readonly-storage-buffer"
+      buffer: {
+        type: "read-only-storage"
+      }
     },
     {
       binding: 1,
       visibility: GPUShaderStage.COMPUTE,
-      type: "readonly-storage-buffer"
+      buffer: {
+        type: "read-only-storage"
+      }
     },
     {
       binding: 2,
       visibility: GPUShaderStage.COMPUTE,
-      type: "storage-buffer"
+      buffer: {
+        type: "storage"
+      }
     }
   ]
 });
@@ -570,17 +576,23 @@ An illustration of `getBindGroupLayout` for the previous sample is [available].
 -     {
 -       binding: 0,
 -       visibility: GPUShaderStage.COMPUTE,
--       type: "readonly-storage-buffer"
+-       buffer: {
+-         type: "read-only-storage"
+-       }
 -     },
 -     {
 -       binding: 1,
 -       visibility: GPUShaderStage.COMPUTE,
--       type: "readonly-storage-buffer"
+-       buffer: {
+-         type: "read-only-storage"
+-       }
 -     },
 -     {
 -       binding: 2,
 -       visibility: GPUShaderStage.COMPUTE,
--       type: "storage-buffer"
+-       buffer: {
+-         type: "storage"
+-       }
 -     }
 -   ]
 - });
