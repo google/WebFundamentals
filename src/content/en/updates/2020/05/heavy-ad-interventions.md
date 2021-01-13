@@ -188,13 +188,13 @@ window.addEventListener('pagehide', (event) => {
 });
 ```
 
-Caution: The `pagehide` event restricts the amount of work that can happen
+Remember the `pagehide` event restricts the amount of work that can happen
 within them to protect the user experience. For example, trying to send a
 `fetch()` request with the reports will result in that request being canceled.
 You should use `navigator.sendBeacon()` to send that report and even then, this
 is only best-effort by the browser not a guarantee.
 
-[**Do not use** the `unload` and `beforeunload`
+Caution: [**Do not use** the `unload` and `beforeunload`
 events](https://web.dev/bfcache/#never-use-the-unload-event) here. This will
 actively hurt your page caching and performance across multiple browsers.
 
