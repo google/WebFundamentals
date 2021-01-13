@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
+
 {# wf_updated_on: 2021-01-13 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
@@ -64,6 +65,7 @@ that will resolve with a GPU device you’ll use to do some GPU computation.
 
 ```js
 const adapter = await navigator.gpu.requestAdapter();
+if (!adapter) return;
 const device = await adapter.requestDevice();
 ```
 
@@ -248,6 +250,7 @@ reading once all GPU queue commands have all been executed.
 
 ```js
 const adapter = await navigator.gpu.requestAdapter();
+if (!adapter) return;
 const device = await adapter.requestDevice();
 
 
