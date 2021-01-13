@@ -188,8 +188,8 @@ window.addEventListener('pagehide', (event) => {
 });
 ```
 
-Remember the `pagehide` event restricts the amount of work that can happen
-within it to protect the user experience. For example, trying to send a
+Remember that, to protect the user experience, the `pagehide` event restricts 
+the amount of work that can happen within it. For example, trying to send a
 `fetch()` request with the reports will result in that request being canceled.
 You should use `navigator.sendBeacon()` to send that report and even then, this
 is only best-effort by the browser not a guarantee.
