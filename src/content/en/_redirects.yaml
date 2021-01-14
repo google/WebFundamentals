@@ -267,3 +267,50 @@ redirects:
 
 - from: /web/updates/2016/02/save-data
   to: /web/fundamentals/performance/optimizing-content-efficiency/save-data
+
+
+#
+# Chromium Chronicle Redirects
+#
+
+- from: /web/updates/tags/chromium-chronicle
+  to: https://developer.chrome.com/tags/chromium-chronicle/
+
+- from: /web/updates/2019/04/chromium-chronicle-1
+  to: https://developer.chrome.com/blog/chromium-chronicle-1/
+
+- from: /web/updates/2019/05/chromium-chronicle-2
+  to: https://developer.chrome.com/blog/chromium-chronicle-2/
+
+- from: /web/updates/2019/06/chromium-chronicle-3
+  to: https://developer.chrome.com/blog/chromium-chronicle-3/
+
+- from: /web/updates/2019/07/chromium-chronicle-4
+  to: https://developer.chrome.com/blog/chromium-chronicle-4/
+
+- from: /web/updates/2019/08/chromium-chronicle-5
+  to: https://developer.chrome.com/blog/chromium-chronicle-5/
+
+- from: /web/updates/2019/09/chromium-chronicle-6
+  to: https://developer.chrome.com/blog/chromium-chronicle-6/
+
+- from: /web/updates/2019/10/chromium-chronicle-7
+  to: https://developer.chrome.com/blog/chromium-chronicle-7/
+
+- from: /web/updates/2019/11/chromium-chronicle-8
+  to: https://developer.chrome.com/blog/chromium-chronicle-8/
+
+- from: /web/updates/2019/12/chromium-chronicle-9
+  to: https://developer.chrome.com/blog/chromium-chronicle-9/
+
+- from: /web/updates/2020/02/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-10/
+
+- from: /web/updates/2020/03/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-13/
+
+- from: /web/updates/2020/10/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-14/
+
+- from: /web/updates/2020/11/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-15/
