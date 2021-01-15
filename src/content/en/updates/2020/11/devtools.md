@@ -13,6 +13,13 @@ description: New CSS angle visualization tools, emulate unsupported image types 
 
 {% include "web/_shared/contributors/jecelynyeen.html" %}
 
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="3tUXV_n3yng"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+
 ## Faster DevTools startup {: #fast-startup }
 
 DevTools startup now is ~37% faster in terms of JavaScript compilation (from 6.9s down to 5s)! 🎉
