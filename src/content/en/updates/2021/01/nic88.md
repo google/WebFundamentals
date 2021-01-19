@@ -29,6 +29,8 @@ Here's what you need to know:
   Store.
 * The [`aspect-ratio`](#aspect-ratio) CSS property makes it easy to set the
   aspect ratio on any element.
+* Chrome 88 will [heavily throttle](#timers) chained JavaScript timers
+  for hidden pages in particular conditions.
 * You can now use [Play Billing](#play-billing) in your Trusted Web Activity.
 * All the videos from [Chrome Dev Summit](#cds) are up.
 * And, there’s [plenty more](#more).
@@ -105,6 +107,19 @@ Thanks to [Jen Simmons](https://twitter.com/jensimmons/status/134728742163389235
 for calling out this is supported in the latest Safari Technical Preview,
 so we should see it in Safari soon! And check out
 [Una's demo](https://codepen.io/una/pen/BazyaOM) to see it in action.
+
+## Heavy throttling of chained JS timers {: #timers }
+
+Chrome 88 will heavily throttle chained JavaScript timers for hidden pages in
+particular conditions. This will reduce CPU usage, which will also reduce
+battery usage. There are some edge cases where this will change behavior,
+but timers are often used where a different API would be more efficient, and
+more reliable.
+
+That was pretty jargon heavy, and a bit ambiguous, so check out Jake's article
+[Heavy throttling of chained JS timers beginning in Chrome 88](https://developer.chrome.com/blog/timer-throttling-in-chrome-88/)
+on developer.chrome.com for all the details.
+
 
 ## Play billing in Trusted Web Activity {: #play-billing }
 
