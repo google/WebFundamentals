@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web Vitals lane and more.
 
-{# wf_updated_on: 2020-11-20 #}
+{# wf_updated_on: 2021-01-19 #}
 {# wf_published_on: 2020-11-12 #}
-{# wf_tags: chrome7, devtools, devtools-whatsnew #}
+{# wf_tags: chrome88, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web Vitals lane and more. #}
 {# wf_blink_components: Platform>DevTools #}
@@ -12,6 +12,8 @@ description: New CSS angle visualization tools, emulate unsupported image types 
 # What's New In DevTools (Chrome 88) {: .page-title }
 
 {% include "web/_shared/contributors/jecelynyeen.html" %}
+
+<<../../../updates/_shared/devtools-research.md>>
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="3tUXV_n3yng"
@@ -267,7 +269,7 @@ Chromium issue: [1143833](https://crbug.com/1143833)
 ### CSS Flexbox debugging tools {: #flexbox }
 
 <aside class="note">
-  </p>To enable the experiment, check the <strong>Enable CSS Flexbox debugging features</strong>  checkbox under <strong>Settings</strong> > <strong>Experiments</strong>.
+  <p>To enable the experiment, check the <strong>Enable CSS Flexbox debugging features</strong> checkbox under <strong>Settings</strong> > <strong>Experiments</strong>.
   </p>
 </aside>
 
@@ -317,7 +319,7 @@ Chromium issues: [1144090](https://crbug.com/1144090), [1139945](https://crbug.c
 ### Customize chords keyboard shortcuts {: #keyboard-shortcuts }
 
 <aside class="note">
-  </p>To enable the experiment, check the Enable keyboard shortcut editor checkbox under **Settings** > **Experiments**.
+  <p>To enable the experiment, check the <strong>Enable keyboard shortcut editor</strong> checkbox under <strong>Settings</strong> > <strong>Experiments</strong>.
   </p>
 </aside>
 
@@ -325,7 +327,7 @@ DevTools added experimental support for [customize keyboard shortcuts](/web/upda
 
 You can now create chords (a.k.a multi-keypress shortcuts) in the shortcut editor. 
 
-Go to **Settings** > **Shortcuts**, hovering on a command and click the **Edit** button (pen icon) to customize the chords shortcut.
+Go to <strong>Settings</strong> > <strong>Shortcuts</strong>, hovering on a command and click the <strong>Edit</strong> button (pen icon) to customize the chords shortcut.
 
 ![Chords keyboard shortcuts](/web/updates/images/2020/11/devtools/14-keyboard-shortcuts.png)
 
