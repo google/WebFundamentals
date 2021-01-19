@@ -6,7 +6,7 @@ description: A round up of the deprecations and removals in Chrome 88 to help yo
 {# wf_published_on: 2020-12-04 #}
 {# wf_tags: deprecations,removals,chrome88 #}
 {# wf_blink_components: Blink>Layout,Blink>Network,Blink>Storage>AppCache #}
-{# wf_featured_image: /web/updates/images/2020/12/dep-rem_88.jpg #}
+{# wf_featured_image: /web/updates/images/2020/12/dep-rem_480.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 88 to help you plan. #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
