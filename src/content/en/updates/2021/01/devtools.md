@@ -26,8 +26,6 @@ In the **Sources** panel, open the **debugger** sidebar pane. Expand the **CSP V
 
 ![Breakpoint on Trusted Type violations](/web/updates/images/2021/01/devtools/trusted-type-violations.png)
 
-Could you add a picture explaining that the new issue icon at the end of the line shows issues raised at that line? Clicking the icon should take the user to the issues tab.
-
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/13dcbd22d42acbb8843c3e03d59060bbdf16b936 #}
 
 Chromium issues: [1142804](https://crbug.com/1142804)
