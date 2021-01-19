@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 88 to help you plan.
 
-{# wf_updated_on: 2020-12-04 #}
+{# wf_updated_on: 2021-01-19 #}
 {# wf_published_on: 2020-12-04 #}
 {# wf_tags: deprecations,removals,chrome88 #}
 {# wf_blink_components: Blink>Layout,Blink>Network,Blink>Storage>AppCache #}
-{# wf_featured_image: /web/updates/images/2020/10/dep-rem_87.jpg #}
+{# wf_featured_image: /web/updates/images/2020/12/dep-rem_480.jpg #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 88 to help you plan. #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
