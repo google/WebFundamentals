@@ -2,6 +2,35 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 89 {: #discover89 .hide-from-toc }
+
+* [Debugging support for Trusted Types violations](/web/updates/2021/01/devtools#trusted-types)
+* [Capture node screenshot beyond viewport](/web/updates/2021/01/devtools#node-screenshot)
+* [New Trust Tokens tab for network requests](/web/updates/2021/01/devtools#trust-token)
+* [Lighthouse 7 in the Lighthouse panel](/web/updates/2021/01/devtools#lighthouse)
+* [Support forcing the CSS `:target` state](/web/updates/2021/01/devtools#force-target)
+* [New shortcut to duplicate element](/web/updates/2021/01/devtools#duplicate-element)
+* [Color pickers for custom CSS properties](/web/updates/2021/01/devtools#color-picker)
+* [New shortcuts to copy CSS properties](/web/updates/2021/01/devtools#copy-css)
+* [New option to show URL-decoded cookies](/web/updates/2021/01/devtools#cookies-decoded)
+* [Clear only visible cookies](/web/updates/2021/01/devtools#clear-cookies)
+* [New option to clear third-party cookies in the Storage pane](/web/updates/2021/01/devtools#third-party-cookies)
+* [Edit User-Agent Client Hints for custom devices](/web/updates/2021/01/devtools#ua-ch)
+* [Persist “record network log” setting](/web/updates/2021/01/devtools#network-log)
+* [View WebTransport connections in the Network panel](/web/updates/2021/01/devtools#webtransport)
+* [“Online” renamed to “No throttling”](/web/updates/2021/01/devtools#no-throttling)
+* [New shortcuts to copy object in the Console and Sources panel](/web/updates/2021/01/devtools#copy-object)
+* [New Service Workers information in the Frame details view](/web/updates/2021/01/devtools#sw)
+* [Measure Memory information in the Frame details view](/web/updates/2021/01/devtools#measure-memory)
+* [Provide feedback from the Issues tab](/web/updates/2021/01/devtools#issues-feedback)
+* [Dropped frames in the Performance panel](/web/updates/2021/01/devtools#dropped-frames)
+* [Emulate foldable and dual-screen in Device Mode](/web/updates/2021/01/devtools#dual-screen)
+* [[Experimental] Automate browser testing with Puppeteer Recorder](/web/updates/2021/01/devtools#record)
+* [[Experimental] Font editor in the Styles pane](/web/updates/2021/01/devtools#font)
+* [[Experimental] CSS flexbox debugging tools](/web/updates/2021/01/devtools#flexbox)
+* [[Experimental] New CSP Violations tab](/web/updates/2021/01/devtools#csp)
+* [[Experimental] New color contrast calculation - Advanced Perceptual Contrast Algorithm (APCA)](/web/updates/2021/01/devtools#apca)
+
 ### Chrome 88 {: #discover88 .hide-from-toc }
 
 * [Faster DevTools startup](/web/updates/2020/11/devtools#fast-startup)
