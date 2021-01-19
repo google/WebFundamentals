@@ -423,7 +423,7 @@ Chromium issues: [1137837](https://crbug.com/1137837)
 </aside>
 
 The [Advanced Perceptual Contrast Algorithm (APCA)](https://w3c.github.io/silver/guidelines/methods/Method-font-characteristic-contrast.html
-) is replacing the [AA](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum)/[AAA](https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced) guidelines contrast ratio in the [Color Picker](https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#contrast). 
+) is replacing the [AA](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum)/[AAA](https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced) guidelines contrast ratio in the [Color Picker](/web/tools/chrome-devtools/accessibility/reference#contrast). 
 
 APCA is a new way to compute contrast based on modern research on color perception. Compared to AA/AAA guidelines, APCA is more context-dependent. The contrast is calculated based on the text’s spatial properties (font weight & size), color (perceived lightness difference between text and background), and context (ambient light, surroundings, intended purpose of the text).
 
