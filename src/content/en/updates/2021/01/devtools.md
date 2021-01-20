@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Debugging support for Trusted Types violations, capture node screenshot beyond viewport, new Trust Tokens tab for network requests and more.
 
-{# wf_updated_on: 2021-01-19 #}
+{# wf_updated_on: 2021-01-20 #}
 {# wf_published_on: 2021-01-19 #}
 {# wf_tags: chrome89, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -28,7 +28,7 @@ In the **Sources** panel, open the **debugger** sidebar pane. Expand the **CSP V
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/13dcbd22d42acbb8843c3e03d59060bbdf16b936 #}
 
-Chromium issues: [1142804](https://crbug.com/1142804)
+Chromium issue: [1142804](https://crbug.com/1142804)
 
 
 ### Link issue in the Sources panel to the Issues tab {: #trusted-type-link }
@@ -39,7 +39,7 @@ The **Sources** panel now shows a warning icon next to the line that violates Tr
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8c42bf00df2346fcfde28e72f2977c72e324118b #}
 
-Chromium issues: [1150883](https://crbug.com/1150883)
+Chromium issue: [1150883](https://crbug.com/1150883)
 
 
 ## Capture node screenshot beyond viewport {: #node-screenshot }
@@ -138,7 +138,7 @@ In addition, you can hold the `Shift` key and click on color picker to cycle thr
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6506ea926f2864de67113dfb8827cc3e1bb562d1 #}
 
-Chromium issues: [1147016](https://crbug.com/1147016)
+Chromium issue: [1147016](https://crbug.com/1147016)
 
 
 ### New shortcuts to copy CSS properties {: #copy-css}
@@ -163,7 +163,7 @@ Copy options for CSS property:
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3c1ec23006ebb6845ed95e1e6379ebb87303c35a #}
 
-Chromium issues: [1152391](https://crbug.com/1152391)
+Chromium issue: [1152391](https://crbug.com/1152391)
 
 
 ## Cookies updates {: #cookies-updates }
@@ -190,7 +190,7 @@ In the **Application** panel > **Cookies** pane, enter text in the textbox to fi
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b18ca864bd90638b6a3a2ec38b067a2739ca9e3f #}
 
-Chromium issues: [978059](https://crbug.com/978059)
+Chromium issue: [978059](https://crbug.com/978059)
 
 
 ### New option to clear third-party cookies in the Storage pane {: #third-party-cookies }
@@ -255,8 +255,8 @@ The network emulation option “Online” is now renamed to “No Throttling”.
 
 Chromium issue: [1028078](https://crbug.com/1028078)
 
-
-## New shortcuts to copy object in the Console and Sources panel {: #copy-object }
+## New copy options in the Console and Sources panel {: #copy-sources-console }
+### New shortcuts to copy object in the Console and Sources panel {: #copy-object }
 
 You can now copy object values with the new shortcuts in the Console and Sources panel. This is handy especially when you have a large object (e.g. a long array) to copy.
 
@@ -267,6 +267,17 @@ You can now copy object values with the new shortcuts in the Console and Sources
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ffcbeba235cb0bffbc637f4830d771aabcdb7ccb #}
 
 Chromium issues: [1149859](https://crbug.com/1149859), [1148353](https://crbug.com/1148353)
+
+
+### New shortcuts to copy file name in the Sources panel {: #copy-file-name }
+
+You can now copy file name by right clicking on a file in the **Sources** panel and select **Copy file name**.
+
+![Copy file name](/web/updates/images/2021/01/devtools/copy-file-name.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/3650e610e1874c84fc8495ab806e02d7d1798b33  #}
+
+Chromium issue: [1155120](https://crbug.com/1155120)
 
 
 ## Frame details view updates {: #frame-details }
@@ -280,7 +291,7 @@ In the **Application** panel, expand a frame with service workers, then select a
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7df55c21d64b6df52a923c3e6e3b370db6e0a495 #}
 
-Chromium issues: [1122507](https://crbug.com/1122507)
+Chromium issue: [1122507](https://crbug.com/1122507)
 
 
 ### Measure Memory information in the Frame details view {: #measure-memory }
@@ -330,7 +341,7 @@ You can also enable the **Experimental Web Platform features** to access the new
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/d08c5531762807570b5a929d3496eae8632bf2b5%5E%21/ #}
 
-Chromium issues: [1054281](https://crbug.com/1054281)
+Chromium issue: [1054281](https://crbug.com/1054281)
 
 
 ## Experimental features
@@ -393,7 +404,7 @@ DevTools now draws a guiding line to help you better visualize the CSS `align-it
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/55ec66e9ab8abe13e100cd435f52b0448252a26d #}
 
-Chromium issues: [1139949](https://crbug.com/1139949)
+Chromium issue: [1139949](https://crbug.com/1139949)
 
 
 ### New CSP Violations tab {: #csp }
@@ -410,7 +421,7 @@ View all Content Security Policy (CSP) violations at a glance in the new **CSP V
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2302644f86cd9048134c8841901d5190fff7af2 #}
 
-Chromium issues: [1137837](https://crbug.com/1137837)
+Chromium issue: [1137837](https://crbug.com/1137837)
 
 
 ### New color contrast calculation - Advanced Perceptual Contrast Algorithm (APCA) {: #apca }

@@ -19,7 +19,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Persist “record network log” setting](/web/updates/2021/01/devtools#network-log)
 * [View WebTransport connections in the Network panel](/web/updates/2021/01/devtools#webtransport)
 * [“Online” renamed to “No throttling”](/web/updates/2021/01/devtools#no-throttling)
-* [New shortcuts to copy object in the Console and Sources panel](/web/updates/2021/01/devtools#copy-object)
+* [New copy options in the Console and Sources panel](/web/updates/2021/01/devtools#copy-sources-console)
 * [New Service Workers information in the Frame details view](/web/updates/2021/01/devtools#sw)
 * [Measure Memory information in the Frame details view](/web/updates/2021/01/devtools#measure-memory)
 * [Provide feedback from the Issues tab](/web/updates/2021/01/devtools#issues-feedback)
