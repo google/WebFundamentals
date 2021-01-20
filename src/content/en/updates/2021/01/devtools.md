@@ -271,7 +271,7 @@ Chromium issues: [1149859](https://crbug.com/1149859), [1148353](https://crbug.c
 
 ### New shortcuts to copy file name in the Sources panel {: #copy-file-name }
 
-You can now copy file name by right clicking on a file tab in the **Sources** panel and select **Copy file name**.
+You can now copy file name by right clicking on a file in the **Sources** panel and select **Copy file name**.
 
 ![Copy file name](/web/updates/images/2021/01/devtools/copy-file-name.png)
 
