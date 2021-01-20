@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Debugging support for Trusted Types violations, capture node screenshot beyond viewport, new Trust Tokens tab for network requests and more.
 
-{# wf_updated_on: 2021-01-19 #}
+{# wf_updated_on: 2021-01-20 #}
 {# wf_published_on: 2021-01-19 #}
 {# wf_tags: chrome89, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -255,8 +255,8 @@ The network emulation option “Online” is now renamed to “No Throttling”.
 
 Chromium issue: [1028078](https://crbug.com/1028078)
 
-
-## New shortcuts to copy object in the Console and Sources panel {: #copy-object }
+## New copy options in the Console and Sources panel {: #copy-sources-console }
+### New shortcuts to copy object in the Console and Sources panel {: #copy-object }
 
 You can now copy object values with the new shortcuts in the Console and Sources panel. This is handy especially when you have a large object (e.g. a long array) to copy.
 
@@ -267,6 +267,17 @@ You can now copy object values with the new shortcuts in the Console and Sources
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ffcbeba235cb0bffbc637f4830d771aabcdb7ccb #}
 
 Chromium issues: [1149859](https://crbug.com/1149859), [1148353](https://crbug.com/1148353)
+
+
+### New shortcuts to copy file name in the Sources panel {: #copy-file-name }
+
+You can now copy file name by right clicking on a file tab in the **Sources** panel and select **Copy file name**.
+
+![Copy file name](/web/updates/images/2021/01/devtools/copy-file-name.png)
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/3650e610e1874c84fc8495ab806e02d7d1798b33  #}
+
+Chromium issue: [1155120](https://crbug.com/1155120)
 
 
 ## Frame details view updates {: #frame-details }
