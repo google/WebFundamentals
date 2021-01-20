@@ -153,7 +153,7 @@ or check out the [docs](/web/android/trusted-web-activity/play-billing).
 And of course there’s plenty more.
 
 * To conform to a change in the HTML standard, anchor tags with `target="_blank"`
-  will now imply `rel="no-opener"` by default, this helps prevent
+  will now imply `rel="noopener"` by default, this helps prevent
   tab-napping attacks.
 * Most operating systems enable mouse acceleration by default, but that can be
   a problem for some games. In Chrome 88, the Pointer Lock API allows you to
