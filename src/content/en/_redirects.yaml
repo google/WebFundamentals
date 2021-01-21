@@ -314,3 +314,109 @@ redirects:
 
 - from: /web/updates/2020/11/chromium-chronicle
   to: https://developer.chrome.com/blog/chromium-chronicle-15/
+
+#
+# New in Chrome redirects
+#
+
+- from: /web/updates/2016/10/nic54
+  to: https://developer.chrome.com/blog/new-in-chrome-54/
+
+- from: /web/updates/2016/11/nic55
+  to: https://developer.chrome.com/blog/new-in-chrome-55/
+
+- from: /web/updates/2017/01/nic56
+  to: https://developer.chrome.com/blog/new-in-chrome-56/
+
+- from: /web/updates/2017/03/nic57
+  to: https://developer.chrome.com/blog/new-in-chrome-57/
+
+- from: /web/updates/2017/04/nic58
+  to: https://developer.chrome.com/blog/new-in-chrome-58/
+
+- from: /web/updates/2017/05/nic59
+  to: https://developer.chrome.com/blog/new-in-chrome-59/
+
+- from: /web/updates/2017/07/nic60
+  to: https://developer.chrome.com/blog/new-in-chrome-60/
+
+- from: /web/updates/2017/09/nic61
+  to: https://developer.chrome.com/blog/new-in-chrome-61/
+
+- from: /web/updates/2017/10/nic62
+  to: https://developer.chrome.com/blog/new-in-chrome-62/
+
+- from: /web/updates/2017/12/nic63
+  to: https://developer.chrome.com/blog/new-in-chrome-63/
+
+- from: /web/updates/2018/01/nic64
+  to: https://developer.chrome.com/blog/new-in-chrome-64/
+
+- from: /web/updates/2018/03/nic65
+  to: https://developer.chrome.com/blog/new-in-chrome-65/
+
+- from: /web/updates/2018/04/nic66
+  to: https://developer.chrome.com/blog/new-in-chrome-66/
+
+- from: /web/updates/2018/05/nic67
+  to: https://developer.chrome.com/blog/new-in-chrome-67/
+
+- from: /web/updates/2018/07/nic68
+  to: https://developer.chrome.com/blog/new-in-chrome-68/
+
+- from: /web/updates/2018/09/nic69
+  to: https://developer.chrome.com/blog/new-in-chrome-69/
+
+- from: /web/updates/2018/10/nic70
+  to: https://developer.chrome.com/blog/new-in-chrome-70/
+
+- from: /web/updates/2018/12/nic71
+  to: https://developer.chrome.com/blog/new-in-chrome-71/
+
+- from: /web/updates/2019/01/nic72
+  to: https://developer.chrome.com/blog/new-in-chrome-72/
+
+- from: /web/updates/2019/03/nic73
+  to: https://developer.chrome.com/blog/new-in-chrome-73/
+
+- from: /web/updates/2019/04/nic74
+  to: https://developer.chrome.com/blog/new-in-chrome-74/
+
+- from: /web/updates/2019/06/nic75
+  to: https://developer.chrome.com/blog/new-in-chrome-75/
+
+- from: /web/updates/2019/07/nic76
+  to: https://developer.chrome.com/blog/new-in-chrome-76/
+
+- from: /web/updates/2019/09/nic77
+  to: https://developer.chrome.com/blog/new-in-chrome-77/
+
+- from: /web/updates/2019/10/nic78
+  to: https://developer.chrome.com/blog/new-in-chrome-78/
+
+- from: /web/updates/2019/12/nic79
+  to: https://developer.chrome.com/blog/new-in-chrome-79/
+
+- from: /web/updates/2020/02/nic80
+  to: https://developer.chrome.com/blog/new-in-chrome-80/
+
+- from: /web/updates/2020/04/nic81
+  to: https://developer.chrome.com/blog/new-in-chrome-81/
+
+- from: /web/updates/2020/05/nic83
+  to: https://developer.chrome.com/blog/new-in-chrome-83/
+
+- from: /web/updates/2020/07/nic84
+  to: https://developer.chrome.com/blog/new-in-chrome-84/
+
+- from: /web/updates/2020/08/nic85
+  to: https://developer.chrome.com/blog/new-in-chrome-85/
+
+- from: /web/updates/2020/10/nic86
+  to: https://developer.chrome.com/blog/new-in-chrome-86/
+
+- from: /web/updates/2020/11/nic87
+  to: https://developer.chrome.com/blog/new-in-chrome-87/
+
+- from: /web/updates/2021/01/nic88
+  to: https://developer.chrome.com/blog/new-in-chrome-88/
