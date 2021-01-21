@@ -26,7 +26,7 @@ footer:
     - label: Web on Android
       path: /web/android/
     - label: Chrome Extension Docs
-      path: https://developers.chrome.com/extensions/api_index
+      path: https://developer.chrome.com/
     - label: Site-Kit Plugin for WordPress
       path: https://sitekit.withgoogle.com/
     - label: How to file a good browser bug

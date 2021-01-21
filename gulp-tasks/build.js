@@ -348,12 +348,14 @@ gulp.task('build:updates', function() {
     description: description,
     section: section,
     outputPath: baseOutputPath,
+    template: path.join(global.WF.src.templates, 'updates', 'index.yaml'),
   };
   const startPath = path.join(global.WF.src.content, section);
   const patterns = ['**/*.md', '!tags/*', '!**/index.md'];
   let files = wfHelper.getFileList(startPath, patterns);
   files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateIndex(files, options);
+  delete options.template;
   wfTemplateHelper.generateFeeds(files, options);
   options.outputPath = path.join(baseOutputPath, 'tags');
   wfTemplateHelper.generateTagPages(files, options);
@@ -368,7 +370,7 @@ gulp.task('build:updates', function() {
   options = {
     outputPath: global.WF.src.content,
     articlesToShow: 4,
-  },
+  };
   wfTemplateHelper.generateLatestWidget(files, options);
 
   // Build updates widget for /web/index
