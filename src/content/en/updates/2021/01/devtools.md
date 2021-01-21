@@ -255,7 +255,7 @@ The network emulation option “Online” is now renamed to “No Throttling”.
 
 Chromium issue: [1028078](https://crbug.com/1028078)
 
-## New copy options in the Console and Sources panel {: #copy-sources-console }
+## New copy options in the Console, Sources panel, and Styles pane {: #copy-sources-console }
 ### New shortcuts to copy object in the Console and Sources panel {: #copy-object }
 
 You can now copy object values with the new shortcuts in the Console and Sources panel. This is handy especially when you have a large object (e.g. a long array) to copy.
@@ -269,11 +269,18 @@ You can now copy object values with the new shortcuts in the Console and Sources
 Chromium issues: [1149859](https://crbug.com/1149859), [1148353](https://crbug.com/1148353)
 
 
-### New shortcuts to copy file name in the Sources panel {: #copy-file-name }
+### New shortcuts to copy file name in the Sources panel and Styles pane {: #copy-file-name }
 
-You can now copy file name by right clicking on a file in the **Sources** panel and select **Copy file name**.
+You can now copy file name by right clicking on:
 
-![Copy file name](/web/updates/images/2021/01/devtools/copy-file-name.png)
+- a file in the **Sources** panel, or
+- the file name in the **Styles pane** in the **Elements** panel
+
+Select **Copy file name** from the context menu to copy the file name.
+
+![Copy file name in the Sources panel](/web/updates/images/2021/01/devtools/copy-file-name.png)
+
+![Copy file name in the Styles pane](/web/updates/images/2021/01/devtools/copy-file-name-2.png)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/3650e610e1874c84fc8495ab806e02d7d1798b33  #}
 
