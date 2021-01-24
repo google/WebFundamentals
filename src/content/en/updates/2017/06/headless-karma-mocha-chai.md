@@ -117,7 +117,7 @@ module.exports = function(config) {
 }
 ```
 
-Note: Run `./node_modules/karma/bin/ init karma.conf.js` to generate the Karma configuration file.
+Note: Run `./node_modules/karma/bin/karma init karma.conf.js` to generate the Karma configuration file.
 
 ## Write a test
 
