@@ -256,6 +256,9 @@ redirects:
 - from: /web/fundamentals/media/manipulating/cheatsheet
   to: https://web.dev/media-cheat-sheet/
 
+- from: /web/fundamentals/media/fast-playback-with-video-preload
+  to: https://web.dev/fast-playback-with-preload
+
 # Device APIs redirects
 
 - from: /web/fundamentals/native-hardware/build-for-webusb
