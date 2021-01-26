@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Image optimization is hard and automation is the key to success.
 
-{# wf_updated_on: 2015-08-31 #}
+{# wf_updated_on: 2021-01-26 #}
 {# wf_published_on: 2015-08-31 #}
 {# wf_tags: news,performance,clienthints #}
 {# wf_featured_image: /web/updates/images/2015-09-01-automating-resource-selection-with-client-hints/ch-negotiation.png #}
@@ -37,7 +37,7 @@ is hard**:
 
 Individually, these are [well-understood problems](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization). 
 Collectively, they create a large optimization space that we (the developers) 
-often overlook or neglect&mdash;_"ain't nobody got time fo that"_. Humans do a poor 
+often overlook or neglect&mdash;_"ain't nobody got time for that"_. Humans do a poor 
 job of exploring the same search space repetitively, especially when many steps 
 are involved. Computers, on the other hand, excel at these types of tasks.
 
