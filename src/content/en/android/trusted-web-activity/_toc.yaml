@@ -17,6 +17,8 @@ toc:
     path: /web/android/trusted-web-activity/web-share-target/
   - title: Use Play Billing in your Trusted Web Activity
     path: /web/android/trusted-web-activity/play-billing/
+  - title: Receive Payments via Google Play Billing with the Digital Goods API, the Payment Request API and Trusted Web Activity
+    path: /web/android/trusted-web-activity/receive-payments-play-billing/
 - title: Map of Trusted Web Activity libraries and tools
   path: /web/android/trusted-web-activity/lay-of-the-land/
 - title: What's new for Web in Play
