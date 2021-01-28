@@ -62,7 +62,7 @@ const CONTRIBUTORS_FILE = 'src/data/_contributors.yaml';
 const BLINK_COMPONENTS_FILE = 'src/data/blinkComponents.json';
 const IS_TRAVIS = process.env.TRAVIS === 'true';
 const IS_TRAVIS_PUSH = process.env.TRAVIS_EVENT_TYPE === 'push';
-const IS_TRAVIS_ON_MASTER = process.env.TRAVIS_BRANCH === 'master';
+const IS_TRAVIS_ON_MAIN = process.env.TRAVIS_BRANCH === 'main';
 
 let esLintConfig;
 
@@ -287,9 +287,9 @@ function getFiles() {
     gutil.log(' ', 'Searching for changed files');
     let cmd = 'git --no-pager diff --name-only ';
     if (IS_TRAVIS) {
-      cmd += '$(git merge-base FETCH_HEAD master) FETCH_HEAD';
+      cmd += '$(git merge-base FETCH_HEAD main) FETCH_HEAD';
     } else {
-      cmd += '$(git merge-base origin/master HEAD)';
+      cmd += '$(git merge-base origin/main HEAD)';
     }
     return wfHelper.promisedExec(cmd, '.')
     .then(function(results) {
@@ -307,7 +307,7 @@ function getFiles() {
       if (warnForSideEffect === true) {
         const warn = chalk.yellow('WARNING:');
         const msg = `Gulp tasks have changed, be sure to run with ` +
-          `${chalk.cyan('--testAll')} or ${chalk.cyan('--testMaster')} ` +
+          `${chalk.cyan('--testAll')} or ${chalk.cyan('--testMain')} ` +
           `to catch any unintended side effects!`;
         gutil.log(warn, msg);
       }
@@ -353,7 +353,7 @@ function testFile(filename, opts) {
     if (opts.ignoreFileSize) {
       return Promise.resolve(false);
     }
-    const warnOnly = IS_TRAVIS && IS_TRAVIS_ON_MASTER;
+    const warnOnly = IS_TRAVIS && IS_TRAVIS_ON_MAIN;
     return validateMedia.test(filename, warnOnly);
   }
 
@@ -570,7 +570,7 @@ gulp.task('test', ['test:travis-init'], function() {
   if (global.WF.options.help) {
     gutil.log(' ', chalk.cyan('--help'), 'Shows this message');
     gutil.log(' ', chalk.cyan('--testAll'), 'Tests all files');
-    gutil.log(' ', chalk.cyan('--testMaster'), 'Tests all files like Travis');
+    gutil.log(' ', chalk.cyan('--testMain'), 'Tests all files like Travis');
     gutil.log(' ', chalk.cyan('--testTests'), 'Tests the test files');
     gutil.log(' ', chalk.cyan('--ignoreESLint'), 'Skips ESLinting');
     gutil.log(' ', chalk.cyan('--ignoreBlink'), 'Skips wf_blink_components');
@@ -588,8 +588,8 @@ gulp.task('test', ['test:travis-init'], function() {
     return true;
   }
 
-  if ((global.WF.options.testMaster) ||
-      (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MASTER)) {
+  if ((global.WF.options.testMain) ||
+      (IS_TRAVIS && IS_TRAVIS_PUSH && IS_TRAVIS_ON_MAIN)) {
     global.WF.options.testAll = true;
     global.WF.options.ignoreBlink = true;
     global.WF.options.ignoreMaxLen = true;
@@ -617,9 +617,9 @@ gulp.task('test', ['test:travis-init'], function() {
   // Comment widget will be deprecated in 2019Q2-3, disabling the warning
   global.WF.options.ignoreCommentWidget = true;
 
-  // Test master
-  if (global.WF.options.testMaster) {
-    const msg = `${chalk.cyan('--testMaster')} was used.`;
+  // Test main
+  if (global.WF.options.testMain) {
+    const msg = `${chalk.cyan('--testMain')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
   }
 

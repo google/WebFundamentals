@@ -63,7 +63,7 @@ configuração.
 
       <figure>
         <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/config.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/config.png?raw=true"
 alt="Configuring audits.">
         <figcaption>       <b>Figura 1</b>. Configurando auditorias</figcaption>
       </figure>
@@ -74,7 +74,7 @@ seção foram obtidas com a versão 69 do Chrome. Você pode conferir qual vers�
 está executando em <code>chrome://version</code>. O UI do painel Audits é
 levemente diferente em versões anteriores do Chrome, mas o fluxo de trabalho
 geral é o mesmo.</aside>
-    
+
 
 3. Em **Device**, selecione **Mobile** se você quiser simular um dispositivo
 móvel. Esta opção altera a string do seu agente de usuário e redimensiona a
@@ -102,33 +102,33 @@ acessibilidade da página.
 
       <figure>
         <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/report.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/report.png?raw=true"
 alt="A report.">
         <figcaption>       <b>Figura 2</b>. Um relatório</figcaption>
       </figure>
-    
+
 
 8. Clique na auditoria para entender melhor.
 
       <figure>
         <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/attributes.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/attributes.png?raw=true"
 alt="More information about an audit.">
         <figcaption>       <b>Figura 3</b>. Mais informações sobre uma
 auditoria</figcaption>
       </figure>
-    
+
 
 9. Clique em **Learn More** para ver a documentação da auditoria.
 
       <figure>
         <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/documentation.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/documentation.png?raw=true"
 alt="Viewing an audit's documentation.">
         <figcaption>       <b>Figura 4</b>. Visualização da documentação de uma
 auditoria</figcaption>
       </figure>
-    
+
 
 ### Veja também: Extensão aXe {: #axe }
 
@@ -142,7 +142,7 @@ inspecionar e destacar falhas node.
 
 <figure>
   <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/aXe.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/aXe.png?raw=true"
 alt="The aXe extension.">
   <figcaption>     <b>Figura 5</b>. A extensão aXe</figcaption>
 </figure>
@@ -163,7 +163,7 @@ Tabs](https://github.com/google/WebFundamentals/blob/master/web/tools/chrome-dev
 
 <figure>
   <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/a11y-pane.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/a11y-pane.png?raw=true"
 alt="Inspecting the h1 element of the DevTools homepage in the Accessibility
 pane.">
   <figcaption>     <b>Figura 6</b>. Inspeção do elemento <code>h1</code> da
@@ -182,7 +182,7 @@ Accessibility](#pane).
 
 <figure>
   <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/a11y-tree.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/a11y-tree.png?raw=true"
 alt="The Accessibility Tree section">
   <figcaption>     <b>Figura 7</b>. A seção Accessibility Tree</figcaption>
 </figure>
@@ -196,7 +196,7 @@ Visualize os atributos ARIA de um elemento no [painel Accessibility](#pane).
 
 <figure>
   <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/aria.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/aria.png?raw=true"
 alt="The ARIA Attributes section">
   <figcaption>     <b>Figura 8</b>. A seção ARIA Attributes</figcaption>
 </figure>
@@ -215,7 +215,7 @@ Accessibility](#pane).
 
 <figure>
   <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/computed-a11y.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/computed-a11y.png?raw=true"
 alt="The Computed (Accessibility) Properties section.">
   <figcaption>     <b>Figura 9</b>. A seção Computed (Accessibility)
 Properties</figcaption>
@@ -240,24 +240,24 @@ inspecionar.
 
       <figure>
         <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/inspect.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/inspect.png?raw=true"
 alt="Inspecting a paragraph in the DOM Tree.">
         <figcaption>       <b>Figura 10</b>. Inspeção de um parágrafo no DOM
 Tree</figcaption>
       </figure>
-    
+
 
 3. No painel **Styles**, clique no quadrado com a cor do elemento, depois no
 valor da `cor` do elemento.
 
       <figure>
         <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/color.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/color.png?raw=true"
 alt="The color property of the element.">
         <figcaption>       <b>Figura 11</b>. A propriedade <code>color</code> do
 elemento</figcaption>
       </figure>
-    
+
 
 4. Verifique a seção **Contrast Ratio** no seletor de cores. Um sinal de
 aprovação significa que o elemento tem o [mínimo
@@ -267,14 +267,14 @@ recomendado](https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced){:.extern
 
       <figure>
         <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/color-picker.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/color-picker.png?raw=true"
 alt="The Contrast Ratio section of the Color Picker shows 2 checkmarks and a
                   value of 16.10.">
         <figcaption>       <b>Figura 12</b>. A seção Contrast Ratio do Seletor
 de cor (Color Picker) exibe 2 marcas de seleção e um valor de
 <code>16.10</code></figcaption>
       </figure>
-    
+
 
 5. Clique na seção **Contrast Ratio** para ver mais informações. Uma linha
 aparece no seletor visual(visual picker) no topo do seletor de cores. Se a cor
@@ -284,12 +284,12 @@ qualquer coisa no mesmo lado também não atenderá às recomendações.
 
       <figure>
         <img
-src="https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/chrome-devtools/accessibility/imgs/contrast-ratio-line.png?raw=true"
+src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/contrast-ratio-line.png?raw=true"
 alt="The Contrast Ratio Line in the visual picker.">
         <figcaption>       <b>Figura 13</b>. A Contrast Ratio Line no seletor
 visual</figcaption>
       </figure>
-    
+
 
 ## Comentários {: #feedback}
 

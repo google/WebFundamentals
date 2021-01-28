@@ -136,7 +136,7 @@ def parse(requestPath, fileLocation, content, lang='en'):
   context['renderedTOC'] = toc;
 
   gitHubEditUrl = 'https://github.com/google/WebFundamentals/blob/'
-  gitHubEditUrl += 'master/src/content/'
+  gitHubEditUrl += 'main/src/content/'
   gitHubEditUrl += fileLocation.replace(SOURCE_PATH, '')
   context['gitHubEditUrl'] = gitHubEditUrl
 

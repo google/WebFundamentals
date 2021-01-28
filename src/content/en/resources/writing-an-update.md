@@ -20,7 +20,7 @@ page, feeds, `book.yaml` and the tags pages using `gulp`.
 
 To get started quickly, copy the template and start there.
 
-1. Make a copy of the template ([showcase](https://github.com/google/WebFundamentals/blob/master/src/templates/showcase/_template.md) or [update](https://github.com/google/WebFundamentals/blob/master/src/templates/updates/_template.md)), and place it in the appropriate directory.
+1. Make a copy of the template ([showcase](https://github.com/google/WebFundamentals/blob/main/src/templates/showcase/_template.md) or [update](https://github.com/google/WebFundamentals/blob/main/src/templates/updates/_template.md)), and place it in the appropriate directory.
 1. Update the key fields:
     * `book_path`
     * `description`
@@ -55,7 +55,7 @@ of tags.
 </pre>
 
 Note: Check the list of [common
-tags](https://github.com/google/WebFundamentals/blob/master/src/data/commonTags.json)
+tags](https://github.com/google/WebFundamentals/blob/main/src/data/commonTags.json)
 and use whenever possible. If you use a tag that's not in that list, the build
 process will throw a warning.
 
@@ -71,7 +71,7 @@ be an absolute page on DevSite.
 
 Images should be 16x9, ideally 800px by 450px.
 
-**Looking for a generic image?** Check out the [generic images](https://github.com/google/WebFundamentals/tree/master/src/content/en/updates/images/generic) folder.
+**Looking for a generic image?** Check out the [generic images](https://github.com/google/WebFundamentals/tree/main/src/content/en/updates/images/generic) folder.
 
 ### Featured Snippet
 

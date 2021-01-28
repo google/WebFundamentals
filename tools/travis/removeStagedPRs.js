@@ -20,15 +20,15 @@ if (!OAUTH_TOKEN) {
   process.exit(0);
 }
 
-let travisIsPush = process.env.TRAVIS_EVENT_TYPE === 'push';
+const travisIsPush = process.env.TRAVIS_EVENT_TYPE === 'push';
 if (travisIsPush !== true) {
   console.log(chalk.yellow('Skipping:'), 'Event type must be push.');
   process.exit(0);
 }
 
-let travisIsOnMaster = process.env.TRAVIS_BRANCH === 'master';
-if (travisIsOnMaster !== true) {
-  console.log(chalk.yellow('Skipping:'), 'Must be on master');
+const travisIsOnMain = process.env.TRAVIS_BRANCH === 'main';
+if (travisIsOnMain !== true) {
+  console.log(chalk.yellow('Skipping:'), 'Must be on main');
   process.exit(0);
 }
 

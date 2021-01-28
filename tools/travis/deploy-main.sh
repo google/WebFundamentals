@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Auto-Deploy MASTER
+# Auto-Deploy main
 #
 
 # If encrypted variables aren't available, abort
@@ -16,9 +16,9 @@ if [ "${TRAVIS_EVENT_TYPE}" != "push" ]; then
   exit
 fi
 
-# If this isn't master, abort.
-if [ "${TRAVIS_BRANCH}" != "master" ]; then
-  echo "This only runs on the master branch. Branch was $TRAVIS_BRANCH"
+# If this isn't main, abort.
+if [ "${TRAVIS_BRANCH}" != "main" ]; then
+  echo "This only runs on the main branch. Branch was $TRAVIS_BRANCH"
   exit
 fi
 
@@ -29,5 +29,5 @@ if [ "${TRAVIS_TEST_RESULT}" = "1" ]; then
 fi
 
 # Deploy to AppEngine
-echo "Deploying to AppEngine (master)..."
-$HOME/google-cloud-sdk/bin/gcloud app deploy app.yaml -q --no-promote --version master
+echo "Deploying to AppEngine (main)..."
+$HOME/google-cloud-sdk/bin/gcloud app deploy app.yaml -q --no-promote --version main

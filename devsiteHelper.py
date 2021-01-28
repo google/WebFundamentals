@@ -126,7 +126,7 @@ def fetchGithubFile(path, revision = None):
   """
   path = path.replace('/blob', '')
   if revision:
-    path = path.replace('master', revision.replace('refs/tags/', ''))
+    path = path.replace('main', revision.replace('refs/tags/', ''))
   url = 'https://raw.githubusercontent.com/%s' % path
   try:
     response = urllib2.urlopen(url)

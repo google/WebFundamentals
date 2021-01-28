@@ -335,7 +335,7 @@ YAML front matter must always be at the top of the document.
       <ul>
         <li>Images should be 16x9, ideally 800px by 450px.</li>
         <li>Looking for a generic image? Check out the
-          <a href="https://github.com/google/WebFundamentals/tree/master/src/content/en/updates/images/generic">
+          <a href="https://github.com/google/WebFundamentals/tree/main/src/content/en/updates/images/generic">
           generic images</a> folder.
         </li>
     </td>
@@ -610,7 +610,7 @@ YAML front matter must always be at the top of the document.
     <td>Notes</td>
     <td>
       If the tag doesn't exist in the current list, add it to
-      <a href="https://github.com/google/WebFundamentals/blob/master/src/data/commonTags.json">
+      <a href="https://github.com/google/WebFundamentals/blob/main/src/data/commonTags.json">
       <code>commonTags.json</code></a>
     </td>
   </tr>

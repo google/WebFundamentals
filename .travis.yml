@@ -21,13 +21,13 @@ script:
   - npm run test
   - node ./tools/travis/addCommitComment.js
 after_success:
-  - ./tools/travis/deploy-master.sh
+  - ./tools/travis/deploy-main.sh
   - ./tools/travis/deploy-pr.sh
   - ./tools/travis/flush-memcache.sh
   - node ./tools/travis/removeStagedPRs.js
 branches:
   only:
-    - master
+    - main
 notifications:
   email:
     recipients:

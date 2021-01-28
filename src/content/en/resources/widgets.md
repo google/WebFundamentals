@@ -199,7 +199,7 @@ automatically maintain a 16:9 ratio.
     </div>
 
 
-[common-links]: https://github.com/google/WebFundamentals/blob/master/src/content/en/_common-links.md
+[common-links]: https://github.com/google/WebFundamentals/blob/main/src/content/en/_common-links.md
 
 
 ## Add the "was this page helpful?" widget to your docs {: #helpful }
