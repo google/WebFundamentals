@@ -37,7 +37,7 @@ is hard**:
 
 Individually, these are [well-understood problems](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization). 
 Collectively, they create a large optimization space that we (the developers) 
-often overlook or neglect&mdash;_"ain't nobody got time for that"_. Humans do a poor 
+often overlook or neglect. Humans do a poor 
 job of exploring the same search space repetitively, especially when many steps 
 are involved. Computers, on the other hand, excel at these types of tasks.
 
