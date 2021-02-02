@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: An overview of the libraries and tools for creating Trusted Web Activities.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-06-17 #}
+{# wf_updated_on: 2021-02-02 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs {: .page-title }
@@ -22,6 +22,10 @@ Custom Tabs is a browser feature, [introduced by Chrome][7], that is now support
 by most major browsers on Android. It give apps more control over their web
 experience, and make transitions between native and web content more seamless without
 having to resort to a WebView.
+
+Note: For information on sharing the content in Custom Tabs, see the blog post,
+[Better content sharing with Custom
+Tabs](https://blog.chromium.org/2021/01/better-content-sharing-with-custom-tabs.html).
 
 Custom Tabs allow an app to customize how the browser looks and feels. An app
 can change things like:
