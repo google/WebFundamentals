@@ -25,7 +25,7 @@ While DevTools is starting up, it needs to make some calls to the [V8 JavaScript
 
 The mechanism Chromium uses to send DevTools commands to V8 (and for IPC in general) is called [`mojo`](https://chromium.googlesource.com/chromium/src/+/master/mojo/README.md). My teammates [Benedikt Meurer](https://twitter.com/bmeurer) and [Sigurd Schneider](/web/resources/contributors#sigurd-schneider) discovered an inefficiency while working on another task, and came up with an idea to improve the process by removing two redundant steps in how these messages are sent and received.
 
-Let us dive into how the ``mojo`` mechanism works!
+Let us dive into how the `mojo` mechanism works!
 
 ## The `mojo` mechanisms
 
