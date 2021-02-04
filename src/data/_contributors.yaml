@@ -107,7 +107,7 @@ kenjibaheux:
   name:
     given: Kenji
     family: Baheux
-  twitter: KenjiBaheux
+  twitter: kenjibaheux
   github: KenjiBaheux
   org:
     name: Google
@@ -412,7 +412,7 @@ peconn:
     given: Peter
     family: Conn
   twitter: petereconn
-  github: PEConn
+  github: peconn
   description:
     en: I'm a Software Engineer working on the Web Platform at Google London.
   org:
@@ -463,7 +463,7 @@ dalecurtis:
   country: US
   role:
     - author
-  twitter: DaleCurtis
+  twitter: dalecurtis
   email: dalecurtis@google.com
   homepage: 'https://github.com/dalecurtis'
   description:
@@ -492,7 +492,7 @@ wdenniss:
   country: US
   role:
     - author
-  twitter: WilliamDenniss
+  twitter: williamdenniss
   email: wdenniss@google.com
   description:
     en: Google Identity Product Manager
@@ -568,7 +568,7 @@ pavoldrotar:
     unit: Web Platform
   country: UK
   homepage: 'https://pavoldrotar.com'
-  twitter: DrotarPavol
+  twitter: drotarpavol
   github: padr31
   email: pavol.drotar3@gmail.com
   description:
@@ -643,7 +643,7 @@ jackfranklin:
   role:
     - author
   homepage: https://www.jackfranklin.co.uk/
-  twitter: Jack_Franklin
+  twitter: jack_franklin
   github: jackfranklin
   email: jacktfranklin@chromium.org
   description:
@@ -1357,7 +1357,7 @@ wmlin:
   role:
     - translator
     - engineer
-  github: Honry
+  github: honry
   email: wanming.lin@intel.com
   description:
     en: Wanming is an Engineer at Intel
@@ -1544,7 +1544,7 @@ jacquerie:
     - engineer
     - contributor
   homepage: 'http://jacquerie.github.io'
-  twitter: Jaconotar
+  twitter: jaconotar
   email: jacopo.notarstefano@gmail.com
   description:
     en: Jacopo is a Full Stack Developer
@@ -1600,7 +1600,7 @@ jasonpark:
   country: SG
   role:
     - translator
-  twitter: hyunjO_on
+  twitter: hyunjo_on
   email: jpar225@gmail.com
   description:
     en: Jason is a Node.js Developer
@@ -1865,7 +1865,7 @@ alansilva:
   country: Brazil
   role:
     - translator
-  twitter: AlanCezarAraujo
+  twitter: alancezarAraujo
   homepage: 'https://www.linkedin.com/in/alan-cezar-31a6a538'
   email: alan.cezar.silva@gmail.com
   description:
@@ -1906,7 +1906,7 @@ andismith:
     unit: Director of Web Development
   country: UK
   homepage: 'http://www.andismith.com'
-  twitter: AndiSmith
+  twitter: andismith
   role:
     - author
   email: andi.smith.uk+gdocs@gmail.com
@@ -2042,7 +2042,7 @@ surma:
   role:
     - author
     - engineer
-  twitter: DasSurma
+  twitter: dassurma
 
 yoichiro:
   name:
@@ -2068,7 +2068,7 @@ franktang:
     name: Google
   role:
     - author
-  github: FrankYFTang
+  github: frankyftang
   email: ftang@google.com
   description:
     en: i18n engineer
@@ -2309,7 +2309,7 @@ jecelynyeen:
   role:
     - author
   homepage: https://jec.fyi
-  twitter: JecelynYeen
+  twitter: jecelynyeen
   github: chybie
   email: jec@google.com
   description:
