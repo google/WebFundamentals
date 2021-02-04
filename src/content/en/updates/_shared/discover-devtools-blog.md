@@ -2,6 +2,7 @@
 
 Below is a list of everything that's been covered in the *Chrome DevTools Engineering Blog* series.
 
+* [Improving DevTools startup time](/web/updates/2021/01/faster-devtools-startup)
 * [Migrating Puppeteer to TypeScript](/web/updates/2021/01/puppeteer-typescript)
 * [Debugging WebAssembly with modern tools](/web/updates/2020/12/webassembly)
 * [DevTools architecture refresh: migrating to Web Components](/web/updates/2020/12/migrating-to-web-components)
