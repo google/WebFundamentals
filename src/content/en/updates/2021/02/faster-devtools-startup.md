@@ -15,8 +15,8 @@ description: Reduce DevTools performance overhead of message dispatch in the fro
 
 <<../../_shared/devtools-research.md>>
 
-## Tl;DR; DevTools startup now is ~13% faster 🎉 (from 11.2s down to 10s).
-The result is achieved by removing a redundant serialization.
+## DevTools startup now is ~13% faster 🎉 (from 11.2s down to 10s).
+TL;DR; The result is achieved by removing a redundant serialization.
 
 ## Overview
 While DevTools is starting up, it needs to make some calls to the [V8 JavaScript engine V8](https://v8.dev/). 
