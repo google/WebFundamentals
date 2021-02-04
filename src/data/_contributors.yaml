@@ -715,22 +715,6 @@ mychaelgo:
   description:
     en: Mychael Go is Fullstack Software Engineer
 
-sadym:
-  name:
-    given: Maksim
-    family: Sadym
-  org:
-    name: Google
-    unit: Chrome
-  country: Munich
-  role:
-    - author
-  twitter: maximsadym
-  github: sadym-chromium
-  email: sadym@chromium.org
-  description:
-    en: Googler building Chrome DevTools.
-
 sgomes:
   name:
     given: Sérgio
@@ -1665,6 +1649,22 @@ rupl:
   email: chris.ruppel@gmail.com
   description:
     en: Chris is a frontend developer and web performance advocate.
+
+sadym:
+  name:
+    given: Maksim
+    family: Sadym
+  org:
+    name: Google
+    unit: Chrome
+  country: Munich
+  role:
+    - author
+  twitter: maximsadym
+  github: sadym-chromium
+  email: sadym@chromium.org
+  description:
+    en: Googler building Chrome DevTools.
 
 nsatragno:
   name:
