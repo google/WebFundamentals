@@ -61,7 +61,54 @@ Based on these experiments, DevTools opens **~13% faster (from 11.2s down to 10s
 
 ### Hightlights, CPU durations
 
-![Hightlights, CPU durations](/web/updates/images/2021/02/faster/faster-5.svg)
+<table class="responsive" markdown="1">
+<thead>
+  <tr>
+  <td><strong>Method name</strong></td>
+  <td><strong>Not optimized (ms)</strong></td>
+  <td><strong>Optimized (ms)</strong></td>
+  <td><strong>Differences (ms)</strong></td>
+  <td><strong>Speed improvement (%)</strong></td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+  <td><strong>Total</strong></td>
+  <td><strong>11,213.19</strong></td>
+  <td><strong>9,953.99</strong></td>
+  <td><strong>-1,259.20</strong></td>
+  <td><strong>12.65%</strong></td>
+  </tr>
+  <tr>
+  <td>v8.run</td>
+  <td>499.67</td>
+  <td>3.61</td>
+  <td>-496.06</td>
+  <td>12.65%</td>
+  </tr>
+  <tr>
+  <td>V8.Execute</td>
+  <td>1,654.87</td>
+  <td>1,349.61</td>
+  <td>-305.25</td>
+  <td>3.07%</td>
+  </tr>
+  <tr>
+  <td>v8.callFunction</td>
+  <td>1,171.84</td>
+  <td>1,339.77</td>
+  <td>167.94</td>
+  <td>-1.69%</td>
+  </tr>
+  <tr>
+  <td>v8.compile</td>
+  <td>133.93</td>
+  <td>3.56</td>
+  <td>-130.37</td>
+  <td>1.31%</td>
+  </tr>
+</tbody>
+</table>
 
 ![DevTools load CPU time (ms)](/web/updates/images/2021/02/faster/faster-4.svg)
 
