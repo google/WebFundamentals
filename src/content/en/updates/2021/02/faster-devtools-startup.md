@@ -31,7 +31,7 @@ Let us dive into how the `mojo` mechanism works!
 
 ![The mojo mechanisms](/web/updates/images/2021/02/faster/faster-2.svg)
 
-There is a mojo command `EvaluateScript` which runs the JS command. It serializes the whole JS command including the `arguments` into a string of JavaScript source code that can be `eval()`’. As you might imagine, these strings can become quite long and expensive. After the command is received by V8, these strings of JavaScript code are deserialized before running. This process of serializing and deserializing for every single message creates significant overhead.
+There is a mojo command `EvaluateScript` which runs the JS command. It serializes the whole JS command including the `arguments` into a string of JavaScript source code that can be `eval()`. As you might imagine, these strings can become quite long and expensive. After the command is received by V8, these strings of JavaScript code are deserialized before running. This process of serializing and deserializing for every single message creates significant overhead.
 
 Benedikt Meurer realised that serialisation and deserialisation of the `arguments` is quite expensive, and that the whole  **"Serialize JS command to JS string"** and **"Deserialize JS string"** steps are redundant and can be skipped. 
 
