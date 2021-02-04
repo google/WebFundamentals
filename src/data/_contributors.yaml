@@ -108,7 +108,7 @@ kenjibaheux:
     given: Kenji
     family: Baheux
   twitter: kenjibaheux
-  github: KenjiBaheux
+  github: kenjibaheux
   org:
     name: Google
     unit: Chrome
@@ -1865,7 +1865,7 @@ alansilva:
   country: Brazil
   role:
     - translator
-  twitter: alancezarAraujo
+  twitter: alancezararaujo
   homepage: 'https://www.linkedin.com/in/alan-cezar-31a6a538'
   email: alan.cezar.silva@gmail.com
   description:
