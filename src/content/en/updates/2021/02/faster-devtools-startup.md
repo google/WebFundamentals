@@ -19,7 +19,7 @@ description: Reduce DevTools performance overhead of message dispatch in the fro
 TL;DR; The result is achieved by removing a redundant serialization.
 
 ## Overview
-While DevTools is starting up, it needs to make some calls to the [V8 JavaScript engine V8](https://v8.dev/). 
+While DevTools is starting up, it needs to make some calls to the [V8 JavaScript engine](https://v8.dev/). 
 
 ![DevTools starting up process](/web/updates/images/2021/02/faster/faster-1.svg)
 
@@ -35,13 +35,13 @@ There is a mojo command `EvaluateScript` which runs the JS command. It serialize
 
 Benedikt Meurer realised that serialisation and deserialisation of the `arguments` is quite expensive, and that the whole  **"Serialize JS command to JS string"** and **"Deserialize JS string"** steps are redundant and can be skipped. 
 
-Technical details: [`RenderFrameHostImpl::ExecuteJavaScript](https://source.chromium.org/chromium/chromium/src/+/master:content/browser/renderer_host/render_frame_host_impl.cc;drc=df872ce8fcce25af51aa6b0f9fe8b1135b687524;l=1677)
+Technical details: [`RenderFrameHostImpl::ExecuteJavaScript`](https://source.chromium.org/chromium/chromium/src/+/master:content/browser/renderer_host/render_frame_host_impl.cc;drc=df872ce8fcce25af51aa6b0f9fe8b1135b687524;l=1677)
 
 ## How we improved
 
 ![Improved mechanisms](/web/updates/images/2021/02/faster/faster-3.svg)
 
-We introduced another mojo API method which allows us to pass the object name, the method to be called, and the list of arguments directly, instead of having to create the string of JavaScript source code. This allows us to skip serialization, deserialization, and the need to parse the JavaScript code.
+We introduced another mojo API method which allows us to pass the object name, the method to be called, and the list of arguments directly, instead of having to create the string of JavaScript source code. This allows us to skip serialization & deserialization, and removes the need to parse the JavaScript code.
 
 For technical details on how we implemented this optimization, consult these two patches:
 
@@ -51,7 +51,7 @@ For technical details on how we implemented this optimization, consult these two
 ## Impact
 To measure the effectiveness of the change, we ran some measurements comparing Chromium revisions [cb971089a058](https://chromium.googlesource.com/chromium/src/+/cb971089a058160601940d2b2a12d360115f66e5) and [4f213b39d581](https://chromium.googlesource.com/chromium/src/+/4f213b39d581eaa69a6d70378c91de2768e0004a) (before and after the change).
 
-For both revisions, we benchmarked the following scenario 5 times:
+For both revisions, we ran the following scenario 5 times:
 
 1. Record trace using `chrome://tracing`
 2. Open DevTools-on-DevTools
