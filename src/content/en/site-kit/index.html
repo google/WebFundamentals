@@ -31,8 +31,8 @@
     </style>
   </head>
   <body>
-    <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-50">
-      <div class="devsite-landing-row-group">
+    <section class="devsite-landing-row devsite-landing-row-2-up">
+      <div class="devsite-landing-row-inner">
         <div class="devsite-landing-row-item">
           <div id="site-kit-setup">
             {% dynamic if request.query_string.sitename %}
@@ -40,7 +40,7 @@
             {% dynamic endif %}
             {% dynamic if request.query_string.siteurl %}
               {% dynamic setvar productName %}Site Kit on {% dynamic print request.query_string.siteurl|escape %}{% dynamic endsetvar %}
-              {% dynamic setvar redirectURI %}{% dynamic print request.query_string.siteurl|escape %}?oauth2callback=1{% dynamic endsetvar %}
+              {% dynamic setvar redirectURI %}{% dynamic print request.query_string.siteurl|escape %}/wp-admin/index.php?oauth2callback=1{% dynamic endsetvar %}
             {% dynamic endif %}
             {% dynamic if user.signed_in and setvar.projectName and setvar.productName and setvar.redirectURI %}
             <p>
