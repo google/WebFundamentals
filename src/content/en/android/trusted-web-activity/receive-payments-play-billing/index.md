@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Receive Payments via Google Play Billing in your PWA with the Digital Goods API, the Payment Request API and Trusted Web Activity.
 
 {# wf_published_on: 2021-01-26 #}
-{# wf_updated_on: 2021-01-26 #}
+{# wf_updated_on: 2021-01-28 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -155,8 +155,11 @@ doesn’t have methods to query SKUs, but the Play Store does provide
 
 ## Build the purchase flow
 
-The constructor for a PaymentRequest takes two parameters: a list of payment methods and a list of
-payment details.
+The constructor for a PaymentRequest takes a list of payment methods accepted as a parameter.
+
+Note: The Payment Request API can have a PaymentDetails object as the second parameter for the
+PaymentRequest constructor, but it is [not required when used with the Digital Goods API][32] and
+values passed will be ignored.
 
 When inside the Trusted Web Activity, you must use the Google Play billing payment method, by
 setting `https://play.google.com/billing` as the identifier, and adding the product SKU in as a
@@ -172,26 +175,13 @@ async function makePurchase(service, sku) {
        }
    }];
 
+    const request = new PaymentRequest(paymentMethods);
    ...
 }
 ```
 
-Even though the payment details are required, the Play Billing will ignore those values and use the
-values set when creating the SKU  in the Play Console, so they  can be filled with bogus values:
-
-```js
-const paymentDetails = {
-    total: {
-        label: `Total`,
-        amount: {currency: `USD`, value: `0`}
-    }
-};
-
-const request = new PaymentRequest(paymentMethods, paymentDetails);
-```
-
-Call the `show()` on the payment request object to start the payment flow. If the Promise succeeds
-that will may be payment was successful. If it fails, the user likely aborted the payment. 
+Call `show()` on the payment request object to start the payment flow. If the Promise succeeds
+that means the payment was successful. If it fails, the user likely aborted the payment. 
 
 If the promise succeeds, you will need to verify the purchase in order to protect against fraud.
 Due to the sensitivity of the data, this step must be implemented using your backend. Check out the
@@ -203,7 +193,7 @@ the purchase, otherwise,
 
 ```js
 ...
-const request = new PaymentRequest(paymentMethods, paymentDetails);
+const request = new PaymentRequest(paymentMethods);
 try {
     const paymentResponse = await request.show();
     const {purchaseToken} = paymentResponse.details;
@@ -246,17 +236,7 @@ async function makePurchase(service, sku) {
         }
     }];
 
-    // The "total" member of the paymentDetails is required by the Payment
-    // Request API, but is not used when using Google Play Billing. We can
-    // set it up with bogus details.
-    const paymentDetails = {
-        total: {
-            label: `Total`,
-            amount: {currency: `USD`, value: `0`}
-        }
-    };
-
-    const request = new PaymentRequest(paymentMethods, paymentDetails);
+    const request = new PaymentRequest(paymentMethods);
     try {
         const paymentResponse = await request.show();
         const {purchaseToken} = paymentResponse.details;
@@ -414,4 +394,5 @@ by the Digital Goods API, and server-side components.
 [29]: https://developer.android.com/google/play/billing/billing_subscriptions#Allow-upgrade
 [30]: https://developer.android.com/google/play/billing/getting-ready#configure-rtdn
 [31]: https://medium.com/androiddevelopers/implementing-linkedpurchasetoken-correctly-to-prevent-duplicate-subscriptions-82dfbf7167da
+[32]: https://github.com/w3c/payment-request/issues/912
 
