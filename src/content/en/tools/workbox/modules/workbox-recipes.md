@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-recipes.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2021-01-15 #}
+{# wf_updated_on: 2021-02-11 #}
 {# wf_published_on: 2020-11-13 #}
 
 # Workbox Recipes {: .page-title }
@@ -91,7 +91,7 @@ const urls = [
   '/offline.html',
 ];
 
-warmStrategyCache(urls, strategy);
+warmStrategyCache({urls, strategy});
 ```
 
 #### Pattern
