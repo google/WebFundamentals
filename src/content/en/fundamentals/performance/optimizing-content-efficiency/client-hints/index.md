@@ -81,6 +81,9 @@ client reads this header, it’s being told “this site wants the `Viewport-Wid
 and `Downlink` client hints.” Don’t worry about the specific hints themselves.
 We’ll get to those in a moment.
 
+Note: In order for client hints to work at all, your site must be served over
+HTTPS!
+
 You can set these opt-in headers in any back-end language. For example, [PHP’s
 `header` function](http://php.net/manual/en/function.header.php) could be used.
 You could even set these opt-in headers with [the `http-equiv`
@@ -91,8 +94,10 @@ on a `<meta>` tag:
 <meta http-equiv="Accept-CH" content="Viewport-Width, Downlink">
 ```
 
-Note: In order for client hints to work at all, your site must be served over
-HTTPS!
+Warning: Earlier versions of the spec included the `Accept-CH-Lifetime` which
+has now been removed and sites should also stop sending it. If you were using
+this to enable hints to persist over browser sessions you should instead ensure
+you are sending the necessary `Accept-CH` headers on the relevant responses.
 
 ## All the client hints!
 
