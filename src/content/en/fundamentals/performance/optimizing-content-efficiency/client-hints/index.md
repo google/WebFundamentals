@@ -94,10 +94,11 @@ on a `<meta>` tag:
 <meta http-equiv="Accept-CH" content="Viewport-Width, Downlink">
 ```
 
-Warning: Earlier versions of the spec included the `Accept-CH-Lifetime` which
-has now been removed and sites should also stop sending it. If you were using
-this to enable hints to persist over browser sessions you should instead ensure
-you are sending the necessary `Accept-CH` headers on the relevant responses.
+Warning: Earlier versions of the spec included the `Accept-CH-Lifetime` header
+which has now been removed and sites should also stop sending it. If you were
+using this to enable hints to persist over browser sessions you should instead
+ensure you are sending the necessary `Accept-CH` headers on the relevant
+responses.
 
 ## All the client hints!
 
