@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Client hints are a set of HTTP request headers we can use to change how we deliver page resources based on characteristics of a user's device and network connection. In this article, you'll learn all about client hints, how they work, and a few ideas on how you can use them to make your site faster for users.
 
-{# wf_updated_on: 2020-07-24 #}
+{# wf_updated_on: 2021-02-17 #}
 {# wf_published_on: 2018-11-22 #}
 {# wf_blink_components: UI>Browser>Mobile>Settings>DataSaver,Blink>Fonts,Blink>CSS,Blink>JavaScript #}
 
@@ -81,13 +81,8 @@ client reads this header, it’s being told “this site wants the `Viewport-Wid
 and `Downlink` client hints.” Don’t worry about the specific hints themselves.
 We’ll get to those in a moment.
 
-There’s also an optional `Accept-CH-Lifetime` header which specifies the length
-of time, in seconds, the browser should remember the value you set for
-`Accept-CH` for your origin.
-
-Note: Client hints don’t kick in on the navigation request the first time a user
-visits your site. However, if you persist hints with `Accept-CH-Lifetime`, this
-information will be available on the navigation request.
+Note: In order for client hints to work at all, your site must be served over
+HTTPS!
 
 You can set these opt-in headers in any back-end language. For example, [PHP’s
 `header` function](http://php.net/manual/en/function.header.php) could be used.
@@ -97,11 +92,13 @@ on a `<meta>` tag:
 
 ```html
 <meta http-equiv="Accept-CH" content="Viewport-Width, Downlink">
-<meta http-equiv="Accept-CH-Lifetime" content="86400">
 ```
 
-Note: In order for client hints to work at all, your site must be served over
-HTTPS!
+Warning: Earlier versions of the spec included the `Accept-CH-Lifetime` header
+which has now been removed and sites should also stop sending it. If you were
+using this to enable hints to persist over browser sessions you should instead
+ensure you are sending the necessary `Accept-CH` headers on the relevant
+responses.
 
 ## All the client hints!
 
