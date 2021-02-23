@@ -219,18 +219,41 @@ class Router {
         catch (err) {
             responsePromise &#x3D; Promise.reject(err);
         }
-        if (responsePromise instanceof Promise &amp;amp;&amp;amp; this._catchHandler) {
-            responsePromise &#x3D; responsePromise.catch((err) &#x3D;&gt; {
-                if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-                    // Still include URL here as it will be async from the console group
-                    // and may not make sense without the URL
-                    logger.groupCollapsed(&#x60;Error thrown when responding to: &#x60; +
-                        &#x60; ${getFriendlyURL(url)}. Falling back to Catch Handler.&#x60;);
-                    logger.error(&#x60;Error thrown by:&#x60;, route);
-                    logger.error(err);
-                    logger.groupEnd();
+        // Get route&#x27;s catch handler, if it exists
+        const catchHandler &#x3D; route &amp;amp;&amp;amp; route.catchHandler;
+        if (responsePromise instanceof Promise &amp;amp;&amp;amp; (this._catchHandler || catchHandler)) {
+            responsePromise &#x3D; responsePromise.catch(async (err) &#x3D;&gt; {
+                // If there&#x27;s a route catch handler, process that first
+                if (catchHandler) {
+                    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                        // Still include URL here as it will be async from the console group
+                        // and may not make sense without the URL
+                        logger.groupCollapsed(&#x60;Error thrown when responding to: &#x60; +
+                            &#x60; ${getFriendlyURL(url)}. Falling back to route&#x27;s Catch Handler.&#x60;);
+                        logger.error(&#x60;Error thrown by:&#x60;, route);
+                        logger.error(err);
+                        logger.groupEnd();
+                    }
+                    try {
+                        return await catchHandler.handle({ url, request, event, params });
+                    }
+                    catch (catchErr) {
+                        err &#x3D; catchErr;
+                    }
                 }
-                return this._catchHandler.handle({ url, request, event });
+                if (this._catchHandler) {
+                    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                        // Still include URL here as it will be async from the console group
+                        // and may not make sense without the URL
+                        logger.groupCollapsed(&#x60;Error thrown when responding to: &#x60; +
+                            &#x60; ${getFriendlyURL(url)}. Falling back to global Catch Handler.&#x60;);
+                        logger.error(&#x60;Error thrown by:&#x60;, route);
+                        logger.error(err);
+                        logger.groupEnd();
+                    }
+                    return this._catchHandler.handle({ url, request, event });
+                }
+                throw err;
             });
         }
         return responsePromise;

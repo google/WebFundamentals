@@ -70,6 +70,14 @@ class Route {
         this.match &#x3D; match;
         this.method &#x3D; method;
     }
+    /**
+     *
+     * @param {module:workbox-routing-handlerCallback} handler A callback
+     * function that returns a Promise resolving to a Response
+     */
+    setCatchHandler(handler) {
+        this.catchHandler &#x3D; normalizeHandler(handler);
+    }
 }
 export { Route };
 </code></pre>
