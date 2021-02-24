@@ -48,7 +48,7 @@ if ('serviceWorker' in navigator) {
           // instructing it to activate.  
           // Note: for this to work, you have to add a message
           // listener in your service worker. See below.
-          messageSW(registration.waiting, {type: 'SKIP_WAITING'});
+          await messageSW(registration.waiting, {type: 'SKIP_WAITING'});
         }
       },
 
