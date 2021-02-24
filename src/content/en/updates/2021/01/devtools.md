@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Debugging support for Trusted Types violations, capture node screenshot beyond viewport, new Trust Tokens tab for network requests and more.
 
-{# wf_updated_on: 2021-01-20 #}
+{# wf_updated_on: 2021-02-24 #}
 {# wf_published_on: 2021-01-19 #}
 {# wf_tags: chrome89, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -14,6 +14,18 @@ description: Debugging support for Trusted Types violations, capture node screen
 {% include "web/_shared/contributors/jecelynyeen.html" %}
 
 <<../../_shared/devtools-research.md>>
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="msHeKmMEeHU"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="VtaRYSBIbU4"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Debugging support for Trusted Types violations {: #trusted-types }
 ### Breakpoint on Trusted Type violations {: #trusted-types-violations }
