@@ -54,8 +54,9 @@ class Strategy {
      * @param {Array&amp;lt;Object&gt;} [options.plugins] [Plugins]{@link /web/tools/workbox/guides/using-plugins}
      * to use in conjunction with this caching strategy.
      * @param {Object} [options.fetchOptions] Values passed along to the
-     * [&#x60;init&#x60;]{@link https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters}
-     * of all fetch() requests made by this strategy.
+     * [&#x60;init&#x60;](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+     * of [non-navigation](https://github.com/GoogleChrome/workbox/issues/1796)
+     * &#x60;fetch()&#x60; requests made by this strategy.
      * @param {Object} [options.matchOptions] The
      * [&#x60;CacheQueryOptions&#x60;]{@link https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions}
      * for any &#x60;cache.match()&#x60; or &#x60;cache.put()&#x60; calls made by this strategy.

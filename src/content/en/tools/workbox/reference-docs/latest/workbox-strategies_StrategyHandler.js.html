@@ -129,8 +129,8 @@ class StrategyHandler {
     }
     /**
      * Fetches a given request (and invokes any applicable plugin callback
-     * methods) using the &#x60;fetchOptions&#x60; and &#x60;plugins&#x60; defined on the strategy
-     * object.
+     * methods) using the &#x60;fetchOptions&#x60; (for non-navigation requests) and
+     * &#x60;plugins&#x60; defined on the &#x60;Strategy&#x60; object.
      *
      * The following plugin lifecycle methods are invoked when using this method:
      * - &#x60;requestWillFetch()&#x60;
@@ -280,7 +280,9 @@ class StrategyHandler {
      * - cacheDidUpdate()
      *
      * @param {Request|string} key The request or URL to use as the cache key.
-     * @param {Promise&amp;lt;void&gt;} response The response to cache.
+     * @param {Response} response The response to cache.
+     * @return {Promise&amp;lt;boolean&gt;} &#x60;false&#x60; if a cacheWillUpdate caused the response
+     * not be cached, and &#x60;true&#x60; otherwise.
      */
     async cachePut(key, response) {
         const request &#x3D; toRequest(key);
@@ -311,7 +313,7 @@ class StrategyHandler {
                 logger.debug(&#x60;Response &#x27;${getFriendlyURL(effectiveRequest.url)}&#x27; &#x60; +
                     &#x60;will not be cached.&#x60;, responseToCache);
             }
-            return;
+            return false;
         }
         const { cacheName, matchOptions } &#x3D; this._strategy;
         const cache &#x3D; await self.caches.open(cacheName);
@@ -346,6 +348,7 @@ class StrategyHandler {
                 event: this.event,
             });
         }
+        return true;
     }
     /**
      * Checks the list of plugins for the &#x60;cacheKeyWillBeUsed&#x60; callback, and

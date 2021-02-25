@@ -34,11 +34,6 @@ import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
 import { WorkboxError } from &#x27;workbox-core/_private/WorkboxError.js&#x27;;
 import { Strategy } from &#x27;workbox-strategies/Strategy.js&#x27;;
 import &#x27;./_version.js&#x27;;
-const copyRedirectedCacheableResponsesPlugin &#x3D; {
-    async cacheWillUpdate({ response }) {
-        return response.redirected ? await copyResponse(response) : response;
-    }
-};
 /**
  * A [Strategy]{@link module:workbox-strategies.Strategy} implementation
  * specifically designed to work with
@@ -77,7 +72,7 @@ class PrecacheStrategy extends Strategy {
         // any redirected response must be &quot;copied&quot; rather than cloned, so the new
         // response doesn&#x27;t contain the &#x60;redirected&#x60; flag. See:
         // https://bugs.chromium.org/p/chromium/issues/detail?id&#x3D;669363&amp;amp;desc&#x3D;2#c1
-        this.plugins.push(copyRedirectedCacheableResponsesPlugin);
+        this.plugins.push(PrecacheStrategy.copyRedirectedCacheableResponsesPlugin);
     }
     /**
      * @private
@@ -138,17 +133,12 @@ class PrecacheStrategy extends Strategy {
         return response;
     }
     async _handleInstall(request, handler) {
-        const response &#x3D; await handler.fetchAndCachePut(request);
-        // Any time there&#x27;s no response, consider it a precaching error.
-        let responseSafeToPrecache &#x3D; Boolean(response);
-        // Also consider it an error if the user didn&#x27;t pass their own
-        // cacheWillUpdate plugin, and the response is a 400+ (note: this means
-        // that by default opaque responses can be precached).
-        if (response &amp;amp;&amp;amp; response.status &gt;&#x3D; 400 &amp;amp;&amp;amp;
-            !this._usesCustomCacheableResponseLogic()) {
-            responseSafeToPrecache &#x3D; false;
-        }
-        if (!responseSafeToPrecache) {
+        this._useDefaultCacheabilityPluginIfNeeded();
+        const response &#x3D; await handler.fetch(request);
+        // Make sure we defer cachePut() until after we know the response
+        // should be cached; see https://github.com/GoogleChrome/workbox/issues/2737
+        const wasCached &#x3D; await handler.cachePut(request, response.clone());
+        if (!wasCached) {
             // Throwing here will lead to the &#x60;install&#x60; handler failing, which
             // we want to do if *any* of the responses aren&#x27;t safe to cache.
             throw new WorkboxError(&#x27;bad-precaching-response&#x27;, {
@@ -159,21 +149,71 @@ class PrecacheStrategy extends Strategy {
         return response;
     }
     /**
-     * Returns true if any users plugins were added containing their own
-     * &#x60;cacheWillUpdate&#x60; callback.
+     * This method is complex, as there a number of things to account for:
      *
-     * This method indicates whether the default cacheable response logic (i.e.
-     * &amp;lt;400, including opaque responses) should be used. If a custom plugin
-     * with a &#x60;cacheWillUpdate&#x60; callback is passed, then the strategy should
-     * defer to that plugin&#x27;s logic.
+     * The &#x60;plugins&#x60; array can be set at construction, and/or it might be added to
+     * to at any time before the strategy is used.
+     *
+     * At the time the strategy is used (i.e. during an &#x60;install&#x60; event), there
+     * needs to be at least one plugin that implements &#x60;cacheWillUpdate&#x60; in the
+     * array, other than &#x60;copyRedirectedCacheableResponsesPlugin&#x60;.
+     *
+     * - If this method is called and there are no suitable &#x60;cacheWillUpdate&#x60;
+     * plugins, we need to add &#x60;defaultPrecacheCacheabilityPlugin&#x60;.
+     *
+     * - If this method is called and there is exactly one &#x60;cacheWillUpdate&#x60;, then
+     * we don&#x27;t have to do anything (this might be a previously added
+     * &#x60;defaultPrecacheCacheabilityPlugin&#x60;, or it might be a custom plugin).
+     *
+     * - If this method is called and there is more than one &#x60;cacheWillUpdate&#x60;,
+     * then we need to check if one is &#x60;defaultPrecacheCacheabilityPlugin&#x60;. If so,
+     * we need to remove it. (This situation is unlikely, but it could happen if
+     * the strategy is used multiple times, the first without a &#x60;cacheWillUpdate&#x60;,
+     * and then later on after manually adding a custom &#x60;cacheWillUpdate&#x60;.)
+     *
+     * See https://github.com/GoogleChrome/workbox/issues/2737 for more context.
      *
      * @private
      */
-    _usesCustomCacheableResponseLogic() {
-        return this.plugins.some((plugin) &#x3D;&gt; plugin.cacheWillUpdate &amp;amp;&amp;amp;
-            plugin !&#x3D;&#x3D; copyRedirectedCacheableResponsesPlugin);
+    _useDefaultCacheabilityPluginIfNeeded() {
+        let defaultPluginIndex &#x3D; null;
+        let cacheWillUpdatePluginCount &#x3D; 0;
+        for (const [index, plugin] of this.plugins.entries()) {
+            // Ignore the copy redirected plugin when determining what to do.
+            if (plugin &#x3D;&#x3D;&#x3D; PrecacheStrategy.copyRedirectedCacheableResponsesPlugin) {
+                continue;
+            }
+            // Save the default plugin&#x27;s index, in case it needs to be removed.
+            if (plugin &#x3D;&#x3D;&#x3D; PrecacheStrategy.defaultPrecacheCacheabilityPlugin) {
+                defaultPluginIndex &#x3D; index;
+            }
+            if (plugin.cacheWillUpdate) {
+                cacheWillUpdatePluginCount++;
+            }
+        }
+        if (cacheWillUpdatePluginCount &#x3D;&#x3D;&#x3D; 0) {
+            this.plugins.push(PrecacheStrategy.defaultPrecacheCacheabilityPlugin);
+        }
+        else if (cacheWillUpdatePluginCount &gt; 1 &amp;amp;&amp;amp; defaultPluginIndex !&#x3D;&#x3D; null) {
+            // Only remove the default plugin; multiple custom plugins are allowed.
+            this.plugins.splice(defaultPluginIndex, 1);
+        }
+        // Nothing needs to be done if cacheWillUpdatePluginCount is 1
     }
 }
+PrecacheStrategy.defaultPrecacheCacheabilityPlugin &#x3D; {
+    async cacheWillUpdate({ response }) {
+        if (!response || response.status &gt;&#x3D; 400) {
+            return null;
+        }
+        return response;
+    }
+};
+PrecacheStrategy.copyRedirectedCacheableResponsesPlugin &#x3D; {
+    async cacheWillUpdate({ response }) {
+        return response.redirected ? await copyResponse(response) : response;
+    }
+};
 export { PrecacheStrategy };
 </code></pre>
           </article>
