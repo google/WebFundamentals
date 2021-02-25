@@ -151,8 +151,8 @@ what we can do to fix that.
 Note: If you don't care for long-winded explanations and just want to dive into
 code, you can go ahead and check out [the `tree-shake`
 branch](https://github.com/malchata/webpack-tree-shaking-example/tree/tree-shake)
-in the app's GitHub repo. You can also [diff this branch
-`master`](https://github.com/malchata/webpack-tree-shaking-example/compare/tree-shake)
+in the app's GitHub repo. You can also
+[diff this branch](https://github.com/malchata/webpack-tree-shaking-example/compare/tree-shake)
 to see exactly what was changed to make tree shaking work!
 
 In any application, finding opportunities for tree shaking are going to involve

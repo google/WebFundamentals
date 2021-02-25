@@ -188,7 +188,7 @@ When it comes to routing, my approach was to use the Express framework's [native
 routing syntax](https://expressjs.com/en/guide/routing.html). It's flexible
 enough to match simple URL prefixes, as well as URLs that include parameters as
 part of the path. Here, I [create a
-mapping](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/lib/routes.mjs)
+mapping](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/lib/routes.mjs)
 between route names the underlying Express pattern to match against.
 
 ```js
@@ -201,7 +201,7 @@ export default routes;
 ```
 
 I can then reference this mapping directly from the [server's
-code](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/server.mjs).
+code](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/server.mjs).
 When there's a match for a given Express pattern, the appropriate handler
 responds with templating logic specific to the matching route.
 
@@ -224,7 +224,7 @@ the rest of the data sources, it streams them to the browser until the
 document is complete.
 
 To see what I mean, take a look at the [Express
-code](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/server.mjs) for
+code](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/server.js) for
 one of our routes:
 
 ```js
@@ -270,7 +270,7 @@ me.
 
 So here's an example of how I'm templating the dynamic HTML portion of my web
 app's index. As with my routes, the templating logic is [stored in an ES
-module](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/lib/templates.mjs)
+module](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/lib/templates.mjs)
 that can be imported into both the server and the service worker.
 
 ```js
@@ -314,7 +314,7 @@ that I need in order to display the corresponding question. Keep that in
 mind. I'll revisit it later.
 
 Jumping back to my [route
-handler](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/server.mjs),
+handler](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/server.mjs),
 once templating is complete, I stream the final portion of my page's HTML to the
 browser, and end the stream. This is the cue to the browser that the progressive
 rendering is complete.
@@ -370,7 +370,7 @@ Just as with my server-side code, my service worker needs to know how to match
 an incoming request with the appropriate response logic.
 
 My approach was to
-[translate](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/lib/route-matchers.mjs)
+[translate](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/lib/route-matchers.mjs)
 each Express route into a corresponding [regular
 expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions),
 making use of a helpful library called
@@ -403,7 +403,7 @@ when done by hand, so I turn to Workbox to handle
 process.
 
 I tell Workbox which URLs to precache using a [configuration
-file](https://github.com/GoogleChromeLabs/so-pwa/blob/master/workbox-config.js),
+file](https://github.com/GoogleChromeLabs/so-pwa/blob/main/workbox-config.js),
 pointing to the directory that contains all of my local assets along with a set
 of patterns to match. This file is automatically read by the [Workbox's
 CLI](/web/tools/workbox/modules/workbox-cli), which is
@@ -504,7 +504,7 @@ closer to 100% browser support.
 ### Runtime caching
 
 Let's check out how my [service
-worker](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/service-worker.mjs)
+worker](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/service-worker.mjs)
 deals with runtime data, from the Stack Exchange API. I'm making use of
 Workbox's built-in support for a [stale-while-revalidate caching
 strategy](/web/tools/workbox/reference-docs/latest/workbox.strategies#stalewhilerevalidate),
@@ -536,7 +536,7 @@ The other strategy implements the stale-while-revalidate caching logic,
 along with least-recently-used cache expiration once we reach 50 entries.
 
 Now that I have those strategies in place, all that's left is to [tell
-Workbox](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/service-worker.mjs)
+Workbox](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/service-worker.mjs)
 how to use them to construct a complete, streaming response. I pass in an array
 of sources as functions, and each of those functions will be executed
 immediately. Workbox takes the result from each source and streams it to the web
@@ -586,7 +586,7 @@ isomorphic JavaScript.
 
 I've walked through both the server and service worker for my PWA, but there's
 one last bit of logic to cover: there's a [small amount of
-JavaScript](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/app.mjs)
+JavaScript](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/app.mjs)
 that runs on each of my pages, after they're fully streamed in.
 
 This code progressively enhances the user experience, but isn't crucial—the web
@@ -601,7 +601,7 @@ coordination between my templating and client-side code, I can update the
 window's title using page-specific metadata.
 
 As part of the [templating
-code](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/lib/templates.mjs),
+code](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/lib/templates.mjs),
 my approach is to include a script tag containing the properly escaped string.
 
 ```js
@@ -611,7 +611,7 @@ const metadataScript = `<script>
 ```
 
 Then, once my page [has
-loaded](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/app.mjs), I
+loaded](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/app.mjs), I
 read that string and update the document title.
 
 ```js
@@ -638,7 +638,7 @@ question? I can cross-reference those data attributes against the list of cached
 URLs, and create an array of all the question links that don't match.
 
 When the browser enters an offline state, [I loop
-through](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/app.mjs) the
+through](https://github.com/GoogleChromeLabs/so-pwa/blob/main/src/app.mjs) the
 list of uncached links, and dim out the ones that won't work. Keep in mind that
 this is just a visual hint to the user about what they should expect from those
 pages—I'm not actually disabling the links, or preventing the user from

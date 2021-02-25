@@ -47,7 +47,7 @@ JavaScript に深く依存するサイトを構築する際に、送信した内
  これにより、CertSimple は圧縮された JS のバイトサイズの [17%](https://speakerdeck.com/addyosmani/the-browser-hackers-guide-to-instant-loading?slide=30) を節約し、LinkedIn は読み込み時間 [4%](https://engineering.linkedin.com/blog/2017/05/boosting-site-speed-using-brotli-compression) を節約しました。
 * **未使用のコードの削除**。
     * [DevTools のコード カバレッジ](/web/updates/2017/04/devtools-release-notes#coverage)で削除できるまたは遅延読み込みできるコードを特定します。
-    * 最近のブラウザに既存のトランスパイル機能を避けるために、[babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env) および browserlist を使用します。
+    * 最近のブラウザに既存のトランスパイル機能を避けるために、[babel-preset-env](https://github.com/GoogleChrome/puppeteer/blob/main/packages/babel-preset-env) および browserlist を使用します。
       上級デベロッパーであれば、慎重な [Webpack バンドルの分析](https://github.com/webpack-contrib/webpack-bundle-analyzer)によって不要な依存関係を削除できるかもしれません。
     * コードを削除する方法の詳細については、[tree-shaking](https://webpack.js.org/guides/tree-shaking/)、[Closure Compiler](/closure/compiler/) の高度な最適化、または Moment.js のようなライブラリのための [lodash-babel-plugin](https://github.com/lodash/babel-plugin-lodash) や webpack の [ContextReplacementPlugin](https://iamakulov.com/notes/webpack-front-end-size-caching/#moment-js) のようなライブラリ トリミング プラグインを参照してください。
 * **ネットワーク トリップを最小限に抑えるためのコード キャッシング**。
@@ -278,5 +278,3 @@ Real-world performance
  代わりに静的に圧縮することをお勧めします）。
 * [Performance Futures](https://medium.com/@samccone/performance-futures-bundling-281543d9a0d5)
   — Sam Saccone
-
-

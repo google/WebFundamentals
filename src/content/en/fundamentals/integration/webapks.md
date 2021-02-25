@@ -19,7 +19,7 @@ for your app to show up in the app launcher, in Android's app settings and
 to register a set of intent filters.
 
 To
-[generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README),
+[generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README.md),
 Chrome looks at the [web app manifest](https://web.dev/add-manifest/) and
 other metadata. [When an update to the manifest is detected](#update-webapk),
 Chrome will need to generate a new APK.

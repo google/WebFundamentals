@@ -57,7 +57,7 @@ ES5 代码。
 * **移除未使用的代码**。
     * 识别可以使用 [DevTools 代码覆盖](/web/updates/2017/04/devtools-release-notes#coverage)来移除或延迟加载代码的机会。
     * 使用
-[babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+[babel-preset-env](https://github.com/GoogleChrome/puppeteer/blob/main/packages/babel-preset-env)
 和 browserlist，避免转译现代浏览器中已有的功能。
       高级开发者可能会发现仔细[分析其 webpack 软件包](https://github.com/webpack-contrib/webpack-bundle-analyzer)有助于找到裁减非必要依赖项的机会。
     * 要删除代码，请查看 [tree-shaking](https://webpack.js.org/guides/tree-shaking/)、[Closure Compiler](/closure/compiler/) 的高级优化和库裁剪插件（例如 [lodash-babel-plugin](https://github.com/lodash/babel-plugin-lodash)）或者 webpack 的 [ContextReplacementPlugin](https://iamakulov.com/notes/webpack-front-end-size-caching/#moment-js)（适用于 Moment.js 等库）。
@@ -283,5 +283,3 @@ Kristofer Baxter
 * [Cloudflare 的 Brotli 压缩实验结果](https://blog.cloudflare.com/results-experimenting-brotli/)（请注意，较高质量的动态 Brotli 会导致初始页面渲染延迟，因此务必谨慎评估。
  您可能想改为使用静态压缩。）
 * [性能的未来](https://medium.com/@samccone/performance-futures-bundling-281543d9a0d5) - Sam Saccone
-
-

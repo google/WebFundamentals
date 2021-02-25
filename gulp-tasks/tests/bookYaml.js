@@ -76,6 +76,7 @@ const TOC_ELEMENT = {
   type: 'object',
   additionalProperties: false,
   properties: {
+    acl: {type: 'string'},
     attributes: {type: 'array', items: {$ref: '/Attribute'}},
     alternate_paths: {type: 'array'},
     break: {type: 'boolean'},
@@ -95,7 +96,6 @@ const TOC_ELEMENT = {
     version_added: {type: 'string'},
     version_deprecated: {type: 'string'},
     versioning: {type: 'string'},
-    whitelist: {type: 'string'},
   },
 };
 

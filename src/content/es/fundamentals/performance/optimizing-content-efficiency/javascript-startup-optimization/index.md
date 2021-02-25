@@ -63,7 +63,7 @@ Puedes **reducir** el costo de transferencia de red de JavaScript mediante lo si
       para identificar oportunidades de código que se pueda
       eliminar o cargar con lentitud.
     * Usa
-      [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+      [babel-preset-env](https://github.com/GoogleChrome/puppeteer/blob/main/packages/babel-preset-env)
       y browserlist para evitar funciones de transpilación que ya están incluidas en los navegadores modernos.
       Los desarrolladores experimentados pueden encontrar que el [análisis de los paquetes
       de webpack](https://github.com/webpack-contrib/webpack-bundle-analyzer)
