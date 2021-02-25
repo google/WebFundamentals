@@ -18,14 +18,14 @@ description: 确保 Service Worker 发挥最佳性能。
 ## 首先了解什么是导航请求？
 
 在 [Fetch
-规范](https://fetch.spec.whatwg.org/#navigation-request)中，将导航请求简洁地定义为：<em>导航[请求](https://fetch.spec.whatwg.org/#concept-request)是[目的地](https://fetch.spec.whatwg.org/#concept-request-destination)为“<code>document</code>”的请求。
+规范](https://fetch.spec.whatwg.org/#navigation-request)中，将导航请求简洁地定义为: <em>导航[请求](https://fetch.spec.whatwg.org/#concept-request)是[目的地](https://fetch.spec.whatwg.org/#concept-request-destination)为“<code>document</code>”的请求。
 </em> 这个定义在技术上正确无误，但缺少细节，而且低估了导航对于网页应用性能的重要性。
  通俗地说，每当您在浏览器的地址栏中输入网址、与
 <code>[window.location](https://developer.mozilla.org/en-US/docs/Web/API/Window/location)</code> 交互，或者从一个网页访问指向另一网页的链接时，就会执行导航请求。
  在页面上放置 `<iframe>`
 也会产生针对 `<iframe>` 的 `src` 的导航请求。
 
-注：依赖 [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
+注: 依赖 [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
 和原地 DOM 修改的[单页面应用](https://en.wikipedia.org/wiki/Single-page_application)在视图之间切换时，往往会避免导航请求。
  但是，在浏览器会话中，针对单页面应用的初始请求仍为导航。
 
@@ -35,7 +35,7 @@ description: 确保 Service Worker 发挥最佳性能。
 
 
 
-注：[HTTP/2 服务器推送](/web/fundamentals/performance/http2/#server_push)在此时会发挥作用，允许子资源响应随导航响应一起返回，而没有额外的延迟。
+注: [HTTP/2 服务器推送](/web/fundamentals/performance/http2/#server_push)在此时会发挥作用，允许子资源响应随导航响应一起返回，而没有额外的延迟。
  但是，在与远程服务器建立连接期间出现的任何延迟也会导致延迟将数据推送到客户端。
 
 
@@ -73,7 +73,7 @@ description: 确保 Service Worker 发挥最佳性能。
 
 
 
-注：对于部分网页应用来说，响应导航请求时无法绕开网络。
+注: 对于部分网页应用来说，响应导航请求时无法绕开网络。
  这可能是因为网站上每个网址的 HTML 都依赖于来自某内容管理系统的数据，或者网站使用不同的布局，无法融入到通用的应用 Shell 结构中。
  此外，Service Worker 还打开了通往改善 HTML 加载*现状*的大门。
 您可以通过使用数据流，使用缓存的公共 HTML 块（可能是网站的完整 `<head>` 和某些初始
@@ -90,7 +90,7 @@ description: 确保 Service Worker 发挥最佳性能。
 
 
 其中一种方法是，使用实现
-[stale-while-revalidate 策略](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)的 Service Worker `fetch` 处理程序来处理导航请求，如下所示：
+[stale-while-revalidate 策略](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)的 Service Worker `fetch` 处理程序来处理导航请求，如下所示:
 
 
 ```js
@@ -135,12 +135,12 @@ self.addEventListener('fetch', event => {
 ### 使用应用 Shell
 
 对于现有的单页面应用，实现[应用 Shell 架构](/web/fundamentals/architecture/app-shell)十分简单。
- 您可使用明确的策略，在不依赖于网络的情况下处理导航请求：以缓存的 HTML 文档通用“Shell”来执行每个导航请求，而不考虑具体网址。
+ 您可使用明确的策略，在不依赖于网络的情况下处理导航请求: 以缓存的 HTML 文档通用“Shell”来执行每个导航请求，而不考虑具体网址。
  该 Shell 包括引导单页面应用所需的所有内容，然后客户端路由逻辑可以渲染请求网址特定的内容。
 
 
 
-手动编写的相应 Service Worker `fetch` 处理程序类似如下：
+手动编写的相应 Service Worker `fetch` 处理程序类似如下:
 
 
 ```js
@@ -169,7 +169,7 @@ Worker 以实现其他功能（例如，提供[离线回退内容](/web/fundamen
 
 ### 切勿使用“直通式”提取处理程序
 
-如果您仅将 Service Worker 用于推送通知，您可能会误认为必须进行以下操作或将其视为空操作：
+如果您仅将 Service Worker 用于推送通知，您可能会误认为必须进行以下操作或将其视为空操作:
 
 
 

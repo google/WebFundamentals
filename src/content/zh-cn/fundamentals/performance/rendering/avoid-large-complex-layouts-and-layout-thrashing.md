@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:布局是浏览器计算各元素几何信息的过程：元素的大小以及在页面中的位置。根据所用的 CSS、元素的内容或父级元素，每个元素都将有显式或隐含的大小信息。此过程在 Chrome 中称为布局 (Layout)。
+description:布局是浏览器计算各元素几何信息的过程: 元素的大小以及在页面中的位置。根据所用的 CSS、元素的内容或父级元素，每个元素都将有显式或隐含的大小信息。此过程在 Chrome 中称为布局 (Layout)。
 
 # 避免大型、复杂的布局和布局抖动 {: .page-title }
 
@@ -9,12 +9,12 @@ description:布局是浏览器计算各元素几何信息的过程：元素的�
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-布局是浏览器计算各元素几何信息的过程：元素的大小以及在页面中的位置。
+布局是浏览器计算各元素几何信息的过程: 元素的大小以及在页面中的位置。
 根据所用的 CSS、元素的内容或父级元素，每个元素都将有显式或隐含的大小信息。此过程在 Chrome、Opera、Safari 和 Internet Explorer 中称为布局 (Layout)。
 在 Firefox 中称为自动重排 (Reflow)，但实际上其过程是一样的。
 
 
-与样式计算相似，布局开销的直接考虑因素如下：
+与样式计算相似，布局开销的直接考虑因素如下:
 
 1. 需要布局的元素数量。
 2. 这些布局的复杂性。
@@ -48,7 +48,7 @@ description:布局是浏览器计算各元素几何信息的过程：元素的�
 
 **布局几乎总是作用到整个文档。** 如果有大量元素，将需要很长时间来算出所有元素的位置和尺寸。
 
-如果无法避免布局，关键还是要使用 Chrome DevTools 来查看布局要花多长时间，并确定布局是否为造成瓶颈的原因。首先，打开 DevTools，选择“Timeline”标签，点击“record”按钮，然后与您的网站交互。当您停止记录时，将看到网站表现情况的详细分析：
+如果无法避免布局，关键还是要使用 Chrome DevTools 来查看布局要花多长时间，并确定布局是否为造成瓶颈的原因。首先，打开 DevTools，选择“Timeline”标签，点击“record”按钮，然后与您的网站交互。当您停止记录时，将看到网站表现情况的详细分析:
 
 <img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" alt="DevTools 显示布局要较长时间" />
 
@@ -64,7 +64,7 @@ Note: 想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确
 
 <img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" alt="使用浮动作为布局" />
 
-如果我们更新此示例以使用 Flexbox（Web 平台的新模型），则出现不同的情况：
+如果我们更新此示例以使用 Flexbox（Web 平台的新模型），则出现不同的情况:
 
 <img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" alt="使用 flexbox 作为布局" />
 
@@ -74,13 +74,13 @@ Note: 想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确
 
 ## 避免强制同步布局
 
-将一帧送到屏幕会采用如下顺序：
+将一帧送到屏幕会采用如下顺序:
 
 <img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" alt="使用 flexbox 作为布局" />
 
 首先 JavaScript 运行，然后计算样式，然后布局。但是，可以使用 JavaScript 强制浏览器提前执行布局。这被称为**强制同步布局**。
 
-要记住的第一件事是，在 JavaScript 运行时，来自上一帧的所有旧布局值是已知的，并且可供您查询。因此，如果（例如）您要在帧的开头写出一个元素（让我们称其为“框”）的高度，可能编写一些如下代码：
+要记住的第一件事是，在 JavaScript 运行时，来自上一帧的所有旧布局值是已知的，并且可供您查询。因此，如果（例如）您要在帧的开头写出一个元素（让我们称其为“框”）的高度，可能编写一些如下代码:
 
 
     // Schedule our function to run at the start of the frame.
@@ -92,7 +92,7 @@ Note: 想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确
     }
 
 
-如果在请求此框的高度之前，已更改其样式，就会出现问题：
+如果在请求此框的高度之前，已更改其样式，就会出现问题:
 
 
     function logBoxHeight() {
@@ -107,9 +107,9 @@ Note: 想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确
 
 现在，为了回答高度问题，浏览器必须先应用样式更改（由于增加了 `super-big` 类），然后运行布局。这时它才能返回正确的高度。这是不必要的，并且可能是开销很大的工作。
 
-因此，始终应先批量读取样式并执行（浏览器可以使用上一帧的布局值），然后执行任何写操作：
+因此，始终应先批量读取样式并执行（浏览器可以使用上一帧的布局值），然后执行任何写操作:
 
-正确完成时，以上函数应为：
+正确完成时，以上函数应为:
 
 
     function logBoxHeight() {
@@ -124,7 +124,7 @@ Note: 想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确
 大部分情况下，并不需要应用样式然后查询值；使用上一帧的值就足够了。与浏览器同步（或比其提前）运行样式计算和布局可能成为瓶颈，并且您一般不想做这种设计。
 
 ## 避免布局抖动
-有一种方式会使强制同步布局甚至更糟：接二连三地执行大量这种布局。看看这个代码：
+有一种方式会使强制同步布局甚至更糟: 接二连三地执行大量这种布局。看看这个代码:
 
 
     function resizeAllParagraphsToMatchBlockWidth() {
@@ -138,7 +138,7 @@ Note: 想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确
 
 此代码循环处理一组段落，并设置每个段落的宽度以匹配一个称为“box”的元素的宽度。这看起来没有害处，但问题是循环的每次迭代读取一个样式值 (`box.offsetWidth`)，然后立即使用此值来更新段落的宽度 (`paragraphs[i].style.width`)。在循环的下次迭代时，浏览器必须考虑样式已更改这一事实，因为 `offsetWidth` 是上次请求的（在上一次迭代中），因此它必须应用样式更改，然后运行布局。每次迭代都将出现此问题！
 
-此示例的修正方法还是先读取值，然后写入值：
+此示例的修正方法还是先读取值，然后写入值:
 
 
     // Read.

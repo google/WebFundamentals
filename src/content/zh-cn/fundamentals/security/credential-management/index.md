@@ -21,7 +21,7 @@ book_path: /web/fundamentals/_book.yaml
   </figure>
 </div>
 
-凭据管理 API：
+凭据管理 API:
 
 * **简化登录流程** - 用户可以自动重新登录某个网站，即使其会话已过期。
 * **支持使用帐户选择器一键登录** - 系统显示原生帐户选择器，无需使用登录表单。
@@ -38,7 +38,7 @@ book_path: /web/fundamentals/_book.yaml
 
 ## 实现凭据管理的步骤
 
-成功集成凭据管理 API 的方法有很多，集成的具体做法取决于网站的结构和用户体验，使用此流程的网站具有以下用户体验优势：
+成功集成凭据管理 API 的方法有很多，集成的具体做法取决于网站的结构和用户体验，使用此流程的网站具有以下用户体验优势:
 
 
 
@@ -48,7 +48,7 @@ book_path: /web/fundamentals/_book.yaml
 * 当用户退出时，网站确保他们不会自动重新登录。
 
 
-要点：使用凭据管理 API 需要通过安全来源提供的页面。
+要点: 使用凭据管理 API 需要通过安全来源提供的页面。
 
 
 ### 检索用户凭据并登录
@@ -56,7 +56,7 @@ book_path: /web/fundamentals/_book.yaml
 要使用户登录，请从浏览器的密码管理器检索凭据，并使用这些凭据让用户登录。
 
 
-例如：
+例如:
 
 1. 当用户访问您的网站并尚未登录时，调用 `navigator.credential.get()`
 2. 使用检索的凭据让用户登录。
@@ -68,7 +68,7 @@ book_path: /web/fundamentals/_book.yaml
 
 ### 保存或更新用户凭据
 
-如果用户使用用户名和密码登录：
+如果用户使用用户名和密码登录:
 
 1. 在用户成功登录后，创建一个帐号或更改密码，使用用户 ID 和密码创建 `PasswordCredential`。
 2. 使用 `navigator.credentials.store()` 保存凭据对象。
@@ -76,7 +76,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-如果用户通过 Google Sign-In、Facebook、GitHub 等联合身份提供程序登录：
+如果用户通过 Google Sign-In、Facebook、GitHub 等联合身份提供程序登录:
 
 
 1. 在用户成功登录后，创建帐号或更改密码，使用用户的电子邮件地址作为 ID 创建 `FederatedCredential`，并通过 `.provider` 指定身份提供程序

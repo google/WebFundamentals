@@ -32,12 +32,12 @@ description:在 Chrome DevTools 中设置永久制作，以便立即查看更改
 
 ## 将本地源文件添加到工作区
 
-要将本地文件夹的源文件设置为可以在 Sources 面板中修改，请执行以下操作：
+要将本地文件夹的源文件设置为可以在 Sources 面板中修改，请执行以下操作:
 
 1. 右键点击左侧面板。
 2. 选择 **Add Folder to Workspace**。
 3. 选择您想要映射的本地文件夹的位置。
-4. 点击 **Allow**，授予 Chrome 访问该文件夹的权限。 
+4. 点击 **Allow**，授予 Chrome 访问该文件夹的权限。
 
 ![将文件夹添加到工作区](imgs/addfolder.png)
 
@@ -45,7 +45,7 @@ description:在 Chrome DevTools 中设置永久制作，以便立即查看更改
 
 ## 暂存保留的更改
 
-您已将本地文件夹映射到工作区中，但浏览器仍在提供网络文件夹内容。要将永久更改自动暂存到浏览器中，请将文件夹中的本地文件映射到网址：
+您已将本地文件夹映射到工作区中，但浏览器仍在提供网络文件夹内容。要将永久更改自动暂存到浏览器中，请将文件夹中的本地文件映射到网址:
 
 
 
@@ -87,7 +87,7 @@ description:在 Chrome DevTools 中设置永久制作，以便立即查看更改
 
 ### 添加文件
 
-要添加文件，请执行以下操作：
+要添加文件，请执行以下操作:
 
 1. 右键点击 Sources 左侧窗格中的文件夹。
 2. 选择 **New File**。
@@ -95,7 +95,7 @@ description:在 Chrome DevTools 中设置永久制作，以便立即查看更改
 
 ### 删除文件
 
-要删除文件，请执行以下操作：
+要删除文件，请执行以下操作:
 
 1. 右键点击 Sources 左侧窗格中的文件。
 2. 选择 **Delete** 并点击 **Yes** 确认。
@@ -105,7 +105,7 @@ description:在 Chrome DevTools 中设置永久制作，以便立即查看更改
 对文件进行重大更改前，复制原始文件进行备份非常有用。
 
 
-要复制文件，请进行以下操作：
+要复制文件，请进行以下操作:
 
 1. 右键点击 Sources 左侧窗格中的文件。
 2. 选择 **Make a Copy...**。
@@ -128,9 +128,9 @@ description:在 Chrome DevTools 中设置永久制作，以便立即查看更改
 
 
 
-要在多个文件中搜索某个字符串，请执行以下操作：
+要在多个文件中搜索某个字符串，请执行以下操作:
 
-1. 打开搜索窗口：点击 **Show Drawer** 按钮 ![Show Drawer](imgs/show_drawer_button.png){:.inline} ，然后点击 **Search**；或者按 <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">F</kbd> 或 <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Opt</kbd> + <kbd class="kbd">F</kbd> (Mac)。
+1. 打开搜索窗口: 点击 **Show Drawer** 按钮 ![Show Drawer](imgs/show_drawer_button.png){:.inline} ，然后点击 **Search**；或者按 <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">F</kbd> 或 <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Opt</kbd> + <kbd class="kbd">F</kbd> (Mac)。
 2. 将字符串键入搜索字段并按 **Enter**。
 3. 如果字符串是一个正则表达式或者需要不区分大小写，请点击相应的框。
 

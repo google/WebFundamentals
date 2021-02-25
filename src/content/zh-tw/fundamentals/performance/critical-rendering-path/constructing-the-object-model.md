@@ -26,20 +26,20 @@ Warning: A tag here did NOT convert properly, please fix! ''
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-首先，我們從最簡單的情況開始講解：一個純 HTML 網頁，只包含一些文字和一張圖片。瀏覽器需要做什麼才能處理這個簡單的網頁呢？
+首先，我們從最簡單的情況開始講解: 一個純 HTML 網頁，只包含一些文字和一張圖片。瀏覽器需要做什麼才能處理這個簡單的網頁呢？
 
 <img src="images/full-process.png" alt="DOM 建構程序">
 
-1. **轉換：**瀏覽器從硬碟或網路讀取 HTML 的原始位元組，然後根據指定的檔案編碼格式 (例如 UTF-8)，將其轉換為相應字元。
-1. **權杖化：**瀏覽器將字串轉換為 [W3C HTML5 標準](http://www.w3.org/TR/html5/){: .external }指定的不同權杖，例如"<html>"、"<body>"以及其他帶有「角括號」的字串。每個權杖都具有特殊的含義和一套規則。
-1. **詞法分析：**發出的權杖轉換為定義其屬性和規則的「物件」。
-1. **DOM 建構：**最後，因為 HTML 標記定義不同標記之間的關係 (某些標記嵌套在其他標籤中)，建立的物件會在樹狀資料結構中連結起來，而樹狀資料結構也會捕捉原始標記中定義的上下層級關係：例如 _HTML_ 物件是 _body_ 物件的上層物件，_body_ 是 _paragraph_ 物件的上層物件等等。
+1. **轉換: **瀏覽器從硬碟或網路讀取 HTML 的原始位元組，然後根據指定的檔案編碼格式 (例如 UTF-8)，將其轉換為相應字元。
+1. **權杖化: **瀏覽器將字串轉換為 [W3C HTML5 標準](http://www.w3.org/TR/html5/){: .external }指定的不同權杖，例如"<html>"、"<body>"以及其他帶有「角括號」的字串。每個權杖都具有特殊的含義和一套規則。
+1. **詞法分析: **發出的權杖轉換為定義其屬性和規則的「物件」。
+1. **DOM 建構: **最後，因為 HTML 標記定義不同標記之間的關係 (某些標記嵌套在其他標籤中)，建立的物件會在樹狀資料結構中連結起來，而樹狀資料結構也會捕捉原始標記中定義的上下層級關係: 例如 _HTML_ 物件是 _body_ 物件的上層物件，_body_ 是 _paragraph_ 物件的上層物件等等。
 
 <img src="images/dom-tree.png" class="center" alt="DOM 樹狀結構">
 
 **上述整個流程的最終輸出產物是文件物件模型，也就是這個簡單網頁的「DOM」。瀏覽器會使用 DOM 完成對相應網頁的所有後續處理。**
 
-每次瀏覽器處理 HTML 標記時，都必須完成上述所有步驟：將位元組轉換為字元、標示權杖、將權杖轉換為節點，然後建構 DOM 樹狀結構。整個過程可能需要一段時間，尤其在處理大量 HTML 時更是如此。
+每次瀏覽器處理 HTML 標記時，都必須完成上述所有步驟: 將位元組轉換為字元、標示權杖、將權杖轉換為節點，然後建構 DOM 樹狀結構。整個過程可能需要一段時間，尤其在處理大量 HTML 時更是如此。
 
 <img src="images/dom-timeline.png" class="center" alt="在 DevTools 中追蹤 DOM 建構流程">
 
@@ -51,19 +51,19 @@ DOM 樹狀結構準備就緒後，我們是否就有足夠的資訊在螢幕上�
 
 ## CSS 物件模型 (CSSOM)
 
-瀏覽器建構這個簡單網頁的 DOM 時，在文件的 head 區段會遇到一個 link 標記，用於參照外部 CSS 樣式表 style.css。瀏覽器預期將會需要這項資源來轉譯網頁，因此會立即發出對這項資源的請求，而系統會傳回以下內容：
+瀏覽器建構這個簡單網頁的 DOM 時，在文件的 head 區段會遇到一個 link 標記，用於參照外部 CSS 樣式表 style.css。瀏覽器預期將會需要這項資源來轉譯網頁，因此會立即發出對這項資源的請求，而系統會傳回以下內容:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
-當然，我們本來可以直接在 HTML 標記中聲明樣式 (內嵌)，但是如果將 CSS 與 HTML 分開，我們就可以將內容和設計分別進行處理：設計人員可以處理 CSS，開發人員則可以處理 HTML 等等。
+當然，我們本來可以直接在 HTML 標記中聲明樣式 (內嵌)，但是如果將 CSS 與 HTML 分開，我們就可以將內容和設計分別進行處理: 設計人員可以處理 CSS，開發人員則可以處理 HTML 等等。
 
-與 HTML 相同，我們需要將收到的 CSS 規則轉換為瀏覽器可以理解及處理的內容。因此，我們再重複一次與處理 HTML時非常類似的過程：
+與 HTML 相同，我們需要將收到的 CSS 規則轉換為瀏覽器可以理解及處理的內容。因此，我們再重複一次與處理 HTML時非常類似的過程:
 
 <img src="images/cssom-construction.png" class="center" alt="CSSOM 建構步驟">
 
-CSS 位元組會轉換為字元，然後轉換為權杖和節點，最後連結到樹狀結構上，稱為「CSS 物件模型」，或縮寫為 CSSOM：
+CSS 位元組會轉換為字元，然後轉換為權杖和節點，最後連結到樹狀結構上，稱為「CSS 物件模型」，或縮寫為 CSSOM:
 
 <img src="images/cssom-tree.png" class="center" alt="CSSOM 樹狀結構">
 
@@ -73,11 +73,8 @@ CSSOM 為什麼採用樹狀結構？ 為網頁上的任何物件計算最終的�
 
 此外請注意，上述的樹狀結構不是完整的 CSSOM 樹狀結構，只顯示了我們決定在樣式表中覆蓋的樣式。每個瀏覽器都會提供一套預設的樣式，也稱為「使用者代理樣式」，也就是不提供任何自訂樣式時看到的樣式。我們的樣式只是覆蓋這些預設樣式集 (例如 [預設 IE 樣式](http://www.iecss.com/){: .external })。如果您曾在 Chrome DevTools 中檢查過「計算的樣式」，並且想知道所有樣式從何而來，現在真相大白了！
 
-想知道 CSS 處理所需的時間嗎？ 您可以在 DevTools 中記錄時間軸，並查詢「Recalculate Style」事件：與 DOM 剖析不同，時間軸不會顯示單獨的「Parse CSS」項目，而是捕捉剖析和 CSSOM 樹狀結構建構作業，加上此事件下計算的樣式遞迴計算。
+想知道 CSS 處理所需的時間嗎？ 您可以在 DevTools 中記錄時間軸，並查詢「Recalculate Style」事件: 與 DOM 剖析不同，時間軸不會顯示單獨的「Parse CSS」項目，而是捕捉剖析和 CSSOM 樹狀結構建構作業，加上此事件下計算的樣式遞迴計算。
 
 <img src="images/cssom-timeline.png" class="center" alt="在 DevTools 中追蹤 CSSOM 建構流程">
 
 處理我們的小小樣式表需要大約 0.6 毫秒，而且會影響網頁上的 8 個元素，雖然時間不長，但也會產生成本。不過，這 8 個元素是從哪來的？ CSSOM 和 DOM 是獨立的資料結構！ 原來，瀏覽器隱藏了一個重要的步驟。接下來，我們會探討將 DOM 和 CSSOM 連結在一起的轉譯樹狀結構。
-
-
-

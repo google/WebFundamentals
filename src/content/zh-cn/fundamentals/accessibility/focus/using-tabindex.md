@@ -21,7 +21,7 @@ description: 使用 tabindex 修改 DOM 顺序
 您可以利用 `tabindex` 为可聚焦页面元素指定显式顺序、在 Tab 键顺序中插入原本不可聚焦的元素以及从 Tab 键顺序中移除元素。
 
 
-例如：`tabindex="0"`：在自然 Tab 键顺序中插入一个元素。可通过按 `Tab` 键聚焦该元素，也可通过调用其 `focus()` 方法聚焦该元素
+例如: `tabindex="0"`: 在自然 Tab 键顺序中插入一个元素。可通过按 `Tab` 键聚焦该元素，也可通过调用其 `focus()` 方法聚焦该元素
 
 
 
@@ -36,7 +36,7 @@ description: 使用 tabindex 修改 DOM 顺序
 <custom-button tabindex="0">Press Tab to Focus Me!</custom-button>
 {% endframebox %}
 
-`tabindex="-1"`：从自然 Tab 键顺序中移除某个元素，但仍可通过调用其 `focus()` 方法聚焦该元素
+`tabindex="-1"`: 从自然 Tab 键顺序中移除某个元素，但仍可通过调用其 `focus()` 方法聚焦该元素
 
 
     <button id="foo" tabindex="-1">I'm not keyboard focusable</button>
@@ -47,7 +47,7 @@ description: 使用 tabindex 修改 DOM 顺序
 <button onclick="foo.focus();">Focus my sibling</button>
 {% endframebox %}
 
-`tabindex="5"`：只要 tabindex 大于 0，就会将该元素跳至自然 Tab 键顺序的最前面。
+`tabindex="5"`: 只要 tabindex 大于 0，就会将该元素跳至自然 Tab 键顺序的最前面。
 如果有多个元素的 tabindex 均大于 0，Tab 键顺序将以大于 0 的最小值为起点，从小到大排序。使用大于 0 的 tabindex 被视为**反面模式**。
 
 

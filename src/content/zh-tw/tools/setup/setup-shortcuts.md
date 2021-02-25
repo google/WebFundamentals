@@ -21,13 +21,13 @@ description:爲您反覆使用的命令行任務設置快捷方式。如果您�
 ## 如何設置
 
 創建命令行快捷方式最簡單的方法就是將常見命令的別名添加至 bashrc 文件。
-在 Mac 或 Linux 上：
+在 Mac 或 Linux 上:
 
-1. 從命令行任意位置，鍵入：
+1. 從命令行任意位置，鍵入:
 
         open -a 'Sublime Text' ~/.bashrc
 
-2. 添加新別名，例如：
+2. 添加新別名，例如:
 
         alias master='git checkout master'
 

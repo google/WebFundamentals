@@ -5,7 +5,7 @@ description:Shadow DOM 可让网络开发者为网络组件创建独立的 DOM �
 {# wf_updated_on: 2016-10-13 #}
 {# wf_published_on: 2016-08-01 #}
 
-# Shadow DOM v1：独立的网络组件 {: .page-title }
+# Shadow DOM v1: 独立的网络组件 {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
@@ -26,7 +26,7 @@ Note: **已经很熟悉 Shadow DOM？**本文章介绍新版 <a href="http://w3c
 
 
 
-Shadow DOM 是四大网络组件标准之一：[HTML 模板](https://www.html5rocks.com/en/tutorials/webcomponents/template/)、[Shadow DOM][sd_spec_whatwg]、[自定义元素](/web/fundamentals/getting-started/primers/customelements)以及 [HTML 导入](https://www.html5rocks.com/en/tutorials/webcomponents/imports/)。
+Shadow DOM 是四大网络组件标准之一: [HTML 模板](https://www.html5rocks.com/en/tutorials/webcomponents/template/)、[Shadow DOM][sd_spec_whatwg]、[自定义元素](/web/fundamentals/getting-started/primers/customelements)以及 [HTML 导入](https://www.html5rocks.com/en/tutorials/webcomponents/imports/)。
 
 
 
@@ -35,12 +35,12 @@ Shadow DOM 是四大网络组件标准之一：[HTML 模板](https://www.html5ro
 您无需编写使用 shadow DOM 的网络组件。但是如果您有编写，可充分利用其各种优势（CSS 作用域、DOM 封装和组合），并构建可重复使用的[自定义元素](/web/fundamentals/getting-started/primers/customelements)，这些元素具有弹性、高度可配置且高度可重用。如果自定义元素是创建新 HTML（通过 JS API）的方式，shadow DOM 则是创建其 HTML 和 CSS 的方式。这两种 API 组合使用，通过独立的 HTML、CSS 和 JavaScript 来创建组件。
 
 
-Shadow DOM 这款工具旨在构建基于组件的应用。因此，可为网络开发中的常见问题提供解决方案：
+Shadow DOM 这款工具旨在构建基于组件的应用。因此，可为网络开发中的常见问题提供解决方案:
 
 
-- **隔离 DOM**：组件的 DOM 是独立的（例如，`document.querySelector()` 不会返回组件 shadow DOM 中的节点）。
-- **作用域 CSS**：shadow DOM 内部定义的 CSS 在其作用域内。样式规则不会泄漏，页面样式也不会渗入。
-- **组合**：为组件设计一个声明性、基于标记的 API。
+- **隔离 DOM**: 组件的 DOM 是独立的（例如，`document.querySelector()` 不会返回组件 shadow DOM 中的节点）。
+- **作用域 CSS**: shadow DOM 内部定义的 CSS 在其作用域内。样式规则不会泄漏，页面样式也不会渗入。
+- **组合**: 为组件设计一个声明性、基于标记的 API。
 - **简化 CSS** - 作用域 DOM 意味着您可以使用简单的 CSS 选择器，更通用的 id/类名称，而无需担心命名冲突。
 - **效率** - 将应用看成是多个 DOM 块，而不是一个大的（全局性）页面。
 
@@ -80,9 +80,9 @@ HTML 因其易于使用的特点驱动着网络的发展。通过声明几个标
 因此，文档对象模型 (DOM) 应运而生。
 
 
-浏览器加载网页时会做一些很有趣的事情。其中之一就是它会将编写的 HTML 转变成活动文档。为理解页面的结构，浏览器通常会将 HTML（静态文本字符串）解析为数据模型（对象/节点）。浏览器通过创建一个节点树来保留 HTML 的层次结构：DOM。
+浏览器加载网页时会做一些很有趣的事情。其中之一就是它会将编写的 HTML 转变成活动文档。为理解页面的结构，浏览器通常会将 HTML（静态文本字符串）解析为数据模型（对象/节点）。浏览器通过创建一个节点树来保留 HTML 的层次结构: DOM。
 DOM 很酷的一点在于它能够生动地展示您的页面。
-与我们编写的静态 HTML 不同，浏览器生成的节点包含有属性、方法，而且最棒的是可通过程序进行操作！这就是为什么我们直接使用 JavaScript 即可创建 DOM 元素的原因：
+与我们编写的静态 HTML 不同，浏览器生成的节点包含有属性、方法，而且最棒的是可通过程序进行操作！这就是为什么我们直接使用 JavaScript 即可创建 DOM 元素的原因:
 
 
 
@@ -93,7 +93,7 @@ DOM 很酷的一点在于它能够生动地展示您的页面。
     document.body.appendChild(header);
 
 
-生成以下 HTML 标记：
+生成以下 HTML 标记:
 
 
     <body>
@@ -108,7 +108,7 @@ DOM 很酷的一点在于它能够生动地展示您的页面。
 
 ####  影子中的 DOM{: #sddom}
 
-Shadow DOM 与普通 DOM 相同，但有两点区别：1) 创建/使用的方式；2) 与页面其他部分有关的行为方式。
+Shadow DOM 与普通 DOM 相同，但有两点区别: 1) 创建/使用的方式；2) 与页面其他部分有关的行为方式。
 通常，您创建 DOM 节点并将其附加至其他元素作为子项。
 借助于 shadow DOM，您可以创建作用域 DOM 树，该 DOM 树附加至该元素上，但与其自身真正的子项分离开来。这一作用域子树称为**影子树**。被附着的元素称为**影子宿主**。
 您在影子中添加的任何项均将成为宿主元素的本地项，包括 `<style>`。
@@ -118,7 +118,7 @@ Shadow DOM 与普通 DOM 相同，但有两点区别：1) 创建/使用的方式
 ##  创建 shadow DOM {: #create}
 
 **影子根**是附加至“宿主”元素的文档片段。元素通过附加影子根来获取其 shadow DOM。
-要为元素创建 shadow DOM，请调用 `element.attachShadow()`：
+要为元素创建 shadow DOM，请调用 `element.attachShadow()`:
 
 
 
@@ -134,14 +134,14 @@ Shadow DOM 与普通 DOM 相同，但有两点区别：1) 创建/使用的方式
 这就是网络。我们可自主选择。
 
 规范[定义了元素列表](http://w3c.github.io/webcomponents/spec/shadow/#h-methods)，这些元素无法托管影子树，
-元素之所以在所选之列，其原因如下：
+元素之所以在所选之列，其原因如下:
 
 
 - 浏览器已为该元素托管其自身的内部 shadow DOM（`<textarea>`、`<input>`）。
 
 - 让元素托管 shadow DOM 毫无意义 (`<img>`)。
 
-例如，以下方法行不通：
+例如，以下方法行不通:
 
 
     document.createElement('input').attachShadow({mode: 'open'});
@@ -155,7 +155,7 @@ Shadow DOM 与普通 DOM 相同，但有两点区别：1) 创建/使用的方式
 
 
 
-**例如** - 自定义元素**将 shadow DOM 附加至其自身**，对其 DOM/CSS 进行封装：
+**例如** - 自定义元素**将 shadow DOM 附加至其自身**，对其 DOM/CSS 进行封装:
 
 
     // Use custom elements API v1 to register a new HTML tag and define its JS behavior
@@ -197,11 +197,11 @@ Note: 尝试运行该示例时，您可能会注意到没有任何渲染。
 组合是 `<select>`、`<details>`、`<form>` 和 `<video>` 等原生元素如此灵活的原因所在。
 这些标记中的每个标记接受特定的 HTML 作为子项，并且加以特殊处理。
 例如，`<select>` 知道如何将 `<option>` 和 `<optgroup>` 渲染为下拉和多选小部件。`<details>` 元素将 `<summary>` 渲染为可展开的箭头。
-甚至 `<video>` 知道如何处理特定的子项：`<source>` 元素未进行渲染，但却会影响视频的行为。多么神奇！
+甚至 `<video>` 知道如何处理特定的子项: `<source>` 元素未进行渲染，但却会影响视频的行为。多么神奇！
 
 
 
-###  术语：light DOM 与 shadow DOM {: #lightdom}
+###  术语: light DOM 与 shadow DOM {: #lightdom}
 
 Shadow DOM 组合引入了大量与网络开发相关的新的基础知识。
 为避免陷入迷茫，我们先标准化一些术语，这样我们就能讲同样的行话。
@@ -290,7 +290,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
 您还可以创建**已命名 slot**。已命名 slot 是 shadow DOM 中用户可通过名称引用的特定槽。
 
 
-**例如** - `<fancy-tabs>` shadow DOM 中的已命名 slot：
+**例如** - `<fancy-tabs>` shadow DOM 中的已命名 slot:
 
 
     #shadow-root
@@ -302,7 +302,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
       </div>
 
 
-组件用户对 `<fancy-tabs>` 的声明类似于：
+组件用户对 `<fancy-tabs>` 的声明类似于:
 
 
     <fancy-tabs>
@@ -325,7 +325,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
     </fancy-tabs>
 
 
-而且如果您很好奇，您会发现扁平树看起来类似于：
+而且如果您很好奇，您会发现扁平树看起来类似于:
 
 
     <fancy-tabs>
@@ -360,7 +360,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
 
 ###  组件定义的样式{: #host}
 
-请记住，shadow DOM 最有用的功能是**作用域 CSS**：
+请记住，shadow DOM 最有用的功能是**作用域 CSS**:
 
 - 外部页面中的 CSS 选择器不应用于组件内部。
 - 内部定义的样式也不会渗出。它们的作用域仅限于宿主元素。
@@ -393,7 +393,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
       </div>
 
 
-样式表的作用域也仅限于影子树：
+样式表的作用域也仅限于影子树:
 
 
     #shadow-root
@@ -408,7 +408,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
       </div>
 
 
-您可能想知道在您添加 `multiple` 属性时，`<select>` 元素是如何渲染多选小部件（而不是下拉工具）的：
+您可能想知道在您添加 `multiple` 属性时，`<select>` 元素是如何渲染多选小部件（而不是下拉工具）的:
 
 
 <select multiple>
@@ -473,7 +473,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
 
 如果 `:host-context(<selector>)` 或其任意父级与 `<selector>` 匹配，它将与组件匹配。
 一个常见用途是根据组件的环境进行主题化。
-例如，很多人都通过将类应用到 `<html>` 或 `<body>` 进行主题化：
+例如，很多人都通过将类应用到 `<html>` 或 `<body>` 进行主题化:
 
 
 
@@ -484,7 +484,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
     </body>
 
 
-如果 `:host-context(.darktheme)` 为 `.darktheme` 的子级，它将对 `<fancy-tabs>` 进行样式化：
+如果 `:host-context(.darktheme)` 为 `.darktheme` 的子级，它将对 `<fancy-tabs>` 进行样式化:
 
 
 
@@ -502,7 +502,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
 `::slotted(<compound-selector>)` 与分布到 `<slot>` 中的节点匹配。
 
 
-比如说我们已创建了一个 name badge 组件：
+比如说我们已创建了一个 name badge 组件:
 
 
     <name-badge>
@@ -513,7 +513,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
     </name-badge>
 
 
-组件的 shadow DOM 可为用户的 `<h2>` 和 `.title` 设定样式：
+组件的 shadow DOM 可为用户的 `<h2>` 和 `.title` 设定样式:
 
 
     <style>
@@ -539,7 +539,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
 但是，light DOM 分布后，它_可以_采用其他样式（通过 shadow DOM 定义的样式）。
 
 
-另一个来自 `<fancy-tabs>` 的更深入的例子：
+另一个来自 `<fancy-tabs>` 的更深入的例子:
 
 
     const shadowRoot = this.attachShadow({mode: 'open'});
@@ -581,7 +581,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
     `;
 
 
-在该示例中，有两个 slot：用于标签标题的命名 slot，以及用于标签内容的命名 slot。
+在该示例中，有两个 slot: 用于标签标题的命名 slot，以及用于标签内容的命名 slot。
 用户选择一个标签后，我们会对其选择进行加粗并在面板上显示。
 这是通过选择具有 `selected` 属性的分布式节点来实现的。
 自定义元素的 JS（此处未显示）会在合适的时间添加此属性。
@@ -589,7 +589,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
 
 ###  从外部为组件设定样式{: #stylefromoutside}
 
-有几种方法可从外部为组件设定样式：最简单的方法是使用标记名称作为选择器：
+有几种方法可从外部为组件设定样式: 最简单的方法是使用标记名称作为选择器:
 
 
 
@@ -602,7 +602,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
     }
 
 
-**外部样式总是优先于在 shadow DOM 中定义的样式**。例如，如果用户编写选择器 `fancy-tabs { width: 500px; }`，它将优先于组件的规则：`:host { width: 650px;}`。
+**外部样式总是优先于在 shadow DOM 中定义的样式**。例如，如果用户编写选择器 `fancy-tabs { width: 500px; }`，它将优先于组件的规则: `:host { width: 650px;}`。
 
 
 
@@ -614,9 +614,9 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
 
 如果组件的作者通过 [CSS 自定义属性][css_props]提供样式钩子，则用户可调整内部样式。
 从概念上看，这与 `<slot>` 类似。
-您创建“样式占位符”以便用户进行替换：
+您创建“样式占位符”以便用户进行替换:
 
-**例如** - `<fancy-tabs>` 可让用户替换背景颜色：
+**例如** - `<fancy-tabs>` 可让用户替换背景颜色:
 
 
     <!-- main page -->
@@ -629,7 +629,7 @@ Slot 实际上并不移动 DOM；它们在 shadow DOM 内部的其他位置进�
     <fancy-tabs background>...</fancy-tabs>
 
 
-在其 shadow DOM 内部：
+在其 shadow DOM 内部:
 
 
     :host([background]) {
@@ -655,7 +655,7 @@ shadow DOM 的另一情况称为“闭合”模式。创建闭合影子树后，
 
 
 
-**例如** - 创建一个闭合的影子树：
+**例如** - 创建一个闭合的影子树:
 
 
     const div = document.createElement('div');
@@ -664,7 +664,7 @@ shadow DOM 的另一情况称为“闭合”模式。创建闭合影子树后，
     // shadowRoot.host === div
 
 
-其他 API 也会受到闭合模式的影响：
+其他 API 也会受到闭合模式的影响:
 
 - `Element.assignedSlot` / `TextNode.assignedSlot` 返回 `null`
 - `Event.composedPath()`，用于与 shadow DOM 内部元素关联的事件，返回 []
@@ -676,7 +676,7 @@ Note: 闭合的影子树不是非常有用。有些开发者将闭合模式视�
 
 
 
-任何时候都不要使用 `{mode: 'closed'}` 来创建网络组件，以下是我总结的几点原因：
+任何时候都不要使用 `{mode: 'closed'}` 来创建网络组件，以下是我总结的几点原因:
 
 
 1. 人为的安全功能。没有什么能够阻止攻击者入侵 `Element.prototype.attachShadow`。
@@ -735,7 +735,7 @@ Note: 当组件的实例首次初始化时，`slotchange` 不触发。
 
 
 
-举个例子，比如您的 shadow DOM 看起来像这样：
+举个例子，比如您的 shadow DOM 看起来像这样:
 
     <slot><b>fallback content</b></slot>
 
@@ -770,15 +770,15 @@ Note: 当组件的实例首次初始化时，`slotchange` 不触发。
 
 有些事件甚至不会从 shadow DOM 中传播出去。
 
-**确实**会跨过影子边界的事件有：
+**确实**会跨过影子边界的事件有:
 
-- 聚焦事件：`blur`、`focus`、`focusin`、`focusout`
-- 鼠标事件：`click`、`dblclick`、`mousedown`、`mouseenter`、`mousemove`，等等
-- 滚轮事件：`wheel`
-- 输入事件：`beforeinput`、`input`
-- 键盘事件：`keydown`、`keyup`
-- 组合事件：`compositionstart`、`compositionupdate`、`compositionend`
-- 拖放事件：`dragstart`、`drag`、`dragend`、`drop`，等等
+- 聚焦事件: `blur`、`focus`、`focusin`、`focusout`
+- 鼠标事件: `click`、`dblclick`、`mousedown`、`mouseenter`、`mousemove`，等等
+- 滚轮事件: `wheel`
+- 输入事件: `beforeinput`、`input`
+- 键盘事件: `keydown`、`keyup`
+- 组合事件: `compositionstart`、`compositionupdate`、`compositionend`
+- 拖放事件: `dragstart`、`drag`、`dragend`、`drop`，等等
 
 **提示**
 
@@ -787,7 +787,7 @@ Note: 当组件的实例首次初始化时，`slotchange` 不触发。
 
 ####  使用自定义事件{: #customevents}
 
-通过影子树中内部节点触发的自定义 DOM 事件不会超出影子边界，除非事件是使用 `composed: true` 标记创建的：
+通过影子树中内部节点触发的自定义 DOM 事件不会超出影子边界，除非事件是使用 `composed: true` 标记创建的:
 
 
 
@@ -814,7 +814,7 @@ Note: 当组件的实例首次初始化时，`slotchange` 不触发。
 
 ### 处理焦点{: #focus}
 
-如果您从 [shadow DOM 的事件模型](#events)重新调用，将对在 shadow DOM 内部触发的事件进行调整，使其看起来来自宿主元素。例如，我们假设您点击某个影子根内部的 `<input>`：
+如果您从 [shadow DOM 的事件模型](#events)重新调用，将对在 shadow DOM 内部触发的事件进行调整，使其看起来来自宿主元素。例如，我们假设您点击某个影子根内部的 `<input>`:
 
 
 
@@ -825,13 +825,13 @@ Note: 当组件的实例首次初始化时，`slotchange` 不触发。
 
 
 `focus` 事件看起来来自 `<x-focus>`，而不是 `<input>`。
-与此类似，`document.activeElement` 将是 `<x-focus>`。如果影子根使用 `mode:'open'` 创建（请参阅[闭合模式](#closed)），您还可以访问获得焦点的外部节点：
+与此类似，`document.activeElement` 将是 `<x-focus>`。如果影子根使用 `mode:'open'` 创建（请参阅[闭合模式](#closed)），您还可以访问获得焦点的外部节点:
 
 
 
     document.activeElement.shadowRoot.activeElement // only works with open mode.
 
-如果存在多个级别的 shadow DOM（即自定义元素位于另一个自定义元素中），您需要以递归方式深入影子根以查找 `activeElement`：
+如果存在多个级别的 shadow DOM（即自定义元素位于另一个自定义元素中），您需要以递归方式深入影子根以查找 `activeElement`:
 
 
 
@@ -845,7 +845,7 @@ Note: 当组件的实例首次初始化时，`slotchange` 不触发。
     }
 
 
-焦点的另一个选项是 `delegatesFocus: true` 选项，它可以将元素的焦点行为拓展到影子树内：
+焦点的另一个选项是 `delegatesFocus: true` 选项，它可以将元素的焦点行为拓展到影子树内:
 
 
 - 如果您点击 shadow DOM 内的某个节点，且该节点不是一个可聚焦区域，那么第一个可聚焦区域将成为焦点。
@@ -901,7 +901,7 @@ Note: 当组件的实例首次初始化时，`slotchange` 不触发。
 
 
 
-如果是设置 `delegatesFocus: false`，下面将是您看到的结果：
+如果是设置 `delegatesFocus: false`，下面将是您看到的结果:
 
 <figure>
   <img src="imgs/delegateFocusFalse.png">
@@ -934,7 +934,7 @@ Note: 当组件的实例首次初始化时，`slotchange` 不触发。
 
 ###  使用 CSS 组件{: #containment}
 
-通常，网络组件的布局/样式/绘制相当独立。在 `:host` 中使用 [CSS containment](/web/updates/2016/06/css-containment) 可获得更好性能：
+通常，网络组件的布局/样式/绘制相当独立。在 `:host` 中使用 [CSS containment](/web/updates/2016/06/css-containment) 可获得更好性能:
 
 
 
@@ -1081,7 +1081,7 @@ For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs
 模板是用于声明网络组件结构的理想占位符。
 
 
-具体请参见[“自定义元素：构建可重复使用的网络组件”](/web/fundamentals/getting-started/primers/customelements)中的示例。
+具体请参见[“自定义元素: 构建可重复使用的网络组件”](/web/fundamentals/getting-started/primers/customelements)中的示例。
 
 
 ##  历史记录和浏览器支持{: #historysupport}
@@ -1092,7 +1092,7 @@ v0 规范提供了创建影子根的不同方法（`element.createShadowRoot`，
 
 
 
-如果您想了解旧版 v0 规范，可查看 html5rocks 文章：[1](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)、[2](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/)、[3](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/)。[shadow DOM v0 与 v1 的差异][differences]中也提供了大量的二者比较信息。
+如果您想了解旧版 v0 规范，可查看 html5rocks 文章: [1](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/)、[2](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/)、[3](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/)。[shadow DOM v0 与 v1 的差异][differences]中也提供了大量的二者比较信息。
 
 
 
@@ -1108,7 +1108,7 @@ Edge 在考虑中，但[优先级很高](https://developer.microsoft.com/en-us/m
 
 
 
-如希望获得 shadow DOM 检测功能，请查看是否存在 `attachShadow`：
+如希望获得 shadow DOM 检测功能，请查看是否存在 `attachShadow`:
 
 
     const supportsShadowDOMV1 = !!HTMLElement.prototype.attachShadow;
@@ -1120,12 +1120,12 @@ Edge 在考虑中，但[优先级很高](https://developer.microsoft.com/en-us/m
 在浏览器提供广泛支持前，[shadydom](https://github.com/webcomponents/shadydom) 和 [shadycss](https://github.com/webcomponents/shadycss) polyfill 可以为您提供 v1 功能。Shady DOM 可以模拟 Shadow DOM 的 DOM 作用域，而 shadycss polyfill 则可以模拟原生 API 提供的 CSS 自定义属性和样式作用域。
 
 
-安装 polyfill：
+安装 polyfill:
 
     bower install --save webcomponents/shadydom
     bower install --save webcomponents/shadycss
 
-使用 polyfill：
+使用 polyfill:
 
 
     function loadScript(src) {
@@ -1169,8 +1169,8 @@ Edge 在考虑中，但[优先级很高](https://developer.microsoft.com/en-us/m
 
 - [Shadow DOM v1 与 v0 的差异][differences]
 - [“基于 Slot 的 Shadow DOM API 简介”](https://webkit.org/blog/4096/introducing-shadow-dom-api/)（出自 WebKit 博客）。
-- [网络组件和模块化 CSS 之未来](https://philipwalton.github.io/talks/2015-10-26/)（作者：[Philip Walton](https://twitter.com/@philwalton)）
-- [“自定义元素：构建可重复使用的网络组件”](/web/fundamentals/getting-started/primers/customelements)（出自：Google 的 WebFundamentals）。
+- [网络组件和模块化 CSS 之未来](https://philipwalton.github.io/talks/2015-10-26/)（作者: [Philip Walton](https://twitter.com/@philwalton)）
+- [“自定义元素: 构建可重复使用的网络组件”](/web/fundamentals/getting-started/primers/customelements)（出自: Google 的 WebFundamentals）。
 - [Shadow DOM v1 规范][sd_spec_whatwg]
 - [自定义元素 v1 规范][ce_spec]
 

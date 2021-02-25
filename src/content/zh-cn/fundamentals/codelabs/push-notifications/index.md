@@ -42,11 +42,11 @@ description:在此代码实验室中，您将学习如何向网络应用添加�
 
 ### 下载示例代码
 
-您可以通过以下其中一种方式获取此代码实验室的示例代码：下载 zip 文件：
+您可以通过以下其中一种方式获取此代码实验室的示例代码: 下载 zip 文件:
 
 [链接](https://github.com/googlechrome/push-notifications/archive/master.zip)
 
-或者克隆此 Git 存储区：
+或者克隆此 Git 存储区:
 
     git clone https://github.com/GoogleChrome/push-notifications.git
 
@@ -58,21 +58,21 @@ description:在此代码实验室中，您将学习如何向网络应用添加�
 
 [链接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式：
+安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式:
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-在随后出现的窗口中，点击 Web Server 图标：
+在随后出现的窗口中，点击 Web Server 图标:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
-接下来您将看到此对话框，您可以在其中配置本地网络服务器：
+接下来您将看到此对话框，您可以在其中配置本地网络服务器:
 
 ![433870360ad308d4.png](img/433870360ad308d4.png)
 
 点击 __choose folder__ 按钮，然后选择 app 文件夹。这样您就可以通过网络服务器对话框（在 __Web Server URL(s)__ 部分）中突出显示的网址为正在进行的工作提供支持。
 
-在 Options 下，选中“Automatically show index.html”旁边的框，如下所示：
+在 Options 下，选中“Automatically show index.html”旁边的框，如下所示:
 
 ![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
@@ -80,7 +80,7 @@ description:在此代码实验室中，您将学习如何向网络应用添加�
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
-现在，在您的网络浏览器中访问您的网站（通过点击突出显示的 Web Server URL），然后您会看到如下页面：
+现在，在您的网络浏览器中访问您的网站（通过点击突出显示的 Web Server URL），然后您会看到如下页面:
 
 ![4525ec369fc2ae47.png](img/4525ec369fc2ae47.png)
 
@@ -104,7 +104,7 @@ description:在此代码实验室中，您将学习如何向网络应用添加�
 
 我们的 `app/index.html` 页面会加载 `scripts/main.js`，它位于我们将注册服务工作线程的 JavaScript 文件中。
 
-将以下代码添加到 `scripts/main.js`：
+将以下代码添加到 `scripts/main.js`:
 
 ```
 if ('serviceWorker' in navigator && 'PushManager' in window) {
@@ -131,19 +131,19 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
 请在浏览器中打开网址 __127.0.0.1:8887__ 以检查所做更改。
 
-打开 Chrome DevTools 以检查 `Service Worker is registered` 的控制台，如下所示：
+打开 Chrome DevTools 以检查 `Service Worker is registered` 的控制台，如下所示:
 
 ![de3ceca91043d278.png](img/de3ceca91043d278.png)
 
 ### 获取应用服务器密钥
 
-如需使用此代码实验室，您需要生成一些应用服务器密钥，我们可以使用此配套网站执行这一操作：[https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
+如需使用此代码实验室，您需要生成一些应用服务器密钥，我们可以使用此配套网站执行这一操作: [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 您可以在这里生成一个公私密钥对。
 
 ![a1304b99e7b981dd.png](img/a1304b99e7b981dd.png)
 
-将公钥复制到 `scripts/main.js` 替换 `<Your Public Key>` 值：
+将公钥复制到 `scripts/main.js` 替换 `<Your Public Key>` 值:
 
 ```
 const applicationServerPublicKey = '<Your Public Key>';
@@ -161,7 +161,7 @@ Note: 决不能将私钥放在网络应用中！
 
 我们将在 `scripts/main.js` 中创建两个函数，一个称为 `initialiseUI`，会检查用户当前有没有订阅，另一个称为 `updateBtn`，将启用我们的按钮，以及更改用户是否订阅的文本。
 
-我们希望 `initialiseUI` 函数如下所示：
+我们希望 `initialiseUI` 函数如下所示:
 
 ```
 function initialiseUI() {
@@ -227,7 +227,7 @@ navigator.serviceWorker.register('sw.js')
 
 目前我们的“Enable Push Messaging”按钮未执行太多的操作，让我们来修复这个问题。
 
-向 `initialiseUI()` 函数中的按钮添加点击侦听器，如下所示：
+向 `initialiseUI()` 函数中的按钮添加点击侦听器，如下所示:
 
 ```
 function initialiseUI() {
@@ -301,12 +301,12 @@ swRegistration.pushManager.subscribe({
 
 `userVisibleOnly` 参数基本上就表示承认您会在发送推送时显示通知。此时必须编写此值并且此值必须为 true。
 
-调用 `subscribe()` 会返回在执行以下操作后解析的 promise：
+调用 `subscribe()` 会返回在执行以下操作后解析的 promise:
 
 1. 用户已授权显示通知。
 2. 浏览器已向推送服务发送网络请求，以便获取详细信息来生成 PushSubscription。
 
-如果这些步骤成功执行，`subscribe()` promise 将通过 `PushSubscription` 解析。如果用户未授权，或者如果订阅用户存在任何问题，promise 将会拒绝，并显示错误。这会在我们的代码实验室中向我们提供以下 promise 链：
+如果这些步骤成功执行，`subscribe()` promise 将通过 `PushSubscription` 解析。如果用户未授权，或者如果订阅用户存在任何问题，promise 将会拒绝，并显示错误。这会在我们的代码实验室中向我们提供以下 promise 链:
 
 ```
 swRegistration.pushManager.subscribe({
@@ -331,7 +331,7 @@ swRegistration.pushManager.subscribe({
 
 如此一来，我们就可以收到订阅，并将用户视为已订阅用户，或者收到错误并将其打印到控制台。在这两种情况下，我们调用 `updateBtn()` 都是为了确保按钮已重新启用并且有合适的文本。
 
-我们可以在实际应用中使用 `updateSubscriptionOnServer` 方法将订阅发送到后端，但我们的代码实验室会使用此方法打印 UI 中的订阅，这将在稍后为我们提供帮助。将此方法添加到 `scripts/main.js`：
+我们可以在实际应用中使用 `updateSubscriptionOnServer` 方法将订阅发送到后端，但我们的代码实验室会使用此方法打印 UI 中的订阅，这将在稍后为我们提供帮助。将此方法添加到 `scripts/main.js`:
 
 ```
 function updateSubscriptionOnServer(subscription) {
@@ -352,7 +352,7 @@ function updateSubscriptionOnServer(subscription) {
 
 #### 试一试
 
-如果您返回到网络应用，并尝试点击此按钮，会看到如下所示的权限提示：
+如果您返回到网络应用，并尝试点击此按钮，会看到如下所示的权限提示:
 
 ![227cea0abe03a5b4.png](img/227cea0abe03a5b4.png)
 
@@ -368,7 +368,7 @@ function updateSubscriptionOnServer(subscription) {
 
 我们目前为止还没有解决的事情是，如果用户阻止权限请求会怎么样。这需要考虑一些特殊的注意事项，因为如果用户阻止权限，我们的网络应用将无法重新显示权限提示，也不能订阅用户，因此，我们需要至少停用推送按钮，以便用户知道无法使用此按钮。
 
-很明显，我们需要在 `updateBtn()` 函数中处理这个情况。我们只需要检查 `Notification.permission` 值，如下所示：
+很明显，我们需要在 `updateBtn()` 函数中处理这个情况。我们只需要检查 `Notification.permission` 值，如下所示:
 
 ```
 function updateBtn() {
@@ -413,7 +413,7 @@ function updateBtn() {
 
 在我们触发推送消息后，浏览器会收到推送消息，弄明白推送的服务工作线程，然后再唤醒相应的服务线程并分配推送事件。我们需要侦听此事件，显示通知作为结果。
 
-将以下代码添加到 `sw.js` 文件：
+将以下代码添加到 `sw.js` 文件:
 
 ```
 self.addEventListener('push', function(event) {
@@ -431,7 +431,7 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-我们来了解一下这个代码。我们通过向服务工作线程添加事件侦听器来侦听服务工作线程中的推送事件，代码如下所示：
+我们来了解一下这个代码。我们通过向服务工作线程添加事件侦听器来侦听服务工作线程中的推送事件，代码如下所示:
 
 ```
 self.addEventListener('push', ...... );
@@ -453,7 +453,7 @@ self.registration.showNotification(title, options);
 
 我们在推送事件中要介绍的最后一个内容是 `event.waitUntil()`。此方法带有 promise ，并且浏览器会保持服务工作线程处于活动状态并运行，直到传入的 promise 已进行解析。
 
-为了简化上述代码，使其易于理解，我们可以重新编写代码，如下所示：
+为了简化上述代码，使其易于理解，我们可以重新编写代码，如下所示:
 
 ```
 const notificationPromise = self.registration.showNotification(title, options);
@@ -470,7 +470,7 @@ event.waitUntil(notificationPromise);
 
 ![2b089bdf10a8a945.png](img/2b089bdf10a8a945.png)
 
-点击后，您会看到类似于如下的通知：
+点击后，您会看到类似于如下的通知:
 
 ![eee7f9133a97c1c4.png](img/eee7f9133a97c1c4.png)
 
@@ -484,7 +484,7 @@ Note: 如果这个步骤不管用，请通过 DevTools Application 面板中的 
 
 如果您点击以下其中一个通知，会发现没有发生任何事情。我们可以通过侦听服务工作线程中的 `notificationclick` 事件，处理通知点击。
 
-开始在 `sw.js` 中添加 `notificationclick` 侦听器，如下所示：
+开始在 `sw.js` 中添加 `notificationclick` 侦听器，如下所示:
 
 ```
 self.addEventListener('notificationclick', function(event) {
@@ -500,13 +500,13 @@ self.addEventListener('notificationclick', function(event) {
 
 当用户点击通知时，会调用 `notificationclick` 事件侦听器。
 
-在此代码实验室中，我们首先关闭点击过的通知：
+在此代码实验室中，我们首先关闭点击过的通知:
 
 ```
 event.notification.close();
 ```
 
-然后，打开新窗口/标签加载网址 [developers.google.com](/web/)，您可以随意更改此网址：）
+然后，打开新窗口/标签加载网址 [developers.google.com](/web/)，您可以随意更改此网址: ）
 
 ```
 clients.openWindow('https://developers.google.com/web/')
@@ -528,11 +528,11 @@ clients.openWindow('https://developers.google.com/web/')
 
 一般情况下，这个过程就是从网页向后端发送订阅，然后后端通过对订阅中的端点实施 API 调用，进而触发推送消息。
 
-这超出了此代码实验室的讨论范围，但您可以使用此代码实验室的配套网站 ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) 来触发实际的推送消息。复制粘贴页面底部的订阅：
+这超出了此代码实验室的讨论范围，但您可以使用此代码实验室的配套网站 ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) 来触发实际的推送消息。复制粘贴页面底部的订阅:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
-然后将此内容粘贴到配套网站的 *Subscription to Send To*  文本区域：
+然后将此内容粘贴到配套网站的 *Subscription to Send To*  文本区域:
 
 ![a12fbfdc08233592.png](img/a12fbfdc08233592.png)
 
@@ -556,7 +556,7 @@ clients.openWindow('https://developers.google.com/web/')
 
 我们到现在还没介绍如何取消用户的推送消息订阅。为此，我们需要对 `PushSubscription` 调用 `unsubscribe()`。
 
-返回到我们的 `scripts/main.js` 文件，将 `initialiseUI()` 中 `pushButton` 的点击侦听器更改为以下内容：
+返回到我们的 `scripts/main.js` 文件，将 `initialiseUI()` 中 `pushButton` 的点击侦听器更改为以下内容:
 
 ```
 pushButton.addEventListener('click', function() {
@@ -569,7 +569,7 @@ pushButton.addEventListener('click', function() {
 });
 ```
 
-请注意，我们现在准备调用新函数 `unsubscribeUser()`。在此方法中，我们会获取当前的订阅，并对其调用取消订阅。将以下代码添加到 `scripts/main.js`：
+请注意，我们现在准备调用新函数 `unsubscribeUser()`。在此方法中，我们会获取当前的订阅，并对其调用取消订阅。将以下代码添加到 `scripts/main.js`:
 
 ```
 function unsubscribeUser() {
@@ -595,7 +595,7 @@ function unsubscribeUser() {
 
 我们来了解一下这个函数。
 
-首先，我们通过调用 `getSubscription()` 获取当前的订阅：
+首先，我们通过调用 `getSubscription()` 获取当前的订阅:
 
 ```
 swRegistration.pushManager.getSubscription()

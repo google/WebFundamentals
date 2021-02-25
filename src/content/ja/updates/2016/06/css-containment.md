@@ -14,7 +14,7 @@ description: CSS Containment という新しい仕様によって、ブラウザ
 
 CSS Containment という新しい仕様によって、ブラウザが行うスタイル、レイアウト、描画の範囲を制限できるようになります。
 
-<img class="screenshot" src="/web/updates/images/2016/06/containment.jpg" alt="CSS Containment の比較。使用前：レイアウトに 59.6ms、使用後：レイアウトに 0.05ms" />
+<img class="screenshot" src="/web/updates/images/2016/06/containment.jpg" alt="CSS Containment の比較。使用前: レイアウトに 59.6ms、使用後: レイアウトに 0.05ms" />
 
 Containament 仕様では次の構文と値が定義されています。
 
@@ -34,15 +34,15 @@ Web アプリや複雑な Web サイトを開発するとき、スタイル、�
     <section class="view">
       Home
     </section>
-    
+
     <section class="view">
       About
     </section>
-    
+
     <section class="view">
       Contact
     </section>
-    
+
 
 ひとつのビューに新しい要素を追加すると、スタイル、レイアウト、そして描画が発生します。
 
@@ -50,16 +50,16 @@ Web アプリや複雑な Web サイトを開発するとき、スタイル、�
     <section class="view">
       Home
     </section>
-    
+
     <section class="view">
       About
       <div class="newly-added-element">Check me out!</div>
     </section>
-    
+
     <section class="view">
       Contact
     </section>
-    
+
 
 しかしこの場合、**DOM 全体**がスコープとなってしまい、スタイル、レイアウト、描画の計算は**すべての要素**を考慮にいれなければいけません。たとえ要素が変更されていなくてもです。DOM が大きくなればなるほど計算処理が増えるので、ユーザーの入力に迅速に答えられなくなる可能性が高まります。
 
@@ -83,7 +83,7 @@ CSS Containment は `contain` という新しいプロパティに以下の値�
 > This value turns on layout containment for the element. This ensures that the containing element is totally opaque for layout purposes; nothing outside can affect its internal layout, and vice versa.
 > [Containment 仕様](https://drafts.csswg.org/css-containment/#valdef-contain-layout)
 
-> 訳：この値は要素に対し、レイアウトの封じ込めを有効にします。これにより、要素がレイアウト上不透明（opaque）であることが保証されます。つまり要素外のものが封じ込められた要素に影響することはありませんし、逆もまた同様です。
+> 訳: この値は要素に対し、レイアウトの封じ込めを有効にします。これにより、要素がレイアウト上不透明（opaque）であることが保証されます。つまり要素外のものが封じ込められた要素に影響することはありませんし、逆もまた同様です。
 
 レイアウトの封じ込めは `contain: paint` とともに、**最も**恩恵を受けるものでしょう。
 
@@ -96,7 +96,7 @@ CSS Containment は `contain` という新しいプロパティに以下の値�
 > This value turns on paint containment for the element. This ensures that the descendants of the containing element don’t display outside its bounds, so if an element is off-screen or otherwise not visible, its descendants are also guaranteed to be not visible.
 > [Containment 仕様](https://drafts.csswg.org/css-containment/#valdef-contain-paint)
 
-> 訳：この値は要素に対し、描画の封じ込めを有効にします。これにより、子孫要素が指定された要素の領域外に表示されないことが保証されます。もし指定された要素が画面外、もしくは非表示となる場合、子孫要素も表示されません。
+> 訳: この値は要素に対し、描画の封じ込めを有効にします。これにより、子孫要素が指定された要素の領域外に表示されないことが保証されます。もし指定された要素が画面外、もしくは非表示となる場合、子孫要素も表示されません。
 
 描画にスコープを設けることは、レイアウトに続きとても有益な封じ込めでしょう。描画の封じ込めは、適用された要素を切り取るようなものです。しかし副作用もあります。
 
@@ -109,7 +109,7 @@ CSS Containment は `contain` という新しいプロパティに以下の値�
 > The value turns on size containment for the element. This ensures that the containing element can be laid out without needing to examine its descendants.
 > [Containment 仕様](https://drafts.csswg.org/css-containment/#valdef-contain-size)
 
-> 訳：この値は要素に対し、大きさの封じ込めを有効にします。これにより、指定された要素が子孫要素の内容を調べずにレイアウトされることが保証されます。
+> 訳: この値は要素に対し、大きさの封じ込めを有効にします。これにより、指定された要素が子孫要素の内容を調べずにレイアウトされることが保証されます。
 
 `contain: size` は、要素の子が**親要素の大きさに影響しない**ことを意味し、計算もしくは指定された大きさが使用されます。結果、`contain: size` を指定しても、大きさを指定しなかった場合（直接もしくは Flexbox のプロパティ経由で）、要素は 0px × 0px で表示されます。
 
@@ -120,7 +120,7 @@ CSS Containment は `contain` という新しいプロパティに以下の値�
 > This value turns on style containment for the element. This ensures that, for properties which can have effects on more than just an element and its descendants, those effects don’t escape the containing element.
 > [Containment 仕様](https://drafts.csswg.org/css-containment/#valdef-contain-style)
 
-> 訳：この値は要素に対し、スタイルの封じ込めを有効にします。これにより、要素や子孫以外にも影響するプロパティにおいて、その影響が当該要素外に漏れ出さないことを保証します。
+> 訳: この値は要素に対し、スタイルの封じ込めを有効にします。これにより、要素や子孫以外にも影響するプロパティにおいて、その影響が当該要素外に漏れ出さないことを保証します。
 
 要素のスタイルを変更した場合、DOM ツリーの上方にどう影響するのかを予想するのは大変でしょう。ひとつの例として[CSS のカウンタ](https://developer.mozilla.org/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)があります。子のカウンタを変更すると、ドキュメント中にある同じ名前を持つカウンタの値に影響するのです。`contain: style` を指定すると、包含要素を超えてスタイルの変更が伝わることはありません。
 
@@ -149,6 +149,5 @@ CSS Containment は `contain` という新しいプロパティに以下の値�
   * [CSS Containment 仕様 日本語訳](http://triple-underscore.github.io/css-containment-ja.html)
 * [Chrome Statusでのステータス](https://www.chromestatus.com/features/6522186978295808)
 
-Translated By: 
+Translated By:
 {% include "web/_shared/contributors/myakura.html" %}
-

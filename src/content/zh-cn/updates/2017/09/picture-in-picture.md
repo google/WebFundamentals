@@ -26,14 +26,14 @@ description: 让我们来讨论如何使用一个Web API以在桌面创建一个
 
 但是... 要怎样在桌面中使用画中画? 网页要怎样控制画中画呢?
 
-好消息是[画中画Web API的规范](https://wicg.github.io/picture-in-picture/) 已经在草稿阶段中了。这规范能让网页使用这API来控制画中画在网页中的行为，这包括：
+好消息是[画中画Web API的规范](https://wicg.github.io/picture-in-picture/) 已经在草稿阶段中了。这规范能让网页使用这API来控制画中画在网页中的行为，这包括:
 
 - 通知网页当视频进入或退出画中画。
 - 允许用户使用手势来进入或退出画中画模式。
 - 允许网页退出画中画。
 - 允许网页检查是否可以使用画中画模式。
 
-以下是画中画Web API的示例代码：
+以下是画中画Web API的示例代码:
 
 ```
 <video id="video" src="https://example.com/file.mp4"></video>
@@ -95,4 +95,3 @@ window.addEventListener('resize', function() {
 
 Translated by
 {% include "web/_shared/contributors/henrylim.html" %}
-

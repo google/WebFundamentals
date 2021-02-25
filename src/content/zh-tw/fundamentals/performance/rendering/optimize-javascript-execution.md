@@ -37,9 +37,9 @@ Note: 如果您真的想要看到作用中的 JIT，應該要看看<a href="http
     function updateScreen(time) {
       // Make visual updates here.
     }
-    
+
     requestAnimationFrame(updateScreen);
-    
+
 
 架構或範例可以像動畫一樣，使用 `setTimeout` 或 `setInterval` 做視覺變更，但這種方式的問題在於，回呼會在畫面的 _某一點_ 執行，可能就在結束之時，如此往往造成我們遺漏一個畫面的效果，從而導致閃避現象。
 
@@ -58,41 +58,41 @@ JavaScript 是在瀏覽器的主執行緒上運作，就連同樣式計算、版
 
     var dataSortWorker = new Worker("sort-worker.js");
     dataSortWorker.postMesssage(dataToSort);
-    
+
     // The main thread is now free to continue working on other things...
-    
+
     dataSortWorker.addEventListener('message', function(evt) {
        var sortedData = e.data;
        // Update data on screen...
     });
-    
-    
 
-並非所有的工作都可以適用這種模式：Web Worker 並無 DOM 存取能力。 當您的工作必須在主執行緒上運作時，請考慮批次方案：將較大的任務分割成微任務，每個微任務僅需幾 ms 的時間，同時是跨每個畫面在 `requestAnimationFrame` 處理常式內執行。
+
+
+並非所有的工作都可以適用這種模式: Web Worker 並無 DOM 存取能力。 當您的工作必須在主執行緒上運作時，請考慮批次方案: 將較大的任務分割成微任務，每個微任務僅需幾 ms 的時間，同時是跨每個畫面在 `requestAnimationFrame` 處理常式內執行。
 
 
     var taskList = breakBigTaskIntoMicroTasks(monsterTaskList);
     requestAnimationFrame(processTaskList);
-    
+
     function processTaskList(taskStartTime) {
       var taskFinishTime;
-    
+
       do {
         // Assume the next task is pushed onto a stack.
         var nextTask = taskList.pop();
-    
+
         // Process nextTask.
         processTask(nextTask);
-    
+
         // Go again if there’s enough time to do the next task.
         taskFinishTime = window.performance.now();
       } while (taskFinishTime - taskStartTime < 3);
-    
+
       if (taskList.length > 0)
         requestAnimationFrame(processTaskList);
-    
+
     }
-    
+
 
 這種方法會伴隨 UX 和 UI 後果，您將需要確定使用者知道一項任務正在處理中，此時可[使用進度或活動指示器](http://www.google.com/design/spec/components/progress-activity.html)。 任一情況下，這種方法將讓您的應用程式的主執行緒保持空閒，協助它對使用者互動保持高回應性。
 
@@ -100,15 +100,15 @@ JavaScript 是在瀏覽器的主執行緒上運作，就連同樣式計算、版
 
 當評估架構、程式庫或您自己的程式碼時，以個別畫面為基礎，評估執行 JavaScript 程式碼的成本。 在做轉換或捲動等效能關鍵的動畫工作時，這一點尤其重要。
 
-測量您 JavaScript 成本和效能設定檔的最佳方法，是使用 Chrome DevTools。 基本上，您將取得看起來像以下的低詳細資料記錄：
+測量您 JavaScript 成本和效能設定檔的最佳方法，是使用 Chrome DevTools。 基本上，您將取得看起來像以下的低詳細資料記錄:
 
 <img src="images/optimize-javascript-execution/low-js-detail.jpg"  alt="Chrome DevTools 的 Timeline 提供低 JS 執行詳細資料。">
 
-如果您發現您有長時間執行的 JavaScript，您可以啟用 DevTools 使用者介面頂部的 JavaScript 分析工具：
+如果您發現您有長時間執行的 JavaScript，您可以啟用 DevTools 使用者介面頂部的 JavaScript 分析工具:
 
 啟用 DevTools 中的 JS 分析工具。"><img src="images/optimize-javascript-execution/js-profiler-toggle.jpg"  alt="
 
-以這種方式分析 JavaScript 會帶有額外負荷，所以當您想要更深入瞭解 JavaScript 執行期特性時，要確定只啟用此功能。 啟用核取方塊之後，您現在可以執行相同的行為，對於您 JavaScript 呼叫了哪些功能，您會得到多出許多的相關資訊：
+以這種方式分析 JavaScript 會帶有額外負荷，所以當您想要更深入瞭解 JavaScript 執行期特性時，要確定只啟用此功能。 啟用核取方塊之後，您現在可以執行相同的行為，對於您 JavaScript 呼叫了哪些功能，您會得到多出許多的相關資訊:
 
 <img src="images/optimize-javascript-execution/high-js-detail.jpg"  alt="Chrome DevTools 的 Timeline 提供高 JS 執行詳細資料。">
 
@@ -121,5 +121,3 @@ JavaScript 是在瀏覽器的主執行緒上運作，就連同樣式計算、版
 如果您在製作遊戲或高運算成本的的應用程式，那麼就是上述的例外情況，因為在這種情況下，您通常會在單一畫面中納入許多運算，此時所有考量都有幫助。
 
 簡而言之，因為微最佳化通常不會對應至您正在打造的應用程式種類，因此對於微最佳化要非常謹慎。
-
-

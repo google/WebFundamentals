@@ -27,20 +27,20 @@ description:了解浏览器如何构建 DOM 和 CSSOM 树。
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom.html){: target="_blank" .external }
 
-让我们从可能的最简单情况入手：一个包含一些文本和一幅图片的普通 HTML 页面。浏览器如何处理此页面？
+让我们从可能的最简单情况入手: 一个包含一些文本和一幅图片的普通 HTML 页面。浏览器如何处理此页面？
 
 <img src="images/full-process.png" alt="DOM 构建流程">
 
-1. **转换：** 浏览器从磁盘或网络读取 HTML 的原始字节，并根据文件的指定编码（例如 UTF-8）将它们转换成各个字符。
-1. **令牌化：** 浏览器将字符串转换成 [W3C HTML5 标准](http://www.w3.org/TR/html5/){: .external }规定的各种令牌，例如，“&lt;html&gt;”、“&lt;body&gt;”，以及其他尖括号内的字符串。每个令牌都具有特殊含义和一组规则。
-1. **词法分析：** 发出的令牌转换成定义其属性和规则的“对象”。
-1. **DOM 构建：** 最后，由于 HTML 标记定义不同标记之间的关系（一些标记包含在其他标记内），创建的对象链接在一个树数据结构内，此结构也会捕获原始标记中定义的父项-子项关系：_HTML_ 对象是 _body_ 对象的父项，_body_ 是 _paragraph_ 对象的父项，依此类推。
+1. **转换: ** 浏览器从磁盘或网络读取 HTML 的原始字节，并根据文件的指定编码（例如 UTF-8）将它们转换成各个字符。
+1. **令牌化: ** 浏览器将字符串转换成 [W3C HTML5 标准](http://www.w3.org/TR/html5/){: .external }规定的各种令牌，例如，“&lt;html&gt;”、“&lt;body&gt;”，以及其他尖括号内的字符串。每个令牌都具有特殊含义和一组规则。
+1. **词法分析: ** 发出的令牌转换成定义其属性和规则的“对象”。
+1. **DOM 构建: ** 最后，由于 HTML 标记定义不同标记之间的关系（一些标记包含在其他标记内），创建的对象链接在一个树数据结构内，此结构也会捕获原始标记中定义的父项-子项关系: _HTML_ 对象是 _body_ 对象的父项，_body_ 是 _paragraph_ 对象的父项，依此类推。
 
 <img src="images/dom-tree.png"  alt="DOM 树">
 
 **整个流程的最终输出是我们这个简单页面的文档对象模型 (DOM)，浏览器对页面进行的所有进一步处理都会用到它。**
 
-浏览器每次处理 HTML 标记时，都会完成以上所有步骤：将字节转换成字符，确定令牌，将令牌转换成节点，然后构建 DOM 树。这整个流程可能需要一些时间才能完成，有大量 HTML 需要处理时更是如此。
+浏览器每次处理 HTML 标记时，都会完成以上所有步骤: 将字节转换成字符，确定令牌，将令牌转换成节点，然后构建 DOM 树。这整个流程可能需要一些时间才能完成，有大量 HTML 需要处理时更是如此。
 
 <img src="images/dom-timeline.png"  alt="在 DevTools 中追踪 DOM 构建">
 
@@ -52,19 +52,19 @@ DOM 树捕获文档标记的属性和关系，但并未告诉我们元素在渲�
 
 ## CSS 对象模型 (CSSOM)
 
-在浏览器构建我们这个简单页面的 DOM 时，在文档的 head 部分遇到了一个 link 标记，该标记引用一个外部 CSS 样式表：style.css。由于预见到需要利用该资源来渲染页面，它会立即发出对该资源的请求，并返回以下内容：
+在浏览器构建我们这个简单页面的 DOM 时，在文档的 head 部分遇到了一个 link 标记，该标记引用一个外部 CSS 样式表: style.css。由于预见到需要利用该资源来渲染页面，它会立即发出对该资源的请求，并返回以下内容:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-我们本可以直接在 HTML 标记内声明样式（内联），但让 CSS 独立于 HTML 有利于我们将内容和设计作为独立关注点进行处理：设计人员负责处理 CSS，开发者侧重于 HTML，等等。
+我们本可以直接在 HTML 标记内声明样式（内联），但让 CSS 独立于 HTML 有利于我们将内容和设计作为独立关注点进行处理: 设计人员负责处理 CSS，开发者侧重于 HTML，等等。
 
-与处理 HTML 时一样，我们需要将收到的 CSS 规则转换成某种浏览器能够理解和处理的东西。因此，我们会重复 HTML 过程，不过是为 CSS 而不是 HTML：
+与处理 HTML 时一样，我们需要将收到的 CSS 规则转换成某种浏览器能够理解和处理的东西。因此，我们会重复 HTML 过程，不过是为 CSS 而不是 HTML:
 
 <img src="images/cssom-construction.png"  alt="CSSOM 构建步骤">
 
-CSS 字节转换成字符，接着转换成令牌和节点，最后链接到一个称为“CSS 对象模型”(CSSOM) 的树结构内：
+CSS 字节转换成字符，接着转换成令牌和节点，最后链接到一个称为“CSS 对象模型”(CSSOM) 的树结构内:
 
 <img src="images/cssom-tree.png"  alt="CSSOM 树">
 
@@ -74,7 +74,7 @@ CSSOM 为何具有树结构？为页面上的任何对象计算最后一组样�
 
 还请注意，以上树并非完整的 CSSOM 树，它只显示了我们决定在样式表中替换的样式。每个浏览器都提供一组默认样式（也称为“User Agent 样式”），即我们不提供任何自定义样式时所看到的样式，我们的样式只是替换这些默认样式（例如[默认 IE 样式](http://www.iecss.com/){: .external }）。
 
-要了解 CSS 处理所需的时间，您可以在 DevTools 中记录时间线并寻找“Recalculate Style”事件：与 DOM 解析不同，该时间线不显示单独的“Parse CSS”条目，而是在这一个事件下一同捕获解析和 CSSOM 树构建，以及计算的样式的递归计算。
+要了解 CSS 处理所需的时间，您可以在 DevTools 中记录时间线并寻找“Recalculate Style”事件: 与 DOM 解析不同，该时间线不显示单独的“Parse CSS”条目，而是在这一个事件下一同捕获解析和 CSSOM 树构建，以及计算的样式的递归计算。
 
 <img src="images/cssom-timeline.png"  alt="在 DevTools 中追踪 CSSOM 构建">
 
@@ -82,7 +82,7 @@ CSSOM 为何具有树结构？为页面上的任何对象计算最后一组样�
 
 <a href="render-tree-construction" class="gc-analytics-event"
     data-category="CRP" data-label="Next / Render-Tree Construction">
-  <button>下一课：渲染树构建、布局及绘制</button>
+  <button>下一课: 渲染树构建、布局及绘制</button>
 </a>
 
 

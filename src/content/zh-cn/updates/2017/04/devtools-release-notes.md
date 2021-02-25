@@ -16,7 +16,7 @@ description: Chrome 59 中添加到 DevTools 的新功能和变更。
 
 欢迎来到新一期的 DevTools 更新日志。观看下面的视频或者继续阅读以了解 Chrome 59 中 DevTools 的新功能。
 
-提示：你可以访问 `chrome://help` 来查看当前使用的 Chrome 版本。
+提示: 你可以访问 `chrome://help` 来查看当前使用的 Chrome 版本。
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="4mx1m7UbBR0"
@@ -47,7 +47,7 @@ description: Chrome 59 中添加到 DevTools 的新功能和变更。
   </figcaption>
 </figure>
 
-要打开此面板：
+要打开此面板:
 
 1. 呼出[命令面板][CM]。
 1. 输入 `Coverage` 选择 **Show Coverage**。
@@ -83,10 +83,10 @@ description: Chrome 59 中添加到 DevTools 的新功能和变更。
     function wait(ms) {
       return new Promise(r => setTimeout(r, ms)).then(() => "Yay");
     }
-    
+
     // do some work in background.
     setInterval(() => 42, 200);
-    
+
     async function test() {
       debugger;
       const hello = "world";
@@ -95,13 +95,13 @@ description: Chrome 59 中添加到 DevTools 的新功能和变更。
       console.log(tmp);
       return hello;
     }
-    
+
     async function runTest() {
       let result = await test();
       console.log(result);
     }
 
-P.S. 想提高调试水平吗？看看这些资源：
+P.S. 想提高调试水平吗？看看这些资源:
 
 * [Get Started With Debugging JS](/web/tools/chrome-devtools/javascript/)
 * [Pause Your Code With Breakpoints][breakpoints]

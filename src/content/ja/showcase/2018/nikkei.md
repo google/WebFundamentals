@@ -25,7 +25,7 @@ book_path: /web/showcase/_book.yaml
   }
 </style>
 
-140年以上の歴史を持つ[日本経済新聞](https://r.nikkei.com/)は、日本で最も権威のあるメディア事業の1つです。紙媒体の新聞に加えて、毎月4億5,000万人以上のユーザがデジタルの媒体を訪れています。日経では2017年11月に、より良いユーザーエクスペリエンスと、ウェブにおけるビジネスを加速するため、「プログレッシブウェブアプリ(PWA) - [https://r.nikkei.com](https://r.nikkei.com)」を成功裏に立ち上げました。 
+140年以上の歴史を持つ[日本経済新聞](https://r.nikkei.com/)は、日本で最も権威のあるメディア事業の1つです。紙媒体の新聞に加えて、毎月4億5,000万人以上のユーザがデジタルの媒体を訪れています。日経では2017年11月に、より良いユーザーエクスペリエンスと、ウェブにおけるビジネスを加速するため、「プログレッシブウェブアプリ(PWA) - [https://r.nikkei.com](https://r.nikkei.com)」を成功裏に立ち上げました。
 
 <div class="attempt-left">
   <p><b>パフォーマンスの改善</b></p>
@@ -126,7 +126,7 @@ Service Workerを採用することで、ネットワークの状態に関わら
 
 ### スピードは重要
 
-スピードはこれまで以上に重要視されるべき指標です。スマートフォンが多くのユーザにとってウェブを閲覧するメインのデバイスとなるにつれ、日本経済新聞社が提供するサービスでもモバイルからのトラフィックが急激に増えてきていました。しかし、[Lighthouse](/web/tools/lighthouse/)を使った調査で従来のサイトでSpeed Indexが平均10秒であり、初期読み込みが非常に遅く、巨大なJavaScriptを読み込んでいるなど、モバイル向けに最適化されていない状況であることを認識しました。 
+スピードはこれまで以上に重要視されるべき指標です。スマートフォンが多くのユーザにとってウェブを閲覧するメインのデバイスとなるにつれ、日本経済新聞社が提供するサービスでもモバイルからのトラフィックが急激に増えてきていました。しかし、[Lighthouse](/web/tools/lighthouse/)を使った調査で従来のサイトでSpeed Indexが平均10秒であり、初期読み込みが非常に遅く、巨大なJavaScriptを読み込んでいるなど、モバイル向けに最適化されていない状況であることを認識しました。
 日経ではこれを機にウェブ・パフォーマンスにおけるベストプラクティスを適用しサイトをリニューアルすることにしました。以下に、新たに構築したPWA、<r.nikkei.com>における結果と、主要なパフォーマンス改善について紹介しましょう。
 
 ### Web APIとベストプラクティスを活用して読み込みを高速化する
@@ -198,7 +198,7 @@ Service Workerを採用することで、ネットワークの状態に関わら
 - [クリティカル・パス外のリソースの後読み](/web/fundamentals/performance/lazy-loading-guidance/images-and-video/): Intersection Observer APIを利用し、初期画面以下の部分に関わるリソースを後読み
 - [Webフォントの読み込み戦略](/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization):システムフォントの利用を最優先する
 - [First Meaningful Paintの最適化](/web/tools/lighthouse/audits/first-contentful-paint):コンテンツをサーバーサイドでレンダリング
-- [パフォーマンスバジェットを採用](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/) ：JavaScriptの送信と解析/コンパイル時間を抑え続ける
+- [パフォーマンスバジェットを採用](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/) : JavaScriptの送信と解析/コンパイル時間を抑え続ける
 
 ### サードパーティJavaScriptの最適化
 

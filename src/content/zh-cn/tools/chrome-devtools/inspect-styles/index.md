@@ -25,7 +25,7 @@ description:检查和编辑页面的 HTML 与 CSS。
 
 ## 实时编辑 DOM 节点
 
-要实时编辑 DOM 节点，只需双击[选定元素](#inspect-an-element)，然后进行更改：
+要实时编辑 DOM 节点，只需双击[选定元素](#inspect-an-element)，然后进行更改:
 
 
 <video src="animations-img/edit-element-name.mp4" style="max-width:100%;"
@@ -50,7 +50,7 @@ DOM 树视图会显示树的当前状态；可能会与最初因其他原因加�
 默认情况下，您的 CSS 修改不是永久的，重新加载页面时更改会丢失。
 如果您想要在页面加载时保留更改，请设置[永久制作](/web/tools/setup/setup-workflow)。
 
- 
+
 
 ## 检查和编辑框模型参数
 
@@ -62,7 +62,7 @@ DOM 树视图会显示树的当前状态；可能会与最初因其他原因加�
 
 同轴矩形包含当前元素 **padding**、**border** 和 **margin** 属性的 **top**、**bottom**、**left**、**right** 值。
 
- 
+
 
 对于位置为非静态的元素，还会显示 **position** 矩形，包含 **top**、**right**、**bottom** 和 **left** 属性的值。
 
@@ -82,13 +82,13 @@ DOM 树视图会显示树的当前状态；可能会与最初因其他原因加�
 <video src="animations-img/revisions.mp4" style="max-width:100%;"
        autoplay loop muted controls></video>
 
-要查看对页面所做实时编辑的历史记录，请执行以下操作：
+要查看对页面所做实时编辑的历史记录，请执行以下操作:
 
 1. 在 **Styles** 窗格中，点击您修改的文件。DevTools 会将您带到 **Sources** 面板。
 1. 右键点击文件。
 1. 选择 **Local modifications**。
 
-要探索所做的更改，请执行以下操作：
+要探索所做的更改，请执行以下操作:
 
 * 展开顶级文件名查看做出修改的时间 ![做出修改的时间](imgs/image_25.png){:.inline}。
 * 展开第二级项目查看修改相应的[不同](https://en.wikipedia.org/wiki/Diff)（前和后）。
@@ -101,7 +101,7 @@ DOM 树视图会显示树的当前状态；可能会与最初因其他原因加�
 如果您未[设置永久制作](/web/tools/setup/setup-workflow)，每次您重新加载页面时，所有的实时编辑都会丢失。
 
 
-假设您已设置了永久制作，要撤消更改，请执行以下操作：
+假设您已设置了永久制作，要撤消更改，请执行以下操作:
 
 * 使用 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Z</kbd> (Windows) 或 <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Z</kbd> (Mac) 通过 Elements 面板快速撤消对 DOM 或样式所做的细微更改。
 

@@ -69,7 +69,7 @@ JavaScript 在浏览器的主线程上运行，恰好与样式计算、布局以
 
 
 
-并非所有工作都适合此模型：Web Worker 没有 DOM 访问权限。如果您的工作必须在主线程上执行，请考虑一种批量方法，将大型任务分割为微任务，每个微任务所占时间不超过几毫秒，并且在每帧的 `requestAnimationFrame` 处理程序内运行。
+并非所有工作都适合此模型: Web Worker 没有 DOM 访问权限。如果您的工作必须在主线程上执行，请考虑一种批量方法，将大型任务分割为微任务，每个微任务所占时间不超过几毫秒，并且在每帧的 `requestAnimationFrame` 处理程序内运行。
 
 
     var taskList = breakBigTaskIntoMicroTasks(monsterTaskList);
@@ -101,15 +101,15 @@ JavaScript 在浏览器的主线程上运行，恰好与样式计算、布局以
 
 在评估一个框架、库或您自己的代码时，务必逐帧评估运行 JavaScript 代码的开销。当执行性能关键的动画工作（例如变换或滚动）时，这点尤其重要。
 
-测量 JavaScript 开销和性能情况的最佳方法是使用 Chrome DevTools。通常，您将获得如下的简单记录：
+测量 JavaScript 开销和性能情况的最佳方法是使用 Chrome DevTools。通常，您将获得如下的简单记录:
 
 <img src="images/optimize-javascript-execution/low-js-detail.jpg" alt="Chrome DevTools 的 Timeline 提供简略的 JS 执行情况。">
 
-如果发现有长时间运行的 JavaScript，则可以在 DevTools 用户界面的顶部启用 JavaScript 分析器：
+如果发现有长时间运行的 JavaScript，则可以在 DevTools 用户界面的顶部启用 JavaScript 分析器:
 
 <img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" alt="在 DevTools 中启用 JS 分析器。">
 
-以这种方式分析 JavaScript 会产生开销，因此一定只在想要更深入了解 JavaScript 运行时特性时才启用它。启用此复选框后，现在可以执行相同的操作，您将获得有关 JavaScript 中调用了哪些函数的更多信息：
+以这种方式分析 JavaScript 会产生开销，因此一定只在想要更深入了解 JavaScript 运行时特性时才启用它。启用此复选框后，现在可以执行相同的操作，您将获得有关 JavaScript 中调用了哪些函数的更多信息:
 
 <img src="images/optimize-javascript-execution/high-js-detail.jpg" alt="Chrome DevTools 的 Timeline 提供详细的 JS 执行情况。">
 

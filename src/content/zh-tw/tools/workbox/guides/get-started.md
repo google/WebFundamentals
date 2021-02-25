@@ -22,7 +22,7 @@ description:Get Started with Workbox.
 console.log('Hello from sw.js');
 ```
 
-在您的網頁中註冊您的新Service Worker文件，如下所示：
+在您的網頁中註冊您的新Service Worker文件，如下所示:
 
 {% include "web/tools/workbox/guides/_shared/register-sw.html" %}
 
@@ -70,7 +70,7 @@ worker中。
 
 Workbox的主要功能之一是路由和緩存策略模塊。它允許您監聽來自網頁的請求，並確定是否以及如何緩存和響應該請求。
 
-讓我們將緩存後備添加到我們的JavaScript文件。最簡單的方法是使用Workbox註冊路線，該路線將與請求的任何“.js”文件相匹配，我們可以使用正則表達式執行此操作：
+讓我們將緩存後備添加到我們的JavaScript文件。最簡單的方法是使用Workbox註冊路線，該路線將與請求的任何“.js”文件相匹配，我們可以使用正則表達式執行此操作:
 
 ```javascript
 workbox.routing.registerRoute(
@@ -91,7 +91,7 @@ workbox.routing.registerRoute(
 ```
 
 將此代碼添加到您的service
-worker並刷新頁面。如果您的網頁中包含JavaScript文件，您應該看到類似如下的日誌：
+worker並刷新頁面。如果您的網頁中包含JavaScript文件，您應該看到類似如下的日誌:
 
 ![Example console logs from routing a JavaScript file.](../images/guides/get-started/routing-example.png)
 

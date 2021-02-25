@@ -12,7 +12,7 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 使用 <strong>Application</strong> 面板检查、修改和调试网络应用清单、服务工作线程和服务工作线程缓存。
 
 
-相关指南： 
+相关指南:
 
 * [Progressive Web App](/web/progressive-web-apps)
 
@@ -36,7 +36,7 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 
 
 
-相关指南：
+相关指南:
 
 * [通过网络应用清单改进用户体验](/web/fundamentals/web-app-manifest)
 * [使用应用安装横幅](/web/fundamentals/app-install-banners)
@@ -69,7 +69,7 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 
 ![添加到桌面设备文件架][shelf]
 
-**提示**：在模拟 Add to Homescreen 事件时请保持 **Console** 抽屉式导航栏处于打开状态。
+**提示**: 在模拟 Add to Homescreen 事件时请保持 **Console** 抽屉式导航栏处于打开状态。
 Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescreen 生命周期有关的其他信息。
 
 
@@ -93,10 +93,10 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 
 
 
-相关指南：
+相关指南:
 
 * [服务工作线程简介](/web/fundamentals/primers/service-worker)
-* [推送通知：及时、相关且精确](/web/fundamentals/push-notifications)
+* [推送通知: 及时、相关且精确](/web/fundamentals/push-notifications)
 
 
 **Application** 面板中的 **Service Workers** 窗格是在 DevTools 中检查和调试服务工作线程的主要地方。
@@ -159,7 +159,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 参阅下面的部分了解详情。
 
 
-相关指南：
+相关指南:
 
 * [清除存储](/web/tools/chrome-devtools/iterate/manage-data/local-storage#clear-storage)
 
@@ -169,7 +169,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 参阅下面的部分，获取有关 **Application** 面板其他窗格的更多帮助。
 
 
-相关指南：
+相关指南:
 
 * [检查页面资源](/web/tools/chrome-devtools/iterate/manage-data/page-resources)
 * [检查和管理本地存储与缓存](/web/tools/chrome-devtools/iterate/manage-data/local-storage)

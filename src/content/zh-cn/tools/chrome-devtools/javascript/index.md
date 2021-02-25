@@ -22,7 +22,7 @@ description:了解如何使用 Chrome DevTools 查找和修正 JavaScript 错误
 </div>
 
 
-## 第 1 步：重现错误 {: #reproduce }
+## 第 1 步: 重现错误 {: #reproduce }
 
 找到一系列可一致重现错误的操作始终是调试的第一步。
 
@@ -48,7 +48,7 @@ description:了解如何使用 Chrome DevTools 查找和修正 JavaScript 错误
        </figcaption>
      </figure>
 
-## 第 2 步：熟悉 Sources 面板界面 {: #sources-ui }
+## 第 2 步: 熟悉 Sources 面板界面 {: #sources-ui }
 
 DevTools 可为更改 CSS、分析页面加载性能和监控网络请求等不同的任务提供许多不同的工具。
  您可在 **Sources** 面板中调试
@@ -74,7 +74,7 @@ JavaScript。
        </figcaption>
      </figure>
 
-**Sources** 面板界面包含 3 个部分：
+**Sources** 面板界面包含 3 个部分:
 
 <figure>
   <img src="imgs/sources-annotated.png" alt="Sources 面板界面的 3 个部分。"/>
@@ -88,10 +88,10 @@ JavaScript。
 3. **JavaScript Debugging** 窗格。 检查页面 JavaScript 的各种工具。 如果 DevTools 窗口布局较宽，此窗格会显示在 **Code Editor** 窗格右侧。
 
 
-## 第 3 步：使用断点暂停代码 {: #event-breakpoint }
+## 第 3 步: 使用断点暂停代码 {: #event-breakpoint }
 
 调试这种问题的常用方法是将多个 `console.log()`
-语句插入代码，以便在执行脚本时检查相关值。 例如：
+语句插入代码，以便在执行脚本时检查相关值。 例如:
 
 <pre class="prettyprint">function updateLabel() {
   var addend1 = getNumber1();
@@ -105,7 +105,7 @@ JavaScript。
 
 虽然 `console.log()` 方法可以完成任务，但**断点**可以更快完成此任务。
 断点可让您在执行代码的过程中暂停代码，并在此时及时检查所有相关值。
- 与 `console.log()` 方法相比，断点具有一些优势：
+ 与 `console.log()` 方法相比，断点具有一些优势:
 
 * 使用 `console.log()`，您需要手动打开源代码，查找相关代码，插入 `console.log()` 语句，然后重新加载此页面，才能在控制台中看到这些消息。
  使用断点，无需了解代码结构即可暂停相关代码。
@@ -118,7 +118,7 @@ JavaScript。
 如果退一步思考应用的运作方式，您可以根据经验推测出，使用与 **Add Number 1 and Number 2** 按钮关联的 `click` 事件侦听器时计算的和不正确 (`5 + 1 = 51`)。
  因此，您可能需要在 `click` 侦听器运行时暂停代码。
  **Event Listener Breakpoints**
-可让您完成此任务：
+可让您完成此任务:
 
 1. 在 **JavaScript Debugging** 窗格中，点击 **Event Listener Breakpoints** 以展开该部分。
  DevTools 会显示 **Animation** 和 **Clipboard**
@@ -140,7 +140,7 @@ JavaScript。
 
 
 1. 返回至演示页面，再次点击 **Add Number 1 and Number 2**。 DevTools 会暂停演示并在 **Sources** 面板中突出显示一行代码。
-   DevTools 应在此代码行暂停：
+   DevTools 应在此代码行暂停:
 
      <pre class="prettyprint">function onClick() {</pre>
 
@@ -148,7 +148,7 @@ JavaScript。
 {:.cdt-inl} 直到在正确的代码行暂停为止。
 
      <aside class="note">
-       **注**：如果是在其他代码行暂停，可使用浏览器扩展程序在您访问的每一页上注册一个 `click` 事件侦听器。
+       **注**: 如果是在其他代码行暂停，可使用浏览器扩展程序在您访问的每一页上注册一个 `click` 事件侦听器。
  使用扩展程序的 `click` 侦听器可执行暂停操作。
  如果是采用无痕模式进行[隐私浏览][incognito]，将会停用所有扩展程序，而且您会发现您每次都在正确的代码行暂停。
 
@@ -165,15 +165,15 @@ JavaScript。
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
 [breakpoints]: /web/tools/chrome-devtools/javascript/breakpoints
 
-## 第 4 步：单步调试代码 {: #code-stepping }
+## 第 4 步: 单步调试代码 {: #code-stepping }
 
 一个常见的错误原因是脚本执行顺序有误。
  可以通过单步调试代码一次一行地检查代码执行情况，准确找到执行顺序异常之处。
- 立即尝试：
+ 立即尝试:
 
 1. 在 DevTools 的 **Sources** 面板上，点击 **Step into next function
    call** ![单步执行时进入下一个函数调用][into]，{:.devtools-inline} 以便一次一行地单步调试 `onClick()` 函数的执行。
-   DevTools 突出显示下面这行代码：
+   DevTools 突出显示下面这行代码:
 
      <pre class="prettyprint">if (inputsAreEmpty()) {</pre>
 
@@ -192,13 +192,13 @@ JavaScript。
 [into]: /web/tools/chrome-devtools/images/step-into.png
 [over]: /web/tools/chrome-devtools/images/step-over.png
 
-## 第 5 步：设置代码行断点 {: #line-breakpoint }
+## 第 5 步: 设置代码行断点 {: #line-breakpoint }
 
-代码行断点是最常见的断点类型。 如果您想在执行到某一行代码时暂停，请使用代码行断点：
+代码行断点是最常见的断点类型。 如果您想在执行到某一行代码时暂停，请使用代码行断点:
 
 
 
-1. 看一下 `updateLabel()` 中的最后一行代码：
+1. 看一下 `updateLabel()` 中的最后一行代码:
 
      <pre class="prettyprint">label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;</pre>
 
@@ -219,14 +219,14 @@ JavaScript。
        </figcaption>
      </figure>
 
-## 第 6 步：检查变量值 {: #check-values }
+## 第 6 步: 检查变量值 {: #check-values }
 
 `addend1`、`addend2` 和 `sum` 的值疑似有问题。 这些值位于引号中，这意味着它们是字符串。
  这个假设有助于说明错误的原因。
 现在可以收集更多信息。 DevTools 可提供许多用于检查变量值的工具。
 
 
-### 方法 1：Scope 窗格 {: #scope }
+### 方法 1: Scope 窗格 {: #scope }
 
 在某代码行暂停时，**Scope** 窗格会显示当前定义的局部和全局变量，以及各变量值。
  其中还会显示闭包变量（如果适用）。
@@ -241,11 +241,11 @@ JavaScript。
   </figcaption>
 </figure>
 
-### 方法 2：监视表达式 {: #watch-expressions }
+### 方法 2: 监视表达式 {: #watch-expressions }
 
 **Watch Expressions** 标签可让您监视变量值随时间变化的情况。
 顾名思义，监视表达式不仅限于监视变量。 您可以将任何有效的 JavaScript 表达式存储在监视表达式中。
- 立即尝试：
+ 立即尝试:
 
 1. 点击 **Watch** 标签。
 1. 点击 **Add Expression** ![添加表达式][add]{:.devtools-inline}。
@@ -264,11 +264,11 @@ JavaScript。
 正如猜想，`sum` 的求值结果本应是数字，而实际结果却是字符串。
  现在已确定这就是错误的原因。
 
-### 方法 3：控制台 {: #console }
+### 方法 3: 控制台 {: #console }
 
 除了查看 `console.log()` 消息以外，您还可以使用控制台对任意 JavaScript 语句求值。
  对于调试，您可以使用控制台测试错误的潜在解决方法。
- 立即尝试：
+ 立即尝试:
 
 1. 如果您尚未打开 Console 抽屉式导航栏，请按 <kbd>Escape</kbd> 将其打开。
  该导航栏将在 DevTools 窗口底部打开。
@@ -287,12 +287,12 @@ JavaScript。
 
 [add]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
 
-## 第 7 步：应用修正方法 {: #apply-fix }
+## 第 7 步: 应用修正方法 {: #apply-fix }
 
 您已找到修正错误的方法。 接下来就是尝试通过编辑代码并重新运行演示来使用修正方法。
  您不必离开 DevTools 就能应用修正。
  您可以直接在 DevTools UI 内编辑 JavaScript 代码。
- 立即尝试：
+ 立即尝试:
 
 1. 点击 **Resume script execution** ![继续执行脚本][resume]
 {:.devtools-inline}。
@@ -315,7 +315,7 @@ Note: 此工作流程只能修正在浏览器中运行的代码，
 恭喜！现在您已了解如何在调试 JavaScript 时充分使用 Chrome DevTools。
  本教程介绍的工具和方法有助于您节省大量时间。
 
-本教程仅介绍两种设置断点的方法。 DevTools 还提许多其他方法，其中包括：
+本教程仅介绍两种设置断点的方法。 DevTools 还提许多其他方法，其中包括:
 
 
 * 仅在满足您指定的条件时触发的条件断点。

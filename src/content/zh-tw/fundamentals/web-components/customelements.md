@@ -5,7 +5,7 @@ description:自定義元素允許網絡開發者定義新的 HTML 標記、擴�
 {# wf_updated_on: 2016-09-26 #}
 {# wf_published_on: 2016-06-28 #}
 
-# 自定義元素 v1：可重用網絡組件 {: .page-title }
+# 自定義元素 v1: 可重用網絡組件 {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
@@ -32,7 +32,7 @@ Note: 本文說明新的<a href="https://html.spec.whatwg.org/multipage/scriptin
 以需要創建的標記名稱調用 `customElements.define()`，並使用 JavaScript`class` 擴展基礎 `HTMLElement`。
 
 
-**示例** - 定義一個移動抽屜面板 `<app-drawer>`：
+**示例** - 定義一個移動抽屜面板 `<app-drawer>`:
 
 
     class AppDrawer extends HTMLElement {...}
@@ -42,7 +42,7 @@ Note: 本文說明新的<a href="https://html.spec.whatwg.org/multipage/scriptin
     window.customElements.define('app-drawer', class extends HTMLElement {...});
 
 
-示例用法：
+示例用法:
 
 
     <app-drawer></app-drawer>
@@ -57,7 +57,7 @@ Note: 本文說明新的<a href="https://html.spec.whatwg.org/multipage/scriptin
 
 
 
-**示例：** - 定義 DOM 的 `<app-drawer>` 接口：
+**示例: ** - 定義 DOM 的 `<app-drawer>` 接口:
 
 
     class AppDrawer extends HTMLElement {
@@ -118,7 +118,7 @@ Note: 本文說明新的<a href="https://html.spec.whatwg.org/multipage/scriptin
 在本例中，我們創建了一個具有`open` 屬性、`disabled` 屬性和`toggleDrawer()` 方法的抽屜式導航欄。
 它還[以 HTML 屬性來反映屬性](#reflectattr)。
 
-自定義元素有一個超讚功能，即：類定義中的**`this` 引用 DOM 元素自身**，亦即類的實例。
+自定義元素有一個超讚功能，即: 類定義中的**`this` 引用 DOM 元素自身**，亦即類的實例。
 在本例中，`this` 是指 `<app-drawer>`。這 (😉) 就是元素向自身添加 `click` 偵聽器的方式！您不限於事件偵聽器。完整的 DOM API 在元素代碼內提供。使用 `this` 來訪問元素屬性、檢驗子項 (`this.children`) 和查詢節點 (`this.querySelectorAll('.items')`) 等。
 
 **有關創建自定義元素的規則**
@@ -136,7 +136,7 @@ Custom Elements API 對創建新的 HTML 元素很有用，但它也可用於擴
 
 擴展其他自定義元素可通過擴展其類定義來實現。
 
-**示例** - 創建擴展 `<app-drawer>` 的 `<fancy-app-drawer>`：
+**示例** - 創建擴展 `<app-drawer>` 的 `<fancy-app-drawer>`:
 
 
     class FancyDrawer extends AppDrawer {
@@ -173,7 +173,7 @@ Custom Elements API 對創建新的 HTML 元素很有用，但它也可用於擴
 同樣，擴展 `<img>` 的元素需要擴展 `HTMLImageElement`。
 
 
-**示例** - 擴展 `<button>`：
+**示例** - 擴展 `<button>`:
 
 
     // See https://html.spec.whatwg.org/multipage/indices.html#element-interfaces
@@ -203,9 +203,9 @@ Custom Elements API 對創建新的 HTML 元素很有用，但它也可用於擴
 擴展原生元素時，對 `define()` 的調用會稍有不同。所需的第三個參數告知瀏覽器要擴展的標記。這很有必要，因爲許多 HTML 標記均使用同一 DOM 接口。例如，`<section>`、`<address>` 和 `<em>`（以及其他）都使用 `HTMLElement`；`<q>` 和 `<blockquote>` 則使用 `HTMLQuoteElement`；等等。指定 `{extends: 'blockquote'}` 可讓瀏覽器知道您創建的是增強的 `<blockquote>` 而不是 `<q>`。有關 HTML DOM 接口的完整列表，請參閱 [HTML 規範](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces)。
 
 
-Note: 擴展 `HTMLButtonElement` 可讓我們的花式按鈕獲得 `<button>` 的所有 DOM 屬性/方法。這樣，我們無需自己實現即可獲得諸多功能：`disabled` 屬性、`click()` 方法、`keydown` 偵聽器、`tabindex` 管理等。但是，我們可以使用自定義功能（即 `drawRipple()` 方法）來逐漸增補 `<button>`。代碼更少，可重用性更高！
+Note: 擴展 `HTMLButtonElement` 可讓我們的花式按鈕獲得 `<button>` 的所有 DOM 屬性/方法。這樣，我們無需自己實現即可獲得諸多功能: `disabled` 屬性、`click()` 方法、`keydown` 偵聽器、`tabindex` 管理等。但是，我們可以使用自定義功能（即 `drawRipple()` 方法）來逐漸增補 `<button>`。代碼更少，可重用性更高！
 
-自定義內置元素的用戶有多種方法來使用該元素。他們可以通過在原生標記上添加 `is=""` 屬性來聲明：
+自定義內置元素的用戶有多種方法來使用該元素。他們可以通過在原生標記上添加 `is=""` 屬性來聲明:
 
 
 
@@ -213,7 +213,7 @@ Note: 擴展 `HTMLButtonElement` 可讓我們的花式按鈕獲得 `<button>` �
     <button is="fancy-button" disabled>Fancy button!</button>
 
 
-在 JavaScript 中創建實例：
+在 JavaScript 中創建實例:
 
 
     // Custom elements overload createElement() to support the is="" attribute.
@@ -223,7 +223,7 @@ Note: 擴展 `HTMLButtonElement` 可讓我們的花式按鈕獲得 `<button>` �
     document.body.appendChild(button);
 
 
-或者使用 `new` 運算符：
+或者使用 `new` 運算符:
 
 
     let button = new FancyButton();
@@ -233,7 +233,7 @@ Note: 擴展 `HTMLButtonElement` 可讓我們的花式按鈕獲得 `<button>` �
 
 此處爲擴展 `<img>` 的另一個例子。
 
-**示例** - 擴展 `<img>`：
+**示例** - 擴展 `<img>`:
 
 
     customElements.define('bigger-img', class extends Image {
@@ -244,14 +244,14 @@ Note: 擴展 `HTMLButtonElement` 可讓我們的花式按鈕獲得 `<button>` �
     }, {extends: 'img'});
 
 
-用戶聲明此組件爲：
+用戶聲明此組件爲:
 
 
     <!-- This <img> is a bigger img. -->
     <img is="bigger-img" width="15" height="20">
 
 
-或者在 JavaScript 中創建實例：
+或者在 JavaScript 中創建實例:
 
 
     const BiggerImage = customElements.get('bigger-img');
@@ -306,7 +306,7 @@ Note: 某些瀏覽器不推薦使用  <code>is=""</code> 語法。這對可訪�
 
 
 
-**示例：**向 `<app-drawer>` 中添加自定義元素響應：
+**示例: **向 `<app-drawer>` 中添加自定義元素響應:
 
 
     class AppDrawer extends HTMLElement {
@@ -328,7 +328,7 @@ Note: 某些瀏覽器不推薦使用  <code>is=""</code> 語法。這對可訪�
 
 必要時應定義響應。如果您的元素足夠複雜，並在 `connectedCallback()` 中打開 IndexedDB 的連接，請在 `disconnectedCallback()` 中執行所需清理工作。但必須小心！您不能認爲您的元素任何時候都能從 DOM 中正常移除。例如，如果用戶關閉了標籤，`disconnectedCallback()` 將無法調用。
 
-**示例：**將自定義元素移動到另一文檔，觀察其 `adoptedCallback()`：
+**示例: **將自定義元素移動到另一文檔，觀察其 `adoptedCallback()`:
 
 
     function createWindow(srcdoc) {
@@ -363,7 +363,7 @@ Note: 某些瀏覽器不推薦使用  <code>is=""</code> 語法。這對可訪�
 
 ### 將屬性 (property) 映射爲特性 (attribute) {: #reflectattr}
 
-HTML 屬性通常會將其值以 HTML 特性的形式映射回 DOM。例如，如果 `hidden` 或 `id` 的值在 JS 中發生變更：
+HTML 屬性通常會將其值以 HTML 特性的形式映射回 DOM。例如，如果 `hidden` 或 `id` 的值在 JS 中發生變更:
 
 
 
@@ -371,7 +371,7 @@ HTML 屬性通常會將其值以 HTML 特性的形式映射回 DOM。例如，�
     div.hidden = true;
 
 
-值將以特性的形式應用於活動 DOM：
+值將以特性的形式應用於活動 DOM:
 
 
     <div id="my-id" hidden>
@@ -384,7 +384,7 @@ HTML 屬性通常會將其值以 HTML 特性的形式映射回 DOM。例如，�
 您可能想要映射屬性的另一個原因是，用戶定義的樣式在 JS 狀態變更時應用。
 
 
-回到我們的 `<app-drawer>` 例子。此組件的用戶可能會希望其灰色顯示和/或停用，以避免用戶交互：
+回到我們的 `<app-drawer>` 例子。此組件的用戶可能會希望其灰色顯示和/或停用，以避免用戶交互:
 
 
 
@@ -395,7 +395,7 @@ HTML 屬性通常會將其值以 HTML 特性的形式映射回 DOM。例如，�
 
 
 `disabled` 屬性在 JS 中發生變更時，我們希望該特性能添加到 DOM，以便用戶選擇器能匹配。
-元素可通過將值映射到具有同一名稱的特性上來提供該行爲：
+元素可通過將值映射到具有同一名稱的特性上來提供該行爲:
 
 
 
@@ -418,7 +418,7 @@ HTML 屬性通常會將其值以 HTML 特性的形式映射回 DOM。例如，�
 
 ### 保留對屬性的更改 {: #attrchanges}
 
-HTML 屬性可方便地讓用戶聲明初始狀態：
+HTML 屬性可方便地讓用戶聲明初始狀態:
 
 
     <app-drawer open disabled></app-drawer>
@@ -516,7 +516,7 @@ Note: 我將未定義的自定義元素視爲處於中間過渡狀態。[規範]
 
 自定義元素通過在元素代碼內部使用 DOM API 來管理其自身內容。[響應](#reactions)在這方面可起到作用。
 
-**示例** - 使用一些默認 HTML 來創建元素：
+**示例** - 使用一些默認 HTML 來創建元素:
 
     customElements.define('x-foo-with-markup', class extends HTMLElement {
       connectedCallback() {
@@ -574,7 +574,7 @@ Shadow DOM 本身是一種組合工具。
 
 
 Shadow DOM 提供了一種方法，可讓元素以獨立於頁面其餘部分的方式擁有和渲染 DOM 並設置其樣式。
-您甚至可以使用一個標記來隱藏整個應用：
+您甚至可以使用一個標記來隱藏整個應用:
 
 
 
@@ -599,7 +599,7 @@ Shadow DOM 提供了一種方法，可讓元素以獨立於頁面其餘部分的
       ...
     });
 
-示例用法：
+示例用法:
 
     <x-foo-shadowdom>
       <p><b>User's</b> custom text</p>
@@ -656,7 +656,7 @@ if (supportsCustomElementsV1) {
 
 對於不熟悉的開發者而言，[`<template>` 元素](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)讓您能聲明 DOM 的片段，該片段在頁面加載時解析並駐留，且於後續運行時激活。它是網頁組件家族中的另一 API 原語。**模板是聲明自定義元素結構的理想之選**。
 
-**示例：**註冊帶有使用 `<template>` 創建的 Shadow DOM 內容的元素：
+**示例: **註冊帶有使用 `<template>` 創建的 Shadow DOM 內容的元素:
 
     <template id="x-foo-from-template">
       <style>
@@ -679,9 +679,9 @@ if (supportsCustomElementsV1) {
     </script>
 
 
-這幾行代碼實現了豐富的功能。讓我們瞭解一些主要方面：
+這幾行代碼實現了豐富的功能。讓我們瞭解一些主要方面:
 
-1. 我們在 HTML 中定義新的元素：`<x-foo-from-template>`
+1. 我們在 HTML 中定義新的元素: `<x-foo-from-template>`
 2. 元素的 Shadow DOM 使用 `<template>` 創建
 3. 由於是 Shadow DOM，元素的 DOM 侷限於元素本地
 4. 由於是 Shadow DOM，元素的內部 CSS 作用域限於元素內
@@ -776,7 +776,7 @@ if (supportsCustomElementsV1) {
 
 
 
-**示例** - 在定義前隱藏 `<app-drawer>`：
+**示例** - 在定義前隱藏 `<app-drawer>`:
 
 
     app-drawer:not(:defined) {
@@ -798,7 +798,7 @@ if (supportsCustomElementsV1) {
 HTML 使用起來非常寬鬆和靈活。例如，在頁面上聲明 `<randomtagthatdoesntexist>`，瀏覽器將非常樂意接受它。爲什麼非標準標記可以生效？答案在於 [HTML 規範](https://html.spec.whatwg.org/multipage/dom.html#htmlunknownelement)允許這樣。規範沒有定義的元素作爲 `HTMLUnknownElement` 進行解析。
 
 自定義元素則並非如此。如果在創建時使用有效的名稱（包含“-”），則潛在的自定義元素將解析爲 `HTMLElement`。
-您可以在支持自定義元素的瀏覽器中核實這一點。打開控制檯：<span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">J</span>（或者在 Mac 上，<span class="kbd">Cmd</span>+<span class="kbd">Opt</span>+<span class="kbd">J</span>）並粘貼下列代碼行：
+您可以在支持自定義元素的瀏覽器中核實這一點。打開控制檯: <span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">J</span>（或者在 Mac 上，<span class="kbd">Cmd</span>+<span class="kbd">Opt</span>+<span class="kbd">J</span>）並粘貼下列代碼行:
 
 
     // "tabs" is not a valid custom element name
@@ -860,7 +860,7 @@ HTML 使用起來非常寬鬆和靈活。例如，在頁面上聲明 `<randomtag
 
 Chrome 54（[狀態](https://www.chromestatus.com/features/4696261944934400)）包含自定義元素 v1。Safari 已[開始提供原型](https://bugs.webkit.org/show_bug.cgi?id=150225)，可以在 WebKit 中對該 API 進行夜間測試。Edge 已[開始提供原型](https://twitter.com/AaronGustafson/status/717028669948977153)。Mozilla 需要處理一個[未解決的錯誤](https://bugzilla.mozilla.org/show_bug.cgi?id=889230)。
 
-要檢測自定義元素功能，檢測是否存在 `window.customElements`：
+要檢測自定義元素功能，檢測是否存在 `window.customElements`:
 
 
     const supportsCustomElementsV1 = 'customElements' in window;
@@ -870,13 +870,13 @@ Chrome 54（[狀態](https://www.chromestatus.com/features/4696261944934400)）�
 
 在瀏覽器提供廣泛支持前，可以暫時使用 [polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js)。
 
-**注**：無法對 `:defined` CSS 僞類執行 polyfill。
+**注**: 無法對 `:defined` CSS 僞類執行 polyfill。
 
-安裝方法：
+安裝方法:
 
     bower install --save webcomponents/custom-elements
 
-用法：
+用法:
 
 
     function loadScript(src) {
@@ -902,7 +902,7 @@ Chrome 54（[狀態](https://www.chromestatus.com/features/4696261944934400)）�
 ##  結論
 
 自定義元素提供了一種新工具，可讓我們在瀏覽器中定義新 HTML 標記並創建可重用的組件。
-將它們與 Shadow DOM 和 `<template>` 等新平臺原語結合使用，我們可開始實現網絡組件的宏大圖景：
+將它們與 Shadow DOM 和 `<template>` 等新平臺原語結合使用，我們可開始實現網絡組件的宏大圖景:
 
 - 創建和擴展可重複使用組件的跨瀏覽器（網絡標準）。
 - 無需庫或框架即可使用。原生 JS/HTML 威武！

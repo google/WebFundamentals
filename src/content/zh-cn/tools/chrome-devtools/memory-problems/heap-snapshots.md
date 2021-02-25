@@ -20,14 +20,14 @@ Chrome DevTools 的堆分析器可以按页面的 JavaScript 对象和相关 DOM
 
 ## 拍摄快照
 
-在 Profiles 面板上，选择 **Take Heap Snapshot**，然后点击 **Start** 或者按 <span class="kbd">Cmd</span> + <span class="kbd">E</span> 或 <span class="kbd">Ctrl</span> + <span class="kbd">E</span>：
+在 Profiles 面板上，选择 **Take Heap Snapshot**，然后点击 **Start** 或者按 <span class="kbd">Cmd</span> + <span class="kbd">E</span> 或 <span class="kbd">Ctrl</span> + <span class="kbd">E</span>:
 
 ![选择分析类型](imgs/profiling-type.png)
 
 **快照**最初存储在渲染器进程内存中。当您点击快照图标进行查看时，它们将根据要求传输到 DevTools 中。
 
 
-在快照加载到 DevTools 中并解析后，快照名称下方将出现一个数字，显示[可到达 JavaScript 对象](/web/tools/chrome-devtools/profile/memory-problems/memory-101#object-sizes)的总大小：
+在快照加载到 DevTools 中并解析后，快照名称下方将出现一个数字，显示[可到达 JavaScript 对象](/web/tools/chrome-devtools/profile/memory-problems/memory-101#object-sizes)的总大小:
 
 
 
@@ -37,13 +37,13 @@ Note: 只有可到达对象才会包含到快照中。此外，拍摄快照始�
 
 ## 清除快照
 
-按 Clear all profiles 图标可以（同时从 DevTools 和渲染器内存）移除快照：
+按 Clear all profiles 图标可以（同时从 DevTools 和渲染器内存）移除快照:
 
 ![移除快照](imgs/remove-snapshots.png)
 
 关闭 DevTools 窗口不会从渲染器内存中删除配置文件。重新打开 DevTools 时，之前拍摄的所有快照都会重新显示在快照列表中。
 
-<p class="note"><strong>示例：</strong>查看此<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html">离散对象</a>示例，并使用堆分析器对其进行分析。您应看到多个（对象）项目分配。</p>
+<p class="note"><strong>示例: </strong>查看此<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html">离散对象</a>示例，并使用堆分析器对其进行分析。您应看到多个（对象）项目分配。</p>
 
 ## 查看快照
 
@@ -61,7 +61,7 @@ Note: 只有可到达对象才会包含到快照中。此外，拍摄快照始�
 
 
 
-要在视图间切换，请使用视图底部的选择器：
+要在视图间切换，请使用视图底部的选择器:
 
 ![切换视图选择器](imgs/switch-views.png)
 
@@ -69,11 +69,11 @@ Note: 并不是所有属性都存储在 JavaScript 堆上。不会捕捉使用�
 
 ### Summary 视图
 
-快照最初会在 Summary 视图下打开并显示对象概览，可以将此视图展开以显示实例：
+快照最初会在 Summary 视图下打开并显示对象概览，可以将此视图展开以显示实例:
 
 ![Summary 视图](imgs/summary-view.png)
 
-顶级条目为“概览”行。这些行显示：
+顶级条目为“概览”行。这些行显示:
 
 * **Constructor** 表示使用此构造函数创建的所有对象。
 * **对象实例数**显示在 # 列中。
@@ -102,28 +102,28 @@ Note: 并不是所有属性都存储在 JavaScript 堆上。不会捕捉使用�
 * **HTMLDivElement**、**HTMLAnchorElement**、**DocumentFragment**等 – 引用元素或者您的代码所引用特定类型的文本对象。
 
 
-<p class="note"><strong>示例：</strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-summary">演示页面</a>，了解如何使用 Summary 视图。</p>
+<p class="note"><strong>示例: </strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-summary">演示页面</a>，了解如何使用 Summary 视图。</p>
 
 ### Comparison 视图
 
-通过相互比较多个快照，查找泄漏的对象。要验证某个特定的应用操作不会引起泄漏（例如，通常来说，一对直接和反向操作（比如打开一个文档然后将其关闭）不应泄漏任何垃圾），您可以按照下面的情形操作：
+通过相互比较多个快照，查找泄漏的对象。要验证某个特定的应用操作不会引起泄漏（例如，通常来说，一对直接和反向操作（比如打开一个文档然后将其关闭）不应泄漏任何垃圾），您可以按照下面的情形操作:
 
 1. 在执行任何操作前拍摄一个堆快照。
 2. 执行操作（以一种您认为会引起泄漏的方式与页面交互）。
 3. 执行反向操作（执行反向交互并重复几次）。
 4. 拍摄第二个堆快照，然后将其视图更改为 Comparison，并与快照 1 进行比较。
 
-在 Comparison 视图中，将显示两个快照之间的不同。展开概览条目时，将显示已添加和删除的对象实例：
+在 Comparison 视图中，将显示两个快照之间的不同。展开概览条目时，将显示已添加和删除的对象实例:
 
 ![Comparison 视图](imgs/comparison-view.png)
 
-<p class="note"><strong>示例：</strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-comparison">演示页面</a>，了解如何使用快照比较检测泄漏。</p>
+<p class="note"><strong>示例: </strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-comparison">演示页面</a>，了解如何使用快照比较检测泄漏。</p>
 
 ### Containment 视图
 
 Containment 视图基本上是您应用的对象结构的“俯瞰视图”。利用此视图，您可以深入了解函数闭包、观察共同组成您的 JavaScript 对象的 VM 内部对象，以及从一个非常低的级别了解您的应用使用的内存量。
 
-此视图提供了多个入口点：
+此视图提供了多个入口点:
 
 * **DOMWindow 对象**是被视为 JavaScript 代码“全局”对象的对象。
 * **GC 根**是 VM 的垃圾使用的实际 GC 根。GC 根可以由内置对象映射、符号表、VM 线程堆栈、编译缓存、句柄作用域和全局句柄组成。
@@ -132,12 +132,12 @@ Containment 视图基本上是您应用的对象结构的“俯瞰视图”。�
 ![Containment 视图](imgs/containment-view.png)
 
 <p class="note">
-  <strong>示例：</strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-containment">演示页面</a>，了解如何使用此视图探索闭包和事件处理程序。</p>
+  <strong>示例: </strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-containment">演示页面</a>，了解如何使用此视图探索闭包和事件处理程序。</p>
 
 
 <strong>闭包提示</strong>
 
-闭包有助于为函数命名，让您可以轻松地在快照中区分不同的闭包。例如，下面的示例未使用已命名的函数：
+闭包有助于为函数命名，让您可以轻松地在快照中区分不同的闭包。例如，下面的示例未使用已命名的函数:
 
 
     function createLargeClosure() {
@@ -151,7 +151,7 @@ Containment 视图基本上是您应用的对象结构的“俯瞰视图”。�
     }
 
 
-而下面的示例则使用了已命名的函数：
+而下面的示例则使用了已命名的函数:
 
 
     function createLargeClosure() {
@@ -168,7 +168,7 @@ Containment 视图基本上是您应用的对象结构的“俯瞰视图”。�
 ![为函数命名以区分闭包](imgs/domleaks.png)
 
 <p class="note">
-    <strong>示例：</strong>
+    <strong>示例: </strong>
     查看此<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example7.html">为什么 eval 是魔鬼</a>示例，分析闭包对内存的影响。您可能还想深入研究此示例，了解如何记录<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example8.html">堆分配</a>。</p>
 
 
@@ -186,14 +186,14 @@ Containment 视图基本上是您应用的对象结构的“俯瞰视图”。�
 ![Dominators 视图](imgs/dominators-view.png)
 
 <p class="note">
-    <strong>示例：</strong>
+    <strong>示例: </strong>
     查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-dominators">演示</a>，了解如何查找聚集点。深入研究此示例，了解<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example10.html">保留路径和支配项</a>。</p>
 
 
 ## 查询颜色编码
 
 对象的属性和属性值具有不同的类型，并采用相应的颜色进行编码。
-每个属性都具有以下四种类型之一：
+每个属性都具有以下四种类型之一:
 
 * **a: property** - 具有名称的正则属性，可以通过 .（点）运算符或者 [ ]（方括号）标记访问，例如 ["foo bar"]；
 * **0: element** - 具有数字索引的正则属性，可以通过 [ ]（方括号）标记访问；
@@ -241,7 +241,7 @@ DOM 泄漏可能比您想象的要大。思考下面的示例 - 什么时候发�
 ![DOM 子树](imgs/treegc.png)
 
 <p class="note">
-    <strong>示例：</strong>
+    <strong>示例: </strong>
     查看此<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example6.html">泄漏的 DOM 节点</a>示例，了解 DOM 节点的什么地方可能出现泄漏以及如何检测泄漏。您还可以查看这个 <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example9.html">DOM 泄漏超出预期</a>示例，继续深入研究。</p>
 
 
@@ -249,7 +249,7 @@ DOM 泄漏可能比您想象的要大。思考下面的示例 - 什么时候发�
 
 
 <p class="note">
-    <strong>示例</strong>：
+    <strong>示例</strong>:
     查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-dom-leaks">演示</a>，了解已分离的 DOM 树。</p>
 
 

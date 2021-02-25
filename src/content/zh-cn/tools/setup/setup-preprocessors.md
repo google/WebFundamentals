@@ -22,15 +22,15 @@ description:了解如何设置 CSS 与 JS 预处理器以帮助您高效地编�
 
 ## 什么是预处理器？
 
-预处理器可以获取任意的源文件，并将其转换成浏览器可以识别的内容。 
+预处理器可以获取任意的源文件，并将其转换成浏览器可以识别的内容。
 
-输出为 CSS 时，可以使用预处理器添加以下功能（如果不使用预处理器，则不会存在这些功能）：CSS 变量、嵌套，等等。这个类别中显著的例子是 [Sass](http://sass-lang.com/)、[Less](http://lesscss.org/){: .external } 和 [Stylus](https://learnboost.github.io/stylus/)。
+输出为 CSS 时，可以使用预处理器添加以下功能（如果不使用预处理器，则不会存在这些功能）: CSS 变量、嵌套，等等。这个类别中显著的例子是 [Sass](http://sass-lang.com/)、[Less](http://lesscss.org/){: .external } 和 [Stylus](https://learnboost.github.io/stylus/)。
 
 输出为 JavaScript 时，它们可以从完全不同的语言转换（编译），或者将超集或新语言标准转换（转译）为当前的标准。这个类别中显著的例子是 [CoffeeScript](http://coffeescript.org/){: .external } 和 ES6（通过 [Babel](https://babeljs.io/)）。
 
 ## 调试和修改预处理的内容
 
-只要您在浏览器中且使用 DevTools [修改您的 CSS](/web/tools/chrome-devtools/inspect-styles/edit-styles) 或调试 JavaScript，就会出现一个非常明显的问题：您正在浏览的内容没有反映源，而且不会真的帮助您解决问题。
+只要您在浏览器中且使用 DevTools [修改您的 CSS](/web/tools/chrome-devtools/inspect-styles/edit-styles) 或调试 JavaScript，就会出现一个非常明显的问题: 您正在浏览的内容没有反映源，而且不会真的帮助您解决问题。
 
 为了解决问题，最现代的预处理器支持一种名称为 <b>Source Maps</b> 的功能。
 
@@ -42,11 +42,11 @@ description:了解如何设置 CSS 与 JS 预处理器以帮助您高效地编�
 
 对于生成的每个 CSS 文件，除了编译的 CSS，CSS 预处理器还会生成源映射文件 (.map)。源映射文件是 JSON 文件，会在每个生成的 CSS 声明与源文件相应行之间定义映射。
 
-每个 CSS 文件均包含指定源映射文件网址的注解，嵌入文件最后一行上的特殊注释中：
+每个 CSS 文件均包含指定源映射文件网址的注解，嵌入文件最后一行上的特殊注释中:
 
     /*# sourceMappingURL=<url> */
 
-例如，假设存在一个名为 **styles.scss** 的 Sass 源文件：
+例如，假设存在一个名为 **styles.scss** 的 Sass 源文件:
 
     %$textSize: 26px;
     $fontColor: red;
@@ -57,7 +57,7 @@ description:了解如何设置 CSS 与 JS 预处理器以帮助您高效地编�
         background: $bgColor;
     }
 
-Sass 会生成 CSS 文件 **styles.css**，包含 sourceMappingURL 注解：
+Sass 会生成 CSS 文件 **styles.css**，包含 sourceMappingURL 注解:
 
     h2 {
       font-size: 26px;
@@ -66,7 +66,7 @@ Sass 会生成 CSS 文件 **styles.css**，包含 sourceMappingURL 注解：
     }
     /*# sourceMappingURL=styles.css.map */
 
-下方为一个源映射文件示例：
+下方为一个源映射文件示例:
 
     {
       "version": "3",
@@ -79,7 +79,7 @@ Sass 会生成 CSS 文件 **styles.css**，包含 sourceMappingURL 注解：
 
 一些网络服务器（如 Google App 引擎）需要适用于提供的每个文件类型的显式配置。这种情况下，需要为您的 Source Maps 提供 MIME 类型的 `application/json`，但实际上 Chrome 可以[接受任何内容类型](https://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files)，例如 `application/octet-stream`。
 
-### 奖励：通过自定义标题进行源映射 
+### 奖励: 通过自定义标题进行源映射
 
 如果您不希望文件中存在其他注释，请使用缩小的 JavaScript 文件上的 HTTP 标题字段告知 DevTools 在哪里可以找到源映射。这需要配置或自定义您的网络服务器，不在本文档的介绍范围内。
 

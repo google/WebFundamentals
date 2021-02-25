@@ -24,13 +24,13 @@ description:控制檯日誌是一種可以檢查您的頁面或應用所進行�
 
 使用 <a href="/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-">console.log()</a> 方法可以向控制檯進行任何基本記錄。此方法採用一個或多個表達式作爲參數，並將其當前值寫入控制檯，從而將多個參數級聯到一個由空格分隔的行中。
 
-在您的 JavaScript 中執行下面一行代碼：
+在您的 JavaScript 中執行下面一行代碼:
 
 
     console.log("Node count:", a.childNodes.length, "and the current time is:", Date.now());
-    
 
-將在控制檯中輸出以下內容：
+
+將在控制檯中輸出以下內容:
 ![記錄多個](images/console-write-log-multiple.png)
 
 ## 自動填充命令 {: #autocomplete}
@@ -47,7 +47,7 @@ description:控制檯日誌是一種可以檢查您的頁面或應用所進行�
 
 要結束分組，您只需要在完成後調用 [`console.groupEnd()`](./console-reference#consolegroupend)。
 
-示例輸入：
+示例輸入:
 
 
     var user = "jsmith", authenticated = false;
@@ -58,16 +58,16 @@ description:控制檯日誌是一種可以檢查您的頁面或應用所進行�
         console.log("User '%s' not authenticated.", user)
     }
     console.groupEnd();
-    
 
-示例輸出：
+
+示例輸出:
 ![簡單的控制檯組輸出](images/console-write-group.png)
 
 #### 嵌套組
 
 日誌組也可以彼此嵌套。同時以小片段查看較大的組時，嵌套組非常有用。
 
-下面的示例顯示了登錄流程身份驗證階段的日誌組：
+下面的示例顯示了登錄流程身份驗證階段的日誌組:
 
 
     var user = "jsmith", authenticated = true, authorized = true;
@@ -86,14 +86,14 @@ description:控制檯日誌是一種可以檢查您的頁面或應用所進行�
     // End top-level group
     console.groupEnd();
     console.log("A group-less log trace.");
-    
 
-下面是控制檯中的嵌套組輸出：
+
+下面是控制檯中的嵌套組輸出:
 ![簡單的控制檯組輸出](images/console-write-nestedgroup.png)
 
 #### 自動摺疊組
 
-大量使用組時，即時查看所有信息可能不是非常有用。這些情況下，您可以通過調用 [`console.groupCollapsed()`](./console-reference#consolegroupcollapsedobject-object-) 而不是 `console.group()` 的方式自動摺疊組：
+大量使用組時，即時查看所有信息可能不是非常有用。這些情況下，您可以通過調用 [`console.groupCollapsed()`](./console-reference#consolegroupcollapsedobject-object-) 而不是 `console.group()` 的方式自動摺疊組:
 
 
     console.groupCollapsed("Authenticating user '%s'", user);
@@ -101,9 +101,9 @@ description:控制檯日誌是一種可以檢查您的頁面或應用所進行�
         ...
     }
     console.groupEnd();
-    
 
-groupCollapsed() 輸出：
+
+groupCollapsed() 輸出:
 ![初始處於摺疊狀態的組](images/console-write-groupcollapsed.png)
 
 ## 錯誤和警告
@@ -112,14 +112,14 @@ groupCollapsed() 輸出：
 
 ### console.error()
 
-[`console.error()`](./console-reference#consoleerrorobject--object-) 方法會顯示紅色圖標和紅色消息文本：
+[`console.error()`](./console-reference#consoleerrorobject--object-) 方法會顯示紅色圖標和紅色消息文本:
 
 
     function connectToServer() {
         console.error("Error: %s (%i)", "Server is  not responding",500);
     }
     connectToServer();
-    
+
 
 轉變爲
 
@@ -127,13 +127,13 @@ groupCollapsed() 輸出：
 
 ### console.warn()
 
-[`console.warn()`](./console-reference#consolewarnobject--object-) 方法會顯示一個黃色警告圖標和相應的消息文本：
+[`console.warn()`](./console-reference#consolewarnobject--object-) 方法會顯示一個黃色警告圖標和相應的消息文本:
 
 
     if(a.childNodes.length < 3 ) {
         console.warn('Warning! Too few nodes (%d)', a.childNodes.length);
     }
-    
+
 
 轉變爲
 
@@ -149,9 +149,9 @@ groupCollapsed() 輸出：
 
 
     console.assert(list.childNodes.length < 500, "Node count is > 500");
-    
 
-斷言失敗在控制檯中的顯示方式：
+
+斷言失敗在控制檯中的顯示方式:
 ![斷言失敗](images/console-write-assert-failed.png)
 
 ## 字符串替代和格式設置
@@ -162,7 +162,7 @@ groupCollapsed() 輸出：
 
     console.log("%s has %d points", "Sam", 100);
 
-格式說明符的完整列表爲：
+格式說明符的完整列表爲:
 
 | 說明符 | 輸出                                                                            |
 |-----------|:----------------------------------------------------------------------------------|
@@ -175,13 +175,13 @@ groupCollapsed() 輸出：
 
 本示例使用數字說明符設置 `document.childNodes.length` 的值的格式。同時使用浮點說明符設置 `Date.now()` 的值的格式。
 
-代碼：
+代碼:
 
 
     console.log("Node count: %d, and the time is %f.", document.childNodes.length, Date.now());
-    
 
-上一個代碼示例的輸出：
+
+上一個代碼示例的輸出:
 ![示例替代輸出](images/console-write-log-multiple.png)
 
 ### 使用 CSS 設置控制檯輸出的樣式
@@ -189,19 +189,19 @@ groupCollapsed() 輸出：
 利用 CSS 格式說明符，您可以自定義控制檯中的顯示。使用說明符啓動字符串，並設置爲您希望的樣式，作爲第二個參數。
 
 
-嘗試使用下面的代碼：
+嘗試使用下面的代碼:
 
 
     console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
-    
 
-..將您的日誌輸出設置爲藍色的大字體：
+
+..將您的日誌輸出設置爲藍色的大字體:
 
 ![設置了格式的字符串](images/console-write-format-string.png)
 
 ### 將 DOM 元素格式化爲 JavaScript 對象
 
-默認情況下，DOM 元素將以其 HTML 的表示的形式記錄到控制檯中，不過有時，您希望以 JavaScript 對象的形式訪問 DOM 元素並檢查其屬性。爲此，您可以使用 `%O` 字符串說明符（參見上文），也可以使用 `console.dir` 達到同樣的效果： 
+默認情況下，DOM 元素將以其 HTML 的表示的形式記錄到控制檯中，不過有時，您希望以 JavaScript 對象的形式訪問 DOM 元素並檢查其屬性。爲此，您可以使用 `%O` 字符串說明符（參見上文），也可以使用 `console.dir` 達到同樣的效果:
 
 ![使用 dir() 記錄元素](images/dir-element.png)
 

@@ -21,7 +21,7 @@ description:Polymer Starter Kit。
 
 
 
-PRPL 模式概括：
+PRPL 模式概括:
 
 * **推送**初始路由需要的组件
 * 尽快**呈现**初始路由
@@ -48,7 +48,7 @@ PRPL 模式概括：
 
 ### 启动开发服务器
 
-此命令在 `http://localhost:8080` 中服务于此应用，并为此应用提供基本的网址路由：
+此命令在 `http://localhost:8080` 中服务于此应用，并为此应用提供基本的网址路由:
 
 
     polymer serve --open
@@ -70,12 +70,12 @@ PRPL 模式概括：
 
 ### 预览此版本
 
-此命令在 `http://localhost:8080` 中提供了此应用未捆绑状态的缩减版本，因为其由兼容的 push 服务器提供服务：
+此命令在 `http://localhost:8080` 中提供了此应用未捆绑状态的缩减版本，因为其由兼容的 push 服务器提供服务:
 
 
     polymer serve build/unbundled
 
-此命令在 `http://localhost:8080` 中提供了此应用缩减版本，使用片段捆绑生成：
+此命令在 `http://localhost:8080` 中提供了此应用缩减版本，使用片段捆绑生成:
 
 
     polymer serve build/bundled

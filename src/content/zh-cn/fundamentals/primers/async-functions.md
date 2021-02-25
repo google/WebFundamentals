@@ -14,7 +14,7 @@ Chrome 55 中默认情况下启用异步函数，坦率地讲，它们的作用�
 它们可以让异步代码“智商”下降、可读性提高。
 
 
-异步函数的工作方式是这样的：
+异步函数的工作方式是这样的:
 
     async function myFirstAsyncFunction() {
       try {
@@ -33,9 +33,9 @@ Chrome 55 中默认情况下启用异步函数，坦率地讲，它们的作用�
 Note: 如果不熟悉 Promise，可以看一看[我们的 Promise 指南](/web/fundamentals/getting-started/primers/promises)。
 
 
-## 示例：记录获取日志
+## 示例: 记录获取日志
 
-假设我们想获取某个网址并以文本形式记录响应日志。以下是利用 Promise 编写的代码：
+假设我们想获取某个网址并以文本形式记录响应日志。以下是利用 Promise 编写的代码:
 
 
     function logFetch(url) {
@@ -48,7 +48,7 @@ Note: 如果不熟悉 Promise，可以看一看[我们的 Promise 指南](/web/f
         });
     }
 
-以下是利用异步函数具有相同作用的代码：
+以下是利用异步函数具有相同作用的代码:
 
     async function logFetch(url) {
       try {
@@ -70,7 +70,7 @@ Note: 您 `await` 的任何内容都通过 `Promise.resolve()` 传递，这样�
 
 无论是否使用 `await`，异步函数*都会*返回 Promise。该 Promise 解析时返回异步函数返回的任何值，拒绝时返回异步函数抛出的任何值。
 
-因此，对于：
+因此，对于:
 
     // wait ms milliseconds
     function wait(ms) {
@@ -91,14 +91,14 @@ Note: 您 `await` 的任何内容都通过 `Promise.resolve()` 传递，这样�
 
 …调用 `foo()` 返回的 Promise 会在*拒绝*时返回 `Error('bar')`。
 
-## 示例：流式传输响应
+## 示例: 流式传输响应
 
 异步函数在更复杂示例中更有用武之地。假设我们想在流式传输响应的同时记录数据块日志，并返回数据块最终大小。
 
 
 Note: 一看到“记录数据块日志”这几个字就让我感到不舒服。
 
-以下是使用 Promise 编写的代码：
+以下是使用 Promise 编写的代码:
 
     function getResponseSize(url) {
       return fetch(url).then(response => {
@@ -123,7 +123,7 @@ Note: 一看到“记录数据块日志”这几个字就让我感到不舒服�
 
 
 
-我们再用异步函数来编写上面这段代码：
+我们再用异步函数来编写上面这段代码:
 
     async function getResponseSize(url) {
       const response = await fetch(url);
@@ -153,7 +153,7 @@ Note: 我有点偏爱卡片信息流。如果不熟悉流式传输，可以[看�
 
 ## 其他异步函数语法
 
-我们已经见识了 `async function() {}`，但 `async` 关键字还可用于其他函数语法：
+我们已经见识了 `async function() {}`，但 `async` 关键字还可用于其他函数语法:
 
 
 ### 箭头函数
@@ -208,7 +208,7 @@ Note: 类构造函数以及 getter/settings 方法不能是异步的。
       return "done!";
     }
 
-以上代码执行完毕需要 1000 毫秒，再看看这段代码：
+以上代码执行完毕需要 1000 毫秒，再看看这段代码:
 
     async function parallel() {
       const wait1 = wait(500);
@@ -221,12 +221,12 @@ Note: 类构造函数以及 getter/settings 方法不能是异步的。
 …以上代码只需 500 毫秒就可执行完毕，因为两个 wait 是同时发生的。让我们看一个实例…
 
 
-### 示例：按顺序输出获取的数据
+### 示例: 按顺序输出获取的数据
 
 假定我们想获取一系列网址，并尽快按正确顺序将它们记录到日志中。
 
 
-*深呼吸* - 以下是使用 Promise 编写的代码：
+*深呼吸* - 以下是使用 Promise 编写的代码:
 
     function logInOrder(urls) {
       // fetch all the URLs
@@ -244,7 +244,7 @@ Note: 类构造函数以及 getter/settings 方法不能是异步的。
 是的，没错，我使用 `reduce` 来链接 Promise 序列。我是不是*很智能*。
 但这种有点*很智能*的编码还是不要为好。
 
-不过，如果使用异步函数改写以上代码，又容易让代码变得*过于循序*：
+不过，如果使用异步函数改写以上代码，又容易让代码变得*过于循序*:
 
 
 <span class="compare-worse">不推荐的编码方式</span> - 过于循序
@@ -258,7 +258,7 @@ Note: 类构造函数以及 getter/settings 方法不能是异步的。
 
 代码简洁得多，但我的第二次获取要等到第一次获取读取完毕才能开始，以此类推。
 其执行效率要比并行执行获取的 Promise 示例低得多。
-幸运的是，还有一种理想的中庸之道：
+幸运的是，还有一种理想的中庸之道:
 
 <span class="compare-better">推荐的编码方式</span> - 可读性强、并行效率高
 
@@ -280,7 +280,7 @@ Note: 类构造函数以及 getter/settings 方法不能是异步的。
 
 ## 浏览器支持与解决方法
 
-在写作本文时，Chrome 55 中默认情况下启用异步函数，但它们在所有主流浏览器中正处于开发阶段：
+在写作本文时，Chrome 55 中默认情况下启用异步函数，但它们在所有主流浏览器中正处于开发阶段:
 
 
 * Edge - [在 14342+ 编译版本中隐藏在一个标志后](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/asyncfunctions/)
@@ -304,14 +304,14 @@ Note: Babel REPL 说起来很有趣。试试就知道。
 
 
 
-原本的异步函数代码：
+原本的异步函数代码:
 
     async function slowEcho(val) {
       await wait(1000);
       return val;
     }
 
-…如果使用 [polyfill](https://gist.github.com/jakearchibald/edbc78f73f7df4f7f3182b3c7e522d25){: .external}，就需要这样编写：
+…如果使用 [polyfill](https://gist.github.com/jakearchibald/edbc78f73f7df4f7f3182b3c7e522d25){: .external}，就需要这样编写:
 
 
     const slowEcho = createAsyncFunction(function*(val) {

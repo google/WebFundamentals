@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: PageSpeed Insights 規則使用背景：最佳化關鍵轉譯路徑時需要注意的地方及其原因。
+description: PageSpeed Insights 規則使用背景: 最佳化關鍵轉譯路徑時需要注意的地方及其原因。
 
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
@@ -10,7 +10,7 @@ description: PageSpeed Insights 規則使用背景：最佳化關鍵轉譯路徑
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
-PageSpeed Insights 規則使用背景：最佳化關鍵轉譯路徑時需要注意的地方及其原因。
+PageSpeed Insights 規則使用背景: 最佳化關鍵轉譯路徑時需要注意的地方及其原因。
 
 ##刪除禁止轉譯的 JavaScript 和 CSS
 
@@ -42,11 +42,8 @@ CSS 是建構轉譯樹狀結構的必備元素，但在初次建構網頁時，J
 
 ### **避免使用 CSS import**
 
-CSS import (@import) 指令可讓一個樣式表從另一個樣式表檔案中匯入規則。但是，建議您避免使用這些指令，因為這會在關鍵路徑中增加往返次數：只有在收到並剖析完帶有 @import 規則的 CSS 樣式表之後，才會發現匯入的 CSS 資源。
+CSS import (@import) 指令可讓一個樣式表從另一個樣式表檔案中匯入規則。但是，建議您避免使用這些指令，因為這會在關鍵路徑中增加往返次數: 只有在收到並剖析完帶有 @import 規則的 CSS 樣式表之後，才會發現匯入的 CSS 資源。
 
 ### **內嵌禁止轉譯的 CSS**
 
 為了獲得最佳效果，您不妨考慮將關鍵 CSS 直接內嵌到 HTML 文件中。這麼做可以減少關鍵路徑中的額外往返次數。如果做法正確，在只有 HTML 一項禁止資源時，就能實現「一次往返」的關鍵路徑長度。
-
-
-

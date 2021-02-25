@@ -22,7 +22,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 ## 哪一端朝上？
 
 要使用裝置定向和動作事件所傳回的資料，
-理解所提供的值很重要。  
+理解所提供的值很重要。
 
 ### 地球座標視框。
 
@@ -31,13 +31,13 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 
 <ul>
   <li>
-    <b>X：</b>代表東西方向 (其中東是正值)。
+    <b>X: </b>代表東西方向 (其中東是正值)。
   </li>
     <li>
-    <b>Y：</b>代表南北方向 (北是正值)。
+    <b>Y: </b>代表南北方向 (北是正值)。
   </li>
     <li>
-    <b>Z：</b>表示上下方向，
+    <b>Z: </b>表示上下方向，
 垂直於地面 (其中上是正值)。
   </li>
 </ul>
@@ -48,18 +48,18 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 是根據裝置中心對準。
 
 <img src="images/axes.png" alt="裝置座標框架的圖例">
-<!-- 特別感謝 Sheppy (https://developer.mozilla.org/en-US/profiles/Sheppy){: .external} 
+<!-- 特別感謝 Sheppy (https://developer.mozilla.org/en-US/profiles/Sheppy){: .external}
 提供其公共版權的影像。 -->
 
 <ul>
   <li>
-    <b>x：</b>在螢幕平面上，往右為正值。
+    <b>x: </b>在螢幕平面上，往右為正值。
   </li>
     <li>
-    <b>y：</b>在螢幕平面上，往上為正值。
+    <b>y: </b>在螢幕平面上，往上為正值。
   </li>
     <li>
-    <b>z：</b>垂直於螢幕或鍵盤，
+    <b>z: </b>垂直於螢幕或鍵盤，
 遠離為正值。
   </li>
 </ul>
@@ -95,14 +95,14 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
   <figcaption>
     <b>gamma:</b> 繞著 y 軸的旋轉，當裝置左右側和地球表面等距時為 0&deg;。
   右側倒向地球表面時，
-此值會增加。 
+此值會增加。
   </figcaption>
 </figure>
 
 
 
 
-## 裝置定向 
+## 裝置定向
 
 
 
@@ -118,7 +118,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 
 ### 使用裝置定位事件的時機
 
-裝置定向事件有幾個用途。  例如：
+裝置定向事件有幾個用途。  例如:
 
 <ul>
   <li>當使用者移動時更新地圖。</li>
@@ -129,8 +129,8 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 ### 查看支援並接聽事件
 
 若要接聽 `DeviceOrientationEvent`，
-首先請查看瀏覽器是否支援這些事件。  然後，將事件接聽器附加到 `window` 
- 物件，接聽 `deviceorientation` 物件。 
+首先請查看瀏覽器是否支援這些事件。  然後，將事件接聽器附加到 `window`
+ 物件，接聽 `deviceorientation` 物件。
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
@@ -153,7 +153,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 
 
 
-## 裝置動作 
+## 裝置動作
 
 
 
@@ -170,7 +170,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 
 ### 使用裝置動作事件的時機
 
-裝置動作事件有有幾個用途。  例如：
+裝置動作事件有有幾個用途。  例如:
 
 <ul>
   <li>搖晃手勢以重新整理資料。</li>
@@ -181,8 +181,8 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 ### 查看支援並接聽事件
 
 要接聽 `DeviceMotionEvent`，
-首先查看瀏覽器是否支援這些事件。  然後，將事件接聽器附加到 `window` 
- 物件，接聽 `devicemotion` 物件。 
+首先查看瀏覽器是否支援這些事件。  然後，將事件接聽器附加到 `window`
+ 物件，接聽 `devicemotion` 物件。
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
@@ -242,7 +242,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 </table>
 
 反之，如果手持電話時，螢幕垂直於地面，
-並直接面對檢視者：
+並直接面對檢視者:
 
 <table>
     <thead>
@@ -281,7 +281,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
   </tbody>
 </table>
 
-#### 範例：計算物件的最大加速度
+#### 範例: 計算物件的最大加速度
 
 使用裝置動作事件的一種方法是計算物件的最大加速度。
   例如，一個人跳躍的最大加速度為何。
@@ -294,4 +294,3 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 在點選「執行！」按鈕後，使用者被告知要跳躍！在這段時間中，
 頁面會儲存最大 (和最小) 的加速度值，並在跳躍後，
 告知使用者他們的最大加速度。
-

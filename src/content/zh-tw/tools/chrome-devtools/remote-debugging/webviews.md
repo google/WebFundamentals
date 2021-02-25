@@ -29,18 +29,18 @@ description:使用 Chrome 開發者工具在您的原生 Android 應用中調試
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
         WebView.setWebContentsDebuggingEnabled(true);
     }
-    
+
 
 此設置適用於應用的所有 WebView。
 
-**提示**：WebView 調試**不會**受應用清單中 `debuggable` 標誌的狀態的影響。如果您希望僅在 `debuggable` 爲 `true` 時啓用 WebView 調試，請在運行時測試標誌。
+**提示**: WebView 調試**不會**受應用清單中 `debuggable` 標誌的狀態的影響。如果您希望僅在 `debuggable` 爲 `true` 時啓用 WebView 調試，請在運行時測試標誌。
 
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
         if (0 != (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE))
         { WebView.setWebContentsDebuggingEnabled(true); }
     }
-    
+
 
 ## 在 DevTools 中打開 WebView
 
