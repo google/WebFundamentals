@@ -5,6 +5,7 @@ description: Polymer 0.8 has landed and with it come some major changes and perf
 {# wf_updated_on: 2015-04-15 #}
 {# wf_published_on: 2015-04-15 #}
 {# wf_youtube_id: cyf-17lWkYE #}
+{# wf_blink_components: N/A #}
 
 # Polymer 0.8: First Look {: .page-title }
 

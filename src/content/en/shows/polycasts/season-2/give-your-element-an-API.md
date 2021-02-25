@@ -5,6 +5,7 @@ description: Today I'm going to show you how to add public properties and method
 {# wf_updated_on: 2015-05-18 #}
 {# wf_published_on: 2015-05-18 #}
 {# wf_youtube_id: 7jolqbtIdiY #}
+{# wf_blink_components: N/A #}
 
 # Episode 16 {: .page-title }
 

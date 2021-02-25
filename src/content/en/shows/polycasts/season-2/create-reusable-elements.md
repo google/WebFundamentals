@@ -5,6 +5,7 @@ description: Creating reusable components doesn't have to be so tricky! Use the 
 {# wf_updated_on: 2015-03-05 #}
 {# wf_published_on: 2015-03-05 #}
 {# wf_youtube_id: p7Q1mQtFGM8 #}
+{# wf_blink_components: N/A #}
 
 # Create reusable elements with ease {: .page-title }
 
