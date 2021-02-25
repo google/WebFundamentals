@@ -39,7 +39,7 @@ content for faster loading.
 
 ![Perfomance comparison between opening a browser, the WebView and Custom Tabs.](performance.gif)
 
-You can test this now with our [sample][1] on GitHub. 
+You can test this now with our [sample][1] on GitHub.
 
 ## When should I use Custom Tabs vs WebView?
 
@@ -97,16 +97,16 @@ issues on [crbug.com][3] and ask questions to our Twitter account
 
 ## Getting Started
 
-If you are getting started with Custom Tabs, checkout the [Implementation Guide][11] and the 
+If you are getting started with Custom Tabs, checkout the [Implementation Guide][11] and the
 [GitHub Demo][1].
 
 For questions, check the [chrome-custom-tabs][5] tag on StackOverflow.
 
 ## Feedback {: #feedback .hide-from-toc }
 
-{% include "web/_shared/helpful.html" %}		
+{% include "web/_shared/helpful.html" %}
 
-[1]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/custom-tabs-example-app
+[1]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/custom-tabs-example-app
 [2]: https://play.google.com/store/apps/details?id=com.chrome
 [3]: https://crbug.com
 [4]: https://twitter.com/ChromiumDev
