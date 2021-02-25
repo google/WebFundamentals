@@ -5,7 +5,7 @@ description: Inheritance in HTML?! Yep! Not only is it possible with Web Compone
 {# wf_updated_on: 2015-05-03 #}
 {# wf_published_on: 2015-05-03 #}
 {# wf_youtube_id: OV8BvxpNQOs #}
-{# wf_blink_component: N/A #}
+{# wf_blink_components: N/A #}
 
 # Extending Native Elements {: .page-title }
 
