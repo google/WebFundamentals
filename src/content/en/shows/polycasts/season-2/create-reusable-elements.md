@@ -20,7 +20,7 @@ Creating reusable components doesn't have to be so tricky! Use the polyserve too
 
 ## Read More
 
-- [Demo source code](https://github.com/robdodson/polycasts/tree/master/ep14-reusable-elements)
+- [Demo source code](https://github.com/Polymer/polycasts/tree/master/ep14-reusable-elements)
 - [Polymer 0.8 documentation](https://www.polymer-project.org/0.8/)
 - [Polyserve](https://github.com/polymerlabs/polyserve)
 - [Previous guide to creating reusable components](https://www.polymer-project.org/0.5/docs/start/reusableelements.html)

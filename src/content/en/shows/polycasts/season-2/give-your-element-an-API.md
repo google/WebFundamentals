@@ -20,7 +20,7 @@ description: Today I'm going to show you how to add public properties and method
 
 ### Demo source code
 
-[https://github.com/robdodson/polycasts/tree/master/ep16-public-api/name-tag](https://github.com/robdodson/polycasts/tree/master/ep16-public-api/name-tag)
+[https://github.com/Polymer/polycasts/tree/master/ep16-public-api/name-tag](https://github.com/Polymer/polycasts/tree/master/ep16-public-api/name-tag)
 
 ### Polymer 0.9 documentation on properties
 

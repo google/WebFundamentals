@@ -21,7 +21,7 @@ Inheritance in HTML?! Yep! Not only is it possible with Web Components, it's sup
 
 ## Read More
 
-- [Demo source code](https://github.com/robdodson/polycasts/tree/master/ep15-extending-elements)
+- [Demo source code](https://github.com/Polymer/polycasts/tree/master/ep15-extending-elements)
 - [Polymer 0.8 documentation](https://www.polymer-project.org/0.8/)
 - [Polyserve](https://github.com/polymerlabs/polyserve)
 - [Create reusable elements with ease](https://www.youtube.com/watch?v=p7Q1mQtFGM8&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
