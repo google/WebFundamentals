@@ -407,7 +407,7 @@ file](https://github.com/GoogleChromeLabs/so-pwa/blob/main/workbox-config.js),
 pointing to the directory that contains all of my local assets along with a set
 of patterns to match. This file is automatically read by the [Workbox's
 CLI](/web/tools/workbox/modules/workbox-cli), which is
-[run](https://github.com/GoogleChrome/workbox/blob/master/package.json) each
+[run](https://github.com/GoogleChrome/workbox/blob/main/package.json) each
 time I rebuild the site.
 
 ```js
