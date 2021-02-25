@@ -11,7 +11,7 @@ description:利用 Chrome DevTools 提供的工具，您可以修复引发异常
 {% include "web/_shared/contributors/flaviocopes.html" %}
 利用 Chrome DevTools 提供的工具，您可以修复引发异常的网页和在 JavaScript 中调试错误。
 
-如果您可以了解背后的详细信息，页面异常和 JavaScript 错误会非常有用。在页面引发异常或脚本产生错误时，Console 可以提供具体、可靠的信息来帮助您定位和纠正问题。 
+如果您可以了解背后的详细信息，页面异常和 JavaScript 错误会非常有用。在页面引发异常或脚本产生错误时，Console 可以提供具体、可靠的信息来帮助您定位和纠正问题。
 
 在控制台中，您可以跟踪异常和引发异常的执行路径，显式或隐式捕捉异常（或忽略它们），甚至设置错误处理程序来自动收集和处理异常数据。
 
@@ -28,12 +28,12 @@ description:利用 Chrome DevTools 提供的工具，您可以修复引发异常
 发生错误时，请打开 DevTools 控制台 (`Ctrl+Shift+J` / `Cmd+Option+J`) 查看 JavaScript 错误消息。每一条消息都有一个指向文件名的链接，文件名带有您可以导航到文件的行号。
 
 
-异常示例：
+异常示例:
 ![异常示例](images/track-exceptions-tracking-exceptions.jpg)
 
 ### 视图异常堆叠追踪
 
-导致错误的执行路径并不总是非常明显。完整的 JavaScript 调用堆栈在控制台中会伴随着异常。展开这些控制台消息可以查看堆栈框架和导航到代码中的相应位置：
+导致错误的执行路径并不总是非常明显。完整的 JavaScript 调用堆栈在控制台中会伴随着异常。展开这些控制台消息可以查看堆栈框架和导航到代码中的相应位置:
 
 
 
@@ -41,7 +41,7 @@ description:利用 Chrome DevTools 提供的工具，您可以修复引发异常
 
 ### 出现 JavaScript 异常时暂停
 
-下一次引发异常时，请暂停 JavaScript 执行并检查其调用堆栈、范围变量以及您应用的状态。利用 Scripts 面板底部的三态停止按钮，您可以在不同的异常处理模式之间切换：![暂停按钮](images/track-exceptions-pause-gray.png){:.inline}
+下一次引发异常时，请暂停 JavaScript 执行并检查其调用堆栈、范围变量以及您应用的状态。利用 Scripts 面板底部的三态停止按钮，您可以在不同的异常处理模式之间切换: ![暂停按钮](images/track-exceptions-pause-gray.png){:.inline}
 
 
 
@@ -55,19 +55,19 @@ description:利用 Chrome DevTools 提供的工具，您可以修复引发异常
 通过将日志消息输出到控制台可更好地了解网页的行为。通过包含关联的堆叠追踪让日志条目的信息更丰富。有多种方式可以实现此目标。
 
 ### Error.stack
-每个 Error 对象都有一个包含堆叠追踪的字符串属性命名的堆栈：
+每个 Error 对象都有一个包含堆叠追踪的字符串属性命名的堆栈:
 
 ![Error.stack 示例](images/track-exceptions-error-stack.jpg)
 
 ### console.trace()
 
-使用可以打印当前 JavaScript 调用跟踪的 [`console.trace()`](./console-reference#consoletraceobject) 调用设置您的代码：
+使用可以打印当前 JavaScript 调用跟踪的 [`console.trace()`](./console-reference#consoletraceobject) 调用设置您的代码:
 
 ![console.trace() 示例](images/track-exceptions-console-trace.jpg)
 
 ### console.assert()
 
-通过将带有错误条件的 [`console.assert()`](./console-reference#consoleassertexpression-object) 作为第一个参数调用，在您的 JavaScript 代码中放置断言。当此表达式评估为 false 时，您将看到一条相应的 Console 记录：
+通过将带有错误条件的 [`console.assert()`](./console-reference#consoleassertexpression-object) 作为第一个参数调用，在您的 JavaScript 代码中放置断言。当此表达式评估为 false 时，您将看到一条相应的 Console 记录:
 
 
 
@@ -76,7 +76,7 @@ description:利用 Chrome DevTools 提供的工具，您可以修复引发异常
 
 ## 如何检查堆叠追踪来查找触发器
 
-我们来看一下如何使用刚刚学习的工具，并找出错误的真正原因。下面是一个包含两个脚本的简单 HTML 页面：
+我们来看一下如何使用刚刚学习的工具，并找出错误的真正原因。下面是一个包含两个脚本的简单 HTML 页面:
 
 
 
@@ -91,12 +91,12 @@ description:利用 Chrome DevTools 提供的工具，您可以修复引发异常
 
 
 
-在页面运行的时候点击页面时，将触发下面的错误：
+在页面运行的时候点击页面时，将触发下面的错误:
 
 
 ![触发的错误](images/track-exceptions-example-error-triggered.png)
 
-点击箭头可以展开错误消息：
+点击箭头可以展开错误消息:
 
 ![展开的错误消息](images/track-exceptions-example-error-message-expanded.png)
 
@@ -120,7 +120,7 @@ Chrome 会公开 `window.onerror` 处理程序函数，每当 JavaScript 代码�
 
 举例来说，使用 AJAX POST 调用设置一个错误处理程序，用于收集未捕捉异常的相关信息并将其报告回服务器，您会发现这样非常实用。这样，您可以记录用户浏览器中发生的所有错误并获得相关通知。
 
-使用 `window.onerror` 的示例：
+使用 `window.onerror` 的示例:
 
 ![window.onerror 处理程序的示例](images/runtime-exceptions-window-onerror.jpg)
 

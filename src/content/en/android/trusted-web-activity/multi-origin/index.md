@@ -19,7 +19,7 @@ before reading this documentation.*
 ________________
 
 **Trusted Web Activities** are a new way to integrate your web-app content such as your PWA with
-your Android app using a protocol based on Custom Tabs. 
+your Android app using a protocol based on Custom Tabs.
 
 <figure class="attempt-right">
   <img src="/web/updates/images/2020/01/twa-multi-origin/off-origin-navigation.gif"
@@ -30,7 +30,7 @@ your Android app using a protocol based on Custom Tabs.
 </figure>
 
 A Trusted Web Activity needs the origins being opened to be validated using
-[Digital Asset Links][3], in order to show the content in full-screen. 
+[Digital Asset Links][3], in order to show the content in full-screen.
 
 When a user navigates off the validated origin,  Custom Tab UI is shown. The URL bar in the Custom
 Tab tells the users they are now navigating in a domain outside the application, while also
@@ -52,7 +52,7 @@ able to control each validated origin.
 
 ## Setting up validation for multiple origins
 As in the main origin, the validation is achieved via Digital Asset Links and each domain to be
-validated needs to have its own assetlinks.json file. 
+validated needs to have its own assetlinks.json file.
 
 ### Add an assetlinks file to each origin
 In our example with *www.example.com* and *checkout.example.com*, we would have:
@@ -62,7 +62,7 @@ In our example with *www.example.com* and *checkout.example.com*, we would have:
 
 
 Since each domain is getting connected to the same Android application, the `assetlinks.json` files
-look exactly the same. 
+look exactly the same.
 
 Assuming the package name for the Android application is `com.example.twa`, both `assetlink.json`
 files would contain something similar to the following:
@@ -123,7 +123,7 @@ validated will be inside an `item` sub-element:
 </string-array>
 ...
 ```
-	
+
 Next, add a new `meta-data` tag inside the existing activity element that references the
 `LauncherActivity`, inside `AndroidManifest.xml`:
 
@@ -165,7 +165,7 @@ public void launcherWithMultipleOrigins(View view) {
 ## Conclusion
 With those steps, the Trusted Web Activity is now ready to support multiple origins.
 android-browser-helper has a [sample application][9] for multi origin Trusted Web Activities. Make
-sure to check it. 
+sure to check it.
 
 ## Troubleshooting
 Setting up Digital Asset Links has a few moving parts. If the application is still showing the
@@ -190,7 +190,7 @@ on applications installed on the device..
 [5]: https://github.com/GoogleChrome/android-browser-helper/blob/master/androidbrowserhelper/src/main/java/com/google/androidbrowserhelper/trusted/LauncherActivity.java
 [6]: https://github.com/GoogleChromeLabs/svgomg-twa
 [7]: https://github.com/GoogleChromeLabs/bubblewrap
-[8]: https://github.com/GoogleChromeLabs/svgomg-twa/blob/master/app/build.gradle#L73-L80
-[9]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/twa-multi-domain
+[8]: https://github.com/GoogleChromeLabs/svgomg-twa/blob/main/app/build.gradle#L73-L80
+[9]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/twa-multi-domain
 [10]: /web/android/trusted-web-activity/quick-start#troubleshooting
 [11]: https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool

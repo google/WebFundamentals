@@ -63,7 +63,7 @@ Anda bisa **mengurangi** biaya transfer jaringan JavaScript melalui:
       dengan [cakupan
       kode DevTools](/web/updates/2017/04/devtools-release-notes#coverage).
     * Gunakan
-      [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+      [babel-preset-env](https://github.com/GoogleChrome/puppeteer/blob/main/packages/babel-preset-env)
       dan browserlist untuk menghindari transpiling fitur yang sudah ada di browser modern.
       Developer berpengalaman mungkin tahu bahwa [analisis paket webpack
 ](https://github.com/webpack-contrib/webpack-bundle-analyzer) yang teliti akan membantu

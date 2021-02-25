@@ -12,7 +12,7 @@ description:合成是将页面的已绘制部分放在一起以在屏幕上显�
 合成是将页面的已绘制部分放在一起以在屏幕上显示的过程。
 
 
-此方面有两个关键因素影响页面的性能：需要管理的合成器层数量，以及您用于动画的属性。
+此方面有两个关键因素影响页面的性能: 需要管理的合成器层数量，以及您用于动画的属性。
 
 ### TL;DR {: .hide-from-toc }
 
@@ -22,11 +22,11 @@ description:合成是将页面的已绘制部分放在一起以在屏幕上显�
 
 ## 使用 transform 和 opacity 属性更改来实现动画
 
-性能最佳的像素管道版本会避免布局和绘制，只需要合成更改：
+性能最佳的像素管道版本会避免布局和绘制，只需要合成更改:
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="无布局或绘制的像素管道。">
 
-为了实现此目标，需要坚持更改可以由合成器单独处理的属性。目前只有两个属性符合条件：**`transforms`** 和 **`opacity`**：
+为了实现此目标，需要坚持更改可以由合成器单独处理的属性。目前只有两个属性符合条件: **`transforms`** 和 **`opacity`**:
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="在不触发布局或绘制的情况下可以设置动画的属性。">
 
@@ -36,7 +36,7 @@ Note: 如果担心可能无法限制动画只使用这些属性，请看看 [FLI
 
 ## 提升您打算设置动画的元素
 
-正如我们在“[降低绘制的复杂性并减少绘制区域](simplify-paint-complexity-and-reduce-paint-areas)”一节所述，应当将您打算设置动画的元素（在合理范围内，不要过度！）提升到其自己的层：
+正如我们在“[降低绘制的复杂性并减少绘制区域](simplify-paint-complexity-and-reduce-paint-areas)”一节所述，应当将您打算设置动画的元素（在合理范围内，不要过度！）提升到其自己的层:
 
 
     .moving-element {
@@ -44,7 +44,7 @@ Note: 如果担心可能无法限制动画只使用这些属性，请看看 [FLI
     }
 
 
-或者，对于旧版浏览器，或者不支持 will-change 的浏览器：
+或者，对于旧版浏览器，或者不支持 will-change 的浏览器:
 
 
     .moving-element {
@@ -56,7 +56,7 @@ Note: 如果担心可能无法限制动画只使用这些属性，请看看 [FLI
 
 ## 管理层并避免层数激增
 
-层往往有助于性能，知道这一点可能会诱使开发者通过以下代码来提升页面上的所有元素：
+层往往有助于性能，知道这一点可能会诱使开发者通过以下代码来提升页面上的所有元素:
 
 
     * {
@@ -77,15 +77,15 @@ Warning: 如无必要，请勿提升元素。
   </figure>
 </div>
 
-要了解应用中的层，以及某元素有层的原因，您必须在 Chrome DevTools 的 Timeline 中启用绘制分析器：
+要了解应用中的层，以及某元素有层的原因，您必须在 Chrome DevTools 的 Timeline 中启用绘制分析器:
 
 <div style="clear:both;"></div>
 
-打开此选项后，您应当进行录制。录制结束后，您将能够点击单个帧，这些帧位于 FPS 柱形之间，细节如下：
+打开此选项后，您应当进行录制。录制结束后，您将能够点击单个帧，这些帧位于 FPS 柱形之间，细节如下:
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="开发者有兴趣分析的帧。">
 
-点击此处将为您提供一个新的详情选项：“layer”选项卡。
+点击此处将为您提供一个新的详情选项: “layer”选项卡。
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="Chrome DevTools 中的 Layer 选项卡按钮。">
 

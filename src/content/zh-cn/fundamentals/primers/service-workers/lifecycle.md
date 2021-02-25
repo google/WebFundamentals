@@ -15,7 +15,7 @@ Service Worker 的生命周期是最复杂的一环。如果您不了解它要�
 
 ##  目的
 
-Service Worker 生命周期的目的：
+Service Worker 生命周期的目的:
 
 * 实现离线优先。
 * 允许新 Service Worker 自行做好运行准备，无需中断当前的 Service Worker。
@@ -28,7 +28,7 @@ Note: 用户非常讨厌数据丢失。这会让他们非常沮丧。
 
 ##  第一个 Service Worker
 
-简介：
+简介:
 
 * `install` 事件是 Service Worker 获取的第一个事件，并且只发生一次。
 * 传递到 `installEvent.waitUntil()` 的一个 promise 可表明安装的持续时间以及安装是否成功。
@@ -203,7 +203,7 @@ Note: 用户非常讨厌数据丢失。这会让他们非常沮丧。
 </div>
 </div>
 
-选取以下 HTML：
+选取以下 HTML:
 
     <!DOCTYPE html>
     An image will appear here in 3 seconds:
@@ -221,7 +221,7 @@ Note: 用户非常讨厌数据丢失。这会让他们非常沮丧。
 
 它注册一个 Service Worker，并在 3 秒后添加一个小狗的图像。
 
-下面是它的 Service Worker：`sw.js`:
+下面是它的 Service Worker: `sw.js`:
 
     self.addEventListener('install', event => {
       console.log('V1 installing…');
@@ -248,7 +248,7 @@ Note: 用户非常讨厌数据丢失。这会让他们非常沮丧。
 
 它缓存一个小猫的图像，并在请求 `/dog.svg` 时提供该图像。不过，如果您[运行上述示例](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external }，首次加载页面时您看到的是一条小狗。按 refresh，您将看到小猫。
 
-注：猫比狗好。确实*如此*。
+注: 猫比狗好。确实*如此*。
 
 ###  作用域和控制
 
@@ -260,7 +260,7 @@ Service Worker 注册的默认作用域是与脚本网址相对的 `./`。这意
 
 在调用 `.register()` 时，将下载您的第一个 Service Worker。如果您的脚本在初始执行中未能进行下载、解析，或引发错误，则注册器 promise 将拒绝，并舍弃此 Service Worker。
 
-Chrome 的 DevTools 在控制台和应用标签的 Service Worker 部分中显示此错误：
+Chrome 的 DevTools 在控制台和应用标签的 Service Worker 部分中显示此错误:
 
 <figure>
   <img src="images/register-fail.png" class="browser-screenshot" alt="Service Worker DevTools 标签中显示的错误"/>
@@ -288,13 +288,13 @@ Chrome 的 DevTools 在控制台和应用标签的 Service Worker 部分中显�
 
 如果您使用 Service Worker 加载页面的方式与通过网络加载页面的方式不同，`clients.claim()` 会有些棘手，因为您的 Service Worker 最终会控制一些未使用它加载的客户端。
 
-注：我看到很多人添加 `clients.claim()` 作为样板文件，但我自己很少这么做。该事件只是在首次加载时非常重要，由于渐进式增强，即使没有 Service Worker，页面也能顺利运行。
+注: 我看到很多人添加 `clients.claim()` 作为样板文件，但我自己很少这么做。该事件只是在首次加载时非常重要，由于渐进式增强，即使没有 Service Worker，页面也能顺利运行。
 
 ## 更新 Service Worker{: #updates}
 
-简介：
+简介:
 
-* 以下情况下会触发更新：
+* 以下情况下会触发更新:
     * 导航到一个作用域内的页面。
     * 更新 `push` 和 `sync` 等功能事件，除非在前 24 小时内已进行更新检查。
     * 调用 `.register()`，*仅在* Service Worker 网址已发生变化时。
@@ -481,7 +481,7 @@ Chrome 的 DevTools 在控制台和应用标签的 Service Worker 部分中显�
 </div>
 </div>
 
-假设我们已更改Service Worker脚本，在响应时使用马的图片而不是猫的图片：
+假设我们已更改Service Worker脚本，在响应时使用马的图片而不是猫的图片:
 
     const expectedCaches = ['static-v2'];
 
@@ -520,7 +520,7 @@ Chrome 的 DevTools 在控制台和应用标签的 Service Worker 部分中显�
       }
     });
 
-注：我对马没有什么强烈的看法。
+注: 我对马没有什么强烈的看法。
 
 [查看上面的演示](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }。您应还会看到一个猫的图像。原因是…
 
@@ -534,7 +534,7 @@ Chrome 的 DevTools 在控制台和应用标签的 Service Worker 部分中显�
 
 成功安装 Service Worker 后，更新的 Service Worker 将延迟激活，直到现有 Service Worker 不再控制任何客户端。此状态称为“waiting”，这是浏览器确保每次只运行一个 Service Worker 版本的方式。
 
-如果您运行[更新的演示](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }，您应仍会看到一个猫的图片，因为 V2 Worker 尚未激活。在 DevTools 的“Application”标签中，您会看到等待的新 Service Worker：
+如果您运行[更新的演示](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }，您应仍会看到一个猫的图片，因为 V2 Worker 尚未激活。在 DevTools 的“Application”标签中，您会看到等待的新 Service Worker:
 
 <figure>
   <img src="images/waiting.png" class="browser-screenshot" alt="DevTools 显示等待的新 Service Worker"/>
@@ -564,7 +564,7 @@ Note: Cache storage API 属于“源存储”（如 localStorage 和 IndexedDB�
 
 这会导致您的 Service Worker 将当前活动的 Worker 逐出，并在进入等待阶段时尽快激活自己（或立即激活，前提是已经处于等待阶段）。这*不能*让您的 Worker 跳过安装，只是跳过等待阶段。
 
-`skipWaiting()` 在等待期间调用还是在之前调用并没有什么不同。一般情况下是在 `install` 事件中调用它：
+`skipWaiting()` 在等待期间调用还是在之前调用并没有什么不同。一般情况下是在 `install` 事件中调用它:
 
     self.addEventListener('install', event => {
       self.skipWaiting();
@@ -582,7 +582,7 @@ Note: `skipWaiting()` 意味着新 Service Worker 可能会控制使用较旧 Wo
 
 ### 手动更新
 
-如前所述，在执行导航和功能事件后，浏览器将自动检查更新，但是您也可以手动触发更新：
+如前所述，在执行导航和功能事件后，浏览器将自动检查更新，但是您也可以手动触发更新:
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
       // sometime later…
@@ -595,19 +595,19 @@ Note: `skipWaiting()` 意味着新 Service Worker 可能会控制使用较旧 Wo
 
 如果您读过[我的一篇有关缓存最佳做法的博文](https://jakearchibald.com/2016/caching-best-practices/){: .external }，您可能会考虑为每个 Service Worker 版本提供唯一的网址。**请一定不要这么做！**这种做法并不适用于 Service Worker，您只需在其当前位置更新脚本即可。
 
-它将给您带来如下问题：
+它将给您带来如下问题:
 
 1. `index.html` 将 `sw-v1.js` 注册为 Service Worker。
 1. `sw-v1.js` 缓存并提供 `index.html`，以实现离线优先。
 1. 您更新 `index.html`，以便注册全新的 `sw-v2.js`。
 
-如果您执行上述操作，用户将永远无法获取 `sw-v2.js`，因为 `sw-v1.js` 将从其缓存中提供旧版本的 `index.html`。因此，您将自己置于这样的境地：您需要更新 Service Worker 才能更新 Service Worker。这真得很让人讨厌。
+如果您执行上述操作，用户将永远无法获取 `sw-v2.js`，因为 `sw-v1.js` 将从其缓存中提供旧版本的 `index.html`。因此，您将自己置于这样的境地: 您需要更新 Service Worker 才能更新 Service Worker。这真得很让人讨厌。
 
 不过，对于[上面的演示](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }，我*已*更改 Service Worker 的网址。这样做是为了进行演示，让您可以在版本间进行切换。在生产环境中我不会这么做。
 
 ## 让开发更简单{: #devtools}
 
-Service Worker 生命周期是专为用户构建的，这就给开发工作带来一定的困难。幸运的是，我们可通过以下几个工具解决这个问题：
+Service Worker 生命周期是专为用户构建的，这就给开发工作带来一定的困难。幸运的是，我们可通过以下几个工具解决这个问题:
 
 ### Update on reload
 
@@ -617,7 +617,7 @@ Service Worker 生命周期是专为用户构建的，这就给开发工作带�
   <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools 显示“update on reload”"/>
 </figure>
 
-这可使生命周期变得对开发者友好。每次浏览时都将：
+这可使生命周期变得对开发者友好。每次浏览时都将:
 
 1. 重新提取 Service Worker。
 1. 即使字节完全相同，也将其作为新版本安装，这表示运行 `install` 事件并更新缓存。
@@ -640,7 +640,7 @@ Service Worker 生命周期是专为用户构建的，这就给开发工作带�
 
 Service Worker 是作为[可扩展网页](https://extensiblewebmanifesto.org/){: .external }的一部分进行设计。我们的想法是，作为浏览器开发者，必须承认网页开发者比我们更了解网页开发。因此，我们不应提供狭隘的高级 API 使用*我们*喜欢的模式解决特定问题，而是应该为您提供访问浏览器核心内容的权限，让您可以根据自己的需求以对*您的*用户最有效的方式来解决问题。
 
-因此，为支持尽可能多的模式，整个更新周期都是可观察的：
+因此，为支持尽可能多的模式，整个更新周期都是可观察的:
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
       reg.installing; // the installing worker, or undefined

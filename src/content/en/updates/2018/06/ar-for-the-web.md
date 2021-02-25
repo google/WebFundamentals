@@ -20,7 +20,7 @@ though only the VR features were enabled. VR is an experience based purely on
 what's in a computing device. AR on the other hand allows you to render virtual
 objects in the real world. To allow placement and tracking of those objects, we
 just added the
-[WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/explainer.md)
+[WebXR Hit Test API](https://github.com/immersive-web/hit-test/)
 to Chrome Canary, a new method that helps immersive web code place objects in
 the real world.
 
@@ -278,4 +278,3 @@ We're not done building immersive web APIs, not by a long shot. We'll publish
 new articles here as we make progress.
 
 {% include "web/_shared/rss-widget-updates.html" %}
-

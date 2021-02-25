@@ -231,7 +231,7 @@ for its well structured deprecation reports and additional metadata like
 
 [spec]: https://w3c.github.io/reporting
 [reportingobserver]: https://w3c.github.io/reporting/#observers
-[explainer]: https://github.com/W3C/reporting/blob/master/EXPLAINER.md
+[explainer]: https://github.com/W3C/reporting/blob/main/EXPLAINER.md
 [chromestatus]: https://www.chromestatus.com/feature/4691191559880704
 [featurepolicy]: /web/updates/2018/06/feature-policy
 [interventions]: https://www.chromestatus.com/features#intervention

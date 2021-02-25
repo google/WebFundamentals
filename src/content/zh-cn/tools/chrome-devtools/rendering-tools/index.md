@@ -23,7 +23,7 @@ description:用户希望页面可以交互并且非常流畅。像素管道的�
 - 绘制比任何其他渲染活动花费的时间都要多。请留意绘制瓶颈。
 
 
-## JavaScript 
+## JavaScript
 
 JavaScript 计算，特别是会触发大量视觉变化的计算会降低应用性能。
 不要让时机不当或长时间运行的 JavaScript 影响用户交互。
@@ -47,7 +47,7 @@ JavaScript 计算，特别是会触发大量视觉变化的计算会降低应用
 
 ### 问题
 
-下表对一些常见 JavaScript 问题和潜在解决方案进行了说明：
+下表对一些常见 JavaScript 问题和潜在解决方案进行了说明:
 
 <table>
   <thead>
@@ -64,7 +64,7 @@ JavaScript 计算，特别是会触发大量视觉变化的计算会降低应用
     <tr>
       <td data-th="Problem">时机不当的 JavaScript 影响响应、动画、加载。</td>
       <td data-th="Example">页面加载后用户向右滚动、setTimeout/setInterval。</td>
-      <td data-th="Solution"><a href="/web/fundamentals/performance/rendering/optimize-javascript-execution">优化 JavaScript 执行</a>：使用 <code>requestAnimationFrame</code>、使 DOM 操作遍布各个帧、使用网络工作线程。
+      <td data-th="Solution"><a href="/web/fundamentals/performance/rendering/optimize-javascript-execution">优化 JavaScript 执行</a>: 使用 <code>requestAnimationFrame</code>、使 DOM 操作遍布各个帧、使用网络工作线程。
     </tr>
     <tr>
       <td data-th="Problem">长时间运行的 JavaScript 影响响应。</td>
@@ -79,14 +79,14 @@ JavaScript 计算，特别是会触发大量视觉变化的计算会降低应用
   </tbody>
 </table>
 
-## 样式 
+## 样式
 
 样式更改开销较大，在这些更改会影响 DOM 中的多个元素时更是如此。
 只要您将样式应用到元素，浏览器就必须确定对所有相关元素的影响、重新计算布局并重新绘制。
 
 
 
-相关指南：
+相关指南:
 
 * [缩小样式计算的范围并降低其复杂性](/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)
 
@@ -103,7 +103,7 @@ JavaScript 计算，特别是会触发大量视觉变化的计算会降低应用
 
 ![长时间运行的重新计算样式](imgs/recalculate-style.png)
 
-要降低 **Recalculate Style** 事件的影响，请执行以下操作：
+要降低 **Recalculate Style** 事件的影响，请执行以下操作:
 
 * 使用 [CSS 触发器](https://csstriggers.com)了解哪些 CSS 属性会触发布局、绘制与合成。
 这些属性对渲染性能的影响最大。
@@ -115,7 +115,7 @@ JavaScript 计算，特别是会触发大量视觉变化的计算会降低应用
 
 ### 问题
 
-下表对一些常见样式问题和潜在解决方案进行了说明：
+下表对一些常见样式问题和潜在解决方案进行了说明:
 
 
 <table>
@@ -138,21 +138,21 @@ JavaScript 计算，特别是会触发大量视觉变化的计算会降低应用
   </tbody>
 </table>
 
-相关指南：
+相关指南:
 
 * [缩小样式计算的范围并降低其复杂性](/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)
 
 
-## 布局 
+## 布局
 
 布局（或 Firefox 中的自动重排）是浏览器用来计算页面上所有元素的位置和大小的过程。
 网页的布局模式意味着一个元素可能影响其他元素；例如 `<body>` 元素的宽度一般会影响其子元素的宽度以及树中各处的节点，等等。这个过程对于浏览器来说可能很复杂。
 一般的经验法则是，如果在帧完成前从 DOM 请求返回几何值，您将发现会出现“强制同步布局”，在频繁地重复或针对较大的 DOM 树执行操作时这会成为性能的大瓶颈。
 
 
- 
 
-相关指南：
+
+相关指南:
 
 * [避免布局抖动](/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing)
 * [诊断强制同步布局](/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts)
@@ -162,7 +162,7 @@ JavaScript 计算，特别是会触发大量视觉变化的计算会降低应用
 ### 工具
 
 Chrome DevTools 的 **Timeline** 可以确定页面何时会导致强制同步布局。
-这些 **Layout** 事件使用红色竖线标记。 
+这些 **Layout** 事件使用红色竖线标记。
 
 ![强制同步布局](imgs/forced-synchronous-layout.png)
 
@@ -174,7 +174,7 @@ Chrome DevTools 的 **Timeline** 可以确定页面何时会导致强制同步�
 
 ### 问题
 
-下表对一些常见布局问题和潜在解决方案进行了说明：
+下表对一些常见布局问题和潜在解决方案进行了说明:
 
 
 <table>
@@ -198,7 +198,7 @@ Chrome DevTools 的 **Timeline** 可以确定页面何时会导致强制同步�
   </tbody>
 </table>
 
-## 绘制与合成 
+## 绘制与合成
 
 绘制是填充像素的过程。这经常是渲染流程开销最大的部分。
 如果您在任何情况下注意到页面出现卡顿现象，很有可能存在绘制问题。
@@ -215,16 +215,16 @@ Chrome DevTools 的 **Timeline** 可以确定页面何时会导致强制同步�
 想要了解绘制花费多久或多久绘制一次？请在 **Timeline** 面板上启用 [Paint profiler][paint]，然后[进行记录][recording]。
 
 如果您的大部分渲染时间花费在绘制上，即表示存在绘制问题。
- 
+
 
 ![Timeline 记录中的长时间绘制](imgs/long-paint.png)
 
 请查看 [**rendering settings**][rendering settings] 菜单，进一步了解可以帮助诊断绘制问题的配置。
- 
+
 
 ### 问题
 
-下表对一些常见绘制与合成问题及潜在解决方案进行了说明：
+下表对一些常见绘制与合成问题及潜在解决方案进行了说明:
 
 <table>
   <thead>

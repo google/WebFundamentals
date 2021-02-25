@@ -22,7 +22,7 @@ description:確定服務工作線程註冊時間的最佳做法。
 
 ## 通用註冊樣板文件
 
-如果您曾閱讀有關服務工作線程的內容，您可能會看到與以下內容實質相似的樣板文件：
+如果您曾閱讀有關服務工作線程的內容，您可能會看到與以下內容實質相似的樣板文件:
 
 
     if ('serviceWorker' in navigator) {
@@ -60,7 +60,7 @@ description:確定服務工作線程註冊時間的最佳做法。
 ## 改進樣板文件
 
 解決方案是通過選擇調用 `navigator.serviceWorker.register()` 的時間來控制服務工作線程的啓動。
-一個簡單的經驗法則是延遲註冊，直到 <code>[load event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>在  <code>window</code> 上觸發，如下所示：
+一個簡單的經驗法則是延遲註冊，直到 <code>[load event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>在  <code>window</code> 上觸發，如下所示:
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -144,7 +144,7 @@ description:確定服務工作線程註冊時間的最佳做法。
 您仍可獲得具有服務工作線程進行重複訪問的所有優勢。
 
 
-爲確保延遲服務工作線程的初始註冊直到第一個頁面已加載，一個簡單的方法是使用以下代碼：
+爲確保延遲服務工作線程的初始註冊直到第一個頁面已加載，一個簡單的方法是使用以下代碼:
 
 
     if ('serviceWorker' in navigator) {

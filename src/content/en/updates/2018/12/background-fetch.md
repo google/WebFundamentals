@@ -444,7 +444,7 @@ component](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+rep
 
 ## Additional resources
 
-* [Explainer](https://github.com/WICG/background-fetch/blob/master/README.md)
+* [Explainer](https://github.com/WICG/background-fetch/blob/main/README.md)
 * [Specification](https://wicg.github.io/background-fetch/)
 * [chromestatus.com entry](https://www.chromestatus.com/features/5712608971718656)
 
@@ -453,4 +453,3 @@ component](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+rep
 {% include "web/_shared/helpful.html" %}
 
 {% include "web/_shared/rss-widget-updates.html" %}
-

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2020-07-22 #}
+{# wf_updated_on: 2021-02-25 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -160,7 +160,7 @@ policies for use cases such as kiosks or unattended systems. Check out the
 enterprise policies:
 
 - The ["AutoplayAllowed"] policy controls whether autoplay is allowed or not.
-- The ["AutoplayWhitelist"] policy allows you to specify a whitelist of URL
+- The ["AutoplayAllowlist"] policy allows you to specify an allowlist of URL
   patterns where autoplay will always be enabled.
 
 ## Best practices for web developers {: #best-practices }
@@ -221,7 +221,7 @@ will need to call <code>resume()</code> after a user gesture is received.
 
 If you create your <code>AudioContext</code> on page load, you’ll have to call
 <code>resume()</code> at some time after the user interacted with the page
-(e.g., user clicked a button). Alternatively, the <code>AudioContext</code> 
+(e.g., user clicked a button). Alternatively, the <code>AudioContext</code>
 will be resumed after a user gesture if <code>start()</code> is called on
 any attached node.
 
@@ -239,7 +239,7 @@ any attached node.
       });
     });
 
-You may also create the <code>AudioContext</code> only when the user interacts 
+You may also create the <code>AudioContext</code> only when the user interacts
 with the page.
 
     document.querySelector('button').addEventListener('click', function() {
@@ -266,15 +266,15 @@ Note: Web Audio FAQs can be found [here].
 <div class="clearfix"></div>
 
 [Policy List]: https://dev.chromium.org/administrators/policy-list-3
-["AutoplayAllowed"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayAllowed
-["AutoplayWhitelist"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayWhitelist
+["AutoplayAllowed"]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=AutoplayAllowed
+["AutoplayAllowlist"]: https://cloud.google.com/docs/chrome-enterprise/policies/?policy=AutoplayAllowlist
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
 [added the site to their home screen]: /web/updates/2017/02/improved-add-to-home-screen
 [installed the PWA]: /web/progressive-web-apps/desktop
 [Promise]: /web/fundamentals/getting-started/primers/promises
 [rejected]: /web/updates/2017/06/play-request-was-interrupted
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
-[feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/master/features.md
+[feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/main/features.md
 [feature policy]: https://wicg.github.io/feature-policy/
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
 [enable MEI]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags

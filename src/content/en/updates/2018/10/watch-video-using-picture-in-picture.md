@@ -124,7 +124,7 @@ the original tab. Note that this method also returns a promise.
     }
     ...
 
-Note: I'd recommend the video leaves Picture-in-Picture automatically when 
+Note: I'd recommend the video leaves Picture-in-Picture automatically when
 [video enters fullscreen].
 
 ### Listen to Picture-in-Picture events {: #listen-pip-events }
@@ -375,7 +375,7 @@ involved in the [standardization effort].
 [Media Session sample]: https://googlechrome.github.io/samples/media-session/video.html
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
-[disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/master/features.md#picture-in-picture
+[disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/main/features.md#picture-in-picture
 [implementation status page]: https://github.com/WICG/picture-in-picture/blob/master/implementation-status.md
 [add custom Picture-in-Picture controls]: https://github.com/WICG/picture-in-picture/pull/69
 [https://www.chromestatus.com/feature/5729206566649856]: https://www.chromestatus.com/feature/5729206566649856
@@ -388,4 +388,3 @@ involved in the [standardization effort].
 [Jennifer Apacible]: https://twitter.com/japacible
 [Media Session API]: /web/updates/2017/02/media-session
 [Audio playlist sample]: https://googlechrome.github.io/samples/picture-in-picture/audio-playlist
-

@@ -41,7 +41,7 @@ DevTools 控制台让您可通过特定方式了解您页面中的项目状态�
 
 ## 选择元素
 
-使用下列快捷键选择元素：
+使用下列快捷键选择元素:
 
 <table class="responsive">
   <thead>
@@ -65,7 +65,7 @@ DevTools 控制台让您可通过特定方式了解您页面中的项目状态�
   </tbody>
 </table>
 
-目标选择的示例：
+目标选择的示例:
 
     $('code') // Returns the first code element in the document.
     $$('figure') // Returns an array of all figure elements in the document.

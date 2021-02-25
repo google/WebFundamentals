@@ -21,7 +21,7 @@ from the service worker specification.
 
 [Service workers](/web/fundamentals/primers/service-worker/) give web developers the ability to respond to network requests made by their web applications, allowing them to continue working even while offline, [fight lie-fi](/web/fundamentals/performance/poor-connectivity/#lie-fi), and implement complex cache interactions like [stale-while-revalidate](https://jakearchibald.com/2014/offline-cookbook/#stale-while-revalidate). But service workers have historically been tied to a specific origin—as the owner of a web app, it's your responsibility to write and deploy a service worker to intercept all the network requests your web app makes. In that model, each service worker is responsible for handling even cross-origin requests, for example to a third-party API or for web fonts.
 
-What if a third-party provider of an API, or web fonts, or other commonly used service had the power to deploy their own service worker that got a chance to handle requests made by *other* origins to their origin? Providers could implement their own custom networking logic, and take advantage of a single, authoritative [cache instance](https://developer.mozilla.org/en-US/docs/Web/API/Cache) for storing their responses. Now, thanks to [foreign fetch](https://github.com/w3c/ServiceWorker/blob/master/foreign_fetch_explainer.md), that type of third-party service worker deployment is a reality.
+What if a third-party provider of an API, or web fonts, or other commonly used service had the power to deploy their own service worker that got a chance to handle requests made by *other* origins to their origin? Providers could implement their own custom networking logic, and take advantage of a single, authoritative [cache instance](https://developer.mozilla.org/en-US/docs/Web/API/Cache) for storing their responses. Now, thanks to [foreign fetch](https://github.com/w3c/ServiceWorker/blob/main/foreign_fetch_explainer.md), that type of third-party service worker deployment is a reality.
 
 Deploying a service worker that implements foreign fetch makes sense for any provider of a service that's accessed via HTTPS requests from browsers—just think about scenarios in which you could provide a network-independent version of your service, in which browsers could take advantage of a common resource cache. Services that could benefit from this include, but are not limited to:
 
@@ -231,7 +231,7 @@ The browser starts from the top and, depending on the service worker implementat
 
 ## Learn more
 
-*   [Foreign fetch explainer](https://github.com/w3c/ServiceWorker/blob/master/foreign_fetch_explainer.md)
+*   [Foreign fetch explainer](https://github.com/w3c/ServiceWorker/blob/main/foreign_fetch_explainer.md)
 *   [Sample code and live demo](https://googlechrome.github.io/samples/service-worker/foreign-fetch/)
 *   [Service worker issue tracker](https://github.com/w3c/ServiceWorker/issues)
 

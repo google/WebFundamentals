@@ -47,7 +47,7 @@ ways to open web content from your Android app:
 1. The host app doesn't have direct access to web content in a Trusted Web
    Activity or any other kind of web state, like cookies and `localStorage`.
    Nevertheless, you can coordinate with the web content by passing data to and
-   from the page in URLs (e.g. through query parameters and 
+   from the page in URLs (e.g. through query parameters and
    [intent URIs](https://developer.chrome.com/multidevice/android/intents).)
 1. Transitions between web and native content are between **activities**. Each
    activity (i.e. screen) of your app is either completely provided by the web,
@@ -84,5 +84,5 @@ is a good place to get started.
 [7]: /web/android/trusted-web-activity/quick-start/
 [8]: /web/android/trusted-web-activity/integration-guide/
 [9]: https://github.com/GoogleChrome/android-browser-helper
-[10]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos
+[10]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos
 [11]: https://github.com/GoogleChromeLabs/bubblewrap

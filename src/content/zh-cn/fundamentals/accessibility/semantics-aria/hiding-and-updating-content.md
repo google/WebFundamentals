@@ -87,13 +87,13 @@ description:向辅助技术隐藏内容
     <div class="status">Your message has been sent.</div>
 
 
-与其“活动”版本进行比较：
+与其“活动”版本进行比较:
 
 
     <div class="status" aria-live="polite">Your message has been sent.</div>
 
 
-`aria-live` 有三个允许值：`polite`、`assertive` 和 `off`。
+`aria-live` 有三个允许值: `polite`、`assertive` 和 `off`。
 
  - `aria-live="polite"` 指示辅助技术在完成其当前执行的任何操作后提醒用户这一变化。
 它非常适合在事情重要但并不紧急时使用，`aria-live` 大多作此用途。

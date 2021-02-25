@@ -62,7 +62,7 @@ Android Emulator 標配 Android SDK，您需要從<a href="http://developer.andr
   <figcaption>Android Emulator Content Shell</figcaption>
 </figure>
 
-要安裝 Chromium Content Shell for Android，請保持模擬器運行並在命令提示符處運行以下命令：
+要安裝 Chromium Content Shell for Android，請保持模擬器運行並在命令提示符處運行以下命令:
 
 
     git clone https://github.com/PaulKinlan/chromium-android-installer.git
@@ -83,7 +83,7 @@ Android Emulator 標配 Android SDK，您需要從<a href="http://developer.andr
 
 從 <a href="https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/">https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/</a> 下載合適的 .apk 文件。
 
-從這裏，您可以使用以下命令將文件安裝到打開的模擬器或連接的 Android 設備上：
+從這裏，您可以使用以下命令將文件安裝到打開的模擬器或連接的 Android 設備上:
 
     adb install &lt;path to APK&gt;/fennec-XX.X.XX.android-arm.apk
 

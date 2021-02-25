@@ -23,15 +23,15 @@ description:从手机到桌面设备的屏幕，使用触摸屏的设备越来�
 
 ## 响应元素状态
 
-您是否有过这样的经历：触摸或点按网页上的某个元素时怀疑网站是否真的检测到了您的触摸动作？
+您是否有过这样的经历: 触摸或点按网页上的某个元素时怀疑网站是否真的检测到了您的触摸动作？
 
 
 只需在用户触摸 UI 元素或与其进行交互时改变元素的颜色，用户就能基本确认网站处于工作状态。
 这样做不仅能减轻用户的失望感，还能让其觉得网站敏捷并且响应迅速。
 
 
-DOM 元素可继承下列任何状态：default、focus、hover 和 active。
-要在上述每一种状态下改变 UI，我们需要对下列伪类 `:hover`、`:focus` 和 `:active` 应用样式，如下所示：
+DOM 元素可继承下列任何状态: default、focus、hover 和 active。
+要在上述每一种状态下改变 UI，我们需要对下列伪类 `:hover`、`:focus` 和 `:active` 应用样式，如下所示:
 
 
 <pre class="prettyprint">
@@ -59,7 +59,7 @@ Note: 定位标记和按钮在不同浏览器中可能有不同的行为，因�
 
 
 大多数浏览器使用 `outline` CSS 属性在某个元素获得焦点时在其周围显示一个圆环。
-可以使用以下代码禁止该样式：
+可以使用以下代码禁止该样式:
 
     .btn:focus {
       outline: 0;
@@ -67,7 +67,7 @@ Note: 定位标记和按钮在不同浏览器中可能有不同的行为，因�
       // Add replacement focus styling here (i.e. border)
     }
 
-Safari 和 Chrome 添加的点按突出显示颜色可使用 `-webkit-tap-highlight-color` CSS 属性阻止：
+Safari 和 Chrome 添加的点按突出显示颜色可使用 `-webkit-tap-highlight-color` CSS 属性阻止:
 
 
 <pre class="prettyprint">
@@ -76,7 +76,7 @@ Safari 和 Chrome 添加的点按突出显示颜色可使用 `-webkit-tap-highli
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
-Windows Phone 上的 Internet Explorer 也有类似行为，但可通过元标记禁止：
+Windows Phone 上的 Internet Explorer 也有类似行为，但可通过元标记禁止:
 
 
     <meta name="msapplication-tap-highlight" content="no">
@@ -113,7 +113,7 @@ Note: 请仅在有对应 `:hover`、`:active` 和 `:focus` 的伪类时禁止上
 
 ## 实现自定义手势
 
-如果您想到了一个网站自定义交互和手势创意，需要牢记两个主题：
+如果您想到了一个网站自定义交互和手势创意，需要牢记两个主题:
 
 
 1. 如何支持所有浏览器。
@@ -206,7 +206,7 @@ Note: 由于 API 采用了特殊设计，PointerEvents 只需单个 `pointerdown
 
 
 
-实现以上操作的步骤如下：
+实现以上操作的步骤如下:
 
 1. 添加所有 TouchEvent 和 PointerEvent 侦听器。对于 MouseEvents，**只**添加开始事件。
 1. 在开始手势回调内，将鼠标移动和结束事件绑定到文档。这样便可接收所有鼠标事件，无论事件是否发生在原始元素上。
@@ -215,7 +215,7 @@ Note: 由于 API 采用了特殊设计，PointerEvents 只需单个 `pointerdown
 1. 发生结束事件时，从文档中移除鼠标移动和结束侦听器并结束手势。
 
 
-以下代码段中的 `handleGestureStart()` 方法向文档添加了移动和结束事件：
+以下代码段中的 `handleGestureStart()` 方法向文档添加了移动和结束事件:
 
 
 <pre class="prettyprint">
@@ -224,7 +224,7 @@ Note: 由于 API 采用了特殊设计，PointerEvents 只需单个 `pointerdown
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
-我们添加的结束回调是 `handleGestureEnd()`，当手势完成时，这个回调会从文档中移除移动和结束事件侦听器并释放指针捕获，如下所示：
+我们添加的结束回调是 `handleGestureEnd()`，当手势完成时，这个回调会从文档中移除移动和结束事件侦听器并释放指针捕获，如下所示:
 
 
 
@@ -269,11 +269,11 @@ Note: 由于 API 采用了特殊设计，PointerEvents 只需单个 `pointerdown
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-2.html){: target="_blank" .external }
 
-`TouchEvent` 有三个包含触摸数据的列表：
+`TouchEvent` 有三个包含触摸数据的列表:
 
-* `touches`：屏幕上所有当前触摸的列表，无论它们在什么 DOM 元素之中。
-* `targetTouches`：当前事件所绑定的 DOM 元素触摸列表。
-* `changedTouches`：因发生变化而导致事件触发的触摸列表。
+* `touches`: 屏幕上所有当前触摸的列表，无论它们在什么 DOM 元素之中。
+* `targetTouches`: 当前事件所绑定的 DOM 元素触摸列表。
+* `changedTouches`: 因发生变化而导致事件触发的触摸列表。
 
 
 在大多数情况下，`targetTouches` 便可满足您的所有需求。（如需了解有关这些列表的详细信息，请参阅[触摸列表](#touch-lists)）。
@@ -296,13 +296,13 @@ Note: 由于 API 采用了特殊设计，PointerEvents 只需单个 `pointerdown
 
 
 
-在演示中，我们将初始触摸位置存储在 `handleGestureStart()` 中（查找 `initialTouchPos`）：
+在演示中，我们将初始触摸位置存储在 `handleGestureStart()` 中（查找 `initialTouchPos`）:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
-`handleGestureMove()` 方法先存储其事件的位置，然后在必要时请求动画帧，并以回调形式传入 `onAnimFrame()` 函数：
+`handleGestureMove()` 方法先存储其事件的位置，然后在必要时请求动画帧，并以回调形式传入 `onAnimFrame()` 函数:
 
 
 
@@ -348,7 +348,7 @@ CSS 属性 `touch-action` 用于控制元素的默认触摸行为。
 
 这样您就可以自行实现点按两次手势。
 
-下面列出了常用的 touch-action 值：
+下面列出了常用的 touch-action 值:
 
 <table class="responsive">
   <thead>
@@ -392,7 +392,7 @@ CSS 属性 `touch-action` 用于控制元素的默认触摸行为。
 
 
 
-带供应商前缀的事件名称如下：'MSPointerDown'、'MSPointerUp' 和 'MSPointerMove'。
+带供应商前缀的事件名称如下: 'MSPointerDown'、'MSPointerUp' 和 'MSPointerMove'。
 
 
 下例展示的是如何检查支持情况和切换事件名称。
@@ -450,12 +450,12 @@ CSS 属性 `touch-action` 用于控制元素的默认触摸行为。
 
 
 
-可以在这里找到权威的触摸事件参考资料：[w3 Touch Events](http://www.w3.org/TR/touch-events/)。
+可以在这里找到权威的触摸事件参考资料: [w3 Touch Events](http://www.w3.org/TR/touch-events/)。
 
 
 ### 触摸、鼠标和指针事件
 
-这些事件是为应用新增手势的构建基块：
+这些事件是为应用新增手势的构建基块:
 
 
 <table class="responsive">
@@ -510,7 +510,7 @@ CSS 属性 `touch-action` 用于控制元素的默认触摸行为。
 
 ### 触摸列表
 
-每个触摸事件都包括三个列表属性：
+每个触摸事件都包括三个列表属性:
 
 <table class="responsive">
   <thead>
@@ -536,7 +536,7 @@ CSS 属性 `touch-action` 用于控制元素的默认触摸行为。
     <tr>
       <td data-th="Attribute"><code>changedTouches</code></td>
       <td data-th="Description">
-        因发生更改而导致事件触发的触摸列表：
+        因发生更改而导致事件触发的触摸列表:
         <ul>
           <li>
             对于 <code>

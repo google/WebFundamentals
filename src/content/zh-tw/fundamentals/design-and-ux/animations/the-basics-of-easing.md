@@ -24,20 +24,20 @@ description: 了解如何柔化並為您的動畫加權。
 
 CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](choosing-the-right-easing)。 您可以使用影響動畫的緩動 (或有時候稱為計時) 之關鍵字。 您還可以 [完全自訂您的緩動](custom-easing)，給您更多自由以表達您應用程式的個性。
 
-以下是您可以在 CSS 中使用的關鍵字：
+以下是您可以在 CSS 中使用的關鍵字:
 
 * `linear`
 * `ease-in`
 * `ease-out`
 * `ease-in-out`
 
-資料來源： [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
+資料來源:  [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
 
 您也可以使用一個 `steps` 關鍵字，讓您建立具有分離步驟的轉換，但以上的關鍵字對於建立感覺自然的動畫才最實用，而這正是您想要達成的。
 
 ## 線性動畫
 
-不帶任何緩動的動畫被稱為 **線性**。 線性轉換的圖形看似這樣：
+不帶任何緩動的動畫被稱為 **線性**。 線性轉換的圖形看似這樣:
 
 <img src="images/linear.png" style="max-width: 300px" alt="線性緩動動畫曲線。" />
 
@@ -45,11 +45,11 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 隨著時間的推移，值會以等量增加。 直線動作的東西往往感覺很機器化且不自然，而這是使用者會覺得格格不入的東西。 一般而言，您應該要避免直線動作。
 
-無論您是以 CSS 或 JavaScript 來編寫動畫，您會發現總存在著直線動作的選項。 要以 CSS 達成以上效果，程式碼必須如下所示：
+無論您是以 CSS 或 JavaScript 來編寫動畫，您會發現總存在著直線動作的選項。 要以 CSS 達成以上效果，程式碼必須如下所示:
 
 
     transition: transform 500ms linear;
-    
+
 
 
 ## 緩出動畫
@@ -58,11 +58,11 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 <img src="images/ease-out.png" style="max-width: 300px" alt="緩出動畫曲線。" />
 
-有多種途徑可以達成緩出效果，但最簡單的是 CSS 中的 `ease-out` 關鍵字：
+有多種途徑可以達成緩出效果，但最簡單的是 CSS 中的 `ease-out` 關鍵字:
 
 
     transition: transform 500ms ease-out;
-    
+
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-ease-out.html">請參閱緩出動畫。</a>
 
@@ -78,11 +78,11 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 這種動畫就像一塊沉重的石頭落下，它慢慢地開始，並砰地一聲快速落地。
 
-類似緩出和線性動畫，要使用緩入動畫，您可以使用它的關鍵字：
+類似緩出和線性動畫，要使用緩入動畫，您可以使用它的關鍵字:
 
 
     transition: transform 500ms ease-in;
-    
+
 
 然而從互動的角度來看，緩入因為其突兀的結束而感覺有點不尋常；現實世界中移動的東西傾向於減速，而非突然停止不動。 緩入也有一開始就感覺遲鈍的不利影響，而這會負面影響在您網站或應用程式給人的回應能力印象。
 
@@ -96,10 +96,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 在此必須小心，不要採用過長的動畫持續時間，因為緩入開始對動畫會有遲鈍感。 通常在 300-500ms 的範圍左右會比較適合，但實際數字視您專案的感覺而定。 有鑑於此，由於起步緩慢、中間快速及結束緩慢，您將可創造動畫的強烈對照感，讓使用者相當滿意。
 
-要使用緩入緩出動畫，您可以使用 `ease-in-out` CSS 關鍵字：
+要使用緩入緩出動畫，您可以使用 `ease-in-out` CSS 關鍵字:
 
 
     transition: transform 500ms ease-in-out;
-    
-
-

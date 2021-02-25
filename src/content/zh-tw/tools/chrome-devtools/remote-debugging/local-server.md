@@ -14,7 +14,7 @@ description:在開發計算機網絡服務器上託管網站，然後從 Android
 
 
 使用 USB 電纜和 Chrome DevTools，您可以從開發計算機運行網站，然後在 Android 設備上查看網站。
- 
+
 
 
 ### TL;DR {: .hide-from-toc }
@@ -29,7 +29,7 @@ description:在開發計算機網絡服務器上託管網站，然後從 Android
 
 
 
-要啓用端口轉發，請執行以下操作：
+要啓用端口轉發，請執行以下操作:
 
 1. 在您的開發計算機與 Android 設備之間設置[遠程調試](.)。
 完成後，您應在 **Inspect Devices** 對話框的左側菜單中看到 Android 設備，還應看到 **Connected** 狀態指示器。
@@ -52,7 +52,7 @@ description:在開發計算機網絡服務器上託管網站，然後從 Android
 要查看內容，請在您的 Android 設備上打開 Chrome，然後轉至您在 **Device port** 中指定的 `localhost` 端口。
 例如，如果您在字段中輸入了 `5000`，則應轉至 `localhost:5000`。
 
- 
+
 
 ## 映射到自定義本地域名 {:#custom-domains}
 
@@ -62,7 +62,7 @@ description:在開發計算機網絡服務器上託管網站，然後從 Android
 例如，假設您的網站使用僅在白名單網域 `chrome.devtools` 上運行的第三方 JavaScript 庫。
 因此，您可以在開發計算機上的 `hosts` 文件中創建條目，將此網域映射到 `localhost`（如 `127.0.0.1 chrome.devtools`）。設置自定義域名映射和端口轉發後，您將能夠在 Android 設備上查看網站，網址爲 `chrome.devtools`。
 
- 
+
 
 ### 爲代理服務器設置端口轉發
 
@@ -70,9 +70,9 @@ description:在開發計算機網絡服務器上託管網站，然後從 Android
 代理服務器示例包括 [Charles][charles]、[Squid][squid] 和 [Fiddler][fiddler]。
 
 
-要爲代理設置端口轉發，請執行以下操作：
+要爲代理設置端口轉發，請執行以下操作:
 
-1. 運行代理服務器並記下其正在使用的端口。**注**：代理服務器和您的網絡服務器必須在不同的端口上運行。
+1. 運行代理服務器並記下其正在使用的端口。**注**: 代理服務器和您的網絡服務器必須在不同的端口上運行。
 1. 爲您的 Android 設備設置[端口轉發](#port-forwarding)。在 **local address** 字段中，輸入 `localhost:`，後面緊跟運行代理服務器的端口。例如，如果代理服務器在端口 `8000` 上運行，您應輸入 `localhost:8000`。
 在 **device port** 字段中，輸入您想要使 Android 設備在其上面偵聽的端口號，如 `3333`。
 
@@ -84,11 +84,11 @@ description:在開發計算機網絡服務器上託管網站，然後從 Android
 ### 在您的設備上配置代理設置
 
 接下來，您需要配置 Android 設備，以便與代理服務器進行通信。
- 
+
 
 1. 在您的 Android 設備上，轉至 **Settings** > **Wi-Fi**。
 1. 長按您當前連接到的網絡的名稱。
-   **注**：代理設置的適用範圍爲單個網絡。
+   **注**: 代理設置的適用範圍爲單個網絡。
 3. 點按 **Modify network**。
 4. 點按 **Advanced options**。將會顯示代理設置。
 5. 點按 **Proxy** 菜單，然後選擇 **Manual**。
@@ -101,13 +101,13 @@ description:在開發計算機網絡服務器上託管網站，然後從 Android
 
 
 現在，您可以在 Android 設備上訪問自定義域名，就像您在開發計算機上訪問一樣。
- 
+
 
 如果您的網絡服務器正在非標準端口上運行，從 Android 設備請求內容時請務必指定端口。例如，如果網絡服務器正在端口 `7331` 上使用自定義域名 `chrome.devtools`，您從 Android 設備上查看網站時應使用網址 `chrome.devtools:7331`。
 
- 
 
-**提示**：要恢復正常瀏覽，與開發計算機斷開連接後請務必在您的 Android 設備上還原代理設置。
+
+**提示**: 要恢復正常瀏覽，與開發計算機斷開連接後請務必在您的 Android 設備上還原代理設置。
 
 
 

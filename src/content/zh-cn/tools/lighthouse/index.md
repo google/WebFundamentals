@@ -18,7 +18,7 @@ Note: Lighthouse 目前非常关注 Progressive Web App 功能，如“添加到
 
 ## 使用入门
 
-运行 Lighthouse 的方式有两种：作为 Chrome 扩展程序运行，或作为命令行工具运行。
+运行 Lighthouse 的方式有两种: 作为 Chrome 扩展程序运行，或作为命令行工具运行。
 Chrome 扩展程序提供了一个对用户更友好的界面，方便读取报告。
 命令行工具允许您将 Lighthouse 集成到持续集成系统。
 

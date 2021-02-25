@@ -324,7 +324,7 @@ code snippet above won't return results:
 
 {% include "web/_shared/helpful.html" %}
 
-[1]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/custom-tabs-example-app
+[1]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/custom-tabs-example-app
 [2]: https://developer.android.com/jetpack/androidx/releases/browser#declaring_dependencies
 [3]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent
 [4]: https://developer.android.com/reference/androidx/browser/customtabs/CustomTabsIntent.Builder

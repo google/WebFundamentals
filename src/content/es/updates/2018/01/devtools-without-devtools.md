@@ -59,9 +59,9 @@ Esta es solo una de las muchas, muchas características de DevTools a las que po
 
 Una sugerencia general: echa un vistazo a [Puppeteer API][API]{:.external} antes de recurrir a la creación de un cliente de Protocolo DevTools. Puppeteer ya tiene API dedicadas para muchas funciones de DevTools, como [code coverage][coverage]{:.external} y [intercepting **Console** messages][console]{:.external} .
 
-[API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
-[coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
-[console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
+[API]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md
+[coverage]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#class-coverage
+[console]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#event-console
 
 Si necesita ayuda para acceder a una función de DevTools a través de Puppeteer, [ask a question on Stack Overflow][SO]{:.external} .
 

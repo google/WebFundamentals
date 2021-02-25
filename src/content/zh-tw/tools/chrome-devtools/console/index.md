@@ -12,7 +12,7 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
 
-瞭解如何：打開 DevTools 控制檯；堆疊冗餘消息或將其顯示在各自的行上；清除或保留輸出，或者將其保存到文件中；過濾輸出，以及訪問其他控制檯設置。
+瞭解如何: 打開 DevTools 控制檯；堆疊冗餘消息或將其顯示在各自的行上；清除或保留輸出，或者將其保存到文件中；過濾輸出，以及訪問其他控制檯設置。
 
 
 
@@ -25,17 +25,17 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 
 ## 打開控制檯
 
-以全屏模式的專用面板形式訪問控制檯：
+以全屏模式的專用面板形式訪問控制檯:
 
 ![Console 面板](images/console-panel.png)
 
-或以任何其他面板旁的抽屜式導航欄的形式：
+或以任何其他面板旁的抽屜式導航欄的形式:
 
 ![Console 抽屜式導航欄](images/console-drawer.png)
 
 ### 以面板形式打開
 
-要打開專用的 **Console** 面板，請執行以下操作之一：
+要打開專用的 **Console** 面板，請執行以下操作之一:
 
 * 按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows / Linux) 或者 <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac)。
 * 如果 DevTools 已打開，則按 **Console** 按鈕。
@@ -44,7 +44,7 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 
 ### 以抽屜式導航欄形式打開
 
-要以任何其他面板旁的抽屜式導航欄的形式打開控制檯，請執行以下操作之一：
+要以任何其他面板旁的抽屜式導航欄的形式打開控制檯，請執行以下操作之一:
 
 * 在 DevTools 處於聚焦狀態時按 <kbd>Esc</kbd>。
 * 按 **Customize and control DevTools** 按鈕，然後按 **Show console**。
@@ -73,7 +73,7 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 
 ### 清除歷史記錄 {: #clearing }
 
-您可以通過以下方式清除控制檯歷史記錄：
+您可以通過以下方式清除控制檯歷史記錄:
 
 * 在控制檯中點擊右鍵，然後按 **Clear console**。
 * 在控制檯中鍵入 `clear()`。
@@ -124,20 +124,20 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
 
 ## 過濾控制檯輸出
 
-點擊 **Filter** 按鈕 
+點擊 **Filter** 按鈕
 (![filter 按鈕](images/filter-button.png){:.inline})
 可以過濾控制檯輸出。您可以按嚴重性等級、按正則表達式模式或者通過隱藏網絡消息的方式進行過濾。
 
 
 ![過濾的控制檯輸出](images/filtered-console.png)
 
-按嚴重性等級進行過濾的說明如下所示：
+按嚴重性等級進行過濾的說明如下所示:
 
 <table class="responsive">
   <thead>
      <tr>
       <th colspan="2">選項及顯示的內容</th>
-    </tr>   
+    </tr>
   </thead>
   <tbody>
   <tr>
@@ -178,7 +178,7 @@ description:瞭解如何導航 Chrome DevTools JavaScript 控制檯。
   <thead>
      <tr>
       <th colspan="2">設置及說明</th>
-    </tr>   
+    </tr>
   </thead>
   <tbody>
   <tr>

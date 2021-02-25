@@ -222,4 +222,4 @@ allowed only for clients and servers of the same origin, verified by a digital a
 [10]: https://developers.google.com/digital-asset-links/v1/getting-started
 [11]: https://developer.chrome.com/multidevice/android/customtabs
 [12]: https://developers.google.com/web/android/custom-tabs/implementation-guide#connect_to_the_custom_tabs_service
-[13]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos
+[13]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos

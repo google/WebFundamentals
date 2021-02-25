@@ -154,11 +154,11 @@ you come across a bug, feel free to [create an issue][16].
 [7]: https://developer.android.com/jetpack/androidx/releases/browser
 [8]: https://github.com/GoogleChrome/android-browser-helper
 [9]: https://github.com/GoogleChromeLabs/svgomg-twa
-[10]: https://github.com/GoogleChromeLabs/svgomg-twa/blob/master/app/build.gradle
+[10]: https://github.com/GoogleChromeLabs/svgomg-twa/blob/main/app/build.gradle
 [11]: /web/android/trusted-web-activity/quick-start
 [12]: https://github.com/GoogleChromeLabs/bubblewrap/
-[13]: https://github.com/GoogleChromeLabs/bubblewrap/blob/master/README.md
+[13]: https://github.com/googleChromeLabs/bubblewrap/blob/main/README.md
 [14]: /web/android/trusted-web-activity
-[15]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos
+[15]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos
 [16]: https://github.com/GoogleChromeLabs/bubblewrap/issues/new
 [17]: /web/android/trusted-web-activity/integration-guide

@@ -54,7 +54,7 @@ App Shell 架构具有相对不变的导航以及一直变化的内容，对应�
 
 ### 优势 {: #app-shell-benefits }
 
-使用服务工作线程的 App Shell 架构的优势包括：
+使用服务工作线程的 App Shell 架构的优势包括:
 
 * **始终快速的可靠性能**。重复访问速度极快。
 第一次访问时即可缓存静态资产和 UI（例如 HTML、JavaScript、图像和 CSS），以便在重复访问时即时加载。内容可能会在第一次访问时缓存到系统中，但一般会在需要时才进行加载。
@@ -70,14 +70,14 @@ App Shell 架构具有相对不变的导航以及一直变化的内容，对应�
 
 ## 要求{: #app-shell-requirements }
 
-App Shell 应能完美地执行以下操作：
+App Shell 应能完美地执行以下操作:
 
 * 快速加载
 * 尽可能使用较少的数据
 * 使用本机缓存中的静态资产
 * 将内容与导航分离开来
 * 检索和显示特定页面的内容（HTML、JSON 等）
-* 可选：缓存动态内容
+* 可选: 缓存动态内容
 
 App Shell 可保证 UI 的本地化以及从 API 动态加载内容，但同时不影响网络的可链接性和可检测性。
 用户下次访问您的应用时，应用会自动显示最新版本。无需在使用前下载新版本。
@@ -195,7 +195,7 @@ Note: 这些示例仅为呈现一般信息以及进行说明而提供。
 
 #### 手动缓存 App Shell
 
-以下是使用服务工作线程的 `install` 事件将 App Shell 中的静态资源缓存到 [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) 中的服务工作线程代码示例：
+以下是使用服务工作线程的 `install` 事件将 App Shell 中的静态资源缓存到 [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) 中的服务工作线程代码示例:
 
 
 
@@ -227,7 +227,7 @@ sw-precache 生成的服务工作线程会缓存并提供您在构建过程中�
 所有资源都可以离线工作，并且可在随后的访问中快速加载相关内容，无需其他操作。
 
 
-以下是在 [gulp](http://gulpjs.com) 构建过程中使用 sw-precache 的基本示例：
+以下是在 [gulp](http://gulpjs.com) 构建过程中使用 sw-precache 的基本示例:
 
 
     gulp.task('generate-service-worker', function(callback) {

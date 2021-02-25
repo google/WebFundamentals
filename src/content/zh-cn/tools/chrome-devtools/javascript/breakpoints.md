@@ -80,7 +80,7 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
  DevTools *始终*会在执行此代码行之前暂停。
 
 
-在 DevTools 中设置代码行断点：
+在 DevTools 中设置代码行断点:
 
 1. 点击 **Sources** 标签。
 1. 打开包含您想要中断的代码行的文件。
@@ -92,7 +92,7 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
   <img src="imgs/loc-breakpoint.png"
        alt="代码行断点。"
   <figcaption>
-    <b>图 1</b>：第 <b>29</b> 行设置的代码行断点
+    <b>图 1</b>: 第 <b>29</b> 行设置的代码行断点
   </figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
 
 
 
-若要设置条件代码行断点：
+若要设置条件代码行断点:
 
 1. 点击 **Sources** 标签。
 1. 打开包含您想要中断的代码行的文件。
@@ -128,7 +128,7 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
   <img src="imgs/conditional-loc-breakpoint.png"
        alt="条件代码行断点。"
   <figcaption>
-    <b>图 2</b>：第 <b>32</b> 行设置的条件代码行断点
+    <b>图 2</b>: 第 <b>32</b> 行设置的条件代码行断点
 
   </figcaption>
 </figure>
@@ -142,7 +142,7 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
   <img src="imgs/breakpoints-pane.png"
        alt="Breakpoints 窗格。"
   <figcaption>
-    <b>图 3</b>：显示两个代码行断点的 <b>Breakpoints</b> 窗格：一个代码行断点位于 <code>get-started.js</code> 第 15 行，另一个位于
+    <b>图 3</b>: 显示两个代码行断点的 <b>Breakpoints</b> 窗格: 一个代码行断点位于 <code>get-started.js</code> 第 15 行，另一个位于
     第 32 行
   </figcaption>
 
@@ -161,7 +161,7 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
   <img src="imgs/deactivated-breakpoints.png"
        alt="Breakpoints 窗格中取消激活的断点。"
   <figcaption>
-    <b>图 4</b>：<b>Breakpoints</b> 窗格中取消激活的断点已停用且处于透明状态
+    <b>图 4</b>: <b>Breakpoints</b> 窗格中取消激活的断点已停用且处于透明状态
   </figcaption>
 
 </figure>
@@ -171,7 +171,7 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
 如果想要暂停更改 DOM
 节点或其子级的代码，可以使用 DOM 更改断点。
 
-若要设置 DOM 更改断点：
+若要设置 DOM 更改断点:
 
 1. 点击 **Elements** 标签。
 1. 转至要设置断点的元素。
@@ -183,21 +183,21 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
   <img src="imgs/dom-change-breakpoint.png"
        alt="用于创建 DOM 更改断点的上下文菜单。"
   <figcaption>
-    <b>图 5</b>：用于创建 DOM 更改断点的上下文菜单
+    <b>图 5</b>: 用于创建 DOM 更改断点的上下文菜单
   </figcaption>
 </figure>
 
 ### DOM 更改断点的类型 {: #dom-types }
 
-* **Subtree modifications**： 在移除或添加当前所选节点的子级，或更改子级内容时触发这类断点。
+* **Subtree modifications**:  在移除或添加当前所选节点的子级，或更改子级内容时触发这类断点。
  在子级节点属性发生变化或对当前所选节点进行任何更改时不会触发这类断点。
 
 
 
-* **Attributes modifications**：在当前所选节点上添加或移除属性，或属性值发生变化时触发这类断点。
+* **Attributes modifications**: 在当前所选节点上添加或移除属性，或属性值发生变化时触发这类断点。
 
 
-* **Node Removal**：在移除当前选定的节点时会触发。
+* **Node Removal**: 在移除当前选定的节点时会触发。
 
 ## XHR/Fetch 断点 {: #xhr }
 
@@ -205,13 +205,13 @@ DevTools 中调试 JavaScript 入门](/web/tools/chrome-devtools/javascript/)。
 的请求网址包含指定字符串时中断，可以使用 XHR 断点。 DevTools 会在
 XHR 调用 `send()` 的代码行暂停。
 
-注：此功能还可用于 [Fetch][Fetch] 请求。
+注: 此功能还可用于 [Fetch][Fetch] 请求。
 
 例如，在您发现您的页面请求的是错误网址，并且您想要快速找到导致错误请求的 AJAX
 或
 Fetch 源代码时，这类断点很有用。
 
-若要设置 XHR 断点：
+若要设置 XHR 断点:
 
 1. 点击 **Sources** 标签。
 1. 展开 **XHR Breakpoints** 窗格。
@@ -223,7 +223,7 @@ Fetch 源代码时，这类断点很有用。
   <img src="imgs/xhr-breakpoint.png"
        alt="创建 XHR 断点。"
   <figcaption>
-    <b>图 6</b>：在 <b>XHR Breakpoints</b> 中
+    <b>图 6</b>: 在 <b>XHR Breakpoints</b> 中
     对网址中包含 <code>org</code> 的所有请求创建 XHR 断点
   </figcaption>
 </figure>
@@ -245,7 +245,7 @@ Fetch 源代码时，这类断点很有用。
   <img src="imgs/event-listener-breakpoint.png"
        alt="创建事件侦听器断点。"
   <figcaption>
-    <b>图 7</b>：为
+    <b>图 7</b>: 为
     <code>deviceorientation</code> 创建事件侦听器断点
   </figcaption>
 </figure>
@@ -265,7 +265,7 @@ Fetch 源代码时，这类断点很有用。
   <img src="imgs/uncaught-exception.png"
        alt="引发未捕获异常时暂停。"
   <figcaption>
-    <b>图 7</b>：引发未捕获异常时暂停
+    <b>图 7</b>: 引发未捕获异常时暂停
   </figcaption>
 </figure>
 
@@ -302,7 +302,7 @@ Fetch 源代码时，这类断点很有用。
     debug(hey); // This doesn't work. hey() is out of scope.
 
 如果是从 DevTools 控制台中调用 `debug()`，则很难确保目标函数在范围内。
- 下面介绍一个策略：
+ 下面介绍一个策略:
 
 1. 在函数在范围内时设置[代码行断点](#loc)。
 1. 触发此断点。

@@ -5,7 +5,7 @@ description:由於大多數桌面設備都沒有觸摸屏、GPS 芯片和加速�
 {# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
-# 模擬傳感器：地理定位與加速度計 {: .page-title }
+# 模擬傳感器: 地理定位與加速度計 {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
@@ -22,7 +22,7 @@ description:由於大多數桌面設備都沒有觸摸屏、GPS 芯片和加速�
 
 <div class="wf-devtools-flex">
   <div>
-    <p>要訪問 Chrome DevTools 傳感器控件，請執行以下操作：</p>
+    <p>要訪問 Chrome DevTools 傳感器控件，請執行以下操作: </p>
     <ol>
       <li>打開 DevTools 主菜單</li>
       <li>在 <strong>More Tools</strong> 菜單下，點擊 <strong>Sensors</strong></li>
@@ -61,7 +61,7 @@ Note: 如果您的應用檢測到使用 JavaScript（如 Modernizr）的傳感�
   </div>
 </div>
 
-您可以操作下列方向參數：
+您可以操作下列方向參數:
 
 <dl>
 <dt><abbr title="alpha">α</abbr></dt>

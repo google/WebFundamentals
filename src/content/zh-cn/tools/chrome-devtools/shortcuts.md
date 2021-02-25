@@ -51,7 +51,7 @@ description:Chrome DevTools 中所有键盘快捷键的参考。
 
 ## 全局键盘快捷键
 
-下列键盘快捷键可以在所有 DevTools 面板中使用：
+下列键盘快捷键可以在所有 DevTools 面板中使用:
 
 <table>
   <thead>
@@ -204,7 +204,7 @@ description:Chrome DevTools 中所有键盘快捷键的参考。
 
 #### Styles 边栏
 
-Styles 边栏中可用的快捷键：
+Styles 边栏中可用的快捷键:
 
 <table>
   <thead>

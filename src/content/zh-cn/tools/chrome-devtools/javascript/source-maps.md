@@ -25,9 +25,9 @@ description:保持您的客户端代码便于阅读和调试，即使在您组�
 
 ## 使用支持的预处理器
 
-您需要使用可以创建源映射的压缩工具。有关最常用的选项，[请参见我们的预处理器支持部分](/web/tools/setup/setup-preprocessors?#supported-preprocessors)。要详细查看，请参见[源映射：语言、工具和其他信息](https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info) Wiki 页面。
+您需要使用可以创建源映射的压缩工具。有关最常用的选项，[请参见我们的预处理器支持部分](/web/tools/setup/setup-preprocessors?#supported-preprocessors)。要详细查看，请参见[源映射: 语言、工具和其他信息](https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info) Wiki 页面。
 
-Source Maps 一般与下列类型的预处理器搭配使用：
+Source Maps 一般与下列类型的预处理器搭配使用:
 
 * 转译器（[Babel](https://babeljs.io/){: .external }、[Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started)）
 * 编译器（[Closure Compiler](https://github.com/google/closure-compiler)、[TypeScript](http://www.typescriptlang.org/){: .external }、[CoffeeScript](http://coffeescript.org) 和 [Dart](https://www.dartlang.org)）
@@ -47,7 +47,7 @@ Source Maps 默认处于启用状态（自 Chrome 39 开始），不过，如果
 
 ### 使用 Source Maps 调试
 
-[调试代码](/web/tools/chrome-devtools/debug/breakpoints/step-code) 和启用 Source Maps 时，Source Maps 将在两个地方显示：
+[调试代码](/web/tools/chrome-devtools/debug/breakpoints/step-code) 和启用 Source Maps 时，Source Maps 将在两个地方显示:
 
 1. 控制台中（指向来源的链接应是原始文件，而不是生成的文件）
 2. 逐步执行代码时（调用堆栈中的链接应打开原始的源文件）
@@ -60,7 +60,7 @@ Source Maps 默认处于启用状态（自 Chrome 39 开始），不过，如果
 
 `//# sourceURL=source.coffee`
 
-导航到此**[演示](http://www.thecssninja.com/demo/source_mapping/compile.html)**，然后执行以下操作：
+导航到此**[演示](http://www.thecssninja.com/demo/source_mapping/compile.html)**，然后执行以下操作:
 
 
 * 打开 DevTools 并转至 **Sources** 面板。

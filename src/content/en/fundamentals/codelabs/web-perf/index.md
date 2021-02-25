@@ -83,7 +83,7 @@ First, you should get the application code, both the "before" and "after" versio
 
 ### Run the original app
 
-First, get the original janky version of the app up and running. In Chrome, open __index.html__ in the top-level folder (e.g., news-aggregator-master). Experiment with the app a bit; you'll quickly notice a couple of the high-level performance problems in the two major user interactions, scrolling within the main screen and story slide-in/out. We'll focus on those main issues to see how we can improve this janky app's performance.
+First, get the original janky version of the app up and running. In Chrome, open __index.html__ in the top-level folder (e.g., news-aggregator). Experiment with the app a bit; you'll quickly notice a couple of the high-level performance problems in the two major user interactions, scrolling within the main screen and story slide-in/out. We'll focus on those main issues to see how we can improve this janky app's performance.
 
 
 ## Exercise 1: List scrolling
@@ -569,5 +569,3 @@ We recommend that you examine the completed project code, available in this  [Gi
 ### Thank you!
 
 Thanks for working through this codelab. We're always striving to improve; if you found a bug of problem, or just have any suggestions, problems, or comments, please contact us at the feedback link below. Happy coding!
-
-

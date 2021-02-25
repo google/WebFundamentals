@@ -20,14 +20,14 @@ Chrome DevTools 的堆分析器可以按頁面的 JavaScript 對象和相關 DOM
 
 ## 拍攝快照
 
-在 Profiles 面板上，選擇 **Take Heap Snapshot**，然後點擊 **Start** 或者按 <span class="kbd">Cmd</span> + <span class="kbd">E</span> 或 <span class="kbd">Ctrl</span> + <span class="kbd">E</span>：
+在 Profiles 面板上，選擇 **Take Heap Snapshot**，然後點擊 **Start** 或者按 <span class="kbd">Cmd</span> + <span class="kbd">E</span> 或 <span class="kbd">Ctrl</span> + <span class="kbd">E</span>:
 
 ![選擇分析類型](imgs/profiling-type.png)
 
 **快照**最初存儲在渲染器進程內存中。當您點擊快照圖標進行查看時，它們將根據要求傳輸到 DevTools 中。
 
 
-在快照加載到 DevTools 中並解析後，快照名稱下方將出現一個數字，顯示[可到達 JavaScript 對象](/web/tools/chrome-devtools/profile/memory-problems/memory-101#object-sizes)的總大小：
+在快照加載到 DevTools 中並解析後，快照名稱下方將出現一個數字，顯示[可到達 JavaScript 對象](/web/tools/chrome-devtools/profile/memory-problems/memory-101#object-sizes)的總大小:
 
 
 
@@ -37,13 +37,13 @@ Note: 只有可到達對象纔會包含到快照中。此外，拍攝快照始�
 
 ## 清除快照
 
-按 Clear all profiles 圖標可以（同時從 DevTools 和渲染器內存）移除快照：
+按 Clear all profiles 圖標可以（同時從 DevTools 和渲染器內存）移除快照:
 
 ![移除快照](imgs/remove-snapshots.png)
 
 關閉 DevTools 窗口不會從渲染器內存中刪除配置文件。重新打開 DevTools 時，之前拍攝的所有快照都會重新顯示在快照列表中。
 
-<p class="note"><strong>示例：</strong>查看此<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html">離散對象</a>示例，並使用堆分析器對其進行分析。您應看到多個（對象）項目分配。</p>
+<p class="note"><strong>示例: </strong>查看此<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html">離散對象</a>示例，並使用堆分析器對其進行分析。您應看到多個（對象）項目分配。</p>
 
 ## 查看快照
 
@@ -61,7 +61,7 @@ Note: 只有可到達對象纔會包含到快照中。此外，拍攝快照始�
 
 
 
-要在視圖間切換，請使用視圖底部的選擇器：
+要在視圖間切換，請使用視圖底部的選擇器:
 
 ![切換視圖選擇器](imgs/switch-views.png)
 
@@ -69,11 +69,11 @@ Note: 並不是所有屬性都存儲在 JavaScript 堆上。不會捕捉使用�
 
 ### Summary 視圖
 
-快照最初會在 Summary 視圖下打開並顯示對象概覽，可以將此視圖展開以顯示實例：
+快照最初會在 Summary 視圖下打開並顯示對象概覽，可以將此視圖展開以顯示實例:
 
 ![Summary 視圖](imgs/summary-view.png)
 
-頂級條目爲“概覽”行。這些行顯示：
+頂級條目爲“概覽”行。這些行顯示:
 
 * **Constructor** 表示使用此構造函數創建的所有對象。
 * **對象實例數**顯示在 # 列中。
@@ -102,28 +102,28 @@ Note: 並不是所有屬性都存儲在 JavaScript 堆上。不會捕捉使用�
 * **HTMLDivElement**、**HTMLAnchorElement**、**DocumentFragment**等 – 引用元素或者您的代碼所引用特定類型的文本對象。
 
 
-<p class="note"><strong>示例：</strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-summary">演示頁面</a>，瞭解如何使用 Summary 視圖。</p>
+<p class="note"><strong>示例: </strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-summary">演示頁面</a>，瞭解如何使用 Summary 視圖。</p>
 
 ### Comparison 視圖
 
-通過相互比較多個快照，查找泄漏的對象。要驗證某個特定的應用操作不會引起泄漏（例如，通常來說，一對直接和反向操作（比如打開一個文檔然後將其關閉）不應泄漏任何垃圾），您可以按照下面的情形操作：
+通過相互比較多個快照，查找泄漏的對象。要驗證某個特定的應用操作不會引起泄漏（例如，通常來說，一對直接和反向操作（比如打開一個文檔然後將其關閉）不應泄漏任何垃圾），您可以按照下面的情形操作:
 
 1. 在執行任何操作前拍攝一個堆快照。
 2. 執行操作（以一種您認爲會引起泄漏的方式與頁面交互）。
 3. 執行反向操作（執行反向交互並重復幾次）。
 4. 拍攝第二個堆快照，然後將其視圖更改爲 Comparison，並與快照 1 進行比較。
 
-在 Comparison 視圖中，將顯示兩個快照之間的不同。展開概覽條目時，將顯示已添加和刪除的對象實例：
+在 Comparison 視圖中，將顯示兩個快照之間的不同。展開概覽條目時，將顯示已添加和刪除的對象實例:
 
 ![Comparison 視圖](imgs/comparison-view.png)
 
-<p class="note"><strong>示例：</strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-comparison">演示頁面</a>，瞭解如何使用快照比較檢測泄漏。</p>
+<p class="note"><strong>示例: </strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-comparison">演示頁面</a>，瞭解如何使用快照比較檢測泄漏。</p>
 
 ### Containment 視圖
 
 Containment 視圖基本上是您應用的對象結構的“俯瞰視圖”。利用此視圖，您可以深入瞭解函數閉包、觀察共同組成您的 JavaScript 對象的 VM 內部對象，以及從一個非常低的級別瞭解您的應用使用的內存量。
 
-此視圖提供了多個入口點：
+此視圖提供了多個入口點:
 
 * **DOMWindow 對象**是被視爲 JavaScript 代碼“全局”對象的對象。
 * **GC 根**是 VM 的垃圾使用的實際 GC 根。GC 根可以由內置對象映射、符號表、VM 線程堆棧、編譯緩存、句柄作用域和全局句柄組成。
@@ -132,12 +132,12 @@ Containment 視圖基本上是您應用的對象結構的“俯瞰視圖”。�
 ![Containment 視圖](imgs/containment-view.png)
 
 <p class="note">
-  <strong>示例：</strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-containment">演示頁面</a>，瞭解如何使用此視圖探索閉包和事件處理程序。</p>
+  <strong>示例: </strong>查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-containment">演示頁面</a>，瞭解如何使用此視圖探索閉包和事件處理程序。</p>
 
 
 <strong>閉包提示</strong>
 
-閉包有助於爲函數命名，讓您可以輕鬆地在快照中區分不同的閉包。例如，下面的示例未使用已命名的函數：
+閉包有助於爲函數命名，讓您可以輕鬆地在快照中區分不同的閉包。例如，下面的示例未使用已命名的函數:
 
 
     function createLargeClosure() {
@@ -151,7 +151,7 @@ Containment 視圖基本上是您應用的對象結構的“俯瞰視圖”。�
     }
 
 
-而下面的示例則使用了已命名的函數：
+而下面的示例則使用了已命名的函數:
 
 
     function createLargeClosure() {
@@ -168,7 +168,7 @@ Containment 視圖基本上是您應用的對象結構的“俯瞰視圖”。�
 ![爲函數命名以區分閉包](imgs/domleaks.png)
 
 <p class="note">
-    <strong>示例：</strong>
+    <strong>示例: </strong>
     查看此<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example7.html">爲什麼 eval 是魔鬼</a>示例，分析閉包對內存的影響。您可能還想深入研究此示例，瞭解如何記錄<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example8.html">堆分配</a>。</p>
 
 
@@ -186,14 +186,14 @@ Containment 視圖基本上是您應用的對象結構的“俯瞰視圖”。�
 ![Dominators 視圖](imgs/dominators-view.png)
 
 <p class="note">
-    <strong>示例：</strong>
+    <strong>示例: </strong>
     查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-dominators">演示</a>，瞭解如何查找聚集點。深入研究此示例，瞭解<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example10.html">保留路徑和支配項</a>。</p>
 
 
 ## 查詢顏色編碼
 
 對象的屬性和屬性值具有不同的類型，並採用相應的顏色進行編碼。
-每個屬性都具有以下四種類型之一：
+每個屬性都具有以下四種類型之一:
 
 * **a: property** - 具有名稱的正則屬性，可以通過 .（點）運算符或者 [ ]（方括號）標記訪問，例如 ["foo bar"]；
 * **0: element** - 具有數字索引的正則屬性，可以通過 [ ]（方括號）標記訪問；
@@ -241,7 +241,7 @@ DOM 泄漏可能比您想象的要大。思考下面的示例 - 什麼時候發�
 ![DOM 子樹](imgs/treegc.png)
 
 <p class="note">
-    <strong>示例：</strong>
+    <strong>示例: </strong>
     查看此<a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example6.html">泄漏的 DOM 節點</a>示例，瞭解 DOM 節點的什麼地方可能出現泄漏以及如何檢測泄漏。您還可以查看這個 <a href="https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example9.html">DOM 泄漏超出預期</a>示例，繼續深入研究。</p>
 
 
@@ -249,7 +249,7 @@ DOM 泄漏可能比您想象的要大。思考下面的示例 - 什麼時候發�
 
 
 <p class="note">
-    <strong>示例</strong>：
+    <strong>示例</strong>:
     查看此<a href="https://developer.chrome.com/devtools/docs/heap-profiling-dom-leaks">演示</a>，瞭解已分離的 DOM 樹。</p>
 
 

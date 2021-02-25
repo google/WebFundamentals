@@ -13,7 +13,7 @@ description: ****了解如何导航 Chrome DevTools JavaScript 控制台。
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
 
-了解如何：打开 DevTools 控制台；堆叠冗余消息或将其显示在各自的行上；清除或保留输出，或者将其保存到文件中；过滤输出，以及访问其他控制台设置。
+了解如何: 打开 DevTools 控制台；堆叠冗余消息或将其显示在各自的行上；清除或保留输出，或者将其保存到文件中；过滤输出，以及访问其他控制台设置。
 
 
 
@@ -26,17 +26,17 @@ description: ****了解如何导航 Chrome DevTools JavaScript 控制台。
 
 ## 打开控制台
 
-以全屏模式的专用面板形式访问控制台：
+以全屏模式的专用面板形式访问控制台:
 
 ![Console 面板](images/console-panel.png)
 
-或以任何其他面板旁的抽屉式导航栏的形式：
+或以任何其他面板旁的抽屉式导航栏的形式:
 
 ![Console 抽屉式导航栏](images/console-drawer.png)
 
 ### 以面板形式打开
 
-要打开专用的 **Console** 面板，请执行以下操作之一：
+要打开专用的 **Console** 面板，请执行以下操作之一:
 
 * 按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows / Linux) 或者 <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac)。
 * 如果 DevTools 已打开，则按 **Console** 按钮。
@@ -45,7 +45,7 @@ description: ****了解如何导航 Chrome DevTools JavaScript 控制台。
 
 ### 以抽屉式导航栏形式打开
 
-要以任何其他面板旁的抽屉式导航栏的形式打开控制台，请执行以下操作之一：
+要以任何其他面板旁的抽屉式导航栏的形式打开控制台，请执行以下操作之一:
 
 * 在 DevTools 处于聚焦状态时按 <kbd>Esc</kbd>。
 * 按 **Customize and control DevTools** 按钮，然后按
@@ -76,7 +76,7 @@ description: ****了解如何导航 Chrome DevTools JavaScript 控制台。
 
 ### 清除历史记录 {: #clearing}
 
-您可以通过以下方式清除控制台历史记录：
+您可以通过以下方式清除控制台历史记录:
 
 * 在控制台中点击右键，然后按 **Clear console**。
 * 在控制台中输入 `clear()`。
@@ -134,13 +134,13 @@ description: ****了解如何导航 Chrome DevTools JavaScript 控制台。
 
 ![过滤的控制台输出](images/filtered-console.png)
 
-按严重性等级进行过滤的说明如下所示：
+按严重性等级进行过滤的说明如下所示:
 
 <table class="responsive">
   <thead>
      <tr>
       <th colspan="2">选项及显示的内容</th>
-    </tr>   
+    </tr>
   </thead>
   <tbody>
   <tr>
@@ -181,7 +181,7 @@ description: ****了解如何导航 Chrome DevTools JavaScript 控制台。
   <thead>
      <tr>
       <th colspan="2">设置及说明</th>
-    </tr>   
+    </tr>
   </thead>
   <tbody>
   <tr>

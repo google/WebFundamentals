@@ -76,7 +76,7 @@ Object <code>provider</code>
 
 ### 自动获取凭据
 
-要让用户自动登录，请在用户访问您的网站时使用 `unmediated: true` 请求一个凭据对象，例如：
+要让用户自动登录，请在用户访问您的网站时使用 `unmediated: true` 请求一个凭据对象，例如:
 
 
 <pre class="prettyprint">
@@ -98,7 +98,7 @@ navigator.credentials.get({
 </figure>
 
 此请求将立即使用一个凭据对象进行解析，并且不会显示帐户选择器。
-当浏览器获取凭据信息时，系统将弹出一个通知：
+当浏览器获取凭据信息时，系统将弹出一个通知:
 
 
 <div class="clearfix"></div>
@@ -115,12 +115,12 @@ navigator.credentials.get({
 
 
 当用户点按“Sign-In”按钮时，通常会调用帐户选择器。
-用户可以选择一个帐户进行登录，例如：
+用户可以选择一个帐户进行登录，例如:
 
 <div class="clearfix"></div>
 
 
-要启用帐户选择器，请将 `unmediated` 属性设置为 `false`：
+要启用帐户选择器，请将 `unmediated` 属性设置为 `false`:
 
 
 <pre class="prettyprint">
@@ -157,7 +157,7 @@ navigator.credentials.get({
 如果 `.type` 是 `federated`，则 `.provider` 属性是一个表示身份提供程序的字符串。
 
 
-例如：
+例如:
 
     if (cred) {
       switch (cred.type) {
@@ -182,7 +182,7 @@ navigator.credentials.get({
 
 如果是一个 `undefined` 值，则用户继续处于退出状态。
 
-当出现以下情况时传递一个 `undefined` 值：
+当出现以下情况时传递一个 `undefined` 值:
 
 * 用户尚未确认自动登录功能（每个浏览器实例确认一次）。
 * 用户没有凭据，或在源中存储了两个以上的凭据对象。
@@ -199,7 +199,7 @@ navigator.credentials.get({
 要向服务器验证用户的身份，请使用 `fetch()` 将提供的 `PasswordCredential` POST 到服务器。
 
 
-完成 POST 后，`fetch` 自动将 `PasswordCredential` 对象转换为使用 `multipart/form-data` 编码的 `FormData` 对象：
+完成 POST 后，`fetch` 自动将 `PasswordCredential` 对象转换为使用 `multipart/form-data` 编码的 `FormData` 对象:
 
 
     ------WebKitFormBoundaryOkstjzGAv8zab97W
@@ -217,7 +217,7 @@ Note: 您不能使用 `XMLHttpRequest` 将 `PasswordCredential` POST 到您的�
 
 #### `PasswordCredential` 参数
 
-获取的 `PasswordCredential` 对象包括以下参数：
+获取的 `PasswordCredential` 对象包括以下参数:
 
 <table class="responsive properties">
   <tbody>
@@ -274,7 +274,7 @@ Note: 您不能使用 `XMLHttpRequest` 将 `PasswordCredential` POST 到您的�
 
 
 
-获取凭据对象后：
+获取凭据对象后:
 
     if (cred) {
       if (cred.type == 'password') {
@@ -310,7 +310,7 @@ Note: 您不能使用 `XMLHttpRequest` 将 `PasswordCredential` POST 到您的�
 要通过身份提供程序对用户进行身份验证，使用具有 `FederatedCredential` 的特定身份验证流程即可。
 
 
-例如，如果提供程序为 Google，则使用 [Google Sign-In JavaScript 内容库](/identity/sign-in/web/)：
+例如，如果提供程序为 Google，则使用 [Google Sign-In JavaScript 内容库](/identity/sign-in/web/):
 
 
     // Instantiate an auth object
@@ -336,7 +336,7 @@ Note: 您不能使用 `XMLHttpRequest` 将 `PasswordCredential` POST 到您的�
 Google Sign-In 会生成一个 id 令牌作为身份验证的证明，您将该令牌发送到服务器以创建一个会话。
 
 
-有关其他身份提供程序，请参阅相应的文档：
+有关其他身份提供程序，请参阅相应的文档:
 
 * [Facebook](https://developers.facebook.com/docs/facebook-login)
 * [Twitter](https://dev.twitter.com/web/sign-in/implementing)
@@ -347,7 +347,7 @@ Google Sign-In 会生成一个 id 令牌作为身份验证的证明，您将该�
 ## 退出{: #sign-out }
 
 当用户退出您的网站时，您需要确保此用户在下次访问时不会自动登录。
-要关闭自动登录，请调用 [`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation)：
+要关闭自动登录，请调用 [`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation):
 
 
 

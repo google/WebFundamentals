@@ -24,7 +24,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 ## 檢查應用到元素的樣式
 
 [選擇一個元素](edit-dom#inspect-an-element)以檢查其樣式。
-**Styles** 窗格可以顯示應用到選定元素的 CSS 規則，優先級從高到低：
+**Styles** 窗格可以顯示應用到選定元素的 CSS 規則，優先級從高到低:
 
 
 * 頂端爲 `element.style`。這些樣式要麼直接使用樣式屬性（例如 `<p style="color:green">`）直接應用到元素，要麼在 DevTools 中應用。
@@ -64,20 +64,20 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以檢查和修改與�
 
 在 **Styles** 窗格中將鼠標懸停在 CSS 選擇器上可以查看受該選擇器影響的所有元素。
 例如，在下面的屏幕截圖中，鼠標懸停在選擇器 `.wf-tools-guide__section-link a` 上。在實時頁面中，您可以看到受選擇器影響的所有 `<a>` 元素。
- 
+
 
 ![查看受選擇器影響的元素](imgs/selector-hover.png)
 
-Note：此功能僅突出顯示視口中的元素；視口以外的其他元素也可能受選擇器影響。
- 
+Note: 此功能僅突出顯示視口中的元素；視口以外的其他元素也可能受選擇器影響。
+
 
 ## 添加、啓用和停用 CSS 類 {: #classes }
 
 點擊 **.cls** 按鈕可以查看與當前選定元素關聯的所有 CSS 類。
-從這裏，您可以執行以下操作：
+從這裏，您可以執行以下操作:
 
 * 啓用或停用當前與元素關聯的類。
-* 向元素添加新類。 
+* 向元素添加新類。
 
 ![classes 窗格](imgs/classes.png)
 
@@ -87,7 +87,7 @@ Note：此功能僅突出顯示視口中的元素；視口以外的其他元素�
 
 按 <kbd>Shift</kbd>+<kbd>Tab</kbd> 可以向後移動。
 
-編輯數字式 CSS 屬性值時，可以使用下面的鍵盤快捷鍵增大和減小值：
+編輯數字式 CSS 屬性值時，可以使用下面的鍵盤快捷鍵增大和減小值:
 
 
 * 使用<kbd>向上鍵</kbd>和<kbd>向下鍵</kbd>能夠以 1 爲增量增大和減小值（如果當前值介於 -1 和 1 之間，則增量爲 0.1）。
@@ -95,7 +95,7 @@ Note：此功能僅突出顯示視口中的元素；視口以外的其他元素�
 * 使用 <kbd>Shift</kbd>+<kbd>向上鍵</kbd>能夠以 10 爲增量增大值；使用 <kbd>Shift</kbd>+<kbd>向下鍵</kbd>能夠以 10 爲增量減小值。
 * 使用 <kbd>Shift</kbd>+<kbd>Page Up</kbd>（Windows、Linux）或 <kbd>Shift</kbd>+<kbd>Function</kbd>+<kbd>向上鍵</kbd> (Mac) 能夠以 100 爲增量增大值。使用 <kbd>Shift</kbd>+<kbd>Page Down</kbd>（Windows、Linux）或 <kbd>Shift</kbd>+<kbd>Function</kbd>+<kbd>向下鍵</kbd> (Mac) 能夠以 100 爲增量減小值。
 
- 
+
 
 ## 添加新屬性聲明
 
@@ -109,20 +109,20 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 
 點擊 **New Style Rule** (![New Style Rule 按鈕](imgs/new-style-rule.png){:.inline}) 按鈕可以添加一個新的 CSS 規則。
 
- 
 
-點擊並按住按鈕可以選擇要向哪一個樣式表添加規則。 
+
+點擊並按住按鈕可以選擇要向哪一個樣式表添加規則。
 
 ## 添加或移除動態樣式（僞類）{:#pseudo-classes}
 
 您可以在元素上手動設置動態僞類選擇器（例如 `:active`、`:focus`、`:hover` 和 `:visited`）。
- 
 
-可以通過兩種方式在元素上設置動態狀態：
+
+可以通過兩種方式在元素上設置動態狀態:
 
 * 在 **Elements** 面板內右鍵點擊某個元素，然後從菜單中選擇目標僞類，將其啓用或停用。
 ![右鍵點擊元素以啓用僞類選擇器](imgs/pseudoclass-rightclick.png)
-  
+
 
 
 
@@ -143,7 +143,7 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 ![規則集中的三點圖標](imgs/rule-set-three-dots-icon.png)
 
 將鼠標懸停到此圖標上可以調出用於添加 `color` 聲明 (![添加 color 聲明](imgs/add-color.png){:.inline}) 或 `background-color` 聲明 (![添加 background-color 聲明](imgs/add-background-color.png){:.inline}) 的按鈕。點擊這些按鈕之一可以將聲明添加到樣式規則中。
- 
+
 
 ## 使用 Color Picker 修改顏色 {: #color-picker }
 
@@ -154,7 +154,7 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 
 ![打開 Color Picker](imgs/open-color-picker.jpg)
 
-您可以通過多種方式與 **Color Picker** 交互：
+您可以通過多種方式與 **Color Picker** 交互:
 
 1. **取色器**。請參閱[取色器](#eyedropper)瞭解更多信息。
 2. **當前顏色**。**當前值**的可視表示。
@@ -181,12 +181,12 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 
 ### 調色板 {: #color-palettes }
 
-**Color Picker** 提供了下列調色板：
+**Color Picker** 提供了下列調色板:
 
 * **Page Colors**。一組從頁面的 CSS 自動生成的顏色。
 * **Material Design**。一組符合 [Material Design 規範][md]的顏色。
 * **Custom**。您選擇的任意一組顏色。DevTools 可以保存您的自定義調色板（甚至在不同的頁面間），直至您將其刪除。
- 
+
 
 #### 修改自定義調色板 {: #custom-color-palette }
 
@@ -202,7 +202,7 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 
 您可以查看和編輯定義或使用 [CSS 自定義屬性][intro]（之前稱爲 CSS 變量）的聲明，就像查看和編輯任何其他聲明一樣。
 
- 
+
 
 自定義屬性通常在 `:root` 選擇器中[定義][def]。
 要查看在 `:root` 中定義的自定義屬性，請檢查 `html` 元素。
@@ -215,7 +215,7 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 
 
 您可以查看和編輯使用自定義屬性的聲明值，就像查看和編輯任何其他聲明值一樣。
- 
+
 
 如果您看到一個像 `var(--main-color)` 一樣的聲明值（如下面的屏幕截圖所示），則表示聲明正在使用自定義屬性。
 可以像編輯任何其他聲明值一樣編輯這些值。
@@ -231,7 +231,7 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 
 如果您在使用 Sass、Less、Stylus 或任何其他 CSS 預處理器，則在 Styles 編輯器中編輯生成的 CSS 輸出文件不會有任何作用，因爲它們不會映射到您的源代碼。
 
-藉助 CSS 源映射，DevTools 可以將生成的文件自動映射到源代碼文件，這樣，您可以在 Sources 面板中實時編輯這些文件並查看結果，而不用離開 DevTools 或刷新頁面。 
+藉助 CSS 源映射，DevTools 可以將生成的文件自動映射到源代碼文件，這樣，您可以在 Sources 面板中實時編輯這些文件並查看結果，而不用離開 DevTools 或刷新頁面。
 
 ### 預處理器工作流
 
@@ -239,7 +239,7 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 
 ![顯示 .scss 樣式表的 Elements 面板](imgs/sass-debugging.png)
 
-要跳轉到源文件，請執行以下操作：
+要跳轉到源文件，請執行以下操作:
 
 1. 點擊鏈接，在 Sources 面板中打開（可編輯）源文件。
 2. <kbd class="kbd">Ctrl</kbd> + **點擊**（或 <kbd class="kbd">Cmd</kbd> + **點擊**）任何 CSS 屬性名稱或值，打開源文件並跳轉到相應行。
@@ -250,7 +250,7 @@ Note: 要啓用或停用樣式聲明，請選中或取消選中旁邊的複選�
 
 ### 啓用/停用 CSS 源映射和自動重新加載
 
-**默認情況下，CSS 源映射處於啓用狀態**。您可以選擇啓用生成的 CSS 文件的自動重新加載。要啓用 CSS 源映射和 CSS 重新重新加載，請執行以下操作：
+**默認情況下，CSS 源映射處於啓用狀態**。您可以選擇啓用生成的 CSS 文件的自動重新加載。要啓用 CSS 源映射和 CSS 重新重新加載，請執行以下操作:
 
 1. 打開 DevTools 的 Settings 面板並點擊 **General**。
 2. 開啓 **Enable CSS source maps** 和 **Auto-reload generated CSS**。

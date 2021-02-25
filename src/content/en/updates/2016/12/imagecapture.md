@@ -230,8 +230,7 @@ API from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
 
 ## Find out more
 * [W3C Image Capture Spec](https://w3c.github.io/mediacapture-image/)
-* [Image Capture implementation status](https://github.com/w3c/mediacapture-image/blob/master/implementation-status.md)
+* [Image Capture implementation status](https://github.com/w3c/mediacapture-image/blob/main/implementation-status.md)
 * [Shape Detection API](https://wicg.github.io/shape-detection-api/#introduction)
 * [Shape Detection explainer and readme](https://github.com/WICG/shape-detection-api)
 * [Shape Detection demo collection](https://codepen.io/collection/DwWVJj/)
-

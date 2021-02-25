@@ -30,11 +30,11 @@ description:在服务器上启用 HTTPS 对于确保网页安全非常重要。
 长远来看，随着计算机处理开销降低，密钥长度会增加。
 目前 2048 是最佳长度。
 
-用于生成 RSA 密钥对的命令为：
+用于生成 RSA 密钥对的命令为:
 
     openssl genrsa -out www.example.com.key 2048
 
-这将生成以下输出：
+这将生成以下输出:
 
     Generating RSA private key, 2048 bit long modulus
     .+++
@@ -47,11 +47,11 @@ description:在服务器上启用 HTTPS 对于确保网页安全非常重要。
 *openssl* 命令以交互方式要求您提供所需的元数据。
 
 
-运行以下命令：
+运行以下命令:
 
     openssl req -new -sha256 -key www.example.com.key -out www.example.com.csr
 
-系统将输出以下内容：
+系统将输出以下内容:
 
     You are about to be asked to enter information that will be incorporated
     into your certificate request
@@ -75,11 +75,11 @@ description:在服务器上启用 HTTPS 对于确保网页安全非常重要。
     A challenge password []:
     An optional company name []:
 
-为确保 CSR 的有效性，请运行以下命令：
+为确保 CSR 的有效性，请运行以下命令:
 
     openssl req -text -in www.example.com.csr -noout
 
-响应结果应如下所示：
+响应结果应如下所示:
 
     Certificate Request:
         Data:
@@ -120,10 +120,10 @@ description:在服务器上启用 HTTPS 对于确保网页安全非常重要。
 
 
 
-例如，某个 CA 目前提供以下价格：
+例如，某个 CA 目前提供以下价格:
 
-* 标准：16 美元/年，适用于 example.com 和 www.example.com。
-* 通配符：150 美元/年，适用于 example.com 和 \*.example.com。
+* 标准: 16 美元/年，适用于 example.com 和 www.example.com。
+* 通配符: 150 美元/年，适用于 example.com 和 \*.example.com。
 
 按这些价格，当您有 9 个以上子域名时，通配符证书比较划算；您也可以只购买一个或多个单名称证书。
 （例如，如果您有五个以上子域名，在服务器上启用 HTTPS 时，您可能发现通配符证书更方便。）
@@ -142,7 +142,7 @@ Note: 记住，在通配符证书中，通配符只适用于一个 DNS 标签。
 * 使用 Mozilla 的服务器配置工具来设置服务器以支持 HTTPS。
 * 定期使用 Qualys 便捷的 SSL 服务器测试来测试网站，并确保得分至少为 A 或 A+。
 
-此时，您必须做出关键的操作决定。选择下列其中一项：
+此时，您必须做出关键的操作决定。选择下列其中一项:
 
 * 给为网络服务器提供内容的每个主机名指定一个独立的 IP 地址。
 * 使用基于名称的虚拟托管。
@@ -211,7 +211,7 @@ Note: 在 HTTP 页面中包括 HTTPS 资源完全没问题。
     <p>Check out this <a href="http://foo.com/">other cool
     site.</a></p>
 
-换句话说，使站内网址尽可能是相对地址：协议相对（省去协议，以 `//example.com` 开头）或主机相对（以相对路径开头，例如 `/jquery.js`）。
+换句话说，使站内网址尽可能是相对地址: 协议相对（省去协议，以 `//example.com` 开头）或主机相对（以相对路径开头，例如 `/jquery.js`）。
 
 <p><span class="compare-better">建议做法</span> — 我们建议您使用协议相对站内网址。</p>
 
@@ -245,7 +245,7 @@ Note: 在 HTTP 页面中包括 HTTPS 资源完全没问题。
 
 Success: 为确保大型网站的迁移更顺利，我们建议采用协议相对网址。如果您还不确定是否能够完全部署 HTTPS，则强制网站的所有子资源使用 HTTPS 可能会弄巧成拙。可能会有一段时间，您对 HTTPS 觉得新奇，并且 HTTP 网站仍必须像往常一样运行。但从长远看，您将完成迁移并锁定 HTTPS（请参考接下来两个部分）。
 
-如果网站依赖第三方（例如 CDN、jquery.com）提供的脚本、图像或其他资源，则有两个选择：
+如果网站依赖第三方（例如 CDN、jquery.com）提供的脚本、图像或其他资源，则有两个选择:
 
 
 * 对这些资源使用协议相对网址。如果该第三方不提供 HTTPS，请求他们提供。
@@ -317,7 +317,7 @@ Chris Palmer [在 Chrome 开发峰会 2014 上做过一个演讲，讨论 HTTPS 
 
 ### 引用站点标头
 
-当用户从您的 HTTPS 网站链接到其他 HTTP 网站时，User Agent 不会发送引用站点标头。如果这是个问题，有多种方法可解决：
+当用户从您的 HTTPS 网站链接到其他 HTTP 网站时，User Agent 不会发送引用站点标头。如果这是个问题，有多种方法可解决:
 
 
 * 其他网站应迁移到 HTTPS。如果被引用网站可以完成本指南中的[在服务器上启用 HTTPS](#enable-https-on-your-servers) 部分，则可以将您网站中指向他们网站的链接从 `http://` 更改为 `https://`，或可以使用协议相对链接。
@@ -331,7 +331,7 @@ Caution: 根据 [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3)�
 
 通过展示广告来赚钱的网站运营商希望确保迁移到 HTTPS 不会降低广告曝光量。
 但是，由于混合内容的安全问题，HTTP `<iframe>` 在 HTTPS 页面中不起作用。
-这里就存在一个棘手的集体行动问题：在广告商通过 HTTPS 发布广告之前，网站运营商无法在不损失广告收入的情况下迁移到 HTTPS；但是在网站运营商迁移到 HTTPS 之前，广告商没有动力来通过 HTTPS 发布广告。
+这里就存在一个棘手的集体行动问题: 在广告商通过 HTTPS 发布广告之前，网站运营商无法在不损失广告收入的情况下迁移到 HTTPS；但是在网站运营商迁移到 HTTPS 之前，广告商没有动力来通过 HTTPS 发布广告。
 
 
 

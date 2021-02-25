@@ -413,9 +413,9 @@ The [Devtools Protocol](https://chromedevtools.github.io/devtools-protocol/)
 supports a powerful feature called [Network interception](https://chromedevtools.github.io/devtools-protocol/tot/Network#event-requestIntercepted)
 which can be used to **modify requests before they're issued by the browser**.
 Puppeteer supports network interception by turning on
-[`page.setRequestInterception(true)`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetrequestinterceptionvalue)
+[`page.setRequestInterception(true)`](https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#pagesetrequestinterceptionvalue)
 and listening for the
-[page's `request` event](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-request).
+[page's `request` event](https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#event-request).
 That allows us to abort requests for certain resources and let others continue
 through.
 
@@ -513,11 +513,11 @@ async function ssr(url) {
 
 This code:
 
-1. Use a [`page.on('response')`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-response)
+1. Use a [`page.on('response')`](https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#event-response)
    handler to listen for network responses.
 2. Stashes the responses of local stylesheets.
 3. Finds all `<link rel="stylesheet">` in the DOM and replaces them with an
-equivalent `<style>`. See [`page.$$eval`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pageevalselector-pagefunction-args)
+equivalent `<style>`. See [`page.$$eval`](https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args)
 API docs.
 The `style.textContent` is set to the stylesheet response.
 
@@ -571,7 +571,7 @@ Instead, you may want to launch a single instance and reuse it for rendering
 multiple pages.
 
 Puppeteer can reconnect to an existing instance of Chrome by calling
-[`puppeteer.connect()`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerconnectoptions)
+[`puppeteer.connect()`](https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#puppeteerconnectoptions)
 and passing it the instance's remote debugging URL. To keep a long-running
 browser instance, we can move the code that launches Chrome from the `ssr()`
 function and into the Express server:
@@ -734,7 +734,7 @@ And in the page, we can look for that parameter:
 </html>
 ```
 
-Tip: Another handy method to look at is [`Page.evaluateOnNewDocument()`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pageevaluateonnewdocumentpagefunction-args)
+Tip: Another handy method to look at is [`Page.evaluateOnNewDocument()`](https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#pageevaluateonnewdocumentpagefunction-args)
 . It allows you to inject code into the page and have Puppeteer run that code
 before the rest of the page's JavaScript executes.
 {: .success }

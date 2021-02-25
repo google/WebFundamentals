@@ -23,7 +23,7 @@ description:很重要的一点是，您需要了解应用或网站在连接不�
 
 ####  浏览器工具
 
-[Chrome DevTools](/web/tools/chrome-devtools/network-performance/network-conditions) 让您能使用 Chrome DevTools Network 面板的预设或自定义设置，以多种上传/下载速度和[往返时间](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/)测试网站：
+[Chrome DevTools](/web/tools/chrome-devtools/network-performance/network-conditions) 让您能使用 Chrome DevTools Network 面板的预设或自定义设置，以多种上传/下载速度和[往返时间](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/)测试网站:
 
 ![Chrome DevTools 节流](images/chrome-devtools-throttling.png)
 
@@ -39,7 +39,7 @@ description:很重要的一点是，您需要了解应用或网站在连接不�
 
 ####  设备模拟
 
-[Android Emulator](http://developer.android.com/tools/devices/emulator.html#netspeed) 允许您模拟在 Android 设备上运行应用（包括网络浏览器和混合式网络应用）时可能遇到的各种网络状况：
+[Android Emulator](http://developer.android.com/tools/devices/emulator.html#netspeed) 允许您模拟在 Android 设备上运行应用（包括网络浏览器和混合式网络应用）时可能遇到的各种网络状况:
 
 ![Android Emulator](images/android-emulator.png)
 
@@ -65,7 +65,7 @@ description:很重要的一点是，您需要了解应用或网站在连接不�
 
 利用软件和硬件代理，您可以模拟有问题的移动网络状况，例如带宽限制、封包延迟和随机丢包。利用共享代理或欠佳网络，开发团队可以将网络实战测试纳入工作流程。
 
-Facebook 的 [Augmented Traffic Control](http://facebook.github.io/augmented-traffic-control/) (ATC) 是以 BSD 许可证发布的一套应用，可用于控制流量和模拟连接不良的网络状况：
+Facebook 的 [Augmented Traffic Control](http://facebook.github.io/augmented-traffic-control/) (ATC) 是以 BSD 许可证发布的一套应用，可用于控制流量和模拟连接不良的网络状况:
 
 ![Facebook 的 Augmented Traffic Control](images/augmented-traffic-control.png)
 
@@ -85,7 +85,7 @@ Facebook 的 [Augmented Traffic Control](http://facebook.github.io/augmented-tra
 
 像这种虚假连接会导致糟糕的体验，因为浏览器（或 JavaScript）会持续不断地尝试检索资源，而不是放弃并选择有效的备用连接。实际上，Lie-fi 比离线更糟，因为如果确实离线的话，至少 JavaScript 可以采取相应的规避措施。
 
-现在，越来越多的人舍弃固定宽带而转为使用移动网络，因此，Lie-fi 问题也越来越严峻。最新的[美国人口普查数据](https://www.ntia.doc.gov/blog/2016/evolving-technologies-change-nature-internet-use)显示，越来越多的人[舍弃固定宽带而转为使用移动网络](https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/)。下图是 2015 年和 2013 年在家使用移动互联网的数据比较：
+现在，越来越多的人舍弃固定宽带而转为使用移动网络，因此，Lie-fi 问题也越来越严峻。最新的[美国人口普查数据](https://www.ntia.doc.gov/blog/2016/evolving-technologies-change-nature-internet-use)显示，越来越多的人[舍弃固定宽带而转为使用移动网络](https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/)。下图是 2015 年和 2013 年在家使用移动互联网的数据比较:
 
 <img src="images/home-broadband.png" class="center" alt="显示舍弃固定宽带而转为使用移动网络（尤其是低收入家庭）的美国人口普查数据图">
 

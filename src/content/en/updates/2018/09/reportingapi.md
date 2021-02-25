@@ -512,8 +512,8 @@ happen (e.g. know about deprecated APIs ahead of their removal).
 
 [spec]: https://w3c.github.io/reporting
 [reportingobserver]: /web/updates/2018/07/reportingobserver
-[explainer]: https://github.com/W3C/reporting/blob/master/EXPLAINER.md
+[explainer]: https://github.com/W3C/reporting/blob/main/EXPLAINER.md
 [featurepolicy]: /web/updates/2018/06/feature-policy
 [nel]: https://www.chromestatus.com/features/5391249376804864
-[reportingintegration]: https://github.com/WICG/feature-policy/blob/master/reporting.md
+[reportingintegration]: https://github.com/WICG/feature-policy/blob/main/reporting.md
 [cspviolations]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP#Enabling_reportin

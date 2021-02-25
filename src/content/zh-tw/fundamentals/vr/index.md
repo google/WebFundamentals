@@ -15,7 +15,7 @@ WebVR 是一個 JavaScript API，其利用用戶擁有的任意 VR 耳機和 VR 
 
 ## 支持與可用性
 
-目前，WebVR API 可用於以下瀏覽器：
+目前，WebVR API 可用於以下瀏覽器:
 
 * Chrome Beta (M56+)，通過一個[來源試用版](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)實現。
 * Firefox Nightly。

@@ -180,7 +180,7 @@ There are a few things that can cause this. This is a checklist of things to loo
 [3]: /web/android/trusted-web-activity/integration-guide
 [4]: https://scrapbook-pwa.web.app/
 [5]: https://github.com/GoogleChrome/samples/tree/gh-pages/web-share
-[6]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/twa-basic
+[6]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/twa-basic
 [7]: https://github.com/GoogleChrome/android-browser-helper
 [8]: https://scrapbook-pwa.web.app/manifest.json
 [9]: https://web.dev/web-share/

@@ -24,7 +24,7 @@ description: Generic Sensor API从Chrome 63开始作为原始试用版（Origin 
 
 您可能认为Web平台已经提供了一些传感器数据接口，例如，[DeviceMotion](/web/fundamentals/native-hardware/device-orientation/)和[DeviceOrientation](/web/fundamentals/native-hardware/device-orientation/)事件暴露运动传感器数据，还有一些其他实验性API提供来自环境传感器的数据。那么，为什么我们还需要这个新的API呢？
 
-与现有传感器接口相比，Generic Sensor API有许多优势：
+与现有传感器接口相比，Generic Sensor API有许多优势:
 
 - Generic Sensor API是一个传感器框架，可以使用新的传感器类轻松扩展，并且每个类都将保留通用接口。为一种传感器类型编写的客户端代码可以重新用于另一种，只需很少的修改！
 - 您可以配置传感器，例如，设置适合您应用需求的采样频率。
@@ -39,7 +39,7 @@ description: Generic Sensor API从Chrome 63开始作为原始试用版（Origin 
 
 在撰写本文时，Chrome支持以下几种传感器。
 
-**运动传感器（Motion sensors）：**
+**运动传感器（Motion sensors）: **
 
 - 加速度计（Accelerometer）
 - 陀螺仪（Gyroscope）
@@ -47,7 +47,7 @@ description: Generic Sensor API从Chrome 63开始作为原始试用版（Origin 
 - 绝对方向传感器（AbsoluteOrientationSensor）
 - 相对方向传感器（RelativeOrientationSensor）
 
-**环境传感器（Environmental sensors）：**
+**环境传感器（Environmental sensors）: **
 
 - 环境光传感器（AmbientLightSensor）
 - 磁力计（Magnetometer）
@@ -80,7 +80,7 @@ description: Generic Sensor API从Chrome 63开始作为原始试用版（Origin 
 
 <div class="clearfix"></div>
 
-加速度计可用于如下步骤：步数计算，动作感应或简单的设备定向。通常情况下，加速度计测量结合其他来源的数据，以创建融合传感器，如方向传感器。
+加速度计可用于如下步骤: 步数计算，动作感应或简单的设备定向。通常情况下，加速度计测量结合其他来源的数据，以创建融合传感器，如方向传感器。
 
 [线性加速度传感器](https://w3c.github.io/accelerometer/#linearaccelerationsensor-interface)测量装置传感器的设备的加速度，不包括的重力的作用。例如，当设备处于静止状态时，传感器在三个轴上测量的加速度≈0m/<sup>2</sup>。
 
@@ -108,7 +108,7 @@ description: Generic Sensor API从Chrome 63开始作为原始试用版（Origin 
 
 [绝对方向传感器](https://w3c.github.io/orientation-sensor/#orientationsensor-interface)是一种的融合传感器，测量设备相对于地球坐标系的旋转，而[相对方向传感器](https://w3c.github.io/orientation-sensor/#relativeorientationsensor-interface)则提供设备相对于固定的参考坐标系统的旋转数据。
 
-所有现代3D JavaScript框架均支持四元数和旋转矩阵来表示旋转。但是，如果你直接使用WebGL，[方向传感器](https://w3c.github.io/orientation-sensor/#orientationsensor-populatematrix)接口提供了便捷的方法用于WebGL兼容的旋转矩阵。这里有几个代码示例：
+所有现代3D JavaScript框架均支持四元数和旋转矩阵来表示旋转。但是，如果你直接使用WebGL，[方向传感器](https://w3c.github.io/orientation-sensor/#orientationsensor-populatematrix)接口提供了便捷的方法用于WebGL兼容的旋转矩阵。这里有几个代码示例:
 
 <div class="clearfix"></div>
 
@@ -177,9 +177,9 @@ gl.uniformMatrix4fv(modMatrixAttr, false, modMatrix);
   <figcaption><b>图5</b>: 屏幕坐标系</figcaption>
 </figure>
 
-以前，传感器读数重新映射到屏幕坐标必须在JavaScript中实现。这种方法效率低下，并且也极大地增加了Web应用程序代码的复杂性：Web应用程序必须监视屏幕方向更改并执行传感器读数的坐标转换，这对欧拉角或四元数来说并不是简单的事情。
+以前，传感器读数重新映射到屏幕坐标必须在JavaScript中实现。这种方法效率低下，并且也极大地增加了Web应用程序代码的复杂性: Web应用程序必须监视屏幕方向更改并执行传感器读数的坐标转换，这对欧拉角或四元数来说并不是简单的事情。
 
-Generic Sensor API提供了更简单可靠的解决方案！本地坐标系对于所有定义的空间传感器类都是可配置的：Accelerometer、Gyroscope、LinearAccelerationSensor、AbsoluteOrientationSensor、RelativeOrientationSensor和Magnetometer。通过将`referenceFrame`选项传递给传感器对象构造函数，用户可以定义返回的读数是否将在[设备](https://w3c.github.io/accelerometer/#device-coordinate-system)或[屏幕](https://w3c.github.io/accelerometer/#screen-coordinate-system)坐标中解析。
+Generic Sensor API提供了更简单可靠的解决方案！本地坐标系对于所有定义的空间传感器类都是可配置的: Accelerometer、Gyroscope、LinearAccelerationSensor、AbsoluteOrientationSensor、RelativeOrientationSensor和Magnetometer。通过将`referenceFrame`选项传递给传感器对象构造函数，用户可以定义返回的读数是否将在[设备](https://w3c.github.io/accelerometer/#device-coordinate-system)或[屏幕](https://w3c.github.io/accelerometer/#screen-coordinate-system)坐标中解析。
 
 ```
 // 当有新的读数时，初始化传感器和更新模型矩阵。
@@ -313,4 +313,3 @@ Note: Feature Policy集成在Chrome 65或更高版本中。在早期版本的Chr
 Translated by {% include "web/_shared/contributors/wmlin.html" %}
 
 {% include "web/_shared/rss-widget-updates.html" %}
-

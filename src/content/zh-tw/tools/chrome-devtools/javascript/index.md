@@ -29,7 +29,7 @@ description:在本交互式教程中使用 Chrome DevTools 調試 JavaScript 入
 其速度快得多，也更有效。
 
 
-## 第 1 步：重現錯誤 {: #step-1 }
+## 第 1 步: 重現錯誤 {: #step-1 }
 
 重現錯誤始終是調試的第一步。“重現錯誤”是指找到一系列總是能導致錯誤出現的操作。
 
@@ -55,11 +55,11 @@ description:在本交互式教程中使用 Chrome DevTools 調試 JavaScript 入
 啊嗚。這個結果是錯誤的。正確結果應爲 `6`。這就是您要修正的錯誤。
 
 
-## 第 2 步：使用斷點暫停代碼
+## 第 2 步: 使用斷點暫停代碼
 
 DevTools 讓您可以暫停執行中的代碼，並對暫停時刻的*所有*變量值進行檢查。
 用於暫停代碼的工具稱爲**斷點**。
-立即試一試：
+立即試一試:
 
 1. 按 <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) 或 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>（Windows、Linux）在演示頁面上打開 DevTools。
 
@@ -82,12 +82,12 @@ DevTools 讓您可以暫停執行中的代碼，並對暫停時刻的*所有*變
        <img src="imgs/get-started-click-breakpoint.png"
          alt="DevTools 在演示頁面上打開，Sources 面板獲得焦點，click 事件偵聽器斷點處於啓用狀態。"
        <figcaption>
-         <b>圖 1</b>：DevTools 在演示頁面上打開，Sources 面板獲得焦點，click 事件偵聽器斷點處於啓用狀態。
+         <b>圖 1</b>: DevTools 在演示頁面上打開，Sources 面板獲得焦點，click 事件偵聽器斷點處於啓用狀態。
          如果 DevTools 窗口較大，則 <b>Event Listener Breakpoints</b> 窗格位於右側，而不是像屏幕截圖中那樣位於左下方。</figcaption>
      </figure>
 
 1. 返回至演示頁面，再次點擊 **Add Number 1 and Number 2**。DevTools 暫停演示並在 **Sources** 面板中突出顯示一行代碼。
-   DevTools 突出顯示的是下面這行代碼：
+   DevTools 突出顯示的是下面這行代碼:
 
        `function onClick() {`
 
@@ -101,14 +101,14 @@ Note: 這不過是 DevTools 提供的衆多斷點類型中的一種。應使用�
 
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
 
-## 第 3 步：單步調試代碼
+## 第 3 步: 單步調試代碼
 
 一個常見的錯誤原因是腳本執行順序有誤。
-可以通過單步調試代碼一次一行地檢查代碼執行情況，準確找到執行順序異常之處。立即試一試：
+可以通過單步調試代碼一次一行地檢查代碼執行情況，準確找到執行順序異常之處。立即試一試:
 
-1. 在 DevTools 的 **Sources** 面板上，點擊 **Step into next function call** ![單步執行到下一個函數調用中][into]{:.devtools-inline}，一次一行地單步調試 `onClick()` 函數的執行。DevTools 突出顯示下面這行代碼：
+1. 在 DevTools 的 **Sources** 面板上，點擊 **Step into next function call** ![單步執行到下一個函數調用中][into]{:.devtools-inline}，一次一行地單步調試 `onClick()` 函數的執行。DevTools 突出顯示下面這行代碼:
 
-       `if (inputsAreEmpty()) {` 
+       `if (inputsAreEmpty()) {`
 
 1. 點擊 **Step over next function call** ![單步執行時越過下一個函數調用][over]{:.devtools-inline}。
 DevTools 執行 `inputsAreEmpty()` 但不進入它。
@@ -123,15 +123,15 @@ DevTools 執行 `inputsAreEmpty()` 但不進入它。
 [into]: /web/tools/chrome-devtools/images/step-into.png
 [over]: /web/tools/chrome-devtools/images/step-over.png
 
-## 第 4 步：設置另一個斷點
+## 第 4 步: 設置另一個斷點
 
-代碼行斷點是最常見的斷點類型。如果您想在執行到某一行代碼時暫停，請使用代碼行斷點。立即試一試：
+代碼行斷點是最常見的斷點類型。如果您想在執行到某一行代碼時暫停，請使用代碼行斷點。立即試一試:
 
-1. 看一下 `updateLabel()` 中的最後一行代碼，其內容類似於：
+1. 看一下 `updateLabel()` 中的最後一行代碼，其內容類似於:
 
        `label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;`
 
-1. 在這行代碼的左側，可以看到這行代碼的行號：
+1. 在這行代碼的左側，可以看到這行代碼的行號:
 **32**。點擊 **32**。DevTools 會在 **32** 上放置一個藍色圖標。
 這意味着這行代碼上有一個代碼行斷點。
    DevTools 現在總是會在執行這行代碼之前暫停。
@@ -144,7 +144,7 @@ DevTools 執行 `inputsAreEmpty()` 但不進入它。
 `sum` 的值疑似有問題。其求值結果本應是數字，而實際結果卻是字符串。
 這可能就是造成錯誤的原因。
 
-## 第 5 步：檢查變量值
+## 第 5 步: 檢查變量值
 
 另一種常見的錯誤原因是，變量或函數產生的值異常。
 許多開發者都利用 `console.log()` 來了解值隨時間變化的情況，但 `console.log()` 可能單調乏味而又效率低下，原因有兩個。
@@ -153,7 +153,7 @@ DevTools 執行 `inputsAreEmpty()` 但不進入它。
 
 
 DevTools 爲 `console.log()` 提供的其中一個替代工具是監視表達式。可以使用監視表達式來監視變量值隨時間變化的情況。顧名思義，監視表達式的監視對象不僅限於變量。您可以將任何有效的 JavaScript 表達式存儲在監視表達式中。
-立即試一試：
+立即試一試:
 
 1. 在 DevTools 的 **Sources** 面板上，點擊 **Watch**。該部分隨即展開。
 1. 點擊 **Add Expression** ![添加表達式][add]{:.devtools-inline}。
@@ -165,7 +165,7 @@ DevTools 爲 `console.log()` 提供的其中一個替代工具是監視表達式
        <img src="imgs/get-started-watch-expression.png"
          alt="“監視表達式”窗格。"
        <figcaption>
-         <b>圖 1</b>：創建  <code>typeof sum</code> 監視表達式後的“監視表達式”窗格（右下方）。
+         <b>圖 1</b>: 創建  <code>typeof sum</code> 監視表達式後的“監視表達式”窗格（右下方）。
          如果 DevTools 窗口較大，則“監視表達式”窗格位於右側，<b>Event Listener Breakpoints</b> 窗格的上方。</figcaption>
      </figure>
 
@@ -173,7 +173,7 @@ DevTools 爲 `console.log()` 提供的其中一個替代工具是監視表達式
 這就是演示頁面錯誤的原因。
 
 DevTools 爲 `console.log()` 提供的另一個替代工具是 Console。可以使用 Console 對任意 JavaScript 語句求值。開發者通常利用 Console 在調試時覆蓋變量值。在您所處的情況下，Console 可幫助您測試剛發現的錯誤的潛在解決方法。
-立即試一試：
+立即試一試:
 
 1. 如果您尚未打開 Console 抽屜，請按 <kbd>Escape</kbd> 將其打開。
 它會在 DevTools 窗口底部打開。
@@ -185,17 +185,17 @@ DevTools 爲 `console.log()` 提供的另一個替代工具是 Console。可以�
        <img src="imgs/get-started-console.png"
          alt="對一個語句求值後的 Console 抽屜。"
        <figcaption>
-         <b>圖 1</b>：對  <code>parseInt(addend1) + parseInt(addend2)</code> 求值後的 Console 抽屜。</figcaption>
+         <b>圖 1</b>: 對  <code>parseInt(addend1) + parseInt(addend2)</code> 求值後的 Console 抽屜。</figcaption>
      </figure>
 
 [add]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
 
-## 第 6 步：應用修正
+## 第 6 步: 應用修正
 
 您已找到錯誤的潛在解決方法。剩下的工作就是編輯代碼後重新運行演示頁面來測試修正效果。
 您不必離開 DevTools 就能應用修正。
 您可以直接在 DevTools UI 內編輯 JavaScript 代碼。
-立即試一試：
+立即試一試:
 
 1. 在 DevTools 的 **Sources** 面板上的代碼編輯器中，將 `var sum = addend1 + addend2` 替換爲 `var sum = parseInt(addend1) + parseInt(addend2);`。它就是您當前暫停位置上面那行代碼。
 1. 按 <kbd>Command</kbd>+<kbd>S</kbd> (Mac) 或 <kbd>Ctrl</kbd>+<kbd>S</kbd>（Windows、Linux）保存更改。代碼的背景色變爲紅色，這表示在 DevTools 內更改了腳本。
@@ -216,7 +216,7 @@ DevTools 爲 `console.log()` 提供的另一個替代工具是 Console。可以�
 
 恭喜！現在您已掌握了在 DevTools 中調試 JavaScript 的基礎知識。
 
-本教程只向您介紹了兩種設置斷點的方法。DevTools 還提供了許多其他方法，其中包括：
+本教程只向您介紹了兩種設置斷點的方法。DevTools 還提供了許多其他方法，其中包括:
 
 
 * 僅在滿足您指定的條件時觸發的條件斷點。

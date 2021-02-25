@@ -12,7 +12,7 @@ description: Latest Updates to the Credential Management API
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
-このポストで説明している変更点のいくつかは Google I/O のセッション **Secure and Seamless Sign-In: Keeping Users Engaged** でも触れています ：
+このポストで説明している変更点のいくつかは Google I/O のセッション **Secure and Seamless Sign-In: Keeping Users Engaged** でも触れています :
 
 
 <div class="video-wrapper-full-width">
@@ -50,7 +50,7 @@ Chrome は [Credential Management API](/web/fundamentals/security/credential-man
 
 ## Chrome 60
 
-Chrome 60 の [Credential Management API](/web/fundamentals/security/credential-management) では重要な変更点がいくつかあります：
+Chrome 60 の [Credential Management API](/web/fundamentals/security/credential-management) では重要な変更点がいくつかあります:
 
 - [`PasswordCredential` オブジェクトがパスワードを含むようになります。](#password)
 -  パスワードの特別な扱いが必要なくなるため、カスタマイズされた `fetch()` 関数が[まもなく廃止されます](#fetchdeprecation)。
@@ -77,10 +77,10 @@ if (navigator.credentials && navigator.credentials.preventSilentAccess) {
 
 ### `PasswordCredential` オブジェクトがパスワードを含むようになります {: #password}
 
-Credential Management API はこれまでパスワードの扱いについて保守的なアプローチを取っていました。JavaScript からパスワードを隠蔽していたため、開発者は若干カスタマイズされた `fetch()` API を使って、直接 `PasswordCredential` オブジェクトをサーバーに送って、認証を行う必要がありました。 
+Credential Management API はこれまでパスワードの扱いについて保守的なアプローチを取っていました。JavaScript からパスワードを隠蔽していたため、開発者は若干カスタマイズされた `fetch()` API を使って、直接 `PasswordCredential` オブジェクトをサーバーに送って、認証を行う必要がありました。
 
 しかしこのアプローチでは、いくつもの制約がありました。
-API を採用できない理由として頂いたフィードバックには下記のようなものがあります：
+API を採用できない理由として頂いたフィードバックには下記のようなものがあります:
 
 - JSON オブジェクトの一部としてパスワードを送らなければならない。
 - サーバーにパスワードのハッシュ値を送らなければならない。
@@ -129,7 +129,7 @@ navigator.credentials.get({
   パスワードが <code>PasswordCredential</code> オブジェクトに隠されることがなくなったため、カスタマイズされた <code>fetch()</code> 関数は不要となり、Chrome 62 で利用できなくなります。利用者の方はコードを<stromg>更新しなければなりません</stromg>。</aside>
 
 
-カスタマイズされた `fetch()` 関数を使っているかを検証するには、`PasswordCredential` オブジェクト、もしくは `FederatedCredential` オブジェクトを `credentials` プロパティの値として使っているかをご確認ください。例えば：
+カスタマイズされた `fetch()` 関数を使っているかを検証するには、`PasswordCredential` オブジェクト、もしくは `FederatedCredential` オブジェクトを `credentials` プロパティの値として使っているかをご確認ください。例えば:
 
 ```
 fetch('/signin', {
@@ -143,7 +143,7 @@ fetch('/signin', {
 ### `navigator.credentials.get()` が enum の mediation を受け取るようになります {: #mediation}
 
 Chrome 60 まで `navigator.credentials.get()` はオプショナルな `unmediated` プロパティとして Boolean を受け取っていました。
-例えば：
+例えば:
 
 ```
 navigator.credentials.get({
@@ -159,12 +159,12 @@ navigator.credentials.get({
 
 `unmediated: true` とすることで、クレデンシャルを取得する際にブラウザがアカウントチューザーを表示するのを防ぐことができます。
 
-このフラグは mediation に変更され、ユーザーの仲介は下記のような状況で発生するようになります：
+このフラグは mediation に変更され、ユーザーの仲介は下記のような状況で発生するようになります:
 
 - ユーザーがログインするアカウントを選択する必要がある場合。
 - `navigator.credentials.requireUseMediation()` を呼び出した後にユーザーが明示的にログインしたい場合。
 
-`mediation` の値として下記のいずれかを選びます：
+`mediation` の値として下記のいずれかを選びます:
 
 
 <table>
@@ -196,7 +196,7 @@ navigator.credentials.get({
 </table>
 
 
-この例では、先程のフラグ `unmediated: true` の等値を使うことで、アカウントチューザーを表示することなくクレデンシャルを返します：
+この例では、先程のフラグ `unmediated: true` の等値を使うことで、アカウントチューザーを表示することなくクレデンシャルを返します:
 
 ```
 navigator.credentials.get({
@@ -244,7 +244,7 @@ let c = await navigator.credentials.create({
 });
 ```
 
-もしくは：
+もしくは:
 
 ```
 let c = await navigator.credentials.create({
@@ -286,4 +286,3 @@ let c = await navigator.credentials.create({
 既存の Credential Management API の実装をお持ちですか？こちらの[マイグレーションガイド](https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit)
 
 を参考にして下さい。新しい API への対応方法をステップ・バイ・ステップでご紹介します。
-

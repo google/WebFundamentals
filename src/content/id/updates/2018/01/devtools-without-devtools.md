@@ -59,9 +59,9 @@ Ini hanyalah salah satu dari sekian banyak fitur DevTools yang dapat Anda akses 
 
 Saran umum: periksa [Puppeteer API][API]{:.external} sebelum beralih ke membuat klien Protokol DevTools. Dalang sudah memiliki API khusus untuk banyak fitur DevTools, seperti [code coverage][coverage]{:.external} dan [intercepting **Console** messages][console]{:.external} .
 
-[API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
-[coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
-[console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
+[API]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md
+[coverage]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#class-coverage
+[console]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#event-console
 
 Jika Anda membutuhkan bantuan mengakses fitur DevTools melalui Puppeteer, [ask a question on Stack Overflow][SO]{:.external} .
 
