@@ -158,12 +158,12 @@ Para abrir o painel Accessibility:
 2. Na **árvore DOM**, selecione o elemento que você deseja inspecionar.
 3. Clique na aba **Accessibility**. Esta aba pode estar escondida atrás do botão
 ![More
-Tabs](https://github.com/google/WebFundamentals/blob/master/web/tools/chrome-devtools/images/shared/more-tabs.png?raw=true){:
+Tabs](/web/tools/chrome-devtools/images/shared/more-tabs.png){:
 .inline-icon } **More Tabs**.
 
 <figure>
   <img
-src="https://github.com/google/WebFundamentals/blob/main/src/content/en/tools/chrome-devtools/accessibility/imgs/a11y-pane.png?raw=true"
+src="/web/tools/chrome-devtools/accessibility/imgs/a11y-pane.png"
 alt="Inspecting the h1 element of the DevTools homepage in the Accessibility
 pane.">
   <figcaption>     <b>Figura 6</b>. Inspeção do elemento <code>h1</code> da
