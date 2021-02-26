@@ -1637,6 +1637,22 @@ pozdnyakov:
   description:
     en: Mikhail is an Engineer at Intel
 
+orkon:
+  name:
+    given: Alex
+    family: Rudenko
+  org:
+    name: Google
+    unit: Chrome
+  country: Munich
+  role:
+    - author
+  twitter: orkon
+  github: orkon
+  email: alexrudenkoym@chromium.org
+  description:
+    en: Googler working on Chrome DevTools.
+
 rupl:
   name:
     given: Chris
