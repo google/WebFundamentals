@@ -309,7 +309,7 @@ own, registered service worker and an external service worker:
   </li>
   <li>
     <strong id="def-external-service-worker">External service worker:</strong>
-    a service worked that started installing independently of the
+    a service worker that started installing independently of the
     <code>Workbox</code> instance calling <code>register()</code>. This
     typically happens when a user has a new version of your site open in another
     tab. When an event originates from an external service worker, the event's
