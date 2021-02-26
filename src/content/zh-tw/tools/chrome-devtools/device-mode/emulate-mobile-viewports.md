@@ -24,7 +24,7 @@ description:利用 Chrome DevTools 的 Device Mode，您可以在一系列設備
 
 ![Device Mode 已啓用](imgs/device-mode.png)
 
-利用視口控件，您可以針對各種設備測試網站，以及是否能夠實現完全自適應。它包括以下兩個模式：
+利用視口控件，您可以針對各種設備測試網站，以及是否能夠實現完全自適應。它包括以下兩個模式:
 
   1. **自適應**。使視口可以通過任意一側的大手柄隨意調整大小。
   2. **特定設備**。將視口鎖定爲特定設備確切的視口大小，並模擬特定設備特性。
@@ -47,7 +47,7 @@ description:利用 Chrome DevTools 的 Device Mode，您可以在一系列設備
 
 <div class="wf-devtools-flex">
   <div>
-  <p>我們已在設備下拉菜單中包含了當前最熱門的設備。選擇設備後，每個預設都會自動配置特定設備特性的模擬：</p>
+  <p>我們已在設備下拉菜單中包含了當前最熱門的設備。選擇設備後，每個預設都會自動配置特定設備特性的模擬: </p>
   <ul>
     <li>設置正確的“User Agent”(UA) 字符串。</li>
     <li>設置設備分辨率和 DPI（設備像素比）。</li>
@@ -64,11 +64,11 @@ description:利用 Chrome DevTools 的 Device Mode，您可以在一系列設備
 ### 添加自定義設備預設
 
 Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣或冷門設備未涵蓋在內，可以添加自定義設備。
- 
+
 
 <div class="wf-devtools-flex">
   <div>
-  <p>要添加自定義設備，請執行以下操作：</p>
+  <p>要添加自定義設備，請執行以下操作: </p>
   <ol>
     <li>轉至 DevTools 的 Settings 面板。</li>
     <li>點擊 <strong>Devices</strong> 標籤。</li>
@@ -91,7 +91,7 @@ Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣�
 
 <div class="wf-devtools-flex">
   <div>
-    <p>在選定的設備上，控件不只是可以切換方向。對於支持的設備（如 Nexus 5X），您會獲得一個下拉菜單，可以模擬特定設備狀態，如：</p>
+    <p>在選定的設備上，控件不只是可以切換方向。對於支持的設備（如 Nexus 5X），您會獲得一個下拉菜單，可以模擬特定設備狀態，如: </p>
     <ul>
       <li>默認瀏覽器 UI</li>
       <li>顯示 Chrome 導航欄</li>
@@ -103,11 +103,11 @@ Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣�
   </div>
 </div>
 
-### 縮放到合適大小  
+### 縮放到合適大小
 
 <div class="wf-devtools-flex">
   <div>
-  <p>有時，您可能想要測試分辨率大於瀏覽器窗口實際可用空間的設備。這種情況下，<strong>Zoom to Fit</strong> 選項會很方便：</p>
+  <p>有時，您可能想要測試分辨率大於瀏覽器窗口實際可用空間的設備。這種情況下，<strong>Zoom to Fit</strong> 選項會很方便: </p>
   <ol>
     <li><strong>Fit to Window</strong> 會自動將縮放級別設置爲最大的可用空間。</li>
     <li>例如，如果您想要測試圖像的 DPI，<strong>Explicit percentages</strong> 會非常有用。</li>
@@ -122,7 +122,7 @@ Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣�
 
 <div class="wf-devtools-flex">
   <div>
-  <p>點擊設備工具欄右側上的三個小圓點，可以更改或啓用可選控件。當前選項包括：</p>
+  <p>點擊設備工具欄右側上的三個小圓點，可以更改或啓用可選控件。當前選項包括: </p>
   <ul>
     <li>User Agent 類型（模擬 UA 和觸摸事件）</li>
     <li>設備像素比</li>
@@ -141,7 +141,7 @@ Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣�
 ### User Agent 類型
 
 **User Agent Type** 或 Device Type 設置讓您可以更改設備的類型。
-可能的值爲：
+可能的值爲:
 
   1. Mobile
   2. Desktop
@@ -149,9 +149,9 @@ Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣�
 
 更改此設置會影響移動設備視口和觸摸事件模擬並更改 UA 字符串。
 因此，如果您想要爲桌面設備創建自適應網站，且想要測試懸停效果，請在 Responsive 模式下切換到“Desktop”。
-：
+:
 
-**提示**：您也可以在 [**Network conditions**][nc] 抽屜式導航欄中設置 User Agent。
+**提示**: 您也可以在 [**Network conditions**][nc] 抽屜式導航欄中設置 User Agent。
 
 
 
@@ -162,11 +162,11 @@ Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣�
 
 
 
-網頁上“設備像素比”(DPR) 靈敏度的部分示例如下：
+網頁上“設備像素比”(DPR) 靈敏度的部分示例如下:
 
-* CSS 媒體查詢，例如：
+* CSS 媒體查詢，例如:
 
-      @media (-webkit-min-device-pixel-ratio: 2), 
+      @media (-webkit-min-device-pixel-ratio: 2),
              (min-resolution: 192dpi) { ... }
 
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 規則。
@@ -190,7 +190,7 @@ Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣�
 
 ![媒體查詢檢查器](imgs/media-query-inspector-ruler.png)
 
-用彩色標記的媒體查詢示例如下：
+用彩色標記的媒體查詢示例如下:
 
 <style>#colortable { width: 60%; border: none; } #colortable td { border: none; } .max-width { background: #327ff2; width: 10%; } .max-and-min { background: #3b9903; width: 10%; } .min-width { background: #d4731f; width: 10%; }</style>
 
@@ -229,15 +229,15 @@ Device Mode 提供了多種用於模擬的設備。如果您發現某款邊緣�
 
 ### 配置網絡（UA、網絡節流）
 
-選擇此選項會在抽屜式導航欄中打開一個面板，您可以在其中更改網絡相關行爲：
+選擇此選項會在抽屜式導航欄中打開一個面板，您可以在其中更改網絡相關行爲:
 
 
-  1. **Disk Cache**：停用 Disk Cache 將在打開 DevTools 時停止瀏覽器緩存頁面及其資源。
-  2. **Network Throttling**：在此處閱讀更多有關[網絡節流](/web/tools/chrome-devtools/network-performance/network-conditions)的信息。
-  3. **User Agent**：允許您設置特定的 UA (User Agent) 字符串替換值。
+  1. **Disk Cache**: 停用 Disk Cache 將在打開 DevTools 時停止瀏覽器緩存頁面及其資源。
+  2. **Network Throttling**: 在此處閱讀更多有關[網絡節流](/web/tools/chrome-devtools/network-performance/network-conditions)的信息。
+  3. **User Agent**: 允許您設置特定的 UA (User Agent) 字符串替換值。
 
 
-**提示**：您也可以從[主菜單][nc]中打開 **Network conditions** 抽屜式導航欄。
+**提示**: 您也可以從[主菜單][nc]中打開 **Network conditions** 抽屜式導航欄。
 
 
 ## 限制

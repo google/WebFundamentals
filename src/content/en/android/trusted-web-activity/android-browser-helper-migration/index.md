@@ -51,7 +51,7 @@ Developers who were using the previous [`custom-tabs-client`][5] will have to im
 changes in their application, when migrating to `android-browser-helper`.
 
 Fortunately, besides replacing using the old library with the new library, those changes mainly
-involve changing searching and replacing a few strings throughout `AndroidManifest.xml`. 
+involve changing searching and replacing a few strings throughout `AndroidManifest.xml`.
 
 Here’s a summary of the names changed:
 
@@ -82,8 +82,8 @@ use the library, make sure to pop by the [GitHub repository][1] and file an [iss
 
 [1]: https://github.com/GoogleChrome/android-browser-helper
 [2]: https://developer.android.com/jetpack/
-[3]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/twa-webview-fallback
-[4]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/twa-multi-domain
+[3]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/twa-webview-fallback
+[4]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/twa-multi-domain
 [5]: https://jitpack.io/#GoogleChrome/custom-tabs-client
 [6]: https://developer.android.com/guide/webapps/webview
 [7]: https://github.com/GoogleChromeLabs/svgomg-twa/pull/76/files

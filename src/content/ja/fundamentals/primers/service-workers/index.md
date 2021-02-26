@@ -132,7 +132,7 @@ Service Worker をインストールするには、まずページから Service
  この例の場合、Service Worker のファイルはドメインのルートにあります。
  これはこの Service Worker のスコープが origin 全体ということです。
  つまり、この Service Worker はこのドメインのすべての `fetch` イベントを受け取ります。
- もし `/example/sw.js` にある Service Worker ファイルを登録した場合、その Service Worker は `fetch` イベントのうちページの URL が `/example/` から始まるもの（例：`/example/page1/`、`/example/page2/`）のみを受け取ります。
+ もし `/example/sw.js` にある Service Worker ファイルを登録した場合、その Service Worker は `fetch` イベントのうちページの URL が `/example/` から始まるもの（例: `/example/page1/`、`/example/page2/`）のみを受け取ります。
 
 Service Worker が有効になっているかどうかは、`chrome://inspect/#service-workers` にある自分のサイトからわかります。
 

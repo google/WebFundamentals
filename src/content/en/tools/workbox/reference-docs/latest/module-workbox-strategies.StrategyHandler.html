@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>6.0.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
             <p>A class created every time a Strategy instance instance calls
               handle() or
@@ -191,7 +191,7 @@
               </dl>
               <h3 id="cachePut" class="symbol-name">cachePut</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
-              <p class="type-signature"> cachePut(key, response)</p>
+              <p class="type-signature"> cachePut(key, response)&nbsp;returns&nbsp;Promise containing boolean</p>
               <p>Puts a request/response pair in the cache (and invokes any applicable
                 plugin callback methods) using the <code>cacheName</code> and <code>plugins</code> defined on
                 the strategy object.</p>
@@ -223,7 +223,7 @@
                         <p>response</p>
                       </td>
                       <td>
-                        <p class="details-table-types">Promise containing void</p>
+                        <p class="details-table-types">Response</p>
                         <p>The response to cache.</p>
                       </td>
                     </tr>
@@ -231,6 +231,11 @@
                 </table>
               </section>
               <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing boolean</code>&nbsp;<code>false</code> if a cacheWillUpdate caused the response
+                    not be cached, and <code>true</code> otherwise.</p>
+                </dd>
               </dl>
               <h3 id="destroy" class="symbol-name">destroy</h3>
               <p class="type-signature"> destroy()</p>
@@ -253,8 +258,8 @@
               <h3 id="fetch" class="symbol-name">fetch</h3>
               <p class="type-signature"> fetch(input)&nbsp;returns&nbsp;Promise containing Response</p>
               <p>Fetches a given request (and invokes any applicable plugin callback
-                methods) using the <code>fetchOptions</code> and <code>plugins</code> defined on the strategy
-                object.</p>
+                methods) using the <code>fetchOptions</code> (for non-navigation requests) and
+                <code>plugins</code> defined on the <code>Strategy</code> object.</p>
               <p>The following plugin lifecycle methods are invoked when using this method:</p>
               <ul>
                 <li><code>requestWillFetch()</code></li>

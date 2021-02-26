@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: An overview of the libraries and tools for creating Trusted Web Activities.
 
 {# wf_published_on: 2020-02-04 #}
-{# wf_updated_on: 2020-06-17 #}
+{# wf_updated_on: 2021-02-02 #}
 {# wf_blink_components: N/A #}
 
 # Custom Tabs {: .page-title }
@@ -23,6 +23,10 @@ by most major browsers on Android. It give apps more control over their web
 experience, and make transitions between native and web content more seamless without
 having to resort to a WebView.
 
+Note: For information on sharing the content in Custom Tabs, see the blog post,
+[Better content sharing with Custom
+Tabs](https://blog.chromium.org/2021/01/better-content-sharing-with-custom-tabs.html).
+
 Custom Tabs allow an app to customize how the browser looks and feels. An app
 can change things like:
 
@@ -35,7 +39,7 @@ content for faster loading.
 
 ![Perfomance comparison between opening a browser, the WebView and Custom Tabs.](performance.gif)
 
-You can test this now with our [sample][1] on GitHub. 
+You can test this now with our [sample][1] on GitHub.
 
 ## When should I use Custom Tabs vs WebView?
 
@@ -93,16 +97,16 @@ issues on [crbug.com][3] and ask questions to our Twitter account
 
 ## Getting Started
 
-If you are getting started with Custom Tabs, checkout the [Implementation Guide][11] and the 
+If you are getting started with Custom Tabs, checkout the [Implementation Guide][11] and the
 [GitHub Demo][1].
 
 For questions, check the [chrome-custom-tabs][5] tag on StackOverflow.
 
 ## Feedback {: #feedback .hide-from-toc }
 
-{% include "web/_shared/helpful.html" %}		
+{% include "web/_shared/helpful.html" %}
 
-[1]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos/custom-tabs-example-app
+[1]: https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/custom-tabs-example-app
 [2]: https://play.google.com/store/apps/details?id=com.chrome
 [3]: https://crbug.com
 [4]: https://twitter.com/ChromiumDev

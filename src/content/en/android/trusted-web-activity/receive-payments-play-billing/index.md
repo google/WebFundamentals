@@ -3,7 +3,7 @@ book_path: /web/android/_book.yaml
 description: Receive Payments via Google Play Billing in your PWA with the Digital Goods API, the Payment Request API and Trusted Web Activity.
 
 {# wf_published_on: 2021-01-26 #}
-{# wf_updated_on: 2021-01-26 #}
+{# wf_updated_on: 2021-01-28 #}
 {# wf_tags: trusted-web-activity #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_blink_components: N/A #}
@@ -83,8 +83,8 @@ feature:
   "features": {
     "playBilling": {
       "enabled": true
-    }   
-  },  
+    }
+  },
   "alphaDependencies": {
     "enabled": true
   },
@@ -131,7 +131,7 @@ if ('getDigitalGoodsService' in window) {
 The Digital Goods API provides `getDetails()`, which allows retrieving the information like the
 product title, description, and most importantly, the price, from the payments backend.
 
-You can then use this information in your use interface and provide more details to the user: 
+You can then use this information in your use interface and provide more details to the user:
 
 ```js
 const skuDetails = await itemService.getDetails(['shiny_sword', 'gem']);
@@ -155,8 +155,11 @@ doesn’t have methods to query SKUs, but the Play Store does provide
 
 ## Build the purchase flow
 
-The constructor for a PaymentRequest takes two parameters: a list of payment methods and a list of
-payment details.
+The constructor for a PaymentRequest takes a list of payment methods accepted as a parameter.
+
+Note: The Payment Request API can have a PaymentDetails object as the second parameter for the
+PaymentRequest constructor, but it is [not required when used with the Digital Goods API][32] and
+values passed will be ignored.
 
 When inside the Trusted Web Activity, you must use the Google Play billing payment method, by
 setting `https://play.google.com/billing` as the identifier, and adding the product SKU in as a
@@ -172,26 +175,13 @@ async function makePurchase(service, sku) {
        }
    }];
 
+    const request = new PaymentRequest(paymentMethods);
    ...
 }
 ```
 
-Even though the payment details are required, the Play Billing will ignore those values and use the
-values set when creating the SKU  in the Play Console, so they  can be filled with bogus values:
-
-```js
-const paymentDetails = {
-    total: {
-        label: `Total`,
-        amount: {currency: `USD`, value: `0`}
-    }
-};
-
-const request = new PaymentRequest(paymentMethods, paymentDetails);
-```
-
-Call the `show()` on the payment request object to start the payment flow. If the Promise succeeds
-that will may be payment was successful. If it fails, the user likely aborted the payment. 
+Call `show()` on the payment request object to start the payment flow. If the Promise succeeds
+that means the payment was successful. If it fails, the user likely aborted the payment.
 
 If the promise succeeds, you will need to verify the purchase in order to protect against fraud.
 Due to the sensitivity of the data, this step must be implemented using your backend. Check out the
@@ -203,7 +193,7 @@ the purchase, otherwise,
 
 ```js
 ...
-const request = new PaymentRequest(paymentMethods, paymentDetails);
+const request = new PaymentRequest(paymentMethods);
 try {
     const paymentResponse = await request.show();
     const {purchaseToken} = paymentResponse.details;
@@ -246,17 +236,7 @@ async function makePurchase(service, sku) {
         }
     }];
 
-    // The "total" member of the paymentDetails is required by the Payment
-    // Request API, but is not used when using Google Play Billing. We can
-    // set it up with bogus details.
-    const paymentDetails = {
-        total: {
-            label: `Total`,
-            amount: {currency: `USD`, value: `0`}
-        }
-    };
-
-    const request = new PaymentRequest(paymentMethods, paymentDetails);
+    const request = new PaymentRequest(paymentMethods);
     try {
         const paymentResponse = await request.show();
         const {purchaseToken} = paymentResponse.details;
@@ -334,7 +314,7 @@ without enabling the Origin Trial:
  - Ensure you are on Android 9 or greater with [developer mode enabled][23].
  - Install Chrome 88 or above.
  - Enable the following flags in Chrome by navigating to `chrome://flags` and searching for the
- flag by name.  
+ flag by name.
      - `#enable-experimental-web-platform-features`
      - `#enable-web-payments-experimental-features`
      - `#enable-debug-for-store-billing`
@@ -347,9 +327,9 @@ from the Play Store.
 The Digital Goods API will be available on Chrome OS stable starting with version 89. In the
 meantime, it is possible to test the Digital Goods API:
 
- - Enable the [Chrome OS dev channel][24], 
+ - Enable the [Chrome OS dev channel][24],
  - Enable the following flags in Chrome by navigating to `chrome://flags` and searching for the
- flag by name. 
+ flag by name.
      - `#enable-experimental-web-platform-features`
      - `#enable-web-payments-experimental-features`
  - Install your app from the Play Store on the device.
@@ -357,7 +337,7 @@ meantime, it is possible to test the Digital Goods API:
 ## With test users and QA teams
 
 In order to test with a broader audience, you will need to sign-up for the Origin Trial, as asking
-every user to enable the Chrome flags is not practical. 
+every user to enable the Chrome flags is not practical.
 
 The Play Store also provides affordances for testing, including user test accounts and test SKUs.
 Checkout the [Google Play Billing test documentation][25] for more information.
@@ -377,7 +357,7 @@ by the Digital Goods API, and server-side components.
  backend is notified  when the state of a subscription changes instead of polling their status on
  Play.
  - Implement `linkedPurchaseToken` to prevent duplicate subscriptions. Read [this blogpost][31] on
- how to implement it correctly. 
+ how to implement it correctly.
 
 {% include "web/_shared/helpful.html" %}
 
@@ -386,7 +366,7 @@ by the Digital Goods API, and server-side components.
 [1]: https://developer.android.com/google/play/billing
 [2]: https://developers.google.com/web/android/trusted-web-activity/
 [3]: https://developers.google.com/web/fundamentals/payments
-[4]: https://github.com/WICG/digital-goods/blob/master/explainer.md
+[4]: https://github.com/WICG/digital-goods/blob/main/explainer.md
 [5]: https://web.dev/origin-trials/
 [6]: https://github.com/WICG/digital-goods/issues
 [7]: https://developer.android.com/distribute/best-practices/earn/in-app-purchases
@@ -414,4 +394,4 @@ by the Digital Goods API, and server-side components.
 [29]: https://developer.android.com/google/play/billing/billing_subscriptions#Allow-upgrade
 [30]: https://developer.android.com/google/play/billing/getting-ready#configure-rtdn
 [31]: https://medium.com/androiddevelopers/implementing-linkedpurchasetoken-correctly-to-prevent-duplicate-subscriptions-82dfbf7167da
-
+[32]: https://github.com/w3c/payment-request/issues/912

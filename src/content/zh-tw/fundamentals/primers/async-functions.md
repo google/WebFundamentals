@@ -14,7 +14,7 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
 它們可以讓異步代碼“智商”下降、可讀性提高。
 
 
-異步函數的工作方式是這樣的：
+異步函數的工作方式是這樣的:
 
     async function myFirstAsyncFunction() {
       try {
@@ -33,9 +33,9 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
 Note: 如果不熟悉 Promise，可以看一看[我們的 Promise 指南](/web/fundamentals/getting-started/primers/promises)。
 
 
-## 示例：記錄獲取日誌
+## 示例: 記錄獲取日誌
 
-假設我們想獲取某個網址並以文本形式記錄響應日誌。以下是利用 Promise 編寫的代碼：
+假設我們想獲取某個網址並以文本形式記錄響應日誌。以下是利用 Promise 編寫的代碼:
 
 
     function logFetch(url) {
@@ -48,7 +48,7 @@ Note: 如果不熟悉 Promise，可以看一看[我們的 Promise 指南](/web/f
         });
     }
 
-以下是利用異步函數具有相同作用的代碼：
+以下是利用異步函數具有相同作用的代碼:
 
     async function logFetch(url) {
       try {
@@ -70,7 +70,7 @@ Note: 您 `await` 的任何內容都通過 `Promise.resolve()` 傳遞，這樣�
 
 無論是否使用 `await`，異步函數*都會*返回 Promise。該 Promise 解析時返回異步函數返回的任何值，拒絕時返回異步函數拋出的任何值。
 
-因此，對於：
+因此，對於:
 
     // wait ms milliseconds
     function wait(ms) {
@@ -91,14 +91,14 @@ Note: 您 `await` 的任何內容都通過 `Promise.resolve()` 傳遞，這樣�
 
 …調用 `foo()` 返回的 Promise 會在*拒絕*時返回 `Error('bar')`。
 
-## 示例：流式傳輸響應
+## 示例: 流式傳輸響應
 
 異步函數在更復雜示例中更有用武之地。假設我們想在流式傳輸響應的同時記錄數據塊日誌，並返回數據塊最終大小。
 
 
 Note: 一看到“記錄數據塊日誌”這幾個字就讓我感到不舒服。
 
-以下是使用 Promise 編寫的代碼：
+以下是使用 Promise 編寫的代碼:
 
     function getResponseSize(url) {
       return fetch(url).then(response => {
@@ -123,7 +123,7 @@ Note: 一看到“記錄數據塊日誌”這幾個字就讓我感到不舒服�
 
 
 
-我們再用異步函數來編寫上面這段代碼：
+我們再用異步函數來編寫上面這段代碼:
 
     async function getResponseSize(url) {
       const response = await fetch(url);
@@ -153,7 +153,7 @@ Note: 我有點偏愛卡片信息流。如果不熟悉流式傳輸，可以[看�
 
 ## 其他異步函數語法
 
-我們已經見識了 `async function() {}`，但 `async` 關鍵字還可用於其他函數語法：
+我們已經見識了 `async function() {}`，但 `async` 關鍵字還可用於其他函數語法:
 
 
 ### 箭頭函數
@@ -208,7 +208,7 @@ Note: 類構造函數以及 getter/settings 方法不能是異步的。
       return "done!";
     }
 
-以上代碼執行完畢需要 1000 毫秒，再看看這段代碼：
+以上代碼執行完畢需要 1000 毫秒，再看看這段代碼:
 
     async function parallel() {
       const wait1 = wait(500);
@@ -221,12 +221,12 @@ Note: 類構造函數以及 getter/settings 方法不能是異步的。
 …以上代碼只需 500 毫秒就可執行完畢，因爲兩個 wait 是同時發生的。讓我們看一個實例…
 
 
-### 示例：按順序輸出獲取的數據
+### 示例: 按順序輸出獲取的數據
 
 假定我們想獲取一系列網址，並儘快按正確順序將它們記錄到日誌中。
 
 
-*深呼吸* - 以下是使用 Promise 編寫的代碼：
+*深呼吸* - 以下是使用 Promise 編寫的代碼:
 
     function logInOrder(urls) {
       // fetch all the URLs
@@ -244,7 +244,7 @@ Note: 類構造函數以及 getter/settings 方法不能是異步的。
 是的，沒錯，我使用 `reduce` 來鏈接 Promise 序列。我是不是*很智能*。
 但這種有點*很智能*的編碼還是不要爲好。
 
-不過，如果使用異步函數改寫以上代碼，又容易讓代碼變得*過於循序*：
+不過，如果使用異步函數改寫以上代碼，又容易讓代碼變得*過於循序*:
 
 
 <span class="compare-worse">不推薦的編碼方式</span> - 過於循序
@@ -258,7 +258,7 @@ Note: 類構造函數以及 getter/settings 方法不能是異步的。
 
 代碼簡潔得多，但我的第二次獲取要等到第一次獲取讀取完畢才能開始，以此類推。
 其執行效率要比並行執行獲取的 Promise 示例低得多。
-幸運的是，還有一種理想的中庸之道：
+幸運的是，還有一種理想的中庸之道:
 
 <span class="compare-better">推薦的編碼方式</span> - 可讀性強、並行效率高
 
@@ -280,7 +280,7 @@ Note: 類構造函數以及 getter/settings 方法不能是異步的。
 
 ## 瀏覽器支持與解決方法
 
-在寫作本文時，Chrome 55 中默認情況下啓用異步函數，但它們在所有主流瀏覽器中正處於開發階段：
+在寫作本文時，Chrome 55 中默認情況下啓用異步函數，但它們在所有主流瀏覽器中正處於開發階段:
 
 
 * Edge - [在 14342+ 編譯版本中隱藏在一個標誌後](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/asyncfunctions/)
@@ -304,14 +304,14 @@ Note: Babel REPL 說起來很有趣。試試就知道。
 
 
 
-原本的異步函數代碼：
+原本的異步函數代碼:
 
     async function slowEcho(val) {
       await wait(1000);
       return val;
     }
 
-…如果使用 [polyfill](https://gist.github.com/jakearchibald/edbc78f73f7df4f7f3182b3c7e522d25){: .external}，就需要這樣編寫：
+…如果使用 [polyfill](https://gist.github.com/jakearchibald/edbc78f73f7df4f7f3182b3c7e522d25){: .external}，就需要這樣編寫:
 
 
     const slowEcho = createAsyncFunction(function*(val) {

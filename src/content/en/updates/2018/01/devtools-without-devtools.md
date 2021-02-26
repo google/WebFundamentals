@@ -67,9 +67,9 @@ a DevTools Protocol client. Puppeteer already has dedicated APIs for many DevToo
 such as [code coverage][coverage]{:.external} and [intercepting **Console**
 messages][console]{:.external}.
 
-[API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
-[coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
-[console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
+[API]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md
+[coverage]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#class-coverage
+[console]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#event-console
 
 If you need help accessing a DevTools feature via Puppeteer, [ask a question on Stack
 Overflow][SO]{:.external}.

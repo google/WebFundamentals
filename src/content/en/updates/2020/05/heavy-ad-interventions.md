@@ -106,7 +106,7 @@ prevent poor performing ads escaping into the wild.
 ## What happens when an ad is removed?
 
 An intervention in Chrome is reported via the aptly named
-[Reporting API](https://github.com/W3C/reporting/blob/master/EXPLAINER.md#interventions)
+[Reporting API](https://github.com/W3C/reporting/blob/main/EXPLAINER.md#interventions)
 with an `intervention` report type. You can use the Reporting API to be notified
 about interventions either by a `POST` request to a reporting endpoint or within
 your JavaScript.
@@ -188,7 +188,7 @@ window.addEventListener('pagehide', (event) => {
 });
 ```
 
-Remember that, to protect the user experience, the `pagehide` event restricts 
+Remember that, to protect the user experience, the `pagehide` event restricts
 the amount of work that can happen within it. For example, trying to send a
 `fetch()` request with the reports will result in that request being canceled.
 You should use `navigator.sendBeacon()` to send that report and even then, this

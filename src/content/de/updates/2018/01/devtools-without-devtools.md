@@ -59,9 +59,9 @@ Dies ist nur eine von vielen, vielen DevTools-Funktionen, auf die Sie möglicher
 
 Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer API][API]{:.external} bevor Sie einen DevTools-Protokoll-Client erstellen. Puppenspieler verfügt bereits über dedizierte APIs für viele DevTools-Funktionen wie [code coverage][coverage]{:.external} und [intercepting **Console** messages][console]{:.external} .
 
-[API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
-[coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
-[console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
+[API]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md
+[coverage]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#class-coverage
+[console]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#event-console
 
 Wenn Sie Hilfe benötigen, um eine DevTools-Funktion über Puppeteer, [ask a question on Stack Overflow][SO]{:.external} , zu [ask a question on Stack Overflow][SO]{:.external} .
 

@@ -26,19 +26,19 @@ description:进入全屏模式。
 
 * 作为对用户手势的响应请求浏览器进入全屏模式。
 * 将应用安装到主屏幕。
-* 弄虚作假：自动隐藏地址栏。
+* 弄虚作假: 自动隐藏地址栏。
 
 ### 作为对用户手势的响应请求浏览器进入全屏模式
 
 <a href="http://caniuse.com/#feat=fullscreen">并非所有平台都相同</a>。iOS Safari 没有全屏 API，但 Chrome（Android 版）、Firefox 和 IE 11+ 上则有相应的 API。您构建的大多数应用都是组合使用全屏规范提供的 JS API 和 CSS 选择器。
-您在打造全屏体验时需要在意的主要 JS API 如下：
+您在打造全屏体验时需要在意的主要 JS API 如下:
 
 
-* `element.requestFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前缀）：以全屏模式显示元素。
+* `element.requestFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前缀）: 以全屏模式显示元素。
 
 * `document.exitFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前缀。
-  Firefox 改用 `cancelFullScreen()`）：取消全屏模式。
-* `document.fullscreenElement`（目前在 Chrome、Firefox 和 IE 中添加前缀）：如有任何元素处于全屏模式，返回 true。
+  Firefox 改用 `cancelFullScreen()`）: 取消全屏模式。
+* `document.fullscreenElement`（目前在 Chrome、Firefox 和 IE 中添加前缀）: 如有任何元素处于全屏模式，返回 true。
 
 
 Note: 您会注意到，在添加前缀的版本中，屏幕中“S”的大小写处理存在大量不一致的情况。
@@ -98,20 +98,20 @@ href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_scre
 
 <figure class="attempt-right" style="max-width: 320px;">
   <img src="images/body.png">
-  <figcaption>图 1：让 body 元素进入全屏模式。</figcaption>
+  <figcaption>图 1: 让 body 元素进入全屏模式。</figcaption>
 </figure>
 
 
-让 body 元素进入全屏模式是很自然的想法，但如果使用的是基于 WebKit 或 Blink 的渲染引擎，就会发现这会产生一种怪异的效果：将正文宽度缩减到能够容纳所有内容的最小尺寸。（Mozilla Gecko 不存在这个问题。）
+让 body 元素进入全屏模式是很自然的想法，但如果使用的是基于 WebKit 或 Blink 的渲染引擎，就会发现这会产生一种怪异的效果: 将正文宽度缩减到能够容纳所有内容的最小尺寸。（Mozilla Gecko 不存在这个问题。）
 
 <div class="clearfix"></div>
 
 <figure class="attempt-right" style="max-width: 320px;">
 <img src="images/document.png" >
-<figcaption>图 2：让 document 元素进入全屏模式。</figcaption>
+<figcaption>图 2: 让 document 元素进入全屏模式。</figcaption>
 </figure>
 
-要修复此问题，请使用 document 元素替代 body 元素：
+要修复此问题，请使用 document 元素替代 body 元素:
 
     document.documentElement.requestFullscreen();
 
@@ -175,7 +175,7 @@ href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_scre
       }
     </style>
 
-按照这些模式，可以在检测到全屏模式处于运行状态时对用户界面作出相应调整，例如：
+按照这些模式，可以在检测到全屏模式处于运行状态时对用户界面作出相应调整，例如:
 
 
 * 提供一个返回开始页面的链接
@@ -226,12 +226,12 @@ Chrome 团队近期实现的一项功能可在用户已将页面添加到主屏�
 
 [网络应用清单](/web/fundamentals/web-app-manifest)是一个简单的 JSON 文件，使您（开发者）能够控制在用户可能看到应用的区域（例如手机主屏幕）中如何向用户显示应用，指示用户可以启动哪些功能，更重要的是说明启动方法。未来，清单将让您对应用进行更多控制，但现在我们只侧重于如何启动应用。
 
-具体而言：
+具体而言:
 
 1. 将清单的相关信息告知浏览器
 2. 说明启动方法
 
-在创建清单并托管在网站上之后，只需要从所有包含应用的页面添加一个下面这样的 link 标记：
+在创建清单并托管在网站上之后，只需要从所有包含应用的页面添加一个下面这样的 link 标记:
 
 
     <link rel="manifest" href="/manifest.json">
@@ -271,7 +271,7 @@ Chrome（Android 版）从 38 版（2014 年 10 月）起就已支持清单，�
 
 ##### 实用程序应用
 
-大多数实用程序应用都将立即受益于清单。对于您可能希望像移动平台上的所有其他应用一样独立启动的应用，要指示应用独立启动，请向网络应用清单添加以下内容：
+大多数实用程序应用都将立即受益于清单。对于您可能希望像移动平台上的所有其他应用一样独立启动的应用，要指示应用独立启动，请向网络应用清单添加以下内容:
 
 
     "display": "standalone"
@@ -313,9 +313,9 @@ Chrome（Android 版）从 38 版（2014 年 10 月）起就已支持清单，�
 
     "display": "standalone"
 
-### 弄虚作假：自动隐藏地址栏
+### 弄虚作假: 自动隐藏地址栏
 
-可通过像下面这样自动隐藏地址栏来“伪造全屏模式”：
+可通过像下面这样自动隐藏地址栏来“伪造全屏模式”:
 
     window.scrollTo(0,1);
 
@@ -374,14 +374,14 @@ iOS 没有硬件返回按钮或刷新手势。因此，必须确保用户能在�
     }
 
 如果用户从主屏幕启动网站，`display-mode` 媒体查询将按照网络应用清单中的定义进行设置。
-在纯粹全屏的情况下，其内容将是：
+在纯粹全屏的情况下，其内容将是:
 
 
     @media (display-mode: fullscreen) {
 
     }
 
-如果用户以独立模式启动应用，`display-mode` 媒体查询将是 `standalone`：
+如果用户以独立模式启动应用，`display-mode` 媒体查询将是 `standalone`:
 
 
     @media (display-mode: standalone) {
@@ -391,7 +391,7 @@ iOS 没有硬件返回按钮或刷新手势。因此，必须确保用户能在�
 
 #### Firefox
 
-当用户通过网站请求全屏，或者用户以全屏模式启动应用时，所有标准 Fullscreen API 都可使用，其中包括下面这样可调整 UI 来响应全屏状态的 CSS 伪选择器：
+当用户通过网站请求全屏，或者用户以全屏模式启动应用时，所有标准 Fullscreen API 都可使用，其中包括下面这样可调整 UI 来响应全屏状态的 CSS 伪选择器:
 
 
 
@@ -433,7 +433,7 @@ iOS 没有硬件返回按钮或刷新手势。因此，必须确保用户能在�
 
 有时 Fullscreen API 可能有点吹毛求疵。浏览器供应商不想把用户锁定在全屏页面中，因此他们开发了相应的机制，只要满足条件，便可立即摆脱全屏模式。
 
-这意味着您无法让构建的全屏网站跨越多个页面，这是因为：
+这意味着您无法让构建的全屏网站跨越多个页面，这是因为:
 
 
 * 利用 ‘window.location =  "http://example.com"` 以编程方式更改网址会摆脱全屏模式。
@@ -441,12 +441,12 @@ iOS 没有硬件返回按钮或刷新手势。因此，必须确保用户能在�
 * 通过 `navigator.pushState` API 更改网址也会摆脱全屏体验。
 
 
-如果想保持用户的全屏体验，可以采用以下这两个方案：
+如果想保持用户的全屏体验，可以采用以下这两个方案:
 
 1. 利用可安装网络应用机制进入全屏模式。
 2. 利用 # 片段管理 UI 和应用状态。
 
-通过使用 #syntax 更新网址 (window.location = "#somestate") 以及侦听 `window.onhashchange` 事件，可以利用浏览器自身的历史堆栈管理应用状态变化，允许用户使用其硬件返回按钮，或者利用如下 history API 提供简单的编程返回按钮体验：
+通过使用 #syntax 更新网址 (window.location = "#somestate") 以及侦听 `window.onhashchange` 事件，可以利用浏览器自身的历史堆栈管理应用状态变化，允许用户使用其硬件返回按钮，或者利用如下 history API 提供简单的编程返回按钮体验:
 
 
 

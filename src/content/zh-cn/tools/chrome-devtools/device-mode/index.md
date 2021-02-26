@@ -16,7 +16,7 @@ description: 使用 Chrome Device Mode 下的虚拟设备打造移动设备优�
 使用 Device Mode 可以大致了解您的页面在移动设备上呈现的外观和效果。
 
 Device Mode 是 Chrome DevTools 中未绑定功能集的名称，有助于您模拟移动设备。
- 这些功能包括：
+ 这些功能包括:
 
 * [模拟移动设备视口](#viewport)
 * [限制网络流量](#network)
@@ -33,7 +33,7 @@ Device Mode 被视为对您的页面在移动设备上的外观取[一阶近似]
 [approximation]: https://en.wikipedia.org/wiki/Order_of_approximation#First-order
 
 不过，移动设备的某些方面是 DevTools 永远无法模拟的。 例如，移动设备 CPU 的架构与笔记本电脑或桌面设备 CPU 的架构大不一样。
- 如果心存疑虑，最好可以在移动设备上运行您的页面。 
+ 如果心存疑虑，最好可以在移动设备上运行您的页面。
 在移动设备上实际运行某页面代码时，可通过[远程调试](/web/tools/chrome-devtools/remote-debugging/)在笔记本电脑或桌面设备上查看、更改、调试和分析页面代码。
 
 
@@ -52,7 +52,7 @@ Device Mode 被视为对您的页面在移动设备上的外观取[一阶近似]
   </figcaption>
 </figure>
 
-默认情况下，设备工具栏在打开时处于自适应视口模式。 
+默认情况下，设备工具栏在打开时处于自适应视口模式。
 
 ### 自适应视口模式 {: #responsive }
 
@@ -132,7 +132,7 @@ queries**。
 在模拟 iPhone 6 等特定移动设备的尺寸时，可打开 **More options**，然后选择 **Show device frame** 以显示设备视口物理框架。
 
 
-注：如果看不到特定设备的设备框架，则可能意味着 DevTools
+注: 如果看不到特定设备的设备框架，则可能意味着 DevTools
 没有该特定选项的效果图。
 
 <figure>
@@ -199,7 +199,7 @@ queries**。
 
 **Mid-tier mobile** 可模拟快速 3G 网络，并限制 CPU 占用率，以使模拟性能比普通性能低 4 倍。
  **Low-end mobile** 可模拟慢速 3G 网络，并限制 CPU 占用率，以使模拟性能比普通性能低 6 倍。
-请记住，限制是相对于笔记本电脑或桌面设备的普通性能而言。 
+请记住，限制是相对于笔记本电脑或桌面设备的普通性能而言。
 
 请注意，如果 **Device Toolbar** 布局较窄，则会隐藏 **Throttle** 列表。
 
@@ -344,4 +344,3 @@ queries**。
 {% include "web/_shared/helpful.html" %}
 
 如需了解提供反馈的其他方式，请参阅[加入 DevTools 社区](/web/tools/chrome-devtools/#community)。
-

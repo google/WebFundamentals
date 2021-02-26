@@ -114,7 +114,7 @@ in the browser, right from the command line:
     >>> quit
     $
 
-Note: the addition of the --crash-dumps-dir flag when using repl mode. 
+Note: the addition of the --crash-dumps-dir flag when using repl mode.
 
 ## Debugging Chrome without a browser UI? {: #frontend }
 
@@ -185,7 +185,7 @@ await browser.close();
 })();
 ```
 
-Check out [Puppeteer's documentation](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md)
+Check out [Puppeteer's documentation](https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md)
 to learn more about the full API.
 
 ### The CRI library {: #cri }
@@ -539,7 +539,7 @@ on App Engine Flex.
 
 Note: `--no-sandbox` is not needed if you
 [properly setup a user](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile#L35-L40)
-in the container. 
+in the container.
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 

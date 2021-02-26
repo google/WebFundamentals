@@ -251,7 +251,7 @@ Note: <code>datalist</code> 值是提供的建议值，并不意味着用户只�
 ### 标签的重要性
 
 `label` 元素为用户提供指引，告诉他们表单元素中需要什么信息。
-将输入元素放在 `label` 元素内，或通过使用“`for`”属性，可使每个 `label` 与一个输入元素关联。为表单元素设置标签还能帮助增大触摸目标的大小：用户可以触摸标签或输入框，以将焦点置于输入元素中。
+将输入元素放在 `label` 元素内，或通过使用“`for`”属性，可使每个 `label` 与一个输入元素关联。为表单元素设置标签还能帮助增大触摸目标的大小: 用户可以触摸标签或输入框，以将焦点置于输入元素中。
 
 
 
@@ -298,7 +298,7 @@ Note: Chrome 需要将 `input` 元素包含在 `<form>` 标记中才能启用自
 如果它们不包含在 `form` 标签中，Chrome 将提供建议值，但是**不会**完成表单。
 
 
-例如，要提示浏览器应给表单自动填写用户名、电子邮件地址和电话号码，应当使用：
+例如，要提示浏览器应给表单自动填写用户名、电子邮件地址和电话号码，应当使用:
 
 
 <pre class="prettyprint">
@@ -361,12 +361,12 @@ Note: Chrome 需要将 `input` 元素包含在 `<form>` 标记中才能启用自
       </td>
       <td data-th="autocomplete attribute">
         <ul>
-          <li>用于单个地址输入框：
+          <li>用于单个地址输入框:
             <ul>
               <li><code>street-address</code></li>
             </ul>
           </li>
-          <li>用于两个地址输入框：
+          <li>用于两个地址输入框:
             <ul>
               <li><code>address-line1</code></li>
               <li><code>address-line2</code></li>
@@ -477,7 +477,7 @@ Note: 仅在您的地址格式需要时，才需要使用  <code>street-address<
 ####  `pattern` 属性
 
 `pattern` 属性指定一个用于验证输入字段的[正则表达式](https://en.wikipedia.org/wiki/Regular_expression)。
-例如，要验证美国邮编（5 位数，有时后面有一个破折号和另外 4 位数），我们将 `pattern` 设置如下：
+例如，要验证美国邮编（5 位数，有时后面有一个破折号和另外 4 位数），我们将 `pattern` 设置如下:
 
 
 
@@ -532,7 +532,7 @@ Note: 仅在您的地址格式需要时，才需要使用  <code>street-address<
 ####  `required` 属性
 
 如果提供 `required` 属性，则此字段必须包含值，才能提交表单。
-例如，要使邮编为必填值，只需加上 required 属性：
+例如，要使邮编为必填值，只需加上 required 属性:
 
 
 
@@ -586,7 +586,7 @@ Success: 即使客户端有输入验证，也务必在服务器上验证数据�
 
 ###  使用 JavaScript 实现更复杂的实时验证
 
-当内置验证加上正则表达式还不够时，可以使用 [Constraint Validation API](https://w3c.github.io/html/sec-forms.html#constraints)，这是一个用于处理自定义验证的强大工具。此 API 使您能够进行各种验证，例如设置自定义错误，检查一个元素是否有效，并确定元素无效的原因：
+当内置验证加上正则表达式还不够时，可以使用 [Constraint Validation API](https://w3c.github.io/html/sec-forms.html#constraints)，这是一个用于处理自定义验证的强大工具。此 API 使您能够进行各种验证，例如设置自定义错误，检查一个元素是否有效，并确定元素无效的原因:
 
 
 
@@ -626,7 +626,7 @@ Success: 即使客户端有输入验证，也务必在服务器上验证数据�
 
 如果字段未通过验证，可使用 `setCustomValidity()` 来将字段标记为无效并解释字段未通过验证的原因。
 例如，注册表单可能要求用户通过输入两次来确认其电子邮件地址。
-对第二个输入使用 blur 事件，以验证两个输入值，并设置相应的响应。例如：
+对第二个输入使用 blur 事件，以验证两个输入值，并设置相应的响应。例如:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
@@ -638,7 +638,7 @@ Success: 即使客户端有输入验证，也务必在服务器上验证数据�
 
 由于并非所有浏览器都会在表单存在无效数据时阻止用户提交，因此您应当捕获提交事件，并对表单元素使用 `checkValidity()` 以确定表单是否有效。
 
-例如：
+例如:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}

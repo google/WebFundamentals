@@ -24,7 +24,7 @@ description:不走寻常路，为项目创建完全自定义的动画。
 
 更改每个控制点的 X 和 Y 值将实现截然不同的曲线，从而使动画有截然不同的感觉。例如，如果第一个控制点在右下角，则动画在开头缓慢。如果它在左上角，动画在开头会显得很快。相反，如果第二控制点在网格的右下角，则动画在结尾处变快；而在左上角时，动画将在结尾处变慢。
 
-为了对比，以下有两条曲线：一条典型的缓入缓出曲线和一条自定义曲线：
+为了对比，以下有两条曲线: 一条典型的缓入缓出曲线和一条自定义曲线:
 
 <div class="attempt-left">
   <figure>
@@ -39,11 +39,11 @@ description:不走寻常路，为项目创建完全自定义的动画。
 
 [查看自定义缓动的动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-custom-curve.html){: target="_blank" .external }
 
-此自定义曲线的 CSS 为：
+此自定义曲线的 CSS 为:
 
 
     transition: transform 500ms cubic-bezier(0.465, 0.183, 0.153, 0.946);
-    
+
 
 前两个数字是第一个控制点的 X 和 Y 坐标，后两个数字是第二个控制点的 X 和 Y 坐标。
 
@@ -61,23 +61,23 @@ description:不走寻常路，为项目创建完全自定义的动画。
 
 [查看弹性缓动的动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-elastic.html){: target="_blank" .external }
 
-要使用 TweenMax，请在页面中包括此脚本：
+要使用 TweenMax，请在页面中包括此脚本:
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    
 
-将该脚本放到合适位置后，您可以对元素调用 TweenMax，并且告诉它您想要的任何缓动，以及您想要哪些属性。有大量缓动选项可供使用；以下代码使用一个弹性缓出：
+
+将该脚本放到合适位置后，您可以对元素调用 TweenMax，并且告诉它您想要的任何缓动，以及您想要哪些属性。有大量缓动选项可供使用；以下代码使用一个弹性缓出:
 
 
     var box = document.getElementById('my-box');
     var animationDurationInSeconds = 1.5;
-    
+
     TweenMax.to(box, animationDurationInSeconds, {
       x: '100%',
       ease: 'Elastic.easeOut'
     });
-    
+
 
 [TweenMax 文档](https://greensock.com/docs/#/HTML5/GSAP/TweenMax/)重点说明了您使用的所有选项，非常值得一读。
 

@@ -63,7 +63,7 @@ You can **reduce** the network transfer cost of JavaScript through:
       with [DevTools code
       coverage](/web/updates/2017/04/devtools-release-notes#coverage).
     * Use
-      [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+      [babel-preset-env](https://github.com/babel/babel/tree/main/packages/babel-preset-env)
       and browserlist to avoid transpiling features already in modern browsers.
       Advanced developers may find careful [analysis of their webpack
       bundles](https://github.com/webpack-contrib/webpack-bundle-analyzer) helps

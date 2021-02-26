@@ -274,4 +274,4 @@ With that done, you can consider deploying your app to the Play Store.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-[1]: https://github.com/GoogleChromeLabs/bubblewrap/blob/master/packages/cli/README.md
+[1]: https://github.com/googleChromeLabs/bubblewrap/blob/main/packages/cli/README.md

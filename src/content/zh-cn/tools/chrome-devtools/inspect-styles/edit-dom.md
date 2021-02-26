@@ -28,7 +28,7 @@ Chrome DevTools 的 Elements 面板中的 DOM 树视图可以显示当前网页�
 <video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
-可以通过多种方式检查元素：
+可以通过多种方式检查元素:
 
 右键点击页面上的任何元素并选择 **Inspect**。
 
@@ -51,19 +51,19 @@ DevTools 会在 **Elements** 面板中自动突出显示您悬停的元素。点
 
 使用您的鼠标或键盘在 DOM 结构中导航。
 
-折叠的节点的旁边会有一个向右箭头：![折叠的节点](imgs/collapsed-node.png){:.inline}
+折叠的节点的旁边会有一个向右箭头: ![折叠的节点](imgs/collapsed-node.png){:.inline}
 
 
-展开的节点的旁边会有一个向下箭头：![展开的节点](imgs/expanded-node.png){:.inline}
+展开的节点的旁边会有一个向下箭头: ![展开的节点](imgs/expanded-node.png){:.inline}
 
 
-使用鼠标：
+使用鼠标:
 
 * 点击一次可以突出显示节点。
 * 要展开节点，请双击节点上的任何地方，或者点击节点旁边的箭头。
 * 要折叠节点，请点击节点旁边的箭头。
 
-使用键盘：
+使用键盘:
 
 * 按**向上箭头**键可以选择当前节点上方的节点。
 * 按**向下箭头**可以选择当前节点下方的节点。
@@ -83,18 +83,18 @@ Elements 面板的底部是面包屑导航记录。
 
 ![扩展面包屑导航记录](imgs/breadcrumb-footer.png)
 
-在结构中向上导航会移动突出显示焦点：
+在结构中向上导航会移动突出显示焦点:
 
 ![面包屑导航记录向上导航](imgs/breadcrumb-trail.png)
 
-DevTools 会在记录中显示尽可能多的项目。如果状态栏无法显示全部记录，将在记录截断的地方显示一个省略号 (...)。点击省略号可以显示隐藏的元素：
+DevTools 会在记录中显示尽可能多的项目。如果状态栏无法显示全部记录，将在记录截断的地方显示一个省略号 (...)。点击省略号可以显示隐藏的元素:
 
 
 ![面包屑导航省略号](imgs/breadcrumb-ellipsis.png)
 
 ## 编辑 DOM 节点和属性
 
-要编辑 DOM 节点名称或属性，请执行以下操作：
+要编辑 DOM 节点名称或属性，请执行以下操作:
 
 * 直接在节点名称或属性上双击。
 * 突出显示节点，按 <kbd>Enter</kbd>，然后按 <kbd>Tab</kbd>，
@@ -110,7 +110,7 @@ DevTools 会在记录中显示尽可能多的项目。如果状态栏无法显�
 
 ### 以 HTML 形式编辑 DOM 节点及其子级
 
-要以 HTML 形式编辑 DOM 节点及其子级，请执行以下操作：
+要以 HTML 形式编辑 DOM 节点及其子级，请执行以下操作:
 
 * 打开 [more actions 菜单](#more-actions)并选择 **Edit as HTML**。
 * 按 <kbd>F2</kbd> (Windows / Linux) 或 <kbd>Fn</kbd>+<kbd>F2</kbd> (Mac)。
@@ -128,7 +128,7 @@ DevTools 会在记录中显示尽可能多的项目。如果状态栏无法显�
 
 ## 删除 DOM 节点
 
-要删除 DOM 节点，请执行以下操作：
+要删除 DOM 节点，请执行以下操作:
 
 * 打开 [more actions 菜单](#more-actions)并选择 **Delete Node**。
 * 选择节点并按 <kbd>Delete</kbd> 键。
@@ -156,13 +156,13 @@ Note: 如果您意外删除了节点，按 <kbd class='kbd'>Ctrl</kbd> + <kbd cl
 
 ## 设置 DOM 断点
 
-设置 DOM 断点以调试复杂的 JavaScript 应用。例如，如果您的 JavaScript 正在更改 DOM 元素的样式，请将 DOM 断点设置为在元素属性修改时触发。在发生以下一种 DOM 更改时触发断点：子树更改、属性更改、节点移除。
+设置 DOM 断点以调试复杂的 JavaScript 应用。例如，如果您的 JavaScript 正在更改 DOM 元素的样式，请将 DOM 断点设置为在元素属性修改时触发。在发生以下一种 DOM 更改时触发断点: 子树更改、属性更改、节点移除。
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.breakpoints #}
 
 ### 子树修改
 
-添加、移除或移动子元素时将触发子树修改断点。例如，如果您在 `main-content` 元素上设置子树修改，以下代码将触发断点：
+添加、移除或移动子元素时将触发子树修改断点。例如，如果您在 `main-content` 元素上设置子树修改，以下代码将触发断点:
 
 
     var element = document.getElementById('main-content');
@@ -173,7 +173,7 @@ Note: 如果您意外删除了节点，按 <kbd class='kbd'>Ctrl</kbd> + <kbd cl
 
 ### 属性修改
 
-动态更改元素的属性 (`class, id, name`) 时将发生属性修改：
+动态更改元素的属性 (`class, id, name`) 时将发生属性修改:
 
 
     var element = document.getElementById('main-content');
@@ -183,7 +183,7 @@ Note: 如果您意外删除了节点，按 <kbd class='kbd'>Ctrl</kbd> + <kbd cl
 
 ### 节点移除
 
-从 DOM 中移除有问题的节点时将触发节点移除修改：
+从 DOM 中移除有问题的节点时将触发节点移除修改:
 
 
 
@@ -199,14 +199,14 @@ Elements 和 Sources 面板均包含一个用于管理 DOM 断点的窗格。
 
 ![DOM breakpoints 窗格](imgs/dom-breakpoints-pane.png)
 
-可通过以下方式之一与列出的每一个断点交互：
+可通过以下方式之一与列出的每一个断点交互:
 
 * **悬停**在元素标识符上可以显示元素在页面上的相应位置（类似于在 Elements 面板中悬停在节点上）。
 * **点击**元素可以将其在 Elements 面板中选中。
 * **切换**复选框可以启用或停用断点。
 
 触发 DOM 断点时，断点将在 DOM Breakpoints 窗格中突出显示。
-**Call Stack** 窗格将显示调试程序暂停的**原因**：
+**Call Stack** 窗格将显示调试程序暂停的**原因**:
 
 
 ![断点原因](imgs/breakpoint-reason.png)
@@ -225,7 +225,7 @@ Event Listeners 窗格中的顶级项目将显示具有已注册侦听器的事�
 每个处理程序都由一个类似于 CSS 选择器的元素标识符标识，例如 `document` 或 `button#call-to-action`。如果已为相同元素注册多个处理程序，将重复列示元素。
 
 
-点击元素标识符旁的展开箭头可以查看事件处理程序的属性。Event Listeners 窗格将列出每个侦听器的以下属性：
+点击元素标识符旁的展开箭头可以查看事件处理程序的属性。Event Listeners 窗格将列出每个侦听器的以下属性:
 
 <table class="responsive">
   <thead>

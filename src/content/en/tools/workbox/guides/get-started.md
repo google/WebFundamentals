@@ -131,7 +131,7 @@ This service worker caches navigation requests (for new HTML pages) with a [Netw
 
 In addition to caching as requests are made, sometimes called runtime caching, Workbox also supports [precaching](/web/tools/workbox/modules/workbox-precaching), the ability to cache resources when the service worker is installed. There are a number of items that are great candidates for precaching: your web app's [start URL](https://web.dev/add-manifest/#start-url), your [offline fallback](#offline_fallback) page, and key JavaScript and CSS files. By precaching files, you’ll guarantee that they’re available in the cache when the service worker takes control of the page.
 
-You can use precaching inside your new service worker by using a bundler plugin ([webpack](/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin) or [rollup](https://github.com/chromeos/static-site-scaffold-modules/blob/master/modules/rollup-plugin-workbox-inject/README.md)) that supports precache manifest injection:
+You can use precaching inside your new service worker by using a bundler plugin ([webpack](/web/tools/workbox/modules/workbox-webpack-plugin#injectmanifest_plugin) or [rollup](https://github.com/chromeos/static-site-scaffold-modules/blob/main/modules/rollup-plugin-workbox-inject/README.md)) that supports precache manifest injection:
 
 ```javascript
 import { precacheAndRoute } from 'workbox-precaching';

@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>6.0.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
           </header>
           <section>
@@ -131,6 +131,16 @@
                             </tr>
                             <tr>
                               <td class="details-table-name">
+                                <p>matchCallback</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">RouteMatchCallback</p>
+                                <p>Workbox callback function to call to match to. Defaults to request.destination === 'image';</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
                                 <p>maxAgeSeconds</p>
                               </td>
                               <td>
@@ -147,6 +157,26 @@
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">number</p>
                                 <p>Maximum number of images that will be cached. Defaults to 60</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>plugins</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Array of WorkboxPlugin</p>
+                                <p>Additional plugins to use for this recipe</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>warmCache</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Array of string</p>
+                                <p>Paths to call to use to warm this cache</p>
                               </td>
                             </tr>
                           </tbody>
@@ -281,6 +311,26 @@
                                 <p>Maximum amount of time, in seconds, to wait on the network before falling back to cache. Defaults to 3</p>
                               </td>
                             </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>plugins</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Array of WorkboxPlugin</p>
+                                <p>Additional plugins to use for this recipe</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>warmCache</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Array of string</p>
+                                <p>Paths to call to use to warm this cache</p>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </td>
@@ -325,6 +375,88 @@
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">string</p>
                                 <p>Name for cache. Defaults to static-resources</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>matchCallback</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">RouteMatchCallback</p>
+                                <p>Workbox callback function to call to match to. Defaults to request.destination === 'style' || request.destination === 'script' || request.destination === 'worker';</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>plugins</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Array of WorkboxPlugin</p>
+                                <p>Additional plugins to use for this recipe</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>warmCache</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Array of string</p>
+                                <p>Paths to call to use to warm this cache</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".warmStrategyCache" class="symbol-name">warmStrategyCache</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> warmStrategyCache(options)</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>options</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>urls</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Array of string</p>
+                                <p>Paths to warm the strategy's cache with</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>strategy</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Strategy</p>
+                                <p>Strategy to use</p>
                               </td>
                             </tr>
                           </tbody>

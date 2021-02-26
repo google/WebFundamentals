@@ -77,7 +77,7 @@ certificate that works for SXG from
 [this page](https://www.digicert.com/account/ietf/http-signed-exchange.php).
 
 Once you get a certificate for SXG you can create your own SXGs by using the
-[reference generator tools](https://github.com/WICG/webpackage/tree/master/go/signedexchange)
+[reference generator tools](https://github.com/WICG/webpackage/tree/main/go/signedexchange)
 published on github.
 
 You can also take a look at the actual SXG example files in the
@@ -91,7 +91,7 @@ that they have valid certificates and timestamps in the signature.
 ## Testing the Feature Locally
 
 For creating SXGs for testing purposes, you can create
-[a self-signed certificate](https://github.com/WICG/webpackage/tree/master/go/signedexchange#creating-our-first-signed-exchange)
+[a self-signed certificate](https://github.com/WICG/webpackage/tree/main/go/signedexchange#creating-our-first-signed-exchange)
 and enable `chrome://flags/#allow-sxg-certs-without-extension` to have your
 Chrome process the SXGs created with the certificate without the special extension.
 

@@ -5,7 +5,7 @@ description:豐富的離線體驗、定期的後臺同步以及推送通知等�
 {# wf_published_on: 2014-12-01 #}
 {# wf_updated_on: 2020-07-24 #}
 
-# 服務工作線程：簡介 {: .page-title }
+# 服務工作線程: 簡介 {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
@@ -25,7 +25,7 @@ description:豐富的離線體驗、定期的後臺同步以及推送通知等�
 在服務工作線程出現前，存在能夠在網絡上爲用戶提供離線體驗的另一個 API，稱爲 [AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }。App Cache 的主要問題是，它具有[相當多的缺陷](http://alistapart.com/article/application-cache-is-a-douchebag)，並且，雖然它對單頁網絡應用支持較好，但對多頁網站來說則不盡人意。服務工作線程則能很好地避免這些常見的難點。
 
 
-服務工作線程相關注意事項：
+服務工作線程相關注意事項:
 
 * 它是一種 [JavaScript 工作線程](//www.html5rocks.com/en/tutorials/workers/basics/){: .external }，無法直接訪問 DOM。
 服務工作線程通過響應 [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) 接口發送的消息來與其控制的頁面通信，頁面可在必要時對 DOM 執行操作。
@@ -52,7 +52,7 @@ description:豐富的離線體驗、定期的後臺同步以及推送通知等�
 
 
 
-激活之後，服務工作線程將會對其作用域內的所有頁面實施控制，不過，首次註冊該服務工作線程的頁面需要再次加載纔會受其控制。服務工作線程實施控制後，它將處於以下兩種狀態之一：服務工作線程終止以節省內存，或處理獲取和消息事件，從頁面發出網絡請求或消息後將會出現後一種狀態。
+激活之後，服務工作線程將會對其作用域內的所有頁面實施控制，不過，首次註冊該服務工作線程的頁面需要再次加載纔會受其控制。服務工作線程實施控制後，它將處於以下兩種狀態之一: 服務工作線程終止以節省內存，或處理獲取和消息事件，從頁面發出網絡請求或消息後將會出現後一種狀態。
 
 
 
@@ -155,7 +155,7 @@ Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/
     });
 
 
-在 `install` 回調的內部，我們需要執行以下步驟：
+在 `install` 回調的內部，我們需要執行以下步驟:
 
 1. 打開緩存。
 2. 緩存文件。
@@ -273,10 +273,10 @@ Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/
     });
 
 
-執行的操作如下：
+執行的操作如下:
 
 1. 在 `fetch` 請求中添加對 `.then()` 的回調。
-2. 獲得響應後，執行以下檢查：
+2. 獲得響應後，執行以下檢查:
 
    1. 確保響應有效。
    2. 檢查並確保響應的狀態爲 `200`。
@@ -289,7 +289,7 @@ Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/
 ## 更新服務工作線程 {: #update-a-service-worker }
 
 在某個時間點，您的服務工作線程需要更新。
-此時，您需要遵循以下步驟：
+此時，您需要遵循以下步驟:
 
 1. 更新您的服務工作線程 JavaScript 文件。用戶導航至您的站點時，瀏覽器會嘗試在後臺重新下載定義服務工作線程的腳本文件。如果服務工作線程文件與其當前所用文件存在字節差異，則將其視爲“新服務工作線程”。
 2. 新服務工作線程將會啓動，且將會觸發 `install` 事件。
@@ -308,13 +308,13 @@ Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/
 
 
 
-比如說我們有一個名爲 `'my-site-cache-v1'` 的緩存，我們想要將該緩存拆分爲一個頁面緩存和一個博文緩存。這就意味着在安裝步驟中我們創建了兩個緩存：`'pages-cache-v1'` 和 `'blog-posts-cache-v1'`，且在激活步驟中我們要刪除舊的 `'my-site-cache-v1'`。
+比如說我們有一個名爲 `'my-site-cache-v1'` 的緩存，我們想要將該緩存拆分爲一個頁面緩存和一個博文緩存。這就意味着在安裝步驟中我們創建了兩個緩存: `'pages-cache-v1'` 和 `'blog-posts-cache-v1'`，且在激活步驟中我們要刪除舊的 `'my-site-cache-v1'`。
 
 
 
 
 
-以下代碼將執行此操作，具體做法爲：遍歷服務工作線程中的所有緩存，並刪除未在緩存白名單中定義的任何緩存。
+以下代碼將執行此操作，具體做法爲: 遍歷服務工作線程中的所有緩存，並刪除未在緩存白名單中定義的任何緩存。
 
 
 
@@ -359,14 +359,14 @@ Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/
 #### 默認情況下沒有憑據
 
 使用 `fetch` 時，默認情況下請求中不包含 Cookie 等憑據。
-如需憑據，改爲調用：
+如需憑據，改爲調用:
 
     fetch(url, {
       credentials: 'include'
     })
 
 
-這一行爲是有意爲之，可以說比 XHR 更復雜的以下默認行爲更好：如果網址具有相同來源，則默認發送憑據，否則忽略。獲取的行爲更接近於其他 CORS 請求，如 `<img crossorigin>`，它將決不會發送 Cookie，除非您使用 `<img crossorigin="use-credentials">` 選擇加入。
+這一行爲是有意爲之，可以說比 XHR 更復雜的以下默認行爲更好: 如果網址具有相同來源，則默認發送憑據，否則忽略。獲取的行爲更接近於其他 CORS 請求，如 `<img crossorigin>`，它將決不會發送 Cookie，除非您使用 `<img crossorigin="use-credentials">` 選擇加入。
 
 
 
@@ -389,7 +389,7 @@ Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/
 `srcset` 屬性或 `<picture>` 元素將在運行期間選擇最適當的圖像資產，併發出網絡請求。
 
 
-對於服務工作線程，如果您想要在安裝過程中緩存圖像，您有下列幾種選擇：
+對於服務工作線程，如果您想要在安裝過程中緩存圖像，您有下列幾種選擇:
 
 
 1. 安裝 `<picture>` 元素和 `srcset` 屬性將請求的所有圖像。
@@ -403,14 +403,14 @@ Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/
 假定您在安裝期間選擇安裝低分辨率版本的圖像，在頁面加載時您想要嘗試從網絡中檢索高分辨率的圖像，但是如果檢索高分辨率版本失敗，則回退到低分辨率版本。這沒有問題，而且這種做法很好，但是有另外一個問題。
 
 
-如果我們有以下兩張圖像：
+如果我們有以下兩張圖像:
 
 | 屏幕密度 | 寬度 | 高度 |
 | -------------- | ----- | ------ |
 |1x             | 400   | 400    |
 | 2x             | 800   | 800    |
 
-在 `srcset` 圖像中，我們有一些像這樣的標記：
+在 `srcset` 圖像中，我們有一些像這樣的標記:
 
 
     <img src="image-src.png" srcset="image-src.png 1x, image-2x.png 2x" />

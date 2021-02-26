@@ -35,7 +35,7 @@ Success: 让您的移动首页侧重于将用户与他们要寻找的内容联�
   <figure id="fig1">
     <img src="images/hpnav-cta-good.png">
     <figcaption class="success">
-      <b>宜</b>：将用户所有最常见的任务安排在便于访问的位置。</figcaption>
+      <b>宜</b>: 将用户所有最常见的任务安排在便于访问的位置。</figcaption>
 
   </figure>
 </div>
@@ -43,7 +43,7 @@ Success: 让您的移动首页侧重于将用户与他们要寻找的内容联�
   <figure id="fig1">
     <img src="images/hpnav-cta-bad.png">
     <figcaption class="warning">
-      <b>忌</b>：使用“了解详情”之类含糊的吸引注意力的元素浪费宝贵的首屏空间。</figcaption>
+      <b>忌</b>: 使用“了解详情”之类含糊的吸引注意力的元素浪费宝贵的首屏空间。</figcaption>
 
   </figure>
 </div>
@@ -56,7 +56,7 @@ Success: 让您的移动首页侧重于将用户与他们要寻找的内容联�
   <figure id="fig1">
     <img src="images/hpnav-menus-good.png">
     <figcaption class="success">
-      <b>宜</b>：让菜单保持简短和亲切。</figcaption>
+      <b>宜</b>: 让菜单保持简短和亲切。</figcaption>
 
   </figure>
 </div>
@@ -73,7 +73,7 @@ Success: 让您的移动首页侧重于将用户与他们要寻找的内容联�
   <figure id="fig1">
     <img src="images/hpnav-hp-good.png">
     <figcaption class="success">
-      <b>宜</b>：简化返回首页的操作。</figcaption>
+      <b>宜</b>: 简化返回首页的操作。</figcaption>
 
   </figure>
 </div>
@@ -94,7 +94,7 @@ Success: 让您的移动首页侧重于将用户与他们要寻找的内容联�
   <figure id="fig1">
     <img src="images/hpnav-promo-good.png">
     <figcaption class="success">
-      <b>宜</b>：推广信息应能轻松关闭，并且不应让用户在使用网站时分心。</figcaption>
+      <b>宜</b>: 推广信息应能轻松关闭，并且不应让用户在使用网站时分心。</figcaption>
 
   </figure>
 </div>
@@ -102,7 +102,7 @@ Success: 让您的移动首页侧重于将用户与他们要寻找的内容联�
   <figure id="fig1">
     <img src="images/hpnav-promo-bad.png">
     <figcaption class="warning">
-      <b>忌</b>：插页广告（有时称作关门广告）常常令用户反感，让用户在使用网站时平添烦恼。</figcaption>
+      <b>忌</b>: 插页广告（有时称作关门广告）常常令用户反感，让用户在使用网站时平添烦恼。</figcaption>
 
   </figure>
 </div>
@@ -123,7 +123,7 @@ Success: 帮助移动用户找到其正在急切寻找的内容。
   <figure id="fig1">
     <img src="images/ss-search-good.jpg">
     <figcaption class="success">
-      <b>宜</b>：让搜索可见</figcaption>
+      <b>宜</b>: 让搜索可见</figcaption>
 
   </figure>
 </div>
@@ -131,7 +131,7 @@ Success: 帮助移动用户找到其正在急切寻找的内容。
   <figure id="fig1">
     <img src="images/ss-search-bad.jpg">
     <figcaption class="warning">
-      <b>忌</b>：将搜索隐藏在溢出菜单中</figcaption>
+      <b>忌</b>: 将搜索隐藏在溢出菜单中</figcaption>
 
   </figure>
 </div>
@@ -149,7 +149,7 @@ Success: 帮助移动用户找到其正在急切寻找的内容。
   <figure id="fig1">
     <img src="images/ss-relevant-good.png">
     <figcaption class="success">
-      <b>宜</b>：Macy's 只返回儿童商品。</figcaption>
+      <b>宜</b>: Macy's 只返回儿童商品。</figcaption>
 
   </figure>
 </div>
@@ -157,7 +157,7 @@ Success: 帮助移动用户找到其正在急切寻找的内容。
   <figure id="fig1">
     <img src="images/ss-relevant-bad.png">
     <figcaption class="warning">
-      <b>忌</b>：返回任何包含儿童一词的商品的搜索结果。</figcaption>
+      <b>忌</b>: 返回任何包含儿童一词的商品的搜索结果。</figcaption>
 
   </figure>
 </div>
@@ -174,7 +174,7 @@ Success: 帮助移动用户找到其正在急切寻找的内容。
   <figure id="fig1">
     <img src="images/ss-filters-good.jpg">
     <figcaption class="success">
-      <b>宜</b>：为过滤提供便利。</figcaption>
+      <b>宜</b>: 为过滤提供便利。</figcaption>
 
   </figure>
 </div>
@@ -182,7 +182,7 @@ Success: 帮助移动用户找到其正在急切寻找的内容。
   <figure id="fig1">
     <img src="images/ss-filters-bad.jpg">
     <figcaption class="warning">
-      <b>忌</b>：隐藏过滤功能。</figcaption>
+      <b>忌</b>: 隐藏过滤功能。</figcaption>
 
   </figure>
 </div>
@@ -195,7 +195,7 @@ Success: 帮助移动用户找到其正在急切寻找的内容。
   <figure id="fig1">
     <img src="images/ss-guide-good.png" alt="Zappos 通过询问用户的寻找内容来对其进行引导。">
     <figcaption class="success">
-      <b>宜</b>：通过沿正确方向引导用户来帮助他们查找其要寻找的内容。</figcaption>
+      <b>宜</b>: 通过沿正确方向引导用户来帮助他们查找其要寻找的内容。</figcaption>
 
   </figure>
 </div>
@@ -221,7 +221,7 @@ Success: 了解客户之旅，让用户根据自身情况进行转化。
   <figure id="fig1">
     <img src="images/cc-gates-good.png">
     <figcaption class="success">
-      <b>宜</b>：允许用户在不登录的情况下浏览网站。</figcaption>
+      <b>宜</b>: 允许用户在不登录的情况下浏览网站。</figcaption>
 
   </figure>
 </div>
@@ -229,7 +229,7 @@ Success: 了解客户之旅，让用户根据自身情况进行转化。
   <figure id="fig1">
     <img src="images/cc-gates-bad.png">
     <figcaption class="warning">
-      <b>忌</b>：在网站上过早提出登录或注册要求。</figcaption>
+      <b>忌</b>: 在网站上过早提出登录或注册要求。</figcaption>
 
   </figure>
 </div>
@@ -243,7 +243,7 @@ Success: 了解客户之旅，让用户根据自身情况进行转化。
   <figure id="fig1">
     <img src="images/cc-purchase-guest-good.png">
     <figcaption class="success">
-      <b>宜</b>：允许用户使用访客帐号购物。</figcaption>
+      <b>宜</b>: 允许用户使用访客帐号购物。</figcaption>
 
   </figure>
 </div>
@@ -271,7 +271,7 @@ Success: 了解客户之旅，让用户根据自身情况进行转化。
   <figure id="fig1">
     <img src="images/cc-other-device-good.png">
     <figcaption class="success">
-      <b>宜</b>：让用户能够方便地继续在其他设备上浏览或购物。</figcaption>
+      <b>宜</b>: 让用户能够方便地继续在其他设备上浏览或购物。</figcaption>
 
   </figure>
 </div>
@@ -307,7 +307,7 @@ Success: 通过易用型表单提供顺畅的无缝式转化体验。
   <figure id="fig1">
     <img src="images/forms-calendar-good.png">
     <figcaption class="success">
-      <b>宜</b>：尽可能使用日历小部件。</figcaption>
+      <b>宜</b>: 尽可能使用日历小部件。</figcaption>
 
   </figure>
 </div>
@@ -323,7 +323,7 @@ Success: 通过易用型表单提供顺畅的无缝式转化体验。
   <figure id="fig1">
     <img src="images/forms-multipart-good.png">
     <figcaption class="success">
-      <b>宜</b>：尽可能预填充内容。</figcaption>
+      <b>宜</b>: 尽可能预填充内容。</figcaption>
 
   </figure>
 </div>
@@ -370,7 +370,7 @@ Success: 通过可增强移动用户使用体验的微小改进来取悦他们�
   <figure id="fig1">
     <img src="images/sw-make-images-expandable-good.png">
     <figcaption class="success">
-      <b>宜</b>：让产品图像可扩展并便于查看细节。</figcaption>
+      <b>宜</b>: 让产品图像可扩展并便于查看细节。</figcaption>
 
   </figure>
 </div>
@@ -386,7 +386,7 @@ Success: 通过可增强移动用户使用体验的微小改进来取悦他们�
   <figure id="fig1">
     <img src="images/us-orientation.jpg">
     <figcaption class="success">
-      <b>宜</b>：告诉用户哪个方向效果最好。</figcaption>
+      <b>宜</b>: 告诉用户哪个方向效果最好。</figcaption>
 
   </figure>
 </div>
@@ -405,7 +405,7 @@ Success: 通过可增强移动用户使用体验的微小改进来取悦他们�
   <figure id="fig1">
     <img src="images/sw-single-browser-good.png">
     <figcaption class="success">
-      <b>宜</b>：Macy's 通过在网站上提供优惠券将用户留在其网站上。</figcaption>
+      <b>宜</b>: Macy's 通过在网站上提供优惠券将用户留在其网站上。</figcaption>
 
   </figure>
 </div>
@@ -434,7 +434,7 @@ Success: 通过可增强移动用户使用体验的微小改进来取悦他们�
   <figure id="fig1">
     <img src="images/sw-navigation-good.png">
     <figcaption class="success">
-      <b>宜</b>：始终在手势操作时请求获取用户的位置。</figcaption>
+      <b>宜</b>: 始终在手势操作时请求获取用户的位置。</figcaption>
 
   </figure>
 </div>
@@ -442,7 +442,7 @@ Success: 通过可增强移动用户使用体验的微小改进来取悦他们�
   <figure id="fig1">
     <img src="images/sw-navigation-bad.png">
     <figcaption class="warning">
-      <b>忌</b>：在网站加载首页时立即请求提供位置会导致不好的用户体验。</figcaption>
+      <b>忌</b>: 在网站加载首页时立即请求提供位置会导致不好的用户体验。</figcaption>
 
   </figure>
 </div>

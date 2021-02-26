@@ -23,14 +23,14 @@ description:了解如何缓和或加强您的动画。
 
 CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosing-the-right-easing)。您可以使用影响相关动画的缓动（或有时称为 `timing`）的关键字。还可以[完全自定义您的缓动](custom-easing)，借此方式更自由地表达应用的个性。
 
-以下是可在 CSS 中使用的一些关键字：
+以下是可在 CSS 中使用的一些关键字:
 
 * `linear`
 * `ease-in`
 * `ease-out`
 * `ease-in-out`
 
-资料来源：[CSS 变换，W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
+资料来源: [CSS 变换，W3C](http://www.w3.org/TR/css3-transitions/#transition-timing-function-property)
 
 还可以使用 `steps` 关键字，它允许您创建具有离散步骤的变换，但上面列出的关键字对于创建感觉自然的动画最有用，并且这绝对是您要的效果。
 
@@ -42,21 +42,21 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosin
   </figure>
 </div>
 
-没有任何缓动的动画称为**线性**动画。线性变换的图形看起来像这样：
+没有任何缓动的动画称为**线性**动画。线性变换的图形看起来像这样:
 
 随着时间推移，其值以等量增加。采用线性运动时，动画内容往往显得很僵硬，不自然，让用户觉得不协调。一般来说，应避免线性运动。
 
-不管通过 CSS 还是 JavaScript 来编写动画代码，您将发现始终有线性运动的选项。 
+不管通过 CSS 还是 JavaScript 来编写动画代码，您将发现始终有线性运动的选项。
 
 [查看线性动画](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/box-move-linear.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
-要通过 CSS 实现上述效果，代码将类似下面这样：
+要通过 CSS 实现上述效果，代码将类似下面这样:
 
 
     transition: transform 500ms linear;
-    
+
 
 
 ## 缓出动画
@@ -75,11 +75,11 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosin
 
 <div style="clear:both;"></div>
 
-有很多方法来实现缓出效果，但最简单的方法是 CSS 中的 `ease-out` 关键字：
+有很多方法来实现缓出效果，但最简单的方法是 CSS 中的 `ease-out` 关键字:
 
 
     transition: transform 500ms ease-out;
-    
+
 
 
 ## 缓入动画
@@ -100,11 +100,11 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosin
 
 <div style="clear:both;"></div>
 
-要使用缓入动画，与缓出和线性动画类似，可以使用其关键字：
+要使用缓入动画，与缓出和线性动画类似，可以使用其关键字:
 
 
     transition: transform 500ms ease-in;
-    
+
 
 ## 缓入缓出动画
 
@@ -123,11 +123,11 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](choosin
 <div style="clear:both;"></div>
 
 
-要设置缓入缓出动画，可以使用 `ease-in-out` CSS 关键字：
+要设置缓入缓出动画，可以使用 `ease-in-out` CSS 关键字:
 
 
     transition: transform 500ms ease-in-out;
-    
+
 
 
 

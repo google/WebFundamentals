@@ -31,8 +31,8 @@
     </style>
   </head>
   <body>
-    <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-50">
-      <div class="devsite-landing-row-group">
+    <section class="devsite-landing-row devsite-landing-row-2-up">
+      <div class="devsite-landing-row-inner">
         <div class="devsite-landing-row-item">
           <div id="site-kit-setup">
             {% dynamic if request.query_string.sitename %}
@@ -40,7 +40,7 @@
             {% dynamic endif %}
             {% dynamic if request.query_string.siteurl %}
               {% dynamic setvar productName %}Site Kit on {% dynamic print request.query_string.siteurl|escape %}{% dynamic endsetvar %}
-              {% dynamic setvar redirectURI %}{% dynamic print request.query_string.siteurl|escape %}?oauth2callback=1{% dynamic endsetvar %}
+              {% dynamic setvar redirectURI %}{% dynamic print request.query_string.siteurl|escape %}/wp-admin/index.php?oauth2callback=1{% dynamic endsetvar %}
             {% dynamic endif %}
             {% dynamic if user.signed_in and setvar.projectName and setvar.productName and setvar.redirectURI %}
             <p>
@@ -72,7 +72,7 @@
                 data-henhouse-header-logo-url="https://www.gstatic.com/images/branding/product/1x/googleg_64dp.png"
                 data-henhouse-use-updated-header="true"
                 data-api-id="servicemanagement.googleapis.com"
-                data-henhouse-extra-api-ids="adsense.googleapis.com,analytics.googleapis.com,analyticsreporting.googleapis.com,pagespeedonline.googleapis.com,people.googleapis.com,siteverification.googleapis.com,tagmanager.googleapis.com,webmasters.googleapis.com"
+                data-henhouse-extra-api-ids="adsense.googleapis.com,analytics.googleapis.com,analyticsreporting.googleapis.com,pagespeedonline.googleapis.com,people.googleapis.com,siteverification.googleapis.com,tagmanager.googleapis.com,searchconsole.googleapis.com"
                 data-henhouse-credential-type="OAUTH"
                 data-henhouse-client-type="WEB_SERVER"
                 {% dynamic if user.signed_in and setvar.projectName and setvar.productName and setvar.redirectURI %}

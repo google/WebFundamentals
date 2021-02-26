@@ -31,7 +31,7 @@ description:保持较低的 JavaScript 网络传输以及解析/编译成本，�
  您可能使用的是咖啡店的 Wi-Fi，但连接到 2G 速度的蜂窝热点。
 
 
-您可以通过以下方法**降低** JavaScript 的网络传输成本：
+您可以通过以下方法**降低** JavaScript 的网络传输成本:
 
 * **仅发送用户所需的代码**。
     * 使用[代码拆分](/web/updates/2017/06/supercharged-codesplit)将 JavaScript 分解成关键部分和非关键部分。
@@ -57,7 +57,7 @@ ES5 代码。
 * **移除未使用的代码**。
     * 识别可以使用 [DevTools 代码覆盖](/web/updates/2017/04/devtools-release-notes#coverage)来移除或延迟加载代码的机会。
     * 使用
-[babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+[babel-preset-env](https://github.com/GoogleChrome/puppeteer/blob/main/packages/babel-preset-env)
 和 browserlist，避免转译现代浏览器中已有的功能。
       高级开发者可能会发现仔细[分析其 webpack 软件包](https://github.com/webpack-contrib/webpack-bundle-analyzer)有助于找到裁减非必要依赖项的机会。
     * 要删除代码，请查看 [tree-shaking](https://webpack.js.org/guides/tree-shaking/)、[Closure Compiler](/closure/compiler/) 的高级优化和库裁剪插件（例如 [lodash-babel-plugin](https://github.com/lodash/babel-plugin-lodash)）或者 webpack 的 [ContextReplacementPlugin](https://iamakulov.com/notes/webpack-front-end-size-caching/#moment-js)（适用于 Moment.js 等库）。
@@ -85,13 +85,13 @@ DevTools](/web/tools/chrome-devtools/) 中，解析和编译是 Performance 面�
 
 <img src="images/1__4gNDmBlXxOF2-KmsOrKkw.png"/>
 
-Bottom-Up 和 Call Tree 选项卡显示确切的解析/编译时间：
+Bottom-Up 和 Call Tree 选项卡显示确切的解析/编译时间:
 
 <figure> <img src="images/1_GdrVt_BTTzzBOIoyZZsQZQ.png"/> <figcaption> Chrome
 DevTools Performance 面板 > Bottom-Up。 启用 V8 的 Runtime Call Stats 后，我们可以看到在解析和编译等阶段花费的时间</figcaption></figure>
 
 
-注：Performance 面板对 Runtime Call Stats 的支持目前处于实验阶段。
+注: Performance 面板对 Runtime Call Stats 的支持目前处于实验阶段。
 若要启用支持，请转到 chrome://flags/#enable-devtools-experiments -> 重新启动 Chrome ->
 转到 DevTools -> Settings -> Experiments -> 按 Shift 6 次 -> 勾选名为 `Timeline: V8 Runtime Call Stats on Timeline` 的选项，然后关闭再重新打开 DevTools。
 
@@ -147,7 +147,7 @@ DevTools Performance 面板 > Bottom-Up。 启用 V8 的 Runtime Call Stats 后�
 
 
 此图着重强调务必在**普通**硬件（例如，Moto
-G4）上进行测试，而不仅仅在您所用手机上进行测试，这一点很重要。 但是，环境也很重要：**请针对您的设备和网络情况进行优化。**
+G4）上进行测试，而不仅仅在您所用手机上进行测试，这一点很重要。 但是，环境也很重要: **请针对您的设备和网络情况进行优化。**
 
 
 <figure> <img src="images/1_6oEpMEi_pjRNjmtN9i2TCA.png"/> <figcaption>Google
@@ -191,7 +191,7 @@ JavaScript](http://beta.httparchive.org/reports/state-of-javascript#bytesJs) 状
 
 ## 其他成本
 
-JavaScript 可以在其他方面影响页面性能：
+JavaScript 可以在其他方面影响页面性能:
 
 * 内存。 页面可能会因为 GC（垃圾回收）而出现卡顿或频繁暂停现象。
  当浏览器收回内存时，就会暂停执行 JS，因此频繁收集垃圾的浏览器会导致暂停执行的频率超出我们的容忍程度。
@@ -211,7 +211,7 @@ JavaScript 可以在其他方面影响页面性能：
 
 ### PRPL
 
-PRPL（推送、渲染、预先缓存、延迟加载）是一种通过激进代码拆分和缓存来优化交互性的模式：
+PRPL（推送、渲染、预先缓存、延迟加载）是一种通过激进代码拆分和缓存来优化交互性的模式:
 
 
 <img src="images/1_VgdNbnl08gcetpqE1t9P9w.png"/>
@@ -219,7 +219,7 @@ PRPL（推送、渲染、预先缓存、延迟加载）是一种通过激进代�
 上图直观地呈现出 PRPL 的影响。
 
 我们使用
-V8 的 Runtime Call Stats 来分析热门移动网站和渐进式网页应用的加载时间。 正如我们所见，许多网站都将大部分的时间用在解析（以橙色显示）上：
+V8 的 Runtime Call Stats 来分析热门移动网站和渐进式网页应用的加载时间。 正如我们所见，许多网站都将大部分的时间用在解析（以橙色显示）上:
 
 
 <img src="images/1_9BMRW5i_bS4By_JSESXX8A.png"/>
@@ -246,7 +246,7 @@ V8 的 Runtime Call Stats 来分析热门移动网站和渐进式网页应用的
 当有更多资源到达时，应用可以进行延迟加载，并解锁更多功能。
 
 <figure> <img src="images/1_zY03Y5nVEY21FXA63Qe8PA.png"/> <figcaption> <a
-href="https://twitter.com/aerotwist/status/729712502943174657">渐进式引导</a>，发布人：Paul Lewis</figcaption> </figure>
+href="https://twitter.com/aerotwist/status/729712502943174657">渐进式引导</a>，发布人: Paul Lewis</figcaption> </figure>
 
 
 加载与视图中显示的内容成比例的代码是诀窍所在。 PRPL
@@ -258,7 +258,7 @@ href="https://twitter.com/aerotwist/status/729712502943174657">渐进式引导</
  应该尽量降低这两个指标。**
 
 某些团队已成功通过采用严格的性能预算来保持较短的
-JavaScript 传输和解析/编译时间。 请参阅 Alex Russell 的“[您能否承受？：
+JavaScript 传输和解析/编译时间。 请参阅 Alex Russell 的“[您能否承受？:
 真实的网络性能预算](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/)”，以获取有关适用于移动设备的预算指南。
 
 
@@ -283,5 +283,3 @@ Kristofer Baxter
 * [Cloudflare 的 Brotli 压缩实验结果](https://blog.cloudflare.com/results-experimenting-brotli/)（请注意，较高质量的动态 Brotli 会导致初始页面渲染延迟，因此务必谨慎评估。
  您可能想改为使用静态压缩。）
 * [性能的未来](https://medium.com/@samccone/performance-futures-bundling-281543d9a0d5) - Sam Saccone
-
-

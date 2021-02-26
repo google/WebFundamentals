@@ -32,9 +32,6 @@ It might seem unexpected, but using an element for AJAX is actually pretty great
 ### Does Polymer play nicely with Typescript? Are there official type definitions?
 <https://github.com/borisyankov/DefinitelyTyped/tree/master/polymer>
 
-### How do I go about including and using 3rd party libraries - Three.js for example - as requirements for my elements?
-<https://github.com/robdodson/chart-elements/blob/master/chart-js-import.html>
-
 ### What is the suggested way to go about routing?
 <https://www.youtube.com/watch?v=iDQqP5Yyczg&list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo&index=19>
 <https://github.com/PolymerLabs/web-component-shards>

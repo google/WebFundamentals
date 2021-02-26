@@ -24,7 +24,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
 
 ## 使用轉換以在檢視之間移動
 
-要讓過程更容易些，讓我們假設有兩個檢視： 一個清單檢視和一個詳細資訊檢視。 當使用者在清單檢視內點選一個清單項目，詳細資訊檢視將滑入，而清單檢視將滑出。
+要讓過程更容易些，讓我們假設有兩個檢視:  一個清單檢視和一個詳細資訊檢視。 當使用者在清單檢視內點選一個清單項目，詳細資訊檢視將滑入，而清單檢視將滑出。
 
 <img src="images/view-translate.gif" alt="在兩個檢視之間轉換" />
 
@@ -32,7 +32,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
 
 <img src="images/container-two-views.svg" alt="視圖層次。" />
 
-該容器的 CSS 為：
+該容器的 CSS 為:
 
 
     .container {
@@ -41,7 +41,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
       overflow: hidden;
       position: relative;
     }
-    
+
 
 該容器的位置被設定為 `relative`。 這代表其中的每個檢視可以定位在最左上角，然後以變形來到處移動。 較之使用 `left` 屬性 (會觸發版面配置與繪製)，這種方法的效能更好，通常也更容易合理化。
 
@@ -52,12 +52,12 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
       position: absolute;
       left: 0;
       top: 0;
-    
+
       /* let the browser know we plan to animate
          each view in and out */
       will-change: transform;
     }
-    
+
 
 在 `transform` 屬性上新增 `transition`，會提供不錯的滑動效果。 為了給它一個不錯的感覺，它使用自訂 `cubic-bezier` 曲線，如我們在 [自訂緩動指南](custom-easing.html) 中所討論。
 
@@ -67,16 +67,16 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
       transition: -webkit-transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
       transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
     }
-    
 
-畫面之外的檢視應該解譯為往右，因此在此例中，詳細資訊檢視應該要移動：
+
+畫面之外的檢視應該解譯為往右，因此在此例中，詳細資訊檢視應該要移動:
 
 
     .details-view {
       -webkit-transform: translateX(100%);
       transform: translateX(100%);
     }
-    
+
 
 現在需要少量的 JavaScript 來處理類別。 這會切換檢視上的適當類別。
 
@@ -84,7 +84,7 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
     var container = document.querySelector('.container');
     var backButton = document.querySelector('.back-button');
     var listItems = document.querySelectorAll('.list-item');
-    
+
     /**
      * Toggles the class on the container so that
      * we choose the correct view.
@@ -92,15 +92,15 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
     function onViewChange(evt) {
       container.classList.toggle('view-change');
     }
-    
+
     // When you click on a list item bring on the details view.
     for (var i = 0; i < listItems.length; i++) {
       listItems[i].addEventListener('click', onViewChange, false);
     }
-    
+
     // And switch it back again when you click on the back button
     backButton.addEventListener('click', onViewChange);
-    
+
 
 最後，我們為這些類別新增 CSS 宣告。
 
@@ -109,12 +109,12 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
       -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
     }
-    
+
     .view-change .details-view {
       -webkit-transform: translateX(0);
       transform: translateX(0);
     }
-    
+
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/animations/inter-view-animation.html">請參閱範例。</a>
 
@@ -129,5 +129,3 @@ Note: 要跨瀏覽器設計這種階層，可能頗具挑戰性。 例如，iOS 
 針對較大的螢幕，您應該隨時保持清單檢視 (而非移除它)，並從右手邊滑入詳細資訊檢視。 大概就和處理導覽檢視相同。
 
 <img src="images/container-two-views-ls.svg" alt="在較大螢幕上的視圖層次。" />
-
-

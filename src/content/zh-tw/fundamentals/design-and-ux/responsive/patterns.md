@@ -14,7 +14,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 回應式網頁設計模式正在快速演化，但已有一些能跨桌面和行動裝置運作良好的既定模式
 
 
-回應式網頁使用的大多數版面配置可以分成五大外觀設計模式：主體為流動 (mostly fluid)、欄內容下排 (column drop)、版面配置位移 (layout shifter)、微小調整 (tiny tweaks) 和畫布外空間利用 (off canvas)。
+回應式網頁使用的大多數版面配置可以分成五大外觀設計模式: 主體為流動 (mostly fluid)、欄內容下排 (column drop)、版面配置位移 (layout shifter)、微小調整 (tiny tweaks) 和畫布外空間利用 (off canvas)。
 
 在某些情況下，網頁可能會使用不同模式組合，例如欄內容下排與畫布外空間利用。
   最初是由
@@ -35,7 +35,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 
 
-## 主體為流動 
+## 主體為流動
 
 
 
@@ -57,7 +57,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 而次要 `div` 會在主要 `div` 下顯示為兩欄。  超過 800px 時，
 容器 `div` 變成固定寬度，並在螢幕上居中。
 
-使用這種模式的網站包括：
+使用這種模式的網站包括:
 
  * [A List Apart](http://mediaqueri.es/ala/){: .external }
  * [Media Queries](http://mediaqueri.es/){: .external }
@@ -71,12 +71,12 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 
 
-## 欄內容下排 
+## 欄內容下排
 
 
 
 
-針對全寬度多欄版面配置，視窗寬度之於內容變得太窄時，欄內容下排只是會垂直堆疊所有欄而已。  
+針對全寬度多欄版面配置，視窗寬度之於內容變得太窄時，欄內容下排只是會垂直堆疊所有欄而已。
 
 最後結果是所有欄會被垂直堆疊。
   為這種版面配置模式選擇中斷點，
@@ -90,12 +90,12 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 
 就像主體為流動的範例，
-內容被垂直堆疊於最小檢視中，但在螢幕擴展超出 600px 時，主要與次要內容 
+內容被垂直堆疊於最小檢視中，但在螢幕擴展超出 600px 時，主要與次要內容
 `div` 會佔據整個螢幕寬度。  `div` 的順序是以舊 CSS 屬性來設定。
   在 800px 時，所有三個內容 `div` 都會顯示，使用完整螢幕寬度。
 
 
-使用這種模式的網站包括：
+使用這種模式的網站包括:
 
  * [Modernizr](http://modernizr.com/){: .external }
  * [Wee Nudge](http://weenudge.com/){: .external }
@@ -107,7 +107,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 
 
-## 版面配置位移 
+## 版面配置位移
 
 
 
@@ -128,7 +128,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 在較小的螢幕上，內容會垂直堆疊，
 但在螢幕變得較大時大幅變更，帶有一個左 `div` ，和兩個堆疊的 `div` 在右邊。
 
-使用這種模式的網站包括：
+使用這種模式的網站包括:
 
  * [Food Sense](http://foodsense.is/){: .external }
  * [基本回應式設計
@@ -142,12 +142,12 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 
 
-## 微小調整 
+## 微小調整
 
 
 
 
-微小調整只是對版面配置做出小小變更，例如調整字型大小 、調整影像大小，或小幅移動內容。  
+微小調整只是對版面配置做出小小變更，例如調整字型大小 、調整影像大小，或小幅移動內容。
 
 它適用於單欄版面配置，例如單網頁線性網站、大量文字
 的文章。
@@ -160,7 +160,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 顧名思義，螢幕大小變更時，此範例也沒什麼變化。
 螢幕寬度越大，字型和邊框間距也是如此。
 
-使用這種模式的網站包括：
+使用這種模式的網站包括:
 
  * [Opera's Shiny Demos](http://shinydemos.com/){: .external }
  * [Ginger Whale](http://gingerwhale.com/){: .external }
@@ -173,7 +173,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 
 
-## 畫布外空間利用 
+## 畫布外空間利用
 
 
 
@@ -195,7 +195,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 iOS 6 版本 Safari 和 Android 瀏覽器不支援 `flexbox` 的 `flex-flow: row nowrap` 功能，所以我們必須退回到絕對定位方式。
 
 
-使用這種模式的網站包括：
+使用這種模式的網站包括:
 
  * [HTML5Rocks
  文章](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
@@ -205,5 +205,3 @@ iOS 6 版本 Safari 和 Android 瀏覽器不支援 `flexbox` 的 `flex-flow: row
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
 </pre>
-
-

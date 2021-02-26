@@ -22,7 +22,7 @@ description: Esse codelab ensinará você a identificar e eliminar afunilamento 
 Este codelab é uma versão em texto de parte do conteúdo discutido em um curso da Udacity sobre desempenho de aplicativos/Web ([ud860](https://www.udacity.com/course/browser-rendering-optimization--ud860)). Em vez de simplesmente transcrever o curso em vídeo, o propósito deste codelab é tratar de forma enxuta e concisa a identificação e a correção das instabilidades, usando o projeto final prático original do curso.
 
 
-Visão geral do ## 
+Visão geral do ##
 
 
 
@@ -83,7 +83,7 @@ Antes de mais nada, obtenha o código do aplicativo, em suas duas versões: "ant
 
 ### Execute o aplicativo original
 
-Primeiro, execute a versão instável original. No Chrome, abra __index.html__ na pasta de alto nível (por exemplo, news-aggregator-master). Experimente usar o aplicativo. Você notará rapidamente alguns problemas de desempenho de alto nível nas duas principais interações do usuário: a rolagem da tela principal e o deslizar das matérias. Veremos esses problemas principais para descobrir como melhorar o desempenho instável do aplicativo.
+Primeiro, execute a versão instável original. No Chrome, abra __index.html__ na pasta de alto nível (por exemplo, news-aggregator). Experimente usar o aplicativo. Você notará rapidamente alguns problemas de desempenho de alto nível nas duas principais interações do usuário: a rolagem da tela principal e o deslizar das matérias. Veremos esses problemas principais para descobrir como melhorar o desempenho instável do aplicativo.
 
 
 ## Exercício 1: Rolagem de lista
@@ -93,7 +93,7 @@ Primeiro, execute a versão instável original. No Chrome, abra __index.html__ n
 
 Durante a rolagem na tela principal, você notará trepidações na lista de matérias. Além disso, você verá que indicadores de pontos das matérias individuais (os números em círculos) mudam de valor e de cor. Este exercício identificará esses problemas e escolherá a sua abordagem.
 
-Vamos ver no Timeline o que realmente acontece quando rolamos a tela principal. Certifique-se de que a caixa de seleção __JS Profile__ esteja ativada antes de começar sua gravação. Inicie uma gravação, role a lista para baixo um pouco e interrompa a gravação. 
+Vamos ver no Timeline o que realmente acontece quando rolamos a tela principal. Certifique-se de que a caixa de seleção __JS Profile__ esteja ativada antes de começar sua gravação. Inicie uma gravação, role a lista para baixo um pouco e interrompa a gravação.
 
 No topo da gravação, você verá um indicador de FPS em verde. Você deve ver uma barra verde com alguns picos ocasionais, como na imagem abaixo. O fato de que a barra verde está tão baixa indica que a tela não estava alcançando 60 FPS.
 
@@ -103,7 +103,7 @@ Aumente o zoom de sua gravação e você verá que, após o evento de rolagem, h
 
 ![d6fb17faaa99e6f.png](img/d6fb17faaa99e6f.png)
 
-Passe o cursor para identificar um evento de layout e, em seguida, clique nele para ver seus detalhes. 
+Passe o cursor para identificar um evento de layout e, em seguida, clique nele para ver seus detalhes.
 
 ![fce56d36285bc1fc.png](img/fce56d36285bc1fc.png)
 
@@ -148,13 +148,13 @@ function colorizeAndScaleStories() {
 }
 ```
 
-Observe que `height`, `width` e `line-height` são acessados, o que causa uma execução do layout. Além disso, a opacidade é definida. Embora uma alteração de opacidade não acione o layout, essa linha de código aplica um novo estilo, que acionao recálculo e, novamente o layout. Essas duas técnicas usadas no loop principal da função causam o problema de layout síncrono forçado. 
+Observe que `height`, `width` e `line-height` são acessados, o que causa uma execução do layout. Além disso, a opacidade é definida. Embora uma alteração de opacidade não acione o layout, essa linha de código aplica um novo estilo, que acionao recálculo e, novamente o layout. Essas duas técnicas usadas no loop principal da função causam o problema de layout síncrono forçado.
 
 Em seguida, considere o efeito visual dos indicadores de pontos da matéria, que não adicionam nenhuma informação valiosa. Podemos conseguir esse efeito com propriedades do CSS em vez de JavaScript. Mas a melhor saída pode ser eliminar o efeito completamente. Conclusão: algumas vezes, a melhor correção de código é eliminar o código.
 
 Vamos remover as chamadas para a função `colorizeAndScaleStories`. Recomende a remoção das linhas 88, 89 e 305 em app.js, assim como toda a própria função, linhas 255-286. Não exclua as linhas, porque os números das linhas a que fazemos referência mais adiante neste codelab não corresponderão ao seu aplicativo. Agora, os pontos da matéria têm a mesma aparência o tempo todo.
 
-Execute o aplicativo novamente, grave alguma atividade de rolagem no Timeline e aumente o zoom em um evento de rolagem. Desta vez, você verá que há apenas um recálculo estilo após a rolagem, e que a barra de FPS é muito maior.   
+Execute o aplicativo novamente, grave alguma atividade de rolagem no Timeline e aumente o zoom em um evento de rolagem. Desta vez, você verá que há apenas um recálculo estilo após a rolagem, e que a barra de FPS é muito maior.
 
 ![5e9d66cb007f9076.png](img/5e9d66cb007f9076.png)
 
@@ -214,7 +214,7 @@ Como sempre, comece fazendo uma gravação no Timeline de uma matéria deslizand
 
 ![59865afca1e508ef.png](img/59865afca1e508ef.png)
 
-Em geral, sempre que vir um evento roxo com um triângulo vermelho sobre ele, você deve investigar passando o cursor sobre ele e clicando para ver seus detalhes. Agora, você está interessado no layout síncrono forçado que ocorreu depois que um temporizador foi acionado. 
+Em geral, sempre que vir um evento roxo com um triângulo vermelho sobre ele, você deve investigar passando o cursor sobre ele e clicando para ver seus detalhes. Agora, você está interessado no layout síncrono forçado que ocorreu depois que um temporizador foi acionado.
 
 ![1bd8f7700f55a6c4.png](img/1bd8f7700f55a6c4.png)
 
@@ -365,7 +365,7 @@ Após o primeiro grupo de declarações de variáveis, observe as quatro linhas 
 
 A princípio, isso não é necessariamente um problema, mas é um desperdício que cresce com o uso do aplicativo. Naturalmente, o usuário vê apenas uma matéria por vez, mas os novos nós criados para cada matéria visualizada nunca são descartados. Depois de alguns cliques, o DOM estará repleto de nós abandonados que consomem memória e retardam o aplicativo. Quanto mais o aplicativo for usado, pior será o seu desempenho.
 
-Uma forma melhor de obter esse recurso é criar apenas um nó `storyDetails` permanente mais cedo no script para conter a matéria atual e depois usar a confiável propriedade `innerHTML` para redefinir o conteúdo do nó a cada nova matéria, em vez de criar um novo nó. Em outras palavras, você simplesmente este código: 
+Uma forma melhor de obter esse recurso é criar apenas um nó `storyDetails` permanente mais cedo no script para conter a matéria atual e depois usar a confiável propriedade `innerHTML` para redefinir o conteúdo do nó a cada nova matéria, em vez de criar um novo nó. Em outras palavras, você simplesmente este código:
 
 ```
     storyDetails = document.createElement('section');
@@ -383,7 +383,7 @@ Por este:
     storyDetails.innerHTML = storyDetailsHtml;
 ```
 
-Sem dúvida, essa mudança melhorará o desempenho no longo prazo, mas não fará nada no curto prazo. 
+Sem dúvida, essa mudança melhorará o desempenho no longo prazo, mas não fará nada no curto prazo.
 
 Ainda precisamos resolver o problema do deslizamento das matérias.
 
@@ -399,7 +399,7 @@ Vamos examinar esse processo. No Timeline, ative o gerador de perfis do JavaScri
 
 ![33ba193a24cb7303.png](img/33ba193a24cb7303.png)
 
-Naquele exercício, colocamos chamadas de função `animate` em um `requestAnimationFrame`; o que certamente ajudou, mas não eliminou totalmente o problema. 
+Naquele exercício, colocamos chamadas de função `animate` em um `requestAnimationFrame`; o que certamente ajudou, mas não eliminou totalmente o problema.
 
 Você se lembra que, em nossa discussão anterior (e em sua pesquisa em [Acionadores CSS](http://csstriggers.com/)), vimos que o uso de propriedades específicas causa a execução de determinadas partes do pipeline de renderização. Vamos examinar `animate` novamente.
 
@@ -428,7 +428,7 @@ function animate () {
 }
 ```
 
-Perto do fim da função, a propriedade `left` é definida. Isso faz com que o navegador execute o layout. Logo depois, a propriedade `style` é definida. Isso faz com que o navegador execute o recálculo de estilos. Como sabemos, se isso ocorrer mais de uma vez em um quadro, causará um layout síncrono forçado. E isso acontece várias vezes nessa função. 
+Perto do fim da função, a propriedade `left` é definida. Isso faz com que o navegador execute o layout. Logo depois, a propriedade `style` é definida. Isso faz com que o navegador execute o recálculo de estilos. Como sabemos, se isso ocorrer mais de uma vez em um quadro, causará um layout síncrono forçado. E isso acontece várias vezes nessa função.
 
 A função `animate` está dentro da função `showStory` e de sua função irmã, `hideStory`. Ambas atualizam as mesmas propriedades e causam um problema de layout síncrono forçado.
 
@@ -463,7 +463,7 @@ Como vimos anteriormente neste codelab, algumas vezes a melhor correção de có
 }
 ```
 
-A primeira coisa a observar na classe `.story-details` é que definimos a propriedade `left` a 100%. Qualquer que seja a largura da tela, essa configuração empurrará o elemento da matéria para a direta, completamente fora da página visível, o que na realidade significa que o elemento ficará oculto. 
+A primeira coisa a observar na classe `.story-details` é que definimos a propriedade `left` a 100%. Qualquer que seja a largura da tela, essa configuração empurrará o elemento da matéria para a direta, completamente fora da página visível, o que na realidade significa que o elemento ficará oculto.
 
 Em seguida, nas classes `.story-details.visible` e `.story-details.hidden`, definimos um `transform` em cada uma delas para forçar a posição X (horizontal) para -100vw (*largura da janela de visualização*) e 0, respectivamente. Ao serem aplicadas, essas classes deslocarão o conteúdo da matéria para visualização ou de volta à sua posição original, fora da tela.
 
@@ -492,7 +492,7 @@ Tudo isso deve gerar benefícios consideráveis no desempenho de deslizamento do
 
 ![5543cf34c10a914b.png](img/5543cf34c10a914b.png)
 
-A execução do aplicativo deve estar muito melhor. Todos os quadros estão agora bem abaixo da linha de 60 fps e os avisos de layout síncrono forçado desapareceram. O melhor de tudo é que não precisamos mais usar o JavaScript para executar a animação de deslizamento. 
+A execução do aplicativo deve estar muito melhor. Todos os quadros estão agora bem abaixo da linha de 60 fps e os avisos de layout síncrono forçado desapareceram. O melhor de tudo é que não precisamos mais usar o JavaScript para executar a animação de deslizamento.
 
 O nosso trabalho de aprimoramento básico de desempenho está concluído.
 

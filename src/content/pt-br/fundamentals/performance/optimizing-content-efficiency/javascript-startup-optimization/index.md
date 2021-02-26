@@ -63,7 +63,7 @@ Wi-Fi pública, mas na realidade estar conectado a um ponto de acesso de rede m�
       com a [cobertura de código
       do DevTools](/web/updates/2017/04/devtools-release-notes#coverage).
     * Use
-      [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+      [babel-preset-env](https://github.com/GoogleChrome/puppeteer/blob/main/packages/babel-preset-env)
       e browserlist para evitar transcompilar recursos que já existem em navegadores modernos.
       Para desenvolvedores avançados, a [análise cuidadosa dos pacotes de
       webpack](https://github.com/webpack-contrib/webpack-bundle-analyzer) talvez seja útil

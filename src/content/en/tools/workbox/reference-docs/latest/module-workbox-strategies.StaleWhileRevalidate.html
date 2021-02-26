@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>6.0.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
             <p>An implementation of a
               <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate">stale-while-revalidate</a>
@@ -55,6 +55,7 @@
                         <p>options</p>
                       </td>
                       <td>
+                        <p class="details-table-optional">Optional</p>
                         <p class="details-table-types">Object</p>
                         <p>Values in <code>options</code> have the following properties:</p>
                         <table class="function param responsive">
@@ -69,6 +70,7 @@
                                 <p>cacheName</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">string</p>
                                 <p>Cache name to store and retrieve
                                   requests. Defaults to cache names provided by
@@ -80,6 +82,7 @@
                                 <p>plugins</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Array of Object</p>
                                 <p><a href="/web/tools/workbox/guides/using-plugins">Plugins</a>
                                   to use in conjunction with this caching strategy.</p>
@@ -90,10 +93,12 @@
                                 <p>fetchOptions</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Object</p>
                                 <p>Values passed along to the
                                   <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters"><code>init</code></a>
-                                  of all fetch() requests made by this strategy.</p>
+                                  of <a href="https://github.com/GoogleChrome/workbox/issues/1796">non-navigation</a>
+                                  <code>fetch()</code> requests made by this strategy.</p>
                               </td>
                             </tr>
                             <tr>
@@ -101,6 +106,7 @@
                                 <p>matchOptions</p>
                               </td>
                               <td>
+                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Object</p>
                                 <p><a href="https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions"><code>CacheQueryOptions</code></a></p>
                               </td>

@@ -28,7 +28,7 @@ JavaScript で次のコード行を実行するとします。
 
 
     console.log("Node count:", a.childNodes.length, "and the current time is:", Date.now());
-    
+
 
 この場合、コンソールに次のように出力されます。
 ![複数の値のログ出力](images/console-write-log-multiple.png)
@@ -48,7 +48,7 @@ JavaScript で次のコード行を実行するとします。
 
 終わったら単に [`console.groupEnd()`](./console-reference#consolegroupend) を呼び出すと、グループ化が終了します。
 
-入力例：
+入力例:
 
 
     var user = "jsmith", authenticated = false;
@@ -59,7 +59,7 @@ JavaScript で次のコード行を実行するとします。
         console.log("User '%s' not authenticated.", user)
     }
     console.groupEnd();
-    
+
 
 出力例:
 ![コンソールでの簡単なグループ出力](images/console-write-group.png)
@@ -87,7 +87,7 @@ JavaScript で次のコード行を実行するとします。
     // End top-level group
     console.groupEnd();
     console.log("A group-less log trace.");
-    
+
 
 コンソールにおけるネストされたグループの出力は次のとおりです。
 ![コンソールでの簡単なグループ出力](images/console-write-nestedgroup.png)
@@ -102,7 +102,7 @@ JavaScript で次のコード行を実行するとします。
         ...
     }
     console.groupEnd();
-    
+
 
 groupCollapsed() の出力:
 ![最初は折りたたまれた状態のグループ](images/console-write-groupcollapsed.png)
@@ -120,7 +120,7 @@ groupCollapsed() の出力:
         console.error("Error: %s (%i)", "Server is  not responding",500);
     }
     connectToServer();
-    
+
 
 上記のように入力すると、出力結果は次のようになります。
 
@@ -134,7 +134,7 @@ groupCollapsed() の出力:
     if(a.childNodes.length < 3 ) {
         console.warn('Warning! Too few nodes (%d)', a.childNodes.length);
     }
-    
+
 
 上記のように入力すると、出力結果は次のようになります。
 
@@ -150,7 +150,7 @@ groupCollapsed() の出力:
 
 
     console.assert(list.childNodes.length < 500, "Node count is > 500");
-    
+
 
 コンソールにおけるアサーションの失敗の表示:
 ![アサーションの失敗](images/console-write-assert-failed.png)
@@ -180,7 +180,7 @@ groupCollapsed() の出力:
 
 
     console.log("Node count: %d, and the time is %f.", document.childNodes.length, Date.now());
-    
+
 
 上記のコードサンプルの出力:
 ![置換の出力例](images/console-write-log-multiple.png)
@@ -194,7 +194,7 @@ CSS フォーマット指定子を使用すると、コンソールの表示を�
 
 
     console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
-    
+
 
 ログ出力が大きくなり、青色で表示されます。
 
@@ -202,7 +202,7 @@ CSS フォーマット指定子を使用すると、コンソールの表示を�
 
 ### JavaScript オブジェクトとしての DOM 要素のフォーマット
 
-デフォルトでは、DOM 要素は HTML の表現としてコンソールに出力されますが、JavaScript オブジェクトとして DOM 要素にアクセスし、そのプロパティを調査することもできます。そのためには、`%O` 文字列指定子を使用します（上記を参照）。また、`console.dir` を使用しても同じ結果が得られます。 
+デフォルトでは、DOM 要素は HTML の表現としてコンソールに出力されますが、JavaScript オブジェクトとして DOM 要素にアクセスし、そのプロパティを調査することもできます。そのためには、`%O` 文字列指定子を使用します（上記を参照）。また、`console.dir` を使用しても同じ結果が得られます。
 
 ![dir() を使用した要素のログ出力](images/dir-element.png)
 

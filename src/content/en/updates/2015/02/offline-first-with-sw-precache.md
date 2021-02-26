@@ -22,7 +22,7 @@ will rely on service workers, and following the
 [release of Chrome 40](https://blog.chromium.org/2014/12/chrome-40-beta-powerful-offline-and.html),
 service worker-based caching is available to use today. If you’ve wanted to add service worker-powered
 offline support to your sites, but weren’t sure how to get started, the
-<strong><code><a href="https://github.com/jeffposnick/sw-precache">sw-precache</a></code></strong>
+<strong><code><a href="https://github.com/GoogleChromeLabs/sw-precache">sw-precache</a></code></strong>
 module is for you! <code>sw-precache</code> hooks into your existing <code>node</code>-based build
 process (e.g. <code><a href="https://gulpjs.com/">Gulp</a></code> or
 <code><a href="https://gruntjs.com/">Grunt</a></code>) and generates a list of versioned resources,
@@ -83,14 +83,12 @@ total precache size as part of the task output:
 
 
 There’s a lot more information at the
-[GitHub project page](https://github.com/jeffposnick/sw-precache), including a demo project with
-<code><a href="https://github.com/jeffposnick/sw-precache/blob/master/demo/gulpfile.js">gulpfile.js</a></code> and
-<code><a href="https://github.com/jeffposnick/sw-precache/blob/master/demo/Gruntfile.js">Gruntfile.js</a></code>
+[GitHub project page](https://github.com/GoogleChromeLabs/sw-precache), including a demo project with
+<code><a href="https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/gulpfile.js">gulpfile.js</a></code> and
+<code><a href="https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/Gruntfile.js">Gruntfile.js</a></code>
 samples, and a
-[script](https://github.com/jeffposnick/sw-precache/blob/master/demo/app/js/service-worker-registration.js)
+[script](https://github.com/GoogleChromeLabs/sw-precache/blob/master/demo/app/js/service-worker-registration.js)
 you can use to register the generated service worker. If you’d like to see it
 in action, just check out the recently launched
 [Google I/O 2015 web app](https://events.google.com/io2015/){: .external }—thanks (in part) to
 <code>sw-precache</code>, you can browse it at your leisure, online or off.
-
-

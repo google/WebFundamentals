@@ -13,7 +13,7 @@ description:优化关键渲染路径是指优先显示与当前用户操作有�
 _优化关键渲染路径_是指优先显示与当前用户操作有关的内容。
 
 
-要提供快速的网络体验，浏览器需要做许多工作。这类工作大多数是我们这些网络开发者看不到的：我们编写标记，屏幕上就会显示出漂亮的页面。
+要提供快速的网络体验，浏览器需要做许多工作。这类工作大多数是我们这些网络开发者看不到的: 我们编写标记，屏幕上就会显示出漂亮的页面。
 
 但浏览器到底是如何使用我们的 HTML、CSS 和 JavaScript 在屏幕上渲染像素的呢？
 
@@ -32,7 +32,7 @@ _优化关键渲染路径_是指优先显示与当前用户操作有关的内容
 
 <a href="constructing-the-object-model" class="gc-analytics-event"
     data-category="CRP" data-label="Next / Constructing the Object Model">
-  <button>下一课：构建对象模型</button>
+  <button>下一课: 构建对象模型</button>
 </a>
 
 {% include "web/_shared/udacity/ud884.html" %}

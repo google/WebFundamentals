@@ -65,7 +65,7 @@ Android Emulator 标配 Android SDK，您需要从<a href="http://developer.andr
 </figure>
 
 要安装
-Chromium Content Shell for Android，请保持模拟器运行并在命令提示符处运行以下命令：
+Chromium Content Shell for Android，请保持模拟器运行并在命令提示符处运行以下命令:
 
     git clone https://github.com/PaulKinlan/chromium-android-installer.git
     chmod u+x ./chromium-android-installer/\*.sh
@@ -85,7 +85,7 @@ Chromium Content Shell for Android，请保持模拟器运行并在命令提示�
 
 从 <a href="https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/">https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/</a> 下载合适的 .apk 文件。
 
-从这里，您可以使用以下命令将文件安装到打开的模拟器或连接的 Android 设备上：
+从这里，您可以使用以下命令将文件安装到打开的模拟器或连接的 Android 设备上:
 
     adb install &lt;path to APK&gt;/fennec-XX.X.XX.android-arm.apk
 
@@ -97,7 +97,7 @@ Chromium Content Shell for Android，请保持模拟器运行并在命令提示�
 
 完成后，您可以通过 [Apple 的文档](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html)学习如何使用模拟器。
 
-注：为了避免在每次想要使用 iOS 模拟器时都要打开 Xcode，请打开 Xcode，然后右键点击停靠栏中的 iOS Simulator 图标并选择 `Keep in Dock`。 现在，您可以在需要时随时点击此图标。
+注: 为了避免在每次想要使用 iOS 模拟器时都要打开 Xcode，请打开 Xcode，然后右键点击停靠栏中的 iOS Simulator 图标并选择 `Keep in Dock`。 现在，您可以在需要时随时点击此图标。
 
 ### Modern.IE
 

@@ -5,13 +5,13 @@ description:Payment Request API 用于在网上实现快速简便的支付。
 {# wf_published_on:2016-07-25 #}
 {# wf_updated_on:2016-12-06 #}
 
-# Payment Request API：集成指南 {: .page-title }
+# Payment Request API: 集成指南 {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/zkoch.html" %}
 
-Dogfood：`PaymentRequest` 仍处于开发阶段。虽然我们认为其稳定性足以满足实现的要求，但可能仍需作出改动。
+Dogfood: `PaymentRequest` 仍处于开发阶段。虽然我们认为其稳定性足以满足实现的要求，但可能仍需作出改动。
 我们会持续更新本页，以时刻反映 API 的最新状况（[M56 变更](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#)）。在此期间，为让您免于受到可能不具有向后兼容性的 API 变更的影响，我们提供了可嵌入网站的 [shim](https://storage.googleapis.com/prshim/v1/payment-shim.js)。这个 shim 可平息两个主流 Chrome 版本的任何 API 差异。
 
 
@@ -30,7 +30,7 @@ Dogfood：`PaymentRequest` 仍处于开发阶段。虽然我们认为其稳定�
 
 ## Payment Request API 简介 {: #introducing }
 
-Payment Request API 是一个旨在*消灭结账表单*的系统。它显著改进了购物流程期间的用户工作流，为用户提供更一致的体验，并让电商公司能够轻松地利用各种完全不同的支付方式。Payment Request API 不是一种新的支付方式，也不与支付处理机构直接整合；它是一种旨在实现以下目标的处理层：
+Payment Request API 是一个旨在*消灭结账表单*的系统。它显著改进了购物流程期间的用户工作流，为用户提供更一致的体验，并让电商公司能够轻松地利用各种完全不同的支付方式。Payment Request API 不是一种新的支付方式，也不与支付处理机构直接整合；它是一种旨在实现以下目标的处理层:
 
 * 让浏览器充当商家、用户和支付处理机构的中介
 * 尽可能标准化支付通信流程
@@ -48,7 +48,7 @@ Payment Request API 是一种开放式的跨浏览器标准，可以取代传统
 
 *支付交易流程*
 
-流程一开始，商家网站首先创建新的 `PaymentRequest`，并将购买所需的全部信息传递给浏览器：应支付的金额、期望使用的货币，以及网站接受的支付方式。浏览器确定网站所接受的支付方式和用户在目标设备上安装的支付方式之间的兼容性。
+流程一开始，商家网站首先创建新的 `PaymentRequest`，并将购买所需的全部信息传递给浏览器: 应支付的金额、期望使用的货币，以及网站接受的支付方式。浏览器确定网站所接受的支付方式和用户在目标设备上安装的支付方式之间的兼容性。
 
 <div class="attempt-right">
   <figure>
@@ -63,7 +63,7 @@ Payment Request API 是一种开放式的跨浏览器标准，可以取代传统
 Payment Request 也可以扩展为返回额外信息，例如收货地址和选项、付款人电子邮件和电话等。这样，无需要向用户显示结账表单，您即可获得完成支付所需的全部信息。
 
 
-新流程有三重好处：从用户角度看，请求、授权、支付和结果等以往所有冗长的交互现在可一步完成；从网站角度看，只需调用一次 JavaScript API；从支付方式角度看，流程没有发生任何变化。
+新流程有三重好处: 从用户角度看，请求、授权、支付和结果等以往所有冗长的交互现在可一步完成；从网站角度看，只需调用一次 JavaScript API；从支付方式角度看，流程没有发生任何变化。
 
 <div style="clear:both;"></div>
 
@@ -97,7 +97,7 @@ Payment Request 也可以扩展为返回额外信息，例如收货地址和选�
 
 `methodData` 参数包含支持的支付方式列表，以及有关支付方式的额外信息（如相关）。此序列含有 `PaymentMethodData` 字典，其中包括与应用预期接受的支付方式相关的标准标识符，以及任何支付方式的特定数据。如需了解更多详情，请参见 [Payment Request API 架构](https://w3c.github.io/browser-payment-api/specs/architecture.html)。
 
-目前，`PaymentRequest` 在 Chrome 中仅支持以下标准信用卡：“`amex`”、“`diners`”、“`discover`”、“`jcb`”、“`maestro`”、“`mastercard`”、“`unionpay`”和“`visa`”。
+目前，`PaymentRequest` 在 Chrome 中仅支持以下标准信用卡: “`amex`”、“`diners`”、“`discover`”、“`jcb`”、“`maestro`”、“`mastercard`”、“`unionpay`”和“`visa`”。
 
 
     var methodData = [
@@ -111,7 +111,7 @@ Payment Request 也可以扩展为返回额外信息，例如收货地址和选�
 
 #### details 参数 {: #details-parameter }
 
-`details` 参数包含有关交易的信息。有两个主要元素：total，反映要支付的总额和要使用的货币；可选的 `displayItems` 集，显示最终金额包含哪些分项。此参数并非用作明细项目列表，而是订单主要组成部分的摘要：总价、折扣、税、运费等。
+`details` 参数包含有关交易的信息。有两个主要元素: total，反映要支付的总额和要使用的货币；可选的 `displayItems` 集，显示最终金额包含哪些分项。此参数并非用作明细项目列表，而是订单主要组成部分的摘要: 总价、折扣、税、运费等。
 
 <div class="attempt-right">
   <figure>
@@ -208,7 +208,7 @@ Payment Request 也可以扩展为返回额外信息，例如收货地址和选�
 
 <table class="properties responsive">
 <tr>
-  <th colspan="2"><code>PaymentResponse</code> 具有下列字段：</th>
+  <th colspan="2"><code>PaymentResponse</code> 具有下列字段: </th>
 </tr>
 <tr>
   <td><code>methodName</code></td>
@@ -241,7 +241,7 @@ Payment Request 也可以扩展为返回额外信息，例如收货地址和选�
 </table>
 
 
-对于信用卡付款，响应为标准格式。对于非信用卡付款（例如 Android Pay），响应将由支付服务商提供文档说明。信用卡响应包含下列字典：
+对于信用卡付款，响应为标准格式。对于非信用卡付款（例如 Android Pay），响应将由支付服务商提供文档说明。信用卡响应包含下列字典:
 
 `cardholderName`
 `cardNumber`

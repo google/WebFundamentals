@@ -51,7 +51,7 @@ import &#x27;./_version.js&#x27;;
 const createOnSyncCallback &#x3D; (config) &#x3D;&gt; {
     return async ({ queue }) &#x3D;&gt; {
         let entry;
-        while (entry &#x3D; await queue.shiftRequest()) {
+        while ((entry &#x3D; await queue.shiftRequest())) {
             const { request, timestamp } &#x3D; entry;
             const url &#x3D; new URL(request.url);
             try {
