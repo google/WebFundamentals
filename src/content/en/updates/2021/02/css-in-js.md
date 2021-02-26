@@ -57,7 +57,7 @@ Let’s dive into the details of Styles editing works in DevTools.
 
 ## Style editing mechanism in DevTools
 
-![Style editing mechanism in DevTools](/web/updates/images/2021/02/css-in-js/mechanism.png)
+![Style editing mechanism in DevTools](/web/updates/images/2021/02/css-in-js/mechanism.svg)
 
 When you select an element in DevTools, the **Styles** pane is shown. The **Styles** pane issues a CDP command called [CSS.getMatchedStylesForNode](https://chromedevtools.github.io/devtools-protocol/tot/CSS/#method-getMatchedStylesForNode) to get CSS rules that apply to the element. CDP stands for Chrome DevTools Protocol and it’s an API that allows DevTools frontend to get additional information about the inspected page.
 
