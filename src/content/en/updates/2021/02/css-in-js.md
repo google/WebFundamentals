@@ -20,7 +20,7 @@ This article talks about CSS-in-JS support in DevTools that landed a year ago an
 ## What is CSS-in-JS?
 The definition of CSS-in-JS is rather vague. In a broad sense, it’s an approach for managing CSS code using JavaScript. For example, it could mean that the CSS content is defined using JavaScript and the final CSS output is generated on the fly by the app. 
 
-In the context of DevTools, CSS-in-JS means that the CSS content is injected into the page using [CSSOM APIs](https://developers.google.com/web/updates/2018/03/cssom). Regular CSS is injected using `<style>` or `<link>` elements, and it has a static source (e.g. a DOM node or a network resource). In contrast, CSS-in-JS often does not have a static source. A special case here is that the content of a `<style>` element can be updated using CSSOM API, causing the source to become out of sync with the actual CSS stylesheet.
+In the context of DevTools, CSS-in-JS means that the CSS content is injected into the page using [CSSOM APIs](/web/updates/2018/03/cssom). Regular CSS is injected using `<style>` or `<link>` elements, and it has a static source (e.g. a DOM node or a network resource). In contrast, CSS-in-JS often does not have a static source. A special case here is that the content of a `<style>` element can be updated using CSSOM API, causing the source to become out of sync with the actual CSS stylesheet.
 
 If you use any CSS-in-JS library (e.g. [styled-component](https://github.com/styled-components/styled-components), [Emotion](https://emotion.sh/), [JSS](https://cssinjs.org/)),  the library might inject styles using CSSOM APIs under the hood depending on the mode of development and the browser. 
 
@@ -34,7 +34,7 @@ stylesheet.replaceSync('.some { color: blue; }');
 stylesheet.insertRule('.some { color: green; }'); 
 ```
 
-You can [create a completely new stylesheet](https://developers.google.com/web/updates/2019/02/constructable-stylesheets) as well:
+You can [create a completely new stylesheet](/web/updates/2019/02/constructable-stylesheets) as well:
 
 ```js
 // Create a completely new stylesheet
@@ -51,7 +51,7 @@ In DevTools, the most commonly used feature when dealing with CSS is the **Style
 
 <video src="/web/updates/images/2021/02/css-in-js/css-edit.mp4" alt="Edit CSS" style="max-width:100%;" autoplay loop muted></video>
 
-Before last year, the support for CSS rules modified using CSSOM APIs was rather limited: **you could only see the applied rules but could not edit them.** The main goal we had last year was to allow editing of CSS-in-JS rules using the Styles pane. Sometimes we also call CSS-in-JS styles [“constructed”](https://developers.google.com/web/updates/2019/02/constructable-stylesheets) to indicate that they were constructed using Web APIs.
+Before last year, the support for CSS rules modified using CSSOM APIs was rather limited: **you could only see the applied rules but could not edit them.** The main goal we had last year was to allow editing of CSS-in-JS rules using the Styles pane. Sometimes we also call CSS-in-JS styles [“constructed”](/web/updates/2019/02/constructable-stylesheets) to indicate that they were constructed using Web APIs.
 
 Let’s dive into the details of Styles editing works in DevTools.
 
