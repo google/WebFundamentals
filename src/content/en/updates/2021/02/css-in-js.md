@@ -15,7 +15,7 @@ description: How we support CSS-in-JS in DevTools and how it is different from r
 
 <<../../_shared/devtools-research.md>>
 
-This article talks about CSS-in-JS support in DevTools that landed a year ago and, in general, what we mean by CSS-in-JS and how it’s different from regular CSS that has been supported by DevTools for a long time.
+This article talks about CSS-in-JS support in DevTools that landed since Chrome 85 and, in general, what we mean by CSS-in-JS and how it’s different from regular CSS that has been supported by DevTools for a long time.
 
 ## What is CSS-in-JS?
 The definition of CSS-in-JS is rather vague. In a broad sense, it’s an approach for managing CSS code using JavaScript. For example, it could mean that the CSS content is defined using JavaScript and the final CSS output is generated on the fly by the app. 
