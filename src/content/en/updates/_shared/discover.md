@@ -2,6 +2,24 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 90 {: #discover90 .hide-from-toc }
+* [New CSS flexbox debugging tools](/web/updates/2021/02/devtools#flexbox)
+* [New Core Web Vitals overlay](/web/updates/2021/02/devtools#cwv)
+* [Moved issue count to the Console status bar](/web/updates/2021/02/devtools#issue-count)
+* [Report Trusted Web Activity issues](/web/updates/2021/02/devtools#twa)
+* [Format strings as (valid) JavaScript string literals in the Console](/web/updates/2021/02/devtools#double-quotes)
+* [New Trust Tokens pane in the Application panel](/web/updates/2021/02/devtools#trust-token-pane)
+* [Emulate the CSS color-gamut media feature](/web/updates/2021/02/devtools#css-gamut)
+* [Improved Progressive Web Apps tooling](/web/updates/2021/02/devtools#pwa)
+* [New `Remote Address Space` column in the Network panel](/web/updates/2021/02/devtools#remote-address-space)
+* [Performance improvements](/web/updates/2021/02/devtools#perf)
+* [Display allowed/disallowed features in the Frame details view](/web/updates/2021/02/devtools#permission-policy)
+* [New `SameParty` column in the Cookies pane](/web/updates/2021/02/devtools#)
+* [Deprecated non-standard `fn.displayName` support](/web/updates/2021/02/devtools#display-name)
+* [Deprecation of `Don't show Chrome Data Saver warning` in the Settings menu](/web/updates/2021/02/devtools#data-saver-warning)
+* [[Experimental] Automatic low-contrast issue reporting in the Issues tab](/web/updates/2021/02/devtools#low-contrast)
+* [[Experimental] Full accessibility tree view in the Elements panel](/web/updates/2021/02/devtools#accesibility-tree)
+
 ### Chrome 89 {: #discover89 .hide-from-toc }
 
 * [Debugging support for Trusted Types violations](/web/updates/2021/01/devtools#trusted-types)
