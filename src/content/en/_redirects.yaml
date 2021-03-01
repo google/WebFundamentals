@@ -204,6 +204,9 @@ redirects:
 - from: /web/updates/2019/02/trusted-types
   to: https://web.dev/trusted-types/
 
+- from: /web/updates/2019/02/intersectionobserver-v2
+  to: https://web.dev/intersectionobserver-v2/
+
 - from: /web/updates/2019/03/prefers-reduced-motion
   to: https://web.dev/prefers-reduced-motion/
 
