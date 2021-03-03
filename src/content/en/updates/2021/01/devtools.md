@@ -337,7 +337,7 @@ If you ever want to improve an issue message, go to the **Issues** tab from the 
 
 ## Dropped frames in the Performance panel {: #dropped-frames }
 
-When [analyzing load performance in the Performance panel](/chrome-devtools/evaluate-performance/reference#record-load), the **Frames** section now marks dropped frames as red. Hover on it to find out the frame rate.
+When [analyzing load performance in the Performance panel](/web/tools/chrome-devtools/evaluate-performance/reference#record-load), the **Frames** section now marks dropped frames as red. Hover on it to find out the frame rate.
 
 ![Dropped frames](/web/updates/images/2021/01/devtools/dropped-frames.png)
 
