@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-recipes.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2021-02-11 #}
+{# wf_updated_on: 2021-03-03 #}
 {# wf_published_on: 2020-11-13 #}
 
 # Workbox Recipes {: .page-title }
@@ -75,7 +75,7 @@ setCatchHandler(handler);
 
 ### Warm strategy cache
 
-The warm strategy cache recipe allows you to load provided URLs into your cache during the service worker's `install` phase, caching them with the options of the provided [strategy](web/tools/workbox/modules/workbox-strategies). This can be used as an alternative to [precaching](web/tools/workbox/modules/workbox-precaching) if you know the specific URLs you'd like to cache, want to warm the cache of a route, or similar places where you'd like cache URLs during installation.
+The warm strategy cache recipe allows you to load provided URLs into your cache during the service worker's `install` phase, caching them with the options of the provided [strategy](/web/tools/workbox/modules/workbox-strategies). This can be used as an alternative to [precaching](/web/tools/workbox/modules/workbox-precaching) if you know the specific URLs you'd like to cache, want to warm the cache of a route, or similar places where you'd like cache URLs during installation.
 
 See the [warm strategy cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~warmStrategyCache) for a list of all configuration options.
 
@@ -116,7 +116,7 @@ self.addEventListener('install', event => {
 
 ### Page cache
 
-The page cache recipe allows your service worker to respond to a request for an HTML page (through URL navigation) with a [network first](web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache) caching strategy, optimized to, ideally, allow for the cache fallback to arrive quick enough for for a [largest contentful paint](https://web.dev/vitals/) score of less than 4.0 seconds.
+The page cache recipe allows your service worker to respond to a request for an HTML page (through URL navigation) with a [network first](/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache) caching strategy, optimized to, ideally, allow for the cache fallback to arrive quick enough for for a [largest contentful paint](https://web.dev/vitals/) score of less than 4.0 seconds.
 
 This recipe, by default, assumes the network timeout should be 3 seconds and supports [cache warming](#warm_strategy_cache) through the `warmCache` option. See the [page cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~pageCache) for a list of all configuration options.
 
@@ -300,7 +300,7 @@ registerRoute(
 
 ## Quick usage
 
-Combining all of the recipes together will yield a service worker that responds to page requests with a [network first](web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache) caching strategy, respond to CSS, JavaScript, and Web Worker requests with a [stale-while-revalidate](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate) strategy, respond to image requests with a [cache first](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) strategy, properly cache Google Fonts, and provide an offline fallback for page requests. This can all be done with the following:
+Combining all of the recipes together will yield a service worker that responds to page requests with a [network first](/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache) caching strategy, respond to CSS, JavaScript, and Web Worker requests with a [stale-while-revalidate](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate) strategy, respond to image requests with a [cache first](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) strategy, properly cache Google Fonts, and provide an offline fallback for page requests. This can all be done with the following:
 
 ```js
 import {
