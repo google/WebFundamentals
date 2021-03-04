@@ -430,11 +430,6 @@ redirects:
 - from: /web/updates/2021/01/nic88
   to: https://developer.chrome.com/blog/new-in-chrome-88/
 
-## Redirects for Web-on-Android content migrated to DCC
-
-- from: /web/android/...
-  to: https://developer.chrome.com/docs/android/
-
 ## TWA Docs
 - from: /web/android/trusted-web-activity
   to: https://developer.chrome.com/docs/android/trusted-web-activity/overview/
@@ -482,3 +477,7 @@ redirects:
 
 - from: /web/android/custom-tabs/headers
   to: https://developer.chrome.com/docs/android/custom-tabs/headers/
+
+## Redirects for Web-on-Android content migrated to DCC
+- from: /web/android/...
+  to: https://developer.chrome.com/docs/android/
