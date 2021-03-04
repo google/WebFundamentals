@@ -432,7 +432,7 @@ redirects:
 
 ## Redirects for Web-on-Android content migrated to DCC
 
-- from: /web/android
+- from: /web/android/...
   to: https://developer.chrome.com/docs/android/
 
 ## TWA Docs
