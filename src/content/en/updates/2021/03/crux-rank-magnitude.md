@@ -13,9 +13,9 @@ description: Adding Rank Magnitude to the CrUX Report in BigQuery.
 {% include "web/_shared/contributors/johannes.html" %}
 
 Starting with the [February 2021
-dataset](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/changelog#202101),
+dataset](/web/tools/chrome-user-experience-report/bigquery/changelog#202101),
 we’re adding an experimental metric to the [CrUX report in
-BigQuery](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/getting-started)
+BigQuery](/web/tools/chrome-user-experience-report/bigquery/getting-started)
 which distinguishes the popularity of origins by orders of magnitude: The top 1k
 origins, top 10k, top 100k, top 1M, ... Let’s see how this looks in practice:
 
