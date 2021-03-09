@@ -938,6 +938,19 @@ katiehempenius:
   twitter: katiehempenius
   email: khempenius@google.com
 
+johannes:
+  name:
+    given: Johannes
+    family: Henkel
+  github: powdercloud
+  org:
+    name: Google
+    unit: Software Engineer
+  country: US
+  email: johannes@google.com
+  description:
+    en: Software Engineer working on the Chrome User Experience Report at Google.
+
 jihyerish:
   name:
     given: Jihye
@@ -2341,16 +2354,3 @@ maciejzasada:
   role:
     - author
   email: maciej@unit9.com
-
-johannes:
-  name:
-    given: Johannes
-    family: Henkel
-  github: powdercloud
-  org:
-    name: Google
-    unit: Software Engineer
-  country: US
-  email: johannes@google.com
-  description:
-    en: Software Engineer working on the Chrome User Experience Report at Google.
