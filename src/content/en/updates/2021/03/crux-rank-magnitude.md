@@ -4,15 +4,20 @@ description: Adding Rank Magnitude to the CrUX Report in BigQuery.
 
 {# wf_updated_on: 2021-03-09 #}
 {# wf_published_on: 2021-03-09 #}
+{# wf_featured_image: /web/updates/2021/03/images/crux-rank-magnitude/crux-rank-magnitude.png #}
 {# wf_featured_snippet: Adding Rank Magnitude to the CrUX Report in BigQuery. #}
 {# wf_blink_components: N/A #}
 
 # Adding Rank Magnitude to the CrUX Report in BigQuery. {: .page-title }
 
-Starting with the February 2021 dataset, we’ve added an experimental metric to
-the CrUX report in BigQuery which distinguishes the popularity of origins by
-orders of magnitude: The top 1k origins, top 10k, top 100k, top 1M, ... Let’s see
-how this looks in practice:
+{% include "web/_shared/contributors/johannes.html" %}
+
+Starting with the [February 2021
+dataset](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/changelog#202101),
+we’re adding an experimental metric to the [CrUX report in
+BigQuery](https://developers.google.com/web/tools/chrome-user-experience-report/bigquery/getting-started)
+which distinguishes the popularity of origins by orders of magnitude: The top 1k
+origins, top 10k, top 100k, top 1M, ... Let’s see how this looks in practice:
 
 ```SQL
 SELECT
