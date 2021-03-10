@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v5 to v5.
 
-{# wf_updated_on: 2020-11-18 #}
+{# wf_updated_on: 2021-03-10 #}
 {# wf_published_on: 2020-09-17 #}
 {# wf_blink_components: N/A #}
 
@@ -28,6 +28,22 @@ Workbox v7.
 
 - The `fbclid` URL query parameter is now ignored by `workbox-precaching` when looking up a
   precached response for a given request.
+
+- The `PrecacheController` constructor now takes in an object with specific properties as its parameter, instead of a string. This object supports the following properties: `cacheName` (serving the same purpose as the string that was passed in to the constructor in v5), `plugins` (replacing the `addPlugins()` method from v5), and `fallbackToNetwork` (replacing the similar option that was passed to `createHandler()` and `createHandlerBoundToURL() in v5).
+
+- The `install()` and `activate()` methods of `PrecacheController` now take exactly one parameter, which should be set to a corresponding `InstallEvent` or `ActivateEvent`, respectively.
+
+- The `addRoute()` method has been removed from `PrecacheController`. In its place, the new `PrecacheRoute` class can be used to create a route that you can then register.
+
+- The `precacheAndRoute()` method has been removed from `PrecacheController`. (It still exists as a static helper method exported by the `workbox-precaching` module.) It was removed because `PrecacheRoute` can be used instead.
+
+- The `createMatchCalback()` method has been removed from `PrecacheController`. The new `PrecacheRoute` can be used instead.
+
+- The `createHandler()` method has been removed from `PrecacheController`. The `strategy` property of the `PrecacheController` object can be used to handle requests instead.
+
+- The `createHandler()` static export has already been removed from the `workbox-precaching` module. In its place, developers should construct a `PrecacheController` instance and use its `strategy` property.
+
+- The route registered with `precacheAndRoute()` is now a "real" route that uses `workbox-routing`'s `Router` class under the hood. This may lead to a different evaluation order of your routes if you interleave calls to `registerRoute()` and `precacheAndRoute()`.
 
 ### workbox-routing
 
