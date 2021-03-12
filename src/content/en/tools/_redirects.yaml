@@ -1,175 +1,13 @@
 redirects:
 
-- from: /web/tools/chrome-devtools/ui
-  to:   /web/tools/chrome-devtools/customize/
-
-- from: /web/tools/chrome-devtools/console/get-started
-  to:   /web/tools/chrome-devtools/console/
-
-- from: /web/tools/chrome-devtools/snippets
-  to:   /web/tools/chrome-devtools/javascript/snippets
-
-- from: /web/tools/chrome-devtools/manage-data/page-resources
-  to:   /web/tools/chrome-devtools/resources/
-
-- from: /web/tools/chrome-devtools/manage-data/cookies
-  to:   /web/tools/chrome-devtools/storage/cookies
-
-- from: /web/tools/chrome-devtools/network-performance/
-  to:   /web/tools/chrome-devtools/network/
-
-- from: /web/tools/chrome-devtools/console/command-line-reference
-  to: /web/tools/chrome-devtools/console/utilities
-
-- from: /web/tools/chrome-devtools/console/console-reference
-  to: /web/tools/chrome-devtools/console/api
-
 - from: /web/tools/polymer-starter-kit/...
   to: https://www.polymer-project.org/2.0/start/toolbox/set-up
-
-- from: /web/tools/chrome-devtools/javascript/add-breakpoints
-  to: /web/tools/chrome-devtools/javascript/breakpoints
-
-- from: /web/tools/chrome-devtools/settings
-  to: /web/tools/chrome-devtools/ui
-
-- from: /web/tools/chrome-devtools/javascript/What%20do%20the%20colors%20mean%20in%20Chrome%20Developer%20Tools%20Scope%20panel
-  to: /web/tools/chrome-devtools/javascript
-
-- from: /web/tools/chrome-devtools/memory-problems/memory-diagnosis
-  to: /web/tools/chrome-devtools/memory-problems/
-
-- from: /web/tools/chrome-devtools/javascript/console/console-ui
-  to: /web/tools/chrome-devtools/console/
-
-- from: /web/tools/chrome-devtools/javascript/command-line/command-line-reference
-  to: /web/tools/chrome-devtools/console/command-line-reference
-
-- from: /web/tools/chrome-devtools/javascript/breakpoints/...
-  to: /web/tools/chrome-devtools/javascript/
-
-- from: /web/tools/chrome-devtools/inspect-styles/basics
-  to: /web/tools/chrome-devtools/inspect-styles/
-
-- from: /web/tools/chrome-devtools/inspect-styles/shortcuts
-  to: /web/tools/chrome-devtools/shortcuts
-
-- from: /web/tools/chrome-devtools/remote-debugging/remote-debugging
-  to: /web/tools/chrome-devtools/remote-debugging/
-
-- from: /web/tools/chrome-devtools/evaluate-performance/rail
-  to: /web/fundamentals/performance/rail
-
-- from: /web/tools/chrome-devtools/evaluate-performance/
-  to: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
-
-- from: /web/tools/chrome-devtools/javascript/
-  to: /web/tools/chrome-devtools/javascript/overview
-
-- from: /web/tools/chrome-devtools/manage-data/
-  to: /web/tools/chrome-devtools/manage-data/local-storage
-
-- from: /web/tools/chrome-devtools/iterate/device-mode/media-queries
-  to: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
-
-- from: /web/tools/chrome-devtools/iterate/inspect-styles/basics
-  to: /web/tools/chrome-devtools/inspect-styles
-
-- from: /web/tools/iterate/inspect-styles/media-queries
-  to: /web/tools/chrome-devtools/device-mode/media-queries
-
-- from: /web/tools/chrome-devtools/beginners/...
-  to: /web/tools/chrome-devtools/
-
-- from: /web/tools/iterate/...
-  to: /web/tools/chrome-devtools/...
-
-- from: /web/tools/javascript/native-development/...
-  to: /web/tools/chrome-devtools/remote-debugging/webviews
-
-- from: /web/tools/javascript/...
-  to: /web/tools/chrome-devtools/javascript/...
 
 - from: /web/tools/material-design-lite/...
   to: http://www.getmdl.io/
 
-- from: /web/tools/profile-performance/...
-  to: /web/tools/chrome-devtools/evaluate-performance/...
-
-- from: /web/tools/setup/device-testing/device-input
-  to: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
-
-- from: /web/tools/setup/device-testing/...
-  to: /web/tools/chrome-devtools/device-mode/
-
-- from: /web/tools/setup/readability/...
-  to: /web/tools/chrome-devtools/javascript/...
-
-- from: /web/tools/setup/remote-debugging/...
-  to: /web/tools/chrome-devtools/remote-debugging/...
-
-- from: /web/tools/setup/workspace/setup-devtools
-  to: /web/tools/chrome-devtools/
-
 - from: /web/tools/setup/workspace/...
   to: /web/tools/setup/
-
-- from: /web/tools/devtools
-  to: /web/tools/chrome-devtools/
-
-- from: /web/tools/chrome-devtools/iterate/...
-  to: /web/tools/chrome-devtools/...
-
-- from: /web/tools/chrome-devtools/debug/breakpoints/...
-  to: /web/tools/chrome-devtools/javascript/...
-
-- from: /web/tools/chrome-devtools/debug/command-line/...
-  to: /web/tools/chrome-devtools/console/...
-
-- from: /web/tools/chrome-devtools/debug/console/console-ui
-  to: /web/tools/chrome-devtools/console/
-
-- from: /web/tools/chrome-devtools/debug/console/...
-  to: /web/tools/chrome-devtools/console/...
-
-- from: /web/tools/chrome-devtools/debug/readability/...
-  to: /web/tools/chrome-devtools/javascript/...
-
-- from: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
-  to: /web/tools/chrome-devtools/remote-debugging/
-
-- from: /web/tools/chrome-devtools/debug/snippets/
-  to: /web/tools/chrome-devtools/javascript/snippets
-
-- from: /web/tools/chrome-devtools/debug/watch-variables/
-  to: /web/tools/chrome-devtools/javascript/watch-variables
-
-- from: /web/tools/chrome-devtools/progressive-web-apps/
-  to: /web/tools/chrome-devtools/progressive-web-apps
-
-- from: /web/tools/chrome-devtools/security
-  to: /web/tools/chrome-devtools/security/
-
-- from: /web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis
-  to: /web/tools/chrome-devtools/memory-problems/
-
-- from: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime
-  to: /web/tools/chrome-devtools/rendering-tools/
-
-- from: /web/tools/chrome-devtools/debug/...
-  to: /web/tools/chrome-devtools/...
-
-- from: /web/tools/chrome-devtools/profile/...
-  to: /web/tools/chrome-devtools/...
-
-- from: /web/tools/chrome-devtools/evaluate-performance/...
-  to: /web/tools/chrome-devtools/...
-
-- from: /web/tools/chrome-devtools/javascript/console/...
-  to: /web/tools/chrome-devtools/console/...
-
-- from: /web/tools/chrome-devtools/network-performance/...
-  to:   /web/tools/chrome-devtools/network/...
 
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
@@ -506,3 +344,98 @@ redirects:
 
 - from: /web/tools/workbox/guides/codelabs/...
   to: /codelabs/workbox-lab
+
+# DevTools
+
+- from: https://developers.google.com/web/updates/2017/04/devtools-release-notes
+  to: /blog/new-in-devtools-59
+
+- from: https://developers.google.com/web/updates/2017/05/devtools-release-notes
+  to: /blog/new-in-devtools-60
+
+- from: https://developers.google.com/web/updates/2017/07/devtools-release-notes
+  to: /blog/new-in-devtools-61
+
+- from: https://developers.google.com/web/updates/2017/08/devtools-release-notes
+  to: /blog/new-in-devtools-62
+
+- from: https://developers.google.com/web/updates/2017/10/devtools-release-notes
+  to: /blog/new-in-devtools-63
+
+- from: https://developers.google.com/web/updates/2017/11/devtools-release-notes
+  to: /blog/new-in-devtools-64
+
+- from: https://developers.google.com/web/updates/2018/01/devtools
+  to: /blog/new-in-devtools-65
+
+- from: https://developers.google.com/web/updates/2018/02/devtools
+  to: /blog/new-in-devtools-66
+
+- from: https://developers.google.com/web/updates/2018/04/devtools
+  to: /blog/new-in-devtools-67
+
+- from: https://developers.google.com/web/updates/2018/05/devtools
+  to: /blog/new-in-devtools-68
+
+- from: https://developers.google.com/web/updates/2018/08/devtools
+  to: /blog/new-in-devtools-70
+
+- from: https://developers.google.com/web/updates/2018/10/devtools
+  to: /blog/new-in-devtools-71
+
+- from: https://developers.google.com/web/updates/2018/11/devtools
+  to: /blog/new-in-devtools-72
+
+- from: https://developers.google.com/web/updates/2019/01/devtools
+  to: /blog/new-in-devtools-73
+
+- from: https://developers.google.com/web/updates/2019/03/devtools
+  to: /blog/new-in-devtools-74
+
+- from: https://developers.google.com/web/updates/2019/04/devtools
+  to: /blog/new-in-devtools-75
+
+- from: https://developers.google.com/web/updates/2019/05/devtools
+  to: /blog/new-in-devtools-76
+
+- from: https://developers.google.com/web/updates/2019/07/devtools
+  to: /blog/new-in-devtools-77
+
+- from: https://developers.google.com/web/updates/2019/09/devtools
+  to: /blog/new-in-devtools-78
+
+- from: https://developers.google.com/web/updates/2019/10/devtools
+  to: /blog/new-in-devtools-79
+
+- from: https://developers.google.com/web/updates/2019/12/devtools
+  to: /blog/new-in-devtools-80
+
+- from: https://developers.google.com/web/updates/2020/01/devtools
+  to: /blog/new-in-devtools-81
+
+- from: https://developers.google.com/web/updates/2020/03/devtools
+  to: /blog/new-in-devtools-83
+
+- from: https://developers.google.com/web/updates/2020/05/devtools
+  to: /blog/new-in-devtools-84
+
+- from: https://developers.google.com/web/updates/2020/06/devtools
+  to: /blog/new-in-devtools-85
+
+- from: https://developers.google.com/web/updates/2020/08/devtools
+  to: /blog/new-in-devtools-86
+
+- from: https://developers.google.com/web/updates/2020/10/devtools
+  to: /blog/new-in-devtools-87
+
+- from: https://developers.google.com/web/updates/2020/11/devtools
+  to: /blog/new-in-devtools-88
+
+- from: https://developers.google.com/web/updates/2021/01/devtools
+  to: /blog/new-in-devtools-89
+
+- from: https://developers.google.com/web/updates/2021/02/devtools
+  to: /blog/new-in-devtools-90
+
+- from: /web/tools/chrome-devtools/...
+  to: https://developer.chrome.com/docs/devtools/...
