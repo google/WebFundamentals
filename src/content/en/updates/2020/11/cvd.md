@@ -19,7 +19,7 @@ This article describes why and how we implemented color vision deficiency simula
 Note: If you prefer watching a presentation over reading articles, then enjoy the video below! If not, skip the video and read on.
 
 <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="LnapsmokM_4" allowfullscreen></iframe>
+  <iframe class="devsite-embedded-youtube-video" data-video-id="34iDTeCNTz4" allowfullscreen></iframe>
 </div>
 
 ## Background: bad color contrast {: #background }
