@@ -7,6 +7,98 @@ redirects:
 - from: /web/updates/nic
   to: /web/updates/2020/11/nic87
 
+# DevTools
+
+- from: /web/updates/2017/04/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-59
+
+- from: /web/updates/2017/05/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-60
+
+- from: /web/updates/2017/07/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-61
+
+- from: /web/updates/2017/08/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-62
+
+- from: /web/updates/2017/10/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-63
+
+- from: /web/updates/2017/11/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-64
+
+- from: /web/updates/2018/01/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-65
+
+- from: /web/updates/2018/02/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-66
+
+- from: /web/updates/2018/04/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-67
+
+- from: /web/updates/2018/05/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-68
+
+- from: /web/updates/2018/08/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-70
+
+- from: /web/updates/2018/10/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-71
+
+- from: /web/updates/2018/11/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-72
+
+- from: /web/updates/2019/01/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-73
+
+- from: /web/updates/2019/03/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-74
+
+- from: /web/updates/2019/04/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-75
+
+- from: /web/updates/2019/05/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-76
+
+- from: /web/updates/2019/07/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-77
+
+- from: /web/updates/2019/09/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-78
+
+- from: /web/updates/2019/10/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-79
+
+- from: /web/updates/2019/12/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-80
+
+- from: /web/updates/2020/01/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-81
+
+- from: /web/updates/2020/03/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-83
+
+- from: /web/updates/2020/05/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-84
+
+- from: /web/updates/2020/06/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-85
+
+- from: /web/updates/2020/08/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-86
+
+- from: /web/updates/2020/10/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-87
+
+- from: /web/updates/2020/11/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-88
+
+- from: /web/updates/2021/01/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-89
+
+- from: /web/updates/2021/02/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-90
+
 # Redirects for TWA content
 
 - from: /web/updates/2019/02/using-twa
@@ -351,3 +443,4 @@ redirects:
 
 - from: /web/updates/chrome-devtools/...
   to: /web/updates/devtools/
+
