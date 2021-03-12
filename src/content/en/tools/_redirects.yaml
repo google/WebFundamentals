@@ -347,5 +347,50 @@ redirects:
 
 # DevTools
 
+- from: /web/tools/chrome-devtools/console/track-exceptions
+  to: https://developer.chrome.com/docs/devtools/console/api/#error
+
+- from: /web/tools/chrome-devtools/network/network-conditions
+  to: https://developer.chrome.com/docs/devtools/network/reference/
+
+- from: /web/tools/chrome-devtools/console/expressions
+  to: https://developer.chrome.com/docs/devtools/console/log/
+
+- from: /web/tools/chrome-devtools/console/track-executions
+  to: https://developer.chrome.com/docs/devtools/console/api/#count
+
+- from: /web/tools/chrome-devtools/javascript/step-code
+  to: https://developer.chrome.com/docs/devtools/javascript/reference/#stepping
+
+- from: /web/tools/chrome-devtools/inspect-styles
+  to: https://developer.chrome.com/docs/devtools/css/
+
+- from: /web/tools/chrome-devtools/network/issues
+  to: https://developer.chrome.com/docs/devtools/network/
+
+- from: /web/tools/chrome-devtools/console/structured-data
+  to: https://developer.chrome.com/docs/devtools/console/log/
+
+- from: /web/tools/chrome-devtools/inspect-styles/animations
+  to: https://developer.chrome.com/docs/devtools/css/animations/
+
+- from: /web/tools/chrome-devtools/console/console-write
+  to: https://developer.chrome.com/docs/devtools/console/api/
+
+- from: /web/tools/chrome-devtools/inspect-styles/edit-dom
+  to: https://developer.chrome.com/docs/devtools/dom/
+
+- from: /web/tools/chrome-devtools/javascript/pretty-print
+  to: https://developer.chrome.com/docs/devtools/javascript/reference/#format
+
+- from: /web/tools/chrome-devtools/console/events
+  to: https://developer.chrome.com/docs/devtools/console/utilities/#monitorevents
+
+- from: /web/tools/chrome-devtools/manage-data/local-storage
+  to: https://developer.chrome.com/docs/devtools/#storage
+
+- from: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+  to: https://developer.chrome.com/docs/devtools/device-mode/#overview
+
 - from: /web/tools/chrome-devtools/...
   to: https://developer.chrome.com/docs/devtools/...

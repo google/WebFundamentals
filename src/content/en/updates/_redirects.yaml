@@ -9,9 +9,6 @@ redirects:
 
 # DevTools
 
-- from: /web/updates/2017/04/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-59
-
 - from: /web/updates/2017/05/devtools-release-notes
   to: https://developer.chrome.com/blog/new-in-devtools-60
 
