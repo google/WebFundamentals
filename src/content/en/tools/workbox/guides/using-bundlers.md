@@ -71,7 +71,7 @@ The [`InjectManifest` plugin](/web/tools/workbox/modules/workbox-webpack-plugin#
 
 ### Rollup setup
 
-[`rollup-plugin-workbox-inject`](https://github.com/chromeos/static-site-scaffold-modules/blob/master/modules/rollup-plugin-workbox-inject/README.md) handles the precache manifest injection step for you, and assumes that you've already configured Rollup to bundle your service worker source file.
+[`rollup-plugin-workbox-inject`](https://github.com/chromeos/static-site-scaffold-modules/blob/main/modules/rollup-plugin-workbox-inject/README.md) handles the precache manifest injection step for you, and assumes that you've already configured Rollup to bundle your service worker source file.
 
 Note: [`rollup-plugin-workbox`](https://github.com/modernweb-dev/web/tree/master/packages/rollup-plugin-workbox#injectmanifest) can perform a similar replacement with a slightly different interface and set of options. Feel free to use either!
 

@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
             <p>Performs efficient precaching of assets.</p>
           </header>
@@ -29,7 +29,7 @@
             <section>
               <h3 id="PrecacheController" class="symbol-name">PrecacheController</h3>
               <p class="type-signature"> new
-                PrecacheController(cacheName)</p>
+                PrecacheController(options)</p>
               <p>Create a new PrecacheController.</p>
               <section>
                 <table class="function param responsive">
@@ -41,13 +41,53 @@
                   <tbody>
                     <tr>
                       <td class="details-table-name">
-                        <p>cacheName</p>
+                        <p>options</p>
                       </td>
                       <td>
                         <p class="details-table-optional">Optional</p>
-                        <p class="details-table-types">string</p>
-                        <p>An optional name for the cache, to override
-                          the default precache name.</p>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>options</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>cacheName</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">string</p>
+                                <p>The cache to use for precaching.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>plugins</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">string</p>
+                                <p>Plugins to use when precaching as well
+                                  as responding to fetch events for precached assets.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>fallbackToNetwork</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">boolean</p>
+                                <p>Whether to attempt to
+                                  get the response from the network if there's a precache miss.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </td>
                     </tr>
                   </tbody>
@@ -58,13 +98,41 @@
             </section>
           </section>
           <section>
+            <h2>Property</h2>
+            <section>
+              <h3 id="strategy" class="symbol-name">strategy</h3>
+              <p class="type-signature"><a href="module-workbox-precaching.PrecacheStrategy.html">module:workbox-precaching.PrecacheStrategy</a></p>
+              <p>The strategy created by this controller andused to cache assets and respond to fetch events.</p>
+              <dl class="dl-compact">
+              </dl>
+            </section>
             <h2>Methods</h2>
             <section>
               <h3 id="activate" class="symbol-name">activate</h3>
-              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
-              <p class="type-signature"> activate()&nbsp;returns&nbsp;Promise containing <a href="module-workbox-precaching.html#.CleanupResult">module:workbox-precaching.CleanupResult</a></p>
+              <p class="type-signature"> activate(event)&nbsp;returns&nbsp;Promise containing <a href="module-workbox-precaching.html#.CleanupResult">module:workbox-precaching.CleanupResult</a></p>
               <p>Deletes assets that are no longer present in the current precache manifest.
                 Call this method from the service worker activate event.</p>
+              <p>Note: this method calls <code>event.waitUntil()</code> for you, so you do not need
+                to call it yourself in your event handlers.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>event</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">ExtendableEvent</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
@@ -97,49 +165,10 @@
               </section>
               <dl class="dl-compact">
               </dl>
-              <h3 id="createHandler" class="symbol-name">createHandler</h3>
-              <p class="type-signature"> createHandler(fallbackToNetwork)&nbsp;returns&nbsp;<a href="module-workbox-routing.html#~handlerCallback">module:workbox-routing~handlerCallback</a></p>
-              <p>Returns a function that can be used within a
-                <a href="module-workbox-routing.Route.html">module:workbox-routing.Route</a> that will find a response for the
-                incoming request against the precache.</p>
-              <p>If for an unexpected reason there is a cache miss for the request,
-                this will fall back to retrieving the <code>Response</code> via <code>fetch()</code> when
-                <code>fallbackToNetwork</code> is <code>true</code>.</p>
-              <section>
-                <table class="function param responsive">
-                  <tr>
-                    <th colspan="2">
-                      <h4>Parameter</h4>
-                    </th>
-                  </tr>
-                  <tbody>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>fallbackToNetwork</p>
-                      </td>
-                      <td>
-                        <p class="details-table-optional">Optional</p>
-                        <p class="details-table-types">boolean</p>
-                        <p>Whether to attempt to get the
-                          response from the network if there's a precache miss.</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-                <dt>Returns</dt>
-                <dd>
-                  <p><code><a href="module-workbox-routing.html#~handlerCallback">module:workbox-routing~handlerCallback</a></code>&nbsp;</p>
-                </dd>
-              </dl>
               <h3 id="createHandlerBoundToURL" class="symbol-name">createHandlerBoundToURL</h3>
-              <p class="type-signature"> createHandlerBoundToURL(url, fallbackToNetwork)&nbsp;returns&nbsp;<a href="module-workbox-routing.html#~handlerCallback">module:workbox-routing~handlerCallback</a></p>
+              <p class="type-signature"> createHandlerBoundToURL(url)&nbsp;returns&nbsp;<a href="module-workbox-routing.html#~handlerCallback">module:workbox-routing~handlerCallback</a></p>
               <p>Returns a function that looks up <code>url</code> in the precache (taking into
                 account revision information), and returns the corresponding <code>Response</code>.</p>
-              <p>If for an unexpected reason there is a cache miss when looking up <code>url</code>,
-                this will fall back to retrieving the <code>Response</code> via <code>fetch()</code> when
-                <code>fallbackToNetwork</code> is <code>true</code>.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -156,17 +185,6 @@
                         <p class="details-table-types">string</p>
                         <p>The precached URL which will be used to lookup the
                           <code>Response</code>.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="details-table-name">
-                        <p>fallbackToNetwork</p>
-                      </td>
-                      <td>
-                        <p class="details-table-optional">Optional</p>
-                        <p class="details-table-types">boolean</p>
-                        <p>Whether to attempt to get the
-                          response from the network if there's a precache miss.</p>
                       </td>
                     </tr>
                   </tbody>
@@ -231,10 +249,11 @@
                 </dd>
               </dl>
               <h3 id="install" class="symbol-name">install</h3>
-              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> install(options)&nbsp;returns&nbsp;Promise containing <a href="module-workbox-precaching.html#.InstallResult">module:workbox-precaching.InstallResult</a></p>
               <p>Precaches new and updated assets. Call this method from the service worker
                 install event.</p>
+              <p>Note: this method calls <code>event.waitUntil()</code> for you, so you do not need
+                to call it yourself in your event handlers.</p>
               <section>
                 <table class="function param responsive">
                   <tr>
@@ -262,20 +281,8 @@
                                 <p>event</p>
                               </td>
                               <td>
-                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Event</p>
-                                <p>The install event (if needed).</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>plugins</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">Array of Object</p>
-                                <p>Plugins to be used for fetching
-                                  and caching during install.</p>
+                                <p>The install event.</p>
                               </td>
                             </tr>
                           </tbody>
@@ -294,7 +301,8 @@
               <h3 id="matchPrecache" class="symbol-name">matchPrecache</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> matchPrecache(request)&nbsp;returns&nbsp;Promise containing (Response or undefined)</p>
-              <p>This acts as a drop-in replacement for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match"><code>cache.match()</code></a>
+              <p>This acts as a drop-in replacement for
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match"><code>cache.match()</code></a>
                 with the following differences:</p>
               <ul>
                 <li>It knows what the name of the precache is, and only checks in that cache.</li>
@@ -331,6 +339,36 @@
                 <dd>
                   <p><code>Promise containing (Response or undefined)</code>&nbsp;</p>
                 </dd>
+              </dl>
+              <h3 id="precache" class="symbol-name">precache</h3>
+              <p class="type-signature"> precache(entries)</p>
+              <p>Adds items to the precache list, removing any duplicates and
+                stores the files in the
+                <a href="module-workbox-core.html#.cacheNames">&quot;precache cache&quot;</a> when the service
+                worker installs.</p>
+              <p>This method can be called multiple times.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>entries</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Array of (Object or string)</p>
+                        <p>Array of entries to precache.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
               </dl>
             </section>
           </section>

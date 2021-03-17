@@ -41,7 +41,7 @@ description:输入处理程序可能是应用出现性能问题的原因，因�
 
 ##  使滚动处理程序去除抖动
 
-上面两个问题的解决方法相同：始终应使下一个 `requestAnimationFrame` 回调的视觉更改去除抖动：
+上面两个问题的解决方法相同: 始终应使下一个 `requestAnimationFrame` 回调的视觉更改去除抖动:
 
 
     function onScroll (evt) {

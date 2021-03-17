@@ -40,6 +40,12 @@ redirects:
 - from: /web/feedback/...
   to: https://web.dev/how-to-file-a-good-bug/
 
+- from: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+  to: https://web.dev/what-is-mixed-content
+
+- from: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+  to: https://web.dev/fixing-mixed-content
+
 - from: /web/fundamentals/performance/resource-prioritization
   to: https://web.dev/fast/#prioritize-resources
 
@@ -115,6 +121,9 @@ redirects:
 - from: /web/fundamentals/performance/optimizing-javascript/code-splitting
   to: https://web.dev/reduce-javascript-payloads-with-code-splitting
 
+- from: /web/fundamentals/instant-and-offline/offline-ux
+  to: https://web.dev/offline-ux-considerations/
+
 ## Redirects for Updates content migrated to web.dev
 
 - from: /web/updates/2011/11/Quota-Management-API-Fast-Facts
@@ -125,6 +134,9 @@ redirects:
 
 - from: /web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
   to: https://web.dev/customize-install/
+
+- from: /web/updates/2015/07/interact-with-ble-devices-on-the-web
+  to: https://web.dev/bluetooth/
 
 - from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
   to: https://web.dev/add-manifest/#splash-screen
@@ -137,6 +149,9 @@ redirects:
 
 - from: /web/updates/2015/10/splashscreen
   to: https://web.dev/add-manifest/#splash-screen
+
+- from: /web/updates/2016/03/access-usb-devices-on-the-web
+  to: https://web.dev/usb/
 
 - from: /web/updates/2016/06/persistent-storage
   to: https://web.dev/persistent-storage/
@@ -158,6 +173,9 @@ redirects:
 
 - from: /web/updates/2017/06/user-centric-performance-metrics
   to: https://web.dev/user-centric-performance-metrics/
+
+- from: /web/updates/2017/09/sensors-for-the-web
+  to: https://web.dev/generic-sensor/
 
 - from: /web/updates/2018/05/dpwa
   to: https://web.dev/progressive-web-apps/
@@ -185,6 +203,9 @@ redirects:
 
 - from: /web/updates/2019/02/trusted-types
   to: https://web.dev/trusted-types/
+
+- from: /web/updates/2019/02/intersectionobserver-v2
+  to: https://web.dev/intersectionobserver-v2/
 
 - from: /web/updates/2019/03/prefers-reduced-motion
   to: https://web.dev/prefers-reduced-motion/
@@ -227,6 +248,27 @@ redirects:
 - from: /web/fundamentals/web-app-manifest/...
   to: https://web.dev/add-manifest/
 
+# Media redirects
+
+- from: /web/fundamentals/media/video
+  to: https://web.dev/video-and-source-tags/
+
+- from: /web/fundamentals/media/manipulating/applications
+  to: https://web.dev/media-application-basics/
+
+- from: /web/fundamentals/media/manipulating/files
+  to: https://web.dev/media/#prepare-media-files-for-the-web
+
+- from: /web/fundamentals/media/manipulating/cheatsheet
+  to: https://web.dev/media-cheat-sheet/
+
+- from: /web/fundamentals/media/fast-playback-with-video-preload
+  to: https://web.dev/fast-playback-with-preload
+
+# Device APIs redirects
+
+- from: /web/fundamentals/native-hardware/build-for-webusb
+  to: https://web.dev/build-for-webusb/
 
 #
 # Other redirects
@@ -234,3 +276,208 @@ redirects:
 
 - from: /web/updates/2016/02/save-data
   to: /web/fundamentals/performance/optimizing-content-efficiency/save-data
+
+
+#
+# Chromium Chronicle Redirects
+#
+
+- from: /web/updates/tags/chromium-chronicle
+  to: https://developer.chrome.com/tags/chromium-chronicle/
+
+- from: /web/updates/2019/04/chromium-chronicle-1
+  to: https://developer.chrome.com/blog/chromium-chronicle-1/
+
+- from: /web/updates/2019/05/chromium-chronicle-2
+  to: https://developer.chrome.com/blog/chromium-chronicle-2/
+
+- from: /web/updates/2019/06/chromium-chronicle-3
+  to: https://developer.chrome.com/blog/chromium-chronicle-3/
+
+- from: /web/updates/2019/07/chromium-chronicle-4
+  to: https://developer.chrome.com/blog/chromium-chronicle-4/
+
+- from: /web/updates/2019/08/chromium-chronicle-5
+  to: https://developer.chrome.com/blog/chromium-chronicle-5/
+
+- from: /web/updates/2019/09/chromium-chronicle-6
+  to: https://developer.chrome.com/blog/chromium-chronicle-6/
+
+- from: /web/updates/2019/10/chromium-chronicle-7
+  to: https://developer.chrome.com/blog/chromium-chronicle-7/
+
+- from: /web/updates/2019/11/chromium-chronicle-8
+  to: https://developer.chrome.com/blog/chromium-chronicle-8/
+
+- from: /web/updates/2019/12/chromium-chronicle-9
+  to: https://developer.chrome.com/blog/chromium-chronicle-9/
+
+- from: /web/updates/2020/02/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-10/
+
+- from: /web/updates/2020/03/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-13/
+
+- from: /web/updates/2020/10/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-14/
+
+- from: /web/updates/2020/11/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-15/
+
+#
+# New in Chrome redirects
+#
+
+- from: /web/updates/2016/10/nic54
+  to: https://developer.chrome.com/blog/new-in-chrome-54/
+
+- from: /web/updates/2016/11/nic55
+  to: https://developer.chrome.com/blog/new-in-chrome-55/
+
+- from: /web/updates/2017/01/nic56
+  to: https://developer.chrome.com/blog/new-in-chrome-56/
+
+- from: /web/updates/2017/03/nic57
+  to: https://developer.chrome.com/blog/new-in-chrome-57/
+
+- from: /web/updates/2017/04/nic58
+  to: https://developer.chrome.com/blog/new-in-chrome-58/
+
+- from: /web/updates/2017/05/nic59
+  to: https://developer.chrome.com/blog/new-in-chrome-59/
+
+- from: /web/updates/2017/07/nic60
+  to: https://developer.chrome.com/blog/new-in-chrome-60/
+
+- from: /web/updates/2017/09/nic61
+  to: https://developer.chrome.com/blog/new-in-chrome-61/
+
+- from: /web/updates/2017/10/nic62
+  to: https://developer.chrome.com/blog/new-in-chrome-62/
+
+- from: /web/updates/2017/12/nic63
+  to: https://developer.chrome.com/blog/new-in-chrome-63/
+
+- from: /web/updates/2018/01/nic64
+  to: https://developer.chrome.com/blog/new-in-chrome-64/
+
+- from: /web/updates/2018/03/nic65
+  to: https://developer.chrome.com/blog/new-in-chrome-65/
+
+- from: /web/updates/2018/04/nic66
+  to: https://developer.chrome.com/blog/new-in-chrome-66/
+
+- from: /web/updates/2018/05/nic67
+  to: https://developer.chrome.com/blog/new-in-chrome-67/
+
+- from: /web/updates/2018/07/nic68
+  to: https://developer.chrome.com/blog/new-in-chrome-68/
+
+- from: /web/updates/2018/09/nic69
+  to: https://developer.chrome.com/blog/new-in-chrome-69/
+
+- from: /web/updates/2018/10/nic70
+  to: https://developer.chrome.com/blog/new-in-chrome-70/
+
+- from: /web/updates/2018/12/nic71
+  to: https://developer.chrome.com/blog/new-in-chrome-71/
+
+- from: /web/updates/2019/01/nic72
+  to: https://developer.chrome.com/blog/new-in-chrome-72/
+
+- from: /web/updates/2019/03/nic73
+  to: https://developer.chrome.com/blog/new-in-chrome-73/
+
+- from: /web/updates/2019/04/nic74
+  to: https://developer.chrome.com/blog/new-in-chrome-74/
+
+- from: /web/updates/2019/06/nic75
+  to: https://developer.chrome.com/blog/new-in-chrome-75/
+
+- from: /web/updates/2019/07/nic76
+  to: https://developer.chrome.com/blog/new-in-chrome-76/
+
+- from: /web/updates/2019/09/nic77
+  to: https://developer.chrome.com/blog/new-in-chrome-77/
+
+- from: /web/updates/2019/10/nic78
+  to: https://developer.chrome.com/blog/new-in-chrome-78/
+
+- from: /web/updates/2019/12/nic79
+  to: https://developer.chrome.com/blog/new-in-chrome-79/
+
+- from: /web/updates/2020/02/nic80
+  to: https://developer.chrome.com/blog/new-in-chrome-80/
+
+- from: /web/updates/2020/04/nic81
+  to: https://developer.chrome.com/blog/new-in-chrome-81/
+
+- from: /web/updates/2020/05/nic83
+  to: https://developer.chrome.com/blog/new-in-chrome-83/
+
+- from: /web/updates/2020/07/nic84
+  to: https://developer.chrome.com/blog/new-in-chrome-84/
+
+- from: /web/updates/2020/08/nic85
+  to: https://developer.chrome.com/blog/new-in-chrome-85/
+
+- from: /web/updates/2020/10/nic86
+  to: https://developer.chrome.com/blog/new-in-chrome-86/
+
+- from: /web/updates/2020/11/nic87
+  to: https://developer.chrome.com/blog/new-in-chrome-87/
+
+- from: /web/updates/2021/01/nic88
+  to: https://developer.chrome.com/blog/new-in-chrome-88/
+
+## TWA Docs
+- from: /web/android/trusted-web-activity
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/overview/
+
+- from: /web/android/trusted-web-activity/quick-start
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/quick-start/
+
+- from: /web/android/trusted-web-activity/integration-guide
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/integration-guide/
+
+- from: /web/android/trusted-web-activity/lay-of-the-land
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/lay-of-the-land/
+
+- from: /web/android/trusted-web-activity/multi-origin
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/multi-origin/
+
+- from: /web/android/trusted-web-activity/query-parameters
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/query-parameters/
+
+- from: /web/android/trusted-web-activity/android-browser-helper-migration
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/android-browser-helper-migration/
+
+- from: /web/android/trusted-web-activity/web-share-target
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/web-share-target/
+
+- from: /web/android/trusted-web-activity/play-billing
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/play-billing/
+
+- from: /web/android/trusted-web-activity/receive-payments-play-billing
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/receive-payments-play-billing/
+
+- from: /web/android/trusted-web-activity/whats-new
+  to: https://developer.chrome.com/docs/android/whats-new/
+
+## CustomTabs Docs
+
+- from: /web/android/custom-tabs
+  to: https://developer.chrome.com/docs/android/custom-tabs/overview/
+
+- from: /web/android/custom-tabs/implementation-guide
+  to: https://developer.chrome.com/docs/android/custom-tabs/integration-guide/
+
+- from: /web/android/custom-tabs/best-practices
+  to: https://developer.chrome.com/docs/android/custom-tabs/best-practices/
+
+- from: /web/android/custom-tabs/headers
+  to: https://developer.chrome.com/docs/android/custom-tabs/headers/
+
+## Redirects for Web-on-Android content migrated to DCC
+- from: /web/android/...
+  to: https://developer.chrome.com/docs/android/

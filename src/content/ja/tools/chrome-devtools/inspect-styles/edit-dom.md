@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools の [Elements] パネルの DOM ツリービューには、現在のウェブページの DOM 構造が表示されます。DOM のアップデートを通じて、ページのコンテンツと構造をライブ編集します。
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 
 # DOM の編集 {: .page-title }
@@ -25,7 +25,7 @@ Chrome DevTools の [Elements] パネルの DOM ツリービューには、現�
 **[Elements] パネル**を使用して、ページ内のすべての要素を 1 つの DOM ツリーで調査します。
 任意の要素を選択して、その要素に適用されているスタイルを調査します。
 
-<video autoplay muted src="animations/inspect-element.mp4">
+<video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
 以下のように、いくつかの方法で要素を調査できます。
@@ -105,7 +105,7 @@ DOM ノード名または属性を編集するには、次のようにします�
 
 終了すると、終了タグが自動的にアップデートされます。
 
-<video autoplay muted src="animations/edit-element-name.mp4">
+<video autoplay muted src="animations-img/edit-element-name.mp4">
 </video>
 
 ###  DOM ノードとその子の HTML としての編集
@@ -123,7 +123,7 @@ DOM ノードとその子を HTML として編集するには、次のように�
 
 ノードを移動するには、ノードをクリックし、長押してドラッグします。
 
-<video autoplay muted src="animations/move-node.mp4">
+<video autoplay muted src="animations-img/move-node.mp4">
 </video>
 
 ##  DOM ノードの削除

@@ -107,8 +107,8 @@ kenjibaheux:
   name:
     given: Kenji
     family: Baheux
-  twitter: KenjiBaheux
-  github: KenjiBaheux
+  twitter: kenjibaheux
+  github: kenjibaheux
   org:
     name: Google
     unit: Chrome
@@ -174,6 +174,20 @@ kaycebasques:
     - author
   description:
     en: Technical Writer, Chrome DevTools & Lighthouse
+
+jobay:
+  name:
+    given: Johan
+    family: Bay
+  org:
+    name: Google
+    unit: Chrome DevTools
+  country: DK
+  role:
+    - author
+  github: johanbay
+  description:
+    en: Software Development Intern working on Puppeteer
 
 beaufortfrancois:
   name:
@@ -288,7 +302,7 @@ mathiasbynens:
     family: Bynens
   org:
     name: Google
-    unit: V8
+    unit: Chrome DevTools
   country: DE
   role:
     - author
@@ -298,7 +312,7 @@ mathiasbynens:
   email: mths@google.com
   lanyrd: mathias
   description:
-    en: V8 JavaScript whisperer
+    en: JavaScript whisperer
 
 owencm:
   name:
@@ -398,7 +412,7 @@ peconn:
     given: Peter
     family: Conn
   twitter: petereconn
-  github: PEConn
+  github: peconn
   description:
     en: I'm a Software Engineer working on the Web Platform at Google London.
   org:
@@ -449,7 +463,7 @@ dalecurtis:
   country: US
   role:
     - author
-  twitter: DaleCurtis
+  twitter: dalecurtis
   email: dalecurtis@google.com
   homepage: 'https://github.com/dalecurtis'
   description:
@@ -478,7 +492,7 @@ wdenniss:
   country: US
   role:
     - author
-  twitter: WilliamDenniss
+  twitter: williamdenniss
   email: wdenniss@google.com
   description:
     en: Google Identity Product Manager
@@ -545,6 +559,21 @@ tdresser:
   description:
     en: Software Engineer working on performance metrics at Google
 
+pavoldrotar:
+  name:
+    given: Pavol
+    family: Drotar
+  org:
+    name: Google
+    unit: Web Platform
+  country: UK
+  homepage: 'https://pavoldrotar.com'
+  twitter: drotarpavol
+  github: padr31
+  email: pavol.drotar3@gmail.com
+  description:
+    en: I am a Software Engineer Intern wroking on the Web Platform.
+
 samdutton:
   name:
     given: Sam
@@ -602,6 +631,23 @@ flackr:
   role:
     - author
   email: flackr@google.com
+
+jackfranklin:
+  name:
+    given: Jack
+    family: Franklin
+  org:
+    name: Google
+    unit: Chrome
+  country: London
+  role:
+    - author
+  homepage: https://www.jackfranklin.co.uk/
+  twitter: jack_franklin
+  github: jackfranklin
+  email: jacktfranklin@chromium.org
+  description:
+    en: Googler building Chrome DevTools and Puppeteer and web tooling.
 
 jonathangarbee:
   name:
@@ -892,6 +938,19 @@ katiehempenius:
   twitter: katiehempenius
   email: khempenius@google.com
 
+johannes:
+  name:
+    given: Johannes
+    family: Henkel
+  github: powdercloud
+  org:
+    name: Google
+    unit: Software Engineer
+  country: US
+  email: johannes@google.com
+  description:
+    en: Software Engineer working on the Chrome User Experience Report at Google.
+
 jihyerish:
   name:
     given: Jihye
@@ -962,6 +1021,20 @@ captainpangyo:
   email: jangkeehyo@gmail.com
   description:
     en: Josh is a Singing Computer Scientist
+
+adrianajara:
+  name:
+    given: Adriana
+    family: Jara
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  email: ajara@google.com
+  description:
+    en: Adriana is a Developer Advocate
 
 kazukikanamori:
   name:
@@ -1297,7 +1370,7 @@ wmlin:
   role:
     - translator
     - engineer
-  github: Honry
+  github: honry
   email: wanming.lin@intel.com
   description:
     en: Wanming is an Engineer at Intel
@@ -1443,7 +1516,7 @@ kuu:
   email: miyazaqui@gmail.com
   description:
     en: "Kuu is interested in media technology on the Web"
-    
+
 fawazm:
   name:
     given: Fawaz
@@ -1484,7 +1557,7 @@ jacquerie:
     - engineer
     - contributor
   homepage: 'http://jacquerie.github.io'
-  twitter: Jaconotar
+  twitter: jaconotar
   email: jacopo.notarstefano@gmail.com
   description:
     en: Jacopo is a Full Stack Developer
@@ -1540,7 +1613,7 @@ jasonpark:
   country: SG
   role:
     - translator
-  twitter: hyunjO_on
+  twitter: hyunjo_on
   email: jpar225@gmail.com
   description:
     en: Jason is a Node.js Developer
@@ -1577,6 +1650,22 @@ pozdnyakov:
   description:
     en: Mikhail is an Engineer at Intel
 
+orkon:
+  name:
+    given: Alex
+    family: Rudenko
+  org:
+    name: Google
+    unit: Chrome
+  country: Munich
+  role:
+    - author
+  twitter: orkon
+  github: orkon
+  email: alexrudenkoym@chromium.org
+  description:
+    en: Googler working on Chrome DevTools.
+
 rupl:
   name:
     given: Chris
@@ -1589,6 +1678,37 @@ rupl:
   email: chris.ruppel@gmail.com
   description:
     en: Chris is a frontend developer and web performance advocate.
+
+sadym:
+  name:
+    given: Maksim
+    family: Sadym
+  org:
+    name: Google
+    unit: Chrome
+  country: Munich
+  role:
+    - author
+  twitter: maximsadym
+  github: sadym-chromium
+  email: sadym@chromium.org
+  description:
+    en: Googler working on Chrome DevTools.
+
+nsatragno:
+  name:
+    given: Nina
+    family: Satragno
+  org:
+    name: Google
+    unit: Chrome
+  country: CA
+  role:
+    - author
+  twitter: nsatragno
+  email: nsatragno@google.com
+  description:
+    en: Google Chrome engineer making authentication on the web safe & easy.
 
 satyakresna:
   name:
@@ -1774,7 +1894,7 @@ alansilva:
   country: Brazil
   role:
     - translator
-  twitter: AlanCezarAraujo
+  twitter: alancezararaujo
   homepage: 'https://www.linkedin.com/in/alan-cezar-31a6a538'
   email: alan.cezar.silva@gmail.com
   description:
@@ -1815,7 +1935,7 @@ andismith:
     unit: Director of Web Development
   country: UK
   homepage: 'http://www.andismith.com'
-  twitter: AndiSmith
+  twitter: andismith
   role:
     - author
   email: andi.smith.uk+gdocs@gmail.com
@@ -1916,7 +2036,7 @@ ingvarstepanyan:
   role:
     - author
   description:
-    en: Developer Advocate, V8 & WebAssembly
+    en: WebAssembly Developer Advocate at Google
 
 sunyunjia:
   name:
@@ -1951,7 +2071,7 @@ surma:
   role:
     - author
     - engineer
-  twitter: DasSurma
+  twitter: dassurma
 
 yoichiro:
   name:
@@ -1977,7 +2097,7 @@ franktang:
     name: Google
   role:
     - author
-  github: FrankYFTang
+  github: frankyftang
   email: ftang@google.com
   description:
     en: i18n engineer
@@ -2218,7 +2338,7 @@ jecelynyeen:
   role:
     - author
   homepage: https://jec.fyi
-  twitter: JecelynYeen
+  twitter: jecelynyeen
   github: chybie
   email: jec@google.com
   description:

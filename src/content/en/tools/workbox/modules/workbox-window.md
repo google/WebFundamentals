@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2021-02-10 #}
 {# wf_blink_components: N/A #}
 
 # Workbox Window {: .page-title }
@@ -92,7 +92,7 @@ statements](/web/fundamentals/performance/optimizing-javascript/code-splitting/#
 you can also conditionally load `workbox-window`, which should help reduce the
 size of your page's main bundle.
 
-Even though `workbox-window` is quite small (1kb gzipped), there's no reason it
+Even though `workbox-window` is quite small, there's no reason it
 needs to be loaded with your site's core application logic, as service workers,
 by their very nature, are a progressive enhancement.
 
@@ -309,17 +309,13 @@ own, registered service worker and an external service worker:
   </li>
   <li>
     <strong id="def-external-service-worker">External service worker:</strong>
-    a service worked that started installing independently of the
-    <code>Workbox</code> instancing calling <code>register()</code>. This
+    a service worker that started installing independently of the
+    <code>Workbox</code> instance calling <code>register()</code>. This
     typically happens when a user has a new version of your site open in another
-    tab.
+    tab. When an event originates from an external service worker, the event's
+    `isExternal` property will be set to `true`.
   </li>
 </ul>
-
-The idea is that all lifecycle events that come from the registered service
-worker are events that your code should be expecting, whereas all lifecycle
-events that come from an external service worker should be considered
-potentially dangerous, and users should be warned accordingly.
 
 With these two types of service workers in mind, here is a breakdown of all the
 important service worker lifecycle moments, along with developer recommendations
@@ -359,7 +355,7 @@ wb.register();
     <td>
       <p>The very first time a service worker installs, it's common to precache
       all the assets needed for the site to work offline. You might consider
-      informing the user that their site can now function offlinece.</p>
+      informing the user that their site can now function offline.</p>
       <p>Also, since the very first time a service worker installs it won't have
       intercepted fetch events for that page load, you may also consider caching
       assets that have already been loaded (though this is not needed if those
@@ -519,44 +515,10 @@ events when it detects an update from an "external" service worker, where
 external just means any version that is not the version the current `Workbox`
 instance registered.
 
-<table class="orange">
-  <tr>
-    <th style="width: 25%">Moment</th>
-    <th>Event</th>
-    <th>Recommended action</th>
-  </tr>
-  <tr>
-    <td>An external service worker has installed</td>
-    <td><code>externalinstalled</code></td>
-    <td>
-      <p>If an external service worker has installed, it likely means a user it
-      running a newer version of your site in a different tab.</p>
-      <p>How to respond likely depends on whether the installed service enters
-      the waiting or active phase.</p>
-   </td>
-  </tr>
-  <tr>
-    <td>An external service worker is installed by waiting to activate</td>
-    <td><code>externalwaiting</code></td>
-    <td>
-      <p>If an external service worker is waiting to activate, it likely means a
-      user has is attempting to get a new version of your site in another tab,
-      but they're blocked because this tab is still open.</p>
-      <p>If this happens, you may consider showing showing a notification to the
-      user asking them to close this tab. In extreme cases, you may even
-      consider calling <code>window.reload()</code> if doing so won't cause the
-      user to lose any saved state.</p>
-   </td>
-  </tr>
-  <tr>
-    <td>An external service worker has activated</td>
-    <td><code>externalactivated</code></td>
-    <td>If an external service worker has activated, there's a good chance that
-    the current page will not continue to function properly. You may want to
-    consider showing a notification to the user that they're running an older
-    version of the page and things may be broken.</td>
-  </tr>
-</table>
+As of Workbox v6 and later, these events are equivalent to the events documented
+above, with the addition of an `isExternal: true` property set on each event
+object. If your web application needs to implement specific logic to handle an
+"external" service worker, you can check for that property in your event handlers.
 
 ## Avoiding common mistakes
 

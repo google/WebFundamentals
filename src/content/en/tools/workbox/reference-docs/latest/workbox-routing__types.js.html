@@ -37,10 +37,11 @@ import &#x27;./_version.js&#x27;;
 /**
  * The &quot;match&quot; callback is used to determine if a &#x60;Route&#x60; should apply for a
  * particular URL. When matching occurs in response to a fetch event from the
- * client, the &#x60;event&#x60; and &#x60;request&#x60; objects are supplied in addition to the
- * URL. However, since the match callback can be invoked outside of a fetch
- * event, matching logic should not assume the &#x60;event&#x60; or &#x60;request&#x60; objects
- * will always be available (unlike URL, which is always available).
+ * client, the &#x60;event&#x60; object is supplied in addition to the &#x60;url&#x60;, &#x60;request&#x60;,
+ * and &#x60;sameOrigin&#x60; value. However, since the match callback can be invoked
+ * outside of a fetch event, matching logic should not assume the &#x60;event&#x60;
+ * object will always be available.
+ *
  * If the match callback returns a truthy value, the matching route&#x27;s
  * [handler callback]{@link module:workbox-routing~handlerCallback} will be
  * invoked immediately. If the value returned is a non-empty array or object,
@@ -48,11 +49,12 @@ import &#x27;./_version.js&#x27;;
  *
  * @callback ~matchCallback
  * @param {Object} context
+ * @param {Request} context.request The corresponding request.
  * @param {URL} context.url The request&#x27;s URL.
- * @param {Request} [context.request] The corresponding request,
- *     if available.
- * @param {FetchEvent} [context.event] The corresponding event that triggered
- *     the request, if available.
+ * @param {ExtendableEvent} context.event The corresponding event that triggered
+ *     the request.
+ * @param {boolean} context.sameOrigin The result of comparing &#x60;url.origin&#x60;
+ *     against the current origin.
  * @return {*} To signify a match, return a truthy value.
  *
  * @memberof module:workbox-routing
@@ -69,11 +71,10 @@ import &#x27;./_version.js&#x27;;
  *
  * @callback ~handlerCallback
  * @param {Object} context
- * @param {URL} context.url The URL that matched.
- * @param {Request} [context.request] The corresponding request,
- *     if available.
- * @param {FetchEvent} [context.event] The corresponding event that triggered
- *     the request, if available.
+ * @param {Request|string} context.request The corresponding request.
+ * @param {URL} context.url The URL that matched, if available.
+ * @param {ExtendableEvent} context.event The corresponding event that triggered
+ *     the request.
  * @param {Object} [context.params] Array or Object parameters returned by the
  *     Route&#x27;s [match callback]{@link module:workbox-routing~matchCallback}.
  *     This will be undefined if an empty array or object were returned.

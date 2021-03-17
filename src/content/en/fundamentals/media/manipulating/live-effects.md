@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Many of today's most popular apps let you apply filters and effects to images or video. This article shows how to implement these features on the open web.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2021-01-26 #}
 {# wf_published_on: 2017-08-08 #}
 {# wf_blink_components: Blink>WebGL, Blink>Canvas #}
 

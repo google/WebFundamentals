@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2020-09-14 #}
+{# wf_updated_on: 2021-01-26 #}
 {# wf_published_on: 2014-01-16 #}
 {# wf_blink_components: Blink>Media #}
 

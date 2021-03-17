@@ -39,7 +39,7 @@ Houdini　のゴールは、Web 開発者が書いたコードを　CSS　エン
 
 ### Paint Worklet ([仕様][Paint Worklet spec])
 
-**アップデート**：初期段階の実装が Chrome Canary に搭載されました。“Experimental Web Platform features” を有効にすると、すべてではありませんが使えます。
+**アップデート**: 初期段階の実装が Chrome Canary に搭載されました。“Experimental Web Platform features” を有効にすると、すべてではありませんが使えます。
 
 まずは Paint Worklet から説明しようと思います。というのも、説明しないといけない機能が少ないからです。仕様にはこう書いてあります。
 
@@ -119,7 +119,7 @@ Paint Worklet の話に戻りましょう。フラグメントごとにコード
 
 ### Compositor Worklet
 
-**アップデート**：Chrome は Compositor Worker という Chrome 独自の API を実装中です。この API の上に Compositor Worklet（そして他のものも）を実装します。Compositor Worker はもうそろそろ実装され、ネイティブ実装と遜色ないパフォーマンスを発揮できる polyfill を提供できるようになります。
+**アップデート**: Chrome は Compositor Worker という Chrome 独自の API を実装中です。この API の上に Compositor Worklet（そして他のものも）を実装します。Compositor Worker はもうそろそろ実装され、ネイティブ実装と遜色ないパフォーマンスを発揮できる polyfill を提供できるようになります。
 
 Compositor Worklet の仕様は WICG に移され、もう少し検討が必要とされてしまいましたが、私がわくわくしているのは実はこれなのです。ご存知かもしれませんが、いくつかの処理は CSS エンジンにより、グラフィックスカードに移管されます。CSS エンジンはグラフィックスカードに依存しているのに、です。
 
@@ -159,7 +159,7 @@ Compositor Worklet は、同僚の Robert Flack が [polyfill][CompWorklet polyf
 
 ### Layout Worklet ([仕様][Layout Worklet spec])
 
-**アップデート**：最初のドラフトが提案されました。実装はこれからです。
+**アップデート**: 最初のドラフトが提案されました。実装はこれからです。
 
 仕様に中身はまだありませんが、そのアイデアはとても興味をそそるものです。なにせレイアウトを自分で定義できるんですから！Layout Worklet は `display: layout('mylayout')` といったことができ、ノードの子をノードのボックス内でどう配置するかを JavaScript で定義できる仕組みです。もちろん、JavaScript で実装された Flexbox はネイティブ実装よりも遅いでしょう。しかし、ムダを省くことでパフォーマンスがよくなるケースも容易に考えられるでしょう。たとえば、Windows 10 や [Masonry] スタイルのレイアウトを想像してください。絶対配置・固定配置も使わない、`z-index` もない。要素も重ならず、ボーダーやオーバーフローもない。再レイアウト時にこうしたチェックを飛ばせるなら、パフォーマンスにもきっと良い影響があるでしょう。
 
@@ -200,7 +200,7 @@ Compositor Worklet は、同僚の Robert Flack が [polyfill][CompWorklet polyf
 
 ### Typed CSSOM ([仕様][Typed CSSOM spec])
 
-**アップデート**：「ほぼほぼ完全」な実装が Chrome Canary に「Experimental Web Platform features」フラグつきで実装されました。
+**アップデート**: 「ほぼほぼ完全」な実装が Chrome Canary に「Experimental Web Platform features」フラグつきで実装されました。
 
 Typed CSSOM（CSS オブジェクトモデル）は、たぶん誰もが遭遇し、ずっと耐えてきた問題をなんとかするものです。どういうことか、1行の JavaScript で説明してみましょう。
 
@@ -231,7 +231,7 @@ Typed CSSOM（CSS オブジェクトモデル）は、たぶん誰もが遭遇�
 
 ### Properties and Values ([仕様][Properties and Values spec])
 
-**アップデート**：仕様は安定していますが、試せる実装はまだありません。
+**アップデート**: 仕様は安定していますが、試せる実装はまだありません。
 
 [CSS カスタムプロパティ][CSS Custom Properties]（もしくは俗称の「CSS Variables」）を知っていますか？それです！それに型がつきます！これまでの CSS Variables は文字列しか持てず、その利用法も値の使い回しを避けるためくらいにしか使えませんでした。しかしこの仕様では、変数に型を指定できるだけではなく、初期値や継承の有無までも JavaScript API から指定できます。技術的には、カスタムプロパティを CSS Transition や CSS Animations で動かすことも意味します（実際に検討もされています）。
 
@@ -287,4 +287,3 @@ Houdini のドラフトのリストには、まだ多くの仕様があります
 
 Translated By:
 {% include "web/_shared/contributors/myakura.html" %}
-

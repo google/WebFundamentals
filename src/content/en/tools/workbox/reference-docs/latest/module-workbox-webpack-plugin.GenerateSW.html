@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
             <p>This class supports creating a new, ready-to-use service worker file as
               part of the webpack compilation process.</p>
@@ -100,7 +100,7 @@
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">boolean</p>
                                 <p>Whether or not Workbox
-                                  should attempt to identify an delete any precaches created by older,
+                                  should attempt to identify and delete any precaches created by older,
                                   incompatible versions.</p>
                               </td>
                             </tr>
@@ -149,10 +149,10 @@
                                 <p class="details-table-types">RegExp</p>
                                 <p>Assets that match this will be
                                   assumed to be uniquely versioned via their URL, and exempted from the normal
-                                  HTTP cache-busting that's done when populating the precache. While not
-                                  required, it's recommended that if your existing build process already
-                                  inserts a <code>[hash]</code> value into each filename, you provide a RegExp that will
-                                  detect that, as it will reduce the bandwidth consumed when precaching.</p>
+                                  HTTP cache-busting that's done when populating the precache. (As of Workbox
+                                  v6, this option is usually not needed, as each
+                                  <a href="https://github.com/webpack/webpack/issues/9038">asset's metadata</a> is used
+                                  to determine whether it's immutable or not.)</p>
                               </td>
                             </tr>
                             <tr>
@@ -279,7 +279,7 @@
                                 <p class="details-table-types">string</p>
                                 <p>If set to 'production', then an optimized service
                                   worker bundle that excludes debugging info will be produced. If not explicitly
-                                  configured here, the <code>mode</code> value configured in the current <code>webpack</code> compiltion
+                                  configured here, the <code>mode</code> value configured in the current <code>webpack</code> compilation
                                   will be used.</p>
                               </td>
                             </tr>
@@ -395,7 +395,8 @@
                                 <p>Whether to add an
                                   unconditional call to <a href="module-workbox-core.html#.skipWaiting"><code>skipWaiting()</code></a>
                                   to the generated service worker. If <code>false</code>, then a <code>message</code> listener will
-                                  be added instead, allowing you to conditionally call <code>skipWaiting()</code>.</p>
+                                  be added instead, allowing you to conditionally call <code>skipWaiting()</code> by posting
+                                  a message containing {type: 'SKIP_WAITING'}.</p>
                               </td>
                             </tr>
                             <tr>

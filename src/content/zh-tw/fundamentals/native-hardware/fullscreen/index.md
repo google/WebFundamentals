@@ -26,19 +26,19 @@ description:進入全屏模式。
 
 * 作爲對用戶手勢的響應請求瀏覽器進入全屏模式。
 * 將應用安裝到主屏幕。
-* 弄虛作假：自動隱藏地址欄。
+* 弄虛作假: 自動隱藏地址欄。
 
 ### 作爲對用戶手勢的響應請求瀏覽器進入全屏模式
 
 <a href="http://caniuse.com/#feat=fullscreen">並非所有平臺都相同</a>。iOS Safari 沒有全屏 API，但 Chrome（Android 版）、Firefox 和 IE 11+ 上則有相應的 API。您構建的大多數應用都是組合使用全屏規範提供的 JS API 和 CSS 選擇器。
-您在打造全屏體驗時需要在意的主要 JS API 如下：
+您在打造全屏體驗時需要在意的主要 JS API 如下:
 
 
-* `element.requestFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前綴）：以全屏模式顯示元素。
+* `element.requestFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前綴）: 以全屏模式顯示元素。
 
 * `document.exitFullscreen()`（目前在 Chrome、Firefox 和 IE 中添加前綴。
-  Firefox 改用 `cancelFullScreen()`）：取消全屏模式。
-* `document.fullscreenElement`（目前在 Chrome、Firefox 和 IE 中添加前綴）：如有任何元素處於全屏模式，返回 true。
+  Firefox 改用 `cancelFullScreen()`）: 取消全屏模式。
+* `document.fullscreenElement`（目前在 Chrome、Firefox 和 IE 中添加前綴）: 如有任何元素處於全屏模式，返回 true。
 
 
 Note: 您會注意到，在添加前綴的版本中，屏幕中“S”的大小寫處理存在大量不一致的情況。
@@ -98,20 +98,20 @@ href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_scre
 
 <figure class="attempt-right" style="max-width: 320px;">
   <img src="images/body.png">
-  <figcaption>圖 1：讓 body 元素進入全屏模式。</figcaption>
+  <figcaption>圖 1: 讓 body 元素進入全屏模式。</figcaption>
 </figure>
 
 
-讓 body 元素進入全屏模式是很自然的想法，但如果使用的是基於 WebKit 或 Blink 的渲染引擎，就會發現這會產生一種怪異的效果：將正文寬度縮減到能夠容納所有內容的最小尺寸。（Mozilla Gecko 不存在這個問題。）
+讓 body 元素進入全屏模式是很自然的想法，但如果使用的是基於 WebKit 或 Blink 的渲染引擎，就會發現這會產生一種怪異的效果: 將正文寬度縮減到能夠容納所有內容的最小尺寸。（Mozilla Gecko 不存在這個問題。）
 
 <div class="clearfix"></div>
 
 <figure class="attempt-right" style="max-width: 320px;">
 <img src="images/document.png" >
-<figcaption>圖 2：讓 document 元素進入全屏模式。</figcaption>
+<figcaption>圖 2: 讓 document 元素進入全屏模式。</figcaption>
 </figure>
 
-要修復此問題，請使用 document 元素替代 body 元素：
+要修復此問題，請使用 document 元素替代 body 元素:
 
     document.documentElement.requestFullscreen();
 
@@ -175,7 +175,7 @@ href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_scre
       }
     </style>
 
-按照這些模式，可以在檢測到全屏模式處於運行狀態時對用戶界面作出相應調整，例如：
+按照這些模式，可以在檢測到全屏模式處於運行狀態時對用戶界面作出相應調整，例如:
 
 
 * 提供一個返回開始頁面的鏈接
@@ -226,12 +226,12 @@ Chrome 團隊近期實現的一項功能可在用戶已將頁面添加到主屏�
 
 [網絡應用清單](/web/fundamentals/web-app-manifest)是一個簡單的 JSON 文件，使您（開發者）能夠控制在用戶可能看到應用的區域（例如手機主屏幕）中如何向用戶顯示應用，指示用戶可以啓動哪些功能，更重要的是說明啓動方法。未來，清單將讓您對應用進行更多控制，但現在我們只側重於如何啓動應用。
 
-具體而言：
+具體而言:
 
 1. 將清單的相關信息告知瀏覽器
 2. 說明啓動方法
 
-在創建清單並託管在網站上之後，只需要從所有包含應用的頁面添加一個下面這樣的 link 標記：
+在創建清單並託管在網站上之後，只需要從所有包含應用的頁面添加一個下面這樣的 link 標記:
 
 
     <link rel="manifest" href="/manifest.json">
@@ -271,7 +271,7 @@ Chrome（Android 版）從 38 版（2014 年 10 月）起就已支持清單，�
 
 ##### 實用程序應用
 
-大多數實用程序應用都將立即受益於清單。對於您可能希望像移動平臺上的所有其他應用一樣獨立啓動的應用，要指示應用獨立啓動，請向網絡應用清單添加以下內容：
+大多數實用程序應用都將立即受益於清單。對於您可能希望像移動平臺上的所有其他應用一樣獨立啓動的應用，要指示應用獨立啓動，請向網絡應用清單添加以下內容:
 
 
     "display": "standalone"
@@ -313,9 +313,9 @@ Chrome（Android 版）從 38 版（2014 年 10 月）起就已支持清單，�
 
     "display": "standalone"
 
-### 弄虛作假：自動隱藏地址欄
+### 弄虛作假: 自動隱藏地址欄
 
-可通過像下面這樣自動隱藏地址欄來“僞造全屏模式”：
+可通過像下面這樣自動隱藏地址欄來“僞造全屏模式”:
 
     window.scrollTo(0,1);
 
@@ -374,14 +374,14 @@ iOS 沒有硬件返回按鈕或刷新手勢。因此，必須確保用戶能在�
     }
 
 如果用戶從主屏幕啓動網站，`display-mode` 媒體查詢將按照網絡應用清單中的定義進行設置。
-在純粹全屏的情況下，其內容將是：
+在純粹全屏的情況下，其內容將是:
 
 
     @media (display-mode: fullscreen) {
 
     }
 
-如果用戶以獨立模式啓動應用，`display-mode` 媒體查詢將是 `standalone`：
+如果用戶以獨立模式啓動應用，`display-mode` 媒體查詢將是 `standalone`:
 
 
     @media (display-mode: standalone) {
@@ -391,7 +391,7 @@ iOS 沒有硬件返回按鈕或刷新手勢。因此，必須確保用戶能在�
 
 #### Firefox
 
-當用戶通過網站請求全屏，或者用戶以全屏模式啓動應用時，所有標準 Fullscreen API 都可使用，其中包括下面這樣可調整 UI 來響應全屏狀態的 CSS 僞選擇器：
+當用戶通過網站請求全屏，或者用戶以全屏模式啓動應用時，所有標準 Fullscreen API 都可使用，其中包括下面這樣可調整 UI 來響應全屏狀態的 CSS 僞選擇器:
 
 
 
@@ -433,7 +433,7 @@ iOS 沒有硬件返回按鈕或刷新手勢。因此，必須確保用戶能在�
 
 有時 Fullscreen API 可能有點吹毛求疵。瀏覽器供應商不想把用戶鎖定在全屏頁面中，因此他們開發了相應的機制，只要滿足條件，便可立即擺脫全屏模式。
 
-這意味着您無法讓構建的全屏網站跨越多個頁面，這是因爲：
+這意味着您無法讓構建的全屏網站跨越多個頁面，這是因爲:
 
 
 * 利用 ‘window.location =  "http://example.com"` 以編程方式更改網址會擺脫全屏模式。
@@ -441,12 +441,12 @@ iOS 沒有硬件返回按鈕或刷新手勢。因此，必須確保用戶能在�
 * 通過 `navigator.pushState` API 更改網址也會擺脫全屏體驗。
 
 
-如果想保持用戶的全屏體驗，可以採用以下這兩個方案：
+如果想保持用戶的全屏體驗，可以採用以下這兩個方案:
 
 1. 利用可安裝網絡應用機制進入全屏模式。
 2. 利用 # 片段管理 UI 和應用狀態。
 
-通過使用 #syntax 更新網址 (window.location = "#somestate") 以及偵聽 `window.onhashchange` 事件，可以利用瀏覽器自身的歷史堆棧管理應用狀態變化，允許用戶使用其硬件返回按鈕，或者利用如下 history API 提供簡單的編程返回按鈕體驗：
+通過使用 #syntax 更新網址 (window.location = "#somestate") 以及偵聽 `window.onhashchange` 事件，可以利用瀏覽器自身的歷史堆棧管理應用狀態變化，允許用戶使用其硬件返回按鈕，或者利用如下 history API 提供簡單的編程返回按鈕體驗:
 
 
 

@@ -28,13 +28,14 @@
   https://opensource.org/licenses/MIT.
 */
 
-const {RawSource} &#x3D; require(&#x27;webpack-sources&#x27;);
-const {SingleEntryPlugin} &#x3D; require(&#x27;webpack&#x27;);
+const escapeRegexp &#x3D; require(&#x27;workbox-build/build/lib/escape-regexp&#x27;);
+const prettyBytes &#x3D; require(&#x27;pretty-bytes&#x27;);
 const replaceAndUpdateSourceMap &#x3D; require(
     &#x27;workbox-build/build/lib/replace-and-update-source-map&#x27;);
 const stringify &#x3D; require(&#x27;fast-json-stable-stringify&#x27;);
 const upath &#x3D; require(&#x27;upath&#x27;);
 const validate &#x3D; require(&#x27;workbox-build/build/lib/validate-options&#x27;);
+const webpack &#x3D; require(&#x27;webpack&#x27;);
 const webpackInjectManifestSchema &#x3D; require(
     &#x27;workbox-build/build/options/schema/webpack-inject-manifest&#x27;);
 
@@ -46,6 +47,13 @@ const relativeToOutputPath &#x3D; require(&#x27;./lib/relative-to-output-path&#x
 // Used to keep track of swDest files written by *any* instance of this plugin.
 // See https://github.com/GoogleChrome/workbox/issues/2181
 const _generatedAssetNames &#x3D; new Set();
+
+// SingleEntryPlugin in v4 was renamed to EntryPlugin in v5.
+const SingleEntryPlugin &#x3D; webpack.EntryPlugin || webpack.SingleEntryPlugin;
+
+// webpack v4/v5 compatibility:
+// https://github.com/webpack/webpack/issues/11425#issuecomment-686607633
+const {RawSource} &#x3D; webpack.sources || require(&#x27;webpack-sources&#x27;);
 
 /**
  * This class supports compiling a service worker file provided via &#x60;swSrc&#x60;,
@@ -82,20 +90,16 @@ class InjectManifest {
    *
    * @param {RegExp} [config.dontCacheBustURLsMatching] Assets that match this will be
    * assumed to be uniquely versioned via their URL, and exempted from the normal
-   * HTTP cache-busting that&#x27;s done when populating the precache. While not
-   * required, it&#x27;s recommended that if your existing build process already
-   * inserts a &#x60;[hash]&#x60; value into each filename, you provide a RegExp that will
-   * detect that, as it will reduce the bandwidth consumed when precaching.
+   * HTTP cache-busting that&#x27;s done when populating the precache. (As of Workbox
+   * v6, this option is usually not needed, as each
+   * [asset&#x27;s metadata](https://github.com/webpack/webpack/issues/9038) is used
+   * to determine whether it&#x27;s immutable or not.)
    *
    * @param {Array&amp;lt;string|RegExp|Function&gt;} [config.exclude&#x3D;[/\.map$/, /^manifest.*\.js$]]
    * One or more specifiers used to exclude assets from the precache manifest.
    * This is interpreted following
    * [the same rules](https://webpack.js.org/configuration/module/#condition)
    * as &#x60;webpack&#x60;&#x27;s standard &#x60;exclude&#x60; option.
-   *
-   * @param {Array&amp;lt;string&gt;} [config.importScriptsViaChunks] One or more names of
-   * webpack chunks. The content of those chunks will be included in the
-   * generated service worker, via a call to &#x60;importScripts()&#x60;.
    *
    * @param {Array&amp;lt;string&gt;} [config.excludeChunks] One or more chunk names whose
    * corresponding output files should be excluded from the precache manifest.
@@ -172,11 +176,31 @@ class InjectManifest {
             (error) &#x3D;&gt; compilation.errors.push(error)),
     );
 
-    compiler.hooks.emit.tapPromise(
-        this.constructor.name,
-        (compilation) &#x3D;&gt; this.handleEmit(compilation).catch(
-            (error) &#x3D;&gt; compilation.errors.push(error)),
-    );
+    // webpack v4/v5 compatibility:
+    // https://github.com/webpack/webpack/issues/11425#issuecomment-690387207
+    if (webpack.version.startsWith(&#x27;4.&#x27;)) {
+      compiler.hooks.emit.tapPromise(
+          this.constructor.name,
+          (compilation) &#x3D;&gt; this.addAssets(compilation).catch(
+              (error) &#x3D;&gt; compilation.errors.push(error)),
+      );
+    } else {
+      const {PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER} &#x3D; webpack.Compilation;
+      // Specifically hook into thisCompilation, as per
+      // https://github.com/webpack/webpack/issues/11425#issuecomment-690547848
+      compiler.hooks.thisCompilation.tap(
+          this.constructor.name, (compilation) &#x3D;&gt; {
+            compilation.hooks.processAssets.tapPromise({
+              name: this.constructor.name,
+              // TODO(jeffposnick): This may need to change eventually.
+              // See https://github.com/webpack/webpack/issues/11822#issuecomment-726184972
+              stage: PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER - 10,
+            }, () &#x3D;&gt; this.addAssets(compilation).catch(
+                (error) &#x3D;&gt; compilation.errors.push(error)),
+            );
+          },
+      );
+    }
   }
 
   /**
@@ -237,7 +261,7 @@ class InjectManifest {
   addSrcToAssets(compilation, parentCompiler) {
     const source &#x3D; parentCompiler.inputFileSystem.readFileSync(
         this.config.swSrc).toString();
-    compilation.assets[this.config.swDest] &#x3D; new RawSource(source);
+    compilation.emitAsset(this.config.swDest, new RawSource(source));
   }
 
   /**
@@ -269,14 +293,19 @@ class InjectManifest {
    *
    * @private
    */
-  async handleEmit(compilation) {
+  async addAssets(compilation) {
     // See https://github.com/GoogleChrome/workbox/issues/1790
     if (this.alreadyCalled) {
-      compilation.warnings.push(&#x60;${this.constructor.name} has been called &#x60; +
+      const warningMessage &#x3D; &#x60;${this.constructor.name} has been called &#x60; +
         &#x60;multiple times, perhaps due to running webpack in --watch mode. The &#x60; +
         &#x60;precache manifest generated after the first call may be inaccurate! &#x60; +
         &#x60;Please see https://github.com/GoogleChrome/workbox/issues/1790 for &#x60; +
-        &#x60;more information.&#x60;);
+        &#x60;more information.&#x60;;
+
+      if (!compilation.warnings.some((warning) &#x3D;&gt; warning instanceof Error &amp;amp;&amp;amp;
+            warning.message &#x3D;&#x3D;&#x3D; warningMessage)) {
+        compilation.warnings.push(new Error(warningMessage));
+      }
     } else {
       this.alreadyCalled &#x3D; true;
     }
@@ -291,42 +320,57 @@ class InjectManifest {
     const absoluteSwSrc &#x3D; upath.resolve(this.config.swSrc);
     compilation.fileDependencies.add(absoluteSwSrc);
 
-    const swAsset &#x3D; compilation.assets[config.swDest];
-    const initialSWAssetString &#x3D; swAsset.source();
+    const swAsset &#x3D; compilation.getAsset(config.swDest);
+    const swAssetString &#x3D; swAsset.source.source();
 
-    if (!initialSWAssetString.includes(config.injectionPoint)) {
+    const globalRegexp &#x3D; new RegExp(escapeRegexp(config.injectionPoint), &#x27;g&#x27;);
+    const injectionResults &#x3D; swAssetString.match(globalRegexp);
+
+    if (!injectionResults) {
       throw new Error(&#x60;Can&#x27;t find ${config.injectionPoint} in your SW source.&#x60;);
     }
+    if (injectionResults.length !&#x3D;&#x3D; 1) {
+      throw new Error(&#x60;Multiple instances of ${config.injectionPoint} were &#x60; +
+          &#x60;found in your SW source. Include it only once. For more info, see &#x60; +
+          &#x60;https://github.com/GoogleChrome/workbox/issues/2681&#x60;);
+    }
 
-    const manifestEntries &#x3D; await getManifestEntriesFromCompilation(
+    const {size, sortedEntries} &#x3D; await getManifestEntriesFromCompilation(
         compilation, config);
 
-    let manifestString &#x3D; stringify(manifestEntries);
+    let manifestString &#x3D; stringify(sortedEntries);
     if (this.config.compileSrc) {
       // See https://github.com/GoogleChrome/workbox/issues/2263
       manifestString &#x3D; manifestString.replace(/&quot;/g, &#x60;&#x27;&#x60;);
     }
 
     const sourcemapAssetName &#x3D; getSourcemapAssetName(
-        compilation, initialSWAssetString, config.swDest);
+        compilation, swAssetString, config.swDest);
 
     if (sourcemapAssetName) {
-      const sourcemapAsset &#x3D; compilation.assets[sourcemapAssetName];
+      _generatedAssetNames.add(sourcemapAssetName);
+      const sourcemapAsset &#x3D; compilation.getAsset(sourcemapAssetName);
       const {source, map} &#x3D; await replaceAndUpdateSourceMap({
         jsFilename: config.swDest,
-        originalMap: JSON.parse(sourcemapAsset.source()),
-        originalSource: initialSWAssetString,
+        originalMap: JSON.parse(sourcemapAsset.source.source()),
+        originalSource: swAssetString,
         replaceString: manifestString,
         searchString: config.injectionPoint,
       });
 
-      compilation.assets[sourcemapAssetName] &#x3D; new RawSource(map);
-      compilation.assets[config.swDest] &#x3D; new RawSource(source);
+      compilation.updateAsset(sourcemapAssetName, new RawSource(map));
+      compilation.updateAsset(config.swDest, new RawSource(source));
     } else {
       // If there&#x27;s no sourcemap associated with swDest, a simple string
       // replacement will suffice.
-      compilation.assets[config.swDest] &#x3D; new RawSource(
-          initialSWAssetString.replace(config.injectionPoint, manifestString));
+      compilation.updateAsset(config.swDest, new RawSource(
+          swAssetString.replace(config.injectionPoint, manifestString)));
+    }
+
+    if (compilation.getLogger) {
+      const logger &#x3D; compilation.getLogger(this.constructor.name);
+      logger.info(&#x60;The service worker at ${config.swDest} will precache
+        ${sortedEntries.length} URLs, totaling ${prettyBytes(size)}.&#x60;);
     }
   }
 }

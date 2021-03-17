@@ -5,7 +5,7 @@ description:由于大多数桌面设备都没有触摸屏、GPS 芯片和加速�
 {# wf_updated_on: 2020-07-10 #}
 {# wf_published_on: 2015-04-13 #}
 
-# 模拟传感器：地理定位与加速度计 {: .page-title }
+# 模拟传感器: 地理定位与加速度计 {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
@@ -22,7 +22,7 @@ description:由于大多数桌面设备都没有触摸屏、GPS 芯片和加速�
 
 <div class="wf-devtools-flex">
   <div>
-    <p>要访问 Chrome DevTools 传感器控件，请执行以下操作：</p>
+    <p>要访问 Chrome DevTools 传感器控件，请执行以下操作: </p>
     <ol>
       <li>打开 DevTools 主菜单</li>
       <li>在 <strong>More Tools</strong> 菜单下，点击 <strong>Sensors</strong></li>
@@ -61,7 +61,7 @@ Note: 如果您的应用检测到使用 JavaScript（如 Modernizr）的传感�
   </div>
 </div>
 
-您可以操作下列方向参数：
+您可以操作下列方向参数:
 
 <dl>
 <dt><abbr title="alpha">α</abbr></dt>

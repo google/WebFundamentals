@@ -27,18 +27,24 @@
   license that can be found in the LICENSE file or at
   https://opensource.org/licenses/MIT.
 */
+import { logger } from &#x27;./_private/logger.js&#x27;;
 import &#x27;./_version.js&#x27;;
 /**
- * Force a service worker to activate immediately, instead of
- * [waiting](/web/fundamentals/primers/service-workers/lifecycle#waiting)
- * for existing clients to close.
+ * This method is deprecated, and will be removed in Workbox v7.
+ *
+ * Calling self.skipWaiting() is equivalent, and should be used instead.
  *
  * @memberof module:workbox-core
  */
 function skipWaiting() {
-    // We need to explicitly call &#x60;self.skipWaiting()&#x60; here because we&#x27;re
-    // shadowing &#x60;skipWaiting&#x60; with this local function.
-    self.addEventListener(&#x27;install&#x27;, () &#x3D;&gt; self.skipWaiting());
+    // Just call self.skipWaiting() directly.
+    // See https://github.com/GoogleChrome/workbox/issues/2525
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+        logger.warn(&#x60;skipWaiting() from workbox-core is no longer recommended &#x60; +
+            &#x60;and will be removed in Workbox v7. Using self.skipWaiting() instead &#x60; +
+            &#x60;is equivalent.&#x60;);
+    }
+    self.skipWaiting();
 }
 export { skipWaiting };
 </code></pre>

@@ -22,11 +22,11 @@ description: Это описание страницы, размещенное в
 Для начала скопируйте шаблон.
 
 1. Скопируйте шаблон
-([демо](https://github.com/google/WebFundamentals/blob/master/src/templates/showcase/_template.md)
+([демо](https://github.com/google/WebFundamentals/blob/main/src/templates/showcase/_template.md)
 или
-[обновление](https://github.com/google/WebFundamentals/blob/master/src/templates/updates/_template.md))
+[обновление](https://github.com/google/WebFundamentals/blob/main/src/templates/updates/_template.md))
 и поместите в соответствующую директорию.
-2. Обновите ключевые поля: 
+2. Обновите ключевые поля:
     - `book_path`
     - `description`
 - `wf_updated_on` & `wf_published_on` используйте формат YYYY-MM-DD
@@ -64,7 +64,7 @@ Note: Вы не можете добавить HTML атрибут описани
 </pre>
 
 Note: Посмотрите список [общих
-тэгов](https://github.com/google/WebFundamentals/blob/master/src/data/commonTags.json)
+тэгов](https://github.com/google/WebFundamentals/blob/main/src/data/commonTags.json)
 и используйте его, если это возможно. Если вы используете тэг, которого нет в
 этом списке, процесс сборки вызовет предупреждение.
 
@@ -81,7 +81,7 @@ Note: Посмотрите список [общих
 Изображение должно быть 16x9, в идеале 800px на 450px.
 
 **Ищете типовое изображение?** Проверьте папку [типовых
-изображений](https://github.com/google/WebFundamentals/tree/master/src/content/en/updates/images/generic).
+изображений](https://github.com/google/WebFundamentals/tree/main/src/content/en/updates/images/generic).
 
 ### Популярные сниппеты
 

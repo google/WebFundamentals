@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Tampilan pohon DOM di panel Elemen Chrome DevTools menampilkan struktur DOM laman web saat ini. Edit materi dan struktur laman Anda secara langsung melalui pembaruan DOM.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 
 # Mengedit DOM {: .page-title }
@@ -25,7 +25,7 @@ Tampilan pohon DOM di panel Elemen Chrome DevTools menampilkan struktur DOM lama
 Gunakan **panel Elements** untuk memeriksa semua elemen di laman Anda dalam satu
 pohon DOM. Pilih elemen apa pun dan periksa gaya yang diterapkan padanya.
 
-<video autoplay muted src="animations/inspect-element.mp4">
+<video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
 Ada beberapa cara untuk memeriksa elemen:
@@ -110,7 +110,7 @@ Untuk mengedit nama atau atribut simpul DOM:
 
 Tag penutup akan otomatis diperbarui setelah Anda selesai.
 
-<video autoplay muted src="animations/edit-element-name.mp4">
+<video autoplay muted src="animations-img/edit-element-name.mp4">
 </video>
 
 ### Mengedit simpul DOM dan anaknya sebagai HTML
@@ -129,7 +129,7 @@ Untuk mengedit simpul DOM dan anaknya sebagai HTML:
 
 Klik, tahan, dan seret simpul untuk memindahkannya.
 
-<video autoplay muted src="animations/move-node.mp4">
+<video autoplay muted src="animations-img/move-node.mp4">
 </video>
 
 ## Menghapus simpul DOM

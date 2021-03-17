@@ -35,7 +35,7 @@ if ('serviceWorker' in navigator) {
     // Assumes your app has some sort of prompt UI element
     // that a user can either accept or reject.
     const prompt = createUIPrompt({
-      onAccept: async () => {
+      onAccept: () => {
         // Assuming the user accepted the update, set up a listener
         // that will reload the page as soon as the previously waiting
         // service worker has taken control.
@@ -140,7 +140,7 @@ else, this is a baseline recipe to follow. It takes advantage of
 browsers) to help mitigate the startup cost of a service worker.
 
 ```javascript
-import {* as navigationPreload} from 'workbox-navigation-preload';
+import * as navigationPreload from 'workbox-navigation-preload';
 import {registerRoute, NavigationRoute} from 'workbox-routing';
 import {NetworkOnly} from 'workbox-strategies';
 
@@ -257,7 +257,7 @@ To help with these sort of use cases, you can use any of the Workbox strategies 
 fashion via the `handle()` method.
 
 ```javascript
-import {StaleWhileRevalidate} from 'workbox-strategies';
+import {NetworkFirst} from 'workbox-strategies';
 
 // Inside your service worker code:
 const strategy = new NetworkFirst({networkTimeoutSeconds: 10});

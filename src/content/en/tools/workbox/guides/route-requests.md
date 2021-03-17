@@ -167,7 +167,7 @@ Most routes can be handled with one of the built in caching strategies.
 
 - Stale While Revalidate
   - This strategy will use a cached response for a request if it is
-  available and update the cache in the background with a response form
+  available and update the cache in the background with a response from
   the network. (If it’s not cached it will wait for the network response
   and use that.) This is a fairly safe strategy as it means users are
   regularly updating their cache. The downside of this strategy is that

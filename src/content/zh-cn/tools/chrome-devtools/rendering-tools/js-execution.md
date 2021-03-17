@@ -31,7 +31,7 @@ description:使用 Chrome DevTools CPU 分析器识别开销大的函数。
 3. 按 **Start**。
 4. 根据您要分析的内容不同，可以重新加载页面、与页面交互，或者只是让页面运行。
 5. 完成后，按 **Stop** 按钮。
- 
+
 
 您也可以使用 [Command Line API][profile] 对命令行产生的分析进行记录和分组。
 
@@ -41,15 +41,15 @@ description:使用 Chrome DevTools CPU 分析器识别开销大的函数。
 ## 查看 CPU 分析 {:#view-profile}
 
 完成记录后，DevTools 会使用记录的数据自动填充 Profile 面板。
- 
+
 
 默认视图为 **Heavy (Bottom Up)**。此视图让您可以看到哪些函数对性能影响最大并能够检查这些函数的调用路径。
 
- 
+
 
 ### 更改排序顺序 {:#sort}
 
-要更改排序顺序，请点击 **focus selected function** 图标 (![focus selected function 图标](imgs/focus.png){:.inline}) 旁的下拉菜单，然后选择下列选项中的一项：
+要更改排序顺序，请点击 **focus selected function** 图标 (![focus selected function 图标](imgs/focus.png){:.inline}) 旁的下拉菜单，然后选择下列选项中的一项:
 
 
 
@@ -59,12 +59,12 @@ description:使用 Chrome DevTools CPU 分析器识别开销大的函数。
 ![火焰图](imgs/flamechart.png)
 
 **Heavy (Bottom Up)**。按照函数对性能的影响列出函数，让您可以检查函数的调用路径。
-这是默认视图。 
+这是默认视图。
 
 ![大型图表](imgs/heavy.png)
 
 **Tree (Top Down)**。显示调用结构的总体状况，从调用堆栈的顶端开始。
- 
+
 
 ![树状图](imgs/tree.png)
 
@@ -89,26 +89,26 @@ description:使用 Chrome DevTools CPU 分析器识别开销大的函数。
 
 ![Flamechart 视图](imgs/flamechart.png)
 
-火焰图分为以下两部分：
+火焰图分为以下两部分:
 
 1. **概览**。整个记录的鸟瞰图。
    条的高度与调用堆栈的深度相对应。
-所以，栏越高，调用堆栈越深。 
+所以，栏越高，调用堆栈越深。
 
 2. **调用堆栈**。这里可以详细深入地查看记录过程中调用的函数。
 横轴是时间，纵轴是调用堆栈。
 堆栈由上而下组织。所以，上面的函数调用它下面的函数，以此类推。
- 
+
 
    函数的颜色随机，与其他面板中使用的颜色无关。
 不过，函数的颜色在调用过程中始终保持一致，以便您了解执行的模式。
- 
+
 
 ![带标注的火焰图](imgs/annotated-cpu-flame.png)
 
 高调用堆栈不一定很重要，只是表示调用了大量的函数。
 但宽条表示调用需要很长时间完成。
-这些需要优化。 
+这些需要优化。
 
 ### 在记录的特定部分上放大 {:#zoom}
 
@@ -122,8 +122,8 @@ description:使用 Chrome DevTools CPU 分析器识别开销大的函数。
 
 点击函数可在 **Sources** 面板中查看其定义。
 
-将鼠标悬停在函数上可显示其名称和计时数据。提供的信息如下：
- 
+将鼠标悬停在函数上可显示其名称和计时数据。提供的信息如下:
+
 
 *  **Name**。函数的名称。
 *  **Self time**。完成函数当前的调用所需的时间，仅包含函数本身的声明，不包含函数调用的任何函数。

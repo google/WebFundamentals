@@ -14,11 +14,11 @@ description:點擊 Chrome DevTools 中的 Pretty-Print 圖標，將您的 JavaSc
 ![pretty-print 圖標](imgs/prettyprint-icon.png){:.inline} 圖標，將縮減的腳本轉換成更便於人閱讀的形式。
 
 
-下面是縮減的腳本在 **Sources** 面板中可能的外觀：
+下面是縮減的腳本在 **Sources** 面板中可能的外觀:
 
 ![縮減的腳本](imgs/pretty-print-off.jpg)
 
-下面是相同腳本在點擊 **Pretty-Print** 圖標後的外觀：
+下面是相同腳本在點擊 **Pretty-Print** 圖標後的外觀:
 
 ![點擊 pretty print 之後縮減的腳本](imgs/pretty-print-on.jpg)
 

@@ -51,15 +51,15 @@ Note: 你可以訪問 `chrome://help` 來查看當前使用的 Chrome 版本。
   </figcaption>
 </figure>
 
-每行代碼都是有顏色的：
+每行代碼都是有顏色的:
 
 - 青色代表那代碼已使用。
 - 紅色代表那代碼未使用。
-- 一行紅色和綠色的代碼（就像圖2的第三行**Figure 2**），是代表只有部分的代碼已使用。 例如：三元表達式的代碼：`var b = (a > 0) ? a : 0 `是紅色和綠色。
+- 一行紅色和綠色的代碼（就像圖2的第三行**Figure 2**），是代表只有部分的代碼已使用。 例如: 三元表達式的代碼: `var b = (a > 0) ? a : 0 `是紅色和綠色。
 
 Note: 這代碼的顏色可能將在未來的Chrome更新做出改變。
 
-要打開**覆蓋率面板**：
+要打開**覆蓋率面板**:
 
 1. 呼出[命令面板](/web/tools/chrome-devtools/ui#command-menu)。
 2. 輸入 `Coverage` 然後選擇 **Show Coverage**。
@@ -110,7 +110,7 @@ async function runTest() {
 }
 ```
 
-PS：想提高調試水平嗎？看看這些資源：
+PS: 想提高調試水平嗎？看看這些資源:
 
 - [Get Started With Debugging JS](/web/tools/chrome-devtools/javascript/)
 - [Pause Your Code With Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints)

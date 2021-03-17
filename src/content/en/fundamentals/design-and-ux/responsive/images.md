@@ -471,8 +471,7 @@ one single request.
 
 On the downside:
 
-* On mobile, Data URIs can be
-  [significantly slower](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/)
+* On mobile, Data URIs can be significantly slower
   to display on mobile than images from an external <code>src</code>.
 * Data URIs can considerably increase the size of an HTML request.
 * They add complexity to your markup and your workflow.

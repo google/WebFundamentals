@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="192px" height="192px" viewBox="0 0 192 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>Master</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="152" height="152" rx="12"></rect>
@@ -35,7 +34,7 @@
         </mask>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Master">
+        <g id="Main">
             <g id="Logo" transform="translate(20.000000, 20.000000)">
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>

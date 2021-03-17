@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Device Memory API allows developers to serve different resources to users based on their device's memory capabilities.
 
-{# wf_updated_on: 2019-10-13 #}
+{# wf_updated_on: 2021-02-03 #}
 {# wf_published_on: 2017-12-07 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -107,18 +107,6 @@ app.get('/static/js/:scriptId', (req, res) => {
   res.sendFile(`./path/to/${req.params.scriptId}.${scriptVersion}.js`);
 });
 ```
-
-<aside>
-  <strong>Note:</strong>
-  The <code>Accept-CH</code> header works well for a page's subresource, but it
-  doesn't help if you want to conditionally serve page contents based on device
-  capabilities. To address this, the <a
-  href="http://httpwg.org/http-extensions/client-hints.html#accept-ch-lifetime">
-  <code>Accept-CH-Lifetime</code></a> header (coming soon to Chrome) instructs
-  browsers to include the specified client hints headers in all subsequent
-  requests from this origin for the number of seconds specified by the header
-  value.
-</aside>
 
 ### Using the JavaScript API
 

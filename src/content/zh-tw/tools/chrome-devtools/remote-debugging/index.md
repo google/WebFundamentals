@@ -17,7 +17,7 @@ description:從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上�
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上的實時內容。
-本教程將向您展示如何：
+本教程將向您展示如何:
 
 * 設置您的 Android 設備進行遠程調試，並從開發計算機上發現設備。
 * 從您的開發計算機檢查和調試 Android 設備上的實時內容。
@@ -37,7 +37,7 @@ description:從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上�
 
 [drivers]: https://developer.android.com/tools/extras/oem-usb.html
 
-## 第 1 步：發現您的 Android 設備 {: #discover }
+## 第 1 步: 發現您的 Android 設備 {: #discover }
 
 1. 在您的 Android 設備上，選擇 **Settings** > **Developer Options** > **Enable USB Debugging**。
 在運行 Android 4.2 及更新版本的設備上，**Developer options** 默認情況下處於隱藏狀態。
@@ -56,7 +56,7 @@ description:從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上�
 1. [打開 DevTools](/web/tools/chrome-devtools/#open)。
 
 1. 在 DevTools 中，點擊 **Main Menu** ![主菜單][main]{:.devtools-inline}，然後選擇 **More tools** > **Remote devices**。
- 
+
 
      ![打開遠程設備抽屜式導航欄][open]
 
@@ -90,7 +90,7 @@ Note: 如果您在發現流程中遇到任何問題，您可以通過在 Android
 
 
 
-## 第 2 步：從您的開發計算機調試 Android 設備上的內容。 {: #debug }
+## 第 2 步: 從您的開發計算機調試 Android 設備上的內容。 {: #debug }
 
 1. 如果您尚未在 Android 設備上打開 Chrome，則現在打開它。
 
@@ -112,7 +112,7 @@ Note: 如果您在發現流程中遇到任何問題，您可以通過在 Android
 您的 Android 設備上運行的 Chrome 的版本決定在開發計算機上打開的 DevTools 的版本。因此，如果您的 Android 設備正在運行一個非常舊的 Chrome 版本，則 DevTools 實例看上去可能與您常用的實例有很大的差別。
 
 
-### 更多操作：重新加載、聚焦或關閉一個標籤 {: #more-actions }
+### 更多操作: 重新加載、聚焦或關閉一個標籤 {: #more-actions }
 
 點擊您要重新加載、聚焦或關閉的標籤旁的 **More Options** ![更多選項][more]{:.devtools-inline}。
 
@@ -142,15 +142,15 @@ Element][select]{:.devtools-inline}，然後在您的 Android 設備屏幕上點
 
 [抓屏]: imgs/toggle-screencast.png
 
-您可以通過多種方式與抓屏互動：
+您可以通過多種方式與抓屏互動:
 
-* 將點擊轉變爲點按，在設備上觸發適當的觸摸事件。 
-* 將計算機上的按鍵發送至設備。 
-* 要模擬雙指張合手勢，請按住 <kbd>Shift</kbd> 拖動。 
+* 將點擊轉變爲點按，在設備上觸發適當的觸摸事件。
+* 將計算機上的按鍵發送至設備。
+* 要模擬雙指張合手勢，請按住 <kbd>Shift</kbd> 拖動。
 * 要滾動，請使用您的觸控板或鼠標滾輪，或者使用您的鼠標指針拋式滾動。
 
 
-關於抓屏的一些注意事項：
+關於抓屏的一些注意事項:
 
 * 抓屏僅顯示頁面內容。抓屏的透明部分表示設備界面，如 Chrome 多功能框、Android 狀態欄或 Android 鍵盤。
 * 抓屏會對幀率產生負面影響。在測量滾動或動畫時停用抓屏，以更準確地瞭解頁面的性能。

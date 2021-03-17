@@ -43,7 +43,7 @@ description:学习如何将服务工作线程集成到现有应用内，以使�
 
     $ git clone git@github.com:GoogleChrome/airhorn.git
 
-或 HTTPS：
+或 HTTPS:
 
     $ git clone https://github.com/GoogleChrome/airhorn.git
 
@@ -52,7 +52,7 @@ description:学习如何将服务工作线程集成到现有应用内，以使�
 
 
 
-首先，我们先看看应用示例的最终样子（提示：太奇妙了）。
+首先，我们先看看应用示例的最终样子（提示: 太奇妙了）。
 
 通过查看 `master` 分支确保您位于正确的（最终）分支。
 
@@ -63,7 +63,7 @@ description:学习如何将服务工作线程集成到现有应用内，以使�
     $ cd app
     $ python -m SimpleHTTPServer 3000
 
-在 Chrome 中打开网站。您会看到：![9246b0abd8d860da.png](img/9246b0abd8d860da.png)
+在 Chrome 中打开网站。您会看到: ![9246b0abd8d860da.png](img/9246b0abd8d860da.png)
 
 
 ## 测试应用
@@ -84,7 +84,7 @@ description:学习如何将服务工作线程集成到现有应用内，以使�
 
 现在，返回到应用中。尽管您处于离线状态，页面应仍然能够完全重新加载。您应仍然能够使用喇叭。
 
-它能够离线工作的原因就是此 代码实验室的基础：通过服务工作线程提供离线支持。
+它能够离线工作的原因就是此 代码实验室的基础: 通过服务工作线程提供离线支持。
 
 
 ## 构建初学者应用
@@ -124,7 +124,7 @@ description:学习如何将服务工作线程集成到现有应用内，以使�
 
 
 
-现在，可以将离线支持重新添加到应用中。这个过程由两个步骤组成：
+现在，可以将离线支持重新添加到应用中。这个过程由两个步骤组成:
 
 1. 创建一个将作为服务工作线程的 JavaScript 文件。
 2. 指示浏览器将此 JavaScript 文件注册为“服务工作线程”。
@@ -208,11 +208,11 @@ self.addEventListener('install', function(e) {
 
 我们来测试一下这个功能。__注意__ 您将会看到更加异常的服务工作线程行为。
 
-打开 DevTools，转至 __Application__ 面板。应停用 __Offline__ 复选框。按 `Esc` 键以打开 DevTools 窗口底部的 __Console__ 抽屉。您的 DevTools 窗口应类似于以下屏幕截图：
+打开 DevTools，转至 __Application__ 面板。应停用 __Offline__ 复选框。按 `Esc` 键以打开 DevTools 窗口底部的 __Console__ 抽屉。您的 DevTools 窗口应类似于以下屏幕截图:
 
 ![c96de824be6852d7.png](img/c96de824be6852d7.png)
 
-现在重新加载页面并查看 DevTools 窗口。首先，我们预期能看到记录到控制台中的大量请求，但没有看到。其次，在 __Service Worker__ 窗格中，我们可以看到 __Status__ 已发生更改：
+现在重新加载页面并查看 DevTools 窗口。首先，我们预期能看到记录到控制台中的大量请求，但没有看到。其次，在 __Service Worker__ 窗格中，我们可以看到 __Status__ 已发生更改:
 
 ![c7cfb6099e79d5aa.png](img/c7cfb6099e79d5aa.png)
 

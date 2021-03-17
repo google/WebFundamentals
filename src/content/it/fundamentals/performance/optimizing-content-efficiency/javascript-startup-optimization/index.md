@@ -64,14 +64,14 @@ il](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encodin
 * **Rimozione del codice inutilizzato**.
     * Identifica il codice che può essere rimosso o caricato lazily con [DevTools
     code coverage](/web/updates/2017/04/devtools-release-notes#coverage).
-    * Usa [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env) e
+    * Usa [babel-preset-env](https://github.com/GoogleChrome/puppeteer/blob/main/packages/babel-preset-env) e
     browserlist per evitare la funzionalità di transpiling dei browser moderni. Gli
     sviluppatori avanzati possono trovare utile l'[analisi dei webpack
     bundle](https://github.com/webpack-contrib/webpack-bundle-analyzer) per
     identificare opportunità di eliminazione delle dipendenze non necessarie.
     * Per rimuovere il codice,
     vedi [tree-shaking](https://webpack.js.org/guides/tree-shaking/),
-    le ottimizzazioni avanzate e i plug-in di    
+    le ottimizzazioni avanzate e i plug-in di
     ritaglio di libreria del [compilatore Closure](/closure/compiler/)
     come [lodash-babel-plugin](https://github.com/lodash/babel-plugin-lodash) o
     [ContextReplacementPlugin](https://iamakulov.com/notes/webpack-front-end-size-caching/#moment-js) di

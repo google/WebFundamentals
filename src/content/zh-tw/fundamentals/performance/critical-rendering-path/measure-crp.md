@@ -26,15 +26,15 @@ description: 無法評估就談不上最佳化。幸運的是，Navigation Timin
 
 那麼，這些時間戳記到底有什麼含義呢？
 
-* **domLoading：**這是整個過程開始的時間戳記，瀏覽器開始解析 HTML 文件第一批收到的位元組
+* **domLoading: **這是整個過程開始的時間戳記，瀏覽器開始解析 HTML 文件第一批收到的位元組
   。
-* **domInteractive：**標記瀏覽器完成解析並且所有 HTML 和 DOM 都建構完畢的時間點。
-* **domContentLoaded：**標記 DOM 準備就緒並且沒有樣式表禁止 JavaScript 執行的時間點，表示我們現在 (大概) 可以開始建構轉譯樹狀結構了。
+* **domInteractive: **標記瀏覽器完成解析並且所有 HTML 和 DOM 都建構完畢的時間點。
+* **domContentLoaded: **標記 DOM 準備就緒並且沒有樣式表禁止 JavaScript 執行的時間點，表示我們現在 (大概) 可以開始建構轉譯樹狀結構了。
     * 很多 JavaScript 框架等待這個事件發生後，才會開始執行自己的邏輯。因此，瀏覽器會透過捕捉 _EventStart_ 和 _EventEnd_ 時間戳記，方便我們追蹤執行邏輯所需的時間。
-* **domComplete：** 顧名思義，所有的處理程序都已完成，網頁上所有資源 (圖片等) 也下載完成，表示載入旋轉圖示停止旋轉了。
-* **loadEvent：**這是每個網頁載入的最後一步，瀏覽器會觸發「onLoad」事件，以便觸發額外的應用程式邏輯。
+* **domComplete: ** 顧名思義，所有的處理程序都已完成，網頁上所有資源 (圖片等) 也下載完成，表示載入旋轉圖示停止旋轉了。
+* **loadEvent: **這是每個網頁載入的最後一步，瀏覽器會觸發「onLoad」事件，以便觸發額外的應用程式邏輯。
 
-HTML 規格中指明了每一個事件的具體條件：該在什麼時候觸發、在什麼條件下觸發等等。在我們的課程中，則會將重點放在與關鍵轉譯路徑有關的一些關鍵里程碑：
+HTML 規格中指明了每一個事件的具體條件: 該在什麼時候觸發、在什麼條件下觸發等等。在我們的課程中，則會將重點放在與關鍵轉譯路徑有關的一些關鍵里程碑:
 
 * **domInteractive** 標記 DOM 準備就緒。
 * **domContentLoaded** 通常標記 [DOM 和 CSSOM 都準備就緒]的時間(http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/)。
@@ -51,6 +51,3 @@ HTML 規格中指明了每一個事件的具體條件：該在什麼時候觸發
 <img src="images/device-navtiming-small.png" class="center" alt="NavTiming 示範">
 
 透過上面的介紹和示例，我們現在知道要追蹤哪些具體的里程碑，以及可用來輸出這些評估結果的簡單功能。注意，除了直接將指標顯示在網頁上，您還可以修改程式碼，將這些指標傳送到分析伺服器上 ([Google Analytics (分析) 可自動完成這項功能](https://support.google.com/analytics/answer/1205784))。這是一種有效監控網頁效能的方法，您可以藉此找出哪些網頁的效能還需要進一步最佳化。
-
-
-

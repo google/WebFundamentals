@@ -23,7 +23,7 @@ description:用戶希望頁面可以交互並且非常流暢。像素管道的�
 - 繪製比任何其他渲染活動花費的時間都要多。請留意繪製瓶頸。
 
 
-## JavaScript 
+## JavaScript
 
 JavaScript 計算，特別是會觸發大量視覺變化的計算會降低應用性能。
 不要讓時機不當或長時間運行的 JavaScript 影響用戶交互。
@@ -47,7 +47,7 @@ JavaScript 計算，特別是會觸發大量視覺變化的計算會降低應用
 
 ### 問題
 
-下表對一些常見 JavaScript 問題和潛在解決方案進行了說明：
+下表對一些常見 JavaScript 問題和潛在解決方案進行了說明:
 
 <table>
   <thead>
@@ -64,7 +64,7 @@ JavaScript 計算，特別是會觸發大量視覺變化的計算會降低應用
     <tr>
       <td data-th="Problem">時機不當的 JavaScript 影響響應、動畫、加載。</td>
       <td data-th="Example">頁面加載後用戶向右滾動、setTimeout/setInterval。</td>
-      <td data-th="Solution"><a href="/web/fundamentals/performance/rendering/optimize-javascript-execution">優化 JavaScript 執行</a>：使用 <code>requestAnimationFrame</code>、使 DOM 操作遍佈各個幀、使用網絡工作線程。
+      <td data-th="Solution"><a href="/web/fundamentals/performance/rendering/optimize-javascript-execution">優化 JavaScript 執行</a>: 使用 <code>requestAnimationFrame</code>、使 DOM 操作遍佈各個幀、使用網絡工作線程。
     </tr>
     <tr>
       <td data-th="Problem">長時間運行的 JavaScript 影響響應。</td>
@@ -79,14 +79,14 @@ JavaScript 計算，特別是會觸發大量視覺變化的計算會降低應用
   </tbody>
 </table>
 
-## 樣式 
+## 樣式
 
 樣式更改開銷較大，在這些更改會影響 DOM 中的多個元素時更是如此。
 只要您將樣式應用到元素，瀏覽器就必須確定對所有相關元素的影響、重新計算佈局並重新繪製。
 
 
 
-相關指南：
+相關指南:
 
 * [縮小樣式計算的範圍並降低其複雜性](/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)
 
@@ -103,7 +103,7 @@ JavaScript 計算，特別是會觸發大量視覺變化的計算會降低應用
 
 ![長時間運行的重新計算樣式](imgs/recalculate-style.png)
 
-要降低 **Recalculate Style** 事件的影響，請執行以下操作：
+要降低 **Recalculate Style** 事件的影響，請執行以下操作:
 
 * 使用 [CSS 觸發器](https://csstriggers.com)瞭解哪些 CSS 屬性會觸發佈局、繪製與合成。
 這些屬性對渲染性能的影響最大。
@@ -115,7 +115,7 @@ JavaScript 計算，特別是會觸發大量視覺變化的計算會降低應用
 
 ### 問題
 
-下表對一些常見樣式問題和潛在解決方案進行了說明：
+下表對一些常見樣式問題和潛在解決方案進行了說明:
 
 
 <table>
@@ -138,21 +138,21 @@ JavaScript 計算，特別是會觸發大量視覺變化的計算會降低應用
   </tbody>
 </table>
 
-相關指南：
+相關指南:
 
 * [縮小樣式計算的範圍並降低其複雜性](/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations)
 
 
-## 佈局 
+## 佈局
 
 佈局（或 Firefox 中的自動重排）是瀏覽器用來計算頁面上所有元素的位置和大小的過程。
 網頁的佈局模式意味着一個元素可能影響其他元素；例如 `<body>` 元素的寬度一般會影響其子元素的寬度以及樹中各處的節點，等等。這個過程對於瀏覽器來說可能很複雜。
 一般的經驗法則是，如果在幀完成前從 DOM 請求返回幾何值，您將發現會出現“強制同步佈局”，在頻繁地重複或針對較大的 DOM 樹執行操作時這會成爲性能的大瓶頸。
 
 
- 
 
-相關指南：
+
+相關指南:
 
 * [避免佈局抖動](/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing)
 * [診斷強制同步佈局](/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts)
@@ -162,7 +162,7 @@ JavaScript 計算，特別是會觸發大量視覺變化的計算會降低應用
 ### 工具
 
 Chrome DevTools 的 **Timeline** 可以確定頁面何時會導致強制同步佈局。
-這些 **Layout** 事件使用紅色豎線標記。 
+這些 **Layout** 事件使用紅色豎線標記。
 
 ![強制同步佈局](imgs/forced-synchronous-layout.png)
 
@@ -174,7 +174,7 @@ Chrome DevTools 的 **Timeline** 可以確定頁面何時會導致強制同步�
 
 ### 問題
 
-下表對一些常見佈局問題和潛在解決方案進行了說明：
+下表對一些常見佈局問題和潛在解決方案進行了說明:
 
 
 <table>
@@ -198,7 +198,7 @@ Chrome DevTools 的 **Timeline** 可以確定頁面何時會導致強制同步�
   </tbody>
 </table>
 
-## 繪製與合成 
+## 繪製與合成
 
 繪製是填充像素的過程。這經常是渲染流程開銷最大的部分。
 如果您在任何情況下注意到頁面出現卡頓現象，很有可能存在繪製問題。
@@ -215,16 +215,16 @@ Chrome DevTools 的 **Timeline** 可以確定頁面何時會導致強制同步�
 想要了解繪製花費多久或多久繪製一次？請在 **Timeline** 面板上啓用 [Paint profiler][paint]，然後[進行記錄][recording]。
 
 如果您的大部分渲染時間花費在繪製上，即表示存在繪製問題。
- 
+
 
 ![Timeline 記錄中的長時間繪製](imgs/long-paint.png)
 
 請查看 [**rendering settings**][rendering settings] 菜單，進一步瞭解可以幫助診斷繪製問題的配置。
- 
+
 
 ### 問題
 
-下表對一些常見繪製與合成問題及潛在解決方案進行了說明：
+下表對一些常見繪製與合成問題及潛在解決方案進行了說明:
 
 <table>
   <thead>

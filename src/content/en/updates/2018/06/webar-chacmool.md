@@ -33,12 +33,12 @@ on
 [ARCore-compatible Android devices](/ar/discover/supported-devices) with Android O or later. You'll also need to
 [install ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign).
  This work relies on a new WebXR proposal (the
-[WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/explainer.md)),
+[WebXR Hit Test API](https://github.com/immersive-web/hit-test/)),
 so it is under a flag and intended to stay in Canary as we test and refine the
 new API proposal with other members of the Immersive Web Community Group. In
 fact, to access the demo you'll need to enable two flags in `chrome://flags:`
 `#webxr` and `#webxr-hit-test`.  Once you have these both enabled and have restarted
-Canary, you can check out the [Chacmool](https://web-education-ar-demo.appspot.com/) demo.  
+Canary, you can check out the [Chacmool](https://web-education-ar-demo.appspot.com/) demo.
 
 Note: If you want to be notified of spec updates as they land in Chrome, the
 [Immersive Web Early Adopters Guide](https://immersive-web.github.io/webxr-reference/) is
@@ -75,7 +75,7 @@ was used to reduce the model's file size from 44.3 megabytes to a mere 225
 kilobytes. Finally, a web worker is used to load the model on a background
 thread so the page remains interactive while the model is loaded and
 decompressed, an operation that would typically cause jank and prevent the page
-from being scrolled.  
+from being scrolled.
 
 We can't stress enough that, since we were developing on desktop and deploying
 onto a phone, using
@@ -117,7 +117,7 @@ best design practices for the web. Be sure the site provides a good experience
 across devices (desktop, tablet, mobile, headset, etc) -  supporting
 [progressive enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement)
 means also designing for non-AR-capable devices (i.e. show a 3D model viewer on
-non-AR devices). 	
+non-AR devices).
 
 If you are interested in developing your own web-based AR experiences, we have a
 companion post here that will give more details about how to get started

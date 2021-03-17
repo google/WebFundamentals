@@ -11,7 +11,7 @@ Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 ## WebVR 實現狀態
 
-目前，WebVR API 可用於以下瀏覽器：
+目前，WebVR API 可用於以下瀏覽器:
 
 * Chrome Beta (M56+)，通過一個[來源試用版](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)實現。
 * Firefox Nightly。

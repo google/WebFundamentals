@@ -82,7 +82,7 @@ Pertama, Anda harus mendapatkan kode aplikasinya, baik versi "sebelum"maupun "se
 
 ### Menjalankan aplikasi orisinal
 
-Pertama, dapatkan versi aplikasi orisinal yang tersendat dan jalankan. Di Chrome, buka __index.html__ di folder tingkat teratas (mis., news-aggregator-master). Bereksperimenlah sedikit dengan aplikasi ini; Anda akan segera melihat masalah kinerja tingkat tinggi dalam dua interaksi pengguna utama, bergulir dalam layar utama dan pergeseran masuk/keluar cerita. Kita akan memfokuskan pada masalah utama itu untuk mengetahui bagaimana kita bisa meningkatkan kinerja aplikasi yang tersendat ini.
+Pertama, dapatkan versi aplikasi orisinal yang tersendat dan jalankan. Di Chrome, buka __index.html__ di folder tingkat teratas (mis., news-aggregator). Bereksperimenlah sedikit dengan aplikasi ini; Anda akan segera melihat masalah kinerja tingkat tinggi dalam dua interaksi pengguna utama, bergulir dalam layar utama dan pergeseran masuk/keluar cerita. Kita akan memfokuskan pada masalah utama itu untuk mengetahui bagaimana kita bisa meningkatkan kinerja aplikasi yang tersendat ini.
 
 
 ## Latihan 1: Menggulir daftar
@@ -92,7 +92,7 @@ Pertama, dapatkan versi aplikasi orisinal yang tersendat dan jalankan. Di Chrome
 
 Selama menggulir di layar utama, Anda akan melihat bahwa daftar cerita bergetar. Anda juga akan melihat bahwa masing-masing indikator poin cerita (angka yang dilingkari) tidak hanya mengubah nilai, melainkan juga mengubah warna. Latihan ini adalah tentang mengidentifikasi masalah ini dan memutuskan cara pendekatannya.
 
-Mari kita lihat apa yang sebenarnya terjadi saat kita menggulir di layar utama, dengan menggunakan Timeline. Pastikan bahwa kotak centang __JS Profile__ diaktifkan sebelum Anda memulai perekaman. Mulailah perekaman baru, gulir daftar ke bawah, kemudian hentikan perekaman. 
+Mari kita lihat apa yang sebenarnya terjadi saat kita menggulir di layar utama, dengan menggunakan Timeline. Pastikan bahwa kotak centang __JS Profile__ diaktifkan sebelum Anda memulai perekaman. Mulailah perekaman baru, gulir daftar ke bawah, kemudian hentikan perekaman.
 
 Di bagian atas rekaman, Anda melihat indikator FPS berwarna hijau. Anda akan melihat bilah hijau dengan beberapa lonjakan, seperti pada tangkapan layar di bawah ini. Fakta bahwa bilah hijau sangat rendah menunjukkan bahwa layar tidak mencapai 60 FPS.
 
@@ -102,7 +102,7 @@ Perbesar rekaman dan Anda akan melihat bahwa setelah kejadian gulir ada panggila
 
 ![d6fb17faaa99e6f.png](img/d6fb17faaa99e6f.png)
 
-Arahkan ke atasnya untuk mengidentifikasi kejadian layout, kemudian klik untuk menampilkan detailnya. 
+Arahkan ke atasnya untuk mengidentifikasi kejadian layout, kemudian klik untuk menampilkan detailnya.
 
 ![fce56d36285bc1fc.png](img/fce56d36285bc1fc.png)
 
@@ -147,13 +147,13 @@ function colorizeAndScaleStories() {
 }
 ```
 
-Perhatikan bahwa `height`, `width`, dan `line-height` telah diakses, yang menyebabkan layout dijalankan. Opasitas juga telah diatur dan -- sedangkan perubahan opasitas tidak memicu layout -- baris kode ini menerapkan gaya baru, yang memicu penghitungan ulang dan, layout lagi. Kedua teknik ini yang digunakan dalam loop utama fungsi menyebabkan masalah layout sinkron paksa. 
+Perhatikan bahwa `height`, `width`, dan `line-height` telah diakses, yang menyebabkan layout dijalankan. Opasitas juga telah diatur dan -- sedangkan perubahan opasitas tidak memicu layout -- baris kode ini menerapkan gaya baru, yang memicu penghitungan ulang dan, layout lagi. Kedua teknik ini yang digunakan dalam loop utama fungsi menyebabkan masalah layout sinkron paksa.
 
 Berikutnya, pertimbangkan efek visual pada indikator poin cerita, yang tidak menambahkan nilai informasi apa pun. Kita bisa menghasilkan efek ini dengan properti CSS sebagai ganti JavaScript, namun kita mungkin lebih baik meninggalkan efek sama sekali. Kesimpulan: kadang-kadang solusi kode terbaik adalah menghilangkannya.
 
 Mari kita membuang panggilan ke fungsi `colorizeAndScaleStories`. Serahkan baris 88, 89, dan 305 di app.js, serta seluruh fungsi, baris 255-286. Jangan menghapus baris, karena nomor baris yang kita referensikan setelahnya di codelab, akan tidak cocok dengan aplikasi Anda. Sekarang pokok cerita selalu terlihat sama.
 
-Jalankan lagi aplikasi dan lakukan perekaman Timeline terhadap beberapa aktivitas gulir, kemudian perbesar di kejadian gulir. Kali ini, Anda akan melihat bahwa hanya ada satu kalkulasi ulang gaya setelah pengguliran, dan bilah FPS jauh lebih tinggi. 
+Jalankan lagi aplikasi dan lakukan perekaman Timeline terhadap beberapa aktivitas gulir, kemudian perbesar di kejadian gulir. Kali ini, Anda akan melihat bahwa hanya ada satu kalkulasi ulang gaya setelah pengguliran, dan bilah FPS jauh lebih tinggi.
 
 ![5e9d66cb007f9076.png](img/5e9d66cb007f9076.png)
 
@@ -213,7 +213,7 @@ Seperti biasa, mulailah dengan melakukan perekaman Timeline terhadap pergantian 
 
 ![59865afca1e508ef.png](img/59865afca1e508ef.png)
 
-Biasanya, setiap kali Anda melihat kejadian ungu dengan segitiga merah di atasnya, Anda ingin menyelidikinya dengan mengarahkan kursor ke atasnya dan mengekliknya untuk menampilkan detailnya. Sekarang, Anda tertarik dalam layout sinkron paksa yang terjadi setelah pengatur waktu diaktifkan. 
+Biasanya, setiap kali Anda melihat kejadian ungu dengan segitiga merah di atasnya, Anda ingin menyelidikinya dengan mengarahkan kursor ke atasnya dan mengekliknya untuk menampilkan detailnya. Sekarang, Anda tertarik dalam layout sinkron paksa yang terjadi setelah pengatur waktu diaktifkan.
 
 ![1bd8f7700f55a6c4.png](img/1bd8f7700f55a6c4.png)
 
@@ -364,7 +364,7 @@ Setelah grup pertama deklarasi variabel, perhatikan empat baris yang membentuk v
 
 Pertama, itu tidak perlu jadi masalah, namun ini menjadi semakin tidak efisien saat aplikasi digunakan. Tentu saja, pengguna hanya melihat satu cerita untuk setiap kalinya, namun simpul-simpul baru yang dibuat untuk setiap cerita yang telah dilihat tidak akan dibuang. Setelah beberapa klik, DOM akan berantakan dengan simpul-simpul yang ditinggalkan sehingga menyita memori dan memperlambat aplikasi -- dan semakin lama aplikasi digunakan, semakin buruk kinerjanya.
 
-Cara yang lebih baik untuk menghasilkan fitur ini adalah membuat dahulu satu simpul `storyDetails` permanen di skrip untuk menampung cerita saat ini, kemudian menggunakan properti `innerHTML` yang tepercaya untuk menyetel ulang materinya setiap kali, sebagai ganti membuat simpul baru. Dengan kata lain, Anda cukup menyederhanakan kode ini: 
+Cara yang lebih baik untuk menghasilkan fitur ini adalah membuat dahulu satu simpul `storyDetails` permanen di skrip untuk menampung cerita saat ini, kemudian menggunakan properti `innerHTML` yang tepercaya untuk menyetel ulang materinya setiap kali, sebagai ganti membuat simpul baru. Dengan kata lain, Anda cukup menyederhanakan kode ini:
 
 ```
     storyDetails = document.createElement('section');
@@ -382,7 +382,7 @@ Ke ini:
     storyDetails.innerHTML = storyDetailsHtml;
 ```
 
-Perubahan itu jelas akan meningkatkan kinerja jangka panjang, namun itu tidak melakukan apa pun bagi kita dalam jangka pendek. 
+Perubahan itu jelas akan meningkatkan kinerja jangka panjang, namun itu tidak melakukan apa pun bagi kita dalam jangka pendek.
 
 Kita tetap perlu menyelesaikan penanganan masalah pergeseran masuk/keluar cerita ini.
 
@@ -398,7 +398,7 @@ Mari kita periksa proses ini. Di Timeline, aktifkan profiler JavaScript, dan lak
 
 ![33ba193a24cb7303.png](img/33ba193a24cb7303.png)
 
-Di latihan itu, kita menempatkan panggilan fungsi `animate` ke dalam `requestAnimationFrame`; yang pasti akan membantu, namun tidak menghilangkan masalah sepenuhnya. 
+Di latihan itu, kita menempatkan panggilan fungsi `animate` ke dalam `requestAnimationFrame`; yang pasti akan membantu, namun tidak menghilangkan masalah sepenuhnya.
 
 Ingat kembali dari diskusi kita sebelumnya (dan dari riset Anda di [Pemicu CSS](http://csstriggers.com/)) bahwa menggunakan properti tertentu akan menyebabkan bagian tertentu dari pipeline rendering terjadi. Mari kita perhatikan  `animate` lagi.
 
@@ -427,7 +427,7 @@ function animate () {
 }
 ```
 
-Mendekati akhir fungsi, properti `left` telah disetel; ini menyebabkan browser menjalankan layout. Tidak lama kemudian, properti `style` disetel; ini menyebabkan browser menjalankan gaya penghitungan ulang. Seperti yang Anda ketahui, jika ini terjadi lebih dari sekali di sebuah bingkai, ini akan menyebabkan layout sinkron paksa -- dan ini terjadi beberapa kali dalam fungsi ini. 
+Mendekati akhir fungsi, properti `left` telah disetel; ini menyebabkan browser menjalankan layout. Tidak lama kemudian, properti `style` disetel; ini menyebabkan browser menjalankan gaya penghitungan ulang. Seperti yang Anda ketahui, jika ini terjadi lebih dari sekali di sebuah bingkai, ini akan menyebabkan layout sinkron paksa -- dan ini terjadi beberapa kali dalam fungsi ini.
 
 Fungsi `animate` dimuat dalam fungsi `showStory` dan fungsi saudaranya, `hideStory`, keduanya memperbarui properti yang sama dan menyebabkan masalah layout sinkron paksa.
 
@@ -462,7 +462,7 @@ Seperti yang telah kita ketahui sebelumnya dalam codelab ini, kadang-kadang perb
 }
 ```
 
-Hal pertama yang harus diperhatikan dalam kelas `.story-details` adalah bahwa kita menyetel properti `left` ke 100%; sebesar apa pun lebar layar, ini mendorong seluruh elemen cerita ke kanan, sepenuhnya keluar dari laman yang terlihat, sehingga benar-benar menyembunyikannya. 
+Hal pertama yang harus diperhatikan dalam kelas `.story-details` adalah bahwa kita menyetel properti `left` ke 100%; sebesar apa pun lebar layar, ini mendorong seluruh elemen cerita ke kanan, sepenuhnya keluar dari laman yang terlihat, sehingga benar-benar menyembunyikannya.
 
 Berikutnya, di kelas `.story-details.visible` dan `.story-details.hidden`, kita menyiapkan `transform` pada semua kelas untuk memaksa posisi X (horizontal) ke -100vw ( *tampilan lebar yang terlihat* ) dan 0. Di aplikasi, kelas-kelas ini akan memindahkan materi cerita ke dalam tampilan atau mengembalikan ke posisi luar-layar aslinya.
 
@@ -491,7 +491,7 @@ Semua ini seharusnya memiliki banyak manfaat positif pada kinerja pergeseran mas
 
 ![5543cf34c10a914b.png](img/5543cf34c10a914b.png)
 
-Kinerja aplikasi seharusnya jauh lebih baik; semua bingkai kini di bawah garis 60 fps, dan peringatan layout sinkron paksa sudah hilang. Yang penting, kita tidak perlu lagi menggunakan JavaScript untuk melakukan animasi geser-masuk/keluar. 
+Kinerja aplikasi seharusnya jauh lebih baik; semua bingkai kini di bawah garis 60 fps, dan peringatan layout sinkron paksa sudah hilang. Yang penting, kita tidak perlu lagi menggunakan JavaScript untuk melakukan animasi geser-masuk/keluar.
 
 Pekerjaan meningkatkan kinerja dasar kita sudah beres.
 

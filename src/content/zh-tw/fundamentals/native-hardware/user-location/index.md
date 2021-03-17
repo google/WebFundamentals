@@ -20,7 +20,7 @@ GeoLocation API  還可讓您觀看使用者所在地點，並在他們移動時
 
 
 
-## 讓使用者同意位置共用 
+## 讓使用者同意位置共用
 
 
 
@@ -120,7 +120,7 @@ GeoLocation API  還可讓您觀看使用者所在地點，並在他們移動時
 
 如果您需要使用者完成行動，「取悅」使用者以採取行動，這是不錯的方法。
 
-我們建議： 
+我們建議:
 
 1.  設定會在短期內觸發的計時器 -- 5 秒是不錯的建議值。
 2.  如果您得到錯誤訊息，請對使用者顯示訊息。
@@ -132,22 +132,22 @@ GeoLocation API  還可讓您觀看使用者所在地點，並在他們移動時
     button.onclick = function() {
       var startPos;
       var element = document.getElementById("nudge");
-    
+
       var showNudgeBanner = function() {
         nudge.style.display = "block";
       };
-    
+
       var hideNudgeBanner = function() {
         nudge.style.display = "none";
       };
-    
+
       var nudgeTimeoutId = setTimeout(showNudgeBanner, 5000);
-    
+
       var geoSuccess = function(position) {
         hideNudgeBanner();
         // We have the location, don't display banner
-        clearTimeout(nudgeTimeoutId); 
-    
+        clearTimeout(nudgeTimeoutId);
+
         // Do magic with location
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
@@ -160,14 +160,14 @@ GeoLocation API  還可讓您觀看使用者所在地點，並在他們移動時
             showNudgeBanner();
             break;
       };
-    
+
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
     };
-    
 
 
 
-## 取得使用者目前的位置 
+
+## 取得使用者目前的位置
 
 
 
@@ -205,7 +205,7 @@ API 無視裝置類型；它不管瀏覽器如何判斷位置，
 但在進行之前最好先查看是否支援，這才是好習慣。
 
 您可以測試地理位置物件是否存在，
-以輕易查看相容性：
+以輕易查看相容性:
 
 
     // check for Geolocation support
@@ -215,7 +215,7 @@ API 無視裝置類型；它不管瀏覽器如何判斷位置，
     else {
       console.log('Geolocation is not supported for this Browser/OS version yet.');
     }
-    
+
 
 ### 判斷使用者的目前位置
 
@@ -233,7 +233,7 @@ GeoLocation API 提供了一個簡單的「一次性」
       };
       navigator.geolocation.getCurrentPosition(geoSuccess);
     };
-    
+
 
 如果這是此網域的應用程式首次要求這項權限，
 瀏覽器通常會查看使用者的同意。 視瀏覽器而定，偏好設定可能為一律允許或不允許權限查詢，
@@ -263,7 +263,7 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
 遺憾的是，並不是所有位置查詢都會成功。 或許是無法找到 GPS，
 或使用者突然停用位置查詢。 發生錯誤時，
 會呼叫 `getCurrentPosition()` 的第二個選用引數，
-這樣您就可以在回呼中通知使用者：
+這樣您就可以在回呼中通知使用者:
 
 
     window.onload = function() {
@@ -283,7 +283,7 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
       };
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
     };
-    
+
 
 ### 降低啟動地理位置硬體的必要性
 
@@ -301,7 +301,7 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
       var geoOptions = {
       	maximumAge: 5 * 60 * 1000,
       }
-    
+
       var geoSuccess = function(position) {
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
@@ -315,10 +315,10 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
         //   2: position unavailable (error response from location provider)
         //   3: timed out
       };
-    
+
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
     };
-    
+
 
 ### 別讓使用者等待，要設定逾時。
 
@@ -330,7 +330,7 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
       var geoOptions = {
          timeout: 10 * 1000
       }
-    
+
       var geoSuccess = function(position) {
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
@@ -344,10 +344,10 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
         //   2: position unavailable (error response from location provider)
         //   3: timed out
       };
-    
+
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
     };
-    
+
 
 ### 捨較精細的位置，而就更粗略的位置。
 
@@ -356,7 +356,7 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
 可儘快傳回的粗略位置。
 
 如果您確實需要高精度，
-是可以 `enableHighAccuracy` 選項來覆寫預設設定。  請保守使用這項功能：不但解析速度慢，
+是可以 `enableHighAccuracy` 選項來覆寫預設設定。  請保守使用這項功能: 不但解析速度慢，
 電力也用得更多。
 
 
@@ -365,7 +365,7 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
       var geoOptions = {
         enableHighAccuracy: true
       }
-    
+
       var geoSuccess = function(position) {
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
@@ -379,15 +379,15 @@ DevTools 會針對無法透過覆寫功能表提供的 navigator.geolocation 與
         //   2: position unavailable (error response from location provider)
         //   3: timed out
       };
-    
+
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
     };
-    
 
 
 
 
-## 監視使用者位置 
+
+## 監視使用者位置
 
 
 
@@ -417,23 +417,23 @@ API 無視裝置類型；它不管瀏覽器如何判斷位置，
 
 ### 監看使用者位置
 
-GeoLocation API 
-允許您以對 `getCurrentPosition()` 的單一呼叫，取得使用者的位置 (使用者同意之下)。  
+GeoLocation API
+允許您以對 `getCurrentPosition()` 的單一呼叫，取得使用者的位置 (使用者同意之下)。
 
 如果您想要持續監視使用者的位置，
 GeoLocation API 提供一種稱為 `watchPosition()` 的方法。 它用類似方式
-以 `getCurrentPosition()`，但當定位軟體在以下情況下，它會觸發多次：
+以 `getCurrentPosition()`，但當定位軟體在以下情況下，它會觸發多次:
 
 
 1.  更精確鎖定使用者。
 2.  使用者的位置變更。
- 
+
 
     var watchId = navigator.geolocation.watchPosition(function(position) {
       document.getElementById('currentLat').innerHTML = position.coords.latitude;
       document.getElementById('currentLon').innerHTML = position.coords.longitude;
     });
-    
+
 
 ### 總是清理和節省電池
 
@@ -451,7 +451,7 @@ GeoLocation API 提供一種稱為 `watchPosition()` 的方法。 它用類似�
 遺憾的是，並不是所有位置查詢都會成功。 或許是無法找到 GPS，
 或使用者突然停用位置查詢。 發生錯誤時，
 會呼叫 getCurrentPosition() 的第二個選用引數，
-這樣您就可以在回呼中通知使用者：
+這樣您就可以在回呼中通知使用者:
 
 
     window.onload = function() {
@@ -471,6 +471,3 @@ GeoLocation API 提供一種稱為 `watchPosition()` 的方法。 它用類似�
       };
       navigator.geolocation.watchPosition(geoSuccess, geoError);
     };
-    
-
-

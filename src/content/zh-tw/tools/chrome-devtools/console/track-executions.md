@@ -29,7 +29,7 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
 
 ### 基本示例
 
-在這裏，我們將測量 100 萬個新 Array 的初始化：
+在這裏，我們將測量 100 萬個新 Array 的初始化:
 
 
     console.time("Array initialize");
@@ -40,14 +40,14 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
     console.timeEnd("Array initialize");
 
 
-將在控制檯中輸出下列結果：
+將在控制檯中輸出下列結果:
 ![經過的時間](images/track-executions-time-duration.png)
 
 ### Timeline 上的計時器
 
 當 [Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) 記錄在 `time()` 操作期間發生時，它也會對 Timeline 進行標註。如果您想要跟蹤應用的操作和操作來自何處，請使此記錄。
 
-執行 `time()` 時 Timeline 上的標註如下所示：
+執行 `time()` 時 Timeline 上的標註如下所示:
 
 ![timeline 上的時間標註](images/track-executions-time-annotation-on-timeline.png)
 
@@ -58,12 +58,12 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
 [Timeline 面板](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool)可以提供引擎時間消耗的完整概覽。您可以使用 [`timeStamp()`](./console-reference#consoletimestamplabel) 從控制檯向 Timeline 添加一個標記。
 這是一種將您應用中的事件與其他事件進行關聯的簡單方式。
 
-`timeStamp()` 會在以下地方對 Timeline 進行標註：
+`timeStamp()` 會在以下地方對 Timeline 進行標註:
 
 - Timeline 彙總和詳細信息視圖中的黃色垂直線。
 - 會向事件列表添加一條記錄。
 
-以下示例代碼：
+以下示例代碼:
 
 
     function AddResult(name, result) {
@@ -74,7 +74,7 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
     }
 
 
-將生成下面的 Timeline 時間戳：
+將生成下面的 Timeline 時間戳:
 
 ![Timeline 中的時間戳](images/track-executions-timestamp2.png)
 
@@ -82,7 +82,7 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
 
 使用 `count()` 方法記錄提供的字符串，以及相同字符串已被提供的次數。當完全相同的語句被提供給同一行上的 `count()` 時，此數字將增大。
 
-將 `count()` 與某些動態內容結合使用的示例代碼：
+將 `count()` 與某些動態內容結合使用的示例代碼:
 
 
     function login(user) {
@@ -102,7 +102,7 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
     login(users[0]);
 
 
-代碼示例的輸出：
+代碼示例的輸出:
 
 ![console.count() example output](images/track-executions-console-count.png)
 

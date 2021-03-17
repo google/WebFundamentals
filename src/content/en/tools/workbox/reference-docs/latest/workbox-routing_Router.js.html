@@ -28,10 +28,11 @@
   https://opensource.org/licenses/MIT.
 */
 import { assert } from &#x27;workbox-core/_private/assert.js&#x27;;
-import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
-import { WorkboxError } from &#x27;workbox-core/_private/WorkboxError.js&#x27;;
 import { getFriendlyURL } from &#x27;workbox-core/_private/getFriendlyURL.js&#x27;;
+import { defaultMethod } from &#x27;./utils/constants.js&#x27;;
+import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
 import { normalizeHandler } from &#x27;./utils/normalizeHandler.js&#x27;;
+import { WorkboxError } from &#x27;workbox-core/_private/WorkboxError.js&#x27;;
 import &#x27;./_version.js&#x27;;
 /**
  * The Router can be used to process a FetchEvent through one or more
@@ -56,6 +57,7 @@ class Router {
      */
     constructor() {
         this._routes &#x3D; new Map();
+        this._defaultHandlerMap &#x3D; new Map();
     }
     /**
      * @return {Map&amp;lt;string, Array&amp;lt;module:workbox-routing.Route&gt;&gt;} routes A &#x60;Map&#x60; of HTTP
@@ -114,7 +116,7 @@ class Router {
                         entry &#x3D; [entry];
                     }
                     const request &#x3D; new Request(...entry);
-                    return this.handleRequest({ request });
+                    return this.handleRequest({ request, event });
                     // TODO(philipwalton): TypeScript errors without this typecast for
                     // some reason (probably a bug). The real type here should work but
                     // doesn&#x27;t: &#x60;Array&amp;lt;Promise&amp;lt;Response&gt; | undefined&gt;&#x60;.
@@ -132,10 +134,9 @@ class Router {
      * appropriate Route&#x27;s handler.
      *
      * @param {Object} options
-     * @param {Request} options.request The request to handle (this is usually
-     *     from a fetch event, but it does not have to be).
-     * @param {FetchEvent} [options.event] The event that triggered the request,
-     *     if applicable.
+     * @param {Request} options.request The request to handle.
+     * @param {ExtendableEvent} options.event The event that triggered the
+     *     request.
      * @return {Promise&amp;lt;Response&gt;|undefined} A promise is returned if a
      *     registered route can handle the request. If there is no matching
      *     route and there&#x27;s no &#x60;defaultHandler&#x60;, &#x60;undefined&#x60; is returned.
@@ -156,7 +157,13 @@ class Router {
             }
             return;
         }
-        const { params, route } &#x3D; this.findMatchingRoute({ url, request, event });
+        const sameOrigin &#x3D; url.origin &#x3D;&#x3D;&#x3D; location.origin;
+        const { params, route } &#x3D; this.findMatchingRoute({
+            event,
+            request,
+            sameOrigin,
+            url,
+        });
         let handler &#x3D; route &amp;amp;&amp;amp; route.handler;
         const debugMessages &#x3D; [];
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
@@ -173,12 +180,13 @@ class Router {
         }
         // If we don&#x27;t have a handler because there was no matching route, then
         // fall back to defaultHandler if that&#x27;s defined.
-        if (!handler &amp;amp;&amp;amp; this._defaultHandler) {
+        const method &#x3D; request.method;
+        if (!handler &amp;amp;&amp;amp; this._defaultHandlerMap.has(method)) {
             if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
                 debugMessages.push(&#x60;Failed to find a matching route. Falling &#x60; +
-                    &#x60;back to the default handler.&#x60;);
+                    &#x60;back to the default handler for ${method}.&#x60;);
             }
-            handler &#x3D; this._defaultHandler;
+            handler &#x3D; this._defaultHandlerMap.get(method);
         }
         if (!handler) {
             if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
@@ -211,18 +219,41 @@ class Router {
         catch (err) {
             responsePromise &#x3D; Promise.reject(err);
         }
-        if (responsePromise instanceof Promise &amp;amp;&amp;amp; this._catchHandler) {
-            responsePromise &#x3D; responsePromise.catch((err) &#x3D;&gt; {
-                if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-                    // Still include URL here as it will be async from the console group
-                    // and may not make sense without the URL
-                    logger.groupCollapsed(&#x60;Error thrown when responding to: &#x60; +
-                        &#x60; ${getFriendlyURL(url)}. Falling back to Catch Handler.&#x60;);
-                    logger.error(&#x60;Error thrown by:&#x60;, route);
-                    logger.error(err);
-                    logger.groupEnd();
+        // Get route&#x27;s catch handler, if it exists
+        const catchHandler &#x3D; route &amp;amp;&amp;amp; route.catchHandler;
+        if (responsePromise instanceof Promise &amp;amp;&amp;amp; (this._catchHandler || catchHandler)) {
+            responsePromise &#x3D; responsePromise.catch(async (err) &#x3D;&gt; {
+                // If there&#x27;s a route catch handler, process that first
+                if (catchHandler) {
+                    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                        // Still include URL here as it will be async from the console group
+                        // and may not make sense without the URL
+                        logger.groupCollapsed(&#x60;Error thrown when responding to: &#x60; +
+                            &#x60; ${getFriendlyURL(url)}. Falling back to route&#x27;s Catch Handler.&#x60;);
+                        logger.error(&#x60;Error thrown by:&#x60;, route);
+                        logger.error(err);
+                        logger.groupEnd();
+                    }
+                    try {
+                        return await catchHandler.handle({ url, request, event, params });
+                    }
+                    catch (catchErr) {
+                        err &#x3D; catchErr;
+                    }
                 }
-                return this._catchHandler.handle({ url, request, event });
+                if (this._catchHandler) {
+                    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                        // Still include URL here as it will be async from the console group
+                        // and may not make sense without the URL
+                        logger.groupCollapsed(&#x60;Error thrown when responding to: &#x60; +
+                            &#x60; ${getFriendlyURL(url)}. Falling back to global Catch Handler.&#x60;);
+                        logger.error(&#x60;Error thrown by:&#x60;, route);
+                        logger.error(err);
+                        logger.groupEnd();
+                    }
+                    return this._catchHandler.handle({ url, request, event });
+                }
+                throw err;
             });
         }
         return responsePromise;
@@ -235,31 +266,26 @@ class Router {
      * @param {Object} options
      * @param {URL} options.url
      * @param {Request} options.request The request to match.
-     * @param {Event} [options.event] The corresponding event (unless N/A).
+     * @param {Event} options.event The corresponding event.
      * @return {Object} An object with &#x60;route&#x60; and &#x60;params&#x60; properties.
      *     They are populated if a matching route was found or &#x60;undefined&#x60;
      *     otherwise.
      */
-    findMatchingRoute({ url, request, event }) {
-        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-            assert.isInstance(url, URL, {
-                moduleName: &#x27;workbox-routing&#x27;,
-                className: &#x27;Router&#x27;,
-                funcName: &#x27;findMatchingRoute&#x27;,
-                paramName: &#x27;options.url&#x27;,
-            });
-            assert.isInstance(request, Request, {
-                moduleName: &#x27;workbox-routing&#x27;,
-                className: &#x27;Router&#x27;,
-                funcName: &#x27;findMatchingRoute&#x27;,
-                paramName: &#x27;options.request&#x27;,
-            });
-        }
+    findMatchingRoute({ url, sameOrigin, request, event }) {
         const routes &#x3D; this._routes.get(request.method) || [];
         for (const route of routes) {
             let params;
-            const matchResult &#x3D; route.match({ url, request, event });
+            const matchResult &#x3D; route.match({ url, sameOrigin, request, event });
             if (matchResult) {
+                if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+                    // Warn developers that using an async matchCallback is almost always
+                    // not the right thing to do. 
+                    if (matchResult instanceof Promise) {
+                        logger.warn(&#x60;While routing ${getFriendlyURL(url)}, an async &#x60; +
+                            &#x60;matchCallback function was used. Please convert the &#x60; +
+                            &#x60;following route to use a synchronous matchCallback function:&#x60;, route);
+                    }
+                }
                 // See https://github.com/GoogleChrome/workbox/issues/2079
                 params &#x3D; matchResult;
                 if (Array.isArray(matchResult) &amp;amp;&amp;amp; matchResult.length &#x3D;&#x3D;&#x3D; 0) {
@@ -288,14 +314,18 @@ class Router {
      * Define a default &#x60;handler&#x60; that&#x27;s called when no routes explicitly
      * match the incoming request.
      *
+     * Each HTTP method (&#x27;GET&#x27;, &#x27;POST&#x27;, etc.) gets its own default handler.
+     *
      * Without a default handler, unmatched requests will go against the
      * network as if there were no service worker present.
      *
      * @param {module:workbox-routing~handlerCallback} handler A callback
      * function that returns a Promise resulting in a Response.
+     * @param {string} [method&#x3D;&#x27;GET&#x27;] The HTTP method to associate with this
+     * default handler. Each method has its own default.
      */
-    setDefaultHandler(handler) {
-        this._defaultHandler &#x3D; normalizeHandler(handler);
+    setDefaultHandler(handler, method &#x3D; defaultMethod) {
+        this._defaultHandlerMap.set(method, normalizeHandler(handler));
     }
     /**
      * If a Route throws an error while handling a request, this &#x60;handler&#x60;

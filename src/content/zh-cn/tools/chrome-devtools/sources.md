@@ -12,7 +12,7 @@ description: 在 Chrome DevTools 的 Sources 面板中查看和编辑文件、�
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-使用 Chrome DevTools **Sources** 面板可以：
+使用 Chrome DevTools **Sources** 面板可以:
 
 * [查看文件](#files)。
 * [编辑 CSS 和 JavaScript](#edit)。
@@ -34,7 +34,7 @@ description: 在 Chrome DevTools 的 Sources 面板中查看和编辑文件、�
   </figcaption>
 </figure>
 
-**Network** 窗格的组织结构：
+**Network** 窗格的组织结构:
 
 * 顶层（如<b>图 1</b> 中的 `top`）表示 [HTML 帧][frame]。
   您在访问的每个页面上都可找到 `top`。 `top` 表示主文档帧。
@@ -55,7 +55,7 @@ description: 在 Chrome DevTools 的 Sources 面板中查看和编辑文件、�
        alt="在 Editor 窗格中查看文件"/>
   <figcaption>
     <b>图 2</b>. 在 <b>Editor</b> 窗格中查看 <code>jquery-bundle.js</code> 的内容
-    
+
   </figcaption>
 </figure>
 
@@ -94,7 +94,7 @@ DevTools 不能重新运行脚本，因此只有在函数内作出的 JavaScript
 
 ## 创建、保存和运行代码段 {: #snippets }
 
-代码段是可在任何页面上运行的脚本。 假设为将 jQuery 库插入页面中，您在 **Console** 中反复输入以下代码，以便从 **Console** 运行 jQuery 命令：
+代码段是可在任何页面上运行的脚本。 假设为将 jQuery 库插入页面中，您在 **Console** 中反复输入以下代码，以便从 **Console** 运行 jQuery 命令:
 
 
 
@@ -115,7 +115,7 @@ DevTools 不能重新运行脚本，因此只有在函数内作出的 JavaScript
   </figcaption>
 </figure>
 
-运行**代码段**：
+运行**代码段**:
 
 * 通过 **Snippets** 窗格打开文件，然后点击 **Run** ![Run 按钮][run]{:.cdt-inl}。
 * 打开 [**Command Menu**][CM]、删除 `>` 字符、输入 `!`、输入您**代码段**的名称，然后按 <kbd>Enter</kbd> 键。

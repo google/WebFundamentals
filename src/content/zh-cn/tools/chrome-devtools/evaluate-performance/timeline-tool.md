@@ -26,13 +26,13 @@ description:使用 Chrome DevTools 的 Timeline 面板可以记录和分析您�
 
 ## Timeline 面板概览 {:#timeline-overview}
 
-Timeline 面板包含以下四个窗格：
+Timeline 面板包含以下四个窗格:
 
 1. **Controls**。开始记录，停止记录和配置记录期间捕获的信息。
 2. **Overview**。
 页面性能的高级汇总。更多内容请参见下文。
 3. **火焰图**。
-CPU 堆叠追踪的可视化。 
+CPU 堆叠追踪的可视化。
 
    您可以在**火焰图**上看到一到三条垂直的虚线。蓝线代表 `DOMContentLoaded` 事件。
 绿线代表首次绘制的时间。
@@ -40,13 +40,13 @@ CPU 堆叠追踪的可视化。
 
 4. **Details**。选择事件后，此窗格会显示与该事件有关的更多信息。
 未选择事件时，此窗格会显示选定时间范围的相关信息。
- 
+
 
 ![带标注的 Timeline 面板](imgs/timeline-annotated.png)
 
 ### Overview 窗格
 
-**Overview** 窗格包含以下三个图表：
+**Overview** 窗格包含以下三个图表:
 
 1. **FPS**。每秒帧数。绿色竖线越高，FPS 越高。
 FPS 图表上的红色块表示长时间帧，很可能会出现[卡顿][jank]。
@@ -60,9 +60,9 @@ CPU 资源。此[面积图][ac]指示消耗 CPU 资源的事件类型。
 
 
 
-   横杠按照以下方式进行彩色编码：
+   横杠按照以下方式进行彩色编码:
    <!-- source: https://goo.gl/eANVFf -->
-   
+
    * HTML 文件为**<span style="color:hsl(214, 67%, 66%)">蓝色</span>**。
    * 脚本为**<span style="color:hsl(43, 83%, 64%)">黄色</span>**。
    * 样式表为**<span style="color:hsl(256, 67%, 70%)">紫色</span>**。
@@ -72,7 +72,7 @@ CPU 资源。此[面积图][ac]指示消耗 CPU 资源的事件类型。
 
 ![Overview 窗格，带标注](imgs/overview-annotated.jpg)
 
-[ac]: https://en.wikipedia.org/wiki/Area_chart 
+[ac]: https://en.wikipedia.org/wiki/Area_chart
 [jank]: /web/fundamentals/performance/rendering/
 
 ## 做记录
@@ -137,7 +137,7 @@ CPU 资源。此[面积图][ac]指示消耗 CPU 资源的事件类型。
 
 开始记录前，请启用 **JS Profile** 复选框，以便在您的时间线记录中捕捉 JavaScript 堆栈。
 启用 JS 分析器后，您的火焰图会显示调用的每个 JavaScript 函数。
- 
+
 
 ![启用 JS 分析的火焰图](imgs/js-profile.png)
 
@@ -162,12 +162,12 @@ CPU 资源。此[面积图][ac]指示消耗 CPU 资源的事件类型。
 ## 搜索记录
 
 查看事件时，您可能希望侧重于一种类型的事件。例如，您可能需要查看每个 `Parse HTML` 事件的详细信息。
- 
+
 
 在 **Timeline** 处于焦点时，按 <kbd>Cmd</kbd>+<kbd>F</kbd> (Mac) 或 <kbd>Ctrl</kbd>+<kbd>F</kbd> (Windows / Linux) 以打开一个查找工具栏。键入您想要检查的事件类型的名称，如 `Event`。
 
 工具栏仅适用于当前选定的时间范围。选定时间范围以外的任何事件都不会包含在结果中。
- 
+
 
 利用上下箭头，您可以按照时间顺序在结果中移动。所以，第一个结果表示选定时间范围内最早的事件，最后一个结果表示最后的事件。每次按向上或向下箭头会选择一个新事件，因此，您可以在 **Details** 窗格中查看其详细信息。按向上和向下箭头等同于在**火焰图**中点击事件。
 
@@ -182,7 +182,7 @@ CPU 资源。此[面积图][ac]指示消耗 CPU 资源的事件类型。
 
 ![放大 Timeline 记录的一部分](imgs/zoom.png)
 
-要在 Timeline 部分上放大，请执行以下操作：
+要在 Timeline 部分上放大，请执行以下操作:
 
 * 在 **Overview** 窗格中，使用鼠标拖出 Timeline 选择。
 * 在标尺区域调整灰色滑块。

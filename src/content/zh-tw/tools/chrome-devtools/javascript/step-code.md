@@ -28,7 +28,7 @@ description:通過每次執行一個代碼行或一個函數，您可以觀察�
 
 ## 步驟的操作
 
-所有步驟選項均通過邊欄中的可點擊圖標![斷點按鈕欄](imgs/image_7.png){:.inline}表示，但也可以通過快捷鍵觸發。下面是簡要介紹：
+所有步驟選項均通過邊欄中的可點擊圖標![斷點按鈕欄](imgs/image_7.png){:.inline}表示，但也可以通過快捷鍵觸發。下面是簡要介紹:
 
 <table>
   <thead>
@@ -105,7 +105,7 @@ Scope 窗格顯示在 local、closure 和 global 級別定義的屬性。
 ![顯示暗淡的屬性](imgs/enumerables.png)
 
 深顏色屬性可以計數。淺顏色、顯示暗淡的屬性則不可計數。
-如需瞭解詳細信息，請參閱以下 Stack Overflow 主題：[Chrome 開發者工具 Scope 面板中的顏色有何含義？](Chrome 開發者工具 Scope 面板中的顏色有何含義？)
+如需瞭解詳細信息，請參閱以下 Stack Overflow 主題: [Chrome 開發者工具 Scope 面板中的顏色有何含義？](Chrome 開發者工具 Scope 面板中的顏色有何含義？)
 
 
 
@@ -137,23 +137,23 @@ Scope 窗格顯示在 local、closure 和 global 級別定義的屬性。
 一個名爲 `onClick` 的函數被註冊爲此元素的 `onclick` 事件處理程序。
 無論何時調用 `onClick`，它都會循序調用一個名爲 `f` 的函數，該函數通過 `debugger` 關鍵字強制腳本暫停。
 
- 
+
 
 <video src="animations/async-call-stack-demo.mp4"
        autoplay muted loop controls></video>
 
-在此視頻中，觸發了一個斷點並展開了調用堆棧。堆棧中只有一個調用：`f`。
+在此視頻中，觸發了一個斷點並展開了調用堆棧。堆棧中只有一個調用: `f`。
 然後，啓用異步調用堆棧功能，腳本繼續執行，並再次觸發斷點和展開調用堆棧。此時，調用堆棧包含 `f` 之前的所有調用，包括第三方內容庫調用和 `onClick` 調用。首次調用該腳本時，調用堆棧中只有一個調用。
 第二次調用腳本時，有四個調用。簡言之，異步調用堆棧功能可提高完整的異步函數調用堆棧的可視性。
 
 
 
-### 提示：給函數命名以提高調用堆棧可讀性
+### 提示: 給函數命名以提高調用堆棧可讀性
 
 匿名函數使調用堆棧很難閱讀。爲函數命名以提高可讀性。
 
 
-以下兩個屏幕截圖中的代碼段功能效果相同：代碼功能並不重要，重要的是第一個屏幕截圖中的代碼使用匿名函數，而第二個屏幕截圖中的代碼使用已命名的函數。
+以下兩個屏幕截圖中的代碼段功能效果相同: 代碼功能並不重要，重要的是第一個屏幕截圖中的代碼使用匿名函數，而第二個屏幕截圖中的代碼使用已命名的函數。
 
 
 
@@ -164,11 +164,11 @@ Scope 窗格顯示在 local、closure 和 global 級別定義的屬性。
 
 
 
-含匿名函數的調用堆棧：
+含匿名函數的調用堆棧:
 
 ![包含可讀性低匿名函數的調用堆棧](imgs/anon.png)
 
-含已命名函數的調用堆棧： 
+含已命名函數的調用堆棧:
 
 ![包含可讀性更高已命名函數的調用堆棧](imgs/named.png)
 
@@ -178,15 +178,15 @@ Scope 窗格顯示在 local、closure 和 global 級別定義的屬性。
 
 將腳本文件設置爲黑箱以忽略來自調用棧的第三方文件。
 
-設置爲黑箱之前：
+設置爲黑箱之前:
 
 ![設置爲黑箱之前的調用堆棧](imgs/before-blackbox.png)
 
-設置爲黑箱之後：
+設置爲黑箱之後:
 
 ![設置爲黑箱之後的調用堆棧](imgs/after-blackbox.png)
 
-如需將文件設置爲黑箱：
+如需將文件設置爲黑箱:
 
 1. 打開 DevTools Settings。
 
@@ -200,7 +200,7 @@ Scope 窗格顯示在 local、closure 和 global 級別定義的屬性。
 
 4. 在 **Pattern** 文本字段中，輸入您想要從調用堆棧排除的文件名模式。
 DevTools 將排除與該模式匹配的任意腳本。
- 
+
 
    ![添加黑箱模式](imgs/add-pattern.png)
 
@@ -217,7 +217,7 @@ DevTools 將排除與該模式匹配的任意腳本。
 
 代碼執行暫停時，您可以觀察和修改其正在處理的數據。這對於嘗試追蹤一個看上去有錯誤值的變量或沒有如期收到的傳遞參數很關鍵。
 
-通過點擊 **Show/Hide drawer** 顯示 Console 抽屜![顯示/隱藏抽屜](imgs/image_16.png){: .inline}或按 <kbd class="kbd">ESC</kbd>.在執行步驟時打開控制檯，您現在可以：
+通過點擊 **Show/Hide drawer** 顯示 Console 抽屜![顯示/隱藏抽屜](imgs/image_16.png){: .inline}或按 <kbd class="kbd">ESC</kbd>.在執行步驟時打開控制檯，您現在可以:
 
 * 輸入變量的名稱以在當前函數範圍中查看其當前值
 * 輸入一個 JavaScript 分配語句以更改此值
@@ -237,7 +237,7 @@ DevTools 將排除與該模式匹配的任意腳本。
 
 觀察並暫停執行代碼有助於您查找錯誤，而實時編輯讓您可以快速預覽更改，無需重新加載。
 
-如需實時編輯腳本，只需在執行步驟時點擊“Sources”面板的編輯器部分。在編輯器中進行所需的更改，然後按 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">S</kbd>（或在 Mac 上按 <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">S</kbd>）提交此更改。此時，整個 JS 文件將作爲補丁程序進入 VM，並且所有函數定義都將更新。 
+如需實時編輯腳本，只需在執行步驟時點擊“Sources”面板的編輯器部分。在編輯器中進行所需的更改，然後按 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">S</kbd>（或在 Mac 上按 <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">S</kbd>）提交此更改。此時，整個 JS 文件將作爲補丁程序進入 VM，並且所有函數定義都將更新。
 
 現在，您可以繼續執行；已修改的腳本將替代原始腳本執行，並且您可以觀察您的更改效果。
 
@@ -255,15 +255,15 @@ DevTools 將排除與該模式匹配的任意腳本。
 使用 Sources 面板上的 **Threads** 窗格可暫停、進入以及檢查其他線程，例如服務工作線程或網絡工作線程。
 
 
-爲展示 Threads 窗格，此部分使用了以下演示：[網絡工作線程基本示例](http://mdn.github.io/simple-web-worker/)。
+爲展示 Threads 窗格，此部分使用了以下演示: [網絡工作線程基本示例](http://mdn.github.io/simple-web-worker/)。
 
 
-如果您打開應用上的 DevTools，就能發現 main 腳本位於 `main.js` 中：
+如果您打開應用上的 DevTools，就能發現 main 腳本位於 `main.js` 中:
 
 
 ![Main 腳本](imgs/main-script.png)
 
-網絡 worker 腳本位於 `worker.js` 中：
+網絡 worker 腳本位於 `worker.js` 中:
 
 ![Worker 腳本](imgs/worker-script.png)
 
@@ -273,12 +273,12 @@ Main 腳本偵聽對 **Multiply number 1** 或 **Multiply number 2** 輸入字�
 
 
 
-假定您在 `main.js` 中設置了一個在第一個數字發生變化時觸發的斷點：
+假定您在 `main.js` 中設置了一個在第一個數字發生變化時觸發的斷點:
 
 
 ![Main 腳本斷點](imgs/main-script-breakpoint.png)
 
-並且您還在 `worker.js` 中設置了一個在工作線程收到消息時觸發的斷點：
+並且您還在 `worker.js` 中設置了一個在工作線程收到消息時觸發的斷點:
 
 
 ![Worker 腳本斷點](imgs/worker-script-breakpoint.png)
@@ -288,7 +288,7 @@ Main 腳本偵聽對 **Multiply number 1** 或 **Multiply number 2** 輸入字�
 ![觸發的 main 和 worker 腳本斷點](imgs/breakpoints-triggered.png)
 
 在 Threads 窗格中，藍色箭頭指示的是當前選定的線程。
-例如，在上面的屏幕截圖中，選定的是 **Main** 線程。 
+例如，在上面的屏幕截圖中，選定的是 **Main** 線程。
 
 DevTools 所有用於單步調試代碼（繼續或暫停腳本執行、單步執行下一函數調用、進入並單步執行下一函數調用等）的控件都與該線程有關。換言之，如果您在 DevTools 顯示類似以上屏幕截圖的內容時按 **Resume script execution** 按鈕，Main 線程會繼續執行，但網絡工作線程仍將暫停。**Call Stack** 和 **Scope** 部分同樣只顯示 Main 線程的信息。
 

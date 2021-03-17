@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
           </header>
           <section>
@@ -214,22 +214,20 @@
                           <tbody>
                             <tr>
                               <td class="details-table-name">
-                                <p>url</p>
+                                <p>request</p>
                               </td>
                               <td>
-                                <p class="details-table-types">URL</p>
-                                <p>The URL that matched.</p>
+                                <p class="details-table-types">(Request or string)</p>
+                                <p>The corresponding request.</p>
                               </td>
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>request</p>
+                                <p>url</p>
                               </td>
                               <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">Request</p>
-                                <p>The corresponding request,
-                                  if available.</p>
+                                <p class="details-table-types">URL</p>
+                                <p>The URL that matched, if available.</p>
                               </td>
                             </tr>
                             <tr>
@@ -237,10 +235,9 @@
                                 <p>event</p>
                               </td>
                               <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">FetchEvent</p>
+                                <p class="details-table-types">ExtendableEvent</p>
                                 <p>The corresponding event that triggered
-                                  the request, if available.</p>
+                                  the request.</p>
                               </td>
                             </tr>
                             <tr>
@@ -273,11 +270,11 @@
               <p class="type-signature"> matchCallback(context)&nbsp;returns&nbsp;any type</p>
               <p>The &quot;match&quot; callback is used to determine if a <code>Route</code> should apply for a
                 particular URL. When matching occurs in response to a fetch event from the
-                client, the <code>event</code> and <code>request</code> objects are supplied in addition to the
-                URL. However, since the match callback can be invoked outside of a fetch
-                event, matching logic should not assume the <code>event</code> or <code>request</code> objects
-                will always be available (unlike URL, which is always available).
-                If the match callback returns a truthy value, the matching route's
+                client, the <code>event</code> object is supplied in addition to the <code>url</code>, <code>request</code>,
+                and <code>sameOrigin</code> value. However, since the match callback can be invoked
+                outside of a fetch event, matching logic should not assume the <code>event</code>
+                object will always be available.</p>
+              <p>If the match callback returns a truthy value, the matching route's
                 <a href="module-workbox-routing.html#~handlerCallback">handler callback</a> will be
                 invoked immediately. If the value returned is a non-empty array or object,
                 that value will be set on the handler's <code>context.params</code> argument.</p>
@@ -305,6 +302,15 @@
                           <tbody>
                             <tr>
                               <td class="details-table-name">
+                                <p>request</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Request</p>
+                                <p>The corresponding request.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
                                 <p>url</p>
                               </td>
                               <td>
@@ -314,24 +320,22 @@
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>request</p>
+                                <p>event</p>
                               </td>
                               <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">Request</p>
-                                <p>The corresponding request,
-                                  if available.</p>
+                                <p class="details-table-types">ExtendableEvent</p>
+                                <p>The corresponding event that triggered
+                                  the request.</p>
                               </td>
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>event</p>
+                                <p>sameOrigin</p>
                               </td>
                               <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">FetchEvent</p>
-                                <p>The corresponding event that triggered
-                                  the request, if available.</p>
+                                <p class="details-table-types">boolean</p>
+                                <p>The result of comparing <code>url.origin</code>
+                                  against the current origin.</p>
                               </td>
                             </tr>
                           </tbody>

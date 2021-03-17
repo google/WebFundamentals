@@ -151,8 +151,8 @@ what we can do to fix that.
 Note: If you don't care for long-winded explanations and just want to dive into
 code, you can go ahead and check out [the `tree-shake`
 branch](https://github.com/malchata/webpack-tree-shaking-example/tree/tree-shake)
-in the app's GitHub repo. You can also [diff this branch
-`master`](https://github.com/malchata/webpack-tree-shaking-example/compare/tree-shake)
+in the app's GitHub repo. You can also
+[diff this branch](https://github.com/malchata/webpack-tree-shaking-example/compare/tree-shake)
 to see exactly what was changed to make tree shaking work!
 
 In any application, finding opportunities for tree shaking are going to involve
@@ -386,7 +386,7 @@ import sortBy from "lodash-es/sortBy";
 
 If you prefer your `import` syntax to be consistent, you _could_ just use the
 standard `lodash` package, and install
-[`babel-plugin-lodash`](http://babel-plugin-lodash/). Once you add the plugin to
+[`babel-plugin-lodash`](https://www.npmjs.com/package/babel-plugin-lodash). Once you add the plugin to
 your Babel config, you can use the typical `import` syntax you would otherwise
 use to shake unused exports.
 

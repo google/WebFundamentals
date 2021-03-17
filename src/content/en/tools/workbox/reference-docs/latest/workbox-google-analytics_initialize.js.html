@@ -51,7 +51,7 @@ import &#x27;./_version.js&#x27;;
 const createOnSyncCallback &#x3D; (config) &#x3D;&gt; {
     return async ({ queue }) &#x3D;&gt; {
         let entry;
-        while (entry &#x3D; await queue.shiftRequest()) {
+        while ((entry &#x3D; await queue.shiftRequest())) {
             const { request, timestamp } &#x3D; entry;
             const url &#x3D; new URL(request.url);
             try {
@@ -87,14 +87,14 @@ const createOnSyncCallback &#x3D; (config) &#x3D;&gt; {
                     headers: { &#x27;Content-Type&#x27;: &#x27;text/plain&#x27; },
                 }));
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-                    logger.log(&#x60;Request for &#x27;${getFriendlyURL(url.href)}&#x27;&#x60; +
+                    logger.log(&#x60;Request for &#x27;${getFriendlyURL(url.href)}&#x27; &#x60; +
                         &#x60;has been replayed&#x60;);
                 }
             }
             catch (err) {
                 await queue.unshiftRequest(entry);
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-                    logger.log(&#x60;Request for &#x27;${getFriendlyURL(url.href)}&#x27;&#x60; +
+                    logger.log(&#x60;Request for &#x27;${getFriendlyURL(url.href)}&#x27; &#x60; +
                         &#x60;failed to replay, putting it back in the queue.&#x60;);
                 }
                 throw err;

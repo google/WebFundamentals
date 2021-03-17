@@ -23,7 +23,7 @@ Worker](/web/fundamentals/getting-started/primers/service-workers) 可有效加�
 
 ## 通用注册样板文件
 
-如果您曾阅读有关 Service Worker 的内容，您可能会看到与以下内容实质相似的样板文件：
+如果您曾阅读有关 Service Worker 的内容，您可能会看到与以下内容实质相似的样板文件:
 
 
     if ('serviceWorker' in navigator) {
@@ -69,7 +69,7 @@ Worker](/web/fundamentals/getting-started/primers/service-workers) 可有效加�
 解决方案是通过选择调用 `navigator.serviceWorker.register()` 的时间来控制 Service Worker 的启动。
  一个简单的经验法则是延迟注册，直到 <code>[load
 event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>
-在 <code>window</code> 上触发，如下所示：
+在 <code>window</code> 上触发，如下所示:
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -169,7 +169,7 @@ event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onlo
  您仍可获得具有服务工作线程进行重复访问的所有优势。
 
 
-为确保延迟服务工作线程的初始注册直到第一个页面已加载，一个简单的方法是使用以下代码：
+为确保延迟服务工作线程的初始注册直到第一个页面已加载，一个简单的方法是使用以下代码:
 
 
     if ('serviceWorker' in navigator) {

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more.
 
-{# wf_updated_on: 2020-06-04 #}
+{# wf_updated_on: 2020-10-09 #}
 {# wf_published_on: 2020-03-10 #}
 {# wf_tags: chrome83, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,6 +12,12 @@ description: Emulate color vision deficiencies, emulate locales, COOP and COEP d
 # What's New In DevTools (Chrome 83) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="MLNERCykDPg"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Emulate vision deficiencies {: #vision-deficiencies }
 

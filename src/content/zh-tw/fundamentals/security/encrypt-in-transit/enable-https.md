@@ -38,11 +38,11 @@ description: 安全性是網頁保護使用者的重要一部分，而移轉為 
 則是殺雞用牛刀。隨著時間推移，電腦處理成本變得更低之後，
 金鑰大小也必須增加。2,048 是目前的最佳取捨。)
 
-產生 RSA 金鑰組的命令為：
+產生 RSA 金鑰組的命令為:
 
     openssl genrsa -out www.example.com.key 2048
 
-這會給您以下的輸出結果：
+這會給您以下的輸出結果:
 
     Generating RSA private key, 2048 bit long modulus
     .+++
@@ -55,12 +55,12 @@ description: 安全性是網頁保護使用者的重要一部分，而移轉為 
 *openssl* 會以互動方式要求您提供該中繼資料。
 
 
-執行以下命令：
+執行以下命令:
 
     openssl req -new -sha256 -key www.example.com.key -out
 www.example.com.csr
 
-將輸出以下內容：
+將輸出以下內容:
 
     You are about to be asked to enter information that will be incorporated
     into your certificate request
@@ -84,11 +84,11 @@ www.example.com.csr
     A challenge password []:
     An optional company name []:
 
-現在，請確定該 CSR 並未納入這個命令所無法理解的部分：
+現在，請確定該 CSR 並未納入這個命令所無法理解的部分:
 
     openssl req -text -in www.example.com.csr -noout
 
-回應應該如下所示：
+回應應該如下所示:
 
     Certificate Request:
         Data:
@@ -113,7 +113,7 @@ www.example.com.csr
 
 ### 提交您的 CSR 給 CA
 
-視您想要使用的 CA 類型，傳送 CSR 給它們會有不同方法：
+視您想要使用的 CA 類型，傳送 CSR 給它們會有不同方法:
 使用網站上的表單、傳送電子郵件或其他方式。
 一些 CA (或其轉售商) 可能甚至自動化處理部分或全部程序 (在某些案例中，
 也包括金鑰組與產生 CSR)。
@@ -128,10 +128,10 @@ www.example.com.csr
 包括數個獨特名稱 (例如，www.example、www.example.com、example.net 與 www.example.net 等所有網站)
 或「萬用字元」名稱，如 \*.example.com。
 
-舉例來說，一家 CA 目前提供以下價格：
+舉例來說，一家 CA 目前提供以下價格:
 
-* 標準收費：16 美元/年，適用於 example.com 和 www.example.com。
-* 萬用字元：150 美元/年，適用於 example.com 和 \*.example.com。
+* 標準收費: 16 美元/年，適用於 example.com 和 www.example.com。
+* 萬用字元: 150 美元/年，適用於 example.com 和 \*.example.com。
 
 以這些價格，當您擁有超過 9 個子網域時，萬用字元憑證較為經濟；
 否則，您可以只購買 1 個或更多單名稱憑證。(如果您有比方說 5 個以上子網域，
@@ -160,7 +160,7 @@ Note: 請記住，在萬用字元憑證中，
 
 
 
-在此步驟中，您必須做出重大營運決策：
+在此步驟中，您必須做出重大營運決策:
 
 * 指定一個獨特的 IP 位址給您網頁伺服器藉以供應內容的來源主機名稱；
 或* 使用基於名稱 (name-based) 的虛擬主機裝載 (hosting) 方式。
@@ -219,7 +219,7 @@ Note: 您最終應該將 HTTP 要求重新導向至 HTTPS，
 
 
 
-但當您透過包含 HTTP 資源：
+但當您透過包含 HTTP 資源:
 [混合
 內容](http://www.w3.org/TR/mixed-content/){: .external}的 HTTPS 供應頁面時，會出現一個問題，  瀏覽器的會警告使用者，HTTPS 的完整優點已經喪失。
 
@@ -234,7 +234,7 @@ Note: 您最終應該將 HTTP 要求重新導向至 HTTPS，
 使用者可能會從 HTTPS 降級為 HTTP。
 
 當您的頁面包含
-使用 *http://* 配置、完全合格的內部網站 URL 時，會發生這些問題。 您應該變更以下的內容：
+使用 *http://* 配置、完全合格的內部網站 URL 時，會發生這些問題。 您應該變更以下的內容:
 
 		<h1>歡迎來到 Example.com</h1>
 		<script src="http://example.com/jquery.js"></script>
@@ -245,7 +245,7 @@ Note: 您最終應該將 HTTP 要求重新導向至 HTTPS，
 		<p>查看<a href="http://foo.com/">另一個酷網站。
 		</a></p>
 
-修改成這樣：
+修改成這樣:
 
 		<h1>歡迎來到 Example.com</h1>
 		<script src="//example.com/jquery.js"></script>
@@ -256,7 +256,7 @@ Note: 您最終應該將 HTTP 要求重新導向至 HTTPS，
 		<p>查看<a href="http://foo.com/">另一個酷網站。
 		</a></p>
 
-或這樣：
+或這樣:
 
 		<h1>歡迎來到 Example.com</h1>
 		<script src="/jquery.js"></script>
@@ -267,7 +267,7 @@ Note: 您最終應該將 HTTP 要求重新導向至 HTTPS，
 		<p>查看<a href="http://foo.com/">另一個酷網站。
 		</a></p>
 
-也就是要讓內部網站 URL 儘可能具相對性：
+也就是要讓內部網站 URL 儘可能具相對性:
 協定相對 (缺少通訊協定，以 //example.com 開頭) 或主機相對 (/jquery.js 一樣僅以路徑起頭)。
 
 
@@ -291,7 +291,7 @@ Note: 我推薦使用通訊協定相對的 URL，
 並固定使用 HTTPS (請見以下兩節)。
 
 如果您的網站依賴來自第三方供應的指令碼、影像與其他資源，
-例如 CDN、jquery.com 之類的，您則有 2 個選項：
+例如 CDN、jquery.com 之類的，您則有 2 個選項:
 
 * 也針對這些資源，使用通訊協定相對的 URL。 如果第三方不供應 HTTPS 服務，
 則要求他們為之。 包括 jquery.com 在內的網站已支援。
@@ -417,7 +417,7 @@ Google 也發行一份指南，教導
 
 當使用者追隨您 HTTPS 網站上的連結至其他 HTTP 網站，
 使用者代理程式將不會傳送參照者標頭。 如果這會形成問題，
-有幾個方法可以解決：
+有幾個方法可以解決:
 
 * 其他網站應移轉為 HTTPS。 也許，他們會覺得
 本指南很實用！ :)如果被參照者網站可以完成本指南的「在您伺服器上啟用 HTTPS」一節，
@@ -436,7 +436,7 @@ Caution: 如果參照頁面是以安全通訊協定傳輸，用戶端**不應該
 
 透過展示廣告賺錢的網站營運者，
 會想要確保移轉為 HTTPS 時不會降低廣告閱聽數。 但由於混合內容的安全性考量，
-HTTP iframe 在 HTTPS 頁面中不會運作。 這是個棘手的集體行動問題：
+HTTP iframe 在 HTTPS 頁面中不會運作。 這是個棘手的集體行動問題:
 除非廣告主透過 HTTPs 發行，網站營運者無法不損失廣告營收而移轉為 HTTPS；
 但在網站營運者移轉為 HTTPS 之前，廣告主沒有什麼動力去發行 HTTPS。
 
@@ -445,4 +445,3 @@ HTTP iframe 在 HTTPS 頁面中不會運作。 這是個棘手的集體行動問
  (例如完成此指南中的「在您伺服器上啟用 HTTPS」)。 很多廣告主已經做了。 您應該要求完全不提供 HTTPS 服務的廣告主，
 至少要起個頭。 在足夠的廣告主正確互通之前，
 您可能會想延緩完成此指南的「讓內部網站 URL 具相對性」部分。
-

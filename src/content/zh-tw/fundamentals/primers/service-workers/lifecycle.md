@@ -35,7 +35,7 @@ Note: 用戶非常討厭數據丟失。這會讓他們非常沮喪。
 
 ## 第一個服務工作線程
 
-簡介：
+簡介:
 
 * `install` 事件是服務工作線程獲取的第一個事件，並且它僅發生一次。
 
@@ -209,7 +209,7 @@ Note: 用戶非常討厭數據丟失。這會讓他們非常沮喪。
 </div>
 </div>
 
-選取以下 HTML：
+選取以下 HTML:
 
     <!DOCTYPE html>
     An image will appear here in 3 seconds:
@@ -227,7 +227,7 @@ Note: 用戶非常討厭數據丟失。這會讓他們非常沮喪。
 
 它註冊一個服務工作線程，並在 3 秒後添加一個小狗的圖像。
 
-下面是它的服務工作線程，`sw.js`：
+下面是它的服務工作線程，`sw.js`:
 
     self.addEventListener('install', event => {
       console.log('V1 installing…');
@@ -278,7 +278,7 @@ Note: 貓比狗好。確實*如此*。
 
 
 
-Chrome 的 DevTools 在控制檯和應用標籤的服務工作線程部分中顯示此錯誤：
+Chrome 的 DevTools 在控制檯和應用標籤的服務工作線程部分中顯示此錯誤:
 
 
 <figure>
@@ -336,9 +336,9 @@ Note: 我看到很多人添加 `clients.claim()` 作爲樣板文件，但我自�
 
 ## 更新服務工作線程{: #updates}
 
-簡介：
+簡介:
 
-* 會觸發更新的情況：
+* 會觸發更新的情況:
     * 導航到一個作用域內的頁面。
     * 更新 `push` 和 `sync` 等功能事件，除非在前 24 小時內進行了更新檢查。
 
@@ -594,7 +594,7 @@ Note: 我對馬沒有什麼強烈的看法。
 
 
 如果您運行[更新的演示](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}，您應仍會看到一個貓的圖片，因爲 V2 工作線程尚未激活。在 DevTools 的“Application”標籤中，您會看到等待的新服務工作線程：
+.external}，您應仍會看到一個貓的圖片，因爲 V2 工作線程尚未激活。在 DevTools 的“Application”標籤中，您會看到等待的新服務工作線程:
 
 
 <figure>
@@ -646,7 +646,7 @@ Note: Cache storage API 屬於“源存儲”（如 localStorage 和 IndexedDB�
 這會導致您的服務工作線程將當前活動的工作線程逐出，並在進入等待階段時儘快激活自己（或立即激活，前提是已經處於等待階段）。這*不能*讓您的工作線程跳過安裝，只是跳過等待階段。
 
 `skipWaiting()` 在等待期間調用還是在之前調用並沒有什麼不同。
-一般情況下是在 `install` 事件中調用它：
+一般情況下是在 `install` 事件中調用它:
 
     self.addEventListener('install', event => {
       self.skipWaiting();
@@ -687,14 +687,14 @@ Note: `skipWaiting()` 意味着新服務工作線程可能會控制使用較舊�
 如果您讀過[我的一篇有關緩存最佳做法的博文](https://jakearchibald.com/2016/caching-best-practices/){: .external}，您可能會考慮爲每個服務工作線程提供一個唯一網址。**請一定不要這麼做！** 對於服務工作線程，這通常是一個糟糕的做法，只會在其當前位置更新腳本。
 
 
-它將給您帶來如下問題：
+它將給您帶來如下問題:
 
 1. `index.html` 將 `sw-v1.js` 註冊爲一個服務工作線程。
 1. `sw-v1.js` 緩存並提供 `index.html`，因此它可以實現離線優先。
 1. 您更新 `index.html`，以便註冊全新的 `sw-v2.js`。
 
 如果您執行上述操作，用戶將永遠無法獲取 `sw-v2.js`，因爲 `sw-v1.js` 將從其緩存中提供舊版本的 `index.html`。
-因此，您將自己置於這樣的境地：您需要更新服務工作線程才能更新服務工作線程。這真得很讓人討厭。
+因此，您將自己置於這樣的境地: 您需要更新服務工作線程才能更新服務工作線程。這真得很讓人討厭。
 
 不過，對於[上面的演示](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
 .external}，我*已*更改服務工作線程的網址。
@@ -705,7 +705,7 @@ Note: `skipWaiting()` 意味着新服務工作線程可能會控制使用較舊�
 ## 讓開發更簡單{: #devtools}
 
 服務工作線程生命週期是專爲用戶構建的，這就給開發工作帶來一定的困難。
-幸運的是，我們可通過以下幾個工具解決這個問題：
+幸運的是，我們可通過以下幾個工具解決這個問題:
 
 ### Update on reload
 
@@ -715,7 +715,7 @@ Note: `skipWaiting()` 意味着新服務工作線程可能會控制使用較舊�
   <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools 顯示“update on reload”">
 </figure>
 
-這可使生命週期變得對開發者友好。每次瀏覽時都將：
+這可使生命週期變得對開發者友好。每次瀏覽時都將:
 
 1. 重新獲取服務工作線程。
 1. 將其作爲新版本安裝，即使它的字節完全相同，這表示運行 `install` 事件並更新緩存。
@@ -749,7 +749,7 @@ Note: `skipWaiting()` 意味着新服務工作線程可能會控制使用較舊�
 
 
 
-因此，爲支持儘可能多的模式，整個更新週期都是可觀察的：
+因此，爲支持儘可能多的模式，整個更新週期都是可觀察的:
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
       reg.installing; // the installing worker, or undefined

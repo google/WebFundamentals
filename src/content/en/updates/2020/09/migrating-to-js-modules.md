@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: How we migrate Chrome DevTools to JavaScript modules. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
-{# wf_updated_on: 2020-09-09 #}
+{# wf_updated_on: 2020-12-08 #}
 {# wf_published_on: 2020-09-08 #}
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/2020/09/devtools-blog.jpg #}
 {# wf_featured_snippet: How we migrate Chrome DevTools to JavaScript modules. #}
 {# wf_blink_components: N/A #}
 
-# DevTools architecture refresh: Migrating to JavaScript modules {: .page-title }
+# DevTools architecture refresh: migrating to JavaScript modules {: .page-title }
 
 {% include "web/_shared/contributors/tvanderlippe.html" %}
 

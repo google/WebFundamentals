@@ -72,7 +72,7 @@ Note: 从 Chrome 50 开始，[Geolocation API 只能在安全环境 (HTTPS) 上�
   <figure>
     <img src="images/sw-navigation-good.png">
     <figcaption class="success">
-      <b>宜</b>：始终在手势操作时请求获取用户的位置。</figcaption>
+      <b>宜</b>: 始终在手势操作时请求获取用户的位置。</figcaption>
 
   </figure>
 </div>
@@ -80,7 +80,7 @@ Note: 从 Chrome 50 开始，[Geolocation API 只能在安全环境 (HTTPS) 上�
   <figure id="fig1">
     <img src="images/sw-navigation-bad.png">
     <figcaption class="warning">
-      <b>忌</b>：在网站加载首页时请求提供位置会导致用户体验不佳。
+      <b>忌</b>: 在网站加载首页时请求提供位置会导致用户体验不佳。
     </figcaption>
   </figure>
 </div>
@@ -136,7 +136,7 @@ Note: 从 Chrome 50 开始，[Geolocation API 只能在安全环境 (HTTPS) 上�
 如果您需要用户完成操作，最好“取悦”他们，让其心甘情愿地完成操作。
 
 
-我们建议：
+我们建议:
 
 1.  设置一个在短时间后触发的计时器 - 5 秒是个不错的值。
 2.  如果收到错误消息，则向用户显示消息。
@@ -189,7 +189,7 @@ Note: 从 Chrome 50 开始，[Geolocation API 只能在安全环境 (HTTPS) 上�
 现在，大部分浏览器均支持 Geolocation API，但最好在执行任何操作之前始终检查是否支持。
 
 
-可以通过测试是否存在 geolocation 对象，轻松检查兼容性：
+可以通过测试是否存在 geolocation 对象，轻松检查兼容性:
 
 
     // check for Geolocation support
@@ -203,7 +203,7 @@ Note: 从 Chrome 50 开始，[Geolocation API 只能在安全环境 (HTTPS) 上�
 
 ## 确定用户的当前位置
 
-Geolocation API 提供一种简单的“一次性”方法来获取用户的位置：`getCurrentPosition()`。
+Geolocation API 提供一种简单的“一次性”方法来获取用户的位置: `getCurrentPosition()`。
 调用此方法将以异步方式报告用户的当前位置。
 
 
@@ -232,7 +232,7 @@ Geolocation API 使您通过单次调用 `getCurrentPosition()` 即可获取用�
 
 
 如果希望持续监测用户的位置，可以使用 Geolocation API 的 `watchPosition()` 方法。
-其运行方式与 `getCurrentPosition()` 类似，但它会在定位软件出现以下情况时多次触发：
+其运行方式与 `getCurrentPosition()` 类似，但它会在定位软件出现以下情况时多次触发:
 
 
 
@@ -269,7 +269,7 @@ Geolocation API 使您通过单次调用 `getCurrentPosition()` 即可获取用�
 ###  妥善处理错误
 
 遗憾的是，并非所有位置查找均能成功。可能是 GPS 无法定位，或用户突然停用了位置查找。
-在出现错误时，系统将调用 `getCurrentPosition()` 的第二个可选参数，以便您可以在回调内通知用户：
+在出现错误时，系统将调用 `getCurrentPosition()` 的第二个可选参数，以便您可以在回调内通知用户:
 
 
     window.onload = function() {
@@ -361,7 +361,7 @@ Geolocation API 使您通过单次调用 `getCurrentPosition()` 即可获取用�
 
 
 如果真的需要高度精确，可以用 `enableHighAccuracy` 选项替换默认设置。
-谨慎使用该选项：解析速度会下降，并且电池耗电会增加。
+谨慎使用该选项: 解析速度会下降，并且电池耗电会增加。
 
 
     window.onload = function() {
@@ -396,7 +396,7 @@ Geolocation API 使您通过单次调用 `getCurrentPosition()` 即可获取用�
   </figure>
 </div>
 
-地理定位设置完毕后，您需要：
+地理定位设置完毕后，您需要:
 
 * 测试应用在不同地理定位下的工作情况。
 * 验证应用在无法使用地理定位时是否可妥善降级。

@@ -35,7 +35,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
     <img src="imgs/gplus-snippet-2.png" srcset="imgs/gplus-snippet-2.png 1x,
       imgs/gplus-snippet-2-2x.png 2x" />
     <figcaption class="success">
-      使用了适当的标记：包含正确的标题、简短说明和图片。
+      使用了适当的标记: 包含正确的标题、简短说明和图片。
 添加这些项目可能有助于提高吸引力。</figcaption>
 
 
@@ -67,7 +67,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 
 
 
-下面是一个示例：
+下面是一个示例:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
@@ -91,7 +91,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 
 
 ### 验证丰富摘要
-要验证 Google+ 上的丰富摘要，您可以使用下面这样的工具：
+要验证 Google+ 上的丰富摘要，您可以使用下面这样的工具:
 
 * [结构化数据测试工具](https://www.google.com/webmasters/tools/richsnippets) - 网站站长工具
 
@@ -111,7 +111,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 
 
 ### 使用 `og:` 带命名空间的 `meta` 标记来描述元数据
-一个 `meta` 标记包括一个 `property` 属性和一个 `content` 属性。属性和内容可取下列值：
+一个 `meta` 标记包括一个 `property` 属性和一个 `content` 属性。属性和内容可取下列值:
 
 
 <table>
@@ -156,7 +156,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 * [ogp.me](http://ogp.me/){: .external }
 
 ### 验证丰富摘要
-要验证 Facebook 上的标记，您可以使用下面这样的工具：
+要验证 Facebook 上的标记，您可以使用下面这样的工具:
 
 * [调试程序](https://developers.facebook.com/tools/debug/){: .external }
 
@@ -169,7 +169,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 为了让 Twitter Card 发挥作用，[您的网域必须获得批准](https://cards-dev.twitter.com/validator)并必须包含以 `twitter:card` 作为 `name` 属性而非 `property` 属性的元标记。
 
 
-下面是一个快速示例：
+下面是一个快速示例:
 
 
 
@@ -187,24 +187,24 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 <img src="imgs/twitter-card.png" srcset="imgs/twitter-card.png 1x, imgs/twitter-card-2x.png 2x" />
 
 ### 了解详情
-如需了解有关 Twitter Card 的更多信息，请访问：
+如需了解有关 Twitter Card 的更多信息，请访问:
 
 * [Twitter 的开发者网站](https://dev.twitter.com/docs/cards)
 
 ### 验证丰富摘要
-为验证标记，Twitter 提供了以下工具：
+为验证标记，Twitter 提供了以下工具:
 
 * [Card Validator](https://cards-dev.twitter.com/validator)
 
 ## 最佳做法
 考虑到所有三个选择，最佳做法是将它们都加入到网页中。
-下面是一个示例：
+下面是一个示例:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/discovery/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
 </pre>
 
-请注意，microdata 和 OGP 共享某些标记：
+请注意，microdata 和 OGP 共享某些标记:
 
 * `itemscope` 位于 `head` 标记处
 * `title` 和 `description` 在 microdata 与 OGP 之间共享

@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-04-28 #}
+{# wf_updated_on: 2021-01-14 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Routing {: .page-title }
@@ -77,7 +77,9 @@ a `params` value, which is the value returned by the "match" function.
 const handlerCb = async ({url, request, event, params}) => {
   const response = await fetch(request);
   const responseBody = await response.text();
-  return new Response(`${responseBody} <!-- Look Ma. Added Content. -->`); 
+  return new Response(`${responseBody} <!-- Look Ma. Added Content. -->`, {
+    headers: response.headers,
+  });
 };
 ```
 

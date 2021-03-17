@@ -17,7 +17,7 @@ Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 對於 WebVR（以及常見的 3D），其輸入類型多種多樣，理想情況下，我們不僅要考慮所有輸入類型，還需要能夠根據用戶上下文的變化在各種輸入間進行切換。
 
-目前可用的輸入類型一覽：
+目前可用的輸入類型一覽:
 
 <img class="attempt-right" src="../img/touch-input.png" alt="觸摸輸入圖標">
 
@@ -34,7 +34,7 @@ Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 ## 將 Ray Input 內容庫添加到頁面
 
-爲簡單起見，我們可以使用一個腳本標記直接添加 Ray Input：
+爲簡單起見，我們可以使用一個腳本標記直接添加 Ray Input:
 
     <!-- Must go after Three.js as it relies on its primitives -->
     <script src="third_party/ray.min.js"></script>
@@ -108,7 +108,7 @@ Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 ## 啓用 Gamepad API 擴展程序
 
-瞭解目前如何在 WebVR 中使用 Gamepad API 需要注意兩個重要事項：
+瞭解目前如何在 WebVR 中使用 Gamepad API 需要注意兩個重要事項:
 
 * 在 Chrome 56 中，您需要啓用 `chrome://flags` 中的 Gamepad Extensions 標誌。如果您使用的是[來源試用版](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)，則 Gamepad Extensions 已經與 WebVR API　一起啓用。**對於本地開發，您需要啓用此標記**。
 

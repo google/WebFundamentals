@@ -20,8 +20,10 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/module-workbox-navigation-preload
 - title: "workbox-precaching"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching
-- title: "workbox-rangeRequests"
+- title: "workbox-range-requests"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-range-requests
+- title: "workbox-recipes"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-recipes
 - title: "workbox-routing"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-routing
 - title: "workbox-strategies"

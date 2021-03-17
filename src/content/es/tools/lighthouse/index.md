@@ -48,9 +48,9 @@ figure {
 </style>
 
 Lighthouse es una herramienta automatizada [open-source](https://github.com/GoogleChrome/lighthouse),
-que busca mejorar la calidad de las páginas web. Podes correrla contra cualquier 
+que busca mejorar la calidad de las páginas web. Podes correrla contra cualquier
 página web, sea pública o requiera autenticación. Cuenta con auditorías de performance,
-accesibilidad, progressive web apps, SEO y más. 
+accesibilidad, progressive web apps, SEO y más.
 
 Podes ejecutar Lighthouse en Chrome Devtools, desde la línea de comandos, o como un
 módulo de Node. Simplemente le das a Lighthouse una URL a auditar, correrá una serie de auditorías
@@ -59,7 +59,7 @@ Desde allí, usa las auditorías que han fallado como indicadores sobre cómo im
 Cada auditoría tiene un doc de referencia explicando por qué la auditoría es importante,
 así como cómo arreglarla.
 
-También puedes usar [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci/blob/master/docs/getting-started.md) para prevenir regresiones en tu sitio.
+También puedes usar [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci/blob/main/docs/getting-started.md) para prevenir regresiones en tu sitio.
 
 <p class="lighthouse-call-to-action-container">
   <a class="button button-primary lighthouse-primary-call-to-action gc-analytics-event"
@@ -98,7 +98,7 @@ Elegí el flujo de Lighthouse que más te sirva:
 * [Como un módulo de node](#programmatic). Integrá Lighthouse dentro de tus sistemas de integración continua.
 * [Desde una web UI](#psi). Ejecutá Lighthouse y vinculá reportes sin necesidad de instalar nada.
 
-Note: El CLI y flujos de Node requieren que tengas una instancia de Google Chrome 
+Note: El CLI y flujos de Node requieren que tengas una instancia de Google Chrome
 instalada en tu máquina.
 
 ### Ejecutá Lighthouse en Chrome DevTools {: #devtools }
@@ -178,7 +178,7 @@ Para correr una auditoría:
 
 1. En Chrome, dirígete a la página que deseas auditar.
 
-1. Hacé click en **Lighthouse** ![Lighthouse][icon]{:.lighthouse-inline}. Deberías verlo 
+1. Hacé click en **Lighthouse** ![Lighthouse][icon]{:.lighthouse-inline}. Deberías verlo
    al lado de la barra de direcciones de Chrome. Sino, abrí el menu principal de Chrome
    y accedelo desde arriba del menú. Luego de hacer click, el menu de Lighthouse se desplegará
 
@@ -233,7 +233,7 @@ Usá [Lighthouse Viewer][viewer] para ver y compartir reportes online.
 
 ### Compartí reportes como JSON {: #json }
 
-Lighthouse Viewer necesita la salida en formato JSON de un reporte de Lighthouse. 
+Lighthouse Viewer necesita la salida en formato JSON de un reporte de Lighthouse.
 La siguiente lista explica cómo obtener la salida en formato JSON dependiendo de
 qué flujo de Lighthouse estés usando:
 
@@ -284,7 +284,7 @@ Para ver un reporte que fue guardado como un Gist:
 
 Lighthouse apunta a proveer una guía que sea relevante y accionable para todos los desarrolladores web. Con este objetivo, hay dos funcionalidades actualmente disponibles que te permiten ajustar Lighthouse a tus necesidades específicas.
 
-* **Stack Packs**. 
+* **Stack Packs**.
 Hoy en día muchos desarrolladores utilizan distintas tecnologías (backend/CMS/JavaScript frameworks) para construir sus páginas web.
 En vez de tan solo mostrar recomendaciones generales, Lighthouse ahora puede proveerte consejos más relevantes y accionables dependiendo de la tecnología usada.
 
@@ -292,10 +292,10 @@ Stack Packs le permite a Lighthouse detectar sobre qué tecnología se encuentra
 
 Para contribuir a Stack Pack, revisá el archivo de [Contributing Guidelines](https://github.com/GoogleChrome/lighthouse-stack-packs/blob/master/CONTRIBUTING.md).
 
-* **Lighthouse Plugins**. 
+* **Lighthouse Plugins**.
 Los Plugins de Lighthouse permiten a los expertos de dominios de la comunidad, extender la funcionalidad de Lighthouse para sus necesidades específicas. Ahora podes potenciar los datos que Lighthouse recolecta para crear nuevas auditorías. En su núcleo, un plugin de Lighthouse es un módulo de Node que implementa una serie de comprobaciones que serán corridas por Lighthouse y sumadas al reporte como una nueva categoría.
 
-Para más información sobre cómo crear tu propio plugin, lee el [Plugin Handbook](https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md) en el repositorio GitHub de Lighthouse. 
+Para más información sobre cómo crear tu propio plugin, lee el [Plugin Handbook](https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md) en el repositorio GitHub de Lighthouse.
 
 
 ## Contribuir

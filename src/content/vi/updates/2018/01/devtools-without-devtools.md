@@ -59,9 +59,9 @@ Ví dụ: tập lệnh bên dưới cho phép tôi che phủ [FPS Meter][FPS] tr
 
 Một gợi ý chung: kiểm tra [Puppeteer API][API]{:.external} trước khi sử dụng để tạo một trình khách giao thức DevTools. Puppeteer đã có các API chuyên dụng cho nhiều tính năng của DevTools, chẳng hạn như [code coverage][coverage]{:.external} và [intercepting **Console** messages][console]{:.external} .
 
-[API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
-[coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
-[console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
+[API]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md
+[coverage]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#class-coverage
+[console]: https://github.com/GoogleChrome/puppeteer/blob/main/docs/api.md#event-console
 
 Nếu bạn cần trợ giúp truy cập tính năng DevTools thông qua Puppeteer, [ask a question on Stack Overflow][SO]{:.external} .
 

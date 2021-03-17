@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: How to view Application Cache data from the Application panel of Chrome DevTools.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2021-01-18 #}
 {# wf_published_on: 2019-03-25 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -12,7 +12,7 @@ description: How to view Application Cache data from the Application panel of Ch
 
 <aside class="warning">
   The Application Cache API is 
-  <a href="https://html.spec.whatwg.org/multipage/offline.html#offline">
+  <a href="https://web.dev/appcache-removal/">
     being removed from the web platform
   </a>.
 </aside>

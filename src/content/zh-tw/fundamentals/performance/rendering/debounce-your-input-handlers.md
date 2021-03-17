@@ -40,25 +40,23 @@ description: 輸入處理常式可能是您的應用程式效能問題的潛在�
 
 ## 解彈跳您的捲動處理常式
 
-上述兩項問題的解決方案是一樣的：您應該總是針對下一個 `requestAnimationFrame` 回呼，解彈跳視覺變更：
+上述兩項問題的解決方案是一樣的: 您應該總是針對下一個 `requestAnimationFrame` 回呼，解彈跳視覺變更:
 
 
     function onScroll (evt) {
-    
+
       // Store the scroll value for laterz.
       lastScrollY = window.scrollY;
-    
+
       // Prevent multiple rAF callbacks.
       if (scheduledAnimationFrame)
         return;
-    
+
       scheduledAnimationFrame = true;
       requestAnimationFrame(readAndUpdatePage);
     }
-    
+
     window.addEventListener('scroll', onScroll);
-    
+
 
 這樣做也有另一好處，那就是讓您的輸入處理常式保持輕重量，現在你就不必以高運算成本的程式碼，來封鎖捲動或輕觸等事件了，太好了！
-
-

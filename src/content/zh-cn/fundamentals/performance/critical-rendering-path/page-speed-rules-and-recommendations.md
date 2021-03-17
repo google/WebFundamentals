@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:本指南审视 PageSpeed Insights 规则背景：优化关键渲染路径时的注意事项以及原因。
+description:本指南审视 PageSpeed Insights 规则背景: 优化关键渲染路径时的注意事项以及原因。
 
 {# wf_updated_on:2015-10-05 #}
 {# wf_published_on:2014-03-31 #}
@@ -9,7 +9,7 @@ description:本指南审视 PageSpeed Insights 规则背景：优化关键渲染
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-本指南审视 PageSpeed Insights 规则背景：优化关键渲染路径时的注意事项以及原因。
+本指南审视 PageSpeed Insights 规则背景: 优化关键渲染路径时的注意事项以及原因。
 
 
 ## 消除阻塞渲染的 JavaScript 和 CSS
@@ -43,30 +43,30 @@ description:本指南审视 PageSpeed Insights 规则背景：优化关键渲染
         }
       }();
     </script>
-    
 
-新增的 `fetch()` 方法提供了一种方便的数据异步请求方式。由于它尚未做到随处可用，因此您应该利用功能检测来测试其是否存在，然后再使用。该方法通过 Promise 而非多个事件处理程序来处理响应。不同于对 XMLHttpRequest 的响应，从 Chrome 43 开始，fetch 响应将是 stream 对象。这意味着调用 `json()` 也会返回 Promise。 
+
+新增的 `fetch()` 方法提供了一种方便的数据异步请求方式。由于它尚未做到随处可用，因此您应该利用功能检测来测试其是否存在，然后再使用。该方法通过 Promise 而非多个事件处理程序来处理响应。不同于对 XMLHttpRequest 的响应，从 Chrome 43 开始，fetch 响应将是 stream 对象。这意味着调用 `json()` 也会返回 Promise。
 
 
     <script>
-    fetch('./api/some.json')  
-      .then(  
-        function(response) {  
-          if (response.status !== 200) {  
-            console.log('Looks like there was a problem. Status Code: ' +  response.status);  
-            return;  
+    fetch('./api/some.json')
+      .then(
+        function(response) {
+          if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' +  response.status);
+            return;
           }
-          // Examine the text in the response  
-          response.json().then(function(data) {  
-            console.log(data);  
-          });  
-        }  
-      )  
-      .catch(function(err) {  
-        console.log('Fetch Error :-S', err);  
+          // Examine the text in the response
+          response.json().then(function(data) {
+            console.log(data);
+          });
+        }
+      )
+      .catch(function(err) {
+        console.log('Fetch Error :-S', err);
       });
     </script>
-    
+
 
 `fetch()` 方法也可处理 POST 请求。
 
@@ -74,13 +74,13 @@ description:本指南审视 PageSpeed Insights 规则背景：优化关键渲染
     <script>
     fetch(url, {
       method: 'post',
-      headers: {  
-        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
-      },  
-      body: 'foo=bar&lorem=ipsum'  
+      headers: {
+        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      body: 'foo=bar&lorem=ipsum'
     }).then(function() { // Aditional code });
     </script>
-    
+
 
 ### 延迟解析 JavaScript
 
@@ -100,7 +100,7 @@ CSS 是构建渲染树的必备元素，首次构建网页时，JavaScript 常�
 
 ### 避免使用 CSS import
 
-一个样式表可以使用 CSS import (`@import`) 指令从另一样式表文件导入规则。不过，应避免使用这些指令，因为它们会在关键路径中增加往返次数：只有在收到并解析完带有 `@import` 规则的 CSS 样式表之后，才会发现导入的 CSS 资源。
+一个样式表可以使用 CSS import (`@import`) 指令从另一样式表文件导入规则。不过，应避免使用这些指令，因为它们会在关键路径中增加往返次数: 只有在收到并解析完带有 `@import` 规则的 CSS 样式表之后，才会发现导入的 CSS 资源。
 
 ### 内联阻塞渲染的 CSS
 

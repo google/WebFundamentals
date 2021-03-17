@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The new Issues tab, accessibility information in the Inspect Mode tooltip, and more.
 
-{# wf_updated_on: 2020-05-19 #}
+{# wf_updated_on: 2020-12-01 #}
 {# wf_published_on: 2020-05-12 #}
 {# wf_tags: chrome84, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,6 +12,12 @@ description: The new Issues tab, accessibility information in the Inspect Mode t
 # What's New In DevTools (Chrome 84) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="dgYAlcJonxo"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Fix site issues with the new Issues tab {: #issues }
 

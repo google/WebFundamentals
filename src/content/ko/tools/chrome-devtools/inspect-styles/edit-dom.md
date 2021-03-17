@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Chrome DevTools의 Elements 패널에 있는 DOM 트리 뷰에 현재 웹 페이지의 DOM 구조가 표시됩니다. DOM 업데이트를 통해 페이지의 콘텐츠와 구조를 실시간으로 편집할 수 있습니다.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 
 # DOM 편집 {: .page-title }
@@ -25,7 +25,7 @@ Chrome DevTools의 Elements 패널에 있는 DOM 트리 뷰에 현재 웹 페이
 **Elements 패널**을 사용하면 페이지의 모든 요소를 단일
 DOM 트리에서 검사할 수 있습니다. 아무 요소나 선택하여 적용된 스타일을 검사합니다.
 
-<video autoplay muted src="animations/inspect-element.mp4">
+<video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
 요소를 검사하는 방법은 여러 가지가 있습니다.
@@ -110,7 +110,7 @@ DOM 이름 또는 속성을 편집하려면:
 
 작업을 마치면 닫는 태그가 자동으로 업데이트됩니다.
 
-<video autoplay muted src="animations/edit-element-name.mp4">
+<video autoplay muted src="animations-img/edit-element-name.mp4">
 </video>
 
 ### DOM 노드와 자식 노드를 HTML로 편집
@@ -129,7 +129,7 @@ DOM 노드와 자식 노드를 HTML로 편집하려면:
 
 노드를 클릭한 상태로 드래그하여 이동합니다.
 
-<video autoplay muted src="animations/move-node.mp4">
+<video autoplay muted src="animations-img/move-node.mp4">
 </video>
 
 ## DOM 노드 삭제

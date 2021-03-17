@@ -28,11 +28,12 @@
   https://opensource.org/licenses/MIT.
 */
 
-const {RawSource} &#x3D; require(&#x27;webpack-sources&#x27;);
 const bundle &#x3D; require(&#x27;workbox-build/build/lib/bundle&#x27;);
 const populateSWTemplate &#x3D;
   require(&#x27;workbox-build/build/lib/populate-sw-template&#x27;);
+const prettyBytes &#x3D; require(&#x27;pretty-bytes&#x27;);
 const validate &#x3D; require(&#x27;workbox-build/build/lib/validate-options&#x27;);
+const webpack &#x3D; require(&#x27;webpack&#x27;);
 const webpackGenerateSWSchema &#x3D; require(
     &#x27;workbox-build/build/options/schema/webpack-generate-sw&#x27;);
 
@@ -40,6 +41,10 @@ const getScriptFilesForChunks &#x3D; require(&#x27;./lib/get-script-files-for-ch
 const getManifestEntriesFromCompilation &#x3D;
   require(&#x27;./lib/get-manifest-entries-from-compilation&#x27;);
 const relativeToOutputPath &#x3D; require(&#x27;./lib/relative-to-output-path&#x27;);
+
+// webpack v4/v5 compatibility:
+// https://github.com/webpack/webpack/issues/11425#issuecomment-686607633
+const {RawSource} &#x3D; webpack.sources || require(&#x27;webpack-sources&#x27;);
 
 // Used to keep track of swDest files written by *any* instance of this plugin.
 // See https://github.com/GoogleChrome/workbox/issues/2181
@@ -75,7 +80,7 @@ class GenerateSW {
    * may be served from the same &#x60;http://localhost:port&#x60; origin.
    *
    * @param {boolean} [config.cleanupOutdatedCaches&#x3D;false] Whether or not Workbox
-   * should attempt to identify an delete any precaches created by older,
+   * should attempt to identify and delete any precaches created by older,
    * incompatible versions.
    *
    * @param {boolean} [config.clientsClaim&#x3D;false] Whether or not the service
@@ -92,10 +97,10 @@ class GenerateSW {
    *
    * @param {RegExp} [config.dontCacheBustURLsMatching] Assets that match this will be
    * assumed to be uniquely versioned via their URL, and exempted from the normal
-   * HTTP cache-busting that&#x27;s done when populating the precache. While not
-   * required, it&#x27;s recommended that if your existing build process already
-   * inserts a &#x60;[hash]&#x60; value into each filename, you provide a RegExp that will
-   * detect that, as it will reduce the bandwidth consumed when precaching.
+   * HTTP cache-busting that&#x27;s done when populating the precache. (As of Workbox
+   * v6, this option is usually not needed, as each
+   * [asset&#x27;s metadata](https://github.com/webpack/webpack/issues/9038) is used
+   * to determine whether it&#x27;s immutable or not.)
    *
    * @param {Array&amp;lt;string|RegExp|Function&gt;} [config.exclude&#x3D;[/\.map$/, /^manifest.*\.js$]]
    * One or more specifiers used to exclude assets from the precache manifest.
@@ -106,7 +111,7 @@ class GenerateSW {
    * @param {Array&amp;lt;string&gt;} [config.excludeChunks] One or more chunk names whose
    * corresponding output files should be excluded from the precache manifest.
    *
-   * @param {Array&amp;lt;RegExp&gt;} [config.ignoreURLParametersMatching&#x3D;[/^utm_/]]
+   * @param {Array&amp;lt;RegExp&gt;} [config.ignoreURLParametersMatching&#x3D;[/^utm_/, /^fbclid$/]]
    * Any search parameter names that match against one of the RegExp in this array
    * will be removed before looking for a precache match. This is useful if your
    * users might request URLs that contain, for example, URL parameters used to
@@ -146,7 +151,7 @@ class GenerateSW {
    *
    * @param {string} [config.mode] If set to &#x27;production&#x27;, then an optimized service
    * worker bundle that excludes debugging info will be produced. If not explicitly
-   * configured here, the &#x60;mode&#x60; value configured in the current &#x60;webpack&#x60; compiltion
+   * configured here, the &#x60;mode&#x60; value configured in the current &#x60;webpack&#x60; compilation
    * will be used.
    *
    * @param {object&amp;lt;string, string&gt;} [config.modifyURLPrefix] A mapping of prefixes
@@ -199,7 +204,8 @@ class GenerateSW {
    * @param {boolean} [config.skipWaiting&#x3D;false] Whether to add an
    * unconditional call to [&#x60;skipWaiting()&#x60;]{@link module:workbox-core.skipWaiting}
    * to the generated service worker. If &#x60;false&#x60;, then a &#x60;message&#x60; listener will
-   * be added instead, allowing you to conditionally call &#x60;skipWaiting()&#x60;.
+   * be added instead, allowing you to conditionally call &#x60;skipWaiting()&#x60; by posting
+   * a message containing {type: &#x27;SKIP_WAITING&#x27;}.
    *
    * @param {boolean} [config.sourcemap&#x3D;true] Whether to create a sourcemap
    * for the generated service worker files.
@@ -234,11 +240,31 @@ class GenerateSW {
   apply(compiler) {
     this.propagateWebpackConfig(compiler);
 
-    compiler.hooks.emit.tapPromise(
-        this.constructor.name,
-        (compilation) &#x3D;&gt; this.handleEmit(compilation).catch(
-            (error) &#x3D;&gt; compilation.errors.push(error)),
-    );
+    // webpack v4/v5 compatibility:
+    // https://github.com/webpack/webpack/issues/11425#issuecomment-690387207
+    if (webpack.version.startsWith(&#x27;4.&#x27;)) {
+      compiler.hooks.emit.tapPromise(
+          this.constructor.name,
+          (compilation) &#x3D;&gt; this.addAssets(compilation).catch(
+              (error) &#x3D;&gt; compilation.errors.push(error)),
+      );
+    } else {
+      const {PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER} &#x3D; webpack.Compilation;
+      // Specifically hook into thisCompilation, as per
+      // https://github.com/webpack/webpack/issues/11425#issuecomment-690547848
+      compiler.hooks.thisCompilation.tap(
+          this.constructor.name, (compilation) &#x3D;&gt; {
+            compilation.hooks.processAssets.tapPromise({
+              name: this.constructor.name,
+              // TODO(jeffposnick): This may need to change eventually.
+              // See https://github.com/webpack/webpack/issues/11822#issuecomment-726184972
+              stage: PROCESS_ASSETS_STAGE_OPTIMIZE_TRANSFER - 10,
+            }, () &#x3D;&gt; this.addAssets(compilation).catch(
+                (error) &#x3D;&gt; compilation.errors.push(error)),
+            );
+          },
+      );
+    }
   }
 
   /**
@@ -246,14 +272,19 @@ class GenerateSW {
    *
    * @private
    */
-  async handleEmit(compilation) {
+  async addAssets(compilation) {
     // See https://github.com/GoogleChrome/workbox/issues/1790
     if (this.alreadyCalled) {
-      compilation.warnings.push(&#x60;${this.constructor.name} has been called &#x60; +
+      const warningMessage &#x3D; &#x60;${this.constructor.name} has been called &#x60; +
         &#x60;multiple times, perhaps due to running webpack in --watch mode. The &#x60; +
         &#x60;precache manifest generated after the first call may be inaccurate! &#x60; +
         &#x60;Please see https://github.com/GoogleChrome/workbox/issues/1790 for &#x60; +
-        &#x60;more information.&#x60;);
+        &#x60;more information.&#x60;;
+
+      if (!compilation.warnings.some((warning) &#x3D;&gt; warning instanceof Error &amp;amp;&amp;amp;
+            warning.message &#x3D;&#x3D;&#x3D; warningMessage)) {
+        compilation.warnings.push(new Error(warningMessage));
+      }
     } else {
       this.alreadyCalled &#x3D; true;
     }
@@ -286,8 +317,9 @@ class GenerateSW {
           .concat(scripts);
     }
 
-    config.manifestEntries &#x3D; await getManifestEntriesFromCompilation(
+    const {size, sortedEntries} &#x3D; await getManifestEntriesFromCompilation(
         compilation, config);
+    config.manifestEntries &#x3D; sortedEntries;
 
     const unbundledCode &#x3D; populateSWTemplate(config);
 
@@ -301,8 +333,17 @@ class GenerateSW {
     });
 
     for (const file of files) {
-      compilation.assets[file.name] &#x3D; new RawSource(file.contents);
+      compilation.emitAsset(file.name, new RawSource(file.contents), {
+        // See https://github.com/webpack-contrib/compression-webpack-plugin/issues/218#issuecomment-726196160
+        minimized: config.mode &#x3D;&#x3D;&#x3D; &#x27;production&#x27;,
+      });
       _generatedAssetNames.add(file.name);
+    }
+
+    if (compilation.getLogger) {
+      const logger &#x3D; compilation.getLogger(this.constructor.name);
+      logger.info(&#x60;The service worker at ${config.swDest} will precache
+        ${config.manifestEntries.length} URLs, totaling ${prettyBytes(size)}.&#x60;);
     }
   }
 }

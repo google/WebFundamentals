@@ -5,6 +5,7 @@ description: Polymer 0.8 has landed and with it come some major changes and perf
 {# wf_updated_on: 2015-04-15 #}
 {# wf_published_on: 2015-04-15 #}
 {# wf_youtube_id: cyf-17lWkYE #}
+{# wf_blink_components: N/A #}
 
 # Polymer 0.8: First Look {: .page-title }
 
@@ -20,7 +21,7 @@ Polymer 0.8 has landed and with it come some major changes and performance impro
 
 ## Read More
 
-- [Demo source code](https://github.com/robdodson/polycasts/tree/master/ep13-08-first-look)
+- [Demo source code](https://github.com/Polymer/polycasts/tree/master/ep13-08-first-look)
 - [Polymer 0.8 documentation](https://www.polymer-project.org/0.8/)
 - [Content elements with core-drawer-panel](/web/shows/polycasts/season-1/core-drawer-panel)
 - [Shady DOM explainer](https://www.polymer-project.org/0.8/docs/devguide/local-dom.html)

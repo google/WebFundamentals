@@ -259,7 +259,7 @@ href="https://blinkcomponents-b48b5.firebaseapp.com/">Blink компоненто
   <tr>
     <td>Пример</td>
     <td>
-      
+
     </td>
   </tr>
 </table>
@@ -329,7 +329,7 @@ href="https://blinkcomponents-b48b5.firebaseapp.com/">Blink компоненто
       <ul>
         <li>Изображения должны быть 16x9, в идеале 800px на 450px.</li>
 <li>Ищите типовое изображение? Проверьте папку <a
-href="https://github.com/google/WebFundamentals/tree/master/src/content/en/updates/images/generic">типовые
+href="https://github.com/google/WebFundamentals/tree/main/src/content/en/updates/images/generic">типовые
 изображения</a>.
         </li>
     </ul>
@@ -596,9 +596,9 @@ href="https://github.com/google/WebFundamentals/tree/master/src/content/en/updat
   </tr>
   <tr>
     <td>Примечание</td>
-    <td>Если тэга нет в текущем списке, добавьте его в 
+    <td>Если тэга нет в текущем списке, добавьте его в
 <a
-href="https://github.com/google/WebFundamentals/blob/master/src/data/commonTags.json">
+href="https://github.com/google/WebFundamentals/blob/main/src/data/commonTags.json">
       <code>commonTags.json</code></a>
     </td>
   </tr>

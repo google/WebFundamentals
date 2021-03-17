@@ -113,11 +113,6 @@ const validate &#x3D; require(&#x27;./lib/validate-options&#x27;);
  * prevents you from inadvertently precaching very large files that might have
  * accidentally matched one of your patterns.
  *
- * @param {string} [config.mode&#x3D;&#x27;production&#x27;] If set to &#x27;production&#x27;, then an
- * optimized service worker bundle that excludes debugging info will be
- * produced. If not explicitly configured here, the &#x60;process.env.NODE_ENV&#x60; value
- * will be used, and failing that, it will fall back to &#x60;&#x27;production&#x27;&#x60;.
- *
  * @param {object&amp;lt;string, string&gt;} [config.modifyURLPrefix] A mapping of prefixes
  * that, if present in an entry in the precache manifest, will be replaced with
  * the corresponding value. This can be used to, for example, remove or add a
@@ -186,9 +181,10 @@ async function injectManifest(config) {
   // If our swSrc file contains a sourcemap, we would invalidate that
   // mapping if we just replaced injectionPoint with the stringified manifest.
   // Instead, we need to update the swDest contents as well as the sourcemap
-  // at the same time.
+  // (assuming it&#x27;s a real file, not a data: URL) at the same time.
   // See https://github.com/GoogleChrome/workbox/issues/2235
-  if (url) {
+  // and https://github.com/GoogleChrome/workbox/issues/2648
+  if (url &amp;amp;&amp;amp; !url.startsWith(&#x27;data:&#x27;)) {
     const sourcemapSrcPath &#x3D; upath.resolve(upath.dirname(options.swSrc), url);
     const sourcemapDestPath &#x3D; upath.resolve(upath.dirname(options.swDest), url);
 

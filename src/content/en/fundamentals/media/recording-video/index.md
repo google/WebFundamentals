@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's camera.
 
-{# wf_updated_on: 2020-03-06 #}
+{# wf_updated_on: 2021-01-26 #}
 {# wf_published_on: 2017-09-24 #}
 {# wf_blink_components: Blink>GetUserMedia #}
 

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2020-02-21 #}
+{# wf_updated_on: 2020-10-14 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -10,9 +10,6 @@ description: When the user adds your Progressive Web App to their home screen on
 # WebAPKs on Android {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
-
-_This article contains contributions from Jeff Posnick and
-[Peter Kotwicz](https://groups.google.com/a/chromium.org/forum/#!msg/chromium-discuss/NUjaM4QtFrU/gTJ1kSONBAAJ)_.
 
 [Installing a PWA](https://web.dev/progressive-web-apps/) on Android does
 more than just add the Progressive Web App to the user's Home Screen. Chrome
@@ -22,7 +19,7 @@ for your app to show up in the app launcher, in Android's app settings and
 to register a set of intent filters.
 
 To
-[generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README),
+[generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README.md),
 Chrome looks at the [web app manifest](https://web.dev/add-manifest/) and
 other metadata. [When an update to the manifest is detected](#update-webapk),
 Chrome will need to generate a new APK.
@@ -143,57 +140,8 @@ to delete site data, that will apply to the WebAPK as well.
 
 ## Updating the WebAPK {: #update-webapk }
 
-Chrome will periodically compare the locally installed manifest against a copy
-of the manifest fetched from the network. If any of the properties in the
-manifest required to add the PWA to the home screen have changed in the network
-copy, Chrome will request an updated WebAPK, reflecting those new values.
-
-There are a number of rules that govern how these update checks are triggered:
-
-- Update checks only happen when a WebAPK is launched. Launching Chrome directly
-  will not a trigger an update check for a given WebAPK.
-- Chrome checks for updates either every 1 day or every 30 days. Checking for
-  updates every day happens the large majority of the time. It switches to
-  the 30 day interval in unlikely cases where the update server cannot provide
-  an update.
-- Clearing Chrome's data (via "CLEAR ALL DATA" in Android settings) resets the update timer.
-- Chrome will only update a WebAPK if the Web Manifest URL does not change. If
-  you change the web page from referencing `/manifest.json` to
-  reference `/manifest2.json`, the WebAPK will no longer update.
-  (Don't do this!)
-- Chrome will only update a WebAPK if the WebAPK is not running. Moving the
-  WebAPK to the background is not sufficient if it keeps running.
-- Only WebAPKs created by an official version of Chrome (Stable/Beta/Dev/Canary)
-  will be updated. It does not work with Chromium (`org.chromium.chrome`).
-- The update check may be delayed until the device is plugged in and has a WiFi
-  connection.
-
-Note: The update interval was reduced to 1 day (from 3 days) in Chrome 76.
-For behavior in Chrome 75 and earlier, refer to
-[Updating WebAPKs More Frequently][webapk-update-cr75].
-
-For Chrome 76 (July 2019) and later, here's a hypothetical example of how
-WebAPK update scheduling works over time:
-
-- **January 1**: Install WebAPK
-- **January 1**: Launch WebAPK → No update check (0 days have passed)
-- **January 2**: Launch WebAPK → Check whether update is needed (1 day has passed)
-- **January 4**: Launch Chrome → No update check (Launching Chrome has no effect)
-- **January 4**: Launch WebAPK → Check whether update is needed (1+ days have passed)
-- **January 6**: Clear Chrome's data in Android settings
-- **January 9**: Launch WebAPK → No update check (From Chrome's perspective this
-  is the first WebAPK launch)
-- **January 10**: Launch WebAPK → Check whether update is needed (1 day has passed)
-
-See the
-[`UpdateReason`](https://cs.chromium.org/chromium/src/chrome/browser/android/webapk/webapk.proto?l=35)
-enum in `message WebApk` for the reasons a WebAPK may be updated.
-
-Icons may be [cached](/web/fundamentals/performance/optimizing-content-efficiency/http-caching),
-so it may be helpful to change the filenames when updating icons or other
-graphics.
-
-[webapk-update-cr75]: /web/updates/2019/06/webapk-update-frequency#chrome_75_and_earlier
+Information on how a WebAPK is updated has moved to
+[How Chrome handles updates to the web app manifest](https://web.dev/manifest-updates/){: .external }.
 
 ## Frequently asked questions
 
@@ -222,16 +170,6 @@ graphics.
   </dd>
 
   <dt>
-    When a user opens a site installed via improved add to Home screen, will
-    Chrome be running?
-  </dt>
-  <dd>
-    Yes, once the site is opened from the home screen the primary activity is
-    still Chrome. Cookies, permissions, and all other browser state will be
-    shared.
-  </dd>
-
-  <dt>
     Will my installed site's storage be cleared if the user clears Chrome's
     cache?
   </dt>
@@ -244,11 +182,6 @@ graphics.
     Not at this time, but we think it is an important area and we are
     investigating ways to make it work.
   </dd>
-
-  <dt>
-    Will I be able to register to handle custom URL schemes and protocols?
-  </dt>
-  <dd>No.</dd>
 
   <dt>
     How are permissions handled? Will I see the Chrome prompt or Android's?
@@ -278,14 +211,17 @@ graphics.
     Can we upload the APKs that are created to the Play Store?
   </dt>
   <dd>
-    No. There is no key signing information supplied to enable you to create
-    your own PWA that can be in the store.
+    No. If you want to upload your own APK, check out
+    <a href="/web/android/trusted-web-activity/">Trusted Web Activities</a>.
   </dd>
 
   <dt>
     Are these listed in the Play Store?
   </dt>
-  <dd>No.</dd>
+  <dd>
+    No. If you want to upload your own APK for listing in the Play Store, check
+    out <a href="/web/android/trusted-web-activity/">Trusted Web Activities</a>.
+  </dd>
 
   <dt>
     I am a developer of another browser on Android, can I have this seamless

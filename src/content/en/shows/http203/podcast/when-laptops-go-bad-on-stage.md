@@ -27,7 +27,7 @@ In this episode:
 * [Drying a basin with a motion-activated
   tap](https://twitter.com/jaffathecake/status/1060885922642767872).
 * [Transferrable
-  streams](https://github.com/whatwg/streams/blob/master/transferable-streams-explainer.md).
+  streams](https://github.com/whatwg/streams/blob/main/transferable-streams-explainer.md).
 * [Limmy's show](https://www.youtube.com/watch?v=PzKo1JPNf4s).
 * [The Cumbrian dictionary](http://www.cumbriandictionary.co.uk/).
 

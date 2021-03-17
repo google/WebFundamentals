@@ -29,7 +29,7 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
 
 ### 基本示例
 
-在这里，我们将测量 100 万个新 Array 的初始化：
+在这里，我们将测量 100 万个新 Array 的初始化:
 
 
     console.time("Array initialize");
@@ -40,14 +40,14 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
     console.timeEnd("Array initialize");
 
 
-将在控制台中输出下列结果：
+将在控制台中输出下列结果:
 ![经过的时间](images/track-executions-time-duration.png)
 
 ### Timeline 上的计时器
 
 当 [Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) 记录在 `time()` 操作期间发生时，它也会对 Timeline 进行标注。如果您想要跟踪应用的操作和操作来自何处，请使此记录。
 
-执行 `time()` 时 Timeline 上的标注如下所示：
+执行 `time()` 时 Timeline 上的标注如下所示:
 
 ![timeline 上的时间标注](images/track-executions-time-annotation-on-timeline.png)
 
@@ -63,7 +63,7 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
 - Timeline 汇总和详细信息视图中的黄色垂直线。
 - 会向事件列表添加一条记录。
 
-以下示例代码：
+以下示例代码:
 
 
     function AddResult(name, result) {
@@ -74,7 +74,7 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
     }
 
 
-将生成下面的 Timeline 时间戳：
+将生成下面的 Timeline 时间戳:
 
 ![Timeline 中的时间戳](images/track-executions-timestamp2.png)
 
@@ -82,7 +82,7 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
 
 使用 `count()` 方法记录提供的字符串，以及相同字符串已被提供的次数。当完全相同的语句被提供给同一行上的 `count()` 时，此数字将增大。
 
-将 `count()` 与某些动态内容结合使用的示例代码：
+将 `count()` 与某些动态内容结合使用的示例代码:
 
 
     function login(user) {
@@ -102,7 +102,7 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
     login(users[0]);
 
 
-代码示例的输出：
+代码示例的输出:
 
 ![console.count() example output](images/track-executions-console-count.png)
 

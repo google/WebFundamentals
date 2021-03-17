@@ -29,6 +29,12 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkOnly
 - title: "PrecacheController"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController
+- title: "PrecacheFallbackPlugin"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheFallbackPlugin
+- title: "PrecacheRoute"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheRoute
+- title: "PrecacheStrategy"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheStrategy
 - title: "Queue"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue
 - title: "RangeRequestsPlugin"
@@ -41,6 +47,10 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/module-workbox-routing.Router
 - title: "StaleWhileRevalidate"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.StaleWhileRevalidate
+- title: "Strategy"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.Strategy
+- title: "StrategyHandler"
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.StrategyHandler
 - title: "Workbox"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
 - title: "workbox"

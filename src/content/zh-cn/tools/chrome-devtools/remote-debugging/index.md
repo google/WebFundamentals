@@ -18,7 +18,7 @@ description:从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上�
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上的实时内容。
- 本教程将向您展示如何：
+ 本教程将向您展示如何:
 
 * 设置您的 Android 设备进行远程调试，并从开发计算机上发现设备。
 * 从您的开发计算机检查和调试 Android 设备上的实时内容。
@@ -35,9 +35,9 @@ description:从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上�
   </figcaption>
 </figure>
 
-## 第 1 步：发现您的 Android 设备 {: #discover }
+## 第 1 步: 发现您的 Android 设备 {: #discover }
 
-下面的工作流程适用于大多数用户。 如需更多帮助，请参阅[问题排查：DevTools 检测不到 Android 设备](#troubleshooting)。
+下面的工作流程适用于大多数用户。 如需更多帮助，请参阅[问题排查: DevTools 检测不到 Android 设备](#troubleshooting)。
 
 
 1. 在您的 Android 设备上打开 **Developer Options** 屏幕。 请参阅[配置设备上的开发者选项](https://developer.android.com/studio/debug/dev-options.html)
@@ -45,8 +45,8 @@ description:从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上�
 1. 选择 **Enable USB Debugging**。
 1. 在您的开发计算机上打开 Chrome。
 1. [打开 DevTools](/web/tools/chrome-devtools/#open)。
-1. 在 DevTools 中，点击 **主菜单** ![主菜单][main]，{:.devtools-inline} 
-   然后选择 **More tools** > **Remote devices**。 
+1. 在 DevTools 中，点击 **主菜单** ![主菜单][main]，{:.devtools-inline}
+   然后选择 **More tools** > **Remote devices**。
 
      <figure>
        <img src="imgs/open-remote-devices.png"
@@ -91,11 +91,11 @@ description:从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上�
 [unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
 
 1. 如果设备显示 **Unknown**，则根据 Android 设备上的权限提示接受 **Allow USB
-Debugging**。 
+Debugging**。
 
-### 问题排查：DevTools 检测不到 Android 设备 {: #troubleshooting }
+### 问题排查: DevTools 检测不到 Android 设备 {: #troubleshooting }
 
-请确保正确安装硬件：
+请确保正确安装硬件:
 
 * 如果是使用 USB 集线器，请尝试将您的 Android 设备直接连接到开发计算机上。
 * 尝试拔出 Android 设备与开发计算机之间的 USB 电缆，然后再将其插回原位
@@ -103,14 +103,14 @@ Debugging**。
 * 确保您的 USB 电缆正常工作。 您应该能够从自己的开发计算机上检查 Android 设备上的文件。
 
 
-请确保正确安装您的软件：
+请确保正确安装您的软件:
 
 * 如果开发计算机运行的是 Windows 系统，请尝试为 Android 设备手动安装 USB 驱动程序。
  请参阅[安装原始设备制造商 (OEM) USB 驱动程序][drivers]{:.external}。
 * 某些 Windows 和 Android 设备（特别是 Samsung）组合需要额外的设置。
  请参阅 [Chrome DevTools 设备插入时未检测到设备][SO]{:.external}。
 
-如果您的 Android 设备上未显示 **Allow USB Debugging** 提示，请尝试：
+如果您的 Android 设备上未显示 **Allow USB Debugging** 提示，请尝试:
 
 * 当 DevTools 在开发计算机上处于焦点状态时，断开并重新连接 USB 电缆，此时将会显示 Android 主屏幕。
  换言之，有时如果 Android 设备或开发计算机的屏幕锁定，则不会显示此提示。
@@ -126,7 +126,7 @@ Debugging**。
 [SO]: https://stackoverflow.com/questions/21925992
 [issue]: https://github.com/google/webfundamentals/issues/new?title=[Remote%20Debugging]
 
-## 第 2 步：从您的开发计算机调试 Android 设备上的内容 {: #debug }
+## 第 2 步: 从您的开发计算机调试 Android 设备上的内容 {: #debug }
 
 1. 在 Android 设备上打开 Chrome。
 1. 在 **Remote Devices** 标签中，点击与您的 Android 设备型号名称匹配的标签。
@@ -151,7 +151,7 @@ Debugging**。
    因此，如果您的 Android 设备正在运行一个非常旧的 Chrome 版本，则 DevTools 实例看上去可能与您常用的实例有很大的差别。
 
 
-### 更多操作：重新加载、聚焦或关闭一个标签 {: #more-actions }
+### 更多操作: 重新加载、聚焦或关闭一个标签 {: #more-actions }
 
 点击您要重新加载、聚焦或关闭的标签旁的 **More Options** ![更多选项][more]{:.devtools-inline} 。
 
@@ -186,15 +186,15 @@ Debugging**。
 
 [screencast]: imgs/toggle-screencast.png
 
-您可以通过多种方式与抓屏互动：
+您可以通过多种方式与抓屏互动:
 
-* 将点击转变为点按，在设备上触发适当的轻触事件。 
-* 将计算机上的按键发送至设备。 
-* 要模拟双指张合手势，请按住 <kbd>Shift</kbd> 并拖动。 
+* 将点击转变为点按，在设备上触发适当的轻触事件。
+* 将计算机上的按键发送至设备。
+* 要模拟双指张合手势，请按住 <kbd>Shift</kbd> 并拖动。
 * 要滚动，请使用您的触控板或鼠标滚轮，或者使用您的鼠标指针抛式滚动。
 
 
-关于抓屏的一些注意事项：
+关于抓屏的一些注意事项:
 
 * 抓屏仅显示页面内容。 抓屏的透明部分表示设备界面，如 Chrome 地址栏、Android 状态栏或 Android 键盘。
 * 抓屏会对帧率产生负面影响。 在测量滚动或动画时停用抓屏，以更准确地了解页面的性能。

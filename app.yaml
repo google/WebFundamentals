@@ -32,10 +32,10 @@ handlers:
   http_headers:
     x-frame-options: SAMEORIGIN
 
-- url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3|mov))
+- url: /web/(.*\.(png|gif|jpg|svg|webp|avif|xml|mp4|webm|pdf|mp3|mov))
   static_files: src/content/en/\1
   expiration: 1d
-  upload: src/content/en/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3|mov))
+  upload: src/content/en/(.*\.(png|gif|jpg|svg|webp|avif|xml|mp4|webm|pdf|mp3|mov))
   http_headers:
     x-frame-options: SAMEORIGIN
 

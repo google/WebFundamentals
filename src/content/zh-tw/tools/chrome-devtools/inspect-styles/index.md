@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description:檢查和編輯頁面的 HTML 與 CSS。
 
-{# wf_updated_on:2020-07-10 #}
+{# wf_updated_on:2020-12-14 #}
 {# wf_published_on:2015-04-13 #}
 
 # 檢查和編輯頁面與樣式 {: .page-title }
@@ -25,10 +25,10 @@ description:檢查和編輯頁面的 HTML 與 CSS。
 
 ## 實時編輯 DOM 節點
 
-要實時編輯 DOM 節點，只需雙擊[選定元素](#inspect-an-element)，然後進行更改：
+要實時編輯 DOM 節點，只需雙擊[選定元素](#inspect-an-element)，然後進行更改:
 
 
-<video src="animations/edit-element-name.mp4" style="max-width:100%;"
+<video src="animations-img/edit-element-name.mp4" style="max-width:100%;"
        loop muted autoplay controls></video>
 
 DOM 樹視圖會顯示樹的當前狀態；可能會與最初因其他原因加載的 HTML 不匹配。
@@ -50,7 +50,7 @@ DOM 樹視圖會顯示樹的當前狀態；可能會與最初因其他原因加�
 默認情況下，您的 CSS 修改不是永久的，重新加載頁面時更改會丟失。
 如果您想要在頁面加載時保留更改，請設置[永久製作](/web/tools/setup/setup-workflow)。
 
- 
+
 
 ## 檢查和編輯框模型參數
 
@@ -62,7 +62,7 @@ DOM 樹視圖會顯示樹的當前狀態；可能會與最初因其他原因加�
 
 同軸矩形包含當前元素 **padding**、**border** 和 **margin** 屬性的 **top**、**bottom**、**left**、**right** 值。
 
- 
+
 
 對於位置爲非靜態的元素，還會顯示 **position** 矩形，包含 **top**、**right**、**bottom** 和 **left** 屬性的值。
 
@@ -79,16 +79,16 @@ DOM 樹視圖會顯示樹的當前狀態；可能會與最初因其他原因加�
 
 ## 查看本地更改
 
-<video src="animations/revisions.mp4" style="max-width:100%;"
+<video src="animations-img/revisions.mp4" style="max-width:100%;"
        autoplay loop muted controls></video>
 
-要查看對頁面所做實時編輯的歷史記錄，請執行以下操作：
+要查看對頁面所做實時編輯的歷史記錄，請執行以下操作:
 
 1. 在 **Styles** 窗格中，點擊您修改的文件。DevTools 會將您帶到 **Sources** 面板。
 1. 右鍵點擊文件。
 1. 選擇 **Local modifications**。
 
-要探索所做的更改，請執行以下操作：
+要探索所做的更改，請執行以下操作:
 
 * 展開頂級文件名查看做出修改的時間 ![做出修改的時間](imgs/image_25.png){:.inline}。
 * 展開第二級項目查看修改相應的[不同](https://en.wikipedia.org/wiki/Diff)（前和後）。
@@ -101,7 +101,7 @@ DOM 樹視圖會顯示樹的當前狀態；可能會與最初因其他原因加�
 如果您未[設置永久製作](/web/tools/setup/setup-workflow)，每次您重新加載頁面時，所有的實時編輯都會丟失。
 
 
-假設您已設置了永久製作，要撤消更改，請執行以下操作：
+假設您已設置了永久製作，要撤消更改，請執行以下操作:
 
 * 使用 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Z</kbd> (Windows) 或 <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Z</kbd> (Mac) 通過 Elements 面板快速撤消對 DOM 或樣式所做的細微更改。
 

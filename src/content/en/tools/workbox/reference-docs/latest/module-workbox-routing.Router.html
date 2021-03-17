@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
             <p>The Router can be used to process a FetchEvent through one or more
               <a href="module-workbox-routing.Route.html">Routes</a> responding with a Request if
@@ -135,9 +135,8 @@
                                 <p>event</p>
                               </td>
                               <td>
-                                <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">Event</p>
-                                <p>The corresponding event (unless N/A).</p>
+                                <p>The corresponding event.</p>
                               </td>
                             </tr>
                           </tbody>
@@ -187,8 +186,7 @@
                               </td>
                               <td>
                                 <p class="details-table-types">Request</p>
-                                <p>The request to handle (this is usually
-                                  from a fetch event, but it does not have to be).</p>
+                                <p>The request to handle.</p>
                               </td>
                             </tr>
                             <tr>
@@ -196,10 +194,9 @@
                                 <p>event</p>
                               </td>
                               <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">FetchEvent</p>
-                                <p>The event that triggered the request,
-                                  if applicable.</p>
+                                <p class="details-table-types">ExtendableEvent</p>
+                                <p>The event that triggered the
+                                  request.</p>
                               </td>
                             </tr>
                           </tbody>
@@ -270,9 +267,10 @@
               <dl class="dl-compact">
               </dl>
               <h3 id="setDefaultHandler" class="symbol-name">setDefaultHandler</h3>
-              <p class="type-signature"> setDefaultHandler(handler)</p>
+              <p class="type-signature"> setDefaultHandler(handler, method)</p>
               <p>Define a default <code>handler</code> that's called when no routes explicitly
                 match the incoming request.</p>
+              <p>Each HTTP method ('GET', 'POST', etc.) gets its own default handler.</p>
               <p>Without a default handler, unmatched requests will go against the
                 network as if there were no service worker present.</p>
               <section>
@@ -291,6 +289,17 @@
                         <p class="details-table-types"><a href="module-workbox-routing.html#~handlerCallback">module:workbox-routing~handlerCallback</a></p>
                         <p>A callback
                           function that returns a Promise resulting in a Response.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>method</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">string</p>
+                        <p>The HTTP method to associate with this
+                          default handler. Each method has its own default.</p>
                       </td>
                     </tr>
                   </tbody>

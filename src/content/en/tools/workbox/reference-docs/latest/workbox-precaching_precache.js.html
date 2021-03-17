@@ -27,27 +27,8 @@
   license that can be found in the LICENSE file or at
   https://opensource.org/licenses/MIT.
 */
-import { logger } from &#x27;workbox-core/_private/logger.js&#x27;;
 import { getOrCreatePrecacheController } from &#x27;./utils/getOrCreatePrecacheController.js&#x27;;
-import { precachePlugins } from &#x27;./utils/precachePlugins.js&#x27;;
 import &#x27;./_version.js&#x27;;
-const installListener &#x3D; (event) &#x3D;&gt; {
-    const precacheController &#x3D; getOrCreatePrecacheController();
-    const plugins &#x3D; precachePlugins.get();
-    event.waitUntil(precacheController.install({ event, plugins })
-        .catch((error) &#x3D;&gt; {
-        if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-            logger.error(&#x60;Service worker installation failed. It will &#x60; +
-                &#x60;be retried automatically during the next navigation.&#x60;);
-        }
-        // Re-throw the error to ensure installation fails.
-        throw error;
-    }));
-};
-const activateListener &#x3D; (event) &#x3D;&gt; {
-    const precacheController &#x3D; getOrCreatePrecacheController();
-    event.waitUntil(precacheController.activate());
-};
 /**
  * Adds items to the precache list, removing any duplicates and
  * stores the files in the
@@ -69,15 +50,7 @@ const activateListener &#x3D; (event) &#x3D;&gt; {
  */
 function precache(entries) {
     const precacheController &#x3D; getOrCreatePrecacheController();
-    precacheController.addToCacheList(entries);
-    if (entries.length &gt; 0) {
-        // NOTE: these listeners will only be added once (even if the &#x60;precache()&#x60;
-        // method is called multiple times) because event listeners are implemented
-        // as a set, where each listener must be unique.
-        // See https://github.com/Microsoft/TypeScript/issues/28357#issuecomment-436484705
-        self.addEventListener(&#x27;install&#x27;, installListener);
-        self.addEventListener(&#x27;activate&#x27;, activateListener);
-    }
+    precacheController.precache(entries);
 }
 export { precache };
 </code></pre>

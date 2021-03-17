@@ -6,7 +6,7 @@ description:丰富的离线体验、定期的后台同步以及推送通知等�
 {# wf_updated_on: 2020-07-24 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
-# Service Worker：简介 {: .page-title }
+# Service Worker: 简介 {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
@@ -32,7 +32,7 @@ Service Worker 是浏览器在后台独立于网页运行的脚本，它打开�
 AppCache API 存在的许多相关问题，在设计 Service Worker 时已予以避免。
 
 
-Service Worker 相关注意事项：
+Service Worker 相关注意事项:
 
 * 它是一种 [JavaScript Worker](//www.html5rocks.com/en/tutorials/workers/basics/){: .external }，无法直接访问 DOM。
  Service Worker 通过响应 [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) 接口发送的消息来与其控制的页面通信，页面可在必要时对 DOM 执行操作。
@@ -63,7 +63,7 @@ Service Worker 的生命周期完全独立于网页。
 
 
 激活之后，Service Worker 将会对其作用域内的所有页面实施控制，不过，首次注册该 Service Worker 的页面需要再次加载才会受其控制。
- 服务工作线程实施控制后，它将处于以下两种状态之一：服务工作线程终止以节省内存，或处理获取和消息事件，从页面发出网络请求或消息后将会出现后一种状态。
+ 服务工作线程实施控制后，它将处于以下两种状态之一: 服务工作线程终止以节省内存，或处理获取和消息事件，从页面发出网络请求或消息后将会出现后一种状态。
 
 
 
@@ -168,7 +168,7 @@ Service Worker JavaScript 文件的位置。
     });
 
 
-在 `install` 回调的内部，我们需要执行以下步骤：
+在 `install` 回调的内部，我们需要执行以下步骤:
 
 1. 打开缓存。
 2. 缓存文件。
@@ -288,10 +288,10 @@ promise 参数并使用它来判断安装所花费的时间，以及安装是否
     });
 
 
-执行的操作如下：
+执行的操作如下:
 
 1. 在 `fetch` 请求中添加对 `.then()` 的回调。
-2. 获得响应后，执行以下检查：
+2. 获得响应后，执行以下检查:
     1. 确保响应有效。
     2. 检查并确保响应的状态为 `200`。
     3. 确保响应类型为 **basic**，亦即由自身发起的请求。
@@ -306,7 +306,7 @@ promise 参数并使用它来判断安装所花费的时间，以及安装是否
 ## 更新 Service Worker {: #update-a-service-worker }
 
 在某个时间点，您的 Service Worker 需要更新。
- 此时，您需要遵循以下步骤：
+ 此时，您需要遵循以下步骤:
 
 1. 更新您的服务工作线程 JavaScript 文件。 用户导航至您的站点时，浏览器会尝试在后台重新下载定义 Service Worker 的脚本文件。
  如果 Service Worker 文件与其当前所用文件存在字节差异，则将其视为_新 Service Worker_。
@@ -324,11 +324,11 @@ promise 参数并使用它来判断安装所花费的时间，以及安装是否
 
 
 比如说我们有一个名为 `'my-site-cache-v1'` 的缓存，我们想要将该缓存拆分为一个页面缓存和一个博文缓存。
-这就意味着在安装步骤中我们创建了两个缓存：`'pages-cache-v1'` 和
+这就意味着在安装步骤中我们创建了两个缓存: `'pages-cache-v1'` 和
 `'blog-posts-cache-v1'`，且在激活步骤中我们要删除旧的
 `'my-site-cache-v1'`。
 
-以下代码将执行此操作，具体做法为：遍历
+以下代码将执行此操作，具体做法为: 遍历
 Service Worker 中的所有缓存，并删除未在缓存白名单中定义的任何缓存。
 
 
@@ -376,14 +376,14 @@ debugging”，然后将调试程序语句置于安装事件开始处。
 #### 默认情况下没有凭据
 
 使用 `fetch` 时，默认情况下请求中不包含 Cookie 等凭据。
- 如需凭据，改为调用：
+ 如需凭据，改为调用:
 
     fetch(url, {
       credentials: 'include'
     })
 
 
-这一行为是有意为之，可以说比 XHR 更复杂的以下默认行为更好：如果网址具有相同来源，则默认发送凭据，否则忽略。
+这一行为是有意为之，可以说比 XHR 更复杂的以下默认行为更好: 如果网址具有相同来源，则默认发送凭据，否则忽略。
  提取的行为更接近于其他 CORS 请求，如 `<img
 crossorigin>`，它将决不会发送 Cookie，除非您使用 `<img
 crossorigin="use-credentials">` 选择加入。
@@ -407,7 +407,7 @@ crossorigin="use-credentials">` 选择加入。
 `srcset` 属性或 `<picture>` 元素将在运行期间选择最适当的图像资产，并发出网络请求。
 
 
-对于 Service Worker，如果您想要在安装过程中缓存图像，您有下列几种选择：
+对于 Service Worker，如果您想要在安装过程中缓存图像，您有下列几种选择:
 
 
 1. 安装 `<picture>` 元素和 `srcset` 属性将请求的所有图像。
@@ -421,14 +421,14 @@ crossorigin="use-credentials">` 选择加入。
  这没有问题，而且这种做法很好，但是有另外一个问题。
 
 
-如果我们有以下两张图像：
+如果我们有以下两张图像:
 
 | 屏幕密度 | 宽度 | 高度 |
 | -------------- | ----- | ------ |
 | 1x             | 400   | 400    |
 | 2x             | 800   | 800    |
 
-在 `srcset` 图像中，我们有一些像这样的标记：
+在 `srcset` 图像中，我们有一些像这样的标记:
 
 
     <img src="image-src.png" srcset="image-src.png 1x, image-2x.png 2x" />

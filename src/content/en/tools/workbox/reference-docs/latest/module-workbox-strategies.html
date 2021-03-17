@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
             <p>There are common caching strategies that most service workers will need
               and use. This module provides simple implementations of these strategies.</p>
@@ -74,6 +74,14 @@
                 support <a href="https://enable-cors.org/">CORS</a>.</p>
               <p>If the network request fails, and there is no cache match, this will throw
                 a <code>WorkboxError</code> exception.</p>
+              <h3 class="class-list"><a href="module-workbox-strategies.Strategy.html">Strategy</a></h3>
+              <p>An abstract base class that all other strategy classes must extend from:</p>
+              <h3 class="class-list"><a href="module-workbox-strategies.StrategyHandler.html">StrategyHandler</a></h3>
+              <p>A class created every time a Strategy instance instance calls
+                handle() or
+                handleAll() that wraps all fetch and
+                cache actions around plugin callbacks and keeps track of when the strategy
+                is &quot;done&quot; (i.e. all added <code>event.waitUntil()</code> promises have resolved).</p>
             </section>
           </section>
         </div>

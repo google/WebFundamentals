@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: Inspecciona y edita el código HTML y la CSS de las páginas.
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Inspecciona y edita páginas y estilos {: .page-title }
@@ -28,7 +28,7 @@ el panel Elements de Chrome DevTools.
 Para editar en tiempo real un nodo del DOM, simplemente haz doble clic en el 
 [elemento seleccionado](#inspect-an-element) y realiza los cambios:
 
-<video src="animations/edit-element-name.mp4" style="max-width:100%;"
+<video src="animations-img/edit-element-name.mp4" style="max-width:100%;"
        loop muted autoplay controls></video>
 
 En la vista del árbol del DOM, se muestra el estado actual del árbol; es posible que, por diferentes motivos, no coincida con el 
@@ -81,7 +81,7 @@ de posicionamiento del elemento concreto.
 
 ## Visualiza cambios locales
 
-<video src="animations/revisions.mp4" style="max-width:100%;"
+<video src="animations-img/revisions.mp4" style="max-width:100%;"
        autoplay loop muted controls></video>
 
 Para ver el historial de las ediciones en tiempo real efectuadas en la página, realiza lo siguiente:

@@ -14,7 +14,7 @@ description:在开发计算机网络服务器上托管网站，然后从 Android
 
 
 使用 USB 电缆和 Chrome DevTools，您可以从开发计算机运行网站，然后在 Android 设备上查看网站。
- 
+
 
 
 ### TL;DR {: .hide-from-toc }
@@ -29,7 +29,7 @@ description:在开发计算机网络服务器上托管网站，然后从 Android
 
 
 
-要启用端口转发，请执行以下操作：
+要启用端口转发，请执行以下操作:
 
 1. 在您的开发计算机与 Android 设备之间设置[远程调试](.)。
 完成后，您应在 **Inspect Devices** 对话框的左侧菜单中看到 Android 设备，还应看到 **Connected** 状态指示器。
@@ -52,7 +52,7 @@ description:在开发计算机网络服务器上托管网站，然后从 Android
 要查看内容，请在您的 Android 设备上打开 Chrome，然后转至您在 **Device port** 中指定的 `localhost` 端口。
 例如，如果您在字段中输入了 `5000`，则应转至 `localhost:5000`。
 
- 
+
 
 ## 映射到自定义本地域名{:#custom-domains}
 
@@ -62,7 +62,7 @@ description:在开发计算机网络服务器上托管网站，然后从 Android
 例如，假设您的网站使用仅在白名单网域 `chrome.devtools` 上运行的第三方 JavaScript 库。
 因此，您可以在开发计算机上的 `hosts` 文件中创建条目，将此网域映射到 `localhost`（如 `127.0.0.1 chrome.devtools`）。设置自定义域名映射和端口转发后，您将能够在 Android 设备上查看网站，网址为 `chrome.devtools`。
 
- 
+
 
 ### 为代理服务器设置端口转发
 
@@ -70,9 +70,9 @@ description:在开发计算机网络服务器上托管网站，然后从 Android
 代理服务器示例包括 [Charles][charles]、[Squid][squid] 和 [Fiddler][fiddler]。
 
 
-要为代理设置端口转发，请执行以下操作：
+要为代理设置端口转发，请执行以下操作:
 
-1. 运行代理服务器并记下其正在使用的端口。**注**：代理服务器和您的网络服务器必须在不同的端口上运行。
+1. 运行代理服务器并记下其正在使用的端口。**注**: 代理服务器和您的网络服务器必须在不同的端口上运行。
 1. 为您的 Android 设备设置[端口转发](#port-forwarding)。在 **local address** 字段中，输入 `localhost:`，后面紧跟运行代理服务器的端口。例如，如果代理服务器在端口 `8000` 上运行，您应输入 `localhost:8000`。
 在 **device port** 字段中，输入您想要使 Android 设备在其上面侦听的端口号，如 `3333`。
 
@@ -84,11 +84,11 @@ description:在开发计算机网络服务器上托管网站，然后从 Android
 ### 在您的设备上配置代理设置
 
 接下来，您需要配置 Android 设备，以便与代理服务器进行通信。
- 
+
 
 1. 在您的 Android 设备上，转至 **Settings** > **Wi-Fi**。
 1. 长按您当前连接到的网络的名称。
-   **注**：代理设置的适用范围为单个网络。
+   **注**: 代理设置的适用范围为单个网络。
 3. 点按 **Modify network**。
 4. 点按 **Advanced options**。将会显示代理设置。
 5. 点按 **Proxy** 菜单，然后选择 **Manual**。
@@ -101,13 +101,13 @@ description:在开发计算机网络服务器上托管网站，然后从 Android
 
 
 现在，您可以在 Android 设备上访问自定义域名，就像您在开发计算机上访问一样。
- 
+
 
 如果您的网络服务器正在非标准端口上运行，从 Android 设备请求内容时请务必指定端口。例如，如果网络服务器正在端口 `7331` 上使用自定义域名 `chrome.devtools`，您从 Android 设备上查看网站时应使用网址 `chrome.devtools:7331`。
 
- 
 
-**提示**：要恢复正常浏览，与开发计算机断开连接后请务必在您的 Android 设备上还原代理设置。
+
+**提示**: 要恢复正常浏览，与开发计算机断开连接后请务必在您的 Android 设备上还原代理设置。
 
 
 

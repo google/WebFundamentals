@@ -52,7 +52,7 @@ toc:
     path: 'https://github.com/GoogleChrome/puppeteer/releases'
     status: external
   - title: How to Contribute
-    path: 'https://github.com/GoogleChrome/puppeteer/blob/master/CONTRIBUTING.md'
+    path: 'https://github.com/GoogleChrome/puppeteer/blob/main/CONTRIBUTING.md'
     status: external
   - title: FAQ
     path: /web/tools/puppeteer/faq

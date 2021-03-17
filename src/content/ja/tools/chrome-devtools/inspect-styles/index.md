@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description: ページの HTML と CSS を調査して編集します。
 
-{# wf_updated_on:2020-07-10 #}
+{# wf_updated_on:2020-12-14 #}
 {# wf_published_on:2015-04-13 #}
 
 # ページとスタイルの調査と編集 {: .page-title }
@@ -28,7 +28,7 @@ Chrome DevTools の [Elements] パネルを使用して、ページの HTML と 
 DOM ノードをライブ編集するには、単純に[選択された要素](#inspect-an-element)をダブルクリックして、変更を行います。
 
 
-<video src="animations/edit-element-name.mp4" style="max-width:100%;"
+<video src="animations-img/edit-element-name.mp4" style="max-width:100%;"
        loop muted autoplay controls></video>
 
 DOM ツリービューには、ツリーの現在の状態が表示されます。これは、別の理由で最初に読み込まれた HTML とは一致しないことがあります。
@@ -80,7 +80,7 @@ DOM ツリービューには、ツリーの現在の状態が表示されます�
 
 ##  ローカル変更の表示
 
-<video src="animations/revisions.mp4" style="max-width:100%;"
+<video src="animations-img/revisions.mp4" style="max-width:100%;"
        autoplay loop muted controls></video>
 
 ページに加えたライブ編集の履歴を表示するには、次のようにします。

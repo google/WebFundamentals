@@ -280,7 +280,7 @@ For now, there are a couple of ways to see what features are controllable.
   implemented or are being considered in Blink.
 
 To determine _how_ to use some of these policies, check out the
-[spec's GitHub repo](https://github.com/WICG/feature-policy/tree/master/policies).
+[spec's GitHub repo](https://github.com/WICG/feature-policy/tree/main/policies).
 It contains a few explainers on some of the policies.
 
 ## FAQ
@@ -310,8 +310,8 @@ to guarantee a certain UX for users.
 
 #### Is there a way to report policy violations to my server? {: #report }
 
-A [Reporting API](https://github.com/WICG/feature-policy/blob/master/reporting.md)
-is [in the works](https://github.com/WICG/feature-policy/blob/master/reporting.md)!
+A [Reporting API](https://github.com/WICG/feature-policy/blob/main/reporting.md)
+is [in the works](https://github.com/WICG/feature-policy/blob/main/reporting.md)!
 Similar to how sites can opt-in to receiving reports about
 [CSP violations](https://www.chromestatus.com/feature/5826576096690176) or
 [deprecations](https://www.chromestatus.com/feature/4691191559880704), you'll

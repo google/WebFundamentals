@@ -277,8 +277,7 @@ onclick="[JAVASCRIPT]">`를 알맞은 `addEventListener()` 호출로 바꾸어�
 [놀랍도록 영리한](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html){: .external}
 여러 가지 데이터 누수 방법으로부터 데이터를 보호하기 위해 `style` 속성과 `style`태그를 둘 다 외부 스타일시트로 통합해야 합니다.
 
-인라인 스크립트와 스타일이 있어야 하는 경우 `'unsafe-inline'`을 `script-src` 또는 `style-
-src` 지시문에 허용되는 소스로 추가하여
+인라인 스크립트와 스타일이 있어야 하는 경우 `'unsafe-inline'`을 `script-src` 또는 `style-src` 지시문에 허용되는 소스로 추가하여
 사용할 수 있습니다. 또한, 난스(nonce)나 해시(아래 참조)도 사용할 수 있지만 실제로는 사용하면 안 됩니다. 인라인 스크립트를 금지하는 것은 CSP가 제공하는 가장 큰 보안상 강점이며,
 인라인 스타일 금지 역시 애플리케이션을 강화하는 역할을 합니다. 모든 코드를 줄 밖으로 이동한 후
 제대로 작동하도록 하려면 미리 약간의 작업을 해야 하지만,

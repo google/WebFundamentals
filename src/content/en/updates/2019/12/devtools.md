@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Support for let and class redeclarations in the Console, improved WebAssembly debugging, and more.
 
-{# wf_updated_on: 2020-02-06 #}
+{# wf_updated_on: 2020-09-29 #}
 {# wf_published_on: 2019-12-05 #}
 {# wf_tags: chrome80, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}

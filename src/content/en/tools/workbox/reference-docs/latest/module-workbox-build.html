@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
           </header>
           <section>
@@ -160,7 +160,7 @@
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">boolean</p>
                                 <p>Whether or not Workbox
-                                  should attempt to identify an delete any precaches created by older,
+                                  should attempt to identify and delete any precaches created by older,
                                   incompatible versions.</p>
                               </td>
                             </tr>
@@ -447,7 +447,8 @@
                                 <p>Whether to add an
                                   unconditional call to <a href="module-workbox-core.html#.skipWaiting"><code>skipWaiting()</code></a>
                                   to the generated service worker. If <code>false</code>, then a <code>message</code> listener will
-                                  be added instead, allowing you to conditionally call <code>skipWaiting()</code>.</p>
+                                  be added instead, allowing you to conditionally call <code>skipWaiting()</code> by posting
+                                  a message containing {type: 'SKIP_WAITING'}.</p>
                               </td>
                             </tr>
                             <tr>
@@ -496,7 +497,7 @@
               </dl>
               <h3 id=".getManifest" class="symbol-name">getManifest</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
-              <p class="type-signature"> getManifest(config)&nbsp;returns&nbsp;Promise containing {count: number, filePaths: Array of string, size: number, warnings: Array of string}</p>
+              <p class="type-signature"> getManifest(config)&nbsp;returns&nbsp;Promise containing {count: number, manifestEntries: Array of <a href="module-workbox-build.html#.ManifestEntry">module:workbox-build.ManifestEntry</a>, size: number, warnings: Array of string}</p>
               <p>This method returns a list of URLs to precache, referred to as a &quot;precache
                 manifest&quot;, along with details about the number of entries and their size,
                 based on the options you provide.</p>
@@ -638,19 +639,6 @@
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>mode</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">string</p>
-                                <p>If set to 'production', then an
-                                  optimized service worker bundle that excludes debugging info will be
-                                  produced. If not explicitly configured here, the <code>process.env.NODE_ENV</code> value
-                                  will be used, and failing that, it will fall back to <code>'production'</code>.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
                                 <p>modifyURLPrefix</p>
                               </td>
                               <td>
@@ -691,8 +679,8 @@
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing {count: number, filePaths: Array of string, size: number, warnings: Array of string}</code>&nbsp;A promise that resolves once the service worker and related files
-                    (indicated by <code>filePaths</code>) has been written to <code>swDest</code>. The <code>size</code> property
+                  <p><code>Promise containing {count: number, manifestEntries: Array of <a href="module-workbox-build.html#.ManifestEntry">module:workbox-build.ManifestEntry</a>, size: number, warnings: Array of string}</code>&nbsp;A promise that resolves once the precache manifest (available in the
+                    <code>manifestEntries</code> property) has been determined. The <code>size</code> property
                     contains the aggregate size of all the precached entries, in bytes, and the
                     <code>count</code> property contains the total number of precached entries. Any
                     non-fatal warning messages will be returned via <code>warnings</code>.</p>
@@ -879,19 +867,6 @@
                             </tr>
                             <tr>
                               <td class="details-table-name">
-                                <p>mode</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">string</p>
-                                <p>If set to 'production', then an
-                                  optimized service worker bundle that excludes debugging info will be
-                                  produced. If not explicitly configured here, the <code>process.env.NODE_ENV</code> value
-                                  will be used, and failing that, it will fall back to <code>'production'</code>.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
                                 <p>modifyURLPrefix</p>
                               </td>
                               <td>
@@ -968,10 +943,10 @@
                         <p>revision</p>
                       </td>
                       <td>
-                        <p class="details-table-optional">Optional</p>
                         <p class="details-table-types">string</p>
-                        <p>The revision details for the file. This is a
-                          hash generated by node based on the file contents.</p>
+                        <p>The revision details for the file. This should be
+                          either a hash generated based on the file contents, or <code>null</code> if there is
+                          versioning already included in the URL.</p>
                       </td>
                     </tr>
                     <tr>
@@ -1322,6 +1297,27 @@ const removeRevisionTransform &#x3D; async (manifestEntries) &#x3D;&gt; {
                                 <p>The <code>maxAgeSeconds</code>
                                   property to use when creating the
                                   <a href="module-workbox-expiration.ExpirationPlugin.html"><code>ExpirationPlugin</code></a>.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>precacheFallback</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Object</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>precacheFallback.fallbackURL</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">number</p>
+                                <p>The <code>fallbackURL</code>
+                                  property to use when creating the
+                                  <a href="module-workbox-precaching.PrecacheFallbackPlugin.html"><code>PrecacheFallbackPlugin</code></a>.</p>
                               </td>
                             </tr>
                             <tr>

@@ -27,7 +27,7 @@ description:了解如何为应用中的模态视图设置动画。
 
 <div class="clearfix"></div>
 
-模态叠加层应与视口对齐，因此需要将其 `position` 设置为 `fixed`：
+模态叠加层应与视口对齐，因此需要将其 `position` 设置为 `fixed`:
 
 
     .modal {
@@ -36,70 +36,70 @@ description:了解如何为应用中的模态视图设置动画。
       left: 0;
       width: 100%;
       height: 100%;
-    
+
       pointer-events: none;
       opacity: 0;
-    
+
       will-change: transform, opacity;
     }
-    
+
 
 其初始 `opacity` 为 0，因此在视图中被隐藏，而且还需要将 `pointer-events` 设置为 `none`，使点击和触摸事件能够穿过。若不设置，它将阻止所有交互，使整个页面无响应。最后，由于它将对其 `opacity` 和 `transform` 设置动画，因此需要使用 `will-change` 将这些属性标记为“即将更改”（另请参考[使用 will-change 属性](animations-and-performance#using-the-will-change-property)）。
 
-当视图可见时，需要接受交互并且将 `opacity` 设置为 1：
+当视图可见时，需要接受交互并且将 `opacity` 设置为 1:
 
 
     .modal.visible {
       pointer-events: auto;
       opacity: 1;
     }
-    
 
-现在，每当需要模态视图时，可以使用 JavaScript 来切换“visible”类：
+
+现在，每当需要模态视图时，可以使用 JavaScript 来切换“visible”类:
 
 
     modal.classList.add('visible')；
-    
 
-此时，模态视图出现时没有任何动画，因此您现在可以在以下位置加入动画（另请参考[自定义缓动](custom-easing)）：
+
+此时，模态视图出现时没有任何动画，因此您现在可以在以下位置加入动画（另请参考[自定义缓动](custom-easing)）:
 
 
 
     .modal {
       -webkit-transform: scale(1.15);
       transform: scale(1.15);
-    
+
       -webkit-transition:
         -webkit-transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
         opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
-    
+
       transition:
         transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
         opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
-    
+
     }
-    
+
 
 给变形属性加上 `scale` 使视图好像轻轻掉到屏幕上，这是一种不错的效果。同时给变形和透明度属性应用默认变换，采用自定义曲线和 0.1 秒持续时间。
 
-这个持续时间很短，但在用户消除视图并且希望返回应用时，效果非常好。缺点是：模态视图在出现时可能会太突然。要修复此问题，应替换 `visible` 类的变换值：
+这个持续时间很短，但在用户消除视图并且希望返回应用时，效果非常好。缺点是: 模态视图在出现时可能会太突然。要修复此问题，应替换 `visible` 类的变换值:
 
 
     .modal.visible {
-    
+
       -webkit-transform: scale(1);
       transform: scale(1);
-    
+
       -webkit-transition:
         -webkit-transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946),
         opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
-    
+
       transition:
         transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946),
         opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
-    
+
     }
-    
+
 
 现在模态视图用 0.3 秒时间进入屏幕，没那么突然，但是会快速消除，这样用户会喜欢。
 

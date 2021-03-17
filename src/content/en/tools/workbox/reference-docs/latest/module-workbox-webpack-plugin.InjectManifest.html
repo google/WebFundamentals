@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>5.1.2</small></span>
+              <span class="label label-version"><small>6.1.1</small></span>
             </div>
             <p>This class supports compiling a service worker file provided via <code>swSrc</code>,
               and injecting into that service worker a list of URLs and revision
@@ -113,10 +113,10 @@
                                 <p class="details-table-types">RegExp</p>
                                 <p>Assets that match this will be
                                   assumed to be uniquely versioned via their URL, and exempted from the normal
-                                  HTTP cache-busting that's done when populating the precache. While not
-                                  required, it's recommended that if your existing build process already
-                                  inserts a <code>[hash]</code> value into each filename, you provide a RegExp that will
-                                  detect that, as it will reduce the bandwidth consumed when precaching.</p>
+                                  HTTP cache-busting that's done when populating the precache. (As of Workbox
+                                  v6, this option is usually not needed, as each
+                                  <a href="https://github.com/webpack/webpack/issues/9038">asset's metadata</a> is used
+                                  to determine whether it's immutable or not.)</p>
                               </td>
                             </tr>
                             <tr>
@@ -130,18 +130,6 @@
                                   This is interpreted following
                                   <a href="https://webpack.js.org/configuration/module/#condition">the same rules</a>
                                   as <code>webpack</code>'s standard <code>exclude</code> option.</p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>importScriptsViaChunks</p>
-                              </td>
-                              <td>
-                                <p class="details-table-optional">Optional</p>
-                                <p class="details-table-types">Array of string</p>
-                                <p>One or more names of
-                                  webpack chunks. The content of those chunks will be included in the
-                                  generated service worker, via a call to <code>importScripts()</code>.</p>
                               </td>
                             </tr>
                             <tr>

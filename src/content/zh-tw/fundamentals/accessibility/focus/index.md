@@ -57,7 +57,7 @@ description:無障礙功能中的屏幕焦點概覽
 
 
 作爲用戶，您可以使用 `Tab`、`Shift+Tab` 或箭頭鍵來控制當前聚焦的元素。
-在 Mac OSX 上，控制方式略有不同：儘管 Chrome 始終允許您使用 `Tab` 進行導航，但在 Safari 等其他瀏覽器中更改焦點時，您需要按 `Option+Tab`。（您可以在 System Preferences 的 Keyboard 部分更改此設置。）
+在 Mac OSX 上，控制方式略有不同: 儘管 Chrome 始終允許您使用 `Tab` 進行導航，但在 Safari 等其他瀏覽器中更改焦點時，您需要按 `Option+Tab`。（您可以在 System Preferences 的 Keyboard 部分更改此設置。）
 
 
 ![鍵盤首選項對話框](imgs/system-prefs2.png)
@@ -89,7 +89,7 @@ description:無障礙功能中的屏幕焦點概覽
 
 ![航空公司網站模型](imgs/airlinesite2.png)
 
-您應該指定的機票參數如下：
+您應該指定的機票參數如下:
 
  - 單程
  - 目的地墨爾本

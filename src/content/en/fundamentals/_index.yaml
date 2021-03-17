@@ -4,6 +4,28 @@ book_path: /web/fundamentals/_book.yaml
 landing_page:
   nav: both
   rows:
+
+  - heading: Looking for new content?
+    description: >
+      Head on over to <a href="https://web.dev/">web.dev</a> and
+      <a href="https://developer.chrome.com/">developer.chrome.com</a>
+      for all the latest.
+    items:
+    - heading: web.dev
+      description: >
+        Learn how to use the web's modern capabilities on your own sites and apps with useful
+        guidance and analysis from web.dev.
+      path: https://web.dev/
+      icon:
+        path: /web/images/web-dev-logo.png
+    - heading: developer.chrome.com
+      description: >
+        Chrome's official site to help you stay up to date on everything Chrome related, build
+        Extensions, publish on the Chrome Web Store, optimize your website, and more.
+      path: https://developer.chrome.com/
+      icon:
+        path: https://fonts.gstatic.com/s/i/productlogos/chrome/v4/web-96dp/logo_chrome_color_1x_web_96dp.png
+
   # Hero
   - classname: devsite-landing-row-50
     heading: The core foundations of a delightful web experience are...

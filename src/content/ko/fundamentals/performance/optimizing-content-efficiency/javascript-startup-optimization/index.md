@@ -62,7 +62,7 @@ Wi-Fi가 있지만 2G 속도의 모바일 핫스팟에 연결되어있을 수 �
     * [DevTools 코드
       대상 범위](/web/updates/2017/04/devtools-release-notes#coverage)에서
       삭제되거나 지연 로드될 수 있는 코드의 기회를 식별합니다.
-    * [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+    * [babel-preset-env](https://github.com/GoogleChrome/puppeteer/blob/main/packages/babel-preset-env)
       및 브라우저 목록을
       사용하여 이미 최신 브라우저에 있는 트랜스파일 기능을 방지합니다.
       [웹팩

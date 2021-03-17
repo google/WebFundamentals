@@ -24,7 +24,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 ## 检查应用到元素的样式
 
 [选择一个元素](edit-dom#inspect-an-element)以检查其样式。
-**Styles** 窗格可以显示应用到选定元素的 CSS 规则，优先级从高到低：
+**Styles** 窗格可以显示应用到选定元素的 CSS 规则，优先级从高到低:
 
 
 * 顶端为 `element.style`。这些样式要么直接使用样式属性（例如 `<p style="color:green">`）直接应用到元素，要么在 DevTools 中应用。
@@ -68,13 +68,13 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 
 ![查看受选择器影响的元素](imgs/selector-hover.png)
 
-**注**：此功能仅突出显示视口中的元素；视口以外的其他元素也可能受选择器影响。
+**注**: 此功能仅突出显示视口中的元素；视口以外的其他元素也可能受选择器影响。
 
 
 ## 添加、启用和停用 CSS 类 {:#classes}
 
 点击 **.cls** 按钮可以查看与当前选定元素关联的所有 CSS 类。
-从这里，您可以执行以下操作：
+从这里，您可以执行以下操作:
 
 * 启用或停用当前与元素关联的类。
 * 向元素添加新类。
@@ -87,7 +87,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 
 按 <kbd>Shift</kbd>+<kbd>Tab</kbd> 可以向后移动。
 
-编辑数字式 CSS 属性值时，可以使用下面的键盘快捷键增大和减小值：
+编辑数字式 CSS 属性值时，可以使用下面的键盘快捷键增大和减小值:
 
 
 * 使用<kbd>向上键</kbd>和<kbd>向下键</kbd>能够以 1 为增量增大和减小值（如果当前值介于 -1 和 1 之间，则增量为 0.1）。
@@ -118,7 +118,7 @@ Note: 要启用或停用样式声明，请选中或取消选中旁边的复选�
 您可以在元素上手动设置动态伪类选择器（例如 `:active`、`:focus`、`:hover` 和 `:visited`）。
 
 
-可以通过两种方式在元素上设置动态状态：
+可以通过两种方式在元素上设置动态状态:
 
 * 在 **Elements** 面板内右键点击某个元素，然后从菜单中选择目标伪类，将其启用或停用。
 ![右键点击元素以启用伪类选择器](imgs/pseudoclass-rightclick.png)
@@ -154,7 +154,7 @@ Note: 要启用或停用样式声明，请选中或取消选中旁边的复选�
 
 ![打开 Color Picker](imgs/open-color-picker.jpg)
 
-您可以通过多种方式与 **Color Picker** 交互：
+您可以通过多种方式与 **Color Picker** 交互:
 
 1. **取色器**。请参阅[取色器](#eyedropper)了解更多信息。
 2. **当前颜色**。**当前值**的可视表示。
@@ -181,7 +181,7 @@ Note: 要启用或停用样式声明，请选中或取消选中旁边的复选�
 
 ### 调色板 {:#color-palettes}
 
-**Color Picker** 提供了下列调色板：
+**Color Picker** 提供了下列调色板:
 
 * **Page Colors**。一组从页面的 CSS 自动生成的颜色。
 * **Material Design**。一组符合 [Material Design 规范][md]的颜色。
@@ -239,7 +239,7 @@ Note: 要启用或停用样式声明，请选中或取消选中旁边的复选�
 
 ![显示 .scss 样式表的 Elements 面板](imgs/sass-debugging.png)
 
-要跳转到源文件，请执行以下操作：
+要跳转到源文件，请执行以下操作:
 
 1. 点击链接，在 Sources 面板中打开（可编辑）源文件。
 2. <kbd class="kbd">Ctrl</kbd> + **点击**（或 <kbd class="kbd">Cmd</kbd> + **点击**）任何 CSS 属性名称或值，打开源文件并跳转到相应行。
@@ -250,7 +250,7 @@ Note: 要启用或停用样式声明，请选中或取消选中旁边的复选�
 
 ### 启用/停用 CSS 源映射和自动重新加载
 
-**默认情况下，CSS 源映射处于启用状态**。您可以选择启用生成的 CSS 文件的自动重新加载。要启用 CSS 源映射和 CSS 重新重新加载，请执行以下操作：
+**默认情况下，CSS 源映射处于启用状态**。您可以选择启用生成的 CSS 文件的自动重新加载。要启用 CSS 源映射和 CSS 重新重新加载，请执行以下操作:
 
 1. 打开 DevTools 的 Settings 面板并点击 **General**。
 2. 开启 **Enable CSS source maps** 和 **Auto-reload generated CSS**。

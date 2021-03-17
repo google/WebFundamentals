@@ -3,16 +3,6 @@ toc:
   path: /web/tools/workbox/guides/get-started
 - title: "Using Bundlers with Workbox"
   path: /web/tools/workbox/guides/using-bundlers
-- title: "Precache Files"
-  path: /web/tools/workbox/guides/precache-files
-  style: accordion
-  section:
-  - title: "CLI"
-    path: /web/tools/workbox/guides/precache-files/cli
-  - title: "Gulp or Node"
-    path: /web/tools/workbox/guides/precache-files/workbox-build
-  - title: "Webpack"
-    path: /web/tools/workbox/guides/precache-files/webpack
 - title: "Route Requests"
   path: /web/tools/workbox/guides/route-requests
 - title: "Configure Workbox"
@@ -40,18 +30,6 @@ toc:
     path: /web/tools/workbox/guides/generate-service-worker/workbox-build
   - title: "Webpack"
     path: /web/tools/workbox/guides/generate-service-worker/webpack
-- title: "Codelabs"
-  style: accordion
-  section:
-    - title: "Workbox For Webpack"
-      path: /web/tools/workbox/guides/codelabs/webpack
-    - title: "Workbox For Gulp"
-      path: /web/tools/workbox/guides/codelabs/gulp
-    - title: "Workbox For npm Script"
-      path: /web/tools/workbox/guides/codelabs/npm-script
-    - title: "Build a PWA using Workbox"
-      path: "https://codelabs.developers.google.com/codelabs/workbox-lab/"
-      status: external
 - title: "Migrating from Older Versions"
   style: accordion
   section:
@@ -63,5 +41,7 @@ toc:
     path: /web/tools/workbox/guides/migrations/migrate-from-v3
   - title: "From Workbox v4 to v5"
     path: /web/tools/workbox/guides/migrations/migrate-from-v4
+  - title: "From Workbox v5 to v6"
+    path: /web/tools/workbox/guides/migrations/migrate-from-v5
     status: new
 

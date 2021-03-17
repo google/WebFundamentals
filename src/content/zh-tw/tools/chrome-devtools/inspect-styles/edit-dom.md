@@ -2,7 +2,7 @@ project_path: /web/tools/chrome-devtools/_project.yaml
 book_path: /web/tools/chrome-devtools/_book.yaml
 description:Chrome DevTools 的 Elements 面板中的 DOM 樹視圖可以顯示當前網頁的 DOM 結構。通過 DOM 更新實時修改頁面的內容和結構。
 
-{# wf_updated_on: 2020-07-10 #}
+{# wf_updated_on: 2020-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 
 # 編輯 DOM {: .page-title }
@@ -25,10 +25,10 @@ Chrome DevTools 的 Elements 面板中的 DOM 樹視圖可以顯示當前網頁�
 使用 **Elements** 面板可以在一個 DOM 樹中檢查頁面中的所有元素。
 選擇任何元素並檢查應用到該元素的樣式。
 
-<video autoplay muted src="animations/inspect-element.mp4">
+<video autoplay muted src="animations-img/inspect-element.mp4">
 </video>
 
-可以通過多種方式檢查元素：
+可以通過多種方式檢查元素:
 
 右鍵點擊頁面上的任何元素並選擇 **Inspect**。
 
@@ -51,19 +51,19 @@ DevTools 會在 **Elements** 面板中自動突出顯示您懸停的元素。點
 
 使用您的鼠標或鍵盤在 DOM 結構中導航。
 
-摺疊的節點的旁邊會有一個向右箭頭：![摺疊的節點](imgs/collapsed-node.png){:.inline}
+摺疊的節點的旁邊會有一個向右箭頭: ![摺疊的節點](imgs/collapsed-node.png){:.inline}
 
 
-展開的節點的旁邊會有一個向下箭頭：![展開的節點](imgs/expanded-node.png){:.inline}
+展開的節點的旁邊會有一個向下箭頭: ![展開的節點](imgs/expanded-node.png){:.inline}
 
 
-使用鼠標：
+使用鼠標:
 
 * 點擊一次可以突出顯示節點。
 * 要展開節點，請雙擊節點上的任何地方，或者點擊節點旁邊的箭頭。
 * 要摺疊節點，請點擊節點旁邊的箭頭。
 
-使用鍵盤：
+使用鍵盤:
 
 * 按**向上箭頭**鍵可以選擇當前節點上方的節點。
 * 按**向下箭頭**可以選擇當前節點下方的節點。
@@ -83,18 +83,18 @@ Elements 面板的底部是麪包屑導航記錄。
 
 ![擴展麪包屑導航記錄](imgs/breadcrumb-footer.png)
 
-在結構中向上導航會移動突出顯示焦點：
+在結構中向上導航會移動突出顯示焦點:
 
 ![麪包屑導航記錄向上導航](imgs/breadcrumb-trail.png)
 
-DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯示全部記錄，將在記錄截斷的地方顯示一個省略號 (...)。點擊省略號可以顯示隱藏的元素：
+DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯示全部記錄，將在記錄截斷的地方顯示一個省略號 (...)。點擊省略號可以顯示隱藏的元素:
 
 
 ![麪包屑導航省略號](imgs/breadcrumb-ellipsis.png)
 
 ## 編輯 DOM 節點和屬性
 
-要編輯 DOM 節點名稱或屬性，請執行以下操作：
+要編輯 DOM 節點名稱或屬性，請執行以下操作:
 
 * 直接在節點名稱或屬性上雙擊。
 * 突出顯示節點，按 <kbd>Enter</kbd>，然後按 <kbd>Tab</kbd>，
@@ -105,12 +105,12 @@ DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯�
 
 完成後，結束標記將自動更新。
 
-<video autoplay muted src="animations/edit-element-name.mp4">
+<video autoplay muted src="animations-img/edit-element-name.mp4">
 </video>
 
 ### 以 HTML 形式編輯 DOM 節點及其子級
 
-要以 HTML 形式編輯 DOM 節點及其子級，請執行以下操作：
+要以 HTML 形式編輯 DOM 節點及其子級，請執行以下操作:
 
 * 打開 [more actions 菜單](#more-actions)並選擇 **Edit as HTML**。
 * 按 <kbd>F2</kbd> (Windows / Linux) 或 <kbd>Fn</kbd>+<kbd>F2</kbd> (Mac)。
@@ -123,12 +123,12 @@ DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯�
 
 點擊、按住並拖動節點可將其移動。
 
-<video autoplay muted src="animations/move-node.mp4">
+<video autoplay muted src="animations-img/move-node.mp4">
 </video>
 
 ## 刪除 DOM 節點
 
-要刪除 DOM 節點，請執行以下操作：
+要刪除 DOM 節點，請執行以下操作:
 
 * 打開 [more actions 菜單](#more-actions)並選擇 **Delete Node**。
 * 選擇節點並按 <kbd>Delete</kbd> 鍵。
@@ -156,13 +156,13 @@ Note: 如果您意外刪除了節點，按 <kbd class='kbd'>Ctrl</kbd> + <kbd cl
 
 ## 設置 DOM 斷點
 
-設置 DOM 斷點以調試複雜的 JavaScript 應用。例如，如果您的 JavaScript 正在更改 DOM 元素的樣式，請將 DOM 斷點設置爲在元素屬性修改時觸發。在發生以下一種 DOM 更改時觸發斷點：子樹更改、屬性更改、節點移除。
+設置 DOM 斷點以調試複雜的 JavaScript 應用。例如，如果您的 JavaScript 正在更改 DOM 元素的樣式，請將 DOM 斷點設置爲在元素屬性修改時觸發。在發生以下一種 DOM 更改時觸發斷點: 子樹更改、屬性更改、節點移除。
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.breakpoints #}
 
 ### 子樹修改
 
-添加、移除或移動子元素時將觸發子樹修改斷點。例如，如果您在 `main-content` 元素上設置子樹修改，以下代碼將觸發斷點：
+添加、移除或移動子元素時將觸發子樹修改斷點。例如，如果您在 `main-content` 元素上設置子樹修改，以下代碼將觸發斷點:
 
 
     var element = document.getElementById('main-content');
@@ -173,7 +173,7 @@ Note: 如果您意外刪除了節點，按 <kbd class='kbd'>Ctrl</kbd> + <kbd cl
 
 ### 屬性修改
 
-動態更改元素的屬性 (`class, id, name`) 時將發生屬性修改：
+動態更改元素的屬性 (`class, id, name`) 時將發生屬性修改:
 
 
     var element = document.getElementById('main-content');
@@ -183,7 +183,7 @@ Note: 如果您意外刪除了節點，按 <kbd class='kbd'>Ctrl</kbd> + <kbd cl
 
 ### 節點移除
 
-從 DOM 中移除有問題的節點時將觸發節點移除修改：
+從 DOM 中移除有問題的節點時將觸發節點移除修改:
 
 
 
@@ -199,14 +199,14 @@ Elements 和 Sources 面板均包含一個用於管理 DOM 斷點的窗格。
 
 ![DOM breakpoints 窗格](imgs/dom-breakpoints-pane.png)
 
-可通過以下方式之一與列出的每一個斷點交互：
+可通過以下方式之一與列出的每一個斷點交互:
 
 * **懸停**在元素標識符上可以顯示元素在頁面上的相應位置（類似於在 Elements 面板中懸停在節點上）。
 * **點擊**元素可以將其在 Elements 面板中選中。
 * **切換**複選框可以啓用或停用斷點。
 
 觸發 DOM 斷點時，斷點將在 DOM Breakpoints 窗格中突出顯示。
-**Call Stack** 窗格將顯示調試程序暫停的**原因**：
+**Call Stack** 窗格將顯示調試程序暫停的**原因**:
 
 
 ![斷點原因](imgs/breakpoint-reason.png)
@@ -225,7 +225,7 @@ Event Listeners 窗格中的頂級項目將顯示具有已註冊偵聽器的事�
 每個處理程序都由一個類似於 CSS 選擇器的元素標識符標識，例如 `document` 或 `button#call-to-action`。如果已爲相同元素註冊多個處理程序，將重複列示元素。
 
 
-點擊元素標識符旁的展開箭頭可以查看事件處理程序的屬性。Event Listeners 窗格將列出每個偵聽器的以下屬性：
+點擊元素標識符旁的展開箭頭可以查看事件處理程序的屬性。Event Listeners 窗格將列出每個偵聽器的以下屬性:
 
 <table class="responsive">
   <thead>
