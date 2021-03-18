@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Simulating color vision deficiencies in the Blink Renderer. The Chrome DevTools engineering blog - by the developers who build the DevTools.
 
-{# wf_updated_on: 2020-11-20 #}
+{# wf_updated_on: 2021-03-12 #}
 {# wf_published_on: 2020-11-19 #}
 {# wf_tags: devtools-blog #}
 {# wf_featured_image: /web/updates/images/2020/11/cvd/cvd.png #}
@@ -143,6 +143,7 @@ You can think of each of these color vision deficiency simulations as an overlay
                            0.280  0.673  0.047  0.000  0.000
                           -0.012  0.043  0.969  0.000  0.000
                            0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
   </filter>
 </svg>
 ```
@@ -193,6 +194,7 @@ Anyway, we have this SVG filter, and we can now apply it to arbitrary elements o
                            0.213  0.715  0.072  0.000  0.000
                            0.213  0.715  0.072  0.000  0.000
                            0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
   </filter>
   <!-- The filter color matrices are based on the following research paper:
        Gustavo M. Machado, Manuel M. Oliveira, and Leandro A. F. Fernandes,
@@ -206,18 +208,21 @@ Anyway, we have this SVG filter, and we can now apply it to arbitrary elements o
                            0.280  0.673  0.047  0.000  0.000
                           -0.012  0.043  0.969  0.000  0.000
                            0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
   </filter>
   <filter id="protanopia">
     <feColorMatrix values="0.152  1.053 -0.205  0.000  0.000
                            0.115  0.786  0.099  0.000  0.000
                           -0.004 -0.048  1.052  0.000  0.000
                            0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
   </filter>
   <filter id="tritanopia">
     <feColorMatrix values="1.256 -0.077 -0.179  0.000  0.000
                           -0.078  0.931  0.148  0.000  0.000
                            0.005  0.691  0.304  0.000  0.000
                            0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
   </filter>
 </svg>
 <picture>
@@ -278,6 +283,7 @@ Let’s see how we can make this less intrusive. There’s two parts to this sol
                            0.280  0.673  0.047  0.000  0.000
                           -0.012  0.043  0.969  0.000  0.000
                            0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
   </filter>
 </svg>
 ```
@@ -293,11 +299,12 @@ Let’s start with part 2: how can we avoid adding the SVG to the DOM? One idea 
                            0.280  0.673  0.047  0.000  0.000
                           -0.012  0.043  0.969  0.000  0.000
                            0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
   </filter>
 </svg>
 ```
 
-To make this valid standalone SVG (and thus XML), we need to make two changes. Can you guess which?
+To make this valid standalone SVG (and thus XML), we need to make some changes. Can you guess which?
 
 <!-- ```xml
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -305,13 +312,14 @@ To make this valid standalone SVG (and thus XML), we need to make two changes. C
     <feColorMatrix values="0.367  0.861 -0.228  0.000  0.000
                            0.280  0.673  0.047  0.000  0.000
                           -0.012  0.043  0.969  0.000  0.000
-                           0.000  0.000  0.000  1.000  0.000" />
+                           0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
   </filter>
 </svg>
 ``` -->
 <pre class="prettyprint"><code class="html"><span class="tag"><span class="tag">&lt;svg </span></span><mark><span class="atn"><span class="atn">xmlns</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"http://www.w3.org/2000/svg"</span></span></mark><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln"><br>&nbsp; </span></span><span class="tag"><span class="tag">&lt;filter</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">id</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"deuteranopia"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln"><br>&nbsp; &nbsp; </span></span><span class="tag"><span class="tag">&lt;feColorMatrix</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">values</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"0.367 &nbsp;0.861 -0.228 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.280 &nbsp;0.673 &nbsp;0.047 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.012 &nbsp;0.043 &nbsp;0.969 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.000 &nbsp;0.000 &nbsp;0.000 &nbsp;1.000 &nbsp;0.000"</span></span><mark><span class="tag"><span class="tag"> /&gt;</span></span></mark><span class="pln"><span class="pln"><br>&nbsp; </span></span><span class="tag"><span class="tag">&lt;/filter&gt;</span></span><span class="pln"><span class="pln"><br></span></span><span class="tag"><span class="tag">&lt;/svg&gt;</span></span><span class="pln"><span class="pln"><br></span></span></code></pre>
 
-The first change is the XML namespace declaration at the top. The second addition is the so-called “solidus” — the slash that indicates the `<feColorMatrix>` tag both opens and closes the element. The HTML parser couldn’t care less about `/>` vs. `>`, but in XML the difference matters.
+The first change is the XML namespace declaration at the top. The second addition is the so-called “solidus” — the slash that indicates the `<feColorMatrix>` tag both opens and closes the element. This last change is not actually necessary (we could just stick to the explicit `</feColorMatrix>` closing tag instead), but since both XML and SVG-in-HTML support this `/>` shorthand, we might as well make use of it.
 
 Anyway, with those changes, we can finally save this as a valid SVG file, and point to it from the CSS `filter` property value in our HTML document:
 
