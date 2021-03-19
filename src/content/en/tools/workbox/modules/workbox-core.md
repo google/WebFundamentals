@@ -90,7 +90,7 @@ The `clientsClaim()` method in `workbox-core` automatically adds an `activate`
 event listener to your service worker, and inside of it, calls
 `self.clients.claim()`. Calling `self.clients.claim()` before the current service
 worker activates will lead to a
-[runtime exception](https://w3c.github.io/ServiceWorker/#:~:text=If%20the%20service%20worker%20is%20not%20an%20active%20worker%2C%20return%20a%20promise%20rejected%20with%20an%20%22InvalidStateError%22%20DOMException.),
+[runtime exception](https://w3c.github.io/ServiceWorker/#dom-clients-claim),
 and `workbox-core`'s wrapper helps ensure that you call it at the right time.
 
 ### The skipWaiting wrapper is deprecated
