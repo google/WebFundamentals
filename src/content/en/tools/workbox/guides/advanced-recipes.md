@@ -68,8 +68,8 @@ phase.
 
 When a waiting service worker is found we inform the user that an updated
 version of the site is available and prompt them to reload. If they accept the
-prompt, we use `messageSkipWaiting()` to the waiting service worker telling it to run
-`skipWaiting()`, meaning it'll start to activate. Once the new service worker
+prompt, we use `messageSkipWaiting()` to tell the waiting service worker to run
+`self.skipWaiting()`, meaning it'll start to activate. Once the new service worker
 has activated and taken control, we reload the current page, causing the latest
 version of all the precached assets to be displayed.
 
