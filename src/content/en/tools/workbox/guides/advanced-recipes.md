@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2020-08-25 #}
+{# wf_updated_on: 2021-03-19 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -19,7 +19,8 @@ To do this you'll need to add some code to your page and to your service worker.
 
 ```html
 <script type="module">
-import {Workbox, messageSW} from 'https://storage.googleapis.com/workbox-cdn/releases/{% include "web/tools/workbox/_shared/workbox-latest-version.html" %}/workbox-window.prod.mjs';
+// This code sample uses features introduced in Workbox v6.
+import {Workbox, messageSkipWaiting} from 'https://storage.googleapis.com/workbox-cdn/releases/{% include "web/tools/workbox/_shared/workbox-latest-version.html" %}/workbox-window.prod.mjs';
 
 if ('serviceWorker' in navigator) {
   const wb = new Workbox('/sw.js');
@@ -43,13 +44,7 @@ if ('serviceWorker' in navigator) {
           window.location.reload();
         });
 
-        if (registration && registration.waiting) {
-          // Send a message to the waiting service worker,
-          // instructing it to activate.  
-          // Note: for this to work, you have to add a message
-          // listener in your service worker. See below.
-          messageSW(registration.waiting, {type: 'SKIP_WAITING'});
-        }
+        messageSkipWaiting();
       },
 
       onReject: () => {
@@ -61,9 +56,8 @@ if ('serviceWorker' in navigator) {
   // Add an event listener to detect when the registered
   // service worker has installed but is waiting to activate.
   wb.addEventListener('waiting', showSkipWaitingPrompt);
-  wb.addEventListener('externalwaiting', showSkipWaitingPrompt);
 
-  wb.register().then((r) => registration = r);
+  wb.register();
 }
 </script>
 ```
@@ -74,7 +68,7 @@ phase.
 
 When a waiting service worker is found we inform the user that an updated
 version of the site is available and prompt them to reload. If they accept the
-prompt, we `postMessage()` the new service worker telling it to run
+prompt, we use `messageSkipWaiting()` to the waiting service worker telling it to run
 `skipWaiting()`, meaning it'll start to activate. Once the new service worker
 has activated and taken control, we reload the current page, causing the latest
 version of all the precached assets to be displayed.
@@ -97,13 +91,13 @@ service worker file yourself:
 ```javascript
 addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
-    skipWaiting();
+    self.skipWaiting();
   }
 });
 ```
 
-This will listen for messages of `type: 'SKIP_WAITING'` and run the `skipWaiting()`
-method, forcing the service worker to activate right away.
+This will listen for messages of `type: 'SKIP_WAITING'` and run the
+`self.skipWaiting()` method, forcing the service worker to activate right away.
 
 ## "Warm" the runtime cache
 
