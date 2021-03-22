@@ -182,6 +182,9 @@ redirects:
 
 - from: /web/updates/2018/05/first-input-delay
   to: https://web.dev/fid/
+  
+- from: /web/updates/2018/07/reportingobserver
+  to: https://web.dev/reporting-observer/
 
 - from: /web/updates/2018/11/writable-files
   to: https://web.dev/native-file-system/
