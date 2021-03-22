@@ -43,16 +43,16 @@ toc:
     path: 'https://www.npmjs.com/package/puppeteer'
     status: external
   - title: Github
-    path: 'https://github.com/GoogleChrome/puppeteer'
+    path: 'https://github.com/puppeteer/puppeteer'
     status: external
   - title: Report an issue
-    path: 'https://github.com/GoogleChrome/puppeteer/issues/new'
+    path: 'https://github.com/puppeteer/puppeteer/issues/new'
     status: external
   - title: Releases
-    path: 'https://github.com/GoogleChrome/puppeteer/releases'
+    path: 'https://github.com/puppeteer/puppeteer/releases'
     status: external
   - title: How to Contribute
-    path: 'https://github.com/GoogleChrome/puppeteer/blob/main/CONTRIBUTING.md'
+    path: 'https://github.com/puppeteer/puppeteer/blob/main/CONTRIBUTING.md'
     status: external
   - title: FAQ
     path: /web/tools/puppeteer/faq
