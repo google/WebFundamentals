@@ -11,13 +11,10 @@ upper_tabs:
       contents:
       - title: Home
         path: /web/tools/
-      - include: /web/tools/setup/_toc.yaml
-      - title: Web Starter Kit
-        path: /web/tools/starter-kit/
-        status: deprecated
     - name: Chrome DevTools
       contents:
-      - include: /web/tools/chrome-devtools/_toc.yaml
+      - title: Chrome DevTools
+        path: https://developer.chrome.com/docs/devtools/
     - name: Lighthouse
       contents:
       - include: /web/tools/lighthouse/_toc.yaml

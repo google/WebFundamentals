@@ -2,7 +2,7 @@ included:
 - column:
   - links:
     - label: Chrome DevTools
-      path: /web/tools/chrome-devtools
+      path: https://developer.chrome.com/docs/devtools/
     - label: Lighthouse
       path: /web/tools/lighthouse
     - label: Puppeteer

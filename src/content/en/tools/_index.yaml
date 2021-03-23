@@ -14,10 +14,10 @@ landing_page:
         built into Google Chrome. Use the DevTools to iterate, debug and
         profile your site.
       image_path: images/chrome-devtools-16x9.png
-      path: /web/tools/chrome-devtools/
+      path: https://developer.chrome.com/docs/devtools/
       buttons:
       - label: Get started
-        path: /web/tools/chrome-devtools/
+        path: https://developer.chrome.com/docs/devtools/
     - heading: Lighthouse
       description: >
         Lighthouse is an open-source, automated tool for improving the quality
