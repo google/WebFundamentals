@@ -127,6 +127,9 @@ redirects:
 - from: /web/updates/2020/09/migrating-to-js-modules
   to: https://developer.chrome.com/blog/migrating-to-js-modules
 
+- from: /web/updates/2019/12/webassembly
+  to: https://developer.chrome.com/blog/webassembly-debug
+
 # Redirects for TWA content
 
 - from: /web/updates/2019/02/using-twa
