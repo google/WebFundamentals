@@ -99,22 +99,31 @@ redirects:
 # DevTools engineering blog
 - from: /web/updates/2021/02/css-in-js
   to: https://developer.chrome.com/blog/css-in-js
+
 - from: /web/updates/2021/02/faster-devtools-startup
   to: https://developer.chrome.com/blog/faster-devtools-startup
+
 - from: /web/updates/2021/01/puppeteer-typescript
   to: https://developer.chrome.com/blog/puppeteer-typescript
+
 - from: /web/updates/2020/12/webassembly
   to: https://developer.chrome.com/blog/webassembly
+
 - from: /web/updates/2020/12/migrating-to-web-components
   to: https://developer.chrome.com/blog/migrating-to-web-components
+
 - from: /web/updates/2020/11/cvd
   to: https://developer.chrome.com/blog/cvd
+
 - from: /web/updates/2020/11/puppetaria
   to: https://developer.chrome.com/blog/puppetaria
+
 - from: /web/updates/2020/10/webauthn-tab
   to: https://developer.chrome.com/blog/webauthn-tab
+
 - from: /web/updates/2020/09/issues-tab
   to: https://developer.chrome.com/blog/issues-tab
+
 - from: /web/updates/2020/09/migrating-to-js-modules
   to: https://developer.chrome.com/blog/migrating-to-js-modules
 
