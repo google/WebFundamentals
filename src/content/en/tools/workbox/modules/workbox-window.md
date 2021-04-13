@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2021-02-10 #}
+{# wf_updated_on: 2021-03-19 #}
 {# wf_blink_components: N/A #}
 
 # Workbox Window {: .page-title }
@@ -599,7 +599,6 @@ optional):
   </tr>
 </table>
 
-
 Messages sent via the `messageSW()` method use `MessageChannel` so the receiver
 can respond to them. To respond to a message you can call
 `event.ports[0].postMessage(response)` in your message event listener. The
@@ -684,3 +683,18 @@ allows you to differentiate between breaking updates and non-breaking updates,
 and in the case of a breaking update you'd know it's not safe to message the
 service worker. Instead you'd want to warn the user that they're running an old
 version of the page, and suggest they reload to get the update.
+
+### Skip waiting helper
+
+A common use convention for window to service worker messaging is send a
+`{type: 'SKIP_WAITING'}` message to instruct a service worker that's installed to
+[skip the waiting phase](/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
+and activate.
+
+Starting with Workbox v6, the `messageSkipWaiting()` method can be used to send a
+`{type: 'SKIP_WAITING'}` message to the waiting service worker associated with the
+current service worker registration. It will silently do nothing if there isn't a
+waiting service worker.
+
+For guidance on using `messageSkipWaiting()`, see the
+"[Offer a page reload for users](/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users)" recipe.

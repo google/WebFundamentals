@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2021-03-19 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Core {: .page-title }
@@ -69,21 +69,45 @@ multiple projects and use the same localhost port for each project, setting a
 custom prefix for each module will prevent the caches from conflicting
 with each other.
 
-## Skip Waiting and Clients Claim
+## Clients Claim
 
 Some developers want to be able to publish a new service worker and have it
-update and control a web page as soon as possible, skipping the default
-[service worker lifecycle](/web/fundamentals/primers/service-workers/lifecycle).
+control already-open web pages as soon as soon as it activates, which will not
+happen [by default](/web/fundamentals/primers/service-workers/lifecycle#clientsclaim).
 
-If you find yourself wanting this behavior, `workbox-core` provides some helper
-methods to make this easy:
+If you find yourself wanting this behavior, `workbox-core` provides a helper method:
 
 <pre class="prettyprint js">
-import {skipWaiting, clientsClaim} from 'workbox-core';
+import {clientsClaim} from 'workbox-core';
 
-skipWaiting();
+// This clientsClaim() should be at the top level
+// of your service worker, not inside of, e.g.,
+// an event handler.
 clientsClaim();
 </pre>
+
+The `clientsClaim()` method in `workbox-core` automatically adds an `activate`
+event listener to your service worker, and inside of it, calls
+`self.clients.claim()`. Calling `self.clients.claim()` before the current service
+worker activates will lead to a
+[runtime exception](https://w3c.github.io/ServiceWorker/#dom-clients-claim),
+and `workbox-core`'s wrapper helps ensure that you call it at the right time.
+
+### The skipWaiting wrapper is deprecated
+
+Previous to Workbox v6, developers were also encouraged to use the `skipWaiting()`
+method from `workbox-core`. However, this method offered little value beyond what
+developers would get if they called `self.skipWaiting()` explicitly.
+
+Because the legacy `workbox-core` wrapper also registered an `install` event handler
+in which `self.skipWaiting()` was called, the wrapper would not behave as expected
+if it were called inside of another event handler, like `message`, after installation
+had already completed.
+
+For these reasons, `workbox-core`'s `skipWaiting()` is deprecated, and developers
+should switch to calling `self.skipWaiting()` directly. Unlike with
+`self.clients.claim()`, `self.skipWaiting()` will not throw an exception if called
+at the "wrong" time, so there is no need to wrap it in an event handler.
 
 Note: If your web app lazy-loads resources that are uniquely versioned with, e.g., hashes in their
 URLs, it's recommended that you avoid using skip waiting. Enabling it could
