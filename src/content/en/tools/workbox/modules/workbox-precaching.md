@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-12-09 #}
+{# wf_updated_on: 2021-03-11 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -252,11 +252,13 @@ precacheController.addToCacheList([{
 }]);
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(precacheController.install());
+  // Passing in event is required in Workbox v6+
+  event.waitUntil(precacheController.install(event));
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(precacheController.activate());
+  // Passing in event is required in Workbox v6+
+  event.waitUntil(precacheController.activate(event));
 });
 
 self.addEventListener('fetch', (event) => {
