@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2021-01-14 #}
+{# wf_updated_on: 2021-03-22 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Routing {: .page-title }
@@ -283,13 +283,18 @@ method whenever you want to use the router to respond to a request.
 import {Router} from 'workbox-routing';
 
 const router = new Router();
+
 self.addEventListener('fetch', (event) => {
-  const responsePromise = router.handleRequest(event);
+  const {request} = event;
+  const responsePromise = router.handleRequest({
+    event,
+    request,
+  });
   if (responsePromise) {
-    // Router found a route to handle the request
+    // Router found a route to handle the request.
     event.respondWith(responsePromise);
   } else {
-    // No route found to handle the request
+    // No route was found to handle the request.
   }
 });
 ```
