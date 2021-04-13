@@ -44,8 +44,8 @@ upload an image file from the file system. In Chrome and Safari on iOS and Andro
 give the user a choice of which app to use to capture the image, including the option of taking a
 photo directly with the camera or choosing an existing image file.
 
-<img src="images/ios-chooser.png" />
-<img src="images/android-chooser.png" />
+<img src="images/ios-chooser.png" width="250"/>
+<img src="images/android-chooser.png" width="250"/>
 
 The data can then be attached to a `<form>` or manipulated with JavaScript by
 listening for an `onchange` event on the input element and then reading
