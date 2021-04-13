@@ -21,7 +21,7 @@ const readFile = promisify(fs.readFile);
 const ensureDir = promisify(fs.ensureDir);
 const writeFile = promisify(fs.writeFile);
 
-const ORG = 'GoogleChrome';
+const ORG = 'puppeteer';
 const USER = 'puppeteer';
 const GITHUB_PROJECT_URL = `https://github.com/${ORG}/${USER}`;
 const GIT_URL = `${GITHUB_PROJECT_URL}.git`;
