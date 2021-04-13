@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better crawler indexability.
 
-{# wf_updated_on: 2020-07-24 #}
+{# wf_updated_on: 2021-03-27 #}
 {# wf_published_on: 2018-04-01 #}
 {# wf_blink_components: Internals>Headless #}
 {# wf_tags: puppeteer,headless,testing,ssr,prerender,search,crawler #}
@@ -76,7 +76,7 @@ Your app might be a <abbr title="Single Page Application">SPA</abbr>,
 something more complex like a library or framework. To be honest, your tech
 stack doesn't matter. What matters is that you spent a lot of time building
 Awesome Web Thing and users are unable to discover it. The other reason you
-might be here is because some article out on The Web mentioned that
+might be here is because some articles out on The Web mentioned that
 server-side rendering is good for performance. You're here for that quick win to
 reduce [JavaScript startup cost](/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)
 and improve
@@ -741,7 +741,7 @@ before the rest of the page's JavaScript executes.
 
 ### Avoid inflating Analytics pageviews {: #analytics }
 
-Be careful if you're using Analytics on your site. Prerendering pages will
+Be careful if you're using Analytics on your site. Prerendering pages
 may result in inflated pageviews. Specifically, **you'll see 2x the
 number of hits**, one hit when headless Chrome renders the page and another
 when the user's browser renders it.
@@ -776,7 +776,7 @@ your app **without significant code** changes!
 
 Note: If you're curious to see a working app that uses the techniques described
 in this article, check out [this app](https://devwebfeed.appspot.com/ssr) and
-[it's code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs).
+[its code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs).
 
 ## Appendix
 
@@ -797,7 +797,7 @@ client and everyone feels a moment of zen.
 
 In practice, I've found universal JS difficult to pull off. A personal story...
 
-> I recently started a
+> I recently started
 [a project](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)
 and wanted to give [lit-html](https://github.com/Polymer/lit-html) a try. Lit
 is a great little library that lets you write [HTML &lt;template>s](https://www.html5rocks.com/en/tutorials/webcomponents/template/)
