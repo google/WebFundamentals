@@ -1709,6 +1709,170 @@
           }
         }
       ]
+    },
+    {
+      "agency_name": "Pizzazz Media Ltd",
+      "region": [
+        "Europe"
+      ],
+      "description": "Pizzazz are committed to adopting the latest technologies to produce websites and Progressive Web Apps that are benefifial to both the site owner, and their users! ",
+      "website": "https://pizzazzmedia.com",
+      "projects": [
+        {
+          "url": "https://pizzazzmedia.com",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 83
+        }
+      ],
+      "max_lighthouse_score": 83,
+      "contact": "info@pizzazzmedia.com",
+      "image_url": "https://storage.googleapis.com/web-agencies-directory/logos/pizzazzprofile192.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "St Leonards on Sea"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "St Leonards on Sea",
+          "geo": {
+            "lat": 50.85563819999999,
+            "lng": 0.5525772
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Dentsu Digital Inc",
+      "region": [
+        "Asia"
+      ],
+      "description": "Provide consulting, development / implementation, operation / execution for all areas of digital marketing.",
+      "website": "https://www.dentsudigital.co.jp/",
+      "projects": [
+        {
+          "url": "https://xp-plus-prod.firebaseapp.com/",
+          "vertical": [
+            "Media"
+          ],
+          "lighthouse_score": 83
+        }
+      ],
+      "max_lighthouse_score": 83,
+      "contact": "taira.fumihiko@dentsudigital.co.jp",
+      "image_url": "https://storage.googleapis.com/web-agencies-directory/logos/dd_logo.png",
+      "vertical": [
+        "Media"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Japan",
+          "cities": [
+            "Tokyo"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Japan",
+          "city_name": "Tokyo",
+          "geo": {
+            "lat": 35.6894875,
+            "lng": 139.6917064
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "株式会社博報堂アイ・スタジオ　HAKUHODO i-studio Inc.",
+      "region": [
+        "Asia"
+      ],
+      "description": "インタラクティブ領域におけるクリエイティブ、デジタルマーケティング・CRMのプランニング・制作・運用、およびシステム開発業務\n\nCreative / digital marketing / CRM planning / production / operation, and system development work in the interactive domain.",
+      "website": "https://www.i-studio.co.jp/",
+      "projects": [
+        {
+          "url": "https://metrogram.i-studio.co.jp/",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "yusuke.kobayashi@i-studio.co.jp",
+      "image_url": "https://storage.googleapis.com/web-agencies-directory/logos/HOSHINO.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Japan",
+          "cities": [
+            "Tokyo"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Japan",
+          "city_name": "Tokyo",
+          "geo": {
+            "lat": 35.6894875,
+            "lng": 139.6917064
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Aerolab",
+      "region": [
+        "South America"
+      ],
+      "description": "Aerolab is one of the leading Digital Product Agencies in LATAM. We design and develop beautiful and meaningful products: apps, PWA and all sorts of technology solutions.",
+      "website": "https://aerolab.co",
+      "projects": [
+        {
+          "url": "https://uselullaby.com/en",
+          "vertical": [
+            "Health/Fitness"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hey@aerolab.co",
+      "image_url": "https://storage.googleapis.com/web-agencies-directory/logos/logo-Roberto.png",
+      "vertical": [
+        "Health/Fitness"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Argentina",
+          "cities": [
+            "Buenos Aires"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Argentina",
+          "city_name": "Buenos Aires",
+          "geo": {
+            "lat": -34.6036844,
+            "lng": -58.3815591
+          }
+        }
+      ]
     }
   ],
   "filters_": {
@@ -1726,7 +1890,9 @@
       "Africa",
       "Asia",
       "Europe",
-      "North America"
+      "Europe, Asia, North America",
+      "North America",
+      "South America"
     ]
   }
 }
