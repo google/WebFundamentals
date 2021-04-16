@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
 
-{# wf_updated_on: 2021-01-28 #}
+{# wf_updated_on: 2021-04-16 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -46,7 +46,7 @@ honest, I'm just scratching the surface, so that you can start playing on your
 own. I will be diving deeper and covering WebGPU rendering (canvas, texture,
 etc.) in forthcoming articles.
 
-Dogfood: WebGPU is available for now in Chrome 78 for macOS behind an
+Dogfood: WebGPU is available for now in Chrome Canary on desktop behind an
 experimental flag. You can enable it at `chrome://flags/#enable-unsafe-webgpu`. The
 API is constantly changing and currently unsafe. As GPU sandboxing isn't
 implemented yet for the WebGPU API, it is possible to read GPU data for other
@@ -367,83 +367,60 @@ const bindGroup = device.createBindGroup({
 
 ### Compute shader code
 
-The compute shader code for multiplying matrices is written in GLSL, a
-high-level shading language used in WebGL, which has a syntax based on the C
-programming language. Without going into detail, you should find below the three
-storage buffers marked with the keyword `buffer`. The program will use
-`firstMatrix` and `secondMatrix` as inputs (readonly) and `resultMatrix` as its
-output.
+The compute shader code for multiplying matrices is written in [WGSL], the
+WebGPU Shader Language, that is trivially translatable to [SPIR-V]. Without
+going into detail, you should find below the three storage buffers identified
+with `var<storage>`. The program will use `firstMatrix` and `secondMatrix` as
+inputs and `resultMatrix` as its output.
 
-Note that each storage buffer has a `binding` qualifier used that corresponds to
+Note that each storage buffer has a `binding` decoration used that corresponds to
 the same index defined in bind group layouts and bind groups declared above.
 
 ```js
-const computeShaderCode = `#version 450
+const shaderModule = device.createShaderModule({
+  code: `
+    [[block]] struct Matrix {
+      size : vec2<f32>;
+      numbers: array<f32>;
+    };
 
-  layout(std430, set = 0, binding = 0) readonly buffer FirstMatrix {
-      vec2 size;
-      float numbers[];
-  } firstMatrix;
+    [[group(0), binding(0)]] var<storage> firstMatrix : [[access(read)]] Matrix;
+    [[group(0), binding(1)]] var<storage> secondMatrix : [[access(read)]] Matrix;
+    [[group(0), binding(2)]] var<storage> resultMatrix : [[access(write)]] Matrix;
 
-  layout(std430, set = 0, binding = 1) readonly buffer SecondMatrix {
-      vec2 size;
-      float numbers[];
-  } secondMatrix;
+    [[stage(compute)]] fn main([[builtin(global_invocation_id)]] global_id : vec3<u32>) {
+      resultMatrix.size = vec2<f32>(firstMatrix.size.x, secondMatrix.size.y);
 
-  layout(std430, set = 0, binding = 2) buffer ResultMatrix {
-      vec2 size;
-      float numbers[];
-  } resultMatrix;
+      let resultCell : vec2<u32> = vec2<u32>(global_id.x, global_id.y);
+      var result : f32 = 0.0;
+      for (var i : u32 = 0u; i < u32(firstMatrix.size.y); i = i + 1u) {
+        let a : u32 = i + resultCell.x * u32(firstMatrix.size.y);
+        let b : u32 = resultCell.y + i * u32(secondMatrix.size.y);
+        result = result + firstMatrix.numbers[a] * secondMatrix.numbers[b];
+      }
 
-  void main() {
-    resultMatrix.size = vec2(firstMatrix.size.x, secondMatrix.size.y);
-
-    ivec2 resultCell = ivec2(gl_GlobalInvocationID.x, gl_GlobalInvocationID.y);
-    float result = 0.0;
-    for (int i = 0; i < firstMatrix.size.y; i++) {
-      int a = i + resultCell.x * int(firstMatrix.size.y);
-      int b = resultCell.y + i * int(secondMatrix.size.y);
-      result += firstMatrix.numbers[a] * secondMatrix.numbers[b];
+      let index : u32 = resultCell.y + resultCell.x * u32(secondMatrix.size.y);
+      resultMatrix.numbers[index] = result;
     }
-
-    int index = resultCell.y + resultCell.x * int(secondMatrix.size.y);
-    resultMatrix.numbers[index] = result;
-  }
-`;
+  `
+});
 ```
 
 ### Pipeline setup
 
-WebGPU in Chrome currently uses bytecode instead of raw GLSL code. This means we
-have to compile `computeShaderCode` before running the compute shader. Luckily
-for us, the [@webgpu/glslang] package allows us to compile `computeShaderCode`
-in a format that WebGPU in Chrome accepts. This bytecode format is based on a
-safe subset of [SPIR-V].
-
-Note that the “GPU on the Web” W3C Community Group has still not decided at the
-time of writing on the shading language for WebGPU.
-
-```js
-import glslangModule from 'https://unpkg.com/@webgpu/glslang@0.0.8/dist/web-devel/glslang.js';
-```
-
 The compute pipeline is the object that actually describes the compute operation
 we're going to perform. Create it by calling `device.createComputePipeline()`.
 It takes two arguments: the bind group layout we created earlier, and a compute
-stage defining the entry point of our compute shader (the `main` GLSL function)
-and the actual compute shader module compiled with `glslang.compileGLSL()`.
+stage defining the entry point of our compute shader (the `main` WGSL function)
+and the actual compute shader module created with `device.createShaderModule()`.
 
 ```js
-const glslang = await glslangModule();
-
 const computePipeline = device.createComputePipeline({
   layout: device.createPipelineLayout({
     bindGroupLayouts: [bindGroupLayout]
   }),
   computeStage: {
-    module: device.createShaderModule({
-      code: glslang.compileGLSL(computeShaderCode, "compute")
-    }),
+    module: shaderModule,
     entryPoint: "main"
   }
 });
@@ -458,8 +435,8 @@ Let’s start a programmable compute pass encoder with
 `commandEncoder.beginComputePass()`. We'll use this to encode GPU commands
 that will perform the matrix multiplication. Set its pipeline with
 `passEncoder.setPipeline(computePipeline)` and its bind group at index 0 with
-`passEncoder.setBindGroup(0, bindGroup)`. The index 0 corresponds to the `set =
-0` qualifier in the GLSL code.
+`passEncoder.setBindGroup(0, bindGroup)`. The index 0 corresponds to the
+`group(0)` decoration in the WGSL code.
 
 Now, let’s talk about how this compute shader is going to run on the GPU. Our
 goal is to execute this program in parallel for each cell of the result matrix,
@@ -485,8 +462,8 @@ dispatch a compute call with `passEncoder.dispatch(firstMatrix[0],
 secondMatrix[1])`.
 
 As seen in the drawing above, each shader will have access to a unique
-`gl_GlobalInvocationID` object that will be used to know which result matrix
-cell to compute.
+`builtin(global_invocation_id)` object that will be used to know which result
+matrix cell to compute.
 
 ```js
 const commandEncoder = device.createCommandEncoder();
@@ -627,7 +604,7 @@ articles soon featuring more deep dives in GPU Compute and on how rendering
 
 [WebGPU]: https://gpuweb.github.io/gpuweb/
 [try out this sample]: https://glitch.com/edit/#!/gpu-compute-sample-1
-[@webgpu/glslang]: https://www.npmjs.com/package/@webgpu/glslang
+[WGSL]: https://gpuweb.github.io/gpuweb/wgsl/
 [SPIR-V]: https://www.khronos.org/spir/
 [play with the sample]: https://glitch.com/edit/#!/gpu-compute-sample-2
 [infer the bind group layout from the shader module]: https://github.com/gpuweb/gpuweb/issues/446
