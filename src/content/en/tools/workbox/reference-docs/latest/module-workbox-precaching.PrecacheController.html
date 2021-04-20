@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>6.1.1</small></span>
+              <span class="label label-version"><small>6.1.5</small></span>
             </div>
             <p>Performs efficient precaching of assets.</p>
           </header>
@@ -249,7 +249,7 @@
                 </dd>
               </dl>
               <h3 id="install" class="symbol-name">install</h3>
-              <p class="type-signature"> install(options)&nbsp;returns&nbsp;Promise containing <a href="module-workbox-precaching.html#.InstallResult">module:workbox-precaching.InstallResult</a></p>
+              <p class="type-signature"> install(event)&nbsp;returns&nbsp;Promise containing <a href="module-workbox-precaching.html#.InstallResult">module:workbox-precaching.InstallResult</a></p>
               <p>Precaches new and updated assets. Call this method from the service worker
                 install event.</p>
               <p>Note: this method calls <code>event.waitUntil()</code> for you, so you do not need
@@ -264,29 +264,10 @@
                   <tbody>
                     <tr>
                       <td class="details-table-name">
-                        <p>options</p>
+                        <p>event</p>
                       </td>
                       <td>
-                        <p class="details-table-types">Object</p>
-                        <p>Values in <code>options</code> have the following properties:</p>
-                        <table class="function param responsive">
-                          <tr>
-                            <th colspan="2">
-                              <h4>Parameter</h4>
-                            </th>
-                          </tr>
-                          <tbody>
-                            <tr>
-                              <td class="details-table-name">
-                                <p>event</p>
-                              </td>
-                              <td>
-                                <p class="details-table-types">Event</p>
-                                <p>The install event.</p>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <p class="details-table-types">ExtendableEvent</p>
                       </td>
                     </tr>
                   </tbody>

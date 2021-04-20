@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>6.1.1</small></span>
+              <span class="label label-version"><small>6.1.5</small></span>
             </div>
             <p>A class to aid in handling service worker registration, updates, and
               reacting to service worker lifecycle events.</p>
@@ -356,6 +356,16 @@
                         <p class="details-table-types">(boolean or undefined)</p>
                         <p>True if a service worker was already
                           controlling when this service worker was registered.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>isExternal</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">(boolean or undefined)</p>
+                        <p>True if this event is associated
+                          with an <a href="/web/tools/workbox/modules/workbox-window#when_an_unexpected_version_of_the_service_worker_is_found">external service worker</a>.</p>
                       </td>
                     </tr>
                     <tr>
