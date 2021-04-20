@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
 
-{# wf_updated_on: 2021-04-16 #}
+{# wf_updated_on: 2021-04-20 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -419,7 +419,7 @@ const computePipeline = device.createComputePipeline({
   layout: device.createPipelineLayout({
     bindGroupLayouts: [bindGroupLayout]
   }),
-  computeStage: {
+  compute: {
     module: shaderModule,
     entryPoint: "main"
   }
@@ -545,7 +545,7 @@ An illustration of `getBindGroupLayout` for the previous sample is [available].
 -  layout: device.createPipelineLayout({
 -    bindGroupLayouts: [bindGroupLayout]
 -  }),
-   computeStage: {
+   compute: {
 ```
 
 ```
