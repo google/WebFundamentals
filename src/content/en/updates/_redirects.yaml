@@ -10,125 +10,125 @@ redirects:
 # DevTools
 
 - from: /web/updates/2017/05/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-60
+  to: https://developer.chrome.com/blog/new-in-devtools-60/
 
 - from: /web/updates/2017/07/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-61
+  to: https://developer.chrome.com/blog/new-in-devtools-61/
 
 - from: /web/updates/2017/08/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-62
+  to: https://developer.chrome.com/blog/new-in-devtools-62/
 
 - from: /web/updates/2017/10/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-63
+  to: https://developer.chrome.com/blog/new-in-devtools-63/
 
 - from: /web/updates/2017/11/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-64
+  to: https://developer.chrome.com/blog/new-in-devtools-64/
 
 - from: /web/updates/2018/01/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-65
+  to: https://developer.chrome.com/blog/new-in-devtools-65/
 
 - from: /web/updates/2018/02/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-66
+  to: https://developer.chrome.com/blog/new-in-devtools-66/
 
 - from: /web/updates/2018/04/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-67
+  to: https://developer.chrome.com/blog/new-in-devtools-67/
 
 - from: /web/updates/2018/05/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-68
+  to: https://developer.chrome.com/blog/new-in-devtools-68/
 
 - from: /web/updates/2018/08/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-70
+  to: https://developer.chrome.com/blog/new-in-devtools-70/
 
 - from: /web/updates/2018/10/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-71
+  to: https://developer.chrome.com/blog/new-in-devtools-71/
 
 - from: /web/updates/2018/11/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-72
+  to: https://developer.chrome.com/blog/new-in-devtools-72/
 
 - from: /web/updates/2019/01/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-73
+  to: https://developer.chrome.com/blog/new-in-devtools-73/
 
 - from: /web/updates/2019/03/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-74
+  to: https://developer.chrome.com/blog/new-in-devtools-74/
 
 - from: /web/updates/2019/04/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-75
+  to: https://developer.chrome.com/blog/new-in-devtools-75/
 
 - from: /web/updates/2019/05/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-76
+  to: https://developer.chrome.com/blog/new-in-devtools-76/
 
 - from: /web/updates/2019/07/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-77
+  to: https://developer.chrome.com/blog/new-in-devtools-77/
 
 - from: /web/updates/2019/09/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-78
+  to: https://developer.chrome.com/blog/new-in-devtools-78/
 
 - from: /web/updates/2019/10/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-79
+  to: https://developer.chrome.com/blog/new-in-devtools-79/
 
 - from: /web/updates/2019/12/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-80
+  to: https://developer.chrome.com/blog/new-in-devtools-80/
 
 - from: /web/updates/2020/01/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-81
+  to: https://developer.chrome.com/blog/new-in-devtools-81/
 
 - from: /web/updates/2020/03/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-83
+  to: https://developer.chrome.com/blog/new-in-devtools-83/
 
 - from: /web/updates/2020/05/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-84
+  to: https://developer.chrome.com/blog/new-in-devtools-84/
 
 - from: /web/updates/2020/06/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-85
+  to: https://developer.chrome.com/blog/new-in-devtools-85/
 
 - from: /web/updates/2020/08/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-86
+  to: https://developer.chrome.com/blog/new-in-devtools-86/
 
 - from: /web/updates/2020/10/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-87
+  to: https://developer.chrome.com/blog/new-in-devtools-87/
 
 - from: /web/updates/2020/11/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-88
+  to: https://developer.chrome.com/blog/new-in-devtools-88/
 
 - from: /web/updates/2021/01/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-89
+  to: https://developer.chrome.com/blog/new-in-devtools-89/
 
 - from: /web/updates/2021/02/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-90
+  to: https://developer.chrome.com/blog/new-in-devtools-90/
 
 # DevTools engineering blog
 - from: /web/updates/2021/02/css-in-js
-  to: https://developer.chrome.com/blog/css-in-js
+  to: https://developer.chrome.com/blog/css-in-js/
 
 - from: /web/updates/2021/02/faster-devtools-startup
-  to: https://developer.chrome.com/blog/faster-devtools-startup
+  to: https://developer.chrome.com/blog/faster-devtools-startup/
 
 - from: /web/updates/2021/01/puppeteer-typescript
-  to: https://developer.chrome.com/blog/puppeteer-typescript
+  to: https://developer.chrome.com/blog/puppeteer-typescript/
 
 - from: /web/updates/2020/12/webassembly
-  to: https://developer.chrome.com/blog/webassembly
+  to: https://developer.chrome.com/blog/wasm-debugging-2020/
 
 - from: /web/updates/2020/12/migrating-to-web-components
-  to: https://developer.chrome.com/blog/migrating-to-web-components
+  to: https://developer.chrome.com/blog/migrating-to-web-components/
 
 - from: /web/updates/2020/11/cvd
-  to: https://developer.chrome.com/blog/cvd
+  to: https://developer.chrome.com/blog/cvd/
 
 - from: /web/updates/2020/11/puppetaria
-  to: https://developer.chrome.com/blog/puppetaria
+  to: https://developer.chrome.com/blog/puppetaria/
 
 - from: /web/updates/2020/10/webauthn-tab
-  to: https://developer.chrome.com/blog/webauthn-tab
+  to: https://developer.chrome.com/blog/webauthn-tab/
 
 - from: /web/updates/2020/09/issues-tab
-  to: https://developer.chrome.com/blog/issues-tab
+  to: https://developer.chrome.com/blog/issues-tab/
 
 - from: /web/updates/2020/09/migrating-to-js-modules
-  to: https://developer.chrome.com/blog/migrating-to-js-modules
+  to: https://developer.chrome.com/blog/migrating-to-js-modules/
 
 - from: /web/updates/2019/12/webassembly
-  to: https://developer.chrome.com/blog/webassembly-debug
+  to: https://developer.chrome.com/blog/wasm-debugging-2019/
 
 # Redirects for TWA content
 
