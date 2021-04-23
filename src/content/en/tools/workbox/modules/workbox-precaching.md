@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2021-03-11 #}
+{# wf_updated_on: 2021-04-23 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -122,10 +122,8 @@ Workbox comes with tools to help with generating this list:
   them to your service worker.
 Warning: It's strongly recommended that you use one of Workbox's 
 [build tools](/web/tools/workbox/modules#node-modules) to generate this precache 
-manifest.
-
-**Never hardcode revision info into a "hand written" manifest, as precached URLs will not be kept up
-to date unless the revision info reflects the URL's contents!**
+manifest. **Never hardcode revision info into a "hand written" manifest, as precached URLs will not
+be kept up to date unless the revision info reflects the URL's contents!**
 
 ## Incoming Requests for Precached Files
 
