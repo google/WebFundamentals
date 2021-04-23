@@ -30,7 +30,7 @@ failed requests sent to the Measurement Protocol. It can store these
 requests in IndexedDB and then retry them later once connectivity is
 restored.
 
-Workbox Google Analytics does exactly this. It also also adds fetch
+Workbox Google Analytics does exactly this. It also adds fetch
 handlers to cache the
 [analytics.js](/analytics/devguides/collection/analyticsjs/) and
 [gtag.js](/analytics/devguides/collection/gtagjs/)
