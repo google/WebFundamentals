@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-google-analytics.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2021-04-23 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Google Analytics  {: .page-title }
@@ -30,7 +30,7 @@ failed requests sent to the Measurement Protocol. It can store these
 requests in IndexedDB and then retry them later once connectivity is
 restored.
 
-Workbox Google Analytics does exactly this. It also also adds fetch
+Workbox Google Analytics does exactly this. It also adds fetch
 handlers to cache the
 [analytics.js](/analytics/devguides/collection/analyticsjs/) and
 [gtag.js](/analytics/devguides/collection/gtagjs/)
