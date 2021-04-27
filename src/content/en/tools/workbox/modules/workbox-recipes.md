@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-recipes.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2021-03-03 #}
+{# wf_updated_on: 2021-04-27 #}
 {# wf_published_on: 2020-11-13 #}
 
 # Workbox Recipes {: .page-title }
@@ -310,10 +310,6 @@ import {
   googleFontsCache,
   offlineFallback,
 } from 'workbox-recipes';
-import { precacheAndRoute } from 'workbox-precaching';
-
-// Include offline.html in the manifest
-precacheAndRoute(self.__WB_MANIFEST);
 
 pageCache();
 
