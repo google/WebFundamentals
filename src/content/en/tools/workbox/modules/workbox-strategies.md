@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-09-23 #}
+{# wf_updated_on: 2021-04-27 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -37,7 +37,10 @@ the caching strategies directly without `workbox-routing`.
 The [stale-while-revalidate](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
 pattern allows you to respond to the request as quickly as possible with a
 cached response if available, falling back to the network request if it’s
-not cached. The network request is then used to update the cache.
+not cached. The network request is then used to update the cache. As opposed to
+[some implementations](https://github.com/GoogleChrome/workbox/issues/2807)
+of stale-while-revalidate, this strategy will always make a revalidation request,
+regardless of the age of the cached response.
 
 This is a fairly common strategy where having the most up-to-date resource
 is not vital to the application.
