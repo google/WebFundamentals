@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-recipes.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2021-03-03 #}
+{# wf_updated_on: 2021-04-29 #}
 {# wf_published_on: 2020-11-13 #}
 
 # Workbox Recipes {: .page-title }
@@ -22,10 +22,18 @@ The offline fallback recipe allows your service worker to serve a web page, imag
 
 This recipe, by default, assumes the fallback page is `offline.html` and that there isn't an image or font fallback. See the [offline fallback options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~offlineFallback) for a list of all configuration options.
 
+The offline fallback will only be applied if there's a matching [route](/web/tools/workbox/modules/workbox-routing) for a given request. If you're using the offline fallback recipe on its own, you'll need to create routes yourself. The simplest way to do is to use the [`setDefaultHandler()`](/web/tools/workbox/modules/workbox-routing#set_a_default_handler) method to create a route that applies the [`NetworkOnly`](/web/tools/workbox/modules/workbox-strategies#network_only) strategy to all requests, as shown below. Other recipes, like the [page cache](#page_cache), [static resource cache](#static_resources_cache), or [image cache](#image_cache), set up routes for their respective caches. `setDefaultHandler()` is not required when using both offline fallback and one of those recipes.
+
 #### Recipe
 
 ```js
 import { offlineFallback } from 'workbox-recipes';
+import { setDefaultHandler } from 'workbox-routing';
+import { NetworkOnly } from 'workbox-strategies';
+
+setDefaultHandler(
+  new NetworkOnly()
+);
 
 offlineFallback();
 ```
@@ -33,11 +41,16 @@ offlineFallback();
 #### Pattern
 
 ```js
-import { setCatchHandler } from 'workbox-routing';
+import { setCatchHandler, setDefaultHandler } from 'workbox-routing';
+import { NetworkOnly } from 'workbox-strategies';
 
 const pageFallback = 'offline.html';
 const imageFallback = false;
 const fontFallback = false;
+
+setDefaultHandler(
+  new NetworkOnly()
+);
 
 self.addEventListener('install', event => {
   const files = [pageFallback];
@@ -310,10 +323,6 @@ import {
   googleFontsCache,
   offlineFallback,
 } from 'workbox-recipes';
-import { precacheAndRoute } from 'workbox-precaching';
-
-// Include offline.html in the manifest
-precacheAndRoute(self.__WB_MANIFEST);
 
 pageCache();
 
