@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) provide extended buffering and playback control for the HTML5 audio and video elements. While originally developed to facilitate Dynamic Adaptive Streaming over HTTP (DASH) based video players, MSE can be used for audio; specifically for gapless playback.
 
-{# wf_updated_on: 2021-01-26 #}
+{# wf_updated_on: 2021-05-04 #}
 {# wf_published_on: 2015-06-11 #}
 {# wf_tags: news,audio,codecs,mse #}
 {# wf_blink_components: Blink>Media #}
@@ -109,7 +109,7 @@ decode our MP3 segments; there are several
 We'll come back to the code in a moment, but let's now look more closely at the
 file we've just appended, specifically at the end of it. Below, is a graph of
 the last 3000 samples averaged across both channels from the
-[`sintel_0.mp3`](https://storage.googleapis.com/wf-assets/audio/sintel_0.mp3)
+`sintel_0.mp3`
 track. Each pixel on the red line is a
 [floating point sample](https://en.wikipedia.org/wiki/Audio_bit_depth)
 in the range of `[-1.0, 1.0]`.
@@ -127,7 +127,7 @@ exactly 576 padding samples to the end of the file.
 
 In addition to the padding at the end, each file also had padding added to the
 beginning. If we peek ahead at the
-[`sintel_1.mp3`](https://storage.googleapis.com/wf-assets/audio/sintel_1.mp3)
+`sintel_1.mp3`
 track we'll see another 576 samples of padding exists at the front. The amount
 of padding varies by encoder and content, but we know the exact values based on
 [`metadata`](#appendix-b-parsing-gapless-metadata) included within each file.
@@ -212,9 +212,9 @@ offset](https://w3c.github.io/media-source#definitions) to remove this silence.
 Let's see what our shiny new code has accomplished by taking another look at the
 waveform after we've applied our append windows. Below, you can see that the
 silent section at the end of
-[`sintel_0.mp3`](https://storage.googleapis.com/wf-assets/audio/sintel_0.mp3)
+`sintel_0.mp3`
 (in red) and the silent section at the beginning of
-[`sintel_1.mp3`](https://storage.googleapis.com/wf-assets/audio/sintel_1.mp3)
+`sintel_1.mp3`
 (in blue) have been removed; leaving us with a seamless transition between
 segments.
 
