@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What is really happening with "DOMException: The play() request was interrupted"?
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2021-05-06 #}
 {# wf_published_on: 2017-06-14 #}
 {# wf_tags: media,devtools #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -170,7 +170,7 @@ your video to play later.
 ## Play promise support {: #support }
 
 At the time of writing, `HTMLMediaElement.play()` returns a promise in
-[Chrome], Firefox, Opera, and [Safari]. [Edge] is still working on it.
+[Chrome], Edge, Firefox, Opera, and [Safari].
 
 ## Danger zone {: #danger-zone }
 
