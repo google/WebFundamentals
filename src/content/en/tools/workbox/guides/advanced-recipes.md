@@ -20,7 +20,7 @@ To do this you'll need to add some code to your page and to your service worker.
 ```html
 <script type="module">
 // This code sample uses features introduced in Workbox v6.
-import {Workbox, messageSkipWaiting} from 'https://storage.googleapis.com/workbox-cdn/releases/{% include "web/tools/workbox/_shared/workbox-latest-version.html" %}/workbox-window.prod.mjs';
+import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/{% include "web/tools/workbox/_shared/workbox-latest-version.html" %}/workbox-window.prod.mjs';
 
 if ('serviceWorker' in navigator) {
   const wb = new Workbox('/sw.js');
@@ -44,7 +44,7 @@ if ('serviceWorker' in navigator) {
           window.location.reload();
         });
 
-        messageSkipWaiting();
+        wb.messageSkipWaiting();
       },
 
       onReject: () => {
