@@ -119,7 +119,7 @@ alerts to display a warning page. Additionally,
 check happens in order to make sure sensitive cross-site 
 data does not make it to the renderer process.
 
-### Step 3: Find a renderer process
+### Step 4: Find a renderer process
 
 Once all of the checks are done and Network thread is confident that browser should navigate to the 
 requested site, the Network thread tells UI thread that the data is ready. UI thread then finds a 
@@ -140,7 +140,7 @@ if all goes as expected, a renderer process is already in standby position when 
 received data. This standby process might not get used if the navigation redirects cross-site, in 
 which case a different process might be needed.
 
-### Step 4: Commit navigation
+### Step 5: Commit navigation
 
 Now that the data and the renderer process is ready, an IPC is sent from the browser process to the 
 renderer process to commit the navigation. It also passes on the data stream so the renderer 
