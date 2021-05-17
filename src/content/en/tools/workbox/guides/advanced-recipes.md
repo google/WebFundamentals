@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2021-03-19 #}
+{# wf_updated_on: 2021-05-17 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -202,7 +202,7 @@ setDefaultHandler(new StaleWhileRevalidate());
 
 // This "catch" handler is triggered when any of the other routes fail to
 // generate a response.
-setCatchHandler(({event}) => {
+setCatchHandler(async ({event}) => {
   // The FALLBACK_URL entries must be added to the cache ahead of time, either
   // via runtime or precaching. If they are precached, then call
   // `matchPrecache(FALLBACK_URL)` (from the `workbox-precaching` package)
