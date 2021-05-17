@@ -77,13 +77,13 @@ In your web app, you can listen for these events like so:
 navigator.serviceWorker.addEventListener('message', async (event) => {
   // Optional: ensure the message came from workbox-broadcast-update
   if (event.data.meta === 'workbox-broadcast-update') {
-    const {cacheName, updatedUrl} = event.data.payload;
+    const {cacheName, updatedURL} = event.data.payload;
 
-    // Do something with cacheName and updatedUrl.
+    // Do something with cacheName and updatedURL.
     // For example, get the cached content and update
     // the content on the page.
     const cache = await caches.open(cacheName);
-    const updatedResponse = await cache.match(updatedUrl);
+    const updatedResponse = await cache.match(updatedURL);
     const updatedText = await updatedResponse.text();
   }
 });
