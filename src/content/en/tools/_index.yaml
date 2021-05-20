@@ -52,19 +52,15 @@ landing_page:
 
   - classname: devsite-landing-row-cards
     items:
-    - heading: Polymer
+    - heading: Lit
       description: >
-        The Polymer Project helps you deliver amazing user experiences by
-        unlocking the full potential of the web platform. Polymer makes the
-        most of Web Components, a powerful new platform feature for extending
-        HTML and componentizing your apps, allowing you to build cutting-edge
-        Progressive Web Apps that load quickly, respond instantly and work
-        from anywhere.
-      image_path: images/polymer-16x9.png
-      path: https://www.polymer-project.org/
+        Lit is a simple library for building fast, lightweight web components. You can use Lit to
+        build web components that work in any framework, or with no framework at all.
+      image_path: images/lit-16x9.png
+      path: https://lit.dev/
       buttons:
       - label: Learn more
-        path: https://www.polymer-project.org/
+        path: https://lit.dev/
 
     - heading: Angular
       description: >
