@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=main)](https://travis-ci.org/google/WebFundamentals)
 [![License](https://img.shields.io/github/license/google/WebFundamentals)](https://github.com/google/WebFundamentals/blob/main/LICENSE)
 
-Welcome to the new **WebFundamentals**! An effort to showcase best practices and tools for modern Web Development.
+Welcome to the new [Web Fundamentals](https://developers.google.com/web/fundamentals)! An effort to showcase best practices and tools for modern Web Development.
 
 
 ### What's changed?
