@@ -142,7 +142,8 @@ and how you can alter that behavior.
 Requests with search parameters can be altered to remove specific values, or
 remove all values.
 
-By default, search parameters starting with `utm_` are removed, meaning that a request for
+By default, search parameters that start with `utm_` or exactly match `fbclid` are removed,
+meaning that a request for
 `/about.html?utm_campaign=abcd` will be fulfilled with a precached entry for `/about.html`.
 
 You can ignore a different set of search parameters using `ignoreURLParametersMatching`:
