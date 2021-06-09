@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
 
-{# wf_updated_on: 2021-04-20 #}
+{# wf_updated_on: 2021-06-09 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -384,9 +384,9 @@ const shaderModule = device.createShaderModule({
       numbers: array<f32>;
     };
 
-    [[group(0), binding(0)]] var<storage> firstMatrix : [[access(read)]] Matrix;
-    [[group(0), binding(1)]] var<storage> secondMatrix : [[access(read)]] Matrix;
-    [[group(0), binding(2)]] var<storage> resultMatrix : [[access(write)]] Matrix;
+    [[group(0), binding(0)]] var<storage, read> firstMatrix : Matrix;
+    [[group(0), binding(1)]] var<storage, read> secondMatrix : Matrix;
+    [[group(0), binding(2)]] var<storage, write> resultMatrix : Matrix;
 
     [[stage(compute)]] fn main([[builtin(global_invocation_id)]] global_id : vec3<u32>) {
       resultMatrix.size = vec2<f32>(firstMatrix.size.x, secondMatrix.size.y);
