@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-01-15 #}
+{# wf_updated_on: 2021-06-22 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -102,13 +102,23 @@ import {Queue} from 'workbox-background-sync';
 const queue = new Queue('myQueueName');
 
 self.addEventListener('fetch', (event) => {
-  // Clone the request to ensure it's safe to read when
-  // adding to the Queue.
-  const promiseChain = fetch(event.request.clone()).catch((err) => {
-    return queue.pushRequest({request: event.request});
-  });
+  // Add in your own criteria here to return early if this
+  // isn't a request that should use background sync.
+  if (event.request.method !== 'POST') {
+    return;
+  }
 
-  event.waitUntil(promiseChain);
+  const bgSyncLogic = async () => {
+    try {
+      const response = await fetch(event.request.clone());
+      return response;
+    } catch (error) {
+      await queue.pushRequest({request: event.request});
+      return error;
+    }
+  };
+
+  event.respondWith(bgSyncLogic());
 });
 ```
 
