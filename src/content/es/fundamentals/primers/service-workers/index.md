@@ -93,7 +93,7 @@ instala por primera vez.
 
 Cada vez hay más opciones de navegadores. Los service workers son compatibles con Chrome, Firefox y
 Opera. Microsoft Edge está
-[mostrando apoyo públicamente](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/).
+[mostrando apoyo públicamente](https://developer.microsoft.com/en-us/microsoft-edge/status/serviceworker/).
 Incluso Safari ha demostrado [interés en desarrollos futuros](https://trac.webkit.org/wiki/FiveYearPlanFall2015).
 Puedes seguir el progreso de todos los navegadores en el sitio
 [is Serviceworker ready?](https://jakearchibald.github.io/isserviceworkerready/){: .external }

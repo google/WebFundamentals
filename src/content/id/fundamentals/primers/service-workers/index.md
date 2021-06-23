@@ -93,7 +93,7 @@ penginstalan yang pertama.
 
 Opsi browser semakin banyak. Service worker didukung oleh Chrome, Firefox, dan
 Opera. Microsoft Edge sekarang
-[menunjukkan dukungan publik](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/).
+[menunjukkan dukungan publik](https://developer.microsoft.com/en-us/microsoft-edge/status/serviceworker/).
 Bahkan Safari telah memberikan [petunjuk development di masa mendatang](https://trac.webkit.org/wiki/FiveYearPlanFall2015).
 Anda dapat mengikuti perkembangan semua browser di situs Jake Archibald
 [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external }.

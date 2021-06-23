@@ -68,7 +68,7 @@ description:豐富的離線體驗、定期的後臺同步以及推送通知等�
 ### 瀏覽器支持
 
 可用的瀏覽器日益增多。服務工作線程受 Firefox 和 Opera 支持。
-Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/)。甚至 Safari 也[暗示未來會進行相關開發](https://trac.webkit.org/wiki/FiveYearPlanFall2015)。
+Microsoft Edge 現在[表示公開支持](https://developer.microsoft.com/en-us/microsoft-edge/status/serviceworker/)。甚至 Safari 也[暗示未來會進行相關開發](https://trac.webkit.org/wiki/FiveYearPlanFall2015)。
 您可以在 Jake Archibald 的 [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external } 網站上查看所有瀏覽器的支持情況。
 
 
