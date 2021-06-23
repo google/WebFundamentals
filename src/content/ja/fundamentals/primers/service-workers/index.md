@@ -77,7 +77,7 @@ Service Worker はウェブページとはまったく異なるライフサイ�
 ### サポートしているブラウザを使う
 
 Service Worker をサポートするブラウザは増えています。 現在 Service worker は Chrome と Firefox と Opera でサポートされています。
- Microsoft Edge も[支持を表明](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/)しています。
+ Microsoft Edge も[支持を表明](https://developer.microsoft.com/en-us/microsoft-edge/status/serviceworker/)しています。
 Safari も[将来の展開を示唆](https://trac.webkit.org/wiki/FiveYearPlanFall2015)しています。
 ブラウザによるサポート状況は、Jake Archibald による [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external }
 サイトで確認できます。

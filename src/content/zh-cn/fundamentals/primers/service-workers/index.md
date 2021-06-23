@@ -79,7 +79,7 @@ Service Worker 的生命周期完全独立于网页。
 ### 浏览器支持
 
 可用的浏览器日益增多。 Service Worker 受 Chrome、Firefox 和
-Opera 支持。 Microsoft Edge 现在[表示公开支持](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/)。
+Opera 支持。 Microsoft Edge 现在[表示公开支持](https://developer.microsoft.com/en-us/microsoft-edge/status/serviceworker/)。
 甚至 Safari 也[暗示未来会进行相关开发](https://trac.webkit.org/wiki/FiveYearPlanFall2015)。
 您可以在 Jake Archibald 的
 [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external } 网站上查看所有浏览器的支持情况

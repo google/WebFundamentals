@@ -93,7 +93,7 @@ AppCache API에는 다양한 문제가 있으며 서비스 워커는 이를 방�
 
 브라우저 옵션은 성장하고 있습니다. Chrome, Firefox와
 Opera가 서비스 워커를 지원합니다. Microsoft Edge는 현재
-[공적 지원을 표명](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/)하고 있습니다.
+[공적 지원을 표명](https://developer.microsoft.com/en-us/microsoft-edge/status/serviceworker/)하고 있습니다.
 Safari도 [향후 개발 예정](https://trac.webkit.org/wiki/FiveYearPlanFall2015)임을 밝혔습니다.
 Jake Archibald의
 [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external }사이트에서 모든 브라우저의 진행 상황을 확인할 수

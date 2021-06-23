@@ -93,7 +93,7 @@ first installation.
 
 Browser options are growing. Service workers are supported by Chrome, Firefox and
 Opera. Microsoft Edge is now
-[showing public support](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/).
+[showing public support](https://developer.microsoft.com/en-us/microsoft-edge/status/serviceworker/).
 Even Safari has dropped [hints of future development](https://trac.webkit.org/wiki/FiveYearPlanFall2015).
 You can follow the progress of all the browsers at Jake Archibald's
 [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external }
