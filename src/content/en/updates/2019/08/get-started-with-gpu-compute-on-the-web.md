@@ -462,7 +462,8 @@ The size of the workgroup grid for our compute shader is `(8, 8)` in our WGSL
 code. Because of that, “x” and “y” that are respectively the number of rows of
 the first matrix and the number of columns of the second matrix will be divided
 by 8. With that, we can now dispatch a compute call with
-`passEncoder.dispatch(firstMatrix[0] / 8, secondMatrix[1] / 8)`.
+`passEncoder.dispatch(firstMatrix[0] / 8, secondMatrix[1] / 8)`. The number of
+workgroup grids to run are the `dispatch()` arguments.
 
 As seen in the drawing above, each shader will have access to a unique
 `builtin(global_invocation_id)` object that will be used to know which result
