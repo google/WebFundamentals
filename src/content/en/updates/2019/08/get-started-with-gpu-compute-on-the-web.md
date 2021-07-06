@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
 
-{# wf_updated_on: 2021-06-09 #}
+{# wf_updated_on: 2021-07-05 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -388,7 +388,8 @@ const shaderModule = device.createShaderModule({
     [[group(0), binding(1)]] var<storage, read> secondMatrix : Matrix;
     [[group(0), binding(2)]] var<storage, write> resultMatrix : Matrix;
 
-    [[stage(compute)]] fn main([[builtin(global_invocation_id)]] global_id : vec3<u32>) {
+    [[stage(compute), workgroup_size(8, 8)]]
+    fn main([[builtin(global_invocation_id)]] global_id : vec3<u32>) {
       resultMatrix.size = vec2<f32>(firstMatrix.size.x, secondMatrix.size.y);
 
       let resultCell : vec2<u32> = vec2<u32>(global_id.x, global_id.y);
@@ -456,10 +457,13 @@ function on a set of data is called dispatching.
   </figcaption>
 </figure>
 
-In our code, “x” and “y” will be respectively the number of rows of the first
-matrix and the number of columns of the second matrix. With that, we can now
-dispatch a compute call with `passEncoder.dispatch(firstMatrix[0],
-secondMatrix[1])`.
+
+The size of the workgroup grid for our compute shader is `(8, 8)` in our WGSL
+code. Because of that, “x” and “y” that are respectively the number of rows of
+the first matrix and the number of columns of the second matrix will be divided
+by 8. With that, we can now dispatch a compute call with
+`passEncoder.dispatch(firstMatrix[0] / 8, secondMatrix[1] / 8)`. The number of
+workgroup grids to run are the `dispatch()` arguments.
 
 As seen in the drawing above, each shader will have access to a unique
 `builtin(global_invocation_id)` object that will be used to know which result
@@ -471,7 +475,9 @@ const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginComputePass();
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
-passEncoder.dispatch(firstMatrix[0] /* x */, secondMatrix[1] /* y */);
+const x = firstMatrix[0] / 8; // X dimension of the grid of workgroups to dispatch.
+const y = secondMatrix[1] / 8; // Y dimension of the grid of workgroups to dispatch.
+passEncoder.dispatch(x, y);
 passEncoder.endPass();
 ```
 
