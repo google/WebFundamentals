@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
 
-{# wf_updated_on: 2021-07-05 #}
+{# wf_updated_on: 2021-07-15 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -390,6 +390,11 @@ const shaderModule = device.createShaderModule({
 
     [[stage(compute), workgroup_size(8, 8)]]
     fn main([[builtin(global_invocation_id)]] global_id : vec3<u32>) {
+      // Guard against out-of-bounds work group sizes
+      if (global_id.x >= u32(firstMatrix.size.x) || global_id.y >= u32(secondMatrix.size.y)) {
+        return;
+      }
+
       resultMatrix.size = vec2<f32>(firstMatrix.size.x, secondMatrix.size.y);
 
       let resultCell : vec2<u32> = vec2<u32>(global_id.x, global_id.y);
@@ -475,8 +480,8 @@ const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginComputePass();
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
-const x = firstMatrix[0] / 8; // X dimension of the grid of workgroups to dispatch.
-const y = secondMatrix[1] / 8; // Y dimension of the grid of workgroups to dispatch.
+const x = Math.ceil(firstMatrix[0] / 8); // X dimension of the grid of workgroups to dispatch.
+const y = Math.ceil(secondMatrix[1] / 8); // Y dimension of the grid of workgroups to dispatch.
 passEncoder.dispatch(x, y);
 passEncoder.endPass();
 ```
