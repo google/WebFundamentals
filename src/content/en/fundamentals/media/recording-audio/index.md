@@ -170,14 +170,9 @@ destination.
 &lt;a id="download">Download&lt;/a>
 &lt;button id="stop">Stop&lt;/button>
 &lt;script>
-  let shouldStop = false;
-  let stopped = false;
   const downloadLink = document.getElementById('download');
   const stopButton = document.getElementById('stop');
 
-  stopButton.addEventListener('click', function() {
-    shouldStop = true;
-  });
 
   const handleSuccess = function(stream) {
     const options = {mimeType: 'audio/webm'};
@@ -185,19 +180,16 @@ destination.
     <strong>const mediaRecorder = new MediaRecorder(stream, options);
 
     mediaRecorder.addEventListener('dataavailable', function(e) {
-      if (e.data.size > 0) {
-        recordedChunks.push(e.data);
-      }
-
-      if(shouldStop === true && stopped === false) {
-        mediaRecorder.stop();
-        stopped = true;
-      }
+      if (e.data.size > 0) recordedChunks.push(e.data);
     });
 
     mediaRecorder.addEventListener('stop', function() {
       downloadLink.href = URL.createObjectURL(new Blob(recordedChunks));
       downloadLink.download = 'acetest.wav';
+    });
+
+    stopButton.addEventListener('click', function() {
+      mediaRecorder.stop();
     });
 
     mediaRecorder.start();</strong>
