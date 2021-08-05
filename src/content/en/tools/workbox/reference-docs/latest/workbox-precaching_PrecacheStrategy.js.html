@@ -115,12 +115,16 @@ class PrecacheStrategy extends Strategy {
             });
         }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+            // Params in handlers is type any, can&#x27;t change right now.
+            // eslint-disable-next-line
             const cacheKey &#x3D; handler.params &amp;amp;&amp;amp; handler.params.cacheKey ||
                 await handler.getCacheKey(request, &#x27;read&#x27;);
             // Workbox is going to handle the route.
             // print the routing details to the console.
             logger.groupCollapsed(&#x60;Precaching is responding to: &#x60; +
                 getFriendlyURL(request.url));
+            // cacheKey is type any, can&#x27;t change right now.
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
             logger.log(&#x60;Serving the precached url: ${getFriendlyURL(cacheKey.url)}&#x60;);
             logger.groupCollapsed(&#x60;View request details here.&#x60;);
             logger.log(request);

@@ -172,10 +172,12 @@ class Strategy {
             }
         }
         catch (error) {
-            for (const callback of handler.iterateCallbacks(&#x27;handlerDidError&#x27;)) {
-                response &#x3D; await callback({ error, event, request });
-                if (response) {
-                    break;
+            if (error instanceof Error) {
+                for (const callback of handler.iterateCallbacks(&#x27;handlerDidError&#x27;)) {
+                    response &#x3D; await callback({ error, event, request });
+                    if (response) {
+                        break;
+                    }
                 }
             }
             if (!response) {
@@ -183,7 +185,7 @@ class Strategy {
             }
             else if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
                 logger.log(&#x60;While responding to &#x27;${getFriendlyURL(request.url)}&#x27;, &#x60; +
-                    &#x60;an ${error} error occurred. Using a fallback response provided by &#x60; +
+                    &#x60;an ${error instanceof Error ? error.toString() : &#x27;&#x27;} error occurred. Using a fallback response provided by &#x60; +
                     &#x60;a handlerDidError plugin.&#x60;);
             }
         }
@@ -212,13 +214,15 @@ class Strategy {
             await handler.doneWaiting();
         }
         catch (waitUntilError) {
-            error &#x3D; waitUntilError;
+            if (waitUntilError instanceof Error) {
+                error &#x3D; waitUntilError;
+            }
         }
         await handler.runCallbacks(&#x27;handlerDidComplete&#x27;, {
             event,
             request,
             response,
-            error,
+            error: error,
         });
         handler.destroy();
         if (error) {

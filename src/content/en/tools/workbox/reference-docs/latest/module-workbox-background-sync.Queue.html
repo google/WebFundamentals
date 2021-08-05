@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>6.1.5</small></span>
+              <span class="label label-version"><small>6.2.0</small></span>
             </div>
             <p>A class to manage storing failed requests in IndexedDB and retrying them
               later. All parts of the storing and replaying process are observable via
@@ -123,25 +123,25 @@
             <section>
               <h3 id="getAll" class="symbol-name">getAll</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
-              <p class="type-signature"> getAll()&nbsp;returns&nbsp;Promise containing Array of Object</p>
+              <p class="type-signature"> getAll()&nbsp;returns&nbsp;Promise containing Array of QueueEntry</p>
               <p>Returns all the entries that have not expired (per <code>maxRetentionTime</code>).
                 Any expired entries are removed from the queue.</p>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Array of Object</code>&nbsp;</p>
+                  <p><code>Promise containing Array of QueueEntry</code>&nbsp;</p>
                 </dd>
               </dl>
               <h3 id="popRequest" class="symbol-name">popRequest</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
-              <p class="type-signature"> popRequest()&nbsp;returns&nbsp;Promise containing Object</p>
+              <p class="type-signature"> popRequest()&nbsp;returns&nbsp;Promise containing (QueueEntry or undefined)</p>
               <p>Removes and returns the last request in the queue (along with its
                 timestamp and any metadata). The returned object takes the form:
                 <code>{request, timestamp, metadata}</code>.</p>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Object</code>&nbsp;</p>
+                  <p><code>Promise containing (QueueEntry or undefined)</code>&nbsp;</p>
                 </dd>
               </dl>
               <h3 id="pushRequest" class="symbol-name">pushRequest</h3>
@@ -162,7 +162,7 @@
                         <p>entry</p>
                       </td>
                       <td>
-                        <p class="details-table-types">Object</p>
+                        <p class="details-table-types">QueueEntry</p>
                         <p>Values in <code>entry</code> have the following properties:</p>
                         <table class="function param responsive">
                           <tr>
@@ -232,14 +232,14 @@
               </dl>
               <h3 id="shiftRequest" class="symbol-name">shiftRequest</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
-              <p class="type-signature"> shiftRequest()&nbsp;returns&nbsp;Promise containing Object</p>
+              <p class="type-signature"> shiftRequest()&nbsp;returns&nbsp;Promise containing (QueueEntry or undefined)</p>
               <p>Removes and returns the first request in the queue (along with its
                 timestamp and any metadata). The returned object takes the form:
                 <code>{request, timestamp, metadata}</code>.</p>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
-                  <p><code>Promise containing Object</code>&nbsp;</p>
+                  <p><code>Promise containing (QueueEntry or undefined)</code>&nbsp;</p>
                 </dd>
               </dl>
               <h3 id="unshiftRequest" class="symbol-name">unshiftRequest</h3>
@@ -260,7 +260,7 @@
                         <p>entry</p>
                       </td>
                       <td>
-                        <p class="details-table-types">Object</p>
+                        <p class="details-table-types">QueueEntry</p>
                         <p>Values in <code>entry</code> have the following properties:</p>
                         <table class="function param responsive">
                           <tr>

@@ -88,7 +88,7 @@ async function createPartialResponse(request, originalResponse) {
         });
         slicedResponse.headers.set(&#x27;Content-Length&#x27;, String(slicedBlobSize));
         slicedResponse.headers.set(&#x27;Content-Range&#x27;, &#x60;bytes ${effectiveBoundaries.start}-${effectiveBoundaries.end - 1}/&#x60; +
-            originalBlob.size);
+            &#x60;${originalBlob.size}&#x60;);
         return slicedResponse;
     }
     catch (error) {

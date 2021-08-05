@@ -79,8 +79,8 @@ class RegExpRoute extends Route {
             // behind this behavior.
             if ((url.origin !&#x3D;&#x3D; location.origin) &amp;amp;&amp;amp; (result.index !&#x3D;&#x3D; 0)) {
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-                    logger.debug(&#x60;The regular expression &#x27;${regExp}&#x27; only partially matched &#x60; +
-                        &#x60;against the cross-origin URL &#x27;${url}&#x27;. RegExpRoute&#x27;s will only &#x60; +
+                    logger.debug(&#x60;The regular expression &#x27;${regExp.toString()}&#x27; only partially matched &#x60; +
+                        &#x60;against the cross-origin URL &#x27;${url.toString()}&#x27;. RegExpRoute&#x27;s will only &#x60; +
                         &#x60;handle cross-origin requests if they match the entire URL.&#x60;);
                 }
                 return;

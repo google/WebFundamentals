@@ -64,11 +64,13 @@ class Workbox extends WorkboxEventTarget {
      * calling &#x60;navigator.serviceWorker.register(scriptURL, options)&#x60;. See:
      * https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register
      *
-     * @param {string} scriptURL The service worker script associated with this
-     *     instance.
+     * @param {string|TrustedScriptURL} scriptURL The service worker script
+     *     associated with this instance. Using a
+     *     [&#x60;TrustedScriptURL&#x60;](https://web.dev/trusted-types/) is supported.
      * @param {Object} [registerOptions] The service worker options associated
      *     with this instance.
      */
+    // eslint-disable-next-line @typescript-eslint/ban-types
     constructor(scriptURL, registerOptions &#x3D; {}) {
         super();
         this._registerOptions &#x3D; {};
@@ -107,7 +109,7 @@ class Workbox extends WorkboxEventTarget {
                 // If the script URL of the installing SW is different from this
                 // instance&#x27;s script URL, we know it&#x27;s definitely not from our
                 // registration.
-                !urlsMatch(installingSW.scriptURL, this._scriptURL) ||
+                !urlsMatch(installingSW.scriptURL, this._scriptURL.toString()) ||
                 // If all of the above are false, then we use a time-based heuristic:
                 // Any &#x60;updatefound&#x60; event that occurs long after our registration is
                 // assumed to be external.
@@ -259,7 +261,9 @@ class Workbox extends WorkboxEventTarget {
          * @param {Event} originalEvent
          */
         this._onMessage &#x3D; async (originalEvent) &#x3D;&gt; {
-            const { data, source } &#x3D; originalEvent;
+            // Can&#x27;t change type &#x27;any&#x27; of data.
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+            const { data, ports, source } &#x3D; originalEvent;
             // Wait until there&#x27;s an &quot;own&quot; service worker. This is used to buffer
             // &#x60;message&#x60; events that may be received prior to calling &#x60;register()&#x60;.
             await this.getSW();
@@ -271,9 +275,12 @@ class Workbox extends WorkboxEventTarget {
             // update to be found.
             if (this._ownSWs.has(source)) {
                 this.dispatchEvent(new WorkboxEvent(&#x27;message&#x27;, {
+                    // Can&#x27;t change type &#x27;any&#x27; of data.
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                     data,
-                    sw: source,
                     originalEvent,
+                    ports,
+                    sw: source,
                 }));
             }
         };
@@ -327,7 +334,8 @@ class Workbox extends WorkboxEventTarget {
         // page wasn&#x27;t fully unloaded before this page started loading).
         // /web/fundamentals/primers/service-workers/lifecycle#waiting
         const waitingSW &#x3D; this._registration.waiting;
-        if (waitingSW &amp;amp;&amp;amp; urlsMatch(waitingSW.scriptURL, this._scriptURL)) {
+        if (waitingSW &amp;amp;&amp;amp;
+            urlsMatch(waitingSW.scriptURL, this._scriptURL.toString())) {
             // Store the waiting SW as the &quot;own&quot; Sw, even if it means overwriting
             // a compatible controller.
             this._sw &#x3D; waitingSW;
@@ -350,7 +358,7 @@ class Workbox extends WorkboxEventTarget {
             this._ownSWs.add(this._sw);
         }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
-            logger.log(&#x27;Successfully registered service worker.&#x27;, this._scriptURL);
+            logger.log(&#x27;Successfully registered service worker.&#x27;, this._scriptURL.toString());
             if (navigator.serviceWorker.controller) {
                 if (this._compatibleControllingSW) {
                     logger.debug(&#x27;A service worker with the same script URL &#x27; +
@@ -363,7 +371,7 @@ class Workbox extends WorkboxEventTarget {
                 }
             }
             const currentPageIsOutOfScope &#x3D; () &#x3D;&gt; {
-                const scopeURL &#x3D; new URL(this._registerOptions.scope || this._scriptURL, document.baseURI);
+                const scopeURL &#x3D; new URL(this._registerOptions.scope || this._scriptURL.toString(), document.baseURI);
                 const scopeURLBasePath &#x3D; new URL(&#x27;./&#x27;, scopeURL.href).pathname;
                 return !location.pathname.startsWith(scopeURLBasePath);
             };
@@ -373,7 +381,7 @@ class Workbox extends WorkboxEventTarget {
             }
         }
         this._registration.addEventListener(&#x27;updatefound&#x27;, this._onUpdateFound);
-        navigator.serviceWorker.addEventListener(&#x27;controllerchange&#x27;, this._onControllerChange, { once: true });
+        navigator.serviceWorker.addEventListener(&#x27;controllerchange&#x27;, this._onControllerChange);
         return this._registration;
     }
     /**
@@ -452,6 +460,8 @@ class Workbox extends WorkboxEventTarget {
      * @param {Object} data An object to send to the service worker
      * @return {Promise&amp;lt;Object&gt;}
      */
+    // We might be able to change the &#x27;data&#x27; type to Record&amp;lt;string, unknown&gt; in the future.
+    // eslint-disable-next-line @typescript-eslint/ban-types
     async messageSW(data) {
         const sw &#x3D; await this.getSW();
         return messageSW(sw, data);
@@ -465,7 +475,7 @@ class Workbox extends WorkboxEventTarget {
      */
     messageSkipWaiting() {
         if (this._registration &amp;amp;&amp;amp; this._registration.waiting) {
-            messageSW(this._registration.waiting, SKIP_WAITING_MESSAGE);
+            void messageSW(this._registration.waiting, SKIP_WAITING_MESSAGE);
         }
     }
     /**
@@ -477,7 +487,8 @@ class Workbox extends WorkboxEventTarget {
      */
     _getControllingSWIfCompatible() {
         const controller &#x3D; navigator.serviceWorker.controller;
-        if (controller &amp;amp;&amp;amp; urlsMatch(controller.scriptURL, this._scriptURL)) {
+        if (controller &amp;amp;&amp;amp;
+            urlsMatch(controller.scriptURL, this._scriptURL.toString())) {
             return controller;
         }
         else {
@@ -492,6 +503,9 @@ class Workbox extends WorkboxEventTarget {
      */
     async _registerScript() {
         try {
+            // this._scriptURL may be a TrustedScriptURL, but there&#x27;s no support for
+            // passing that to register() in lib.dom right now.
+            // https://github.com/GoogleChrome/workbox/issues/2855
             const reg &#x3D; await navigator.serviceWorker.register(this._scriptURL, this._registerOptions);
             // Keep track of when registration happened, so it can be used in the
             // &#x60;this._onUpdateFound&#x60; heuristic. Also use the presence of this
@@ -520,6 +534,7 @@ export { Workbox };
  * @property {Event} originalEvent The original [&#x60;message&#x60;]{@link https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent}
  *     event.
  * @property {string} type &#x60;message&#x60;.
+ * @property {MessagePort[]} ports The &#x60;ports&#x60; value from &#x60;originalEvent&#x60;.
  * @property {Workbox} target The &#x60;Workbox&#x60; instance.
  */
 /**

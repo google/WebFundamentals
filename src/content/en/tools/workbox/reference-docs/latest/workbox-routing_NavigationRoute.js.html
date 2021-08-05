@@ -105,7 +105,7 @@ class NavigationRoute extends Route {
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
                     logger.log(&#x60;The navigation route ${pathnameAndSearch} is not &#x60; +
                         &#x60;being used, since the URL matches this denylist pattern: &#x60; +
-                        &#x60;${regExp}&#x60;);
+                        &#x60;${regExp.toString()}&#x60;);
                 }
                 return false;
             }

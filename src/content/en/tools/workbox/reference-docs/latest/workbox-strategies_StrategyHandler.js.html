@@ -166,9 +166,9 @@ class StrategyHandler {
             }
         }
         catch (err) {
-            throw new WorkboxError(&#x27;plugin-error-request-will-fetch&#x27;, {
-                thrownError: err,
-            });
+            if (err instanceof Error) {
+                throw new WorkboxError(&#x27;plugin-error-request-will-fetch&#x27;, { thrownErrorMessage: err.message });
+            }
         }
         // The request can be altered by plugins with &#x60;requestWillFetch&#x60; making
         // the original request (most likely from a &#x60;fetch&#x60; event) different
@@ -202,7 +202,7 @@ class StrategyHandler {
             // is being used (see above).
             if (originalRequest) {
                 await this.runCallbacks(&#x27;fetchDidFail&#x27;, {
-                    error,
+                    error: error,
                     event,
                     originalRequest: originalRequest.clone(),
                     request: pluginFilteredRequest.clone(),
@@ -224,7 +224,7 @@ class StrategyHandler {
     async fetchAndCachePut(input) {
         const response &#x3D; await this.fetch(input);
         const responseClone &#x3D; response.clone();
-        this.waitUntil(this.cachePut(input, responseClone));
+        void this.waitUntil(this.cachePut(input, responseClone));
         return response;
     }
     /**
@@ -329,11 +329,13 @@ class StrategyHandler {
                 responseToCache.clone() : responseToCache);
         }
         catch (error) {
-            // See https://developer.mozilla.org/en-US/docs/Web/API/DOMException#exception-QuotaExceededError
-            if (error.name &#x3D;&#x3D;&#x3D; &#x27;QuotaExceededError&#x27;) {
-                await executeQuotaErrorCallbacks();
+            if (error instanceof Error) {
+                // See https://developer.mozilla.org/en-US/docs/Web/API/DOMException#exception-QuotaExceededError
+                if (error.name &#x3D;&#x3D;&#x3D; &#x27;QuotaExceededError&#x27;) {
+                    await executeQuotaErrorCallbacks();
+                }
+                throw error;
             }
-            throw error;
         }
         for (const callback of this.iterateCallbacks(&#x27;cacheDidUpdate&#x27;)) {
             await callback({
@@ -365,6 +367,7 @@ class StrategyHandler {
                     mode,
                     request: effectiveRequest,
                     event: this.event,
+                    // params has a type any can&#x27;t change right now.
                     params: this.params,
                 }));
             }
@@ -471,7 +474,7 @@ class StrategyHandler {
      * &#x60;waitUntil()&#x60; promises.
      */
     destroy() {
-        this._handlerDeferred.resolve();
+        this._handlerDeferred.resolve(null);
     }
     /**
      * This method will call cacheWillUpdate on the available plugins (or use

@@ -46,7 +46,7 @@ function enable(headerValue) {
             event.waitUntil(self.registration.navigationPreload.enable().then(() &#x3D;&gt; {
                 // Defaults to Service-Worker-Navigation-Preload: true if not set.
                 if (headerValue) {
-                    self.registration.navigationPreload.setHeaderValue(headerValue);
+                    void self.registration.navigationPreload.setHeaderValue(headerValue);
                 }
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
                     logger.log(&#x60;Navigation preload is enabled.&#x60;);
