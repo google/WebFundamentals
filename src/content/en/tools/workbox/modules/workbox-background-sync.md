@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2021-06-22 #}
+{# wf_updated_on: 2021-08-17 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -57,6 +57,32 @@ registerRoute(
   }),
   'POST'
 );
+```
+
+`BackgroundSyncPlugin` hooks into the
+[`fetchDidFail` plugin callback](/web/tools/workbox/guides/using-plugins), and
+`fetchDidFail` is only invoked if there's an exception thrown, most likely due
+to a network failure. This means that requests won't be retried if there's a
+response received with a
+[`4xx` or `5xx` error status](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+If you would like to retry all requests that result in, e.g., a `5xx` status,
+you can do so by
+[adding a `fetchDidSucceed` plugin](https://github.com/GoogleChrome/workbox/issues/2599#issuecomment-900304969)
+to your strategy:
+
+```javascript
+const statusPlugin = {
+  fetchDidSucceed: ({response}) => {
+    if (response.status >= 500) {
+      // Throwing anything here will trigger fetchDidFail.
+      throw new Error('Server error.');
+    }
+    // If it's not 5xx, use the response as-is.
+    return response;
+  },
+};
+
+// Add statusPlugin to the plugins array in your strategy.
 ```
 
 ## Advanced Usage
