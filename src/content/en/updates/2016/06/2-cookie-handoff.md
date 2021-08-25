@@ -48,7 +48,7 @@ industry on documenting best practices for using 2CH.
 
 Service workers are a new technology supported by multiple browsers such as
 Chrome, Firefox, Opera and coming soon to 
-[Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker).
+[Edge](https://developer.microsoft.com/en-us/microsoft-edge/status/serviceworker/).
 They allow you to intercept all network requests from your site through a
 common point of code on the client, without modifying the existing pages. This
 allows you to set up a "2CH worker" for logged in users that can intercept
