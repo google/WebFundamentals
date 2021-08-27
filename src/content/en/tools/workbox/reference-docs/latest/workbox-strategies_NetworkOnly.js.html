@@ -94,7 +94,9 @@ class NetworkOnly extends Strategy {
             }
         }
         catch (err) {
-            error &#x3D; err;
+            if (err instanceof Error) {
+                error &#x3D; err;
+            }
         }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
             logger.groupCollapsed(messages.strategyStart(this.constructor.name, request));

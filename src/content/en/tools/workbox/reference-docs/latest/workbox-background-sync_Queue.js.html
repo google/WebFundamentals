@@ -42,8 +42,8 @@ const queueNames &#x3D; new Set();
  * converting the request data into a real request and omitting the &#x60;id&#x60; and
  * &#x60;queueName&#x60; properties.
  *
- * @param {Object} queueStoreEntry
- * @return {Object}
+ * @param {UnidentifiedQueueStoreEntry} queueStoreEntry
+ * @return {Queue}
  * @private
  */
 const convertEntry &#x3D; (queueStoreEntry) &#x3D;&gt; {
@@ -109,7 +109,7 @@ class Queue {
      * Stores the passed request in IndexedDB (with its timestamp and any
      * metadata) at the end of the queue.
      *
-     * @param {Object} entry
+     * @param {QueueEntry} entry
      * @param {Request} entry.request The request to store in the queue.
      * @param {Object} [entry.metadata] Any metadata you want associated with the
      *     stored request. When requests are replayed you&#x27;ll have access to this
@@ -142,7 +142,7 @@ class Queue {
      * Stores the passed request in IndexedDB (with its timestamp and any
      * metadata) at the beginning of the queue.
      *
-     * @param {Object} entry
+     * @param {QueueEntry} entry
      * @param {Request} entry.request The request to store in the queue.
      * @param {Object} [entry.metadata] Any metadata you want associated with the
      *     stored request. When requests are replayed you&#x27;ll have access to this
@@ -176,7 +176,7 @@ class Queue {
      * timestamp and any metadata). The returned object takes the form:
      * &#x60;{request, timestamp, metadata}&#x60;.
      *
-     * @return {Promise&amp;lt;Object&gt;}
+     * @return {Promise&amp;lt;QueueEntry | undefined&gt;}
      */
     async popRequest() {
         return this._removeRequest(&#x27;pop&#x27;);
@@ -186,7 +186,7 @@ class Queue {
      * timestamp and any metadata). The returned object takes the form:
      * &#x60;{request, timestamp, metadata}&#x60;.
      *
-     * @return {Promise&amp;lt;Object&gt;}
+     * @return {Promise&amp;lt;QueueEntry | undefined&gt;}
      */
     async shiftRequest() {
         return this._removeRequest(&#x27;shift&#x27;);
@@ -195,7 +195,7 @@ class Queue {
      * Returns all the entries that have not expired (per &#x60;maxRetentionTime&#x60;).
      * Any expired entries are removed from the queue.
      *
-     * @return {Promise&amp;lt;Array&amp;lt;Object&gt;&gt;}
+     * @return {Promise&amp;lt;Array&amp;lt;QueueEntry&gt;&gt;}
      */
     async getAll() {
         const allEntries &#x3D; await this._queueStore.getAll();
@@ -341,10 +341,12 @@ class Queue {
                             await this._onSync({ queue: this });
                         }
                         catch (error) {
-                            syncError &#x3D; error;
-                            // Rethrow the error. Note: the logic in the finally clause
-                            // will run before this gets rethrown.
-                            throw syncError;
+                            if (error instanceof Error) {
+                                syncError &#x3D; error;
+                                // Rethrow the error. Note: the logic in the finally clause
+                                // will run before this gets rethrown.
+                                throw syncError;
+                            }
                         }
                         finally {
                             // New items may have been added to the queue during the sync,
@@ -370,14 +372,14 @@ class Queue {
             }
             // If the browser doesn&#x27;t support background sync, retry
             // every time the service worker starts up as a fallback.
-            this._onSync({ queue: this });
+            void this._onSync({ queue: this });
         }
     }
     /**
      * Returns the set of queue names. This is primarily used to reset the list
      * of queue names in tests.
      *
-     * @return {Set}
+     * @return {Set&amp;lt;string&gt;}
      *
      * @private
      */

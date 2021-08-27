@@ -28,16 +28,15 @@
   https://opensource.org/licenses/MIT.
 */
 
-const escapeRegexp &#x3D; require(&#x27;workbox-build/build/lib/escape-regexp&#x27;);
+const {escapeRegExp} &#x3D; require(&#x27;workbox-build/build/lib/escape-regexp&#x27;);
+const {replaceAndUpdateSourceMap} &#x3D;
+  require(&#x27;workbox-build/build/lib/replace-and-update-source-map&#x27;);
+const {validateWebpackInjectManifestOptions} &#x3D;
+  require(&#x27;workbox-build/build/lib/validate-options&#x27;);
 const prettyBytes &#x3D; require(&#x27;pretty-bytes&#x27;);
-const replaceAndUpdateSourceMap &#x3D; require(
-    &#x27;workbox-build/build/lib/replace-and-update-source-map&#x27;);
 const stringify &#x3D; require(&#x27;fast-json-stable-stringify&#x27;);
 const upath &#x3D; require(&#x27;upath&#x27;);
-const validate &#x3D; require(&#x27;workbox-build/build/lib/validate-options&#x27;);
 const webpack &#x3D; require(&#x27;webpack&#x27;);
-const webpackInjectManifestSchema &#x3D; require(
-    &#x27;workbox-build/build/options/schema/webpack-inject-manifest&#x27;);
 
 const getManifestEntriesFromCompilation &#x3D;
   require(&#x27;./lib/get-manifest-entries-from-compilation&#x27;);
@@ -159,6 +158,8 @@ class InjectManifest {
     // there take precedence over derived properties from the compiler.
     this.config &#x3D; Object.assign({
       mode: compiler.mode,
+      // Use swSrc with a hardcoded .js extension, in case swSrc is a .ts file.
+      swDest: upath.parse(this.config.swSrc).name + &#x27;.js&#x27;,
     }, this.config);
   }
 
@@ -272,7 +273,7 @@ class InjectManifest {
    */
   async handleMake(compilation, parentCompiler) {
     try {
-      this.config &#x3D; validate(this.config, webpackInjectManifestSchema);
+      this.config &#x3D; validateWebpackInjectManifestOptions(this.config);
     } catch (error) {
       throw new Error(&#x60;Please check your ${this.constructor.name} plugin &#x60; +
         &#x60;configuration:\n${error.message}&#x60;);
@@ -285,6 +286,13 @@ class InjectManifest {
       await this.performChildCompilation(compilation, parentCompiler);
     } else {
       this.addSrcToAssets(compilation, parentCompiler);
+      // This used to be a fatal error, but just warn at runtime because we
+      // can&#x27;t validate it easily.
+      if (Array.isArray(this.config.webpackCompilationPlugins) &amp;amp;&amp;amp;
+          this.config.webpackCompilationPlugins.length &gt; 0) {
+        compilation.warnings.push(new Error(&#x27;compileSrc is false, so the &#x27; +
+          &#x27;webpackCompilationPlugins option will be ignored.&#x27;));
+      }
     }
   }
 
@@ -323,7 +331,7 @@ class InjectManifest {
     const swAsset &#x3D; compilation.getAsset(config.swDest);
     const swAssetString &#x3D; swAsset.source.source();
 
-    const globalRegexp &#x3D; new RegExp(escapeRegexp(config.injectionPoint), &#x27;g&#x27;);
+    const globalRegexp &#x3D; new RegExp(escapeRegExp(config.injectionPoint), &#x27;g&#x27;);
     const injectionResults &#x3D; swAssetString.match(globalRegexp);
 
     if (!injectionResults) {
@@ -339,7 +347,14 @@ class InjectManifest {
         compilation, config);
 
     let manifestString &#x3D; stringify(sortedEntries);
-    if (this.config.compileSrc) {
+    if (this.config.compileSrc &amp;amp;&amp;amp;
+      // See https://github.com/GoogleChrome/workbox/issues/2729
+      // (TODO: Switch to ?. once our linter supports it.)
+      !(compilation.options &amp;amp;&amp;amp;
+        compilation.options.devtool &#x3D;&#x3D;&#x3D; &#x27;eval-cheap-source-map&#x27; &amp;amp;&amp;amp;
+        compilation.options.optimization &amp;amp;&amp;amp;
+        compilation.options.optimization.minimize)
+    ) {
       // See https://github.com/GoogleChrome/workbox/issues/2263
       manifestString &#x3D; manifestString.replace(/&quot;/g, &#x60;&#x27;&#x60;);
     }

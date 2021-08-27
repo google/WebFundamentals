@@ -106,8 +106,9 @@ class Router {
     addCacheListener() {
         // See https://github.com/Microsoft/TypeScript/issues/28357#issuecomment-436484705
         self.addEventListener(&#x27;message&#x27;, ((event) &#x3D;&gt; {
-            if (event.data &amp;amp;&amp;amp; event.data.type &#x3D;&#x3D;&#x3D; &#x27;CACHE_URLS&#x27;) {
-                const { payload } &#x3D; event.data;
+            // event.data is type &#x27;any&#x27;
+            if (event.data &amp;amp;&amp;amp; event.data.type &#x3D;&#x3D;&#x3D; &#x27;CACHE_URLS&#x27;) { // eslint-disable-line
+                const { payload } &#x3D; event.data; // eslint-disable-line
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
                     logger.debug(&#x60;Caching URLs from the window&#x60;, payload.urlsToCache);
                 }
@@ -124,7 +125,7 @@ class Router {
                 event.waitUntil(requestPromises);
                 // If a MessageChannel was used, reply to the message on success.
                 if (event.ports &amp;amp;&amp;amp; event.ports[0]) {
-                    requestPromises.then(() &#x3D;&gt; event.ports[0].postMessage(true));
+                    void requestPromises.then(() &#x3D;&gt; event.ports[0].postMessage(true));
                 }
             }
         }));
@@ -238,7 +239,9 @@ class Router {
                         return await catchHandler.handle({ url, request, event, params });
                     }
                     catch (catchErr) {
-                        err &#x3D; catchErr;
+                        if (catchErr instanceof Error) {
+                            err &#x3D; catchErr;
+                        }
                     }
                 }
                 if (this._catchHandler) {
@@ -277,11 +280,13 @@ class Router {
         const routes &#x3D; this._routes.get(request.method) || [];
         for (const route of routes) {
             let params;
+            // route.match returns type any, not possible to change right now.
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             const matchResult &#x3D; route.match({ url, sameOrigin, request, event });
             if (matchResult) {
                 if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
                     // Warn developers that using an async matchCallback is almost always
-                    // not the right thing to do. 
+                    // not the right thing to do.
                     if (matchResult instanceof Promise) {
                         logger.warn(&#x60;While routing ${getFriendlyURL(url)}, an async &#x60; +
                             &#x60;matchCallback function was used. Please convert the &#x60; +
@@ -289,12 +294,13 @@ class Router {
                     }
                 }
                 // See https://github.com/GoogleChrome/workbox/issues/2079
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                 params &#x3D; matchResult;
-                if (Array.isArray(matchResult) &amp;amp;&amp;amp; matchResult.length &#x3D;&#x3D;&#x3D; 0) {
+                if (Array.isArray(params) &amp;amp;&amp;amp; params.length &#x3D;&#x3D;&#x3D; 0) {
                     // Instead of passing an empty array in as params, use undefined.
                     params &#x3D; undefined;
                 }
-                else if ((matchResult.constructor &#x3D;&#x3D;&#x3D; Object &amp;amp;&amp;amp;
+                else if ((matchResult.constructor &#x3D;&#x3D;&#x3D; Object &amp;amp;&amp;amp; // eslint-disable-line
                     Object.keys(matchResult).length &#x3D;&#x3D;&#x3D; 0)) {
                     // Instead of passing an empty object in as params, use undefined.
                     params &#x3D; undefined;

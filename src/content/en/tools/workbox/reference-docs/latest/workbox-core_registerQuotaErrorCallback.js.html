@@ -38,6 +38,8 @@ import &#x27;./_version.js&#x27;;
  * @param {Function} callback
  * @memberof module:workbox-core
  */
+// Can&#x27;t change Function type
+// eslint-disable-next-line @typescript-eslint/ban-types
 function registerQuotaErrorCallback(callback) {
     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
         assert.isType(callback, &#x27;function&#x27;, {

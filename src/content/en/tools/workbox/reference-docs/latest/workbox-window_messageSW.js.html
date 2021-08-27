@@ -42,6 +42,8 @@ import &#x27;./_version.js&#x27;;
  * @return {Promise&amp;lt;Object|undefined&gt;}
  * @memberof module:workbox-window
  */
+// Better not change type of data.
+// eslint-disable-next-line @typescript-eslint/ban-types
 function messageSW(sw, data) {
     return new Promise((resolve) &#x3D;&gt; {
         const messageChannel &#x3D; new MessageChannel();

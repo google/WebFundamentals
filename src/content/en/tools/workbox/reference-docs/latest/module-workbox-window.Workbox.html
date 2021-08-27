@@ -20,7 +20,7 @@
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span>
               &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>6.1.5</small></span>
+              <span class="label label-version"><small>6.2.0</small></span>
             </div>
             <p>A class to aid in handling service worker registration, updates, and
               reacting to service worker lifecycle events.</p>
@@ -48,9 +48,10 @@
                         <p>scriptURL</p>
                       </td>
                       <td>
-                        <p class="details-table-types">string</p>
-                        <p>The service worker script associated with this
-                          instance.</p>
+                        <p class="details-table-types">(string or TrustedScriptURL)</p>
+                        <p>The service worker script
+                          associated with this instance. Using a
+                          <a href="https://web.dev/trusted-types/"><code>TrustedScriptURL</code></a> is supported.</p>
                       </td>
                     </tr>
                     <tr>
@@ -509,6 +510,15 @@
                       <td>
                         <p class="details-table-types">string</p>
                         <p><code>message</code>.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>ports</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Array of MessagePort</p>
+                        <p>The <code>ports</code> value from <code>originalEvent</code>.</p>
                       </td>
                     </tr>
                     <tr>

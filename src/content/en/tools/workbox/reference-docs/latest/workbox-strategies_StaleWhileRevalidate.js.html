@@ -69,7 +69,7 @@ class StaleWhileRevalidate extends Strategy {
      * &#x60;fetch()&#x60; requests made by this strategy.
      * @param {Object} [options.matchOptions] [&#x60;CacheQueryOptions&#x60;](https://w3c.github.io/ServiceWorker/#dictdef-cachequeryoptions)
      */
-    constructor(options) {
+    constructor(options &#x3D; {}) {
         super(options);
         // If this instance contains no plugins with a &#x27;cacheWillUpdate&#x27; callback,
         // prepend the &#x60;cacheOkAndOpaquePlugin&#x60; plugin to the plugins list.
@@ -119,7 +119,9 @@ class StaleWhileRevalidate extends Strategy {
                 response &#x3D; await fetchAndCachePromise;
             }
             catch (err) {
-                error &#x3D; err;
+                if (err instanceof Error) {
+                    error &#x3D; err;
+                }
             }
         }
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {

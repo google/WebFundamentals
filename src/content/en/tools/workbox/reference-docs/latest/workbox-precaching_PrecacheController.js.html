@@ -168,6 +168,8 @@ class PrecacheController {
      * @return {Promise&amp;lt;module:workbox-precaching.InstallResult&gt;}
      */
     install(event) {
+        // waitUntil returns Promise&amp;lt;any&gt;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return waitUntil(event, async () &#x3D;&gt; {
             const installReportPlugin &#x3D; new PrecacheInstallReportPlugin();
             this.strategy.plugins.push(installReportPlugin);
@@ -205,6 +207,8 @@ class PrecacheController {
      * @return {Promise&amp;lt;module:workbox-precaching.CleanupResult&gt;}
      */
     activate(event) {
+        // waitUntil returns Promise&amp;lt;any&gt;
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return waitUntil(event, async () &#x3D;&gt; {
             const cache &#x3D; await self.caches.open(this.strategy.cacheName);
             const currentlyCachedRequests &#x3D; await cache.keys();

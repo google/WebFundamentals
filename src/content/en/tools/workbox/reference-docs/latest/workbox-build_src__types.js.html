@@ -111,15 +111,19 @@ import &#x27;./_version.mjs&#x27;;
  * property to use when creating the
  * [&#x60;ExpirationPlugin&#x60;]{@link module:workbox-expiration.ExpirationPlugin}.
  *
- * @property {number} [options.expiration.maxEntries] The &#x60;maxAgeSeconds&#x60;
+ * @property {number} [options.expiration.maxEntries] The &#x60;maxEntries&#x60;
  * property to use when creating the
  * [&#x60;ExpirationPlugin&#x60;]{@link module:workbox-expiration.ExpirationPlugin}.
  *
  * @property {Object} [options.precacheFallback]
  *
- * @property {number} [options.precacheFallback.fallbackURL] The &#x60;fallbackURL&#x60;
+ * @property {string} [options.precacheFallback.fallbackURL] The &#x60;fallbackURL&#x60;
  * property to use when creating the
  * [&#x60;PrecacheFallbackPlugin&#x60;]{@link module:workbox-precaching.PrecacheFallbackPlugin}.
+ *
+ * @property {boolean} [options.rangeRequests] Set to &#x60;true&#x60; to add the
+ * [&#x60;RangeRequestsPlugin&#x60;]{@link module:workbox-range-requests.RangeRequestsPlugin}
+ * for the strategy being configured.
  *
  * @property {Object} [options.matchOptions] The &#x60;matchOptions&#x60; property value
  * to use when constructing one of the

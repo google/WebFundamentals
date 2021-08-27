@@ -81,7 +81,7 @@ function registerRoute(capture, handler, method) {
                 if ((url.pathname &#x3D;&#x3D;&#x3D; captureUrl.pathname) &amp;amp;&amp;amp;
                     (url.origin !&#x3D;&#x3D; captureUrl.origin)) {
                     logger.debug(&#x60;${capture} only partially matches the cross-origin URL &#x60; +
-                        &#x60;${url}. This route will only handle cross-origin requests &#x60; +
+                        &#x60;${url.toString()}. This route will only handle cross-origin requests &#x60; +
                         &#x60;if they match the entire URL.&#x60;);
                 }
             }

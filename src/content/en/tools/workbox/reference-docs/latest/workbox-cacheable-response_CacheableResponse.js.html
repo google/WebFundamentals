@@ -127,7 +127,7 @@ class CacheableResponse {
                     logFriendlyHeaders[key] &#x3D; value;
                 });
                 logger.groupCollapsed(&#x60;View response status and headers here.&#x60;);
-                logger.log(&#x60;Response status: &#x60; + response.status);
+                logger.log(&#x60;Response status: ${response.status}&#x60;);
                 logger.log(&#x60;Response headers: &#x60; +
                     JSON.stringify(logFriendlyHeaders, null, 2));
                 logger.groupEnd();

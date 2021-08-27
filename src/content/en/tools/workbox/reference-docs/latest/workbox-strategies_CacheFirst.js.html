@@ -66,7 +66,7 @@ class CacheFirst extends Strategy {
             });
         }
         let response &#x3D; await handler.cacheMatch(request);
-        let error;
+        let error &#x3D; undefined;
         if (!response) {
             if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
                 logs.push(&#x60;No response found in the &#x27;${this.cacheName}&#x27; cache. &#x60; +
@@ -76,7 +76,9 @@ class CacheFirst extends Strategy {
                 response &#x3D; await handler.fetchAndCachePut(request);
             }
             catch (err) {
-                error &#x3D; err;
+                if (err instanceof Error) {
+                    error &#x3D; err;
+                }
             }
             if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
                 if (response) {
