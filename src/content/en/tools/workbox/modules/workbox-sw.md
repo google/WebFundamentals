@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-sw.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2020-05-01 #}
+{# wf_updated_on: 2021-08-23 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox {: .page-title }
@@ -52,21 +52,18 @@ If you don’t want to use the CDN, it’s easy enough to switch to Workbox file
 hosted on your own domain.
 
 The simplest approach is to get the files via [`workbox-cli`'s `copyLibraries`
-command](/web/tools/workbox/modules/workbox-cli#copylibraries) or from a [GitHub
-Release](https://github.com/GoogleChrome/workbox/releases), and then tell
+command](/web/tools/workbox/modules/workbox-cli#copylibraries), and then tell
 `workbox-sw` where to find these files via the `modulePathPrefix` config option.
 
-If you put the files under `/third_party/workbox/`, you would use them like so:
+If you put the files under `/third_party/workbox-vX.Y.Z/`, you would use them like so:
 
 <pre class="prettyprint js">
-importScripts('/third_party/workbox/workbox-sw.js');
+importScripts('/third_party/workbox-vX.Y.Z/workbox-sw.js');
 
 workbox.setConfig({
-  modulePathPrefix: '/third_party/workbox/'
+  modulePathPrefix: '/third_party/workbox-vX.Y.Z/'
 });
 </pre>
-
-With this, you’ll use only the local Workbox files.
 
 ## Avoid Async Imports
 
