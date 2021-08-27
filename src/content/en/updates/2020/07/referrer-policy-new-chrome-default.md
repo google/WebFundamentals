@@ -197,7 +197,7 @@ like `strict-origin-when-cross-origin` or stricter right now.
 This protects your users and makes your website behave more predictably across browsers. Mostly, it
 gives you control —rather than having your site depend on browser defaults.
 
-Check [Referer and Referrer-Policy: best practices](https://web.dev/referrer-best-practices) for
+Check [Referrer and Referrer-Policy: best practices](https://web.dev/referrer-best-practices) for
 details on setting a policy.
 
 ### About Chrome enterprise
