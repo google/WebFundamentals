@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: This article is about me playing with the experimental WebGPU API and sharing my journey with web developers interested in performing data-parallel computations using the GPU.
 
 
-{# wf_updated_on: 2021-07-15 #}
+{# wf_updated_on: 2021-09-02 #}
 {# wf_published_on: 2019-08-28 #}
 {# wf_tags: news,gpu,canvas,graphics #}
 {# wf_blink_components: Blink>WebGPU #}
@@ -397,15 +397,15 @@ const shaderModule = device.createShaderModule({
 
       resultMatrix.size = vec2<f32>(firstMatrix.size.x, secondMatrix.size.y);
 
-      let resultCell : vec2<u32> = vec2<u32>(global_id.x, global_id.y);
-      var result : f32 = 0.0;
-      for (var i : u32 = 0u; i < u32(firstMatrix.size.y); i = i + 1u) {
-        let a : u32 = i + resultCell.x * u32(firstMatrix.size.y);
-        let b : u32 = resultCell.y + i * u32(secondMatrix.size.y);
+      let resultCell = vec2<u32>(global_id.x, global_id.y);
+      var result = 0.0;
+      for (var i = 0u; i < u32(firstMatrix.size.y); i = i + 1u) {
+        let a = i + resultCell.x * u32(firstMatrix.size.y);
+        let b = resultCell.y + i * u32(secondMatrix.size.y);
         result = result + firstMatrix.numbers[a] * secondMatrix.numbers[b];
       }
 
-      let index : u32 = resultCell.y + resultCell.x * u32(secondMatrix.size.y);
+      let index = resultCell.y + resultCell.x * u32(secondMatrix.size.y);
       resultMatrix.numbers[index] = result;
     }
   `
