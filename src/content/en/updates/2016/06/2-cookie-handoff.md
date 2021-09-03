@@ -4,6 +4,7 @@ description: Introducing a proof of concept design to persist sessions using the
 
 {# wf_updated_on: 2021-09-03 #}
 {# wf_published_on: 2016-06-19 #}
+{# wf_blink_components: N/A #}
 {# wf_tags: identity,sessions,cookie,serviceworker #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 
