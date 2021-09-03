@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Introducing a proof of concept design to persist sessions using the Service Worker.
 
-{# wf_updated_on: 2016-06-19 #}
+{# wf_updated_on: 2021-09-03 #}
 {# wf_published_on: 2016-06-19 #}
+{# wf_blink_components: N/A #}
 {# wf_tags: identity,sessions,cookie,serviceworker #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 
@@ -12,7 +13,9 @@ description: Introducing a proof of concept design to persist sessions using the
 {% include "web/_shared/contributors/wdenniss.html" %}
 {% include "web/_shared/contributors/owencm.html" %}
 
-
+Warning: While we're keeping this information available for historical purposes,
+we don't encourage developers to adopt this pattern. Many of the links and
+examples in this post are out of date.
 
 We all love how native apps will ask you to login only once and then remember
 you until you tell them you want to log out. Unfortunately the web doesn't
