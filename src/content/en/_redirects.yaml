@@ -231,6 +231,9 @@ redirects:
 - from: /web/updates/2018/03/clipboardapi
   to: https://web.dev/async-clipboard
 
+- from: /web/updates/2019/08/get-started-with-gpu-compute-on-the-web
+  to: https://web.dev/gpu-compute
+
 ## Redirects for PWA content migrated to web.dev
 
 - from: /web/g-co/dpwa
