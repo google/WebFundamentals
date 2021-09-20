@@ -263,7 +263,7 @@ Here's its service worker, `sw.js`:
 
 It caches an image of a cat, and serves it whenever there's a request for
 `/dog.svg`. However, if you [run the above
-example](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external },
+example](https://service-worker-lifecycle-demos.glitch.me/main/){: .external },
 you'll see a dog the first time you load the page. Hit refresh, and
 you'll see the cat.
 
@@ -317,12 +317,12 @@ events like `push` and `sync`, you'll get an `activate` event. But that doesn't
 mean the page that called `.register()` will be controlled.
 
 The first time you load [the
-demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external },
+demo](https://service-worker-lifecycle-demos.glitch.me/main/){: .external },
 even though `dog.svg` is requested long after the service worker
 activates, it doesn't handle the request, and you still see the image of the
 dog. The default is *consistency*, if your page loads without a service worker,
 neither will its subresources. If you load [the
-demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external } a second time
+demo](https://service-worker-lifecycle-demos.glitch.me/main/){: .external } a second time
 (in other words, refresh the page), it'll be controlled. Both the page and the
 image will go through `fetch` events, and you'll see a cat
 instead.
@@ -333,7 +333,7 @@ You can take control of uncontrolled clients by calling `clients.claim()` within
 your service worker once it's activated.
 
 Here's [a variation of the demo
-above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){: .external } which calls
+above](https://service-worker-lifecycle-demos.glitch.me/claimed/){: .external } which calls
 `clients.claim()` in its `activate` event. You *should* see
 a cat the first time. I say "should", because this is timing sensitive. You'll only
 see a cat if the service worker activates and `clients.claim()` takes effect
@@ -592,7 +592,7 @@ a horse rather than a cat:
 Note: I have no strong opinions on horses.
 
 [Check out a demo of the
-above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }.
+above](https://service-worker-lifecycle-demos.glitch.me/main/v2.html){: .external }.
 You should still see an image of a cat. Here's why…
 
 ### Install
@@ -613,7 +613,7 @@ is called "waiting", and it's how the browser ensures that only one version of
 your service worker is running at a time.
 
 If you ran [the updated
-demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }, you should still see a picture of a cat,
+demo](https://service-worker-lifecycle-demos.glitch.me/main/v2.html){: .external }, you should still see a picture of a cat,
 because the V2 worker hasn't yet activated. You can see the new service
 worker waiting in the "Application" tab of DevTools:
 
@@ -630,7 +630,7 @@ is always controlling a client during a refresh.
 
 To get the update, close or navigate away from all tabs using the current service
 worker. Then, when you [navigate to the demo
-again](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external },
+again](https://service-worker-lifecycle-demos.glitch.me/main/v2.html){: .external },
 you should see the horse.
 
 This pattern is similar to how Chrome updates. Updates to Chrome download in the
@@ -687,7 +687,7 @@ But you may want to call it as a results of a `postMessage()` to the service
 worker. As in, you want to `skipWaiting()` following a user interaction.
 
 [Here's a demo that uses
-`skipWaiting()`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){: .external }.
+`skipWaiting()`](https://service-worker-lifecycle-demos.glitch.me/main/v3.html){: .external }.
 You should see a picture of a cow without having to navigate away.
 Like `clients.claim()` it's a race, so you'll only see the cow if the new service
 worker fetches, installs and activates before the page tries to load the image.
@@ -731,7 +731,7 @@ position where you need to update your service worker in order to update your
 service worker. Ew.
 
 However, for [the demo
-above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external },
+above](https://service-worker-lifecycle-demos.glitch.me/main/v2.html){: .external },
 I *have* changed the URL of the service worker. This is so, for the
 sake of the demo, you can switch between the versions. It isn't something I'd do
 in production.
