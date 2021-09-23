@@ -7,6 +7,32 @@ redirects:
 - from: /web/updates/nic
   to: /web/updates/2020/11/nic87
 
+# Media Updates
+
+- from: /web/updates/2017/03/chrome-58-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-58/
+
+- from: /web/updates/2017/07/chrome-61-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-61/
+
+- from: /web/updates/2017/09/chrome-62-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-62/
+
+- from: /web/updates/2017/12/chrome-63-64-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-63-64/
+
+- from: /web/updates/2018/08/chrome-69-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-69/
+
+- from: /web/updates/2018/09/chrome-70-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-70/
+
+- from: /web/updates/2019/02/chrome-73-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-73/
+
+- from: /web/updates/2019/07/chrome-75-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-75/
+
 # DevTools
 
 - from: /web/updates/2017/05/devtools-release-notes
