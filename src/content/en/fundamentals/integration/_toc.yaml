@@ -27,4 +27,7 @@ toc:
       path: /web/fundamentals/design-and-ux/input/forms/
     - title: Add Touch To Your Site
       path: /web/fundamentals/design-and-ux/input/touch/
+  - title: Web Payments
+    path: https://web.dev/payments
+    status: external
   - include: /web/fundamentals/push-notifications/_toc.yaml
