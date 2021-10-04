@@ -53,21 +53,23 @@ landing_page:
     - description-50
     classname: cds20-marquee-margin-fix
     items:
-    - image_path: /web/images/cds20-art.png
-      heading: "Chrome Dev Summit 2020"
+    - image_path: /web/images/cds21-art.jpg
+      heading: "Chrome Dev Summit 2021"
       description: >
-        Chrome Dev Summit is over, and we had  fun hosting all of you at
-        the Chrome Dev Summit, and in CDS Adventure.
+        The countdown to Chrome Dev Summit 2021 is on! Tune into the keynote
+        and live ask me anything AMA with Chrome leaders on November 3.
+        Request your invite to participate in office hours, workshops and
+        learning lounges.
       list:
-      - heading: December 9-10
-        description: Sessions, Live Q&A, Workshops, Office Hours & More!
+      - heading: November 3rd, 2021
+        description: Keynote livestream, AMA, workshops, learning loungers and more!
         icon:
           icon_name: event
       buttons:
-      - label: Watch sessions
-        path: https://goo.gle/cds20-sessions
+      - label: Learn more
+        path: https://developer.chrome.com/devsummit/
         classname: button button-primary
-      path: http://goo.gle/cds20-sessions
+      path: https://developer.chrome.com/devsummit/
 
 
   - classname: wf-landing-row
