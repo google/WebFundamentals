@@ -88,7 +88,6 @@ Best of all, the browser acts as an intermediary, storing all the information ne
 
 Payment Request demos are available at these URLs:
 
-* Demo:  [https://emerald-eon.appspot.com/](https://emerald-eon.appspot.com/)
 * Polymer Shop demo:  [https://polykart-credential-payment.appspot.com/](https://polykart-credential-payment.appspot.com/)
 * Simple demos and sample code:  [https://googlechrome.github.io/samples/paymentrequest/](https://googlechrome.github.io/samples/paymentrequest/)
 * Deep dive documentation:  [https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request)
