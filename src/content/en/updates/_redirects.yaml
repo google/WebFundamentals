@@ -501,3 +501,10 @@ redirects:
 - from: /web/updates/chrome-devtools/...
   to: /web/updates/devtools/
 
+# Redirects for payments
+
+- from: /web/updates/2016/07/payment-request
+  to: https://web.dev/how-payment-request-api-works/
+
+- from: /web/updates/2018/06/payment-handler-api
+  to: https://web.dev/web-based-payment-apps-overview/
