@@ -4,6 +4,9 @@
 
 redirects:
 
+- from: /web/fundamentals/performance/navigation-and-resource-timing
+  to: https://web.dev/navigation-and-resource-timing/
+
 - from: /web/fundamentals/codelabs/your-first-pwapp
   to: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
 
