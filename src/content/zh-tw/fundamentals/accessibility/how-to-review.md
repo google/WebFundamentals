@@ -53,7 +53,7 @@ description: How to review your site for accessibility issues.
 
 <img src="imgs/ic_speaker_notes_black_24px.svg" class="attempt-right" alt="" width="100">
 
-改進通用鍵盤支持為下一步奠定了一些基礎，即檢查頁面是否有適當的標籤和語義以及屏幕閱讀器導航的任何障礙。如果您不熟悉輔助技術如何解釋語義標記，請參閱“ [簡介”以](/web/fundamentals/accessibility/semantics-builtin/)了解更新。
+改進通用鍵盤支持為下一步奠定了一些基礎，即檢查頁面是否有適當的標籤和語義以及屏幕閱讀器導航的任何障礙。如果您不熟悉輔助技術如何解釋語義標記，請參閱[語義簡介](/web/fundamentals/accessibility/semantics-builtin/)以了解更新。
 
 ### 關鍵點
 
