@@ -44,7 +44,7 @@ And here’s how it looks with Mutation Observers:
          insertedNodes.push(mutation.addedNodes[i]);
      })
     });
-    observer.observe(document, { childList: true });
+    observer.observe(document.documentElement, { childList: true });
     console.log(insertedNodes);
 
 
