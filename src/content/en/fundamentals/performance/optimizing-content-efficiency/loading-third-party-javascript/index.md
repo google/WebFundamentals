@@ -579,7 +579,7 @@ efficient.
 [IntersectionObserver](/web/updates/2016/04/intersectionobserver) is a browser
 API that allows us to efficiently detect when an observed element enters or
 exits the browser's viewport. Learn more about how to use it for [lazy-loading
-resources](http://deanhume.com/home/blogpost/lazy-loading-images-using-intersection-observer/10163).
+resources](https://deanhume.com/home/blogpost/lazy-loading-images-using-intersection-observer/10163).
 LazySizes also has[ optional
 support](https://github.com/aFarkas/lazysizes/blob/097a9878817dd17be3366633e555f3929a7eaaf1/src/lazysizes-intersection.js)
 for IntersectionObserver.
