@@ -3,7 +3,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-04-26 #}
+{# wf_updated_on: 2021-11-16 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -37,15 +37,15 @@ You can check for browser support of fetch in the window interface. For example:
 
 ```
 if (!('fetch' in window)) {
-  console.log('Fetch API not found, try including the polyfill');
+  console.log('Fetch API not found, please upgrade your browser.');
   return;
 }
 // We can safely use fetch from now on
 ```
 
-There is a  [polyfill](https://github.com/github/fetch) for  [browsers that are not currently supported](http://caniuse.com/#feat=fetch) (but see the readme for important caveats.).
+Fetch is supported across [all modern browsers](https://caniuse.com/fetch), but there is a  [polyfill](https://github.com/github/fetch) if you need to support older browsers.
 
-The  [fetch() method](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) takes the path to a resource as input. The method returns a  [promise](http://www.html5rocks.com/en/tutorials/es6/promises/) that resolves to the  [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) of that request.
+The  [fetch() method](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) takes the path to a resource as input. The method returns a [promise](https://web.dev/promises/) that resolves to the  [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) of that request.
 
 <div id="makerequest"></div>
 
@@ -57,7 +57,7 @@ The  [fetch() method](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFet
 
 Let's look at a simple example of fetching a JSON file:
 
-#### main.js
+#### main.js (with promise chaining)
 
 ```
 fetch('examples/example.json')
@@ -65,34 +65,46 @@ fetch('examples/example.json')
   // Do stuff with the response
 })
 .catch(function(error) {
-  console.log('Looks like there was a problem: \n', error);
+  console.log('Looks like there was a problem: ', error);
 });
 ```
 
-We pass the path for the resource we want to retrieve as a parameter to fetch. In this case this is __examples/example.json__. The fetch call returns a promise that resolves to a response object.
+We pass the path for the resource we want to retrieve as a parameter to fetch. In this example, this is __examples/example.json__. The fetch call returns a promise that resolves to a response object.
 
 When the promise resolves, the response is passed to `.then`. This is where the response could be used. If the request does not complete, `.catch` takes over and is passed the corresponding error.
 
+Note, the previous example uses [promise chaining](https://developers.google.com/web/ilt/pwa/working-with-promises#chaining), however [async/await](https://web.dev/async-functions/) can simplify your code. The remaining examples use async/await or [top-level await](https://v8.dev/features/top-level-await).
+
+Here is the same example as before, but converted to use top-level await.
+
+#### main.js (with top-level await)
+
+```
+try {
+  const response = await fetch('examples/example.json');
+} catch (error) {
+  console.log('Looks like there was a problem: ', error);
+}
+```
+
 Response objects represent the response to a request. They contain the requested resource and useful properties and methods. For example, `response.ok`, `response.status`, and `response.statusText` can all be used to evaluate the status of the response.
 
-Evaluating the success of responses is particularly important when using fetch because bad responses (like 404s) still resolve. The only time a fetch promise will reject is if the request was unable to complete. The previous code segment would only fall back to .`catch` if there was no network connection, but not if the response was bad (like a 404). If the previous code were updated to validate responses it would look like:
+Evaluating the success of responses is particularly important when using fetch because bad responses (like 404s) still resolve. The only time a fetch promise will reject is if the request was unable to complete. The previous code segment would only error if there was no network connection, but not if the response was bad (like a 404). If the previous code were updated to validate responses it would look like:
 
 #### main.js
 
 ```
-fetch('examples/example.json')
-.then(function(response) {
+try {
+  const response = await fetch('examples/example.json');
   if (!response.ok) {
-    throw Error(response.statusText);
+    throw Error(`${response.status} ${response.statusText}`);
   }
-  // Do stuff with the response
-})
-.catch(function(error) {
-  console.log('Looks like there was a problem: \n', error);
-});
+} catch (error) {
+  console.log('Looks like there was a problem: ', error);
+}
 ```
 
-Now if the response object's `ok` property is false (indicating a non 200-299 response), the function throws an error containing `response.statusText` that triggers the `.catch` block. This prevents bad responses from propagating down the fetch chain.
+Now if the response object's `ok` property is false (indicating a [non 200-299 response](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok)), the function throws an error containing `response.status` and `response.statusText` that is caught in the catch-block. This ensures that bad responses are caught early.
 
 <div id="readresponse"></div>
 
@@ -107,75 +119,43 @@ Responses must be read in order to access the body of the response. Response obj
 #### main.js
 
 ```
-fetch('examples/example.json')
-.then(function(response) {
+try {
+  const response = await fetch('examples/example.json');
   if (!response.ok) {
-    throw Error(response.statusText);
+    throw Error(`${response.status} ${response.statusText}`);
   }
   // Read the response as json.
-  return response.json();
-})
-.then(function(responseAsJson) {
-  // Do stuff with the JSON
-  console.log(responseAsJson);
-})
-.catch(function(error) {
-  console.log('Looks like there was a problem: \n', error);
-});
+  const json = await response.json();
+} catch (error) {
+  console.log('Looks like there was a problem: ', error);
+}
 ```
 
-This code will be cleaner and easier to understand if it's abstracted into functions:
+You can wrap the previous code into a function and use it as follows:
 
 #### main.js
 
 ```
-function logResult(result) {
-  console.log(result);
-}
-
-function logError(error) {
-  console.log('Looks like there was a problem: \n', error);
-}
-
-function validateResponse(response) {
-  if (!response.ok) {
-    throw Error(response.statusText);
+async function fetchResource(pathToResource) {
+  try {
+    const response = await fetch(pathToResource);
+    if (!response.ok) {
+      throw Error(`${response.status} ${response.statusText}`);
+    }
+    return response;
+  } catch (error) {
+    console.log('Looks like there was a problem: ', error);
   }
-  return response;
 }
 
-function readResponseAsJSON(response) {
-  return response.json();
+const response = await fetchResource('examples/example.json');
+if (response) {
+  // Read the response as json.
+  console.log(await response.json())
 }
-
-function fetchJSON(pathToResource) {
-  fetch(pathToResource) // 1
-  .then(validateResponse) // 2
-  .then(readResponseAsJSON) // 3
-  .then(logResult) // 4
-  .catch(logError);
-}
-
-fetchJSON('examples/example.json');
 ```
 
-(This is  [promise chaining](working-with-promises#chaining).)
-
- To summarize what's happening:
-
-Step 1. Fetch is called on a resource, __examples/example.json__. Fetch returns a promise that will resolve to a response object. When the promise resolves, the response object is passed to `validateResponse`.
-
-Step 2. `validateResponse` checks if the response is valid (is it a 200-299?). If it isn't, an error is thrown, skipping the rest of the `then` blocks and triggering the `catch` block. This is particularly important. Without this check bad responses are passed down the chain and could break later code that may rely on receiving a valid response. If the response is valid, it is passed to `readResponseAsJSON`.
-
-
-
 Note: You can also handle any network status code using the `status` property of the `response` object. This lets you respond with custom pages for different errors or handle other responses that are not `ok` (i.e., not 200-299), but still usable (e.g., status codes in the 300 range). See  [Caching files with the service worker](caching-files-with-service-worker#generic-fallback) for an example of a custom response to a 404.
-
-
-
-Step 3. `readResponseAsJSON` reads the body of the response using the  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) method. This method returns a promise that resolves to JSON. Once this promise resolves, the JSON data is passed to `logResult`. (Can you think of what would happen if the promise from `response.json()` rejects?)
-
-Step 4. Finally, the JSON data from the original request to __examples/example.json__ is logged by `logResult`.
 
 #### For more information
 
@@ -190,31 +170,21 @@ Let's look at an example of fetching an image and appending it to a web page.
 #### main.js
 
 ```
-function readResponseAsBlob(response) {
-  return response.blob();
-}
-
 function showImage(responseAsBlob) {
-  // Assuming the DOM has a div with id 'container'
-  var container = document.getElementById('container');
-  var imgElem = document.createElement('img');
-  container.appendChild(imgElem);
-  var imgUrl = URL.createObjectURL(responseAsBlob);
-  imgElem.src = imgUrl;
+  const imgUrl = URL.createObjectURL(responseAsBlob);
+  const imageEl = document.createElement('img');
+  imageEl.src = imgUrl;
+  document.body.appendChild(imageEl);
 }
 
-function fetchImage(pathToResource) {
-  fetch(pathToResource)
-  .then(validateResponse)
-  .then(readResponseAsBlob)
-  .then(showImage)
-  .catch(logError);
+// Uses the same fetchResource function as shown in previous examples
+const response = await fetchResource('examples/kitten.jpg');
+if (response) {
+  showImage(await response.blob());
 }
-
-fetchImage('examples/kitten.jpg');
 ```
 
-In this example an image (__examples/kitten.jpg)__ is fetched. As in the previous example, the response is validated with `validateResponse`. The response is then read as a  [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) (instead of as JSON), and an image element is created and appended to the page, and the image's `src` attribute is set to a data URL representing the Blob.
+In this example an image (__examples/kitten.jpg__) is fetched. Similar to the previous example, the response is validated with the `fetchResource` function. The response is then read as a  [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) (instead of as JSON), and an image element is created and appended to the page, and the image's `src` attribute is set to a data URL representing the Blob.
 
 
 
@@ -230,37 +200,26 @@ Note: The <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL">URL obj
 
 ### Example: fetching text
 
-Let's look at another example, this time fetching some text and inserting it into the page.
+Let's look at another example, this time fetching some text and inserting it into the current page.
 
 #### main.js
 
 ```
-function readResponseAsText(response) {
-  return response.text();
-}
-
 function showText(responseAsText) {
-  // Assuming the DOM has a div with id 'message'
-  var message = document.getElementById('message');
-  message.textContent = responseAsText;
+  document.body.textContent = responseAsText;
 }
 
-function fetchText(pathToResource) {
-  fetch(pathToResource)
-  .then(validateResponse)
-  .then(readResponseAsText)
-  .then(showText)
-  .catch(logError);
+const response = await fetchResource('examples/words.txt');
+if (response) {
+  showText(await response.text());
 }
-
-fetchText('examples/words.txt');
 ```
 
-In this example a text file is being fetched, __examples/words.txt__. Like the previous two exercises, the response is validated with `validateResponse`. Then the response is read as text, and appended to the page.
+In this example a text file is being fetched, __examples/words.txt__. Like the previous two examples, the response is validated with the `fetchResource` function. Then the response is read as text, and appended to the page.
 
 
 
-Note: It may be tempting to fetch HTML and append that using the <code>innerHTML</code> attribute, but be careful -- this can expose your site to <a href="https://www.google.com/about/appsecurity/learning/xss/">cross site scripting attacks</a>!
+Note: It may be tempting to fetch HTML and append that using the <code>innerHTML</code> attribute, but be careful -- this can expose your site to <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss">cross site scripting attacks</a>!
 
 
 
@@ -270,7 +229,7 @@ Note: It may be tempting to fetch HTML and append that using the <code>innerHTML
 
 
 
-Note: For completeness, the methods we have used are actually methods of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body">Body</a>, a Fetch API <a href="https://developer.mozilla.org/en-US/docs/Glossary/mixin">mixin</a> that is implemented in the Response object.
+Note: For completeness, the methods we have used are actually methods of <a href="https://fetch.spec.whatwg.org/#dom-body-body">Body</a>, a Fetch API <a href="https://developer.mozilla.org/en-US/docs/Glossary/mixin">mixin</a> that is implemented in the Response object.
 
 
 
@@ -290,7 +249,7 @@ Note: For completeness, the methods we have used are actually methods of <a href
 
 By default fetch uses the GET method, which retrieves a specific resource, but other request HTTP methods can also be used.
 
-HEAD requests are just like GET requests except the body of the response is empty. You can use this kind of request when all you want the file's metadata, and you want or need the file's data to be transported.
+HEAD requests are just like GET requests except the body of the response is empty. You can use this kind of request when all you want is the file's metadata, and you want or need the file's data to be transported.
 
 To call an API with a HEAD request, set the method in the `init` parameter. For example:
 
@@ -302,29 +261,37 @@ fetch('examples/words.txt', {
 })
 ```
 
-This will make a HEAD request for __examples/words.txt__.
-
-You could use a HEAD request to check the size of a resource. For example:
+This will make a HEAD request for __examples/words.txt__. We can update the `fetchResource` function signature to receive an options object for the fetch API.
 
 #### main.js
 
 ```
-function checkSize(response) {
-  var size = response.headers.get('content-length');
-  // Do stuff based on response size
+async function fetchResource(pathToResource, init) {
+  try {
+    // Pass `init` to fetch()
+    const response = await fetch(pathToResource, init);
+    if (!response.ok) {
+      throw Error(`${response.status} ${response.statusText}`);
+    }
+    return response;
+  } catch (error) {
+    console.log('Looks like there was a problem: ', error);
+  }
 }
+```
 
-function headRequest(pathToResource) {
-  fetch(pathToResource, {
-    method: 'HEAD'
-  })
-  .then(validateResponse)
-  .then(checkSize)
-  // ...
-  .catch(logError);
+Now, you could use a HEAD request to check the size of a resource. For example:
+
+#### main.js
+
+```
+const response = await fetchResource('examples/words.txt', {
+  method: 'HEAD'
+});
+
+if (response) {
+  const size = response.headers.get('content-length');
 }
-
-headRequest('examples/words.txt');
 ```
 
 Here the HEAD method is used to request the size (in bytes) of a resource (represented in the __content-length__ header) without actually loading the resource itself. In practice this could be used to determine if the full resource should be requested (or even how to request it).
@@ -369,7 +336,7 @@ The `init` parameter can be used with the  [Headers](https://developer.mozilla.o
 #### main.js
 
 ```
-var myHeaders = new Headers({
+const myHeaders = new Headers({
   'Content-Type': 'text/plain',
   'X-Custom-Header': 'hello world'
 });
@@ -407,11 +374,9 @@ Fetch (and XMLHttpRequest) follow the  [same-origin policy](https://developer.mo
 #### main.js
 
 ```
-// From http://foo.com/
-fetch('http://bar.com/data.json')
-.then(function(response) {
-  // Do something with response
-});
+// From https://foo.com/
+const response = await fetch('https://bar.com/data.json');
+// do something with the response
 ```
 
 
@@ -429,13 +394,11 @@ You can use  [`no-cors`](https://developer.mozilla.org/en-US/docs/Web/API/Global
 #### main.js
 
 ```
-  // From http://foo.com/
-fetch('http://bar.com/data.json', {
+// From https://foo.com/
+const response = await fetch('https://bar.com/data.json', {
   mode: 'no-cors' // 'cors' by default
 })
-.then(function(response) {
-  // Do something with response
-});
+// Do something with response
 ```
 
 #### For more information
