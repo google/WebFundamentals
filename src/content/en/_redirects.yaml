@@ -29,6 +29,9 @@ redirects:
 - from: /web/g-co/twa
   to: /web/android/trusted-web-activity/
 
+- from: /web/agencies/...
+  to: https://marketingplatform.google.com/about/partners/find-a-partner
+
 #
 # Redirects for content migrated to web.dev
 #
@@ -182,7 +185,7 @@ redirects:
 
 - from: /web/updates/2018/05/first-input-delay
   to: https://web.dev/fid/
-  
+
 - from: /web/updates/2018/07/reportingobserver
   to: https://web.dev/reporting-observer/
 
