@@ -41,10 +41,7 @@ footer:
       path: https://support.google.com/webmasters/
     - label: Search Console Community
       path: https://support.google.com/webmasters/community
-    - label: Instructor Led Training
-      path: /web/ilt/
-    - label: Agencies
-      path: /web/agencies/
+
 
   - name: Contribute
     icon_name: bug_report
