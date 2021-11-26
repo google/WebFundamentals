@@ -125,7 +125,7 @@ redirects:
   to: https://web.dev/reduce-javascript-payloads-with-code-splitting
 
 - from: /web/fundamentals/instant-and-offline/offline-ux
-  to: https://web.dev/offline-ux-considerations/
+  to: https://web.dev/offline-ux-design-guidelines/
 
 ## Redirects for Updates content migrated to web.dev
 
