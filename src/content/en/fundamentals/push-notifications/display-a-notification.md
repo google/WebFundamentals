@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-06-08 #}
+{# wf_updated_on: 2021-11-25 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -129,7 +129,7 @@ and on Firefox:
 
 Sadly there aren't any solid guidelines for what size image to use for an icon.
 
-[Android seems to want a 64dp image](http://stackoverflow.com/questions/7220738/honeycomb-notifications-how-to-set-largeicon-to-the-right-size)
+[Android seems to want a 64dp image](https://stackoverflow.com/questions/7220738/honeycomb-notifications-how-to-set-largeicon-to-the-right-size)
 (which is 64px multiples by the device pixel ratio).
 
 If we assume the highest pixel ratio for a device will be 3, an icon size
@@ -162,7 +162,7 @@ On other browsers (or Chrome without the badge), you'll see an icon of the brows
 As with the `icon` option, there are no real guidelines on what size to use.
 
 Digging through [Android
-guidelines](https://developer.android.com/guide/practices/ui_guidelines/icon_design_status_bar.html)
+guidelines](https://developer.android.com/studio/write/image-asset-studio#notification)
 the recommended size is 24px multiplied by the device pixel ratio.
 
 Meaning an image of 72px or more should be good (assuming a max device
@@ -197,7 +197,7 @@ best approach is to serve an image with this ratio and allow Android to crop the
 being said, the `image` option is still new and this behavior may change.
 
 On Android, the only [guideline
-width](https://code.google.com/p/android/issues/detail?id=36744) I could find is a width of
+width](https://issuetracker.google.com/issues/36953847) I could find is a width of
 450dp.
 
 Using this guideline, an image of width 1350px or more would be a good
@@ -311,7 +311,7 @@ On Firefox (while hovering over it) you'll get this:
 
 ### Vibrate
 
-Caution: Support for [`vibrate` has been deprecated](https://crbug.com/971422)
+Caution: Support for [`vibrate` has been deprecated](https://bugs.chromium.org/p/chromium/issues/detail?id=971422)
 on Android O or later.
 
 The vibrate option allows you to define a vibration pattern that'll run when a notification is
