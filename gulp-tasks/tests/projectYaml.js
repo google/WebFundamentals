@@ -58,7 +58,6 @@ const SCHEMA_PROJECT = {
       additionalProperties: false,
     },
     footer_path: {type: 'string', required: true},
-    gcs_id: {type: 'string'},
     google_analytics_ids: {
       type: 'array',
       items: {type: 'string', format: 'wfUAString'},
