@@ -2,24 +2,16 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: In Chrome 56 and 57, there are a few changes to the Payment Request API following the spec changes. Learn what they are and make changes to your own implementations.
 
-{# wf_updated_on: 2017-10-13 #}
+{# wf_updated_on: 2021-12-07 #}
 {# wf_published_on: 2017-01-31 #}
 {# wf_tags: payment,chrome56,chrome57,chrome61,chrome62 #}
 {# wf_featured_image: /web/updates/images/2016/07/payment-request/0.png #}
 {# wf_featured_snippet: In Chrome, there are updates to the Payment Request API following the spec changes. Learn what they are and make changes to your own implementation. #}
+{# wf_blink_components: Blink>Payments #}
 
 # Changes in the Payment Request API {: .page-title}
 
 {% include "web/_shared/contributors/agektmr.html" %}
-
-Since the launch of the Payment Request API in Chrome 53, a few changes have
-been made to the API. These changes won't break the functionalities of your
-working code, but we recommend you to add [a
-shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) to your code so
-that future changes won't break your product.
-
-Note: All changes described here are already reflected in [the existing
-integration guides](/web/fundamentals/discovery-and-monetization/payment-request/).
 
 ## Chrome 62
 
