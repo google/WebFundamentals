@@ -1,6 +1,9 @@
 # ATTENTION - changes made to this file not in GitHub will be over written!
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
+keywords:
+- docType:Product
+page_type: Product
 landing_page:
   body_class: hide-devsite-banner
   meta_tags:
