@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A step-by-step guide to the basics of UX design.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2021-12-20 #}
 {# wf_published_on: 2016-10-01 #}
 {# wf_blink_components: N/A #}
 
