@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 
 landing_page:
   header:
-    description: <!-- No Description -->
+    hide_description: true
 
   rows:
   - custom_html: >
