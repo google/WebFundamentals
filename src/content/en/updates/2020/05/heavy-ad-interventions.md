@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Handling Heavy Ad Interventions
 
 {# wf_published_on: 2020-05-14 #}
-{# wf_updated_on: 2021-01-13 #}
+{# wf_updated_on: 2022-02-03 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_tags: devtools,performance #}
 {# wf_featured_snippet: Chrome’s Heavy Ad Intervention will unload ads that exceed their allowance for CPU or network usage. Learn how to monitor these with the Reporting API and update your ads to avoid issues. #}
@@ -21,11 +21,11 @@ to less visible consequences such as draining the battery or eating up bandwidth
 allowances. These ads range from the actively malicious, such as cryptocurrency
 miners, through to genuine content with inadvertent bugs or performance issues.
 
-Chrome is experimenting with setting limits on the resources an ad may use and
-unloading that ad if the limits are exceeded. You can read
-[the announcement on the Chromium blog](https://blog.chromium.org/2020/05/resource-heavy-ads-in-chrome.html)
-for more details. The mechanism used for unloading ads is the
-[Heavy Ad Intervention](https://github.com/johnivdel/heavy-ad-intervention).
+Chrome sets limits on the resources an ad may use and unloads that ad if the
+limits are exceeded. You can read [the announcement on the Chromium
+blog](https://blog.chromium.org/2020/05/resource-heavy-ads-in-chrome.html) for
+more details. The mechanism used for unloading ads is the [Heavy Ad
+Intervention](https://github.com/johnivdel/heavy-ad-intervention).
 
 ## Heavy Ad criteria
 
@@ -44,21 +44,17 @@ are on how long the CPU takes to execute the ad's code.
 
 ## Testing the intervention
 
-You can test the new intervention in Chrome 84 and upwards.
+The intervention shipped  in Chrome 85, but by default there is some noise and
+variability added to the thresholds to protect user privacy.
 
-- Enable `chrome://flags/#enable-heavy-ad-intervention`
-- Disable `chrome://flags/#heavy-ad-privacy-mitigations`
+Setting `chrome://flags/#heavy-ad-privacy-mitigations` to **Disabled** removes
+those protections, meaning the restrictions are applied deterministically,
+purely according to the limits. This should make debugging and testing easier.
 
-Setting `chrome://flags/#enable-heavy-ad-intervention` to **Enabled** activates
-the new behavior, but by default there is some noise and variability added to
-the thresholds to protect user privacy. Setting
-`chrome://flags/#heavy-ad-privacy-mitigations` to **Disabled** prevents this,
-meaning the restrictions are applied deterministically, purely according to the
-limits. This should make debugging and testing easier.
-
-Note: Earlier versions of Chrome include the
-`#heavy-ad-privacy-mitigations-opt-out` flag which should be set to **Enabled**
-for testing.
+Note: Earlier versions of Chrome included the
+`#heavy-ad-privacy-mitigations-opt-out`  and `#enable-heavy-ad-intervention`
+flags for initial testing. These flags are no longer required and have been
+removed.
 
 When the intervention is triggered you should see the content in the iframe for
 a heavy ad replaced with an **Ad removed** message. If you follow the included
@@ -233,6 +229,11 @@ dot **⋮** menu then **More Tools** > **Rendering**) select "**Highlight Ad
 Frames**". If testing content in the top-level window or other context where it
 is not tagged as an ad the intervention will not be triggered, but you can still
 manually check against the thresholds.
+
+A frame's ad status is also displayed in the **Elements** pane where an `ad`
+annotation is added after the opening `<iframe>` tag. This is also visible in
+the **Application** pane under the **Frames** section, where ad-tagged frames
+will include an "**Ad Status**" attribute.
 
 ### Network usage
 
