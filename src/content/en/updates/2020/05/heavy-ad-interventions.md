@@ -44,7 +44,7 @@ are on how long the CPU takes to execute the ad's code.
 
 ## Testing the intervention
 
-The intervention shipped  in Chrome 85, but by default there is some noise and
+The intervention shipped in Chrome 85, but by default there is some noise and
 variability added to the thresholds to protect user privacy.
 
 Setting `chrome://flags/#heavy-ad-privacy-mitigations` to **Disabled** removes
@@ -52,7 +52,7 @@ those protections, meaning the restrictions are applied deterministically,
 purely according to the limits. This should make debugging and testing easier.
 
 Note: Earlier versions of Chrome included the
-`#heavy-ad-privacy-mitigations-opt-out`  and `#enable-heavy-ad-intervention`
+`#heavy-ad-privacy-mitigations-opt-out` and `#enable-heavy-ad-intervention`
 flags for initial testing. These flags are no longer required and have been
 removed.
 
@@ -232,7 +232,7 @@ manually check against the thresholds.
 
 A frame's ad status is also displayed in the **Elements** pane where an `ad`
 annotation is added after the opening `<iframe>` tag. This is also visible in
-the **Application** pane under the **Frames** section, where ad-tagged frames
+the **Application** panel under the **Frames** section, where ad-tagged frames
 will include an "**Ad Status**" attribute.
 
 ### Network usage
