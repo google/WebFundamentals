@@ -20,7 +20,7 @@ Each recipe combines a number of [Workbox modules](/web/tools/workbox/modules) t
 
 The offline fallback recipe allows your service worker to serve a web page, image, or font if there's a routing error for any of the three, for instance if a user is offline and there isn't a cache hit. In version 6.1.0 of Workbox Recipes, the requirement to cache these items using [precaching](/web/tools/workbox/modules/workbox-precaching) was removed; for backwards compatibility, it will look for items in the precache first before trying its own cache.
 
-This recipe, by default, assumes the fallback page is `offline.html` and that there isn't an image or font fallback. See the [offline fallback options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~offlineFallback) for a list of all configuration options.
+This recipe, by default, assumes the fallback page is `offline.html` and that there isn't an image or font fallback. See the [offline fallback options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#.offlineFallback) for a list of all configuration options.
 
 The offline fallback will only be applied if there's a matching [route](/web/tools/workbox/modules/workbox-routing) for a given request. If you're using the offline fallback recipe on its own, you'll need to create routes yourself. The simplest way to do is to use the [`setDefaultHandler()`](/web/tools/workbox/modules/workbox-routing#set_a_default_handler) method to create a route that applies the [`NetworkOnly`](/web/tools/workbox/modules/workbox-strategies#network_only) strategy to all requests, as shown below. Other recipes, like the [page cache](#page_cache), [static resource cache](#static_resources_cache), or [image cache](#image_cache), set up routes for their respective caches. `setDefaultHandler()` is not required when using both offline fallback and one of those recipes.
 
@@ -90,7 +90,7 @@ setCatchHandler(handler);
 
 The warm strategy cache recipe allows you to load provided URLs into your cache during the service worker's `install` phase, caching them with the options of the provided [strategy](/web/tools/workbox/modules/workbox-strategies). This can be used as an alternative to [precaching](/web/tools/workbox/modules/workbox-precaching) if you know the specific URLs you'd like to cache, want to warm the cache of a route, or similar places where you'd like cache URLs during installation.
 
-See the [warm strategy cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~warmStrategyCache) for a list of all configuration options.
+See the [warm strategy cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#.warmStrategyCache) for a list of all configuration options.
 
 #### Recipe
 
@@ -131,7 +131,7 @@ self.addEventListener('install', event => {
 
 The page cache recipe allows your service worker to respond to a request for an HTML page (through URL navigation) with a [network first](/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache) caching strategy, optimized to, ideally, allow for the cache fallback to arrive quick enough for for a [largest contentful paint](https://web.dev/vitals/) score of less than 4.0 seconds.
 
-This recipe, by default, assumes the network timeout should be 3 seconds and supports [cache warming](#warm_strategy_cache) through the `warmCache` option. See the [page cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~pageCache) for a list of all configuration options.
+This recipe, by default, assumes the network timeout should be 3 seconds and supports [cache warming](#warm_strategy_cache) through the `warmCache` option. See the [page cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#.pageCache) for a list of all configuration options.
 
 #### Recipe
 
@@ -170,7 +170,7 @@ registerRoute(
 
 The static resources cache recipe allows your service worker to respond to a request for static resources, specifically CSS, JavaScript, and Web Worker requests, with a [stale-while-revalidate](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate) caching strategy so those assets can be quickly served from the cache and be updated in the background
 
-This recipe supports [cache warming](#warm_strategy_cache) through the `warmCache` option. See the [static resources cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~staticResourceCache) for a list of all configuration options.
+This recipe supports [cache warming](#warm_strategy_cache) through the `warmCache` option. See the [static resources cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#.staticResourceCache) for a list of all configuration options.
 
 #### Recipe
 
@@ -213,7 +213,7 @@ registerRoute(
 
 The image cache recipe allows your service worker to respond to a request for images with a [cache-first](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) caching strategy so that once they're available in cache a user doesn't need to make another request for them.
 
-This recipe, by default, caches a maximum of 60 images, each for 30 days and supports [cache warming](#warm_strategy_cache) through the `warmCache` option. See the [image cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~imageCache) for a list of all configuration options.
+This recipe, by default, caches a maximum of 60 images, each for 30 days and supports [cache warming](#warm_strategy_cache) through the `warmCache` option. See the [image cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#.imageCache) for a list of all configuration options.
 
 #### Recipe
 
@@ -262,7 +262,7 @@ The Google Fonts recipe caches the two parts of a Google Fonts request:
 
 Because the stylesheet can change frequently, a [stale-while-revalidate](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate) caching strategy is used. The font files themselves, on the other hand, do not change and can leverage a [cache first](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) strategy.
 
-This recipe, by default, caches a maximum of 30 font files, each for one year. See the [Google Fonts cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~googleFontsCache) for a list of all configuration options.
+This recipe, by default, caches a maximum of 30 font files, each for one year. See the [Google Fonts cache options](/web/tools/workbox/reference-docs/latest/module-workbox-recipes#.googleFontsCache) for a list of all configuration options.
 
 #### Recipe
 
