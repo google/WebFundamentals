@@ -1,6 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers and devices have access to the user's geographic location. Learn how to work with the user's location in your site and apps.
+Keywords: docType:Product, product:WebGeolocationApi
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-01-01 #}
@@ -13,7 +14,7 @@ description: Most browsers and devices have access to the user's geographic loca
 The Geolocation API lets you discover, with the user's consent, the user's location. You can use this functionality for things like guiding a user to their destination and geo-tagging user-created content; for example, marking where a photo was taken.
 
 The Geolocation API also lets you see where the user is and keep tabs on them as
-they move around, always with the user's consent (and only while the page is open). This 
+they move around, always with the user's consent (and only while the page is open). This
 creates a lot of interesting use cases, such as integrating with backend systems to prepare an order for collection if the user is close by.
 
 You need to be aware of many things when using the Geolocation API. This guide walks you through the common use cases and solutions.
@@ -23,18 +24,18 @@ Note: As of Chrome 50, the [Geolocation API only works on secure contexts (HTTPS
 ### TL;DR {: .hide-from-toc }
 
 * Use geolocation when it benefits the user.
-* Ask for permission as a clear response to a user gesture. 
+* Ask for permission as a clear response to a user gesture.
 * Use feature detection in case a user's browser doesn't support geolocation.
 * Don't just learn how to implement geolocation; learn the best way to use geolocation.
 * Test geolocation with your site.
 
 ## When to use geolocation
 
-*  Find where the user is closest to a specific physical location to tailor 
+*  Find where the user is closest to a specific physical location to tailor
    the user experience.
 *  Tailor information (such as news) to the user's location.
 *  Show the position of a user on a map.
-*  Tag data created inside your application with the user's location 
+*  Tag data created inside your application with the user's location
    (that is, geo-tag a picture).
 
 ## Ask permission responsibly
@@ -62,7 +63,7 @@ a best guess of where the person currently is.
 
 These solutions often work by looking at the user's IP address and mapping that
 to the physical addresses registered with the RIPE database. These locations
-are often not very accurate, normally giving you the position of the 
+are often not very accurate, normally giving you the position of the
 telecommunications hub or cell phone tower that is nearest to the user. In many
 cases, they might not even be that accurate, especially if the user is on VPN
 or some other proxy service.
@@ -70,7 +71,7 @@ or some other proxy service.
 ### Always request access to location on a user gesture
 
 Make sure that users understand why you’re asking for their location, and what
-the benefit to them will be. Asking for it immediately on the homepage as 
+the benefit to them will be. Asking for it immediately on the homepage as
 the site loads results in a poor user experience.
 
 <div class="attempt-left">
@@ -109,7 +110,7 @@ Boston.
 
 A better experience is to make sure users understand why you’re asking
 them for their location. Add a well-known signifier that is common across
-devices, such as a range finder, or an explicit call to action such as 
+devices, such as a range finder, or an explicit call to action such as
 “Find Near Me.”
 
 <div class="attempt-left">
@@ -124,7 +125,7 @@ devices, such as a range finder, or an explicit call to action such as
   <figure id="fig1">
     <img src="images/nearme.png">
     <figcaption>
-      A specific call to action to find near me  
+      A specific call to action to find near me
     </figcaption>
   </figure>
 </div>
@@ -141,7 +142,7 @@ appear.
 It's good practice to "nudge" users into action if you need them to
 complete the action.
 
-We recommend: 
+We recommend:
 
 1.  Set up a timer that triggers after a short period; 5 seconds is a
     good value.
@@ -171,7 +172,7 @@ We recommend:
       var geoSuccess = function(position) {
         hideNudgeBanner();
         // We have the location, don't display banner
-        clearTimeout(nudgeTimeoutId); 
+        clearTimeout(nudgeTimeoutId);
 
         // Do magic with location
         startPos = position;
@@ -237,7 +238,7 @@ the data.
 ## Watching the user's location
 
 The Geolocation API allows you to obtain the user's location (with user
-consent) with a single call to `getCurrentPosition()`.  
+consent) with a single call to `getCurrentPosition()`.
 
 If you want to continually monitor the user's location, use the Geolocation
 API method, `watchPosition()`. It operates in a similar way to
@@ -246,7 +247,7 @@ software:
 
 1.  Gets a more accurate lock on the user.
 2.  Determines that the user's position is changing.
- 
+
 
     var watchId = navigator.geolocation.watchPosition(function(position) {
       document.getElementById('currentLat').innerHTML = position.coords.latitude;
@@ -256,7 +257,7 @@ software:
 ### When to use geolocation to watch the user's location
 
 *  You want to obtain a more precise lock on the user location.
-*  Your application needs to update the user interface based on new location 
+*  Your application needs to update the user interface based on new location
    information.
 *  Your application needs to update business logic when the user enters a certain
    defined zone.
@@ -366,7 +367,7 @@ Unless you set a timeout, your request for the current position might never retu
 ### Prefer a coarse location over a fine-grained location
 
 If you want to find the nearest store to a user, it's unlikely that you need
-1-meter precision. The API is designed to give a coarse 
+1-meter precision. The API is designed to give a coarse
 location that returns as quickly as possible.
 
 If you do need a high level of precision, it's possible to override the default setting

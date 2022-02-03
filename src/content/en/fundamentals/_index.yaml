@@ -1,5 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
+keywords:
+- docType:Product
+page_type: Product
 
 landing_page:
   nav: both

@@ -63,6 +63,10 @@ const SCHEMA_PROJECT = {
       items: {type: 'string', format: 'wfUAString'},
       required: true,
     },
+    keywords: {
+      type: 'array',
+      items: {type: 'string'},
+    },
     hide_ratings_widget: {
       type: 'boolean',
       additionalProperties: false,
