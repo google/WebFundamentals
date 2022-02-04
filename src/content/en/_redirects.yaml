@@ -189,8 +189,8 @@ redirects:
 - from: /web/updates/2018/07/reportingobserver
   to: https://web.dev/reporting-observer/
 
-  - from: /web/updates/2018/09/reportingapi
-    to: https://web.dev/reporting-api/
+- from: /web/updates/2018/09/reportingapi
+  to: https://web.dev/reporting-api/
 
 - from: /web/updates/2018/11/writable-files
   to: https://web.dev/native-file-system/
