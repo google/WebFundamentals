@@ -4,6 +4,9 @@
 
 redirects:
 
+- from: /web/fundamentals/performance/optimizing-javascript/tree-shaking
+  to: https://web.dev/reduce-javascript-payloads-with-tree-shaking/
+
 - from: /web/fundamentals/performance/navigation-and-resource-timing
   to: https://web.dev/navigation-and-resource-timing/
 

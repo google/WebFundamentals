@@ -81,7 +81,8 @@ toc:
       - title: Optimizing JavaScript
         section:
         - title: Reduce JavaScript Payloads with Tree Shaking
-          path: /web/fundamentals/performance/optimizing-javascript/tree-shaking/
+          path: https://web.dev/reduce-javascript-payloads-with-tree-shaking/
+          status: external
         - title: Reduce JavaScript Payloads with Code Splitting
           path: https://web.dev/reduce-javascript-payloads-with-code-splitting
           status: external
