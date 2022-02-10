@@ -16,7 +16,7 @@ social_media:
     width: 1200
     height: 675
 keywords:
-- product:WebFundamentals
+  - 'product:WebFundamentals'
 announcement:
   description: |
     <style>
