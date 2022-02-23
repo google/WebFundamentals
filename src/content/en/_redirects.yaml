@@ -129,6 +129,9 @@ redirects:
 
 ## Redirects for Updates content migrated to web.dev
 
+- from: /web/updates/2019/02/constructable-stylesheets
+  to: https://web.dev/constructable-stylesheets
+
 - from: /web/updates/2018/07/css-scroll-snap
   to: https://web.dev/css-scroll-snap/
 
