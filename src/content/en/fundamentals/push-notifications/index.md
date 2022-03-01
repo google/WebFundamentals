@@ -82,9 +82,8 @@ subscriptions, sending messages, and responding to them.
 There are several ways you can play with the features before you completely
 understand how they work, or have to implement them. First, check out
 [our own sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications).
-Also available are Peter Beverloo's
-[Notification Generator](https://tests.peter.sh/notification-generator/)
-and Mozilla's [Push Payload Demo](https://serviceworke.rs/push-payload_demo.html).
+Also available is Peter Beverloo's
+[Notification Generator](https://tests.peter.sh/notification-generator/).
 
 Note: Unless you're using localhost, the Push API requires HTTPS.
 
