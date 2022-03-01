@@ -6,42 +6,58 @@ toc:
 - heading: Service Worker Packages
 - title: workbox-background-sync
   path: /web/tools/workbox/modules/workbox-background-sync
+  status: external
 - title: workbox-broadcast-update
   path: /web/tools/workbox/modules/workbox-broadcast-update
+  status: external
 - title: workbox-cacheable-response
   path: /web/tools/workbox/modules/workbox-cacheable-response
+  status: external
 - title: workbox-core
   path: /web/tools/workbox/modules/workbox-core
+  status: external
 - title: workbox-expiration
   path: /web/tools/workbox/modules/workbox-expiration
+  status: external
 - title: workbox-google-analytics
   path: /web/tools/workbox/modules/workbox-google-analytics
+  status: external
 - title: workbox-navigation-preload
   path: /web/tools/workbox/modules/workbox-navigation-preload
+  status: external
 - title: workbox-precaching
   path: /web/tools/workbox/modules/workbox-precaching
+  status: external
 - title: workbox-range-requests
   path: /web/tools/workbox/modules/workbox-range-requests
+  status: external
 - title: workbox-recipes
   path: /web/tools/workbox/modules/workbox-recipes
-  status: new
+  status: external
 - title: workbox-routing
   path: /web/tools/workbox/modules/workbox-routing
+  status: external
 - title: workbox-strategies
   path: /web/tools/workbox/modules/workbox-strategies
+  status: external
 
 - heading: Window Packages
 - title: Workbox Window
   path: /web/tools/workbox/modules/workbox-window
+  status: external
 
 - heading: Node Packages
 - title: Workbox CLI
   path: /web/tools/workbox/modules/workbox-cli
+  status: external
 - title: workbox-build
   path: /web/tools/workbox/modules/workbox-build
+  status: external
 - title: workbox-webpack-plugin
   path: /web/tools/workbox/modules/workbox-webpack-plugin
+  status: external
 
 - heading: Loader (CDN)
 - title: workbox-sw
   path: /web/tools/workbox/modules/workbox-sw
+  status: external
