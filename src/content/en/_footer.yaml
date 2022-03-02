@@ -24,7 +24,7 @@ footer:
     icon_name: star
     contents:
     - label: Web on Android
-      path: http://developers.google.com/docs/android/
+      path: https://developer.android.com/docs
     - label: Chrome Extension Docs
       path: https://developer.chrome.com/
     - label: Site Kit plugin for WordPress
