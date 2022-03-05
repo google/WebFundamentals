@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web.
 
-{# wf_updated_on: 2019-05-02 #}
+{# wf_updated_on: 2021-11-25 #}
 {# wf_published_on: 2016-09-27 #}
 {# wf_blink_components: N/A #}
 
@@ -37,7 +37,7 @@ UI and the core components necessary to get your app off the ground, but likely
 does not contain the data.
 
 Note: Try the [First Progressive Web
-App](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
+App](https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0)
 codelab to learn how to architectect and
 implement your first application shell for a weather app. The [Instant
 Loading with the App Shell model](https://www.youtube.com/watch?v=QhUzmR8eZAo)
@@ -205,14 +205,14 @@ all frameworks</a> talk. Samples are available using Polymer (<a
 href="https://shop.polymer-project.org">Shop</a>) and React (<a
 href="https://github.com/insin/react-hn">ReactHN</a>,
 <a
-href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>).
+href="https://github.com/GoogleChromeLabs/sw-precache/tree/master/app-shell-demo">iFixit</a>).
 
 
 ### Caching the application shell {: #app-shell-caching }
 
 An app shell can be cached using a manually written service worker or a
 generated service worker using a static asset precaching tool like
-[sw-precache](https://github.com/googlechrome/sw-precache).
+[sw-precache](https://github.com/GoogleChromeLabs/sw-precache).
 
 Note: The examples are provided for general information and illustrative
 purposes only. The actual resources used will likely be different for your
@@ -267,12 +267,12 @@ Here is a basic example of using sw-precache as part of a
     });
 
 To learn more about static asset caching, see the [Adding a Service Worker with
-sw-precache](https://codelabs.developers.google.com/codelabs/sw-precache/index.html?index=..%2F..%2Findex#0)
+sw-precache](https://developers.google.com/codelabs/pwa-training/pwa03--going-offline?index=..%2F..%2Findex#0)
 codelab.
 
 Note: sw-precache is useful for offline caching your static resources. For
 runtime/dynamic resources, we recommend using our complimentary library
-[sw-toolbox](https://github.com/googlechrome/sw-toolbox).
+[sw-toolbox](https://github.com/GoogleChromeLabs/sw-toolbox) (archived repo).
 
 ## Conclusion {: #conclusion }
 
