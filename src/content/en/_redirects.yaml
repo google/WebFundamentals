@@ -43,6 +43,54 @@ redirects:
 - from: /web/feedback/...
   to: https://web.dev/how-to-file-a-good-bug/
 
+- from: /web/fundamentals/security/hacked
+  to: https://web.dev/hacked/
+
+- from: /web/fundamentals/security/hacked/how_do_I_know_if_site_hacked
+  to: https://web.dev/how-do-i-know-if-my-site-was-hacked/
+
+- from: /web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers
+  to: https://web.dev/top-ways-sites-get-hacked-by-spammers/
+
+- from: /web/fundamentals/security/hacked/support_team
+  to: https://web.dev/build-a-support-team/
+
+- from: /web/fundamentals/security/hacked/quarantine_site
+  to: https://web.dev/quarantine-your-site/
+
+- from: /web/fundamentals/security/hacked/use_search_console
+  to: https://web.dev/use-search-console/
+
+- from: /web/fundamentals/security/hacked/hacked_with_spam
+  to: https://web.dev/assess-spam-damage/
+
+- from: /web/fundamentals/security/hacked/fixing_the_japanese_keyword_hack
+  to: https://web.dev/fixing-the-japanese-keyword-hack/
+
+- from: /web/fundamentals/security/hacked/fixing_the_gibberish_hack
+  to: https://web.dev/fixing-the-gibberish-hack/
+
+- from: /web/fundamentals/security/hacked/fixing_the_cloaked_keywords_hack
+  to: https://web.dev/fixing-the-cloaked-keywords-hack/
+
+- from: /web/fundamentals/security/hacked/hacked_with_malware
+  to: https://web.dev/hacked-with-malware/
+
+- from: /web/fundamentals/security/hacked/vulnerability
+  to: https://web.dev/identify-the-vulnerability/
+
+- from: /web/fundamentals/security/hacked/clean_site
+  to: https://web.dev/clean-and-maintain-your-site/
+
+- from: /web/fundamentals/security/hacked/request_review
+  to: https://web.dev/request-a-review/
+
+- from: /web/fundamentals/security/hacked/glossary_for_hacked_sites
+  to: https://web.dev/glossary-for-hacked-sites/
+
+- from: /web/fundamentals/security/hacked/FAQs_for_hacked_sites
+  to: https://web.dev/faq-for-hacked-sites/
+
 - from: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
   to: https://web.dev/what-is-mixed-content
 
