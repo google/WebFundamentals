@@ -550,3 +550,20 @@ redirects:
 ## Redirects for Web-on-Android content migrated to DCC
 - from: /web/android/...
   to: https://developer.chrome.com/docs/android/
+
+
+## Redirects for Updates content migrated to DCC
+- from: https://developers.google.com/web/updates/2016/02/chrome-49-deprecations
+  to: https://developer.chrome.com/blog/chrome-49-deprecations/
+
+- from: https://developers.google.com/web/updates/2016/03/chrome-50-deprecations
+  to: https://developer.chrome.com/blog/chrome-50-deprecations/
+
+- from: https://developers.google.com/web/updates/2016/04/chrome-51-deprecations
+  to: https://developer.chrome.com/blog/chrome-51-deprecations/
+
+- from: https://developers.google.com/web/updates/2016/06/chrome-52-deprecations
+  to: https://developer.chrome.com/blog/chrome-52-deprecations/
+
+- from: https://developers.google.com/web/updates/2016/08/chrome-53-deprecations
+  to: https://developer.chrome.com/blog/chrome-53-deprecations/
