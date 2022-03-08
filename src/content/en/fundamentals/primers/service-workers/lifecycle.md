@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A deep-dive into the service worker lifecycle.
 
-{# wf_updated_on: 2018-12-05 #}
+{# wf_updated_on: 2022-03-08 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -91,14 +91,14 @@ In brief:
   display: block;
 }
 
-.lifecycle-diagram .label {
+#diagram-static .label {
   font-size: 9.46829414px;
   font-family: 'Just Another Hand';
   text-align: center;
   text-anchor: middle;
 }
 
-.lifecycle-diagram .state-placeholder {
+#diagram-static .state-placeholder {
   fill: none;
   stroke-opacity: 0.28;
   stroke-width: 1px;
@@ -178,7 +178,7 @@ In brief:
     );
     refresh.set({}, {}, "+=1.3");
     refresh.to(el.querySelector('.diagram-refresh'), 0.25, {opacity: 0, scale: 0, ease: Quad.easeInOut});
-    refresh.to(el.querySelector('.refresh-rotator'), 2, {rotation: 360, ease: Linear.easeNone}, 'refresh-appearing');
+    refresh.to(el.querySelector('.diagram-refresh'), 2, {rotation: 360, ease: Linear.easeNone, transformOrigin: '50% 50%'}, 'refresh-appearing');
 
     timeline.add(subTimeline, 'cog-active');
     timeline.add(refresh, 'cog-active');
@@ -394,6 +394,7 @@ In brief:
   display: block;
 }
 
+#diagram-static .label,
 .lifecycle-diagram .label {
   font-size: 9.46829414px;
   font-family: 'Just Another Hand';
@@ -401,7 +402,7 @@ In brief:
   text-anchor: middle;
 }
 
-.lifecycle-diagram .state-placeholder {
+#diagram-static .state-placeholder {
   fill: none;
   stroke-opacity: 0.28;
   stroke-width: 1px;
@@ -497,7 +498,7 @@ In brief:
     );
     refresh.set({}, {}, "+=1.3");
     refresh.to(el.querySelector('.diagram-refresh'), 0.25, {opacity: 0, scale: 0, ease: Quad.easeInOut});
-    refresh.to(el.querySelector('.refresh-rotator'), 2, {rotation: 360, ease: Linear.easeNone}, 'refresh-appearing');
+    refresh.to(el.querySelector('.diagram-refresh'), 2, {rotation: 360, ease: Linear.easeNone, transformOrigin: '50% 50%'}, 'refresh-appearing');
 
     timeline.add(subTimeline, 'cog-waiting');
     timeline.add(refresh, 'cog-waiting');
