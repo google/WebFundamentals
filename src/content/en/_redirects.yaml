@@ -567,3 +567,18 @@ redirects:
 
 - from: https://developers.google.com/web/updates/2016/08/chrome-53-deprecations
   to: https://developer.chrome.com/blog/chrome-53-deprecations/
+
+- from: https://developers.google.com/web/updates/2016/09/chrome-54-deprecations
+  to: https://developer.chrome.com/blog/chrome-54-deprecations/
+
+- from: https://developers.google.com/web/updates/2016/10/chrome-55-deprecations
+  to: https://developer.chrome.com/blog/chrome-55-deprecations/
+
+- from: https://developers.google.com/web/updates/2016/12/chrome-56-deprecations
+  to: https://developer.chrome.com/blog/chrome-56-deprecations
+
+- from: https://developers.google.com/web/updates/2017/02/chrome-57-deprecations
+  to: https://developer.chrome.com/blog/chrome-57-deprecations/
+
+- from: https://developers.google.com/web/updates/2017/03/chrome-58-deprecations
+  to: https://developer.chrome.com/blog/chrome-58-deprecations/
