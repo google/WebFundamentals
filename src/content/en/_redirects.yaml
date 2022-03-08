@@ -553,32 +553,32 @@ redirects:
 
 
 ## Redirects for Updates content migrated to DCC
-- from: https://developers.google.com/web/updates/2016/02/chrome-49-deprecations
+- from: /web/updates/2016/02/chrome-49-deprecations
   to: https://developer.chrome.com/blog/chrome-49-deprecations/
 
-- from: https://developers.google.com/web/updates/2016/03/chrome-50-deprecations
+- from: /web/updates/2016/03/chrome-50-deprecations
   to: https://developer.chrome.com/blog/chrome-50-deprecations/
 
-- from: https://developers.google.com/web/updates/2016/04/chrome-51-deprecations
+- from: /web/updates/2016/04/chrome-51-deprecations
   to: https://developer.chrome.com/blog/chrome-51-deprecations/
 
-- from: https://developers.google.com/web/updates/2016/06/chrome-52-deprecations
+- from: /web/updates/2016/06/chrome-52-deprecations
   to: https://developer.chrome.com/blog/chrome-52-deprecations/
 
-- from: https://developers.google.com/web/updates/2016/08/chrome-53-deprecations
+- from: /web/updates/2016/08/chrome-53-deprecations
   to: https://developer.chrome.com/blog/chrome-53-deprecations/
 
-- from: https://developers.google.com/web/updates/2016/09/chrome-54-deprecations
+- from: /web/updates/2016/09/chrome-54-deprecations
   to: https://developer.chrome.com/blog/chrome-54-deprecations/
 
-- from: https://developers.google.com/web/updates/2016/10/chrome-55-deprecations
+- from: /web/updates/2016/10/chrome-55-deprecations
   to: https://developer.chrome.com/blog/chrome-55-deprecations/
 
-- from: https://developers.google.com/web/updates/2016/12/chrome-56-deprecations
+- from: /web/updates/2016/12/chrome-56-deprecations
   to: https://developer.chrome.com/blog/chrome-56-deprecations
 
-- from: https://developers.google.com/web/updates/2017/02/chrome-57-deprecations
+- from: /web/updates/2017/02/chrome-57-deprecations
   to: https://developer.chrome.com/blog/chrome-57-deprecations/
 
-- from: https://developers.google.com/web/updates/2017/03/chrome-58-deprecations
+- from: /web/updates/2017/03/chrome-58-deprecations
   to: https://developer.chrome.com/blog/chrome-58-deprecations/
