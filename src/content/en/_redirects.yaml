@@ -582,3 +582,18 @@ redirects:
 
 - from: https://developers.google.com/web/updates/2017/03/chrome-58-deprecations
   to: https://developer.chrome.com/blog/chrome-58-deprecations/
+
+- from: https://developers.google.com/blog/chrome-58-media-updates
+  to: https://developer.chrome.com/blog/chrome-58-media-updates/
+
+- from: https://developers.google.com/blog/headless-chrome
+  to: https://developer.chrome.com/blog/headless-chrome/
+
+- from: https://developers.google.com/blog/lighthouse-jan 
+  to: https://developer.chrome.com/blog/lighthouse-jan/
+
+- from: https://developers.google.com/blog/chrome-61-media-updates
+  to: https://developer.chrome.com/blog/chrome-61-media-updates/
+
+- from: https://developers.google.com/blog/webvr-origin-trial-chrome-62
+  to: https://developer.chrome.com/blog/webvr-origin-trial-chrome-62/
