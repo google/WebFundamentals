@@ -68,11 +68,13 @@ toc:
 - title: "StrategyHandler"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-StrategyHandler
   status: external
-
 - title: "GenerateSW"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSW
+  status: external
 - title: "InjectManifest"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-InjectManifest
+  status: external
+
 - title: "Queue"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue
 - title: "Workbox"

@@ -126,3 +126,11 @@ redirects:
 # workbox-streams
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-streams
   to: https://developer.chrome.com/docs/workbox/reference/workbox-streams/
+
+# workbox-webpack-plugin
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSW
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-InjectManifest
