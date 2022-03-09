@@ -8,11 +8,13 @@ toc:
 - title: "BroadcastUpdatePlugin"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/
   status: external
-
 - title: "CacheableResponse"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response.CacheableResponse
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-cacheable-response/
+  status: external
 - title: "CacheableResponsePlugin"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response.CacheableResponsePlugin
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-cacheable-response/#type-CacheableResponsePlugin
+  status: external
+
 - title: "CacheExpiration"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-expiration.CacheExpiration
 - title: "CacheFirst"

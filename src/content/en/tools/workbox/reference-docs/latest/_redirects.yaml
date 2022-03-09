@@ -42,3 +42,11 @@ redirects:
 # workbox-build
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-build
   to: https://developer.chrome.com/docs/workbox/reference/workbox-build
+
+# workbox-cacheable-response
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-cacheable-response
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response.CacheableResponse
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-cacheable-response/#type-CacheableResponse
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response.CacheableResponsePlugin
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-cacheable-response/#type-CacheableResponsePlugin
