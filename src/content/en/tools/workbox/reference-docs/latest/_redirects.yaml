@@ -122,3 +122,7 @@ redirects:
   to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-Strategy
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.StrategyHandler
   to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-StrategyHandler
+
+# workbox-streams
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-streams
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-streams/
