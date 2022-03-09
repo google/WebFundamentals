@@ -62,3 +62,7 @@ redirects:
   to: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/#type-CacheExpiration
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-expiration.ExpirationPlugin
   to: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/#type-ExpirationPlugin
+
+# workbox-google-analytics
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-google-analytics
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-google-analytics
