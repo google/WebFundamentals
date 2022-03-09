@@ -82,3 +82,9 @@ redirects:
   to: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheRoute
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheStrategy
   to: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheStrategy
+
+# workbox-range-requests
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-range-requests
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-range-requests/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-range-requests.RangeRequestsPlugin
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-range-requests/#type-RangeRequestsPlugin

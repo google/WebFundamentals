@@ -20,7 +20,6 @@ toc:
 - title: "CacheExpiration"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/#type-CacheExpiration
   status: external
-
 - title: "PrecacheController"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheController
   status: external
@@ -32,6 +31,9 @@ toc:
   status: external
 - title: "PrecacheStrategy"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheStrategy
+  status: external
+- title: "RangeRequestsPlugin"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-range-requests/#type-RangeRequestsPlugin
   status: external
 
 - title: "CacheFirst"
@@ -50,8 +52,6 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkOnly
 - title: "Queue"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue
-- title: "RangeRequestsPlugin"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-range-requests.RangeRequestsPlugin
 - title: "RegExpRoute"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-routing.RegExpRoute
 - title: "Route"
