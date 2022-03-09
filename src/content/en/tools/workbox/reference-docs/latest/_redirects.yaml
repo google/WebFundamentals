@@ -1,0 +1,32 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
+redirects:
+
+# workbox-background-sync
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.BackgroundSyncPlugin
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#type-BackgroundSyncPlugin
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#type-Queue
+
+# I attempted to redirect these, but the hashes don't persist and all of these
+# ended up redirecting to the #type-Queue hash. If there's a way to persist the
+# hash, I'd be all for it, but it doesn't seem like there's a way without a
+# JavaScript solution (if that) — jlwagner
+# - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#getAll
+#   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-getAll
+# - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#name
+#   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#type-Queue-name
+# - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#popRequest
+#   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-popRequest
+# - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#pushRequest
+#   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-pushRequest
+# - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#registerSync
+#   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-registerSync
+# - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#replayRequests
+#   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-replayRequests
+# - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#shiftRequest
+#   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-shiftRequest
+# - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#unshiftRequest
+#   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-unshiftRequest
