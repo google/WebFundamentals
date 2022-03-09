@@ -104,3 +104,21 @@ redirects:
   to: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-Route
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-routing.Router
   to: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-Router
+
+# workbox-strategies
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.CacheFirst
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-CacheFirst
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.CacheOnly
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-CacheOnly
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkFirst
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-NetworkFirst
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkOnly
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-NetworkOnly
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.StaleWhileRevalidate
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-StaleWhileRevalidate
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.Strategy
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-Strategy
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.StrategyHandler
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-StrategyHandler

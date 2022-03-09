@@ -47,27 +47,34 @@ toc:
 - title: "Router"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-Router
   status: external
-
 - title: "CacheFirst"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.CacheFirst
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-CacheFirst
+  status: external
 - title: "CacheOnly"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.CacheOnly
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-CacheOnly
+  status: external
+- title: "NetworkFirst"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-NetworkFirst
+  status: external
+- title: "NetworkOnly"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-NetworkOnly
+  status: external
+- title: "StaleWhileRevalidate"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-StaleWhileRevalidate
+  status: external
+- title: "Strategy"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-Strategy
+  status: external
+- title: "StrategyHandler"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-strategies/#type-StrategyHandler
+  status: external
+
 - title: "GenerateSW"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW
 - title: "InjectManifest"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest
-- title: "NetworkFirst"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkFirst
-- title: "NetworkOnly"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkOnly
 - title: "Queue"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue
-- title: "StaleWhileRevalidate"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.StaleWhileRevalidate
-- title: "Strategy"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.Strategy
-- title: "StrategyHandler"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.StrategyHandler
 - title: "Workbox"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
 - title: "workbox"
