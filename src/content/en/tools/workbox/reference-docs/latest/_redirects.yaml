@@ -50,3 +50,7 @@ redirects:
   to: https://developer.chrome.com/docs/workbox/reference/workbox-cacheable-response/#type-CacheableResponse
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response.CacheableResponsePlugin
   to: https://developer.chrome.com/docs/workbox/reference/workbox-cacheable-response/#type-CacheableResponsePlugin
+
+# workbox-core
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-core
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-core
