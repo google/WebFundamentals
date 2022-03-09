@@ -14,15 +14,17 @@ toc:
 - title: "CacheableResponsePlugin"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-cacheable-response/#type-CacheableResponsePlugin
   status: external
-
+- title: "ExpirationPlugin"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/#type-ExpirationPlugin
+  status: external
 - title: "CacheExpiration"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-expiration.CacheExpiration
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/#type-CacheExpiration
+  status: external
+
 - title: "CacheFirst"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.CacheFirst
 - title: "CacheOnly"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.CacheOnly
-- title: "ExpirationPlugin"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-expiration.ExpirationPlugin
 - title: "GenerateSW"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW
 - title: "InjectManifest"

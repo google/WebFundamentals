@@ -54,3 +54,11 @@ redirects:
 # workbox-core
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-core
   to: https://developer.chrome.com/docs/workbox/reference/workbox-core
+
+# workbox-expiration
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-expiration
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-expiration.CacheExpiration
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/#type-CacheExpiration
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-expiration.ExpirationPlugin
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/#type-ExpirationPlugin
