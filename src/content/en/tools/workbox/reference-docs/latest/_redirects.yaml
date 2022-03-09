@@ -38,3 +38,7 @@ redirects:
   to: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/#type-BroadcastCacheUpdate
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update.BroadcastUpdatePlugin
   to: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/#type-BroadcastUpdatePlugin
+
+# workbox-build
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-build
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-build
