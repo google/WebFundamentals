@@ -70,3 +70,15 @@ redirects:
 # workbox-navigation-preload
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-navigation-preload
   to: https://developer.chrome.com/docs/workbox/reference/workbox-navigation-preload
+
+# workbox-precaching
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-precaching
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheController
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheFallbackPlugin
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheFallbackPlugin
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheRoute
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheRoute
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheStrategy
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheStrategy

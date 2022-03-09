@@ -21,6 +21,19 @@ toc:
   path: https://developer.chrome.com/docs/workbox/reference/workbox-expiration/#type-CacheExpiration
   status: external
 
+- title: "PrecacheController"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheController
+  status: external
+- title: "PrecacheFallbackPlugin"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheFallbackPlugin
+  status: external
+- title: "PrecacheRoute"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheRoute
+  status: external
+- title: "PrecacheStrategy"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-precaching/#type-PrecacheStrategy
+  status: external
+
 - title: "CacheFirst"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.CacheFirst
 - title: "CacheOnly"
@@ -35,14 +48,6 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkFirst
 - title: "NetworkOnly"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkOnly
-- title: "PrecacheController"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController
-- title: "PrecacheFallbackPlugin"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheFallbackPlugin
-- title: "PrecacheRoute"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheRoute
-- title: "PrecacheStrategy"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheStrategy
 - title: "Queue"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue
 - title: "RangeRequestsPlugin"
