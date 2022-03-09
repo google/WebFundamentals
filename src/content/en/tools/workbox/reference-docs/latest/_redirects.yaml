@@ -66,3 +66,7 @@ redirects:
 # workbox-google-analytics
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-google-analytics
   to: https://developer.chrome.com/docs/workbox/reference/workbox-google-analytics
+
+# workbox-navigation-preload
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-navigation-preload
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-navigation-preload
