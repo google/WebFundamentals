@@ -134,3 +134,9 @@ redirects:
   to: https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSW
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest
   to: https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-InjectManifest
+
+# workbox-window
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-window
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-window/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-window/#type-Workbox

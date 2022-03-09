@@ -1,6 +1,9 @@
 toc:
 - title: "BackgroundSyncPlugin"
-  path: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#type-BackgroundSyncPlugin
+  status: external
+- title: "Queue"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#type-Queue
   status: external
 - title: "BroadcastCacheUpdate"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/#type-BroadcastCacheUpdate
@@ -74,11 +77,9 @@ toc:
 - title: "InjectManifest"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-InjectManifest
   status: external
-
-- title: "Queue"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue
 - title: "Workbox"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-window/#type-Workbox
+
 - title: "workbox"
   path: /web/tools/workbox/reference-docs/latest/workbox
 - title: "Index of all"
