@@ -88,3 +88,19 @@ redirects:
   to: https://developer.chrome.com/docs/workbox/reference/workbox-range-requests/
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-range-requests.RangeRequestsPlugin
   to: https://developer.chrome.com/docs/workbox/reference/workbox-range-requests/#type-RangeRequestsPlugin
+
+# workbox-recipes
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-recipes
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-recipes/
+
+# workbox-routing
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-routing
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-routing/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-routing.NavigationRoute
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-NavigationRoute
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-routing.RegExpRoute
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-RegExpRoute
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-routing.Route
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-Route
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-routing.Router
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-Router

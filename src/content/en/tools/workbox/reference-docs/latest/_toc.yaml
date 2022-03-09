@@ -35,6 +35,18 @@ toc:
 - title: "RangeRequestsPlugin"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-range-requests/#type-RangeRequestsPlugin
   status: external
+- title: "NavigationRoute"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-NavigationRoute
+  status: external
+- title: "RegExpRoute"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-RegExpRoute
+  status: external
+- title: "Route"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-Route
+  status: external
+- title: "Router"
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-routing/#type-Router
+  status: external
 
 - title: "CacheFirst"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.CacheFirst
@@ -44,20 +56,12 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW
 - title: "InjectManifest"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest
-- title: "NavigationRoute"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-routing.NavigationRoute
 - title: "NetworkFirst"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkFirst
 - title: "NetworkOnly"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.NetworkOnly
 - title: "Queue"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue
-- title: "RegExpRoute"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-routing.RegExpRoute
-- title: "Route"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-routing.Route
-- title: "Router"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-routing.Router
 - title: "StaleWhileRevalidate"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-strategies.StaleWhileRevalidate
 - title: "Strategy"
