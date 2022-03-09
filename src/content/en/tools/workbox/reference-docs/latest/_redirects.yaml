@@ -30,3 +30,11 @@ redirects:
 #   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-shiftRequest
 # - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.Queue#unshiftRequest
 #   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/#method-Queue-unshiftRequest
+
+# workbox-broadcast-update
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update.BroadcastCacheUpdate
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/#type-BroadcastCacheUpdate
+- from: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update.BroadcastUpdatePlugin
+  to: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/#type-BroadcastUpdatePlugin

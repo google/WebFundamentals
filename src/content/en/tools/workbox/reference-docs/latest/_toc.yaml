@@ -1,10 +1,14 @@
 toc:
 - title: "BackgroundSyncPlugin"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync.BackgroundSyncPlugin
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/
+  status: external
 - title: "BroadcastCacheUpdate"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update.BroadcastCacheUpdate
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/#type-BroadcastCacheUpdate
+  status: external
 - title: "BroadcastUpdatePlugin"
-  path: /web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update.BroadcastUpdatePlugin
+  path: https://developer.chrome.com/docs/workbox/reference/workbox-broadcast-update/
+  status: external
+
 - title: "CacheableResponse"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response.CacheableResponse
 - title: "CacheableResponsePlugin"
