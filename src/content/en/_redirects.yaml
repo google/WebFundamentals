@@ -597,3 +597,18 @@ redirects:
 
 - from: /web/updates/2017/09/webvr-origin-trial-chrome-62
   to: https://developer.chrome.com/blog/webvr-origin-trial-chrome-62/
+
+- from: /web/updates/2017/12/audio-worklet
+  to: https://developer.chrome.com/blog/audio-worklet
+
+- from: /web/updates/2017/12/chrome-loadtimes-deprecated
+  to: https://developer.chrome.com/blog/chrome-loadtimes-deprecated
+
+- from: /web/updates/2017/12/crux
+  to: https://developer.chrome.com/blog/crux-2017-12
+
+- from: /web/updates/2017/12/device-memory
+  to: https://developer.chrome.com/blog/device-memory
+
+- from: /web/updates/2018/01/crux
+  to: https://developer.chrome.com/blog/crux-2018-01
