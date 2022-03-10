@@ -2,6 +2,12 @@
 
 redirects:
 
+# general
+- from: /web/tools/workbox/reference-docs/latest
+  to: https://developer.chrome.com/docs/workbox/reference/
+- from: /web/tools/workbox/reference-docs/latest/index-all.html
+  to: https://developer.chrome.com/docs/workbox/reference/
+
 # workbox-background-sync
 - from: /web/tools/workbox/reference-docs/latest/module-workbox-background-sync
   to: https://developer.chrome.com/docs/workbox/reference/workbox-background-sync/

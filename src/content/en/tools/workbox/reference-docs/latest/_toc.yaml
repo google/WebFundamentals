@@ -79,8 +79,7 @@ toc:
   status: external
 - title: "Workbox"
   path: https://developer.chrome.com/docs/workbox/reference/workbox-window/#type-Workbox
-
 - title: "workbox"
-  path: /web/tools/workbox/reference-docs/latest/workbox
+  path: https://developer.chrome.com/docs/workbox/reference/
 - title: "Index of all"
-  path: /web/tools/workbox/reference-docs/latest/index-all
+  path: https://developer.chrome.com/docs/workbox/reference/
