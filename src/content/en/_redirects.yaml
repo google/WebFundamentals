@@ -579,6 +579,21 @@ redirects:
 
 - from: /web/updates/2017/02/chrome-57-deprecations
   to: https://developer.chrome.com/blog/chrome-57-deprecations/
-
+  
 - from: /web/updates/2017/03/chrome-58-deprecations
   to: https://developer.chrome.com/blog/chrome-58-deprecations/
+
+- from: /web/updates/2017/03/chrome-58-media-updates
+  to: https://developer.chrome.com/blog/chrome-58-media-updates/
+
+- from: /web/updates/2017/04/headless-chrome
+  to: https://developer.chrome.com/blog/headless-chrome/
+
+- from: /web/updates/2017/02/lighthouse-jan 
+  to: https://developer.chrome.com/blog/lighthouse-jan/
+
+- from: /web/updates/2017/07/chrome-61-media-updates
+  to: https://developer.chrome.com/blog/chrome-61-media-updates/
+
+- from: /web/updates/2017/09/webvr-origin-trial-chrome-62
+  to: https://developer.chrome.com/blog/webvr-origin-trial-chrome-62/
