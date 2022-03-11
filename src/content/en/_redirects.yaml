@@ -612,3 +612,18 @@ redirects:
 
 - from: /web/updates/2018/01/crux
   to: https://developer.chrome.com/blog/crux-2018-01
+
+- from: /web/updates/2018/01/paintapi
+  to: https://developer.chrome.com/blog/paintapi
+
+- from: /web/updates/2018/02/lighthouse
+  to: https://developer.chrome.com/blog/lighthouse
+
+- from: /web/updates/2018/03/cssom
+  to: https://developer.chrome.com/blog/cssom
+
+- from: /web/updates/2018/03/smooshgate
+  to: https://developer.chrome.com/blog/smooshgate
+
+- from: /web/updates/2018/04/present-web-pages-to-secondary-attached-displays
+  to: https://developer.chrome.com/blog/present-web-pages-to-secondary-attached-displays
