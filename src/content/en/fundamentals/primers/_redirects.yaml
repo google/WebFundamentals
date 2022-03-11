@@ -12,3 +12,6 @@ redirects:
 
 - from: /web/fundamentals/primers/
   to: /web/fundamentals/
+
+- from: /web/fundamentals/primers/service-workers 
+  to: https://developer.chrome.com/docs/workbox/service-worker-overview/
