@@ -627,3 +627,33 @@ redirects:
 
 - from: /web/updates/2018/04/present-web-pages-to-secondary-attached-displays
   to: https://developer.chrome.com/blog/present-web-pages-to-secondary-attached-displays
+
+- from: /web/updates/2018/09/chrome-70-media-updates
+  to: https://developer.chrome.com/blog/chrome-70-media-updates
+
+- from: /web/updates/2018/09/inside-browser-part1
+  to: https://developer.chrome.com/blog/inside-browser-part1
+
+- from: /web/updates/2018/09/inside-browser-part2
+  to: https://developer.chrome.com/blog/inside-browser-part2
+
+- from: /web/updates/2018/09/inside-browser-part3
+  to: https://developer.chrome.com/blog/inside-browser-part3
+
+- from: /web/updates/2018/09/inside-browser-part4
+  to: https://developer.chrome.com/blog/inside-browser-part4
+
+- from: /web/updates/2019/10/chrome-79-deps-rems
+  to: https://developer.chrome.com/blog/chrome-79-deps-rems
+
+- from: /web/updates/2019/12/chrome-80-deps-rems
+  to: https://developer.chrome.com/blog/chrome-80-deps-rems
+
+- from: /web/updates/2020/02/chrome-81-deps-rems
+  to: https://developer.chrome.com/blog/chrome-81-deps-rems
+
+- from: /web/updates/2020/04/chrome-83-deps-rems
+  to: https://developer.chrome.com/blog/chrome-83-deps-rems
+
+- from: /web/updates/2020/05/chrome-84-deps-rems
+  to: https://developer.chrome.com/blog/chrome-84-deps-rems
