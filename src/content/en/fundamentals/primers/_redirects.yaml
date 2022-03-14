@@ -18,3 +18,6 @@ redirects:
 
 - from: /web/fundamentals/primers/service-workers/lifecycle
   to: https://developer.chrome.com/docs/workbox/service-worker-lifecycle/
+  
+- from: /web/fundamentals/primers/service-workers 
+  to: https://developer.chrome.com/docs/workbox/service-worker-overview/
