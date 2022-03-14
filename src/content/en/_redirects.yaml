@@ -717,3 +717,33 @@ redirects:
 
 - from: /web/updates/2016/09/cache-query-options
   to: https://developer.chrome.com/blog/cache-query-options
+
+- from: /web/updates/2018/06/a2hs-updates
+  to: https://developer.chrome.com/blog/a2hs-updates
+
+- from: /web/updates/2018/10/animation-worklet
+  to: https://developer.chrome.com/blog/animation-worklet
+
+- from: /web/updates/2018/07/reportingobserver
+  to: https://developer.chrome.com/blog/reportingobserver
+
+- from: /web/updates/2018/05/webauthn
+  to: https://developer.chrome.com/blog/webauthn
+
+- from: /web/updates/2017/04/chrome-59-deprecations
+  to: https://developer.chrome.com/blog/chrome-59-deprecations
+
+- from: /web/updates/2017/06/chrome-60-deprecations
+  to: https://developer.chrome.com/blog/chrome-60-deprecations
+
+- from: /web/updates/2017/08/chrome-61-deprecations
+  to: https://developer.chrome.com/blog/chrome-61-deprecations
+
+- from: /web/updates/2017/09/chrome-62-deprecations
+  to: https://developer.chrome.com/blog/chrome-62-deprecations
+
+- from: /web/updates/2017/10/chrome-63-deprecations
+  to: https://developer.chrome.com/blog/chrome-63-deprecations
+
+- from: /web/updates/2017/12/chrome-64-deprecations
+  to: https://developer.chrome.com/blog/chrome-64-deprecations
