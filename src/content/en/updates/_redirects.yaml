@@ -7,6 +7,9 @@ redirects:
 - from: /web/updates/nic
   to: /web/updates/2020/11/nic87
 
+- from: /web/updates/2019/02/priority-hints
+  to: https://web.dev/priority-hints/
+
 # Media Updates
 
 - from: /web/updates/2017/03/chrome-58-media-updates
