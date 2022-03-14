@@ -687,3 +687,33 @@ redirects:
 
 - from: /web/updates/2020/07/custom-tabs-android-11
   to: https://developer.chrome.com/blog/custom-tabs-android-11
+
+- from: /web/updates/2019/06/layoutNG
+  to: https://developer.chrome.com/blog/layoutNg-2
+
+- from: /web/updates/2019/03/kv-storage
+  to: https://developer.chrome.com/blog/kv-storage
+
+- from: /web/updates/2019/01/lighthouse-platform-packs
+  to: https://developer.chrome.com/blog/lighthouse-platform-packs
+
+- from: /web/updates/2018/12/background-fetch
+  to: https://developer.chrome.com/blog/background-fetch
+
+- from: /web/updates/2019/06/chrome-76-deps-rems
+  to: https://developer.chrome.com/blog/chrome-76-deps-rems
+ 
+- from: /web/updates/2016/06/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-06
+
+- from: /web/updates/2016/09/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-09
+
+- from: /web/updates/2016/10/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-10
+
+- from: /web/updates/2016/11/get-ready-for-cds
+  to: https://developer.chrome.com/blog/get-ready-for-cds
+
+- from: /web/updates/2016/09/cache-query-options
+  to: https://developer.chrome.com/blog/cache-query-options
