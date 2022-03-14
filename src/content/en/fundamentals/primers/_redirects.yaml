@@ -13,14 +13,11 @@ redirects:
 - from: /web/fundamentals/primers/
   to: /web/fundamentals/
 
-<<<<<<< HEAD
 - from: /web/fundamentals/primers/service-workers/high-performance-loading
   to: https://developer.chrome.com/docs/workbox/caching-strategies-overview/
 
 - from: /web/fundamentals/primers/service-workers/lifecycle
   to: https://developer.chrome.com/docs/workbox/service-worker-lifecycle/
   
-=======
->>>>>>> main
 - from: /web/fundamentals/primers/service-workers 
   to: https://developer.chrome.com/docs/workbox/service-worker-overview/
