@@ -657,3 +657,33 @@ redirects:
 
 - from: /web/updates/2020/05/chrome-84-deps-rems
   to: https://developer.chrome.com/blog/chrome-84-deps-rems
+
+- from: /web/updates/2020/07/chrome-85-deps-rems
+  to: https://developer.chrome.com/blog/chrome-85-deps-rems
+
+- from: /web/updates/2020/09/chrome-86-deps-rems
+  to: https://developer.chrome.com/blog/chrome-86-deps-rems
+
+- from: /web/updates/2020/10/chrome-87-deps-rems
+  to: https://developer.chrome.com/blog/chrome-87-deps-rems
+
+- from: /web/updates/2020/12/chrome-88-deps-rems
+  to: https://developer.chrome.com/blog/chrome-88-deps-rems
+
+- from: /web/updates/2020/07/referrer-policy-new-chrome-default
+  to: https://developer.chrome.com/blog/referrer-policy-new-chrome-default
+
+- from: /web/updates/2020/05/heavy-ad-interventions
+  to: https://developer.chrome.com/blog/heavy-ad-interventions
+
+- from: /web/updates/2020/10/http-cache-partitioning
+  to: https://developer.chrome.com/blog/http-cache-partitioning
+
+- from: /web/updates/2021/03/crux-rank-magnitude
+  to: https://developer.chrome.com/blog/crux-rank-magnitude
+
+- from: /web/updates/2020/02/notification-permission-data-in-crux
+  to: https://developer.chrome.com/blog/notification-permission-data-in-crux
+
+- from: /web/updates/2020/07/custom-tabs-android-11
+  to: https://developer.chrome.com/blog/custom-tabs-android-11
