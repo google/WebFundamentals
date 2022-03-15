@@ -511,9 +511,3 @@ redirects:
 
 - from: /web/updates/2018/06/payment-handler-api
   to: https://web.dev/web-based-payment-apps-overview/
-
-- from: /web/updates/2011/08/Saving-generated-files-on-the-client-side
-  to: https://web.dev/browser-fs-access/
-
-- from: /web/updates/2018/08/chrome-ux-report-dashboard
-  to: https://web.dev/chrome-ux-report-data-studio-dashboard/
