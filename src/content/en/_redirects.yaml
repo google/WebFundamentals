@@ -789,3 +789,49 @@ redirects:
 
 - from: /web/updates/2018/05/lighthouse3
   to: https://developer.chrome.com/blog/lighthouse3
+
+- from: /web/updates/2018/06/more-native-echo-cancellation
+  to: https://developer.chrome.com/blog/more-native-echo-cancellation
+
+- from: /web/updates/2018/07/nostate-prefetch
+  to: https://developer.chrome.com/blog/nostate-prefetch
+
+- from: /web/updates/2018/07/page-lifecycle-api
+  to: https://developer.chrome.com/blog/page-lifecycle-api
+
+- from: /web/updates/2015/11/presentation-api
+  to: https://developer.chrome.com/blog/presentation-api
+
+- from: /web/updates/2015/04/command-click-to-add-multiple-cursors-in-the-sources-panel
+  to: https://developer.chrome.com/blog/command-click-to-add-multiple-cursors-in-the-sources-panel
+
+- from: /web/updates/2015/03/push-notifications-on-the-open-web
+  to: https://developer.chrome.com/blog/push-notifications-on-the-open-web
+
+- from: /web/updates/2015/05/notifying-you-of-changes-to-notifications
+  to: https://developer.chrome.com/blog/notifying-you-of-changes-to-notifications
+
+- from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
+  to: https://developer.chrome.com/blog/using-manifest-to-set-sitewide-theme-color
+
+- from: /web/updates/2015/09/updates-to-cache-api
+  to: https://developer.chrome.com/blog/updates-to-cache-api
+
+- from: /web/updates/2015/10/notification-requireInteraction
+  to: https://developer.chrome.com/blog/notification-requireInteraction
+
+- from: /web/updates/2015/11/app-shell
+  to: https://developer.chrome.com/blog/app-shell
+
+- from: /web/updates/2015/12/background-sync
+  to: https://developer.chrome.com/blog/background-sync
+
+- from: /web/updates/2016/01/notification-actions
+  to: https://developer.chrome.com/blog/notification-actions
+
+- from: /web/updates/2016/03/notifications
+  to: https://developer.chrome.com/blog/notifications
+
+- from: /web/updates/2016/03/web-push-encryption
+  to: https://developer.chrome.com/blog/web-push-encryption
+
