@@ -747,3 +747,45 @@ redirects:
 
 - from: /web/updates/2017/12/chrome-64-deprecations
   to: https://developer.chrome.com/blog/chrome-64-deprecations
+
+- from: /web/updates/2018/02/chrome-65-deprecations
+  to: https://developer.chrome.com/blog/chrome-65-deprecations
+
+- from: /web/updates/2018/03/chrome-66-deprecations
+  to: https://developer.chrome.com/blog/chrome-66-deprecations
+
+- from: /web/updates/2018/04/chrome-67-deps-rems
+  to: https://developer.chrome.com/blog/chrome-67-deps-rems
+
+- from: /web/updates/2018/06/chrome-68-deps-rems
+  to: https://developer.chrome.com/blog/chrome-68-deps-rems
+
+- from: /web/updates/2018/09/chrome-70-deps-rems
+  to: https://developer.chrome.com/blog/chrome-70-deps-rems
+
+- from: /web/updates/2018/10/chrome-71-deps-rems
+  to: https://developer.chrome.com/blog/chrome-71-deps-rems
+
+- from: /web/updates/2018/12/chrome-72-deps-rems
+  to: https://developer.chrome.com/blog/chrome-72-deps-rems
+
+- from: /web/updates/2019/02/chrome-73-deps-rems
+  to: https://developer.chrome.com/blog/chrome-73-deps-rems
+
+- from: /web/updates/2019/03/chrome-74-deps-rems
+  to: https://developer.chrome.com/blog/chrome-74-deps-rems
+
+- from: /web/updates/2019/05/chrome-75-deps-rems
+  to: https://developer.chrome.com/blog/chrome-75-deps-rems
+
+- from: /web/updates/2019/08/chrome-77-deps-rems
+  to: https://developer.chrome.com/blog/chrome-77-deps-rems
+
+- from: /web/updates/2019/09/chrome-78-deps-rems
+  to: https://developer.chrome.com/blog/chrome-78-deps-rems
+
+- from: /web/updates/2018/07/first-input-delay-in-crux
+  to: https://developer.chrome.com/blog/first-input-delay-in-crux
+
+- from: /web/updates/2018/05/lighthouse3
+  to: https://developer.chrome.com/blog/lighthouse3
