@@ -835,3 +835,23 @@ redirects:
 - from: /web/updates/2016/03/web-push-encryption
   to: https://developer.chrome.com/blog/web-push-encryption
 
+- from: /web/updates/2016/06/sw-readablestreams
+  to: https://developer.chrome.com/blog/sw-readablestreams
+
+- from: /web/updates/2016/07/web-push-interop-wins
+  to: https://developer.chrome.com/blog/web-push-interop-wins
+
+- from: /web/updates/2016/08/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-08/
+
+- from: /web/updates/2016/09/foreign-fetch
+  to: https://developer.chrome.com/blog/foreign-fetch
+
+- from: /web/updates/2016/09/options-of-a-pushsubscription
+  to: https://developer.chrome.com/blog/options-of-a-pushsubscription
+
+- from: /web/updates/2018/05/beyond-spa
+  to: https://developer.chrome.com/blog/beyond-spa
+
+- from: /web/updates/2018/07/pwacompat
+  to: https://developer.chrome.com/blog/pwacompat
