@@ -104,7 +104,7 @@ redirects:
   to: /web/fundamentals/
 
 - from: /web/fundamentals/instant-and-offline/service-worker/lifecycle
-  to: /web/fundamentals/primers/service-workers/lifecycle
+  to: https://web.dev/service-worker-lifecycle/
 
 - from: /web/fundamentals/instant-and-offline/service-worker/registration
   to: /web/fundamentals/primers/service-workers/registration
