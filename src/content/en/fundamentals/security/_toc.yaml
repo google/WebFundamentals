@@ -28,4 +28,3 @@ toc:
         path: https://web.dev/fixing-mixed-content
         status: external
         step_group: security-mixed-content
-    - include: /web/fundamentals/security/hacked/_toc.yaml
