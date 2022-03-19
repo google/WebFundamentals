@@ -269,7 +269,7 @@ const networkContent = Promise.resolve(event.preloadResponse)
 const parts = [
   caches.match('/article-top.include'),
   <strong>networkContent</strong>,
-  caches.match('/article-bottom')
+  caches.match('/article-bottom.include')
 ];
 </pre>
 
