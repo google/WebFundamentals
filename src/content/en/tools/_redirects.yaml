@@ -9,6 +9,8 @@ redirects:
 - from: /web/tools/setup/workspace/...
   to: /web/tools/setup/
 
+# Workbox redirects
+
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
 
@@ -50,6 +52,34 @@ redirects:
 
 - from: /web/tools/workbox/community
   to: https://twitter.com/workboxjs
+
+- from: /web/tools/workbox/guides/precache-files
+  to: /web/tools/workbox/modules/workbox-precaching
+
+- from: /web/tools/workbox/guides/precache-files/...
+  to: /web/tools/workbox/modules/workbox-precaching
+
+- from: /web/tools/workbox/guides/codelabs/...
+  to: /codelabs/workbox-lab
+
+# Workbox migration guides
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-sw
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-sw/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-v2
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v2/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-v3
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v3/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-v4
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v4/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-v5
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v5/
+
+# Lighthouse
 
 - from: /web/tools/lighthouse/audits/critical-request-chains
   to: https://web.dev/critical-request-chains/
@@ -305,10 +335,10 @@ redirects:
 
 - from: /web/tools/lighthouse/v3/scoring
   to: https://web.dev/performance-scoring/
-  
+
 - from: /web/tools/lighthouse/scoring
   to: https://web.dev/performance-scoring/
-  
+
 - from: /web/tools/lighthouse/audits/required-aria-attributes
   to: https://web.dev/aria-required-attr/
 
@@ -335,15 +365,6 @@ redirects:
 
 - from: /web/tools/lighthouse/audits/manifest-contains-theme_color
   to: https://web.dev/themed-omnibox/
-
-- from: /web/tools/workbox/guides/precache-files
-  to: /web/tools/workbox/modules/workbox-precaching
-
-- from: /web/tools/workbox/guides/precache-files/...
-  to: /web/tools/workbox/modules/workbox-precaching
-
-- from: /web/tools/workbox/guides/codelabs/...
-  to: /codelabs/workbox-lab
 
 # DevTools
 
