@@ -34,14 +34,17 @@ toc:
   style: accordion
   section:
   - title: "From sw-precache or sw-toolbox"
-    path: /web/tools/workbox/guides/migrations/migrate-from-sw
+    path: https://developer.chrome.com/docs/workbox/migration/migrate-from-sw/
+    status: external
   - title: "From Workbox v2 to v3"
-    path: /web/tools/workbox/guides/migrations/migrate-from-v2
+    path: https://developer.chrome.com/docs/workbox/migration/migrate-from-v2/
+    status: external
   - title: "From Workbox v3 to v4"
-    path: /web/tools/workbox/guides/migrations/migrate-from-v3
+    path: https://developer.chrome.com/docs/workbox/migration/migrate-from-v3/
+    status: external
   - title: "From Workbox v4 to v5"
-    path: /web/tools/workbox/guides/migrations/migrate-from-v4
+    path: https://developer.chrome.com/docs/workbox/migration/migrate-from-v4/
+    status: external
   - title: "From Workbox v5 to v6"
-    path: /web/tools/workbox/guides/migrations/migrate-from-v5
-    status: new
-
+    path: https://developer.chrome.com/docs/workbox/migration/migrate-from-v5/
+    status: external

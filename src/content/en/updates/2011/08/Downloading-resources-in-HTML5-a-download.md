@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-16 #}
+{# wf_updated_on: 2022-03-19 #}
 {# wf_published_on: 2011-08-01 #}
 {# wf_tags: news #}
 {# wf_blink_components: N/A #}
@@ -30,7 +30,7 @@ It'll give users a way to download content created/modified within your app.
 
 [Full Demo](http://html5-demos.appspot.com/static/a.download.html)
 
-One thing to note is that in the above example, the image has same origin with respect to website. If you try to use a link of image from different origin the link may not work as a navigating link rather than a downloading link. This is because many versions of browser does not support the download policy on cross-origin files. For example Chrome versions prior to 65 did allow downloading cross origin files and it was deprecated in later versions. Read <a href="https://developers.google.com/web/updates/2018/02/chrome-65-deprecations">this</a> for more detail. You can use `Content-Disposition` header to force a download from other origin.
+One thing to note is that in the above example, the image has same origin with respect to website. If you try to use a link of image from different origin the link may not work as a navigating link rather than a downloading link. This is because many versions of browser does not support the download policy on cross-origin files. For example Chrome versions prior to 65 did allow downloading cross origin files and it was deprecated in later versions. Read <a href="/web/updates/2018/02/chrome-65-deprecations">this</a> for more detail. You can use `Content-Disposition` header to force a download from other origin.
 
 Browser support: only the current Chrome dev channel release (14.0.835.15+) supports this attribute.
 

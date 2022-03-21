@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: February wrap up which we look back what's been happening in Web Developer Ecosystem team.
 
-{# wf_updated_on: 2019-03-01 #}
+{# wf_updated_on: 2022-03-19 #}
 {# wf_published_on: 2019-02-28 #}
 {# wf_featured_image: /web/updates/images/generic/monthly.png #}
 {# wf_featured_snippet: February wrap up which we look back what's been happening in Web Developer Ecosystem team.　#}
@@ -31,7 +31,7 @@ Hot off the press,
 [Workbox 4.0 was released](https://github.com/GoogleChrome/workbox/releases/tag/v4.0.0) just a few
 days ago.🎉 This release includes great new features like `workbox-window` and improvements to many
 of the existing workbox packages. For those of you who are already using workbox, check out the
-[v3 to v4 migration guide](/web/tools/workbox/guides/migrations/migrate-from-v3).
+[v3 to v4 migration guide](https://developer.chrome.com/docs/workbox/migration/migrate-from-v3/).
 Wondering how you can use Workbox in your existing project? Here is a guide to
 [use them with bundlers of your choice](/web/tools/workbox/guides/using-bundlers).
 Not sure what problem workbox helps to solve? Check out this
@@ -66,7 +66,7 @@ Working with **audio and video on the web**? Hardware media keys support is here
 Picture-in-Picture window is now in origin trial! Check out
 [Audio/Video Updates in Chrome 73](/web/updates/2019/02/chrome-73-media-updates) for more.
 
-Speaking of origin trial, [get ready for Priority Hints](https://web.dev/priority-hints) with 
+Speaking of origin trial, [get ready for Priority Hints](https://web.dev/priority-hints) with
 **Priority Hints**, developers can set the importance of a `<script>`, `<img>`, or `<link>` element
 to give the browser how to load them. It is still an experimental feature, so please do try out and
 send feedback!
