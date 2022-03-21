@@ -2,17 +2,22 @@ toc:
 - title: "Get Started"
   path: /web/tools/workbox/guides/get-started
 - title: "Using Bundlers with Workbox"
-  path: /web/tools/workbox/guides/using-bundlers
+  path: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler
+  status: external
 - title: "Route Requests"
-  path: /web/tools/workbox/guides/route-requests
+  path: https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#applying-caching-strategies-with-route-matching
+  status: external
 - title: "Configure Workbox"
   path: /web/tools/workbox/guides/configure-workbox
 - title: "Handle Third-Party Requests"
-  path: /web/tools/workbox/guides/handle-third-party-requests
+  path: https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#cross-origin-considerations
+  status: external
 - title: "Using Plugins"
-  path: /web/tools/workbox/guides/using-plugins
+  path: https://developer.chrome.com/docs/workbox/using-plugins/
+  status: external
 - title: "Troubleshoot and Debug"
-  path: /web/tools/workbox/guides/troubleshoot-and-debug
+  path: https://developer.chrome.com/docs/workbox/troubleshooting-and-logging/
+  status: external
 - title: "Understanding Storage Quota"
   path: /web/tools/workbox/guides/storage-quota
 - title: "Common Recipes"
