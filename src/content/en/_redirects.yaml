@@ -855,3 +855,63 @@ redirects:
 
 - from: /web/updates/2018/07/pwacompat
   to: https://developer.chrome.com/blog/pwacompat
+
+- from: /web/updates/2011/06/Contra-in-HTML5-Web-Audio-API
+  to: https://developer.chrome.com/blog/contra-in-html5-web-audio-api
+
+- from: /web/updates/2011/06/HTML5-Libraries-Late-June
+  to: https://developer.chrome.com/blog/html5-libraries-late-june
+
+- from: /web/updates/2011/06/navigator-onLine-in-Chrome-Dev-channel
+  to: https://developer.chrome.com/blog/navigator-online-in-chrome-dev-channel
+
+- from: /web/updates/2011/06/Page-Visibility-API-Have-I-got-your-attention
+  to: https://developer.chrome.com/blog/page-visibility-api-have-i-got-your-attention
+
+- from: /web/updates/2011/06/Welcome-to-updates-html5rocks-com
+  to: https://developer.chrome.com/blog/welcome-to-updates-html5rocks-com
+
+- from: /web/updates/2011/07/Announcing-New-Game-the-conference-for-HTML5-game-developers
+  to: https://developer.chrome.com/blog/announcing-new-game-the-conference-for-html5-game-developers
+
+- from: /web/updates/2011/07/Don-t-Miss-a-Frame-Using-the-Page-Visibility-API-HTML5-Video
+  to: https://developer.chrome.com/blog/don-t-miss-a-frame-using-the-page-visibility-api-html5-video
+
+- from: /web/updates/2011/07/HTML5-Libraries-polyfills-Mid-July
+  to: https://developer.chrome.com/blog/html5-libraries-polyfills-mid-july
+
+- from: /web/updates/2011/07/Using-Cross-domain-images-in-WebGL
+  to: https://developer.chrome.com/blog/using-cross-domain-images-in-webgl
+
+- from: /web/updates/2011/08/Debugging-the-Filesystem-API
+  to: https://developer.chrome.com/blog/debugging-the-filesystem-api
+
+- from: /web/updates/2011/08/insertAdjacentHTML-Everywhere
+  to: https://developer.chrome.com/blog/insertadjacenthtml-everywhere
+
+- from: /web/updates/2011/08/Seek-into-local-files-with-the-File-System-API
+  to: https://developer.chrome.com/blog/seek-into-local-files-with-the-file-system-api
+
+- from: /web/updates/2011/08/What-s-different-in-the-new-WebSocket-protocol
+  to: https://developer.chrome.com/blog/what-s-different-in-the-new-websocket-protocol
+
+- from: /web/updates/2011/09/7-minute-videos-Javascript-Console-Protips-newish-DOM-APIs
+  to: https://developer.chrome.com/blog/7-minute-videos-javascript-console-protips-newish-dom-apis
+
+- from: /web/updates/2011/09/New-Game-Conference-for-HTML5-Game-Developers-Coupon
+  to: https://developer.chrome.com/blog/new-game-conference-for-html5-game-developers-coupon
+
+- from: /web/updates/2011/09/Workers-ArrayBuffer
+  to: https://developer.chrome.com/blog/workers-arraybuffer
+
+- from: /web/updates/2011/10/App-Cache-Tools-and-Auto-Generators
+  to: https://developer.chrome.com/blog/app-cache-tools-and-auto-generators
+
+- from: /web/updates/2011/10/Defining-Scope-In-IndexedDB-Transactions
+  to: https://developer.chrome.com/blog/defining-scope-In-indexeddb-transactions
+
+- from: /web/updates/2011/10/Having-a-ride-with-Three-js
+  to: https://developer.chrome.com/blog/having-a-ride-with-three-js
+
+- from: /web/updates/2011/10/Keeping-up-with-HTML5-and-browser-support
+  to: https://developer.chrome.com/blog/keeping-up-with-html5-and-browser-support
