@@ -975,3 +975,63 @@ redirects:
 
 - from: /web/updates/2012/03/CSS-layout-gets-smarter-with-calc
   to: https://developer.chrome.com/blog/css-layout-gets-smarter-with-calc
+
+- from: /web/updates/2012/03/Optimizing-JavaScript
+  to: https://developer.chrome.com/blog/optimizing-javascript
+
+- from: /web/updates/2012/04/Big-boost-to-DOM-performance-WebKit-s-innerHTML-is-240-faster
+  to: https://developer.chrome.com/blog/big-boost-to-dom-performance-webkit-s-innerhtml-is-240-faster
+
+- from: /web/updates/2012/04/datalist-landed-in-Chrome-Canary
+  to: https://developer.chrome.com/blog/datalist-landed-in-chrome-canary
+
+- from: /updates/2012/04/Processing-XHR2-file-uploads-in-PHP
+  to: https://developer.chrome.com/blog/processing-xhr2-file-uploads-in-php
+
+- from: /web/updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
+  to: https://developer.chrome.com/blog/round-up-of-web-browser-internals-resources
+
+- from: /web/updates/2012/04/Taking-an-Entire-Page-Offline-using-the-HTML5-FileSystem-API
+  to: https://developer.chrome.com/blog/taking-an-entire-page-offline-using-the-html5-filesystem-api
+
+- from: /web/updates/2012/04/WebRTC-Protothon
+  to: https://developer.chrome.com/blog/webrtc-protothon
+
+- from: /web/updates/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision
+  to: https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision
+
+- from: /web/updates/2012/05/Websocket-Frame-Inspection-now-in-Chrome-DevTools
+  to: https://developer.chrome.com/blog/websocket-frame-inspection-now-in-chrome-devtools
+
+- from: /web/updates/2012/06/Don-t-Build-Blobs-Construct-Them
+  to: https://developer.chrome.com/blog/don-t-build-blobs-construct-them
+
+- from: /web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+  to: https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string
+
+- from: /web/updates/2012/07/Arrived-xhr-send-ArrayBufferView
+  to: https://developer.chrome.com/blog/arrived-xhr-send-arraybufferview
+
+- from: /web/updates/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available
+  to: https://developer.chrome.com/blog/drag-and-drop-a-folder-onto-chrome-now-available
+
+- from: /web/updates/2012/07/How-to-measure-browser-graphics-performance
+  to: https://developer.chrome.com/blog/how-to-measure-browser-graphics-performance
+
+- from: /web/updates/2012/07/Taking-advantage-of-GPU-acceleration-in-the-2D-canvas
+  to: https://developer.chrome.com/blog/taking-advantage-of-gpu-acceleration-in-the-2d-canvas
+
+- from: /web/updates/2012/07/Writing-a-flippable-book-using-CSS-Regions-and-3D-transforms
+  to: https://developer.chrome.com/blog/writing-a-flippable-book-using-css-regions-and-3d-transforms
+
+- from: /web/updates/2012/08/datalist-for-range-color-inputs-offer-some-default-choices
+  to: https://developer.chrome.com/blog/datalist-for-range-color-inputs-offer-some-default-choices
+
+- from: /web/updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API
+  to: https://developer.chrome.com/blog/integrating-input-type-file-with-the-filesystem-api
+
+- from: /web/updates/2012/08/Quick-FAQs-on-input-type-date-in-Google-Chrome
+  to: https://developer.chrome.com/blog/quick-faqs-on-input-type-date-in-google-chrome
+
+- from: web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit
+  to: https://developer.chrome.com/blog/stick-your-landings-position-sticky-lands-in-webkit
