@@ -915,3 +915,63 @@ redirects:
 
 - from: /web/updates/2011/10/Keeping-up-with-HTML5-and-browser-support
   to: https://developer.chrome.com/blog/keeping-up-with-html5-and-browser-support
+
+- from: /web/updates/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API
+  to: https://developer.chrome.com/blog/let-your-content-do-the-talking-fullscreen-api
+
+- from: /web/updates/2011/10/WebSockets-updated-to-latest-version-in-Chrome-Canary
+  to: https://developer.chrome.com/blog/websockets-updated-to-latest-version-in-chrome-canary
+
+- from: /web/updates/2011/11/Chrome-Developer-Tools-for-Speed
+  to: https://developer.chrome.com/blog/chrome-developer-tools-for-speed
+
+- from: /web/updates/2011/11/Stream-video-using-the-MediaSource-API
+  to: https://developer.chrome.com/blog/stream-video-using-the-mediasource-api
+
+- from: /web/updates/2011/11/WebGL-demo-roundup
+  to: https://developer.chrome.com/blog/webgl-demo-roundup
+
+- from: /web/updates/2011/12/CSS-Filter-Effects-Landing-in-WebKit
+  to: https://developer.chrome.com/blog/css-filter-effects-landing-in-webkit
+
+- from: /web/updates/2011/12/Transferable-Objects-Lightning-Fast
+  to: https://developer.chrome.com/blog/transferable-objects-lightning-fast
+
+- from: /web/updates/2011/12/Use-mediump-precision-in-WebGL-when-possible
+  to: https://developer.chrome.com/blog/use-mediump-precision-in-webgl-when-possible
+
+- from: /web/updates/2012/01/Getting-Rid-of-Synchronous-XHRs
+  to: https://developer.chrome.com/blog/getting-rid-of-synchronous-xhrs
+
+- from: /web/updates/2012/01/Introducing-Video-Player-Sample
+  to: https://developer.chrome.com/blog/introducing-video-player-sample
+
+- from: /web/updates/2012/01/Web-Audio-FAQ
+  to: https://developer.chrome.com/blog/web-audio-faq
+
+- from: /web/updates/2012/02/Chrome-for-Android-Accelerating-the-Mobile-Web
+  to: https://developer.chrome.com/blog/chrome-for-android-accelerating-the-mobile-web
+
+- from: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
+  to: https://developer.chrome.com/blog/detect-dom-changes-with-mutation-observers
+
+- from: /web/updates/2012/02/Getting-Gmail-to-handle-all-mailto-links-with-registerProtocolHandler
+  to: https://developer.chrome.com/blog/getting-gmail-to-handle-all-mailto-links-with-registerprotocolhandler
+
+- from: /web/updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
+  to: https://developer.chrome.com/blog/html5-audio-and-the-web-audio-api-are-bffs
+
+- from: /web/updates/2012/02/Pointer-Lock-API-Brings-FPS-Games-to-the-Browser
+  to: https://developer.chrome.com/blog/pointer-lock-api-brings-fps-games-to-the-browser
+
+- from: /web/updates/2012/02/SwiftShader-brings-software-3D-rendering-to-Chrome
+  to: https://developer.chrome.com/blog/swiftshader-brings-software-3d-rendering-to-chrome
+
+- from: /web/updates/2012/02/WebGL-and-Web-Audio-API-demo-roundup
+  to: https://developer.chrome.com/blog/webgl-and-web-audio-api-demo-roundup
+
+- from: /web/updates/2012/03/A-New-Experimental-Feature-style-scoped
+  to: https://developer.chrome.com/blog/a-new-experimental-feature-style-scoped
+
+- from: /web/updates/2012/03/CSS-layout-gets-smarter-with-calc
+  to: https://developer.chrome.com/blog/css-layout-gets-smarter-with-calc
