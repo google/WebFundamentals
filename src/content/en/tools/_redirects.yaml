@@ -62,6 +62,23 @@ redirects:
 - from: /web/tools/workbox/guides/codelabs/...
   to: /codelabs/workbox-lab
 
+# Workbox guides
+
+- from: /web/tools/workbox/guides/using-bundlers
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler
+
+- from: /web/tools/workbox/guides/route-requests
+  to: https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#applying-caching-strategies-with-route-matching
+
+- from: /web/tools/workbox/guides/handle-third-party-requests
+  to: https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#cross-origin-considerations
+
+- from: /web/tools/workbox/guides/using-plugins
+  to: https://developer.chrome.com/docs/workbox/using-plugins/
+
+- from: /web/tools/workbox/guides/troubleshoot-and-debug
+  to: https://developer.chrome.com/docs/workbox/troubleshooting-and-logging/
+
 # Workbox migration guides
 
 - from: /web/tools/workbox/guides/migrations/migrate-from-sw
