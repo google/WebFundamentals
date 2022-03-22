@@ -1066,3 +1066,62 @@ redirects:
 - from: /web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API
   to: https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api
 
+- from: /web/updates/2013/02/CSS-Background-shorthand-coming-to-mobile-WebKit-browsers
+  to: https://developer.chrome.com/blog/css-background-shorthand-coming-to-mobile-webkit-browsers
+
+- from: /web/updates/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode
+  to: https://developer.chrome.com/blog/profiling-long-paint-times-with-devtools-continuous-painting-mode
+
+- from: /web/updates/2013/02/WebRTC-RTCDataChannel-demo-API-changes-and-Chrome-talks-to-Firefox
+  to: https://developer.chrome.com/blog/webrtc-rtcdatachannel-demo-api-changes-and-chrome-talks-to-firefox
+
+- from: /web/updates/2013/03/Introduction-to-Custom-Filters-aka-CSS-Shaders
+  to: https://developer.chrome.com/blog/introduction-to-custom-filters-aka-css-shaders
+
+- from: /web/updates/2013/03/Visualizing-Shadow-DOM-Concepts
+  to: https://developer.chrome.com/blog/visualizing-shadow-dom-concepts
+
+- from: /web/updates/2013/06/sourceMappingURL-and-sourceURL-syntax-changed
+  to: https://developer.chrome.com/blog/sourcemappingurl-and-sourceurl-syntax-changed
+
+- from: /web/updates/2013/07/Alpha-transparency-in-Chrome-video
+  to: https://developer.chrome.com/blog/alpha-transparency-in-chrome-video
+
+- from: /web/updates/2013/09/DevTools-answers-What-font-is-that
+  to: https://developer.chrome.com/blog/devtools-answers-what-font-is-that
+
+- from: /web/updates/2013/09/dialog-element-Modals-made-easy
+  to: https://developer.chrome.com/blog/dialog-element-modals-made-easy
+
+- from: /web/updates/2013/10/Flexbox-layout-isn-t-slow
+  to: https://developer.chrome.com/blog/flexbox-layout-isn-t-slow
+
+- from: /web/updates/2013/10/Web-Audio-live-audio-input-now-on-Android
+  to: https://developer.chrome.com/blog/web-audio-live-audio-input-now-on-android
+
+- from: /web/updates/2013/11/The-Landscape-Of-Front-end-Development-Automation-Slides
+  to: https://developer.chrome.com/blog/the-landscape-of-front-end-development-automation-slides
+
+- from: /web/updates/2013/11/The-Yeoman-Monthly-Digest-1
+  to: https://developer.chrome.com/blog/the-yeoman-monthly-digest-1
+
+- from: /web/updates/2013/12/300ms-tap-delay-gone-away
+  to: https://developer.chrome.com/blog/300ms-tap-delay-gone-away
+
+- from: /web/updates/2013/12/DevTools-Digest-December-2013
+  to: https://developer.chrome.com/blog/devtools-digest-december-2013
+
+- from: /web/updates/2013/12/New-Web-Animations-engine-in-Blink-drives-CSS-Animations-Transitions
+  to: https://developer.chrome.com/blog/new-web-animations-engine-in-blink-drives-css-animations-transitions
+
+- from: /web/updates/2013/12/The-Yeoman-Monthly-Digest-2
+  to: https://developer.chrome.com/blog/the-yeoman-monthly-digest-2
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Mobile-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-mobile-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Open-Web-Platform-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-open-web-platform-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Performance-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-performance-summary
