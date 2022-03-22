@@ -579,7 +579,7 @@ redirects:
 
 - from: /web/updates/2017/02/chrome-57-deprecations
   to: https://developer.chrome.com/blog/chrome-57-deprecations/
-  
+
 - from: /web/updates/2017/03/chrome-58-deprecations
   to: https://developer.chrome.com/blog/chrome-58-deprecations/
 
@@ -589,7 +589,7 @@ redirects:
 - from: /web/updates/2017/04/headless-chrome
   to: https://developer.chrome.com/blog/headless-chrome/
 
-- from: /web/updates/2017/02/lighthouse-jan 
+- from: /web/updates/2017/02/lighthouse-jan
   to: https://developer.chrome.com/blog/lighthouse-jan/
 
 - from: /web/updates/2017/07/chrome-61-media-updates
@@ -702,7 +702,7 @@ redirects:
 
 - from: /web/updates/2019/06/chrome-76-deps-rems
   to: https://developer.chrome.com/blog/chrome-76-deps-rems
- 
+
 - from: /web/updates/2016/06/devtools-digest
   to: https://developer.chrome.com/blog/devtools-digest-2016-06
 
@@ -985,7 +985,7 @@ redirects:
 - from: /web/updates/2012/04/datalist-landed-in-Chrome-Canary
   to: https://developer.chrome.com/blog/datalist-landed-in-chrome-canary
 
-- from: /updates/2012/04/Processing-XHR2-file-uploads-in-PHP
+- from: /web/updates/2012/04/Processing-XHR2-file-uploads-in-PHP
   to: https://developer.chrome.com/blog/processing-xhr2-file-uploads-in-php
 
 - from: /web/updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
@@ -1125,7 +1125,7 @@ redirects:
 
 - from: /web/updates/2014/01/Chrome-Dev-Summit-Performance-Summary
   to: https://developer.chrome.com/blog/chrome-dev-summit-performance-summary
-
+  
 - from: /web/updates/2014/01/Chrome-Dev-Summit-Platforms-Summary
   to: https://developer.chrome.com/blog/chrome-dev-summit-platforms-summary
 
@@ -1185,3 +1185,4 @@ redirects:
 
 - from: /web/updates/2014/12/Fundamental-of-Mobile-Web-Development
   to: https://developer.chrome.com/blog/fundamental-of-mobile-web-development
+  
