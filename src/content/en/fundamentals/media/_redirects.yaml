@@ -6,3 +6,24 @@ redirects:
 
 - from: /web/fundamentals/media/
   to: /web/fundamentals/media/video
+
+- from: /web/fundamentals/media/eme
+  to: https://web.dev/media-eme
+
+- from: /web/fundamentals/media/manipulating/live-effects
+  to: https://web.dev/media-manipulating-live-effects
+
+- from: /web/fundamentals/media/mobile-web-video-playback
+  to: https://web.dev/media-mobile-web-video-playback
+
+- from: /web/fundamentals/media/mse/basics
+  to: https://web.dev/media-mse-basics
+
+- from: /web/fundamentals/media/mse/seamless-playback
+  to: https://web.dev/media-mse-seamless-playback
+
+- from: /web/fundamentals/media/recording-audio
+  to: https://web.dev/media-recording-audio
+
+- from: /web/fundamentals/media/recording-video
+  to: https://web.dev/media-recording-video
