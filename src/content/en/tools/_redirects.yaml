@@ -79,6 +79,24 @@ redirects:
 - from: /web/tools/workbox/guides/troubleshoot-and-debug
   to: https://developer.chrome.com/docs/workbox/troubleshooting-and-logging/
 
+- from: /web/tools/workbox/guides/storage-quota
+  to: https://developer.chrome.com/docs/workbox/understanding-storage-quota/
+
+- from: /web/tools/workbox/guides/common-recipes
+  to: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
+
+- from: /web/tools/workbox/guides/advanced-recipes
+  to: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
+
+- from: /web/tools/workbox/guides/generate-service-worker/cli
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#workbox-cli
+
+- from: /web/tools/workbox/guides/generate-service-worker/workbox-build
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#workbox-build
+
+- from: /web/tools/workbox/guides/generate-service-worker/webpack
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler
+
 # Workbox migration guides
 
 - from: /web/tools/workbox/guides/migrations/migrate-from-sw

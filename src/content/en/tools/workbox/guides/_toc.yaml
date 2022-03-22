@@ -19,22 +19,28 @@ toc:
   path: https://developer.chrome.com/docs/workbox/troubleshooting-and-logging/
   status: external
 - title: "Understanding Storage Quota"
-  path: /web/tools/workbox/guides/storage-quota
+  path: https://developer.chrome.com/docs/workbox/understanding-storage-quota/
+  status: external
 - title: "Common Recipes"
-  path: /web/tools/workbox/guides/common-recipes
+  path: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
+  status: external
 - title: "Advanced Recipes"
-  path: /web/tools/workbox/guides/advanced-recipes
+  path: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
+  status: external
 - title: "Service Worker Checklist"
   path: /web/tools/workbox/guides/service-worker-checklist
 - title: "Generate a Complete Service Worker"
   style: accordion
   section:
   - title: "CLI"
-    path: /web/tools/workbox/guides/generate-service-worker/cli
+    path: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#workbox-cli
+    status: external
   - title: "Gulp or Node"
-    path: /web/tools/workbox/guides/generate-service-worker/workbox-build
+    path: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#workbox-build
+    status: external
   - title: "Webpack"
-    path: /web/tools/workbox/guides/generate-service-worker/webpack
+    path: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler
+    status: external
 - title: "Migrating from Older Versions"
   style: accordion
   section:
