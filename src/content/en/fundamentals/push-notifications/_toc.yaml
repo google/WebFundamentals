@@ -39,3 +39,27 @@ toc:
     step_group: web-push
   - title: "Video: Web Push Notifications (I/O 2016)"
     path: /web/fundamentals/push-notifications/video
+  - title: Common Notification Patterns
+    path: https://web.dev/push-notifications-common-notification-patterns
+    status: external
+  - title: Displaying a Notification
+    path: https://web.dev/push-notifications-display-a-notification
+    status: external
+  - title: How Push Works
+    path: https://web.dev/push-notifications-how-push-works
+    status: external
+  - title: Notification Behavior
+    path: https://web.dev/push-notifications-notification-behaviour
+    status: external
+  - title: Permission UX
+    path: https://web.dev/push-notifications-permission-ux
+    status: external
+  - title: Sending Messages with Web Push Libraries
+    path: https://web.dev/sending-messages-with-web-push-libraries
+    status: external
+  - title: Subscribing a User
+    path: https://web.dev/push-notifications-subscribing-a-user
+    status: external
+  - title: The Web Push Protocol
+    path: https://web.dev/push-notifications-web-push-protocol
+    status: external
