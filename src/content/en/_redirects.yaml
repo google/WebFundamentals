@@ -1125,3 +1125,63 @@ redirects:
 
 - from: /web/updates/2014/01/Chrome-Dev-Summit-Performance-Summary
   to: https://developer.chrome.com/blog/chrome-dev-summit-performance-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Platforms-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-platforms-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Polymer-declarative-encapsulated-reusable-components
+  to: https://developer.chrome.com/blog/chrome-dev-summit-polymer-declarative-encapsulated-reusable-components
+
+- from: /web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API
+  to: https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api
+
+- from: /web/updates/2014/01/Yo-Polymer-A-Whirlwind-Tour-Of-Web-Component-Tooling
+  to: https://developer.chrome.com/blog/yo-polymer-a-whirlwind-tour-of-web-component-tooling
+
+- from: /web/updates/2014/02/The-Yeoman-Monthly-Digest-3
+  to: https://developer.chrome.com/blog/the-yeoman-monthly-digest-3
+
+- from: /web/updates/2014/03/Get-on-the-CSS-Grid
+  to: https://developer.chrome.com/blog/get-on-the-css-grid
+
+- from: /web/updates/2014/05/A-More-Compatible-Smoother-Touch
+  to: https://developer.chrome.com/blog/a-more-compatible-smoother-touch
+
+- from: /web/updates/2014/05/Web-Animations-element-animate-is-now-in-Chrome-36
+  to: https://developer.chrome.com/blog/web-animations-element-animate-is-now-in-chrome-36
+
+- from: /web/updates/2014/06/Automating-Web-Performance-Measurement
+  to: https://developer.chrome.com/blog/automating-web-performance-measurement
+
+- from: /web/updates/2014/07/Blob-support-for-IndexedDB-landed-on-Chrome-Dev
+  to: https://developer.chrome.com/blog/blob-support-for-Indexeddb-landed-on-chrome-dev
+
+- from: /web/updates/2014/07/dialog-element-shipped-in-Chrome-37-Beta
+  to: https://developer.chrome.com/blog/dialog-element-shipped-in-chrome-37-beta
+
+- from: /web/updates/2014/07/Web-Audio-Changes-in-m36
+  to: https://developer.chrome.com/blog/web-audio-changes-in-m36
+
+- from: /web/updates/2014/08/Collecting-and-Iterating-the-ES6-Way
+  to: https://developer.chrome.com/blog/collecting-and-iterating-the-es6-way
+
+- from: /web/updates/2014/08/Easier-ArrayBuffer-String-conversion-with-the-Encoding-API
+  to: https://developer.chrome.com/blog/easier-arraybuffer-string-conversion-with-the-encoding-api
+
+- from: /web/updates/2014/09/Precision-Touch-for-Precise-Gestures
+  to: https://developer.chrome.com/blog/precision-touch-for-precise-gestures
+
+- from: /web/updates/2014/10/Generators-the-Gnarly-Bits
+  to: https://developer.chrome.com/blog/generators-the-gnarly-bits
+
+- from: /web/updates/2014/10/Send-beacon-data-in-Chrome-39
+  to: https://developer.chrome.com/blog/send-beacon-data-in-chrome-39
+
+- from: /web/updates/2014/11/frame-timing-api
+  to: https://developer.chrome.com/blog/frame-timing-api
+
+- from: /web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  to: https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android
+
+- from: /web/updates/2014/12/Fundamental-of-Mobile-Web-Development
+  to: https://developer.chrome.com/blog/fundamental-of-mobile-web-development
