@@ -20,7 +20,8 @@ toc:
       - title: Overview
         path: /web/fundamentals/primers/service-workers/
       - title: Life Cycle
-        path: /web/fundamentals/primers/service-workers/lifecycle
+        path: https://web.dev/service-worker-lifecycle/
+        status: external
       - title: Registration
         path: /web/fundamentals/primers/service-workers/registration
       - title: High Performance Loading

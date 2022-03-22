@@ -75,6 +75,10 @@ gulp.task('build:announcement', function() {
   const announcementYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
   const showAnnouncement = announcementYaml['enabled'];
   projectYamlFiles.forEach((file) => {
+    // The legacy Workbox site needs its own banner.
+    if (file.indexOf('workbox') !== -1) {
+      return;
+    }
     let projYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
     if (showAnnouncement) {
       projYaml.announcement = {};

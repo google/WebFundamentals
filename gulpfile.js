@@ -132,6 +132,7 @@ gulp.task('clean', function() {
     'src/content/*/tools/puppeteer/_src/**/*',
     'src/content/*/updates/_index.yaml',
     'src/content/*/updates/*/index.md',
+    'src/content/*/updates/20??/_toc.yaml',
     'src/content/*/updates/tags/*',
     'src/data/codelabs/*/*.md',
     'src/data/codelabs/*/img/**',

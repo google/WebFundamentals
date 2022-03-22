@@ -2,10 +2,14 @@ toc:
 - title: Device APIs
   section:
   - title: Handling User Location
-    path: /web/fundamentals/native-hardware/user-location/
+    path: https://web.dev/native-hardware-user-location
+    status: external
   - title: Using Device Orientation & Motion
-    path: /web/fundamentals/native-hardware/device-orientation/
+    path: https://web.dev/native-hardware-device-orientation
+    status: external
   - title: Making Fullscreen Experiences
-    path: /web/fundamentals/native-hardware/fullscreen/
+    path: https://web.dev/native-hardware-fullscreen
+    status: external
   - title: Click to Call
-    path: /web/fundamentals/native-hardware/click-to-call/
+    path: https://web.dev/native-hardware-click-to-call
+    status: external

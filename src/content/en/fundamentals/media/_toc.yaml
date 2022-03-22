@@ -5,26 +5,32 @@ toc:
     path: https://web.dev/video-and-source-tags/
     status: external
   - title: Mobile Web Video Playback
-    path: /web/fundamentals/media/mobile-web-video-playback
+    path: https://web.dev/media-mobile-web-video-playback
+    status: external
   - title: Playing Protected Content with Encrypted Media Extensions
-    path: /web/fundamentals/media/eme
+    path: https://web.dev/media-eme
+    status: external
   - title: Playback Control with Media Source Extensions
     section:
     - title: Overview
-      path: /web/fundamentals/media/mse/basics
+      path: https://web.dev/media-mse-basics
+      status: external
     - title: Seamless Playback
-      path: /web/fundamentals/media/mse/seamless-playback
+      path: https://web.dev/media-mse-seamless-playback
+      status: external
   - title: Fast Playback with Video Preload
     path: https://web.dev/fast-playback-with-preload/
     status: external
 - title: Capture and Record
   section:
   - title: Capturing Audio
-    path: /web/fundamentals/media/recording-audio/
+    path: https://web.dev/media-recording-audio
+    status: external
   - title: Capturing Images
     path: /web/fundamentals/media/capturing-images/
   - title: Capturing Video
-    path: /web/fundamentals/media/recording-video/
+    path: https://web.dev/media-recording-video
+    status: external
 - title: Manipulating Media Files
   section:
   - title: Application Primers
@@ -34,7 +40,8 @@ toc:
     path: https://web.dev/media/#prepare-media-files-for-the-web
     status: external
   - title: Real Time Effects For Images and Video
-    path: /web/fundamentals/media/manipulating/live-effects
+    path: https://web.dev/media-manipulating-live-effects
+    status: external
   - title: Cheat Sheet
     path: https://web.dev/media-cheat-sheet/
     status: external

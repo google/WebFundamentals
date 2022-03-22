@@ -7,6 +7,9 @@ redirects:
 - from: /web/updates/nic
   to: /web/updates/2020/11/nic87
 
+- from: /web/updates/2019/02/priority-hints
+  to: https://web.dev/priority-hints/
+
 # Media Updates
 
 - from: /web/updates/2017/03/chrome-58-media-updates
@@ -509,62 +512,8 @@ redirects:
 - from: /web/updates/2018/06/payment-handler-api
   to: https://web.dev/web-based-payment-apps-overview/
 
-- from: /web/updates/2017/01/webcomponents-org
-  to: https://web.dev/webcomponents-org/
+- from: /web/updates/2011/08/Saving-generated-files-on-the-client-side
+  to: https://web.dev/browser-fs-access/
 
-- from: /web/updates/2015/04/a-new-home-for-devtools
-  to: https://developer.chrome.com/blog/a-new-home-for-devtools/
-
-- from: /web/updates/2015/05/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
-  to: https://developer.chrome.com/blog/toggle-the-devtools-dock-state-with-a-keyboard-shortcut/
-
-- from: /web/updates/2015/07/improved-dom-breadcrumbs
-  to: https://developer.chrome.com/blog/improved-dom-breadcrumbs/
-
-- from: /web/updates/2015/10/chrome-47-webrtc
-  to: https://developer.chrome.com/blog/chrome-47-webrtc/
-
-- from: /web/updates/2015/11/devtools-digest-cds-edition
-  to: https://developer.chrome.com/blog/devtools-digest-cds-edition/
-
-- from: /web/updates/2018/05/lighthouse3
-  to: https://developer.chrome.com/blog/lighthouse3/
-
-- from: /web/updates/2018/06/feature-policy
-  to: https://developer.chrome.com/blog/feature-policy/
-
-- from: /web/updates/2018/06/webar-chacmool
-  to: https://developer.chrome.com/blog/webar-chacmool/
-
-- from: /web/updates/2018/07/search-ads-speed
-  to: https://developer.chrome.com/blog/search-ads-speed/
-
-- from: /web/updates/2018/07/site-isolation
-  to: https://developer.chrome.com/blog/site-isolation/
-
-- from: /web/updates/2018/08/offscreen-canvas
-  to: https://developer.chrome.com/blog/offscreen-canvas/
-
-- from: /web/updates/2018/09/asynchronous-access-to-http-cookies
-  to: https://developer.chrome.com/blog/asynchronous-access-to-http-cookies/
-
-- from: /web/updates/2018/10/paint-timing-issues
-  to: https://developer.chrome.com/blog/paint-timing-issues/
-
-- from: /web/updates/2018/10/watch-video-using-picture-in-picture
-  to: https://developer.chrome.com/blog/watch-video-using-picture-in-picture/
-
-- from: /web/updates/2018/11/signed-exchanges
-  to: https://developer.chrome.com/blog/signed-exchanges/
-
-- from: /web/updates/2018/11/web-audio-autoplay
-  to: https://developer.chrome.com/blog/web-audio-autoplay/
-
-- from: /web/updates/2019/01/rtcquictransport-api
-  to: https://developer.chrome.com/blog/rtcquictransport-api/
-
-- from: /web/updates/2019/01/user-activation
-  to: https://developer.chrome.com/blog/user-activation/
-
-- from: /web/updates/2019/02/back-forward-cache
-  to: https://developer.chrome.com/blog/back-forward-cache/
+- from: /web/updates/2018/08/chrome-ux-report-dashboard
+  to: https://web.dev/chrome-ux-report-data-studio-dashboard/

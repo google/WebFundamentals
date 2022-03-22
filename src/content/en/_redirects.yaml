@@ -657,3 +657,471 @@ redirects:
 
 - from: /web/updates/2020/05/chrome-84-deps-rems
   to: https://developer.chrome.com/blog/chrome-84-deps-rems
+
+- from: /web/updates/2020/07/chrome-85-deps-rems
+  to: https://developer.chrome.com/blog/chrome-85-deps-rems
+
+- from: /web/updates/2020/09/chrome-86-deps-rems
+  to: https://developer.chrome.com/blog/chrome-86-deps-rems
+
+- from: /web/updates/2020/10/chrome-87-deps-rems
+  to: https://developer.chrome.com/blog/chrome-87-deps-rems
+
+- from: /web/updates/2020/12/chrome-88-deps-rems
+  to: https://developer.chrome.com/blog/chrome-88-deps-rems
+
+- from: /web/updates/2020/07/referrer-policy-new-chrome-default
+  to: https://developer.chrome.com/blog/referrer-policy-new-chrome-default
+
+- from: /web/updates/2020/05/heavy-ad-interventions
+  to: https://developer.chrome.com/blog/heavy-ad-interventions
+
+- from: /web/updates/2020/10/http-cache-partitioning
+  to: https://developer.chrome.com/blog/http-cache-partitioning
+
+- from: /web/updates/2021/03/crux-rank-magnitude
+  to: https://developer.chrome.com/blog/crux-rank-magnitude
+
+- from: /web/updates/2020/02/notification-permission-data-in-crux
+  to: https://developer.chrome.com/blog/notification-permission-data-in-crux
+
+- from: /web/updates/2020/07/custom-tabs-android-11
+  to: https://developer.chrome.com/blog/custom-tabs-android-11
+
+- from: /web/updates/2019/06/layoutNG
+  to: https://developer.chrome.com/blog/layoutNg-2
+
+- from: /web/updates/2019/03/kv-storage
+  to: https://developer.chrome.com/blog/kv-storage
+
+- from: /web/updates/2019/01/lighthouse-platform-packs
+  to: https://developer.chrome.com/blog/lighthouse-platform-packs
+
+- from: /web/updates/2018/12/background-fetch
+  to: https://developer.chrome.com/blog/background-fetch
+
+- from: /web/updates/2019/06/chrome-76-deps-rems
+  to: https://developer.chrome.com/blog/chrome-76-deps-rems
+ 
+- from: /web/updates/2016/06/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-06
+
+- from: /web/updates/2016/09/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-09
+
+- from: /web/updates/2016/10/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-10
+
+- from: /web/updates/2016/11/get-ready-for-cds
+  to: https://developer.chrome.com/blog/get-ready-for-cds
+
+- from: /web/updates/2016/09/cache-query-options
+  to: https://developer.chrome.com/blog/cache-query-options
+
+- from: /web/updates/2018/06/a2hs-updates
+  to: https://developer.chrome.com/blog/a2hs-updates
+
+- from: /web/updates/2018/10/animation-worklet
+  to: https://developer.chrome.com/blog/animation-worklet
+
+- from: /web/updates/2018/07/reportingobserver
+  to: https://developer.chrome.com/blog/reportingobserver
+
+- from: /web/updates/2018/05/webauthn
+  to: https://developer.chrome.com/blog/webauthn
+
+- from: /web/updates/2017/04/chrome-59-deprecations
+  to: https://developer.chrome.com/blog/chrome-59-deprecations
+
+- from: /web/updates/2017/06/chrome-60-deprecations
+  to: https://developer.chrome.com/blog/chrome-60-deprecations
+
+- from: /web/updates/2017/08/chrome-61-deprecations
+  to: https://developer.chrome.com/blog/chrome-61-deprecations
+
+- from: /web/updates/2017/09/chrome-62-deprecations
+  to: https://developer.chrome.com/blog/chrome-62-deprecations
+
+- from: /web/updates/2017/10/chrome-63-deprecations
+  to: https://developer.chrome.com/blog/chrome-63-deprecations
+
+- from: /web/updates/2017/12/chrome-64-deprecations
+  to: https://developer.chrome.com/blog/chrome-64-deprecations
+
+- from: /web/updates/2018/02/chrome-65-deprecations
+  to: https://developer.chrome.com/blog/chrome-65-deprecations
+
+- from: /web/updates/2018/03/chrome-66-deprecations
+  to: https://developer.chrome.com/blog/chrome-66-deprecations
+
+- from: /web/updates/2018/04/chrome-67-deps-rems
+  to: https://developer.chrome.com/blog/chrome-67-deps-rems
+
+- from: /web/updates/2018/06/chrome-68-deps-rems
+  to: https://developer.chrome.com/blog/chrome-68-deps-rems
+
+- from: /web/updates/2018/09/chrome-70-deps-rems
+  to: https://developer.chrome.com/blog/chrome-70-deps-rems
+
+- from: /web/updates/2018/10/chrome-71-deps-rems
+  to: https://developer.chrome.com/blog/chrome-71-deps-rems
+
+- from: /web/updates/2018/12/chrome-72-deps-rems
+  to: https://developer.chrome.com/blog/chrome-72-deps-rems
+
+- from: /web/updates/2019/02/chrome-73-deps-rems
+  to: https://developer.chrome.com/blog/chrome-73-deps-rems
+
+- from: /web/updates/2019/03/chrome-74-deps-rems
+  to: https://developer.chrome.com/blog/chrome-74-deps-rems
+
+- from: /web/updates/2019/05/chrome-75-deps-rems
+  to: https://developer.chrome.com/blog/chrome-75-deps-rems
+
+- from: /web/updates/2019/08/chrome-77-deps-rems
+  to: https://developer.chrome.com/blog/chrome-77-deps-rems
+
+- from: /web/updates/2019/09/chrome-78-deps-rems
+  to: https://developer.chrome.com/blog/chrome-78-deps-rems
+
+- from: /web/updates/2018/07/first-input-delay-in-crux
+  to: https://developer.chrome.com/blog/first-input-delay-in-crux
+
+- from: /web/updates/2018/05/lighthouse3
+  to: https://developer.chrome.com/blog/lighthouse3
+
+- from: /web/updates/2018/06/more-native-echo-cancellation
+  to: https://developer.chrome.com/blog/more-native-echo-cancellation
+
+- from: /web/updates/2018/07/nostate-prefetch
+  to: https://developer.chrome.com/blog/nostate-prefetch
+
+- from: /web/updates/2018/07/page-lifecycle-api
+  to: https://developer.chrome.com/blog/page-lifecycle-api
+
+- from: /web/updates/2015/11/presentation-api
+  to: https://developer.chrome.com/blog/presentation-api
+
+- from: /web/updates/2015/04/command-click-to-add-multiple-cursors-in-the-sources-panel
+  to: https://developer.chrome.com/blog/command-click-to-add-multiple-cursors-in-the-sources-panel
+
+- from: /web/updates/2015/03/push-notifications-on-the-open-web
+  to: https://developer.chrome.com/blog/push-notifications-on-the-open-web
+
+- from: /web/updates/2015/05/notifying-you-of-changes-to-notifications
+  to: https://developer.chrome.com/blog/notifying-you-of-changes-to-notifications
+
+- from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
+  to: https://developer.chrome.com/blog/using-manifest-to-set-sitewide-theme-color
+
+- from: /web/updates/2015/09/updates-to-cache-api
+  to: https://developer.chrome.com/blog/updates-to-cache-api
+
+- from: /web/updates/2015/10/notification-requireInteraction
+  to: https://developer.chrome.com/blog/notification-requireInteraction
+
+- from: /web/updates/2015/11/app-shell
+  to: https://developer.chrome.com/blog/app-shell
+
+- from: /web/updates/2015/12/background-sync
+  to: https://developer.chrome.com/blog/background-sync
+
+- from: /web/updates/2016/01/notification-actions
+  to: https://developer.chrome.com/blog/notification-actions
+
+- from: /web/updates/2016/03/notifications
+  to: https://developer.chrome.com/blog/notifications
+
+- from: /web/updates/2016/03/web-push-encryption
+  to: https://developer.chrome.com/blog/web-push-encryption
+
+- from: /web/updates/2016/06/sw-readablestreams
+  to: https://developer.chrome.com/blog/sw-readablestreams
+
+- from: /web/updates/2016/07/web-push-interop-wins
+  to: https://developer.chrome.com/blog/web-push-interop-wins
+
+- from: /web/updates/2016/08/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-08/
+
+- from: /web/updates/2016/09/foreign-fetch
+  to: https://developer.chrome.com/blog/foreign-fetch
+
+- from: /web/updates/2016/09/options-of-a-pushsubscription
+  to: https://developer.chrome.com/blog/options-of-a-pushsubscription
+
+- from: /web/updates/2018/05/beyond-spa
+  to: https://developer.chrome.com/blog/beyond-spa
+
+- from: /web/updates/2018/07/pwacompat
+  to: https://developer.chrome.com/blog/pwacompat
+
+- from: /web/updates/2011/06/Contra-in-HTML5-Web-Audio-API
+  to: https://developer.chrome.com/blog/contra-in-html5-web-audio-api
+
+- from: /web/updates/2011/06/HTML5-Libraries-Late-June
+  to: https://developer.chrome.com/blog/html5-libraries-late-june
+
+- from: /web/updates/2011/06/navigator-onLine-in-Chrome-Dev-channel
+  to: https://developer.chrome.com/blog/navigator-online-in-chrome-dev-channel
+
+- from: /web/updates/2011/06/Page-Visibility-API-Have-I-got-your-attention
+  to: https://developer.chrome.com/blog/page-visibility-api-have-i-got-your-attention
+
+- from: /web/updates/2011/06/Welcome-to-updates-html5rocks-com
+  to: https://developer.chrome.com/blog/welcome-to-updates-html5rocks-com
+
+- from: /web/updates/2011/07/Announcing-New-Game-the-conference-for-HTML5-game-developers
+  to: https://developer.chrome.com/blog/announcing-new-game-the-conference-for-html5-game-developers
+
+- from: /web/updates/2011/07/Don-t-Miss-a-Frame-Using-the-Page-Visibility-API-HTML5-Video
+  to: https://developer.chrome.com/blog/don-t-miss-a-frame-using-the-page-visibility-api-html5-video
+
+- from: /web/updates/2011/07/HTML5-Libraries-polyfills-Mid-July
+  to: https://developer.chrome.com/blog/html5-libraries-polyfills-mid-july
+
+- from: /web/updates/2011/07/Using-Cross-domain-images-in-WebGL
+  to: https://developer.chrome.com/blog/using-cross-domain-images-in-webgl
+
+- from: /web/updates/2011/08/Debugging-the-Filesystem-API
+  to: https://developer.chrome.com/blog/debugging-the-filesystem-api
+
+- from: /web/updates/2011/08/insertAdjacentHTML-Everywhere
+  to: https://developer.chrome.com/blog/insertadjacenthtml-everywhere
+
+- from: /web/updates/2011/08/Seek-into-local-files-with-the-File-System-API
+  to: https://developer.chrome.com/blog/seek-into-local-files-with-the-file-system-api
+
+- from: /web/updates/2011/08/What-s-different-in-the-new-WebSocket-protocol
+  to: https://developer.chrome.com/blog/what-s-different-in-the-new-websocket-protocol
+
+- from: /web/updates/2011/09/7-minute-videos-Javascript-Console-Protips-newish-DOM-APIs
+  to: https://developer.chrome.com/blog/7-minute-videos-javascript-console-protips-newish-dom-apis
+
+- from: /web/updates/2011/09/New-Game-Conference-for-HTML5-Game-Developers-Coupon
+  to: https://developer.chrome.com/blog/new-game-conference-for-html5-game-developers-coupon
+
+- from: /web/updates/2011/09/Workers-ArrayBuffer
+  to: https://developer.chrome.com/blog/workers-arraybuffer
+
+- from: /web/updates/2011/10/App-Cache-Tools-and-Auto-Generators
+  to: https://developer.chrome.com/blog/app-cache-tools-and-auto-generators
+
+- from: /web/updates/2011/10/Defining-Scope-In-IndexedDB-Transactions
+  to: https://developer.chrome.com/blog/defining-scope-In-indexeddb-transactions
+
+- from: /web/updates/2011/10/Having-a-ride-with-Three-js
+  to: https://developer.chrome.com/blog/having-a-ride-with-three-js
+
+- from: /web/updates/2011/10/Keeping-up-with-HTML5-and-browser-support
+  to: https://developer.chrome.com/blog/keeping-up-with-html5-and-browser-support
+
+- from: /web/updates/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API
+  to: https://developer.chrome.com/blog/let-your-content-do-the-talking-fullscreen-api
+
+- from: /web/updates/2011/10/WebSockets-updated-to-latest-version-in-Chrome-Canary
+  to: https://developer.chrome.com/blog/websockets-updated-to-latest-version-in-chrome-canary
+
+- from: /web/updates/2011/11/Chrome-Developer-Tools-for-Speed
+  to: https://developer.chrome.com/blog/chrome-developer-tools-for-speed
+
+- from: /web/updates/2011/11/Stream-video-using-the-MediaSource-API
+  to: https://developer.chrome.com/blog/stream-video-using-the-mediasource-api
+
+- from: /web/updates/2011/11/WebGL-demo-roundup
+  to: https://developer.chrome.com/blog/webgl-demo-roundup
+
+- from: /web/updates/2011/12/CSS-Filter-Effects-Landing-in-WebKit
+  to: https://developer.chrome.com/blog/css-filter-effects-landing-in-webkit
+
+- from: /web/updates/2011/12/Transferable-Objects-Lightning-Fast
+  to: https://developer.chrome.com/blog/transferable-objects-lightning-fast
+
+- from: /web/updates/2011/12/Use-mediump-precision-in-WebGL-when-possible
+  to: https://developer.chrome.com/blog/use-mediump-precision-in-webgl-when-possible
+
+- from: /web/updates/2012/01/Getting-Rid-of-Synchronous-XHRs
+  to: https://developer.chrome.com/blog/getting-rid-of-synchronous-xhrs
+
+- from: /web/updates/2012/01/Introducing-Video-Player-Sample
+  to: https://developer.chrome.com/blog/introducing-video-player-sample
+
+- from: /web/updates/2012/01/Web-Audio-FAQ
+  to: https://developer.chrome.com/blog/web-audio-faq
+
+- from: /web/updates/2012/02/Chrome-for-Android-Accelerating-the-Mobile-Web
+  to: https://developer.chrome.com/blog/chrome-for-android-accelerating-the-mobile-web
+
+- from: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
+  to: https://developer.chrome.com/blog/detect-dom-changes-with-mutation-observers
+
+- from: /web/updates/2012/02/Getting-Gmail-to-handle-all-mailto-links-with-registerProtocolHandler
+  to: https://developer.chrome.com/blog/getting-gmail-to-handle-all-mailto-links-with-registerprotocolhandler
+
+- from: /web/updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
+  to: https://developer.chrome.com/blog/html5-audio-and-the-web-audio-api-are-bffs
+
+- from: /web/updates/2012/02/Pointer-Lock-API-Brings-FPS-Games-to-the-Browser
+  to: https://developer.chrome.com/blog/pointer-lock-api-brings-fps-games-to-the-browser
+
+- from: /web/updates/2012/02/SwiftShader-brings-software-3D-rendering-to-Chrome
+  to: https://developer.chrome.com/blog/swiftshader-brings-software-3d-rendering-to-chrome
+
+- from: /web/updates/2012/02/WebGL-and-Web-Audio-API-demo-roundup
+  to: https://developer.chrome.com/blog/webgl-and-web-audio-api-demo-roundup
+
+- from: /web/updates/2012/03/A-New-Experimental-Feature-style-scoped
+  to: https://developer.chrome.com/blog/a-new-experimental-feature-style-scoped
+
+- from: /web/updates/2012/03/CSS-layout-gets-smarter-with-calc
+  to: https://developer.chrome.com/blog/css-layout-gets-smarter-with-calc
+
+- from: /web/updates/2012/03/Optimizing-JavaScript
+  to: https://developer.chrome.com/blog/optimizing-javascript
+
+- from: /web/updates/2012/04/Big-boost-to-DOM-performance-WebKit-s-innerHTML-is-240-faster
+  to: https://developer.chrome.com/blog/big-boost-to-dom-performance-webkit-s-innerhtml-is-240-faster
+
+- from: /web/updates/2012/04/datalist-landed-in-Chrome-Canary
+  to: https://developer.chrome.com/blog/datalist-landed-in-chrome-canary
+
+- from: /updates/2012/04/Processing-XHR2-file-uploads-in-PHP
+  to: https://developer.chrome.com/blog/processing-xhr2-file-uploads-in-php
+
+- from: /web/updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
+  to: https://developer.chrome.com/blog/round-up-of-web-browser-internals-resources
+
+- from: /web/updates/2012/04/Taking-an-Entire-Page-Offline-using-the-HTML5-FileSystem-API
+  to: https://developer.chrome.com/blog/taking-an-entire-page-offline-using-the-html5-filesystem-api
+
+- from: /web/updates/2012/04/WebRTC-Protothon
+  to: https://developer.chrome.com/blog/webrtc-protothon
+
+- from: /web/updates/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision
+  to: https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision
+
+- from: /web/updates/2012/05/Websocket-Frame-Inspection-now-in-Chrome-DevTools
+  to: https://developer.chrome.com/blog/websocket-frame-inspection-now-in-chrome-devtools
+
+- from: /web/updates/2012/06/Don-t-Build-Blobs-Construct-Them
+  to: https://developer.chrome.com/blog/don-t-build-blobs-construct-them
+
+- from: /web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+  to: https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string
+
+- from: /web/updates/2012/07/Arrived-xhr-send-ArrayBufferView
+  to: https://developer.chrome.com/blog/arrived-xhr-send-arraybufferview
+
+- from: /web/updates/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available
+  to: https://developer.chrome.com/blog/drag-and-drop-a-folder-onto-chrome-now-available
+
+- from: /web/updates/2012/07/How-to-measure-browser-graphics-performance
+  to: https://developer.chrome.com/blog/how-to-measure-browser-graphics-performance
+
+- from: /web/updates/2012/07/Taking-advantage-of-GPU-acceleration-in-the-2D-canvas
+  to: https://developer.chrome.com/blog/taking-advantage-of-gpu-acceleration-in-the-2d-canvas
+
+- from: /web/updates/2012/07/Writing-a-flippable-book-using-CSS-Regions-and-3D-transforms
+  to: https://developer.chrome.com/blog/writing-a-flippable-book-using-css-regions-and-3d-transforms
+
+- from: /web/updates/2012/08/datalist-for-range-color-inputs-offer-some-default-choices
+  to: https://developer.chrome.com/blog/datalist-for-range-color-inputs-offer-some-default-choices
+
+- from: /web/updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API
+  to: https://developer.chrome.com/blog/integrating-input-type-file-with-the-filesystem-api
+
+- from: /web/updates/2012/08/Quick-FAQs-on-input-type-date-in-Google-Chrome
+  to: https://developer.chrome.com/blog/quick-faqs-on-input-type-date-in-google-chrome
+
+- from: /web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit
+  to: https://developer.chrome.com/blog/stick-your-landings-position-sticky-lands-in-webkit
+
+- from: /web/updates/2012/08/When-milliseconds-are-not-enough-performance-now
+  to: https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now
+
+- from: /web/updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps
+  to: https://developer.chrome.com/blog/interactive-globe-with-css-shaders-google-maps
+
+- from: /web/updates/2012/09/Live-Web-Audio-Input-Enabled
+  to: https://developer.chrome.com/blog/live-web-audio-input-enabled
+
+- from: /web/updates/2012/09/Stacking-Changes-Coming-to-position-fixed-elements
+  to: https://developer.chrome.com/blog/stacking-changes-coming-to-position-fixed-elements
+
+- from: /web/updates/2012/11/Content-Security-Policy-1-0-is-officially-awesome
+  to: https://developer.chrome.com/blog/content-security-policy-1-0-is-officially-awesome
+
+- from: /web/updates/2012/11/Respond-to-change-with-Object-observe
+  to: https://developer.chrome.com/blog/respond-to-change-with-object-observe
+
+- from: /web/updates/2012/12/Canvas-driven-background-images
+  to: https://developer.chrome.com/blog/canvas-driven-background-images
+
+- from: /web/updates/2012/12/Screensharing-with-WebRTC
+  to: https://developer.chrome.com/blog/screensharing-with-webrtc
+
+- from: /web/updates/2012/12/WebRTC-hits-Firefox-Android-and-iOS
+  to: https://developer.chrome.com/blog/webrtc-hits-firefox-android-and-ios
+
+- from: /web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API
+  to: https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api
+
+- from: /web/updates/2013/02/CSS-Background-shorthand-coming-to-mobile-WebKit-browsers
+  to: https://developer.chrome.com/blog/css-background-shorthand-coming-to-mobile-webkit-browsers
+
+- from: /web/updates/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode
+  to: https://developer.chrome.com/blog/profiling-long-paint-times-with-devtools-continuous-painting-mode
+
+- from: /web/updates/2013/02/WebRTC-RTCDataChannel-demo-API-changes-and-Chrome-talks-to-Firefox
+  to: https://developer.chrome.com/blog/webrtc-rtcdatachannel-demo-api-changes-and-chrome-talks-to-firefox
+
+- from: /web/updates/2013/03/Introduction-to-Custom-Filters-aka-CSS-Shaders
+  to: https://developer.chrome.com/blog/introduction-to-custom-filters-aka-css-shaders
+
+- from: /web/updates/2013/03/Visualizing-Shadow-DOM-Concepts
+  to: https://developer.chrome.com/blog/visualizing-shadow-dom-concepts
+
+- from: /web/updates/2013/06/sourceMappingURL-and-sourceURL-syntax-changed
+  to: https://developer.chrome.com/blog/sourcemappingurl-and-sourceurl-syntax-changed
+
+- from: /web/updates/2013/07/Alpha-transparency-in-Chrome-video
+  to: https://developer.chrome.com/blog/alpha-transparency-in-chrome-video
+
+- from: /web/updates/2013/09/DevTools-answers-What-font-is-that
+  to: https://developer.chrome.com/blog/devtools-answers-what-font-is-that
+
+- from: /web/updates/2013/09/dialog-element-Modals-made-easy
+  to: https://developer.chrome.com/blog/dialog-element-modals-made-easy
+
+- from: /web/updates/2013/10/Flexbox-layout-isn-t-slow
+  to: https://developer.chrome.com/blog/flexbox-layout-isn-t-slow
+
+- from: /web/updates/2013/10/Web-Audio-live-audio-input-now-on-Android
+  to: https://developer.chrome.com/blog/web-audio-live-audio-input-now-on-android
+
+- from: /web/updates/2013/11/The-Landscape-Of-Front-end-Development-Automation-Slides
+  to: https://developer.chrome.com/blog/the-landscape-of-front-end-development-automation-slides
+
+- from: /web/updates/2013/11/The-Yeoman-Monthly-Digest-1
+  to: https://developer.chrome.com/blog/the-yeoman-monthly-digest-1
+
+- from: /web/updates/2013/12/300ms-tap-delay-gone-away
+  to: https://developer.chrome.com/blog/300ms-tap-delay-gone-away
+
+- from: /web/updates/2013/12/DevTools-Digest-December-2013
+  to: https://developer.chrome.com/blog/devtools-digest-december-2013
+
+- from: /web/updates/2013/12/New-Web-Animations-engine-in-Blink-drives-CSS-Animations-Transitions
+  to: https://developer.chrome.com/blog/new-web-animations-engine-in-blink-drives-css-animations-transitions
+
+- from: /web/updates/2013/12/The-Yeoman-Monthly-Digest-2
+  to: https://developer.chrome.com/blog/the-yeoman-monthly-digest-2
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Mobile-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-mobile-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Open-Web-Platform-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-open-web-platform-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Performance-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-performance-summary
