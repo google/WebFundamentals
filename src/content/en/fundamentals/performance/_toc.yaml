@@ -190,19 +190,24 @@ toc:
     - title: Audit your site
       section:
       - title: Overview
-        path: /web/fundamentals/performance/audit/
+        path: https://web.dev/performance-audit
+        status: external
         step_group: perf-audit
       - title: Prework
-        path: /web/fundamentals/performance/audit/prework
+        path: https://web.dev/performance-audit-prework
+        status: external
       - title: Check site security
-        path: /web/fundamentals/performance/audit/security
+        path: https://web.dev/performance-audit-security
+        status: external
         step_group: perf-audit
       - title: Measure performance
         path: /web/fundamentals/performance/audit/tools
         step_group: perf-audit
       - title: Share the results
-        path: /web/fundamentals/performance/audit/share
+        path: https://web.dev/performance-audit-share
+        status: external
         step_group: perf-audit
       - title: Next steps
-        path: /web/fundamentals/performance/audit/next
+        path: https://web.dev/performance-audit-next
+        status: external
         step_group: perf-audit
