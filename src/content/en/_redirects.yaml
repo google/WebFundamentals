@@ -1245,3 +1245,63 @@ redirects:
 
 - from: /web/updates/2015/04/see-matching-selectors
   to: https://developer.chrome.com/blog/see-matching-selectors
+
+- from: /web/updates/2015/04/simplified-concepts-in-web-animations-naming
+  to: https://developer.chrome.com/blog/simplified-concepts-in-web-animations-naming
+
+- from: /web/updates/2015/04/the-currently-selected-dom-node
+  to: https://developer.chrome.com/blog/the-currently-selected-dom-node
+
+- from: /web/updates/2015/04/the-easing-editor
+  to: https://developer.chrome.com/blog/the-easing-editor
+
+- from: /web/updates/2015/04/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
+  to: https://developer.chrome.com/blog/toggle-the-devtools-dock-state-with-a-keyboard-shortcut-2
+
+- from: /web/updates/2015/04/unfinished-network-requests
+  to: https://developer.chrome.com/blog/unfinished-network-requests
+
+- from: /web/updates/2015/05/alt-click-to-expand-all-child-nodes
+  to: https://developer.chrome.com/blog/alt-click-to-expand-all-child-nodes-2
+
+- from: /web/updates/2015/05/autocomplete-for-bracket-notation
+  to: https://developer.chrome.com/blog/autocomplete-for-bracket-notation
+
+- from: /web/updates/2015/05/automatically-pause-on-any-exception
+  to: https://developer.chrome.com/blog/automatically-pause-on-any-exception
+
+- from: /web/updates/2015/05/better-incognito-devtools
+  to: https://developer.chrome.com/blog/better-incognito-devtools-2
+
+- from: /web/updates/2015/05/command-click-to-add-multiple-cursors-in-the-sources-panel
+  to: https://developer.chrome.com/blog/command-click-to-add-multiple-cursors-in-the-sources-panel-2
+
+- from: /web/updates/2015/05/expand-css-shorthand-properties
+  to: https://developer.chrome.com/blog/expand-css-shorthand-properties
+
+- from: /web/updates/2015/05/film-strips-in-network-panel
+  to: https://developer.chrome.com/blog/film-strips-in-network-panel
+
+- from: /web/updates/2015/05/get-and-debug-event-listeners
+  to: https://developer.chrome.com/blog/get-and-debug-event-listeners
+
+- from: /web/updates/2015/05/get-notified-of-js-errors-while-you-type
+  to: https://developer.chrome.com/blog/get-notified-of-js-errors-while-you-type
+
+- from: /web/updates/2015/05/go-to-a-line-number-at-a-specific-column
+  to: https://developer.chrome.com/blog/go-to-a-line-number-at-a-specific-column
+
+- from: /web/updates/2015/05/granular-statement-highlights
+  to: https://developer.chrome.com/blog/granular-statement-highlights
+
+- from: /web/updates/2015/05/hard-reload
+  to: https://developer.chrome.com/blog/hard-reload
+
+- from: /web/updates/2015/05/high-performance-video-with-hardware-decoding
+  to: https://developer.chrome.com/blog/high-performance-video-with-hardware-decoding
+
+- from: /web/updates/2015/05/local-modifications
+  to: https://developer.chrome.com/blog/local-modifications
+
+- from: /web/updates/2015/05/perform-a-column-selection-by-by-dragging
+  to: https://developer.chrome.com/blog/perform-a-column-selection-by-by-dragging
