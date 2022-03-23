@@ -1305,3 +1305,63 @@ redirects:
 
 - from: /web/updates/2015/05/perform-a-column-selection-by-by-dragging
   to: https://developer.chrome.com/blog/perform-a-column-selection-by-by-dragging
+
+- from: /web/updates/2015/05/port-forwarding
+  to: https://developer.chrome.com/blog/port-forwarding
+
+- from: /web/updates/2015/05/predefined-snippets
+  to: https://developer.chrome.com/blog/predefined-snippets
+
+- from: /web/updates/2015/05/quick-edit-element-tags
+  to: https://developer.chrome.com/blog/quick-edit-element-tags-2
+
+- from: /web/updates/2015/05/quickly-change-css-values
+  to: https://developer.chrome.com/blog/quickly-change-css-values
+
+- from: /web/updates/2015/05/quickly-monitor-events-from-the-console-panel
+  to: https://developer.chrome.com/blog/quickly-monitor-events-from-the-console-panel-2
+
+- from: /web/updates/2015/05/copy-image-as-data-uri
+  to: https://developer.chrome.com/blog/copy-image-as-data-uri-2
+
+- from: /web/updates/2015/05/copy-the-response-of-a-network-resource-to-your-clipboard
+  to: https://developer.chrome.com/blog/copy-the-response-of-a-network-resource-to-your-clipboard
+
+- from: /web/updates/2015/05/cycle-through-editing-locations
+  to: https://developer.chrome.com/blog/cycle-through-editing-locations
+
+- from: /web/updates/2015/05/easily-jump-to-event-listeners
+  to: https://developer.chrome.com/blog/easily-jump-to-event-listeners
+
+- from: /web/updates/2015/05/easy-timeline-recording
+  to: https://developer.chrome.com/blog/easy-timeline-recording
+
+- from: /web/updates/2015/05/replay-a-network-request-in-curl
+  to: https://developer.chrome.com/blog/replay-a-network-request-in-curl
+
+- from: /web/updates/2015/05/reveal-in-elements-panel
+  to: https://developer.chrome.com/blog/reveal-in-elements-panel-2
+
+- from: /web/updates/2015/05/scroll-elements-into-the-viewport
+  to: https://developer.chrome.com/blog/scroll-elements-into-the-viewport
+
+- from: /web/updates/2015/05/search-dom-tree-by-css-selector
+  to: https://developer.chrome.com/blog/search-dom-tree-by-css-selector
+
+- from: /web/updates/2015/05/see-matching-selectors
+  to: https://developer.chrome.com/blog/see-matching-selectors-2
+
+- from: /web/updates/2015/05/the-currently-selected-dom-node
+  to: https://developer.chrome.com/blog/the-currently-selected-dom-node-2
+
+- from: /web/updates/2015/05/the-easing-editor
+  to: https://developer.chrome.com/blog/the-easing-editor-2
+
+- from: /web/updates/2015/05/triggering-of-pseudo-classes
+  to: https://developer.chrome.com/blog/triggering-of-pseudo-classes
+
+- from: /web/updates/2015/05/unfinished-network-requests
+  to: https://developer.chrome.com/blog/unfinished-network-requests-2
+
+- from: /web/updates/2015/05/use-keyboard-to-navigate-through-callstack
+  to: https://developer.chrome.com/blog/use-keyboard-to-navigate-through-callstack
