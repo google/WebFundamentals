@@ -1186,3 +1186,62 @@ redirects:
 - from: /web/updates/2014/12/Fundamental-of-Mobile-Web-Development
   to: https://developer.chrome.com/blog/fundamental-of-mobile-web-development
   
+- from: /web/updates/2014/12/web-animation-playback
+  to: https://developer.chrome.com/blog/web-animation-playback
+
+- from: /web/updates/2015/01/Chrome-Dev-Summit-Applied-Science-Runtime-Perf
+  to: https://developer.chrome.com/blog/chrome-dev-summit-applied-science-runtime-perf
+
+- from: /web/updates/2015/01/ES6-Template-Strings
+  to: https://developer.chrome.com/blog/es6-template-strings
+
+- from: /web/updates/2015/01/Lets-build-some-apps-with-Polymer
+  to: https://developer.chrome.com/blog/lets-build-some-apps-with-polymer
+
+- from: /web/updates/2015/01/pixelated
+  to: https://developer.chrome.com/blog/pixelated
+  
+- from: /web/updates/2015/01/Polymer-State-of-the-Union
+  to: https://developer.chrome.com/blog/polymer-state-of-the-union
+
+- from: /web/updates/2015/01/What-the-Viewport
+  to: https://developer.chrome.com/blog/what-the-viewport
+
+- from: /web/updates/2015/03/creating-semantic-sites-with-web-components-and-jsonld
+  to: https://developer.chrome.com/blog/creating-semantic-sites-with-web-components-and-jsonld
+
+- from: /web/updates/2015/03/devtools-timeline-now-providing-the-full-story
+  to: https://developer.chrome.com/blog/devtools-timeline-now-providing-the-full-story
+
+- from: /web/updates/2015/04/alt-click-to-expand-all-child-nodes
+  to: https://developer.chrome.com/blog/alt-click-to-expand-all-child-nodes
+
+- from: /web/updates/2015/04/autocapitalize
+  to: https://developer.chrome.com/blog/autocapitalize
+
+- from: /web/updates/2015/04/better-incognito-devtools
+  to: https://developer.chrome.com/blog/better-incognito-devtools
+
+- from: /web/updates/2015/04/copy-image-as-data-uri
+  to: https://developer.chrome.com/blog/copy-image-as-data-uri
+
+- from: /web/updates/2015/04/cut-and-copy-commands
+  to: https://developer.chrome.com/blog/cut-and-copy-commands
+
+- from: /web/updates/2015/04/DOM-attributes-now-on-the-prototype-chain
+  to: https://developer.chrome.com/blog/DOM-attributes-now-on-the-prototype-chain
+
+- from: /web/updates/2015/04/permissions-api-for-the-web
+  to: https://developer.chrome.com/blog/permissions-api-for-the-web
+
+- from: /web/updates/2015/04/quick-edit-element-tags
+  to: https://developer.chrome.com/blog/quick-edit-element-tags
+
+- from: /web/updates/2015/04/quickly-monitor-events-from-the-console-panel
+  to: https://developer.chrome.com/blog/quickly-monitor-events-from-the-console-panel
+
+- from: /web/updates/2015/04/reveal-in-elements-panel
+  to: https://developer.chrome.com/blog/reveal-in-elements-panel
+
+- from: /web/updates/2015/04/see-matching-selectors
+  to: https://developer.chrome.com/blog/see-matching-selectors
