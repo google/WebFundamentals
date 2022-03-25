@@ -1425,3 +1425,78 @@ redirects:
 
 - from: /web/updates/2015/07/who-inspects-the-inspector
   to: https://developer.chrome.com/blog/who-inspects-the-inspector
+
+- from: /web/updates/2015/08/5-tricks-to-use-in-the-console-panel
+  to: https://developer.chrome.com/blog/5-tricks-to-use-in-the-console-panel
+
+- from: /web/updates/2015/08/devtools-digest-aggregated-timeline-details
+  to: https://developer.chrome.com/blog/devtools-digest-aggregated-timeline-details
+
+- from: /web/updates/2015/08/easily-duplicate-dom-nodes
+  to: https://developer.chrome.com/blog/easily-duplicate-dom-nodes
+
+- from: /web/updates/2015/08/edit-html-in-the-console-panel
+  to: https://developer.chrome.com/blog/edit-html-in-the-console-panel
+
+- from: /web/updates/2015/08/google-s-web-tools-in-one-place
+  to: https://developer.chrome.com/blog/google-s-web-tools-in-one-place
+
+- from: /web/updates/2015/08/material-design-lite-1-0-4-release
+  to: https://developer.chrome.com/blog/material-design-lite-1-0-4-release
+
+- from: /web/updates/2015/08/simple-keyboard-tricks-to-use-in-the-styles-pane
+  to: https://developer.chrome.com/blog/simple-keyboard-tricks-to-use-in-the-styles-pane
+
+- from: /web/updates/2015/08/the-larger-than-advanced-network-panel-filter-and-a-few-others
+  to: https://developer.chrome.com/blog/the-larger-than-advanced-network-panel-filter-and-a-few-others
+
+- from: /web/updates/2015/08/using-poster-images-on-plugin-content
+  to: https://developer.chrome.com/blog/using-poster-images-on-plugin-content
+
+- from: /web/updates/2015/08/using-requestidlecallback
+  to: https://developer.chrome.com/blog/using-requestidlecallback
+
+- from: /web/updates/2015/09/automating-resource-selection-with-client-hints
+  to: https://developer.chrome.com/blog/automating-resource-selection-with-client-hints
+
+- from: /web/updates/2015/09/eme-logger
+  to: https://developer.chrome.com/blog/eme-logger
+
+- from: /web/updates/2015/09/history-api-scroll-restoration
+  to: https://developer.chrome.com/blog/history-api-scroll-restoration
+
+- from: /web/updates/2015/09/HPKP-reporting-with-chrome-46
+  to: https://developer.chrome.com/blog/hpkp-reporting-with-chrome-46
+
+- from: /web/updates/2015/09/tab-discarding
+  to: https://developer.chrome.com/blog/tab-discarding
+
+- from: /web/updates/2015/10/devtools-digest-efficient-element-edits
+  to: https://developer.chrome.com/blog/devtools-digest-efficient-element-edits
+
+- from: /web/updates/2015/10/devtools-digest-reordering-tabs
+  to: https://developer.chrome.com/blog/devtools-digest-reordering-tabs-2
+
+- from: /web/updates/2015/10/inputdevicecapabilities
+  to: https://developer.chrome.com/blog/inputdevicecapabilities
+
+- from: /web/updates/2015/10/media-devices
+  to: https://developer.chrome.com/blog/media-devices
+
+- from: /web/updates/2015/10/tap-to-search
+  to: https://developer.chrome.com/blog/tap-to-search
+
+- from: /web/updates/2015/10/web-animations-resources
+  to: https://developer.chrome.com/blog/web-animations-resources
+
+- from: /web/updates/2015/12/security-panel
+  to: https://developer.chrome.com/blog/security-panel
+
+- from: /web/updates/2016/01/high-res-timestamps
+  to: https://developer.chrome.com/blog/high-res-timestamps
+
+- from: /web/updates/2016/01/mediarecorder
+  to: https://developer.chrome.com/blog/mediarecorder
+
+- from: /web/updates/2016/01/urlsearchparams
+  to: https://developer.chrome.com/blog/urlsearchparams
