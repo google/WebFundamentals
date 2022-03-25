@@ -1575,3 +1575,78 @@ redirects:
 
 - from: /web/updates/2016/04/keyboardevent-keys-codes
   to: https://developer.chrome.com/blog/keyboardevent-keys-codes
+
+- from: /web/updates/2016/04/scroll-anchoring
+  to: https://developer.chrome.com/blog/scroll-anchoring
+
+- from: /web/updates/2016/05/houdini
+  to: https://developer.chrome.com/blog/houdini
+
+- from: /web/updates/2016/06/2-cookie-handoff
+  to: https://developer.chrome.com/blog/2-cookie-handoff
+
+- from: /web/updates/2016/06/absolute-positioned-children
+  to: https://developer.chrome.com/blog/absolute-positioned-children
+
+- from: /web/updates/2016/06/css-containment
+  to: https://developer.chrome.com/blog/css-containment
+
+- from: /web/updates/2016/06/passive-event-listeners
+  to: https://developer.chrome.com/blog/passive-event-listeners
+
+- from: /web/updates/2016/06/performance-observer
+  to: https://developer.chrome.com/blog/performance-observer
+
+- from: /web/updates/2016/06/ump
+  to: https://developer.chrome.com/blog/ump
+
+- from: /web/updates/2016/06/webrtc-ecdsa
+  to: https://developer.chrome.com/blog/webrtc-ecdsa
+
+- from: /web/updates/2016/07/autoplay
+  to: https://developer.chrome.com/blog/autoplay-2
+
+- from: /web/updates/2016/07/infinite-scroller
+  to: https://developer.chrome.com/blog/infinite-scroller
+
+- from: /web/updates/2016/07/offline-google-analytics
+  to: https://developer.chrome.com/blog/offline-google-analytics
+
+- from: /web/updates/2016/08/web-animations
+  to: https://developer.chrome.com/blog/web-animations
+
+- from: /web/updates/2016/09/broadcastchannel
+  to: https://developer.chrome.com/blog/broadcastchannel
+
+- from: /web/updates/2016/09/re-rastering-composite
+  to: https://developer.chrome.com/blog/re-rastering-composite
+
+- from: /web/updates/2016/10/addeventlistener-once
+  to: https://developer.chrome.com/blog/addeventlistener-once
+
+- from: /web/updates/2016/10/auxclick
+  to: https://developer.chrome.com/blog/auxclick
+
+- from: /web/updates/2016/10/avoid-not-secure-warn
+  to: https://developer.chrome.com/blog/avoid-not-secure-warn
+
+- from: /web/updates/2016/10/capture-stream
+  to: https://developer.chrome.com/blog/capture-stream
+
+- from: /web/updates/2016/10/css-hyphens
+  to: https://developer.chrome.com/blog/css-hyphens
+
+- from: /web/updates/2016/10/pointer-events
+  to: https://developer.chrome.com/blog/pointer-events
+
+- from: /web/updates/2016/10/touch-action
+  to: https://developer.chrome.com/blog/touch-action
+
+- from: /web/updates/2016/10/updates
+  to: https://developer.chrome.com/blog/updates
+
+- from: /web/updates/2016/12/devtools-javascript-cpu-profile-migration
+  to: https://developer.chrome.com/blog/devtools-javascript-cpu-profile-migration-2
+
+- from: /web/updates/2016/12/imagecapture
+  to: https://developer.chrome.com/blog/imagecapture
