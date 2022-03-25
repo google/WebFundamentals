@@ -1365,3 +1365,63 @@ redirects:
 
 - from: /web/updates/2015/05/use-keyboard-to-navigate-through-callstack
   to: https://developer.chrome.com/blog/use-keyboard-to-navigate-through-callstack
+
+- from: /web/updates/2015/05/view-and-change-your-dom-breakpoints
+  to: https://developer.chrome.com/blog/view-and-change-your-dom-breakpoints
+
+- from: /web/updates/2015/06/Media-Source-Extensions-for-Audio
+  to: https://developer.chrome.com/blog/media-source-extensions-for-audio
+
+- from: /web/updates/2015/06/quickly-edit-view-resources-from-the-elements-panel
+  to: https://developer.chrome.com/blog/quickly-edit-view-resources-from-the-elements-panel
+
+- from: /web/updates/2015/07/add-a-new-custom-device-as-a-preset
+  to: https://developer.chrome.com/blog/add-a-new-custom-device-as-a-preset
+
+- from: /web/updates/2015/07/devtools-digest-film-strip-and-a-new-home-for-throttling
+  to: https://developer.chrome.com/blog/devtools-digest-film-strip-and-a-new-home-for-throttling
+
+- from: /web/updates/2015/07/inspect-and-trigger-css-media-queries
+  to: https://developer.chrome.com/blog/inspect-and-trigger-css-media-queries
+
+- from: /web/updates/2015/07/live-edit-css-in-sources
+  to: https://developer.chrome.com/blog/live-edit-css-in-sources
+
+- from: /web/updates/2015/07/media-notifications
+  to: https://developer.chrome.com/blog/media-notifications
+
+- from: /web/updates/2015/07/mediastream-deprecations
+  to: https://developer.chrome.com/blog/mediastream-deprecations
+
+- from: /web/updates/2015/07/network-colour-groups
+  to: https://developer.chrome.com/blog/network-colour-groups
+
+- from: /web/updates/2015/07/preview-javascript-values-inline-while-debugging
+  to: https://developer.chrome.com/blog/preview-javascript-values-inline-while-debugging
+
+- from: /web/updates/2015/07/print-out-a-quick-stack-trace-from-the-console
+  to: https://developer.chrome.com/blog/print-out-a-quick-stack-trace-from-the-console
+
+- from: /web/updates/2015/07/project-wide-search-with-optional-file-scope
+  to: https://developer.chrome.com/blog/project-wide-search-with-optional-file-scope
+
+- from: /web/updates/2015/07/quickly-cycle-through-the-devtools-panels
+  to: https://developer.chrome.com/blog/quickly-cycle-through-the-devtools-panels
+
+- from: /web/updates/2015/07/rotationAngle-and-touchRadius
+  to: https://developer.chrome.com/blog/rotationangle-and-touchradius
+
+- from: /web/updates/2015/07/select-and-execute-a-block-of-code-in-the-sources-panel
+  to: https://developer.chrome.com/blog/select-and-execute-a-block-of-code-in-the-sources-panel
+
+- from: /web/updates/2015/07/set-a-breakpoint-based-on-a-certain-condition
+  to: https://developer.chrome.com/blog/set-a-breakpoint-based-on-a-certain-condition
+
+- from: /web/updates/2015/07/shortcut-to-select-the-next-occurrence
+  to: https://developer.chrome.com/blog/shortcut-to-select-the-next-occurrence
+
+- from: /web/updates/2015/07/trigger-a-pseudo-class-on-an-element
+  to: https://developer.chrome.com/blog/trigger-a-pseudo-class-on-an-element
+
+- from: /web/updates/2015/07/who-inspects-the-inspector
+  to: https://developer.chrome.com/blog/who-inspects-the-inspector
