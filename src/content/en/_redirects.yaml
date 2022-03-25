@@ -1500,3 +1500,78 @@ redirects:
 
 - from: /web/updates/2016/01/urlsearchparams
   to: https://developer.chrome.com/blog/urlsearchparams
+
+- from: /web/updates/2016/01/vp9-webrtc
+  to: https://developer.chrome.com/blog/vp9-webrtc
+
+- from: /web/updates/2016/02/css-variables-why-should-you-care
+  to: https://developer.chrome.com/blog/css-variables-why-should-you-care
+
+- from: /web/updates/2016/02/devtools-digest-devtools-go-dark
+  to: https://developer.chrome.com/blog/devtools-digest-devtools-go-dark
+
+- from: /web/updates/2016/02/devtools-digest-supercharged-remote-debugging
+  to: https://developer.chrome.com/blog/devtools-digest-supercharged-remote-debugging
+
+- from: /web/updates/2016/02/es2015-proxies
+  to: https://developer.chrome.com/blog/es2015-proxies
+
+- from: /web/updates/2016/02/font-display
+  to: https://developer.chrome.com/blog/font-display
+
+- from: /web/updates/2016/02/smooth-scrolling-in-chrome-49
+  to: https://developer.chrome.com/blog/smooth-scrolling-in-chrome-49
+
+- from: /web/updates/2016/02/webaudio
+  to: https://developer.chrome.com/blog/webaudio
+
+- from: /web/updates/2016/03/canvas-toblob-in-chrome-50
+  to: https://developer.chrome.com/blog/canvas-toblob-in-chrome-50
+
+- from: /web/updates/2016/03/createimagebitmap-in-chrome-50
+  to: https://developer.chrome.com/blog/createimagebitmap-in-chrome-50
+
+- from: /web/updates/2016/03/device-mode-v2
+  to: https://developer.chrome.com/blog/device-mode-v2
+
+- from: /web/updates/2016/03/device-orientation-changes
+  to: https://developer.chrome.com/blog/device-orientation-changes
+
+- from: /web/updates/2016/03/domtokenlist-validation-added-in-chrome-50
+  to: https://developer.chrome.com/blog/domtokenlist-validation-added-in-chrome-50
+
+- from: /web/updates/2016/03/focus-start-point
+  to: https://developer.chrome.com/blog/focus-start-point
+
+- from: /web/updates/2016/03/formdata-methods-for-inspection-and-modification
+  to: https://developer.chrome.com/blog/formdata-methods-for-inspection-and-modification
+
+- from: /web/updates/2016/03/link-rel-preload
+  to: https://developer.chrome.com/blog/link-rel-preload
+
+- from: /web/updates/2016/03/mse-sourcebuffer
+  to: https://developer.chrome.com/blog/mse-sourcebuffer
+
+- from: /web/updates/2016/03/play-returns-promise
+  to: https://developer.chrome.com/blog/play-returns-promise
+
+- from: /web/updates/2016/03/web-animations-improvements
+  to: https://developer.chrome.com/blog/web-animations-improvements
+
+- from: /web/updates/2016/03/web-enabled-internet-of-things
+  to: https://developer.chrome.com/blog/web-enabled-internet-of-things
+
+- from: /web/updates/2016/04/credential-management-api
+  to: https://developer.chrome.com/blog/credential-management-api
+
+- from: /web/updates/2016/04/devtools-digest-command-menu
+  to: https://developer.chrome.com/blog/devtools-digest-command-menu
+
+- from: /web/updates/2016/04/geolocation-on-secure-contexts-only
+  to: https://developer.chrome.com/blog/geolocation-on-secure-contexts-only
+
+- from: /web/updates/2016/04/intersectionobserver
+  to: https://developer.chrome.com/blog/intersectionobserver
+
+- from: /web/updates/2016/04/keyboardevent-keys-codes
+  to: https://developer.chrome.com/blog/keyboardevent-keys-codes
