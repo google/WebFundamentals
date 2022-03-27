@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web.
 
-{# wf_updated_on: 2019-05-02 #}
+{# wf_updated_on: 2021-11-25 #}
 {# wf_published_on: 2016-09-27 #}
 {# wf_blink_components: N/A #}
 
@@ -118,7 +118,7 @@ sources.
 <figure>
   <img src="images/wikipedia.jpg"
     alt="Offline Wikipedia app using an application shell with content caching">
-  <figcaption>Jake Archibald’s <a href="https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty">offline Wikipedia application</a> is a good example of a PWA that uses an app shell model. It loads instantly on repeat visits, but dynamically fetches content using JS. This content is then cached offline for future visits.
+  <figcaption>Jake Archibald’s <a href="https://github.com/jakearchibald/offline-wikipedia">offline Wikipedia source code</a> is a good example of a PWA that uses an app shell model. It loads instantly on repeat visits, but dynamically fetches content using JS. This content is then cached offline for future visits.
 </figcaption>
 </figure>
 
