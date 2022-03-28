@@ -1650,3 +1650,93 @@ redirects:
 
 - from: /web/updates/2016/12/imagecapture
   to: https://developer.chrome.com/blog/imagecapture
+
+- from: /web/updates/2016/12/performant-parallaxing
+  to: https://developer.chrome.com/blog/performant-parallaxing
+
+- from: /web/updates/2016/12/position-sticky
+  to: https://developer.chrome.com/blog/position-sticky
+
+- from: /web/updates/2016/12/url-bar-resizing
+  to: https://developer.chrome.com/blog/url-bar-resizing
+
+- from: /web/updates/2017/01/css-grid
+  to: https://developer.chrome.com/blog/css-grid
+
+- from: /web/updates/2017/01/payment-request-updates
+  to: https://developer.chrome.com/blog/payment-request-updates
+
+- from: /web/updates/2017/01/scrolling-intervention
+  to: https://developer.chrome.com/blog/scrolling-intervention
+
+- from: /web/updates/2017/02/media-session
+  to: https://developer.chrome.com/blog/media-session
+
+- from: /web/updates/2017/02/navigation-preload
+  to: https://developer.chrome.com/blog/navigation-preload
+
+- from: /web/updates/2017/03/background_tabs
+  to: https://developer.chrome.com/blog/background_tabs
+
+- from: /web/updates/2017/03/custom-scrollbar
+  to: https://developer.chrome.com/blog/custom-scrollbar
+
+- from: /web/updates/2017/03/devtools-release-notes
+  to: https://developer.chrome.com/blog/devtools-release-notes
+
+- from: /web/updates/2017/03/dialogs-policy
+  to: https://developer.chrome.com/blog/dialogs-policy
+
+- from: /web/updates/2017/03/mixing-streams
+  to: https://developer.chrome.com/blog/mixing-streams
+
+- from: /web/updates/2017/03/performant-expand-and-collapse
+  to: https://developer.chrome.com/blog/performant-expand-and-collapse
+
+- from: /web/updates/2017/04/native-mac-os-notifications
+  to: https://developer.chrome.com/blog/native-mac-os-notifications
+
+- from: /web/updates/2017/06/aligning-input-events
+  to: https://developer.chrome.com/blog/aligning-input-events
+
+- from: /web/updates/2017/06/budget-api
+  to: https://developer.chrome.com/blog/budget-api
+
+- from: /web/updates/2017/06/credential-management-updates
+  to: https://developer.chrome.com/blog/credential-management-updates
+
+- from: /web/updates/2017/06/headless-karma-mocha-chai
+  to: https://developer.chrome.com/blog/headless-karma-mocha-chai
+
+- from: /web/updates/2017/06/play-request-was-interrupted
+  to: https://developer.chrome.com/blog/play-request-was-interrupted
+
+- from: /web/updates/2017/06/supercharged-codesplit
+  to: https://developer.chrome.com/blog/supercharged-codesplit
+
+- from: /web/updates/2017/07/upcoming-regexp-features
+  to: https://developer.chrome.com/blog/upcoming-regexp-features
+
+- from: /web/updates/2017/08/estimating-available-storage-space
+  to: https://developer.chrome.com/blog/estimating-available-storage-space
+
+- from: /web/updates/2017/09/picture-in-picture
+  to: https://developer.chrome.com/blog/picture-in-picture
+
+- from: /web/updates/2017/09/sticky-headers
+  to: https://developer.chrome.com/blog/sticky-headers
+
+- from: /web/updates/2017/09/visual-viewport-api
+  to: https://developer.chrome.com/blog/visual-viewport-api
+
+- from: /web/updates/2017/10/animated-blur
+  to: https://developer.chrome.com/blog/animated-blur
+
+- from: /web/updates/2017/10/lighthouse
+  to: https://developer.chrome.com/blog/lighthouse-2-5
+
+- from: /web/updates/2017/10/quotaexceedederror
+  to: https://developer.chrome.com/blog/quotaexceedederror
+
+- from: /web/updates/2017/10/remove-shadow-piercing
+  to: https://developer.chrome.com/blog/remove-shadow-piercing
