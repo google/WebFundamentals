@@ -56,23 +56,19 @@ landing_page:
     - description-50
     classname: cds20-marquee-margin-fix
     items:
-    - image_path: /web/images/cds21-art.jpg
-      heading: "Chrome Dev Summit 2021"
+    - image_path: /web/images/cr100-promo.png
+      heading: "#100CoolWebMoments"
       description: >
-        The countdown to Chrome Dev Summit 2021 is on! Tune into the keynote
-        and live ask me anything AMA with Chrome leaders on November 3.
-        Request your invite to participate in office hours, workshops and
-        learning lounges.
-      list:
-      - heading: November 3rd, 2021
-        description: Keynote livestream, AMA, workshops, learning loungers and more!
-        icon:
-          icon_name: event
+        Take a stroll down memory lane and celebrate #100CoolWebMoments
+        since Chrome's first release. Tell us which moments you loved the
+        most. If we've missed anything (and we're sure we have!), tweet us
+        <a href="https://twitter.com/ChromiumDev">@ChromiumDev</a> with
+        <i>#100CoolWebMoments</i>. Enjoy!
       buttons:
-      - label: Learn more
-        path: https://developer.chrome.com/devsummit/
+      - label: Check it out
+        path: https://developer.chrome.com/100/
         classname: button button-primary
-      path: https://developer.chrome.com/devsummit/
+      path: https://developer.chrome.com/100/
 
 
   - classname: wf-landing-row
