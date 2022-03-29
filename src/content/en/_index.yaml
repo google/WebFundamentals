@@ -59,7 +59,7 @@ landing_page:
     - image_path: /web/images/cr100-promo.png
       heading: "#100CoolWebMoments"
       description: >
-        Take a stroll down memory lane and celebrate #100CoolWebMoments
+        Take a stroll down memory lane and celebrate <i>#100CoolWebMoments</i>
         since Chrome's first release. Tell us which moments you loved the
         most. If we've missed anything (and we're sure we have!), tweet us
         <a href="https://twitter.com/ChromiumDev">@ChromiumDev</a> with
