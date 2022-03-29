@@ -20,9 +20,11 @@ toc:
       path: https://web.dev/semantics-builtin
       status: external
     - title: The Accessibility Tree
-      path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+      path: https://web.dev/the-accessibility-tree
+      status: external
     - title: Text Alternatives for Images
-      path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
+      path: https://web.dev/text-alternatives-for-images
+      status: external
     - title: Navigating Content
       path: https://web.dev/navigating-content
       status: external
