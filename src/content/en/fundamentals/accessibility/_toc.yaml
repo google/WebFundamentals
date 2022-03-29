@@ -6,33 +6,43 @@ toc:
   - title: Focus
     section:
     - title: Introduction to Focus
-      path: /web/fundamentals/accessibility/focus/
+      path: https://web.dev/focus
+      status: external
     - title: DOM Order Matters
-      path: /web/fundamentals/accessibility/focus/dom-order-matters
+      path: https://web.dev/fast/dom-order-matters
+      status: external
     - title: Using tabindex
-      path: /web/fundamentals/accessibility/focus/using-tabindex
+      path: https://web.dev/using-tabindex
+      status: external
   - title: Semantics Built-in
     section:
     - title: Introduction to Semantics
-      path: /web/fundamentals/accessibility/semantics-builtin/
+      path: https://web.dev/semantics-builtin
+      status: external
     - title: The Accessibility Tree
       path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
     - title: Text Alternatives for Images
       path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
     - title: Navigating Content
-      path: /web/fundamentals/accessibility/semantics-builtin/navigating-content
+      path: https://web.dev/navigating-content
+      status: external
   - title: Semantics and ARIA
     section:
     - title: Introduction to ARIA
-      path: /web/fundamentals/accessibility/semantics-aria/
+      path: https://web.dev/semantics-aria
+      status: external
     - title: ARIA Labels and Relationships
-      path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
+      path: https://web.dev/aria-labels-and-relationships
+      status: external
     - title: Hiding and Updating Content
-      path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
+      path: https://web.dev/fast/hiding-and-updating-content
+      status: external
   - title: Accessible Styles
     path: https://web.dev/accessible/#create-a-design-and-css-that-supports-users-with-different-needs
     status: external
   - title: How To Do an Accessibility Review
-    path: /web/fundamentals/accessibility/how-to-review
+    path: https://web.dev/how-to-review
+    status: external
   - title: Accessibility for Teams
-    path: /web/fundamentals/accessibility/a11y-for-teams
+    path: https://web.dev/a11y-for-teams
+    status: external
