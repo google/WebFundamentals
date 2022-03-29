@@ -14,28 +14,37 @@ toc:
       path: https://web.dev/variable-fonts/
       status: external
     - title: Additional Colors and Icons
-      path: /web/fundamentals/design-and-ux/browser-customization/
+      path: https://web.dev/icons-and-browser-colors
+      status: external
   - include: /web/fundamentals/accessibility/_toc.yaml
   - title: Animations
     section:
     - title: Overview
-      path: /web/fundamentals/design-and-ux/animations/
+      path: https://web.dev/animations/
+      status: external
     - title: CSS Versus JavaScript
-      path: /web/fundamentals/design-and-ux/animations/css-vs-javascript
+      path: https://web.dev/css-vs-javascript
+      status: external
     - title: The Basics of Easing
-      path: /web/fundamentals/design-and-ux/animations/the-basics-of-easing
+      path: https://web.dev/the-basics-of-easing
+      status: external
     - title: Custom Easing
-      path: /web/fundamentals/design-and-ux/animations/custom-easing
+      path: https://web.dev/custom-easing
+      status: external
     - title: Animating Between Views
       path: /web/fundamentals/design-and-ux/animations/animating-between-views
     - title: Choosing the Right Easing
-      path: /web/fundamentals/design-and-ux/animations/choosing-the-right-easing
+      path: https://web.dev/choosing-the-right-easing
+      status: external
     - title: Animating Modal Views
-      path: /web/fundamentals/design-and-ux/animations/animating-modal-views
+      path: https://web.dev/animating-modal-views
+      status: external
     - title: Asymmetric Animation Timing
-      path: /web/fundamentals/design-and-ux/animations/asymmetric-animation-timing
+      path: https://web.dev/asymmetric-animation-timing
+      status: external
     - title: Animations and Performance
-      path: /web/fundamentals/design-and-ux/animations/animations-and-performance
+      path: https://web.dev/animations-and-performance
+      status: external
   - title: Responsive Web Design
     section:
     - title: Overview
@@ -44,6 +53,7 @@ toc:
     - title: Patterns
       path: /web/fundamentals/design-and-ux/responsive/patterns
     - title: Responsive Images
-      path: /web/fundamentals/design-and-ux/responsive/images
+      path: https://web.dev/responsive-images
+      status: external
     - title: Multi-Device Content
       path: /web/fundamentals/design-and-ux/responsive/content

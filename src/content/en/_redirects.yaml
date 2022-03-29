@@ -211,6 +211,64 @@ redirects:
 - from: /web/fundamentals/accessibility/semantics-builtin/navigating-content
   to: https://web.dev/navigating-content
 
+- from: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
+  to: https://web.dev/text-alternatives-for-images
+
+- from: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+  to: https://web.dev/the-accessibility-tree
+
+- from: /web/fundamentals/web-components/best-practices
+  to: https://web.dev/custom-elements-best-practices
+
+- from: /web/fundamentals/web-components/customelements
+  to: https://web.dev/custom-elements-v1
+
+- from: /web/fundamentals/web-components/examples
+  to: https://web.dev/components-examples-overview
+
+- from: /web/fundamentals/web-components/examples/howto-checkbox
+  to: https://web.dev/components-howto-checkbox
+
+- from: /web/fundamentals/web-components/examples/howto-tabs
+  to: https://web.dev/components-howto-tabs
+
+- from: /web/fundamentals/web-components/examples/howto-tooltip
+  to: https://web.dev/components-howto-tooltip
+
+- from: /web/fundamentals/web-components/shadowdom
+  to: https://web.dev/shadowdom-v1
+
+- from: /web/fundamentals/design-and-ux/browser-customization
+  to: https://web.dev/icons-and-browser-colors
+
+- from: /web/fundamentals/design-and-ux/animations/animating-modal-views
+  to: https://web.dev/animating-modal-views
+
+- from: /web/fundamentals/design-and-ux/animations/animations-and-performance
+  to: https://web.dev/animations-and-performance
+
+- from: /web/fundamentals/design-and-ux/animations/asymmetric-animation-timing
+  to: https://web.dev/asymmetric-animation-timing
+
+- from: /web/fundamentals/design-and-ux/animations/choosing-the-right-easing
+  to: https://web.dev/choosing-the-right-easing
+
+- from: /web/fundamentals/design-and-ux/animations/css-vs-javascript
+  to: https://web.dev/css-vs-javascript
+
+- from: /web/fundamentals/design-and-ux/animations/custom-easing
+  to: https://web.dev/custom-easing
+
+- from: /web/fundamentals/design-and-ux/animations/the-basics-of-easing
+  to: https://web.dev/the-basics-of-easing
+
+- from: /web/fundamentals/design-and-ux/responsive/images
+  to: https://web.dev/responsive-images
+
+- from: web/fundamentals/design-and-ux/animations
+  to: https://web.dev/animations/
+
+
 
 ## Redirects for Updates content migrated to web.dev
 

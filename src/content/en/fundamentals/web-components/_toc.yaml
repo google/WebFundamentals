@@ -4,18 +4,25 @@ toc:
   - title: Overview
     path: /web/fundamentals/web-components/
   - title: "Custom Elements v1: Reusable Web Components"
-    path: /web/fundamentals/web-components/customelements
+    path: https://web.dev/custom-elements-v1
+    status: external
   - title: "Shadow DOM v1: Self-Contained Web Components"
-    path: /web/fundamentals/web-components/shadowdom
+    path: https://web.dev/shadowdom-v1
+    status: external
   - title: Best Practices
-    path: /web/fundamentals/web-components/best-practices
+    path: https://web.dev/custom-elements-best-practices
+    status: external
   - title: Examples
     section:
     - title: Overview
-      path: /web/fundamentals/web-components/examples/
+      path: https://web.dev/components-examples-overview
+      status: external
     - title: "<howto-checkbox>"
-      path: /web/fundamentals/web-components/examples/howto-checkbox
+      path: https://web.dev/components-howto-tabs
+      status: external
     - title: "<howto-tabs>"
       path: /web/fundamentals/web-components/examples/howto-tabs
+      status: external
     - title: "<howto-tooltip>"
-      path: /web/fundamentals/web-components/examples/howto-tooltip
+      path: https://web.dev/components-howto-tooltip
+      status: external
