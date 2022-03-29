@@ -1740,3 +1740,72 @@ redirects:
 
 - from: /web/updates/2017/10/remove-shadow-piercing
   to: https://developer.chrome.com/blog/remove-shadow-piercing
+
+- from: /web/updates/2017/11/overscroll-behavior
+  to: https://developer.chrome.com/blog/overscroll-behavior
+
+- from: /web/updates/2017/12/better-ads
+  to: https://developer.chrome.com/blog/better-ads
+
+- from: /web/updates/2017/12/disabling-hardware-noise-suppression
+  to: https://developer.chrome.com/blog/disabling-hardware-noise-suppression
+
+- from: /web/updates/2017/12/lighthouse
+  to: https://developer.chrome.com/blog/lighthouse-2-6
+
+- from: /web/updates/2017/12/modulepreload
+  to: https://developer.chrome.com/blog/modulepreload
+
+- from: /web/updates/2018/02/meltdown-spectre
+  to: https://developer.chrome.com/blog/meltdown-spectre
+
+- from: /web/updates/2018/03/macos-native-echo-cancellation
+  to: https://developer.chrome.com/blog/macos-native-echo-cancellation
+
+- from: /web/updates/2018/05/lighthouse
+  to: https://developer.chrome.com/blog/lighthouse-load-performance
+
+- from: /web/updates/2018/06/ar-for-the-web
+  to: https://developer.chrome.com/blog/ar-for-the-web
+
+- from: /web/updates/2018/06/audio-worklet-design-pattern
+  to: https://developer.chrome.com/blog/audio-worklet-design-pattern
+
+- from: /web/updates/2019/02/feb-wrap-up
+  to: https://developer.chrome.com/blog/feb-wrap-up
+
+- from: /web/updates/2019/02/hotpath-with-wasm
+  to: https://developer.chrome.com/blog/hotpath-with-wasm
+
+- from: /web/updates/2019/02/lit-element-and-lit-html
+  to: https://developer.chrome.com/blog/lit-element-and-lit-html
+
+- from: /web/updates/2019/02/scrolling-intervention
+  to: https://developer.chrome.com/blog/scrolling-intervention-2
+
+- from: /web/updates/2019/02/string-matchall
+  to: https://developer.chrome.com/blog/string-matchall
+
+- from: /web/updates/2019/05/desynchronized
+  to: https://developer.chrome.com/blog/desynchronized
+
+- from: /web/updates/2019/05/mini-infobar-update
+  to: https://developer.chrome.com/blog/mini-infobar-update
+
+- from: /web/updates/2019/05/model-viewer-ar
+  to: https://developer.chrome.com/blog/model-viewer-ar
+
+- from: /web/updates/2019/05/paint-holding
+  to: https://developer.chrome.com/blog/paint-holding
+
+- from: /web/updates/2019/06/webapk-update-frequency
+  to: https://developer.chrome.com/blog/webapk-update-frequency
+
+- from: /web/updates/2019/07/web-components-time-to-upgrade
+  to: https://developer.chrome.com/blog/web-components-time-to-upgrade
+
+- from: /web/updates/2019/09/fresher-sw
+  to: https://developer.chrome.com/blog/fresher-sw
+
+- from: /web/updates/2019/12/webvr-1-1-removed
+  to: https://developer.chrome.com/blog/webvr-1-1-removed
