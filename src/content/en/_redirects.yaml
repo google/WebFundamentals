@@ -175,6 +175,43 @@ redirects:
 - from: /web/fundamentals/instant-and-offline/offline-ux
   to: https://web.dev/offline-ux-considerations/
 
+- from: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices
+  to: https://web.dev/indexeddb-best-practices
+
+- from: /web/fundamentals/security/encrypt-in-transit/enable-https
+  to: https://web.dev/enabling-https-on-your-servers
+
+- from: /web/fundamentals/accessibility/a11y-for-teams
+  to: https://web.dev/a11y-for-teams
+
+- from: /web/fundamentals/accessibility/focus
+  to: https://web.dev/focus
+
+- from: /web/fundamentals/accessibility/focus/dom-order-matters
+  to: https://web.dev/dom-order-matters
+
+- from: /web/fundamentals/accessibility/focus/using-tabindex
+  to: https://web.dev/using-tabindex
+
+- from: /web/fundamentals/accessibility/how-to-review
+  to: https://web.dev/how-to-review
+
+- from: /web/fundamentals/accessibility/semantics-aria
+  to: https://web.dev/semantics-aria
+
+- from: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
+  to: https://web.dev/aria-labels-and-relationships
+
+- from: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
+  to: https://web.dev/fast/hiding-and-updating-content
+
+- from: /web/fundamentals/accessibility/semantics-builtin
+  to: https://web.dev/semantics-builtin
+
+- from: /web/fundamentals/accessibility/semantics-builtin/navigating-content
+  to: https://web.dev/navigating-content
+
+
 ## Redirects for Updates content migrated to web.dev
 
 - from: /web/updates/2019/02/constructable-stylesheets
@@ -293,6 +330,39 @@ redirects:
 
 - from: /web/updates/2019/08/get-started-with-gpu-compute-on-the-web
   to: https://web.dev/gpu-compute
+
+- from: /web/updates/2011/06/Registering-a-custom-protocol-handler
+  to: https://web.dev/registering-a-custom-protocol-handler
+
+- from: /web/updates/2012/06/The-amazing-powers-of-CSS
+  to: https://web.dev/the-amazing-powers-of-css
+
+- from: /web/updates/2013/03/What-s-the-CSS-scope-pseudo-class-for
+  to: https://web.dev/what-s-the-CSS-scope-pseudo-class-for
+
+- from: /web/updates/2015/03/introduction-to-fetch
+  to: https://web.dev/introduction-to-fetch
+
+- from: /web/updates/2018/03/webauthn-credential-management
+  to: https://web.dev/webauthn-credential-management
+
+- from: /web/updates/2018/04/loading-wasm
+  to: https://web.dev/loading-wasm
+
+- from: /web/updates/2018/08/embind
+  to: https://web.dev/embind
+
+- from: /web/updates/2018/08/wasm-av1
+  to: https://web.dev/wasm-av1
+
+- from: /web/updates/2018/08/web-performance-made-easy
+  to: https://web.dev/web-performance-made-easy
+
+- from: /web/updates/2018/10/wasm-threads
+  to: https://web.dev/wasm-threads
+
+- from: /web/updates/2019/01/emscripten-npm
+  to: https://web.dev/emscripten-npm
 
 ## Redirects for PWA content migrated to web.dev
 

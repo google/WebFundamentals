@@ -16,7 +16,8 @@ toc:
         path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
         step_group: security-https
       - title: Enabling HTTPS on Your Servers
-        path: /web/fundamentals/security/encrypt-in-transit/enable-https
+        path: https://web.dev/enabling-https-on-your-servers
+        status: external
         step_group: security-https
     - title: Preventing Mixed Content
       section:
