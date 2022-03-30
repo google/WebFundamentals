@@ -265,9 +265,65 @@ redirects:
 - from: /web/fundamentals/design-and-ux/responsive/images
   to: https://web.dev/responsive-images
 
-- from: web/fundamentals/design-and-ux/animations
+- from: /web/fundamentals/design-and-ux/animations
   to: https://web.dev/animations/
 
+- from: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization
+  to: https://web.dev/optimizing-content-efficiency-javascript-startup-optimization
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript
+  to: https://web.dev/optimizing-content-efficiency-loading-third-party-javascript
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
+  to: https://web.dev/optimizing-content-efficiency-optimize-encoding-and-transfer
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency/save-data
+  to: https://web.dev/optimizing-content-efficiency-save-data
+
+- from: /web/fundamentals/performance/poor-connectivity
+  to: https://web.dev/performance-poor-connectivity
+
+- from: /web/fundamentals/performance/audit/tools
+  to: https://web.dev/performance-audit-tools
+
+- from: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
+  to: https://web.dev/critical-rendering-path-adding-interactivity-with-javascript
+
+- from: /web/fundamentals/performance/critical-rendering-path/analyzing-crp
+  to: https://web.dev/critical-rendering-path-analyzing-crp
+
+- from: /web/fundamentals/performance/critical-rendering-path/constructing-the-object-model
+  to: https://web.dev/critical-rendering-path-constructing-the-object-model
+
+- from: /web/fundamentals/performance/critical-rendering-path/measure-crp
+  to: https://web.dev/critical-rendering-path-measure-crp
+
+- from: /web/fundamentals/performance/rendering
+  to: https://web.dev/rendering-performance
+
+- from: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
+  to: https://web.dev/avoid-large-complex-layouts-and-layout-thrashing
+
+- from: /web/fundamentals/performance/rendering/debounce-your-input-handlers
+  to: https://web.dev/debounce-your-input-handlers
+
+- from: /web/fundamentals/performance/rendering/optimize-javascript-execution
+  to: https://web.dev/optimize-javascript-execution
+
+- from: /web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
+  to: https://web.dev/reduce-the-scope-and-complexity-of-style-calculations
+
+- from: /web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
+  to: https://web.dev/critical-rendering-path-optimizing-critical-rendering-path
+
+- from: /web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations
+  to: https://web.dev/critical-rendering-path-page-speed-rules-and-recommendations
+
+- from: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
+  to: https://web.dev/critical-rendering-path-render-blocking-css
+
+- from: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
+  to: https://web.dev/critical-rendering-path-render-tree-construction
 
 
 ## Redirects for Updates content migrated to web.dev
