@@ -325,6 +325,14 @@ redirects:
 - from: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
   to: https://web.dev/critical-rendering-path-render-tree-construction
 
+- from: /web/fundamentals/architecture/app-shell 
+  to: https://web.dev/learn/pwa/architecture/
+
+- from: /web/fundamentals/design-and-ux/responsive/patterns 
+  to: https://web.dev/learn/design
+
+- from: /web/fundamentals/design-and-ux/input/forms 
+  to: https://web.dev/learn/forms/
 
 ## Redirects for Updates content migrated to web.dev
 
