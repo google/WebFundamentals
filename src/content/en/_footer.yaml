@@ -21,7 +21,6 @@ footer:
 
 - linkboxes:
   - name: Key Topics
-    icon_name: star
     contents:
     - label: Web on Android
       path: https://developer.android.com/docs
@@ -35,7 +34,6 @@ footer:
       path: https://web.dev/progressive-web-apps/
 
   - name: More Topics
-    icon_name: school
     contents:
     - label: Search Console Help Center
       path: https://support.google.com/webmasters/
@@ -44,7 +42,6 @@ footer:
 
 
   - name: Contribute
-    icon_name: bug_report
     contents:
     - label: File an Issue
       path: https://github.com/google/WebFundamentals/issues

@@ -1,7 +1,6 @@
 footer:
 - linkboxes:
   - name: Key Topics
-    icon_name: star
     contents:
     - label: Guides
       path: /web/tools/workbox/guides/get-started
@@ -11,13 +10,11 @@ footer:
       path: /web/tools/workbox/reference-docs/latest/
 
   - name: Get in Touch
-    icon_name: star
     contents:
     - label: "@workboxjs on Twitter"
       path: https://twitter.com/workboxjs
 
   - name: Contribute
-    icon_name: bug_report
     contents:
     - label: Ask a Question on StackOverflow
       path: https://stackoverflow.com/questions/ask?tags=workbox
