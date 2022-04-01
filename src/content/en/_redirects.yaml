@@ -334,6 +334,22 @@ redirects:
 - from: /web/fundamentals/design-and-ux/input/forms 
   to: https://web.dev/learn/forms/
 
+- from: /web/fundamentals/performance/webpack/decrease-frontend-size
+  to: https://web.dev/decrease-frontend-size
+
+- from: /web/fundamentals/performance/webpack/monitor-and-analyze
+  to: https://web.dev/monitor-and-analyze
+
+- from: /web/fundamentals/performance/webpack/use-long-term-caching
+  to: https://web.dev/use-long-term-caching
+
+- from: /web/fundamentals/primers/async-functions
+  to: https://web.dev/javascript-async-functions
+
+- from: /web/fundamentals/design-and-ux/input/touch
+  to: https://web.dev/add-touch-to-your-site
+
+
 ## Redirects for Updates content migrated to web.dev
 
 - from: /web/updates/2019/02/constructable-stylesheets
@@ -485,6 +501,9 @@ redirects:
 
 - from: /web/updates/2019/01/emscripten-npm
   to: https://web.dev/emscripten-npm
+
+- from: /web/updates/2011/08/Downloading-resources-in-HTML5-a-download
+  to: https://web.dev/downloading-resources-in-html5-a-download
 
 ## Redirects for PWA content migrated to web.dev
 
@@ -2001,3 +2020,24 @@ redirects:
 
 - from: /web/updates/2019/12/webvr-1-1-removed
   to: https://developer.chrome.com/blog/webvr-1-1-removed
+
+- from: /web/updates/2015/02/offline-first-with-sw-precache
+  to:  https://developer.chrome.com/docs/workbox/
+
+
+## Redirects for Fundamentals content migrated to DCC
+
+- from: /web/fundamentals/vr 
+  to:  https://developer.chrome.com/blog/ar-for-the-web/
+
+- from: /web/fundamentals/vr/adding-input-to-a-webvr-scene
+  to:  https://developer.chrome.com/blog/ar-for-the-web/
+
+- from: /web/fundamentals/vr/getting-started-with-webvr 
+  to:  https://developer.chrome.com/blog/ar-for-the-web/
+
+- from: /web/fundamentals/vr/status 
+  to:  https://developer.chrome.com/blog/ar-for-the-web/
+
+- from: /web/fundamentals/vr/vr-perspective
+  to:  https://developer.chrome.com/blog/ar-for-the-web/

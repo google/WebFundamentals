@@ -166,13 +166,16 @@ toc:
             path: /web/fundamentals/performance/webpack/
             step_group: perf-webpack
           - title: Decrease Front-end Size
-            path: /web/fundamentals/performance/webpack/decrease-frontend-size
+            path: https://web.dev/decrease-frontend-size
+            status: external
             step_group: perf-webpack
           - title: Make Use of Long-term Caching
-            path: /web/fundamentals/performance/webpack/use-long-term-caching
+            path: https://web.dev/use-long-term-caching
+            status: external
             step_group: perf-webpack
           - title: Monitor and analyze the app
-            path: /web/fundamentals/performance/webpack/monitor-and-analyze
+            path: https://web.dev/monitor-and-analyze
+            status: external
             step_group: perf-webpack
           - title: Conclusion
             path: /web/fundamentals/performance/webpack/conclusion
