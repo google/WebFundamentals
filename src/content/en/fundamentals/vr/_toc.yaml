@@ -3,12 +3,17 @@ toc:
     status: beta
     section:
     - title: Overview
-      path: /web/fundamentals/vr/
+      path: https://developer.chrome.com/blog/ar-for-the-web/
+      status: external
     - title: Status
-      path: /web/fundamentals/vr/status/
+      path: https://developer.chrome.com/blog/ar-for-the-web/
+      status: external
     - title: Seeing the Web From a VR Perspective
-      path: /web/fundamentals/vr/vr-perspective/
+      path: https://developer.chrome.com/blog/ar-for-the-web/
+      status: external
     - title: Getting Started with WebVR
-      path: /web/fundamentals/vr/getting-started-with-webvr/
+      path: https://developer.chrome.com/blog/ar-for-the-web/
+      status: external
     - title: Adding Input to a WebVR Scene
-      path: /web/fundamentals/vr/adding-input-to-a-webvr-scene/
+      path: https://developer.chrome.com/blog/ar-for-the-web/
+      status: external
