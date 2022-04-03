@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2021-11-25 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime #}
 
@@ -18,11 +18,6 @@ To demonstrate the techniques' effectiveness, we will run various speed tests on
 versions of a web page, beginning with no optimization and progressing through some of 
 the speed-up techniques we've discussed, specifically text resource optimization, 
 graphics resource optimization, and HTTP request reduction.
-
-The original target is a simple, single HTML page with text, images, CSS, and JavaScript, 
-hosted on Firebase here: 
-[https://page-load-speed-demo.firebaseapp.com/pageload0.html](https://page-load-speed-demo.firebaseapp.com/pageload0.html).
-Have a quick look at that, and then we can start improving it.
 
 **Note:** The source code for all versions of the demo page referenced in this document can be 
 found in [this GitHub repository](https://github.com/GoogleChromeLabs/FastPageLoadDemo).
@@ -53,7 +48,7 @@ There are many, many tools available to help determine a page's load speed, far 
 to list here. For this article, we will use three online services to help us see the results 
 of our improvement efforts.
 
-- [Google PageSpeed Insights](http://tinyurl.com/m65jex6)
+- [Google PageSpeed Insights](/speed)
 
 - [WebPageTest](https://www.webpagetest.org/)
 
@@ -184,9 +179,6 @@ of the more accurate "Time to Consistently Interactive". We encourage you to use
 which will generate a Lighthouse report. Then click the *Lighthouse PWA Score* at the top 
 of the page to see the full Lighthouse Progressive Web App report, including the new 
 Consistently Interactive metric.
-
- Here is the text-minified version: 
- [https://page-load-speed-demo.firebaseapp.com/pageload1.html](https://page-load-speed-demo.firebaseapp.com/pageload1.html).
 
 ## Graphical Content
 
@@ -347,9 +339,6 @@ downloading images than before, a significant improvement.
 ![WebPageTest, optimized images](images/image_714.png)
 *WebPageTest, optimized images*
 
-Here is the image-optimized version: 
-[https://page-load-speed-demo.firebaseapp.com/pageload2.html](https://page-load-speed-demo.firebaseapp.com/pageload2.html).
-
 ## HTTP Requests
 
 Recall that the loading speed of a page depends not only on the size of the resources 
@@ -438,9 +427,6 @@ overall reduction in HTTP requests has leveled the playing field such that is no
 so image-heavy. To put it another way, in this version the browser makes no more server 
 hits loading the images than it does loading *all other resources combined*.
 
-Here is the reduced HTTP requests version: 
-[https://page-load-speed-demo.firebaseapp.com/pageload3.html](https://page-load-speed-demo.firebaseapp.com/pageload3.html).
-
 ## All Together Now
 
 Now that we've seen some speed improvements resulting from individual techniques, let's see 
@@ -472,9 +458,6 @@ Fully Loaded scores, and its (beta) First Interactive time is less than a second
 
 ![WebPageTest, all techniques](images/image_722.png)
 *WebPageTest, all techniques*
-
-Here is the all-techniques version: 
-[https://page-load-speed-demo.firebaseapp.com/pageload4.html](https://page-load-speed-demo.firebaseapp.com/pageload4.html).
 
 ## Summary
 
