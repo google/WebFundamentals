@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2022-01-14 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: fundamentals, performance, app-shell #}
 {# wf_featured_image: /web/updates/images/2019/02/rendering-on-the-web/icon.png #}
@@ -84,7 +84,7 @@ React 사용자는 [Gatsby](https://www.gatsbyjs.org), [Next.js 정적 내보내
 
 클라이언트 측 렌더링의 주된 단점은 응용 프로그램이 커짐에 따라 필요한 JavaScript의 양이 증가하는 경향이 있다는 것입니다. 특히 처리 능력을 놓고 경쟁하는 새로운 JavaScript 라이브러리, 폴리필 (polyfill) 및 서드파티 코드를 추가하면 페이지의 내용을 렌더링하기 전에 처리해야하는 경우가 종종 있습니다. 대규모 자바 스크립트 번들에 의존하는 CSR을 기반으로 구축된 경험은 [적극적인 코드 분할](/web/fundamentals/performance/optimizing-javascript/code-splitting/)을 고려해야하며 JavaScript를 "필요한 것만 필요할 때만 제공"해야 합니다. 인터렉션이 거의 없거나 전혀없는 경험의 경우, 서버 렌더링은 이러한 문제에 대해 보다 확장 가능한 솔루션일 수 있습니다.
 
-단일 페이지 애플리케이션을 작성하는 사람들은 대부분의 페이지에서 공유되는 사용자 인터페이스의 핵심 부분을 식별함으로써 [애플리케이션 쉘 캐싱](/web/updates/2015/11/app-shell) 기술을 적용 할 수 있음을 의미합니다. 서비스 워커와 합께 사용하면 두 번째 이후의  방문시인지 성능를 획기적으로 향상시킬 수 있습니다.
+단일 페이지 애플리케이션을 작성하는 사람들은 대부분의 페이지에서 공유되는 사용자 인터페이스의 핵심 부분을 식별함으로써 [애플리케이션 쉘 캐싱](/web/updates/2015/11/app-shell) 기술을 적용 할 수 있음을 의미합니다. 서비스 워커와 함께 사용하면 두 번째 이후의  방문시인지 성능를 획기적으로 향상시킬 수 있습니다.
 
 ## Rehydration을 통한 서버 렌더링과 CSR 결합 {: #rehydration }
 
