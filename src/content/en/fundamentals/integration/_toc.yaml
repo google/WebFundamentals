@@ -13,7 +13,8 @@ toc:
       status: external
       path: https://web.dev/promote-install/
     - title: WebAPKs on Android
-      path: /web/fundamentals/integration/webapks
+      path: https://web.dev/webapks
+      status: external
   - include: /web/fundamentals/native-hardware/_toc.yaml
   - title: Search Optimization
     path: https://web.dev/lighthouse-seo/

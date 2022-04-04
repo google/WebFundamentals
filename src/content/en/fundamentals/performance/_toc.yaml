@@ -11,24 +11,31 @@ toc:
     - title: Loading Performance
       section:
       - title: Overview
-        path: /web/fundamentals/performance/get-started/
+        path: https://web.dev/performance-get-started
+        status: external
       - title: Get Started
         section:
         - title: Measuring Performance
           path: https://web.dev/how-to-measure-speed
           status: external
         - title: Text Content
-          path: /web/fundamentals/performance/get-started/textcontent-3
+          path: https://web.dev/performance-get-started-textcontent-3
+          status: external
         - title: Graphical Content
-          path: /web/fundamentals/performance/get-started/graphicalcontent-4
+          path: https://web.dev/performance/get-started-graphicalcontent-4
+          status: external
         - title: HTTP Requests
-          path: /web/fundamentals/performance/get-started/httprequests-5
+          path: https://web.dev/performance/get-started-httprequests-5
+          status: external
         - title: HTTP Caching
-          path: /web/fundamentals/performance/get-started/httpcaching-6
+          path: https://web.dev/performance/get-started-httpcaching-6
+          status: external
         - title: Wrap-up and Demo
-          path: /web/fundamentals/performance/get-started/wrapup-7
+          path: https://web.dev/performance-get-started-wrapup-7
+          status: external
       - title: How to Think About Speed Tools
-        path: /web/fundamentals/performance/speed-tools
+        path: https://web.dev/speed-tools
+        status: external
       - title: User-centric Performance Metrics
         path: /web/fundamentals/performance/user-centric-performance-metrics
       - title: Understanding Low Bandwidth and High Latency
@@ -41,10 +48,12 @@ toc:
       - title: Optimizing Content Efficiency
         section:
         - title: Overview
-          path: /web/fundamentals/performance/optimizing-content-efficiency/
+          path: https://web.dev/performance-optimizing-content-efficiency
+          status: external
           step_group: perf-oce
         - title: Eliminating Unnecessary Downloads
-          path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
+          path: https://web.dev/optimizing-content-efficiency-eliminate-downloads
+          status: external
           step_group: perf-oce
         - title: Optimizing Encoding and Transfer Size of Text-based Assets
           path: https://web.dev/optimizing-content-efficiency-optimize-encoding-and-transfer
@@ -77,7 +86,8 @@ toc:
           status: external
           step_group: perf-oce
         - title: Adapting to Users with Client Hints
-          path: /web/fundamentals/performance/optimizing-content-efficiency/client-hints/
+          path: https://web.dev/optimizing-content-efficiency-client-hints
+          status: external
           step_group: perf-oce
         - title: Delivering Fast and Light Applications with Save-Data
           path: https://web.dev/optimizing-content-efficiency-save-data
@@ -154,7 +164,8 @@ toc:
             status: external
             step_group: perf-crp
         - title: Introduction to HTTP/2
-          path: /web/fundamentals/performance/http2/
+          path: https://web.dev/performance-http2
+          status: external
       - title: PRPL Pattern
         path: /web/fundamentals/performance/prpl-pattern/
       - title: Resource Prioritization
@@ -163,7 +174,8 @@ toc:
       - title: Web Performance Optimization with webpack
         section:
           - title: Introduction
-            path: /web/fundamentals/performance/webpack/
+            path: https://web.dev/webpack
+            status: external
             step_group: perf-webpack
           - title: Decrease Front-end Size
             path: https://web.dev/decrease-frontend-size
@@ -178,7 +190,8 @@ toc:
             status: external
             step_group: perf-webpack
           - title: Conclusion
-            path: /web/fundamentals/performance/webpack/conclusion
+            path: https://web.dev/webpack-conclusion
+            status: external
             step_group: perf-webpack
     - title: Rendering Performance
       section:
@@ -199,10 +212,12 @@ toc:
         status: external
         step_group: perf-rendering
       - title: Simplify Paint Complexity and Reduce Paint Areas
-        path: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+        path: https://web.dev/simplify-paint-complexity-and-reduce-paint-areas
+        status: external
         step_group: perf-rendering
       - title: Stick to Compositor-Only Properties and Manage Layer Count
-        path: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+        path: https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count
+        status: external
         step_group: perf-rendering
       - title: Debounce Your Input Handlers
         path: https://web.dev/debounce-your-input-handlers

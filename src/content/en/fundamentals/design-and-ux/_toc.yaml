@@ -5,7 +5,8 @@ toc:
   - title: Designing Great User Experiences
     section:
     - title: Basics of User Experiences
-      path: /web/fundamentals/design-and-ux/ux-basics/
+      path: https://web.dev/ux-basics
+      status: external
     # - title: Designing Great UX for Progressive Web Apps
     #   path: /web/fundamentals/design-and-ux/ux-basics/pwa
     - title: What Makes a Good Mobile Site?
@@ -32,7 +33,8 @@ toc:
       path: https://web.dev/custom-easing
       status: external
     - title: Animating Between Views
-      path: /web/fundamentals/design-and-ux/animations/animating-between-views
+      path: https://web.dev/animating-between-views
+      status: external
     - title: Choosing the Right Easing
       path: https://web.dev/choosing-the-right-easing
       status: external
@@ -56,4 +58,5 @@ toc:
       path: https://web.dev/responsive-images
       status: external
     - title: Multi-Device Content
-      path: /web/fundamentals/design-and-ux/responsive/content
+      path: https://web.dev/multi-device-content
+      status: external
