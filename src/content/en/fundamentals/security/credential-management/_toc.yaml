@@ -2,8 +2,11 @@ toc:
 - title: Sign in and Credential Management
   section:
   - title: Overview
-    path: /web/fundamentals/security/credential-management/
+    path: https://web.dev/security-credential-management
+    status: external
   - title: Sign in Users
-    path: /web/fundamentals/security/credential-management/retrieve-credentials
+    path: https://web.dev/security-credential-management-retrieve-credentials
+    status: external
   - title: Save Credentials from Forms
-    path: /web/fundamentals/security/credential-management/save-forms
+    path: https://web.dev/security-credential-management-save-forms
+    status: external

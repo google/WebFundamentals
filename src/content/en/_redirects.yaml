@@ -349,6 +349,20 @@ redirects:
 - from: /web/fundamentals/design-and-ux/input/touch
   to: https://web.dev/add-touch-to-your-site
 
+- from: /web/fundamentals/security/credential-management/save-forms
+  to: https://web.dev/security-credential-management-save-forms
+
+- from: /web/fundamentals/security/credential-management/retrieve-credentials
+  to: https://web.dev/security-credential-management-retrieve-credentials
+
+- from: /web/fundamentals/security/credential-management
+  to: https://web.dev/security-credential-management
+
+- from: /web/fundamentals/security
+  to: https://web.dev/security
+
+- from: /web/fundamentals/media/capturing-images
+  to: https://web.dev/media-capturing-images
 
 ## Redirects for Updates content migrated to web.dev
 
@@ -504,6 +518,9 @@ redirects:
 
 - from: /web/updates/2011/08/Downloading-resources-in-HTML5-a-download
   to: https://web.dev/downloading-resources-in-html5-a-download
+
+- from: /web/updates/2018/03/emscripting-a-c-library
+  to: https://web.dev/emscripting-a-c-library
 
 ## Redirects for PWA content migrated to web.dev
 
