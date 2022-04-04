@@ -3,7 +3,8 @@ toc:
     style: accordion
     section:
     - title: Overview
-      path: /web/fundamentals/security/
+      path: https://web.dev/security
+      status: external
     - title: Content Security Policy
       path: /web/fundamentals/security/csp/
     - title: Encrypting Data In Transit

@@ -27,7 +27,8 @@ toc:
     path: https://web.dev/media-recording-audio
     status: external
   - title: Capturing Images
-    path: /web/fundamentals/media/capturing-images/
+    path: https://web.dev/media-capturing-images
+    status: external
   - title: Capturing Video
     path: https://web.dev/media-recording-video
     status: external
