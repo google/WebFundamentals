@@ -20,7 +20,8 @@ toc:
     path: /web/fundamentals/push-notifications/web-push-protocol
     step_group: web-push
   - title: Handling Push Events
-    path: /web/fundamentals/push-notifications/handling-messages
+    path: https://web.dev/push-notifications-handling-messages
+    status: external
     step_group: web-push
   - title: Displaying a Notification
     path: /web/fundamentals/push-notifications/display-a-notification
@@ -32,7 +33,8 @@ toc:
     path: /web/fundamentals/push-notifications/common-notification-patterns
     step_group: web-push
   - title: FAQ
-    path: /web/fundamentals/push-notifications/faq
+    path: https://web.dev/push-notifications-faq
+    status: external
     step_group: web-push
   - title: Common Issues and Reporting Bugs
     path: /web/fundamentals/push-notifications/common-issues-and-reporting-bugs

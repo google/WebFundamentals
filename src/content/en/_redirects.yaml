@@ -364,6 +364,78 @@ redirects:
 - from: /web/fundamentals/media/capturing-images
   to: https://web.dev/media-capturing-images
 
+- from: /web/fundamentals/integration/webapks
+  to: https://web.dev/webapks
+
+- from: /web/fundamentals/instant-and-offline/web-storage
+  to: https://web.dev/web-storage
+
+- from: /web/fundamentals/discovery/social-discovery
+  to: https://web.dev/social-discovery
+
+- from: /web/fundamentals/push-notifications/faq
+  to: https://web.dev/push-notifications-faq
+
+- from: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+  to: https://web.dev/simplify-paint-complexity-and-reduce-paint-areas
+
+- from: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+  to: https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count
+
+- from: /web/fundamentals/performance/speed-tools
+  to: https://web.dev/speed-tools
+
+- from: /web/fundamentals/performance/webpack
+  to: https://web.dev/webpack
+
+- from: /web/fundamentals/performance/webpack/conclusion
+  to: https://web.dev/webpack-conclusion
+
+- from: /web/fundamentals/design-and-ux/animations/animating-between-views
+  to: https://web.dev/animating-between-views
+
+- from: /web/fundamentals/primers/service-workers/registration
+  to: https://web.dev/service-workers-registration
+
+- from: /web/fundamentals/push-notifications/handling-messages
+  to: https://web.dev/push-notifications-handling-messages
+
+- from: /web/fundamentals/design-and-ux/ux-basics
+  to: https://web.dev/ux-basics
+
+- from: /web/fundamentals/design-and-ux/responsive/content
+  to: https://web.dev/multi-device-content
+
+- from: /web/fundamentals/performance/get-started/wrapup-7
+  to: https://web.dev/performance-get-started-wrapup-7
+
+- from: /web/fundamentals/performance/http2
+  to: https://web.dev/performance-http2
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency
+  to: https://web.dev/performance-optimizing-content-efficiency
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency/client-hints
+  to: https://web.dev/optimizing-content-efficiency-client-hints
+
+- from: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
+  to: https://web.dev/optimizing-content-efficiency-eliminate-downloads
+
+- from: /web/fundamentals/performance/get-started
+  to: https://web.dev/performance-get-started
+
+- from: /web/fundamentals/performance/get-started/graphicalcontent-4
+  to: https://web.dev/performance/get-started-graphicalcontent-4
+
+- from: /web/fundamentals/performance/get-started/httpcaching-6
+  to: https://web.dev/performance/get-started-httpcaching-6
+
+- from: /web/fundamentals/performance/get-started/httprequests-5
+  to: https://web.dev/performance/get-started-httprequests-5
+
+- from: /web/fundamentals/performance/get-started/textcontent-3
+  to: https://web.dev/performance-get-started-textcontent-3
+
 ## Redirects for Updates content migrated to web.dev
 
 - from: /web/updates/2019/02/constructable-stylesheets
@@ -521,6 +593,19 @@ redirects:
 
 - from: /web/updates/2018/03/emscripting-a-c-library
   to: https://web.dev/emscripting-a-c-library
+
+- from: /web/updates/2018/05/welcome-to-immersive
+  to: https://web.dev/welcome-to-immersive
+
+- from: /web/updates/2019/02/rendering-on-the-web
+  to: https://web.dev/rendering-on-the-web
+
+- from: /web/updates/2019/06/pwa-install-addressbar
+  to: https://web.dev/pwa-install-addressbar
+
+- from: /web/updates/2019/06/pwa-install-patterns
+  to: https://web.dev/pwa-install-patterns
+
 
 ## Redirects for PWA content migrated to web.dev
 
