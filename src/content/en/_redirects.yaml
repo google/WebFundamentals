@@ -425,16 +425,34 @@ redirects:
   to: https://web.dev/performance-get-started
 
 - from: /web/fundamentals/performance/get-started/graphicalcontent-4
-  to: https://web.dev/performance/get-started-graphicalcontent-4
+  to: https://web.dev/performance-get-started-graphicalcontent-4
 
 - from: /web/fundamentals/performance/get-started/httpcaching-6
-  to: https://web.dev/performance/get-started-httpcaching-6
+  to: https://web.dev/performance-get-started-httpcaching-6
 
 - from: /web/fundamentals/performance/get-started/httprequests-5
-  to: https://web.dev/performance/get-started-httprequests-5
+  to: https://web.dev/performance-get-started-httprequests-5
 
 - from: /web/fundamentals/performance/get-started/textcontent-3
   to: https://web.dev/performance-get-started-textcontent-3
+
+- from: /web/fundamentals/push-notifications
+  to: https://web.dev/push-notifications
+
+- from: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
+  to: https://web.dev/intro-to-security-terminology
+
+- from: /web/fundamentals/web-components
+  to: https://web.dev/web-components
+
+- from: /web/fundamentals/accessibility
+  to: https://web.dev/accessibility
+
+- from: /web/fundamentals/security/csp
+  to: https://web.dev/csp
+
+- from: /web/fundamentals/performance/critical-rendering-path
+  to: https://web.dev/critical-rendering-path
 
 ## Redirects for Updates content migrated to web.dev
 
@@ -2125,6 +2143,20 @@ redirects:
 
 - from: /web/updates/2015/02/offline-first-with-sw-precache
   to:  https://developer.chrome.com/docs/workbox/
+
+- from: /web/updates/2015/12/getting-started-pwa
+  to: https://developer.chrome.com/blog/getting-started-pwa
+
+- from: /web/updates/2016/12/lighthouse-dbw
+  to: https://developer.chrome.com/blog/lighthouse-dbw
+
+- from: /web/updates/2017/09/abortable-fetch
+  to: https://developer.chrome.com/blog/abortable-fetch
+
+- from: /web/updates/capabilities
+  to: https://developer.chrome.com/blog/capabilities
+
+
 
 
 ## Redirects for Fundamentals content migrated to DCC

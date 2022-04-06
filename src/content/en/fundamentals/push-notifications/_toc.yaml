@@ -2,7 +2,8 @@ toc:
 - title: Web Push Notifications
   section:
   - title: Overview
-    path: /web/fundamentals/push-notifications/
+    path: https://web.dev/push-notifications
+    status: external
     step_group: web-push
   - title: How Push Works
     path: /web/fundamentals/push-notifications/how-push-works

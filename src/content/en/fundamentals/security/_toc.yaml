@@ -6,7 +6,8 @@ toc:
       path: https://web.dev/security
       status: external
     - title: Content Security Policy
-      path: /web/fundamentals/security/csp/
+      path: https://web.dev/csp
+      status: external
     - title: Encrypting Data In Transit
       section:
       - title: Why HTTPS matters
@@ -14,7 +15,8 @@ toc:
         status: external
         step_group: security-https
       - title: Important Security Terminology
-        path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
+        path: https://web.dev/intro-to-security-terminology
+        status: external
         step_group: security-https
       - title: Enabling HTTPS on Your Servers
         path: https://web.dev/enabling-https-on-your-servers
