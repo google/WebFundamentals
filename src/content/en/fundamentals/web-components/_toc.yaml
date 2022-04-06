@@ -2,7 +2,8 @@ toc:
 - title: Web Components
   section:
   - title: Overview
-    path: /web/fundamentals/web-components/
+    path: https://web.dev/web-components
+    status: external
   - title: "Custom Elements v1: Reusable Web Components"
     path: https://web.dev/custom-elements-v1
     status: external

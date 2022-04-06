@@ -2,7 +2,8 @@ toc:
 - title: Accessibility
   section:
   - title: Overview
-    path: /web/fundamentals/accessibility/
+    path: https://web.dev/accessibility
+    status: external
   - title: Focus
     section:
     - title: Introduction to Focus
