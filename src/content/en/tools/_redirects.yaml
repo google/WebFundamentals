@@ -50,6 +50,9 @@ redirects:
 - from: /web/tools/workbox/guides/service-worker-checklist
   to: /web/fundamentals/primers/service-workers/registration
 
+- from: /web/tools/workbox/reference-docs/latest/workbox
+  to: https://developer.chrome.com/docs/workbox/modules/workbox-sw/
+
 - from: /web/tools/workbox/community
   to: https://twitter.com/workboxjs
 
