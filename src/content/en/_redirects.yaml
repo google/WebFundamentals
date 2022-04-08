@@ -454,6 +454,15 @@ redirects:
 - from: /web/fundamentals/performance/critical-rendering-path
   to: https://web.dev/critical-rendering-path
 
+- from: /web/fundamentals/app-install-banners/native 
+  to: https://web.dev/app-install-banners-native 
+
+- from: /web/fundamentals/design-and-ux/principles 
+  to: https://web.dev/ux-basics/
+
+- from: /web/fundamentals/push-notifications/video
+  to: https://web.dev/push-notifications-video
+
 ## Redirects for Updates content migrated to web.dev
 
 - from: /web/updates/2019/02/constructable-stylesheets
@@ -624,6 +633,11 @@ redirects:
 - from: /web/updates/2019/06/pwa-install-patterns
   to: https://web.dev/pwa-install-patterns
 
+- from: /web/updates/2011/10/Spooktacular-HTML5-Pumpkin
+  to: https://web.dev/Spooktacular-HTML5-Pumpkin
+
+- from: /web/updates/2019/02/model-viewer
+  to: https://web.dev/model-viewer/
 
 ## Redirects for PWA content migrated to web.dev
 
@@ -2156,8 +2170,14 @@ redirects:
 - from: /web/updates/capabilities
   to: https://developer.chrome.com/blog/capabilities
 
+- from: /web/updates/2016/08/removing-document-write 
+  to: https://developer.chrome.com/blog/removing-document-write 
 
+- from: /web/updates/2015/05/some-ui-and-feature-enhancements-to-the-colour-picker-tool
+  to: https://developer.chrome.com/blog/some-ui-and-feature-enhancements-to-the-colour-picker-tool
 
+- from: /web/updates/2015/07/measuring-performance-in-a-service-worker 
+  to: https://developer.chrome.com/blog/measuring-performance-in-a-service-worker 
 
 ## Redirects for Fundamentals content migrated to DCC
 
