@@ -771,7 +771,7 @@ Let's make our app shell's code aware of this change. Add a function to `js/app.
 function getContentUri() {
   const hash = window.location.hash;
   if (hash && hash.indexOf('href=') > -1) {
-    return decodeURIComponent(hash.substr(6));
+    return decodeURIComponent(hash.slice(6));
   }
   return window.location;
 }
