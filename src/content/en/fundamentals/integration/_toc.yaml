@@ -8,7 +8,8 @@ toc:
       status: external
       path: https://web.dev/customize-install/
     - title: Native App Install Prompt
-      path: /web/fundamentals/app-install-banners/native
+      path: https://developer.chrome.com/blog/app-install-banners-native/
+      status: external
     - title: Patterns for Promoting PWA Installation
       status: external
       path: https://web.dev/promote-install/

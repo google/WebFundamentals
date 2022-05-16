@@ -325,13 +325,13 @@ redirects:
 - from: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
   to: https://web.dev/critical-rendering-path-render-tree-construction
 
-- from: /web/fundamentals/architecture/app-shell 
+- from: /web/fundamentals/architecture/app-shell
   to: https://web.dev/learn/pwa/architecture/
 
-- from: /web/fundamentals/design-and-ux/responsive/patterns 
+- from: /web/fundamentals/design-and-ux/responsive/patterns
   to: https://web.dev/learn/design
 
-- from: /web/fundamentals/design-and-ux/input/forms 
+- from: /web/fundamentals/design-and-ux/input/forms
   to: https://web.dev/learn/forms/
 
 - from: /web/fundamentals/performance/webpack/decrease-frontend-size
@@ -454,10 +454,10 @@ redirects:
 - from: /web/fundamentals/performance/critical-rendering-path
   to: https://web.dev/critical-rendering-path
 
-- from: /web/fundamentals/app-install-banners/native 
-  to: https://web.dev/app-install-banners-native 
+- from: /web/fundamentals/app-install-banners/native
+  to: https://developer.chrome.com/blog/app-install-banners-native/
 
-- from: /web/fundamentals/design-and-ux/principles 
+- from: /web/fundamentals/design-and-ux/principles
   to: https://web.dev/ux-basics/
 
 - from: /web/fundamentals/push-notifications/video
@@ -1470,7 +1470,7 @@ redirects:
 
 - from: /web/updates/2014/01/Chrome-Dev-Summit-Performance-Summary
   to: https://developer.chrome.com/blog/chrome-dev-summit-performance-summary
-  
+
 - from: /web/updates/2014/01/Chrome-Dev-Summit-Platforms-Summary
   to: https://developer.chrome.com/blog/chrome-dev-summit-platforms-summary
 
@@ -1530,7 +1530,7 @@ redirects:
 
 - from: /web/updates/2014/12/Fundamental-of-Mobile-Web-Development
   to: https://developer.chrome.com/blog/fundamental-of-mobile-web-development
-  
+
 - from: /web/updates/2014/12/web-animation-playback
   to: https://developer.chrome.com/blog/web-animation-playback
 
@@ -1545,7 +1545,7 @@ redirects:
 
 - from: /web/updates/2015/01/pixelated
   to: https://developer.chrome.com/blog/pixelated
-  
+
 - from: /web/updates/2015/01/Polymer-State-of-the-Union
   to: https://developer.chrome.com/blog/polymer-state-of-the-union
 
@@ -2170,27 +2170,27 @@ redirects:
 - from: /web/updates/capabilities
   to: https://developer.chrome.com/blog/capabilities
 
-- from: /web/updates/2016/08/removing-document-write 
-  to: https://developer.chrome.com/blog/removing-document-write 
+- from: /web/updates/2016/08/removing-document-write
+  to: https://developer.chrome.com/blog/removing-document-write
 
 - from: /web/updates/2015/05/some-ui-and-feature-enhancements-to-the-colour-picker-tool
   to: https://developer.chrome.com/blog/some-ui-and-feature-enhancements-to-the-colour-picker-tool
 
-- from: /web/updates/2015/07/measuring-performance-in-a-service-worker 
-  to: https://developer.chrome.com/blog/measuring-performance-in-a-service-worker 
+- from: /web/updates/2015/07/measuring-performance-in-a-service-worker
+  to: https://developer.chrome.com/blog/measuring-performance-in-a-service-worker
 
 ## Redirects for Fundamentals content migrated to DCC
 
-- from: /web/fundamentals/vr 
+- from: /web/fundamentals/vr
   to:  https://developer.chrome.com/blog/ar-for-the-web/
 
 - from: /web/fundamentals/vr/adding-input-to-a-webvr-scene
   to:  https://developer.chrome.com/blog/ar-for-the-web/
 
-- from: /web/fundamentals/vr/getting-started-with-webvr 
+- from: /web/fundamentals/vr/getting-started-with-webvr
   to:  https://developer.chrome.com/blog/ar-for-the-web/
 
-- from: /web/fundamentals/vr/status 
+- from: /web/fundamentals/vr/status
   to:  https://developer.chrome.com/blog/ar-for-the-web/
 
 - from: /web/fundamentals/vr/vr-perspective
