@@ -27,6 +27,10 @@ td[align="right"] {
 
 {% include "web/_shared/contributors/philipwalton.html" %}
 
+<aside class="caution">
+  <strong>Update (May 2022):</strong> The analysis in this case study is based on a snapshot of performance at a point in time, using a sampling of real-world traffic in 2016. Since the article was written, the set of browsers that support service workers has evolved, and the historic performance measurements may not reflect the experience the full population of users will experience today.
+</aside>
+
 One of the most significant benefits of [service workers](/web/fundamentals/primers/service-worker/) (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even measure this?
 
 The [Google I/O web app](https://events.google.com/io2016/){: .external } (IOWA for short) is a [progressive web app](/web/progressive-web-apps/) that leveraged most of the new capabilities offered by service workers to deliver a rich, app-like experience to its users. It also used Google Analytics to capture key performance data and usage patterns from its large and diverse user audience.
