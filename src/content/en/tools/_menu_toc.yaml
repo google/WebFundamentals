@@ -8,6 +8,6 @@ included:
     - label: Puppeteer
       path: /web/tools/puppeteer
     - label: Workbox
-      path: /web/tools/workbox
+      path: https://developer.chrome.com/docs/workbox/
     - label: Chrome User Experience Report
       path: /web/tools/chrome-user-experience-report
