@@ -5,6 +5,18 @@ redirects:
 - from: /web/tools/workbox/
   to: https://developer.chrome.com/docs/workbox/
 
+- from: /web/tools/workbox/reference-docs/v5
+  to: https://developer.chrome.com/docs/workbox/reference/
+
+- from: /web/tools/workbox/reference-docs/v4
+  to: https://developer.chrome.com/docs/workbox/reference/
+
+- from: /web/tools/workbox/reference-docs/v3
+  to: https://developer.chrome.com/docs/workbox/reference/
+
+- from: /web/tools/workbox/reference-docs/v2
+  to: https://developer.chrome.com/docs/workbox/reference/
+
 - from: /web/chrome-devtools
   to: /web/tools/chrome-devtools
 
