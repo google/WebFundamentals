@@ -178,10 +178,10 @@ Add some sample furniture items to the object store.
 Replace TODO 3.3 in `main.js` with the following code:
 
 ```
-dbPromise.then(function(db) {
-  var tx = db.transaction('products', 'readwrite');
-  var store = tx.objectStore('products');
-  var items = [
+dbPromise.then((db) => {
+  const tx = db.transaction('products', 'readwrite');
+  const store = tx.objectStore('products');
+  const items = [
     {
       name: 'Couch',
       id: 'cch-blk-ma',
@@ -237,14 +237,14 @@ dbPromise.then(function(db) {
       quantity: 11
     }
   ];
-  return Promise.all(items.map(function(item) {
+  return Promise.all(items.map((item) => {
       console.log('Adding item: ', item);
       return store.add(item);
     })
-  ).catch(function(e) {
+  ).catch((e) => {
     tx.abort();
     console.log(e);
-  }).then(function() {
+  }).then(() => {
     console.log('All items added successfully!');
   });
 });
@@ -286,14 +286,14 @@ Replace TODO 4.1 in `main.js` with the following code:
 ```
 case 2:
   console.log('Creating a name index');
-  var store = upgradeDb.transaction.objectStore('products');
+  const store = upgradeDb.transaction.objectStore('products');
   store.createIndex('name', 'name', {unique: true});
 ```
 
 Change the version number to 3 in the call to `idb.open`. The full `idb.open` method should look like this:
 
 ```
-var dbPromise = idb.open('couches-n-things', 3, function(upgradeDb) {
+const dbPromise = idb.open('couches-n-things', 3, (upgradeDb) => {
   switch (upgradeDb.oldVersion) {
     case 0:
       // a placeholder case so that the switch block will
@@ -304,7 +304,7 @@ var dbPromise = idb.open('couches-n-things', 3, function(upgradeDb) {
       upgradeDb.createObjectStore('products', {keyPath: 'id'});
     case 2:
       console.log('Creating a name index');
-      var store = upgradeDb.transaction.objectStore('products');
+      const store = upgradeDb.transaction.objectStore('products');
       store.createIndex('name', 'name', {unique: true});
 
     // TODO 4.2 - create 'price' and 'description' indexes
@@ -343,10 +343,10 @@ Use the indexes you created in the previous sections to retrieve items from the 
 Add the following code to the `getByName` function in `main.js`:
 
 ```
-return dbPromise.then(function(db) {
-  var tx = db.transaction('products', 'readonly');
-  var store = tx.objectStore('products');
-  var index = store.index('name');
+return dbPromise.then((db) => {
+  const tx = db.transaction('products', 'readonly');
+  const store = tx.objectStore('products');
+  const index = store.index('name');
   return index.get(key);
 });
 ```
@@ -376,13 +376,13 @@ Use a cursor object to get items from your store within a price range.
 Replace TODO 4.4a in `main.js` with the following code:
 
 ```
-var lower = document.getElementById('priceLower').value;
-var upper = document.getElementById('priceUpper').value;
-var lowerNum = Number(document.getElementById('priceLower').value);
-var upperNum = Number(document.getElementById('priceUpper').value);
+const lower = document.getElementById('priceLower').value;
+const upper = document.getElementById('priceUpper').value;
+const lowerNum = Number(document.getElementById('priceLower').value);
+const upperNum = Number(document.getElementById('priceUpper').value);
 
 if (lower === '' && upper === '') {return;}
-var range;
+let range;
 if (lower !== '' && upper !== '') {
   range = IDBKeyRange.bound(lowerNum, upperNum);
 } else if (lower === '') {
@@ -390,23 +390,23 @@ if (lower !== '' && upper !== '') {
 } else {
   range = IDBKeyRange.lowerBound(lowerNum);
 }
-var s = '';
-dbPromise.then(function(db) {
-  var tx = db.transaction('products', 'readonly');
-  var store = tx.objectStore('products');
-  var index = store.index('price');
+let s = '';
+dbPromise.then((db) => {
+  const tx = db.transaction('products', 'readonly');
+  const store = tx.objectStore('products');
+  const index = store.index('price');
   return index.openCursor(range);
 }).then(function showRange(cursor) {
-  if (!cursor) {return;}
+  if (!cursor) return;
   console.log('Cursored at:', cursor.value.name);
   s += '<h2>Price - ' + cursor.value.price + '</h2><p>';
-  for (var field in cursor.value) {
+  for (const field in cursor.value) {
     s += field + '=' + cursor.value[field] + '<br/>';
   }
   s += '</p>';
   return cursor.continue().then(showRange);
-}).then(function() {
-  if (s === '') {s = '<p>No results.</p>';}
+}).then(() => {
+  if (s === '') s = '<p>No results.</p>';
   document.getElementById('results').innerHTML = s;
 });
 ```
@@ -454,7 +454,7 @@ Open the test page. Your app should pass the next test which tests if the `order
 This step is for you to complete on your own. In the `addOrders` function in `main.js`, write the code to add the following items to the `orders` object store. This code will be very similar to the `addProducts` function that we wrote at the start of the lab:
 
 ```
-var items = [
+const items = [
   {
     name: 'Cabinet',
     id: 'ca-brn-ma',
@@ -510,12 +510,12 @@ This step processes the array of orders passed to the `processOrders` function.
 Replace TODO 5.5 in `main.js` with the following code:
 
 ```
-return dbPromise.then(function(db) {
-  var tx = db.transaction('products');
-  var store = tx.objectStore('products');
+return dbPromise.then((db) => {
+  const tx = db.transaction('products');
+  const store = tx.objectStore('products');
   return Promise.all(
-    orders.map(function(order) {
-      return store.get(order.id).then(function(product) {
+    orders.map((order) => {
+      return store.get(order.id).then((product) => {
         return decrementQuantity(product, order);
       });
     })
@@ -539,9 +539,9 @@ Now we need to check if there are enough items left in the `products` object sto
 Replace TODO 5.6 in `main.js` with the following code:
 
 ```
-return new Promise(function(resolve, reject) {
-  var item = product;
-  var qtyRemaining = item.quantity - order.quantity;
+return new Promise((resolve, reject) => {
+  const item = product;
+  const qtyRemaining = item.quantity - order.quantity;
   if (qtyRemaining < 0) {
     console.log('Not enough ' + product.id + ' left in stock!');
     document.getElementById('receipt').innerHTML =
