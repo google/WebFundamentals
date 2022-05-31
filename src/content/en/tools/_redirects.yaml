@@ -11,6 +11,9 @@ redirects:
 
 # Workbox redirects
 
+- from: /web/tools/workbox/guides/get-started
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/
+
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
 
