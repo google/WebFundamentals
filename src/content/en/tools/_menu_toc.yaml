@@ -5,7 +5,6 @@ included:
       path: https://developer.chrome.com/docs/devtools/
     - label: Lighthouse
       path: https://developer.chrome.com/docs/lighthouse/overview/
-      status: external
     - label: Puppeteer
       path: /web/tools/puppeteer
     - label: Workbox
