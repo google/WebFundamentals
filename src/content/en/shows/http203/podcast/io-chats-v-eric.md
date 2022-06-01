@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Lighthouse and automation.
 
-{# wf_updated_on: 2018-08-02 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2018-08-02 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/io-2018-v-eric.mp3 #}
 {# wf_podcast_duration: 00:18:17 #}
@@ -19,7 +19,7 @@ In this episode we chat to [Vinamrata Singal](https://twitter.com/vinamratas), w
 Lighthoue, and [Eric Bidelman](https://twitter.com/ebidel) who is someone else we know. We cover
 stuff like:
 
-* [Lighthouse](/web/tools/lighthouse/).
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/).
 * [Headless Chrome](/web/updates/2017/04/headless-chrome).
 * [Puppeteer](/web/tools/puppeteer/).
 * Chrome's [DevTools protocol](https://chromedevtools.github.io/devtools-protocol/).

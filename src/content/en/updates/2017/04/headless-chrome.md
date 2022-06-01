@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2018-02-23 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -224,7 +224,7 @@ platforms. Just look at that hard-coded path to Chrome :(
 
 ##### Using ChromeLauncher {: #nodechromelauncher }
 
-[Lighthouse](/web/tools/lighthouse/) is a marvelous
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) is a marvelous
 tool for testing the quality of your web apps. A robust module for launching
 Chrome was developed within Lighthouse and is now extracted for standalone use.
 The [`chrome-launcher` NPM module](https://www.npmjs.com/package/chrome-launcher)

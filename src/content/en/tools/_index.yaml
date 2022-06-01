@@ -28,10 +28,10 @@ landing_page:
         Audits panel. You can also run Lighthouse from the command line or
         install the Chrome Extension.
       image_path: images/lighthouse-16x9.png
-      path: /web/tools/lighthouse/
+      path: https://developer.chrome.com/docs/lighthouse/overview/
       buttons:
       - label: Get started
-        path: /web/tools/lighthouse/
+        path: https://developer.chrome.com/docs/lighthouse/overview/
     - heading: Puppeteer
       description: >
         Puppeteer is a Node library which provides a high-level API to control
@@ -48,10 +48,12 @@ landing_page:
         easy to build an offline PWA and take advantage of the service worker
         APIs.
       image_path: images/workbox-16x9.png
-      path: /web/tools/workbox/
+      path: https://developer.chrome.com/docs/workbox/
+      status: external
       buttons:
       - label: Get started
-        path: /web/tools/workbox/
+        path: https://developer.chrome.com/docs/workbox/
+        status: external
 
   - classname: devsite-landing-row-cards
     items:

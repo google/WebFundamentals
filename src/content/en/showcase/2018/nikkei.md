@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2018-11-19 #}
-{# wf_updated_on: 2018-11-19 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_blink_components: N/A #}
 {# wf_featured_image: /web/showcase/2018/images/nikkei/featured.jpg #}
 {# wf_featured_snippet: With a publishing history of more than 140 years, Nikkei is one of the most authoritative media businesses in Japan. To provide a better user experience and accelerate their business on the web, Nikkei successfully launched a Progressive Web App in November 2017, and they’re seeing amazing results from the new platform. #}
@@ -84,7 +84,7 @@ results from the new platform.
 
 Nikkei saw a rapid rise in mobile traffic to their legacy website as
 smartphones became the main point of entry to the web for many users.
-However, using [Lighthouse](/web/tools/lighthouse/), an auditing tool that
+However, using [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/), an auditing tool that
 scans a web page and gives recommendations on how to improve across multiple
 categories, they understood that their site wasn’t fully optimized for mobile
 across multiple areas and was very slow to load.
@@ -160,7 +160,7 @@ performance was entirely within their control, they optimized their
 
 Speed is more important than ever. As smartphones became the main browsing
 device for many users, Nikkei saw a rapid increase of mobile traffic on
-their service. But using [Lighthouse](/web/tools/lighthouse/), they realized
+their service. But using [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/), they realized
 that their legacy website wasn’t fully optimized for mobile, with the Speed
 Index averaging 10 seconds, very slow initial load, and a large JavaScript
 bundle. It was time for Nikkei to rebuild their website and adapt

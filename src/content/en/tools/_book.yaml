@@ -24,7 +24,8 @@ upper_tabs:
     - name: Workbox
       contents:
       - title: Workbox
-        path: /web/tools/workbox
+        path: https://developer.chrome.com/docs/workbox/
+        status: external
     - name: Chrome User Experience Report
       contents:
       - title: Chrome User Experience Report

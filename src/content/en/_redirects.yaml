@@ -130,6 +130,9 @@ redirects:
 - from: /web/fundamentals/discovery/search-optimization
   to: https://web.dev/lighthouse-seo/
 
+- from: /web/tools/lighthouse/
+  to: https://developer.chrome.com/docs/lighthouse/overview/
+
 - from: /web/fundamentals/engage-and-retain/app-install-banners/...
   to: https://web.dev/customize-install/
 

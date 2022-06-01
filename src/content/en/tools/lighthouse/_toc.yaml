@@ -1,6 +1,7 @@
 toc:
 - title: Overview
-  path: /web/tools/lighthouse/
+  path: https://developer.chrome.com/docs/lighthouse/overview/
+  status: external
 - title: Lighthouse Scoring Guide
   path: https://web.dev/performance-scoring/
   status: external

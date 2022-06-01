@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2017-04-20 #}
-{# wf_updated_on: 2018-03-20 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_featured_image: /web/showcase/2017/images/voot/voot-lite.png #}
 {# wf_featured_snippet: Voot.com launches their media Progressive Web App in India. Within days of implementation, session time per user increased by 39% and daily views per user by 15%. #}
 {# wf_tags: media,casestudy #}
@@ -66,7 +66,7 @@ capabilities.
 
 Voot.com also decreased load times by adding a service worker to preload images
 as the user navigates, and to cache images for repeat visits. The site was also
-analyzed with [Lighthouse](/web/tools/lighthouse/) to gain performance insights,
+analyzed with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to gain performance insights,
 which in turn allowed a reduction in JavaScript and CSS overhead and the
 implementation of synchronous server calls.
 
