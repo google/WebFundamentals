@@ -7,6 +7,7 @@ description: Five new audits, the chrome-launcher standalone Node module, and a 
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
 {# wf_featured_snippet: Five new audits, the chrome-launcher standalone Node module, and a new throttling guide. #}
+{# wf_blink_components: N/A #}
 
 # Lighthouse 2.5 Updates {: .page-title }
 
