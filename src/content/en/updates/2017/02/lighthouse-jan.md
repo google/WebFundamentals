@@ -5,8 +5,8 @@ description: What's new in Lighthouse 1.5.
 {# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2017-02-10 #}
 {# wf_tags: lighthouse,tools,performance,progressive-web-apps #}
-{# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
 {# wf_featured_snippet: What's new in Lighthouse 1.5. New audits, extension updates, Performance Experiment, online Viewer features, and UI tweaks. #}
+{# wf_blink_components: N/A #}
 
 # Lighthouse January 2017 update {: .page-title }
 
@@ -146,4 +146,3 @@ to [report bugs](https://github.com/GoogleChrome/lighthouse/issues), file
 feature requests, or brainstorm
 [ideas](https://github.com/GoogleChrome/lighthouse/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+bug%22)
 on what you'd like to see next.
-

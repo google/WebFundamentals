@@ -5,7 +5,6 @@ description: New perf and SEO audits, perf as the first section in reports, and 
 {# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2018-02-09 #}
 {# wf_tags: lighthouse #}
-{# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
 {# wf_featured_snippet: New perf and SEO audits, perf as the first section in reports, and more. #}
 {# wf_blink_components: N/A #}
 
