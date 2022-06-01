@@ -122,6 +122,9 @@ redirects:
 
 # Lighthouse
 
+- from: /web/tools/lighthouse/run
+  to: https://web.dev/measure/
+
 - from: /web/tools/lighthouse/audits/critical-request-chains
   to: https://web.dev/critical-request-chains/
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Lighthouse 1.5.
 
-{# wf_updated_on: 2017-02-10 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2017-02-10 #}
 {# wf_tags: lighthouse,tools,performance,progressive-web-apps #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -13,7 +13,7 @@ description: What's new in Lighthouse 1.5.
 {% include "web/_shared/contributors/brendankenny.html" %}
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
-[Lighthouse](/web/tools/lighthouse/) is an
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) is an
 [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for
 improving the quality of your web apps. You can install it as a
 [Chrome Extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
@@ -131,7 +131,7 @@ about the Performance Experiment in Lighthouse.
 ## New Documentation
 
 Last but not least, we've modernized the documentation at
-[developers.google.com/web/tools/lighthouse/](/web/tools/lighthouse/)
+[developers.google.com/web/tools/lighthouse/](https://developer.chrome.com/docs/lighthouse/overview/)
 and added new audit references.
 
 ![New documentation](/web/updates/images/2017/02/lighthouse/image_11.png)

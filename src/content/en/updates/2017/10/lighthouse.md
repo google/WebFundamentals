@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Five new audits, the chrome-launcher standalone Node module, and a new throttling guide.
 
-{# wf_updated_on: 2017-10-17 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2017-10-17 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -13,14 +13,14 @@ description: Five new audits, the chrome-launcher standalone Node module, and a 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/brendankenny.html" %}
 
-[CDT]: /web/tools/lighthouse/#devtools
+[CDT]: https://developer.chrome.com/docs/lighthouse/overview/#devtools
 [Node]: https://github.com/GoogleChrome/lighthouse#using-programmatically
-[CLI]: /web/tools/lighthouse/#cli
-[CE]: /web/tools/lighthouse/#extension
+[CLI]: https://developer.chrome.com/docs/lighthouse/overview/#cli
+[CE]: https://developer.chrome.com/docs/lighthouse/overview/#extension
 
 [Lighthouse][LH] 2.5 is now released! Highlights include:
 
-[LH]: /web/tools/lighthouse/
+[LH]: https://developer.chrome.com/docs/lighthouse/overview/
 
 * [chrome-launcher available as a standalone Node module](#launcher).
 * [Five new audits](#audits).
@@ -93,7 +93,7 @@ the command line in [full-config mode][full].
   <img src="/web/updates/images/2017/10/unused.png"
        alt="The \"Unused JavaScript\" audit"
   <figcaption>
-    <b>Figure 3</b>. The <b>Unused JavaScript</b> audit 
+    <b>Figure 3</b>. The <b>Unused JavaScript</b> audit
   </figcaption>
 </figure>
 

@@ -31,8 +31,8 @@ landing_page:
                   <h3>Tools</h3>
                   <p>
                     <a href="/web/tools/chrome-devtools/" class="gc-analytics-event" data-category="webFu" data-label="devtools-landing" data-action="web-home">Chrome DevTools</a>,
-                    <a href="/web/tools/lighthouse/" class="gc-analytics-event" data-category="webFu" data-label="lighthouse-landing" data-action="web-home">Lighthouse</a>,
-                    <a href="/web/tools/workbox/" class="gc-analytics-event" data-category="webFu" data-label="workbox-landing" data-action="web-home">Workbox</a>,
+                    <a href="https://developer.chrome.com/docs/lighthouse/overview/" class="gc-analytics-event" data-category="webFu" data-label="lighthouse-landing" data-action="web-home">Lighthouse</a>,
+                    <a href="https://developer.chrome.com/docs/workbox/" class="gc-analytics-event" data-category="webFu" data-label="workbox-landing" data-action="web-home">Workbox</a>,
                     and more tools to make your life easier and improve your
                     development artistry.
                   </p>

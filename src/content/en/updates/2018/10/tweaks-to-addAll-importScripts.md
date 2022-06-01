@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Some small changes are coming to cache.addAll() and importScripts and in Chrome 71.
 
-{# wf_updated_on: 2018-10-15 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2018-10-15 #}
 {# wf_tags: progressive-web-apps,serviceworker,chrome71,deprecations,removals #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
@@ -66,9 +66,9 @@ self.addEventListener('fetch', event => {
 });
 ```
 
-Note: Some users of the [Workbox library](/web/tools/workbox/) might be
+Note: Some users of the [Workbox library](https://developer.chrome.com/docs/workbox/) might be
 implicitly relying on asynchronous calls to `importScripts()` without realizing it. Please see [this
-guidance](/web/tools/workbox/modules/workbox-sw#avoid_async_imports) to
+guidance](https://developer.chrome.com/docs/workbox/modules/workbox-sw/#avoid-async-imports) to
 make sure you don't run into issues in Chrome 71.
 
 ## Deprecating repeated URLs passed to cache.addAll()
@@ -128,4 +128,3 @@ the inconsistency and updated your code. But on the off chance that you haven't 
 behavior in other browsers, we wanted to call out the change before switching Chrome's behavior.
 
 {% include "web/_shared/rss-widget-updates.html" %}
-

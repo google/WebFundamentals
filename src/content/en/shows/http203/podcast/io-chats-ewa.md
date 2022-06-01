@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Getting performance right.
 
-{# wf_updated_on: 2018-06-29 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2018-06-19 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/io-2018-ewa.mp3 #}
 {# wf_podcast_duration: 00:15:46 #}
@@ -19,7 +19,7 @@ In this episode we chat to [Ewa Gasperowicz](https://twitter.com/devnook), anoth
 Chrome dev-rels. We cover:
 
 * Getting web performance right.
-* Getting performance tests into [Lighthouse](/web/tools/lighthouse/).
+* Getting performance tests into [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/).
 * Does a "functionality first" approach mean performance is forgotten about?
 * How it's no longer possible to know all browser technologies.
 

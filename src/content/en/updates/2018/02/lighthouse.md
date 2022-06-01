@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New perf and SEO audits, perf as the first section in reports, and more.
 
-{# wf_updated_on: 2020-07-24 #}
+{# wf_updated_on: 2022-06-01 #}
 {# wf_published_on: 2018-02-09 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -17,7 +17,7 @@ description: New perf and SEO audits, perf as the first section in reports, and 
 {% include "web/_shared/contributors/paulirish.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-[Lighthouse](/web/tools/lighthouse) 2.8 is out! Highlights include:
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) 2.8 is out! Highlights include:
 
 * [New Performance and SEO audits](#audits)
 * [Performance as the first section of Lighthouse report](#report)
