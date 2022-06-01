@@ -49,11 +49,9 @@ landing_page:
         APIs.
       image_path: images/workbox-16x9.png
       path: https://developer.chrome.com/docs/workbox/
-      status: external
       buttons:
       - label: Get started
         path: https://developer.chrome.com/docs/workbox/
-        status: external
 
   - classname: devsite-landing-row-cards
     items:

@@ -2249,7 +2249,7 @@ redirects:
 - from: /web/ilt/pwa/working-with-the-fetch-api
   to: https://web.dev/learn/pwa/serving/
 
-- from: /web/ilt/pwa//lab-fetch-api
+- from: /web/ilt/pwa/lab-fetch-api
   to: https://web.dev/learn/pwa/serving/
 
 - from: /web/ilt/pwa/caching-files-with-service-worker
