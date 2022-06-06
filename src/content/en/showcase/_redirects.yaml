@@ -139,3 +139,81 @@ redirects:
 
 - from: /web/showcase/2016/net-a-porter
   to: https://web.dev/net-a-porter
+
+- from: /web/showcase/2016/babe
+  to: https://web.dev/babe
+
+- from: /web/showcase/2016/konga
+  to: https://web.dev/konga
+
+- from: /web/showcase/2016/wapo
+  to: https://web.dev/wapo
+
+- from: /web/showcase/2016/jumia
+  to: https://web.dev/jumia2016
+
+- from: /web/showcase/2017/santa
+  to: https://web.dev/santa
+
+- from: /web/showcase/2015/web_filter
+  to: https://web.dev/web-filter
+
+- from: /web/showcase/2015/lightsaber
+  to: https://web.dev/lightsaber
+
+- from: /web/showcase/2016/carnival
+  to: https://web.dev/carnival
+
+- from: /web/showcase/2017/ola
+  to: https://web.dev/ola
+
+- from: /web/showcase/2015/adsy_me
+  to: https://web.dev/adsy-me
+
+- from: /web/showcase/2017/bear71
+  to: https://web.dev/bear71
+
+- from: /web/showcase/2017/wego
+  to: https://web.dev/wego
+
+- from: /web/showcase/2015/0hh1
+  to: https://web.dev/0hh1
+
+- from: /web/showcase/2017/matterport
+  to: https://web.dev/matterport
+
+- from: /web/showcase/2017/mynet
+  to: https://web.dev/mynet
+
+- from: /web/showcase/2016/art-sessions
+  to: https://web.dev/art-sessions
+
+- from: /web/showcase/2015/adventuremachine
+  to: https://web.dev/adventuremachine
+
+- from: /web/showcase/2015/chrome-dev-summit
+  to: https://web.dev/chrome-dev-summit
+
+- from: /web/showcase/2016/ali-express-smart-lock
+  to: https://web.dev/ali-express-smart-lock
+
+- from: /web/showcase/2016/housing
+  to: https://web.dev/housing
+
+- from: /web/showcase/2017/playcanvas
+  to: https://web.dev/playcanvas
+
+- from: /web/showcase/2017/voot
+  to: https://web.dev/voot
+
+- from: /web/showcase/2015/hummingbirdlibrary
+  to: https://web.dev/hummingbirdlibrary
+
+- from: /web/showcase/2016/guardian-smart-lock
+  to: https://web.dev/guardian-smart-lock
+
+- from: /web/showcase/2015/hn_premii
+  to: https://web.dev/hn-premii
+
+- from: /web/showcase/2015/merry_pixmas
+  to: https://web.dev/merry-pixmas
