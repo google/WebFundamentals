@@ -5,25 +5,25 @@
 redirects:
 
 - from: /web/fundamentals/push-notifications/common-notification-patterns
-  to: https://web.dev/push-notifications-common-notification-patterns
+  to: https://web.dev/push-notifications-common-notification-patterns/
 
 - from: /web/fundamentals/push-notifications/display-a-notification
-  to: https://web.dev/push-notifications-display-a-notification
+  to: https://web.dev/push-notifications-display-a-notification/
 
 - from: /web/fundamentals/push-notifications/how-push-works
-  to: https://web.dev/push-notifications-how-push-works
+  to: https://web.dev/push-notifications-how-push-works/
 
 - from: /web/fundamentals/push-notifications/notification-behaviour
-  to: https://web.dev/push-notifications-notification-behaviour
+  to: https://web.dev/push-notifications-notification-behaviour/
 
 - from: /web/fundamentals/push-notifications/permission-ux
-  to: https://web.dev/push-notifications-permission-ux
+  to: https://web.dev/push-notifications-permissions-ux/
 
 - from: /web/fundamentals/push-notifications/sending-messages-with-web-push-libraries
-  to: https://web.dev/sending-messages-with-web-push-libraries
+  to: https://web.dev/sending-messages-with-web-push-libraries/
 
 - from: /web/fundamentals/push-notifications/subscribing-a-user
-  to: https://web.dev/push-notifications-subscribing-a-user
+  to: https://web.dev/push-notifications-subscribing-a-user/
 
 - from: /web/fundamentals/push-notifications/web-push-protocol
-  to: https://web.dev/push-notifications-web-push-protocol
+  to: https://web.dev/push-notifications-web-push-protocol/
