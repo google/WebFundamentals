@@ -4,6 +4,7 @@ book_path: /web/shows/_book.yaml
 {# wf_updated_on: 2022-06-07 #}
 {# wf_published_on: 2016-06-20 #}
 {# wf_youtube_id: 3eW5m9L2DC8 #}
+{# wf_blink_components: N/A #}
 
 # Summit Report: That's a wrap! (Progressive Web App Summit 2016) {: .page-title }
 
