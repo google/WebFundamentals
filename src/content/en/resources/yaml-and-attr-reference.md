@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: YAML Front Matter & Other Attributes.
 
-{# wf_updated_on: 2017-12-06 #}
+{# wf_updated_on: 2022-06-07 #}
 {# wf_published_on: 2017-12-06 #}
 {# wf_blink_components: N/A #}
 
@@ -282,12 +282,12 @@ YAML front matter must always be at the top of the document.
   </tr>
   <tr>
     <td>Applies to</td>
-    <td>Only markdown pages in <b>updates</b> and <b>showcase</b></td>
+    <td>Only markdown pages in <b>updates</b></td>
   </tr>
   <tr>
     <td>Description</td>
     <td>
-      Used to sort article on showcase and updates to keep certain articles at
+      Used to sort article on updates to keep certain articles at
       or near the top.
     </td>
   </tr>
@@ -313,7 +313,7 @@ YAML front matter must always be at the top of the document.
   </tr>
   <tr>
     <td>Applies to</td>
-    <td>Only markdown pages in <b>updates</b> and <b>showcase</b></td>
+    <td>Only markdown pages in <b>updates</b></td>
   </tr>
   <tr>
     <td>Description</td>
@@ -352,7 +352,7 @@ YAML front matter must always be at the top of the document.
   </tr>
   <tr>
     <td>Applies to</td>
-    <td>Only markdown pages in <b>updates</b> and <b>showcase</b></td>
+    <td>Only markdown pages in <b>updates</b></td>
   </tr>
   <tr>
     <td>Description</td>

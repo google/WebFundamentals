@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
-{# wf_updated_on: 2019-03-04 #}
+{# wf_updated_on: 2022-06-07 #}
 {# wf_published_on: 2016-09-13 #}
 {# wf_blink_components: N/A #}
 
@@ -20,7 +20,7 @@ page, feeds, `book.yaml` and the tags pages using `gulp`.
 
 To get started quickly, copy the template and start there.
 
-1. Make a copy of the template ([showcase](https://github.com/google/WebFundamentals/blob/main/src/templates/showcase/_template.md) or [update](https://github.com/google/WebFundamentals/blob/main/src/templates/updates/_template.md)), and place it in the appropriate directory.
+1. Make a copy of the [template](https://github.com/google/WebFundamentals/blob/main/src/templates/updates/_template.md), and place it in the appropriate directory.
 1. Update the key fields:
     * `book_path`
     * `description`
@@ -28,7 +28,7 @@ To get started quickly, copy the template and start there.
     * `wf_featured_image` & `wf_featured_snippet`
     * Update the contributor include
 1. Run `gulp build` to get it listed in the listing pages and table of contents
-1. Write/iterate on the update or showcase
+1. Write/iterate on the update.
 1. Before submitting the pull request, run `gulp test` to verify everything is happy
 1. Submit your PR with the appropriate changes.
 
