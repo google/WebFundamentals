@@ -4,7 +4,6 @@ upper_tabs:
   - include: /web/_upper_tabs-Fundamentals.yaml
   - include: /web/_upper_tabs-Tools.yaml
   - include: /web/_upper_tabs-Updates.yaml
-  - include: /web/_upper_tabs-Showcase.yaml
   - name: Resources
     path: /web/resources/
     lower_tabs:
@@ -32,4 +31,3 @@ upper_tabs:
           path: /web/resources/contributors
         - title: Translation guidance
           path: /web/resources/translations
-

@@ -30,4 +30,3 @@ upper_tabs:
       - title: Chrome User Experience Report
         path: /web/tools/chrome-user-experience-report
 - include: /web/_upper_tabs-Updates.yaml
-- include: /web/_upper_tabs-Showcase.yaml

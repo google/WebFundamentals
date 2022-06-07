@@ -125,70 +125,6 @@ gulp.task('build:fundamentals', function() {
   generateFeedsForEveryYear(files, options);
 });
 
-/**
- * Builds all of the listing pages, including RSS & ATOM feeds
- * for /web/showcase/
- */
-gulp.task('build:showcase', function() {
-  const section = 'showcase';
-  const baseOutputPath = path.join(global.WF.src.content, section);
-  const description = 'Learn why and how other developers have used the web ' +
-      'to create amazing web experiences for their users.';
-  const options = {
-    title: 'Case Studies',
-    description: description,
-    section: section,
-    outputPath: baseOutputPath,
-  };
-  const startPath = path.join(global.WF.src.content, 'showcase');
-  const patterns = ['**/*.md', '!tags/*', '!**/index.md'];
-  let files = wfHelper.getFileList(startPath, patterns);
-
-  // Generate landing page with featured case studies
-  files.sort(wfHelper.featuredComparator);
-  options.template = path.join(global.WF.src.templates, 'showcase/index.yaml');
-  wfTemplateHelper.generateIndex(files, options);
-
-  // Sort case studies by last updated for the rest of the pages
-  files.sort(wfHelper.updatedComparator);
-
-  // Generate the listing by region
-  options.title = 'Show Cases by Region';
-  options.template = path.join(global.WF.src.templates, 'showcase/region.md');
-  options.outputPath = path.join(baseOutputPath, 'region');
-  wfTemplateHelper.generateListPage(files, options);
-
-  // Generate the listing by vertical
-  options.title = 'Show Cases by Vertical';
-  options.template = path.join(global.WF.src.templates, 'showcase/vertical.md');
-  options.outputPath = path.join(baseOutputPath, 'vertical');
-  wfTemplateHelper.generateListPage(files, options);
-
-  // Generate the listings by tags
-  options.title = 'Show Cases by Tag';
-  options.outputPath = path.join(baseOutputPath, 'tags');
-  wfTemplateHelper.generateTagPages(files, options);
-
-  // Generate the listings by Year
-  options.template = null;
-  const filesByYear = wfHelper.splitByYear(files);
-  Object.keys(filesByYear).forEach(function(year) {
-    options.year = year;
-    options.outputPath = path.join(baseOutputPath, year);
-    options.title = 'Show Cases (' + year + ')';
-    wfTemplateHelper.generateListPage(filesByYear[year], options);
-    options.title = year;
-    wfTemplateHelper.generateTOCbyMonth(filesByYear[year], options);
-  });
-
-  // Generate the RSS & ATOM feeds
-  options.title = 'Show Cases';
-  options.outputPath = baseOutputPath;
-  wfTemplateHelper.generateFeeds(files, options);
-
-  generateFeedsForEveryYear(files, options);
-});
-
 
 /**
  * Builds index page and RSS & ATOM feeds for /web/shows/
@@ -418,7 +354,6 @@ gulp.task('build', function(cb) {
       'build:contributors',
       'build:glossary',
       'build:fundamentals',
-      'build:showcase',
       'build:http203Podcast',
       'build:DVDPodcast',
       'build:tools',
