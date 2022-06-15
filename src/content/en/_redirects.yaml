@@ -952,8 +952,17 @@ redirects:
 - from: /web/updates/2017/04/headless-chrome
   to: https://developer.chrome.com/blog/headless-chrome/
 
+- from: /web/updates/2011/07/Multiplayer-Audio-Fun
+  to: https://web.dev/multiplayer-audio-fun/
+
+- from: /web/tools
+  to: https://developer.chrome.com/docs/
+
 - from: /web/updates/2017/02/lighthouse-jan
   to: https://developer.chrome.com/blog/lighthouse-jan/
+
+- from: https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill
+  to: https://web.dev/learn/forms/autofill/
 
 - from: /web/updates/2017/07/chrome-61-media-updates
   to: https://developer.chrome.com/blog/chrome-61-media-updates/
@@ -987,6 +996,9 @@ redirects:
 
 - from: /web/updates/2018/03/smooshgate
   to: https://developer.chrome.com/blog/smooshgate
+
+- from: /web/updates/2018/07/site-isolation
+  to: https://developer.chrome.com/blog/site-isolation/
 
 - from: /web/updates/2018/04/present-web-pages-to-secondary-attached-displays
   to: https://developer.chrome.com/blog/present-web-pages-to-secondary-attached-displays
@@ -1161,6 +1173,9 @@ redirects:
 
 - from: /web/updates/2018/07/page-lifecycle-api
   to: https://developer.chrome.com/blog/page-lifecycle-api
+
+- from: /web/updates/2018/10/tweaks-to-addAll-importScripts
+  to: https://developer.chrome.com/blog/tweeks-to-addAll-importScripts/
 
 - from: /web/updates/2015/11/presentation-api
   to: https://developer.chrome.com/blog/presentation-api
