@@ -949,11 +949,17 @@ redirects:
 - from: /web/updates/2017/03/chrome-58-media-updates
   to: https://developer.chrome.com/blog/chrome-58-media-updates/
 
+- from: /web/updates
+  to: https://developer.chrome.com/blog/
+
 - from: /web/updates/2017/04/headless-chrome
   to: https://developer.chrome.com/blog/headless-chrome/
 
 - from: /web/updates/2011/07/Multiplayer-Audio-Fun
   to: https://web.dev/multiplayer-audio-fun/
+
+- from: /web/fundamentals
+  to: https://web.dev/
 
 - from: /web/tools
   to: https://developer.chrome.com/docs/
