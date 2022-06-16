@@ -277,6 +277,8 @@ gulp.task('build:sitekit', function() {
 /**
  * Builds all of the listing pages, including RSS & ATOM feeds
  * for /web/updates/
+ *
+ * TODO: Remove this dead code, all content has been moved to w.d
  */
 gulp.task('build:updates', function() {
   const section = 'updates';
@@ -357,7 +359,6 @@ gulp.task('build', function(cb) {
       'build:http203Podcast',
       'build:DVDPodcast',
       'build:tools',
-      'build:updates',
       'build:shows',
       'build:sitekit',
     ],
