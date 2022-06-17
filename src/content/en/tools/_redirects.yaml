@@ -1,5 +1,11 @@
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
 
+# Chrome DevTools
 - from: /web/tools/chrome-devtools/console/console-write
   to: https://developer.chrome.com/docs/devtools/console/api/
 
@@ -45,12 +51,13 @@ redirects:
 - from: /web/tools/chrome-devtools/network/network-conditions
   to: https://developer.chrome.com/docs/devtools/network/reference/
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/tools/chrome-devtools/...
   to: https://developer.chrome.com/docs/devtools/
 
-- from: /web/tools/lighthouse/audits/
-  to: https://web.dev/learn/#lighthouse
 
+# Lighthouse
 - from: /web/tools/lighthouse/audits/address-bar
   to: https://web.dev/themed-omnibox/
 
@@ -327,6 +334,11 @@ redirects:
 - from: /web/tools/lighthouse/audits/webp
   to: https://web.dev/uses-webp-images/
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/lighthouse/audits/...
+  to: https://web.dev/learn/#lighthouse
+
 - from: /web/tools/lighthouse/run
   to: https://web.dev/measure/
 
@@ -336,12 +348,18 @@ redirects:
 - from: /web/tools/lighthouse/v3/scoring
   to: https://web.dev/performance-scoring/
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/tools/lighthouse/...
   to: https://developer.chrome.com/docs/lighthouse/overview/
 
+
+# Material Design Lite
 - from: /web/tools/material-design-lite/...
   to: http://www.getmdl.io/
 
+
+# Workbox
 - from: /web/tools/service-worker-libraries/
   to: https://developer.chrome.com/docs/workbox/
 
@@ -426,11 +444,17 @@ redirects:
 - from: /web/tools/workbox/reference-docs/latest/workbox
   to: https://developer.chrome.com/docs/workbox/modules/workbox-sw/
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/tools/workbox/reference-docs/...
   to: https://developer.chrome.com/docs/workbox/reference/
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/tools/workbox/...
   to: https://developer.chrome.com/docs/workbox/
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/tools/...
   to: https://developer.chrome.com/docs/

@@ -3,7 +3,6 @@
 #
 # Redirects should be scoped to this path and be added in alphebetical order.
 #
-
 redirects:
 - from: /web/ilt/pwa/caching-files-with-service-worker
   to: https://web.dev/learn/pwa/caching/

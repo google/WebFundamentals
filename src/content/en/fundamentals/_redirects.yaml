@@ -1,5 +1,9 @@
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
-
 - from: /web/fundamentals/accessibility/a11y-for-teams
   to: https://web.dev/a11y-for-teams/
 
@@ -716,5 +720,7 @@ redirects:
 - from: /web/fundamentals/feed.xml
   to: https://web.dev/feed.xml
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/fundamentals/...
   to: https://web.dev/

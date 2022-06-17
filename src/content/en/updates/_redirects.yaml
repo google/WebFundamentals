@@ -1,7 +1,9 @@
-# Done
-
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
-
 - from: /web/updates/2011/06/Contra-in-HTML5-Web-Audio-API
   to: https://developer.chrome.com/blog/contra-in-html5-web-audio-api
 
@@ -2132,5 +2134,7 @@ redirects:
 - from: /web/updates/tags/chromium-chronicle
   to: https://developer.chrome.com/tags/chromium-chronicle/
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/updates/...
   to: https://developer.chrome.com/blog/

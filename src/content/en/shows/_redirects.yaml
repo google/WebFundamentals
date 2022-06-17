@@ -1,4 +1,8 @@
-# DONE
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
 
 - from: /web/shows/blinkon/4/...
@@ -52,5 +56,7 @@ redirects:
 - from: /web/shows/webrtc/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICT_h7pn39XpU4JkqOja3p-
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/shows/...
   to: https://www.youtube.com/user/ChromeDevelopers/

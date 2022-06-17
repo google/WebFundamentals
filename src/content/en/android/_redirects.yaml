@@ -1,6 +1,9 @@
-# DONE
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
-
 - from: /web/android/custom-tabs
   to: https://developer.chrome.com/docs/android/custom-tabs/overview/
 
@@ -46,5 +49,7 @@ redirects:
 - from: /web/android/trusted-web-activity/whats-new
   to: https://developer.chrome.com/docs/android/whats-new/
 
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 - from: /web/android/...
   to: https://developer.chrome.com/docs/android/

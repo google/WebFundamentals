@@ -1,4 +1,8 @@
-# DONE
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
 - from: /web/showcase/2015/0hh1
   to: https://web.dev/0hh1/
@@ -203,6 +207,9 @@ redirects:
 
 - from: /web/showcase/feed.xml
   to: https://web.dev/tags/case-study/feed.xml
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
 
 - from: /web/showcase/...
   to: https://web.dev/tags/case-study/

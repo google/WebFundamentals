@@ -1,5 +1,10 @@
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Do NOT add redirects for subdirectories here, add them to the redirects
+# file for that subdirectory.
+#
 redirects:
-
 - from: /web/agencies/...
   to: https://marketingplatform.google.com/about/partners/find-a-partner
 
