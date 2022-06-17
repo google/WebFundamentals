@@ -1,0 +1,8 @@
+# DONE
+redirects:
+
+- from: /web/progressive-web-apps/checklist
+  to: https://web.dev/pwa-checklist/
+
+- from: /web/progressive-web-apps/...
+  to: https://web.dev/progressive-web-apps/
