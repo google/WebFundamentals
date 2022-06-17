@@ -1,23 +1,4 @@
 footer:
-- promos:
-  - label: Chromium Blog
-    description: The latest news on the Chromium blog.
-    icon: https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
-    path: https://blog.chromium.org
-  - label: web.dev
-    description: Useful guidance and analysis from web.dev for web developers.
-    path: https://web.dev/
-    icon: /web/images/web-dev-logo.png
-  - label: Twitter
-    description: Connect with @ChromiumDev on Twitter.
-    icon: /site-assets/logo-twitter.svg
-    path: https://twitter.com/chromiumdev
-  - label: Videos
-    description: Check out our videos.
-    icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
-    path: /web/shows/
-
-
 
 - linkboxes:
   - name: Key Topics
@@ -25,25 +6,24 @@ footer:
     - label: Web on Android
       path: https://developer.android.com/docs
     - label: Chrome Extension Docs
-      path: https://developer.chrome.com/
-    - label: Site Kit plugin for WordPress
-      path: https://sitekit.withgoogle.com/
-    - label: How to file a good browser bug
-      path: https://web.dev/how-to-file-a-good-bug/
+      path: https://developer.chrome.com/docs/extensions/
     - label: Progressive Web Apps
       path: https://web.dev/progressive-web-apps/
 
-  - name: More Topics
+  - name: Search Console
     contents:
     - label: Search Console Help Center
       path: https://support.google.com/webmasters/
     - label: Search Console Community
       path: https://support.google.com/webmasters/community
+    - label: Site Kit plugin for WordPress
+      path: https://sitekit.withgoogle.com/
 
-
-  - name: Contribute
+  - name: Tools and Libraries
     contents:
-    - label: File an Issue
-      path: https://github.com/google/WebFundamentals/issues
-    - label: View Page Source
-      path: https://github.com/google/WebFundamentals
+    - label: Chrome DevTools
+      path: https://developer.chrome.com/docs/devtools/
+    - label: Workbox
+      path: https://developer.chrome.com/docs/workbox/
+    - label: Lighthouse
+      path: https://developer.chrome.com/docs/lighthouse/overview/
