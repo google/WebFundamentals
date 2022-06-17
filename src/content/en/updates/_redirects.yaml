@@ -746,7 +746,7 @@ redirects:
 - from: /web/updates/2015/06/18/quickly-edit-view-resources-from-the-elements-panel
   to: https://developer.chrome.com/blog/quickly-edit-view-resources-from-the-elements-panel
 
-- from: /updates/2015/06/checkout-faster-with-autofill
+- from: /web/updates/2015/06/checkout-faster-with-autofill
   to: https://web.dev/learn/forms/autofill/
 
 - from: /web/updates/2015/06/Media-Source-Extensions-for-Audio
