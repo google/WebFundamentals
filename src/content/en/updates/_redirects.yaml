@@ -21,7 +21,7 @@ redirects:
   to: https://developer.chrome.com/blog/page-visibility-api-have-i-got-your-attention
 
 - from: /web/updates/2011/06/Registering-a-custom-protocol-handler
-  to: https://web.dev/registering-a-custom-protocol-handler
+  to: https://web.dev/registering-a-custom-protocol-handler/
 
 - from: /web/updates/2011/06/Welcome-to-updates-html5rocks-com
   to: https://developer.chrome.com/blog/welcome-to-updates-html5rocks-com
@@ -51,7 +51,7 @@ redirects:
   to: https://developer.chrome.com/blog/debugging-the-filesystem-api
 
 - from: /web/updates/2011/08/Downloading-resources-in-HTML5-a-download
-  to: https://web.dev/downloading-resources-in-html5-a-download
+  to: https://web.dev/downloading-resources-in-html5-a-download/
 
 - from: /web/updates/2011/08/insertAdjacentHTML-Everywhere
   to: https://developer.chrome.com/blog/insertadjacenthtml-everywhere
@@ -90,7 +90,7 @@ redirects:
   to: https://developer.chrome.com/blog/let-your-content-do-the-talking-fullscreen-api
 
 - from: /web/updates/2011/10/Spooktacular-HTML5-Pumpkin
-  to: https://web.dev/Spooktacular-HTML5-Pumpkin
+  to: https://web.dev/Spooktacular-HTML5-Pumpkin/
 
 - from: /web/updates/2011/10/WebSockets-updated-to-latest-version-in-Chrome-Canary
   to: https://developer.chrome.com/blog/websockets-updated-to-latest-version-in-chrome-canary
@@ -189,7 +189,7 @@ redirects:
   to: https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string
 
 - from: /web/updates/2012/06/The-amazing-powers-of-CSS
-  to: https://web.dev/the-amazing-powers-of-css
+  to: https://web.dev/the-amazing-powers-of-css/
 
 - from: /web/updates/2012/07/Arrived-xhr-send-ArrayBufferView
   to: https://developer.chrome.com/blog/arrived-xhr-send-arraybufferview
@@ -270,7 +270,7 @@ redirects:
   to: https://developer.chrome.com/blog/visualizing-shadow-dom-concepts
 
 - from: /web/updates/2013/03/What-s-the-CSS-scope-pseudo-class-for
-  to: https://web.dev/what-s-the-CSS-scope-pseudo-class-for
+  to: https://web.dev/what-s-the-CSS-scope-pseudo-class-for/
 
 - from: /web/updates/2013/06/sourceMappingURL-and-sourceURL-syntax-changed
   to: https://developer.chrome.com/blog/sourcemappingurl-and-sourceurl-syntax-changed
@@ -444,7 +444,7 @@ redirects:
   to: https://web.dev/customize-install/
 
 - from: /web/updates/2015/03/introduction-to-fetch
-  to: https://web.dev/introduction-to-fetch
+  to: https://web.dev/introduction-to-fetch/
 
 - from: /web/updates/2015/03/push-notifications-on-the-open-web
   to: https://developer.chrome.com/blog/push-notifications-on-the-open-web
@@ -1038,7 +1038,7 @@ redirects:
   to: https://developer.chrome.com/blog/font-display
 
 - from: /web/updates/2016/02/save-data
-  to: https://web.dev/optimizing-content-efficiency-save-data
+  to: https://web.dev/optimizing-content-efficiency-save-data/
 
 - from: /web/updates/2016/02/smooth-scrolling-in-chrome-49
   to: https://developer.chrome.com/blog/smooth-scrolling-in-chrome-49
@@ -1236,7 +1236,7 @@ redirects:
   to: https://developer.chrome.com/blog/pointer-events
 
 - from: /web/updates/2016/10/resizeobserver
-  to: https://web.dev/resize-observer
+  to: https://web.dev/resize-observer/
 
 - from: /web/updates/2016/10/touch-action
   to: https://developer.chrome.com/blog/touch-action
@@ -1521,13 +1521,13 @@ redirects:
   to: https://developer.chrome.com/blog/chrome-66-deprecations
 
 - from: /web/updates/2018/03/clipboardapi
-  to: https://web.dev/async-clipboard
+  to: https://web.dev/async-clipboard/
 
 - from: /web/updates/2018/03/cssom
   to: https://developer.chrome.com/blog/cssom
 
 - from: /web/updates/2018/03/emscripting-a-c-library
-  to: https://web.dev/emscripting-a-c-library
+  to: https://web.dev/emscripting-a-c-library/
 
 - from: /web/updates/2018/03/macos-native-echo-cancellation
   to: https://developer.chrome.com/blog/macos-native-echo-cancellation
@@ -1539,7 +1539,7 @@ redirects:
   to: https://developer.chrome.com/blog/smooshgate
 
 - from: /web/updates/2018/03/webauthn-credential-management
-  to: https://web.dev/webauthn-credential-management
+  to: https://web.dev/webauthn-credential-management/
 
 - from: /web/updates/2018/04/chrome-67-deps-rems
   to: https://developer.chrome.com/blog/chrome-67-deps-rems
@@ -1548,7 +1548,7 @@ redirects:
   to: https://developer.chrome.com/blog/new-in-devtools-67/
 
 - from: /web/updates/2018/04/loading-wasm
-  to: https://web.dev/loading-wasm
+  to: https://web.dev/loading-wasm/
 
 - from: /web/updates/2018/04/nic66
   to: https://developer.chrome.com/blog/new-in-chrome-66/
@@ -1584,7 +1584,7 @@ redirects:
   to: https://developer.chrome.com/blog/webauthn
 
 - from: /web/updates/2018/05/welcome-to-immersive
-  to: https://web.dev/welcome-to-immersive
+  to: https://web.dev/welcome-to-immersive/
 
 - from: /web/updates/2018/06/a2hs-updates
   to: https://developer.chrome.com/blog/a2hs-updates
@@ -1656,16 +1656,16 @@ redirects:
   to: https://developer.chrome.com/blog/new-in-devtools-70/
 
 - from: /web/updates/2018/08/embind
-  to: https://web.dev/embind
+  to: https://web.dev/embind/
 
 - from: /web/updates/2018/08/offscreen-canvas
   to: https://developer.chrome.com/blog/offscreen-canvas/
 
 - from: /web/updates/2018/08/wasm-av1
-  to: https://web.dev/wasm-av1
+  to: https://web.dev/wasm-av1/
 
 - from: /web/updates/2018/08/web-performance-made-easy
-  to: https://web.dev/web-performance-made-easy
+  to: https://web.dev/web-performance-made-easy/
 
 - from: /web/updates/2018/09/asynchronous-access-to-http-cookies
   to: https://developer.chrome.com/blog/asynchronous-access-to-http-cookies/
@@ -1716,7 +1716,7 @@ redirects:
   to: https://developer.chrome.com/blog/tweeks-to-addAll-importScripts/
 
 - from: /web/updates/2018/10/wasm-threads
-  to: https://web.dev/wasm-threads
+  to: https://web.dev/wasm-threads/
 
 - from: /web/updates/2018/10/watch-video-using-picture-in-picture
   to: https://developer.chrome.com/blog/watch-video-using-picture-in-picture/
@@ -1758,7 +1758,7 @@ redirects:
   to: https://developer.chrome.com/blog/new-in-devtools-73/
 
 - from: /web/updates/2019/01/emscripten-npm
-  to: https://web.dev/emscripten-npm
+  to: https://web.dev/emscripten-npm/
 
 - from: /web/updates/2019/01/lighthouse-platform-packs
   to: https://developer.chrome.com/blog/lighthouse-platform-packs
@@ -1785,7 +1785,7 @@ redirects:
   to: https://developer.chrome.com/blog/media-updates-in-chrome-73/
 
 - from: /web/updates/2019/02/constructable-stylesheets
-  to: https://web.dev/constructable-stylesheets
+  to: https://web.dev/constructable-stylesheets/
 
 - from: /web/updates/2019/02/feb-wrap-up
   to: https://developer.chrome.com/blog/feb-wrap-up
@@ -1806,7 +1806,7 @@ redirects:
   to: https://web.dev/priority-hints/
 
 - from: /web/updates/2019/02/rendering-on-the-web
-  to: https://web.dev/rendering-on-the-web
+  to: https://web.dev/rendering-on-the-web/
 
 - from: /web/updates/2019/02/scrolling-intervention
   to: https://developer.chrome.com/blog/scrolling-intervention-2
@@ -1881,10 +1881,10 @@ redirects:
   to: https://developer.chrome.com/blog/new-in-chrome-75/
 
 - from: /web/updates/2019/06/pwa-install-addressbar
-  to: https://web.dev/pwa-install-addressbar
+  to: https://web.dev/pwa-install-addressbar/
 
 - from: /web/updates/2019/06/pwa-install-patterns
-  to: https://web.dev/pwa-install-patterns
+  to: https://web.dev/pwa-install-patterns/
 
 - from: /web/updates/2019/06/webapk-update-frequency
   to: https://developer.chrome.com/blog/webapk-update-frequency
@@ -1917,7 +1917,7 @@ redirects:
   to: https://web.dev/contact-picker/
 
 - from: /web/updates/2019/08/get-started-with-gpu-compute-on-the-web
-  to: https://web.dev/gpu-compute
+  to: https://web.dev/gpu-compute/
 
 - from: /web/updates/2019/08/native-file-system
   to: https://web.dev/native-file-system/

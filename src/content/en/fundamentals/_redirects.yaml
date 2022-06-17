@@ -7,40 +7,40 @@ redirects:
   to: https://web.dev/accessible/#create-a-design-and-css-that-supports-users-with-different-needs
 
 - from: /web/fundamentals/accessibility/focus
-  to: https://web.dev/focus
+  to: https://web.dev/focus/
 
 - from: /web/fundamentals/accessibility/focus/dom-order-matters
-  to: https://web.dev/dom-order-matters
+  to: https://web.dev/dom-order-matters/
 
 - from: /web/fundamentals/accessibility/focus/using-tabindex
-  to: https://web.dev/using-tabindex
+  to: https://web.dev/using-tabindex/
 
 - from: /web/fundamentals/accessibility/how-to-review
-  to: https://web.dev/how-to-review
+  to: https://web.dev/how-to-review/
 
 - from: /web/fundamentals/accessibility/semantics-aria
-  to: https://web.dev/semantics-aria
+  to: https://web.dev/semantics-aria/
 
 - from: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
-  to: https://web.dev/aria-labels-and-relationships
+  to: https://web.dev/aria-labels-and-relationships/
 
 - from: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
   to: https://web.dev/fast/hiding-and-updating-content
 
 - from: /web/fundamentals/accessibility/semantics-builtin
-  to: https://web.dev/semantics-builtin
+  to: https://web.dev/semantics-builtin/
 
 - from: /web/fundamentals/accessibility/semantics-builtin/navigating-content
-  to: https://web.dev/navigating-content
+  to: https://web.dev/navigating-content/
 
 - from: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
-  to: https://web.dev/text-alternatives-for-images
+  to: https://web.dev/text-alternatives-for-images/
 
 - from: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
-  to: https://web.dev/the-accessibility-tree
+  to: https://web.dev/the-accessibility-tree/
 
 - from: /web/fundamentals/accessibility/...
-  to: https://web.dev/accessibility
+  to: https://web.dev/accessibility/
 
 - from: /web/fundamentals/app-install-banners/
   to: https://web.dev/customize-install/
@@ -82,43 +82,43 @@ redirects:
   to: https://web.dev/animations/
 
 - from: /web/fundamentals/design-and-ux/animations/animating-between-views
-  to: https://web.dev/animating-between-views
+  to: https://web.dev/animating-between-views/
 
 - from: /web/fundamentals/design-and-ux/animations/animating-modal-views
-  to: https://web.dev/animating-modal-views
+  to: https://web.dev/animating-modal-views/
 
 - from: /web/fundamentals/design-and-ux/animations/animations-and-performance
-  to: https://web.dev/animations-and-performance
+  to: https://web.dev/animations-and-performance/
 
 - from: /web/fundamentals/design-and-ux/animations/asymmetric-animation-timing
-  to: https://web.dev/asymmetric-animation-timing
+  to: https://web.dev/asymmetric-animation-timing/
 
 - from: /web/fundamentals/design-and-ux/animations/choosing-the-right-easing
-  to: https://web.dev/choosing-the-right-easing
+  to: https://web.dev/choosing-the-right-easing/
 
 - from: /web/fundamentals/design-and-ux/animations/css-vs-javascript
-  to: https://web.dev/css-vs-javascript
+  to: https://web.dev/css-vs-javascript/
 
 - from: /web/fundamentals/design-and-ux/animations/custom-easing
-  to: https://web.dev/custom-easing
+  to: https://web.dev/custom-easing/
 
 - from: /web/fundamentals/design-and-ux/animations/the-basics-of-easing
-  to: https://web.dev/the-basics-of-easing
+  to: https://web.dev/the-basics-of-easing/
 
 - from: /web/fundamentals/design-and-ux/animations/...
   to: https://web.dev/animations/
 
 - from: /web/fundamentals/design-and-ux/browser-customization
-  to: https://web.dev/icons-and-browser-colors
+  to: https://web.dev/icons-and-browser-colors/
 
 - from: /web/fundamentals/design-and-ux/input/forms/...
   to: https://web.dev/learn/forms/
 
 - from: /web/fundamentals/design-and-ux/input/touch/...
-  to: https://web.dev/add-touch-to-your-site
+  to: https://web.dev/add-touch-to-your-site/
 
 - from: /web/fundamentals/design-and-ux/media/images
-  to: https://web.dev/responsive-images
+  to: https://web.dev/responsive-images/
 
 # Note: this content wasn't migrated and probably should have been?
 - from: /web/fundamentals/design-and-ux/principles
@@ -128,13 +128,13 @@ redirects:
   to: https://web.dev/responsive-web-design-basics/
 
 - from: /web/fundamentals/design-and-ux/responsive/content
-  to: https://web.dev/multi-device-content
+  to: https://web.dev/multi-device-content/
 
 - from: /web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries
   to: https://web.dev/responsive-web-design-basics/
 
 - from: /web/fundamentals/design-and-ux/responsive/images
-  to: https://web.dev/responsive-images
+  to: https://web.dev/responsive-images/
 
 - from: /web/fundamentals/design-and-ux/responsive/patterns
   to: https://web.dev/learn/design
@@ -143,13 +143,13 @@ redirects:
   to: https://web.dev/variable-fonts/
 
 - from: /web/fundamentals/design-and-ux/ux-basics
-  to: https://web.dev/ux-basics
+  to: https://web.dev/ux-basics/
 
 - from: /web/fundamentals/discovery-and-distribution/avoid-mixed-content/...
   to: https://web.dev/what-is-mixed-content/
 
 - from: /web/fundamentals/discovery-and-distribution/security-with-https/
-  to: https://web.dev/why-https-matters
+  to: https://web.dev/why-https-matters/
 
 - from: /web/fundamentals/discovery-and-monetization/payment-request/...
   to: https://web.dev/payments/
@@ -158,7 +158,7 @@ redirects:
   to: https://web.dev/lighthouse-seo/
 
 - from: /web/fundamentals/discovery/social-discovery
-  to: https://web.dev/social-discovery
+  to: https://web.dev/social-discovery/
 
 - from: /web/fundamentals/engage-and-retain/app-install-banners/...
   to: https://web.dev/customize-install/
@@ -173,7 +173,7 @@ redirects:
   to: https://codelabs.developers.google.com/?category=web
 
 - from: /web/fundamentals/getting-started/primers/customelements
-  to: https://web.dev/custom-elements-v1
+  to: https://web.dev/custom-elements-v1/
 
 - from: /web/fundamentals/getting-started/primers/service-workers
   to: https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
@@ -198,7 +198,7 @@ redirects:
   to: https://web.dev/service-worker-lifecycle/
 
 - from: /web/fundamentals/instant-and-offline/service-worker/registration
-  to: https://web.dev/service-workers-registration
+  to: https://web.dev/service-workers-registration/
 
 - from: /web/fundamentals/instant-and-offline/web-storage
   to: https://web.dev/storage-for-the-web/
@@ -213,7 +213,7 @@ redirects:
   to: https://web.dev/storage-for-the-web/
 
 - from: /web/fundamentals/integration/webapks
-  to: https://web.dev/webapks
+  to: https://web.dev/webapks/
 
 - from: /web/fundamentals/layouts/...
   to: https://web.dev/responsive-web-design-basics/
@@ -222,16 +222,16 @@ redirects:
   to: https://web.dev/video-and-source-tags/
 
 - from: /web/fundamentals/media/capturing-images
-  to: https://web.dev/media-capturing-images
+  to: https://web.dev/media-capturing-images/
 
 - from: /web/fundamentals/media/eme
-  to: https://web.dev/media-eme
+  to: https://web.dev/media-eme/
 
 - from: /web/fundamentals/media/fast-playback-with-video-preload
-  to: https://web.dev/fast-playback-with-preload
+  to: https://web.dev/fast-playback-with-preload/
 
 - from: /web/fundamentals/media/images/...
-  to: https://web.dev/responsive-images
+  to: https://web.dev/responsive-images/
 
 - from: /web/fundamentals/media/manipulating/applications
   to: https://web.dev/media-application-basics/
@@ -243,25 +243,25 @@ redirects:
   to: https://web.dev/media/#prepare-media-files-for-the-web
 
 - from: /web/fundamentals/media/manipulating/live-effects
-  to: https://web.dev/media-manipulating-live-effects
+  to: https://web.dev/media-manipulating-live-effects/
 
 - from: /web/fundamentals/media/mobile-web-video-playback
-  to: https://web.dev/media-mobile-web-video-playback
+  to: https://web.dev/media-mobile-web-video-playback/
 
 - from: /web/fundamentals/media/mse/
-  to: https://web.dev/media-mse-basics
+  to: https://web.dev/media-mse-basics/
 
 - from: /web/fundamentals/media/mse/basics
-  to: https://web.dev/media-mse-basics
+  to: https://web.dev/media-mse-basics/
 
 - from: /web/fundamentals/media/mse/seamless-playback
-  to: https://web.dev/media-mse-seamless-playback
+  to: https://web.dev/media-mse-seamless-playback/
 
 - from: /web/fundamentals/media/recording-audio
-  to: https://web.dev/media-recording-audio
+  to: https://web.dev/media-recording-audio/
 
 - from: /web/fundamentals/media/recording-video
-  to: https://web.dev/media-recording-video
+  to: https://web.dev/media-recording-video/
 
 - from: /web/fundamentals/media/video
   to: https://web.dev/video-and-source-tags/
@@ -273,19 +273,19 @@ redirects:
   to: https://web.dev/media-capturing-images/
 
 - from: /web/fundamentals/native-hardware/click-to-call
-  to: https://web.dev/native-hardware-click-to-call
+  to: https://web.dev/native-hardware-click-to-call/
 
 - from: /web/fundamentals/native-hardware/device-orientation
-  to: https://web.dev/native-hardware-device-orientation
+  to: https://web.dev/native-hardware-device-orientation/
 
 - from: /web/fundamentals/native-hardware/fullscreen
-  to: https://web.dev/native-hardware-fullscreen
+  to: https://web.dev/native-hardware-fullscreen/
 
 - from: /web/fundamentals/native-hardware/recording-audio/
   to: https://web.dev/media-recording-audio/
 
 - from: /web/fundamentals/native-hardware/user-location
-  to: https://web.dev/native-hardware-user-location
+  to: https://web.dev/native-hardware-user-location/
 
 - from: /web/fundamentals/payments/
   to: https://web.dev/payments/
@@ -324,73 +324,73 @@ redirects:
   to: https://web.dev/why-speed-matters/
 
 - from: /web/fundamentals/performance/audit
-  to: https://web.dev/performance-audit
+  to: https://web.dev/performance-audit/
 
 - from: /web/fundamentals/performance/audit/next
-  to: https://web.dev/performance-audit-next
+  to: https://web.dev/performance-audit-next/
 
 - from: /web/fundamentals/performance/audit/prework
-  to: https://web.dev/performance-audit-prework
+  to: https://web.dev/performance-audit-prework/
 
 - from: /web/fundamentals/performance/audit/security
-  to: https://web.dev/performance-audit-security
+  to: https://web.dev/performance-audit-security/
 
 - from: /web/fundamentals/performance/audit/share
-  to: https://web.dev/performance-audit-share
+  to: https://web.dev/performance-audit-share/
 
 - from: /web/fundamentals/performance/audit/tools
-  to: https://web.dev/performance-audit-tools
+  to: https://web.dev/performance-audit-tools/
 
 - from: /web/fundamentals/performance/critical-rendering-path
-  to: https://web.dev/critical-rendering-path
+  to: https://web.dev/critical-rendering-path/
 
 - from: /web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
-  to: https://web.dev/critical-rendering-path-adding-interactivity-with-javascript
+  to: https://web.dev/critical-rendering-path-adding-interactivity-with-javascript/
 
 - from: /web/fundamentals/performance/critical-rendering-path/analyzing-crp
-  to: https://web.dev/critical-rendering-path-analyzing-crp
+  to: https://web.dev/critical-rendering-path-analyzing-crp/
 
 - from: /web/fundamentals/performance/critical-rendering-path/constructing-the-object-model
-  to: https://web.dev/critical-rendering-path-constructing-the-object-model
+  to: https://web.dev/critical-rendering-path-constructing-the-object-model/
 
 - from: /web/fundamentals/performance/critical-rendering-path/measure-crp
-  to: https://web.dev/critical-rendering-path-measure-crp
+  to: https://web.dev/critical-rendering-path-measure-crp/
 
 - from: /web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path
-  to: https://web.dev/critical-rendering-path-optimizing-critical-rendering-path
+  to: https://web.dev/critical-rendering-path-optimizing-critical-rendering-path/
 
 - from: /web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations
-  to: https://web.dev/critical-rendering-path-page-speed-rules-and-recommendations
+  to: https://web.dev/critical-rendering-path-page-speed-rules-and-recommendations/
 
 - from: /web/fundamentals/performance/critical-rendering-path/render-blocking-css
-  to: https://web.dev/critical-rendering-path-render-blocking-css
+  to: https://web.dev/critical-rendering-path-render-blocking-css/
 
 - from: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
-  to: https://web.dev/critical-rendering-path-render-tree-construction
+  to: https://web.dev/critical-rendering-path-render-tree-construction/
 
 - from: /web/fundamentals/performance/get-started
-  to: https://web.dev/performance-get-started
+  to: https://web.dev/performance-get-started/
 
 - from: /web/fundamentals/performance/get-started/graphicalcontent-4
-  to: https://web.dev/performance-get-started-graphicalcontent-4
+  to: https://web.dev/performance-get-started-graphicalcontent-4/
 
 - from: /web/fundamentals/performance/get-started/httpcaching-6
-  to: https://web.dev/performance-get-started-httpcaching-6
+  to: https://web.dev/performance-get-started-httpcaching-6/
 
 - from: /web/fundamentals/performance/get-started/httprequests-5
-  to: https://web.dev/performance-get-started-httprequests-5
+  to: https://web.dev/performance-get-started-httprequests-5/
 
 - from: /web/fundamentals/performance/get-started/measuringperf-2
-  to: https://web.dev/how-to-measure-speed
+  to: https://web.dev/how-to-measure-speed/
 
 - from: /web/fundamentals/performance/get-started/textcontent-3
-  to: https://web.dev/performance-get-started-textcontent-3
+  to: https://web.dev/performance-get-started-textcontent-3/
 
 - from: /web/fundamentals/performance/get-started/wrapup-7
-  to: https://web.dev/performance-get-started-wrapup-7
+  to: https://web.dev/performance-get-started-wrapup-7/
 
 - from: /web/fundamentals/performance/http2
-  to: https://web.dev/performance-http2
+  to: https://web.dev/performance-http2/
 
 - from: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
   to: https://web.dev/fast/#lazy-load-images-and-video
@@ -399,16 +399,16 @@ redirects:
   to: https://web.dev/navigation-and-resource-timing/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency
-  to: https://web.dev/performance-optimizing-content-efficiency
+  to: https://web.dev/performance-optimizing-content-efficiency/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
   to: https://web.dev/fast/#optimize-your-images
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/client-hints
-  to: https://web.dev/optimizing-content-efficiency-client-hints
+  to: https://web.dev/optimizing-content-efficiency-client-hints/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
-  to: https://web.dev/optimizing-content-efficiency-eliminate-downloads
+  to: https://web.dev/optimizing-content-efficiency-eliminate-downloads/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
   to: https://web.dev/http-cache/
@@ -417,31 +417,31 @@ redirects:
   to: https://web.dev/fast/#optimize-your-images
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization
-  to: https://web.dev/optimizing-content-efficiency-javascript-startup-optimization
+  to: https://web.dev/optimizing-content-efficiency-javascript-startup-optimization/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript
-  to: https://web.dev/optimizing-content-efficiency-loading-third-party-javascript
+  to: https://web.dev/optimizing-content-efficiency-loading-third-party-javascript/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
-  to: https://web.dev/optimizing-content-efficiency-optimize-encoding-and-transfer
+  to: https://web.dev/optimizing-content-efficiency-optimize-encoding-and-transfer/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video
-  to: https://web.dev/replace-gifs-with-videos
+  to: https://web.dev/replace-gifs-with-videos/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/save-data
-  to: https://web.dev/optimizing-content-efficiency-save-data
+  to: https://web.dev/optimizing-content-efficiency-save-data/
 
 - from: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
   to: https://web.dev/fast/#optimize-webfonts
 
 - from: /web/fundamentals/performance/optimizing-javascript/code-splitting
-  to: https://web.dev/reduce-javascript-payloads-with-code-splitting
+  to: https://web.dev/reduce-javascript-payloads-with-code-splitting/
 
 - from: /web/fundamentals/performance/optimizing-javascript/tree-shaking
   to: https://web.dev/reduce-javascript-payloads-with-tree-shaking/
 
 - from: /web/fundamentals/performance/poor-connectivity
-  to: https://web.dev/performance-poor-connectivity
+  to: https://web.dev/performance-poor-connectivity/
 
 - from: /web/fundamentals/performance/prpl-pattern
   to: https://web.dev/apply-instant-loading-with-prpl/
@@ -450,55 +450,55 @@ redirects:
   to: https://web.dev/rail/
 
 - from: /web/fundamentals/performance/rendering
-  to: https://web.dev/rendering-performance
+  to: https://web.dev/rendering-performance/
 
 - from: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
-  to: https://web.dev/avoid-large-complex-layouts-and-layout-thrashing
+  to: https://web.dev/avoid-large-complex-layouts-and-layout-thrashing/
 
 - from: /web/fundamentals/performance/rendering/debounce-your-input-handlers
-  to: https://web.dev/debounce-your-input-handlers
+  to: https://web.dev/debounce-your-input-handlers/
 
 - from: /web/fundamentals/performance/rendering/optimize-javascript-execution
-  to: https://web.dev/optimize-javascript-execution
+  to: https://web.dev/optimize-javascript-execution/
 
 - from: /web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
-  to: https://web.dev/reduce-the-scope-and-complexity-of-style-calculations
+  to: https://web.dev/reduce-the-scope-and-complexity-of-style-calculations/
 
 - from: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
-  to: https://web.dev/simplify-paint-complexity-and-reduce-paint-areas
+  to: https://web.dev/simplify-paint-complexity-and-reduce-paint-areas/
 
 - from: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
-  to: https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count
+  to: https://web.dev/stick-to-compositor-only-properties-and-manage-layer-count/
 
 - from: /web/fundamentals/performance/resource-prioritization
   to: https://web.dev/fast/#prioritize-resources
 
 - from: /web/fundamentals/performance/speed-tools
-  to: https://web.dev/speed-tools
+  to: https://web.dev/speed-tools/
 
 - from: /web/fundamentals/performance/user-centric-performance-metrics
   to: https://web.dev/user-centric-performance-metrics/
 
 - from: /web/fundamentals/performance/webpack
-  to: https://web.dev/webpack
+  to: https://web.dev/webpack/
 
 - from: /web/fundamentals/performance/webpack/conclusion
-  to: https://web.dev/webpack-conclusion
+  to: https://web.dev/webpack-conclusion/
 
 - from: /web/fundamentals/performance/webpack/decrease-frontend-size
-  to: https://web.dev/decrease-frontend-size
+  to: https://web.dev/decrease-frontend-size/
 
 - from: /web/fundamentals/performance/webpack/monitor-and-analyze
-  to: https://web.dev/monitor-and-analyze
+  to: https://web.dev/monitor-and-analyze/
 
 - from: /web/fundamentals/performance/webpack/use-long-term-caching
-  to: https://web.dev/use-long-term-caching
+  to: https://web.dev/use-long-term-caching/
 
 - from: /web/fundamentals/performance/why-performance-matters
   to: https://web.dev/why-speed-matters/
 
 - from: /web/fundamentals/primers/async-functions
-  to: https://web.dev/javascript-async-functions
+  to: https://web.dev/javascript-async-functions/
 
 - from: /web/fundamentals/primers/customelements/
   to: https://developer.mozilla.org/en-US/docs/Web/Web_Components
@@ -507,7 +507,7 @@ redirects:
   to: https://web.dev/payments/
 
 - from: /web/fundamentals/primers/promises
-  to: https://web.dev/promises
+  to: https://web.dev/promises/
 
 - from: /web/fundamentals/primers/push-notifications/
   to: https://web.dev/notifications/
@@ -531,13 +531,13 @@ redirects:
   to: https://web.dev/service-worker-lifecycle/
 
 - from: /web/fundamentals/primers/service-workers/registration
-  to: https://web.dev/service-workers-registration
+  to: https://web.dev/service-workers-registration/
 
 - from: /web/fundamentals/primers/shadowdom
-  to: https://web.dev/shadowdom-v1
+  to: https://web.dev/shadowdom-v1/
 
 - from: /web/fundamentals/primers/shadowdom/
-  to: https://web.dev/shadowdom-v1
+  to: https://web.dev/shadowdom-v1/
 
 - from: /web/fundamentals/push-notifications
   to: https://web.dev/notifications/
@@ -549,13 +549,13 @@ redirects:
   to: https://web.dev/push-notifications-display-a-notification/
 
 - from: /web/fundamentals/push-notifications/faq
-  to: https://web.dev/push-notifications-faq
+  to: https://web.dev/push-notifications-faq/
 
 - from: /web/fundamentals/push-notifications/good-notification
   to: https://web.dev/push-notifications-common-notification-patterns/
 
 - from: /web/fundamentals/push-notifications/handling-messages
-  to: https://web.dev/push-notifications-handling-messages
+  to: https://web.dev/push-notifications-handling-messages/
 
 - from: /web/fundamentals/push-notifications/how-push-works
   to: https://web.dev/push-notifications-how-push-works/
@@ -573,40 +573,40 @@ redirects:
   to: https://web.dev/push-notifications-subscribing-a-user/
 
 - from: /web/fundamentals/push-notifications/video
-  to: https://web.dev/push-notifications-video
+  to: https://web.dev/push-notifications-video/
 
 - from: /web/fundamentals/push-notifications/web-push-protocol
   to: https://web.dev/push-notifications-web-push-protocol/
 
 - from: /web/fundamentals/security
-  to: https://web.dev/security
+  to: https://web.dev/security/
 
 - from: /web/fundamentals/security/credential-management
-  to: https://web.dev/security-credential-management
+  to: https://web.dev/security-credential-management/
 
 - from: /web/fundamentals/security/credential-management/retrieve-credentials
-  to: https://web.dev/security-credential-management-retrieve-credentials
+  to: https://web.dev/security-credential-management-retrieve-credentials/
 
 - from: /web/fundamentals/security/credential-management/save-forms
-  to: https://web.dev/security-credential-management-save-forms
+  to: https://web.dev/security-credential-management-save-forms/
 
 - from: /web/fundamentals/security/credential-management/store-credentials
   to: https://web.dev/security-credential-management-save-forms/
 
 - from: /web/fundamentals/security/csp
-  to: https://web.dev/csp
+  to: https://web.dev/csp/
 
 - from: /web/fundamentals/security/encrypt-in-transit/
-  to: https://web.dev/why-https-matters
+  to: https://web.dev/why-https-matters/
 
 - from: /web/fundamentals/security/encrypt-in-transit/enable-https
-  to: https://web.dev/enabling-https-on-your-servers
+  to: https://web.dev/enabling-https-on-your-servers/
 
 - from: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
-  to: https://web.dev/intro-to-security-terminology
+  to: https://web.dev/intro-to-security-terminology/
 
 - from: /web/fundamentals/security/encrypt-in-transit/why-https
-  to: https://web.dev/why-https-matters
+  to: https://web.dev/why-https-matters/
 
 - from: /web/fundamentals/security/hacked
   to: https://web.dev/hacked/
@@ -663,13 +663,13 @@ redirects:
   to: https://web.dev/hacked/
 
 - from: /web/fundamentals/security/prevent-mixed-content/
-  to: https://web.dev/what-is-mixed-content
+  to: https://web.dev/what-is-mixed-content/
 
 - from: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
-  to: https://web.dev/fixing-mixed-content
+  to: https://web.dev/fixing-mixed-content/
 
 - from: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
-  to: https://web.dev/what-is-mixed-content
+  to: https://web.dev/what-is-mixed-content/
 
 - from: /web/fundamentals/security/...
   to: https://web.dev/security/
@@ -696,19 +696,19 @@ redirects:
   to: https://web.dev/custom-elements-v1/
 
 - from: /web/fundamentals/web-components/examples
-  to: https://web.dev/components-examples-overview
+  to: https://web.dev/components-examples-overview/
 
 - from: /web/fundamentals/web-components/examples/howto-checkbox
-  to: https://web.dev/components-howto-checkbox
+  to: https://web.dev/components-howto-checkbox/
 
 - from: /web/fundamentals/web-components/examples/howto-tabs
-  to: https://web.dev/components-howto-tabs
+  to: https://web.dev/components-howto-tabs/
 
 - from: /web/fundamentals/web-components/examples/howto-tooltip
-  to: https://web.dev/components-howto-tooltip
+  to: https://web.dev/components-howto-tooltip/
 
 - from: /web/fundamentals/web-components/shadowdom
-  to: https://web.dev/shadowdom-v1
+  to: https://web.dev/shadowdom-v1/
 
 - from: /web/fundamentals/webvr/...
   to:  https://developer.chrome.com/blog/ar-for-the-web/
