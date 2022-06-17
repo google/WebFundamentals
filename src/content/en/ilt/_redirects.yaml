@@ -1,21 +1,179 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 
 redirects:
+- from: /web/ilt/pwa/caching-files-with-service-worker
+  to: https://web.dev/learn/pwa/caching/
 
-- from: /web/ilt/
-  to: /web/ilt/pwa/
+- from: /web/ilt/pwa/caching-files-with-service-worker-slides
+  to: https://web.dev/learn/pwa/caching/
 
-- from: /web/ilt/pwa/using-sw-precache-and-sw-toolbox-slides
-  to: /web/ilt/pwa/lab-workbox
+- from: /web/ilt/pwa/challenge-convert-a-news-app-to-a-pwa
+  to: https://web.dev/learn/pwa/
 
-- from: /web/ilt/pwa/using-sw-precache-and-sw-toolbox
-  to: /web/ilt/pwa/lab-workbox
+- from: /web/ilt/pwa/challenge-convert-an-e-commerce-site-to-a-pwa
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/core-technologies
+  to: https://web.dev/learn/pwa/foundations/
+
+- from: /web/ilt/pwa/design-for-all-your-users
+  to: https://web.dev/learn/pwa/foundations/
+
+- from: /web/ilt/pwa/integrating-analytics
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/integrating-analytics-slides
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/introduction-to-gulp
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/introduction-to-gulp-slides
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/introduction-to-progressive-web-app-architectures
+  to: https://web.dev/learn/pwa/architecture/
+
+- from: /web/ilt/pwa/introduction-to-progressive-web-app-architectures-slides
+  to: https://web.dev/learn/pwa/architecture/
+
+- from: /web/ilt/pwa/introduction-to-push-notifications
+  to: https://web.dev/notifications/
+
+- from: /web/ilt/pwa/introduction-to-push-notifications-slides
+  to: https://web.dev/notifications/
+
+- from: /web/ilt/pwa/introduction-to-service-worker
+  to: https://web.dev/learn/pwa/service-workers/
+
+- from: /web/ilt/pwa/introduction-to-service-worker-slides
+  to: https://web.dev/learn/pwa/service-workers/
+
+- from: /web/ilt/pwa/introduction-to-the-payment-request-api
+  to: https://web.dev/learn/pwa/how-payment-request-api-works/
+
+- from: /web/ilt/pwa/introduction-to-the-payment-request-api-slides
+  to: https://web.dev/learn/pwa/how-payment-request-api-works/
+
+- from: /web/ilt/pwa/lab-auditing-with-lighthouse
+  to: https://web.dev/lighthouse-pwa/
+
+- from: /web/ilt/pwa/lab-build-a-progressive-web-amp
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/lab-caching-files-with-service-worker
+  to: https://web.dev/learn/pwa/caching/
+
+- from: /web/ilt/pwa/lab-cloud-firestore
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/lab-fetch-api
+  to: https://web.dev/learn/pwa/serving/
+
+- from: /web/ilt/pwa/lab-gulp-setup
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/lab-indexeddb
+  to: https://web.dev/indexeddb/
+
+- from: /web/ilt/pwa/lab-integrating-analytics
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/lab-integrating-web-push
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/lab-migrating-to-workbox-from-sw-precache-and-sw-toolbox
+  to: https://web.dev/learn/pwa/workbox/
+
+- from: /web/ilt/pwa/lab-offline-quickstart
+  to: https://web.dev/learn/pwa/offline-data/
+
+- from: /web/ilt/pwa/lab-promises
+  to: https://web.dev/promises/
+
+- from: /web/ilt/pwa/lab-responsive-design
+  to: https://web.dev/learn/design/
+
+- from: /web/ilt/pwa/lab-responsive-images
+  to: https://web.dev/learn/design/responsive-images/
+
+- from: /web/ilt/pwa/lab-scripting-the-service-worker
+  to: https://web.dev/learn/pwa/service-workers/
 
 - from: /web/ilt/pwa/lab-sw-precache-and-sw-toolbox
-  to: /web/ilt/pwa/lab-workbox
+  to: https://web.dev/learn/pwa/workbox/
 
-- from: /web/ilt/pwa/e-commerce-lab-4-sw-precache-and-sw-toolbox
-  to: /web/ilt/pwa/
+- from: /web/ilt/pwa/lab-workbox
+  to: https://web.dev/learn/pwa/workbox/
+
+- from: /web/ilt/pwa/lighthouse-pwa-analysis-tool
+  to: https://web.dev/lighthouse-pwa/
+
+- from: /web/ilt/pwa/lighthouse-pwa-analysis-tool-slides
+  to: hhttps://web.dev/lighthouse-pwa/
+
+- from: /web/ilt/pwa/live-data-in-the-service-worker-slides
+  to: https://web.dev/learn/pwa/offline-data/
+
+- from: /web/ilt/pwa/offline-quickstart
+  to: https://web.dev/learn/pwa/offline-data/
+
+- from: /web/ilt/pwa/offline-quickstart-slides
+  to: https://web.dev/learn/pwa/offline-data/
+
+- from: /web/ilt/pwa/responsive-design-slides
+  to: https://web.dev/learn/design/
+
+- from: /web/ilt/pwa/responsive-images-slides
+  to: https://web.dev/learn/design/responsive-images/
+
+- from: /web/ilt/pwa/setting-up-the-labs
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/tools-for-pwa-developers
+  to: https://web.dev/learn/pwa/
+
+- from: /web/ilt/pwa/using-sw-precache-and-sw-toolbox
+  to: https://web.dev/learn/pwa/workbox/
+
+- from: /web/ilt/pwa/using-sw-precache-and-sw-toolbox-slides
+  to: https://web.dev/learn/pwa/workbox/
+
+- from: /web/ilt/pwa/why-build-pwa
+  to: https://web.dev/learn/pwa/progressive-web-apps/
 
 - from: /web/ilt/pwa/workbox-slides
-  to: /web/ilt/pwa/lab-workbox
+  to: https://web.dev/learn/pwa/workbox/
+
+- from: /web/ilt/pwa/working-with-indexeddb
+  to: https://web.dev/indexeddb/
+
+- from: /web/ilt/pwa/working-with-indexeddb-slides
+  to: https://web.dev/indexeddb/
+
+- from: /web/ilt/pwa/working-with-promises
+  to: https://web.dev/promises/
+
+- from: /web/ilt/pwa/working-with-promises-slides
+  to: https://web.dev/promises/
+
+- from: /web/ilt/pwa/working-with-the-fetch-api
+  to: https://web.dev/learn/pwa/serving/
+
+- from: /web/ilt/pwa/working-with-the-fetch-api-slides
+  to: https://web.dev/learn/pwa/serving/
+
+- from: /web/ilt/pwa/your-audience-your-content
+  to: https://web.dev/learn/pwa/foundations/
+
+- from: /web/ilt/pwalive-data-in-the-service-worker
+  to: https://web.dev/learn/pwa/offline-data/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/ilt/...
+  to: https://web.dev/learn/pwa/
