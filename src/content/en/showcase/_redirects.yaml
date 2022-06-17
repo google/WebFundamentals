@@ -1,108 +1,118 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
+# DONE
 redirects:
+- from: /web/showcase/2015/0hh1
+  to: https://web.dev/0hh1
 
-- from: /web/showcase/case-study/
-  to: /web/showcase/
+- from: /web/showcase/2015/adsy_me
+  to: https://web.dev/adsy-me
 
-- from: /web/showcase/case-study/art-sessions
-  to: /web/showcase/2016/art-sessions
+- from: /web/showcase/2015/adventuremachine
+  to: https://web.dev/adventuremachine
 
-- from: /web/showcase/case-study/beyond-the-rack
-  to: /web/showcase/2015/beyond-the-rack
+- from: /web/showcase/2015/beyond-the-rack
+  to: https://web.dev/beyond-the-rack
 
-- from: /web/showcase/case-study/chrome-dev-summit
-  to: /web/showcase/2015/chrome-dev-summit
-
-- from: /web/showcase/case-study/flipkart
-  to: /web/showcase/2016/flipkart
-
-- from: /web/showcase/case-study/googleplus
-  to: /web/showcase/2015/googleplus
-
-- from: /web/showcase/case-study/lightsaber
-  to: /web/showcase/2015/lightsaber
-
-- from: /web/showcase/case-study/net-a-porter
-  to: /web/showcase/2016/net-a-porter
-
-- from: /web/showcase/case-study/service-workers-iowa
-  to: /web/showcase/2015/service-workers-iowa
-
-- from: /web/showcase/feed.xml
-  to: /web/showcase/rss.xml
-
-- from: /web/showcase/spotlight/
-  to: /web/showcase/
-
-- from: /web/showcase/spotlight/0hh1
-  to: /web/showcase/2015/0hh1
-
-- from: /web/showcase/spotlight/adsy_me
-  to: /web/showcase/2015/adsy_me
-
-- from: /web/showcase/spotlight/airhorner
-  to: /web/showcase/2015/airhorner
-
-- from: /web/showcase/spotlight/hn_premii
-  to: /web/showcase/2015/hn_premii
-
-- from: /web/showcase/spotlight/hummbingbirdlibrary
-  to: /web/showcase/2015/hummingbirdlibrary
-
-- from: /web/showcase/spotlight/little_alchemy
-  to: /web/showcase/2015/little_alchemy
-
-- from: /web/showcase/spotlight/merry_pixmas
-  to: /web/showcase/2015/merry_pixmas
-
-- from: /web/showcase/spotlight/svgomg
-  to: /web/showcase/2015/svgomg
-
-- from: /web/showcase/spotlight/web_filter
-  to: /web/showcase/2015/web_filter
-
-
-## Redirects for Showcase content migrated to Web.dev
+- from: /web/showcase/2015/chrome-dev-summit
+  to: https://web.dev/chrome-dev-summit
 
 - from: /web/showcase/2015/googleplus
   to: https://web.dev/googleplus
 
-- from: /web/showcase/2018/nikkei
-  to: https://web.dev/nikkei
+- from: /web/showcase/2015/hn_premii
+  to: https://web.dev/hn-premii
 
-- from: /web/showcase/2016/aliexpress
-  to: https://web.dev/aliexpress
+- from: /web/showcase/2015/hummingbirdlibrary
+  to: https://web.dev/hummingbirdlibrary
 
-- from: /web/showcase/2018/asda-george
-  to: https://web.dev/asda-george
+- from: /web/showcase/2015/lightsaber
+  to: https://web.dev/lightsaber
 
-- from: /web/showcase/2017/twitter
-  to: https://web.dev/twitter
+- from: /web/showcase/2015/merry_pixmas
+  to: https://web.dev/merry-pixmas
 
-- from: /web/showcase/2017/bookmyshow
-  to: https://web.dev/bookmyshow
+- from: /web/showcase/2015/service-workers-iowa
+  to: https://web.dev/service-workers-iowa
 
-- from: /web/showcase/2016/flipkart
-  to: https://web.dev/flipkart
+- from: /web/showcase/2015/svgomg
+  to: https://web.dev/svgomg
 
-- from: /web/showcase/2016/service-worker-perf
-  to: https://web.dev/service-worker-perf
+- from: /web/showcase/2015/web_filter
+  to: https://web.dev/web-filter
+
+- from: /web/showcase/2016/5miles
+  to: https://web.dev/5miles
+
+- from: /web/showcase/2016/ali-express-smart-lock
+  to: https://web.dev/ali-express-smart-lock
 
 - from: /web/showcase/2016/alibaba
   to: https://web.dev/alibaba
 
+- from: /web/showcase/2016/aliexpress
+  to: https://web.dev/aliexpress
+
+- from: /web/showcase/2016/art-sessions
+  to: https://web.dev/art-sessions
+
+- from: /web/showcase/2016/babe
+  to: https://web.dev/babe
+
+- from: /web/showcase/2016/carnival
+  to: https://web.dev/carnival
+
+- from: /web/showcase/2016/extra
+  to: https://web.dev/extra
+
+- from: /web/showcase/2016/flipkart
+  to: https://web.dev/flipkart
+
+- from: /web/showcase/2016/guardian-smart-lock
+  to: https://web.dev/guardian-smart-lock
+
+- from: /web/showcase/2016/housing
+  to: https://web.dev/housing
+
+- from: /web/showcase/2016/iowa2016
+  to: https://web.dev/iowa2016
+
+- from: /web/showcase/2016/jumia
+  to: https://web.dev/jumia2016
+
+- from: /web/showcase/2016/konga
+  to: https://web.dev/konga
+
 - from: /web/showcase/2016/land-lines
   to: https://web.dev/land-lines
+
+- from: /web/showcase/2016/net-a-porter
+  to: https://web.dev/net-a-porter
+
+- from: /web/showcase/2016/service-worker-perf
+  to: https://web.dev/service-worker-perf
 
 - from: /web/showcase/2016/suumo
   to: https://web.dev/suumo
 
-- from: /web/showcase/2017/forbes
-  to: https://web.dev/forbes
+- from: /web/showcase/2016/wapo
+  to: https://web.dev/wapo
+
+- from: /web/showcase/2016/weather-channel
+  to: https://web.dev/weather-channel
+
+- from: /web/showcase/2017/bear71
+  to: https://web.dev/bear71
+
+- from: /web/showcase/2017/bookmyshow
+  to: https://web.dev/bookmyshow
+
+- from: /web/showcase/2017/dance-tonite
+  to: https://web.dev/dance-tonite
 
 - from: /web/showcase/2017/eleme
   to: https://web.dev/eleme
+
+- from: /web/showcase/2017/forbes
+  to: https://web.dev/forbes
 
 - from: /web/showcase/2017/lancome
   to: https://web.dev/lancome
@@ -110,110 +120,89 @@ redirects:
 - from: /web/showcase/2017/make-my-trip
   to: https://web.dev/make-my-trip
 
-- from: /web/showcase/2016/jumia
-  to: https://web.dev/jumia
-
-- from: /web/showcase/2015/service-workers-iowa
-  to: https://web.dev/service-workers-iowa
-
-- from: /web/showcase/2016/iowa2016
-  to: https://web.dev/iowa2016
-
-- from: /web/showcase/2016/weather-channel
-  to: https://web.dev/weather-channel
-
-- from: /web/showcase/2017/dance-tonite
-  to: https://web.dev/dance-tonite
-
-- from: /web/showcase/2015/svgomg
-  to: https://web.dev/svgomg
-
-- from: /web/showcase/2016/extra
-  to: https://web.dev/extra
-
-- from: /web/showcase/2015/beyond-the-rack
-  to: https://web.dev/beyond-the-rack
-
-- from: /web/showcase/2016/5miles
-  to: https://web.dev/5miles
-
-- from: /web/showcase/2016/net-a-porter
-  to: https://web.dev/net-a-porter
-
-- from: /web/showcase/2016/babe
-  to: https://web.dev/babe
-
-- from: /web/showcase/2016/konga
-  to: https://web.dev/konga
-
-- from: /web/showcase/2016/wapo
-  to: https://web.dev/wapo
-
-- from: /web/showcase/2016/jumia
-  to: https://web.dev/jumia2016
-
-- from: /web/showcase/2017/santa
-  to: https://web.dev/santa
-
-- from: /web/showcase/2015/web_filter
-  to: https://web.dev/web-filter
-
-- from: /web/showcase/2015/lightsaber
-  to: https://web.dev/lightsaber
-
-- from: /web/showcase/2016/carnival
-  to: https://web.dev/carnival
-
-- from: /web/showcase/2017/ola
-  to: https://web.dev/ola
-
-- from: /web/showcase/2015/adsy_me
-  to: https://web.dev/adsy-me
-
-- from: /web/showcase/2017/bear71
-  to: https://web.dev/bear71
-
-- from: /web/showcase/2017/wego
-  to: https://web.dev/wego
-
-- from: /web/showcase/2015/0hh1
-  to: https://web.dev/0hh1
-
 - from: /web/showcase/2017/matterport
   to: https://web.dev/matterport
 
 - from: /web/showcase/2017/mynet
   to: https://web.dev/mynet
 
-- from: /web/showcase/2016/art-sessions
-  to: https://web.dev/art-sessions
-
-- from: /web/showcase/2015/adventuremachine
-  to: https://web.dev/adventuremachine
-
-- from: /web/showcase/2015/chrome-dev-summit
-  to: https://web.dev/chrome-dev-summit
-
-- from: /web/showcase/2016/ali-express-smart-lock
-  to: https://web.dev/ali-express-smart-lock
-
-- from: /web/showcase/2016/housing
-  to: https://web.dev/housing
+- from: /web/showcase/2017/ola
+  to: https://web.dev/ola
 
 - from: /web/showcase/2017/playcanvas
   to: https://web.dev/playcanvas
 
+- from: /web/showcase/2017/santa
+  to: https://web.dev/santa
+
+- from: /web/showcase/2017/twitter
+  to: https://web.dev/twitter
+
 - from: /web/showcase/2017/voot
   to: https://web.dev/voot
 
-- from: /web/showcase/2015/hummingbirdlibrary
-  to: https://web.dev/hummingbirdlibrary
+- from: /web/showcase/2017/wego
+  to: https://web.dev/wego
 
-- from: /web/showcase/2016/guardian-smart-lock
-  to: https://web.dev/guardian-smart-lock
+- from: /web/showcase/2018/asda-george
+  to: https://web.dev/asda-george
 
-- from: /web/showcase/2015/hn_premii
+- from: /web/showcase/2018/nikkei
+  to: https://web.dev/nikkei
+
+- from: /web/showcase/case-study/art-sessions
+  to: https://web.dev/art-sessions
+
+- from: /web/showcase/case-study/beyond-the-rack
+  to: https://web.dev/beyond-the-rack
+
+- from: /web/showcase/case-study/chrome-dev-summit
+  to: https://web.dev/chrome-dev-summit
+
+- from: /web/showcase/case-study/flipkart
+  to: https://web.dev/flipkart
+
+- from: /web/showcase/case-study/googleplus
+  to: https://web.dev/googleplus
+
+- from: /web/showcase/case-study/lightsaber
+  to: https://web.dev/lightsaber
+
+- from: /web/showcase/case-study/net-a-porter
+  to: https://web.dev/net-a-porter
+
+- from: /web/showcase/case-study/service-workers-iowa
+  to: https://web.dev/service-workers-iowa
+
+- from: /web/showcase/spotlight/0hh1
+  to: https://web.dev/0hh1
+
+- from: /web/showcase/spotlight/adsy_me
+  to: https://web.dev/adsy-me
+
+- from: /web/showcase/spotlight/airhorner
+  to: https://web.dev/airhorner/
+
+- from: /web/showcase/spotlight/hn_premii
   to: https://web.dev/hn-premii
 
-- from: /web/showcase/2015/merry_pixmas
+- from: /web/showcase/spotlight/hummbingbirdlibrary
+  to: https://web.dev/hummingbirdlibrary
+
+- from: /web/showcase/spotlight/little_alchemy
+  to: https://web.dev/little-alchemy/
+
+- from: /web/showcase/spotlight/merry_pixmas
   to: https://web.dev/merry-pixmas
+
+- from: /web/showcase/spotlight/svgomg
+  to: https://web.dev/svgomg
+
+- from: /web/showcase/spotlight/web_filter
+  to: https://web.dev/web-filter
+
+- from: /web/showcase/feed.xml
+  to: https://web.dev/tags/case-study/feed.xml
+
+- from: /web/showcase/...
+  to: https://web.dev/tags/case-study/
