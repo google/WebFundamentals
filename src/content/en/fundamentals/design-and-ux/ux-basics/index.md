@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A step-by-step guide to the basics of UX design.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2021-12-20 #}
 {# wf_published_on: 2016-10-01 #}
 {# wf_blink_components: N/A #}
 
@@ -13,7 +13,7 @@ description: A step-by-step guide to the basics of UX design.
 This article introduces a workflow that can help teams, products, startups and
 companies create a robust and meaningful process for developing a better user
 experience for their customers. You could use different parts of the process
-separately but they ideally work best as a series of steps.
+separately, but they ideally work best as a series of steps.
 
 This guide borrows heavily from the Design Sprint methodology that multiple
 teams across Google use to troubleshoot and solve challenges such as the
@@ -106,7 +106,7 @@ medical facilities by the end of the year” would be a great goal to aim for.
 
 There is one caveat. This method of validation is the least favoured as it
 prevents team discussion and collaboration, potentially creating a siloed
-atmosphere in an organization. Nevertheless it can yield some good information
+atmosphere in an organization. Nevertheless, it can yield some good information
 about the clients and the design challenge that you could otherwise miss.
 
 ### Lightning talks
@@ -204,10 +204,10 @@ people (or players), each with a stake in the project's flow. Based on your
 learnings you need to list out the possible players. It could be a user type or
 stakeholder, for example, “a doctor who treats clubfoot”, “a patient who has
 clubfoot”, “a care giver who looks after patient”, etc.. Write down each player
-on a the left hand side of a sheet of paper or if you have access to one, on a
-whiteboard. On the right hand side write each player's goals.
+on the left-hand side of a sheet of paper or if you have access to one, on a
+whiteboard. On the right-hand side write each player's goals.
 
-Finally for each player, write down the number of steps required for them to
+Finally, for each player, write down the number of steps required for them to
 reach their goal. For example for "a doctor who treats clubfoot” the goal would
 be “cure a patient with clubfoot”, so the steps could be “register the patient
 in the system”, “start them on medical a plan”, “create a review cycle of their
@@ -309,7 +309,7 @@ take weeks of work to create.
 </figure>
 
 Creating a prototype is a balance between time and realness, so be careful not
-to sway to much into either extreme. Either way, you could end up wasting time.
+to sway too much into either extreme. Either way, you could end up wasting time.
 
 ## Usability-test your designs
 
@@ -376,7 +376,7 @@ right solution.
 
 This article should now give you a basic grounding in UX and its importance. UX
 isn’t something that should be looked upon as a role for a designer or
-researcher. It is actually the responsibility of everyone involved in a project
+researcher. It is actually the responsibility of everyone involved in a project,
 so I would recommend involvement at every opportunity.
 
 ## Feedback {: #feedback }
