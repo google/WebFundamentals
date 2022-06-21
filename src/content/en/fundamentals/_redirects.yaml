@@ -64,6 +64,9 @@ redirects:
 - from: /web/fundamentals/architecture/building-components/...
   to: https://web.dev/web-components/
 
+- from: /web/fundamentals/codelabs/push-notifications
+  to: https://codelabs.developers.google.com/codelabs/push-notifications
+
 - from: /web/fundamentals/codelabs/offline
   to: https://developers.google.com/codelabs/pwa-training/pwa03--going-offline
 
