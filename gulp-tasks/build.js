@@ -10,7 +10,6 @@ const gulp = require('gulp');
 const path = require('path');
 const gutil = require('gulp-util');
 const wfHelper = require('./wfHelper');
-const wfGlossary = require('./wfGlossary');
 const runSequence = require('run-sequence');
 const wfContributors = require('./wfContributors');
 const wfYouTubeShows = require('./wfYouTubeShows');
@@ -54,38 +53,6 @@ function generateFeedsForEveryYear(files, options) {
  */
 gulp.task('build:contributors', function() {
   wfContributors.build();
-});
-
-
-/**
- * Builds the WebFu glossary
- * @todo - Move this gulp task to wfGlossary.js
- */
-gulp.task('build:glossary', function() {
-  wfGlossary.build();
-});
-
-
-/**
- * Builds the RSS & ATOM feeds for /web/fundamentals/
- */
-gulp.task('build:fundamentals', function() {
-  const section = 'fundamentals';
-  const baseOutputPath = path.join(global.WF.src.content, section);
-  const description = 'The latest changes to ' +
-      'https://developers.google.com/web/fundamentals';
-  const options = {
-    title: 'Web Fundamentals',
-    description: description,
-    section: section,
-    outputPath: baseOutputPath,
-  };
-  const startPath = path.join(global.WF.src.content, section);
-  const files = wfHelper.getFileList(startPath, ['**/*.md']);
-  files.sort(wfHelper.updatedComparator);
-  wfTemplateHelper.generateFeeds(files, options);
-
-  generateFeedsForEveryYear(files, options);
 });
 
 
@@ -316,8 +283,6 @@ gulp.task('build', function(cb) {
   runSequence(
     [
       'build:contributors',
-      'build:glossary',
-      'build:fundamentals',
       'build:http203Podcast',
       'build:DVDPodcast',
       'build:tools',
