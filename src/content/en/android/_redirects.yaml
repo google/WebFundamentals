@@ -1,0 +1,55 @@
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
+redirects:
+- from: /web/android/custom-tabs
+  to: https://developer.chrome.com/docs/android/custom-tabs/overview/
+
+- from: /web/android/custom-tabs/best-practices
+  to: https://developer.chrome.com/docs/android/custom-tabs/best-practices/
+
+- from: /web/android/custom-tabs/headers
+  to: https://developer.chrome.com/docs/android/custom-tabs/headers/
+
+- from: /web/android/custom-tabs/implementation-guide
+  to: https://developer.chrome.com/docs/android/custom-tabs/integration-guide/
+
+- from: /web/android/trusted-web-activity
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/overview/
+
+- from: /web/android/trusted-web-activity/android-browser-helper-migration
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/android-browser-helper-migration/
+
+- from: /web/android/trusted-web-activity/integration-guide
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/integration-guide/
+
+- from: /web/android/trusted-web-activity/lay-of-the-land
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/lay-of-the-land/
+
+- from: /web/android/trusted-web-activity/multi-origin
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/multi-origin/
+
+- from: /web/android/trusted-web-activity/play-billing
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/play-billing/
+
+- from: /web/android/trusted-web-activity/query-parameters
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/query-parameters/
+
+- from: /web/android/trusted-web-activity/quick-start
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/quick-start/
+
+- from: /web/android/trusted-web-activity/receive-payments-play-billing
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/receive-payments-play-billing/
+
+- from: /web/android/trusted-web-activity/web-share-target
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/web-share-target/
+
+- from: /web/android/trusted-web-activity/whats-new
+  to: https://developer.chrome.com/docs/android/whats-new/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/android/...
+  to: https://developer.chrome.com/docs/android/

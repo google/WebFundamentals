@@ -1,8 +1,0 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-redirects:
-
-- from: /web/fundamentals/design-and-ux/input/touch/active-states
-  to: /web/fundamentals/design-and-ux/input/touch/#stateful-elements-respond-to-touch
-
-- from: /web/fundamentals/design-and-ux/input/touch/touch-events
-  to: /web/fundamentals/design-and-ux/input/touch/#implement-custom-gestures

@@ -1,9 +1,14 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
-
 - from: /web/resources/contributors/
   to: /web/resources/contributors
+
+- from: /web/resources/jekyll/...
+  to: /web/resources/
 
 - from: /web/resources/styleguide/
   to: /web/resources/style-guide
@@ -13,6 +18,3 @@ redirects:
 
 - from: /web/resources/translations/
   to: /web/resources/translations
-
-- from: /web/resources/jekyll/...
-  to: /web/resources/

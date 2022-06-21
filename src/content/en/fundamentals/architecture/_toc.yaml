@@ -1,6 +1,0 @@
-toc:
-- title: Architectural Patterns
-  style: accordion
-  section:
-  - title: App Shell Model
-    path: /web/fundamentals/architecture/app-shell

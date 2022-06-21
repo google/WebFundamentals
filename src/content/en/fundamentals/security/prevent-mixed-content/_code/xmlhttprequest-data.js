@@ -1,3 +1,0 @@
-{
-  "data": "INSECURE DATA LOADED!!!"
-}

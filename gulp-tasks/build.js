@@ -6,14 +6,10 @@
 
 'use strict';
 
-const fs = require('fs');
 const gulp = require('gulp');
 const path = require('path');
-const glob = require('globule');
-const jsYaml = require('js-yaml');
 const gutil = require('gulp-util');
 const wfHelper = require('./wfHelper');
-const wfGlossary = require('./wfGlossary');
 const runSequence = require('run-sequence');
 const wfContributors = require('./wfContributors');
 const wfYouTubeShows = require('./wfYouTubeShows');
@@ -57,72 +53,6 @@ function generateFeedsForEveryYear(files, options) {
  */
 gulp.task('build:contributors', function() {
   wfContributors.build();
-});
-
-
-/**
- * Reads src/data/announcement.yaml and adds/removes the announcement
- * to all _project.yaml files.
- */
-gulp.task('build:announcement', function() {
-  const globOpts = {
-    srcBase: 'src/content/en/',
-    prefixBase: true,
-  };
-  const dumpYamlOpts = {lineWidth: 1000};
-  const projectYamlFiles = glob.find('**/_project.yaml', globOpts);
-  const file = 'src/data/announcement.yaml';
-  const announcementYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
-  const showAnnouncement = announcementYaml['enabled'];
-  projectYamlFiles.forEach((file) => {
-    // The legacy Workbox site needs its own banner.
-    if (file.indexOf('workbox') !== -1) {
-      return;
-    }
-    let projYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
-    if (showAnnouncement) {
-      projYaml.announcement = {};
-      projYaml.announcement.description = announcementYaml.description;
-      if (announcementYaml.background) {
-        projYaml.announcement.background = announcementYaml.background;
-      }
-    } else {
-      delete projYaml['announcement'];
-    }
-    fs.writeFileSync(file, jsYaml.safeDump(projYaml, dumpYamlOpts));
-  });
-});
-
-
-/**
- * Builds the WebFu glossary
- * @todo - Move this gulp task to wfGlossary.js
- */
-gulp.task('build:glossary', function() {
-  wfGlossary.build();
-});
-
-
-/**
- * Builds the RSS & ATOM feeds for /web/fundamentals/
- */
-gulp.task('build:fundamentals', function() {
-  const section = 'fundamentals';
-  const baseOutputPath = path.join(global.WF.src.content, section);
-  const description = 'The latest changes to ' +
-      'https://developers.google.com/web/fundamentals';
-  const options = {
-    title: 'Web Fundamentals',
-    description: description,
-    section: section,
-    outputPath: baseOutputPath,
-  };
-  const startPath = path.join(global.WF.src.content, section);
-  const files = wfHelper.getFileList(startPath, ['**/*.md']);
-  files.sort(wfHelper.updatedComparator);
-  wfTemplateHelper.generateFeeds(files, options);
-
-  generateFeedsForEveryYear(files, options);
 });
 
 
@@ -352,10 +282,7 @@ gulp.task('post-install', function(cb) {
 gulp.task('build', function(cb) {
   runSequence(
     [
-      'build:announcement',
       'build:contributors',
-      'build:glossary',
-      'build:fundamentals',
       'build:http203Podcast',
       'build:DVDPodcast',
       'build:tools',
