@@ -1,0 +1,13 @@
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
+redirects:
+- from: /web/progressive-web-apps/checklist
+  to: https://web.dev/pwa-checklist/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/progressive-web-apps/...
+  to: https://web.dev/progressive-web-apps/

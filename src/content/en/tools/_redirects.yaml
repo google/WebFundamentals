@@ -1,141 +1,146 @@
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
 
-- from: /web/tools/polymer-starter-kit/...
-  to: https://www.polymer-project.org/2.0/start/toolbox/set-up
+# Chrome DevTools
+- from: /web/tools/chrome-devtools/console/console-write
+  to: https://developer.chrome.com/docs/devtools/console/api/
 
-- from: /web/tools/material-design-lite/...
-  to: http://www.getmdl.io/
+- from: /web/tools/chrome-devtools/console/events
+  to: https://developer.chrome.com/docs/devtools/console/utilities/#monitorevents
 
-- from: /web/tools/setup/workspace/...
-  to: /web/tools/setup/
+- from: /web/tools/chrome-devtools/console/expressions
+  to: https://developer.chrome.com/docs/devtools/console/log/
 
-# Workbox redirects
+- from: /web/tools/chrome-devtools/console/structured-data
+  to: https://developer.chrome.com/docs/devtools/console/log/
 
-- from: /web/tools/workbox/guides/get-started
-  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/
+- from: /web/tools/chrome-devtools/console/track-exceptions
+  to: https://developer.chrome.com/docs/devtools/console/api/#error
 
-- from: /web/tools/service-worker-libraries/
-  to: /web/tools/workbox/
+- from: /web/tools/chrome-devtools/console/track-executions
+  to: https://developer.chrome.com/docs/devtools/console/api/#count
 
-- from: /web/tools/workbox/next/
-  to: /web/tools/workbox/
+- from: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+  to: https://developer.chrome.com/docs/devtools/device-mode/#overview
 
-- from: /web/tools/workbox/examples/
-  to: /web/tools/workbox/modules/
+- from: /web/tools/chrome-devtools/inspect-styles
+  to: https://developer.chrome.com/docs/devtools/css/
 
-- from: /web/tools/workbox/overview
-  to: /web/tools/workbox/
+- from: /web/tools/chrome-devtools/inspect-styles/animations
+  to: https://developer.chrome.com/docs/devtools/css/animations/
 
-- from: /web/tools/workbox/overview/
-  to: /web/tools/workbox/
+- from: /web/tools/chrome-devtools/inspect-styles/edit-dom
+  to: https://developer.chrome.com/docs/devtools/dom/
 
-- from: /web/tools/workbox/get-started/gulp
-  to: /web/tools/workbox/guides/codelabs/gulp
+- from: /web/tools/chrome-devtools/javascript/pretty-print
+  to: https://developer.chrome.com/docs/devtools/javascript/reference/#format
 
-- from: /web/tools/workbox/get-started/webpack
-  to: /web/tools/workbox/guides/codelabs/webpack
+- from: /web/tools/chrome-devtools/javascript/step-code
+  to: https://developer.chrome.com/docs/devtools/javascript/reference/#stepping
 
-- from: /web/tools/workbox/get-started/npm-script
-  to: /web/tools/workbox/guides/codelabs/npm-script
+- from: /web/tools/chrome-devtools/manage-data/local-storage
+  to: https://developer.chrome.com/docs/devtools/#storage
 
-- from: /web/tools/workbox/guides/migrate
-  to: /web/tools/workbox/guides/migrations/migrate-from-sw
+- from: /web/tools/chrome-devtools/network/issues
+  to: https://developer.chrome.com/docs/devtools/network/
 
-- from: /web/tools/workbox/modules/workbox-broadcast-cache-update
-  to: /web/tools/workbox/modules/workbox-broadcast-update
+- from: /web/tools/chrome-devtools/network/network-conditions
+  to: https://developer.chrome.com/docs/devtools/network/reference/
 
-- from: /web/tools/workbox/modules/workbox-cache-expiration
-  to: /web/tools/workbox/modules/workbox-expiration
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/chrome-devtools/...
+  to: https://developer.chrome.com/docs/devtools/
 
-- from: /web/tools/workbox/guides/enable-offline-analytics
-  to: /web/tools/workbox/modules/workbox-google-analytics
-
-- from: /web/tools/workbox/guides/service-worker-checklist
-  to: /web/fundamentals/primers/service-workers/registration
-
-- from: /web/tools/workbox/reference-docs/latest/workbox
-  to: https://developer.chrome.com/docs/workbox/modules/workbox-sw/
-
-- from: /web/tools/workbox/community
-  to: https://twitter.com/workboxjs
-
-- from: /web/tools/workbox/guides/precache-files
-  to: /web/tools/workbox/modules/workbox-precaching
-
-- from: /web/tools/workbox/guides/precache-files/...
-  to: /web/tools/workbox/modules/workbox-precaching
-
-- from: /web/tools/workbox/guides/codelabs/...
-  to: /codelabs/workbox-lab
-
-# Workbox guides
-
-- from: /web/tools/workbox/guides/using-bundlers
-  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler
-
-- from: /web/tools/workbox/guides/route-requests
-  to: https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#applying-caching-strategies-with-route-matching
-
-- from: /web/tools/workbox/guides/handle-third-party-requests
-  to: https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#cross-origin-considerations
-
-- from: /web/tools/workbox/guides/using-plugins
-  to: https://developer.chrome.com/docs/workbox/using-plugins/
-
-- from: /web/tools/workbox/guides/troubleshoot-and-debug
-  to: https://developer.chrome.com/docs/workbox/troubleshooting-and-logging/
-
-- from: /web/tools/workbox/guides/storage-quota
-  to: https://developer.chrome.com/docs/workbox/understanding-storage-quota/
-
-- from: /web/tools/workbox/guides/common-recipes
-  to: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
-
-- from: /web/tools/workbox/guides/advanced-recipes
-  to: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
-
-- from: /web/tools/workbox/guides/generate-service-worker/cli
-  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#workbox-cli
-
-- from: /web/tools/workbox/guides/generate-service-worker/workbox-build
-  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#workbox-build
-
-- from: /web/tools/workbox/guides/generate-service-worker/webpack
-  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler
-
-# Workbox migration guides
-
-- from: /web/tools/workbox/guides/migrations/migrate-from-sw
-  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-sw/
-
-- from: /web/tools/workbox/guides/migrations/migrate-from-v2
-  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v2/
-
-- from: /web/tools/workbox/guides/migrations/migrate-from-v3
-  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v3/
-
-- from: /web/tools/workbox/guides/migrations/migrate-from-v4
-  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v4/
-
-- from: /web/tools/workbox/guides/migrations/migrate-from-v5
-  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v5/
 
 # Lighthouse
+- from: /web/tools/lighthouse/audits/address-bar
+  to: https://web.dev/themed-omnibox/
 
-- from: /web/tools/lighthouse/run
-  to: https://web.dev/measure/
+- from: /web/tools/lighthouse/audits/alt-attribute
+  to: https://web.dev/image-alt/
+
+- from: /web/tools/lighthouse/audits/app-cache
+  to: https://web.dev/appcache-manifest/
+
+- from: /web/tools/lighthouse/audits/appcache
+  to: https://web.dev/appcache-manifest/
+
+- from: /web/tools/lighthouse/audits/aria-allowed-attributes
+  to: https://web.dev/aria-allowed-attr/
+
+- from: /web/tools/lighthouse/audits/aspect-ratio
+  to: https://web.dev/image-aspect-ratio/
+
+- from: /web/tools/lighthouse/audits/blocking-links
+  to: https://web.dev/render-blocking-resources/
+
+- from: /web/tools/lighthouse/audits/blocking-resources
+  to: https://web.dev/render-blocking-resources/
+
+- from: /web/tools/lighthouse/audits/bootup
+  to: https://web.dev/bootup-time/
+
+- from: /web/tools/lighthouse/audits/budgets
+  to: https://web.dev/use-lighthouse-for-performance-budgets/
+
+- from: /web/tools/lighthouse/audits/button-name
+  to: https://web.dev/button-name/
+
+- from: /web/tools/lighthouse/audits/cache-contains-start_url
+  to: https://web.dev/offline-start-url/
+
+- from: /web/tools/lighthouse/audits/cache-policy
+  to: https://web.dev/uses-long-cache-ttl/
+
+- from: /web/tools/lighthouse/audits/canonical
+  to: https://web.dev/canonical/
+
+- from: /web/tools/lighthouse/audits/consistently-interactive
+  to: https://web.dev/interactive/
+
+- from: /web/tools/lighthouse/audits/console-time
+  to: https://developers.google.com/web/updates/2012/08/When-milliseconds-are-not-enough-performance-now
+
+- from: /web/tools/lighthouse/audits/content-sized-correctly-for-viewport
+  to: https://web.dev/content-width/
+
+- from: /web/tools/lighthouse/audits/contrast-ratio
+  to: https://web.dev/color-contrast/
 
 - from: /web/tools/lighthouse/audits/critical-request-chains
   to: https://web.dev/critical-request-chains/
 
-- from: /web/tools/lighthouse/audits/unused-css
-  to: https://web.dev/unused-css-rules/
+- from: /web/tools/lighthouse/audits/custom-splash-screen
+  to: https://web.dev/splash-screen/
 
-- from: /web/tools/lighthouse/audits/text-compression
-  to: https://web.dev/uses-text-compression/
+- from: /web/tools/lighthouse/audits/date-now
+  to: https://stackoverflow.com/questions/30795525/performance-now-vs-date-now
+
+- from: /web/tools/lighthouse/audits/deprecated-apis
+  to: https://web.dev/deprecations/
+
+- from: /web/tools/lighthouse/audits/description
+  to: https://web.dev/meta-description/
+
+- from: /web/tools/lighthouse/audits/descriptive-link-text
+  to: https://web.dev/link-text/
+
+- from: /web/tools/lighthouse/audits/document-write
+  to: https://web.dev/no-document-write/
+
+- from: /web/tools/lighthouse/audits/dom-size
+  to: https://web.dev/dom-size/
 
 - from: /web/tools/lighthouse/audits/estimated-input-latency
   to: https://web.dev/lighthouse-max-potential-fid/
+
+- from: /web/tools/lighthouse/audits/fast-3g
+  to: https://web.dev/load-fast-enough-for-pwa/
 
 - from: /web/tools/lighthouse/audits/first-contentful-paint
   to: https://web.dev/first-contentful-paint/
@@ -143,80 +148,50 @@ redirects:
 - from: /web/tools/lighthouse/audits/first-cpu-idle
   to: https://web.dev/first-cpu-idle/
 
+- from: /web/tools/lighthouse/audits/first-interactive
+  to: https://web.dev/first-cpu-idle/
+
 - from: /web/tools/lighthouse/audits/first-meaningful-paint
   to: https://web.dev/first-meaningful-paint/
 
-- from: /web/tools/lighthouse/audits/network-payloads
-  to: https://web.dev/total-byte-weight/
+- from: /web/tools/lighthouse/audits/font-sizes
+  to: https://web.dev/font-size/
 
-- from: /web/tools/lighthouse/audits/redirects
-  to: https://web.dev/redirects/
+- from: /web/tools/lighthouse/audits/form-labels
+  to: https://web.dev/label/
 
-- from: /web/tools/lighthouse/audits/bootup
-  to: https://web.dev/bootup-time/
-
-- from: /web/tools/lighthouse/audits/ttfb
-  to: https://web.dev/time-to-first-byte/
-
-- from: /web/tools/lighthouse/audits/minify-css
-  to: https://web.dev/unminified-css/
-
-- from: /web/tools/lighthouse/audits/offscreen-images
-  to: https://web.dev/offscreen-images/
-
-- from: /web/tools/lighthouse/audits/optimize-images
-  to: https://web.dev/uses-optimized-images/
-
-- from: /web/tools/lighthouse/audits/oversized-images
-  to: https://web.dev/uses-responsive-images/
-
-- from: /web/tools/lighthouse/audits/speed-index
-  to: https://web.dev/speed-index/
-
-- from: /web/tools/lighthouse/audits/budgets
-  to: https://web.dev/use-lighthouse-for-performance-budgets/
-
-- from: /web/tools/lighthouse/audits/preload
-  to: https://web.dev/uses-rel-preload/
-
-- from: /web/tools/lighthouse/audits/blocking-resources
-  to: https://web.dev/render-blocking-resources/
-
-- from: /web/tools/lighthouse/audits/webp
-  to: https://web.dev/uses-webp-images/
-
-- from: /web/tools/lighthouse/audits/time-to-interactive
-  to: https://web.dev/interactive/
-
-- from: /web/tools/lighthouse/audits/unoptimized-images
-  to: https://web.dev/uses-optimized-images/
-
-- from: /web/tools/lighthouse/audits/user-timing
-  to: https://web.dev/user-timings/
-
-- from: /web/tools/lighthouse/audits/dom-size
-  to: https://web.dev/dom-size/
-
-- from: /web/tools/lighthouse/audits/cache-policy
-  to: https://web.dev/uses-long-cache-ttl/
-
-- from: /web/tools/lighthouse/audits/address-bar
-  to: https://web.dev/themed-omnibox/
-
-- from: /web/tools/lighthouse/audits/cache-contains-start_url
-  to: https://web.dev/offline-start-url/
-
-- from: /web/tools/lighthouse/audits/custom-splash-screen
-  to: https://web.dev/splash-screen/
-
-- from: /web/tools/lighthouse/audits/no-js
-  to: https://web.dev/without-javascript/
-
-- from: /web/tools/lighthouse/audits/content-sized-correctly-for-viewport
-  to: https://web.dev/content-width/
+- from: /web/tools/lighthouse/audits/geolocation-on-load
+  to: https://web.dev/geolocation-on-start/
 
 - from: /web/tools/lighthouse/audits/has-viewport-meta-tag
   to: https://web.dev/viewport/
+
+- from: /web/tools/lighthouse/audits/has-viewport-meta-tag%22
+  to: https://web.dev/viewport/
+
+- from: /web/tools/lighthouse/audits/hreflang
+  to: https://web.dev/hreflang/
+
+- from: /web/tools/lighthouse/audits/http-200-when-offline
+  to: https://web.dev/works-offline/
+
+- from: /web/tools/lighthouse/audits/http-redirects-to-https
+  to: https://web.dev/redirects-http/
+
+- from: /web/tools/lighthouse/audits/http2
+  to: https://web.dev/uses-http2/
+
+- from: /web/tools/lighthouse/audits/https
+  to: https://web.dev/is-on-https/
+
+- from: /web/tools/lighthouse/audits/https
+  to: https://web.dev/is-on-https/
+
+- from: /web/tools/lighthouse/audits/indexing
+  to: https://web.dev/is-crawable/
+
+- from: /web/tools/lighthouse/audits/install-prompt
+  to: https://web.dev/installable-manifest/
 
 - from: /web/tools/lighthouse/audits/manifest-contains-192px-icon
   to: https://web.dev/installable-manifest/
@@ -233,229 +208,253 @@ redirects:
 - from: /web/tools/lighthouse/audits/manifest-contains-start_url
   to: https://web.dev/installable-manifest/
 
+- from: /web/tools/lighthouse/audits/manifest-contains-theme_color
+  to: https://web.dev/themed-omnibox/
+
 - from: /web/tools/lighthouse/audits/manifest-exists
   to: https://web.dev/installable-manifest/
 
 - from: /web/tools/lighthouse/audits/manifest-has-display-set
   to: https://web.dev/installable-manifest/
 
-- from: /web/tools/lighthouse/audits/fast-3g
-  to: https://web.dev/load-fast-enough-for-pwa/
-
-- from: /web/tools/lighthouse/audits/http-redirects-to-https
-  to: https://web.dev/redirects-http/
-
-- from: /web/tools/lighthouse/audits/registered-service-worker
-  to: https://web.dev/service-worker/
-
-- from: /web/tools/lighthouse/audits/http-200-when-offline
-  to: https://web.dev/works-offline/
-
-- from: /web/tools/lighthouse/audits/install-prompt
+- from: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
   to: https://web.dev/installable-manifest/
 
-- from: /web/tools/lighthouse/audits/https
-  to: https://web.dev/is-on-https/
+- from: /web/tools/lighthouse/audits/minify-css
+  to: https://web.dev/unminified-css/
 
-- from: /web/tools/lighthouse/audits/button-name
-  to: https://web.dev/button-name/
-
-- from: /web/tools/lighthouse/audits/title
-  to: https://web.dev/document-title/
-
-- from: /web/tools/lighthouse/audits/form-labels
-  to: https://web.dev/label/
-
-- from: /web/tools/lighthouse/audits/alt-attribute
-  to: https://web.dev/image-alt/
-
-- from: /web/tools/lighthouse/audits/tabindex
-  to: https://web.dev/tabindex/
-
-- from: /web/tools/lighthouse/audits/appcache
-  to: https://web.dev/appcache-manifest/
-
-- from: /web/tools/lighthouse/audits/console-time
-  to: https://developers.google.com/web/updates/2012/08/When-milliseconds-are-not-enough-performance-now
-
-- from: /web/tools/lighthouse/audits/date-now
-  to: https://stackoverflow.com/questions/30795525/performance-now-vs-date-now
-
-- from: /web/tools/lighthouse/audits/deprecated-apis
-  to: https://web.dev/deprecations/
-
-- from: /web/tools/lighthouse/audits/document-write
-  to: https://web.dev/no-document-write/
+- from: /web/tools/lighthouse/audits/mixed-content
+  to: https://web.dev/what-is-mixed-content
 
 - from: /web/tools/lighthouse/audits/mutation-events
   to: https://developer.mozilla.org/docs/Web/Guide/Events/Mutation_events
 
-- from: /web/tools/lighthouse/audits/old-flexbox
-  to: https://css-tricks.com/old-flexbox-and-new-flexbox/
+- from: /web/tools/lighthouse/audits/network-payloads
+  to: https://web.dev/total-byte-weight/
 
-- from: /web/tools/lighthouse/audits/geolocation-on-load
-  to: https://web.dev/geolocation-on-start/
-
-- from: /web/tools/lighthouse/audits/notifications-on-load
-  to: https://web.dev/notification-on-start/
-
-- from: /web/tools/lighthouse/audits/aspect-ratio
-  to: https://web.dev/image-aspect-ratio/
-
-- from: /web/tools/lighthouse/audits/vulnerabilities
-  to: https://web.dev/no-vulnerable-libraries/
-
-- from: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
-  to: https://web.dev/installable-manifest/
+- from: /web/tools/lighthouse/audits/no-js
+  to: https://web.dev/without-javascript/
 
 - from: /web/tools/lighthouse/audits/noopener
   to: https://web.dev/external-anchors-use-rel-noopener/
 
-- from: /web/tools/lighthouse/audits/password-pasting
-  to: https://web.dev/password-inputs-can-be-pasted-into/
+- from: /web/tools/lighthouse/audits/notifications-on-load
+  to: https://web.dev/notification-on-start/
 
-- from: /web/tools/lighthouse/audits/mixed-content
-  to: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+- from: /web/tools/lighthouse/audits/offscreen-images
+  to: https://web.dev/offscreen-images/
 
-- from: /web/tools/lighthouse/audits/https
-  to: https://web.dev/is-on-https/
+- from: /web/tools/lighthouse/audits/old-flexbox
+  to: https://css-tricks.com/old-flexbox-and-new-flexbox/
 
-- from: /web/tools/lighthouse/audits/http2
-  to: https://web.dev/uses-http2/
+- from: /web/tools/lighthouse/audits/optimize-images
+  to: https://web.dev/uses-optimized-images/
+
+- from: /web/tools/lighthouse/audits/oversized-images
+  to: https://web.dev/uses-responsive-images/
 
 - from: /web/tools/lighthouse/audits/passive-event-listeners
   to: https://web.dev/uses-passive-event-listeners/
 
-- from: /web/tools/lighthouse/audits/web-sql
-  to: https://www.w3.org/TR/webdatabase/#status-of-this-document
-
-- from: /web/tools/lighthouse/audits/description
-  to: https://web.dev/meta-description/
-
-- from: /web/tools/lighthouse/audits/title
-  to: https://web.dev/document-title/
-
-- from: /web/tools/lighthouse/audits/hreflang
-  to: https://web.dev/hreflang/
-
-- from: /web/tools/lighthouse/audits/canonical
-  to: https://web.dev/canonical/
-
-- from: /web/tools/lighthouse/audits/font-sizes
-  to: https://web.dev/font-size/
+- from: /web/tools/lighthouse/audits/password-pasting
+  to: https://web.dev/password-inputs-can-be-pasted-into/
 
 - from: /web/tools/lighthouse/audits/plugins
   to: https://web.dev/plugins/
 
-- from: /web/tools/lighthouse/audits/descriptive-link-text
-  to: https://web.dev/link-text/
+- from: /web/tools/lighthouse/audits/preload
+  to: https://web.dev/uses-rel-preload/
 
-- from: /web/tools/lighthouse/audits/successful-http-code
-  to: https://web.dev/http-status-code/
+- from: /web/tools/lighthouse/audits/redirects
+  to: https://web.dev/redirects/
 
-- from: /web/tools/lighthouse/audits/indexing
-  to: https://web.dev/is-crawable/
-
-- from: /web/tools/lighthouse/audits/robots
-  to: https://web.dev/robots-txt/
-
-- from: /web/tools/lighthouse/audits/tap-targets
-  to: https://web.dev/tap-targets/
-
-- from: /web/tools/lighthouse/audits/has-viewport-meta-tag%22
-  to: https://web.dev/viewport/
-
-- from: /web/tools/lighthouse/audits/contrast-ratio
-  to: https://web.dev/color-contrast/
-
-- from: /web/tools/lighthouse/audits/blocking-links
-  to: https://web.dev/render-blocking-resources/
-
-- from: /web/tools/lighthouse/audits/app-cache
-  to: https://web.dev/appcache-manifest/
-
-- from: /web/tools/lighthouse/audits/
-  to: https://web.dev/learn/#lighthouse
-
-- from: /web/tools/lighthouse/v3/scoring
-  to: https://web.dev/performance-scoring/
-
-- from: /web/tools/lighthouse/scoring
-  to: https://web.dev/performance-scoring/
+- from: /web/tools/lighthouse/audits/registered-service-worker
+  to: https://web.dev/service-worker/
 
 - from: /web/tools/lighthouse/audits/required-aria-attributes
   to: https://web.dev/aria-required-attr/
 
-- from: /web/tools/lighthouse/audits/valid-aria-values
-  to: https://web.dev/aria-valid-attr-value/
+- from: /web/tools/lighthouse/audits/robots
+  to: https://web.dev/robots-txt/
 
-- from: /web/tools/lighthouse/audits/valid-aria-attributes
-  to: https://web.dev/aria-valid-attr/
+- from: /web/tools/lighthouse/audits/speed-index
+  to: https://web.dev/speed-index/
 
-- from: /web/tools/lighthouse/audits/aria-allowed-attributes
-  to: https://web.dev/aria-allowed-attr/
+- from: /web/tools/lighthouse/audits/successful-http-code
+  to: https://web.dev/http-status-code/
 
-- from: /web/tools/lighthouse/audits/unoptimized-images
-  to: https://web.dev/uses-optimized-images/
+- from: /web/tools/lighthouse/audits/tabindex
+  to: https://web.dev/tabindex/
 
-- from: /web/tools/lighthouse/audits/first-interactive
-  to: https://web.dev/first-cpu-idle/
+- from: /web/tools/lighthouse/audits/tap-targets
+  to: https://web.dev/tap-targets/
 
-- from: /web/tools/lighthouse/audits/consistently-interactive
-  to: https://web.dev/interactive/
+- from: /web/tools/lighthouse/audits/text-compression
+  to: https://web.dev/uses-text-compression/
 
 - from: /web/tools/lighthouse/audits/theme-color
   to: https://web.dev/themed-omnibox/
 
-- from: /web/tools/lighthouse/audits/manifest-contains-theme_color
-  to: https://web.dev/themed-omnibox/
+- from: /web/tools/lighthouse/audits/time-to-interactive
+  to: https://web.dev/interactive/
 
-# DevTools
+- from: /web/tools/lighthouse/audits/title
+  to: https://web.dev/document-title/
 
-- from: /web/tools/chrome-devtools/console/track-exceptions
-  to: https://developer.chrome.com/docs/devtools/console/api/#error
+- from: /web/tools/lighthouse/audits/title
+  to: https://web.dev/document-title/
 
-- from: /web/tools/chrome-devtools/network/network-conditions
-  to: https://developer.chrome.com/docs/devtools/network/reference/
+- from: /web/tools/lighthouse/audits/ttfb
+  to: https://web.dev/time-to-first-byte/
 
-- from: /web/tools/chrome-devtools/console/expressions
-  to: https://developer.chrome.com/docs/devtools/console/log/
+- from: /web/tools/lighthouse/audits/unoptimized-images
+  to: https://web.dev/uses-optimized-images/
 
-- from: /web/tools/chrome-devtools/console/track-executions
-  to: https://developer.chrome.com/docs/devtools/console/api/#count
+- from: /web/tools/lighthouse/audits/unoptimized-images
+  to: https://web.dev/uses-optimized-images/
 
-- from: /web/tools/chrome-devtools/javascript/step-code
-  to: https://developer.chrome.com/docs/devtools/javascript/reference/#stepping
+- from: /web/tools/lighthouse/audits/unused-css
+  to: https://web.dev/unused-css-rules/
 
-- from: /web/tools/chrome-devtools/inspect-styles
-  to: https://developer.chrome.com/docs/devtools/css/
+- from: /web/tools/lighthouse/audits/user-timing
+  to: https://web.dev/user-timings/
 
-- from: /web/tools/chrome-devtools/network/issues
-  to: https://developer.chrome.com/docs/devtools/network/
+- from: /web/tools/lighthouse/audits/valid-aria-attributes
+  to: https://web.dev/aria-valid-attr/
 
-- from: /web/tools/chrome-devtools/console/structured-data
-  to: https://developer.chrome.com/docs/devtools/console/log/
+- from: /web/tools/lighthouse/audits/valid-aria-values
+  to: https://web.dev/aria-valid-attr-value/
 
-- from: /web/tools/chrome-devtools/inspect-styles/animations
-  to: https://developer.chrome.com/docs/devtools/css/animations/
+- from: /web/tools/lighthouse/audits/vulnerabilities
+  to: https://web.dev/no-vulnerable-libraries/
 
-- from: /web/tools/chrome-devtools/console/console-write
-  to: https://developer.chrome.com/docs/devtools/console/api/
+- from: /web/tools/lighthouse/audits/web-sql
+  to: https://www.w3.org/TR/webdatabase/#status-of-this-document
 
-- from: /web/tools/chrome-devtools/inspect-styles/edit-dom
-  to: https://developer.chrome.com/docs/devtools/dom/
+- from: /web/tools/lighthouse/audits/webp
+  to: https://web.dev/uses-webp-images/
 
-- from: /web/tools/chrome-devtools/javascript/pretty-print
-  to: https://developer.chrome.com/docs/devtools/javascript/reference/#format
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/lighthouse/audits/...
+  to: https://web.dev/learn/#lighthouse
 
-- from: /web/tools/chrome-devtools/console/events
-  to: https://developer.chrome.com/docs/devtools/console/utilities/#monitorevents
+- from: /web/tools/lighthouse/run
+  to: https://web.dev/measure/
 
-- from: /web/tools/chrome-devtools/manage-data/local-storage
-  to: https://developer.chrome.com/docs/devtools/#storage
+- from: /web/tools/lighthouse/scoring
+  to: https://web.dev/performance-scoring/
 
-- from: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
-  to: https://developer.chrome.com/docs/devtools/device-mode/#overview
+- from: /web/tools/lighthouse/v3/scoring
+  to: https://web.dev/performance-scoring/
 
-- from: /web/tools/chrome-devtools/...
-  to: https://developer.chrome.com/docs/devtools/...
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/lighthouse/...
+  to: https://developer.chrome.com/docs/lighthouse/overview/
+
+
+# Material Design Lite
+- from: /web/tools/material-design-lite/...
+  to: http://www.getmdl.io/
+
+
+# Workbox
+- from: /web/tools/service-worker-libraries/
+  to: https://developer.chrome.com/docs/workbox/
+
+- from: /web/tools/workbox/community
+  to: https://twitter.com/workboxjs
+
+- from: /web/tools/workbox/examples/
+  to: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
+
+- from: /web/tools/workbox/guides/advanced-recipes
+  to: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
+
+- from: /web/tools/workbox/guides/common-recipes
+  to: https://developer.chrome.com/docs/workbox/#use-cases-and-recipes
+
+- from: /web/tools/workbox/guides/enable-offline-analytics
+  to: https://developer.chrome.com/docs/workbox/modules/workbox-google-analytics/
+
+- from: /web/tools/workbox/guides/generate-service-worker/cli
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#workbox-cli
+
+- from: /web/tools/workbox/guides/generate-service-worker/webpack
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler
+
+- from: /web/tools/workbox/guides/generate-service-worker/workbox-build
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#workbox-build
+
+- from: /web/tools/workbox/guides/get-started
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/
+
+- from: /web/tools/workbox/guides/handle-third-party-requests
+  to: https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#cross-origin-considerations
+
+- from: /web/tools/workbox/guides/migrate
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-sw/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-sw
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-sw/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-v2
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v2/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-v3
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v3/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-v4
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v4/
+
+- from: /web/tools/workbox/guides/migrations/migrate-from-v5
+  to: https://developer.chrome.com/docs/workbox/migration/migrate-from-v5/
+
+- from: /web/tools/workbox/guides/precache-files
+  to: https://developer.chrome.com/docs/workbox/modules/workbox-precaching/
+
+- from: /web/tools/workbox/guides/precache-files/...
+  to: https://developer.chrome.com/docs/workbox/modules/workbox-precaching/
+
+- from: /web/tools/workbox/guides/route-requests
+  to: https://developer.chrome.com/docs/workbox/caching-resources-during-runtime/#applying-caching-strategies-with-route-matching
+
+- from: /web/tools/workbox/guides/service-worker-checklist
+  to: https://web.dev/service-workers-registration
+
+- from: /web/tools/workbox/guides/storage-quota
+  to: https://developer.chrome.com/docs/workbox/understanding-storage-quota/
+
+- from: /web/tools/workbox/guides/troubleshoot-and-debug
+  to: https://developer.chrome.com/docs/workbox/troubleshooting-and-logging/
+
+- from: /web/tools/workbox/guides/using-bundlers
+  to: https://developer.chrome.com/docs/workbox/the-ways-of-workbox/#using-a-bundler
+
+- from: /web/tools/workbox/guides/using-plugins
+  to: https://developer.chrome.com/docs/workbox/using-plugins/
+
+- from: /web/tools/workbox/modules/workbox-broadcast-cache-update
+  to: https://developer.chrome.com/docs/workbox/modules/workbox-broadcast-update/
+
+- from: /web/tools/workbox/modules/workbox-cache-expiration
+  to: https://developer.chrome.com/docs/workbox/modules/workbox-expiration/
+
+- from: /web/tools/workbox/reference-docs/latest/workbox
+  to: https://developer.chrome.com/docs/workbox/modules/workbox-sw/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/workbox/reference-docs/...
+  to: https://developer.chrome.com/docs/workbox/reference/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/workbox/...
+  to: https://developer.chrome.com/docs/workbox/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/...
+  to: https://developer.chrome.com/docs/

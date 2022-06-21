@@ -1,72 +1,62 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
+#
+# ATTENTION - Changes made to this file not in GitHub will be over written!
+#
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
-
-- from: /web/shows/feed.xml
-  to: /web/shows/rss.xml
-
-- from: /web/shows/google-io/2014/
-  to: /web/shows/google-io/
-
-- from: /web/shows/google-io/2015/
-  to: /web/shows/google-io/
-
-- from: /web/shows/google-io/2016/
-  to: /web/shows/google-io/
-
-- from: /web/shows/http203/series-1/
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-
-- from: /web/shows/http203/series-2/
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-
-- from: /web/shows/http203/series-3/
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
-
-- from: /web/shows/webrtc/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICT_h7pn39XpU4JkqOja3p-
-
-- from: /web/shows/ttt/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIB3ci6nwNyLYNU6RDOU3YyL
-
-- from: /web/shows/supercharged/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBz9ACEQRmO9Lw8PW7vn0lr
-
-- from: /web/shows/pwa-devsummit/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb
-
-- from: /web/shows/polycasts/season-2/first-look-polymer-0.8
-  to: /web/shows/polycasts/season-2/first-look-polymer-0-8
-
-- from: /web/shows/polycasts/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo
-
-- from: /web/shows/new-in-chrome/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
-
-- from: /web/shows/lazyweb/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAphRfFANEdt5WTb87aZZDk
-
-- from: /web/shows/devbytes/...
-  to: https://www.youtube.com/user/ChromeDevelopers/
-
-- from: /web/shows/cds/2015/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICcHeQY02XLvoGL34rZFWZn
-
-- from: /web/shows/cds/2014/...
-  to: https://www.youtube.com/playlist?list=PLOU2XLYxmsILE0KnGTKKj2SsOtxsK_y_d
-
-- from: /web/shows/cds/2013/...
-  to: https://www.youtube.com/playlist?list=PLOU2XLYxmsIJblRBPqrwisutm3dxoa43P
-
-- from: /web/shows/blinkon/6/...
-  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UL-7hTmxb3WQjMwQmANbVPL
-
-- from: /web/shows/blinkon/5/...
-  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UKZdsQFXJJWrwgZAgeAaFWa
 
 - from: /web/shows/blinkon/4/...
   to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UJNn8CSB0YFywnNIjfDXH5i
 
+- from: /web/shows/blinkon/5/...
+  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UKZdsQFXJJWrwgZAgeAaFWa
+
+- from: /web/shows/blinkon/6/...
+  to: https://www.youtube.com/playlist?list=PL9ioqAuyl6UL-7hTmxb3WQjMwQmANbVPL
+
 - from: /web/shows/blinkon/...
   to: https://www.youtube.com/user/blinkontalks/
+
+- from: /web/shows/cds/2013/...
+  to: https://www.youtube.com/playlist?list=PLOU2XLYxmsIJblRBPqrwisutm3dxoa43P
+
+- from: /web/shows/cds/2014/...
+  to: https://www.youtube.com/playlist?list=PLOU2XLYxmsILE0KnGTKKj2SsOtxsK_y_d
+
+- from: /web/shows/cds/2015/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICcHeQY02XLvoGL34rZFWZn
+
+- from: /web/shows/http203/series-1/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
+
+- from: /web/shows/http203/series-2/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
+
+- from: /web/shows/http203/series-3/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
+
+- from: /web/shows/lazyweb/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAphRfFANEdt5WTb87aZZDk
+
+- from: /web/shows/new-in-chrome/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
+
+- from: /web/shows/polycasts/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo
+
+- from: /web/shows/pwa-devsummit/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb
+
+- from: /web/shows/supercharged/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBz9ACEQRmO9Lw8PW7vn0lr
+
+- from: /web/shows/ttt/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIB3ci6nwNyLYNU6RDOU3YyL
+
+- from: /web/shows/webrtc/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICT_h7pn39XpU4JkqOja3p-
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/shows/...
+  to: https://www.youtube.com/user/ChromeDevelopers/

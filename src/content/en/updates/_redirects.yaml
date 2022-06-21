@@ -1,549 +1,1643 @@
 #
-# ATTENTION: Put redirects for content migrated to web.dev in /en/_redirects.yaml
+# ATTENTION - Changes made to this file not in GitHub will be over written!
 #
-
+# Redirects should be scoped to this path and be added in alphebetical order.
+#
 redirects:
-
-- from: /web/updates/nic
-  to: /web/updates/2020/11/nic87
-
-- from: /web/updates/2019/02/priority-hints
-  to: https://web.dev/priority-hints/
-
-# Media Updates
-
-- from: /web/updates/2017/03/chrome-58-media-updates
-  to: https://developer.chrome.com/blog/media-updates-in-chrome-58/
-
-- from: /web/updates/2017/07/chrome-61-media-updates
-  to: https://developer.chrome.com/blog/media-updates-in-chrome-61/
-
-- from: /web/updates/2017/09/chrome-62-media-updates
-  to: https://developer.chrome.com/blog/media-updates-in-chrome-62/
-
-- from: /web/updates/2017/12/chrome-63-64-media-updates
-  to: https://developer.chrome.com/blog/media-updates-in-chrome-63-64/
-
-- from: /web/updates/2018/08/chrome-69-media-updates
-  to: https://developer.chrome.com/blog/media-updates-in-chrome-69/
-
-- from: /web/updates/2018/09/chrome-70-media-updates
-  to: https://developer.chrome.com/blog/media-updates-in-chrome-70/
-
-- from: /web/updates/2019/02/chrome-73-media-updates
-  to: https://developer.chrome.com/blog/media-updates-in-chrome-73/
-
-- from: /web/updates/2019/07/chrome-75-media-updates
-  to: https://developer.chrome.com/blog/media-updates-in-chrome-75/
-
-# DevTools
-
-- from: /web/updates/2017/05/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-60/
-
-- from: /web/updates/2017/07/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-61/
-
-- from: /web/updates/2017/08/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-62/
-
-- from: /web/updates/2017/10/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-63/
-
-- from: /web/updates/2017/11/devtools-release-notes
-  to: https://developer.chrome.com/blog/new-in-devtools-64/
-
-- from: /web/updates/2018/01/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-65/
-
-- from: /web/updates/2018/02/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-66/
-
-- from: /web/updates/2018/04/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-67/
-
-- from: /web/updates/2018/05/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-68/
-
-- from: /web/updates/2018/08/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-70/
-
-- from: /web/updates/2018/10/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-71/
-
-- from: /web/updates/2018/11/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-72/
-
-- from: /web/updates/2019/01/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-73/
-
-- from: /web/updates/2019/03/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-74/
-
-- from: /web/updates/2019/04/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-75/
-
-- from: /web/updates/2019/05/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-76/
-
-- from: /web/updates/2019/07/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-77/
-
-- from: /web/updates/2019/09/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-78/
-
-- from: /web/updates/2019/10/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-79/
-
-- from: /web/updates/2019/12/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-80/
-
-- from: /web/updates/2020/01/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-81/
-
-- from: /web/updates/2020/03/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-83/
-
-- from: /web/updates/2020/05/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-84/
-
-- from: /web/updates/2020/06/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-85/
-
-- from: /web/updates/2020/08/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-86/
-
-- from: /web/updates/2020/10/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-87/
-
-- from: /web/updates/2020/11/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-88/
-
-- from: /web/updates/2021/01/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-89/
-
-- from: /web/updates/2021/02/devtools
-  to: https://developer.chrome.com/blog/new-in-devtools-90/
-
-# DevTools engineering blog
-- from: /web/updates/2021/02/css-in-js
-  to: https://developer.chrome.com/blog/css-in-js/
-
-- from: /web/updates/2021/02/faster-devtools-startup
-  to: https://developer.chrome.com/blog/faster-devtools-startup/
-
-- from: /web/updates/2021/01/puppeteer-typescript
-  to: https://developer.chrome.com/blog/puppeteer-typescript/
-
-- from: /web/updates/2020/12/webassembly
-  to: https://developer.chrome.com/blog/wasm-debugging-2020/
-
-- from: /web/updates/2020/12/migrating-to-web-components
-  to: https://developer.chrome.com/blog/migrating-to-web-components/
-
-- from: /web/updates/2020/11/cvd
-  to: https://developer.chrome.com/blog/cvd/
-
-- from: /web/updates/2020/11/puppetaria
-  to: https://developer.chrome.com/blog/puppetaria/
-
-- from: /web/updates/2020/10/webauthn-tab
-  to: https://developer.chrome.com/blog/webauthn-tab/
-
-- from: /web/updates/2020/09/issues-tab
-  to: https://developer.chrome.com/blog/issues-tab/
-
-- from: /web/updates/2020/09/migrating-to-js-modules
-  to: https://developer.chrome.com/blog/migrating-to-js-modules/
-
-- from: /web/updates/2019/12/webassembly
-  to: https://developer.chrome.com/blog/wasm-debugging-2019/
-
-# Redirects for TWA content
-
-- from: /web/updates/2019/02/using-twa
-  to: /web/android/trusted-web-activity/
-
-- from: /web/updates/2019/08/twas-quickstart
-  to: /web/android/trusted-web-activity/quick-start/
-
-- from: /web/updates/2020/01/twa-android-browser-helper
-  to: /web/android/trusted-web-activity/android-browser-helper-migration/
-
-- from: /web/updates/2020/01/twa-multi-origin
-  to: /web/android/trusted-web-activity/multi-origin/
-
-- from: /web/updates/2020/02/twa-lay-of-the-land
-  to: /web/android/trusted-web-activity/lay-of-the-land/
-
-- from: /web/updates/2020/03/trusted-web-activity-passing-information
-  to: /web/android/trusted-web-activity/query-parameters/
-
-- from: /web/updates/2020/twa-android-browser-helper
-  to: /web/updates/2020/01/twa-android-browser-helper
-
-- from: /web/updates/2018/06/fresher-sw
-  to: /web/android/trusted-web-activity/
-
-- from: /web/updates/2017/10/using-twa
-  to: /web/android/trusted-web-activity/
-
-# Redirects for content migrated from H5R
+- from: /web/updates/2011/06/Contra-in-HTML5-Web-Audio-API
+  to: https://developer.chrome.com/blog/contra-in-html5-web-audio-api
 
 - from: /web/updates/2011/06/HTML5-Libraries---Late-June
-  to: /web/updates/2011/06/HTML5-Libraries-Late-June
+  to: https://developer.chrome.com/blog/html5-libraries-late-june
 
-- from: /web/updates/2011/06/Welcome-to-updates-html5rocks-com-1
-  to: /web/updates/2011/06/Welcome-to-updates-html5rocks-com
+- from: /web/updates/2011/06/HTML5-Libraries-Late-June
+  to: https://developer.chrome.com/blog/html5-libraries-late-june
+
+- from: /web/updates/2011/06/navigator-onLine-in-Chrome-Dev-channel
+  to: https://developer.chrome.com/blog/navigator-online-in-chrome-dev-channel
 
 - from: /web/updates/2011/06/navigator-onLine-in-Chrome-Dev-channel-1
-  to: /web/updates/2011/06/navigator-onLine-in-Chrome-Dev-channel
+  to: https://developer.chrome.com/blog/navigator-online-in-chrome-dev-channel
+
+- from: /web/updates/2011/06/Page-Visibility-API-Have-I-got-your-attention
+  to: https://developer.chrome.com/blog/page-visibility-api-have-i-got-your-attention
+
+- from: /web/updates/2011/06/Registering-a-custom-protocol-handler
+  to: https://web.dev/registering-a-custom-protocol-handler/
+
+- from: /web/updates/2011/06/Welcome-to-updates-html5rocks-com
+  to: https://developer.chrome.com/blog/welcome-to-updates-html5rocks-com
+
+- from: /web/updates/2011/06/Welcome-to-updates-html5rocks-com-1
+  to: https://developer.chrome.com/blog/welcome-to-updates-html5rocks-com
+
+- from: /web/updates/2011/07/Announcing-New-Game-the-conference-for-HTML5-game-developers
+  to: https://developer.chrome.com/blog/announcing-new-game-the-conference-for-html5-game-developers
+
+- from: /web/updates/2011/07/Don-t-Miss-a-Frame-Using-the-Page-Visibility-API-HTML5-Video
+  to: https://developer.chrome.com/blog/don-t-miss-a-frame-using-the-page-visibility-api-html5-video
 
 - from: /web/updates/2011/07/HTML5-Libraries-Pollyfills---Mid-July
-  to: /web/updates/2011/07/HTML5-Libraries-Polyfills-Mid-July
+  to: https://developer.chrome.com/blog/html5-libraries-polyfills-mid-july
 
-- from: /web/updates/2012/04/Big-boost-to-DOM-performance---WebKit-s-innerHTML-is-240-faster
-  to: /web/updates/2012/04/Big-boost-to-DOM-performance-WebKit-s-innerHTML-is-240-faster
+- from: /web/updates/2011/07/HTML5-Libraries-polyfills-Mid-July
+  to: https://developer.chrome.com/blog/html5-libraries-polyfills-mid-july
 
-- from: /web/updates/2012/07/Arrived-xhr-send-ArrayBufferViews
-  to: /web/updates/2012/07/Arrived-xhr-send-ArrayBufferView
+- from: /web/updates/2011/07/Multiplayer-Audio-Fun
+  to: https://web.dev/multiplayer-audio-fun/
 
-- from: /web/updates/2013/02/WebRTC-data-channels-API-changes-and-Chrome-talks-to-Firefox
-  to: /web/updates/2013/02/WebRTC-RTCDataChannel-demo-API-changes-and-Chrome-talks-to-Firefox
+- from: /web/updates/2011/07/Using-Cross-domain-images-in-WebGL
+  to: https://developer.chrome.com/blog/using-cross-domain-images-in-webgl
 
-- from: /web/updates/2013/10/Web-Audio-live-audio-input---now-on-Android
-  to: /web/updates/2013/10/Web-Audio-live-audio-input-now-on-Android
+- from: /web/updates/2011/08/Debugging-the-Filesystem-API
+  to: https://developer.chrome.com/blog/debugging-the-filesystem-api
 
-- from: /web/updates/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API
-  to: /web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API
+- from: /web/updates/2011/08/Downloading-resources-in-HTML5-a-download
+  to: https://web.dev/downloading-resources-in-html5-a-download/
 
-- from: /web/updates/2014/05/Web-Animations-element.animate-is-now-in-Chrome-36
-  to: /web/updates/2014/05/Web-Animations-element-animate-is-now-in-Chrome-36
-
-- from: /web/updates/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36
-  to: /web/updates/2014/05/Web-Animations-element-animate-is-now-in-Chrome-36
-
-- from: /web/updates/2014/08/Easier-ArrayBuffer---String-conversion-with-the-Encoding-API
-  to: /web/updates/2014/08/Easier-ArrayBuffer-String-conversion-with-the-Encoding-API
-
-- from: /web/updates/2014/12/fundamental-of-web-dev
-  to: /web/updates/2014/12/Fundamental-of-Mobile-Web-Development
-
-- from: /web/updates/2015/01/applied-science-runtime-performance
-  to: /web/updates/2015/01/Chrome-Dev-Summit-Applied-Science-Runtime-Perf
-
-- from: /web/updates/2015/01/polymer-state-of-the-union
-  to: /web/updates/2015/01/Polymer-State-of-the-Union
-
-- from: /web/updates/2015/01/virtual-viewport
-  to: /web/updates/2015/01/What-the-Viewport
-
-- from: /web/updates/2015/03/24/devtools-timeline-now-providing-the-full-story
-  to: /web/updates/2015/03/devtools-timeline-now-providing-the-full-story
-
-- from: /web/updates/2015/03/push-notificatons-on-the-open-web
-  to: /web/updates/2015/03/push-notifications-on-the-open-web
-
-- from: /web/updates/2015/04/19/the-easing-editor
-  to: /web/updates/2015/04/the-easing-editor
-
-- from: /web/updates/2015/04/20/unfinished-network-requests
-  to: /web/updates/2015/04/unfinished-network-requests
-
-- from: /web/updates/2015/04/21/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
-  to: /web/updates/2015/04/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
-
-- from: /web/updates/2015/04/22/alt-click-to-expand-all-child-nodes
-  to: /web/updates/2015/04/alt-click-to-expand-all-child-nodes
-
-- from: /web/updates/2015/04/23/the-currently-selected-dom-node
-  to: /web/updates/2015/04/the-currently-selected-dom-node
-
-- from: /web/updates/2015/04/24/better-incognito-devtools
-  to: /web/updates/2015/04/better-incognito-devtools
-
-- from: /web/updates/2015/04/25/command-click-to-add-multiple-cursors-in-the-sources-panel
-  to: /web/updates/2015/04/command-click-to-add-multiple-cursors-in-the-sources-panel
-
-- from: /web/updates/2015/04/26/quickly-monitor-events-from-the-console-panel
-  to: /web/updates/2015/04/quickly-monitor-events-from-the-console-panel
-
-- from: /web/updates/2015/04/27/see-matching-selectors
-  to: /web/updates/2015/04/quickly-monitor-events-from-the-console-panel
-
-- from: /web/updates/2015/04/28/reveal-in-elements-panel
-  to: /web/updates/2015/04/reveal-in-elements-panel
-
-- from: /web/updates/2015/04/29/copy-image-as-data-uri
-  to: /web/updates/2015/04/copy-image-as-data-uri
-
-- from: /web/updates/2015/04/30/quick-edit-element-tags
-  to: /web/updates/2015/04/quick-edit-element-tags
-
-- from: /web/updates/2015/04/DOM-attributes-now-on-the-prototype
-  to: /web/updates/2015/04/DOM-attributes-now-on-the-prototype-chain
-
-- from: /web/updates/2015/04/devtools-timeline-improvements
-  to: /web/updates/2015/03/devtools-timeline-now-providing-the-full-story
-
-- from: /web/updates/2015/04/web-animations-naming
-  to: /web/updates/2015/04/simplified-concepts-in-web-animations-naming
-
-- from: /web/updates/2015/05/01/predefined-snippets
-  to: /web/updates/2015/05/predefined-snippets
-
-- from: /web/updates/2015/05/02/perform-a-column-selection-by-by-dragging
-  to: /web/updates/2015/05/perform-a-column-selection-by-by-dragging
-
-- from: /web/updates/2015/05/03/copy-the-response-of-a-network-resource-to-your-clipboard
-  to: /web/updates/2015/05/copy-the-response-of-a-network-resource-to-your-clipboard
-
-- from: /web/updates/2015/05/04/cycle-through-editing-locations
-  to: /web/updates/2015/05/cycle-through-editing-locations
-
-- from: /web/updates/2015/05/05/hard-reload
-  to: /web/updates/2015/05/hard-reload
-
-- from: /web/updates/2015/05/05/local-modifications
-  to: /web/updates/2015/05/local-modifications
-
-- from: /web/updates/2015/05/06/granular-statement-highlights
-  to: /web/updates/2015/05/granular-statement-highlights
-
-- from: /web/updates/2015/05/07/easily-jump-to-event-listeners
-  to: /web/updates/2015/05/easily-jump-to-event-listeners
-
-- from: /web/updates/2015/05/08/go-to-a-line-number-at-a-specific-column
-  to: /web/updates/2015/05/go-to-a-line-number-at-a-specific-column
-
-- from: /web/updates/2015/05/09/easy-timeline-recording
-  to: /web/updates/2015/05/easy-timeline-recording
-
-- from: /web/updates/2015/05/10/get-notified-of-js-errors-while-you-type
-  to: /web/updates/2015/05/get-notified-of-js-errors-while-you-type
-
-- from: /web/updates/2015/05/11/expand-css-shorthand-properties
-  to: /web/updates/2015/05/expand-css-shorthand-properties
-
-- from: /web/updates/2015/05/11/port-forwarding
-  to: /web/updates/2015/05/port-forwarding
-
-- from: /web/updates/2015/05/11/search-dom-tree-by-css-selector
-  to: /web/updates/2015/05/search-dom-tree-by-css-selector
-
-- from: /web/updates/2015/05/12/film-strips-in-network-panel
-  to: /web/updates/2015/05/film-strips-in-network-panel
-
-- from: /web/updates/2015/05/12/triggering-of-pseudo-classes
-  to: /web/updates/2015/05/triggering-of-pseudo-classes
-
-- from: /web/updates/2015/05/13/scroll-elements-into-the-viewport
-  to: /web/updates/2015/05/scroll-elements-into-the-viewport
-
-- from: /web/updates/2015/05/14/view-and-change-your-dom-breakpoints
-  to: /web/updates/2015/05/view-and-change-your-dom-breakpoints
-
-- from: /web/updates/2015/05/15/autocomplete-for-bracket-notation
-  to: /web/updates/2015/05/autocomplete-for-bracket-notation
-
-- from: /web/updates/2015/05/15/replay-a-network-request-in-curl
-  to: /web/updates/2015/05/replay-a-network-request-in-curl
-
-- from: /web/updates/2015/05/16/quickly-change-css-values
-  to: /web/updates/2015/05/quickly-change-css-values
-
-- from: /web/updates/2015/05/17/automatically-pause-on-any-exception
-  to: /web/updates/2015/05/automatically-pause-on-any-exception
-
-- from: /web/updates/2015/05/18/get-and-debug-event-listeners
-  to: /web/updates/2015/05/get-and-debug-event-listeners
-
-- from: /web/updates/2015/05/High-performance-video-with-hardware-decoding
-  to: /web/updates/2015/05/high-performance-video-with-hardware-decoding
-
-- from: /web/updates/2015/05/Notifying-you-of-notificiation-changes
-  to: /web/updates/2015/05/notifying-you-of-changes-to-notifications
-
-- from: /web/updates/2015/06/18/quickly-edit-view-resources-from-the-elements-panel
-  to: /web/updates/2015/06/quickly-edit-view-resources-from-the-elements-panel
-
-- from: /web/updates/2015/06/checkout-faster-with-Autofill
-  to: /web/updates/2015/06/checkout-faster-with-autofill
-
-- from: /web/updates/2015/06/mse-gapless-audio
-  to: /web/updates/2015/06/Media-Source-Extensions-for-Audio
-
-- from: /web/updates/2015/07/07/preview-javascript-values-inline-while-debugging
-  to: /web/updates/2015/07/preview-javascript-values-inline-while-debugging
-
-- from: /web/updates/2015/07/08/network-colour-groups
-  to: /web/updates/2015/07/network-colour-groups
-
-- from: /web/updates/2015/07/09/project-wide-search-with-optional-file-scope
-  to: /web/updates/2015/07/project-wide-search-with-optional-file-scope
-
-- from: /web/updates/2015/07/10/trigger-a-pseudo-class-on-an-element
-  to: /web/updates/2015/07/trigger-a-pseudo-class-on-an-element
-
-- from: /web/updates/2015/07/13/who-inspects-the-inspector
-  to: /web/updates/2015/07/who-inspects-the-inspector
-
-- from: /web/updates/2015/07/14/print-out-a-quick-stack-trace-from-the-console
-  to: /web/updates/2015/07/print-out-a-quick-stack-trace-from-the-console
-
-- from: /web/updates/2015/07/15/quickly-cycle-through-the-devtools-panels
-  to: /web/updates/2015/07/quickly-cycle-through-the-devtools-panels
-
-- from: /web/updates/2015/07/17/select-and-execute-a-block-of-code-in-the-sources-panel
-  to: /web/updates/2015/07/select-and-execute-a-block-of-code-in-the-sources-panel
-
-- from: /web/updates/2015/07/17/set-a-breakpoint-based-on-a-certain-condition
-  to: /web/updates/2015/07/set-a-breakpoint-based-on-a-certain-condition
-
-- from: /web/updates/2015/07/20/inspect-and-trigger-css-media-queries
-  to: /web/updates/2015/07/inspect-and-trigger-css-media-queries
-
-- from: /web/updates/2015/07/20/shortcut-to-select-the-next-occurrence
-  to: /web/updates/2015/07/shortcut-to-select-the-next-occurrence
-
-- from: /web/updates/2015/07/22/add-a-new-custom-device-as-a-preset
-  to: /web/updates/2015/07/add-a-new-custom-device-as-a-preset
-
-- from: /web/updates/2015/07/23/devtools-digest-aggregated-timeline-details-color-palettes-and-more
-  to: /web/updates/2015/08/devtools-digest-aggregated-timeline-details
-
-- from: /web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling
-  to: /web/updates/2015/07/devtools-digest-film-strip-and-a-new-home-for-throttling
-
-- from: /web/updates/2015/07/24/improved-dom-breadcrumbs
-  to: /web/updates/2015/07/improved-dom-breadcrumbs
-
-- from: /web/updates/2015/07/24/live-edit-css-in-sources
-  to: /web/updates/2015/07/live-edit-css-in-sources
-
-- from: /web/updates/2015/07/using-rotationAngle-and-touchRadius
-  to: /web/updates/2015//07/rotationAngle-and-touchRadius
-
-- from: /web/updates/2015/08/05/google-s-web-tools-in-one-place
-  to: /web/updates/2015/08/google-s-web-tools-in-one-place
-
-- from: /web/updates/2015/08/10/5-tricks-to-use-in-the-console-panel
-  to: /web/updates/2015/08/5-tricks-to-use-in-the-console-panel
-
-- from: /web/updates/2015/08/10/easily-duplicate-dom-nodes
-  to: /web/updates/2015/08/easily-duplicate-dom-nodes
-
-- from: /web/updates/2015/08/10/edit-html-in-the-console-panel
-  to: /web/updates/2015/08/edit-html-in-the-console-panel
-
-- from: /web/updates/2015/08/24/simple-keyboard-tricks-to-use-in-the-styles-pane
-  to: /web/updates/2015/08/simple-keyboard-tricks-to-use-in-the-styles-pane
-
-- from: /web/updates/2015/08/25/the-larger-than-advanced-network-panel-filter-and-a-few-others
-  to: /web/updates/2015/08/the-larger-than-advanced-network-panel-filter-and-a-few-others
-
-- from: /web/updates/2015/08/27/using-requestidlecallback
-  to: /web/updates/2015/08/using-requestidlecallback
-
-- from: /web/updates/2015/08/new-release-of-material-design-lite
-  to: /web/updates/2015/08/material-design-lite-1-0-4-release
-
-- from: /web/updates/2015/09/tab-discarding-in-chrome-46
-  to: /web/updates/2015/09/tab-discarding
-
-- from: /web/updates/2015/09/using-web-app-manifest-to-set-solid-color-loading-screen
-  to: /web/updates/2015/08/using-web-app-manifest-to-set-solid-color-loading-screen
-
-- from: /web/updates/2016/04/geolocation-on-secure-contexts-
-  to: /web/updates/2016/04/geolocation-on-secure-contexts-only
-
-- from: /web/updates/2015/05/19/...
-  to: /web/updates/2015/05/...
-
-# Redirects for tags & pages
-
-- from: /web/updates/tag/datalist
-  to: /web/updates/tags/datalist
-
-- from: /web/updates/tag/filesystem
-  to: /web/updates/tags/filesystem
-
-- from: /web/updates/tag/webrtc
-  to: /web/updates/tags/webrtc
-
-- from: /web/updates/tags/bluetooth
-  to: /web/updates/tags/webbluetooth
-
-- from: /web/updates/tags/mediasourceextensions
-  to: /web/updates/tags/mse
-
-- from: /web/updates/tags/pushmessaging
-  to: /web/updates/tags/webpush
-
-- from: /web/updates/tags/second_screen
-  to: /web/updates/tags/secondscreen
-
-- from: /web/updates/tools
-  to: /web/updates/tags/devtools
-
-- from: /web/updates/tools/...
-  to: /web/updates/devtools/
-
-- from: /web/updates/tip/...
-  to: /web/updates/
-
-- from: /web/updates/pages/...
-  to: /web/updates/
-
-- from: /web/updates/news/...
-  to: /web/updates/
-
-- from: /web/updates/devtools/...
-  to: /web/updates/
-
-- from: /web/updates/chrome-devtools/...
-  to: /web/updates/devtools/
-
-# Redirects for payments
-
-- from: /web/updates/2016/07/payment-request
-  to: https://web.dev/how-payment-request-api-works/
-
-- from: /web/updates/2018/06/payment-handler-api
-  to: https://web.dev/web-based-payment-apps-overview/
+- from: /web/updates/2011/08/insertAdjacentHTML-Everywhere
+  to: https://developer.chrome.com/blog/insertadjacenthtml-everywhere
 
 - from: /web/updates/2011/08/Saving-generated-files-on-the-client-side
   to: https://web.dev/browser-fs-access/
 
-- from: /web/updates/2018/08/chrome-ux-report-dashboard
-  to: https://web.dev/chrome-ux-report-data-studio-dashboard/
+- from: /web/updates/2011/08/Seek-into-local-files-with-the-File-System-API
+  to: https://developer.chrome.com/blog/seek-into-local-files-with-the-file-system-api
 
-- from: /web/updates/2017/01/webcomponents-org
-  to: https://web.dev/webcomponents-org/
+- from: /web/updates/2011/08/What-s-different-in-the-new-WebSocket-protocol
+  to: https://developer.chrome.com/blog/what-s-different-in-the-new-websocket-protocol
+
+- from: /web/updates/2011/09/7-minute-videos-Javascript-Console-Protips-newish-DOM-APIs
+  to: https://developer.chrome.com/blog/7-minute-videos-javascript-console-protips-newish-dom-apis
+
+- from: /web/updates/2011/09/New-Game-Conference-for-HTML5-Game-Developers-Coupon
+  to: https://developer.chrome.com/blog/new-game-conference-for-html5-game-developers-coupon
+
+- from: /web/updates/2011/09/Workers-ArrayBuffer
+  to: https://developer.chrome.com/blog/workers-arraybuffer
+
+- from: /web/updates/2011/10/App-Cache-Tools-and-Auto-Generators
+  to: https://developer.chrome.com/blog/app-cache-tools-and-auto-generators
+
+- from: /web/updates/2011/10/Defining-Scope-In-IndexedDB-Transactions
+  to: https://developer.chrome.com/blog/defining-scope-In-indexeddb-transactions
+
+- from: /web/updates/2011/10/Having-a-ride-with-Three-js
+  to: https://developer.chrome.com/blog/having-a-ride-with-three-js
+
+- from: /web/updates/2011/10/Keeping-up-with-HTML5-and-browser-support
+  to: https://developer.chrome.com/blog/keeping-up-with-html5-and-browser-support
+
+- from: /web/updates/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API
+  to: https://developer.chrome.com/blog/let-your-content-do-the-talking-fullscreen-api
+
+- from: /web/updates/2011/10/Spooktacular-HTML5-Pumpkin
+  to: https://web.dev/Spooktacular-HTML5-Pumpkin/
+
+- from: /web/updates/2011/10/WebSockets-updated-to-latest-version-in-Chrome-Canary
+  to: https://developer.chrome.com/blog/websockets-updated-to-latest-version-in-chrome-canary
+
+- from: /web/updates/2011/11/Chrome-Developer-Tools-for-Speed
+  to: https://developer.chrome.com/blog/chrome-developer-tools-for-speed
+
+- from: /web/updates/2011/11/Quota-Management-API-Fast-Facts
+  to: https://web.dev/storage-for-the-web/
+
+- from: /web/updates/2011/11/Stream-video-using-the-MediaSource-API
+  to: https://developer.chrome.com/blog/stream-video-using-the-mediasource-api
+
+- from: /web/updates/2011/11/WebGL-demo-roundup
+  to: https://developer.chrome.com/blog/webgl-demo-roundup
+
+- from: /web/updates/2011/12/CSS-Filter-Effects-Landing-in-WebKit
+  to: https://developer.chrome.com/blog/css-filter-effects-landing-in-webkit
+
+- from: /web/updates/2011/12/Transferable-Objects-Lightning-Fast
+  to: https://developer.chrome.com/blog/transferable-objects-lightning-fast
+
+- from: /web/updates/2011/12/Use-mediump-precision-in-WebGL-when-possible
+  to: https://developer.chrome.com/blog/use-mediump-precision-in-webgl-when-possible
+
+- from: /web/updates/2012/01/Getting-Rid-of-Synchronous-XHRs
+  to: https://developer.chrome.com/blog/getting-rid-of-synchronous-xhrs
+
+- from: /web/updates/2012/01/Introducing-Video-Player-Sample
+  to: https://developer.chrome.com/blog/introducing-video-player-sample
+
+- from: /web/updates/2012/01/Web-Audio-FAQ
+  to: https://developer.chrome.com/blog/web-audio-faq
+
+- from: /web/updates/2012/02/Chrome-for-Android-Accelerating-the-Mobile-Web
+  to: https://developer.chrome.com/blog/chrome-for-android-accelerating-the-mobile-web
+
+- from: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
+  to: https://developer.chrome.com/blog/detect-dom-changes-with-mutation-observers
+
+- from: /web/updates/2012/02/Getting-Gmail-to-handle-all-mailto-links-with-registerProtocolHandler
+  to: https://developer.chrome.com/blog/getting-gmail-to-handle-all-mailto-links-with-registerprotocolhandler
+
+- from: /web/updates/2012/02/HTML5-audio-and-the-Web-Audio-API-are-BFFs
+  to: https://developer.chrome.com/blog/html5-audio-and-the-web-audio-api-are-bffs
+
+- from: /web/updates/2012/02/Pointer-Lock-API-Brings-FPS-Games-to-the-Browser
+  to: https://developer.chrome.com/blog/pointer-lock-api-brings-fps-games-to-the-browser
+
+- from: /web/updates/2012/02/SwiftShader-brings-software-3D-rendering-to-Chrome
+  to: https://developer.chrome.com/blog/swiftshader-brings-software-3d-rendering-to-chrome
+
+- from: /web/updates/2012/02/WebGL-and-Web-Audio-API-demo-roundup
+  to: https://developer.chrome.com/blog/webgl-and-web-audio-api-demo-roundup
+
+- from: /web/updates/2012/03/A-New-Experimental-Feature-style-scoped
+  to: https://developer.chrome.com/blog/a-new-experimental-feature-style-scoped
+
+- from: /web/updates/2012/03/CSS-layout-gets-smarter-with-calc
+  to: https://developer.chrome.com/blog/css-layout-gets-smarter-with-calc
+
+- from: /web/updates/2012/03/Optimizing-JavaScript
+  to: https://developer.chrome.com/blog/optimizing-javascript
+
+- from: /web/updates/2012/04/Big-boost-to-DOM-performance---WebKit-s-innerHTML-is-240-faster
+  to: https://developer.chrome.com/blog/big-boost-to-dom-performance-webkit-s-innerhtml-is-240-faster
+
+- from: /web/updates/2012/04/Big-boost-to-DOM-performance-WebKit-s-innerHTML-is-240-faster
+  to: https://developer.chrome.com/blog/big-boost-to-dom-performance-webkit-s-innerhtml-is-240-faster
+
+- from: /web/updates/2012/04/datalist-landed-in-Chrome-Canary
+  to: https://developer.chrome.com/blog/datalist-landed-in-chrome-canary
+
+- from: /web/updates/2012/04/Processing-XHR2-file-uploads-in-PHP
+  to: https://developer.chrome.com/blog/processing-xhr2-file-uploads-in-php
+
+- from: /web/updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
+  to: https://developer.chrome.com/blog/round-up-of-web-browser-internals-resources
+
+- from: /web/updates/2012/04/Taking-an-Entire-Page-Offline-using-the-HTML5-FileSystem-API
+  to: https://developer.chrome.com/blog/taking-an-entire-page-offline-using-the-html5-filesystem-api
+
+- from: /web/updates/2012/04/WebRTC-Protothon
+  to: https://developer.chrome.com/blog/webrtc-protothon
+
+- from: /web/updates/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision
+  to: https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision
+
+- from: /web/updates/2012/05/Websocket-Frame-Inspection-now-in-Chrome-DevTools
+  to: https://developer.chrome.com/blog/websocket-frame-inspection-now-in-chrome-devtools
+
+- from: /web/updates/2012/06/Don-t-Build-Blobs-Construct-Them
+  to: https://developer.chrome.com/blog/don-t-build-blobs-construct-them
+
+- from: /web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+  to: https://developer.chrome.com/blog/how-to-convert-arraybuffer-to-and-from-string
+
+- from: /web/updates/2012/06/The-amazing-powers-of-CSS
+  to: https://web.dev/the-amazing-powers-of-css/
+
+- from: /web/updates/2012/07/Arrived-xhr-send-ArrayBufferView
+  to: https://developer.chrome.com/blog/arrived-xhr-send-arraybufferview
+
+- from: /web/updates/2012/07/Arrived-xhr-send-ArrayBufferViews
+  to: https://developer.chrome.com/blog/arrived-xhr-send-arraybufferview
+
+- from: /web/updates/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available
+  to: https://developer.chrome.com/blog/drag-and-drop-a-folder-onto-chrome-now-available
+
+- from: /web/updates/2012/07/How-to-measure-browser-graphics-performance
+  to: https://developer.chrome.com/blog/how-to-measure-browser-graphics-performance
+
+- from: /web/updates/2012/07/Taking-advantage-of-GPU-acceleration-in-the-2D-canvas
+  to: https://developer.chrome.com/blog/taking-advantage-of-gpu-acceleration-in-the-2d-canvas
+
+- from: /web/updates/2012/07/Writing-a-flippable-book-using-CSS-Regions-and-3D-transforms
+  to: https://developer.chrome.com/blog/writing-a-flippable-book-using-css-regions-and-3d-transforms
+
+- from: /web/updates/2012/08/datalist-for-range-color-inputs-offer-some-default-choices
+  to: https://developer.chrome.com/blog/datalist-for-range-color-inputs-offer-some-default-choices
+
+- from: /web/updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API
+  to: https://developer.chrome.com/blog/integrating-input-type-file-with-the-filesystem-api
+
+- from: /web/updates/2012/08/Quick-FAQs-on-input-type-date-in-Google-Chrome
+  to: https://developer.chrome.com/blog/quick-faqs-on-input-type-date-in-google-chrome
+
+- from: /web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit
+  to: https://developer.chrome.com/blog/stick-your-landings-position-sticky-lands-in-webkit
+
+- from: /web/updates/2012/08/When-milliseconds-are-not-enough-performance-now
+  to: https://developer.chrome.com/blog/when-milliseconds-are-not-enough-performance-now
+
+- from: /web/updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps
+  to: https://developer.chrome.com/blog/interactive-globe-with-css-shaders-google-maps
+
+- from: /web/updates/2012/09/Live-Web-Audio-Input-Enabled
+  to: https://developer.chrome.com/blog/live-web-audio-input-enabled
+
+- from: /web/updates/2012/09/Stacking-Changes-Coming-to-position-fixed-elements
+  to: https://developer.chrome.com/blog/stacking-changes-coming-to-position-fixed-elements
+
+- from: /web/updates/2012/11/Content-Security-Policy-1-0-is-officially-awesome
+  to: https://developer.chrome.com/blog/content-security-policy-1-0-is-officially-awesome
+
+- from: /web/updates/2012/11/Respond-to-change-with-Object-observe
+  to: https://developer.chrome.com/blog/respond-to-change-with-object-observe
+
+- from: /web/updates/2012/12/Canvas-driven-background-images
+  to: https://developer.chrome.com/blog/canvas-driven-background-images
+
+- from: /web/updates/2012/12/Screensharing-with-WebRTC
+  to: https://developer.chrome.com/blog/screensharing-with-webrtc
+
+- from: /web/updates/2012/12/WebRTC-hits-Firefox-Android-and-iOS
+  to: https://developer.chrome.com/blog/webrtc-hits-firefox-android-and-ios
+
+- from: /web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API
+  to: https://developer.chrome.com/blog/voice-driven-web-apps-introduction-to-the-web-speech-api
+
+- from: /web/updates/2013/02/CSS-Background-shorthand-coming-to-mobile-WebKit-browsers
+  to: https://developer.chrome.com/blog/css-background-shorthand-coming-to-mobile-webkit-browsers
+
+- from: /web/updates/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode
+  to: https://developer.chrome.com/blog/profiling-long-paint-times-with-devtools-continuous-painting-mode
+
+- from: /web/updates/2013/02/WebRTC-data-channels-API-changes-and-Chrome-talks-to-Firefox
+  to: https://developer.chrome.com/blog/webrtc-rtcdatachannel-demo-api-changes-and-chrome-talks-to-firefox
+
+- from: /web/updates/2013/02/WebRTC-RTCDataChannel-demo-API-changes-and-Chrome-talks-to-Firefox
+  to: https://developer.chrome.com/blog/webrtc-rtcdatachannel-demo-api-changes-and-chrome-talks-to-firefox
+
+- from: /web/updates/2013/03/Introduction-to-Custom-Filters-aka-CSS-Shaders
+  to: https://developer.chrome.com/blog/introduction-to-custom-filters-aka-css-shaders
+
+- from: /web/updates/2013/03/Visualizing-Shadow-DOM-Concepts
+  to: https://developer.chrome.com/blog/visualizing-shadow-dom-concepts
+
+- from: /web/updates/2013/03/What-s-the-CSS-scope-pseudo-class-for
+  to: https://web.dev/what-s-the-CSS-scope-pseudo-class-for/
+
+- from: /web/updates/2013/06/sourceMappingURL-and-sourceURL-syntax-changed
+  to: https://developer.chrome.com/blog/sourcemappingurl-and-sourceurl-syntax-changed
+
+- from: /web/updates/2013/07/Alpha-transparency-in-Chrome-video
+  to: https://developer.chrome.com/blog/alpha-transparency-in-chrome-video
+
+- from: /web/updates/2013/09/DevTools-answers-What-font-is-that
+  to: https://developer.chrome.com/blog/devtools-answers-what-font-is-that
+
+- from: /web/updates/2013/09/dialog-element-Modals-made-easy
+  to: https://developer.chrome.com/blog/dialog-element-modals-made-easy
+
+- from: /web/updates/2013/10/Flexbox-layout-isn-t-slow
+  to: https://developer.chrome.com/blog/flexbox-layout-isn-t-slow
+
+- from: /web/updates/2013/10/Web-Audio-live-audio-input---now-on-Android
+  to: https://developer.chrome.com/blog/web-audio-live-audio-input-now-on-android
+
+- from: /web/updates/2013/10/Web-Audio-live-audio-input-now-on-Android
+  to: https://developer.chrome.com/blog/web-audio-live-audio-input-now-on-android
+
+- from: /web/updates/2013/11/The-Landscape-Of-Front-end-Development-Automation-Slides
+  to: https://developer.chrome.com/blog/the-landscape-of-front-end-development-automation-slides
+
+- from: /web/updates/2013/11/The-Yeoman-Monthly-Digest-1
+  to: https://developer.chrome.com/blog/the-yeoman-monthly-digest-1
+
+- from: /web/updates/2013/12/300ms-tap-delay-gone-away
+  to: https://developer.chrome.com/blog/300ms-tap-delay-gone-away
+
+- from: /web/updates/2013/12/DevTools-Digest-December-2013
+  to: https://developer.chrome.com/blog/devtools-digest-december-2013
+
+- from: /web/updates/2013/12/New-Web-Animations-engine-in-Blink-drives-CSS-Animations-Transitions
+  to: https://developer.chrome.com/blog/new-web-animations-engine-in-blink-drives-css-animations-transitions
+
+- from: /web/updates/2013/12/The-Yeoman-Monthly-Digest-2
+  to: https://developer.chrome.com/blog/the-yeoman-monthly-digest-2
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Mobile-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-mobile-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Open-Web-Platform-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-open-web-platform-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Performance-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-performance-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Platforms-Summary
+  to: https://developer.chrome.com/blog/chrome-dev-summit-platforms-summary
+
+- from: /web/updates/2014/01/Chrome-Dev-Summit-Polymer-declarative-encapsulated-reusable-components
+  to: https://developer.chrome.com/blog/chrome-dev-summit-polymer-declarative-encapsulated-reusable-components
+
+- from: /web/updates/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API
+  to: https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api
+
+- from: /web/updates/2014/01/Web-apps-that-talk-Introduction-to-the-Speech-Synthesis-API
+  to: https://developer.chrome.com/blog/web-apps-that-talk-introduction-to-the-speech-synthesis-api
+
+- from: /web/updates/2014/01/Yo-Polymer-A-Whirlwind-Tour-Of-Web-Component-Tooling
+  to: https://developer.chrome.com/blog/yo-polymer-a-whirlwind-tour-of-web-component-tooling
+
+- from: /web/updates/2014/02/The-Yeoman-Monthly-Digest-3
+  to: https://developer.chrome.com/blog/the-yeoman-monthly-digest-3
+
+- from: /web/updates/2014/03/Get-on-the-CSS-Grid
+  to: https://developer.chrome.com/blog/get-on-the-css-grid
+
+- from: /web/updates/2014/05/A-More-Compatible-Smoother-Touch
+  to: https://developer.chrome.com/blog/a-more-compatible-smoother-touch
+
+- from: /web/updates/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36
+  to: https://developer.chrome.com/blog/web-animations-element-animate-is-now-in-chrome-36
+
+- from: /web/updates/2014/05/Web-Animations-element-animate-is-now-in-Chrome-36
+  to: https://developer.chrome.com/blog/web-animations-element-animate-is-now-in-chrome-36
+
+- from: /web/updates/2014/05/Web-Animations-element.animate-is-now-in-Chrome-36
+  to: https://developer.chrome.com/blog/web-animations-element-animate-is-now-in-chrome-36
+
+- from: /web/updates/2014/06/Automating-Web-Performance-Measurement
+  to: https://developer.chrome.com/blog/automating-web-performance-measurement
+
+- from: /web/updates/2014/07/Blob-support-for-IndexedDB-landed-on-Chrome-Dev
+  to: https://developer.chrome.com/blog/blob-support-for-Indexeddb-landed-on-chrome-dev
+
+- from: /web/updates/2014/07/dialog-element-shipped-in-Chrome-37-Beta
+  to: https://developer.chrome.com/blog/dialog-element-shipped-in-chrome-37-beta
+
+- from: /web/updates/2014/07/Web-Audio-Changes-in-m36
+  to: https://developer.chrome.com/blog/web-audio-changes-in-m36
+
+- from: /web/updates/2014/08/Collecting-and-Iterating-the-ES6-Way
+  to: https://developer.chrome.com/blog/collecting-and-iterating-the-es6-way
+
+- from: /web/updates/2014/08/Easier-ArrayBuffer---String-conversion-with-the-Encoding-API
+  to: https://developer.chrome.com/blog/easier-arraybuffer-string-conversion-with-the-encoding-api
+
+- from: /web/updates/2014/08/Easier-ArrayBuffer-String-conversion-with-the-Encoding-API
+  to: https://developer.chrome.com/blog/easier-arraybuffer-string-conversion-with-the-encoding-api
+
+- from: /web/updates/2014/09/Precision-Touch-for-Precise-Gestures
+  to: https://developer.chrome.com/blog/precision-touch-for-precise-gestures
+
+- from: /web/updates/2014/10/Generators-the-Gnarly-Bits
+  to: https://developer.chrome.com/blog/generators-the-gnarly-bits
+
+- from: /web/updates/2014/10/Send-beacon-data-in-Chrome-39
+  to: https://developer.chrome.com/blog/send-beacon-data-in-chrome-39
+
+- from: /web/updates/2014/11/frame-timing-api
+  to: https://developer.chrome.com/blog/frame-timing-api
+
+- from: /web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android
+  to: https://web.dev/customize-install/
+
+- from: /web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  to: https://developer.chrome.com/blog/support-for-theme-color-in-chrome-39-for-android
+
+- from: /web/updates/2014/12/Fundamental-of-Mobile-Web-Development
+  to: https://developer.chrome.com/blog/fundamental-of-mobile-web-development
+
+- from: /web/updates/2014/12/fundamental-of-web-dev
+  to: https://developer.chrome.com/blog/fundamental-of-mobile-web-development
+
+- from: /web/updates/2014/12/web-animation-playback
+  to: https://developer.chrome.com/blog/web-animation-playback
+
+- from: /web/updates/2015/01/applied-science-runtime-performance
+  to: https://developer.chrome.com/blog/chrome-dev-summit-applied-science-runtime-perf
+
+- from: /web/updates/2015/01/Chrome-Dev-Summit-Applied-Science-Runtime-Perf
+  to: https://developer.chrome.com/blog/chrome-dev-summit-applied-science-runtime-perf
+
+- from: /web/updates/2015/01/ES6-Template-Strings
+  to: https://developer.chrome.com/blog/es6-template-strings
+
+- from: /web/updates/2015/01/Lets-build-some-apps-with-Polymer
+  to: https://developer.chrome.com/blog/lets-build-some-apps-with-polymer
+
+- from: /web/updates/2015/01/pixelated
+  to: https://developer.chrome.com/blog/pixelated
+
+- from: /web/updates/2015/01/polymer-state-of-the-union
+  to: https://developer.chrome.com/blog/polymer-state-of-the-union
+
+- from: /web/updates/2015/01/Polymer-State-of-the-Union
+  to: https://developer.chrome.com/blog/polymer-state-of-the-union
+
+- from: /web/updates/2015/01/virtual-viewport
+  to: https://developer.chrome.com/blog/what-the-viewport
+
+- from: /web/updates/2015/01/What-the-Viewport
+  to: https://developer.chrome.com/blog/what-the-viewport
+
+- from: /web/updates/2015/02/offline-first-with-sw-precache
+  to: https://developer.chrome.com/docs/workbox/
+
+- from: /web/updates/2015/03/24/devtools-timeline-now-providing-the-full-story
+  to: https://developer.chrome.com/blog/devtools-timeline-now-providing-the-full-story
+
+- from: /web/updates/2015/03/creating-semantic-sites-with-web-components-and-jsonld
+  to: https://developer.chrome.com/blog/creating-semantic-sites-with-web-components-and-jsonld
+
+- from: /web/updates/2015/03/devtools-timeline-now-providing-the-full-story
+  to: https://developer.chrome.com/blog/devtools-timeline-now-providing-the-full-story
+
+- from: /web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
+  to: https://web.dev/customize-install/
+
+- from: /web/updates/2015/03/introduction-to-fetch
+  to: https://web.dev/introduction-to-fetch/
+
+- from: /web/updates/2015/03/push-notifications-on-the-open-web
+  to: https://developer.chrome.com/blog/push-notifications-on-the-open-web
+
+- from: /web/updates/2015/03/push-notificatons-on-the-open-web
+  to: https://developer.chrome.com/blog/push-notifications-on-the-open-web
+
+- from: /web/updates/2015/04/19/the-easing-editor
+  to: https://developer.chrome.com/blog/the-easing-editor
+
+- from: /web/updates/2015/04/20/unfinished-network-requests
+  to: https://developer.chrome.com/blog/unfinished-network-requests
+
+- from: /web/updates/2015/04/21/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
+  to: https://developer.chrome.com/blog/toggle-the-devtools-dock-state-with-a-keyboard-shortcut-2
+
+- from: /web/updates/2015/04/22/alt-click-to-expand-all-child-nodes
+  to: https://developer.chrome.com/blog/alt-click-to-expand-all-child-nodes
+
+- from: /web/updates/2015/04/23/the-currently-selected-dom-node
+  to: https://developer.chrome.com/blog/the-currently-selected-dom-node
+
+- from: /web/updates/2015/04/24/better-incognito-devtools
+  to: https://developer.chrome.com/blog/better-incognito-devtools
+
+- from: /web/updates/2015/04/25/command-click-to-add-multiple-cursors-in-the-sources-panel
+  to: https://developer.chrome.com/blog/command-click-to-add-multiple-cursors-in-the-sources-panel
+
+- from: /web/updates/2015/04/26/quickly-monitor-events-from-the-console-panel
+  to: https://developer.chrome.com/blog/quickly-monitor-events-from-the-console-panel
+
+- from: /web/updates/2015/04/27/see-matching-selectors
+  to: https://developer.chrome.com/blog/quickly-monitor-events-from-the-console-panel
+
+- from: /web/updates/2015/04/28/reveal-in-elements-panel
+  to: https://developer.chrome.com/blog/reveal-in-elements-panel
+
+- from: /web/updates/2015/04/29/copy-image-as-data-uri
+  to: https://developer.chrome.com/blog/copy-image-as-data-uri
+
+- from: /web/updates/2015/04/30/quick-edit-element-tags
+  to: https://developer.chrome.com/blog/quick-edit-element-tags
 
 - from: /web/updates/2015/04/a-new-home-for-devtools
   to: https://developer.chrome.com/blog/a-new-home-for-devtools/
 
+- from: /web/updates/2015/04/alt-click-to-expand-all-child-nodes
+  to: https://developer.chrome.com/blog/alt-click-to-expand-all-child-nodes
+
+- from: /web/updates/2015/04/autocapitalize
+  to: https://developer.chrome.com/blog/autocapitalize
+
+- from: /web/updates/2015/04/better-incognito-devtools
+  to: https://developer.chrome.com/blog/better-incognito-devtools
+
+- from: /web/updates/2015/04/command-click-to-add-multiple-cursors-in-the-sources-panel
+  to: https://developer.chrome.com/blog/command-click-to-add-multiple-cursors-in-the-sources-panel
+
+- from: /web/updates/2015/04/copy-image-as-data-uri
+  to: https://developer.chrome.com/blog/copy-image-as-data-uri
+
+- from: /web/updates/2015/04/cut-and-copy-commands
+  to: https://developer.chrome.com/blog/cut-and-copy-commands
+
+- from: /web/updates/2015/04/devtools-timeline-improvements
+  to: https://developer.chrome.com/blog/devtools-timeline-now-providing-the-full-story
+
+- from: /web/updates/2015/04/DOM-attributes-now-on-the-prototype
+  to: https://developer.chrome.com/blog/DOM-attributes-now-on-the-prototype-chain
+
+- from: /web/updates/2015/04/DOM-attributes-now-on-the-prototype-chain
+  to: https://developer.chrome.com/blog/DOM-attributes-now-on-the-prototype-chain
+
+- from: /web/updates/2015/04/permissions-api-for-the-web
+  to: https://developer.chrome.com/blog/permissions-api-for-the-web
+
+- from: /web/updates/2015/04/quick-edit-element-tags
+  to: https://developer.chrome.com/blog/quick-edit-element-tags
+
+- from: /web/updates/2015/04/quickly-monitor-events-from-the-console-panel
+  to: https://developer.chrome.com/blog/quickly-monitor-events-from-the-console-panel
+
+- from: /web/updates/2015/04/reveal-in-elements-panel
+  to: https://developer.chrome.com/blog/reveal-in-elements-panel
+
+- from: /web/updates/2015/04/see-matching-selectors
+  to: https://developer.chrome.com/blog/see-matching-selectors
+
+- from: /web/updates/2015/04/simplified-concepts-in-web-animations-naming
+  to: https://developer.chrome.com/blog/simplified-concepts-in-web-animations-naming
+
+- from: /web/updates/2015/04/the-currently-selected-dom-node
+  to: https://developer.chrome.com/blog/the-currently-selected-dom-node
+
+- from: /web/updates/2015/04/the-easing-editor
+  to: https://developer.chrome.com/blog/the-easing-editor
+
+- from: /web/updates/2015/04/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
+  to: https://developer.chrome.com/blog/toggle-the-devtools-dock-state-with-a-keyboard-shortcut-2
+
+- from: /web/updates/2015/04/unfinished-network-requests
+  to: https://developer.chrome.com/blog/unfinished-network-requests
+
+- from: /web/updates/2015/04/web-animations-naming
+  to: https://developer.chrome.com/blog/simplified-concepts-in-web-animations-naming
+
+- from: /web/updates/2015/05/01/predefined-snippets
+  to: https://developer.chrome.com/blog/predefined-snippets
+
+- from: /web/updates/2015/05/02/perform-a-column-selection-by-by-dragging
+  to: https://developer.chrome.com/blog/perform-a-column-selection-by-by-dragging
+
+- from: /web/updates/2015/05/03/copy-the-response-of-a-network-resource-to-your-clipboard
+  to: https://developer.chrome.com/blog/copy-the-response-of-a-network-resource-to-your-clipboard
+
+- from: /web/updates/2015/05/04/cycle-through-editing-locations
+  to: https://developer.chrome.com/blog/cycle-through-editing-locations
+
+- from: /web/updates/2015/05/05/hard-reload
+  to: https://developer.chrome.com/blog/hard-reload
+
+- from: /web/updates/2015/05/05/local-modifications
+  to: https://developer.chrome.com/blog/local-modifications
+
+- from: /web/updates/2015/05/06/granular-statement-highlights
+  to: https://developer.chrome.com/blog/granular-statement-highlights
+
+- from: /web/updates/2015/05/07/easily-jump-to-event-listeners
+  to: https://developer.chrome.com/blog/easily-jump-to-event-listeners
+
+- from: /web/updates/2015/05/08/go-to-a-line-number-at-a-specific-column
+  to: https://developer.chrome.com/blog/go-to-a-line-number-at-a-specific-column
+
+- from: /web/updates/2015/05/09/easy-timeline-recording
+  to: https://developer.chrome.com/blog/easy-timeline-recording
+
+- from: /web/updates/2015/05/10/get-notified-of-js-errors-while-you-type
+  to: https://developer.chrome.com/blog/get-notified-of-js-errors-while-you-type
+
+- from: /web/updates/2015/05/11/expand-css-shorthand-properties
+  to: https://developer.chrome.com/blog/expand-css-shorthand-properties
+
+- from: /web/updates/2015/05/11/port-forwarding
+  to: https://developer.chrome.com/blog/port-forwarding
+
+- from: /web/updates/2015/05/11/search-dom-tree-by-css-selector
+  to: https://developer.chrome.com/blog/search-dom-tree-by-css-selector
+
+- from: /web/updates/2015/05/12/film-strips-in-network-panel
+  to: https://developer.chrome.com/blog/film-strips-in-network-panel
+
+- from: /web/updates/2015/05/12/triggering-of-pseudo-classes
+  to: https://developer.chrome.com/blog/triggering-of-pseudo-classes
+
+- from: /web/updates/2015/05/13/scroll-elements-into-the-viewport
+  to: https://developer.chrome.com/blog/scroll-elements-into-the-viewport
+
+- from: /web/updates/2015/05/14/view-and-change-your-dom-breakpoints
+  to: https://developer.chrome.com/blog/view-and-change-your-dom-breakpoints
+
+- from: /web/updates/2015/05/15/autocomplete-for-bracket-notation
+  to: https://developer.chrome.com/blog/autocomplete-for-bracket-notation
+
+- from: /web/updates/2015/05/15/replay-a-network-request-in-curl
+  to: https://developer.chrome.com/blog/replay-a-network-request-in-curl
+
+- from: /web/updates/2015/05/16/quickly-change-css-values
+  to: https://developer.chrome.com/blog/quickly-change-css-values
+
+- from: /web/updates/2015/05/17/automatically-pause-on-any-exception
+  to: https://developer.chrome.com/blog/automatically-pause-on-any-exception
+
+- from: /web/updates/2015/05/18/get-and-debug-event-listeners
+  to: https://developer.chrome.com/blog/get-and-debug-event-listeners
+
+- from: /web/updates/2015/05/alt-click-to-expand-all-child-nodes
+  to: https://developer.chrome.com/blog/alt-click-to-expand-all-child-nodes-2
+
+- from: /web/updates/2015/05/autocomplete-for-bracket-notation
+  to: https://developer.chrome.com/blog/autocomplete-for-bracket-notation
+
+- from: /web/updates/2015/05/automatically-pause-on-any-exception
+  to: https://developer.chrome.com/blog/automatically-pause-on-any-exception
+
+- from: /web/updates/2015/05/better-incognito-devtools
+  to: https://developer.chrome.com/blog/better-incognito-devtools-2
+
+- from: /web/updates/2015/05/command-click-to-add-multiple-cursors-in-the-sources-panel
+  to: https://developer.chrome.com/blog/command-click-to-add-multiple-cursors-in-the-sources-panel-2
+
+- from: /web/updates/2015/05/copy-image-as-data-uri
+  to: https://developer.chrome.com/blog/copy-image-as-data-uri-2
+
+- from: /web/updates/2015/05/copy-the-response-of-a-network-resource-to-your-clipboard
+  to: https://developer.chrome.com/blog/copy-the-response-of-a-network-resource-to-your-clipboard
+
+- from: /web/updates/2015/05/cycle-through-editing-locations
+  to: https://developer.chrome.com/blog/cycle-through-editing-locations
+
+- from: /web/updates/2015/05/easily-jump-to-event-listeners
+  to: https://developer.chrome.com/blog/easily-jump-to-event-listeners
+
+- from: /web/updates/2015/05/easy-timeline-recording
+  to: https://developer.chrome.com/blog/easy-timeline-recording
+
+- from: /web/updates/2015/05/expand-css-shorthand-properties
+  to: https://developer.chrome.com/blog/expand-css-shorthand-properties
+
+- from: /web/updates/2015/05/film-strips-in-network-panel
+  to: https://developer.chrome.com/blog/film-strips-in-network-panel
+
+- from: /web/updates/2015/05/get-and-debug-event-listeners
+  to: https://developer.chrome.com/blog/get-and-debug-event-listeners
+
+- from: /web/updates/2015/05/get-notified-of-js-errors-while-you-type
+  to: https://developer.chrome.com/blog/get-notified-of-js-errors-while-you-type
+
+- from: /web/updates/2015/05/go-to-a-line-number-at-a-specific-column
+  to: https://developer.chrome.com/blog/go-to-a-line-number-at-a-specific-column
+
+- from: /web/updates/2015/05/granular-statement-highlights
+  to: https://developer.chrome.com/blog/granular-statement-highlights
+
+- from: /web/updates/2015/05/hard-reload
+  to: https://developer.chrome.com/blog/hard-reload
+
+- from: /web/updates/2015/05/high-performance-video-with-hardware-decoding
+  to: https://developer.chrome.com/blog/high-performance-video-with-hardware-decoding
+
+- from: /web/updates/2015/05/High-performance-video-with-hardware-decoding
+  to: https://developer.chrome.com/blog/high-performance-video-with-hardware-decoding
+
+- from: /web/updates/2015/05/local-modifications
+  to: https://developer.chrome.com/blog/local-modifications
+
+- from: /web/updates/2015/05/notifying-you-of-changes-to-notifications
+  to: https://developer.chrome.com/blog/notifying-you-of-changes-to-notifications
+
+- from: /web/updates/2015/05/Notifying-you-of-notificiation-changes
+  to: https://developer.chrome.com/blog/notifying-you-of-changes-to-notifications
+
+- from: /web/updates/2015/05/perform-a-column-selection-by-by-dragging
+  to: https://developer.chrome.com/blog/perform-a-column-selection-by-by-dragging
+
+- from: /web/updates/2015/05/port-forwarding
+  to: https://developer.chrome.com/blog/port-forwarding
+
+- from: /web/updates/2015/05/predefined-snippets
+  to: https://developer.chrome.com/blog/predefined-snippets
+
+- from: /web/updates/2015/05/quick-edit-element-tags
+  to: https://developer.chrome.com/blog/quick-edit-element-tags-2
+
+- from: /web/updates/2015/05/quickly-change-css-values
+  to: https://developer.chrome.com/blog/quickly-change-css-values
+
+- from: /web/updates/2015/05/quickly-monitor-events-from-the-console-panel
+  to: https://developer.chrome.com/blog/quickly-monitor-events-from-the-console-panel-2
+
+- from: /web/updates/2015/05/replay-a-network-request-in-curl
+  to: https://developer.chrome.com/blog/replay-a-network-request-in-curl
+
+- from: /web/updates/2015/05/reveal-in-elements-panel
+  to: https://developer.chrome.com/blog/reveal-in-elements-panel-2
+
+- from: /web/updates/2015/05/scroll-elements-into-the-viewport
+  to: https://developer.chrome.com/blog/scroll-elements-into-the-viewport
+
+- from: /web/updates/2015/05/search-dom-tree-by-css-selector
+  to: https://developer.chrome.com/blog/search-dom-tree-by-css-selector
+
+- from: /web/updates/2015/05/see-matching-selectors
+  to: https://developer.chrome.com/blog/see-matching-selectors-2
+
+- from: /web/updates/2015/05/some-ui-and-feature-enhancements-to-the-colour-picker-tool
+  to: https://developer.chrome.com/blog/some-ui-and-feature-enhancements-to-the-colour-picker-tool
+
+- from: /web/updates/2015/05/the-currently-selected-dom-node
+  to: https://developer.chrome.com/blog/the-currently-selected-dom-node-2
+
+- from: /web/updates/2015/05/the-easing-editor
+  to: https://developer.chrome.com/blog/the-easing-editor-2
+
 - from: /web/updates/2015/05/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
   to: https://developer.chrome.com/blog/toggle-the-devtools-dock-state-with-a-keyboard-shortcut/
+
+- from: /web/updates/2015/05/triggering-of-pseudo-classes
+  to: https://developer.chrome.com/blog/triggering-of-pseudo-classes
+
+- from: /web/updates/2015/05/unfinished-network-requests
+  to: https://developer.chrome.com/blog/unfinished-network-requests-2
+
+- from: /web/updates/2015/05/use-keyboard-to-navigate-through-callstack
+  to: https://developer.chrome.com/blog/use-keyboard-to-navigate-through-callstack
+
+- from: /web/updates/2015/05/view-and-change-your-dom-breakpoints
+  to: https://developer.chrome.com/blog/view-and-change-your-dom-breakpoints
+
+- from: /web/updates/2015/06/18/quickly-edit-view-resources-from-the-elements-panel
+  to: https://developer.chrome.com/blog/quickly-edit-view-resources-from-the-elements-panel
+
+- from: /web/updates/2015/06/checkout-faster-with-autofill
+  to: https://web.dev/learn/forms/autofill/
+
+- from: /web/updates/2015/06/Media-Source-Extensions-for-Audio
+  to: https://developer.chrome.com/blog/media-source-extensions-for-audio
+
+- from: /web/updates/2015/06/mse-gapless-audio
+  to: https://developer.chrome.com/blog/media-source-extensions-for-audio
+
+- from: /web/updates/2015/06/quickly-edit-view-resources-from-the-elements-panel
+  to: https://developer.chrome.com/blog/quickly-edit-view-resources-from-the-elements-panel
+
+- from: /web/updates/2015/07/07/preview-javascript-values-inline-while-debugging
+  to: https://developer.chrome.com/blog/preview-javascript-values-inline-while-debugging
+
+- from: /web/updates/2015/07/08/network-colour-groups
+  to: https://developer.chrome.com/blog/network-colour-groups
+
+- from: /web/updates/2015/07/09/project-wide-search-with-optional-file-scope
+  to: https://developer.chrome.com/blog/project-wide-search-with-optional-file-scope
+
+- from: /web/updates/2015/07/10/trigger-a-pseudo-class-on-an-element
+  to: https://developer.chrome.com/blog/trigger-a-pseudo-class-on-an-element
+
+- from: /web/updates/2015/07/13/who-inspects-the-inspector
+  to: https://developer.chrome.com/blog/who-inspects-the-inspector
+
+- from: /web/updates/2015/07/14/print-out-a-quick-stack-trace-from-the-console
+  to: https://developer.chrome.com/blog/print-out-a-quick-stack-trace-from-the-console
+
+- from: /web/updates/2015/07/15/quickly-cycle-through-the-devtools-panels
+  to: https://developer.chrome.com/blog/quickly-cycle-through-the-devtools-panels
+
+- from: /web/updates/2015/07/17/select-and-execute-a-block-of-code-in-the-sources-panel
+  to: https://developer.chrome.com/blog/select-and-execute-a-block-of-code-in-the-sources-panel
+
+- from: /web/updates/2015/07/17/set-a-breakpoint-based-on-a-certain-condition
+  to: https://developer.chrome.com/blog/set-a-breakpoint-based-on-a-certain-condition
+
+- from: /web/updates/2015/07/20/inspect-and-trigger-css-media-queries
+  to: https://developer.chrome.com/blog/inspect-and-trigger-css-media-queries
+
+- from: /web/updates/2015/07/20/shortcut-to-select-the-next-occurrence
+  to: https://developer.chrome.com/blog/shortcut-to-select-the-next-occurrence
+
+- from: /web/updates/2015/07/22/add-a-new-custom-device-as-a-preset
+  to: https://developer.chrome.com/blog/add-a-new-custom-device-as-a-preset
+
+- from: /web/updates/2015/07/23/devtools-digest-aggregated-timeline-details-color-palettes-and-more
+  to: https://developer.chrome.com/blog/devtools-digest-aggregated-timeline-details
+
+- from: /web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling
+  to: https://developer.chrome.com/blog/devtools-digest-film-strip-and-a-new-home-for-throttling
+
+- from: /web/updates/2015/07/24/improved-dom-breadcrumbs
+  to: https://developer.chrome.com/blog/improved-dom-breadcrumbs/
+
+- from: /web/updates/2015/07/24/live-edit-css-in-sources
+  to: https://developer.chrome.com/blog/live-edit-css-in-sources
+
+- from: /web/updates/2015/07/add-a-new-custom-device-as-a-preset
+  to: https://developer.chrome.com/blog/add-a-new-custom-device-as-a-preset
+
+- from: /web/updates/2015/07/devtools-digest-film-strip-and-a-new-home-for-throttling
+  to: https://developer.chrome.com/blog/devtools-digest-film-strip-and-a-new-home-for-throttling
 
 - from: /web/updates/2015/07/improved-dom-breadcrumbs
   to: https://developer.chrome.com/blog/improved-dom-breadcrumbs/
 
+- from: /web/updates/2015/07/inspect-and-trigger-css-media-queries
+  to: https://developer.chrome.com/blog/inspect-and-trigger-css-media-queries
+
+- from: /web/updates/2015/07/interact-with-ble-devices-on-the-web
+  to: https://web.dev/bluetooth/
+
+- from: /web/updates/2015/07/live-edit-css-in-sources
+  to: https://developer.chrome.com/blog/live-edit-css-in-sources
+
+- from: /web/updates/2015/07/measuring-performance-in-a-service-worker
+  to: https://developer.chrome.com/blog/measuring-performance-in-a-service-worker
+
+- from: /web/updates/2015/07/media-notifications
+  to: https://developer.chrome.com/blog/media-notifications
+
+- from: /web/updates/2015/07/mediastream-deprecations
+  to: https://developer.chrome.com/blog/mediastream-deprecations
+
+- from: /web/updates/2015/07/network-colour-groups
+  to: https://developer.chrome.com/blog/network-colour-groups
+
+- from: /web/updates/2015/07/preview-javascript-values-inline-while-debugging
+  to: https://developer.chrome.com/blog/preview-javascript-values-inline-while-debugging
+
+- from: /web/updates/2015/07/print-out-a-quick-stack-trace-from-the-console
+  to: https://developer.chrome.com/blog/print-out-a-quick-stack-trace-from-the-console
+
+- from: /web/updates/2015/07/project-wide-search-with-optional-file-scope
+  to: https://developer.chrome.com/blog/project-wide-search-with-optional-file-scope
+
+- from: /web/updates/2015/07/quickly-cycle-through-the-devtools-panels
+  to: https://developer.chrome.com/blog/quickly-cycle-through-the-devtools-panels
+
+- from: /web/updates/2015/07/rotationAngle-and-touchRadius
+  to: https://developer.chrome.com/blog/rotationangle-and-touchradius
+
+- from: /web/updates/2015/07/select-and-execute-a-block-of-code-in-the-sources-panel
+  to: https://developer.chrome.com/blog/select-and-execute-a-block-of-code-in-the-sources-panel
+
+- from: /web/updates/2015/07/set-a-breakpoint-based-on-a-certain-condition
+  to: https://developer.chrome.com/blog/set-a-breakpoint-based-on-a-certain-condition
+
+- from: /web/updates/2015/07/shortcut-to-select-the-next-occurrence
+  to: https://developer.chrome.com/blog/shortcut-to-select-the-next-occurrence
+
+- from: /web/updates/2015/07/trigger-a-pseudo-class-on-an-element
+  to: https://developer.chrome.com/blog/trigger-a-pseudo-class-on-an-element
+
+- from: /web/updates/2015/07/using-rotationAngle-and-touchRadius
+  to: https://developer.chrome.com/blog/rotationangle-and-touchradius
+
+- from: /web/updates/2015/07/who-inspects-the-inspector
+  to: https://developer.chrome.com/blog/who-inspects-the-inspector
+
+- from: /web/updates/2015/08/05/google-s-web-tools-in-one-place
+  to: https://developer.chrome.com/blog/google-s-web-tools-in-one-place
+
+- from: /web/updates/2015/08/10/5-tricks-to-use-in-the-console-panel
+  to: https://developer.chrome.com/blog/5-tricks-to-use-in-the-console-panel
+
+- from: /web/updates/2015/08/10/easily-duplicate-dom-nodes
+  to: https://developer.chrome.com/blog/easily-duplicate-dom-nodes
+
+- from: /web/updates/2015/08/10/edit-html-in-the-console-panel
+  to: https://developer.chrome.com/blog/edit-html-in-the-console-panel
+
+- from: /web/updates/2015/08/24/simple-keyboard-tricks-to-use-in-the-styles-pane
+  to: https://developer.chrome.com/blog/simple-keyboard-tricks-to-use-in-the-styles-pane
+
+- from: /web/updates/2015/08/25/the-larger-than-advanced-network-panel-filter-and-a-few-others
+  to: https://developer.chrome.com/blog/the-larger-than-advanced-network-panel-filter-and-a-few-others
+
+- from: /web/updates/2015/08/27/using-requestidlecallback
+  to: https://developer.chrome.com/blog/using-requestidlecallback
+
+- from: /web/updates/2015/08/5-tricks-to-use-in-the-console-panel
+  to: https://developer.chrome.com/blog/5-tricks-to-use-in-the-console-panel
+
+- from: /web/updates/2015/08/devtools-digest-aggregated-timeline-details
+  to: https://developer.chrome.com/blog/devtools-digest-aggregated-timeline-details
+
+- from: /web/updates/2015/08/easily-duplicate-dom-nodes
+  to: https://developer.chrome.com/blog/easily-duplicate-dom-nodes
+
+- from: /web/updates/2015/08/edit-html-in-the-console-panel
+  to: https://developer.chrome.com/blog/edit-html-in-the-console-panel
+
+- from: /web/updates/2015/08/google-s-web-tools-in-one-place
+  to: https://developer.chrome.com/blog/google-s-web-tools-in-one-place
+
+- from: /web/updates/2015/08/material-design-lite-1-0-4-release
+  to: https://developer.chrome.com/blog/material-design-lite-1-0-4-release
+
+- from: /web/updates/2015/08/new-release-of-material-design-lite
+  to: https://developer.chrome.com/blog/material-design-lite-1-0-4-release
+
+- from: /web/updates/2015/08/simple-keyboard-tricks-to-use-in-the-styles-pane
+  to: https://developer.chrome.com/blog/simple-keyboard-tricks-to-use-in-the-styles-pane
+
+- from: /web/updates/2015/08/the-larger-than-advanced-network-panel-filter-and-a-few-others
+  to: https://developer.chrome.com/blog/the-larger-than-advanced-network-panel-filter-and-a-few-others
+
+- from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
+  to: https://developer.chrome.com/blog/using-manifest-to-set-sitewide-theme-color
+
+- from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
+  to: https://web.dev/add-manifest/#splash-screen
+
+- from: /web/updates/2015/08/using-poster-images-on-plugin-content
+  to: https://developer.chrome.com/blog/using-poster-images-on-plugin-content
+
+- from: /web/updates/2015/08/using-requestidlecallback
+  to: https://developer.chrome.com/blog/using-requestidlecallback
+
+- from: /web/updates/2015/09/automating-resource-selection-with-client-hints
+  to: https://developer.chrome.com/blog/automating-resource-selection-with-client-hints
+
+- from: /web/updates/2015/09/eme-logger
+  to: https://developer.chrome.com/blog/eme-logger
+
+- from: /web/updates/2015/09/history-api-scroll-restoration
+  to: https://developer.chrome.com/blog/history-api-scroll-restoration
+
+- from: /web/updates/2015/09/HPKP-reporting-with-chrome-46
+  to: https://developer.chrome.com/blog/hpkp-reporting-with-chrome-46
+
+- from: /web/updates/2015/09/tab-discarding
+  to: https://developer.chrome.com/blog/tab-discarding
+
+- from: /web/updates/2015/09/tab-discarding-in-chrome-46
+  to: https://developer.chrome.com/blog/tab-discarding
+
+- from: /web/updates/2015/09/updates-to-cache-api
+  to: https://developer.chrome.com/blog/updates-to-cache-api
+
+- from: /web/updates/2015/09/using-manifest-to-set-sitewide-theme-color
+  to: https://web.dev/add-manifest/#splash-screen
+
+- from: /web/updates/2015/09/using-web-app-manifest-to-set-solid-color-loading-screen
+  to: https://developer.chrome.com/blog/using-manifest-to-set-sitewide-theme-color
+
 - from: /web/updates/2015/10/chrome-47-webrtc
   to: https://developer.chrome.com/blog/chrome-47-webrtc/
+
+- from: /web/updates/2015/10/devtools-digest-efficient-element-edits
+  to: https://developer.chrome.com/blog/devtools-digest-efficient-element-edits
+
+- from: /web/updates/2015/10/devtools-digest-reordering-tabs
+  to: https://developer.chrome.com/blog/devtools-digest-reordering-tabs-2
+
+- from: /web/updates/2015/10/display-mode
+  to: https://web.dev/add-manifest/#display
+
+- from: /web/updates/2015/10/inputdevicecapabilities
+  to: https://developer.chrome.com/blog/inputdevicecapabilities
+
+- from: /web/updates/2015/10/media-devices
+  to: https://developer.chrome.com/blog/media-devices
+
+- from: /web/updates/2015/10/notification-requireInteraction
+  to: https://developer.chrome.com/blog/notification-requireInteraction
+
+- from: /web/updates/2015/10/splashscreen
+  to: https://web.dev/add-manifest/#splash-screen
+
+- from: /web/updates/2015/10/tap-to-search
+  to: https://developer.chrome.com/blog/tap-to-search
+
+- from: /web/updates/2015/10/web-animations-resources
+  to: https://developer.chrome.com/blog/web-animations-resources
+
+- from: /web/updates/2015/11/app-shell
+  to: https://developer.chrome.com/blog/app-shell
 
 - from: /web/updates/2015/11/devtools-digest-cds-edition
   to: https://developer.chrome.com/blog/devtools-digest-cds-edition/
 
+- from: /web/updates/2015/11/presentation-api
+  to: https://developer.chrome.com/blog/presentation-api
+
+- from: /web/updates/2015/12/background-sync
+  to: https://developer.chrome.com/blog/background-sync
+
+- from: /web/updates/2015/12/getting-started-pwa
+  to: https://developer.chrome.com/blog/getting-started-pwa
+
+- from: /web/updates/2015/12/security-panel
+  to: https://developer.chrome.com/blog/security-panel
+
+- from: /web/updates/2016/01/high-res-timestamps
+  to: https://developer.chrome.com/blog/high-res-timestamps
+
+- from: /web/updates/2016/01/mediarecorder
+  to: https://developer.chrome.com/blog/mediarecorder
+
+- from: /web/updates/2016/01/notification-actions
+  to: https://developer.chrome.com/blog/notification-actions
+
+- from: /web/updates/2016/01/urlsearchparams
+  to: https://developer.chrome.com/blog/urlsearchparams
+
+- from: /web/updates/2016/01/vp9-webrtc
+  to: https://developer.chrome.com/blog/vp9-webrtc
+
+- from: /web/updates/2016/02/chrome-49-deprecations
+  to: https://developer.chrome.com/blog/chrome-49-deprecations/
+
+- from: /web/updates/2016/02/css-variables-why-should-you-care
+  to: https://developer.chrome.com/blog/css-variables-why-should-you-care
+
+- from: /web/updates/2016/02/devtools-digest-devtools-go-dark
+  to: https://developer.chrome.com/blog/devtools-digest-devtools-go-dark
+
+- from: /web/updates/2016/02/devtools-digest-supercharged-remote-debugging
+  to: https://developer.chrome.com/blog/devtools-digest-supercharged-remote-debugging
+
+- from: /web/updates/2016/02/es2015-proxies
+  to: https://developer.chrome.com/blog/es2015-proxies
+
+- from: /web/updates/2016/02/font-display
+  to: https://developer.chrome.com/blog/font-display
+
+- from: /web/updates/2016/02/save-data
+  to: https://web.dev/optimizing-content-efficiency-save-data/
+
+- from: /web/updates/2016/02/smooth-scrolling-in-chrome-49
+  to: https://developer.chrome.com/blog/smooth-scrolling-in-chrome-49
+
+- from: /web/updates/2016/02/webaudio
+  to: https://developer.chrome.com/blog/webaudio
+
+- from: /web/updates/2016/03/access-usb-devices-on-the-web
+  to: https://web.dev/usb/
+
+- from: /web/updates/2016/03/canvas-toblob-in-chrome-50
+  to: https://developer.chrome.com/blog/canvas-toblob-in-chrome-50
+
+- from: /web/updates/2016/03/chrome-50-deprecations
+  to: https://developer.chrome.com/blog/chrome-50-deprecations/
+
+- from: /web/updates/2016/03/createimagebitmap-in-chrome-50
+  to: https://developer.chrome.com/blog/createimagebitmap-in-chrome-50
+
+- from: /web/updates/2016/03/device-mode-v2
+  to: https://developer.chrome.com/blog/device-mode-v2
+
+- from: /web/updates/2016/03/device-orientation-changes
+  to: https://developer.chrome.com/blog/device-orientation-changes
+
+- from: /web/updates/2016/03/domtokenlist-validation-added-in-chrome-50
+  to: https://developer.chrome.com/blog/domtokenlist-validation-added-in-chrome-50
+
+- from: /web/updates/2016/03/focus-start-point
+  to: https://developer.chrome.com/blog/focus-start-point
+
+- from: /web/updates/2016/03/formdata-methods-for-inspection-and-modification
+  to: https://developer.chrome.com/blog/formdata-methods-for-inspection-and-modification
+
+- from: /web/updates/2016/03/link-rel-preload
+  to: https://developer.chrome.com/blog/link-rel-preload
+
+- from: /web/updates/2016/03/mse-sourcebuffer
+  to: https://developer.chrome.com/blog/mse-sourcebuffer
+
+- from: /web/updates/2016/03/notifications
+  to: https://developer.chrome.com/blog/notifications
+
+- from: /web/updates/2016/03/play-returns-promise
+  to: https://developer.chrome.com/blog/play-returns-promise
+
+- from: /web/updates/2016/03/web-animations-improvements
+  to: https://developer.chrome.com/blog/web-animations-improvements
+
+- from: /web/updates/2016/03/web-enabled-internet-of-things
+  to: https://developer.chrome.com/blog/web-enabled-internet-of-things
+
+- from: /web/updates/2016/03/web-push-encryption
+  to: https://developer.chrome.com/blog/web-push-encryption
+
+- from: /web/updates/2016/04/chrome-51-deprecations
+  to: https://developer.chrome.com/blog/chrome-51-deprecations/
+
+- from: /web/updates/2016/04/credential-management-api
+  to: https://developer.chrome.com/blog/credential-management-api
+
+- from: /web/updates/2016/04/devtools-digest-command-menu
+  to: https://developer.chrome.com/blog/devtools-digest-command-menu
+
+- from: /web/updates/2016/04/geolocation-on-secure-contexts-
+  to: https://developer.chrome.com/blog/geolocation-on-secure-contexts-only
+
+- from: /web/updates/2016/04/geolocation-on-secure-contexts-only
+  to: https://developer.chrome.com/blog/geolocation-on-secure-contexts-only
+
+- from: /web/updates/2016/04/intersectionobserver
+  to: https://developer.chrome.com/blog/intersectionobserver
+
+- from: /web/updates/2016/04/keyboardevent-keys-codes
+  to: https://developer.chrome.com/blog/keyboardevent-keys-codes
+
+- from: /web/updates/2016/04/scroll-anchoring
+  to: https://developer.chrome.com/blog/scroll-anchoring
+
+- from: /web/updates/2016/05/houdini
+  to: https://developer.chrome.com/blog/houdini
+
+- from: /web/updates/2016/06/2-cookie-handoff
+  to: https://developer.chrome.com/blog/2-cookie-handoff
+
+- from: /web/updates/2016/06/absolute-positioned-children
+  to: https://developer.chrome.com/blog/absolute-positioned-children
+
+- from: /web/updates/2016/06/chrome-52-deprecations
+  to: https://developer.chrome.com/blog/chrome-52-deprecations/
+
+- from: /web/updates/2016/06/css-containment
+  to: https://developer.chrome.com/blog/css-containment
+
+- from: /web/updates/2016/06/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-06
+
+- from: /web/updates/2016/06/passive-event-listeners
+  to: https://developer.chrome.com/blog/passive-event-listeners
+
+- from: /web/updates/2016/06/performance-observer
+  to: https://developer.chrome.com/blog/performance-observer
+
+- from: /web/updates/2016/06/persistent-storage
+  to: https://web.dev/persistent-storage/
+
+- from: /web/updates/2016/06/sw-readablestreams
+  to: https://developer.chrome.com/blog/sw-readablestreams
+
+- from: /web/updates/2016/06/ump
+  to: https://developer.chrome.com/blog/ump
+
+- from: /web/updates/2016/06/webrtc-ecdsa
+  to: https://developer.chrome.com/blog/webrtc-ecdsa
+
+- from: /web/updates/2016/07/autoplay
+  to: https://developer.chrome.com/blog/autoplay-2
+
+- from: /web/updates/2016/07/infinite-scroller
+  to: https://developer.chrome.com/blog/infinite-scroller
+
+- from: /web/updates/2016/07/offline-google-analytics
+  to: https://developer.chrome.com/blog/offline-google-analytics
+
+- from: /web/updates/2016/07/payment-request
+  to: https://web.dev/how-payment-request-api-works/
+
+- from: /web/updates/2016/07/web-push-interop-wins
+  to: https://developer.chrome.com/blog/web-push-interop-wins
+
+- from: /web/updates/2016/08/chrome-53-deprecations
+  to: https://developer.chrome.com/blog/chrome-53-deprecations/
+
+- from: /web/updates/2016/08/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-08/
+
+- from: /web/updates/2016/08/removing-document-write
+  to: https://developer.chrome.com/blog/removing-document-write
+
+- from: /web/updates/2016/08/web-animations
+  to: https://developer.chrome.com/blog/web-animations
+
+- from: /web/updates/2016/09/broadcastchannel
+  to: https://developer.chrome.com/blog/broadcastchannel
+
+- from: /web/updates/2016/09/cache-query-options
+  to: https://developer.chrome.com/blog/cache-query-options
+
+- from: /web/updates/2016/09/chrome-54-deprecations
+  to: https://developer.chrome.com/blog/chrome-54-deprecations/
+
+- from: /web/updates/2016/09/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-09
+
+- from: /web/updates/2016/09/foreign-fetch
+  to: https://developer.chrome.com/blog/foreign-fetch
+
+- from: /web/updates/2016/09/navigator-share
+  to: https://web.dev/web-share/
+
+- from: /web/updates/2016/09/options-of-a-pushsubscription
+  to: https://developer.chrome.com/blog/options-of-a-pushsubscription
+
+- from: /web/updates/2016/09/re-rastering-composite
+  to: https://developer.chrome.com/blog/re-rastering-composite
+
+- from: /web/updates/2016/10/addeventlistener-once
+  to: https://developer.chrome.com/blog/addeventlistener-once
+
+- from: /web/updates/2016/10/auxclick
+  to: https://developer.chrome.com/blog/auxclick
+
+- from: /web/updates/2016/10/avoid-not-secure-warn
+  to: https://developer.chrome.com/blog/avoid-not-secure-warn
+
+- from: /web/updates/2016/10/capture-stream
+  to: https://developer.chrome.com/blog/capture-stream
+
+- from: /web/updates/2016/10/chrome-55-deprecations
+  to: https://developer.chrome.com/blog/chrome-55-deprecations/
+
+- from: /web/updates/2016/10/css-hyphens
+  to: https://developer.chrome.com/blog/css-hyphens
+
+- from: /web/updates/2016/10/devtools-digest
+  to: https://developer.chrome.com/blog/devtools-digest-2016-10
+
+- from: /web/updates/2016/10/navigator-share
+  to: https://web.dev/web-share/
+
+- from: /web/updates/2016/10/nic54
+  to: https://developer.chrome.com/blog/new-in-chrome-54/
+
+- from: /web/updates/2016/10/pointer-events
+  to: https://developer.chrome.com/blog/pointer-events
+
+- from: /web/updates/2016/10/resizeobserver
+  to: https://web.dev/resize-observer/
+
+- from: /web/updates/2016/10/touch-action
+  to: https://developer.chrome.com/blog/touch-action
+
+- from: /web/updates/2016/10/updates
+  to: https://developer.chrome.com/blog/updates
+
+- from: /web/updates/2016/11/get-ready-for-cds
+  to: https://developer.chrome.com/blog/get-ready-for-cds
+
+- from: /web/updates/2016/11/nic55
+  to: https://developer.chrome.com/blog/new-in-chrome-55/
+
+- from: /web/updates/2016/12/chrome-56-deprecations
+  to: https://developer.chrome.com/blog/chrome-56-deprecations
+
+- from: /web/updates/2016/12/devtools-javascript-cpu-profile-migration
+  to: https://developer.chrome.com/blog/devtools-javascript-cpu-profile-migration-2
+
+- from: /web/updates/2016/12/imagecapture
+  to: https://developer.chrome.com/blog/imagecapture
+
+- from: /web/updates/2016/12/lighthouse-dbw
+  to: https://developer.chrome.com/blog/lighthouse-dbw
+
+- from: /web/updates/2016/12/performant-parallaxing
+  to: https://developer.chrome.com/blog/performant-parallaxing
+
+- from: /web/updates/2016/12/position-sticky
+  to: https://developer.chrome.com/blog/position-sticky
+
+- from: /web/updates/2016/12/url-bar-resizing
+  to: https://developer.chrome.com/blog/url-bar-resizing
+
+- from: /web/updates/2017/01/css-grid
+  to: https://developer.chrome.com/blog/css-grid
+
+- from: /web/updates/2017/01/nic56
+  to: https://developer.chrome.com/blog/new-in-chrome-56/
+
+- from: /web/updates/2017/01/payment-request-updates
+  to: https://developer.chrome.com/blog/payment-request-updates
+
+- from: /web/updates/2017/01/scrolling-intervention
+  to: https://developer.chrome.com/blog/scrolling-intervention
+
+- from: /web/updates/2017/01/webcomponents-org
+  to: https://web.dev/webcomponents-org/
+
+- from: /web/updates/2017/02/chrome-57-deprecations
+  to: https://developer.chrome.com/blog/chrome-57-deprecations/
+
+- from: /web/updates/2017/02/improved-add-to-home-screen
+  to: https://web.dev/customize-install/
+
+- from: /web/updates/2017/02/lighthouse-jan
+  to: https://developer.chrome.com/blog/lighthouse-jan/
+
+- from: /web/updates/2017/02/media-session
+  to: https://developer.chrome.com/blog/media-session
+
+- from: /web/updates/2017/02/navigation-preload
+  to: https://developer.chrome.com/blog/navigation-preload
+
+- from: /web/updates/2017/03/background_tabs
+  to: https://developer.chrome.com/blog/background_tabs
+
+- from: /web/updates/2017/03/chrome-58-deprecations
+  to: https://developer.chrome.com/blog/chrome-58-deprecations/
+
+- from: /web/updates/2017/03/chrome-58-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-58/
+
+- from: /web/updates/2017/03/chrome-58-media-updates
+  to: https://developer.chrome.com/blog/chrome-58-media-updates/
+
+- from: /web/updates/2017/03/custom-scrollbar
+  to: https://developer.chrome.com/blog/custom-scrollbar
+
+- from: /web/updates/2017/03/devtools-release-notes
+  to: https://developer.chrome.com/blog/devtools-release-notes
+
+- from: /web/updates/2017/03/dialogs-policy
+  to: https://developer.chrome.com/blog/dialogs-policy
+
+- from: /web/updates/2017/03/mixing-streams
+  to: https://developer.chrome.com/blog/mixing-streams
+
+- from: /web/updates/2017/03/nic57
+  to: https://developer.chrome.com/blog/new-in-chrome-57/
+
+- from: /web/updates/2017/03/performant-expand-and-collapse
+  to: https://developer.chrome.com/blog/performant-expand-and-collapse
+
+- from: /web/updates/2017/04/chrome-59-deprecations
+  to: https://developer.chrome.com/blog/chrome-59-deprecations
+
+- from: /web/updates/2017/04/getinstalledrelatedapps
+  to: https://web.dev/get-installed-related-apps/
+
+- from: /web/updates/2017/04/headless-chrome
+  to: https://developer.chrome.com/blog/headless-chrome/
+
+- from: /web/updates/2017/04/native-mac-os-notifications
+  to: https://developer.chrome.com/blog/native-mac-os-notifications
+
+- from: /web/updates/2017/04/nic58
+  to: https://developer.chrome.com/blog/new-in-chrome-58/
+
+- from: /web/updates/2017/05/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-60/
+
+- from: /web/updates/2017/05/nic59
+  to: https://developer.chrome.com/blog/new-in-chrome-59/
+
+- from: /web/updates/2017/06/aligning-input-events
+  to: https://developer.chrome.com/blog/aligning-input-events
+
+- from: /web/updates/2017/06/budget-api
+  to: https://developer.chrome.com/blog/budget-api
+
+- from: /web/updates/2017/06/chrome-60-deprecations
+  to: https://developer.chrome.com/blog/chrome-60-deprecations
+
+- from: /web/updates/2017/06/credential-management-updates
+  to: https://developer.chrome.com/blog/credential-management-updates
+
+- from: /web/updates/2017/06/headless-karma-mocha-chai
+  to: https://developer.chrome.com/blog/headless-karma-mocha-chai
+
+- from: /web/updates/2017/06/play-request-was-interrupted
+  to: https://developer.chrome.com/blog/play-request-was-interrupted
+
+- from: /web/updates/2017/06/supercharged-codesplit
+  to: https://developer.chrome.com/blog/supercharged-codesplit
+
+- from: /web/updates/2017/06/user-centric-performance-metrics
+  to: https://web.dev/user-centric-performance-metrics/
+
+- from: /web/updates/2017/07/chrome-61-media-updates
+  to: https://developer.chrome.com/blog/chrome-61-media-updates/
+
+- from: /web/updates/2017/07/chrome-61-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-61/
+
+- from: /web/updates/2017/07/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-61/
+
+- from: /web/updates/2017/07/nic60
+  to: https://developer.chrome.com/blog/new-in-chrome-60/
+
+- from: /web/updates/2017/07/upcoming-regexp-features
+  to: https://developer.chrome.com/blog/upcoming-regexp-features
+
+- from: /web/updates/2017/08/chrome-61-deprecations
+  to: https://developer.chrome.com/blog/chrome-61-deprecations
+
+- from: /web/updates/2017/08/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-62/
+
+- from: /web/updates/2017/08/estimating-available-storage-space
+  to: https://developer.chrome.com/blog/estimating-available-storage-space
+
+- from: /web/updates/2017/09/abortable-fetch
+  to: https://developer.chrome.com/blog/abortable-fetch
+
+- from: /web/updates/2017/09/autoplay-policy-changes
+  to: https://developer.chrome.com/blog/autoplay/
+
+- from: /web/updates/2017/09/chrome-62-deprecations
+  to: https://developer.chrome.com/blog/chrome-62-deprecations
+
+- from: /web/updates/2017/09/chrome-62-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-62/
+
+- from: /web/updates/2017/09/nic61
+  to: https://developer.chrome.com/blog/new-in-chrome-61/
+
+- from: /web/updates/2017/09/picture-in-picture
+  to: https://developer.chrome.com/blog/picture-in-picture
+
+- from: /web/updates/2017/09/sensors-for-the-web
+  to: https://web.dev/generic-sensor/
+
+- from: /web/updates/2017/09/sticky-headers
+  to: https://developer.chrome.com/blog/sticky-headers
+
+- from: /web/updates/2017/09/visual-viewport-api
+  to: https://developer.chrome.com/blog/visual-viewport-api
+
+- from: /web/updates/2017/09/webvr-origin-trial-chrome-62
+  to: https://developer.chrome.com/blog/webvr-origin-trial-chrome-62/
+
+- from: /web/updates/2017/10/animated-blur
+  to: https://developer.chrome.com/blog/animated-blur
+
+- from: /web/updates/2017/10/chrome-63-deprecations
+  to: https://developer.chrome.com/blog/chrome-63-deprecations
+
+- from: /web/updates/2017/10/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-63/
+
+- from: /web/updates/2017/10/lighthouse
+  to: https://developer.chrome.com/blog/lighthouse-2-5
+
+- from: /web/updates/2017/10/nic62
+  to: https://developer.chrome.com/blog/new-in-chrome-62/
+
+- from: /web/updates/2017/10/quotaexceedederror
+  to: https://developer.chrome.com/blog/quotaexceedederror
+
+- from: /web/updates/2017/10/remove-shadow-piercing
+  to: https://developer.chrome.com/blog/remove-shadow-piercing
+
+- from: /web/updates/2017/10/using-twa
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/overview/
+
+- from: /web/updates/2017/11/devtools-release-notes
+  to: https://developer.chrome.com/blog/new-in-devtools-64/
+
+- from: /web/updates/2017/11/overscroll-behavior
+  to: https://developer.chrome.com/blog/overscroll-behavior
+
+- from: /web/updates/2017/12/audio-worklet
+  to: https://developer.chrome.com/blog/audio-worklet
+
+- from: /web/updates/2017/12/better-ads
+  to: https://developer.chrome.com/blog/better-ads
+
+- from: /web/updates/2017/12/chrome-63-64-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-63-64/
+
+- from: /web/updates/2017/12/chrome-64-deprecations
+  to: https://developer.chrome.com/blog/chrome-64-deprecations
+
+- from: /web/updates/2017/12/chrome-loadtimes-deprecated
+  to: https://developer.chrome.com/blog/chrome-loadtimes-deprecated
+
+- from: /web/updates/2017/12/crux
+  to: https://developer.chrome.com/blog/crux-2017-12
+
+- from: /web/updates/2017/12/device-memory
+  to: https://developer.chrome.com/blog/device-memory
+
+- from: /web/updates/2017/12/disabling-hardware-noise-suppression
+  to: https://developer.chrome.com/blog/disabling-hardware-noise-suppression
+
+- from: /web/updates/2017/12/lighthouse
+  to: https://developer.chrome.com/blog/lighthouse-2-6
+
+- from: /web/updates/2017/12/modulepreload
+  to: https://developer.chrome.com/blog/modulepreload
+
+- from: /web/updates/2017/12/nic63
+  to: https://developer.chrome.com/blog/new-in-chrome-63/
+
+- from: /web/updates/2018/01/crux
+  to: https://developer.chrome.com/blog/crux-2018-01
+
+- from: /web/updates/2018/01/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-65/
+
+- from: /web/updates/2018/01/nic64
+  to: https://developer.chrome.com/blog/new-in-chrome-64/
+
+- from: /web/updates/2018/01/paintapi
+  to: https://developer.chrome.com/blog/paintapi
+
+- from: /web/updates/2018/02/chrome-65-deprecations
+  to: https://developer.chrome.com/blog/chrome-65-deprecations
+
+- from: /web/updates/2018/02/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-66/
+
+- from: /web/updates/2018/02/lighthouse
+  to: https://developer.chrome.com/blog/lighthouse
+
+- from: /web/updates/2018/02/meltdown-spectre
+  to: https://developer.chrome.com/blog/meltdown-spectre
+
+- from: /web/updates/2018/03/chrome-66-deprecations
+  to: https://developer.chrome.com/blog/chrome-66-deprecations
+
+- from: /web/updates/2018/03/clipboardapi
+  to: https://web.dev/async-clipboard/
+
+- from: /web/updates/2018/03/cssom
+  to: https://developer.chrome.com/blog/cssom
+
+- from: /web/updates/2018/03/emscripting-a-c-library
+  to: https://web.dev/emscripting-a-c-library/
+
+- from: /web/updates/2018/03/macos-native-echo-cancellation
+  to: https://developer.chrome.com/blog/macos-native-echo-cancellation
+
+- from: /web/updates/2018/03/nic65
+  to: https://developer.chrome.com/blog/new-in-chrome-65/
+
+- from: /web/updates/2018/03/smooshgate
+  to: https://developer.chrome.com/blog/smooshgate
+
+- from: /web/updates/2018/03/webauthn-credential-management
+  to: https://web.dev/webauthn-credential-management/
+
+- from: /web/updates/2018/04/chrome-67-deps-rems
+  to: https://developer.chrome.com/blog/chrome-67-deps-rems
+
+- from: /web/updates/2018/04/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-67/
+
+- from: /web/updates/2018/04/loading-wasm
+  to: https://web.dev/loading-wasm/
+
+- from: /web/updates/2018/04/nic66
+  to: https://developer.chrome.com/blog/new-in-chrome-66/
+
+- from: /web/updates/2018/04/present-web-pages-to-secondary-attached-displays
+  to: https://developer.chrome.com/blog/present-web-pages-to-secondary-attached-displays
+
+- from: /web/updates/2018/05/beyond-spa
+  to: https://developer.chrome.com/blog/beyond-spa
+
+- from: /web/updates/2018/05/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-68/
+
+- from: /web/updates/2018/05/dpwa
+  to: https://web.dev/progressive-web-apps/
+
+- from: /web/updates/2018/05/first-input-delay
+  to: https://web.dev/fid/
+
+- from: /web/updates/2018/05/lighthouse
+  to: https://developer.chrome.com/blog/lighthouse-load-performance
+
+- from: /web/updates/2018/05/lighthouse3
+  to: https://developer.chrome.com/blog/lighthouse3
+
 - from: /web/updates/2018/05/lighthouse3
   to: https://developer.chrome.com/blog/lighthouse3/
+
+- from: /web/updates/2018/05/nic67
+  to: https://developer.chrome.com/blog/new-in-chrome-67/
+
+- from: /web/updates/2018/05/webauthn
+  to: https://developer.chrome.com/blog/webauthn
+
+- from: /web/updates/2018/05/welcome-to-immersive
+  to: https://web.dev/welcome-to-immersive/
+
+- from: /web/updates/2018/06/a2hs-updates
+  to: https://developer.chrome.com/blog/a2hs-updates
+
+- from: /web/updates/2018/06/ar-for-the-web
+  to: https://developer.chrome.com/blog/ar-for-the-web
+
+- from: /web/updates/2018/06/audio-worklet-design-pattern
+  to: https://developer.chrome.com/blog/audio-worklet-design-pattern
+
+- from: /web/updates/2018/06/chrome-68-deps-rems
+  to: https://developer.chrome.com/blog/chrome-68-deps-rems
 
 - from: /web/updates/2018/06/feature-policy
   to: https://developer.chrome.com/blog/feature-policy/
 
+- from: /web/updates/2018/06/fresher-sw
+  to: https://developer.chrome.com/blog/fresher-sw/
+
+- from: /web/updates/2018/06/more-native-echo-cancellation
+  to: https://developer.chrome.com/blog/more-native-echo-cancellation
+
+- from: /web/updates/2018/06/payment-handler-api
+  to: https://web.dev/web-based-payment-apps-overview/
+
 - from: /web/updates/2018/06/webar-chacmool
   to: https://developer.chrome.com/blog/webar-chacmool/
+
+- from: /web/updates/2018/07/css-scroll-snap
+  to: https://web.dev/css-scroll-snap/
+
+- from: /web/updates/2018/07/first-input-delay-in-crux
+  to: https://developer.chrome.com/blog/first-input-delay-in-crux
+
+- from: /web/updates/2018/07/nic68
+  to: https://developer.chrome.com/blog/new-in-chrome-68/
+
+- from: /web/updates/2018/07/nostate-prefetch
+  to: https://developer.chrome.com/blog/nostate-prefetch
+
+- from: /web/updates/2018/07/page-lifecycle-api
+  to: https://developer.chrome.com/blog/page-lifecycle-api
+
+- from: /web/updates/2018/07/pwacompat
+  to: https://developer.chrome.com/blog/pwacompat
+
+- from: /web/updates/2018/07/reportingobserver
+  to: https://web.dev/reporting-observer/
+
+- from: /web/updates/2018/07/reportingobserver
+  to: https://developer.chrome.com/blog/reportingobserver
 
 - from: /web/updates/2018/07/search-ads-speed
   to: https://developer.chrome.com/blog/search-ads-speed/
@@ -551,17 +1645,86 @@ redirects:
 - from: /web/updates/2018/07/site-isolation
   to: https://developer.chrome.com/blog/site-isolation/
 
+- from: /web/updates/2018/07/site-isolation
+  to: https://developer.chrome.com/blog/site-isolation/
+
+- from: /web/updates/2018/08/chrome-69-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-69/
+
+- from: /web/updates/2018/08/chrome-ux-report-dashboard
+  to: https://web.dev/chrome-ux-report-data-studio-dashboard/
+
+- from: /web/updates/2018/08/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-70/
+
+- from: /web/updates/2018/08/embind
+  to: https://web.dev/embind/
+
 - from: /web/updates/2018/08/offscreen-canvas
   to: https://developer.chrome.com/blog/offscreen-canvas/
+
+- from: /web/updates/2018/08/wasm-av1
+  to: https://web.dev/wasm-av1/
+
+- from: /web/updates/2018/08/web-performance-made-easy
+  to: https://web.dev/web-performance-made-easy/
 
 - from: /web/updates/2018/09/asynchronous-access-to-http-cookies
   to: https://developer.chrome.com/blog/asynchronous-access-to-http-cookies/
 
+- from: /web/updates/2018/09/chrome-70-deps-rems
+  to: https://developer.chrome.com/blog/chrome-70-deps-rems
+
+- from: /web/updates/2018/09/chrome-70-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-70/
+
+- from: /web/updates/2018/09/chrome-70-media-updates
+  to: https://developer.chrome.com/blog/chrome-70-media-updates
+
+- from: /web/updates/2018/09/inside-browser-part1
+  to: https://developer.chrome.com/blog/inside-browser-part1
+
+- from: /web/updates/2018/09/inside-browser-part2
+  to: https://developer.chrome.com/blog/inside-browser-part2
+
+- from: /web/updates/2018/09/inside-browser-part3
+  to: https://developer.chrome.com/blog/inside-browser-part3
+
+- from: /web/updates/2018/09/inside-browser-part4
+  to: https://developer.chrome.com/blog/inside-browser-part4
+
+- from: /web/updates/2018/09/nic69
+  to: https://developer.chrome.com/blog/new-in-chrome-69/
+
+- from: /web/updates/2018/09/reportingapi
+  to: https://web.dev/reporting-api/
+
+- from: /web/updates/2018/10/animation-worklet
+  to: https://developer.chrome.com/blog/animation-worklet
+
+- from: /web/updates/2018/10/chrome-71-deps-rems
+  to: https://developer.chrome.com/blog/chrome-71-deps-rems
+
+- from: /web/updates/2018/10/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-71/
+
+- from: /web/updates/2018/10/nic70
+  to: https://developer.chrome.com/blog/new-in-chrome-70/
+
 - from: /web/updates/2018/10/paint-timing-issues
   to: https://developer.chrome.com/blog/paint-timing-issues/
 
+- from: /web/updates/2018/10/tweaks-to-addAll-importScripts
+  to: https://developer.chrome.com/blog/tweeks-to-addAll-importScripts/
+
+- from: /web/updates/2018/10/wasm-threads
+  to: https://web.dev/wasm-threads/
+
 - from: /web/updates/2018/10/watch-video-using-picture-in-picture
   to: https://developer.chrome.com/blog/watch-video-using-picture-in-picture/
+
+- from: /web/updates/2018/11/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-72/
 
 - from: /web/updates/2018/11/signed-exchanges
   to: https://developer.chrome.com/blog/signed-exchanges/
@@ -569,11 +1732,409 @@ redirects:
 - from: /web/updates/2018/11/web-audio-autoplay
   to: https://developer.chrome.com/blog/web-audio-autoplay/
 
+- from: /web/updates/2018/11/writable-files
+  to: https://web.dev/native-file-system/
+
+- from: /web/updates/2018/12/background-fetch
+  to: https://developer.chrome.com/blog/background-fetch
+
+- from: /web/updates/2018/12/badging-api
+  to: https://web.dev/badging-api/
+
+- from: /web/updates/2018/12/chrome-72-deps-rems
+  to: https://developer.chrome.com/blog/chrome-72-deps-rems
+
+- from: /web/updates/2018/12/get-installed-related-apps
+  to: https://web.dev/get-installed-related-apps/
+
+- from: /web/updates/2018/12/nic71
+  to: https://developer.chrome.com/blog/new-in-chrome-71/
+
+- from: /web/updates/2018/12/wakelock
+  to: https://web.dev/wakelock/
+
+- from: /web/updates/2018/12/web-share-target
+  to: https://web.dev/web-share-target/
+
+- from: /web/updates/2019/01/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-73/
+
+- from: /web/updates/2019/01/emscripten-npm
+  to: https://web.dev/emscripten-npm/
+
+- from: /web/updates/2019/01/lighthouse-platform-packs
+  to: https://developer.chrome.com/blog/lighthouse-platform-packs
+
+- from: /web/updates/2019/01/nic72
+  to: https://developer.chrome.com/blog/new-in-chrome-72/
+
 - from: /web/updates/2019/01/rtcquictransport-api
   to: https://developer.chrome.com/blog/rtcquictransport-api/
+
+- from: /web/updates/2019/01/shape-detection
+  to: https://web.dev/shape-detection/
 
 - from: /web/updates/2019/01/user-activation
   to: https://developer.chrome.com/blog/user-activation/
 
 - from: /web/updates/2019/02/back-forward-cache
   to: https://developer.chrome.com/blog/back-forward-cache/
+
+- from: /web/updates/2019/02/chrome-73-deps-rems
+  to: https://developer.chrome.com/blog/chrome-73-deps-rems
+
+- from: /web/updates/2019/02/chrome-73-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-73/
+
+- from: /web/updates/2019/02/constructable-stylesheets
+  to: https://web.dev/constructable-stylesheets/
+
+- from: /web/updates/2019/02/feb-wrap-up
+  to: https://developer.chrome.com/blog/feb-wrap-up
+
+- from: /web/updates/2019/02/hotpath-with-wasm
+  to: https://developer.chrome.com/blog/hotpath-with-wasm
+
+- from: /web/updates/2019/02/intersectionobserver-v2
+  to: https://web.dev/intersectionobserver-v2/
+
+- from: /web/updates/2019/02/lit-element-and-lit-html
+  to: https://developer.chrome.com/blog/lit-element-and-lit-html
+
+- from: /web/updates/2019/02/model-viewer
+  to: https://web.dev/model-viewer/
+
+- from: /web/updates/2019/02/priority-hints
+  to: https://web.dev/priority-hints/
+
+- from: /web/updates/2019/02/rendering-on-the-web
+  to: https://web.dev/rendering-on-the-web/
+
+- from: /web/updates/2019/02/scrolling-intervention
+  to: https://developer.chrome.com/blog/scrolling-intervention-2
+
+- from: /web/updates/2019/02/string-matchall
+  to: https://developer.chrome.com/blog/string-matchall
+
+- from: /web/updates/2019/02/trusted-types
+  to: https://web.dev/trusted-types/
+
+- from: /web/updates/2019/02/using-twa
+  to:  https://developer.chrome.com/docs/android/trusted-web-activity/overview/
+
+- from: /web/updates/2019/03/chrome-74-deps-rems
+  to: https://developer.chrome.com/blog/chrome-74-deps-rems
+
+- from: /web/updates/2019/03/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-74/
+
+- from: /web/updates/2019/03/kv-storage
+  to: https://developer.chrome.com/blog/kv-storage
+
+- from: /web/updates/2019/03/nic73
+  to: https://developer.chrome.com/blog/new-in-chrome-73/
+
+- from: /web/updates/2019/03/prefers-reduced-motion
+  to: https://web.dev/prefers-reduced-motion/
+
+- from: /web/updates/2019/04/chromium-chronicle-1
+  to: https://developer.chrome.com/blog/chromium-chronicle-1/
+
+- from: /web/updates/2019/04/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-75/
+
+- from: /web/updates/2019/04/nic74
+  to: https://developer.chrome.com/blog/new-in-chrome-74/
+
+- from: /web/updates/2019/05/chrome-75-deps-rems
+  to: https://developer.chrome.com/blog/chrome-75-deps-rems
+
+- from: /web/updates/2019/05/chromium-chronicle-2
+  to: https://developer.chrome.com/blog/chromium-chronicle-2/
+
+- from: /web/updates/2019/05/desynchronized
+  to: https://developer.chrome.com/blog/desynchronized
+
+- from: /web/updates/2019/05/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-76/
+
+- from: /web/updates/2019/05/mini-infobar-update
+  to: https://developer.chrome.com/blog/mini-infobar-update
+
+- from: /web/updates/2019/05/model-viewer-ar
+  to: https://developer.chrome.com/blog/model-viewer-ar
+
+- from: /web/updates/2019/05/paint-holding
+  to: https://developer.chrome.com/blog/paint-holding
+
+- from: /web/updates/2019/05/web-share-files
+  to: https://web.dev/web-share/#sharing-files
+
+- from: /web/updates/2019/06/chrome-76-deps-rems
+  to: https://developer.chrome.com/blog/chrome-76-deps-rems
+
+- from: /web/updates/2019/06/chromium-chronicle-3
+  to: https://developer.chrome.com/blog/chromium-chronicle-3/
+
+- from: /web/updates/2019/06/layoutNG
+  to: https://developer.chrome.com/blog/layoutNg-2
+
+- from: /web/updates/2019/06/nic75
+  to: https://developer.chrome.com/blog/new-in-chrome-75/
+
+- from: /web/updates/2019/06/pwa-install-addressbar
+  to: https://web.dev/pwa-install-addressbar/
+
+- from: /web/updates/2019/06/pwa-install-patterns
+  to: https://web.dev/pwa-install-patterns/
+
+- from: /web/updates/2019/06/webapk-update-frequency
+  to: https://developer.chrome.com/blog/webapk-update-frequency
+
+- from: /web/updates/2019/07/chrome-75-media-updates
+  to: https://developer.chrome.com/blog/media-updates-in-chrome-75/
+
+- from: /web/updates/2019/07/chromium-chronicle-4
+  to: https://developer.chrome.com/blog/chromium-chronicle-4/
+
+- from: /web/updates/2019/07/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-77/
+
+- from: /web/updates/2019/07/image-support-for-async-clipboard
+  to: https://web.dev/image-support-for-async-clipboard/
+
+- from: /web/updates/2019/07/nic76
+  to: https://developer.chrome.com/blog/new-in-chrome-76/
+
+- from: /web/updates/2019/07/web-components-time-to-upgrade
+  to: https://developer.chrome.com/blog/web-components-time-to-upgrade
+
+- from: /web/updates/2019/08/chrome-77-deps-rems
+  to: https://developer.chrome.com/blog/chrome-77-deps-rems
+
+- from: /web/updates/2019/08/chromium-chronicle-5
+  to: https://developer.chrome.com/blog/chromium-chronicle-5/
+
+- from: /web/updates/2019/08/contact-picker
+  to: https://web.dev/contact-picker/
+
+- from: /web/updates/2019/08/get-started-with-gpu-compute-on-the-web
+  to: https://web.dev/gpu-compute/
+
+- from: /web/updates/2019/08/native-file-system
+  to: https://web.dev/native-file-system/
+
+- from: /web/updates/2019/08/periodic-background-sync
+  to: https://web.dev/periodic-background-sync/
+
+- from: /web/updates/2019/08/twas-quickstart
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/quick-start/
+
+- from: /web/updates/2019/09/chrome-78-deps-rems
+  to: https://developer.chrome.com/blog/chrome-78-deps-rems
+
+- from: /web/updates/2019/09/chromium-chronicle-6
+  to: https://developer.chrome.com/blog/chromium-chronicle-6/
+
+- from: /web/updates/2019/09/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-78/
+
+- from: /web/updates/2019/09/fresher-sw
+  to: https://developer.chrome.com/blog/fresher-sw
+
+- from: /web/updates/2019/09/nic77
+  to: https://developer.chrome.com/blog/new-in-chrome-77/
+
+- from: /web/updates/2019/10/chrome-79-deps-rems
+  to: https://developer.chrome.com/blog/chrome-79-deps-rems
+
+- from: /web/updates/2019/10/chromium-chronicle-7
+  to: https://developer.chrome.com/blog/chromium-chronicle-7/
+
+- from: /web/updates/2019/10/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-79/
+
+- from: /web/updates/2019/10/nic78
+  to: https://developer.chrome.com/blog/new-in-chrome-78/
+
+- from: /web/updates/2019/11/chromium-chronicle-8
+  to: https://developer.chrome.com/blog/chromium-chronicle-8/
+
+- from: /web/updates/2019/12/chrome-80-deps-rems
+  to: https://developer.chrome.com/blog/chrome-80-deps-rems
+
+- from: /web/updates/2019/12/chromium-chronicle-9
+  to: https://developer.chrome.com/blog/chromium-chronicle-9/
+
+- from: /web/updates/2019/12/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-80/
+
+- from: /web/updates/2019/12/nic79
+  to: https://developer.chrome.com/blog/new-in-chrome-79/
+
+- from: /web/updates/2019/12/webassembly
+  to: https://developer.chrome.com/blog/wasm-debugging-2019/
+
+- from: /web/updates/2019/12/webvr-1-1-removed
+  to: https://developer.chrome.com/blog/webvr-1-1-removed
+
+- from: /web/updates/2020/01/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-81/
+
+- from: /web/updates/2020/01/twa-android-browser-helper
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/android-browser-helper-migration/
+
+- from: /web/updates/2020/01/twa-multi-origin
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/multi-origin/
+
+- from: /web/updates/2020/02/chrome-81-deps-rems
+  to: https://developer.chrome.com/blog/chrome-81-deps-rems
+
+- from: /web/updates/2020/02/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-10/
+
+- from: /web/updates/2020/02/nic80
+  to: https://developer.chrome.com/blog/new-in-chrome-80/
+
+- from: /web/updates/2020/02/notification-permission-data-in-crux
+  to: https://developer.chrome.com/blog/notification-permission-data-in-crux
+
+- from: /web/updates/2020/02/twa-lay-of-the-land
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/lay-of-the-land/
+
+- from: /web/updates/2020/03/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-13/
+
+- from: /web/updates/2020/03/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-83/
+
+- from: /web/updates/2020/03/trusted-web-activity-passing-information
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/query-parameters/
+
+- from: /web/updates/2020/04/chrome-83-deps-rems
+  to: https://developer.chrome.com/blog/chrome-83-deps-rems
+
+- from: /web/updates/2020/04/nic81
+  to: https://developer.chrome.com/blog/new-in-chrome-81/
+
+- from: /web/updates/2020/05/chrome-84-deps-rems
+  to: https://developer.chrome.com/blog/chrome-84-deps-rems
+
+- from: /web/updates/2020/05/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-84/
+
+- from: /web/updates/2020/05/heavy-ad-interventions
+  to: https://developer.chrome.com/blog/heavy-ad-interventions
+
+- from: /web/updates/2020/05/nic83
+  to: https://developer.chrome.com/blog/new-in-chrome-83/
+
+- from: /web/updates/2020/06/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-85/
+
+- from: /web/updates/2020/07/chrome-85-deps-rems
+  to: https://developer.chrome.com/blog/chrome-85-deps-rems
+
+- from: /web/updates/2020/07/custom-tabs-android-11
+  to: https://developer.chrome.com/blog/custom-tabs-android-11
+
+- from: /web/updates/2020/07/nic84
+  to: https://developer.chrome.com/blog/new-in-chrome-84/
+
+- from: /web/updates/2020/07/referrer-policy-new-chrome-default
+  to: https://developer.chrome.com/blog/referrer-policy-new-chrome-default
+
+- from: /web/updates/2020/08/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-86/
+
+- from: /web/updates/2020/08/nic85
+  to: https://developer.chrome.com/blog/new-in-chrome-85/
+
+- from: /web/updates/2020/09/chrome-86-deps-rems
+  to: https://developer.chrome.com/blog/chrome-86-deps-rems
+
+- from: /web/updates/2020/09/issues-tab
+  to: https://developer.chrome.com/blog/issues-tab/
+
+- from: /web/updates/2020/09/migrating-to-js-modules
+  to: https://developer.chrome.com/blog/migrating-to-js-modules/
+
+- from: /web/updates/2020/10/chrome-87-deps-rems
+  to: https://developer.chrome.com/blog/chrome-87-deps-rems
+
+- from: /web/updates/2020/10/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-14/
+
+- from: /web/updates/2020/10/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-87/
+
+- from: /web/updates/2020/10/http-cache-partitioning
+  to: https://developer.chrome.com/blog/http-cache-partitioning
+
+- from: /web/updates/2020/10/nic86
+  to: https://developer.chrome.com/blog/new-in-chrome-86/
+
+- from: /web/updates/2020/10/webauthn-tab
+  to: https://developer.chrome.com/blog/webauthn-tab/
+
+- from: /web/updates/2020/11/chromium-chronicle
+  to: https://developer.chrome.com/blog/chromium-chronicle-15/
+
+- from: /web/updates/2020/11/cvd
+  to: https://developer.chrome.com/blog/cvd/
+
+- from: /web/updates/2020/11/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-88/
+
+- from: /web/updates/2020/11/nic87
+  to: https://developer.chrome.com/blog/new-in-chrome-87/
+
+- from: /web/updates/2020/11/puppetaria
+  to: https://developer.chrome.com/blog/puppetaria/
+
+- from: /web/updates/2020/12/chrome-88-deps-rems
+  to: https://developer.chrome.com/blog/chrome-88-deps-rems
+
+- from: /web/updates/2020/12/migrating-to-web-components
+  to: https://developer.chrome.com/blog/migrating-to-web-components/
+
+- from: /web/updates/2020/12/webassembly
+  to: https://developer.chrome.com/blog/wasm-debugging-2020/
+
+- from: /web/updates/2020/twa-android-browser-helper
+  to: https://developer.chrome.com/docs/android/trusted-web-activity/android-browser-helper-migration/
+
+- from: /web/updates/2021/01/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-89/
+
+- from: /web/updates/2021/01/nic88
+  to: https://developer.chrome.com/blog/new-in-chrome-88/
+
+- from: /web/updates/2021/01/puppeteer-typescript
+  to: https://developer.chrome.com/blog/puppeteer-typescript/
+
+- from: /web/updates/2021/02/css-in-js
+  to: https://developer.chrome.com/blog/css-in-js/
+
+- from: /web/updates/2021/02/devtools
+  to: https://developer.chrome.com/blog/new-in-devtools-90/
+
+- from: /web/updates/2021/02/faster-devtools-startup
+  to: https://developer.chrome.com/blog/faster-devtools-startup/
+
+- from: /web/updates/2021/03/crux-rank-magnitude
+  to: https://developer.chrome.com/blog/crux-rank-magnitude
+
+- from: /web/updates/capabilities
+  to: https://developer.chrome.com/blog/capabilities
+
+- from: /web/updates/nic
+  to: https://developer.chrome.com/tags/new-in-chrome/
+
+- from: /web/updates/tags/chromium-chronicle
+  to: https://developer.chrome.com/tags/chromium-chronicle/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/updates/...
+  to: https://developer.chrome.com/blog/
