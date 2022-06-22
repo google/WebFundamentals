@@ -1,7 +1,0 @@
-toc:
-- title: Overview
-  path: https://developer.chrome.com/docs/lighthouse/overview/
-- title: Lighthouse Scoring Guide
-  path: https://web.dev/performance-scoring/
-- title: Audit Documentation
-  path: https://web.dev/learn/#lighthouse

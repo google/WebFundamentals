@@ -1,3 +1,4 @@
 # ATTENTION - changes made to this file not in GitHub will be over written!
-upper_tabs:
-- include: /web/_upper_tabs-Tools.yaml
+guides:
+- title: Overview
+  path: /web/
