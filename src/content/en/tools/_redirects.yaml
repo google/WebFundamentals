@@ -359,9 +359,6 @@ redirects:
   to: http://www.getmdl.io/
 
 # Puppeteer
-- from: /web/tools/puppeteer
-  to: https://developer.chrome.com/docs/puppeteer/overview/
-
 - from: /web/tools/puppeteer/get-started
   to: https://developer.chrome.com/docs/puppeteer/get-started/
 
