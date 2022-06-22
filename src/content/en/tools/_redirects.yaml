@@ -358,6 +358,32 @@ redirects:
 - from: /web/tools/material-design-lite/...
   to: http://www.getmdl.io/
 
+# Puppeteer
+- from: /web/tools/puppeteer
+  to: https://developer.chrome.com/docs/puppeteer/overview/
+
+- from: /web/tools/puppeteer/get-started
+  to: https://developer.chrome.com/docs/puppeteer/get-started/
+
+- from: /web/tools/puppeteer/examples
+  to: https://developer.chrome.com/docs/puppeteer/examples/
+
+- from: /web/tools/puppeteer/articles/ssr
+  to: https://developer.chrome.com/docs/puppeteer/ssr/
+
+- from: /web/tools/puppeteer/debugging
+  to: https://developer.chrome.com/docs/puppeteer/debugging/
+
+- from: /web/tools/puppeteer/troubleshooting
+  to: https://developer.chrome.com/docs/puppeteer/troubleshooting/
+
+- from: /web/tools/puppeteer/faq
+  to: https://developer.chrome.com/docs/puppeteer/faq/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/puppeteer/...
+  to: https://developer.chrome.com/docs/puppeteer/
 
 # Workbox
 - from: /web/tools/service-worker-libraries/
