@@ -1,10 +1,7 @@
 upper_tabs:
-- include: /web/_upper_tabs-Fundamentals.yaml
 - name: Tools
   heading: Tools
   path: /web/tools/
-  menu:
-  - include: /web/tools/_menu_toc.yaml
   lower_tabs:
     other:
     - name: Home
@@ -17,10 +14,12 @@ upper_tabs:
         path: https://developer.chrome.com/docs/devtools/
     - name: Lighthouse
       contents:
-      - include: /web/tools/lighthouse/_toc.yaml
+      - title: Lighthouse
+        path: https://developer.chrome.com/docs/lighthouse/overview/
     - name: Puppeteer
       contents:
-      - include: /web/tools/puppeteer/_toc.yaml
+      - title: Puppeteer
+        path: https://developer.chrome.com/docs/puppeteer/
     - name: Workbox
       contents:
       - title: Workbox
@@ -28,4 +27,4 @@ upper_tabs:
     - name: Chrome User Experience Report
       contents:
       - title: Chrome User Experience Report
-        path: /web/tools/chrome-user-experience-report
+        path: /web/tools/chrome-user-experience-report/
