@@ -485,9 +485,6 @@ redirects:
 - from: /web/tools/chrome-user-experience-report/bigquery/changelog
   to: https://developer.chrome.com/docs/crux/release-notes/
 
-- from: /web/tools/chrome-user-experience-report/api
-  to: https://developer.chrome.com/docs/crux/api/
-
 - from: /web/tools/chrome-user-experience-report/api/...
   to: https://developer.chrome.com/docs/crux/api/
 
