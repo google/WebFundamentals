@@ -466,12 +466,12 @@ redirects:
 
 - from: /web/tools/workbox/reference-docs/latest/workbox
   to: https://developer.chrome.com/docs/workbox/modules/workbox-sw/
-  
+
 # Generic redirect. If it wasn't specified above, and there is no matching
 # path within this folder, redirect to the URL specified.
 - from: /web/tools/workbox/reference-docs/...
   to: https://developer.chrome.com/docs/workbox/reference/
-  
+
 # Generic redirect. If it wasn't specified above, and there is no matching
 # path within this folder, redirect to the URL specified.
 - from: /web/tools/workbox/...
