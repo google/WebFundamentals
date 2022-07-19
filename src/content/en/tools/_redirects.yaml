@@ -466,12 +466,19 @@ redirects:
 
 - from: /web/tools/workbox/reference-docs/latest/workbox
   to: https://developer.chrome.com/docs/workbox/modules/workbox-sw/
+  
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/workbox/reference-docs/...
+  to: https://developer.chrome.com/docs/workbox/reference/
+  
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/workbox/...
+  to: https://developer.chrome.com/docs/workbox/
+
 
 # CrUX
-
-- from: /web/tools/chrome-user-experience-report
-  to: https://developer.chrome.com/docs/crux/
-
 - from: /web/tools/chrome-user-experience-report/bigquery/getting-started
   to: https://developer.chrome.com/docs/crux/bigquery/
 
@@ -484,23 +491,11 @@ redirects:
 - from: /web/tools/chrome-user-experience-report/api/...
   to: https://developer.chrome.com/docs/crux/api/
 
-- from: /web/tools/
-  to: https://developer.chrome.com/docs/
-
-# Generic redirect. If it wasn't specified above, and there is no matching
-# path within this folder, redirect to the URL specified.
-- from: /web/tools/workbox/reference-docs/...
-  to: https://developer.chrome.com/docs/workbox/reference/
-
 # Generic redirect. If it wasn't specified above, and there is no matching
 # path within this folder, redirect to the URL specified.
 - from: /web/tools/chrome-user-experience-report/...
   to: https://developer.chrome.com/docs/crux/
 
-# Generic redirect. If it wasn't specified above, and there is no matching
-# path within this folder, redirect to the URL specified.
-- from: /web/tools/workbox/...
-  to: https://developer.chrome.com/docs/workbox/
 
 # Generic redirect. If it wasn't specified above, and there is no matching
 # path within this folder, redirect to the URL specified.
