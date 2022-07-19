@@ -477,6 +477,23 @@ redirects:
 - from: /web/tools/workbox/...
   to: https://developer.chrome.com/docs/workbox/
 
+
+# CrUX
+- from: /web/tools/chrome-user-experience-report/bigquery/getting-started
+  to: https://developer.chrome.com/docs/crux/bigquery/
+
+- from: /web/tools/chrome-user-experience-report/bigquery/changelog
+  to: https://developer.chrome.com/docs/crux/release-notes/
+
+- from: /web/tools/chrome-user-experience-report/api/...
+  to: https://developer.chrome.com/docs/crux/api/
+
+# Generic redirect. If it wasn't specified above, and there is no matching
+# path within this folder, redirect to the URL specified.
+- from: /web/tools/chrome-user-experience-report/...
+  to: https://developer.chrome.com/docs/crux/
+
+
 # Generic redirect. If it wasn't specified above, and there is no matching
 # path within this folder, redirect to the URL specified.
 - from: /web/tools/...
