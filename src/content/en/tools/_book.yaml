@@ -27,4 +27,4 @@ upper_tabs:
     - name: Chrome User Experience Report
       contents:
       - title: Chrome User Experience Report
-        path: /web/tools/chrome-user-experience-report/
+        path: https://developer.chrome.com/docs/crux/
