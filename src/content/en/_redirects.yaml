@@ -17,6 +17,9 @@ redirects:
 - from: /web/feedback/...
   to: https://web.dev/how-to-file-a-good-bug/
 
+- from: /web/resources/...
+  to: https://web.dev/
+
 - from: /web/g-co/dpwa
   to: https://web.dev/progressive-web-apps/
 
